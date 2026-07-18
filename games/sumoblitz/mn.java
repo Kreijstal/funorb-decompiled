@@ -298,7 +298,7 @@ final class mn {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_b = null;
         field_j = null;

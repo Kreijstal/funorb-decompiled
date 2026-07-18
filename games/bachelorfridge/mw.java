@@ -27,7 +27,7 @@ final class mw extends kj {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_i = null;
         field_g = null;
     }
@@ -40,7 +40,7 @@ final class mw extends kj {
         this.a(64 + param0, 8192, param2, 64 + param2, 32 + param0);
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;

@@ -57,8 +57,7 @@ final class mf extends tm {
                   break L0;
                 } else {
                   ((mf) this).field_a[var3_int].a(8, 8, 8, 4);
-                  int discarded$1 = 0;
-                  li.a(((mf) this).field_a[var3_int]);
+                  li.a(((mf) this).field_a[var3_int], 0);
                   var3_int++;
                   continue L1;
                 }
@@ -109,11 +108,11 @@ final class mf extends tm {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_n = null;
     }
 
-    final static void j() {
+    final static void j(int param0) {
         sa.field_f = new fn(tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, (vh) (Object) e.field_e, ei.field_A);
     }
 
@@ -128,7 +127,7 @@ final class mf extends tm {
         return 0 == param1 ? me.field_w : vf.field_Q;
     }
 
-    final static void a(byte param0, int param1, nm param2, nm param3) {
+    final static void a(byte param0, int param1, nm param2, nm param3, int param4, int param5) {
         td.field_e = param2;
         qi.field_e = 2;
         fj.field_h = 8;

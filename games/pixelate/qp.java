@@ -132,8 +132,7 @@ final class qp extends ie {
         try {
           L0: {
             L1: {
-              int discarded$2 = -1;
-              var4 = re.a(param2);
+              var4 = re.a(param2, -1);
               if (var4 == null) {
                 break L1;
               } else {
@@ -403,8 +402,7 @@ final class qp extends ie {
           if (!eg.field_n.a(-105)) {
             if (null != hc.field_M) {
               if (!hc.field_M.j(-1)) {
-                int discarded$4 = 1;
-                if (!jg.k()) {
+                if (!jg.k(1)) {
                   if (fl.a(12, 13, 15, 0)) {
                     return true;
                   } else {
@@ -419,8 +417,7 @@ final class qp extends ie {
                 return true;
               }
             } else {
-              int discarded$5 = 1;
-              if (!jg.k()) {
+              if (!jg.k(1)) {
                 if (fl.a(12, 13, 15, 0)) {
                   return true;
                 } else {
@@ -437,8 +434,7 @@ final class qp extends ie {
         } else {
           if (null != hc.field_M) {
             if (!hc.field_M.j(-1)) {
-              int discarded$6 = 1;
-              if (!jg.k()) {
+              if (!jg.k(1)) {
                 if (fl.a(12, 13, 15, 0)) {
                   return true;
                 } else {
@@ -453,8 +449,7 @@ final class qp extends ie {
               return true;
             }
           } else {
-            int discarded$7 = 1;
-            if (!jg.k()) {
+            if (!jg.k(1)) {
               if (!fl.a(12, 13, 15, 0)) {
                 return false;
               } else {

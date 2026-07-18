@@ -28,7 +28,7 @@ final class lg extends in {
         return 0L;
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         ig.field_N.field_k = 0;
         ig.field_N.field_e = 0;
     }
@@ -589,7 +589,7 @@ final class lg extends in {
         return var6 / (long)((lg) this).field_p;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_g = null;
         field_e = null;
         field_l = null;

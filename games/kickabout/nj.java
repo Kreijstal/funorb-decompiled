@@ -7,7 +7,7 @@ final class nj {
     static hd field_d;
     static String field_a;
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         if (!(k.field_m == null)) {
             k.field_m.a(73, param0);
         }
@@ -265,14 +265,14 @@ final class nj {
         return var1 - -in.field_b;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;
         field_d = null;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1, int param2, int param3) {
         if (param2 + (param1 + param0) > on.field_f) {
           if (-param2 + param0 >= 0) {
             return param0 - param2;

@@ -8,7 +8,7 @@ final class ti {
     static String field_c;
     static fh field_e;
 
-    final static byte[] a(int param0, byte[] param1, int param2) {
+    final static byte[] a(int param0, byte[] param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5_int = 0;
@@ -98,7 +98,7 @@ final class ti {
         return stackIn_7_0;
     }
 
-    final static int a(jk param0, jk param1) {
+    final static int a(jk param0, jk param1, int param2) {
         RuntimeException var3 = null;
         Object var4 = null;
         int stackIn_1_0 = 0;
@@ -199,7 +199,7 @@ final class ti {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_b = null;
         field_d = null;

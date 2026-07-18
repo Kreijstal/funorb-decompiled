@@ -200,7 +200,7 @@ final class wi {
         return stackIn_22_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -254,7 +254,7 @@ final class wi {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
     }
 

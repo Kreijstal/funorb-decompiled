@@ -7,13 +7,11 @@ final class fi {
     static long[] field_d;
     static boolean field_a;
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = qd.a(false);
-        int discarded$0 = 3;
-        int var2 = nj.b();
+        int var2 = nj.b(3);
         de.field_c.a(vh.field_g + -o.field_f, (o.field_f << 1) + var1, var2 + (bb.field_b << 1), true, -bb.field_b + id.field_c);
-        int discarded$1 = -115;
-        le.a();
+        le.a((byte) -115);
     }
 
     final static void a(int param0) {
@@ -112,7 +110,7 @@ final class fi {
         return stackIn_4_0 != 0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_c = null;
         field_d = null;

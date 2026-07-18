@@ -364,6 +364,7 @@ public final class ir extends aw {
     }
 
     private final static int b(tf param0, int param1) {
+        Object var3 = null;
         if (param0 != he.field_m) {
           if (rs.field_c == param0) {
             return 2;
@@ -378,8 +379,8 @@ public final class ir extends aw {
                   if (param1 == 3103) {
                     return 0;
                   } else {
-                    int discarded$4 = 0;
-                    int discarded$5 = ir.a((ji) null);
+                    var3 = null;
+                    int discarded$2 = ir.a((ji) null, false);
                     return 0;
                   }
                 }
@@ -526,13 +527,12 @@ public final class ir extends aw {
         int stackOut_6_2 = 0;
         int stackOut_6_3 = 0;
         L0: {
-          int discarded$8 = ((ir) this).field_Cc.SetTexture(((ir) this).field_mc, param0.d(-22689));
+          int discarded$5 = ((ir) this).field_Cc.SetTexture(((ir) this).field_mc, param0.d(-22689));
           if (((ir) this).field_Dc[((ir) this).field_mc] != param0.field_a) {
             L1: {
-              int discarded$9 = 0;
-              var3 = ir.a(param0.field_a);
-              int discarded$10 = ((ir) this).field_Cc.SetSamplerState(((ir) this).field_mc, 6, var3);
-              int discarded$11 = ((ir) this).field_Cc.SetSamplerState(((ir) this).field_mc, 5, var3);
+              var3 = ir.a(param0.field_a, false);
+              int discarded$6 = ((ir) this).field_Cc.SetSamplerState(((ir) this).field_mc, 6, var3);
+              int discarded$7 = ((ir) this).field_Cc.SetSamplerState(((ir) this).field_mc, 5, var3);
               ((ir) this).field_Dc[((ir) this).field_mc] = param0.field_a;
               stackOut_9_0 = ((ir) this).field_ad[((ir) this).field_mc];
               stackIn_11_0 = stackOut_9_0;
@@ -575,11 +575,10 @@ public final class ir extends aw {
                   stackIn_16_3 = stackOut_15_3;
                   break L2;
                 } else {
-                  int discarded$12 = 0;
                   stackOut_14_0 = (jagdx.IDirect3DDevice) (Object) stackIn_14_0;
                   stackOut_14_1 = stackIn_14_1;
                   stackOut_14_2 = stackIn_14_2;
-                  stackOut_14_3 = ir.a(param0.field_a);
+                  stackOut_14_3 = ir.a(param0.field_a, false);
                   stackIn_16_0 = stackOut_14_0;
                   stackIn_16_1 = stackOut_14_1;
                   stackIn_16_2 = stackOut_14_2;
@@ -587,7 +586,7 @@ public final class ir extends aw {
                   break L2;
                 }
               }
-              int discarded$13 = ((jagdx.IDirect3DDevice) (Object) stackIn_16_0).SetSamplerState(stackIn_16_1, stackIn_16_2, stackIn_16_3);
+              int discarded$8 = ((jagdx.IDirect3DDevice) (Object) stackIn_16_0).SetSamplerState(stackIn_16_1, stackIn_16_2, stackIn_16_3);
               ((ir) this).field_ad[((ir) this).field_mc] = param0.field_e;
               break L0;
             }
@@ -624,11 +623,10 @@ public final class ir extends aw {
                 stackIn_6_1 = stackOut_5_1;
                 stackIn_6_2 = stackOut_5_2;
                 if (param0.field_e) {
-                  int discarded$14 = 0;
                   stackOut_7_0 = (jagdx.IDirect3DDevice) (Object) stackIn_7_0;
                   stackOut_7_1 = stackIn_7_1;
                   stackOut_7_2 = stackIn_7_2;
-                  stackOut_7_3 = ir.a(param0.field_a);
+                  stackOut_7_3 = ir.a(param0.field_a, false);
                   stackIn_8_0 = stackOut_7_0;
                   stackIn_8_1 = stackOut_7_1;
                   stackIn_8_2 = stackOut_7_2;
@@ -646,7 +644,7 @@ public final class ir extends aw {
                   break L4;
                 }
               }
-              int discarded$15 = ((jagdx.IDirect3DDevice) (Object) stackIn_8_0).SetSamplerState(stackIn_8_1, stackIn_8_2, stackIn_8_3);
+              int discarded$9 = ((jagdx.IDirect3DDevice) (Object) stackIn_8_0).SetSamplerState(stackIn_8_1, stackIn_8_2, stackIn_8_3);
               ((ir) this).field_ad[((ir) this).field_mc] = param0.field_e;
               break L0;
             }
@@ -676,7 +674,7 @@ public final class ir extends aw {
         int discarded$0 = ((ir) this).field_Cc.Clear(1, param0, 0.0f, 0);
     }
 
-    private final boolean h() {
+    private final boolean h(boolean param0) {
         int var2 = 0;
         kg var3 = null;
         int var4 = 0;
@@ -747,7 +745,7 @@ public final class ir extends aw {
         }
     }
 
-    private final static int a(mi param0) {
+    private final static int a(mi param0, int param1) {
         if (jq.field_a != param0) {
           if (fv.field_y == param0) {
             return 0;
@@ -843,7 +841,7 @@ public final class ir extends aw {
         return null;
     }
 
-    private final static int a(ck param0) {
+    private final static int a(ck param0, byte param1) {
         if (param0 != tc.field_g) {
           if (param0 == rv.field_b) {
             return 3;
@@ -1019,8 +1017,7 @@ public final class ir extends aw {
             break L1;
           }
         }
-        int discarded$2 = 21;
-        int discarded$3 = ((ir) this).field_Cc.SetTextureStageState(((ir) this).field_mc, var6, ir.a(param3) | var7);
+        int discarded$1 = ((ir) this).field_Cc.SetTextureStageState(((ir) this).field_mc, var6, ir.a(param3, 21) | var7);
     }
 
     final void b(boolean param0) {
@@ -1080,7 +1077,7 @@ public final class ir extends aw {
         return (ru) (Object) new ec((ir) this, param3, param6, param0, param2, param5, param1);
     }
 
-    private final static int a(ji param0) {
+    private final static int a(ji param0, boolean param1) {
         if (param0 == ao.field_y) {
             return 2;
         }
@@ -1510,8 +1507,7 @@ public final class ir extends aw {
             break L2;
           }
         }
-        int discarded$2 = 21;
-        int discarded$3 = ((ir) this).field_Cc.SetTextureStageState(((ir) this).field_mc, var6, ir.a(param4) | var7);
+        int discarded$1 = ((ir) this).field_Cc.SetTextureStageState(((ir) this).field_mc, var6, ir.a(param4, 21) | var7);
     }
 
     final void a(byte param0, jagdx.IDirect3DPixelShader param1) {
@@ -1524,8 +1520,7 @@ public final class ir extends aw {
             Object var6 = null;
             ha discarded$0 = ir.createToolkit((java.awt.Canvas) null, (d) null, (ki) null, (Integer) null);
         }
-        int discarded$1 = -121;
-        int discarded$2 = ((ir) this).field_Cc.DrawPrimitive(ir.a(param3), param0, param2);
+        int discarded$1 = ((ir) this).field_Cc.DrawPrimitive(ir.a(param3, (byte) -121), param0, param2);
     }
 
     final void A(int param0) {
@@ -1823,16 +1818,14 @@ public final class ir extends aw {
             if (!(fieldTemp$10 <= 50)) {
                 throw new rf();
             }
-            int discarded$11 = 1;
-            boolean discarded$12 = this.h();
+            boolean discarded$11 = this.h(true);
         } else {
             ((ir) this).field_Lc = 0;
             if (!(!jagdx.gv.a(((ir) this).field_Hc.a(0, -95), -1))) {
-                int discarded$13 = 1;
-                boolean discarded$14 = this.h();
+                boolean discarded$12 = this.h(true);
             }
         }
-        int discarded$15 = ((ir) this).field_Cc.BeginScene();
+        int discarded$13 = ((ir) this).field_Cc.BeginScene();
     }
 
     final static ha createToolkit(java.awt.Canvas param0, d param1, ki param2, Integer param3) {

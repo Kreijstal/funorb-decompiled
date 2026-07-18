@@ -86,7 +86,7 @@ final class sf extends td implements m {
                 if (var4 == 0) {
                   break L3;
                 } else {
-                  int discarded$2 = param0.d(0, 16);
+                  int discarded$1 = param0.d(0, 16);
                   var5.field_m = v.a(16, var5.field_m, param0, 55);
                   var5.field_H = v.a(16, var5.field_H, param0, 51);
                   var5.field_Q = v.a(16, var5.field_Q, param0, 68);
@@ -107,8 +107,7 @@ final class sf extends td implements m {
                 if (!lf.a((byte) -68, param0)) {
                   break L5;
                 } else {
-                  int discarded$3 = 16;
-                  var5.field_x = na.a(-26947, param0, var5.field_x);
+                  var5.field_x = na.a(-26947, param0, var5.field_x, 16);
                   var6 = 0;
                   var7 = 0;
                   L6: while (true) {
@@ -6075,7 +6074,7 @@ final class sf extends td implements m {
           }
         }
         L636: {
-          var3 = -120;
+          var3 = -120 / ((-49 - param0) / 56);
           var2 = va.a(0, "reconnect_lost_seq,2");
           if (null != var2) {
             ra.field_t[2] = ta.a(32200, var2);
@@ -7100,7 +7099,7 @@ final class sf extends td implements m {
         }
     }
 
-    final static int a(CharSequence param0, char param1) {
+    final static int a(CharSequence param0, char param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -7129,48 +7128,56 @@ final class sf extends td implements m {
         var6 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
-            var3_int = 0;
-            var4 = param0.length();
+            L1: {
+              var3_int = 0;
+              var4 = param0.length();
+              if (param2 == 11109) {
+                break L1;
+              } else {
+                field_F = -91;
+                break L1;
+              }
+            }
             var5 = 0;
-            L1: while (true) {
-              L2: {
-                L3: {
+            L2: while (true) {
+              L3: {
+                L4: {
                   if (var5 >= var4) {
-                    break L3;
+                    break L4;
                   } else {
                     stackOut_6_0 = ~param0.charAt(var5);
                     stackIn_15_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
                     if (var6 != 0) {
-                      break L2;
+                      break L3;
                     } else {
-                      L4: {
+                      L5: {
                         if (stackIn_7_0 == ~param1) {
                           var3_int++;
-                          break L4;
+                          break L5;
                         } else {
-                          break L4;
+                          break L5;
                         }
                       }
                       var5++;
                       if (var6 == 0) {
-                        continue L1;
+                        continue L2;
                       } else {
-                        break L3;
+                        break L4;
                       }
                     }
                   }
                 }
                 stackOut_14_0 = var3_int;
                 stackIn_15_0 = stackOut_14_0;
-                break L2;
+                break L3;
               }
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var3 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var3;
             stackOut_16_1 = new StringBuilder().append("sf.D(");
@@ -7185,7 +7192,7 @@ final class sf extends td implements m {
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
-              break L5;
+              break L6;
             } else {
               stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
               stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
@@ -7193,21 +7200,29 @@ final class sf extends td implements m {
               stackIn_20_0 = stackOut_17_0;
               stackIn_20_1 = stackOut_17_1;
               stackIn_20_2 = stackOut_17_2;
-              break L5;
+              break L6;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ',' + 11109 + ')');
+          throw sl.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_15_0;
     }
 
-    final static boolean j() {
+    final static boolean j(int param0) {
         RuntimeException var1 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_3_0 = false;
         try {
           L0: {
+            L1: {
+              if (param0 == -4409) {
+                break L1;
+              } else {
+                field_H = null;
+                break L1;
+              }
+            }
             stackOut_3_0 = v.field_e;
             stackIn_4_0 = stackOut_3_0;
             break L0;
@@ -7215,24 +7230,20 @@ final class sf extends td implements m {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1, "sf.C(" + -4409 + ')');
+          throw sl.a((Throwable) (Object) var1, "sf.C(" + param0 + ')');
         }
         return stackIn_4_0;
     }
 
-    public static void b() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void b(boolean param0) {
         try {
-          L0: {
             field_D = null;
             field_H = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1, "sf.B(" + false + ')');
+            if (param0) {
+                boolean discarded$0 = sf.j(105);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) (Object) runtimeException, "sf.B(" + param0 + ')');
         }
     }
 
@@ -7302,8 +7313,7 @@ final class sf extends td implements m {
                   if (((sf) this).field_C != param0) {
                     break L2;
                   } else {
-                    int discarded$3 = 4;
-                    kf.a();
+                    kf.a(4);
                     if (var7 == 0) {
                       break L2;
                     } else {

@@ -11,7 +11,7 @@ abstract class vo {
     private boolean field_c;
     static int field_f;
 
-    final static jea e() {
+    final static jea e(int param0) {
         return nsa.field_i.field_tb;
     }
 

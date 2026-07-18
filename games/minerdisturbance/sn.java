@@ -8,7 +8,7 @@ final class sn {
     static ld field_c;
     static ea field_a;
 
-    final static byte[] a(byte[] param0, ld param1) {
+    final static byte[] a(byte[] param0, ld param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -160,7 +160,7 @@ final class sn {
         return stackIn_16_0;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return ke.field_U.a((byte) 16);
     }
 

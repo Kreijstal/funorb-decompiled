@@ -9,7 +9,7 @@ final class ij extends gf {
     static int[] field_o;
     private tk field_n;
 
-    public static void f() {
+    public static void f(int param0) {
         field_o = null;
     }
 
@@ -68,8 +68,7 @@ final class ij extends gf {
                 }
               }
               var5 = var4;
-              int discarded$8 = 25326;
-              if (va.b(var5)) {
+              if (va.b(var5, 25326)) {
                 stackOut_7_0 = dj.field_b;
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;
@@ -360,7 +359,7 @@ final class ij extends gf {
         return stackIn_14_0;
     }
 
-    final static void e() {
+    final static void e(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -381,8 +380,7 @@ final class ij extends gf {
               if (var2 == 0) {
                 var9 = (qa) (Object) qf.field_a.b(0);
                 if (var9 == null) {
-                  int discarded$4 = 1;
-                  ih.b();
+                  ih.b(true);
                   return;
                 } else {
                   L2: {
@@ -401,8 +399,7 @@ final class ij extends gf {
                     var9.f(0);
                     break L1;
                   } else {
-                    int discarded$5 = 1;
-                    ih.b();
+                    ih.b(true);
                     return;
                   }
                 }
@@ -424,8 +421,7 @@ final class ij extends gf {
                       }
                     }
                     if (var4_ref_ni == null) {
-                      int discarded$6 = 1;
-                      ih.b();
+                      ih.b(true);
                       return;
                     } else {
                       var4_ref_ni.f(0);
@@ -434,8 +430,7 @@ final class ij extends gf {
                   }
                 } else {
                   nn.a("A1: " + me.a(-1), (Throwable) null, -9958);
-                  int discarded$7 = 1;
-                  ih.b();
+                  ih.b(true);
                   break L1;
                 }
               }
@@ -459,7 +454,7 @@ final class ij extends gf {
         }
     }
 
-    final static boolean a(boolean param0, int param1, CharSequence param2) {
+    final static boolean a(boolean param0, int param1, CharSequence param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

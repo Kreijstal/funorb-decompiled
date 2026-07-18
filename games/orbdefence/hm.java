@@ -44,11 +44,9 @@ final class hm extends ta implements ai {
         if (param0 != 48) {
           var6 = null;
           hm.a((String) null, (byte) 56, false, true);
-          int discarded$4 = 0;
-          return al.a(param1, 5200, param3, param4, param2);
+          return al.a(param1, 5200, param3, param4, param2, false);
         } else {
-          int discarded$5 = 0;
-          return al.a(param1, 5200, param3, param4, param2);
+          return al.a(param1, 5200, param3, param4, param2, false);
         }
     }
 
@@ -160,11 +158,10 @@ final class hm extends ta implements ai {
         return stackIn_11_0 != 0;
     }
 
-    final static void a(int[] param0) {
+    final static void a(int[] param0, int param1, int param2, int param3) {
         try {
             pc.a((byte) 53, 0, 160, 0, 0, 120, ul.field_b, 0, 0, 3, 1920, param0);
-            int discarded$0 = 0;
-            jl.a(0, 160, 3, 0, -1, 120, 0, 0, ul.field_b);
+            jl.a(0, 160, 3, 0, -1, 120, 0, 0, ul.field_b, 0);
         } catch (RuntimeException runtimeException) {
             throw dd.a((Throwable) (Object) runtimeException, "hm.K(" + (param0 != null ? "{...}" : "null") + ',' + 3 + ',' + 0 + ',' + 3 + ')');
         }
@@ -195,16 +192,14 @@ final class hm extends ta implements ai {
           L0: {
             L1: {
               if (param3 == ((hm) this).field_B) {
-                int discarded$42 = -16;
-                sg.k();
+                sg.k(-16);
                 break L1;
               } else {
                 if (((hm) this).field_D != param3) {
                   if (((hm) this).field_E != param3) {
                     break L1;
                   } else {
-                    int discarded$43 = 4;
-                    kj.j();
+                    kj.j(4);
                     break L1;
                   }
                 } else {

@@ -12,7 +12,7 @@ final class bk extends hh {
     private si field_l;
     private uf field_i;
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_e = null;
     }
@@ -425,22 +425,19 @@ final class bk extends hh {
                   if (((bk) this).field_i == null) {
                     return;
                   } else {
-                    int discarded$5 = 4;
-                    var24 = hh.a((byte) -88, 3, 64, false, 256, 0.4000000059604645f, 4, 0);
+                    var24 = hh.a((byte) -88, 3, 64, false, 256, 0.4000000059604645f, 4, 0, 4);
                     var20 = var24;
                     var16 = var20;
                     var12 = var16;
                     var11 = var12;
                     var3_array = var11;
-                    int discarded$6 = 4;
-                    var25 = hh.a((byte) -119, 3, 64, false, 256, 0.4000000059604645f, 4, 8);
+                    var25 = hh.a((byte) -119, 3, 64, false, 256, 0.4000000059604645f, 4, 8, 4);
                     ((bk) this).field_k = new float[32768];
                     var5 = 0;
                     var6 = 0;
                     L2: while (true) {
                       if (var6 >= 256) {
-                        int discarded$7 = 1;
-                        this.a();
+                        this.a(true);
                         break L1;
                       } else {
                         var26 = var24[var6];
@@ -451,12 +448,12 @@ final class bk extends hh {
                             var6++;
                             continue L2;
                           } else {
-                            int incrementValue$8 = var5;
+                            int incrementValue$2 = var5;
                             var5++;
-                            ((bk) this).field_k[incrementValue$8] = (float)var26[var9] / 4096.0f;
-                            int incrementValue$9 = var5;
+                            ((bk) this).field_k[incrementValue$2] = (float)var26[var9] / 4096.0f;
+                            int incrementValue$3 = var5;
                             var5++;
-                            ((bk) this).field_k[incrementValue$9] = (float)var27[var9] / 4096.0f;
+                            ((bk) this).field_k[incrementValue$3] = (float)var27[var9] / 4096.0f;
                             var9++;
                             continue L3;
                           }
@@ -566,7 +563,7 @@ final class bk extends hh {
         return true;
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         ((bk) this).field_l = new si(((bk) this).field_a, 2);
         ((bk) this).field_l.a((byte) 111, 0);
         ((bk) this).field_a.a(false, 1);

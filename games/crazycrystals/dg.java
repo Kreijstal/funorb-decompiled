@@ -8,11 +8,11 @@ final class dg {
         s.field_k = 1000000000L / (long)param1;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
     }
 
-    final static byte a(char param0) {
+    final static byte a(char param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = CrazyCrystals.field_B;
@@ -602,7 +602,7 @@ final class dg {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         lo.field_b = null;
         ec.field_l.a(22800);
         ke.field_b[jo.field_o] = 0;

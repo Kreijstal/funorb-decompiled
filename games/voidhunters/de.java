@@ -6,7 +6,7 @@ final class de extends rqa {
     static int field_p;
     static float field_o;
 
-    final static sw a(int param0) {
+    final static sw a(int param0, int param1) {
         return ok.field_b[param0];
     }
 

@@ -11,7 +11,7 @@ final class cf extends mc {
     static vl field_p;
     static jb field_o;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_p = null;
         field_o = null;
         field_q = null;
@@ -21,8 +21,7 @@ final class cf extends mc {
         if (param0 <= 22) {
             return null;
         }
-        int discarded$0 = -97;
-        return new hb(i.e(-11), ld.j());
+        return new hb(i.e(-11), ld.j(-97));
     }
 
     final static boolean a(int param0, byte param1) {
@@ -39,7 +38,7 @@ final class cf extends mc {
         ((cf) this).field_s = false;
     }
 
-    final static mh a(String param0) {
+    final static mh a(String param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

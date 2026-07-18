@@ -116,18 +116,16 @@ final class fr {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1, boolean param2) {
         if (param0) {
           gq.field_e = gq.field_e + 1;
           us.a(2069944240);
           ef.field_m = ef.field_m + 1;
-          int discarded$4 = -128;
-          er.a();
+          er.a((byte) -128);
           return;
         } else {
           ef.field_m = ef.field_m + 1;
-          int discarded$5 = -128;
-          er.a();
+          er.a((byte) -128);
           return;
         }
     }

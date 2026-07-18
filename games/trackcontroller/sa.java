@@ -36,7 +36,7 @@ final class sa extends ok {
         return var3;
     }
 
-    final static void j() {
+    final static void j(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -67,7 +67,7 @@ final class sa extends ok {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_I = null;
         field_R = null;
         field_J = null;

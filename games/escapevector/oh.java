@@ -16,7 +16,7 @@ final class oh extends hg {
     static String field_k;
     int field_j;
 
-    final static void a(vj param0, boolean param1, int param2, boolean param3) {
+    final static void a(vj param0, boolean param1, int param2, boolean param3, byte param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -154,7 +154,7 @@ final class oh extends hg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_p = null;
         field_k = null;
         field_n = null;

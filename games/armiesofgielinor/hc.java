@@ -29,7 +29,7 @@ final class hc {
     private String[] field_m;
     private sh field_f;
 
-    private final void e() {
+    private final void e(byte param0) {
         if (((hc) this).field_p.g(260)) {
             ((hc) this).field_x.f((byte) 126);
             ((hc) this).field_p.f((byte) 127);
@@ -57,7 +57,7 @@ final class hc {
         this.a(false, 0);
     }
 
-    private final void c() {
+    private final void c(int param0) {
         if (!(!br.field_f[96])) {
             ((hc) this).field_t = ((hc) this).field_t + 5;
         }
@@ -72,7 +72,7 @@ final class hc {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         int var2 = ((hc) this).field_p.h(5);
         if (var2 == ((hc) this).field_a) {
             return;
@@ -160,11 +160,9 @@ final class hc {
         if (param0 <= 66) {
             this.a(true);
         }
-        int discarded$0 = 111;
-        this.b();
+        this.b((byte) 111);
         this.a(125);
-        int discarded$1 = -95;
-        this.a();
+        this.a((byte) -95);
     }
 
     final static char a(int param0, char param1) {
@@ -247,17 +245,15 @@ final class hc {
         ((hc) this).field_l.c("shift: " + nh.field_D[((hc) this).field_a], 480, 230, 16777215, -1);
         ((hc) this).field_l.c("model ID: " + sf.field_P[((hc) this).field_a], 480, 242, 16777215, -1);
         this.a(false);
-        int discarded$0 = -25;
-        this.e();
+        this.e((byte) -25);
         ((hc) this).field_f.e((byte) 109);
         if (param0 > -52) {
             return;
         }
     }
 
-    private final void a() {
-        int discarded$0 = 127;
-        this.c();
+    private final void a(byte param0) {
+        this.c(127);
         ((hc) this).field_f.a(((hc) this).field_r, 1, ((hc) this).field_h, -29001, ((hc) this).field_t, ((hc) this).field_s);
         ((hc) this).field_f.b(-19812);
     }
@@ -377,7 +373,7 @@ final class hc {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         ((hc) this).field_n = new ia(((hc) this).field_v, ((hc) this).field_l, ((hc) this).field_j, "Model", 0, 0);
         ((hc) this).field_u = new ia(((hc) this).field_v, ((hc) this).field_l, ((hc) this).field_j, "Animation", 0, 0);
         ((hc) this).field_k = hf.field_d;
@@ -503,8 +499,7 @@ final class hc {
             ((hc) this).field_l = param2;
             ((hc) this).field_m = pt.field_W;
             ((hc) this).field_v = param0;
-            int discarded$2 = -127;
-            this.d();
+            this.d((byte) -127);
             this.d(3);
             this.a(param4, (byte) 39);
             this.a(0, so.field_b.field_a >> 1, so.field_b.field_a >> 1, so.field_b.field_g, 0);

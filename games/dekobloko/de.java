@@ -218,7 +218,7 @@ final class de extends ma {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_W = null;
         field_V = null;
         field_P = null;

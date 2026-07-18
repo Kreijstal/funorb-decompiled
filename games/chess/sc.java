@@ -12,7 +12,7 @@ final class sc {
     static int field_e;
     static lh field_a;
 
-    final static String a(String param0, um param1, int param2, String param3) {
+    final static String a(String param0, um param1, int param2, String param3, byte param4) {
         RuntimeException var5 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -187,21 +187,18 @@ final class sc {
     final static km[] a(int param0, int param1, int param2, int param3, int param4) {
         km[] var6 = new km[9];
         km[] var5 = var6;
-        int discarded$0 = 14727;
-        km dupTemp$1 = rd.a(1, param2);
-        var5[6] = dupTemp$1;
-        var5[3] = dupTemp$1;
-        var5[2] = dupTemp$1;
-        var5[1] = dupTemp$1;
-        var5[0] = dupTemp$1;
-        int discarded$2 = 14727;
-        km dupTemp$3 = rd.a(1, param0);
-        var5[8] = dupTemp$3;
-        var5[7] = dupTemp$3;
-        var5[5] = dupTemp$3;
+        km dupTemp$0 = rd.a(1, param2, 14727);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        km dupTemp$1 = rd.a(1, param0, 14727);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
         if (!(0 == param4)) {
-            int discarded$4 = 14727;
-            var6[4] = rd.a(64, param4);
+            var6[4] = rd.a(64, param4, 14727);
         }
         return var5;
     }
@@ -212,7 +209,7 @@ final class sc {
         e.field_T = rh.field_e[param0];
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         hh var4 = null;
@@ -225,8 +222,7 @@ final class sc {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$4 = 126;
-                ue.a(2, var4);
+                ue.a(2, var4, (byte) 126);
                 var4 = (hh) (Object) eh.field_R.a((byte) -128);
                 continue L1;
               }

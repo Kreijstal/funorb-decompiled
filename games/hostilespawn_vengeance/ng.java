@@ -106,8 +106,7 @@ final class ng extends am {
             } else {
               var8 = new wg(im.field_e, param0);
               im.field_e.c((ag) (Object) var8, param5 ^ -8686);
-              int discarded$10 = -1;
-              if (fc.i()) {
+              if (fc.i(-1)) {
                 var8.r(-104);
                 stackOut_11_0 = 1;
                 stackIn_12_0 = stackOut_11_0;

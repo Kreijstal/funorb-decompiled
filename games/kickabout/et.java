@@ -105,8 +105,7 @@ final class et {
                 var7 = stackIn_12_0;
                 un.field_d.d(param1.toLowerCase(), var7 + (on.field_g >> 1), -13 + (on.field_f + var7), 0, -1);
                 ta.e(123);
-                int discarded$2 = -51;
-                sd.a(var9[var5]);
+                sd.a(var9[var5], (byte) -51);
                 var5++;
                 continue L1;
               }
@@ -170,7 +169,7 @@ final class et {
         return stackIn_14_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_e = null;

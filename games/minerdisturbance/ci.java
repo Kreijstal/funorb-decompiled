@@ -14,7 +14,7 @@ abstract class ci {
     static String field_j;
     static boolean field_b;
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -136,7 +136,7 @@ abstract class ci {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_j = null;
         field_h = null;

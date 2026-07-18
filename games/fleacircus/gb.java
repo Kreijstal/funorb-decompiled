@@ -1843,7 +1843,7 @@ final class gb {
         field_g = null;
     }
 
-    final static void h(int param0, int param1, int param2) {
+    final static void h(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;

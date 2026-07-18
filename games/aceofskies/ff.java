@@ -5,7 +5,7 @@ final class ff {
     static String field_a;
     static long field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
@@ -79,7 +79,7 @@ final class ff {
                 break L1;
               } else {
                 if (-1 == param1.indexOf("<br>")) {
-                  param2[0] = (String) (Object) param2;
+                  param2[0] = param1;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;

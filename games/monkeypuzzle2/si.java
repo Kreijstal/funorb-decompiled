@@ -92,15 +92,15 @@ final class si extends fb {
         }
         L4: {
           if (lf.field_c == 1) {
-            int discarded$5 = var8.j(17277);
-            String discarded$6 = var8.f(-1);
+            int discarded$4 = var8.j(17277);
+            String discarded$5 = var8.f(-1);
             break L4;
           } else {
             if (lf.field_c != 4) {
               break L4;
             } else {
-              int discarded$7 = var8.j(17277);
-              String discarded$8 = var8.f(-1);
+              int discarded$6 = var8.j(17277);
+              String discarded$7 = var8.f(-1);
               break L4;
             }
           }
@@ -135,8 +135,7 @@ final class si extends fb {
           }
           return new hl(param0);
         } else {
-          int discarded$9 = 80;
-          ba.field_h = ea.a((byte) 90, (gk) (Object) var8);
+          ba.field_h = ea.a((byte) 90, (gk) (Object) var8, 80);
           wh.field_e = null;
           return new hl(param0);
         }
@@ -151,7 +150,7 @@ final class si extends fb {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_v = null;
         field_s = null;
         field_o = null;

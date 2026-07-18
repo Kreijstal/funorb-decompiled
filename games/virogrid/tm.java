@@ -15,7 +15,7 @@ final class tm extends l {
     static je field_l;
     static int[] field_h;
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_i = null;
         field_l = null;
@@ -862,10 +862,8 @@ final class tm extends l {
         StringBuilder stackOut_7_1 = null;
         String stackOut_7_2 = null;
         try {
-          int discarded$9 = 109;
-          if (hn.a(param0, param1, param3)) {
-            int discarded$10 = -123;
-            return dd.a();
+          if (hn.a(param0, param1, param3, (byte) 109)) {
+            return dd.a((byte) -123);
           } else {
             return null;
           }

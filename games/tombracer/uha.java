@@ -706,7 +706,7 @@ final class uha extends wda {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         int var1 = -3;
         field_s = null;
     }

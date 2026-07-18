@@ -31,7 +31,7 @@ final class ib extends kd {
         lf.a(17, (byte) 77);
     }
 
-    private final void a(int param0, pr param1) {
+    private final void a(int param0, pr param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -511,7 +511,7 @@ final class ib extends kd {
         field_q = null;
     }
 
-    final static int[] a(double[] param0) {
+    final static int[] a(double[] param0, int param1) {
         RuntimeException var2 = null;
         int[] stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -586,13 +586,11 @@ final class ib extends kd {
                 var2 = param0;
                 L2: while (true) {
                   if (var2 <= var3.field_D) {
-                    int discarded$4 = 1048575;
-                    this.a(var2, var3);
+                    this.a(var2, var3, 1048575);
                     var3.field_D = var3.field_D - var2;
                     break L1;
                   } else {
-                    int discarded$5 = 1048575;
-                    this.a(var3.field_D, var3);
+                    this.a(var3.field_D, var3, 1048575);
                     var2 = var2 - var3.field_D;
                     if (((ib) this).field_w.a(var2, (int[]) null, 0, 1, var3)) {
                       break L1;

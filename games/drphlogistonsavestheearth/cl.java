@@ -213,8 +213,7 @@ final class cl extends gb {
                   }
                 }
                 ((cl) this).field_r = (qe) param0;
-                int discarded$1 = 6;
-                this.e();
+                this.e(6);
                 this.a(param1, 0);
                 ((cl) this).field_g.field_j = 0;
                 ((cl) this).field_d = null;
@@ -708,7 +707,7 @@ final class cl extends gb {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_p = null;
         field_t = null;
         field_n = null;
@@ -811,7 +810,7 @@ final class cl extends gb {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;

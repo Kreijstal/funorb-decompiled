@@ -12,13 +12,13 @@ final class hm extends am {
     static String field_n;
     static String field_o;
 
-    public static void d() {
+    public static void d(int param0) {
         field_o = null;
         field_l = null;
         field_n = null;
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         return !c.field_a.d((byte) -102);
     }
 
@@ -369,7 +369,7 @@ final class hm extends am {
         ((hm) this).field_m = param0;
     }
 
-    final static void a(int param0, int param1, vi param2, int param3) {
+    final static void a(int param0, int param1, vi param2, int param3, int param4) {
         try {
             param2.d(99, 12);
             param2.a((byte) -113, 17);

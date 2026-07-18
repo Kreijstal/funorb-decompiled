@@ -62,8 +62,7 @@ final class nj {
               }
             } else {
               mm.field_y = null;
-              int discarded$3 = 43;
-              gg.c();
+              gg.c((byte) 43);
               return true;
             }
           }
@@ -72,8 +71,7 @@ final class nj {
             if (mm.field_y != null) {
               if (mm.field_y.h(5)) {
                 mm.field_y = null;
-                int discarded$4 = 43;
-                gg.c();
+                gg.c((byte) 43);
                 return true;
               } else {
                 if (param0 != 15780) {
@@ -124,8 +122,7 @@ final class nj {
               }
             }
           } else {
-            int discarded$5 = 43;
-            gg.c();
+            gg.c((byte) 43);
             return true;
           }
         }
@@ -182,7 +179,7 @@ final class nj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_h = null;
         field_b = null;

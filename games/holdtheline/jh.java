@@ -52,11 +52,7 @@ final class jh {
                 break L1;
               }
             }
-            int discarded$8 = 5;
-            int discarded$9 = 5;
-            int discarded$10 = 5;
-            int discarded$11 = 1;
-            stackOut_2_0 = sd.a(pe.field_d, new String[4]);
+            stackOut_2_0 = sd.a(pe.field_d, new String[4], true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

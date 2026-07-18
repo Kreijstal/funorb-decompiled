@@ -17,23 +17,21 @@ final class jba extends ana {
           return false;
         } else {
           if (!((jba) this).field_y.a((byte) -106)) {
-            int fieldTemp$6 = ((jba) this).field_l - 1;
+            int fieldTemp$2 = ((jba) this).field_l - 1;
             ((jba) this).field_l = ((jba) this).field_l - 1;
-            if (fieldTemp$6 > 0) {
+            if (fieldTemp$2 > 0) {
               L0: {
                 if (((jba) this).field_v) {
                   break L0;
                 } else {
-                  int discarded$7 = 47;
-                  this.e();
+                  this.e((byte) 47);
                   break L0;
                 }
               }
               return false;
             } else {
               var2 = 92 % ((param0 - 71) / 47);
-              int discarded$8 = 1;
-              this.b();
+              this.b(true);
               return true;
             }
           } else {
@@ -42,12 +40,11 @@ final class jba extends ana {
         }
     }
 
-    private final void b() {
-        int discarded$0 = -125;
-        this.f();
+    private final void b(boolean param0) {
+        this.f((byte) -125);
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -140,7 +137,7 @@ final class jba extends ana {
         field_A = null;
     }
 
-    final static void a(it param0, jfa param1) {
+    final static void a(it param0, jfa param1, int param2) {
         int var3_int = 0;
         if (bp.e(-29919)) {
             return;
@@ -157,7 +154,7 @@ final class jba extends ana {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         ad var4 = null;
         int var5 = BachelorFridge.field_y;
         aga var2 = ((jba) this).field_z.field_l.a(53, ((jba) this).field_q.field_h);

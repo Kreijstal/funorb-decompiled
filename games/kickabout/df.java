@@ -8,7 +8,7 @@ final class df extends dj {
     static String[] field_F;
     static hd field_G;
 
-    final static void d() {
+    final static void d(boolean param0) {
         nl var1 = null;
         nl var2 = null;
         if (!(0 == et.field_d.field_R[1].field_g)) {
@@ -295,13 +295,13 @@ final class df extends dj {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_F = null;
         field_I = null;
         field_G = null;
     }
 
-    final static int g() {
+    final static int g(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -316,9 +316,7 @@ final class df extends dj {
             L1: while (true) {
               if (!nk.b((byte) -59)) {
                 L2: {
-                  int discarded$25 = 16756;
-                  int discarded$26 = 16756;
-                  re.field_c.a(-21174, ts.b(n.field_m, el.field_A), ts.b(vc.field_y, sm.field_q));
+                  re.field_c.a(-21174, ts.b(n.field_m, el.field_A, 16756), ts.b(vc.field_y, sm.field_q, 16756));
                   if (!re.field_c.c(-1)) {
                     break L2;
                   } else {
@@ -334,8 +332,7 @@ final class df extends dj {
                     if (re.field_c.field_e >= 0) {
                       var2 = gl.field_d[re.field_c.field_e];
                       if (2 == var2) {
-                        int discarded$27 = -77;
-                        dh.c();
+                        dh.c((byte) -77);
                         break L3;
                       } else {
                         break L3;

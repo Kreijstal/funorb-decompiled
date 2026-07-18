@@ -197,7 +197,7 @@ final class an extends qb {
         return var11;
     }
 
-    final static void a(byte[] param0) {
+    final static void a(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -233,17 +233,14 @@ final class an extends qb {
               if (var2_int >= lka.field_E.length) {
                 break L0;
               } else {
-                int discarded$24 = -16306;
-                int discarded$25 = vc.a(var2_int, 0);
+                int discarded$6 = vc.a(var2_int, 0, -16306);
                 var3 = lka.field_E[var2_int][3];
                 var4 = lka.field_E[var2_int][16];
                 var5 = m.a(var2_int, (byte) -98, 1);
                 var6 = kka.a(var2_int, -114, 2);
-                int discarded$26 = -16306;
-                var7 = vc.a(var2_int, 9);
+                var7 = vc.a(var2_int, 9, -16306);
                 var8 = lt.b(28427, var2_int) ? 1 : 0;
-                int discarded$27 = 29052;
-                qq.a(var8 != 0, var4, var3, var5, var7, var6, var6);
+                qq.a(var8 != 0, var4, var3, var5, var7, var6, var6, 29052);
                 var2_int++;
                 continue L1;
               }
@@ -281,7 +278,7 @@ final class an extends qb {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_s = null;
         field_r = null;
     }

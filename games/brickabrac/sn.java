@@ -197,7 +197,7 @@ final class sn extends ki {
         return sk.field_J[-1 + param1];
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_r = null;
         field_t = null;
         field_s = null;
@@ -262,8 +262,7 @@ final class sn extends ki {
         if (!((sn) this).b((byte) -124)) {
             lb.g(param4, param2, 640, 480, 16777215);
         } else {
-            int discarded$0 = -20777;
-            var6 = ge.a(((sn) this).field_m, param3);
+            var6 = ge.a(((sn) this).field_m, param3, -20777);
             if (!(var6.a((byte) -84, param3, ((sn) this).field_m))) {
                 tf.a(0, param3, var6, 1, 114, sf.field_cb);
                 var6.a(((sn) this).field_m, param3, (byte) 78);
@@ -285,18 +284,14 @@ final class sn extends ki {
         nm.field_d = jh.a(0, af.field_D);
         hg.field_g = jh.a(0, sf.field_cb);
         er.field_d = jh.a(0, kq.field_o);
-        int discarded$0 = 2;
-        rd.field_d[0] = cr.a("construct", i.field_m, "construction_caps");
-        int discarded$1 = 2;
-        kh.field_d[0] = cr.a("construct", i.field_m, "construction_segs");
+        rd.field_d[0] = cr.a("construct", i.field_m, "construction_caps", 2);
+        kh.field_d[0] = cr.a("construct", i.field_m, "construction_segs", 2);
         sk.field_J[0] = pl.a("construct", "construction_centre", (byte) 127, i.field_m);
         rd.field_d[1] = ig.a(rd.field_d[0], false);
         kh.field_d[1] = ig.a(kh.field_d[0], param0);
         sk.field_J[1] = pl.a(-16371, sk.field_J[0]);
-        int discarded$2 = 0;
-        pl.a(kq.field_o);
-        int discarded$3 = 0;
-        pl.a(er.field_d);
+        pl.a(kq.field_o, 0);
+        pl.a(er.field_d, 0);
         return true;
     }
 
@@ -317,7 +312,7 @@ final class sn extends ki {
         }
     }
 
-    final static void a(int param0, byte[] param1) {
+    final static void a(int param0, byte[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

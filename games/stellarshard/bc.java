@@ -94,7 +94,7 @@ final class bc extends nl {
         L0: {
           var13 = stellarshard.field_B;
           if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
-            String discarded$4 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$3 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           } else {
             break L0;
@@ -202,7 +202,7 @@ final class bc extends nl {
           return ((bc) this).a(-28548);
         }
         L5: {
-          boolean discarded$5 = var3.addAll((Collection) (Object) var4);
+          boolean discarded$4 = var3.addAll((Collection) (Object) var4);
           var6_array = var3.toArray();
           var7 = null;
           var8_array = var6_array;
@@ -211,7 +211,7 @@ final class bc extends nl {
             break L5;
           } else {
             var14 = null;
-            byte[] discarded$6 = bc.a(-89, 82, 75, (byte[]) null);
+            byte[] discarded$5 = bc.a(-89, 82, 75, (byte[]) null);
             break L5;
           }
         }
@@ -227,8 +227,7 @@ final class bc extends nl {
             var11 = (java.net.Proxy) var10;
             try {
               L7: {
-                int discarded$7 = -444;
-                var12_ref2 = this.a(var11);
+                var12_ref2 = this.a(var11, -444);
                 if (var12_ref2 != null) {
                   stackOut_22_0 = (java.net.Socket) var12_ref2;
                   stackIn_23_0 = stackOut_22_0;
@@ -468,7 +467,7 @@ final class bc extends nl {
         return (java.net.Socket) (Object) stackIn_24_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_h = null;
     }
 
@@ -573,7 +572,7 @@ final class bc extends nl {
         return stackIn_7_0;
     }
 
-    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0, int param1) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;

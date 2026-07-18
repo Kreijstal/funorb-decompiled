@@ -9,7 +9,7 @@ final class c extends gca {
     static String[] field_k;
     private eaa field_l;
 
-    private final void e() {
+    private final void e(byte param0) {
         int var2 = baa.field_v.nextInt() & 8191;
         int var3 = (255 & baa.field_v.nextInt()) + 128;
         int var4 = var3 * via.a(var2, (byte) 72) >> 16;
@@ -18,7 +18,7 @@ final class c extends gca {
         ((c) this).field_l.a((bw) (Object) var6, true);
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         wh.field_p = null;
     }
 
@@ -62,7 +62,7 @@ final class c extends gca {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_i = null;
     }
@@ -80,8 +80,7 @@ final class c extends gca {
               break L0;
             }
           }
-          int discarded$8 = 1;
-          cq discarded$9 = ol.a(pja.field_a[param1][6 + kla.a(var2, m.field_a, -2147483648)]);
+          cq discarded$4 = ol.a(pja.field_a[param1][6 + kla.a(var2, m.field_a, -2147483648)], true);
           return;
         } else {
           L1: {
@@ -92,8 +91,7 @@ final class c extends gca {
               break L1;
             }
           }
-          int discarded$10 = 1;
-          cq discarded$11 = ol.a(pja.field_a[param1][6 + kla.a(var2, m.field_a, -2147483648)]);
+          cq discarded$5 = ol.a(pja.field_a[param1][6 + kla.a(var2, m.field_a, -2147483648)], true);
           return;
         }
     }
@@ -143,8 +141,7 @@ final class c extends gca {
             var4 = ((c) this).field_j * 3.0f;
             L3: while (true) {
               if (baa.field_v.nextFloat() * (var4 + 1.0f) < var4) {
-                int discarded$2 = 99;
-                this.e();
+                this.e((byte) 99);
                 continue L3;
               } else {
                 L4: {
@@ -180,7 +177,7 @@ final class c extends gca {
                 break L5;
               }
             }
-            boolean discarded$3 = ((cia) (Object) stackIn_10_0).b(stackIn_10_1 != 0);
+            boolean discarded$1 = ((cia) (Object) stackIn_10_0).b(stackIn_10_1 != 0);
             var3 = (cia) (Object) ((c) this).field_l.c(0);
             continue L2;
           }

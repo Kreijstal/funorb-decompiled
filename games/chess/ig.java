@@ -12,7 +12,7 @@ final class ig {
     static int field_g;
     static String field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_d = null;
         field_a = null;
@@ -60,8 +60,7 @@ final class ig {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$7 = 83;
-            if (tj.a(param3, param0, param4)) {
+            if (tj.a(param3, param0, param4, (byte) 83)) {
               var5_int = 1;
               stackOut_3_0 = sh.a(-1, param1.a(param3, param0, 5847));
               stackIn_4_0 = stackOut_3_0;

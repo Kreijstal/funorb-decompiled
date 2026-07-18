@@ -208,6 +208,8 @@ final class jf implements ir {
                   break L1;
                 } else {
                   var3 = (Object) (Object) gt.field_r;
+                  var5 = var3;
+                  var5 = var3;
                   break L1;
                 }
               }
@@ -224,9 +226,7 @@ final class jf implements ir {
                 }
               }
             }
-            int discarded$4 = -1;
-            int discarded$5 = 122;
-            stackOut_6_0 = vj.a(param1, (String) var3, (String) var5);
+            stackOut_6_0 = vj.a(param1, (String) var3, (String) var5, 122, -1);
             stackIn_7_0 = stackOut_6_0;
             break L0;
           }
@@ -288,7 +288,7 @@ final class jf implements ir {
         return stackIn_7_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }

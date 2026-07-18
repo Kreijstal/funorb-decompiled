@@ -176,8 +176,7 @@ final class al extends mi implements bo, wi {
                     } else {
                       var4 = param2;
                       nl.a(-22063, var4);
-                      int discarded$2 = 7655;
-                      de.field_ob = md.a(param2);
+                      de.field_ob = md.a(param2, 7655);
                       break L2;
                     }
                   }
@@ -286,8 +285,7 @@ final class al extends mi implements bo, wi {
             var2_int = ((al) this).field_h.f(-2);
             var3 = ((al) this).field_h.g(param0 ^ 843083348);
             var4 = ((al) this).field_h.g(true);
-            int discarded$2 = 0;
-            var5 = hn.c();
+            var5 = hn.c(false);
             if (var4 >= 1890) {
               if (-3 + var5 >= var4) {
                 if (!th.a((byte) 127, var4, var2_int, var3)) {
@@ -324,7 +322,7 @@ final class al extends mi implements bo, wi {
         return bm.field_i;
     }
 
-    final static void a(byte[] param0, int[] param1, int param2, int param3) {
+    final static void a(byte[] param0, int[] param1, int param2, int param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -622,8 +620,7 @@ final class al extends mi implements bo, wi {
               var2_int = ((al) this).field_h.f(-2);
               var3 = ((al) this).field_h.g(-39);
               var4 = ((al) this).field_h.g(true);
-              int discarded$2 = 0;
-              var5 = hn.c();
+              var5 = hn.c(false);
               if (var4 < 1890) {
                 break L1;
               } else {

@@ -31,6 +31,7 @@ final class vg extends pm {
         double var5 = 0.0;
         double var7 = 0.0;
         double var9 = 0.0;
+        Object var11 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -55,8 +56,8 @@ final class vg extends pm {
               if (param0 >= 69) {
                 break L1;
               } else {
-                int discarded$1 = 0;
-                vg.a((String) null, true, -97, (java.awt.Color) null);
+                var11 = null;
+                vg.a((String) null, true, -97, (java.awt.Color) null, false);
                 break L1;
               }
             }
@@ -485,7 +486,7 @@ final class vg extends pm {
         }
     }
 
-    final static void a(String param0, boolean param1, int param2, java.awt.Color param3) {
+    final static void a(String param0, boolean param1, int param2, java.awt.Color param3, boolean param4) {
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;
@@ -1172,8 +1173,7 @@ final class vg extends pm {
                     break L5;
                   }
                 }
-                int discarded$2 = -101;
-                hh.a(param1);
+                hh.a(param1, -101);
                 break L0;
               }
             } else {
@@ -1420,7 +1420,7 @@ final class vg extends pm {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_G = null;
         field_Z = null;
         field_J = null;

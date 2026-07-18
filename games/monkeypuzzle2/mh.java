@@ -221,7 +221,7 @@ final class mh extends jk {
         }
     }
 
-    final static void a(vl param0, int param1) {
+    final static void a(vl param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -243,8 +243,7 @@ final class mh extends jk {
           L0: {
             L1: {
               ob.field_s.a(-8212, (ug) (Object) param0);
-              int discarded$4 = 4;
-              pf.a((byte) -111, param0);
+              pf.a((byte) -111, param0, 4);
               if (param1 == 0) {
                 break L1;
               } else {
@@ -460,7 +459,7 @@ final class mh extends jk {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_F = null;
         int var1 = 0;
         field_H = null;

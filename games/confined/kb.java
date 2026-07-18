@@ -29,8 +29,7 @@ final class kb {
         String stackOut_7_2 = null;
         try {
           L0: {
-            int discarded$6 = 37;
-            if (ig.a(param0, param2)) {
+            if (ig.a(param0, param2, (byte) 37)) {
               stackOut_4_0 = ei.o(69);
               stackIn_5_0 = stackOut_4_0;
               break L0;

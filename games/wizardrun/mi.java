@@ -485,7 +485,6 @@ abstract class mi extends ub implements bg {
             Exception var6_ref3 = null;
             Throwable var6_ref4 = null;
             int var6_int = 0;
-            String var7 = null;
             String var8 = null;
             int var9 = 0;
             String[] var10 = null;
@@ -500,9 +499,10 @@ abstract class mi extends ub implements bg {
             int var17 = 0;
             Object var18 = null;
             byte[][] var19 = null;
-            byte[][] var20 = null;
+            String var20 = null;
             byte[][] var21 = null;
             byte[][] var22 = null;
+            byte[][] var23 = null;
             RuntimeException stackIn_34_0 = null;
             StringBuilder stackIn_34_1 = null;
             RuntimeException stackIn_35_0 = null;
@@ -577,7 +577,7 @@ abstract class mi extends ub implements bg {
                                       }
                                     }
                                   }
-                                  var7 = param1.d(0);
+                                  var20 = param1.d(0);
                                   var8 = param1.d(0);
                                   var9 = param1.f(255);
                                   var10 = new String[var9];
@@ -585,10 +585,10 @@ abstract class mi extends ub implements bg {
                                   L6: while (true) {
                                     if (var11_int >= var9) {
                                       L7: {
-                                        var22 = new byte[var9][];
+                                        var23 = new byte[var9][];
+                                        var22 = var23;
                                         var21 = var22;
-                                        var20 = var21;
-                                        var19 = var20;
+                                        var19 = var21;
                                         var11 = var19;
                                         if (var6_int == 3) {
                                           var12_int = 0;
@@ -598,7 +598,7 @@ abstract class mi extends ub implements bg {
                                             } else {
                                               var13 = param1.i(255);
                                               var11[var12_int] = new byte[var13];
-                                              param1.a(true, var13, var22[var12_int], 0);
+                                              param1.a(true, var13, var23[var12_int], 0);
                                               var12_int++;
                                               continue L8;
                                             }
@@ -613,13 +613,11 @@ abstract class mi extends ub implements bg {
                                       var13 = var17;
                                       L9: while (true) {
                                         if (var9 <= var17) {
-                                          int discarded$5 = -39;
-                                          ((pk) var18).field_m[var5] = param2.a(var8, var12, qc.a(var7), 3617);
-                                          ((pk) var18).field_k[var5] = var22;
+                                          ((pk) var18).field_m[var5] = param2.a(var8, var12, qc.a(var20, (byte) -39), 3617);
+                                          ((pk) var18).field_k[var5] = var23;
                                           break L3;
                                         } else {
-                                          int discarded$6 = -39;
-                                          var12[var17] = qc.a(var10[var17]);
+                                          var12[var17] = qc.a(var10[var17], (byte) -39);
                                           var17++;
                                           continue L9;
                                         }
@@ -635,12 +633,10 @@ abstract class mi extends ub implements bg {
                             }
                           }
                           L10: {
-                            String dupTemp$7 = param1.d(0);
-                            var15 = dupTemp$7;
-                            var7 = dupTemp$7;
-                            String dupTemp$8 = param1.d(0);
-                            var16 = dupTemp$8;
-                            var8 = dupTemp$8;
+                            var15 = param1.d(0);
+                            String dupTemp$1 = param1.d(0);
+                            var16 = dupTemp$1;
+                            var8 = dupTemp$1;
                             var9 = 0;
                             if (1 != var6_int) {
                               break L10;
@@ -651,8 +647,7 @@ abstract class mi extends ub implements bg {
                           }
                           ((pk) var18).field_t[var5] = var6_int;
                           ((pk) var18).field_p[var5] = var9;
-                          int discarded$9 = -39;
-                          ((pk) var18).field_l[var5] = param2.a(-8024, qc.a(var15), var16);
+                          ((pk) var18).field_l[var5] = param2.a(-8024, qc.a(var15, (byte) -39), var16);
                           break L3;
                         }
                         break L2;
@@ -762,7 +757,7 @@ abstract class mi extends ub implements bg {
         return ((mi) this).a((byte) -112) != null ? true : false;
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, boolean param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -799,8 +794,7 @@ abstract class mi extends ub implements bg {
                   stackIn_12_0 = stackOut_11_0;
                   break L0;
                 } else {
-                  int discarded$15 = 1;
-                  if (!df.a(param0.charAt(var3_int))) {
+                  if (!df.a(param0.charAt(var3_int), true)) {
                     stackOut_8_0 = 0;
                     stackIn_9_0 = stackOut_8_0;
                     return stackIn_9_0 != 0;
@@ -945,7 +939,7 @@ abstract class mi extends ub implements bg {
         return var2;
     }
 
-    final static void d() {
+    final static void d(int param0) {
     }
 
     void e(int param0) {

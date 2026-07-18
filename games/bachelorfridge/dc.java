@@ -550,7 +550,7 @@ final class dc extends k {
         return var4;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_o = null;
         field_r = null;
         field_m = null;

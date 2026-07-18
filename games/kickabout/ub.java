@@ -10,7 +10,7 @@ abstract class ub extends wj {
     private se field_H;
     static hd field_D;
 
-    final static kg h() {
+    final static kg h(byte param0) {
         kg var1 = new kg(kw.field_i, ai.field_J, aq.field_f[0], fc.field_g[0], ku.field_c[0], lo.field_j[0], pq.field_O[0], lt.field_a);
         int var2 = -103;
         tk.h((byte) -98);
@@ -74,7 +74,7 @@ abstract class ub extends wj {
         }
     }
 
-    final static ut[] i() {
+    final static ut[] i(byte param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -113,13 +113,13 @@ abstract class ub extends wj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_G = null;
         int var1 = 0;
         field_D = null;
     }
 
-    private final int b() {
+    private final int b(boolean param0) {
         return !((ub) this).field_C ? 0 : this == (Object) (Object) ((ub) this).field_H.h((byte) 18) ? 256 : 0;
     }
 
@@ -141,8 +141,7 @@ abstract class ub extends wj {
     }
 
     boolean k(int param0) {
-        int discarded$0 = 1;
-        int var2 = this.b();
+        int var2 = this.b(true);
         int var3 = -((ub) this).field_F + var2;
         if (var3 > 0) {
             ((ub) this).field_F = ((ub) this).field_F + (var3 + 7) / 8;
@@ -183,8 +182,7 @@ abstract class ub extends wj {
     abstract void a(int param0, byte param1, int param2);
 
     boolean a(int param0) {
-        int discarded$2 = 1;
-        ((ub) this).field_F = this.b();
+        ((ub) this).field_F = this.b(true);
         if (param0 < -11) {
           if (((ub) this).field_F == 0) {
             if (((ub) this).field_C) {

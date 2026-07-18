@@ -12,7 +12,7 @@ class ma extends mf implements ra {
     static long field_E;
     jc field_I;
 
-    private final void b() {
+    private final void b(boolean param0) {
         int var4 = Chess.field_G;
         qj var2 = new qj(((ma) this).field_I);
         mf var3 = (mf) (Object) var2.c(-20229);
@@ -215,8 +215,7 @@ class ma extends mf implements ra {
           L0: {
             L1: {
               L2: {
-                int discarded$2 = -51;
-                param0 = qm.a('_', param0, "");
+                param0 = qm.a('_', param0, "", (byte) -51);
                 var3 = i.a(0, param2);
                 var4 = 79 / ((param1 - -66) / 51);
                 if (-1 != param0.indexOf(param2)) {
@@ -774,8 +773,7 @@ class ma extends mf implements ra {
 
     void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(param0, (int) (char)param1, param2, param3, param4);
-        int discarded$0 = 1;
-        this.b();
+        this.b(true);
     }
 
     ma(int param0, int param1, int param2, int param3, jm param4) {
@@ -882,7 +880,7 @@ class ma extends mf implements ra {
         return stackIn_12_0 != 0;
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_F = null;
         field_J = null;
         field_G = null;

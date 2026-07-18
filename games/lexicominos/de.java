@@ -113,7 +113,7 @@ final class de extends RuntimeException {
         }
     }
 
-    final static void a(boolean param0, float param1, String param2) {
+    final static void a(boolean param0, float param1, String param2, boolean param3) {
         try {
             if (null == qj.field_fb) {
                 qj.field_fb = new uk(ug.field_A, jj.field_d);

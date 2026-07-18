@@ -18,7 +18,7 @@ final class v extends mc {
     int[][] field_y;
     int field_n;
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = 0;
         int var2 = 0;
         var1 = 74;
@@ -40,7 +40,7 @@ final class v extends mc {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 0;
         field_A = null;
         field_x = null;

@@ -43,7 +43,7 @@ abstract class r extends od {
         }
     }
 
-    final static via a(int param0, int param1, int param2, fia param3, int param4) {
+    final static via a(int param0, int param1, int param2, fia param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         via var7 = null;

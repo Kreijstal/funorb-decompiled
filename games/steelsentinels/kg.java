@@ -498,7 +498,7 @@ final class kg extends gh {
         return true;
     }
 
-    final static void a(int param0, mi param1, mi param2) {
+    final static void a(int param0, mi param1, mi param2, int param3) {
         try {
             ud.field_C = 480;
             pa.field_k = param2;

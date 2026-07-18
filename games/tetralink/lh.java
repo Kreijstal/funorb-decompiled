@@ -13,7 +13,7 @@ final class lh extends um {
     static String field_r;
     static String field_w;
 
-    final static int[] h() {
+    final static int[] h(int param0) {
         return new int[8];
     }
 
@@ -189,7 +189,7 @@ final class lh extends um {
         return stackIn_9_0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_x = null;
         field_q = null;
         field_u = null;

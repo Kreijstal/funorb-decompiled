@@ -184,7 +184,7 @@ final class ok {
         return ((ok) this).field_c[fieldTemp$0];
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_j = null;
         field_d = null;
         field_f = null;
@@ -283,21 +283,19 @@ final class ok {
                   break L0;
                 } else {
                   L2: {
-                    int discarded$23 = 0;
-                    if (!kh.a(param1)) {
-                      int discarded$24 = 1;
-                      var6 = param1.b(si.c(-1 + var5), (byte) -123);
+                    if (!kh.a(param1, false)) {
+                      var6 = param1.b(si.c(-1 + var5, 1), (byte) -123);
                       var4[var5] = var4[var6];
                       break L2;
                     } else {
                       var6_ref_l = new l();
-                      int discarded$25 = param1.b(24, (byte) -89);
-                      int discarded$26 = param1.b(24, (byte) -117);
+                      int discarded$12 = param1.b(24, (byte) -89);
+                      int discarded$13 = param1.b(24, (byte) -117);
                       var6_ref_l.field_b = param1.b(24, (byte) -119);
-                      int discarded$27 = param1.b(9, (byte) -119);
-                      int discarded$28 = param1.b(12, (byte) -101);
-                      int discarded$29 = param1.b(12, (byte) -125);
-                      int discarded$30 = param1.b(12, (byte) -93);
+                      int discarded$14 = param1.b(9, (byte) -119);
+                      int discarded$15 = param1.b(12, (byte) -101);
+                      int discarded$16 = param1.b(12, (byte) -125);
+                      int discarded$17 = param1.b(12, (byte) -93);
                       var4[var5] = var6_ref_l;
                       break L2;
                     }
@@ -434,9 +432,7 @@ final class ok {
                         var18 = 0;
                         L5: while (true) {
                           if (3 <= var18) {
-                            int discarded$2 = -1622738130;
-                            int discarded$3 = 1;
-                            up.a(pn.field_k, uc.field_b, false, false, var17);
+                            up.a(pn.field_k, uc.field_b, false, false, var17, true, -1622738130);
                             qu.a(var7, var17, var14, var12, var9, var13, (byte) -9, var8);
                             var15++;
                             continue L3;

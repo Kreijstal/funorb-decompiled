@@ -7,13 +7,13 @@ final class u {
     static int[] field_c;
     static int field_a;
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_d = null;
         field_c = null;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, boolean param1) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (vr.field_c == -3) {
             ts.a(6493);
@@ -113,7 +113,7 @@ final class u {
         }
     }
 
-    final static int a() {
+    final static int a(int param0) {
         lg.field_c.c(123);
         if (!vp.field_o.d(0)) {
             return mh.b((byte) 115);

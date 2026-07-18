@@ -101,7 +101,7 @@ final class wj {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -186,14 +186,14 @@ final class wj {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_f = null;
         field_c = null;
         field_g = null;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         bc var1 = (bc) (Object) va.field_h.d(77);
         if (!(var1 != null)) {
             var1 = new bc();

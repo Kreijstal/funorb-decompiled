@@ -64,7 +64,7 @@ final class pc extends ck {
         return stackIn_11_0;
     }
 
-    final static void a(int param0, wk[] param1, int param2, mi param3, int param4, int param5, int param6, int param7, int param8, wk[] param9, int param10, int param11, int param12, int param13, int param14, int param15, mi param16, int param17, wk[] param18) {
+    final static void a(int param0, wk[] param1, int param2, mi param3, int param4, int param5, int param6, int param7, int param8, wk[] param9, int param10, int param11, int param12, int param13, int param14, int param15, mi param16, int param17, wk[] param18, int param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -144,8 +144,7 @@ final class pc extends ck {
         String stackOut_15_2 = null;
         try {
           L0: {
-            int discarded$1 = 8;
-            vk.a(param14, 240, 8, 2, 0, 16777215, new ak(param18), (byte) -115, param16, param11, new ak(param9), 480, 8, 320, param0, 1146810, 8, param17, param3, new ak(param1));
+            vk.a(param14, 240, 8, 2, 0, 16777215, new ak(param18), (byte) -115, param16, param11, new ak(param9), 480, 8, 320, param0, 1146810, 8, param17, param3, new ak(param1), 8);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -280,7 +279,7 @@ final class pc extends ck {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_s = null;
         field_q = null;
         int var1 = 124;

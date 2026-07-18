@@ -310,7 +310,7 @@ final class cw {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }

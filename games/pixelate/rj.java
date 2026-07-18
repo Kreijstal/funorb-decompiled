@@ -34,7 +34,7 @@ final class rj extends gn {
         }
     }
 
-    final static nc j() {
+    final static nc j(int param0) {
         return (nc) (Object) new k();
     }
 

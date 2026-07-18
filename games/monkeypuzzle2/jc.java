@@ -177,12 +177,12 @@ final class jc {
                         break L5;
                       }
                     }
-                    int fieldTemp$5 = param2.field_m;
+                    int fieldTemp$4 = param2.field_m;
                     param2.field_m = param2.field_m + 1;
-                    param2.field_o[fieldTemp$5] = param0;
-                    int fieldTemp$6 = param0.field_m;
+                    param2.field_o[fieldTemp$4] = param0;
+                    int fieldTemp$5 = param0.field_m;
                     param0.field_m = param0.field_m + 1;
-                    param0.field_o[fieldTemp$6] = param2;
+                    param0.field_o[fieldTemp$5] = param2;
                     param2.field_v = 0.0f;
                     param2.field_D = 0.0f;
                     param2.field_x = true;
@@ -195,12 +195,12 @@ final class jc {
                         } else {
                           if (param0.field_w != 3) {
                             L8: {
-                              int fieldTemp$7 = param2.field_m;
+                              int fieldTemp$6 = param2.field_m;
                               param2.field_m = param2.field_m + 1;
-                              param2.field_o[fieldTemp$7] = param0;
-                              int fieldTemp$8 = param0.field_m;
+                              param2.field_o[fieldTemp$6] = param0;
+                              int fieldTemp$7 = param0.field_m;
                               param0.field_m = param0.field_m + 1;
-                              param0.field_o[fieldTemp$8] = param2;
+                              param0.field_o[fieldTemp$7] = param2;
                               if (!aj.field_b.e(11253)) {
                                 var6 = (il) (Object) aj.field_b.d(4011);
                                 var3_ref = var6;
@@ -221,8 +221,7 @@ final class jc {
                                   kc.b(true);
                                   break L9;
                                 } else {
-                                  int discarded$9 = -127;
-                                  be.b();
+                                  be.b(-127);
                                   break L9;
                                 }
                               }
@@ -319,14 +318,14 @@ final class jc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_d = null;
         field_f = null;
         field_a = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (re.field_e > 32) {
             qb.a(256, -32 + re.field_e);
         } else {

@@ -176,7 +176,7 @@ final class ca implements uo {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1, hd param2, boolean param3, int param4, nm param5) {
+    final static void a(java.awt.Component param0, int param1, hd param2, boolean param3, int param4, nm param5, int param6, int param7) {
         try {
             rc.a(22050, true, 10);
             l.field_a = rc.a(param2, param0, 0, 22050);

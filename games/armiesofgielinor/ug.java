@@ -9,7 +9,7 @@ final class ug extends IOException {
     static int field_b;
     static int field_a;
 
-    final static void a(int param0, ha param1) {
+    final static void a(int param0, ha param1, boolean param2) {
         int var3_int = param1.field_sb;
         int var4 = param1.a(true, var3_int);
         System.out.println("--- STATE DUMP REQUESTED - SERVER CHECKSUM: " + Integer.toString(ub.field_d, 16) + " SERVER CHECKSUM: " + Integer.toString(param1.a(true, var3_int), 16) + " ---");
@@ -36,29 +36,29 @@ final class ug extends IOException {
         ls[] var10 = null;
         wo var11 = null;
         Object stackIn_8_0 = null;
-        Object stackIn_24_0 = null;
-        Object stackIn_33_0 = null;
-        java.awt.Frame stackIn_35_0 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
+        Object stackIn_26_0 = null;
+        Object stackIn_35_0 = null;
+        java.awt.Frame stackIn_37_0 = null;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
-        String stackIn_39_2 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        String stackIn_41_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_23_0 = null;
+        Object stackOut_25_0 = null;
         Object stackOut_7_0 = null;
-        java.awt.Frame stackOut_34_0 = null;
-        Object stackOut_32_0 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
+        java.awt.Frame stackOut_36_0 = null;
+        Object stackOut_34_0 = null;
         RuntimeException stackOut_38_0 = null;
         StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
+        String stackOut_40_2 = null;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
+        String stackOut_39_2 = null;
         var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
@@ -75,9 +75,9 @@ final class ug extends IOException {
                         if (var7_int != 0) {
                           break L1;
                         } else {
-                          stackOut_23_0 = null;
-                          stackIn_24_0 = stackOut_23_0;
-                          return (java.awt.Frame) (Object) stackIn_24_0;
+                          stackOut_25_0 = null;
+                          stackIn_26_0 = stackOut_25_0;
+                          return (java.awt.Frame) (Object) stackIn_26_0;
                         }
                       } else {
                         L3: {
@@ -125,14 +125,14 @@ final class ug extends IOException {
                   var7 = (java.awt.Frame) var11.field_f;
                   if (var7 != null) {
                     if (2 != var11.field_g) {
-                      stackOut_34_0 = (java.awt.Frame) var7;
-                      stackIn_35_0 = stackOut_34_0;
+                      stackOut_36_0 = (java.awt.Frame) var7;
+                      stackIn_37_0 = stackOut_36_0;
                       break L0;
                     } else {
                       fj.a(var7, param3, -2);
-                      stackOut_32_0 = null;
-                      stackIn_33_0 = stackOut_32_0;
-                      return (java.awt.Frame) (Object) stackIn_33_0;
+                      stackOut_34_0 = null;
+                      stackIn_35_0 = stackOut_34_0;
+                      return (java.awt.Frame) (Object) stackIn_35_0;
                     }
                   } else {
                     return null;
@@ -150,33 +150,33 @@ final class ug extends IOException {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_36_0 = (RuntimeException) var6;
-            stackOut_36_1 = new StringBuilder().append("ug.A(").append(param0).append(',').append(0).append(',').append(-1).append(',');
-            stackIn_38_0 = stackOut_36_0;
-            stackIn_38_1 = stackOut_36_1;
-            stackIn_37_0 = stackOut_36_0;
-            stackIn_37_1 = stackOut_36_1;
+            stackOut_38_0 = (RuntimeException) var6;
+            stackOut_38_1 = new StringBuilder().append("ug.A(").append(param0).append(',').append(0).append(',').append(-1).append(',');
+            stackIn_40_0 = stackOut_38_0;
+            stackIn_40_1 = stackOut_38_1;
+            stackIn_39_0 = stackOut_38_0;
+            stackIn_39_1 = stackOut_38_1;
             if (param3 == null) {
-              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
-              stackOut_38_2 = "null";
-              stackIn_39_0 = stackOut_38_0;
-              stackIn_39_1 = stackOut_38_1;
-              stackIn_39_2 = stackOut_38_2;
+              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
+              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+              stackOut_40_2 = "null";
+              stackIn_41_0 = stackOut_40_0;
+              stackIn_41_1 = stackOut_40_1;
+              stackIn_41_2 = stackOut_40_2;
               break L6;
             } else {
-              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
-              stackOut_37_2 = "{...}";
-              stackIn_39_0 = stackOut_37_0;
-              stackIn_39_1 = stackOut_37_1;
-              stackIn_39_2 = stackOut_37_2;
+              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
+              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_2 = "{...}";
+              stackIn_41_0 = stackOut_39_0;
+              stackIn_41_1 = stackOut_39_1;
+              stackIn_41_2 = stackOut_39_2;
               break L6;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ',' + param4 + ',' + param5 + ')');
+          throw ig.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ',' + param4 + ',' + param5 + ')');
         }
-        return stackIn_35_0;
+        return stackIn_37_0;
     }
 
     final static String a(int param0, CharSequence param1) {
@@ -206,8 +206,7 @@ final class ug extends IOException {
           L0: {
             if (param0 == 16) {
               L1: {
-                int discarded$2 = 0;
-                var2 = lt.a(0, wc.a(param1));
+                var2 = lt.a(0, wc.a(param1, 0));
                 if (var2 == null) {
                   var2 = "";
                   break L1;
@@ -257,7 +256,7 @@ final class ug extends IOException {
         return stackIn_7_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
     }
 

@@ -44,8 +44,7 @@ final class mc {
                 break L1;
               }
             }
-            int discarded$2 = 1;
-            stackOut_2_0 = uj.a(param2, (byte) 124, 16);
+            stackOut_2_0 = uj.a(param2, (byte) 124, 16, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

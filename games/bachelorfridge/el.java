@@ -308,15 +308,13 @@ final class el extends aba {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_g = null;
     }
 
-    final static void e() {
-        int discarded$0 = 89;
-        int var1 = te.d();
-        int discarded$1 = -74;
-        int var2 = nka.a();
+    final static void e(byte param0) {
+        int var1 = te.d((byte) 89);
+        int var2 = nka.a((byte) -74);
         raa.field_I.a((ge.field_I << 1) + var2, 9, -wo.field_j + rs.field_a, vka.field_q - ge.field_I, (wo.field_j << 1) + var1);
         w.a(true);
     }

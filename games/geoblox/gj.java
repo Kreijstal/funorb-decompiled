@@ -70,16 +70,14 @@ final class gj extends fj {
           if (param2 == 30) {
             if (param1 != 255) {
               if (param1 < 100) {
-                int discarded$4 = 0;
-                dl.field_a = ig.a(param0, param1);
+                dl.field_a = ig.a(param0, param1, false);
                 return;
               } else {
                 if (param1 <= 105) {
                   dl.field_a = ac.a(28, param3);
                   return;
                 } else {
-                  int discarded$5 = 0;
-                  dl.field_a = ig.a(param0, param1);
+                  dl.field_a = ig.a(param0, param1, false);
                   return;
                 }
               }

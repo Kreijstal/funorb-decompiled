@@ -36,7 +36,7 @@ final class ov implements Iterator {
         }
     }
 
-    final static void a(tf param0) {
+    final static void a(tf param0, int param1) {
         Object var2 = null;
         gn var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -62,8 +62,7 @@ final class ov implements Iterator {
         try {
           L0: {
             L1: while (true) {
-              int discarded$2 = 0;
-              if (jo.a(param0)) {
+              if (jo.a(param0, false)) {
                 break L0;
               } else {
                 var2_ref = param0.g(24009);
@@ -124,7 +123,7 @@ final class ov implements Iterator {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
     }
@@ -174,7 +173,7 @@ final class ov implements Iterator {
         ((ov) this).field_g = null;
     }
 
-    private final void b() {
+    private final void b(int param0) {
         ((ov) this).field_e = ((ov) this).field_d.field_e[0].field_d;
         ((ov) this).field_f = 1;
         ((ov) this).field_g = null;
@@ -202,8 +201,7 @@ final class ov implements Iterator {
         ((ov) this).field_g = null;
         try {
             ((ov) this).field_d = param0;
-            int discarded$0 = 0;
-            this.b();
+            this.b(0);
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) (Object) runtimeException, "ov.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

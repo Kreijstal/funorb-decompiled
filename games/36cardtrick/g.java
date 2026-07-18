@@ -25,7 +25,7 @@ class g extends lk implements u {
         }
     }
 
-    final static void k() {
+    final static void k(int param0) {
         if (!(eh.d(19314))) {
             return;
         }
@@ -34,8 +34,7 @@ class g extends lk implements u {
 
     final void a(int param0, int param1, int param2, int param3, boolean param4) {
         super.a(param0, param1, param2, param3, param4);
-        int discarded$0 = 1;
-        this.h();
+        this.h(1);
     }
 
     lk i(int param0) {
@@ -309,13 +308,13 @@ class g extends lk implements u {
         return stackIn_11_0 != 0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_C = null;
         field_y = null;
         field_B = null;
     }
 
-    private final void h() {
+    private final void h(int param0) {
         int var4 = Main.field_T;
         qd var2 = new qd(((g) this).field_z);
         lk var3 = (lk) (Object) var2.b((byte) -33);
@@ -998,7 +997,7 @@ class g extends lk implements u {
         }
     }
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_7_0 = 0;
@@ -1327,7 +1326,7 @@ class g extends lk implements u {
         return stackIn_3_0;
     }
 
-    final static boolean j() {
+    final static boolean j(int param0) {
         return null != cb.field_j && ra.field_b == ad.field_q;
     }
 

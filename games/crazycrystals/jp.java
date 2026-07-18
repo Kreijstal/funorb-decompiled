@@ -5,7 +5,7 @@ final class jp {
     static int[] field_a;
     static String field_b;
 
-    final static ak a(int param0) {
+    final static ak a(int param0, int param1, int param2, int param3, int param4) {
         ak var5 = null;
         int var6 = 0;
         var6 = CrazyCrystals.field_B;
@@ -24,9 +24,7 @@ final class jp {
             var5.field_h = 10;
             var5.field_g = param0;
             hd.field_d.b(0, (jb) (Object) var5);
-            int discarded$4 = 0;
-            int discarded$5 = 3;
-            j.a(var5);
+            j.a(var5, 3, false);
             return var5;
           }
         }

@@ -53,8 +53,7 @@ final class qh extends vf {
             }
             L2: {
               var10 = (rg) (Object) stackIn_3_0;
-              int discarded$3 = 14907;
-              lc.a(param1 + param3.field_q, param3.field_F + (param1 - -param3.field_q), param4 - (-param3.field_m + -param3.field_z), param4 + param3.field_m);
+              lc.a(param1 + param3.field_q, param3.field_F + (param1 - -param3.field_q), param4 - (-param3.field_m + -param3.field_z), param4 + param3.field_m, 14907);
               if (var10 != null) {
                 param2 = param2 & var10.field_L;
                 break L2;
@@ -143,8 +142,7 @@ final class qh extends vf {
               }
             }
             ((qh) this).field_v.a(param1, param4, param3, (byte) 100, (qh) this);
-            int discarded$4 = 0;
-            ib.b();
+            ib.b(false);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -214,8 +212,7 @@ final class qh extends vf {
           var10.field_c = 50;
           var10.field_k = 500;
           var3 = 20 + var10.field_c - -var10.field_b;
-          int discarded$2 = 1;
-          if (tj.a()) {
+          if (tj.a(true)) {
             var11 = new bd(16, ba.field_Q, (ok) (Object) pn.field_a);
             var11.field_b = var3;
             var11.field_j = -(var11.field_f / 2) + 320;
@@ -257,8 +254,7 @@ final class qh extends vf {
           L2: {
             var12.field_j = 320 - var12.field_f / 2;
             var10.a((byte) -60, var12);
-            int discarded$3 = 1;
-            if (!tj.a()) {
+            if (!tj.a(true)) {
               var10.a(param0, 26206, 2 - -h.field_W);
               break L2;
             } else {

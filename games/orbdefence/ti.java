@@ -347,7 +347,7 @@ final class ti extends sf {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_bb = null;
     }
 

@@ -8,7 +8,7 @@ class sd extends cn {
     static bd field_t;
     static boolean field_u;
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         try {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
@@ -104,8 +104,7 @@ class sd extends cn {
     public final void a(int param0, int param1, int param2, ag param3, boolean param4) {
         try {
             if (param4) {
-                int discarded$0 = 0;
-                ij.a(param3.field_x, param3.field_s, param3.field_m + param0, param3.field_v + param1);
+                ij.a(param3.field_x, param3.field_s, param3.field_m + param0, param3.field_v + param1, false);
             }
             super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {

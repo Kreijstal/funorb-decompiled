@@ -60,8 +60,7 @@ final class ij extends kc {
               break L0;
             } else {
               if (((ij) this).field_Ib[param3] == -1) {
-                int discarded$25 = -19741;
-                ua.g();
+                ua.g(-19741);
                 gb.a(14);
                 break L0;
               } else {
@@ -772,7 +771,7 @@ final class ij extends kc {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_Ob = null;
         field_Tb = null;
         field_Gb = null;

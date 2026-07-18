@@ -42,8 +42,7 @@ final class qh {
                   return ((qh) this).field_c;
                 }
               } else {
-                int discarded$2 = 1;
-                ((qh) this).field_c = fe.a(((qh) this).field_a, ((qh) this).field_d, ((qh) this).field_h);
+                ((qh) this).field_c = fe.a(((qh) this).field_a, ((qh) this).field_d, ((qh) this).field_h, true);
                 return ((qh) this).field_c;
               }
             } else {
@@ -69,8 +68,7 @@ final class qh {
                 return ((qh) this).field_c;
               }
             } else {
-              int discarded$3 = 1;
-              ((qh) this).field_c = fe.a(((qh) this).field_a, ((qh) this).field_d, ((qh) this).field_h);
+              ((qh) this).field_c = fe.a(((qh) this).field_a, ((qh) this).field_d, ((qh) this).field_h, true);
               return ((qh) this).field_c;
             }
           }
@@ -79,7 +77,7 @@ final class qh {
         }
     }
 
-    final static void a(mf param0) {
+    final static void a(mf param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -188,7 +186,7 @@ final class qh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_i = null;
         field_k = null;

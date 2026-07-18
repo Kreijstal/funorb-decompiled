@@ -7,7 +7,7 @@ final class on extends qf {
     static String field_b;
     static int field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_e = null;
@@ -17,7 +17,7 @@ final class on extends qf {
         return param0 & param1;
     }
 
-    final static void a(int param0, int param1, fn param2) {
+    final static void a(int param0, int param1, fn param2, byte param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -72,7 +72,7 @@ final class on extends qf {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return i.field_R;
     }
 

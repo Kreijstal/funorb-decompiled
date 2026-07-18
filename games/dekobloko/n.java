@@ -7,13 +7,13 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
     static String field_a;
     static String field_b;
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_b = null;
         field_a = null;
     }
 
-    final static void a(int param0, cc param1, mm param2, int param3, int param4, cc param5, int param6, mm param7, int param8, int param9, cc param10) {
+    final static void a(int param0, cc param1, mm param2, int param3, int param4, cc param5, int param6, mm param7, int param8, int param9, cc param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
         int var21_int = 0;
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
@@ -94,18 +94,13 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
         String stackOut_15_2 = null;
         try {
           L0: {
-            int discarded$5 = 480;
-            lk.a(param7, true, param2);
+            lk.a(param7, true, param2, 480);
             var21_int = 0;
             s.a(14, 20, (byte) -91, 16, 20);
             pj.a(31004, 320, 240);
             ci.a(param10, 32, 5, (byte) -63, 4, param5);
             gk.a(20, 20, (byte) -75, param1);
-            int discarded$6 = 1;
-            int discarded$7 = 0;
-            int discarded$8 = 0;
-            int discarded$9 = 1;
-            wf.a();
+            wf.a(1, 0, 0, true);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -566,7 +561,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
         return (int)(1000000000L / ul.field_g);
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = 0;
         int var2 = 0;
         var2 = client.field_A ? 1 : 0;
@@ -576,23 +571,20 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
           var1 = bb.field_e;
           if (0 >= var1) {
             cl.field_r.n(-127);
-            int discarded$3 = -1199770620;
-            em.a();
+            em.a(-1199770620);
             return;
           } else {
             if (var1 == 1) {
               ed.field_d = aa.field_d;
               ed.field_d = db.a(new CharSequence[3], -62);
               cl.field_r.n(-127);
-              int discarded$4 = -1199770620;
-              em.a();
+              em.a(-1199770620);
               return;
             } else {
               ed.field_d = cm.a((byte) 87, jc.field_e, new String[1]);
               ed.field_d = db.a(new CharSequence[3], -62);
               cl.field_r.n(-127);
-              int discarded$5 = -1199770620;
-              em.a();
+              em.a(-1199770620);
               return;
             }
           }

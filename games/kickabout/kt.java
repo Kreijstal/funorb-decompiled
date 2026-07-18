@@ -100,7 +100,7 @@ final class kt extends js {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         cd.a((byte) -128, g.field_a.field_J, 15);
     }
 
@@ -357,7 +357,7 @@ final class kt extends js {
         return false;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_m = null;
         field_i = null;
@@ -378,7 +378,7 @@ final class kt extends js {
         }
     }
 
-    final static String a(byte[] param0) {
+    final static String a(byte[] param0, boolean param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;

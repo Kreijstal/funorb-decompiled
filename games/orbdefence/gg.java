@@ -7,7 +7,7 @@ final class gg extends ej implements ai {
     static int[] field_O;
     static int field_N;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, kc param7, kc param8, int param9, int param10, int param11, pf param12, int param13, int param14, pf param15, int param16, pf param17, int param18, int param19) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, kc param7, kc param8, int param9, int param10, int param11, pf param12, int param13, int param14, pf param15, int param16, pf param17, int param18, int param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -90,9 +90,7 @@ final class gg extends ej implements ai {
             ta.a(0, param8, param7, 480);
             nc.a(-101, param3, param10, param9, param1);
             jk.b(240, 320, 249);
-            int discarded$2 = -81;
-            int discarded$3 = 6;
-            fe.a(8, 6, param12, param15);
+            fe.a(8, 6, param12, param15, 6, -81);
             e.a(false, 0, 0, param17);
             l.a(0, param14, param19, param0);
             break L0;
@@ -330,8 +328,7 @@ final class gg extends ej implements ai {
                 if (hh.field_d == param1) {
                   ((gg) this).field_r = ((gg) this).field_r + 10;
                   var3 = (Object) (Object) fi.field_a;
-                  int discarded$25 = -38;
-                  if (!rc.b()) {
+                  if (!rc.b(-38)) {
                     break L1;
                   } else {
                     var3 = (Object) (Object) va.field_a;
@@ -416,7 +413,7 @@ final class gg extends ej implements ai {
         }
     }
 
-    public static void f() {
+    public static void f(boolean param0) {
         field_O = null;
     }
 
@@ -443,8 +440,7 @@ final class gg extends ej implements ai {
           L0: {
             var6_int = -74 % ((param0 - -3) / 62);
             if (param3 == ((gg) this).field_P) {
-              int discarded$2 = 126;
-              this.p();
+              this.p(126);
               break L0;
             } else {
               return;
@@ -482,7 +478,7 @@ final class gg extends ej implements ai {
         }
     }
 
-    private final void p() {
+    private final void p(int param0) {
         if (!((gg) this).field_A) {
             return;
         }

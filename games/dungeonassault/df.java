@@ -10,7 +10,7 @@ final class df {
     static String field_d;
     static String field_f;
 
-    final static void b() {
+    final static void b(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         ai var2 = null;
@@ -54,7 +54,7 @@ final class df {
         }
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return (int)(-16912800L + kd.c(-2456) / 60000L);
     }
 

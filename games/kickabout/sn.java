@@ -34,7 +34,7 @@ final class sn {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_a = null;
         field_g = null;

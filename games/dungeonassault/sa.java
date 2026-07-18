@@ -112,7 +112,7 @@ final class sa {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_x = null;
         field_h = null;
         field_e = null;
@@ -121,7 +121,7 @@ final class sa {
         field_w = null;
     }
 
-    private final void a() {
+    private final void a(int param0) {
         ((sa) this).a(((sa) this).field_g, ((sa) this).field_d, true, -89, ((sa) this).field_q);
     }
 
@@ -136,8 +136,7 @@ final class sa {
           var2 = (-((sa) this).field_u.field_y + ((sa) this).field_b >> 1) + ((sa) this).field_m;
           var3 = ((sa) this).field_j - -((sa) this).field_l;
           if (0 == ((sa) this).field_o) {
-            int discarded$1 = -66;
-            this.a(var2, var3, ((sa) this).field_u);
+            this.a(var2, var3, ((sa) this).field_u, (byte) -66);
             break L0;
           } else {
             if (((sa) this).field_o <= 256) {
@@ -270,7 +269,7 @@ final class sa {
         }
     }
 
-    private final void a(int param0, int param1, cn param2) {
+    private final void a(int param0, int param1, cn param2, byte param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -589,26 +588,24 @@ final class sa {
           if ((mo.field_a & 3) == 0) {
             L2: {
               if (((sa) this).field_o == 0) {
-                int fieldTemp$173 = ((sa) this).field_p - 1;
+                int fieldTemp$99 = ((sa) this).field_p - 1;
                 ((sa) this).field_p = ((sa) this).field_p - 1;
-                if (fieldTemp$173 >= 0) {
+                if (fieldTemp$99 >= 0) {
                   ((sa) this).field_l = ((sa) this).field_l - 1;
                   if (-17 != ((sa) this).field_p) {
                     break L2;
                   } else {
-                    int discarded$174 = 384;
-                    this.a();
+                    this.a(384);
                     break L2;
                   }
                 } else {
                   if (((sa) this).field_g == ((sa) this).field_u) {
                     break L2;
                   } else {
-                    int fieldTemp$175 = ((sa) this).field_s - 1;
+                    int fieldTemp$100 = ((sa) this).field_s - 1;
                     ((sa) this).field_s = ((sa) this).field_s - 1;
-                    if (-1 <= fieldTemp$175) {
-                      int discarded$176 = 384;
-                      this.a();
+                    if (-1 <= fieldTemp$100) {
+                      this.a(384);
                       break L2;
                     } else {
                       break L2;
@@ -619,9 +616,9 @@ final class sa {
                 break L2;
               }
             }
-            int fieldTemp$177 = ((sa) this).field_n - 1;
+            int fieldTemp$101 = ((sa) this).field_n - 1;
             ((sa) this).field_n = ((sa) this).field_n - 1;
-            if (fieldTemp$177 >= 0) {
+            if (fieldTemp$101 >= 0) {
               ((sa) this).field_i = ((sa) this).field_i - 1;
               break L1;
             } else {

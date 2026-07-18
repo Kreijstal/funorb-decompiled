@@ -11,7 +11,7 @@ final class n extends ta {
     static volatile boolean field_x;
     static la field_q;
 
-    public static void a() {
+    public static void a(int param0) {
         field_s = null;
         field_r = null;
         field_q = null;
@@ -129,7 +129,7 @@ final class n extends ta {
         }
     }
 
-    final static int c() {
+    final static int c(byte param0) {
         return (int)(1000000000L / eg.field_u);
     }
 

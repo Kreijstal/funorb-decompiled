@@ -46,12 +46,12 @@ class jf extends oa {
         }
     }
 
-    final static void n() {
+    final static void n(int param0) {
         Object var2 = null;
         nc.a(kf.field_o, (String) null, -80);
     }
 
-    private final void h() {
+    private final void h(int param0) {
         this.f((byte) -93);
         this.h((byte) 121);
     }
@@ -84,7 +84,7 @@ class jf extends oa {
         field_db = null;
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         try {
             int var2_int = 0;
             Exception var2 = null;
@@ -95,8 +95,7 @@ class jf extends oa {
                 var2_int = 8;
                 var3 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.h((byte) 127);
-                int discarded$1 = 1;
-                this.a(var3);
+                this.a(var3, true);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -136,7 +135,7 @@ class jf extends oa {
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
@@ -240,8 +239,7 @@ class jf extends oa {
           L0: {
             L1: {
               super.a(param0, 88, param2, param3);
-              int discarded$2 = 1;
-              this.e();
+              this.e(true);
               if (((jf) this).field_w == 1) {
                 L2: {
                   if (((jf) this).field_p instanceof eg) {
@@ -323,7 +321,7 @@ class jf extends oa {
         }
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         eb.a(0, jk.field_h, an.field_a, bd.field_f, od.field_g);
     }
 
@@ -473,9 +471,9 @@ class jf extends oa {
                                 break L6;
                               } else {
                                 ((jf) this).field_y = ((jf) this).field_y + param2;
-                                int dupTemp$4 = ((jf) this).field_y.length();
-                                ((jf) this).field_fb = dupTemp$4;
-                                ((jf) this).field_bb = dupTemp$4;
+                                int dupTemp$1 = ((jf) this).field_y.length();
+                                ((jf) this).field_fb = dupTemp$1;
+                                ((jf) this).field_bb = dupTemp$1;
                                 break L6;
                               }
                             }
@@ -548,8 +546,7 @@ class jf extends oa {
                                           break L9;
                                         } else {
                                           if (param1 == 65) {
-                                            int discarded$5 = 97;
-                                            this.h();
+                                            this.h(97);
                                             stackOut_53_0 = 1;
                                             stackIn_54_0 = stackOut_53_0;
                                             return stackIn_54_0 != 0;
@@ -576,8 +573,7 @@ class jf extends oa {
                                         break L7;
                                       } else {
                                         if (67 == param1) {
-                                          int discarded$6 = 107;
-                                          this.g();
+                                          this.g((byte) 107);
                                           stackOut_51_0 = 1;
                                           stackIn_52_0 = stackOut_51_0;
                                           return stackIn_52_0 != 0;
@@ -617,9 +613,8 @@ class jf extends oa {
                                     stackIn_29_1 = stackOut_28_1;
                                     break L11;
                                   } else {
-                                    int discarded$7 = 0;
                                     stackOut_27_0 = this;
-                                    stackOut_27_1 = this.m();
+                                    stackOut_27_1 = this.m(0);
                                     stackIn_29_0 = stackOut_27_0;
                                     stackIn_29_1 = stackOut_27_1;
                                     break L11;
@@ -723,7 +718,7 @@ class jf extends oa {
         }
     }
 
-    private final int m() {
+    private final int m(int param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = SteelSentinels.field_G;
@@ -945,8 +940,7 @@ class jf extends oa {
                   ((jf) this).field_jb = stackIn_9_1 != 0;
                   if (((jf) this).field_jb) {
                     L4: {
-                      int discarded$1 = 0;
-                      ((jf) this).field_bb = this.m();
+                      ((jf) this).field_bb = this.m(0);
                       ((jf) this).field_fb = this.g(-122);
                       if (0 >= ((jf) this).field_fb) {
                         break L4;
@@ -1017,7 +1011,7 @@ class jf extends oa {
         ((jf) this).k(-127);
     }
 
-    private final void e() {
+    private final void e(boolean param0) {
         da var3 = null;
         int var4 = 0;
         int var5 = 0;

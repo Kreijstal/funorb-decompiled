@@ -56,7 +56,7 @@ final class bk extends ag {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_H = null;
         field_J = null;
         field_K = null;

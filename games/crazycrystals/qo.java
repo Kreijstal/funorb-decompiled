@@ -11,7 +11,7 @@ final class qo extends el {
     private int field_m;
     static String field_o;
 
-    final static void c() {
+    final static void c(byte param0) {
         v.field_c = 0;
     }
 

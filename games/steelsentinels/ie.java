@@ -30,7 +30,7 @@ final class ie {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -244,7 +244,7 @@ final class ie {
         return uh.a(false, var4, param1);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_f = null;
         field_a = null;
@@ -286,8 +286,7 @@ final class ie {
             for (var2_int = 0; var2_int < param0.length; var2_int++) {
                 ((ie) this).field_h[var2_int] = param0[var2_int];
             }
-            int discarded$0 = 55;
-            this.b();
+            this.b(55);
         } catch (RuntimeException runtimeException) {
             throw ci.a((Throwable) (Object) runtimeException, "ie.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

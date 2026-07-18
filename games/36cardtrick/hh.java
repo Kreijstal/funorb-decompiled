@@ -5,18 +5,17 @@ final class hh extends qb {
     static sc field_g;
     int field_h;
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
     }
 
-    final static String b() {
+    final static String b(byte param0) {
         String var1 = "";
         if (!(null == i.field_a)) {
             var1 = i.field_a.d((byte) -99);
         }
         if (!(-1 != var1.length())) {
-            int discarded$0 = 114;
-            var1 = sg.b();
+            var1 = sg.b(114);
         }
         if (-1 == var1.length()) {
             var1 = vd.field_l;

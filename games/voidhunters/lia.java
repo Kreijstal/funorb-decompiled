@@ -117,14 +117,13 @@ final class lia extends pw {
     }
 
     lia() {
-        int discarded$0 = 127;
-        this.b();
+        this.b((byte) 127);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
     }
 
-    private final void b() {
+    private final void b(byte param0) {
     }
 
     static {

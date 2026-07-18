@@ -12,7 +12,7 @@ final class fj {
     static int[] field_h;
     static int field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_i = null;
         field_a = null;
@@ -140,7 +140,7 @@ final class fj {
         return stackIn_7_0 != 0;
     }
 
-    final static boolean a(char param0, CharSequence param1) {
+    final static boolean a(char param0, CharSequence param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -178,8 +178,7 @@ final class fj {
                   stackIn_9_0 = stackOut_8_0;
                   return stackIn_9_0 != 0;
                 } else {
-                  int discarded$5 = -33;
-                  if (jd.a(param0)) {
+                  if (jd.a(param0, -33)) {
                     L1: {
                       if (0 == var3_int) {
                         stackOut_14_0 = 0;

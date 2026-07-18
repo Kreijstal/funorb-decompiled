@@ -34,8 +34,8 @@ final class dv implements ntb {
           L0: {
             var6 = (dv) (Object) param1;
             var7 = var6;
-            var7.field_a = var6.field_a;
-            var7.field_e = var6.field_e;
+            var7.field_a = ((dv) this).field_a;
+            var7.field_e = ((dv) this).field_e;
             if (param0 > 54) {
               break L0;
             } else {
@@ -282,11 +282,11 @@ final class dv implements ntb {
               L2: {
                 var3 = (dv) (Object) param1;
                 var4 = 9 % ((param0 - 22) / 59);
-                if (var3.field_e != var3.field_e) {
+                if (((dv) this).field_e != var3.field_e) {
                   break L2;
                 } else {
                   L3: {
-                    stackOut_1_0 = var3.field_a;
+                    stackOut_1_0 = ((dv) this).field_a;
                     stackIn_3_0 = stackOut_1_0;
                     stackIn_2_0 = stackOut_1_0;
                     if (var3.field_a) {
@@ -351,7 +351,7 @@ final class dv implements ntb {
         return stackIn_7_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_b = null;
         field_c = null;

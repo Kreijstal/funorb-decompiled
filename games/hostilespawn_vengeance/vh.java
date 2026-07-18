@@ -72,8 +72,7 @@ final class vh {
                   pm.field_a = true;
                   param2.field_w = 1;
                   param2.field_n = true;
-                  int discarded$2 = 1;
-                  tk.a(1, jc.field_c, 31);
+                  tk.a(1, jc.field_c, 31, true);
                   break L1;
                 }
               }
@@ -221,8 +220,7 @@ final class vh {
                 param2.field_z = 0;
                 param2.field_w = 4;
                 if (1 == uj.field_l) {
-                  int discarded$3 = 1;
-                  tk.a(5, jc.field_c, 35);
+                  tk.a(5, jc.field_c, 35, true);
                   break L9;
                 } else {
                   break L9;
@@ -462,7 +460,7 @@ final class vh {
         return stackIn_5_0 != 0;
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         am var3 = null;

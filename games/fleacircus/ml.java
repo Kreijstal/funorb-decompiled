@@ -222,7 +222,7 @@ final class ml extends dk {
         return var3;
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         if (!(ci.field_f)) {
             throw new IllegalStateException();
         }
@@ -244,9 +244,7 @@ final class ml extends dk {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$4 = 7;
-                int discarded$5 = 30;
-                ec.a(var4);
+                ec.a(var4, (byte) 30, 7);
                 var4 = (hg) (Object) ak.field_d.b((byte) -105);
                 continue L1;
               }
@@ -259,7 +257,7 @@ final class ml extends dk {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_K = null;
         field_N = null;
         field_I = null;
@@ -287,8 +285,7 @@ final class ml extends dk {
               if (var3 == null) {
                 break L0;
               } else {
-                int discarded$4 = 5;
-                rd.a(var3, 115);
+                rd.a(var3, 115, 5);
                 var3 = (ql) (Object) mi.field_r.b((byte) -105);
                 continue L2;
               }

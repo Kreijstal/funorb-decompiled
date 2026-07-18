@@ -119,11 +119,30 @@ final class pk extends java.awt.Canvas {
         }
     }
 
-    public static void a() {
-        field_a = null;
-        field_d = null;
-        field_e = null;
-        field_c = null;
+    public static void a(boolean param0) {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            L1: {
+              field_a = null;
+              if (!param0) {
+                break L1;
+              } else {
+                field_d = null;
+                break L1;
+              }
+            }
+            field_d = null;
+            field_e = null;
+            field_c = null;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw oj.a((Throwable) (Object) var1, "pk.A(" + param0 + ')');
+        }
     }
 
     public final void update(java.awt.Graphics param0) {
@@ -184,6 +203,7 @@ final class pk extends java.awt.Canvas {
     final static String a(int param0, String param1, String param2, lj param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_4_0 = null;
+        Object stackIn_7_0 = null;
         String stackIn_9_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -216,6 +236,7 @@ final class pk extends java.awt.Canvas {
         RuntimeException decompiledCaughtException = null;
         String stackOut_3_0 = null;
         String stackOut_8_0 = null;
+        Object stackOut_6_0 = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
         RuntimeException stackOut_13_0 = null;
@@ -255,9 +276,15 @@ final class pk extends java.awt.Canvas {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              stackOut_8_0 = param1 + " - " + param3.a(109, param2) + "%";
-              stackIn_9_0 = stackOut_8_0;
-              break L0;
+              if (param0 == 256) {
+                stackOut_8_0 = param1 + " - " + param3.a(109, param2) + "%";
+                stackIn_9_0 = stackOut_8_0;
+                break L0;
+              } else {
+                stackOut_6_0 = null;
+                stackIn_7_0 = stackOut_6_0;
+                return (String) (Object) stackIn_7_0;
+              }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -265,7 +292,7 @@ final class pk extends java.awt.Canvas {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5;
-            stackOut_10_1 = new StringBuilder().append("pk.B(").append(256).append(',');
+            stackOut_10_1 = new StringBuilder().append("pk.B(").append(param0).append(',');
             stackIn_13_0 = stackOut_10_0;
             stackIn_13_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;

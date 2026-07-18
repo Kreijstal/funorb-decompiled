@@ -7,7 +7,7 @@ final class wnb extends rqa {
     static int field_q;
     static String field_r;
 
-    final static void a(ml param0) {
+    final static void a(ml param0, byte param1) {
         int[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -85,7 +85,7 @@ final class wnb extends rqa {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_o = null;
         field_r = null;
         field_p = null;

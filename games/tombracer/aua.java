@@ -78,7 +78,7 @@ final class aua extends mt {
     public aua() {
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_c = null;
     }

@@ -11,16 +11,16 @@ final class cf extends fc {
     int field_l;
     int field_n;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return oe.field_b == rk.field_X;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_m = null;
         field_p = null;
     }
 
-    final static byte[] a(int param0, byte[] param1, int param2) {
+    final static byte[] a(int param0, byte[] param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5_int = 0;

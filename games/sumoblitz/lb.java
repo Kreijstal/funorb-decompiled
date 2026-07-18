@@ -6,11 +6,11 @@ final class lb {
     static int field_b;
     static long field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
     }
 
-    final static StringBuilder a(StringBuilder param0) {
+    final static StringBuilder a(StringBuilder param0, int param1, char param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

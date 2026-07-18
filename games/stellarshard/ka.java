@@ -295,7 +295,7 @@ class ka extends gg {
         return (((ka) this).field_r[((ka) this).field_k + -2] << 8 & 65280) + (255 & ((ka) this).field_r[((ka) this).field_k - 1]);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_n = null;
         field_l = null;
         field_m = null;

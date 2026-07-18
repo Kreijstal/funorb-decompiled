@@ -9,7 +9,7 @@ final class qp {
     static String field_b;
     static String field_d;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_b = null;
         field_a = null;
@@ -18,7 +18,7 @@ final class qp {
         field_e = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, byte param2) {
         if (param0 < 2) {
             if (param1 >= 5) {
                 return 1;

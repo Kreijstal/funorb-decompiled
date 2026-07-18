@@ -26,7 +26,7 @@ final class u {
         return param0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         kb.b(808);
         oh.a(100, 4);
     }
@@ -274,8 +274,7 @@ final class u {
         String stackOut_5_2 = null;
         try {
           if (c.a(param1, false, param3, param2)) {
-            int discarded$2 = 1;
-            return ne.a();
+            return ne.a(true);
           } else {
             return null;
           }

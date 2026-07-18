@@ -7,7 +7,7 @@ final class oe {
     static jj field_a;
     static String field_d;
 
-    final static java.awt.Frame a(ej param0, int param1, int param2, int param3) {
+    final static java.awt.Frame a(ej param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var6 = null;
         a[] var6_array = null;
         int var7_int = 0;
@@ -17,35 +17,34 @@ final class oe {
         a[] var10 = null;
         re var11 = null;
         Object stackIn_8_0 = null;
-        Object stackIn_29_0 = null;
-        Object stackIn_33_0 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
+        Object stackIn_31_0 = null;
+        Object stackIn_35_0 = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
-        String stackIn_37_2 = null;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        String stackIn_39_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_7_0 = null;
-        Object stackOut_32_0 = null;
-        Object stackOut_28_0 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
+        Object stackOut_34_0 = null;
+        Object stackOut_30_0 = null;
         RuntimeException stackOut_36_0 = null;
         StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
+        RuntimeException stackOut_38_0 = null;
+        StringBuilder stackOut_38_1 = null;
+        String stackOut_38_2 = null;
+        RuntimeException stackOut_37_0 = null;
+        StringBuilder stackOut_37_1 = null;
+        String stackOut_37_2 = null;
         var9 = stellarshard.field_B;
         try {
           L0: {
             if (param0.a(126)) {
               L1: {
                 if (param3 == 0) {
-                  int discarded$1 = 0;
-                  var10 = dl.a(param0);
+                  var10 = dl.a(param0, false);
                   var6_array = var10;
                   if (var6_array != null) {
                     var7_int = 0;
@@ -104,16 +103,16 @@ final class oe {
                   if (var7 != null) {
                     if (2 == var11.field_f) {
                       kf.a(var7, 16711935, param0);
-                      stackOut_32_0 = null;
-                      stackIn_33_0 = stackOut_32_0;
+                      stackOut_34_0 = null;
+                      stackIn_35_0 = stackOut_34_0;
                       break L0;
                     } else {
                       return var7;
                     }
                   } else {
-                    stackOut_28_0 = null;
-                    stackIn_29_0 = stackOut_28_0;
-                    return (java.awt.Frame) (Object) stackIn_29_0;
+                    stackOut_30_0 = null;
+                    stackIn_31_0 = stackOut_30_0;
+                    return (java.awt.Frame) (Object) stackIn_31_0;
                   }
                 } else {
                   jj.a((byte) -114, 10L);
@@ -128,36 +127,36 @@ final class oe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_34_0 = (RuntimeException) var6;
-            stackOut_34_1 = new StringBuilder().append("oe.A(");
-            stackIn_36_0 = stackOut_34_0;
-            stackIn_36_1 = stackOut_34_1;
-            stackIn_35_0 = stackOut_34_0;
-            stackIn_35_1 = stackOut_34_1;
+            stackOut_36_0 = (RuntimeException) var6;
+            stackOut_36_1 = new StringBuilder().append("oe.A(");
+            stackIn_38_0 = stackOut_36_0;
+            stackIn_38_1 = stackOut_36_1;
+            stackIn_37_0 = stackOut_36_0;
+            stackIn_37_1 = stackOut_36_1;
             if (param0 == null) {
-              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
-              stackOut_36_2 = "null";
-              stackIn_37_0 = stackOut_36_0;
-              stackIn_37_1 = stackOut_36_1;
-              stackIn_37_2 = stackOut_36_2;
+              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
+              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_2 = "null";
+              stackIn_39_0 = stackOut_38_0;
+              stackIn_39_1 = stackOut_38_1;
+              stackIn_39_2 = stackOut_38_2;
               break L6;
             } else {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
-              stackOut_35_2 = "{...}";
-              stackIn_37_0 = stackOut_35_0;
-              stackIn_37_1 = stackOut_35_1;
-              stackIn_37_2 = stackOut_35_2;
+              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
+              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+              stackOut_37_2 = "{...}";
+              stackIn_39_0 = stackOut_37_0;
+              stackIn_39_1 = stackOut_37_1;
+              stackIn_39_2 = stackOut_37_2;
               break L6;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ',' + 640 + ',' + 480 + ',' + param3 + ',' + 0 + ',' + -1 + ')');
+          throw ma.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ',' + 640 + ',' + 480 + ',' + param3 + ',' + 0 + ',' + -1 + ')');
         }
-        return (java.awt.Frame) (Object) stackIn_33_0;
+        return (java.awt.Frame) (Object) stackIn_35_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_b = null;

@@ -15,7 +15,7 @@ final class ia {
     private int[] field_d;
     private boolean[] field_b;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return ti.field_b == ki.field_f;
     }
 
@@ -482,7 +482,7 @@ final class ia {
         ((ia) this).field_j = wa.field_p;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_i = null;
         int var1 = 105;

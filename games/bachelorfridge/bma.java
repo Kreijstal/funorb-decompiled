@@ -17,7 +17,7 @@ final class bma extends cia {
         ((bma) this).field_v = param3;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_t = null;
     }
 

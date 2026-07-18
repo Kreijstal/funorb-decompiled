@@ -19,7 +19,7 @@ final class fg extends lh {
     od[] field_n;
     static String field_m;
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -50,8 +50,7 @@ final class fg extends lh {
             var2 = 0;
             L1: while (true) {
               if (var2 >= 40) {
-                int discarded$1 = 31;
-                bm.e();
+                bm.e((byte) 31);
                 ee.field_h = 6;
                 break L0;
               } else {

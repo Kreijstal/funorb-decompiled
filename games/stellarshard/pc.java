@@ -488,8 +488,7 @@ final class pc {
         try {
           L0: {
             if (tl.a(param2, (byte) -5, param0, param4)) {
-              int discarded$2 = 1;
-              stackOut_5_0 = we.a(param1.a(param4, 16, param0));
+              stackOut_5_0 = we.a(param1.a(param4, 16, param0), 1);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

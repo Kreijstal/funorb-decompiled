@@ -37,7 +37,7 @@ final class sg extends k {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_l = null;
         field_m = null;
         field_k = null;
@@ -78,8 +78,7 @@ final class sg extends k {
               }
             }
             L2: {
-              int discarded$10 = -24;
-              if (null != cp.a(param0)) {
+              if (null != cp.a(param0, (byte) -24)) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;

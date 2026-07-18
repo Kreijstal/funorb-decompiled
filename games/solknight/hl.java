@@ -75,11 +75,11 @@ final class hl {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
-    final static String a(String param0, String param1, String param2) {
+    final static String a(String param0, String param1, String param2, boolean param3) {
         int var5 = SolKnight.field_L ? 1 : 0;
         int var4 = param0.indexOf(param2);
         while (-1 != var4) {

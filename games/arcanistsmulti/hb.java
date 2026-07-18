@@ -122,8 +122,7 @@ final class hb extends kc {
                           }
                           break L5;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = bf.a(var6, var5, param1, var4);
+                          int discarded$1 = bf.a(var17, var5, param1, var4, 9);
                           break L5;
                         }
                       }
@@ -218,7 +217,7 @@ final class hb extends kc {
         }
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         mo.field_p = -1;
         cb.field_c = null;
         oh.field_i = false;
@@ -248,7 +247,7 @@ final class hb extends kc {
         this(param0, (kc) (Object) param1, param1.field_Db.field_Hb, param1.field_Db.field_Eb, param1.field_Jb, param2, param3);
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_Ib = null;
         field_Gb = null;
         field_Hb = null;

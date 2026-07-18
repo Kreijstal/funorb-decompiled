@@ -11,7 +11,7 @@ final class pm {
     static sa field_b;
     static int field_c;
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         if (Character.isISOControl(param0)) {
           return false;
         } else {
@@ -39,7 +39,7 @@ final class pm {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_e = null;
         field_g = null;
@@ -304,7 +304,7 @@ final class pm {
         return stackIn_3_0;
     }
 
-    final static void a(uj[] param0) {
+    final static void a(uj[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

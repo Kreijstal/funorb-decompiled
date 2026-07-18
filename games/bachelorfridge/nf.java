@@ -310,8 +310,7 @@ final class nf extends aha {
     }
 
     nf(qu param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (qda) (Object) om.b());
-        int discarded$0 = 0;
+        super(param1, (qda) (Object) om.b(false));
         try {
             ((nf) this).field_L = param0;
             ((nf) this).field_O = param1;

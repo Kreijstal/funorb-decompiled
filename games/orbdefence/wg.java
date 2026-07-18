@@ -191,8 +191,7 @@ final class wg extends hi {
         int var4 = 0;
         ba[] var5 = null;
         var4 = OrbDefence.field_D ? 1 : 0;
-        int discarded$2 = 60;
-        var5 = jl.a();
+        var5 = jl.a((byte) 60);
         var2 = var5;
         var3 = 0;
         L0: while (true) {
@@ -210,7 +209,7 @@ final class wg extends hi {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_n = null;
     }
 

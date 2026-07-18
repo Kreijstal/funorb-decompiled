@@ -180,7 +180,7 @@ final class th extends wf {
         super(param0);
     }
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, int param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -202,8 +202,7 @@ final class th extends wf {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 1;
-            stackOut_2_0 = ti.a(16, param0, 18);
+            stackOut_2_0 = ti.a(16, param0, 18, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -240,7 +239,7 @@ final class th extends wf {
         return stackIn_3_0;
     }
 
-    public static void j() {
+    public static void j(byte param0) {
         field_l = null;
         field_u = null;
         field_o = null;

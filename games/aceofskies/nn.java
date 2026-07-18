@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nn {
-    final static void a(ds param0) {
+    final static void a(ds param0, int param1, byte param2) {
         dl var5 = q.field_p;
         var5.g(109, 6);
         var5.field_g = var5.field_g + 1;

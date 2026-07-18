@@ -4,7 +4,7 @@
 final class fd {
     int field_a;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;

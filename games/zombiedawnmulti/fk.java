@@ -7,7 +7,7 @@ final class fk extends nc {
     static String field_o;
     static th field_n;
 
-    public static void e() {
+    public static void e(int param0) {
         field_o = null;
         field_n = null;
         field_l = null;
@@ -208,11 +208,7 @@ final class fk extends nc {
         var3 = ((fm) (Object) var2).field_C + ((fm) (Object) var2).field_r;
         if (mc.field_i == null) {
           if (!wc.j(114)) {
-            int discarded$11 = 10;
-            int discarded$12 = 0;
-            int discarded$13 = 7;
-            int discarded$14 = 117;
-            mc.field_i = qm.b();
+            mc.field_i = qm.b(117, 7, 0, 10);
             if (!wc.j(111)) {
               if (mc.field_i.field_j) {
                 if (mc.field_i.field_t != null) {
@@ -246,10 +242,10 @@ final class fk extends nc {
                         var8 = 16777215;
                         var7 += 4;
                         this.a(mc.field_i.field_l, -1, (fm) (Object) var5, var9, ta.field_lb, var8, mc.field_i.field_o, mc.field_i.field_g, false, var7, mc.field_i.field_m);
-                        int discarded$15 = ((fm) (Object) var2).a(var4, 40, 150, 560, 200, 0, -1, 1, 1, var3);
+                        int discarded$7 = ((fm) (Object) var2).a(var4, 40, 150, 560, 200, 0, -1, 1, 1, var3);
                         return;
                       } else {
-                        int discarded$16 = ((fm) (Object) var2).a(var4, 40, 150, 560, 200, 0, -1, 1, 1, var3);
+                        int discarded$8 = ((fm) (Object) var2).a(var4, 40, 150, 560, 200, 0, -1, 1, 1, var3);
                         return;
                       }
                     } else {
@@ -291,17 +287,17 @@ final class fk extends nc {
                   }
                 } else {
                   var21 = hk.field_g;
-                  int discarded$17 = ((fm) (Object) var2).a(var21, 40, 150, 560, 200, 0, -1, 1, 1, var3);
+                  int discarded$9 = ((fm) (Object) var2).a(var21, 40, 150, 560, 200, 0, -1, 1, 1, var3);
                   return;
                 }
               } else {
                 var26 = op.field_l;
-                int discarded$18 = ((fm) (Object) var2).a(var26, 40, 150, 560, 200, 0, -1, 1, 1, var3);
+                int discarded$10 = ((fm) (Object) var2).a(var26, 40, 150, 560, 200, 0, -1, 1, 1, var3);
                 return;
               }
             } else {
               var4 = fq.field_j;
-              int discarded$19 = ((fm) (Object) var2).a(var4, 40, 150, 560, 200, 0, -1, 1, 1, var3);
+              int discarded$11 = ((fm) (Object) var2).a(var4, 40, 150, 560, 200, 0, -1, 1, 1, var3);
               return;
             }
           } else {
@@ -393,7 +389,7 @@ final class fk extends nc {
                 }
               }
             }
-            int discarded$20 = ((fm) (Object) var2).a(var4, 40, 150, 560, 200, 0, -1, 1, 1, var3);
+            int discarded$12 = ((fm) (Object) var2).a(var4, 40, 150, 560, 200, 0, -1, 1, 1, var3);
             return;
           }
         } else {
@@ -484,7 +480,7 @@ final class fk extends nc {
               }
             }
           }
-          int discarded$21 = ((fm) (Object) var2).a(var4, 40, 150, 560, 200, 0, -1, 1, 1, var3);
+          int discarded$13 = ((fm) (Object) var2).a(var4, 40, 150, 560, 200, 0, -1, 1, 1, var3);
           return;
         }
     }

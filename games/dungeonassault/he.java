@@ -1015,22 +1015,14 @@ final class he extends ip {
                                   ck.field_H.a(vo.field_m, 69, "useskill");
                                   ck.field_H.a("<img=1>", 104, "command");
                                   ck.field_H.a("<col=FF0000>", -117, "highlight");
-                                  int discarded$8 = -1;
-                                  ck.field_H.a(b.a(gg.field_e), -121, "raider");
-                                  int discarded$9 = -1;
-                                  ck.field_H.a(b.a(af.field_a), -107, "monster");
-                                  int discarded$10 = -1;
-                                  ck.field_H.a(b.a(DungeonAssault.field_H), 74, "trap");
-                                  int discarded$11 = -1;
-                                  ck.field_H.a(b.a(ki.field_e), -106, "guardian");
-                                  int discarded$12 = -1;
-                                  ck.field_H.a(b.a(ak.field_m), 73, "raiders");
-                                  int discarded$13 = -1;
-                                  ck.field_H.a(b.a(wo.field_f), 102, "monsters");
-                                  int discarded$14 = -1;
-                                  ck.field_H.a(b.a(dh.field_e), 98, "traps");
-                                  int discarded$15 = -1;
-                                  ck.field_H.a(b.a(wm.field_j), -115, "guardians");
+                                  ck.field_H.a(b.a(gg.field_e, -1), -121, "raider");
+                                  ck.field_H.a(b.a(af.field_a, -1), -107, "monster");
+                                  ck.field_H.a(b.a(DungeonAssault.field_H, -1), 74, "trap");
+                                  ck.field_H.a(b.a(ki.field_e, -1), -106, "guardian");
+                                  ck.field_H.a(b.a(ak.field_m, -1), 73, "raiders");
+                                  ck.field_H.a(b.a(wo.field_f, -1), 102, "monsters");
+                                  ck.field_H.a(b.a(dh.field_e, -1), 98, "traps");
+                                  ck.field_H.a(b.a(wm.field_j, -1), -115, "guardians");
                                   ck.field_H.a("<col=8B1717>", -103, "col_charge");
                                   ck.field_H.a("<col=2E5D17>", -106, "col_advance");
                                   ck.field_H.a("<col=8B8B2E>", -101, "col_flee");
@@ -1115,7 +1107,7 @@ final class he extends ip {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_n = null;
         field_q = null;
         field_r = null;
@@ -1127,8 +1119,7 @@ final class he extends ip {
         try {
             Object var16 = null;
             lp.a(8, param8, 240, 87, param4, param10, om.field_a, param11, 0, field_p, 0, 8, (cn[]) null, param13, param6, 2, param7, 480, param12, sm.field_c, 320);
-            int discarded$0 = -31425;
-            ic.a(param14);
+            ic.a(param14, -31425);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "he.F(" + 240 + ',' + 0 + ',' + 8 + ',' + 2 + ',' + param4 + ',' + 8 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + 320 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ',' + (param12 != null ? "{...}" : "null") + ',' + param13 + ',' + param14 + ')');
         }
@@ -1164,8 +1155,7 @@ final class he extends ip {
           L0: {
             var3_int = -39 / ((param1 - 5) / 44);
             var5 = (CharSequence) (Object) param0;
-            int discarded$9 = 10;
-            if (!sj.a(var5)) {
+            if (!sj.a(var5, 10)) {
               stackOut_2_0 = pd.field_J;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -1296,7 +1286,7 @@ final class he extends ip {
         return stackIn_5_0;
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         int var1_int = 0;
         int var2 = 0;
         cn var2_ref_cn = null;
@@ -1367,25 +1357,19 @@ final class he extends ip {
                       var11 = new cn(4 + ql.field_c.field_y, ql.field_c.field_v - -4);
                       var11.e();
                       ql.field_c.c(2, 2, uj.field_d);
-                      int discarded$17 = 0;
-                      uc.a(1, 2, var11.field_y, var11, 0, var11.field_v, 0);
+                      uc.a(1, 2, var11.field_y, var11, 0, var11.field_v, 0, false);
                       ql.field_c = var11;
                       al.field_j = ql.field_c.b();
                       var12 = new cn(195, 221);
                       var6 = var12.field_y / 2;
                       var12.e();
-                      int discarded$18 = 30496;
-                      dc.field_e.c(jk.a(new String[1], md.field_a), var6, 40, 16777215, -1);
-                      int discarded$19 = 30496;
-                      tg.field_l.c(jk.a(new String[1], hm.field_t), var6, 60, 16777215, -1);
-                      int discarded$20 = 30496;
-                      dc.field_e.c(jk.a(new String[1], bh.field_K), var6, 110, 16777215, -1);
-                      int discarded$21 = 30496;
-                      tg.field_l.c(jk.a(new String[1], jm.field_b), var6, 130, 16777215, -1);
+                      dc.field_e.c(jk.a(new String[1], md.field_a, 30496), var6, 40, 16777215, -1);
+                      tg.field_l.c(jk.a(new String[1], hm.field_t, 30496), var6, 60, 16777215, -1);
+                      dc.field_e.c(jk.a(new String[1], bh.field_K, 30496), var6, 110, 16777215, -1);
+                      tg.field_l.c(jk.a(new String[1], jm.field_b, 30496), var6, 130, 16777215, -1);
                       dc.field_e.c(je.field_l, var6, 180, 16777215, -1);
                       tg.field_l.c(cg.field_c, var6, 200, 16777215, -1);
-                      int discarded$22 = 0;
-                      uc.a(1, 3, var12.field_y, var12, 0, var12.field_v, 0);
+                      uc.a(1, 3, var12.field_y, var12, 0, var12.field_v, 0, false);
                       gn.field_c.e();
                       var12.h(18 - gn.field_c.field_w, -gn.field_c.field_A + 241);
                       var7 = 0;
@@ -1405,9 +1389,8 @@ final class he extends ip {
                           break L0;
                         } else {
                           en.field_b[var7].e();
-                          int discarded$23 = tg.field_l.a(ec.field_l[var7], 3, 3, en.field_b[var7].field_y + -6, -6 + en.field_b[var7].field_v, uj.field_d, -1, 1, 1, tg.field_l.field_H - -tg.field_l.field_E);
-                          int discarded$24 = 0;
-                          uc.a(1, 3, en.field_b[var7].field_y, en.field_b[var7], 0, en.field_b[var7].field_v, 0);
+                          int discarded$3 = tg.field_l.a(ec.field_l[var7], 3, 3, en.field_b[var7].field_y + -6, -6 + en.field_b[var7].field_v, uj.field_d, -1, 1, 1, tg.field_l.field_H - -tg.field_l.field_E);
+                          uc.a(1, 3, en.field_b[var7].field_y, en.field_b[var7], 0, en.field_b[var7].field_v, 0, false);
                           var7++;
                           continue L1;
                         }
@@ -1434,8 +1417,7 @@ final class he extends ip {
                   var2 = gf.field_i;
                   var3 = gf.field_c;
                   gf.a(rp.field_e);
-                  int discarded$25 = 30496;
-                  var14 = jk.a(new String[1], rn.field_e);
+                  var14 = jk.a(new String[1], rn.field_e, 30496);
                   var5 = dc.field_e.b(var14, wm.field_b);
                   var6 = dc.field_e.a(var14, wm.field_b, dc.field_e.field_E + dc.field_e.field_H);
                   var7 = (-var5 + wm.field_b) / 2 + lj.field_m;
@@ -1502,9 +1484,8 @@ final class he extends ip {
                 qc.field_z.a();
                 var9 = new cn(qc.field_z.field_E, qc.field_z.field_G);
                 var9.e();
-                int discarded$26 = dc.field_e.a(var14, lj.field_m, cb.field_b, wm.field_b, e.field_d, 16777215, -1, 1, 1, dc.field_e.field_H - -dc.field_e.field_E);
-                int discarded$27 = 0;
-                uc.a(1, 3, var9.field_E, var9, 0, var9.field_G, 0);
+                int discarded$4 = dc.field_e.a(var14, lj.field_m, cb.field_b, wm.field_b, e.field_d, 16777215, -1, 1, 1, dc.field_e.field_H - -dc.field_e.field_E);
+                uc.a(1, 3, var9.field_E, var9, 0, var9.field_G, 0, false);
                 qc.field_z.e();
                 var9.h(0, 0);
                 ud.field_r = new cn(640, 480);
@@ -1528,13 +1509,11 @@ final class he extends ip {
                 var3 = gf.field_c;
                 gf.a(rp.field_e);
                 var16 = new cn(412, 43);
-                int discarded$28 = 30496;
-                var5_ref_String = jk.a(new String[1], je.field_a);
+                var5_ref_String = jk.a(new String[1], je.field_a, 30496);
                 lg.field_m = null;
                 var16.e();
-                int discarded$29 = tg.field_l.a(var5_ref_String, 3, 3, var16.field_y - 6, var16.field_v + -6, 16777215, -1, 0, 1, tg.field_l.field_H - -tg.field_l.field_E);
-                int discarded$30 = 0;
-                uc.a(1, 3, var16.field_y, var16, 0, var16.field_v, 0);
+                int discarded$5 = tg.field_l.a(var5_ref_String, 3, 3, var16.field_y - 6, var16.field_v + -6, 16777215, -1, 0, 1, tg.field_l.field_H - -tg.field_l.field_E);
+                uc.a(1, 3, var16.field_y, var16, 0, var16.field_v, 0, false);
                 rf.field_Q.e();
                 var16.h(199 - rf.field_Q.field_w, 83 + -rf.field_Q.field_A);
                 gf.a(var29, var2, var3);
@@ -1562,8 +1541,7 @@ final class he extends ip {
                 var7 = ol.field_b.field_E + (var6 - -20);
                 rf.field_Q.e();
                 tg.field_l.b(rp.field_h, var7 + -rf.field_Q.field_w, tg.field_l.field_H + 155 - (rf.field_Q.field_A + -tg.field_l.field_E), 16777215, -1);
-                int discarded$31 = 0;
-                uc.a(1, 3, var4, rf.field_Q, -rf.field_Q.field_w + (var7 + -4), 50, -rf.field_Q.field_A + 155);
+                uc.a(1, 3, var4, rf.field_Q, -rf.field_Q.field_w + (var7 + -4), 50, -rf.field_Q.field_A + 155, false);
                 var8 = -((-tg.field_l.field_E + -tg.field_l.field_H + (-3 + ol.field_b.field_G)) / 2) + (155 + -rf.field_Q.field_A);
                 ol.field_b.h(-rf.field_Q.field_w + var6, var8);
                 gf.a(var30, var2, var3);
@@ -1748,8 +1726,7 @@ final class he extends ip {
                         }
                       }
                     } else {
-                      int discarded$32 = 245;
-                      qh.a();
+                      qh.a(245);
                       en.field_b[me.field_f].h(269, 340);
                       break L20;
                     }
@@ -1757,8 +1734,7 @@ final class he extends ip {
                 }
               }
             }
-            int discarded$33 = 245;
-            qh.a();
+            qh.a(245);
             en.field_b[me.field_f].h(269, 340);
             break L20;
           }

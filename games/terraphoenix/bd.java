@@ -463,8 +463,7 @@ final class bd {
                 L1: {
                   var3_ref = "";
                   if (param0 != null) {
-                    int discarded$3 = 0;
-                    var3_ref = pc.a(param0);
+                    var3_ref = pc.a(param0, 0);
                     break L1;
                   } else {
                     break L1;
@@ -486,8 +485,7 @@ final class bd {
                     break L2;
                   }
                 }
-                int discarded$4 = 113;
-                u.a(var3_ref);
+                u.a(var3_ref, 113);
                 var8 = qf.a(var3_ref, 0, ":", "%3a");
                 var9 = qf.a(var8, 0, "@", "%40");
                 var4 = -44 % ((3 - param2) / 63);
@@ -548,7 +546,7 @@ final class bd {
                           break L6;
                         } else {
                           var6 = (DataInputStream) var5.field_e;
-                          int discarded$5 = var6.read();
+                          int discarded$1 = var6.read();
                           var6.close();
                           break L6;
                         }
@@ -970,7 +968,7 @@ final class bd {
         ((bd) this).field_n = -2;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_k = null;
         field_m = null;
         field_j = null;

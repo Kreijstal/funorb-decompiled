@@ -119,13 +119,13 @@ final class ik {
         field_e = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (mj.field_p < 6) {
             rk.field_O.c(-4207, -1);
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         se.field_H = new kc(0L, (kc) null);
         if (fc.field_a) {
             se.field_H.a(kg.field_c, 14);

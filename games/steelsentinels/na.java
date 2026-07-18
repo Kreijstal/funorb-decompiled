@@ -84,8 +84,7 @@ final class na {
                 }
               } else {
                 if (var2 != 1) {
-                  int discarded$1 = 94;
-                  sj.a("LR1: " + ci.a(), -102, (Throwable) null);
+                  sj.a("LR1: " + ci.a((byte) 94), -102, (Throwable) null);
                   pm.m(83);
                   break L1;
                 } else {
@@ -248,7 +247,7 @@ final class na {
         var3.d(param2, 47);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_v = null;
         field_q = null;
         field_h = null;
@@ -258,7 +257,7 @@ final class na {
         field_u = null;
     }
 
-    final static boolean a(java.applet.Applet param0) {
+    final static boolean a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Throwable var2_ref = null;

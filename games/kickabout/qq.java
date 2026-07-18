@@ -10,11 +10,11 @@ final class qq extends i {
     static String[] field_L;
     static String field_J;
 
-    final static hd h() {
+    final static hd h(byte param0) {
         return ei.field_d.field_yb;
     }
 
-    final static void a(int param0, byte param1, int param2, String param3, int param4, int param5) {
+    final static void a(int param0, byte param1, int param2, String param3, int param4, int param5, int param6) {
         int var7_int = 15 + un.field_d.a(param3);
         pt.a(640, -22914, 630, 480, 0);
         on.a(-20 + (param5 - -160), -17 + param4, var7_int + 20, 21, 8, 65793, 128);
@@ -51,7 +51,7 @@ final class qq extends i {
         }
     }
 
-    final static int g() {
+    final static int g(byte param0) {
         int var1 = 0;
         return tn.field_b;
     }

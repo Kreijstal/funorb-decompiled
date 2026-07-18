@@ -14,12 +14,12 @@ final class gl {
         return (((param0 & 24) != 0 ? 1 : 0) | ((param0 & 544) == 544 ? 1 : 0)) != 0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_d = null;
     }
 
-    final static vt a(gk param0, String param1, String param2, gk param3) {
+    final static vt a(gk param0, String param1, String param2, gk param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -202,7 +202,7 @@ final class gl {
         return stackIn_1_0;
     }
 
-    final static vt a(byte[] param0) {
+    final static vt a(byte[] param0, int param1) {
         vt var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -229,8 +229,7 @@ final class gl {
           L0: {
             if (param0 != null) {
               var2 = new vt(param0, lh.field_a, lg.field_j, ji.field_b, ee.field_e, fk.field_a);
-              int discarded$2 = 1;
-              kf.f();
+              kf.f(1);
               stackOut_3_0 = (vt) var2;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -273,7 +272,7 @@ final class gl {
         return stackIn_4_0;
     }
 
-    final static ll[] a() {
+    final static ll[] a(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -290,8 +289,7 @@ final class gl {
             }
             var1[var2] = new ll(pu.field_a, cc.field_i, lh.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var5);
         }
-        int discarded$0 = 1;
-        kf.f();
+        kf.f(1);
         return var1;
     }
 

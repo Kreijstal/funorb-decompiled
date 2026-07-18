@@ -99,7 +99,7 @@ final class ud extends sf implements he {
         }
     }
 
-    private final fw a(String param0, qo param1) {
+    private final fw a(String param0, qo param1, int param2) {
         fw var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -280,8 +280,7 @@ final class ud extends sf implements he {
             var4.field_w = 80;
             var4.field_k = (kh) (Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((ud) this).a((byte) 10, var4);
-            int discarded$2 = 93;
-            ((ud) this).field_bb = this.a(pd.field_f, (qo) this);
+            ((ud) this).field_bb = this.a(pd.field_f, (qo) this, 93);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -372,8 +371,7 @@ final class ud extends sf implements he {
             if (param4 != ((ud) this).field_bb) {
               break L0;
             } else {
-              int discarded$2 = 60;
-              this.i();
+              this.i((byte) 60);
               return;
             }
           }
@@ -428,7 +426,7 @@ final class ud extends sf implements he {
         }
     }
 
-    private final void i() {
+    private final void i(byte param0) {
         if (!(((ud) this).field_L)) {
             return;
         }

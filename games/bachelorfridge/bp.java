@@ -8,7 +8,7 @@ final class bp extends ana {
     static int field_z;
     private kk field_v;
 
-    private final void g() {
+    private final void g(int param0) {
     }
 
     bp(gj param0, kk param1) {
@@ -31,35 +31,31 @@ final class bp extends ana {
                 ((bp) this).field_l = ((bp) this).field_l - 1;
                 if (!(fieldTemp$0 < 0)) {
                     if (((bp) this).field_l == 75) {
-                        int discarded$1 = -2602;
-                        this.f();
+                        this.f(-2602);
                         return false;
                     }
                     return false;
                 }
                 var2 = 89 / ((71 - param0) / 47);
-                int discarded$2 = -114;
-                this.g();
+                this.g(-114);
                 return true;
             }
             wf.a(3, (byte) 126);
         }
-        int fieldTemp$3 = ((bp) this).field_l - 1;
+        int fieldTemp$1 = ((bp) this).field_l - 1;
         ((bp) this).field_l = ((bp) this).field_l - 1;
-        if (!(fieldTemp$3 < 0)) {
+        if (!(fieldTemp$1 < 0)) {
             if (!(((bp) this).field_l != 75)) {
-                int discarded$4 = -2602;
-                this.f();
+                this.f(-2602);
             }
             return false;
         }
         var2 = 89 / ((71 - param0) / 47);
-        int discarded$5 = -114;
-        this.g();
+        this.g(-114);
         return true;
     }
 
-    private final void f() {
+    private final void f(int param0) {
         iv var3 = null;
         ad var4 = null;
         int var5 = 0;
@@ -102,7 +98,7 @@ final class bp extends ana {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_y = null;
         field_w = null;
     }

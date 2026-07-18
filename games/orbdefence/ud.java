@@ -14,7 +14,7 @@ final class ud extends ca {
     int field_o;
     int[] field_m;
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_p = null;
     }
 

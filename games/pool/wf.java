@@ -181,7 +181,7 @@ final class wf {
         field_c = null;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         L0: {
           if (-1 == of.field_Pb) {
             if (!lq.b((byte) 114, 1)) {

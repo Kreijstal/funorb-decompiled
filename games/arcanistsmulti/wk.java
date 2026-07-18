@@ -10,7 +10,7 @@ class wk extends pg {
     static String field_i;
     static qb field_l;
 
-    final static kc f() {
+    final static kc f(byte param0) {
         return ja.d((byte) 90);
     }
 
@@ -22,7 +22,7 @@ class wk extends pg {
         return ((wk) this).e((byte) -119);
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_h = null;
         field_i = null;
         field_l = null;
@@ -77,7 +77,7 @@ class wk extends pg {
         throw new IllegalArgumentException();
     }
 
-    private final void b(long param0) {
+    private final void b(long param0, byte param1) {
         int fieldTemp$0 = ((wk) this).field_g;
         ((wk) this).field_g = ((wk) this).field_g + 1;
         ((wk) this).field_j[fieldTemp$0] = (byte)(int)(param0 >> 48);
@@ -402,7 +402,7 @@ class wk extends pg {
         }
     }
 
-    final static void j() {
+    final static void j(int param0) {
         vn var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -607,8 +607,7 @@ class wk extends pg {
 
     final int h(int param0) {
         if (param0 != 11609) {
-            int discarded$0 = 1;
-            wk.b();
+            wk.b(true);
         }
         ((wk) this).field_g = ((wk) this).field_g + 3;
         return (((wk) this).field_j[-1 + ((wk) this).field_g] & 255) + ((((wk) this).field_j[((wk) this).field_g - 3] & 255) << 16) - -((((wk) this).field_j[-2 + ((wk) this).field_g] & 255) << 8);
@@ -690,17 +689,15 @@ class wk extends pg {
               if (param0 == 7) {
                 break L1;
               } else {
-                int discarded$3 = ((wk) this).a(true, 75);
+                int discarded$1 = ((wk) this).a(true, 75);
                 break L1;
               }
             }
             var8 = 19;
             L2: while (true) {
               if (var8 < 0) {
-                int discarded$4 = 12;
-                this.b(var3_long);
-                int discarded$5 = 12;
-                this.b(var5);
+                this.b(var3_long, (byte) 12);
+                this.b(var5, (byte) 12);
                 break L0;
               } else {
                 var3_long = var3_long * 38L;
@@ -801,7 +798,7 @@ class wk extends pg {
         }
     }
 
-    final static void k() {
+    final static void k(int param0) {
         da.field_d = new ln();
         g.field_e.a((byte) -92, (qm) (Object) da.field_d);
     }
@@ -942,22 +939,16 @@ class wk extends pg {
         int var1_int = 0;
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-            int discarded$0 = -101;
-            da.a();
+            da.a((byte) -101);
             int var2 = 122 % ((param0 - -21) / 48);
             for (var1_int = 0; var1_int < 17; var1_int++) {
                 tl.field_f[var1_int] = new lc(var1_int);
             }
             mn.field_r = 13;
             si.field_g = 13;
-            int discarded$36 = 50;
-            int discarded$45 = 16;
-            qn.a();
-            int discarded$76 = 50;
-            int discarded$81 = -107;
-            sm.a();
-            int discarded$90 = 112;
-            if (!(lc.a())) {
+            qn.a(16, 50);
+            sm.a(-107, 50);
+            if (!(lc.a((byte) 112))) {
                 ce.field_i = tj.a(4, -21402);
                 ci.field_d = ld.a(6, false);
             }
@@ -986,8 +977,7 @@ class wk extends pg {
 
     wk(int param0) {
         ((wk) this).field_g = 0;
-        int discarded$0 = 56;
-        ((wk) this).field_j = bb.a(param0);
+        ((wk) this).field_j = bb.a(param0, 56);
     }
 
     final void f(int param0, byte param1) {

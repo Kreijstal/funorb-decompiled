@@ -49,9 +49,7 @@ final class ef {
                 break L1;
               }
             }
-            int discarded$4 = -96;
-            int discarded$5 = 0;
-            stackOut_2_0 = vl.a(param0.length, param0);
+            stackOut_2_0 = vl.a(param0.length, param0, 0, -96);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

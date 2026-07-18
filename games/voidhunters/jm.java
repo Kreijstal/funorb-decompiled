@@ -6,11 +6,11 @@ import java.lang.String;
 final class jm extends rqa {
     static String field_o;
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
     }
 
-    final static sr a(int param0) {
+    final static sr a(int param0, int param1) {
         sr var2 = null;
         byte[] var3 = null;
         var2 = (sr) us.field_d.b(0, (long)param0);

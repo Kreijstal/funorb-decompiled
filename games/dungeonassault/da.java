@@ -308,7 +308,7 @@ abstract class da extends lm implements aa {
         return stackIn_4_0 != 0;
     }
 
-    private final boolean a(lm param0) {
+    private final boolean a(lm param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -1056,8 +1056,7 @@ abstract class da extends lm implements aa {
             if (var5_int == 80) {
               L2: {
                 if (!qk.field_e[81]) {
-                  int discarded$5 = 36;
-                  stackOut_9_0 = this.a(param0);
+                  stackOut_9_0 = this.a(param0, (byte) 36);
                   stackIn_10_0 = stackOut_9_0;
                   break L2;
                 } else {
@@ -1074,7 +1073,7 @@ abstract class da extends lm implements aa {
                 break L0;
               } else {
                 var6 = null;
-                boolean discarded$6 = ((da) this).a((lm) null, -62, -81, -47, 98, (byte) -16, -14);
+                boolean discarded$2 = ((da) this).a((lm) null, -62, -81, -47, 98, (byte) -16, -14);
                 return false;
               }
             }
@@ -1323,8 +1322,7 @@ abstract class da extends lm implements aa {
           L0: {
             var4_int = param3.a(param0, 1000);
             var5 = param3.a(0, param1, var4_int);
-            int discarded$2 = 4;
-            stackOut_0_0 = li.a(var4_int, var5, param3);
+            stackOut_0_0 = li.a(var4_int, var5, param3, 4);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

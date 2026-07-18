@@ -16,7 +16,7 @@ final class jk {
     static gh field_h;
     static int field_d;
 
-    final static boolean c() {
+    final static boolean c(byte param0) {
         return !gf.field_a.a((byte) -72);
     }
 
@@ -330,7 +330,7 @@ final class jk {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_f = null;
         field_g = null;
         field_e = null;
@@ -342,7 +342,7 @@ final class jk {
         field_k = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         wk var3 = new wk(120, 30);
         wk var4 = var3;
         ub.field_a[0] = qe.a(var4, (byte) -93, jf.field_eb);

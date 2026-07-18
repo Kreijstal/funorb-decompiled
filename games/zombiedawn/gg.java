@@ -5,7 +5,7 @@ final class gg {
     static int field_b;
     static char[] field_a;
 
-    final static String a(byte[] param0) {
+    final static String a(byte[] param0, byte param1) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -69,7 +69,7 @@ final class gg {
         pm.d((byte) 36);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

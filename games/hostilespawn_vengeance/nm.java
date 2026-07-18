@@ -158,7 +158,7 @@ final class nm {
         return stackIn_20_0;
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -643,14 +643,10 @@ final class nm {
         try {
             tk.field_d = param0 * eh.a((byte) -126) / 1000;
             tk.a(true, param1);
-            int discarded$0 = 0;
-            hd.a(param1);
-            int discarded$1 = -11310;
-            gb.a(param1);
-            int discarded$2 = 255;
-            ha.b();
-            int discarded$3 = -16183;
-            pl.a();
+            hd.a(param1, false);
+            gb.a(param1, -11310);
+            ha.b(255);
+            pl.a(-16183);
             tk.field_e = -tk.field_d;
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "nm.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -833,7 +829,7 @@ final class nm {
         }
     }
 
-    final static void a(int param0, p param1, int param2) {
+    final static void a(int param0, p param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

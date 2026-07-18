@@ -373,7 +373,7 @@ class ja extends bb {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_O = null;
         field_L = null;
     }

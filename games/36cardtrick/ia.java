@@ -9,7 +9,7 @@ final class ia {
     static String[] field_d;
     static int field_e;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         if (s.field_d == null) {
             return false;
         }
@@ -19,7 +19,7 @@ final class ia {
         return true;
     }
 
-    final static int b() {
+    final static int b(int param0) {
         return 1;
     }
 

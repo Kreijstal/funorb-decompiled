@@ -52,8 +52,7 @@ final class qf extends en {
               var6 = null;
               if (param3.indexOf('@') == -1) {
                 var7 = (CharSequence) (Object) param3;
-                int discarded$2 = 2;
-                var4_long = ci.a(var7);
+                var4_long = ci.a(var7, 2);
                 break L1;
               } else {
                 var6 = (Object) (Object) param3;
@@ -122,7 +121,7 @@ final class qf extends en {
         return stackIn_4_0;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -256,7 +255,7 @@ final class qf extends en {
         return stackIn_20_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
     }
 

@@ -11,7 +11,7 @@ final class qc implements Iterable {
     static boolean field_b;
     static int field_c;
 
-    final static ea c() {
+    final static ea c(int param0) {
         int[] var15 = null;
         int[] var8 = null;
         int var5_int = 0;
@@ -84,7 +84,7 @@ final class qc implements Iterable {
         return (Iterator) (Object) new bc((qc) this);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_a = null;
     }

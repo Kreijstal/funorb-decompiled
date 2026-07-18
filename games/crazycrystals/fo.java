@@ -29,9 +29,7 @@ final class fo extends jb {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$8 = 0;
-                    int discarded$9 = 3;
-                    j.a(var5);
+                    j.a(var5, 3, false);
                     var5 = (ak) (Object) hd.field_d.a(false);
                     continue L2;
                   }
@@ -50,7 +48,7 @@ final class fo extends jb {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_g = null;
         field_m = null;

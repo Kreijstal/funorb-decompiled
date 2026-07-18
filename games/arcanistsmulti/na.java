@@ -53,7 +53,7 @@ final class na extends kc {
         return (int)((na) this).b(false);
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_lc = null;
         field_Tb = null;
         field_Sb = null;
@@ -503,7 +503,7 @@ final class na extends kc {
         var4.b(-var6 + var4.field_g, (byte) 43);
     }
 
-    final static void i() {
+    final static void i(byte param0) {
         df.a(1, cd.e(108));
         int var1 = -2;
     }
@@ -660,7 +660,7 @@ final class na extends kc {
         }
     }
 
-    final static kc f() {
+    final static kc f(byte param0) {
         return nj.field_m.field_Cb;
     }
 

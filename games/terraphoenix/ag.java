@@ -5,19 +5,17 @@ final class ag {
     static java.awt.Image field_a;
     static String field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }
 
     final static void a(int param0) {
-        int discarded$0 = -124;
-        dh.g();
+        dh.g((byte) -124);
         qi.field_b = true;
         dj.field_d = true;
         jl.field_I.b(false);
-        int discarded$1 = 10;
-        ta.a(jh.field_o, false);
+        ta.a(jh.field_o, false, 10);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

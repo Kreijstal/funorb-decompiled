@@ -9,7 +9,7 @@ final class fd extends o {
     static String field_o;
     static String field_l;
 
-    final static void a() {
+    final static void a(int param0) {
         h var1 = (h) (Object) tm.field_a.c(56);
         if (!(var1 != null)) {
             throw new IllegalStateException();
@@ -26,7 +26,7 @@ final class fd extends o {
         kg.field_V = param2;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = -41;
         field_o = null;
         field_l = null;

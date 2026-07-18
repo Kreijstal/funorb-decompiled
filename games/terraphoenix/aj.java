@@ -78,7 +78,7 @@ final class aj {
         lm.field_d = param0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_b = null;
         field_a = null;

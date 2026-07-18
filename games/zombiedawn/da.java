@@ -10,14 +10,14 @@ final class da extends le {
     static int field_n;
     int field_k;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_j = null;
         field_l = null;
         field_m = null;
         field_i = null;
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         am var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -28,16 +28,14 @@ final class da extends le {
           L0: {
             var1 = dp.field_e;
             L1: while (true) {
-              int discarded$13 = 103;
-              if (!jh.a()) {
+              if (!jh.a((byte) 103)) {
                 break L0;
               } else {
                 var1.j(11, 8);
-                int fieldTemp$14 = var1.field_j + 1;
+                int fieldTemp$5 = var1.field_j + 1;
                 var1.field_j = var1.field_j + 1;
-                var2 = fieldTemp$14;
-                int discarded$15 = 84;
-                dn.a(var1);
+                var2 = fieldTemp$5;
+                dn.a(var1, 84);
                 dp.field_e.d(-128, var1.field_j + -var2);
                 continue L1;
               }

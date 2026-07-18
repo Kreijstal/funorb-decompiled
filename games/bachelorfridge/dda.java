@@ -81,7 +81,7 @@ final class dda extends kj {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_k = null;
         field_l = null;
     }

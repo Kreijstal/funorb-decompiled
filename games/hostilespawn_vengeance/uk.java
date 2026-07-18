@@ -88,7 +88,7 @@ abstract class uk {
         }
     }
 
-    final static bd[] a(int param0, int param1, byte param2, int param3) {
+    final static bd[] a(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 < 126) {
           boolean discarded$2 = uk.a(-106);
           return od.a(3, 105, 1, param0, 1, 0, param3, 1, param1);
@@ -97,7 +97,7 @@ abstract class uk {
         }
     }
 
-    final static boolean a(int[] param0) {
+    final static boolean a(int[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -216,8 +216,7 @@ abstract class uk {
               }
             }
           } else {
-            int discarded$2 = 0;
-            bd[] discarded$3 = uk.a(43, -82, (byte) -21, -101);
+            bd[] discarded$1 = uk.a(43, -82, (byte) -21, -101, 0);
             if (param1 == 10) {
               return "levelf2.dat";
             } else {

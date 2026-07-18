@@ -11,8 +11,7 @@ final class tm extends rqa {
             bia.a((byte) 124);
             return;
           } else {
-            int discarded$4 = 1;
-            feb.a(og.field_r).a(true);
+            feb.a(og.field_r, true).a(true);
             return;
           }
         } else {
@@ -21,8 +20,7 @@ final class tm extends rqa {
             bia.a((byte) 124);
             return;
           } else {
-            int discarded$5 = 1;
-            feb.a(og.field_r).a(true);
+            feb.a(og.field_r, true).a(true);
             return;
           }
         }

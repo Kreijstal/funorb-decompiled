@@ -9,7 +9,7 @@ final class nd implements Iterator {
     private vg field_a;
     private sk field_c;
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         return !gva.field_b.b(52);
     }
 
@@ -37,7 +37,7 @@ final class nd implements Iterator {
         }
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         ((nd) this).field_d = null;
         ((nd) this).field_a = ((nd) this).field_c.field_e[0].field_a;
         ((nd) this).field_b = 1;
@@ -46,15 +46,13 @@ final class nd implements Iterator {
     final static void a(byte param0) {
         if (param0 != 55) {
             nd.a((byte) -67);
-            int discarded$0 = 46;
-            gt.a();
+            gt.a((byte) 46);
             return;
         }
-        int discarded$1 = 46;
-        gt.a();
+        gt.a((byte) 46);
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -155,8 +153,7 @@ final class nd implements Iterator {
         ((nd) this).field_d = null;
         try {
             ((nd) this).field_c = param0;
-            int discarded$0 = 1;
-            this.a();
+            this.a(true);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "nd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

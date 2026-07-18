@@ -5,7 +5,7 @@ final class tc {
     static String field_a;
     static int field_b;
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         int var1 = 0;
     }

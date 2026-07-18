@@ -152,8 +152,7 @@ final class wta extends sc implements en, aca {
             var4 = ((wta) this).field_c.f(3476);
             if (param0 == 16384) {
               L1: {
-                int discarded$2 = 1;
-                var5 = vga.a();
+                var5 = vga.a(true);
                 if (var4 < 1890) {
                   break L1;
                 } else {
@@ -214,8 +213,7 @@ final class wta extends sc implements en, aca {
               }
             }
             var4 = ((wta) this).field_c.f(3476);
-            int discarded$2 = 1;
-            var5 = vga.a();
+            var5 = vga.a(true);
             if (var4 < 1890) {
               stackOut_4_0 = cca.field_o;
               stackIn_5_0 = stackOut_4_0;

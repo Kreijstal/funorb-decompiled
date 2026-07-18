@@ -60,8 +60,7 @@ abstract class ld extends km {
           }
           var4 = 5 * var2 - (5 - var2 * var3);
           var5 = (-var4 + 640) / 2;
-          int discarded$1 = 6175;
-          var6 = this.h();
+          var6 = this.h(6175);
           var7 = 0;
           L3: while (true) {
             if (var7 >= ((ld) this).field_m.length) {
@@ -209,8 +208,7 @@ abstract class ld extends km {
                 }
               }
               ((ld) this).a(0);
-              int discarded$1 = 0;
-              pg.d();
+              pg.d(0);
               return;
             }
           } else {
@@ -241,7 +239,7 @@ abstract class ld extends km {
         ((ld) this).field_h.a(0, -1);
     }
 
-    private final int h() {
+    private final int h(int param0) {
         return (284 + ((ld) this).f(-6)) / 2;
     }
 
@@ -252,8 +250,7 @@ abstract class ld extends km {
             ((ld) this).a(false, false, -123);
         }
         super.a(param0, param1, -121);
-        int discarded$0 = 6175;
-        int var4 = this.h();
+        int var4 = this.h(6175);
         for (var5 = 0; var5 < ((ld) this).field_m.length; var5++) {
             ((ld) this).field_m[var5].field_a = var4;
         }

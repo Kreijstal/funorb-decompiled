@@ -12,7 +12,7 @@ abstract class fh {
     static String[][] field_c;
     static ih field_g;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_f = null;
         field_b = null;
@@ -25,7 +25,7 @@ abstract class fh {
 
     abstract byte[] a(int param0);
 
-    final static void b() {
+    final static void b(int param0) {
         lj.a(17, 27);
     }
 

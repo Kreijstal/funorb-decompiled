@@ -46,15 +46,13 @@ final class db implements ml {
           if (var1 > 0) {
             if (var1 != 1) {
               rc.field_i = gg.a(new String[1], pj.field_d, true);
-              int discarded$2 = -125;
-              rc.field_i = vd.a(new CharSequence[3]);
+              rc.field_i = vd.a(new CharSequence[3], (byte) -125);
               me.field_f.g((byte) -75);
               hl.b(34);
               return;
             } else {
               rc.field_i = mc.field_i;
-              int discarded$3 = -125;
-              rc.field_i = vd.a(new CharSequence[3]);
+              rc.field_i = vd.a(new CharSequence[3], (byte) -125);
               me.field_f.g((byte) -75);
               hl.b(34);
               return;
@@ -95,8 +93,7 @@ final class db implements ml {
                   }
                 }
               } else {
-                int discarded$2 = 1;
-                pj.a(3, var3);
+                pj.a(3, var3, true);
                 var3 = (d) (Object) wk.field_b.d((byte) 63);
                 continue L1;
               }
@@ -222,12 +219,12 @@ final class db implements ml {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_b = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;

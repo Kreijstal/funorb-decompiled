@@ -66,7 +66,7 @@ final class jo {
         return new String(var6);
     }
 
-    final static boolean a(wk param0) {
+    final static boolean a(wk param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -177,7 +177,7 @@ final class jo {
         return stackIn_5_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
     }

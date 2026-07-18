@@ -734,9 +734,7 @@ final class ri extends sl {
         }
         L7: {
           if (0 == ((ri) this).field_X) {
-            int discarded$5 = 0;
-            int discarded$6 = 10;
-            hl.a();
+            hl.a(10, 0);
             break L7;
           } else {
             break L7;
@@ -748,8 +746,7 @@ final class ri extends sl {
           } else {
             var4 = 0;
             L9: while (true) {
-              int discarded$7 = 127;
-              if (!mh.e()) {
+              if (!mh.e(127)) {
                 L10: {
                   ((ri) this).field_A.a(26 + ((ri) this).field_C, ((ri) this).field_t, 26, false, 156 + ((ri) this).field_t);
                   if (((ri) this).field_A.b(false)) {
@@ -763,9 +760,7 @@ final class ri extends sl {
                   break L8;
                 } else {
                   ((ri) this).field_T = Math.abs(((ri) this).field_O);
-                  int discarded$8 = 0;
-                  int discarded$9 = 10;
-                  hl.a();
+                  hl.a(10, 0);
                   sc.field_g = -2;
                   break L8;
                 }
@@ -783,7 +778,7 @@ final class ri extends sl {
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -931,7 +926,7 @@ final class ri extends sl {
         }
     }
 
-    private final boolean d() {
+    private final boolean d(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -970,8 +965,7 @@ final class ri extends sl {
               }
             }
           }
-          int discarded$1 = -66;
-          if (this.b(((ri) this).field_d) == ((ri) this).field_w) {
+          if (this.b(((ri) this).field_d, (byte) -66) == ((ri) this).field_w) {
             var2 = this.a(((ri) this).field_i, 0);
             var3 = this.a(((ri) this).field_i, (byte) -76);
             var4 = -var2 + this.a(((ri) this).field_d, 0);
@@ -1056,9 +1050,7 @@ final class ri extends sl {
         int stackOut_1_0 = 0;
         L0: {
           var4 = TrackController.field_F ? 1 : 0;
-          int discarded$18 = 0;
-          int discarded$19 = 10;
-          hl.a();
+          hl.a(10, 0);
           if (param0 != 0) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -1244,8 +1236,7 @@ final class ri extends sl {
           if (!param0) {
             break L0;
           } else {
-            int discarded$5 = -4;
-            this.c();
+            this.c((byte) -4);
             break L0;
           }
         }
@@ -1253,7 +1244,7 @@ final class ri extends sl {
           if (param1 >= 72) {
             break L1;
           } else {
-            boolean discarded$6 = this.a(true, -46, 126);
+            boolean discarded$3 = this.a(true, -46, 126);
             break L1;
           }
         }
@@ -1278,10 +1269,10 @@ final class ri extends sl {
             } else {
               if (((ri) this).field_J != 2) {
                 L4: {
-                  int fieldTemp$7 = ((ri) this).field_E;
-                  int fieldTemp$8 = ((ri) this).field_E + 1;
+                  int fieldTemp$4 = ((ri) this).field_E;
+                  int fieldTemp$5 = ((ri) this).field_E + 1;
                   ((ri) this).field_E = ((ri) this).field_E + 1;
-                  ((ri) this).field_bb = ((ri) this).field_bb ^ (fieldTemp$7 ^ fieldTemp$8);
+                  ((ri) this).field_bb = ((ri) this).field_bb ^ (fieldTemp$4 ^ fieldTemp$5);
                   ((ri) this).field_R = ((ri) this).field_R - ((ri) this).field_cb;
                   var3 = db.field_X - 467;
                   var4_int = wg.field_e + -138;
@@ -2080,8 +2071,7 @@ final class ri extends sl {
                           }
                         }
                         L60: {
-                          int discarded$9 = 102;
-                          if (this.d()) {
+                          if (this.d(102)) {
                             this.b(247, 2);
                             break L60;
                           } else {
@@ -2519,8 +2509,7 @@ final class ri extends sl {
             super.a(param0, 107);
             ((ri) this).field_D = param0.a(-8299);
             ((ri) this).field_Z = param0.c((byte) 107);
-            int discarded$2 = -66;
-            ((ri) this).field_w = this.b(((ri) this).field_i);
+            ((ri) this).field_w = this.b(((ri) this).field_i, (byte) -66);
             ((ri) this).field_h = 0;
             this.b(247, 1);
             ((ri) this).field_x = -1;
@@ -2532,8 +2521,7 @@ final class ri extends sl {
               ((ri) this).field_q = param0.field_v << 1;
               ((ri) this).field_G = -1;
               ((ri) this).field_S = new ja();
-              int discarded$3 = 123;
-              ((ri) this).field_M = this.i();
+              ((ri) this).field_M = this.i(123);
               ((ri) this).field_u = null;
               ((ri) this).field_t = -1000;
               vl.n(-27145);
@@ -2685,7 +2673,7 @@ final class ri extends sl {
         bk.field_E.a(((ri) this).field_I.field_q, 622, 118, 5, -1);
     }
 
-    private final ja i() {
+    private final ja i(int param0) {
         ja var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -2805,14 +2793,12 @@ final class ri extends sl {
         try {
           L0: {
             if (!sd.a(param1, (byte) 89)) {
-              int discarded$14 = 0;
-              if (ba.a(param1)) {
+              if (ba.a(param1, false)) {
                 stackOut_5_0 = 0;
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0 != 0;
               } else {
-                int discarded$15 = -23797;
-                if (!ac.a(param1)) {
+                if (!ac.a(param1, -23797)) {
                   if (param2.length() == 0) {
                     stackOut_12_0 = 1;
                     stackIn_13_0 = stackOut_12_0;
@@ -3018,8 +3004,7 @@ final class ri extends sl {
             break L0;
           } else {
             ((ri) this).field_u.a(true);
-            int discarded$1 = -111;
-            this.f();
+            this.f(-111);
             var2_int = Math.min(255, -((ri) this).field_v + ((ri) this).field_h << 2);
             ((ri) this).a(467, (byte) -121, (((ri) this).field_h + -((ri) this).field_v << 2) + 229);
             var3 = 255 + -var2_int;
@@ -3170,9 +3155,7 @@ final class ri extends sl {
             if (((ri) this).field_J != 2) {
             } else {
                 ((ri) this).field_T = Math.abs(((ri) this).field_O);
-                int discarded$0 = 0;
-                int discarded$1 = 10;
-                hl.a();
+                hl.a(10, 0);
                 ((ri) this).field_R = ((ri) this).field_R + ((ri) this).field_E;
                 ((ri) this).field_cb = ((ri) this).field_cb - 1;
                 if (((ri) this).field_I.field_x >= gj.field_f.length) {
@@ -3184,7 +3167,7 @@ final class ri extends sl {
             }
         }
         if (param0 != 0) {
-            int discarded$2 = this.a((byte) 32, 84);
+            int discarded$0 = this.a((byte) 32, 84);
         }
     }
 
@@ -3283,7 +3266,7 @@ final class ri extends sl {
         }
     }
 
-    private final long b(int[][] param0) {
+    private final long b(int[][] param0, byte param1) {
         RuntimeException var3 = null;
         long var3_long = 0L;
         int var5 = 0;
@@ -3596,7 +3579,7 @@ final class ri extends sl {
         }
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4_int = 0;
@@ -3849,21 +3832,18 @@ final class ri extends sl {
                 tk.field_r = ob.field_x;
                 tk.field_r = fi.a(116, new CharSequence[3]);
                 kb.field_a.t(20252);
-                int discarded$63 = -635;
-                r.f();
+                r.f(-635);
                 break L1;
               } else {
                 tk.field_r = dh.a((byte) -75, new String[1], be.field_l);
                 tk.field_r = fi.a(116, new CharSequence[3]);
                 kb.field_a.t(20252);
-                int discarded$64 = -635;
-                r.f();
+                r.f(-635);
                 break L1;
               }
             } else {
               kb.field_a.t(20252);
-              int discarded$65 = -635;
-              r.f();
+              r.f(-635);
               break L1;
             }
           } else {

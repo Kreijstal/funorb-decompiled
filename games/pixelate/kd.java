@@ -71,7 +71,7 @@ abstract class kd {
         return -1;
     }
 
-    final static void c(boolean param0) {
+    final static void c(boolean param0, int param1) {
         if (null != ri.field_f) {
             t.a(t.field_e, t.field_f, -t.field_e + t.field_h, t.field_a - t.field_f);
             ri.field_f.a(param0, 0);
@@ -667,7 +667,7 @@ abstract class kd {
         return stackIn_17_0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_d = null;
         field_a = null;
         field_c = null;

@@ -235,17 +235,17 @@ final class hi extends ee implements ta, pl {
         int var39 = 0;
         int var40 = 0;
         int[] var41 = null;
-        byte[] var43 = null;
         int var44 = 0;
         nf var45 = null;
-        int[] var49 = null;
-        int[] var53 = null;
-        int[] var57 = null;
-        int[] var59 = null;
+        int[] var50 = null;
+        int[] var55 = null;
         int[] var60 = null;
-        int[] var61 = null;
-        int[] var62 = null;
+        byte[] var62 = null;
         int[] var63 = null;
+        int[] var64 = null;
+        int[] var65 = null;
+        int[] var66 = null;
+        int[] var67 = null;
         int stackIn_17_0 = 0;
         int[] stackIn_18_0 = null;
         int[] stackIn_19_0 = null;
@@ -303,9 +303,8 @@ final class hi extends ee implements ta, pl {
                   break L2;
                 } else {
                   if (var45.field_v > 1) {
-                    var43 = var45.field_n;
-                    int discarded$1 = -85;
-                    va.a(0, var43, 0, uh.field_x);
+                    var62 = var45.field_n;
+                    va.a(0, var62, 0, uh.field_x, (byte) -85);
                     break L1;
                   } else {
                     break L2;
@@ -315,16 +314,16 @@ final class hi extends ee implements ta, pl {
               vc.d(2971);
               break L1;
             }
-            var62 = new int[param5.field_m];
-            var57 = var62;
-            var53 = var57;
-            var49 = var53;
-            var41 = var49;
+            var66 = new int[param5.field_m];
+            var60 = var66;
+            var55 = var60;
+            var50 = var55;
+            var41 = var50;
             var8_array = var41;
-            var63 = new int[param5.field_m];
-            var60 = ok.field_h;
-            var59 = oa.field_f;
-            var61 = gi.field_b;
+            var67 = new int[param5.field_m];
+            var64 = ok.field_h;
+            var63 = oa.field_f;
+            var65 = gi.field_b;
             var13 = 0;
             L3: while (true) {
               if (param5.field_m <= var13) {
@@ -420,8 +419,8 @@ final class hi extends ee implements ta, pl {
                             break L11;
                           } else {
                             L12: {
-                              var28 = var62[var18];
-                              var29 = var63[var18];
+                              var28 = var66[var18];
+                              var29 = var67[var18];
                               if (var21_ref != null) {
                                 stackOut_43_0 = var21_ref.field_a;
                                 stackIn_44_0 = stackOut_43_0;
@@ -443,12 +442,12 @@ final class hi extends ee implements ta, pl {
                         }
                       }
                       L13: {
-                        var28 = var62[var18];
-                        var29 = var62[var19];
-                        var30 = var62[var20];
-                        var31 = var63[var18];
-                        var32 = var63[var19];
-                        var33 = var63[var20];
+                        var28 = var66[var18];
+                        var29 = var66[var19];
+                        var30 = var66[var20];
+                        var31 = var67[var18];
+                        var32 = var67[var19];
+                        var33 = var67[var20];
                         if (var21_ref != null) {
                           stackOut_47_0 = var21_ref.field_a;
                           stackIn_48_0 = stackOut_47_0;
@@ -477,7 +476,7 @@ final class hi extends ee implements ta, pl {
                 }
               } else {
                 L14: {
-                  var14 = var59[var13] * param7 + param4 * var60[var13] - -(var61[var13] * param1) >> 8;
+                  var14 = var63[var13] * param7 + param4 * var64[var13] - -(var65[var13] * param1) >> 8;
                   if (0 > var14) {
                     var14 = -var14;
                     break L14;
@@ -504,7 +503,7 @@ final class hi extends ee implements ta, pl {
                 }
                 L16: {
                   var14 = stackIn_17_0;
-                  var15 = param0 * var61[var13] + (param2 * var60[var13] + param6 * var59[var13]) >> 8;
+                  var15 = param0 * var65[var13] + (param2 * var64[var13] + param6 * var63[var13]) >> 8;
                   stackOut_17_0 = jf.field_b;
                   stackIn_19_0 = stackOut_17_0;
                   stackIn_18_0 = stackOut_17_0;
@@ -524,8 +523,8 @@ final class hi extends ee implements ta, pl {
                 }
                 var15 = stackIn_20_0[stackIn_20_1];
                 var14 = var14 * (256 + -var15) >>> 8;
-                var62[var13] = var14;
-                var63[var13] = var15;
+                var66[var13] = var14;
+                var67[var13] = var15;
                 var13++;
                 continue L3;
               }
@@ -563,7 +562,7 @@ final class hi extends ee implements ta, pl {
         }
     }
 
-    final static int a(CharSequence param0, byte[] param1, int param2, int param3, int param4) {
+    final static int a(CharSequence param0, byte[] param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -947,8 +946,7 @@ final class hi extends ee implements ta, pl {
             L1: {
               if (((hi) this).field_J != param4) {
                 if (((hi) this).field_H == param4) {
-                  int discarded$4 = -50;
-                  this.f();
+                  this.f(-50);
                   break L1;
                 } else {
                   break L1;
@@ -963,7 +961,7 @@ final class hi extends ee implements ta, pl {
                 break L2;
               } else {
                 var7 = null;
-                boolean discarded$5 = this.a(-4, (nl) null);
+                boolean discarded$2 = this.a(-4, (nl) null);
                 break L2;
               }
             }
@@ -1025,7 +1023,7 @@ final class hi extends ee implements ta, pl {
         }
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_I = null;
         field_F = null;
     }
@@ -1267,7 +1265,7 @@ final class hi extends ee implements ta, pl {
         return stackIn_1_0;
     }
 
-    private final void f() {
+    private final void f(int param0) {
         if (!this.h((byte) -118)) {
             return;
         }

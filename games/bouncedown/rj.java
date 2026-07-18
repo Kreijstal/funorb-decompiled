@@ -15,7 +15,7 @@ final class rj extends ai {
     static int field_g;
     static int field_j;
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -57,7 +57,7 @@ final class rj extends ai {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_q = null;
         field_h = null;
     }

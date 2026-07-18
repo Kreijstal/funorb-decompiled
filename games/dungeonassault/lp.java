@@ -152,7 +152,7 @@ final class lp extends ne {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_q = null;
         field_B = null;
         field_C = null;

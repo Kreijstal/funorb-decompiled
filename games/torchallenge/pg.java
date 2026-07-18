@@ -264,8 +264,7 @@ final class pg extends qd {
                         var10 = var12;
                         var6 = var10;
                         if (var3 == 1) {
-                          int discarded$2 = 9;
-                          int discarded$3 = nl.a(var6, var5_int, param1, var4);
+                          int discarded$1 = nl.a(var16, var5_int, param1, var4, 9);
                           break L6;
                         } else {
                           var7 = (Object) (Object) jd.field_b;
@@ -743,7 +742,7 @@ final class pg extends qd {
         field_p = null;
     }
 
-    final static gl a(int param0, String param1) {
+    final static gl a(int param0, String param1, int param2) {
         fc var3 = null;
         RuntimeException var3_ref = null;
         fc stackIn_1_0 = null;

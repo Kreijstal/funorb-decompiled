@@ -20,7 +20,7 @@ final class ce extends ck {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_v = null;
         field_t = null;
         field_o = null;

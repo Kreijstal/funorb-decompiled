@@ -366,7 +366,7 @@ final class vl {
         }
     }
 
-    final static ut a(int param0, int param1) {
+    final static ut a(int param0, int param1, boolean param2, int param3) {
         int var4 = (param1 << 1) + 1;
         ut var5 = new ut(var4, var4);
         iw.a(56, var5);
@@ -382,30 +382,8 @@ final class vl {
         ta.e(126);
     }
 
-    final static boolean a() {
-        int stackIn_4_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_3_0 = 0;
-        L0: {
-          L1: {
-            if (fp.field_e != -1) {
-              break L1;
-            } else {
-              int discarded$4 = 0;
-              if (nq.g() >= 10) {
-                break L1;
-              } else {
-                stackOut_2_0 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                break L0;
-              }
-            }
-          }
-          stackOut_3_0 = 0;
-          stackIn_4_0 = stackOut_3_0;
-          break L0;
-        }
-        return stackIn_4_0 != 0;
+    final static boolean a(boolean param0) {
+        return fp.field_e == -1 && nq.g(0) < 10;
     }
 
     vl(String param0) {

@@ -60,8 +60,7 @@ final class nwa implements ntb {
             return;
         }
         try {
-            int discarded$0 = 0;
-            var3.field_b = (rha[]) (Object) sqb.a((tv[]) (Object) var3.field_b, (tv[]) (Object) var3.field_b, 1, bob.field_e);
+            var3.field_b = (rha[]) (Object) sqb.a((tv[]) (Object) var3.field_b, (tv[]) (Object) ((nwa) this).field_b, 1, bob.field_e, false);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "nwa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -606,9 +605,9 @@ final class nwa implements ntb {
           L0: {
             L1: {
               var3 = (nwa) (Object) param0;
-              boolean discarded$2 = tja.a((ntb[]) (Object) var3.field_b, 1, (ntb[]) (Object) var3.field_b, false, 5547);
+              boolean discarded$2 = tja.a((ntb[]) (Object) var3.field_b, 1, (ntb[]) (Object) ((nwa) this).field_b, false, 5547);
               var4 = 0;
-              if (!dn.a((tv[]) (Object) var3.field_b, false, 1, (tv[]) (Object) var3.field_b, 121)) {
+              if (!dn.a((tv[]) (Object) var3.field_b, false, 1, (tv[]) (Object) ((nwa) this).field_b, 121)) {
                 break L1;
               } else {
                 System.out.println("Message[] messages has changed. ");

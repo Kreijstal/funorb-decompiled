@@ -82,8 +82,7 @@ final class al extends gg {
                   break L5;
                 }
               }
-              int discarded$2 = -92;
-              qg.a(param1);
+              qg.a(param1, (byte) -92);
               break L0;
             } else {
               return;

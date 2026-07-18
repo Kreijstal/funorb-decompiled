@@ -9,7 +9,7 @@ final class nd {
     static int[] field_a;
     static ba field_e;
 
-    final static df[] a() {
+    final static df[] a(int param0) {
         return new df[]{mj.field_l, vh.field_s, jc.field_a};
     }
 
@@ -74,10 +74,7 @@ final class nd {
                   }
                 } else {
                   ul.d();
-                  int discarded$75 = 240;
-                  int discarded$76 = 0;
-                  int discarded$77 = 320;
-                  cd.a();
+                  cd.a(320, false, 240);
                   kg.a(0, (byte) -83, 0, param1);
                   break L1;
                 }

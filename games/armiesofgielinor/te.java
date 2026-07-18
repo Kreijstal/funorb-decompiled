@@ -104,12 +104,12 @@ final class te extends tc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_m = null;
         field_p = null;
     }
 
-    final static void a(int param0, bj param1) {
+    final static void a(int param0, bj param1, int param2) {
         bv var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_3_0 = null;

@@ -6,7 +6,7 @@ final class ga extends gi {
     static int[] field_j;
     byte[] field_h;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         field_i = null;
     }

@@ -110,6 +110,7 @@ final class cn {
           L0: {
             L1: {
               var14 = param6.a(-30491);
+              var11_ref_String = var14;
               var8 = param4.a(-30491);
               var11_ref_String = var8;
               if (null == sh.field_e) {
@@ -161,8 +162,7 @@ final class cn {
                       aa.field_f.e(160, 18);
                       aa.field_f.field_m = aa.field_f.field_m + 2;
                       var10 = aa.field_f.field_m;
-                      int discarded$7 = -85;
-                      var11_ref_String = ln.a(ao.a(13867));
+                      var11_ref_String = ln.a(ao.a(13867), (byte) -85);
                       if (var11_ref_String != null) {
                         break L6;
                       } else {
@@ -171,8 +171,7 @@ final class cn {
                       }
                     }
                     aa.field_f.b((byte) -41, var11_ref_String);
-                    int discarded$8 = 12556;
-                    wh.a(ag.field_m, (we) (Object) aa.field_f, tp.field_t, uk.field_v);
+                    wh.a(ag.field_m, (we) (Object) aa.field_f, tp.field_t, uk.field_v, 12556);
                     aa.field_f.c(7519, aa.field_f.field_m - var10);
                     break L4;
                   } else {
@@ -234,8 +233,7 @@ final class cn {
                     aa.field_f.e(160, 16);
                     aa.field_f.field_m = aa.field_f.field_m + 1;
                     var9 = aa.field_f.field_m;
-                    int discarded$9 = 12556;
-                    wh.a(ag.field_m, (we) (Object) aa.field_f, tp.field_t, uk.field_v);
+                    wh.a(ag.field_m, (we) (Object) aa.field_f, tp.field_t, uk.field_v, 12556);
                     aa.field_f.f(aa.field_f.field_m + -var9, -1);
                     break L4;
                   }
@@ -272,14 +270,13 @@ final class cn {
                       jj.field_b = -1;
                       break L9;
                     } else {
-                      boolean discarded$10 = rd.a(wl.a(23062), false);
+                      boolean discarded$1 = rd.a(wl.a(23062), false);
                       kj.field_j = new Boolean(rn.a((byte) 107, (we) (Object) vi.field_o));
                       vi.field_o.field_m = 0;
                       break L9;
                     }
                   } else {
-                    int discarded$11 = -7624;
-                    ql.a(ao.a(13867));
+                    ql.a(ao.a(13867), -7624);
                     gi.field_b = ph.field_m;
                     na.a(true);
                     qj.field_b = false;
@@ -328,8 +325,7 @@ final class cn {
             }
             L13: {
               if (uk.field_s == bg.field_l) {
-                int discarded$12 = -18481;
-                if (in.e()) {
+                if (in.e(-18481)) {
                   L14: {
                     if (mn.field_e == 255) {
                       var9_ref_String = vi.field_o.e((byte) 40);
@@ -362,8 +358,7 @@ final class cn {
               } else {
                 if (qj.field_b) {
                   L16: {
-                    int discarded$13 = 8;
-                    if (no.d() > 30000L) {
+                    if (no.d(8) > 30000L) {
                       gi.field_b = vc.field_N;
                       break L16;
                     } else {
@@ -471,7 +466,7 @@ final class cn {
         return stackIn_66_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

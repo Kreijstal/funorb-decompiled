@@ -16,7 +16,7 @@ final class ij extends rk {
     static qi field_q;
     static long field_u;
 
-    public static void b() {
+    public static void b(int param0) {
         field_q = null;
         field_r = null;
         field_o = null;
@@ -119,7 +119,7 @@ final class ij extends rk {
         return stackIn_8_0;
     }
 
-    final static gd a() {
+    final static gd a(int param0, int param1) {
         gd var2 = new gd();
         ra.field_d.a((rk) (Object) var2, (byte) 109);
         fm.a(115, 4);

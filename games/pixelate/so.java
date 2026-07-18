@@ -50,8 +50,7 @@ final class so {
             ((so) this).field_g = ((so) this).field_l;
         }
         if (param0 != 27420) {
-            int discarded$0 = 1;
-            so.a();
+            so.a(true);
         }
     }
 
@@ -72,7 +71,7 @@ final class so {
         ((so) this).field_l = ((so) this).field_g;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         if (!ik.field_a) {
             if (null == pk.field_f) {
                 pk.field_f = wg.b(255, 4);
@@ -104,8 +103,7 @@ final class so {
                 if (fc.field_e == 9) {
                     if (!(go.field_k != 0)) {
                         fc.field_e = 5;
-                        int discarded$0 = -25528;
-                        la.a(ti.field_t, 5, false);
+                        la.a(ti.field_t, 5, false, -25528);
                     }
                 }
             }
@@ -124,7 +122,7 @@ final class so {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_c = null;
     }

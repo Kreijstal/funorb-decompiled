@@ -7,7 +7,7 @@ final class lo {
     static wf[] field_a;
     static phb[] field_c;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_b = null;
         field_c = null;

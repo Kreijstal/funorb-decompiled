@@ -9,7 +9,7 @@ final class gm {
     static String field_f;
     static int[] field_c;
 
-    final static ed[] a(int param0, int param1, mf param2) {
+    final static ed[] a(int param0, int param1, mf param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         ed[] stackIn_4_0 = null;
@@ -76,11 +76,11 @@ final class gm {
         return stackIn_4_0;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return eb.field_H;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_f = null;

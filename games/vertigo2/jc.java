@@ -8,7 +8,7 @@ final class jc implements ur {
     private int field_d;
     static int[] field_b;
 
-    final static void b() {
+    final static void b(int param0) {
         int var2 = 0;
         var2 = Vertigo2.field_L ? 1 : 0;
         if ((1 << ln.field_d.field_B & ln.field_d.field_D.field_d) == 0) {
@@ -174,8 +174,7 @@ final class jc implements ur {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = -99;
-            stackOut_2_0 = af.a(false, param1);
+            stackOut_2_0 = af.a(false, param1, (byte) -99);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -234,7 +233,7 @@ final class jc implements ur {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
     }

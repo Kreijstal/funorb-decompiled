@@ -20,7 +20,7 @@ class bob implements wwa, at {
     int field_c;
     int field_n;
 
-    private final void c(shb param0) {
+    private final void c(shb param0, byte param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -219,15 +219,13 @@ class bob implements wwa, at {
                     } else {
                       if (var12 != 1) {
                         if (var12 == 2) {
-                          int discarded$5 = -13;
-                          ((bob) this).field_d.b(((bob) this).b((byte) -72, param5), var9_int + this.a(param6, param5, 0), var11 + this.a(param7, -124, param5, 0), param4, param1);
+                          ((bob) this).field_d.b(((bob) this).b((byte) -72, param5), var9_int + this.a(param6, param5, 0, (byte) -13), var11 + this.a(param7, -124, param5, 0), param4, param1);
                           break L1;
                         } else {
                           break L1;
                         }
                       } else {
-                        int discarded$6 = -13;
-                        ((bob) this).field_d.a(((bob) this).b((byte) -109, param5), (var9_int >> 1) + this.a(param6, param5, 0), this.a(param7, -117, param5, 0) + var11, param4, param1);
+                        ((bob) this).field_d.a(((bob) this).b((byte) -109, param5), (var9_int >> 1) + this.a(param6, param5, 0, (byte) -13), this.a(param7, -117, param5, 0) + var11, param4, param1);
                         break L1;
                       }
                     }
@@ -235,12 +233,10 @@ class bob implements wwa, at {
                     break L4;
                   }
                 }
-                int discarded$7 = -13;
-                ((bob) this).field_d.c(((bob) this).b((byte) -68, param5), this.a(param6, param5, 0), this.a(param7, -118, param5, 0) - -var11, param4, param1);
+                ((bob) this).field_d.c(((bob) this).b((byte) -68, param5), this.a(param6, param5, 0, (byte) -13), this.a(param7, -118, param5, 0) - -var11, param4, param1);
                 break L1;
               } else {
-                int discarded$8 = -13;
-                int discarded$9 = ((bob) this).field_d.a(((bob) this).b((byte) -112, param5), this.a(param6, param5, 0), this.a(param7, -117, param5, 0), var9_int, var10, param4, param1, ((bob) this).field_c, ((bob) this).field_n, ((bob) this).field_h);
+                int discarded$1 = ((bob) this).field_d.a(((bob) this).b((byte) -112, param5), this.a(param6, param5, 0, (byte) -13), this.a(param7, -117, param5, 0), var9_int, var10, param4, param1, ((bob) this).field_c, ((bob) this).field_n, ((bob) this).field_h);
                 break L1;
               }
             }
@@ -350,7 +346,7 @@ class bob implements wwa, at {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final int a(int param0, shb param1, int param2) {
+    private final int a(int param0, shb param1, int param2, byte param3) {
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -649,8 +645,7 @@ class bob implements wwa, at {
                 ((re) (Object) param0.field_d).a(((bob) this).field_h, this.a((byte) 83, param0), ((bob) this).b(param0, (byte) 117), ((bob) this).b((byte) -94, param0), ((bob) this).field_d, ((bob) this).field_c, 3, ((bob) this).field_n);
                 break L3;
               } else {
-                int discarded$3 = 87;
-                this.c(param0);
+                this.c(param0, (byte) 87);
                 break L3;
               }
             }
@@ -871,8 +866,7 @@ class bob implements wwa, at {
                       }
                     }
                     var15 = stackIn_20_0;
-                    int discarded$1 = -13;
-                    msa.field_s.a(var13.field_b + (param4.field_i + ((bob) this).field_k + (param4.field_r + param1)), ((bob) this).field_b >>> 24, true, var15 - var14, ((bob) this).field_b, this.a(param3, param4, var14), var13.field_a);
+                    msa.field_s.a(var13.field_b + (param4.field_i + ((bob) this).field_k + (param4.field_r + param1)), ((bob) this).field_b >>> 24, true, var15 - var14, ((bob) this).field_b, this.a(param3, param4, var14, (byte) -13), var13.field_a);
                     var12++;
                     continue L3;
                   }
@@ -946,8 +940,7 @@ class bob implements wwa, at {
                 break L1;
               }
             }
-            int discarded$2 = -13;
-            stackOut_2_0 = this.a(param1, param2, 0);
+            stackOut_2_0 = this.a(param1, param2, 0, (byte) -13);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -1340,8 +1333,7 @@ class bob implements wwa, at {
                   var7 = var14.a(true, param4);
                   var8 = var13.field_c[var7];
                   var9 = var14.a(param4, -126);
-                  int discarded$1 = -13;
-                  var10 = this.a(param3, param0, var9);
+                  var10 = this.a(param3, param0, var9, (byte) -13);
                   var11 = ((bob) this).b(-3, param1, param0) + Math.max(0, var8.field_b);
                   stackOut_2_0 = ((bob) this).b(-3, param1, param0);
                   stackOut_2_1 = this.a((byte) 71, param0);

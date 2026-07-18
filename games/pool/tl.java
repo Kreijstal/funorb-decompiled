@@ -225,7 +225,7 @@ final class tl extends ob {
         return 36;
     }
 
-    final static int h() {
+    final static int h(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -685,7 +685,7 @@ final class tl extends ob {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_N = null;
         field_I = null;
         field_L = null;
@@ -730,6 +730,7 @@ final class tl extends ob {
         uo[] var30 = null;
         String var31 = null;
         String var32 = null;
+        String var33 = null;
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
         uo stackIn_19_0 = null;
@@ -947,8 +948,7 @@ final class tl extends ob {
             break L0;
           } else {
             L2: {
-              int discarded$5 = 85;
-              if (cj.e()) {
+              if (cj.e((byte) 85)) {
                 if (!param1.field_ec) {
                   stackOut_5_0 = 1;
                   stackIn_6_0 = stackOut_5_0;
@@ -979,8 +979,7 @@ final class tl extends ob {
                 if (!mc.field_f[0][2].field_db) {
                   break L3;
                 } else {
-                  int discarded$6 = 85;
-                  if (cj.e()) {
+                  if (cj.e((byte) 85)) {
                     kk.field_B = rq.field_r;
                     break L3;
                   } else {
@@ -1419,9 +1418,7 @@ final class tl extends ob {
                     if (param3) {
                       break L35;
                     } else {
-                      int discarded$7 = 11;
-                      int discarded$8 = 5;
-                      lm.c();
+                      lm.c(5, 11);
                       break L35;
                     }
                   }
@@ -1953,14 +1950,13 @@ final class tl extends ob {
                           }
                           L68: {
                             if (var21 != null) {
-                              var21 = (Object) (Object) ("<col=A00000>" + (String) var21);
-                              int discarded$9 = -1;
-                              var32 = ug.a("<br>", "<br><col=A00000>", (String) var21);
+                              var32 = "<col=A00000>" + (String) var21;
+                              var33 = ug.a("<br>", "<br><col=A00000>", var32, -1);
                               if (var20 == null) {
-                                var20 = (Object) (Object) var32;
+                                var20 = (Object) (Object) var33;
                                 break L68;
                               } else {
-                                var20 = (Object) (Object) ((String) var20 + "<br>" + var32);
+                                var20 = (Object) (Object) ((String) var20 + "<br>" + var33);
                                 break L68;
                               }
                             } else {
@@ -2550,8 +2546,7 @@ final class tl extends ob {
         var10 = Pool.field_O;
         super.c(43);
         if (hk.b(-128)) {
-          int discarded$1 = 320;
-          this.f();
+          this.f(320);
           return;
         } else {
           L0: {
@@ -2679,7 +2674,7 @@ final class tl extends ob {
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         sa.field_h.b(ra.field_a, 320, 380, 15658734, -1);
     }
 
@@ -2726,8 +2721,7 @@ final class tl extends ob {
               if (param1 == -7510) {
                 break L1;
               } else {
-                int discarded$6 = -13;
-                int discarded$7 = tl.h();
+                int discarded$4 = tl.h(-13);
                 break L1;
               }
             }
@@ -2762,9 +2756,9 @@ final class tl extends ob {
                         }
                       }
                     }
-                    int incrementValue$8 = var5;
+                    int incrementValue$5 = var5;
                     var5++;
-                    var9[incrementValue$8] = (char)var7;
+                    var9[incrementValue$5] = (char)var7;
                     break L3;
                   } else {
                     break L3;

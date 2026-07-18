@@ -21,12 +21,11 @@ final class hi extends nv {
           if (param0 == 5418) {
             break L0;
           } else {
-            boolean discarded$5 = ((hi) this).p((byte) 4);
+            boolean discarded$3 = ((hi) this).p((byte) 4);
             break L0;
           }
         }
-        int discarded$6 = 0;
-        this.b();
+        this.b(0);
         var8 = ((hi) this).b(true).field_u;
         var3 = var8.a((byte) -26, (ffa) (Object) ((hi) this).field_g);
         var4 = ((hi) this).e(6);
@@ -39,7 +38,7 @@ final class hi extends nv {
             if (var6.a(-77)) {
               if ((Object) (Object) var6 != (Object) (Object) var4) {
                 if (io.a(var6.c(param0 + -5435), ((hi) this).field_g.e(9648), (byte) -55, var6.a((byte) 55), ((hi) this).field_g.d(param0 + -5415), var6.e(9648), ((hi) this).field_g.a((byte) 55), ((hi) this).field_g.c(-21), var6.d(3))) {
-                  boolean discarded$7 = var6.a(100, true, 1, ((hi) this).field_o, ((hi) this).field_n, 0);
+                  boolean discarded$4 = var6.a(100, true, 1, ((hi) this).field_o, ((hi) this).field_n, 0);
                   var5++;
                   continue L1;
                 } else {
@@ -58,7 +57,7 @@ final class hi extends nv {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = hua.a((byte) 111, ((hi) this).field_g.g(-25787) >> 2);
         int var3 = bua.a(0, ((hi) this).field_g.g(-25787) >> 2);
         ((hi) this).field_n = -gqa.a(((hi) this).field_r, (byte) 24, var2) - -gqa.a(((hi) this).field_s, (byte) 24, var3);
@@ -72,7 +71,7 @@ final class hi extends nv {
         return param0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_q = null;
         field_p = null;
     }
@@ -84,7 +83,7 @@ final class hi extends nv {
         return 1;
     }
 
-    final static iu[] a() {
+    final static iu[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, int param8) {
         int var9 = 0;
         iu[] var10 = null;
         iu[] var11_ref_iu__ = null;
@@ -233,8 +232,7 @@ final class hi extends nv {
         try {
             super.a(param0, param1);
             param1.b((byte) 60, 3);
-            int discarded$0 = 0;
-            this.b();
+            this.b(0);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "hi.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

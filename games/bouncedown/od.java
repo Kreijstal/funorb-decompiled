@@ -92,7 +92,7 @@ final class od {
         this.a(0, var4);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         Object var2 = null;
         pk.a((String) null, eb.field_z, -98);
     }

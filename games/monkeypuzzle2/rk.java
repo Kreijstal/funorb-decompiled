@@ -12,7 +12,7 @@ final class rk {
     static md field_g;
     String field_b;
 
-    final static void a(md param0, java.awt.Frame param1) {
+    final static void a(md param0, java.awt.Frame param1, boolean param2) {
         ic var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -55,8 +55,7 @@ final class rk {
               L2: while (true) {
                 if (var3.field_g != 0) {
                   if (var3.field_g != 1) {
-                    int discarded$18 = 0;
-                    em.a(100L);
+                    em.a(100L, false);
                     continue L1;
                   } else {
                     param1.setVisible(false);
@@ -64,8 +63,7 @@ final class rk {
                     break L0;
                   }
                 } else {
-                  int discarded$19 = 0;
-                  em.a(10L);
+                  em.a(10L, false);
                   continue L2;
                 }
               }

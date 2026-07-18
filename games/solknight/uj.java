@@ -8,7 +8,7 @@ final class uj {
     int field_d;
     int field_e;
 
-    final static void a(float param0, String param1, boolean param2) {
+    final static void a(float param0, String param1, boolean param2, byte param3) {
         try {
             if (pc.field_b == null) {
                 pc.field_b = new lb(u.field_b, v.field_a);
@@ -22,7 +22,7 @@ final class uj {
         }
     }
 
-    final static void a(int param0, int param1, int param2, o[] param3, int param4) {
+    final static void a(int param0, int param1, int param2, o[] param3, int param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -360,7 +360,7 @@ final class uj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

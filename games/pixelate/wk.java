@@ -52,8 +52,7 @@ final class wk extends rg {
     }
 
     final static void a(int param0, int param1, boolean param2, boolean param3, boolean param4, boolean param5, byte param6, boolean param7, int param8, int param9, int param10, int param11) {
-        int discarded$0 = 13;
-        sk.a(param4, 16777215, 15, param2, param11, 11, 14, (byte) -119, true, 16777215, param3, 0, param5);
+        sk.a(param4, 16777215, 15, param2, param11, 11, 14, (byte) -119, true, 16777215, param3, 0, param5, 13);
         int var12 = -1;
     }
 

@@ -50,7 +50,6 @@ final class kq {
             Exception var6_ref3 = null;
             Throwable var6_ref4 = null;
             int var6_int = 0;
-            String var7 = null;
             String var8 = null;
             int var9 = 0;
             String[] var10 = null;
@@ -65,9 +64,10 @@ final class kq {
             int var17 = 0;
             Object var18 = null;
             byte[][] var19 = null;
-            byte[][] var20 = null;
+            String var20 = null;
             byte[][] var21 = null;
             byte[][] var22 = null;
+            byte[][] var23 = null;
             RuntimeException stackIn_35_0 = null;
             StringBuilder stackIn_35_1 = null;
             RuntimeException stackIn_36_0 = null;
@@ -143,7 +143,7 @@ final class kq {
                                         }
                                       }
                                     }
-                                    var7 = param3.e((byte) -76);
+                                    var20 = param3.e((byte) -76);
                                     var8 = param3.e((byte) -76);
                                     var9 = param3.h(255);
                                     var10 = new String[var9];
@@ -151,10 +151,10 @@ final class kq {
                                     L7: while (true) {
                                       if (var9 <= var11_int) {
                                         L8: {
-                                          var22 = new byte[var9][];
+                                          var23 = new byte[var9][];
+                                          var22 = var23;
                                           var21 = var22;
-                                          var20 = var21;
-                                          var19 = var20;
+                                          var19 = var21;
                                           var11 = var19;
                                           if (3 == var6_int) {
                                             var12_int = 0;
@@ -164,7 +164,7 @@ final class kq {
                                               } else {
                                                 var13 = param3.e(-31);
                                                 var11[var12_int] = new byte[var13];
-                                                param3.a(var22[var12_int], 0, -116, var13);
+                                                param3.a(var23[var12_int], 0, -116, var13);
                                                 var12_int++;
                                                 continue L9;
                                               }
@@ -179,13 +179,11 @@ final class kq {
                                         var13 = var17;
                                         L10: while (true) {
                                           if (var9 <= var17) {
-                                            int discarded$5 = 1;
-                                            ((aj) var18).field_k[var5] = param1.a(26868, var12, var8, sg.a(var7));
-                                            ((aj) var18).field_g[var5] = var22;
+                                            ((aj) var18).field_k[var5] = param1.a(26868, var12, var8, sg.a(var20, 1));
+                                            ((aj) var18).field_g[var5] = var23;
                                             break L3;
                                           } else {
-                                            int discarded$6 = 1;
-                                            var12[var17] = sg.a(var10[var17]);
+                                            var12[var17] = sg.a(var10[var17], 1);
                                             var17++;
                                             continue L10;
                                           }
@@ -201,12 +199,10 @@ final class kq {
                               }
                             }
                             L11: {
-                              String dupTemp$7 = param3.e((byte) -76);
-                              var16 = dupTemp$7;
-                              var7 = dupTemp$7;
-                              String dupTemp$8 = param3.e((byte) -76);
-                              var15 = dupTemp$8;
-                              var8 = dupTemp$8;
+                              var16 = param3.e((byte) -76);
+                              String dupTemp$1 = param3.e((byte) -76);
+                              var15 = dupTemp$1;
+                              var8 = dupTemp$1;
                               var9 = 0;
                               if (1 == var6_int) {
                                 var9 = param3.e(97);
@@ -217,8 +213,7 @@ final class kq {
                             }
                             ((aj) var18).field_i[var5] = var6_int;
                             ((aj) var18).field_h[var5] = var9;
-                            int discarded$9 = 1;
-                            ((aj) var18).field_j[var5] = param1.a(10355, var15, sg.a(var16));
+                            ((aj) var18).field_j[var5] = param1.a(10355, var15, sg.a(var16, 1));
                             break L4;
                           }
                           break L3;

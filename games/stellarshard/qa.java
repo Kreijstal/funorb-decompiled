@@ -25,7 +25,7 @@ final class qa {
     private static int[] field_c;
     private static boolean field_l;
 
-    final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int[] param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -96,9 +96,7 @@ final class qa {
         field_u[2] = var17;
         try {
           L3: {
-            int discarded$2 = 0;
-            int discarded$3 = 0;
-            qa.a(var14 != 0);
+            qa.a(var14 != 0, false, 0);
             break L3;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -486,7 +484,7 @@ final class qa {
         }
     }
 
-    private final static void a(boolean param0) {
+    private final static void a(boolean param0, boolean param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;

@@ -23,7 +23,7 @@ final class jh {
     static int field_k;
     int[] field_j;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         n var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -101,7 +101,7 @@ final class jh {
         field_l = null;
     }
 
-    private final void a(byte[] param0) {
+    private final void a(byte[] param0, byte param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -532,8 +532,7 @@ final class jh {
                     }
                 }
             }
-            int discarded$0 = -80;
-            this.a(param0);
+            this.a(param0, (byte) -80);
         } catch (RuntimeException runtimeException) {
             throw sh.a((Throwable) (Object) runtimeException, "jh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -4,7 +4,7 @@
 final class qd {
     static vna field_a;
 
-    final static int a() {
+    final static int a(byte param0) {
         return -am.field_o + tia.field_a;
     }
 

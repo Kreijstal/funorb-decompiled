@@ -242,8 +242,7 @@ final class uf {
               ri.a(param10, param16, param7 ^ -17016, param5, param6);
               tb.a(-92, param6);
               wp.a(param2, param11, param18, param19, param13, param17, param8, param0, param14, param6, param15, param12, param9, (byte) 117, param4);
-              int discarded$3 = 0;
-              ew.a(true, param6, param1);
+              ew.a(true, param6, param1, 0);
               sb.b((byte) -124);
               if (param7 == 16971) {
                 break L1;
@@ -252,10 +251,8 @@ final class uf {
                 break L1;
               }
             }
-            int discarded$4 = 0;
-            na.h();
-            int discarded$5 = -47;
-            tq.g();
+            na.h(0);
+            tq.g((byte) -47);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -644,11 +641,9 @@ final class uf {
         Object var2 = null;
         if (param0 == 608) {
           if (hl.field_d >= 20) {
-            int discarded$16 = 97;
-            if (hh.b()) {
+            if (hh.b((byte) 97)) {
               if (rl.field_n > 0) {
-                int discarded$17 = 1;
-                if (vr.d()) {
+                if (vr.d(1)) {
                   return false;
                 } else {
                   return true;
@@ -666,11 +661,9 @@ final class uf {
           var2 = null;
           uf.a((ut[][]) null, (sj) null, (int[]) null, true, (byte[]) null, (kg[]) null, (sj) null, 32, (String[][]) null, (String[][]) null, (sj) null, (byte[]) null, (String[]) null, 71, (String[]) null, (ut[][]) null, (int[]) null, -120, 61, (String[]) null);
           if (hl.field_d >= 20) {
-            int discarded$18 = 97;
-            if (hh.b()) {
+            if (hh.b((byte) 97)) {
               if (rl.field_n > 0) {
-                int discarded$19 = 1;
-                if (vr.d()) {
+                if (vr.d(1)) {
                   return false;
                 } else {
                   return true;

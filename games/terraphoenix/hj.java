@@ -29,7 +29,7 @@ final class hj extends jc {
     final static void g(int param0) {
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_J = null;
         field_H = null;
         field_K = null;

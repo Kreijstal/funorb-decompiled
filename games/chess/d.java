@@ -20,8 +20,7 @@ final class d extends ci {
 
     final static void a(vl param0, int param1, vl param2, jk param3, java.awt.Component param4, boolean param5, byte param6) {
         try {
-            int discarded$0 = 10;
-            md.a(param1, param5);
+            md.a(param1, param5, 10);
             mh.field_d = md.a(param3, param4, 0, 22050);
             kn.field_F = md.a(param3, param4, 1, 2048);
             h.field_s = new lb();
@@ -327,7 +326,7 @@ final class d extends ci {
         }
     }
 
-    final static void l() {
+    final static void l(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -471,7 +470,7 @@ final class d extends ci {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         int var1 = 0;
         field_Jb = null;
         field_Lb = null;

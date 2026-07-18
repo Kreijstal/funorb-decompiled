@@ -37,8 +37,8 @@ final class pob extends rna implements ntb {
             var5 = (pob) (Object) param1;
             var6 = var5;
             super.b((byte) 70, param1);
-            var6.field_d = var5.field_d;
-            var6.field_a = var5.field_a;
+            var6.field_d = ((pob) this).field_d;
+            var6.field_a = ((pob) this).field_a;
             if (param0 > 54) {
               break L0;
             } else {
@@ -272,7 +272,7 @@ final class pob extends rna implements ntb {
         return (ucb) (Object) stackIn_3_0;
     }
 
-    final static int b() {
+    final static int b(int param0) {
         int var1 = 61;
         return iua.field_p;
     }
@@ -303,18 +303,18 @@ final class pob extends rna implements ntb {
               super.a(param0, -89);
               var5 = (pob) (Object) param0;
               var4 = 0;
-              if (var5.field_d != var5.field_d) {
+              if (((pob) this).field_d != var5.field_d) {
                 var4 = 1;
-                System.out.println("int index has changed. before=" + var5.field_d + ", now=" + var5.field_d);
+                System.out.println("int index has changed. before=" + var5.field_d + ", now=" + ((pob) this).field_d);
                 break L1;
               } else {
                 break L1;
               }
             }
             L2: {
-              if (var5.field_a != var5.field_a) {
+              if (((pob) this).field_a != var5.field_a) {
                 var4 = 1;
-                System.out.println("int value has changed. before=" + var5.field_a + ", now=" + var5.field_a);
+                System.out.println("int value has changed. before=" + var5.field_a + ", now=" + ((pob) this).field_a);
                 break L2;
               } else {
                 break L2;
@@ -496,10 +496,10 @@ final class pob extends rna implements ntb {
                 if (super.a((byte) 93, param1)) {
                   break L2;
                 } else {
-                  if (var4.field_d != var4.field_d) {
+                  if (((pob) this).field_d != var4.field_d) {
                     break L2;
                   } else {
-                    if (var4.field_a == var4.field_a) {
+                    if (var4.field_a == ((pob) this).field_a) {
                       stackOut_5_0 = 0;
                       stackIn_6_0 = stackOut_5_0;
                       break L1;

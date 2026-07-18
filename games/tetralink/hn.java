@@ -112,7 +112,7 @@ abstract class hn extends gn implements uc {
         return stackIn_5_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_P = null;
         field_O = null;
         field_M = null;
@@ -400,8 +400,7 @@ abstract class hn extends gn implements uc {
                             break L7;
                           } else {
                             if (var6_int == 8) {
-                              int discarded$10 = 0;
-                              mk.a();
+                              mk.a(false);
                               vb.field_j = false;
                               stackOut_27_0 = var6_int;
                               stackIn_28_0 = stackOut_27_0;
@@ -436,8 +435,7 @@ abstract class hn extends gn implements uc {
                         var6_ref = kb.field_q.i(-53);
                         var7 = kb.field_q.d((byte) -99);
                         if ((var7 & 1) != -1) {
-                          int discarded$11 = 115;
-                          qj.b();
+                          qj.b((byte) 115);
                           break L9;
                         } else {
                           break L9;
@@ -505,9 +503,9 @@ abstract class hn extends gn implements uc {
                       L15: {
                         ef.field_n = stackIn_52_0 != 0;
                         if (mc.field_k) {
-                          int discarded$12 = kb.field_q.d((byte) -99);
-                          int discarded$13 = kb.field_q.d((byte) -99);
-                          int discarded$14 = kb.field_q.f(-117);
+                          int discarded$5 = kb.field_q.d((byte) -99);
+                          int discarded$6 = kb.field_q.d((byte) -99);
+                          int discarded$7 = kb.field_q.f(-117);
                           bf.field_n = kb.field_q.e(127);
                           ua.field_a = new byte[bf.field_n];
                           var8 = 0;
@@ -561,7 +559,7 @@ abstract class hn extends gn implements uc {
                             } else {
                               try {
                                 L21: {
-                                  Object discarded$15 = ii.a((byte) 81, "unzap", lk.q(13));
+                                  Object discarded$8 = ii.a((byte) 81, "unzap", lk.q(13));
                                   break L21;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -577,8 +575,7 @@ abstract class hn extends gn implements uc {
                         }
                         try {
                           L23: {
-                            int discarded$16 = 1;
-                            Object discarded$17 = ii.a(new Object[1], 6760, "zap", lk.q(param2 + 2485));
+                            Object discarded$9 = ii.a(new Object[1], 6760, "zap", lk.q(param2 + 2485));
                             break L23;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -623,8 +620,7 @@ abstract class hn extends gn implements uc {
                   } else {
                     if (ua.b(param2 + 2515)) {
                       L28: {
-                        int discarded$18 = 0;
-                        mk.a();
+                        mk.a(false);
                         if (ua.field_c != 7) {
                           break L28;
                         } else {
@@ -663,8 +659,7 @@ abstract class hn extends gn implements uc {
                     } else {
                       if (vb.field_j) {
                         L31: {
-                          int discarded$19 = 127;
-                          if (ib.a() <= 30000L) {
+                          if (ib.a((byte) 127) <= 30000L) {
                             tg.field_d = ja.field_d;
                             break L31;
                           } else {

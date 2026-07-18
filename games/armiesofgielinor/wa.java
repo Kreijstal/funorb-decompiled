@@ -892,8 +892,7 @@ final class wa extends ik {
                           if (var5 != 2) {
                             break L2;
                           } else {
-                            int discarded$1 = 1;
-                            this.a(param1);
+                            this.a(param1, true);
                             break L2;
                           }
                         }
@@ -1095,7 +1094,7 @@ final class wa extends ik {
         }
     }
 
-    private final void a(ha param0) {
+    private final void a(ha param0, boolean param1) {
         RuntimeException var3 = null;
         jd var4 = null;
         jd var5 = null;
@@ -1247,7 +1246,7 @@ final class wa extends ik {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_h = null;
         field_e = null;
     }

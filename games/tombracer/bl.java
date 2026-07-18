@@ -8,7 +8,7 @@ final class bl {
     static is field_a;
     static int[] field_c;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         if (null == oba.field_e) {
             return false;
         }
@@ -18,7 +18,7 @@ final class bl {
         return true;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -71,7 +71,7 @@ final class bl {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;

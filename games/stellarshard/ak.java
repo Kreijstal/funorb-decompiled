@@ -8,15 +8,23 @@ final class ak {
     static int[] field_c;
     static String field_b;
 
-    public static void a() {
-        field_d = null;
-        field_b = null;
-        field_c = null;
+    public static void a(boolean param0) {
+        try {
+            field_d = null;
+            field_b = null;
+            field_c = null;
+            if (!param0) {
+                field_e = -85;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "ak.B(" + param0 + ')');
+        }
     }
 
     final static String a(String param0, String param1, pf param2, byte param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_4_0 = null;
+        Object stackIn_7_0 = null;
         String stackIn_9_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -49,6 +57,7 @@ final class ak {
         RuntimeException decompiledCaughtException = null;
         String stackOut_3_0 = null;
         String stackOut_8_0 = null;
+        Object stackOut_6_0 = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
         RuntimeException stackOut_13_0 = null;
@@ -88,9 +97,15 @@ final class ak {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              stackOut_8_0 = param4 + " - " + param2.b(0, param0) + "%";
-              stackIn_9_0 = stackOut_8_0;
-              break L0;
+              if (param3 == 51) {
+                stackOut_8_0 = param4 + " - " + param2.b(0, param0) + "%";
+                stackIn_9_0 = stackOut_8_0;
+                break L0;
+              } else {
+                stackOut_6_0 = null;
+                stackIn_7_0 = stackOut_6_0;
+                return (String) (Object) stackIn_7_0;
+              }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -173,7 +188,7 @@ final class ak {
           }
           L4: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(51).append(',');
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param3).append(',');
             stackIn_25_0 = stackOut_22_0;
             stackIn_25_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;

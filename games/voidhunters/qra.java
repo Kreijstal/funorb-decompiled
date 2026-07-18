@@ -113,7 +113,7 @@ final class qra extends rqa {
         return stackIn_4_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_p = null;
     }
 

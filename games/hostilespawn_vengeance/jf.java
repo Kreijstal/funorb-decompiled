@@ -87,7 +87,7 @@ final class jf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_h = null;
         field_e = null;
@@ -99,7 +99,7 @@ final class jf {
         throw new IllegalStateException();
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         System.out.println("Error: " + re.a(param0, "%0a", "\n", -120));
     }
 

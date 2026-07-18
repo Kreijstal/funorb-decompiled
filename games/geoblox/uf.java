@@ -81,8 +81,7 @@ final class uf implements Runnable {
             var5.field_x = 2;
             var5.field_w = param2;
             if (param0 > 41) {
-              int discarded$2 = 15079962;
-              this.a(var5);
+              this.a(var5, 15079962);
               stackOut_3_0 = (o) var5;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -263,7 +262,7 @@ final class uf implements Runnable {
         return stackIn_18_0;
     }
 
-    private final void a(o param0) {
+    private final void a(o param0, int param1) {
         synchronized (((uf) this).field_k) {
             ((uf) this).field_k.a(-128, (rc) (Object) param0);
             ((uf) this).field_d = ((uf) this).field_d + 1;
@@ -414,7 +413,7 @@ final class uf implements Runnable {
         return stackIn_1_0;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
     }
 
     final void a(byte param0) {
@@ -486,8 +485,7 @@ final class uf implements Runnable {
                 break L1;
               }
             }
-            int discarded$2 = 15079962;
-            this.a(var4);
+            this.a(var4, 15079962);
             stackOut_2_0 = (o) var4;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -531,7 +529,8 @@ final class uf implements Runnable {
             Exception var2_ref = null;
             Throwable var4 = null;
             int var5 = 0;
-            o var6 = null;
+            Object var6 = null;
+            o var7 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
@@ -543,8 +542,8 @@ final class uf implements Runnable {
                 var2 = (Object) (Object) ((uf) this).field_k;
                 synchronized (var2) {
                   L1: {
-                    var6 = (o) (Object) ((uf) this).field_k.a(true);
-                    if (var6 == null) {
+                    var7 = (o) (Object) ((uf) this).field_k.a(true);
+                    if (var7 == null) {
                       {
                         L2: {
                           ((Object) (Object) ((uf) this).field_k).wait();
@@ -566,18 +565,18 @@ final class uf implements Runnable {
                   try {
                     L4: {
                       L5: {
-                        if (var6.field_x != 2) {
-                          if (3 == var6.field_x) {
-                            var6.field_y = var6.field_w.a((int)var6.field_i, (byte) -76);
+                        if (var7.field_x != 2) {
+                          if (3 == var7.field_x) {
+                            var7.field_y = var7.field_w.a((int)var7.field_i, (byte) -76);
                             decompiledRegionSelector1 = 1;
                             break L4;
                           } else {
-                            var6.field_u = false;
+                            var7.field_u = false;
                             break L5;
                           }
                         } else {
-                          boolean discarded$2 = var6.field_w.a(var6.field_y, (byte) -53, (int)var6.field_i, var6.field_y.length);
-                          var6.field_u = false;
+                          boolean discarded$1 = var7.field_w.a(var7.field_y, (byte) -53, (int)var7.field_i, var7.field_y.length);
+                          var7.field_u = false;
                           break L5;
                         }
                       }
@@ -588,8 +587,8 @@ final class uf implements Runnable {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     L6: {
                       var2_ref = (Exception) (Object) decompiledCaughtException;
-                      int discarded$3 = 125;
-                      gi.a((Throwable) (Object) var2_ref, (String) null);
+                      var6 = null;
+                      gi.a((Throwable) (Object) var2_ref, (String) null, (byte) 125);
                       decompiledRegionSelector1 = 1;
                       break L6;
                     }
@@ -597,7 +596,7 @@ final class uf implements Runnable {
                   if (decompiledRegionSelector1 == 0) {
                     continue L0;
                   } else {
-                    var6.field_u = false;
+                    var7.field_u = false;
                     continue L0;
                   }
                 }

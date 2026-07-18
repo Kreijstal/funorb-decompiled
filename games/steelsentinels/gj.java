@@ -203,7 +203,7 @@ final class gj {
         }
     }
 
-    final static wk[] b() {
+    final static wk[] b(int param0) {
         wk[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -229,8 +229,7 @@ final class gj {
         var2 = 0;
         L0: while (true) {
           if (var2 >= rl.field_d) {
-            int discarded$1 = 9324;
-            uh.a();
+            uh.a(9324);
             return var1;
           } else {
             var3 = le.field_L[var2] * ca.field_r[var2];
@@ -350,7 +349,7 @@ final class gj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         int var1 = 1;

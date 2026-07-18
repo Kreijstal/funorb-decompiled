@@ -38,9 +38,7 @@ final class ck {
             }
           } else {
             if (null == fc.field_l) {
-              int discarded$2 = 0;
-              int discarded$3 = -81;
-              dj.field_k = g.a(480, 0, wh.field_c, 640);
+              dj.field_k = g.a(480, 0, wh.field_c, 640, (byte) -81, 0);
               if (null != dj.field_k) {
                 var2 = 2;
                 th.a((byte) -50, (java.awt.Canvas) (Object) dj.field_k);
@@ -341,7 +339,7 @@ final class ck {
         return var2;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, boolean param1) {
         int stackIn_7_0 = 0;
         int stackOut_5_0 = 0;
         if (160 != param0) {

@@ -20,7 +20,7 @@ final class od extends wf {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_g = null;
         field_h = null;
         field_l = null;

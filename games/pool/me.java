@@ -18,7 +18,7 @@ final class me extends ig {
     private ne field_q;
     static int field_n;
 
-    final static qb[] h() {
+    final static qb[] h(int param0) {
         int var2 = 0;
         int var3 = Pool.field_O;
         qb[] var1 = new qb[wf.field_d];
@@ -99,7 +99,7 @@ final class me extends ig {
         }
     }
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         oq var2 = ej.field_j;
         var2.b(false, 11);
         var2.a(1, false);

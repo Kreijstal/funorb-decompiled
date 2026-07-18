@@ -7,7 +7,7 @@ abstract class aa {
     static nh field_d;
     static String field_a;
 
-    final static byte[] a(se param0, byte[] param1) {
+    final static byte[] a(se param0, byte[] param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

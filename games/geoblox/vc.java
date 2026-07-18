@@ -575,7 +575,7 @@ final class vc extends dk {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         int var2 = 0;
         nj var3 = (nj) (Object) pb.field_t.g(0);
         nj var1 = var3;
@@ -691,7 +691,7 @@ final class vc extends dk {
         return stackIn_1_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_g = null;
         field_j = null;
         field_f = null;

@@ -16,7 +16,7 @@ class sl extends fe {
     static String field_W;
     static String field_U;
 
-    private final void j() {
+    private final void j(byte param0) {
         if (!(!(((sl) this).field_t instanceof pe))) {
             ((pe) (Object) ((sl) this).field_t).a((sl) this, false);
         }
@@ -306,8 +306,7 @@ class sl extends fe {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              int discarded$2 = -20923;
-              this.k();
+              this.k(-20923);
               if (((sl) this).field_n != 1) {
                 break L1;
               } else {
@@ -561,7 +560,7 @@ class sl extends fe {
         }
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_Y = null;
         field_V = null;
         field_U = null;
@@ -569,7 +568,7 @@ class sl extends fe {
         field_P = null;
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         try {
             Exception var2 = null;
             String var2_ref = null;
@@ -595,7 +594,7 @@ class sl extends fe {
         }
     }
 
-    private final void k() {
+    private final void k(int param0) {
         int var8 = Pool.field_O;
         if (!(((sl) this).field_S)) {
             ((sl) this).field_r = 0;
@@ -649,14 +648,12 @@ class sl extends fe {
     }
 
     private final void a(boolean param0) {
-        int discarded$0 = 63;
-        String var2 = this.h();
+        String var2 = this.h((byte) 63);
         if (param0) {
             ((sl) this).field_O = 71;
         }
         if (0 < var2.length()) {
-            int discarded$1 = 63;
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.h()), (java.awt.datatransfer.ClipboardOwner) null);
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.h((byte) 63)), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
@@ -787,9 +784,9 @@ class sl extends fe {
                         L6: {
                           if (((sl) this).field_R >= ((sl) this).field_m.length()) {
                             ((sl) this).field_m = ((sl) this).field_m + param0;
-                            int dupTemp$4 = ((sl) this).field_m.length();
-                            ((sl) this).field_R = dupTemp$4;
-                            ((sl) this).field_N = dupTemp$4;
+                            int dupTemp$1 = ((sl) this).field_m.length();
+                            ((sl) this).field_R = dupTemp$1;
+                            ((sl) this).field_N = dupTemp$1;
                             break L6;
                           } else {
                             ((sl) this).field_m = ((sl) this).field_m.substring(0, ((sl) this).field_R) + param0 + ((sl) this).field_m.substring(((sl) this).field_R, ((sl) this).field_m.length());
@@ -836,8 +833,7 @@ class sl extends fe {
                                         break L8;
                                       } else {
                                         if (65 == param1) {
-                                          int discarded$5 = -98;
-                                          this.l();
+                                          this.l(-98);
                                           stackOut_66_0 = 1;
                                           stackIn_67_0 = stackOut_66_0;
                                           return stackIn_67_0 != 0;
@@ -866,16 +862,14 @@ class sl extends fe {
                                       if (param1 != 67) {
                                         break L7;
                                       } else {
-                                        int discarded$6 = 4;
-                                        this.g();
+                                        this.g((byte) 4);
                                         stackOut_64_0 = 1;
                                         stackIn_65_0 = stackOut_64_0;
                                         return stackIn_65_0 != 0;
                                       }
                                     }
                                   } else {
-                                    int discarded$7 = 3;
-                                    this.j();
+                                    this.j((byte) 3);
                                     stackOut_53_0 = 1;
                                     stackIn_54_0 = stackOut_53_0;
                                     return stackIn_54_0 != 0;
@@ -1031,7 +1025,7 @@ class sl extends fe {
         return stackIn_76_0 != 0;
     }
 
-    private final void l() {
+    private final void l(int param0) {
         this.a(false);
         int var2 = 0;
         this.g(-14642);
@@ -1063,7 +1057,7 @@ class sl extends fe {
         }
     }
 
-    private final String h() {
+    private final String h(byte param0) {
         int var2 = ((sl) this).field_N >= ((sl) this).field_R ? ((sl) this).field_R : ((sl) this).field_N;
         int var3 = ((sl) this).field_R <= ((sl) this).field_N ? ((sl) this).field_N : ((sl) this).field_R;
         return ((sl) this).field_m.substring(var2, var3);

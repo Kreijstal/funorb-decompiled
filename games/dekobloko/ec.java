@@ -21,7 +21,7 @@ final class ec {
     static w field_i;
     static int field_h;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_p = null;
         field_i = null;
@@ -45,8 +45,7 @@ final class ec {
           L0: {
             var1 = we.field_b;
             L1: while (true) {
-              int discarded$6 = -104;
-              if (!sc.c()) {
+              if (!sc.c((byte) -104)) {
                 if (param0 <= -91) {
                   break L0;
                 } else {
@@ -55,9 +54,9 @@ final class ec {
                 }
               } else {
                 var1.f(8, -4);
-                int fieldTemp$7 = var1.field_n + 1;
+                int fieldTemp$2 = var1.field_n + 1;
                 var1.field_n = var1.field_n + 1;
-                var2 = fieldTemp$7;
+                var2 = fieldTemp$2;
                 ba.a(-32141, var1);
                 we.field_b.b(var1.field_n - var2, true);
                 continue L1;

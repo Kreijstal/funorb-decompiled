@@ -526,8 +526,7 @@ final class qa extends ll {
               }
             }
             ((la) (Object) stackIn_34_0).a(stackIn_34_1, stackIn_34_2 != 0, param1, (qa) this, param0);
-            int discarded$1 = 4;
-            bb.b();
+            bb.b(4);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -50,8 +50,9 @@ final class wf extends ae {
         }
     }
 
-    final static int a(hf param0, hf param1) {
+    final static int a(hf param0, hf param1, int param2) {
         RuntimeException var3 = null;
+        Object var4 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -87,8 +88,8 @@ final class wf extends ae {
         String stackOut_6_2 = null;
         try {
           L0: {
-            int discarded$2 = -92;
-            stackOut_0_0 = mg.a(false, param0, 0, param1, (String) null, 0);
+            var4 = null;
+            stackOut_0_0 = mg.a(false, param0, 0, param1, (String) null, 0, (byte) -92);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -523,7 +524,7 @@ final class wf extends ae {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_k = null;
         field_r = null;
         field_n = null;

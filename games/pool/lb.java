@@ -13,7 +13,7 @@ final class lb extends jo {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_M = null;
         field_O = null;
         field_N = null;

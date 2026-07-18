@@ -14,8 +14,7 @@ final class k extends nc {
     static double field_h;
 
     final long a(int param0) {
-        int discarded$0 = 1;
-        ((k) this).field_g = ((k) this).field_g + this.c();
+        ((k) this).field_g = ((k) this).field_g + this.c(true);
         if (param0 != -23239) {
             return -44L;
         }
@@ -35,7 +34,7 @@ final class k extends nc {
         }
     }
 
-    private final long c() {
+    private final long c(boolean param0) {
         long var2 = 0L;
         long var4 = 0L;
         long var6 = 0L;
@@ -221,8 +220,7 @@ final class k extends nc {
               var6 = null;
               if (param3.indexOf('@') == -1) {
                 var7 = (CharSequence) (Object) param3;
-                int discarded$2 = -29667;
-                var4_long = nh.a(var7);
+                var4_long = nh.a(var7, -29667);
                 break L1;
               } else {
                 var6 = (Object) (Object) param3;

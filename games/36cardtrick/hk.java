@@ -6,7 +6,7 @@ final class hk {
     static java.awt.Font field_a;
     static int field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
     }
@@ -116,11 +116,10 @@ final class hk {
     }
 
     final static void a(byte param0, int param1, int param2) {
-        int discarded$9 = 804;
-        gl.a(param2, jd.field_c[param1], ca.field_c[param1]);
+        gl.a(param2, jd.field_c[param1], ca.field_c[param1], 804);
         if (param0 <= 121) {
             Object var4 = null;
-            ha[] discarded$10 = hk.a(-7, (w) null);
+            ha[] discarded$0 = hk.a(-7, (w) null);
         }
     }
 

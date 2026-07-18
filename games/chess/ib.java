@@ -11,13 +11,13 @@ final class ib {
         return qf.field_a;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_c = null;
     }
 
-    final static sa a(String param0) {
+    final static sa a(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

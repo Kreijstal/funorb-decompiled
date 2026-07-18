@@ -290,7 +290,7 @@ final class se {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, boolean param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         gr var4 = null;
@@ -303,8 +303,7 @@ final class se {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$4 = 0;
-                uf.a(var4, 7);
+                uf.a(var4, 7, false);
                 var4 = (gr) (Object) qa.field_r.a((byte) -71);
                 continue L1;
               }

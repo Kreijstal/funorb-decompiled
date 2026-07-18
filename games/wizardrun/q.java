@@ -15,7 +15,7 @@ final class q {
     static String field_g;
     int field_j;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
         field_l = null;
     }
@@ -208,8 +208,7 @@ final class q {
               L2: while (true) {
                 if (var3.field_a != 0) {
                   if (var3.field_a != 1) {
-                    int discarded$14 = 0;
-                    tg.a(100L);
+                    tg.a(100L, false);
                     continue L1;
                   } else {
                     param1.setVisible(false);
@@ -218,8 +217,7 @@ final class q {
                     break L0;
                   }
                 } else {
-                  int discarded$15 = 0;
-                  tg.a(10L);
+                  tg.a(10L, false);
                   continue L2;
                 }
               }

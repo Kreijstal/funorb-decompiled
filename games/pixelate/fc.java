@@ -199,7 +199,7 @@ final class fc {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         if (32 < wn.field_u) {
           L0: {

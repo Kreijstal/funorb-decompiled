@@ -11,7 +11,7 @@ final class ql extends da {
     static int[] field_l;
     private static String field_z;
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_l = null;
     }

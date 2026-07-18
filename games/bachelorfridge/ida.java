@@ -13,7 +13,7 @@ abstract class ida extends at {
     int field_m;
     nq field_p;
 
-    final static String a(int param0, byte[] param1, int param2) {
+    final static String a(int param0, byte[] param1, int param2, int param3) {
         RuntimeException var4 = null;
         char[] var4_array = null;
         int var5 = 0;
@@ -223,7 +223,7 @@ abstract class ida extends at {
         return stackIn_37_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_o = null;
     }
 

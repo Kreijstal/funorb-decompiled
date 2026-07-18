@@ -80,7 +80,7 @@ final class hq extends li {
         return stackIn_4_0 != 0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_q = null;
     }
 
@@ -91,8 +91,7 @@ final class hq extends li {
         var2 = (qg.field_G + -640) / 2;
         var3 = ld.field_b * ld.field_b;
         if (param1 >= -126) {
-          int discarded$1 = 0;
-          hq.a();
+          hq.a(false);
           var4 = var3 + -(param0 * param0);
           hk.field_o.a(94, 199, -124 + (bi.field_j + -90), 90, var2 + -(var4 * 199 / var3));
           lb.field_c.a(118, 438, bi.field_j - 124, 0, var4 * 438 / var3 + (202 + var2));
@@ -109,7 +108,7 @@ final class hq extends li {
         ((hq) this).field_o = false;
     }
 
-    final static er[] a(er[] param0) {
+    final static er[] a(er[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         er var3 = null;

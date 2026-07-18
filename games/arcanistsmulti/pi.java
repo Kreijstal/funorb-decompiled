@@ -12,7 +12,7 @@ final class pi {
         la.field_b = new vn();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_d = null;
         field_b = null;

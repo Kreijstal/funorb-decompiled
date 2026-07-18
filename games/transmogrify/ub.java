@@ -8,7 +8,7 @@ final class ub {
     static dg field_c;
     static boolean field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_e = null;
@@ -44,12 +44,10 @@ final class ub {
               break L1;
             }
           }
-          int discarded$2 = 256;
-          oj.a(ug.field_f);
+          oj.a(ug.field_f, 256);
           ka.c();
           sb.c();
-          int discarded$3 = 16;
-          f.a();
+          f.a((byte) 16);
           if (256 <= var5) {
             fi.c(true);
             if (150 > si.field_l) {
@@ -412,7 +410,7 @@ final class ub {
         }
     }
 
-    final static StringBuilder a(StringBuilder param0) {
+    final static StringBuilder a(StringBuilder param0, int param1, char param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

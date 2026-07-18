@@ -7,7 +7,7 @@ final class fn extends ln {
     static int field_j;
     static String field_i;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_i = null;
         field_g = null;
         field_h = null;

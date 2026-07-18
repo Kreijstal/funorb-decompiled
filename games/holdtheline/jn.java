@@ -53,7 +53,7 @@ final class jn {
         }
     }
 
-    final static void a(int param0, vn param1) {
+    final static void a(int param0, vn param1, int param2, int param3) {
         try {
             bi.field_g = 0;
             em.field_j = 0;
@@ -664,7 +664,7 @@ final class jn {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         if (10 > bk.field_w) {
             return false;
         }

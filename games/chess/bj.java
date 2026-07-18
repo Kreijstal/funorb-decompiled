@@ -282,7 +282,7 @@ abstract class bj extends k {
         return stackIn_11_0;
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_eb = null;
         field_cb = null;
         field_db = null;
@@ -292,7 +292,7 @@ abstract class bj extends k {
         field_jb = null;
     }
 
-    final static void a(na param0) {
+    final static void a(na param0, boolean param1) {
         try {
             ef.field_n.a((o) (Object) new tn(param0, (o) (Object) param0), (byte) -57);
             h.field_s.a((nm) (Object) param0);

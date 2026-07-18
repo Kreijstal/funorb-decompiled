@@ -50,8 +50,8 @@ final class umb extends ksa implements ntb {
             L1: {
               var5 = (umb) (Object) param0;
               var4 = 0;
-              if (var5.field_f != var5.field_f) {
-                iva.a(-6940, "int servertick has changed. before=" + var5.field_f + ", now=" + var5.field_f);
+              if (var5.field_f != ((umb) this).field_f) {
+                iva.a(-6940, "int servertick has changed. before=" + var5.field_f + ", now=" + ((umb) this).field_f);
                 var4 = 1;
                 break L1;
               } else {
@@ -59,16 +59,16 @@ final class umb extends ksa implements ntb {
               }
             }
             L2: {
-              if (var5.field_g == var5.field_g) {
+              if (var5.field_g == ((umb) this).field_g) {
                 break L2;
               } else {
-                iva.a(-6940, "int statecrc has changed. before=" + var5.field_g + ", now=" + var5.field_g);
+                iva.a(-6940, "int statecrc has changed. before=" + var5.field_g + ", now=" + ((umb) this).field_g);
                 var4 = 1;
                 break L2;
               }
             }
             L3: {
-              stackOut_5_0 = var5.field_e;
+              stackOut_5_0 = ((umb) this).field_e;
               stackIn_7_0 = stackOut_5_0;
               stackIn_6_0 = stackOut_5_0;
               if (var5.field_e) {
@@ -192,17 +192,17 @@ final class umb extends ksa implements ntb {
               L2: {
                 var4 = -52 / ((22 - param0) / 59);
                 var3 = (umb) (Object) param1;
-                if (var3.field_f != var3.field_f) {
+                if (var3.field_f != ((umb) this).field_f) {
                   break L2;
                 } else {
-                  if (var3.field_g != var3.field_g) {
+                  if (var3.field_g != ((umb) this).field_g) {
                     break L2;
                   } else {
                     L3: {
                       stackOut_2_0 = var3.field_e;
                       stackIn_4_0 = stackOut_2_0;
                       stackIn_3_0 = stackOut_2_0;
-                      if (var3.field_e) {
+                      if (((umb) this).field_e) {
                         stackOut_4_0 = stackIn_4_0;
                         stackOut_4_1 = 0;
                         stackIn_5_0 = stackOut_4_0;
@@ -268,13 +268,13 @@ final class umb extends ksa implements ntb {
     public final void b(byte param0, tv param1) {
         umb var4 = (umb) (Object) param1;
         umb var3 = var4;
-        var4.field_f = var4.field_f;
+        var4.field_f = ((umb) this).field_f;
         if (param0 < 54) {
             return;
         }
         try {
-            var4.field_g = var4.field_g;
-            var4.field_e = var4.field_e;
+            var4.field_g = ((umb) this).field_g;
+            var4.field_e = ((umb) this).field_e;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "umb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -10,11 +10,10 @@ abstract class jb implements vb {
     static int field_f;
 
     final static int a(byte param0, int param1, boolean param2, int param3) {
-        int discarded$0 = -76;
-        return ve.f();
+        return ve.f((byte) -76);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = ug.field_b * ug.field_b;
         int var2 = var1 - da.field_F * da.field_F;
         int var3 = cb.field_a - -(var2 * (-cb.field_a + Chess.field_E) / var1);
@@ -58,7 +57,7 @@ abstract class jb implements vb {
         de.a(0, param1);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_d = null;
         field_c = null;
         field_e = null;

@@ -11,49 +11,45 @@ final class rg extends bw {
     final static void a(int param0, int param1, byte param2, boolean param3) {
         int var4 = 0;
         int var5 = 0;
-        ug.field_o.e(param0, param1);
-        var4 = -98 % ((param2 - -3) / 53);
-        if (param3) {
-          L0: {
-            var5 = 2 * (wga.field_s % ug.field_o.field_q);
-            if (ug.field_o.field_q <= var5) {
-              var5 = ug.field_o.field_q - var5 - -ug.field_o.field_q;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          if (10 > var5) {
-            var5 = 10;
-            int discarded$4 = 30;
-            int discarded$5 = -3702;
-            iaa.a(param1, 80, var5, 0, param0, 0, ug.field_o);
-            return;
-          } else {
+        L0: {
+          ug.field_o.e(param0, param1);
+          var4 = -98 % ((param2 - -3) / 53);
+          if (param3) {
             L1: {
-              if (-40 + ug.field_o.field_q >= var5) {
+              var5 = 2 * (wga.field_s % ug.field_o.field_q);
+              if (ug.field_o.field_q <= var5) {
+                var5 = ug.field_o.field_q - var5 - -ug.field_o.field_q;
                 break L1;
               } else {
-                var5 = ug.field_o.field_q + -40;
                 break L1;
               }
             }
-            int discarded$6 = 30;
-            int discarded$7 = -3702;
-            iaa.a(param1, 80, var5, 0, param0, 0, ug.field_o);
-            return;
+            if (10 <= var5) {
+              if (-40 + ug.field_o.field_q < var5) {
+                var5 = ug.field_o.field_q + -40;
+                iaa.a(param1, 80, var5, 0, param0, 0, ug.field_o, -3702, 30);
+                break L0;
+              } else {
+                iaa.a(param1, 80, var5, 0, param0, 0, ug.field_o, -3702, 30);
+                return;
+              }
+            } else {
+              var5 = 10;
+              iaa.a(param1, 80, var5, 0, param0, 0, ug.field_o, -3702, 30);
+              return;
+            }
+          } else {
+            break L0;
           }
-        } else {
-          return;
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_j = null;
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -97,9 +93,7 @@ final class rg extends bw {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    int discarded$8 = 4;
-                    int discarded$9 = 4;
-                    ah.a();
+                    ah.a(4, 4);
                     var2 = gs.field_l.c(0);
                     continue L2;
                   }

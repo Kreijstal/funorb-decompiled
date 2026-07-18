@@ -404,7 +404,7 @@ class mi extends kg {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_R = null;
         field_E = null;
         field_y = null;

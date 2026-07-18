@@ -156,7 +156,7 @@ abstract class c extends vg implements fo {
 
     abstract void a(uw param0, int param1);
 
-    public static void m() {
+    public static void m(int param0) {
         field_g = null;
         field_f = null;
         field_h = null;

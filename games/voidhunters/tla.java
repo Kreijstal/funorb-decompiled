@@ -643,9 +643,7 @@ final class tla extends aja {
         ((tla) this).field_l = false;
         try {
             ((tla) this).field_g = param0;
-            int discarded$0 = 60;
-            int discarded$1 = 0;
-            ((tla) this).field_f = uw.a(param0, param4, param5, param2, param3, param1);
+            ((tla) this).field_f = uw.a(param0, param4, param5, param2, param3, param1, false, (byte) 60);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

@@ -15,11 +15,11 @@ final class gj {
         mc.field_b = param3;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
-    final static void a(ve param0, int param1, int param2) {
+    final static void a(ve param0, int param1, int param2, int param3) {
         try {
             ng.field_D = param1;
             nm.field_o = param0;

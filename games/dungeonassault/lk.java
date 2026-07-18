@@ -9,7 +9,7 @@ final class lk extends gd {
     int field_O;
     static String field_P;
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -83,7 +83,7 @@ final class lk extends gd {
         ((lk) this).g(255);
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_Q = null;
         field_R = null;
         field_P = null;
@@ -111,8 +111,7 @@ final class lk extends gd {
             if (var3 == 0) {
               break L0;
             } else {
-              int discarded$4 = 30496;
-              var4 = (Object) (Object) jk.a(new String[1], to.field_a);
+              var4 = (Object) (Object) jk.a(new String[1], to.field_a, 30496);
               break L0;
             }
           }
@@ -180,20 +179,17 @@ final class lk extends gd {
           }
         } else {
           L3: {
-            int discarded$5 = 30496;
-            var9 = jk.a(new String[1], nh.field_i);
+            var9 = jk.a(new String[1], nh.field_i, 30496);
             var4 = (Object) (Object) var9;
             var4 = (Object) (Object) var9;
             if (var3 == 0) {
               break L3;
             } else {
-              int discarded$6 = 30496;
-              var4 = (Object) (Object) (var9 + ", " + jk.a(new String[1], to.field_a));
+              var4 = (Object) (Object) (var9 + ", " + jk.a(new String[1], to.field_a, 30496));
               break L3;
             }
           }
-          int discarded$7 = 0;
-          if (ve.a()) {
+          if (ve.a(false)) {
             if (hm.field_m[((lk) this).field_O]) {
               if (var2 >= 5) {
                 L4: {
@@ -454,7 +450,7 @@ final class lk extends gd {
         }
     }
 
-    final static String a(String param0, nh param1, String param2) {
+    final static String a(String param0, nh param1, String param2, byte param3) {
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -601,7 +597,7 @@ final class lk extends gd {
         return stackIn_5_0;
     }
 
-    final static void f() {
+    final static void f(int param0) {
         ia.field_K = null;
         sg.field_b = null;
         ga.field_o = null;

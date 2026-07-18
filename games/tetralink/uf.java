@@ -10,7 +10,7 @@ final class uf {
     static de field_g;
     static int field_e;
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         if (!(null == lf.field_b)) {
             lf.field_b.a(param0, 256);
         }
@@ -60,7 +60,7 @@ final class uf {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_g = null;

@@ -10,12 +10,12 @@ final class mc extends bw {
     static int field_h;
     int field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_g = null;
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String a(boolean param0, CharSequence param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

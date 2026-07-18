@@ -7,7 +7,7 @@ final class ub {
     static String field_c;
     static boolean field_a;
 
-    final static void a() {
+    final static void a(int param0) {
     }
 
     final static ba a(byte param0, int param1, java.awt.Component param2, int param3) {
@@ -91,7 +91,7 @@ final class ub {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         return uj.field_i > 250;
     }
 

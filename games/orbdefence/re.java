@@ -11,7 +11,7 @@ final class re {
     static String field_f;
     private int field_c;
 
-    private final void b() {
+    private final void b(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -166,7 +166,7 @@ final class re {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_g = null;
         field_f = null;
     }
@@ -247,8 +247,7 @@ final class re {
             for (var2_int = 0; var2_int < param0.length; var2_int++) {
                 ((re) this).field_b[var2_int] = param0[var2_int];
             }
-            int discarded$0 = 92;
-            this.b();
+            this.b((byte) 92);
         } catch (RuntimeException runtimeException) {
             throw dd.a((Throwable) (Object) runtimeException, "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

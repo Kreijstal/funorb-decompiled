@@ -45,13 +45,11 @@ final class jba extends kca {
         try {
           L0: {
             var4 = (CharSequence) (Object) param1;
-            int discarded$7 = -3;
-            if (sqa.a(var4)) {
+            if (sqa.a(var4, -3)) {
               if (param0 == 14) {
                 L1: {
                   var5 = (CharSequence) (Object) param1;
-                  int discarded$8 = 70;
-                  var3_int = jb.a(var5);
+                  var3_int = jb.a(var5, (byte) 70);
                   if (var3_int <= 0) {
                     break L1;
                   } else {
@@ -185,7 +183,7 @@ final class jba extends kca {
         return (String) (Object) stackIn_6_0;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_l = null;
         field_k = null;
     }

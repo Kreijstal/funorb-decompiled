@@ -143,11 +143,11 @@ final class qh {
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0, int param1, byte param2) {
         return (param0 & 52) != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }

@@ -9,11 +9,11 @@ final class a {
     static int field_d;
     static String field_c;
 
-    final static o[] b() {
+    final static o[] b(int param0) {
         return new o[]{va.field_m, ag.field_m, qd.field_D, rf.field_e, ac.field_a, dl.field_b, ce.field_a, ua.field_d, bg.field_f, wg.field_d, bb.field_j, fc.field_a, gg.field_i, pe.field_a};
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_c = null;
         field_b = null;

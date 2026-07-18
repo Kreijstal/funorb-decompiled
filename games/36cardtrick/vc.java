@@ -69,8 +69,7 @@ final class vc extends IOException {
           L0: {
             var4_int = param3.a(18659, param1);
             var5 = param3.a(var4_int, param0, (byte) 7);
-            int discarded$2 = -73;
-            stackOut_2_0 = uh.a(var5, param3, var4_int);
+            stackOut_2_0 = uh.a(var5, param3, var4_int, (byte) -73);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

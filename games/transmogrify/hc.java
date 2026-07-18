@@ -10,7 +10,7 @@ final class hc extends dl {
     private Object field_s;
     static int field_u;
 
-    public static void d() {
+    public static void d(byte param0) {
         field_v = null;
         field_r = null;
     }

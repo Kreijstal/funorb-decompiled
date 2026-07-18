@@ -283,9 +283,7 @@ abstract class qf extends oe {
         try {
           var9 = new ai(22, 65513, param0, param5, param2, param8, param4);
           nf.field_j.a(-96, (hf) (Object) var9);
-          int discarded$4 = -127;
-          int discarded$5 = 3;
-          bm.a(var9);
+          bm.a(var9, 3, -127);
           return var9;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -61,7 +61,7 @@ final class ii implements Iterable {
         return 255 & param0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var6 = null;
         int var12 = 0;
         int decompiledRegionSelector0 = 0;

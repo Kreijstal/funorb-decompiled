@@ -443,7 +443,7 @@ final class pk extends kj {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         int var1 = 0;
         field_X = null;
         field_Y = null;
@@ -654,8 +654,7 @@ final class pk extends kj {
         String stackOut_15_2 = null;
         try {
           L0: {
-            int discarded$1 = 8;
-            la.a(param8, 320, param5, 240, param3, new hi(param20), 2, 0, 8, param13, param14, -111, param17, 0, 480, param7, new hi(param12), param4, new hi(param9), param2);
+            la.a(param8, 320, param5, 240, param3, new hi(param20), 2, 0, 8, param13, param14, -111, param17, 0, 480, param7, new hi(param12), param4, new hi(param9), param2, 8);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -790,19 +789,15 @@ final class pk extends kj {
         }
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         qk.d(14995);
         if (null != dc.field_q) {
           L0: {
             nc.a((byte) 86, dc.field_q);
-            int discarded$8 = -15;
-            cb.a();
-            int discarded$9 = -117;
-            nh.a();
-            int discarded$10 = 0;
-            m.b();
-            int discarded$11 = 60;
-            if (ak.a()) {
+            cb.a((byte) -15);
+            nh.a(-117);
+            m.b(false);
+            if (ak.a(60)) {
               id.field_c.e(1, -2147483648);
               qf.a(0, 0);
               break L0;
@@ -814,14 +809,10 @@ final class pk extends kj {
           return;
         } else {
           L1: {
-            int discarded$12 = -15;
-            cb.a();
-            int discarded$13 = -117;
-            nh.a();
-            int discarded$14 = 0;
-            m.b();
-            int discarded$15 = 60;
-            if (ak.a()) {
+            cb.a((byte) -15);
+            nh.a(-117);
+            m.b(false);
+            if (ak.a(60)) {
               id.field_c.e(1, -2147483648);
               qf.a(0, 0);
               break L1;
@@ -847,8 +838,7 @@ final class pk extends kj {
     }
 
     pk(oe param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (j) (Object) hj.a());
-        int discarded$0 = -65;
+        super(param1, (j) (Object) hj.a((byte) -65));
         try {
             ((pk) this).field_V = param1;
             ((pk) this).field_U = param0;
@@ -903,7 +893,7 @@ final class pk extends kj {
         }
     }
 
-    final static void d() {
+    final static void d(boolean param0) {
     }
 
     static {

@@ -39,7 +39,7 @@ final class th {
     int field_i;
     byte[] field_s;
 
-    public static void a() {
+    public static void a(int param0) {
         field_y = null;
         field_G = null;
         field_v = null;

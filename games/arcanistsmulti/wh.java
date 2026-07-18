@@ -25,7 +25,7 @@ final class wh {
         return 1 + param0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_e = null;
         field_h = null;
@@ -52,8 +52,7 @@ final class wh {
             var3[var4_int] = ph.field_c[dg.a(255, (int) var2[var4_int])];
         }
         qb var4 = new qb(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], var3);
-        int discarded$0 = -18229;
-        dk.a();
+        dk.a(-18229);
         return var4;
     }
 

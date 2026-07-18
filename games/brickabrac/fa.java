@@ -6,7 +6,7 @@ final class fa extends nm {
     int field_i;
     static String field_j;
 
-    final static pe a(int param0, byte param1, int param2) {
+    final static pe a(int param0, byte param1, int param2, int param3) {
         pe var4 = new pe();
         var4.field_w = param2;
         var4.field_m = new int[1];
@@ -19,7 +19,7 @@ final class fa extends nm {
         throw new Error();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
     }
 

@@ -14,7 +14,7 @@ final class mf extends hm {
     private int field_m;
     static String field_i;
 
-    public static void f() {
+    public static void f(int param0) {
         field_i = null;
         int var1 = -31;
         field_j = null;
@@ -43,8 +43,7 @@ final class mf extends hm {
         if (param0 != 1) {
             return;
         }
-        int discarded$0 = 111;
-        tn.a();
+        tn.a(111);
         co.a(0);
     }
 
@@ -52,7 +51,7 @@ final class mf extends hm {
         return param0 | param1;
     }
 
-    private final long b() {
+    private final long b(byte param0) {
         long var2 = 0L;
         int var4 = 0;
         long var5 = 0L;
@@ -123,8 +122,7 @@ final class mf extends hm {
     }
 
     final long a(byte param0) {
-        int discarded$0 = 106;
-        ((mf) this).field_g = ((mf) this).field_g + this.b();
+        ((mf) this).field_g = ((mf) this).field_g + this.b((byte) 106);
         if (param0 != -84) {
             return -57L;
         }
@@ -227,7 +225,7 @@ final class mf extends hm {
         ((mf) this).field_n = System.nanoTime();
     }
 
-    final static boolean a(CharSequence param0, char param1) {
+    final static boolean a(CharSequence param0, char param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;

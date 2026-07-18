@@ -420,9 +420,9 @@ final class ur extends qr {
         }
     }
 
-    final static void j() {
-        int discarded$0 = 3;
-        ce.a(ae.field_g, (String) null);
+    final static void j(int param0) {
+        Object var2 = null;
+        ce.a(ae.field_g, (String) null, (byte) 3);
     }
 
     final boolean f(boolean param0) {
@@ -487,6 +487,7 @@ final class ur extends qr {
 
     final static void a(bi[][] param0, int param1, byte[] param2, boolean param3, bc param4, int[] param5, bi[][] param6, String[] param7, String[] param8, int param9, byte[] param10, bc param11, bc param12, nk[] param13, String[][] param14, int param15, String[][] param16, int[] param17, int param18) {
         RuntimeException var19 = null;
+        Object var20 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
@@ -699,8 +700,8 @@ final class ur extends qr {
         StringBuilder stackOut_42_1 = null;
         String stackOut_42_2 = null;
         try {
-          int discarded$1 = 1;
-          fe.a(param3, param2, param10, param18, param5, param7, param1, param4, param11, param16, param12, param0, (String[]) null, param6, param14, param13, -128, param17, param8);
+          var20 = null;
+          fe.a(param3, param2, param10, param18, param5, param7, param1, param4, param11, param16, param12, param0, (String[]) null, param6, param14, param13, -128, param17, param8, 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1100,8 +1101,7 @@ final class ur extends qr {
         String stackOut_8_2 = null;
         try {
           L0: {
-            int discarded$2 = 2;
-            stackOut_2_0 = us.a(param2, param0.field_v);
+            stackOut_2_0 = us.a(param2, param0.field_v, 2);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

@@ -7,7 +7,7 @@ final class q {
     static int field_d;
     static String field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

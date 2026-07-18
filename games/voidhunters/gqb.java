@@ -39,10 +39,10 @@ final class gqb implements ntb {
               }
             }
             L2: {
-              if (var3.field_c == var3.field_c) {
+              if (((gqb) this).field_c == var3.field_c) {
                 break L2;
               } else {
-                System.out.println("int cooldown has changed. before=" + var3.field_c + ", now=" + var3.field_c);
+                System.out.println("int cooldown has changed. before=" + var3.field_c + ", now=" + ((gqb) this).field_c);
                 var4 = 1;
                 break L2;
               }
@@ -114,7 +114,7 @@ final class gqb implements ntb {
             L1: {
               var4 = -108 / ((param0 - 22) / 59);
               var3 = (gqb) (Object) param1;
-              if (var3.field_c == var3.field_c) {
+              if (var3.field_c == ((gqb) this).field_c) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -168,7 +168,7 @@ final class gqb implements ntb {
         try {
             var5 = (gqb) (Object) param1;
             var6 = var5;
-            var6.field_c = var5.field_c;
+            var6.field_c = ((gqb) this).field_c;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "gqb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -185,7 +185,7 @@ final class gqb implements ntb {
         }
     }
 
-    final static sg a() {
+    final static sg a(boolean param0) {
         sg var9 = new sg();
         ml var2 = new ml(0);
         ml var4 = new ml(14);

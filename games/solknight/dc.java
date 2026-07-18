@@ -13,7 +13,7 @@ final class dc extends a {
     static o field_j;
     static java.awt.Canvas field_q;
 
-    final static void d() {
+    final static void d(byte param0) {
         if (null != ah.field_e) {
             ah.field_e.f(true);
         }
@@ -21,7 +21,7 @@ final class dc extends a {
         gf.field_cb.c(-3399, (rc) (Object) sj.field_d);
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_j = null;
         field_l = null;
         field_q = null;
@@ -58,8 +58,7 @@ final class dc extends a {
         try {
           L0: {
             L1: {
-              int discarded$10 = -112;
-              if (null != wd.a(param0)) {
+              if (null != wd.a(param0, -112)) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -238,7 +237,7 @@ final class dc extends a {
         return stackIn_16_0;
     }
 
-    final static void a(dj param0) {
+    final static void a(dj param0, int param1, byte param2) {
         jd var3 = id.field_c;
         try {
             var3.e(7, -2147483648);

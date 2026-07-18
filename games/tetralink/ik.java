@@ -9,7 +9,7 @@ final class ik {
     static java.applet.Applet field_c;
     static String field_f;
 
-    final static sj a() {
+    final static sj a(int param0) {
         if (fk.field_Q == ma.field_d) {
             throw new IllegalStateException();
         }
@@ -20,13 +20,13 @@ final class ik {
         return va.field_n;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_d = null;
         field_c = null;
     }
 
-    final static Object a(byte[] param0) {
+    final static Object a(byte[] param0, boolean param1, int param2) {
         la var3 = null;
         RuntimeException var3_ref = null;
         la stackIn_5_0 = null;

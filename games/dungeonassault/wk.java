@@ -140,7 +140,7 @@ final class wk {
         }
     }
 
-    final static void a(int param0, String param1, se param2, int param3, int[] param4) {
+    final static void a(int param0, String param1, se param2, int param3, int[] param4, int param5) {
         tf var6 = null;
         try {
             var6 = new tf(param2, param1, param4);
@@ -216,12 +216,12 @@ final class wk {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_a = null;
         field_f = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         sn.a(66, 17);
     }
 
@@ -261,8 +261,7 @@ final class wk {
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                int discarded$2 = -105;
-                var5[var3] = g.a(param0[var3]);
+                var5[var3] = g.a(param0[var3], (byte) -105);
                 var3++;
                 continue L1;
               }
@@ -321,11 +320,10 @@ final class wk {
         var2 = DungeonAssault.field_K;
         try {
           L0: {
-            boolean discarded$28 = lg.field_w.a(wo.field_b, (byte) 66, ci.field_m, true);
+            boolean discarded$12 = lg.field_w.a(wo.field_b, (byte) 66, ci.field_m, true);
             lg.field_w.b(true);
             L1: while (true) {
-              int discarded$29 = 47;
-              if (!ha.b()) {
+              if (!ha.b((byte) 47)) {
                 if (!param0) {
                   if (ki.field_f != -1) {
                     var1_int = ki.field_f;
@@ -366,7 +364,7 @@ final class wk {
                   return stackIn_6_0;
                 }
               } else {
-                boolean discarded$30 = lg.field_w.a(126, mm.field_t, ob.field_Yb);
+                boolean discarded$13 = lg.field_w.a(126, mm.field_t, ob.field_Yb);
                 continue L1;
               }
             }

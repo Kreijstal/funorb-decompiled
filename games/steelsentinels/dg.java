@@ -12,7 +12,7 @@ final class dg {
     static String field_c;
     private static String field_z;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_f = null;
         field_h = null;

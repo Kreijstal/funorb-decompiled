@@ -206,7 +206,7 @@ abstract class mf extends ra implements uj {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_f = null;
         field_g = null;
     }

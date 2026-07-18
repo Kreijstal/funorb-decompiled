@@ -691,11 +691,11 @@ final class lc extends ag {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_L = null;
     }
 
-    private final int a(kc param0) {
+    private final int a(kc param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -797,36 +797,30 @@ final class lc extends ag {
                     var11.c(5);
                     break L1;
                   } else {
-                    int discarded$7 = 1;
-                    pc.a();
+                    pc.a(1);
                     return;
                   }
                 } else {
                   if (var2 == 2) {
                     var15 = (oh) (Object) oc.field_G.a((byte) -95);
                     if (var15 != null) {
-                      int discarded$8 = 0;
-                      var15.field_g = rf.c();
+                      var15.field_g = rf.c(false);
                       var15.field_k = var15.field_g[0];
                       var15.field_i = true;
                       var15.c(5);
                       break L1;
                     } else {
-                      int discarded$9 = 1;
-                      pc.a();
+                      pc.a(1);
                       return;
                     }
                   } else {
-                    int discarded$10 = 48;
-                    d.a((Throwable) null, 63, "A1: " + ik.q());
-                    int discarded$11 = 1;
-                    pc.a();
+                    d.a((Throwable) null, 63, "A1: " + ik.q(48));
+                    pc.a(1);
                     break L1;
                   }
                 }
               } else {
-                int discarded$12 = 0;
-                var10 = rf.c();
+                var10 = rf.c(false);
                 var18 = var10;
                 var17 = var18;
                 var16 = var17;
@@ -841,8 +835,7 @@ final class lc extends ag {
                   if (var6 <= var7) {
                     var14 = (oh) (Object) oc.field_G.a((byte) -95);
                     if (var14 == null) {
-                      int discarded$13 = 1;
-                      pc.a();
+                      pc.a(1);
                       return;
                     } else {
                       var14.field_i = true;
@@ -1162,7 +1155,7 @@ final class lc extends ag {
     private final void e(int param0, int param1, int param2) {
     }
 
-    private final int b(kc param0) {
+    private final int b(kc param0, byte param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -1906,14 +1899,11 @@ final class lc extends ag {
               var7.field_p = -1;
               var7.field_z = 0;
               if (((lc) this).field_P[param0] == 0) {
-                int discarded$3 = -77;
-                int discarded$4 = 1135851910;
-                var7.field_y = bb.a(var6, this.a(var7, (byte) 106), this.b(var7), this.a(var7));
+                var7.field_y = bb.a(var6, this.a(var7, (byte) 106), this.b(var7, (byte) -77), this.a(var7, 1135851910));
                 break L3;
               } else {
                 L4: {
-                  int discarded$5 = 1135851910;
-                  var7.field_y = bb.a(var6, this.a(var7, (byte) 123), 0, this.a(var7));
+                  var7.field_y = bb.a(var6, this.a(var7, (byte) 123), 0, this.a(var7, 1135851910));
                   stackOut_15_0 = this;
                   stackOut_15_1 = 0;
                   stackIn_17_0 = stackOut_15_0;
@@ -2212,9 +2202,7 @@ final class lc extends ag {
                 }
               }
               if (var8 == 0) {
-                int discarded$2 = -77;
-                int discarded$3 = 1135851910;
-                param4.field_y.a(param4.field_r, this.b(param4), this.a(param4));
+                param4.field_y.a(param4.field_r, this.b(param4, (byte) -77), this.a(param4, 1135851910));
                 stackOut_62_0 = 0;
                 stackIn_63_0 = stackOut_62_0;
                 break L0;

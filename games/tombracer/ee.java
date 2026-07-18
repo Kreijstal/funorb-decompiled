@@ -30,8 +30,7 @@ final class ee implements isa {
             L1: {
               var6_int = param0.field_i + param1;
               var7 = param3 + param0.field_n;
-              int discarded$2 = 1;
-              bl.a(param0.field_m, var7, param0.field_p, var6_int);
+              bl.a(param0.field_m, var7, param0.field_p, var6_int, 1);
               var8 = pq.field_b[1];
               if (!(param0 instanceof rj)) {
                 break L1;
@@ -53,8 +52,7 @@ final class ee implements isa {
               }
             }
             if (param0.b((byte) -34)) {
-              int discarded$3 = 0;
-              nn.a(2 + var6_int, 2 + var7, param0.field_p - 4, -4 + param0.field_m);
+              nn.a(2 + var6_int, 2 + var7, param0.field_p - 4, -4 + param0.field_m, false);
               break L0;
             } else {
               return;

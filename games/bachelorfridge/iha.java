@@ -146,12 +146,12 @@ abstract class iha extends at {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
         int var1 = -57;
     }
 
-    final static void e() {
+    final static void e(int param0) {
     }
 
     static {

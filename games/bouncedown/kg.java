@@ -945,7 +945,7 @@ final class kg {
         return (kg) this;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_j = null;
         field_g = null;

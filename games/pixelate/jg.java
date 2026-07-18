@@ -16,8 +16,7 @@ abstract class jg extends ng implements j {
         if (!param0) {
             field_H = null;
         }
-        int discarded$0 = 0;
-        return null != this.m() ? true : false;
+        return null != this.m(0) ? true : false;
     }
 
     final boolean a(ng param0, int param1) {
@@ -267,7 +266,7 @@ abstract class jg extends ng implements j {
         }
     }
 
-    final static boolean k() {
+    final static boolean k(int param0) {
         return null != he.field_f && he.field_f.c((byte) -87);
     }
 
@@ -846,7 +845,7 @@ abstract class jg extends ng implements j {
         }
     }
 
-    private final boolean a(ng param0) {
+    private final boolean a(ng param0, byte param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         ng var5 = null;
@@ -962,7 +961,7 @@ abstract class jg extends ng implements j {
         return stackIn_18_0 != 0;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_I = null;
         field_M = null;
         field_F = null;
@@ -1053,7 +1052,7 @@ abstract class jg extends ng implements j {
         }
     }
 
-    private final ng m() {
+    private final ng m(int param0) {
         ng[] var2 = null;
         int var3 = 0;
         ng var4 = null;
@@ -1135,7 +1134,7 @@ abstract class jg extends ng implements j {
 
     abstract void a(int param0);
 
-    private final boolean b(ng param0) {
+    private final boolean b(ng param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -1157,9 +1156,7 @@ abstract class jg extends ng implements j {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$4 = 1;
-            int discarded$5 = -44;
-            stackOut_2_0 = this.a(param0);
+            stackOut_2_0 = this.a(param0, (byte) -44, 1);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -1359,7 +1356,7 @@ abstract class jg extends ng implements j {
                 if (param1 == 3) {
                   break L1;
                 } else {
-                  boolean discarded$5 = jg.a((byte) 125);
+                  boolean discarded$2 = jg.a((byte) 125);
                   break L1;
                 }
               }
@@ -1370,8 +1367,7 @@ abstract class jg extends ng implements j {
                   if (var5_int == 80) {
                     L3: {
                       if (!bc.field_m[81]) {
-                        int discarded$6 = -17753;
-                        stackOut_19_0 = this.b(param2);
+                        stackOut_19_0 = this.b(param2, -17753);
                         stackIn_20_0 = stackOut_19_0;
                         break L3;
                       } else {

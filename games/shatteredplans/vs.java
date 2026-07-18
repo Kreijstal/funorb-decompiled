@@ -9,12 +9,10 @@ final class vs {
     static String field_e;
     static String field_a;
 
-    final static gb a() {
+    final static gb a(byte param0, int param1) {
         gb var2 = new gb();
         vl.field_o.a((byte) -113, (oh) (Object) var2);
-        int discarded$0 = 2;
-        int discarded$1 = 4;
-        bo.a();
+        bo.a(4, 2);
         return var2;
     }
 
@@ -44,9 +42,7 @@ final class vs {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    int discarded$8 = 2;
-                    int discarded$9 = 4;
-                    bo.a();
+                    bo.a(4, 2);
                     var2 = vl.field_o.a((byte) -71);
                     continue L2;
                   }

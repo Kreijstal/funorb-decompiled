@@ -99,7 +99,7 @@ final class aa {
         return stackIn_9_0 != 0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
     }
 

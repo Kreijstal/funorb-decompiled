@@ -8,14 +8,13 @@ final class od {
     static int[] field_c;
 
     final static void a(byte param0, int param1) {
-        int discarded$4 = 0;
-        int discarded$7 = ia.b();
+        int discarded$3 = ia.b(false);
         if (param0 > -56) {
             field_a = null;
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         field_c = null;

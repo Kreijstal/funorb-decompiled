@@ -77,8 +77,7 @@ final class gp extends ak {
                     var3_int = 1;
                     if (param2 == 10) {
                       var3_int = 0;
-                      int discarded$2 = -51;
-                      dm.i();
+                      dm.i((byte) -51);
                       break L4;
                     } else {
                       break L4;
@@ -442,7 +441,7 @@ final class gp extends ak {
         int var5 = -81 / ((param0 - -15) / 62);
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_Hb = null;
         field_Eb = null;
         field_Kb = null;

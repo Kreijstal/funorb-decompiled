@@ -14,7 +14,7 @@ final class kc extends gi {
     int field_h;
     static nh[] field_i;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9 = 0;
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (param5 >= param3) {
@@ -46,7 +46,7 @@ final class kc extends gi {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_q = null;
         field_j = null;
         field_o = null;
@@ -129,8 +129,7 @@ final class kc extends gi {
             var5_int = param1.a(param2, (byte) -114);
             var6 = -24 % ((param3 - -39) / 54);
             var7 = param1.a((byte) -105, param4, var5_int);
-            int discarded$2 = 15619;
-            stackOut_0_0 = oj.a(var5_int, var7, param1, param0);
+            stackOut_0_0 = oj.a(var5_int, var7, param1, param0, 15619);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

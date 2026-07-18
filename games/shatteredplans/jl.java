@@ -253,8 +253,7 @@ abstract class jl extends w {
                           break L3;
                         } else {
                           var7 = (CharSequence) (Object) lg.field_e.field_z;
-                          int discarded$1 = 1;
-                          var4 = ji.a(var7);
+                          var4 = ji.a(var7, true);
                           break L3;
                         }
                       }
@@ -344,7 +343,7 @@ abstract class jl extends w {
         return super.a((byte) 88);
     }
 
-    final static int a(nf param0) {
+    final static int a(nf param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

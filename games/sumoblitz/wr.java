@@ -201,13 +201,11 @@ final class wr extends wp {
                   break L12;
                 } else {
                   if (var7 == 0) {
-                    int discarded$2 = 113;
-                    ro.a(param1);
+                    ro.a(param1, (byte) 113);
                     break L11;
                   } else {
                     if (param1.field_p == 0) {
-                      int discarded$3 = 113;
-                      ro.a(param1);
+                      ro.a(param1, (byte) 113);
                       break L11;
                     } else {
                       break L12;
@@ -319,7 +317,7 @@ final class wr extends wp {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_G = null;
         field_E = null;
     }
@@ -354,8 +352,7 @@ final class wr extends wp {
         try {
           L0: {
             L1: {
-              int discarded$12 = -1;
-              vr.a((java.awt.Component) (Object) param1);
+              vr.a((java.awt.Component) (Object) param1, -1);
               pl.a((java.awt.Component) (Object) param1, 7);
               if (as.field_w != null) {
                 as.field_w.a((java.awt.Component) (Object) param1, (byte) 76);
@@ -403,7 +400,7 @@ final class wr extends wp {
         super.b(param0, param1, param2, param3);
     }
 
-    final static wc a(boolean param0, fs param1) {
+    final static wc a(boolean param0, fs param1, boolean param2) {
         RuntimeException var3 = null;
         ah[] var3_array = null;
         int var4 = 0;
@@ -561,7 +558,7 @@ final class wr extends wp {
         return stackIn_22_0;
     }
 
-    final static vk a(fr param0, int param1, String param2) {
+    final static vk a(fr param0, int param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;

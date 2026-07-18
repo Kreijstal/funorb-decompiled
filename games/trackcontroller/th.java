@@ -9,28 +9,25 @@ final class th extends fc {
     static int field_l;
     boolean field_j;
 
-    final static void d() {
+    final static void d(int param0) {
         pf.field_U = 0;
     }
 
-    final static kh f() {
-        int discarded$0 = 0;
-        String var1 = l.h();
+    final static kh f(int param0) {
+        String var1 = l.h(0);
         if (var1 != null) {
             if (0 <= var1.indexOf('@')) {
                 var1 = "";
             }
         }
-        int discarded$1 = 0;
-        int discarded$2 = 41;
-        return new kh(l.h(), cf.a());
+        return new kh(l.h(0), cf.a((byte) 41));
     }
 
     th() {
         ((th) this).field_j = false;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_n = null;
         field_i = null;
     }

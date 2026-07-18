@@ -7,7 +7,7 @@ final class mg extends va {
     static o field_s;
     private ti field_r;
 
-    final static ai a(int param0, int[] param1, int param2, int param3, byte param4, int param5, int param6) {
+    final static ai a(int param0, int[] param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
         ai var9 = null;
         RuntimeException var9_ref = null;
         ai stackIn_1_0 = null;
@@ -146,7 +146,7 @@ final class mg extends va {
         super(param0);
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_s = null;
         field_q = null;
     }

@@ -6,14 +6,14 @@ final class ho {
     private static int field_c;
     private static vna field_a;
 
-    final synchronized static void a() {
+    final synchronized static void a(int param0) {
         field_c = field_c - 1;
         if (!(field_c != 0)) {
             ho.a(true);
         }
     }
 
-    final synchronized static void b() {
+    final synchronized static void b(boolean param0) {
         field_c = field_c + 1;
     }
 

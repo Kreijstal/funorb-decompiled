@@ -14,7 +14,7 @@ final class uf {
         return ga.field_c.a((byte) 11);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;

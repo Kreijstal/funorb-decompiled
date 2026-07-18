@@ -56,12 +56,10 @@ final class fi {
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
         try {
-          int discarded$4 = -6728;
-          fb.field_a = a.a("");
+          fb.field_a = a.a("", -6728);
           fb.field_a.a(false, 64187);
           rk.a(param0, 122, param4, param3);
-          int discarded$5 = -81;
-          jk.a();
+          jk.a((byte) -81);
           na.field_S = ml.field_a;
           oe.field_Q = ml.field_a;
           return;
@@ -151,7 +149,7 @@ final class fi {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_b = null;
     }

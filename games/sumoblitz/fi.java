@@ -11,7 +11,7 @@ final class fi extends nt {
         ((fi) this).field_s = true;
     }
 
-    final static int a(int param0, Random param1) {
+    final static int a(int param0, Random param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -116,7 +116,7 @@ final class fi extends nt {
         return param0 | param1;
     }
 
-    final static String a(long param0) {
+    final static String a(long param0, boolean param1) {
         aj.field_y.setTime(new Date(param0));
         int var3 = aj.field_y.get(7);
         int var4 = aj.field_y.get(5);

@@ -13,13 +13,12 @@ final class dh extends fc {
     int field_o;
     int field_j;
 
-    final static nk a() {
+    final static nk a(int param0, int param1, int param2, int param3) {
         nk var4 = new nk();
         var4.field_i = 0;
         var4.field_m = new int[1];
         qh.field_e.a((byte) -93, (fc) (Object) var4);
-        int discarded$0 = 5;
-        gj.a(2, var4);
+        gj.a(2, var4, 5);
         return var4;
     }
 
@@ -198,12 +197,12 @@ final class dh extends fc {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_r = null;
         field_i = null;
     }
 
-    final static qj[] e() {
+    final static qj[] e(int param0) {
         qj[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -497,10 +496,9 @@ final class dh extends fc {
                             continue L3;
                           } else {
                             var5++;
-                            int discarded$5 = 10;
-                            var10 = uk.a((CharSequence) (Object) var9);
-                            StringBuilder discarded$6 = var6.append(param2.substring(var7, var8));
-                            StringBuilder discarded$7 = var6.append(param1[var10]);
+                            var10 = uk.a((CharSequence) (Object) var9, 10);
+                            StringBuilder discarded$3 = var6.append(param2.substring(var7, var8));
+                            StringBuilder discarded$4 = var6.append(param1[var10]);
                             var7 = var5;
                             continue L3;
                           }
@@ -510,7 +508,7 @@ final class dh extends fc {
                       }
                     }
                   } else {
-                    StringBuilder discarded$8 = var6.append(param2.substring(var7));
+                    StringBuilder discarded$5 = var6.append(param2.substring(var7));
                     stackOut_24_0 = var6.toString();
                     stackIn_25_0 = stackOut_24_0;
                     break L0;
@@ -542,8 +540,7 @@ final class dh extends fc {
                         continue L1;
                       } else {
                         var5++;
-                        int discarded$9 = 10;
-                        var8 = uk.a((CharSequence) (Object) var7_ref_String);
+                        var8 = uk.a((CharSequence) (Object) var7_ref_String, 10);
                         var4 = var4 + (param1[var8].length() - var5 + var6_int);
                         continue L1;
                       }

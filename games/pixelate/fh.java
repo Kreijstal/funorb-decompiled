@@ -14,7 +14,7 @@ final class fh extends ch implements pn, vo {
     static int field_L;
     static dq field_I;
 
-    private final int a(byte param0, int param1, String param2, ng param3, String param4) {
+    private final int a(byte param0, int param1, String param2, ng param3, String param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -68,8 +68,7 @@ final class fh extends ch implements pn, vo {
         try {
           L0: {
             var7_int = -111;
-            int discarded$2 = 35;
-            stackOut_0_0 = this.a(170, param3, 70, param2, (byte) -121, param4);
+            stackOut_0_0 = this.a(170, param3, 70, param2, (byte) -121, param4, 35);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -204,13 +203,11 @@ final class fh extends ch implements pn, vo {
           L0: {
             L1: {
               if (param0 == ((fh) this).field_N) {
-                int discarded$6 = 1;
-                nm.b();
+                nm.b(true);
                 break L1;
               } else {
                 if (param0 == ((fh) this).field_P) {
-                  int discarded$7 = 8;
-                  this.e();
+                  this.e((byte) 8);
                   break L1;
                 } else {
                   break L1;
@@ -350,7 +347,7 @@ final class fh extends ch implements pn, vo {
         }
     }
 
-    private final int a(int param0, ng param1, int param2, String param3, byte param4, String param5) {
+    private final int a(int param0, ng param1, int param2, String param3, byte param4, String param5, int param6) {
         RuntimeException var8 = null;
         md var9 = null;
         int var10 = 0;
@@ -511,14 +508,14 @@ final class fh extends ch implements pn, vo {
         }
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         if (!this.g((byte) -59)) {
             return;
         }
         uj.a(-1710418464, ((fh) this).field_O.field_q);
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_M = null;
         field_I = null;
         field_Q = null;
@@ -546,8 +543,7 @@ final class fh extends ch implements pn, vo {
         int var5 = 200;
         ((fh) this).b(var2, 80);
         var3 += 50;
-        int discarded$0 = 170;
-        var3 = var3 + (5 + this.a((byte) 52, var3, na.field_a, (ng) (Object) ((fh) this).field_O, mo.field_i));
+        var3 = var3 + (5 + this.a((byte) 52, var3, na.field_a, (ng) (Object) ((fh) this).field_O, mo.field_i, 170));
         ((fh) this).field_P.a(var5, (byte) 49, var3, 496 + -var5 >> 1, 40);
         ((fh) this).field_N.a(60, (byte) 38, 15 + var3, 3 + var4, 40);
         ((fh) this).field_N.field_n = (fn) this;
@@ -561,7 +557,8 @@ final class fh extends ch implements pn, vo {
     }
 
     final static im a(String param0, int param1) {
-        Object var2 = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         im var4 = null;
         String var5 = null;
@@ -570,22 +567,22 @@ final class fh extends ch implements pn, vo {
         CharSequence var8 = null;
         Object stackIn_3_0 = null;
         im stackIn_15_0 = null;
-        Object stackIn_19_0 = null;
+        RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        Object stackIn_21_0 = null;
+        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         im stackOut_14_0 = null;
         Object stackOut_2_0 = null;
-        Object stackOut_18_0 = null;
+        RuntimeException stackOut_18_0 = null;
         StringBuilder stackOut_18_1 = null;
-        Object stackOut_20_0 = null;
+        RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         String stackOut_20_2 = null;
-        Object stackOut_19_0 = null;
+        RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
         String stackOut_19_2 = null;
         var6 = Pixelate.field_H ? 1 : 0;
@@ -594,15 +591,15 @@ final class fh extends ch implements pn, vo {
             L0: {
               var3 = -109 % ((13 - param1) / 46);
               var7 = (CharSequence) (Object) param0;
-              var2 = (Object) (Object) dh.a(var7, (byte) 118);
+              var2 = dh.a(var7, (byte) 118);
               if (var2 != null) {
                 break L0;
               } else {
-                var2 = (Object) (Object) var7;
+                var2 = param0;
                 break L0;
               }
             }
-            var4 = (im) (Object) hq.field_q.a(-11434, (long)((String) var2).hashCode());
+            var4 = (im) (Object) hq.field_q.a(-11434, (long)var2.hashCode());
             L1: while (true) {
               if (var4 != null) {
                 L2: {
@@ -615,7 +612,7 @@ final class fh extends ch implements pn, vo {
                     break L2;
                   }
                 }
-                if (var5.equals(var2)) {
+                if (var5.equals((Object) (Object) var2)) {
                   stackOut_14_0 = (im) var4;
                   stackIn_15_0 = stackOut_14_0;
                   return stackIn_15_0;
@@ -635,15 +632,15 @@ final class fh extends ch implements pn, vo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_18_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var2_ref;
             stackOut_18_1 = new StringBuilder().append("fh.I(");
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param0 == null) {
-              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
               stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
@@ -651,7 +648,7 @@ final class fh extends ch implements pn, vo {
               stackIn_21_2 = stackOut_20_2;
               break L3;
             } else {
-              stackOut_19_0 = stackIn_19_0;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
               stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;

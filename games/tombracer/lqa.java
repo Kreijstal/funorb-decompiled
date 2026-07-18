@@ -150,7 +150,7 @@ final class lqa extends ei {
         ((lqa) this).field_h = param9 ? true : false;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
     }
 

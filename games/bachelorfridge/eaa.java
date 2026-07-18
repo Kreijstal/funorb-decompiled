@@ -177,7 +177,7 @@ final class eaa {
         }
     }
 
-    final static void f() {
+    final static void f(int param0) {
         ld.a(16777215, 0, 45, 0);
         ld.a(12648447, 3, 45, 3);
         ld.a(16777152, 5, 45, 5);
@@ -308,7 +308,7 @@ final class eaa {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_d = null;
     }
@@ -330,7 +330,7 @@ final class eaa {
         }
     }
 
-    private final void a(eaa param0, bw param1) {
+    private final void a(eaa param0, bw param1, boolean param2) {
         bw var4 = null;
         RuntimeException var4_ref = null;
         RuntimeException stackIn_4_0 = null;
@@ -438,6 +438,7 @@ final class eaa {
 
     final void a(eaa param0, int param1) {
         RuntimeException runtimeException = null;
+        Object var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -457,13 +458,12 @@ final class eaa {
         try {
           L0: {
             L1: {
-              int discarded$4 = 1;
-              this.a(param0, ((eaa) this).field_g.field_b);
+              this.a(param0, ((eaa) this).field_g.field_b, true);
               if (param1 == 12632256) {
                 break L1;
               } else {
-                int discarded$5 = 1;
-                this.a((eaa) null, (bw) null);
+                var4 = null;
+                this.a((eaa) null, (bw) null, true);
                 break L1;
               }
             }

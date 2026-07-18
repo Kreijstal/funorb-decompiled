@@ -72,7 +72,7 @@ final class hp extends eq {
         int var2 = -21 / ((param0 - 63) / 61);
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_i = null;
         field_j = null;
         int var1 = 0;

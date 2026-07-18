@@ -116,7 +116,7 @@ final class si extends vj implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static String f() {
+    final static String f(int param0) {
         if (g.field_a == ci.field_ub) {
             return ih.field_Q;
         }

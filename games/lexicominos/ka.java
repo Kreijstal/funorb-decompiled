@@ -27,7 +27,7 @@ final class ka {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -1;
         field_a = null;
     }

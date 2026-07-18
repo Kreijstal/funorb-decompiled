@@ -21,7 +21,7 @@ final class rg {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -41,13 +41,13 @@ final class rg {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
         field_c = null;
         field_d = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
@@ -136,8 +136,7 @@ final class rg {
                         var18 = 0;
                         L5: while (true) {
                           if (var18 >= 3) {
-                            int discarded$1 = -58;
-                            da.a(oj.field_l, true, ae.field_M, false, false, var17);
+                            da.a(oj.field_l, true, ae.field_M, false, false, var17, (byte) -58);
                             ff.a(var13, var7, var8, var12, var14, var9, (byte) -116, var17);
                             var15++;
                             continue L3;

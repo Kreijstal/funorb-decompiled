@@ -186,8 +186,7 @@ final class hd extends di {
               } else {
                 L1: {
                   if (!param1.equals((Object) (Object) ((hd) this).field_u)) {
-                    int discarded$2 = 647;
-                    var3 = ca.a(param1);
+                    var3 = ca.a(param1, 647);
                     if (!var3.b((byte) 79)) {
                       stackOut_11_0 = tk.field_t;
                       stackIn_12_0 = stackOut_11_0;

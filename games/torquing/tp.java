@@ -142,7 +142,7 @@ final class tp {
         ((tp) this).field_d = null;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_n = null;
         field_h = null;
         field_e = null;
@@ -293,7 +293,7 @@ final class tp {
         return ((tp) this).field_f;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

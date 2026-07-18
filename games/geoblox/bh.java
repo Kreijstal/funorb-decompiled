@@ -20,7 +20,7 @@ final class bh extends java.awt.Canvas {
         return param1 >= 6144 ? -ai.field_l[-param1 + 8192] : -ai.field_l[param1 + -4096];
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -112,8 +112,7 @@ final class bh extends java.awt.Canvas {
                                       var19[1][1 + 4 * var14] = fb.field_m[var11];
                                       var19[1][var14 * 4 + 2] = k.field_i[var11];
                                       var19[1][var14 * 4 - -3] = cj.field_b[var11];
-                                      int discarded$2 = 12;
-                                      if (ge.a(oi.field_a[var11])) {
+                                      if (ge.a(oi.field_a[var11], (byte) 12)) {
                                         if (cj.field_b[var11] + k.field_i[var11] + fb.field_m[var11] != 0) {
                                           break L8;
                                         } else {
@@ -138,8 +137,7 @@ final class bh extends java.awt.Canvas {
                                   var19[0][4 * var10 - -1] = fb.field_m[var11];
                                   var19[0][4 * var10 - -2] = k.field_i[var11];
                                   var19[0][4 * var10 + 3] = cj.field_b[var11];
-                                  int discarded$3 = 12;
-                                  if (!ge.a(oi.field_a[var11])) {
+                                  if (!ge.a(oi.field_a[var11], (byte) 12)) {
                                     break L9;
                                   } else {
                                     if (cj.field_b[var11] + (fb.field_m[var11] + k.field_i[var11]) != 0) {

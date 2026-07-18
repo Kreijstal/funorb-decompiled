@@ -38,8 +38,7 @@ final class pc {
             if (param2 instanceof byte[]) {
               var3 = (byte[]) param2;
               if (param1) {
-                int discarded$2 = 103;
-                stackOut_8_0 = kk.a(var3);
+                stackOut_8_0 = kk.a(var3, (byte) 103);
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
@@ -99,7 +98,7 @@ final class pc {
         field_c = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (df.field_l != null) {
           df.field_l.h((byte) 125);
           lj.field_m = new ne();
@@ -112,10 +111,10 @@ final class pc {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
     }
 
-    final static u a(u param0, int[] param1) {
+    final static u a(u param0, int[] param1, int param2) {
         u var3 = null;
         RuntimeException var3_ref = null;
         u stackIn_3_0 = null;

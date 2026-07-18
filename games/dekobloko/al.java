@@ -14,7 +14,7 @@ final class al implements gl {
     static ha field_h;
     private int field_k;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_h = null;
         field_j = null;

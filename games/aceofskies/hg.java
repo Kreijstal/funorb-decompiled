@@ -325,8 +325,8 @@ final class hg extends to {
     }
 
     final static void a(boolean param0, boolean param1, boolean param2) {
-        int discarded$0 = -61;
-        hr.a(param2, (String) null, param0);
+        Object var4 = null;
+        hr.a(param2, (String) null, param0, (byte) -61);
     }
 
     private hg(int param0, int param1, int param2, int param3, ir param4, no param5, ea param6, boolean param7, boolean param8) {
@@ -872,8 +872,7 @@ final class hg extends to {
                       var39 = (var30 * var36 & 16711894) >>> 8 | (var35 * var30 & -16711830) >>> 8;
                       var38 = var38 + 65793 * var32;
                       var39 = var39 + 65793 * var33;
-                      int discarded$1 = 0;
-                      pl.a(var37 & 255, var23, var22, var24, var27, 255 & var37 >> 8, var38 >> 8 & 255, var39 >> 16, var25, var39 & 255, var37 >> 16, 255 & var38, (var39 & 65506) >> 8, var38 >> 16, var26);
+                      pl.a(var37 & 255, var23, var22, var24, var27, 255 & var37 >> 8, var38 >> 8 & 255, var39 >> 16, var25, var39 & 255, var37 >> 16, 255 & var38, (var39 & 65506) >> 8, var38 >> 16, var26, false);
                       break L10;
                     }
                     var44++;

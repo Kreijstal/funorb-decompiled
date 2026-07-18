@@ -20,7 +20,7 @@ abstract class fh {
         }
     }
 
-    final static gj a(int param0, int param1, int param2) {
+    final static gj a(int param0, int param1, int param2, int param3, byte param4) {
         gj var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -72,11 +72,11 @@ abstract class fh {
 
     abstract void a(int param0, int param1, java.awt.Graphics param2, boolean param3);
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 
-    final static void a(ki param0) {
+    final static void a(ki param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -133,8 +133,7 @@ abstract class fh {
                   }
                 }
               } else {
-                int discarded$1 = 16;
-                tc.field_a[var4] = f.a(var8);
+                tc.field_a[var4] = f.a(var8, 16);
                 var4++;
                 continue L1;
               }
@@ -238,13 +237,12 @@ abstract class fh {
                 break L1;
               } else {
                 var5 = null;
-                hj[] discarded$4 = fh.a((ki) null, -76, (byte) -18, -119);
+                hj[] discarded$2 = fh.a((ki) null, -76, (byte) -18, -119);
                 break L1;
               }
             }
             if (pk.a(-128, param3, param0, param1)) {
-              int discarded$5 = -127;
-              stackOut_5_0 = lm.a();
+              stackOut_5_0 = lm.a(-127);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

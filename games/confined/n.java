@@ -27,7 +27,7 @@ abstract class n {
 
     abstract java.net.Socket b(int param0) throws IOException;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_a = null;
     }

@@ -11,7 +11,7 @@ final class rb {
         return in.field_i;
     }
 
-    final static byte[] a(byte[] param0, byte param1, nk param2) {
+    final static byte[] a(byte[] param0, byte param1, nk param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -167,7 +167,7 @@ final class rb {
         return stackIn_16_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;
@@ -250,7 +250,7 @@ final class rb {
         return stackIn_5_0;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return aa.field_i;
     }
 

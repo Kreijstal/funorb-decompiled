@@ -102,12 +102,11 @@ final class qb extends vg implements wj {
               if (param0 > 14) {
                 break L0;
               } else {
-                oe discarded$4 = ((qb) this).a(-32);
+                oe discarded$2 = ((qb) this).a(-32);
                 break L0;
               }
             }
-            int discarded$5 = -41;
-            ja.a(ad.field_m, gb.field_j + ((qb) this).field_t - ((qb) this).field_Z);
+            ja.a(ad.field_m, gb.field_j + ((qb) this).field_t - ((qb) this).field_Z, (byte) -41);
             return ((qb) this).field_z;
           }
         } else {
@@ -509,7 +508,7 @@ final class qb extends vg implements wj {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_cb = null;
         int var1 = 113;
         field_L = null;

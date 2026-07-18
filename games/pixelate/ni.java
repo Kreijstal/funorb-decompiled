@@ -14,7 +14,7 @@ final class ni extends fa {
     static int field_q;
     int field_u;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_p = null;
         field_o = null;
         field_s = null;

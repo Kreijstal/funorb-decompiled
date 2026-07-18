@@ -39,8 +39,7 @@ final class id {
               jb.field_c.b((byte) 60, od.field_s[1]);
               jb.field_c.b((byte) 60, od.field_s[2]);
               jb.field_c.b((byte) 60, od.field_s[3]);
-              int discarded$2 = 24;
-              ga.a(jb.field_c);
+              ga.a(jb.field_c, 24);
               jb.field_c.a(param1, 103);
               param0.a(jb.field_c, (byte) -71);
               wa.field_d.field_n = 0;
@@ -108,8 +107,7 @@ final class id {
                 break L7;
               }
             }
-            int discarded$3 = -4;
-            ok.a(jb.field_c, ua.field_a, (fj) (Object) wa.field_d, gk.field_b);
+            ok.a(jb.field_c, ua.field_a, (fj) (Object) wa.field_d, gk.field_b, -4);
             wa.field_d.c(wa.field_d.field_n + -var5_int, 400369768);
             jd.a((byte) -95, -1);
             break L0;
@@ -153,7 +151,7 @@ final class id {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         int var1 = 0;

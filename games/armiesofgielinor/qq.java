@@ -13,7 +13,7 @@ final class qq extends oj {
     static String field_H;
     int field_G;
 
-    final static void e() {
+    final static void e(byte param0) {
         if (ib.field_j != -fw.field_C) {
             if (250 - fw.field_C == ib.field_j) {
             }
@@ -488,7 +488,7 @@ final class qq extends oj {
         }
     }
 
-    final static void g() {
+    final static void g(int param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
@@ -512,15 +512,13 @@ final class qq extends oj {
                 oh.field_G[var2] = true;
             }
             oh.field_G[37] = false;
-            int discarded$0 = -98;
-            int discarded$1 = 0;
-            oh.field_G[32] = re.a();
+            oh.field_G[32] = re.a(0, (byte) -98);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "qq.D(" + 1 + ')');
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_A = null;
         field_y = null;
         field_D = null;

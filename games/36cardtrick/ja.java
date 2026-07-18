@@ -10,7 +10,7 @@ final class ja {
     private qk field_g;
     private pg field_f;
 
-    final static String a() {
+    final static String a(int param0) {
         if (hh.field_g == jc.field_P) {
           return lh.field_c;
         } else {

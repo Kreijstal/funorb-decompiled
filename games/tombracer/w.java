@@ -119,8 +119,7 @@ final class w extends sqa {
                     }
                   }
                   L4: {
-                    int discarded$5 = 1;
-                    if (!qqa.a(param0, mga.field_j, var5)) {
+                    if (!qqa.a(param0, mga.field_j, var5, true)) {
                       break L4;
                     } else {
                       if (var4 != 0) {
@@ -138,17 +137,16 @@ final class w extends sqa {
                         if (param0.field_g.length != param0.field_h - -1) {
                           L6: {
                             var6 = param0.c((byte) 52);
-                            int discarded$6 = 1;
-                            if (qqa.a(param0, mga.field_j, var6)) {
+                            if (qqa.a(param0, mga.field_j, var6, true)) {
                               break L6;
                             } else {
                               if (dia.field_q != var6) {
                                 if (uqa.field_w == var6) {
-                                  StringBuilder discarded$7 = var8.append((char)var6);
+                                  StringBuilder discarded$3 = var8.append((char)var6);
                                   break L5;
                                 } else {
                                   param0.field_h = param0.field_h - 1;
-                                  StringBuilder discarded$8 = var8.append((char)var5);
+                                  StringBuilder discarded$4 = var8.append((char)var5);
                                   break L5;
                                 }
                               } else {
@@ -177,7 +175,7 @@ final class w extends sqa {
                     var4 = stackIn_24_0;
                     continue L1;
                   } else {
-                    StringBuilder discarded$9 = var8.append((char)var5);
+                    StringBuilder discarded$5 = var8.append((char)var5);
                     continue L1;
                   }
                 }
@@ -556,7 +554,7 @@ final class w extends sqa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_f = null;
     }

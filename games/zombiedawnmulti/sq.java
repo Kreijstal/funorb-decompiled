@@ -461,7 +461,7 @@ class sq extends gn {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_P = null;
         field_U = null;
     }
@@ -680,7 +680,7 @@ class sq extends gn {
         ((sq) this).a((byte) 94);
     }
 
-    final static void g() {
+    final static void g(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -930,7 +930,7 @@ class sq extends gn {
         }
     }
 
-    final static void a(int param0, ja[] param1) {
+    final static void a(int param0, ja[] param1, boolean param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         RuntimeException stackIn_14_0 = null;

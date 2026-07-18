@@ -57,8 +57,7 @@ final class qe extends ng {
                     var4 = var4 + k.field_D;
                     break L3;
                   } else {
-                    int discarded$3 = 1;
-                    var6 = vh.a(true, se.field_E[var3_int]);
+                    var6 = vh.a(true, se.field_E[var3_int], true);
                     var4 = var4 + hj.field_a;
                     var7 = bi.field_h + -(var6 >> 1);
                     if (!ef.a(var4, -kk.field_z + var7, -78, (cl.field_m << 1) + pb.field_j, (kk.field_z << 1) + var6, param0, param2)) {
@@ -255,8 +254,7 @@ final class qe extends ng {
           L0: {
             if (c.a(param1, false, param2, param3)) {
               var5_int = 9;
-              int discarded$2 = 71;
-              stackOut_3_0 = ea.a(param4.b(-122, param3, param2));
+              stackOut_3_0 = ea.a(param4.b(-122, param3, param2), (byte) 71);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -323,7 +321,7 @@ final class qe extends ng {
         return stackIn_4_0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_e = null;
         field_g = null;
         field_c = null;

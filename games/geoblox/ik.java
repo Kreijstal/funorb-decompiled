@@ -5,7 +5,7 @@ final class ik {
     static int field_a;
     static String field_b;
 
-    final static void a(re param0, int param1) {
+    final static void a(re param0, int param1, byte param2) {
         pk var3 = fj.field_q;
         var3.a(param1, (byte) -77);
         var3.d((byte) 123, param0.field_k);
@@ -16,7 +16,7 @@ final class ik {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -69,11 +69,11 @@ final class ik {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 
-    final static boolean a(ja param0, ja param1) {
+    final static boolean a(ja param0, ja param1, boolean param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;

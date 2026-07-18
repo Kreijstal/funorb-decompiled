@@ -226,13 +226,11 @@ final class bb {
         }
     }
 
-    final static void h() {
-        int discarded$0 = -59;
-        int var1 = la.a();
+    final static void h(int param0) {
+        int var1 = la.a((byte) -59);
         int var2 = bl.a(true);
         he.field_a.a(-we.field_n + de.field_h, (we.field_n << 1) + var2, -1, var1 - -(gh.field_t << 1), ko.field_cb + -gh.field_t);
-        int discarded$1 = -14;
-        pm.a();
+        pm.a(-14);
     }
 
     final fa b(int param0) {

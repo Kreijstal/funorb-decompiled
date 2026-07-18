@@ -6,7 +6,7 @@ final class ld extends kf {
     private ma field_E;
     static String field_G;
 
-    public static void j() {
+    public static void j(int param0) {
         field_G = null;
     }
 

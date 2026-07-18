@@ -72,7 +72,7 @@ final class rl {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         int var1 = 12;
     }

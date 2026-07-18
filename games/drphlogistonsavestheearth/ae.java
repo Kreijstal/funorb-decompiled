@@ -143,7 +143,7 @@ final class ae extends ca implements ke {
         }
     }
 
-    public static void n() {
+    public static void n(int param0) {
         field_lb = null;
         field_ib = null;
         field_hb = null;
@@ -176,14 +176,13 @@ final class ae extends ca implements ke {
                 break L1;
               } else {
                 var7 = null;
-                hf discarded$5 = this.a((fd) null, (String) null, -72);
+                hf discarded$3 = this.a((fd) null, (String) null, -72);
                 break L1;
               }
             }
             L2: {
               if (((ae) this).field_fb == param3) {
-                int discarded$6 = 0;
-                this.o();
+                this.o(0);
                 break L2;
               } else {
                 break L2;
@@ -459,7 +458,7 @@ final class ae extends ca implements ke {
         return stackIn_4_0;
     }
 
-    private final void o() {
+    private final void o(int param0) {
         if (!((ae) this).field_Q) {
             return;
         }

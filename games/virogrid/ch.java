@@ -14,7 +14,7 @@ final class ch {
     static um field_a;
     static boolean field_e;
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -90,15 +90,14 @@ final class ch {
         field_h = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(kb.field_c)) {
             throw new IllegalStateException();
         }
         if (!(hf.field_w == null)) {
             hf.field_w.h(true);
         }
-        int discarded$0 = -113;
-        String var1 = og.c();
+        String var1 = og.c(-113);
         aa.field_a = new ca(var1, (String) null, true, false, false);
         tm.field_l.a(0, (fi) (Object) fi.field_t);
         fi.field_t.b((fi) (Object) aa.field_a, (byte) -53);

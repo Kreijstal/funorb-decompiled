@@ -13,7 +13,7 @@ final class tl {
     static int[] field_d;
     static int[] field_b;
 
-    final static void a(int param0, ha param1) {
+    final static void a(int param0, ha param1, int param2) {
         se var5 = null;
         int var4 = 0;
         try {
@@ -38,12 +38,12 @@ final class tl {
         }
     }
 
-    final static int a(int param0, int param1, boolean param2) {
+    final static int a(int param0, int param1, boolean param2, byte param3) {
         int var4 = 0;
         return nk.a((byte) -97);
     }
 
-    final static boolean a(java.applet.Applet param0) {
+    final static boolean a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -433,7 +433,7 @@ final class tl {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_e = null;
         field_d = null;
@@ -571,7 +571,7 @@ final class tl {
         rc.field_d = 0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         ql.field_e = 0;
     }
 

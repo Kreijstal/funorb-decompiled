@@ -12,7 +12,7 @@ final class ug extends fa {
     static int field_k;
     static String field_p;
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         qh.field_b = param0;
         bq.field_d = param1;
     }
@@ -24,8 +24,7 @@ final class ug extends fa {
           if (null != wo.field_b) {
             var2 = wo.field_b;
             var1 = var2;
-            int discarded$2 = 0;
-            rg.a(sd.a(ek.field_d, 113, new String[1]));
+            rg.a(sd.a(ek.field_d, 113, new String[1]), false);
             wo.field_b = null;
             break L0;
           } else {

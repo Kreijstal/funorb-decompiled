@@ -8,7 +8,7 @@ final class tn extends ab implements dn {
     private mi field_x;
     private mi field_u;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -15;
         field_w = null;
         field_t = null;
@@ -252,7 +252,7 @@ final class tn extends ab implements dn {
         return stackIn_5_0 != 0;
     }
 
-    final static ll a(int param0, int param1) {
+    final static ll a(int param0, int param1, boolean param2) {
         int var4 = 0;
         int var5 = AceOfSkies.field_G ? 1 : 0;
         ll var6 = new ll(param1, param1);
@@ -423,8 +423,7 @@ final class tn extends ab implements dn {
                   break L1;
                 }
               } else {
-                int discarded$3 = 4754;
-                ua.e();
+                ua.e(4754);
                 break L1;
               }
             }

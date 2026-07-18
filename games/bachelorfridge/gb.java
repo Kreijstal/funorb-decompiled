@@ -40,8 +40,7 @@ final class gb extends bw {
         try {
           L0: {
             L1: {
-              int discarded$2 = 3685;
-              k.c();
+              k.c(3685);
               var14 = dg.field_e;
               var13 = var14;
               var12 = var13;
@@ -262,7 +261,7 @@ final class gb extends bw {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = 0;
         if (b.field_u > 32) {
             var1 = b.field_u % 32;
@@ -279,7 +278,7 @@ final class gb extends bw {
         throw new Error();
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_j = null;
         field_f = null;
         field_i = null;

@@ -8,7 +8,7 @@ final class ra {
     static ce field_b;
     static int[] field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_e = null;
         field_c = null;

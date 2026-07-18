@@ -171,7 +171,7 @@ final class k {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         int var1 = 29;
         field_a = null;
@@ -179,7 +179,7 @@ final class k {
         field_c = null;
     }
 
-    final static void a(pf param0) {
+    final static void a(pf param0, int param1) {
         pb var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -187,8 +187,7 @@ final class k {
             var2 = new pb(param0.a("final_frame.jpg", "", (byte) -12), (java.awt.Component) (Object) qd.field_j);
             var3 = var2.field_v;
             var4 = var2.field_y;
-            int discarded$0 = 0;
-            kg.d();
+            kg.d(false);
             wh.field_a = new pb(var3, 3 * var4 / 4);
             wh.field_a.e();
             var2.d(0, 0);

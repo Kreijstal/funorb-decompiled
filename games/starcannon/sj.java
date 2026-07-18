@@ -12,7 +12,7 @@ final class sj extends dk {
     int field_G;
     static int field_I;
 
-    public static void f() {
+    public static void f(byte param0) {
         field_B = null;
         field_D = null;
         int var1 = 26;
@@ -46,7 +46,7 @@ final class sj extends dk {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;

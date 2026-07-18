@@ -335,12 +335,12 @@ class c extends v {
         ba.field_g = hh.a(var5 * var2, var4 * var2, false);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_i = null;
         field_f = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, er[] param4, int param5, cc param6, int param7, int param8, int param9, er[] param10, int param11, int param12, er[] param13, cc param14, int param15, int param16, int param17, int param18) {
+    final static void a(int param0, int param1, int param2, int param3, er[] param4, int param5, cc param6, int param7, int param8, int param9, er[] param10, int param11, int param12, er[] param13, cc param14, int param15, int param16, int param17, int param18, int param19) {
         RuntimeException var20 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -420,8 +420,7 @@ class c extends v {
         String stackOut_17_2 = null;
         try {
           L0: {
-            int discarded$1 = 8;
-            on.a(param6, 20, 10, param18, param1, 16766751, 5, new mp(param4), new mp(param13), 8, (byte) 24, 320, new mp(param10), 16777215, 16777215, param14, 280, param2, param15);
+            on.a(param6, 20, 10, param18, param1, 16766751, 5, new mp(param4), new mp(param13), 8, (byte) 24, 320, new mp(param10), 16777215, 16777215, param14, 280, param2, param15, 8);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -565,7 +564,7 @@ class c extends v {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         ri var3 = null;
@@ -618,18 +617,17 @@ class c extends v {
                     var6_int = 1;
                     L4: while (true) {
                       if (var4 <= var6_int) {
-                        int discarded$4 = -26418;
-                        vl.a(var5, var4);
+                        vl.a(var5, var4, -26418);
                         var6_int = 0;
                         L5: while (true) {
                           if (var6_int >= var4) {
                             qb.a(var5, 2);
-                            String[][] dupTemp$5 = new String[2][var5];
-                            var3.field_t = dupTemp$5;
-                            var6 = dupTemp$5;
-                            int[][] dupTemp$6 = new int[2][4 * var5];
-                            var3.field_q = dupTemp$6;
-                            var7 = dupTemp$6;
+                            String[][] dupTemp$2 = new String[2][var5];
+                            var3.field_t = dupTemp$2;
+                            var6 = dupTemp$2;
+                            int[][] dupTemp$3 = new int[2][4 * var5];
+                            var3.field_q = dupTemp$3;
+                            var7 = dupTemp$3;
                             var8 = cq.field_i;
                             var9 = 0;
                             var10 = 0;
@@ -688,8 +686,7 @@ class c extends v {
                             }
                           } else {
                             L10: {
-                              int discarded$7 = 11591;
-                              vd.a((ed) (Object) var16);
+                              vd.a((ed) (Object) var16, 11591);
                               if (0 == var6_int) {
                                 var3.field_s = br.field_U;
                                 var3.field_y = kp.field_P;

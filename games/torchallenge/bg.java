@@ -15,7 +15,7 @@ final class bg extends ic {
     static int[][] field_I;
     static float field_G;
 
-    public static void h() {
+    public static void h(int param0) {
         field_Q = null;
         field_K = null;
         field_O = null;
@@ -94,8 +94,7 @@ final class bg extends ic {
                         } else {
                           L3: {
                             if (param1.field_x == param3.field_t[param0][var6]) {
-                              int discarded$1 = 26691;
-                              if (jc.a(param3.field_i[param0][var6])) {
+                              if (jc.a(param3.field_i[param0][var6], 26691)) {
                                 var7 = 0;
                                 L4: while (true) {
                                   if (var7 >= var4_int) {
@@ -205,8 +204,7 @@ final class bg extends ic {
 
     final static void a(kb param0, int param1, int param2, int param3, java.awt.Component param4, uj param5, int param6, boolean param7) {
         try {
-            int discarded$0 = 10;
-            kh.a(param1, param7);
+            kh.a(param1, param7, 10);
             bh.field_o = kh.a(param5, param4, 0, param3);
             re.field_B = kh.a(param5, param4, 1, 1024);
             mj.field_a = new jk();

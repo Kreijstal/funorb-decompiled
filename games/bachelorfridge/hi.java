@@ -4,7 +4,7 @@
 final class hi {
     static lda field_a;
 
-    final static void a() {
+    final static void a(int param0) {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

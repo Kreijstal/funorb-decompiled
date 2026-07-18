@@ -11,20 +11,18 @@ final class bna extends ana {
 
     final boolean c(byte param0) {
         int var2 = 0;
-        int fieldTemp$6 = ((bna) this).field_l - 1;
+        int fieldTemp$2 = ((bna) this).field_l - 1;
         ((bna) this).field_l = ((bna) this).field_l - 1;
-        if (fieldTemp$6 >= 0) {
+        if (fieldTemp$2 >= 0) {
           if (((bna) this).field_l == 25) {
-            int discarded$7 = -86;
-            this.e();
+            this.e((byte) -86);
             return false;
           } else {
             return false;
           }
         } else {
           var2 = -58 / ((71 - param0) / 47);
-          int discarded$8 = -85;
-          this.f();
+          this.f((byte) -85);
           return true;
         }
     }
@@ -159,11 +157,11 @@ final class bna extends ana {
         }
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         boolean discarded$0 = dha.a(-108, (bca) (Object) ((bna) this).field_A, ((bna) this).field_q);
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         int var2 = -25;
     }
 
@@ -187,8 +185,7 @@ final class bna extends ana {
         String stackOut_5_2 = null;
         try {
           if (g.a(param0, param3, -30744, param1)) {
-            int discarded$2 = 22;
-            return vma.c();
+            return vma.c(22);
           } else {
             return null;
           }

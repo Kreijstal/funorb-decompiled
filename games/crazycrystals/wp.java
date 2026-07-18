@@ -10,7 +10,7 @@ final class wp {
     static am field_b;
     static int[] field_d;
 
-    final static void a(Throwable param0, String param1) {
+    final static void a(Throwable param0, String param1, int param2) {
         try {
             Exception var3 = null;
             String var3_ref = null;
@@ -88,8 +88,7 @@ final class wp {
                     break L2;
                   }
                 }
-                int discarded$1 = 1;
-                qf.a(var3_ref);
+                qf.a(var3_ref, 1);
                 var7 = ca.a("%3a", 0, var3_ref, ":");
                 var8 = ca.a("%40", 0, var7, "@");
                 var9 = ca.a("%26", 0, var8, "&");
@@ -551,7 +550,7 @@ final class wp {
         return stackIn_12_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_d = null;
         field_b = null;

@@ -11,7 +11,7 @@ final class lf extends kn {
     static String field_Q;
     static String field_N;
 
-    public static void j() {
+    public static void j(int param0) {
         field_N = null;
         field_P = null;
         field_Q = null;
@@ -154,8 +154,7 @@ final class lf extends kn {
                   }
                 }
               }
-              int discarded$2 = 465918340;
-              d.l();
+              d.l(465918340);
               break L1;
             }
             L3: {
@@ -172,7 +171,7 @@ final class lf extends kn {
               if (param4 == 29521) {
                 break L3;
               } else {
-                int discarded$3 = lf.i(-127);
+                int discarded$1 = lf.i(-127);
                 break L3;
               }
             }
@@ -436,8 +435,7 @@ final class lf extends kn {
         km var7 = new km(((lf) this).field_M.field_y, ((lf) this).field_M.field_C);
         tl.a((byte) -67, var7);
         ((lf) this).field_M.a(0, param1, -110, 0);
-        int discarded$12 = 28773;
-        fd.a();
+        fd.a(28773);
         var7.b(((lf) this).field_u + param3, param0 - -((lf) this).field_r, ((lf) this).field_R);
         if (param2 > -80) {
             Object var6 = null;

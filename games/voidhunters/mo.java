@@ -37,7 +37,7 @@ final class mo extends ub implements ntb {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_j = null;
     }
 
@@ -90,7 +90,7 @@ final class mo extends ub implements ntb {
             L1: {
               var4 = 34 / ((param0 - 22) / 59);
               var3 = (mo) (Object) param1;
-              if (var3.field_i.equals((Object) (Object) var3.field_i)) {
+              if (var3.field_i.equals((Object) (Object) ((mo) this).field_i)) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -168,7 +168,7 @@ final class mo extends ub implements ntb {
             L2: {
               var3 = (mo) (Object) param0;
               var4 = 0;
-              if (var3.field_i.equals((Object) (Object) var3.field_i)) {
+              if (var3.field_i.equals((Object) (Object) ((mo) this).field_i)) {
                 break L2;
               } else {
                 iva.a(-6940, "String requeststring has changed. ");

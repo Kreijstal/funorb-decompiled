@@ -15,8 +15,7 @@ final class kj extends rd {
         if (param0 != 2) {
             field_o = null;
         }
-        int discarded$0 = -1;
-        return rf.a(param1, in.field_c);
+        return rf.a(param1, in.field_c, -1);
     }
 
     public static void a(byte param0) {

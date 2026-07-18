@@ -21,7 +21,7 @@ final class b {
         return true;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 

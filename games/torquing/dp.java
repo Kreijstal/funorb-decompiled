@@ -7,7 +7,7 @@ abstract class dp {
 
     abstract byte[] a(int param0);
 
-    final static af a(String param0, String param1, la param2) {
+    final static af a(String param0, String param1, la param2, byte param3) {
         RuntimeException var4 = null;
         af stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;

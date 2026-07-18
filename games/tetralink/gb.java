@@ -254,8 +254,7 @@ class gb extends mc {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              int discarded$2 = 7;
-              var3_ref_dk__ = lf.a();
+              var3_ref_dk__ = lf.a(7);
               var4 = 0;
               L1: while (true) {
                 if (var4 >= var3_ref_dk__.length) {

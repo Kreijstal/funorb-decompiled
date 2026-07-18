@@ -442,14 +442,14 @@ final class h {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!oc.d(63)) {
             return;
         }
         qd.a(126, false, 4);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

@@ -6,17 +6,16 @@ import java.lang.String;
 final class iab implements nka {
     static oe field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
     public final void a(int param0, int param1, int param2) {
         int var4 = 103 / ((22 - param0) / 42);
-        int discarded$0 = -95;
-        pab.a(param2, param1);
+        pab.a(param2, param1, (byte) -95);
     }
 
-    final static String a(int param0, String param1, String param2) {
+    final static String a(int param0, String param1, String param2, byte param3) {
         RuntimeException var4 = null;
         faa var5 = null;
         int var6 = 0;
@@ -70,8 +69,7 @@ final class iab implements nka {
               return stackIn_3_0;
             } else {
               if (2 == iwa.field_b) {
-                int discarded$2 = 0;
-                var7 = nf.a(param1);
+                var7 = nf.a(param1, false);
                 if (var7 == null) {
                   stackOut_9_0 = isa.a(mr.field_L, new String[1], 122);
                   stackIn_10_0 = stackOut_9_0;

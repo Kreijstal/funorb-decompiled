@@ -168,7 +168,7 @@ final class vd implements fp {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
         field_f = null;
         field_m = null;

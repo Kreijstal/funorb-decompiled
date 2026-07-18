@@ -10,7 +10,7 @@ final class tm {
     static String field_f;
     static String field_e;
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_a = null;
         field_e = null;
@@ -18,7 +18,7 @@ final class tm {
         field_c = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;

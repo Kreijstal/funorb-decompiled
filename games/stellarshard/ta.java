@@ -14,7 +14,7 @@ final class ta extends gg {
     static boolean field_n;
     static String field_l;
 
-    final static void a() {
+    final static void a(byte param0) {
         la.field_B = new mj();
         sf.field_f.b((rj) (Object) la.field_B, 23143);
     }

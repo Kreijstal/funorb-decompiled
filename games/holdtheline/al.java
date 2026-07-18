@@ -5,13 +5,13 @@ final class al {
     static go[] field_a;
     static int[] field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         int var1 = 0;
         field_a = null;
     }
 
-    final synchronized static byte[] a(int param0) {
+    final synchronized static byte[] a(int param0, byte param1) {
         byte[] var2_ref_byte__ = null;
         int var2 = 0;
         byte[] var3 = null;

@@ -22,8 +22,7 @@ final class hk {
           L0: {
             var4 = -1;
             if (sh.field_r != 0) {
-              int discarded$3 = -56;
-              db.g();
+              db.g(-56);
               var5 = 0;
               L1: while (true) {
                 if (var5 >= 2) {
@@ -104,8 +103,7 @@ final class hk {
                                 tg.field_r[var5] = nc.a(var3, 100, var1_int);
                                 tg.field_r[var5].e(-1);
                                 tg.field_r[var5].e(0, var3.field_k.length);
-                                int discarded$4 = 6222;
-                                da.field_g[var5] = we.a(tg.field_r[var5]);
+                                da.field_g[var5] = we.a(tg.field_r[var5], 6222);
                                 wh.field_d[var5] = true;
                                 fk.field_u[var5] = 25;
                                 break L5;
@@ -117,8 +115,7 @@ final class hk {
                           L8: {
                             if (!wh.field_d[var5]) {
                               tg.field_r[var5].h(var1_int);
-                              int discarded$5 = 6222;
-                              da.field_g[var5] = we.a(tg.field_r[var5]);
+                              da.field_g[var5] = we.a(tg.field_r[var5], 6222);
                               wh.field_d[var5] = true;
                               fk.field_u[var5] = 25;
                               break L8;
@@ -157,7 +154,7 @@ final class hk {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_a = null;
     }

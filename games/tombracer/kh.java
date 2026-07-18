@@ -494,7 +494,7 @@ final class kh extends uia {
         ((kh) this).field_g[fieldTemp$0] = (byte)(((kh) this).field_n.b(104) + param0);
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_j = null;
         field_m = null;
         field_l = null;

@@ -20,12 +20,9 @@ final class q implements kg {
             if (!tb.field_g) {
               kb.field_t = ed.field_O;
               if (qh.field_k) {
-                int discarded$12 = -98;
-                qi.b();
-                int discarded$13 = -33;
-                re.e();
-                int discarded$14 = 0;
-                ji.h();
+                qi.b((byte) -98);
+                re.e((byte) -33);
+                ji.h(0);
                 qh.field_k = false;
                 return;
               } else {
@@ -37,12 +34,9 @@ final class q implements kg {
               tb.field_g = false;
               kb.field_t = ed.field_O;
               if (qh.field_k) {
-                int discarded$15 = -98;
-                qi.b();
-                int discarded$16 = -33;
-                re.e();
-                int discarded$17 = 0;
-                ji.h();
+                qi.b((byte) -98);
+                re.e((byte) -33);
+                ji.h(0);
                 qh.field_k = false;
                 return;
               } else {
@@ -60,24 +54,18 @@ final class q implements kg {
               if (!qh.field_k) {
                 return;
               } else {
-                int discarded$18 = -98;
-                qi.b();
-                int discarded$19 = -33;
-                re.e();
-                int discarded$20 = 0;
-                ji.h();
+                qi.b((byte) -98);
+                re.e((byte) -33);
+                ji.h(0);
                 qh.field_k = false;
                 return;
               }
             } else {
               kb.field_t = ed.field_O;
               if (qh.field_k) {
-                int discarded$21 = -98;
-                qi.b();
-                int discarded$22 = -33;
-                re.e();
-                int discarded$23 = 0;
-                ji.h();
+                qi.b((byte) -98);
+                re.e((byte) -33);
+                ji.h(0);
                 qh.field_k = false;
                 return;
               } else {
@@ -88,7 +76,7 @@ final class q implements kg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_d = null;

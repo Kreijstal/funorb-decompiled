@@ -10,7 +10,7 @@ final class jc extends mn {
     static String field_w;
     private int field_z;
 
-    final static String a(String param0) {
+    final static String a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -96,15 +96,14 @@ final class jc extends mn {
         return stackIn_8_0;
     }
 
-    final static b b() {
+    final static b b(int param0, int param1) {
         b var2 = new b();
         ta.field_O.a((byte) -119, (tc) (Object) var2);
-        int discarded$0 = -32;
-        a.a(4);
+        a.a(4, (byte) -32);
         return var2;
     }
 
-    private final String a(String[] param0) {
+    private final String a(String[] param0, boolean param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -163,7 +162,7 @@ final class jc extends mn {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_x = null;
         field_B = null;
         int var1 = 0;
@@ -232,8 +231,7 @@ final class jc extends mn {
                         if (var4.f(19725)) {
                           break L1;
                         } else {
-                          int discarded$12 = 0;
-                          String discarded$13 = this.a(new String[2]);
+                          String discarded$6 = this.a(new String[2], false);
                           stackOut_14_0 = null;
                           stackIn_15_0 = stackOut_14_0;
                           return (bd) (Object) stackIn_15_0;
@@ -247,8 +245,7 @@ final class jc extends mn {
                         if (var4.field_h == 0) {
                           break L2;
                         } else {
-                          int discarded$14 = 0;
-                          String discarded$15 = this.a(new String[2]);
+                          String discarded$7 = this.a(new String[2], false);
                           stackOut_18_0 = null;
                           stackIn_19_0 = stackOut_18_0;
                           return (bd) (Object) stackIn_19_0;
@@ -265,29 +262,25 @@ final class jc extends mn {
                       return (bd) (Object) stackIn_22_0;
                     }
                   } else {
-                    int discarded$16 = 0;
-                    String discarded$17 = this.a(new String[3]);
+                    String discarded$8 = this.a(new String[3], false);
                     stackOut_10_0 = null;
                     stackIn_11_0 = stackOut_10_0;
                     return (bd) (Object) stackIn_11_0;
                   }
                 } else {
-                  int discarded$18 = 0;
-                  String discarded$19 = this.a(new String[3]);
+                  String discarded$9 = this.a(new String[3], false);
                   stackOut_7_0 = null;
                   stackIn_8_0 = stackOut_7_0;
                   return (bd) (Object) stackIn_8_0;
                 }
               } else {
-                int discarded$20 = 0;
-                String discarded$21 = this.a(new String[4]);
+                String discarded$10 = this.a(new String[4], false);
                 stackOut_4_0 = null;
                 stackIn_5_0 = stackOut_4_0;
                 return (bd) (Object) stackIn_5_0;
               }
             } else {
-              int discarded$22 = 0;
-              String discarded$23 = this.a(new String[2]);
+              String discarded$11 = this.a(new String[2], false);
               stackOut_1_0 = null;
               stackIn_2_0 = stackOut_1_0;
               return (bd) (Object) stackIn_2_0;

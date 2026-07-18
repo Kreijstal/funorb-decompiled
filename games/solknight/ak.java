@@ -75,8 +75,7 @@ final class ak {
                   uf.field_q = 2;
                   break L3;
                 } else {
-                  int discarded$23 = 6054;
-                  uf.field_q = il.a((CharSequence) (Object) var6);
+                  uf.field_q = il.a((CharSequence) (Object) var6, 6054);
                   break L3;
                 }
               }
@@ -154,14 +153,14 @@ final class ak {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_d = null;
         field_e = null;
         field_b = null;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         if (null == lf.field_d) {
             return false;
         }

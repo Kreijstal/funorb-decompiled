@@ -345,12 +345,12 @@ abstract class bi extends jla {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_h = null;
         field_i = null;
     }
 
-    final static void o() {
+    final static void o(int param0) {
         gja.field_m.f((byte) -66);
         if (null == hp.field_d) {
             hp.field_d = new hga(gja.field_m, at.field_i);

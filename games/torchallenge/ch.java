@@ -7,12 +7,12 @@ final class ch {
     static String field_d;
     static boolean[][] field_a;
 
-    final static void a() {
+    final static void a(int param0) {
         hh.field_a = null;
         uf.field_i = null;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -498,7 +498,7 @@ final class ch {
         field_b = null;
     }
 
-    final static void a(int[] param0, int[] param1) {
+    final static void a(int[] param0, int[] param1, int param2) {
         try {
             qh.a(0, param1, (byte) 75, param0, -1 + param0.length);
         } catch (RuntimeException runtimeException) {

@@ -39,7 +39,7 @@ final class gk {
     int field_k;
     static int[] field_o;
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_e = null;
         field_r = null;

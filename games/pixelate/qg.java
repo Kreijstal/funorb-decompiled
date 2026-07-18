@@ -7,14 +7,14 @@ final class qg {
     static String field_b;
     static hh[] field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_a = null;
         field_b = null;
         field_c = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, boolean param2) {
         pc var3 = aa.field_f;
         var3.g(param1, 15514);
         var3.e(160, 3);

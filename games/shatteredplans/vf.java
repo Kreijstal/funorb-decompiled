@@ -593,7 +593,7 @@ final class vf extends hb {
         js.field_f.b(-var4 + js.field_f.field_j, (byte) 118);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
     }
 

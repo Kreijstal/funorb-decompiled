@@ -20,7 +20,7 @@ final class nr extends gn {
     static vd field_f;
     static String field_k;
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, hu param10, hu param11, dg param12, int param13, int param14, int param15, dg param16, int param17, int param18, dg param19) {
+    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, hu param10, hu param11, dg param12, int param13, int param14, int param15, dg param16, int param17, int param18, dg param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -101,8 +101,7 @@ final class nr extends gn {
         try {
           L0: {
             ew.a(126, 320, param10, param11);
-            int discarded$1 = 5;
-            sb.a(9, 6, 20, 18);
+            sb.a(9, 6, 20, 18, (byte) 5);
             bs.a(240, 0, 320);
             rn.a(param19, 6, param16, 13, 30, -110);
             tm.a(20, 10, false, param12);
@@ -384,7 +383,7 @@ final class nr extends gn {
         ((nr) this).field_h.a(hq.field_b[var6], (byte) -107);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_m = null;
         field_f = null;

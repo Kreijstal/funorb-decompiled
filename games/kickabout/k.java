@@ -16,7 +16,7 @@ final class k extends gn {
         np.field_Jb.a((gn) (Object) new hg(param1), 3);
     }
 
-    final static int b() {
+    final static int b(int param0) {
         if (vk.field_b) {
           return -1;
         } else {
@@ -32,7 +32,7 @@ final class k extends gn {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_e = null;
         field_l = null;

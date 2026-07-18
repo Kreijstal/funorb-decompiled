@@ -24,7 +24,7 @@ final class ke {
         field_b = null;
     }
 
-    final static void a(boolean param0, int param1, kg param2, int param3) {
+    final static void a(boolean param0, int param1, kg param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -49,8 +49,8 @@ final class ke {
         String var23 = null;
         int var24_int = 0;
         String var24 = null;
-        int var25_int = 0;
         String var25 = null;
+        int var25_int = 0;
         int var26 = 0;
         int var27_int = 0;
         String var27 = null;
@@ -59,6 +59,9 @@ final class ke {
         String var30 = null;
         int var30_int = 0;
         int var31 = 0;
+        String var32 = null;
+        String var33 = null;
+        String var34 = null;
         kg stackIn_33_0 = null;
         int stackIn_33_1 = 0;
         int stackIn_33_2 = 0;
@@ -361,7 +364,9 @@ final class ke {
               var18.field_zb = 0;
               var12.field_zb = param2.field_Ub.field_zb;
               var19 = 0;
-              var20 = var12.field_Vb;
+              var32 = var12.field_Vb;
+              var20 = var32;
+              var20 = var32;
               var21 = 72;
               if (mj.field_Sb == param2) {
                 var21 += 42;
@@ -371,8 +376,10 @@ final class ke {
               }
             }
             L15: {
-              var20 = mi.a(var12.field_Sb.field_L, var20, var21);
-              if (var20.equals((Object) (Object) var12.field_Vb)) {
+              var33 = mi.a(var12.field_Sb.field_L, var32, var21);
+              var20 = var33;
+              var20 = var33;
+              if (var33.equals((Object) (Object) var12.field_Vb)) {
                 stackOut_50_0 = 0;
                 stackIn_51_0 = stackOut_50_0;
                 break L15;
@@ -386,13 +393,13 @@ final class ke {
               var22 = stackIn_51_0;
               if (var12.field_jc < 4) {
                 if (var12.field_jc > 0) {
-                  var20 = "<img=" + (-1 + var12.field_jc) + ">" + var20;
+                  var20 = "<img=" + (-1 + var12.field_jc) + ">" + var33;
                   break L16;
                 } else {
                   break L16;
                 }
               } else {
-                var20 = "<img=" + (-4 + var12.field_jc + uc.field_l) + ">" + var20;
+                var20 = "<img=" + (-4 + var12.field_jc + uc.field_l) + ">" + var33;
                 break L16;
               }
             }
@@ -611,9 +618,10 @@ final class ke {
               }
             }
             L28: {
-              int discarded$2 = -126;
-              var23 = sa.a(var12.field_Wb, var20);
+              var23 = sa.a(var12.field_Wb, var20, (byte) -126);
               var24 = var23;
+              var30 = var24;
+              var25 = var30;
               var24 = var23;
               if (var23 == null) {
                 break L28;
@@ -650,8 +658,7 @@ final class ke {
                   break L31;
                 } else {
                   if (0 != var12.field_hc.field_Eb) {
-                    int discarded$3 = 0;
-                    ik.a(var12.field_ec, 11);
+                    ik.a(var12.field_ec, 11, false);
                     break L31;
                   } else {
                     if (0 != var12.field_Yb.field_Eb) {
@@ -682,6 +689,11 @@ final class ke {
                         } else {
                           if (!var12.field_nc) {
                             var24 = db.a(ia.field_i, -76, new String[1]);
+                            var30 = var24;
+                            var25 = var30;
+                            var24 = var25;
+                            var30 = var24;
+                            var25 = var30;
                             break L33;
                           } else {
                             break L34;
@@ -792,11 +804,11 @@ final class ke {
                   if (var24 == null) {
                     break L32;
                   } else {
-                    var24 = "<col=A00000>" + var24;
-                    var30 = var24;
+                    var34 = "<col=A00000>" + var24;
+                    var30 = var34;
                     var25 = var30;
                     var24 = var25;
-                    var30 = var24;
+                    var30 = var34;
                     var25 = var30;
                     var25 = null;
                     var26 = 0;
@@ -810,10 +822,10 @@ final class ke {
                             } else {
                               if (kk.a(-28548)) {
                                 if (var26 != 0) {
-                                  var24 = var24 + "<br>" + hc.field_S + var25;
+                                  var24 = var34 + "<br>" + hc.field_S + var25;
                                   break L39;
                                 } else {
-                                  var24 = var24 + "<br>" + db.a(ph.field_f, -35, new String[1]);
+                                  var24 = var34 + "<br>" + db.a(ph.field_f, -35, new String[1]);
                                   break L39;
                                 }
                               } else {
@@ -822,10 +834,10 @@ final class ke {
                             }
                           }
                           if (var26 == 0) {
-                            var24 = var24 + "<br>" + db.a(o.field_e, -65, new String[1]);
+                            var24 = var34 + "<br>" + db.a(o.field_e, -65, new String[1]);
                             break L39;
                           } else {
-                            var24 = var24 + "<br>" + vg.field_b + var25;
+                            var24 = var34 + "<br>" + vg.field_b + var25;
                             break L39;
                           }
                         }

@@ -76,7 +76,7 @@ abstract class eca extends sc implements en {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_d = null;
     }
 

@@ -23,7 +23,7 @@ final class tf extends dk {
         ((tf) this).field_F = 256;
     }
 
-    final static String a(ni param0) {
+    final static String a(ni param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -62,8 +62,7 @@ final class tf extends dk {
             }
             var4 = new byte[var3_int];
             param0.field_i = param0.field_i + qg.field_e.a(param0.field_k, param0.field_i, 0, var3_int, var4, -1);
-            int discarded$2 = 0;
-            var5 = pg.a(var3_int, 0, var4);
+            var5 = pg.a(var3_int, 0, var4, 0);
             stackOut_2_0 = (String) var5;
             stackIn_3_0 = stackOut_2_0;
             return stackIn_3_0;
@@ -106,7 +105,7 @@ final class tf extends dk {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_G = null;
         field_H = null;
         field_E = null;
@@ -127,8 +126,7 @@ final class tf extends dk {
             return;
         }
         dd var6 = new dd(((tf) this).field_A.field_u, ((tf) this).field_A.field_j);
-        int discarded$0 = 45;
-        r.a(var6);
+        r.a(var6, 45);
         ((tf) this).field_A.b(0, 0, param2, param3);
         ia.a(-107);
         var6.c(((tf) this).field_y + param1, param0 + ((tf) this).field_z, ((tf) this).field_F);
@@ -193,28 +191,19 @@ final class tf extends dk {
         return stackIn_1_0;
     }
 
-    final static void d() {
-        L0: {
-          if (nb.field_a != null) {
+    final static void d(boolean param0) {
+        if (!(nb.field_a == null)) {
             nb.field_a.k(-110);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         if (em.field_g != null) {
-          em.field_g.n(100);
-          int discarded$4 = -33;
-          bc.s();
-          return;
-        } else {
-          int discarded$5 = -33;
-          bc.s();
-          return;
+            em.field_g.n(100);
+            bc.s(-33);
+            return;
         }
+        bc.s(-33);
     }
 
-    final static int b(int param0, int param1) {
+    final static int b(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

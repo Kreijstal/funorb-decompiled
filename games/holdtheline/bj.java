@@ -102,7 +102,7 @@ final class bj extends v implements qa, pi {
         }
     }
 
-    private final String a() {
+    private final String a(byte param0) {
         int var2 = 35;
         return "</col></u>";
     }
@@ -212,9 +212,7 @@ final class bj extends v implements qa, pi {
             ((bj) this).field_K = param0;
             ((bj) this).field_M = new rm(sf.field_j, (tb) null);
             ((bj) this).field_M.field_l = (dh) (Object) new mo();
-            int discarded$2 = -119;
-            int discarded$3 = 1;
-            var7 = sd.a(ta.field_b, new String[2]);
+            var7 = sd.a(ta.field_b, new String[2], true);
             var3 = 20;
             var4 = new dk(hl.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, hl.field_g.field_G, -1, 2147483647, true);
             ((bj) this).field_F = new cj(var7, (dh) (Object) var4);

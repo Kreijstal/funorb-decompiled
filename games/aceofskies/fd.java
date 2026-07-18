@@ -9,7 +9,7 @@ final class fd {
     static String field_c;
     static int field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_c = null;
         field_e = null;
@@ -35,7 +35,7 @@ final class fd {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_1_0 = false;

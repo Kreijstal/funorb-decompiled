@@ -277,7 +277,7 @@ final class km {
         return stackIn_69_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_j = null;
         field_e = null;

@@ -159,9 +159,8 @@ class o implements iq, pj {
                     var9 = var14.a(true, param0);
                     var10 = this.b((byte) -14, param4, var9, param1);
                     var11 = ((o) this).a(param3, param4, 68) - -Math.max(0, var8.field_e);
-                    int discarded$1 = 0;
                     stackOut_3_0 = ((o) this).a(param3, param4, -122);
-                    stackOut_3_1 = this.a(param4);
+                    stackOut_3_1 = this.a(param4, 0);
                     stackOut_3_2 = var8.field_c;
                     stackIn_5_0 = stackOut_3_0;
                     stackIn_5_1 = stackOut_3_1;
@@ -270,8 +269,7 @@ class o implements iq, pj {
               }
               L2: {
                 if (((o) this).field_d) {
-                  int discarded$2 = 0;
-                  ((la) (Object) param0.field_j).a(((o) this).b(true, param0), 0, ((o) this).field_r, ((o) this).field_l, ((o) this).a(124, param0), this.a(param0), ((o) this).field_c, ((o) this).field_j);
+                  ((la) (Object) param0.field_j).a(((o) this).b(true, param0), 0, ((o) this).field_r, ((o) this).field_l, ((o) this).a(124, param0), this.a(param0, 0), ((o) this).field_c, ((o) this).field_j);
                   break L2;
                 } else {
                   this.b((byte) 104, param0);
@@ -601,9 +599,7 @@ class o implements iq, pj {
 
     private final void a(int param0, vg param1, int param2, int param3) {
         try {
-            int discarded$0 = 0;
-            int discarded$1 = 0;
-            this.a(param2, param3, ((o) this).field_p, 2, param1, ((o) this).field_h);
+            this.a(param2, param3, ((o) this).field_p, 2, param1, ((o) this).field_h, 0, 0);
             int var5_int = 20;
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "o.U(" + 102 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -1097,8 +1093,7 @@ class o implements iq, pj {
             }
             L2: {
               var3_int = ((o) this).a(120, param1);
-              int discarded$1 = 0;
-              var4 = this.a(param1);
+              var4 = this.a(param1, 0);
               var6 = ((o) this).field_l;
               if (0 != var6) {
                 if (var6 != 2) {
@@ -1196,7 +1191,7 @@ class o implements iq, pj {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, vg param4, int param5) {
+    private final void a(int param0, int param1, int param2, int param3, vg param4, int param5, int param6, int param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -1225,10 +1220,9 @@ class o implements iq, pj {
             L1: {
               ke.a(-6187, param4.field_m + (param0 - -param4.field_x), param4.field_q + (param1 + param4.field_n), param4.field_q + param1, param0 + param4.field_m);
               var9_int = ((o) this).a(123, param4);
-              int discarded$2 = 0;
-              var10 = this.a(param4);
+              var10 = this.a(param4, 0);
               if (((o) this).field_d) {
-                int discarded$3 = ((o) this).field_c.a(((o) this).b(true, param4), this.b((byte) -14, param4, 0, param0), this.a((byte) -43, param4, 0, param1), var9_int, var10, param2, param5, ((o) this).field_r, ((o) this).field_l, ((o) this).field_j);
+                int discarded$1 = ((o) this).field_c.a(((o) this).b(true, param4), this.b((byte) -14, param4, 0, param0), this.a((byte) -43, param4, 0, param1), var9_int, var10, param2, param5, ((o) this).field_r, ((o) this).field_l, ((o) this).field_j);
                 break L1;
               } else {
                 L2: {
@@ -1398,7 +1392,7 @@ class o implements iq, pj {
         field_m = null;
     }
 
-    private final int a(vg param0) {
+    private final int a(vg param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

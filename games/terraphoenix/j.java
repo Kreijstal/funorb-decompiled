@@ -118,7 +118,7 @@ final class j extends jc {
         return stackIn_3_0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_K = null;
         field_H = null;
         field_P = null;

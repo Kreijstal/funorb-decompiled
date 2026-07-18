@@ -79,7 +79,7 @@ final class sf extends ig implements sk {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, boolean param4) {
         pf.b(511);
         si.f(param3, param1, param0, param2);
     }
@@ -171,7 +171,7 @@ final class sf extends ig implements sk {
         return param1 * 24.0 - (double)uj.field_p.field_g;
     }
 
-    public static void p() {
+    public static void p(int param0) {
         field_T = null;
         field_V = null;
         field_X = null;

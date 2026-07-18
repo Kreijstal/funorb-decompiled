@@ -102,31 +102,25 @@ final class la {
     final static void a(int param0) {
         re.a(0);
         if (kj.field_E != null) {
-            int discarded$0 = 0;
-            wf.a(kj.field_E);
+            wf.a(kj.field_E, false);
         }
-        int discarded$13 = 98;
-        te.a();
-        int discarded$29 = 1392;
-        li.a();
-        int discarded$40 = 79;
-        vf.a();
-        int discarded$46 = -125;
-        if (jb.b()) {
+        te.a((byte) 98);
+        li.a(1392);
+        vf.a(79);
+        if (jb.b(-125)) {
             d.field_b.d((byte) 76, 1);
             nf.a(0, (byte) 95);
         }
-        int discarded$47 = 27;
-        ec.a();
+        ec.a((byte) 27);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_d = null;
         int var1 = -33;
     }
 
-    final static void a(int param0, we param1) {
+    final static void a(int param0, we param1, int param2) {
         ia var3 = null;
         try {
             var3 = d.field_b;

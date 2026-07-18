@@ -8,7 +8,7 @@ final class kl extends ah {
     static String field_o;
     static String field_p;
 
-    public static void g() {
+    public static void g(int param0) {
         field_p = null;
         field_o = null;
     }
@@ -17,7 +17,7 @@ final class kl extends ah {
         super(param0);
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -86,7 +86,7 @@ final class kl extends ah {
         return stackIn_5_0 != 0;
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0, int param1, boolean param2) {
         if (hi.a(param1, -2)) {
           if (param0 != 2) {
             if (4 != param0) {

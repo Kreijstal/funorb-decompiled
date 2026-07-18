@@ -20,9 +20,7 @@ final class rc {
         }
         ca var7 = new ca(param5, param3, param1, param2, param4, param6);
         if (!rc.a(-126)) {
-            int discarded$1 = 0;
-            int discarded$2 = 4;
-            mb.a(var7);
+            mb.a(var7, 4, 0);
         } else {
             so.field_h.b(0, (jb) (Object) var7);
         }
@@ -31,7 +29,7 @@ final class rc {
         ge.field_c = ge.field_c + (1 << param5);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_b = null;
     }

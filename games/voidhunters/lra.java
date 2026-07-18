@@ -1083,9 +1083,9 @@ final class lra extends fh {
                           if (0 >= var9) {
                             break L4;
                           } else {
-                            int incrementValue$3 = var3;
+                            int incrementValue$2 = var3;
                             var3++;
-                            ((lra) this).field_n[incrementValue$3] = var9;
+                            ((lra) this).field_n[incrementValue$2] = var9;
                             break L4;
                           }
                         }
@@ -1093,9 +1093,9 @@ final class lra extends fh {
                           if (var10 <= 0) {
                             break L5;
                           } else {
-                            int incrementValue$4 = var4;
+                            int incrementValue$3 = var4;
                             var4++;
-                            ((lra) this).field_l[incrementValue$4] = var10;
+                            ((lra) this).field_l[incrementValue$3] = var10;
                             break L5;
                           }
                         }
@@ -1112,8 +1112,7 @@ final class lra extends fh {
                 }
               } else {
                 L6: {
-                  int discarded$5 = 55;
-                  var13 = sk.a(param0);
+                  var13 = sk.a(param0, (byte) 55);
                   var14 = var13;
                   if (var14.a(-1) < 0) {
                     break L6;

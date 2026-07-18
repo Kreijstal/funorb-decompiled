@@ -613,8 +613,7 @@ abstract class no extends fh {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    int discarded$4 = 16;
-                                    field_E = tib.a(-596, var7);
+                                    field_E = tib.a(-596, var7, 16);
                                     break L1;
                                   }
                                 } else {
@@ -627,8 +626,7 @@ abstract class no extends fh {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              int discarded$5 = 16;
-                              field_w = tib.a(-596, var6);
+                              field_w = tib.a(-596, var6, 16);
                               break L1;
                             }
                           } else {
@@ -641,8 +639,7 @@ abstract class no extends fh {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        int discarded$6 = 16;
-                        field_D = tib.a(-596, var5);
+                        field_D = tib.a(-596, var5, 16);
                         break L1;
                       }
                     } else {
@@ -660,8 +657,7 @@ abstract class no extends fh {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                int discarded$7 = 16;
-                field_x = tib.a(-596, var3);
+                field_x = tib.a(-596, var3, 16);
                 break L1;
               }
             }
@@ -724,8 +720,7 @@ abstract class no extends fh {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          int discarded$6 = 32;
-          StringBuilder discarded$7 = npa.a(0, false, field_s);
+          StringBuilder discarded$5 = npa.a(0, false, field_s, ' ');
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -761,9 +756,9 @@ abstract class no extends fh {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$8 = field_s.append('<');
-                        StringBuilder discarded$9 = field_s.append(var15);
-                        StringBuilder discarded$10 = field_s.append('>');
+                        StringBuilder discarded$6 = field_s.append('<');
+                        StringBuilder discarded$7 = field_s.append(var15);
+                        StringBuilder discarded$8 = field_s.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -950,7 +945,7 @@ abstract class no extends fh {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$11 = field_s.append((char) var14);
+                        StringBuilder discarded$9 = field_s.append((char) var14);
                         var14 = (char)(aea.a(-126, (char) var14) & 255);
                         var4 = var4 + ((no) this).field_C[var14];
                         if (((no) this).field_u == null) {

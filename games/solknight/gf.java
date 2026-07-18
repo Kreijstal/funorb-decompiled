@@ -127,7 +127,7 @@ abstract class gf extends ld {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         int var1 = 38;
         field_cb = null;
         field_X = null;

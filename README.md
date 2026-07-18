@@ -14,10 +14,12 @@ over the obfuscated gamepacks by the pipeline in
 The 2026-07-18 regeneration updates all 44 games with the latest owned
 decompiler output. The main readability changes are interclass constant-argument
 specialization, integer/long constant folding, removal of constant branches and
-unreachable blocks, optional compaction of proven-dead trailing parameters, and
-removal of checked catches whose try body cannot declare the caught exception.
-Signature changes are recorded per game in `signature-map.json`. The detailed
-proof rules, safety boundaries, and Java/bytecode examples are documented below.
+unreachable blocks, and removal of checked catches whose try body cannot declare
+the caught exception. Trailing-parameter compaction was requested, but the
+pipeline's atomic bytecode guard rejected descriptor staging for every gamepack,
+so this snapshot retains the original method descriptors and contains no
+`signature-map.json` files. The detailed proof rules, safety boundaries, and
+Java/bytecode examples are documented below.
 
 The generator also fixes source emission that could select the wrong Java
 overload after decompilation (notably character values appended to strings).
@@ -42,14 +44,15 @@ every reachable direct call supplies the same constant. It repeats
 specialization, constant folding, branch DCE, and unreachable-code removal to a
 bounded fixed point, allowing a dead dummy call to expose constant arguments in
 its callees. Parameters written with either a store or `iinc` are excluded.
-As a separately gated closed-world cleanup, a contiguous trailing run of those
-specialized parameters is also removed from private or internal static method
-descriptors and from every proven direct call. Each game's
-`signature-map.json` is the dictionary from old signatures to new signatures;
-it records removed parameter indexes, types, constant values, and the analysis
-iteration that proved them. It also lists inherited call-site owner aliases,
-which are resolved against the complete gamepack hierarchy. This deliberately improves internal source APIs
-rather than preserving the original gamepack ABI.
+As a separately gated closed-world cleanup, the pipeline can remove a contiguous
+trailing run of those specialized parameters from private or internal static
+method descriptors and from every proven direct call. The gate was enabled for
+this regeneration, but descriptor staging produced verifier-invalid candidates.
+The atomic guard therefore disabled compaction before any gamepack was emitted;
+no signatures were changed and no mapping dictionaries were produced. When the
+guard accepts a future batch, each game's `signature-map.json` will record old
+and new signatures, removed parameter indexes and values, analysis iterations,
+and inherited call-site owner aliases resolved against the complete hierarchy.
 Virtual and interface method families are not compacted in this snapshot. An
 internal interface would need a family-wide proof that the parameter is dead in
 the interface declaration and every implementation, followed by a coordinated
@@ -99,7 +102,7 @@ repository. Stronger experimental transforms remain gated as noted.
 | Literal constant evaluation | Implemented | JVM integer/long semantics; do not remove observable exceptions |
 | Constant-branch and unreachable-code DCE | Implemented | CFG reachability and incoming-edge checks |
 | Interclass constant-argument specialization | Implemented, gated | Complete gamepack; every resolved direct caller agrees |
-| Private/internal-static signature compaction | Implemented, separately gated | Trailing dead parameters; all inherited owner aliases rewritten |
+| Private/internal-static signature compaction | Implemented and gated; rejected for this snapshot | Trailing dead parameters; all owner aliases rewritten; complete staged gamepack verifies |
 | Virtual/interface family compaction | Not implemented | Would require one proof and rewrite across the whole family |
 | Checked-catch cleanup | Implemented, separately gated | Specific checked type is not declared throwable by the emitted try |
 | Control-flow and stack-shape normalization | Implemented | Stack effects, labels, exception ranges, and verifier guards agree |
@@ -219,7 +222,9 @@ Parameters written by `istore` or `iinc` are never read-only facts.
 
 The separately gated signature pass can remove a contiguous trailing run of
 specialized, unused integer-like parameters from a private or internal static
-method:
+method. The following describes the feature when its atomic verifier guard
+accepts a gamepack; the current snapshot retained the original signatures and
+does not contain these maps.
 
 ```java
 // Before

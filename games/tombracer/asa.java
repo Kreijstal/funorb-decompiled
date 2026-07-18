@@ -171,16 +171,16 @@ final class asa extends gda {
           L0: {
             L1: {
               var12 = (asa) (Object) param0;
-              var4 = var12.field_g;
-              var5 = var12.field_k;
-              var6 = var12.field_l;
-              var7 = var12.field_q;
-              var8 = var12.field_f;
-              var9 = var12.field_m;
-              var10 = var12.field_e;
-              ((asa) this).field_k = var12.field_p * var12.field_m + (var12.field_q * var5 + var4 * var12.field_k);
-              ((asa) this).field_g = var12.field_l * var5 + var12.field_g * var4 + var12.field_f * var12.field_p;
-              var11 = var12.field_n;
+              var4 = ((asa) this).field_g;
+              var5 = ((asa) this).field_k;
+              var6 = ((asa) this).field_l;
+              var7 = ((asa) this).field_q;
+              var8 = ((asa) this).field_f;
+              var9 = ((asa) this).field_m;
+              var10 = ((asa) this).field_e;
+              ((asa) this).field_k = ((asa) this).field_p * var12.field_m + (var12.field_q * var5 + var4 * var12.field_k);
+              ((asa) this).field_g = var12.field_l * var5 + var12.field_g * var4 + var12.field_f * ((asa) this).field_p;
+              var11 = ((asa) this).field_n;
               if (param1 == 3) {
                 break L1;
               } else {
@@ -188,16 +188,16 @@ final class asa extends gda {
                 break L1;
               }
             }
-            ((asa) this).field_q = var6 * var12.field_k + var7 * var12.field_q + var12.field_m * var12.field_o;
-            ((asa) this).field_l = var12.field_f * var12.field_o + (var12.field_g * var6 + var7 * var12.field_l);
-            ((asa) this).field_p = var12.field_p * var12.field_h + (var5 * var12.field_o + var4 * var12.field_p);
-            ((asa) this).field_m = var8 * var12.field_k + var12.field_q * var9 + var12.field_h * var12.field_m;
-            ((asa) this).field_f = var12.field_h * var12.field_f + (var12.field_l * var9 + var12.field_g * var8);
-            ((asa) this).field_o = var12.field_o * var12.field_h + (var12.field_o * var7 + var12.field_p * var6);
-            ((asa) this).field_h = var12.field_h * var12.field_h + (var12.field_p * var8 + var12.field_o * var9);
-            ((asa) this).field_n = var12.field_n + (var12.field_q * var11 + var12.field_k * var10 + var12.field_m * var12.field_i);
-            ((asa) this).field_e = var10 * var12.field_g + var12.field_l * var11 + var12.field_f * var12.field_i + var12.field_e;
-            ((asa) this).field_i = var11 * var12.field_o + var10 * var12.field_p + var12.field_i * var12.field_h + var12.field_i;
+            ((asa) this).field_q = var6 * var12.field_k + var7 * var12.field_q + var12.field_m * ((asa) this).field_o;
+            ((asa) this).field_l = var12.field_f * ((asa) this).field_o + (var12.field_g * var6 + var7 * var12.field_l);
+            ((asa) this).field_p = ((asa) this).field_p * var12.field_h + (var5 * var12.field_o + var4 * var12.field_p);
+            ((asa) this).field_m = var8 * var12.field_k + var12.field_q * var9 + ((asa) this).field_h * var12.field_m;
+            ((asa) this).field_f = ((asa) this).field_h * var12.field_f + (var12.field_l * var9 + var12.field_g * var8);
+            ((asa) this).field_o = ((asa) this).field_o * var12.field_h + (var12.field_o * var7 + var12.field_p * var6);
+            ((asa) this).field_h = var12.field_h * ((asa) this).field_h + (var12.field_p * var8 + var12.field_o * var9);
+            ((asa) this).field_n = var12.field_n + (var12.field_q * var11 + var12.field_k * var10 + var12.field_m * ((asa) this).field_i);
+            ((asa) this).field_e = var10 * var12.field_g + var12.field_l * var11 + var12.field_f * ((asa) this).field_i + var12.field_e;
+            ((asa) this).field_i = var11 * var12.field_o + var10 * var12.field_p + ((asa) this).field_i * var12.field_h + var12.field_i;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

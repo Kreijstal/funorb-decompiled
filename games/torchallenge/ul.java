@@ -9,7 +9,7 @@ final class ul extends da {
     static int field_m;
     int field_i;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, vg param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, vg param5, int param6, int param7) {
         RuntimeException var8 = null;
         int[] var8_array = null;
         int var13 = 0;
@@ -42,17 +42,17 @@ final class ul extends da {
         int var39 = 0;
         int var40 = 0;
         int[] var41 = null;
-        byte[] var43 = null;
         int var44 = 0;
         vg var45 = null;
-        int[] var49 = null;
-        int[] var53 = null;
-        int[] var57 = null;
-        int[] var59 = null;
+        int[] var50 = null;
+        int[] var55 = null;
         int[] var60 = null;
-        int[] var61 = null;
-        int[] var62 = null;
+        byte[] var62 = null;
         int[] var63 = null;
+        int[] var64 = null;
+        int[] var65 = null;
+        int[] var66 = null;
+        int[] var67 = null;
         int stackIn_15_0 = 0;
         int[] stackIn_16_0 = null;
         int[] stackIn_17_0 = null;
@@ -112,27 +112,25 @@ final class ul extends da {
                   if (1 >= var45.field_s) {
                     break L2;
                   } else {
-                    var43 = var45.field_z;
-                    int discarded$2 = 0;
-                    mh.a(0, var43, m.field_i, 0);
+                    var62 = var45.field_z;
+                    mh.a(0, var62, m.field_i, 0, false);
                     break L1;
                   }
                 }
               }
-              int discarded$3 = 2;
-              db.j();
+              db.j(2);
               break L1;
             }
-            var62 = new int[param5.field_c];
-            var57 = var62;
-            var53 = var57;
-            var49 = var53;
-            var41 = var49;
+            var66 = new int[param5.field_c];
+            var60 = var66;
+            var55 = var60;
+            var50 = var55;
+            var41 = var50;
             var8_array = var41;
-            var63 = new int[param5.field_c];
-            var60 = sj.field_S;
-            var61 = kl.field_b;
-            var59 = kd.field_o;
+            var67 = new int[param5.field_c];
+            var64 = sj.field_S;
+            var65 = kl.field_b;
+            var63 = kd.field_o;
             var13 = 0;
             L3: while (true) {
               if (param5.field_c <= var13) {
@@ -226,8 +224,8 @@ final class ul extends da {
                         } else {
                           if (var19 == var20) {
                             L12: {
-                              var28 = var62[var18];
-                              var29 = var63[var18];
+                              var28 = var66[var18];
+                              var29 = var67[var18];
                               if (var21_ref == null) {
                                 stackOut_47_0 = 8355711;
                                 stackIn_48_0 = stackOut_47_0;
@@ -251,12 +249,12 @@ final class ul extends da {
                         }
                       }
                       L13: {
-                        var28 = var62[var18];
-                        var29 = var62[var19];
-                        var30 = var62[var20];
-                        var31 = var63[var18];
-                        var32 = var63[var19];
-                        var33 = var63[var20];
+                        var28 = var66[var18];
+                        var29 = var66[var19];
+                        var30 = var66[var20];
+                        var31 = var67[var18];
+                        var32 = var67[var19];
+                        var33 = var67[var20];
                         if (var21_ref == null) {
                           stackOut_43_0 = 8355711;
                           stackIn_44_0 = stackOut_43_0;
@@ -285,7 +283,7 @@ final class ul extends da {
                 }
               } else {
                 L14: {
-                  var14 = var59[var13] * param6 + (param0 * var60[var13] - -(var61[var13] * param1)) >> 8;
+                  var14 = var63[var13] * param6 + (param0 * var64[var13] - -(var65[var13] * param1)) >> 8;
                   if (var14 < 0) {
                     var14 = -var14;
                     break L14;
@@ -312,7 +310,7 @@ final class ul extends da {
                 }
                 L16: {
                   var14 = stackIn_15_0;
-                  var15 = var59[var13] * param3 + param4 * var60[var13] - -(var61[var13] * param2) >> 8;
+                  var15 = var63[var13] * param3 + param4 * var64[var13] - -(var65[var13] * param2) >> 8;
                   stackOut_15_0 = ch.field_b;
                   stackIn_17_0 = stackOut_15_0;
                   stackIn_16_0 = stackOut_15_0;
@@ -332,8 +330,8 @@ final class ul extends da {
                 }
                 var15 = stackIn_18_0[stackIn_18_1];
                 var14 = (-var15 + 256) * var14 >>> 8;
-                var62[var13] = var14;
-                var63[var13] = var15;
+                var66[var13] = var14;
+                var67[var13] = var15;
                 var13++;
                 continue L3;
               }
@@ -371,7 +369,7 @@ final class ul extends da {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
     }
 
@@ -460,14 +458,13 @@ final class ul extends da {
         }
     }
 
-    final static void c() {
-        int discarded$0 = -54;
-        kl.field_e = of.b();
+    final static void c(int param0) {
+        kl.field_e = of.b(-54);
         t.field_b = new si();
         ee.a(true, 1, true);
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return wf.field_i.a(-11982);
     }
 

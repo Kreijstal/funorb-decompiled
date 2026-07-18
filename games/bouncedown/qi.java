@@ -688,7 +688,7 @@ final class qi extends jd {
         }
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -710,8 +710,7 @@ final class qi extends jd {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 10;
-            stackOut_0_0 = pc.a(8272, true, param0);
+            stackOut_0_0 = pc.a(8272, true, param0, 10);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -835,7 +834,7 @@ final class qi extends jd {
         }
     }
 
-    final static void a(byte[] param0) {
+    final static void a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;

@@ -9,7 +9,7 @@ final class kk implements Runnable {
     private boolean field_e;
     int field_f;
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_d = null;
     }

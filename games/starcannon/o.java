@@ -7,7 +7,7 @@ final class o {
     static String field_b;
     static String field_c;
 
-    final static id a(ue param0, String param1, String param2) {
+    final static id a(ue param0, String param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -198,7 +198,7 @@ final class o {
         mj.field_c[9] = hj.field_b[1];
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
     }

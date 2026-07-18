@@ -76,7 +76,7 @@ final class hca extends rqa {
         return stackIn_4_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
     }
 

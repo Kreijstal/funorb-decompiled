@@ -47,7 +47,7 @@ final class am {
         }
     }
 
-    final static rh a(int param0, int param1, boolean param2) {
+    final static rh a(int param0, int param1, boolean param2, int param3, boolean param4, boolean param5) {
         try {
             Object var6 = null;
             Object var7 = null;

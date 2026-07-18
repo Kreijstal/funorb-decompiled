@@ -149,7 +149,7 @@ final class qi implements Iterable {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_h = null;
     }
@@ -202,8 +202,7 @@ final class qi implements Iterable {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = -37;
-            stackOut_2_0 = w.a(false, param1);
+            stackOut_2_0 = w.a(false, param1, (byte) -37);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

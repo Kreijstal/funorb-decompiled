@@ -23,7 +23,7 @@ final class rc implements dja {
         return (tv) (Object) new qdb();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

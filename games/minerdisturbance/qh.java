@@ -169,7 +169,7 @@ final class qh implements ad {
         }
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String a(boolean param0, CharSequence param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -321,12 +321,12 @@ final class qh implements ad {
         return stackIn_34_0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         vd.field_y = param0;
         h.field_b = param1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         int var1 = 0;
         field_b = null;

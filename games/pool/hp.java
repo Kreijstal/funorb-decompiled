@@ -312,14 +312,14 @@ final class hp {
         return stackIn_5_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
         field_e = null;
         field_b = null;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0, boolean param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -335,8 +335,7 @@ final class hp {
             } else {
               if (var4 == 0) {
                 param1 = false;
-                int discarded$2 = -1;
-                th.b();
+                th.b(-1);
                 break L0;
               } else {
                 break L0;

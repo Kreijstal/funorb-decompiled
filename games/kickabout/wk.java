@@ -172,7 +172,7 @@ final class wk {
         return stackIn_34_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_e = null;
         int var1 = 14;
@@ -198,7 +198,7 @@ final class wk {
         }
     }
 
-    final static gr a(boolean param0) {
+    final static gr a(boolean param0, boolean param1) {
         Random var3 = null;
         int var4 = 0;
         up var5 = null;
@@ -288,7 +288,7 @@ final class wk {
         }
     }
 
-    final static void a(long param0) {
+    final static void a(long param0, int param1) {
         oa.field_a.setTime(new Date(param0));
     }
 

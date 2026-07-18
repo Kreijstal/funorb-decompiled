@@ -9,7 +9,7 @@ class fk extends bc {
     static int[][] field_s;
     static int field_t;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_s = null;
         field_v = null;
         field_u = null;
@@ -41,7 +41,7 @@ class fk extends bc {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_x, -1, 2147483647, false);
     }
 
-    final static String a(Throwable param0) throws IOException {
+    final static String a(Throwable param0, int param1) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;

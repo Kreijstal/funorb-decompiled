@@ -25,7 +25,7 @@ final class id extends mh {
     mh field_dc;
     int field_ic;
 
-    public static void h() {
+    public static void h(int param0) {
         int var1 = 0;
         field_jc = null;
         field_bc = null;
@@ -62,7 +62,7 @@ final class id extends mh {
         }
     }
 
-    final static int[] a(fo param0) {
+    final static int[] a(fo param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int[] var3 = null;

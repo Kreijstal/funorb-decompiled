@@ -133,7 +133,7 @@ final class ud {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }
@@ -146,6 +146,9 @@ final class ud {
             DataInputStream var5 = null;
             int var6 = 0;
             String var7 = null;
+            String var8 = null;
+            String var9 = null;
+            String var10 = null;
             ce stackIn_12_0 = null;
             java.net.URL stackIn_12_1 = null;
             java.net.URL stackIn_12_2 = null;
@@ -209,14 +212,10 @@ final class ud {
                   }
                 }
                 sk.a(param2 ^ param2, var3_ref);
-                int discarded$5 = -66;
-                var3_ref = tj.a(":", var3_ref, "%3a");
-                int discarded$6 = -66;
-                var3_ref = tj.a("@", var3_ref, "%40");
-                int discarded$7 = -66;
-                var3_ref = tj.a("&", var3_ref, "%26");
-                int discarded$8 = -66;
-                var7 = tj.a("#", var3_ref, "%23");
+                var7 = tj.a(":", var3_ref, "%3a", (byte) -66);
+                var8 = tj.a("@", var7, "%40", (byte) -66);
+                var9 = tj.a("&", var8, "%26", (byte) -66);
+                var10 = tj.a("#", var9, "%23", (byte) -66);
                 if (tb.field_d == null) {
                   return;
                 } else {
@@ -266,7 +265,7 @@ final class ud {
                       break L4;
                     }
                   }
-                  var4 = ((ce) (Object) stackIn_14_0).a(new java.net.URL(stackIn_14_3, stackIn_14_5 + "&v1=" + ce.field_r + "&v2=" + ce.field_n + "&e=" + var7), -34);
+                  var4 = ((ce) (Object) stackIn_14_0).a(new java.net.URL(stackIn_14_3, stackIn_14_5 + "&v1=" + ce.field_r + "&v2=" + ce.field_n + "&e=" + var10), -34);
                   L5: while (true) {
                     if (0 != var4.field_b) {
                       L6: {
@@ -274,7 +273,7 @@ final class ud {
                           break L6;
                         } else {
                           var5 = (DataInputStream) var4.field_e;
-                          int discarded$9 = var5.read();
+                          int discarded$1 = var5.read();
                           var5.close();
                           break L6;
                         }
@@ -323,8 +322,7 @@ final class ud {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_0_0 = tc.a((byte) 82, param1);
+            stackOut_0_0 = tc.a((byte) 82, param1, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -361,7 +359,7 @@ final class ud {
         return stackIn_1_0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

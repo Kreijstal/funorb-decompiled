@@ -9,7 +9,7 @@ final class og {
     static hl[] field_d;
     static String field_e;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
         field_a = null;

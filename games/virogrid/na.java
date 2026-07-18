@@ -100,8 +100,7 @@ final class na extends km {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = -26459;
-            stackOut_2_0 = ed.a(param1, 0, param2);
+            stackOut_2_0 = ed.a(param1, 0, param2, -26459);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

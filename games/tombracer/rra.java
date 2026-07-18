@@ -26,7 +26,7 @@ abstract class rra {
 
     abstract void a(int param0, int param1, int param2);
 
-    final static void a() {
+    final static void a(int param0) {
         try {
             int var1 = 0;
             Exception var2 = null;

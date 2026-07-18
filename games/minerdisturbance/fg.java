@@ -93,7 +93,7 @@ final class fg {
         }
     }
 
-    final static void a(byte param0, sl param1) {
+    final static void a(byte param0, sl param1, int param2) {
         int var4 = 0;
         ld var5 = sn.field_c;
         try {
@@ -217,7 +217,7 @@ final class fg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_d = null;
         field_h = null;

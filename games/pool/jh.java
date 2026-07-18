@@ -10,7 +10,7 @@ class jh {
     static int field_c;
     static String field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_g = null;
         field_d = null;
@@ -19,7 +19,7 @@ class jh {
         field_a = null;
     }
 
-    final static void a(int param0, String param1, String param2, int param3, String param4) {
+    final static void a(int param0, String param1, String param2, int param3, String param4, boolean param5) {
         pn var6 = null;
         RuntimeException var6_ref = null;
         RuntimeException stackIn_3_0 = null;

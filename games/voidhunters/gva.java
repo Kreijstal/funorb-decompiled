@@ -9,9 +9,8 @@ final class gva extends Exception {
         field_a = null;
     }
 
-    final static void a() {
-        int discarded$5 = 44;
-        if (!(uab.a())) {
+    final static void a(byte param0) {
+        if (!(uab.a((byte) 44))) {
             return;
         }
         int var1 = -35;

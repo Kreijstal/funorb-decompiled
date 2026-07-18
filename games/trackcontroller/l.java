@@ -11,7 +11,7 @@ final class l extends di {
         super(param0);
     }
 
-    final static String h() {
+    final static String h(int param0) {
         if (fd.field_h != oe.field_b) {
           field_m = null;
           if (oe.field_b == rk.field_X) {
@@ -58,8 +58,7 @@ final class l extends di {
           L0: {
             if (param0 <= -106) {
               L1: {
-                int discarded$8 = -125;
-                if (ha.a(param1) != null) {
+                if (ha.a(param1, -125) != null) {
                   stackOut_5_0 = 0;
                   stackIn_6_0 = stackOut_5_0;
                   break L1;
@@ -394,7 +393,7 @@ final class l extends di {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         fc var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

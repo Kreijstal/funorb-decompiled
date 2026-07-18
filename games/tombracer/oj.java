@@ -349,7 +349,7 @@ final class oj extends jea {
         return false;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_vb = null;
         field_zb = null;
         field_tb = null;

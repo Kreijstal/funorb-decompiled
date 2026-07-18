@@ -78,7 +78,7 @@ final class gbb extends rqa {
         return stackIn_3_0;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0, int param1, int param2, byte param3) {
         int var4 = 0;
         int stackIn_8_0 = 0;
         int stackIn_42_0 = 0;
@@ -149,8 +149,7 @@ final class gbb extends rqa {
               }
               L4: {
                 if (pma.field_o == 13) {
-                  int discarded$4 = 26718;
-                  dr.a();
+                  dr.a(26718);
                   var4 = 1;
                   fva.field_p = false;
                   break L4;
@@ -217,8 +216,7 @@ final class gbb extends rqa {
                     var4 = 1;
                     fva.field_p = false;
                     if (pma.field_o == 13) {
-                      int discarded$5 = 26718;
-                      dr.a();
+                      dr.a(26718);
                       var4 = 1;
                       fva.field_p = false;
                       break L7;
@@ -233,8 +231,7 @@ final class gbb extends rqa {
                       var4 = 1;
                       fva.field_p = false;
                       if (pma.field_o == 13) {
-                        int discarded$6 = 26718;
-                        dr.a();
+                        dr.a(26718);
                         var4 = 1;
                         fva.field_p = false;
                         break L8;
@@ -246,8 +243,7 @@ final class gbb extends rqa {
                   } else {
                     L9: {
                       if (pma.field_o == 13) {
-                        int discarded$7 = 26718;
-                        dr.a();
+                        dr.a(26718);
                         var4 = 1;
                         fva.field_p = false;
                         break L9;
@@ -266,7 +262,7 @@ final class gbb extends rqa {
         }
     }
 
-    final static void a(fh param0, fh param1) {
+    final static void a(fh param0, fh param1, byte param2) {
         try {
             if (!(null == param0.field_d)) {
                 param0.d((byte) -35);

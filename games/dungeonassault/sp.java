@@ -12,7 +12,7 @@ final class sp {
     static String field_b;
     private static String field_z;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_e = null;
         field_c = null;

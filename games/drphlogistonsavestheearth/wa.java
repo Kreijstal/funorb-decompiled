@@ -92,7 +92,7 @@ final class wa extends pj implements kd, ke {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_Q = null;
         field_O = null;
     }
@@ -100,8 +100,7 @@ final class wa extends pj implements kd, ke {
     private final void g(byte param0) {
         L0: {
           L1: {
-            int discarded$6 = -1;
-            if (na.b()) {
+            if (na.b(-1)) {
               break L1;
             } else {
               if (0 >= ((wa) this).field_L.field_p.length()) {
@@ -257,8 +256,7 @@ final class wa extends pj implements kd, ke {
                   if (!bl.field_r.startsWith("win")) {
                     break L2;
                   } else {
-                    int discarded$8 = 0;
-                    if (og.a(param0)) {
+                    if (og.a(param0, 0)) {
                       return;
                     } else {
                       break L2;
@@ -618,8 +616,7 @@ final class wa extends pj implements kd, ke {
             }
             L13: {
               var8 = ij.field_b;
-              int discarded$3 = -87;
-              var9 = dg.a(nb.a(-117));
+              var9 = dg.a(nb.a(-117), (byte) -87);
               if (var9 == p.field_d) {
                 var8 = rc.field_c;
                 break L13;
@@ -633,13 +630,13 @@ final class wa extends pj implements kd, ke {
               }
             }
             L14: {
-              dh dupTemp$4 = new dh(10, ((wa) this).field_m, ((wa) this).field_w - 20, 25, (vg) (Object) ((wa) this).field_L, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$4;
-              ((wa) this).b((vg) (Object) dupTemp$4, (byte) 53);
+              dh dupTemp$2 = new dh(10, ((wa) this).field_m, ((wa) this).field_w - 20, 25, (vg) (Object) ((wa) this).field_L, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$2;
+              ((wa) this).b((vg) (Object) dupTemp$2, (byte) 53);
               ((wa) this).field_m = ((wa) this).field_m + (((vg) (Object) var12).field_k - -5);
-              dh dupTemp$5 = new dh(10, ((wa) this).field_m, -20 + ((wa) this).field_w, 25, (vg) (Object) ((wa) this).field_M, false, 80, 3, var7, 16777215, qf.field_a);
-              var13 = dupTemp$5;
-              ((wa) this).b((vg) (Object) dupTemp$5, (byte) 77);
+              dh dupTemp$3 = new dh(10, ((wa) this).field_m, -20 + ((wa) this).field_w, 25, (vg) (Object) ((wa) this).field_M, false, 80, 3, var7, 16777215, qf.field_a);
+              var13 = dupTemp$3;
+              ((wa) this).b((vg) (Object) dupTemp$3, (byte) 77);
               ((wa) this).field_m = ((wa) this).field_m + (((vg) (Object) var13).field_k + 5);
               ((wa) this).field_S.field_u = (fd) this;
               if (((wa) this).field_K == null) {
@@ -915,8 +912,7 @@ final class wa extends pj implements kd, ke {
                         gf.d((byte) 89);
                         break L1;
                       } else {
-                        int discarded$305 = 75;
-                        oh.a();
+                        oh.a((byte) 75);
                         break L1;
                       }
                     }

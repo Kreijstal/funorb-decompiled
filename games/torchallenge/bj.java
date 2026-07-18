@@ -15,7 +15,7 @@ final class bj extends IOException {
         ae.field_C = true;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         int var2 = TorChallenge.field_F ? 1 : 0;
         try {
@@ -32,8 +32,7 @@ final class bj extends IOException {
             jj.field_d = false;
             qk.field_lb = 0;
             wj.field_a = 0;
-            int discarded$0 = 112;
-            ih.a();
+            ih.a(112);
         } catch (RuntimeException runtimeException) {
             throw oj.a((Throwable) (Object) runtimeException, "bj.B(" + 71 + ')');
         }
@@ -47,7 +46,7 @@ final class bj extends IOException {
         super(param0);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         int var1 = 0;
         field_a = null;

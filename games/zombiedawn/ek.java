@@ -25,7 +25,7 @@ final class ek extends fb {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         ((ek) this).field_H = pb.a(so.field_a, 127, 1) + 128;
         ((ek) this).field_F = 0;
         ((ek) this).field_y = ((ek) this).field_N - (-pb.a(so.field_a, 24, 1) - -12) << 16;
@@ -43,8 +43,7 @@ final class ek extends fb {
           ((ek) this).field_y = param1 << 16;
           ((ek) this).field_x = param0 << 16;
           ((ek) this).field_M = 0;
-          int discarded$2 = -8;
-          this.f();
+          this.f((byte) -8);
           var5 = bg.field_o.length;
           ((ek) this).field_D = pb.a(so.field_a, 10, 1);
           ((ek) this).field_K = pb.a(so.field_a, param2, 1);
@@ -156,13 +155,13 @@ final class ek extends fb {
     }
 
     final void g(int param0) {
-        int fieldTemp$3 = ((ek) this).field_D + 1;
+        int fieldTemp$2 = ((ek) this).field_D + 1;
         ((ek) this).field_D = ((ek) this).field_D + 1;
-        if (fieldTemp$3 >= 4) {
+        if (fieldTemp$2 >= 4) {
           ((ek) this).field_D = 0;
-          int fieldTemp$4 = ((ek) this).field_F + 1;
+          int fieldTemp$3 = ((ek) this).field_F + 1;
           ((ek) this).field_F = ((ek) this).field_F + 1;
-          if (fieldTemp$4 < bg.field_o.length) {
+          if (fieldTemp$3 < bg.field_o.length) {
             if (param0 < 95) {
               ((ek) this).a(-13, -95, -104, 35);
               return;
@@ -179,8 +178,7 @@ final class ek extends fb {
                 return;
               }
             } else {
-              int discarded$5 = -8;
-              this.f();
+              this.f((byte) -8);
               if (param0 >= 95) {
                 return;
               } else {

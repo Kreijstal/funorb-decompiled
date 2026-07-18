@@ -54,8 +54,7 @@ final class ia extends di {
               }
             }
             var4 = (CharSequence) (Object) param0;
-            int discarded$9 = 112;
-            if (!be.a(var4)) {
+            if (!be.a(var4, 112)) {
               stackOut_4_0 = qf.field_d;
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0;
@@ -307,28 +306,24 @@ final class ia extends di {
         }
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         if (jl.field_I == null) {
           if (vi.field_n != null) {
             vi.field_n.h((byte) -81);
-            int discarded$8 = 107;
-            wb.b();
+            wb.b(107);
             return;
           } else {
-            int discarded$9 = 107;
-            wb.b();
+            wb.b(107);
             return;
           }
         } else {
           jl.field_I.h((byte) -28);
           if (vi.field_n == null) {
-            int discarded$10 = 107;
-            wb.b();
+            wb.b(107);
             return;
           } else {
             vi.field_n.h((byte) -81);
-            int discarded$11 = 107;
-            wb.b();
+            wb.b(107);
             return;
           }
         }
@@ -631,7 +626,7 @@ final class ia extends di {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_q = null;
         field_p = null;
         field_n = null;

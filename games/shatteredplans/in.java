@@ -614,7 +614,7 @@ final class in {
         }
     }
 
-    final static qh a(int param0) {
+    final static qh a(int param0, boolean param1) {
         tq.field_j = new qh(320, -param0 + 451, 200, param0 - -28, ih.field_a.toUpperCase());
         fe var2 = new fe(tq.field_j.field_k + 184, 2 + tq.field_j.field_t, 11, 11, -1, (bi) null, "X", 16711680);
         var2.field_h = (Object) (Object) tq.field_j;
@@ -812,7 +812,7 @@ final class in {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         cp.field_a = new qr(0L, (qr) null);
         if (ns.field_pb) {
             cp.field_a.a(4, nm.field_c);

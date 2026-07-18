@@ -48,7 +48,7 @@ final class oi extends rf {
         ((oi) this).field_m = param0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_i = null;
         field_n = null;
         field_j = null;

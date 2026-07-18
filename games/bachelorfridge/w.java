@@ -161,7 +161,7 @@ class w implements q {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
     }
 

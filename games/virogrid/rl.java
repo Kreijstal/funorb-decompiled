@@ -15,7 +15,7 @@ abstract class rl extends wb {
     static String field_o;
     int field_w;
 
-    final static void e() {
+    final static void e(boolean param0) {
         ji.field_e.field_l = 0;
         ji.field_e.field_b = 0;
     }

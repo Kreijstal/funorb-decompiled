@@ -110,7 +110,7 @@ final class mc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
         field_e = null;

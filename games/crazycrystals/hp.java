@@ -17,7 +17,7 @@ final class hp extends jb {
     int field_j;
     int field_k;
 
-    public static void a() {
+    public static void a(int param0) {
         field_q = null;
         field_g = null;
         field_m = null;
@@ -217,7 +217,7 @@ final class hp extends jb {
         return stackIn_3_0;
     }
 
-    final static String d() {
+    final static String d(int param0) {
         if (l.field_b == lc.field_c) {
             return fh.field_i;
         }

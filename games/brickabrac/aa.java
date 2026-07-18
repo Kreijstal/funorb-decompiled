@@ -8,7 +8,7 @@ final class aa {
     static vl field_a;
     static String field_c;
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -181,7 +181,7 @@ final class aa {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(hc.field_f <= 0)) {
             hc.field_f = hc.field_f - 1;
         }
@@ -194,7 +194,7 @@ final class aa {
         }
     }
 
-    final static int a(int param0, Random param1) {
+    final static int a(int param0, Random param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -221,8 +221,7 @@ final class aa {
         try {
           L0: {
             if (param0 > 0) {
-              int discarded$8 = -6;
-              if (wn.a(param0)) {
+              if (wn.a(param0, (byte) -6)) {
                 stackOut_4_0 = (int)((long)param0 * ((long)param1.nextInt() & 4294967295L) >> 32);
                 stackIn_5_0 = stackOut_4_0;
                 return stackIn_5_0;

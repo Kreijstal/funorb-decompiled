@@ -13,19 +13,17 @@ final class jga extends ana {
         var2 = -89 % ((71 - param0) / 47);
         if (!((jga) this).field_m.a((byte) -106)) {
           if (!((jga) this).field_x.a((byte) -106)) {
-            int fieldTemp$6 = ((jga) this).field_l - 1;
+            int fieldTemp$2 = ((jga) this).field_l - 1;
             ((jga) this).field_l = ((jga) this).field_l - 1;
-            if (0 <= fieldTemp$6) {
+            if (0 <= fieldTemp$2) {
               if (25 == ((jga) this).field_l) {
-                int discarded$7 = 0;
-                this.c();
+                this.c(false);
                 return false;
               } else {
                 return false;
               }
             } else {
-              int discarded$8 = 0;
-              this.b();
+              this.b(false);
               return true;
             }
           } else {
@@ -53,7 +51,7 @@ final class jga extends ana {
         field_v = null;
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         int var2 = 0;
         aj var3 = null;
         haa var4 = null;
@@ -65,7 +63,7 @@ final class jga extends ana {
         }
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
     }
 
     static {

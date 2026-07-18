@@ -29,8 +29,7 @@ final class aa {
               return 1;
             } else {
               if (2 == gk.field_db) {
-                int discarded$14 = 37;
-                if (!ha.a(((aa) this).field_n)) {
+                if (!ha.a(((aa) this).field_n, (byte) 37)) {
                   return 0;
                 } else {
                   return 1;
@@ -46,8 +45,7 @@ final class aa {
                 return 1;
               } else {
                 if (2 == gk.field_db) {
-                  int discarded$15 = 37;
-                  if (!ha.a(((aa) this).field_n)) {
+                  if (!ha.a(((aa) this).field_n, (byte) 37)) {
                     return 0;
                   } else {
                     return 1;
@@ -65,7 +63,7 @@ final class aa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_p = null;
         field_f = null;

@@ -279,7 +279,7 @@ final class r {
         }
     }
 
-    final static void a(String param0, String param1) {
+    final static void a(String param0, String param1, int param2) {
         try {
             ri.a((byte) 115, false, param1, param0);
         } catch (RuntimeException runtimeException) {
@@ -287,7 +287,7 @@ final class r {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
         field_e = null;

@@ -118,12 +118,12 @@ final class gu {
         return stackIn_16_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         bv var2 = vl.field_n;
         var2.h(32161, 11);
         var2.b(1, 1);

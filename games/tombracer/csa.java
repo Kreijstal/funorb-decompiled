@@ -108,7 +108,7 @@ abstract class csa extends vg implements noa, qn, fo, gma, lj, ew {
         return ((csa) this).field_t[param0];
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         hk.field_e = new jea(0L, (jea) null);
         if (!(!rca.field_p)) {
             hk.field_e.b(-127, lva.field_t);
@@ -167,7 +167,7 @@ abstract class csa extends vg implements noa, qn, fo, gma, lj, ew {
         }
     }
 
-    private final void m() {
+    private final void m(byte param0) {
         int var3 = 0;
         mka var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
@@ -492,8 +492,7 @@ abstract class csa extends vg implements noa, qn, fo, gma, lj, ew {
             ((csa) this).field_r = dfa.a(-((csa) this).field_r, 8192, -85);
             this.d(true);
             ((csa) this).field_v = !((csa) this).field_v ? true : false;
-            int discarded$0 = -24;
-            this.m();
+            this.m((byte) -24);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "csa.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -515,7 +514,7 @@ abstract class csa extends vg implements noa, qn, fo, gma, lj, ew {
         return var2;
     }
 
-    public static void j() {
+    public static void j(byte param0) {
         field_i = null;
         field_y = null;
     }
@@ -852,8 +851,7 @@ abstract class csa extends vg implements noa, qn, fo, gma, lj, ew {
               if (((csa) this).field_t.length <= var5_int) {
                 L8: {
                   if (((csa) this).field_v) {
-                    int discarded$1 = -24;
-                    this.m();
+                    this.m((byte) -24);
                     this.d(true);
                     break L8;
                   } else {

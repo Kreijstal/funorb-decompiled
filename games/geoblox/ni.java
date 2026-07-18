@@ -30,7 +30,7 @@ final class ni extends ee implements pl {
         ((ni) this).field_D = param1;
     }
 
-    final static void a(rh param0) {
+    final static void a(rh param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -63,8 +63,7 @@ final class ni extends ee implements pl {
             var10 = var8;
             var3 = var10.c((byte) 34);
             var10.k(8);
-            int discarded$2 = 1;
-            l.field_i = jc.a(var10);
+            l.field_i = jc.a(var10, true);
             bm.field_l = new nf[var3];
             pi.field_R = new int[var3][];
             var4 = 0;
@@ -88,8 +87,7 @@ final class ni extends ee implements pl {
                   }
                 }
               } else {
-                int discarded$3 = 113;
-                bm.field_l[var4] = uh.a(var8);
+                bm.field_l[var4] = uh.a(var8, (byte) 113);
                 var4++;
                 continue L1;
               }
@@ -396,7 +394,7 @@ final class ni extends ee implements pl {
         }
     }
 
-    final static nc a(byte[] param0) {
+    final static nc a(byte[] param0, int param1) {
         nc var2 = null;
         RuntimeException var2_ref = null;
         nc stackIn_4_0 = null;

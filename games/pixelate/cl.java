@@ -13,7 +13,7 @@ final class cl {
     static String field_c;
     static String field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         field_i = null;
@@ -348,8 +348,7 @@ final class cl {
     final static void a(byte param0, boolean param1) {
         int var2 = 46;
         if (!(null == up.field_o)) {
-            int discarded$0 = -2;
-            dp.a(up.field_o);
+            dp.a(up.field_o, -2);
         }
         if (!(null == eg.field_n)) {
             eg.field_n.a(param1, (byte) 20);
@@ -358,8 +357,7 @@ final class cl {
         if (!(hc.field_M == null)) {
             hc.field_M.a(param1, 0);
         }
-        int discarded$1 = -24721;
-        kd.c(param1);
+        kd.c(param1, -24721);
     }
 
     static {

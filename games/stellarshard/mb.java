@@ -308,7 +308,7 @@ final class mb {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -363,8 +363,7 @@ final class mb {
             }
             L2: {
               L3: {
-                int discarded$2 = 2619;
-                param2 = ci.a(param2, '_', "");
+                param2 = ci.a(param2, '_', "", 2619);
                 var3 = la.a(param2, (byte) 79);
                 if (param0.indexOf(param2) != -1) {
                   break L3;

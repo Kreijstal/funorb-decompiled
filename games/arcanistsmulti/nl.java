@@ -20,9 +20,8 @@ final class nl extends kc {
         }
     }
 
-    final static hc f() {
-        int discarded$0 = 0;
-        return new hc(k.a(), ga.b(3236));
+    final static hc f(byte param0) {
+        return new hc(k.a(0), ga.b(3236));
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -189,7 +188,7 @@ final class nl extends kc {
         return stackIn_1_0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_Ib = null;
         field_Bb = null;
         field_Fb = null;

@@ -38,8 +38,8 @@ final class vc extends dc {
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
-        int discarded$6 = 1;
-        mi.a((String) null, param1, param0);
+        Object var4 = null;
+        mi.a((String) null, param1, param0, true);
         if (param2 != -16113) {
             vc.a(true, true, -42);
         }

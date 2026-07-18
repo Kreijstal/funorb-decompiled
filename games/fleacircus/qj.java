@@ -90,7 +90,7 @@ final class qj extends dk {
         }
     }
 
-    final static void a(int param0, int param1, byte[] param2, int[] param3) {
+    final static void a(int param0, int param1, byte[] param2, int[] param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

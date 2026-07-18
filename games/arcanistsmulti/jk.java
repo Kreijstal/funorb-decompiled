@@ -28,7 +28,7 @@ final class jk {
     n field_l;
     static String field_v;
 
-    private final void a(byte[] param0) {
+    private final void a(byte[] param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -701,12 +701,12 @@ final class jk {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         int var1 = 0;
         return re.a((byte) -68, cd.e(122));
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var2 = 0;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         if (null == jb.field_z) {
@@ -773,8 +773,7 @@ final class jk {
                     }
                 }
             }
-            int discarded$0 = 12;
-            this.a(param0);
+            this.a(param0, 12);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "jk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

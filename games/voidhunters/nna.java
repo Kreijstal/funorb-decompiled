@@ -229,7 +229,7 @@ final class nna extends dqa implements oo {
         return stackIn_3_0;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_F = null;
         field_v = null;
         field_z = null;

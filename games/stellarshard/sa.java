@@ -16,11 +16,11 @@ final class sa extends i {
         return var4;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return el.field_E == dj.field_a;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_g = null;
     }
 

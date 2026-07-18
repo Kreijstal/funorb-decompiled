@@ -25,7 +25,7 @@ abstract class ic implements w {
 
     abstract String b(byte param0);
 
-    public static void d() {
+    public static void d(byte param0) {
         field_b = null;
         field_d = null;
     }
@@ -180,8 +180,7 @@ abstract class ic implements w {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$2 = 1;
-                th.a(5, var4);
+                th.a(5, var4, 1);
                 var4 = (fk) (Object) ib.field_c.b((byte) 106);
                 continue L1;
               }

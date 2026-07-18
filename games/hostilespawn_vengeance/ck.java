@@ -40,7 +40,7 @@ final class ck {
     byte field_n;
     int field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_C = null;
         field_y = null;
         field_o = null;

@@ -197,7 +197,7 @@ final class kk {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_f = null;
         field_e = null;
@@ -207,7 +207,7 @@ final class kk {
         field_h = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -458,7 +458,7 @@ final class kk {
         return ~nb.field_G == ~nf.field_b.field_fc;
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int stackIn_39_0 = 0;

@@ -9,8 +9,7 @@ final class kl {
 
     final static bi a(int param0) {
         bi var1 = new bi(e.field_e, uf.field_k, vg.field_I[0], b.field_b[0], ij.field_H[0], ob.field_a[0], of.field_d[0], rd.field_d);
-        int discarded$0 = -28210;
-        c.o();
+        c.o(-28210);
         int var2 = 17;
         return var1;
     }
@@ -158,7 +157,7 @@ final class kl {
         return stackIn_1_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -462,7 +461,7 @@ final class kl {
         return '_';
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_a = null;

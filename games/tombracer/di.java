@@ -101,8 +101,7 @@ final class di {
         if (param0 != 100663296) {
             return false;
         }
-        int discarded$0 = -97;
-        return this.a(-101, kw.b());
+        return this.a(-101, kw.b((byte) -97));
     }
 
     final static void a(byte param0, boolean param1) {
@@ -158,8 +157,7 @@ final class di {
                         if (mla.field_a != 0) {
                           break L3;
                         } else {
-                          int discarded$1 = 0;
-                          csa.a();
+                          csa.a(false);
                           break L3;
                         }
                       }
@@ -219,7 +217,7 @@ final class di {
         }
     }
 
-    private final void a(java.awt.Canvas param0) {
+    private final void a(java.awt.Canvas param0, byte param1) {
         Object var3 = null;
         int var4 = 0;
         ei[] var5 = null;
@@ -450,8 +448,7 @@ final class di {
                 }
                 case 17: {
                     try {
-                        int discarded$10 = 28893;
-                        var8_int = sma.a("hw3d");
+                        var8_int = sma.a("hw3d", 28893);
                         if (var8_int != -1) {
                             statePc = 19;
                         } else {
@@ -504,8 +501,7 @@ final class di {
                 }
                 case 22: {
                     try {
-                        int discarded$11 = 28893;
-                        var9_int = sma.a("jaclib");
+                        var9_int = sma.a("jaclib", 28893);
                         if (var9_int != -1) {
                             statePc = 24;
                         } else {
@@ -558,8 +554,7 @@ final class di {
                 }
                 case 27: {
                     try {
-                        int discarded$12 = 28893;
-                        var10 = sma.a("jaggl");
+                        var10 = sma.a("jaggl", 28893);
                         if (var10 != -1) {
                             statePc = 29;
                         } else {
@@ -629,8 +624,7 @@ final class di {
                 }
                 case 34: {
                     try {
-                        int discarded$13 = 28893;
-                        var8_int = sma.a("jaclib");
+                        var8_int = sma.a("jaclib", 28893);
                         if (var8_int == -1) {
                             statePc = 36;
                         } else {
@@ -693,8 +687,7 @@ final class di {
                 }
                 case 40: {
                     try {
-                        int discarded$14 = 28893;
-                        var9_int = sma.a("jaggl");
+                        var9_int = sma.a("jaggl", 28893);
                         if (-1 != var9_int) {
                             statePc = 42;
                         } else {
@@ -774,8 +767,7 @@ final class di {
                 }
                 case 48: {
                     try {
-                        int discarded$15 = 28893;
-                        var8_int = sma.a("jaclib");
+                        var8_int = sma.a("jaclib", 28893);
                         if (var8_int != -1) {
                             statePc = 50;
                         } else {
@@ -828,8 +820,7 @@ final class di {
                 }
                 case 53: {
                     try {
-                        int discarded$16 = 28893;
-                        var9_int = sma.a("jagdx");
+                        var9_int = sma.a("jagdx", 28893);
                         if (var9_int == -1) {
                             statePc = 55;
                         } else {
@@ -892,8 +883,7 @@ final class di {
                 }
                 case 59: {
                     try {
-                        int discarded$17 = 28893;
-                        var10 = sma.a("hw3d");
+                        var10 = sma.a("hw3d", 28893);
                         if (-1 == var10) {
                             statePc = 61;
                         } else {
@@ -983,8 +973,7 @@ final class di {
                 }
                 case 68: {
                     try {
-                        int discarded$18 = 28893;
-                        var8_int = sma.a("jaclib");
+                        var8_int = sma.a("jaclib", 28893);
                         if (-1 == var8_int) {
                             statePc = 70;
                         } else {
@@ -1047,8 +1036,7 @@ final class di {
                 }
                 case 74: {
                     try {
-                        int discarded$19 = 28893;
-                        var9_int = sma.a("sw3d");
+                        var9_int = sma.a("sw3d", 28893);
                         if (var9_int != -1) {
                             statePc = 76;
                         } else {
@@ -1539,8 +1527,7 @@ final class di {
                   }
                 }
               }
-              int discarded$2 = -70;
-              this.a(param1);
+              this.a(param1, (byte) -70);
               break L1;
             }
             L3: {
@@ -1617,15 +1604,14 @@ final class di {
             ((di) this).field_c = param2;
             ck.field_a = param1;
             lga.field_B = param0;
-            int discarded$0 = -55;
-            vsa.a(param0, param3);
+            vsa.a(param0, param3, -55);
             ((di) this).a(0, param4);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "di.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a(uia param0) {
+    final static boolean a(uia param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

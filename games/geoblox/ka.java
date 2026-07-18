@@ -226,7 +226,7 @@ abstract class ka {
 
     abstract void a(boolean param0, byte param1, int param2, int param3);
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 15;
         field_m = null;
         field_i = null;

@@ -131,7 +131,7 @@ abstract class lk {
 
     abstract void a(java.awt.Component param0, int param1, int param2, int param3);
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
         field_g = null;
         field_f = null;
@@ -139,7 +139,7 @@ abstract class lk {
         field_c = null;
     }
 
-    final static void a(int[] param0) {
+    final static void a(int[] param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

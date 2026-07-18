@@ -183,8 +183,7 @@ abstract class he {
             } else {
               if (tf.field_g.length() > 0) {
                 var4_ref_String = tf.field_g.toString();
-                int discarded$9 = 1;
-                if (bi.a(var4_ref_String)) {
+                if (bi.a(var4_ref_String, true)) {
                   var13 = null;
                   var12 = null;
                   sj.a((String) null, il.field_e, 0, (byte) 21, (String) null, 2);
@@ -212,8 +211,7 @@ abstract class he {
                     pg.d(81);
                     break L4;
                   } else {
-                    int discarded$10 = -18853;
-                    il.a(1, var5, param2);
+                    il.a(1, var5, param2, -18853);
                     oe.a(param1, en.field_e, -6988, ib.field_b, -1, var4_ref_String);
                     pg.d(81);
                     break L4;
@@ -235,7 +233,7 @@ abstract class he {
               if (var3 != 0) {
                 if (tf.field_g.length() < 80) {
                   L6: {
-                    StringBuilder discarded$11 = tf.field_g.append((char) var4);
+                    StringBuilder discarded$7 = tf.field_g.append((char) var4);
                     var5 = 485;
                     var17 = g.field_l;
                     var7 = var17;
@@ -273,7 +271,7 @@ abstract class he {
                             if (var5 >= pl.field_X.c(tf.field_g.toString())) {
                               return true;
                             } else {
-                              StringBuilder discarded$12 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
+                              StringBuilder discarded$8 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
                               return true;
                             }
                           } else {
@@ -284,7 +282,7 @@ abstract class he {
                               if (var5 >= pl.field_X.c(tf.field_g.toString())) {
                                 return true;
                               } else {
-                                StringBuilder discarded$13 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
+                                StringBuilder discarded$9 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
                                 return true;
                               }
                             } else {
@@ -294,7 +292,7 @@ abstract class he {
                               if (var5 >= pl.field_X.c(tf.field_g.toString())) {
                                 return true;
                               } else {
-                                StringBuilder discarded$14 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
+                                StringBuilder discarded$10 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
                                 return true;
                               }
                             }
@@ -305,7 +303,7 @@ abstract class he {
                           if (var5 >= pl.field_X.c(tf.field_g.toString())) {
                             return true;
                           } else {
-                            StringBuilder discarded$15 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
+                            StringBuilder discarded$11 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
                             return true;
                           }
                         }
@@ -332,7 +330,7 @@ abstract class he {
                   if (var5 >= pl.field_X.c(tf.field_g.toString())) {
                     return true;
                   } else {
-                    StringBuilder discarded$16 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
+                    StringBuilder discarded$12 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
                     return true;
                   }
                 } else {
@@ -345,7 +343,7 @@ abstract class he {
           } else {
             if (var3 != 0) {
               if (0 < tf.field_g.length()) {
-                StringBuilder discarded$17 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
+                StringBuilder discarded$13 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
                 return true;
               } else {
                 return true;
@@ -357,7 +355,7 @@ abstract class he {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_e = null;
         field_g = null;

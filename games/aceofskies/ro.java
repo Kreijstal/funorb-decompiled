@@ -67,7 +67,7 @@ final class ro extends ua implements ti {
         super.a(param0);
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_r = null;
         field_o = null;
         field_u = null;
@@ -262,7 +262,7 @@ final class ro extends ua implements ti {
         return super.a(((ro) this).field_a.field_Qc, param0, -10386);
     }
 
-    final static int c() {
+    final static int c(byte param0) {
         return oj.field_g;
     }
 

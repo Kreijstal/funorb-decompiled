@@ -21,7 +21,7 @@ final class fpb extends mfb {
         return sbb.field_p;
     }
 
-    final static void a(pgb param0) {
+    final static void a(pgb param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -140,7 +140,7 @@ final class fpb extends mfb {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_c = null;
         field_b = null;
         field_d = null;
@@ -151,7 +151,7 @@ final class fpb extends mfb {
         return sib.field_i;
     }
 
-    final static String d() {
+    final static String d(boolean param0) {
         if (!(dw.field_c != dn.field_r)) {
             return mqb.field_x;
         }

@@ -237,7 +237,7 @@ abstract class ud extends en {
         return stackIn_12_0 != 0;
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_bb = null;
         field_S = null;
     }
@@ -477,7 +477,7 @@ abstract class ud extends en {
         }
     }
 
-    final static int a(CharSequence param0, int param1, byte param2) {
+    final static int a(CharSequence param0, int param1, byte param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

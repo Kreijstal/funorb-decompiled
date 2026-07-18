@@ -144,7 +144,7 @@ final class kh extends dc {
         ((kh) this).field_s = ((kh) this).field_P * ((kh) this).field_y + ((kh) this).field_L;
     }
 
-    private final boolean a(int param0, boolean param1) {
+    private final boolean a(int param0, boolean param1, boolean param2) {
         int var5 = 0;
         int var6 = 0;
         double[] var7 = null;
@@ -234,7 +234,7 @@ final class kh extends dc {
         ((kh) this).field_R = ((kh) this).field_cb + ((kh) this).field_y * ((kh) this).field_x;
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_fb = null;
         field_gb = null;
         field_W = null;
@@ -252,15 +252,13 @@ final class kh extends dc {
             return true;
         }
         if (0.001 * (var5 - ((kh) this).field_X) > ((kh) this).field_K) {
-            int discarded$0 = 1;
-            return this.a(param2 - 1, param0);
+            return this.a(param2 - 1, param0, true);
         }
         double var7 = (-((kh) this).field_X + var5) / ((kh) this).field_K;
         double var9 = ((kh) this).field_x * var7 + ((kh) this).field_cb;
         double var11 = var7 * ((kh) this).field_P + ((kh) this).field_L;
         if (var14.a(var11, var9, (byte) 29, param2)) {
-            int discarded$1 = 1;
-            return this.a(-1 + param2, param0);
+            return this.a(-1 + param2, param0, true);
         }
         return false;
     }
@@ -272,7 +270,7 @@ final class kh extends dc {
         }
     }
 
-    final static void h() {
+    final static void h(int param0) {
         int var1 = 0;
         tj.field_z[45] = 26;
         tj.field_z[46] = 72;
@@ -370,8 +368,7 @@ final class kh extends dc {
         lc var15 = var14;
         double var6 = var14.field_r[param0];
         if (((kh) this).field_K > 0.001 * (-((kh) this).field_X + var6)) {
-            int discarded$0 = 1;
-            return this.a(param0, param2);
+            return this.a(param0, param2, true);
         }
         double var8 = (-((kh) this).field_X + var6) / ((kh) this).field_K;
         double var10 = ((kh) this).field_cb + var8 * ((kh) this).field_x;
@@ -379,8 +376,7 @@ final class kh extends dc {
         if (!var15.a(var12, var10, (byte) 55, param0)) {
             return false;
         }
-        int discarded$1 = 1;
-        return this.a(param0, param2);
+        return this.a(param0, param2, true);
     }
 
     final static String a(byte[] param0, int param1, int param2, int param3) {

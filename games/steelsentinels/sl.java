@@ -20,7 +20,7 @@ final class sl {
     static long field_m;
     static gh[] field_k;
 
-    final static void a(wk[] param0, int param1, int param2, int param3, int param4) {
+    final static void a(wk[] param0, int param1, int param2, int param3, int param4, byte param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -111,7 +111,7 @@ final class sl {
         }
     }
 
-    final static int a(nk param0, int[] param1) {
+    final static int a(nk param0, int[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -291,7 +291,7 @@ final class sl {
         return var2;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_n = null;
         field_c = null;

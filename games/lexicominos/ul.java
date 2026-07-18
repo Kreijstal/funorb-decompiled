@@ -606,7 +606,7 @@ final class ul extends kd {
         }
     }
 
-    final static void a(sh param0, sh param1, sh param2) {
+    final static void a(sh param0, sh param1, sh param2, byte param3) {
         RuntimeException var4 = null;
         jb[] var5 = null;
         jb[][] var6 = null;
@@ -685,7 +685,7 @@ final class ul extends kd {
             ql.field_Q = (le) (Object) ee.a("commonui", "arezzo14", false, param1, param0);
             ra.field_c = (le) (Object) ee.a("commonui", "arezzo14bold", false, param1, param0);
             var18 = new db(param2.a((byte) 127, "", "button.gif"), (java.awt.Component) (Object) ug.field_y);
-            jb discarded$2 = nh.a("commonui", param0, false, "dropdown");
+            jb discarded$1 = nh.a("commonui", param0, false, "dropdown");
             var5 = wf.a(param0, "commonui", true, "screen_options");
             si.field_u = new jb[4];
             oc.field_d = new jb[4];
@@ -734,8 +734,7 @@ final class ul extends kd {
                         var9++;
                         continue L2;
                       } else {
-                        int discarded$3 = 0;
-                        var15[var11_int] = bf.a(var22[var11_int], var5[var9]);
+                        var15[var11_int] = bf.a(var22[var11_int], var5[var9], 0);
                         var11_int++;
                         continue L3;
                       }
@@ -831,7 +830,7 @@ final class ul extends kd {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;

@@ -40,8 +40,7 @@ final class vk {
           if (((vk) this).field_g.field_s == param2) {
             if (param1 == ((vk) this).field_f) {
               if (((vk) this).field_l != ((vk) this).field_w) {
-                int discarded$4 = -12392;
-                ((vk) this).field_g = vg.a(param2, param1, (vk) this);
+                ((vk) this).field_g = vg.a(param2, param1, (vk) this, -12392);
                 ((vk) this).field_w = ((vk) this).field_l;
                 ((vk) this).field_f = param1;
                 return ((vk) this).field_g;
@@ -49,22 +48,19 @@ final class vk {
                 return ((vk) this).field_g;
               }
             } else {
-              int discarded$5 = -12392;
-              ((vk) this).field_g = vg.a(param2, param1, (vk) this);
+              ((vk) this).field_g = vg.a(param2, param1, (vk) this, -12392);
               ((vk) this).field_w = ((vk) this).field_l;
               ((vk) this).field_f = param1;
               return ((vk) this).field_g;
             }
           } else {
-            int discarded$6 = -12392;
-            ((vk) this).field_g = vg.a(param2, param1, (vk) this);
+            ((vk) this).field_g = vg.a(param2, param1, (vk) this, -12392);
             ((vk) this).field_w = ((vk) this).field_l;
             ((vk) this).field_f = param1;
             return ((vk) this).field_g;
           }
         } else {
-          int discarded$7 = -12392;
-          ((vk) this).field_g = vg.a(param2, param1, (vk) this);
+          ((vk) this).field_g = vg.a(param2, param1, (vk) this, -12392);
           ((vk) this).field_w = ((vk) this).field_l;
           ((vk) this).field_f = param1;
           return ((vk) this).field_g;
@@ -84,8 +80,7 @@ final class vk {
     final boolean b(int param0) {
         if (param0 == 3) {
           if (-1 != ((vk) this).field_l) {
-            int discarded$10 = -65;
-            if (mm.a((vk) this)) {
+            if (mm.a((vk) this, -65)) {
               ((vk) this).field_l = -1;
               return true;
             } else {
@@ -98,8 +93,7 @@ final class vk {
         } else {
           ((vk) this).field_n = 41;
           if (-1 != ((vk) this).field_l) {
-            int discarded$11 = -65;
-            if (mm.a((vk) this)) {
+            if (mm.a((vk) this, -65)) {
               ((vk) this).field_l = -1;
               return true;
             } else {
@@ -112,7 +106,7 @@ final class vk {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_d = null;
         field_q = null;

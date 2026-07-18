@@ -27,7 +27,7 @@ final class pc {
     static oi field_l;
     static c field_d;
 
-    private final void a(byte[] param0) {
+    private final void a(byte[] param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -456,9 +456,9 @@ final class pc {
         field_d = null;
     }
 
-    final static void a() {
-        int discarded$0 = 1;
-        rj.a((String) null, "");
+    final static void a(int param0) {
+        Object var2 = null;
+        rj.a((String) null, "", true);
     }
 
     pc(byte[] param0, int param1, byte[] param2) {
@@ -479,8 +479,7 @@ final class pc {
                     }
                 }
             }
-            int discarded$0 = 0;
-            this.a(param0);
+            this.a(param0, 0);
         } catch (RuntimeException runtimeException) {
             throw bd.a((Throwable) (Object) runtimeException, "pc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

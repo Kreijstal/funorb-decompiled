@@ -23,7 +23,7 @@ class ah extends gg {
         ((ah) this).field_l = null;
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, boolean param1) {
         param0.removeKeyListener((java.awt.event.KeyListener) (Object) pk.field_e);
         param0.removeFocusListener((java.awt.event.FocusListener) (Object) pk.field_e);
         try {

@@ -7,7 +7,7 @@ final class ih extends wm implements ntb, hd {
     static int field_e;
     private int field_c;
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
     }
 
@@ -440,10 +440,10 @@ final class ih extends wm implements ntb, hd {
                 if (super.a((byte) 89, param1)) {
                   break L2;
                 } else {
-                  if (var4.field_c != var4.field_c) {
+                  if (((ih) this).field_c != var4.field_c) {
                     break L2;
                   } else {
-                    if (var4.field_d == var4.field_d) {
+                    if (var4.field_d == ((ih) this).field_d) {
                       stackOut_5_0 = 0;
                       stackIn_6_0 = stackOut_5_0;
                       break L1;
@@ -581,8 +581,7 @@ final class ih extends wm implements ntb, hd {
                 }
               }
             } else {
-              int discarded$2 = -14;
-              stackOut_4_0 = qi.a(((ih) this).field_c, true, param2);
+              stackOut_4_0 = qi.a(((ih) this).field_c, true, param2, (byte) -14);
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0;
             }
@@ -767,8 +766,7 @@ final class ih extends wm implements ntb, hd {
             if (param0 > 99) {
               L1: {
                 if (((ih) this).field_c >= 0) {
-                  int discarded$2 = -14;
-                  param1 = qi.a(((ih) this).field_c, true, param1);
+                  param1 = qi.a(((ih) this).field_c, true, param1, (byte) -14);
                   break L1;
                 } else {
                   break L1;
@@ -840,8 +838,8 @@ final class ih extends wm implements ntb, hd {
         }
         try {
             super.b((byte) 110, param1);
-            var4.field_d = var4.field_d;
-            var4.field_c = var4.field_c;
+            var4.field_d = ((ih) this).field_d;
+            var4.field_c = ((ih) this).field_c;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "ih.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

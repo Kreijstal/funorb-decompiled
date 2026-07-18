@@ -46,7 +46,7 @@ final class pc extends ae {
         }
     }
 
-    final static byte[] a(String param0) {
+    final static byte[] a(String param0, byte param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;

@@ -12,7 +12,7 @@ final class kn extends ec {
     int field_H;
     static String field_J;
 
-    final static void g() {
+    final static void g(int param0) {
         la.field_g = 0;
     }
 
@@ -43,8 +43,7 @@ final class kn extends ec {
             return;
         }
         mg var5 = new mg(((kn) this).field_x.field_g, ((kn) this).field_x.field_m);
-        int discarded$0 = 16865;
-        kb.a(var5);
+        kb.a(var5, 16865);
         ((kn) this).field_x.a(param0, 0, 0, param3);
         ai.a(true);
         var5.a(param1 - -((kn) this).field_l, ((kn) this).field_u + param2, ((kn) this).field_H);
@@ -529,7 +528,7 @@ final class kn extends ec {
         return stackIn_13_0 != 0;
     }
 
-    final static u f() {
+    final static u f(int param0) {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         u var2 = null;

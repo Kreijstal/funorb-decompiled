@@ -14,7 +14,7 @@ final class lq extends oh {
     int field_i;
     static bi field_o;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_p = null;
         field_k = null;
         field_r = null;

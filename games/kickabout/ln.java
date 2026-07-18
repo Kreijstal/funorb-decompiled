@@ -109,14 +109,13 @@ final class ln extends ct {
             }
             ne.field_I = param1.field_jb;
             qn.field_b = param2.field_jb;
-            int discarded$0 = 0;
-            qg.a();
+            qg.a(0);
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) (Object) runtimeException, "ln.R(" + 64 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static java.awt.Canvas l() {
+    final static java.awt.Canvas l(int param0) {
         return e.field_m == null ? ic.field_d : (java.awt.Canvas) (Object) e.field_m;
     }
 

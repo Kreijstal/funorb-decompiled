@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pn {
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1, int param2, boolean param3, boolean param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;

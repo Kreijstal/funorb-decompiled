@@ -12,12 +12,12 @@ final class fb extends hf {
     int field_f;
     fb field_h;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_m = null;
         field_j = null;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var4 = 0;

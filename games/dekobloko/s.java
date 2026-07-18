@@ -200,17 +200,14 @@ final class s extends w {
         cc.field_a = param1;
     }
 
-    final static void h() {
+    final static void h(byte param0) {
         sn.a(false);
         if (null != jh.field_b) {
             tj.a(false, jh.field_b);
         }
-        int discarded$12 = 90;
-        wf.d();
-        int discarded$25 = 0;
-        rf.a();
-        int discarded$32 = 67;
-        fc.a();
+        wf.d(90);
+        rf.a((byte) 0);
+        fc.a((byte) 67);
         if (!(!di.a(false))) {
             we.field_b.f(1, -4);
             wj.c(4792, 0);
@@ -218,7 +215,7 @@ final class s extends w {
         si.a(80);
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         int var1 = 0;
         field_Qb = null;
     }
@@ -257,7 +254,7 @@ final class s extends w {
         ((s) this).field_Nb.field_N = param1;
     }
 
-    final static void g() {
+    final static void g(byte param0) {
         if (ah.field_c != null) {
             ah.field_c.f((byte) -66);
         }
@@ -332,7 +329,7 @@ final class s extends w {
         this(param0, (w) (Object) param1, param1.field_Rb.field_Rb, param1.field_Rb.field_Sb, param1.field_Ob, param2, param3);
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         int[] var4 = null;
         int[] var1 = null;
         int var2 = 0;
@@ -367,6 +364,7 @@ final class s extends w {
 
     final static void a(int param0, int param1, ck[][] param2, byte[] param3, ck[][] param4, int param5, boolean param6, String[][] param7, int[] param8, byte[] param9, ji param10, int[] param11, ji param12, pi[] param13, String[] param14, String[][] param15, ji param16) {
         RuntimeException var17 = null;
+        Object var18 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
@@ -565,8 +563,8 @@ final class s extends w {
         String stackOut_39_2 = null;
         try {
           L0: {
-            int discarded$1 = 5;
-            sg.a(param15, true, param9, param16, param11, (byte) -57, param7, param14, 1, param3, param13, param8, 8, param12, (String[]) null, param10, param4, param2);
+            var18 = null;
+            sg.a(param15, true, param9, param16, param11, (byte) -57, param7, param14, 1, param3, param13, param8, 8, param12, (String[]) null, param10, param4, param2, 5);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

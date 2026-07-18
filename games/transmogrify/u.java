@@ -17,7 +17,7 @@ final class u {
         return 1 + param1;
     }
 
-    final static oe[] a(hj param0) {
+    final static oe[] a(hj param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -122,7 +122,7 @@ final class u {
         return stackIn_11_0;
     }
 
-    final static String a(String param0, String param1, ci param2) {
+    final static String a(String param0, String param1, ci param2, boolean param3) {
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -351,7 +351,7 @@ final class u {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
     }

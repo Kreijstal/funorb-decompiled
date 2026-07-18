@@ -112,7 +112,7 @@ class nt extends ms {
         ((nt) this).field_o = param2;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_m = null;
         field_n = null;
         field_l = null;

@@ -11,7 +11,7 @@ final class ug {
     static wd field_e;
     static boolean[] field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_f = null;
         field_d = null;

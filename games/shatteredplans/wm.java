@@ -25,7 +25,7 @@ final class wm {
         field_a = null;
     }
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, int param1, byte param2) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -47,8 +47,7 @@ final class wm {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 1;
-            stackOut_0_0 = fc.a(16, param0, (byte) 124);
+            stackOut_0_0 = fc.a(16, param0, (byte) 124, true);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -85,9 +84,8 @@ final class wm {
         return stackIn_1_0;
     }
 
-    final static void a() {
-        int discarded$0 = -120;
-        nj.b();
+    final static void a(int param0) {
+        nj.b(-120);
     }
 
     final static double a(int param0, byte param1, int param2) {

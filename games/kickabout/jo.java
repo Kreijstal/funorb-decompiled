@@ -77,8 +77,7 @@ final class jo extends tm {
               }
             }
             var5 = param0.a((byte) -121, param3, var4_int);
-            int discarded$2 = 0;
-            stackOut_2_0 = ua.a(var4_int, var5, param0);
+            stackOut_2_0 = ua.a(var4_int, var5, param0, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -165,15 +164,15 @@ final class jo extends tm {
         return stackIn_3_0;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
-        tv var4_ref = null;
         int var5_int = 0;
         String var5 = null;
         hd var6 = null;
         int var7 = 0;
         int var8 = 0;
+        tv var9 = null;
         RuntimeException decompiledCaughtException = null;
         var8 = Kickabout.field_G;
         try {
@@ -203,7 +202,7 @@ final class jo extends tm {
                   break L3;
                 } else {
                   if (iw.field_l) {
-                    boolean discarded$3 = la.field_a.a(g.field_a.field_T, 31947, g.field_a.field_F, param0);
+                    boolean discarded$1 = la.field_a.a(g.field_a.field_T, 31947, g.field_a.field_F, param0);
                     break L3;
                   } else {
                     la.field_a = null;
@@ -224,18 +223,16 @@ final class jo extends tm {
                     }
                   }
                   L6: {
-                    var4_ref = rb.a(param1, sh.field_c, (byte) 26, eb.field_b);
-                    if (var4_ref == null) {
+                    var9 = rb.a(param1, sh.field_c, (byte) 26, eb.field_b);
+                    if (var9 == null) {
                       break L6;
                     } else {
-                      int discarded$4 = -60;
-                      bf.a(var4_ref);
+                      bf.a(var9, (byte) -60);
                       break L6;
                     }
                   }
                   L7: {
-                    int discarded$5 = -3;
-                    var5 = fn.f();
+                    var5 = fn.f(-3);
                     if (var5 != null) {
                       sn.field_e = var5;
                       break L7;
@@ -309,8 +306,7 @@ final class jo extends tm {
                 break L1;
               }
             }
-            int discarded$2 = 39;
-            stackOut_2_0 = new li((Object) (Object) nt.k());
+            stackOut_2_0 = new li((Object) (Object) nt.k(39));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -357,7 +353,7 @@ final class jo extends tm {
         field_A = null;
     }
 
-    final static boolean a(tf param0) {
+    final static boolean a(tf param0, boolean param1) {
         gn var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

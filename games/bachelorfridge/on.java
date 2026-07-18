@@ -256,8 +256,8 @@ final class on extends eo {
                 L2: while (true) {
                   if (~var6 <= ~var2_int) {
                     ((on) this).field_v = ((on) this).field_y[param0.b(16711935)];
+                    int discarded$4 = param0.b(16711935);
                     int discarded$5 = param0.b(16711935);
-                    int discarded$6 = param0.b(16711935);
                     var5 = null;
                     break L0;
                   } else {
@@ -272,9 +272,9 @@ final class on extends eo {
                           if (var9 <= 0) {
                             break L4;
                           } else {
-                            int incrementValue$7 = var3;
+                            int incrementValue$6 = var3;
                             var3++;
-                            ((on) this).field_o[incrementValue$7] = var9;
+                            ((on) this).field_o[incrementValue$6] = var9;
                             break L4;
                           }
                         }
@@ -282,9 +282,9 @@ final class on extends eo {
                           if (var10 <= 0) {
                             break L5;
                           } else {
-                            int incrementValue$8 = var4;
+                            int incrementValue$7 = var4;
                             var4++;
-                            ((on) this).field_q[incrementValue$8] = var10;
+                            ((on) this).field_q[incrementValue$7] = var10;
                             break L5;
                           }
                         }
@@ -301,8 +301,7 @@ final class on extends eo {
                 }
               } else {
                 L6: {
-                  int discarded$9 = 94;
-                  var13 = wb.b(param0);
+                  var13 = wb.b(param0, 94);
                   var14 = var13;
                   if (var14.a(-2359) < 0) {
                     break L6;
@@ -439,8 +438,7 @@ final class on extends eo {
             L1: while (true) {
               if (~var10_int <= ~((on) this).field_y.length) {
                 L2: {
-                  int discarded$2 = 81;
-                  vd.a(param0);
+                  vd.a(param0, 81);
                   jp.a(-117, param3, param4);
                   var26 = new int[param4 * param3];
                   var10_array = var26;
@@ -573,9 +571,9 @@ final class on extends eo {
                             }
                           }
                           L15: {
-                            int incrementValue$3 = var14;
+                            int incrementValue$1 = var14;
                             var14++;
-                            var26[incrementValue$3] = var23;
+                            var26[incrementValue$1] = var23;
                             if (param1) {
                               var14 = var14 + (-1 + param3);
                               break L15;

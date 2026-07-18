@@ -14,7 +14,7 @@ final class eg {
     static String field_h;
     static ai[] field_d;
 
-    final static eg[] a(md param0) {
+    final static eg[] a(md param0, boolean param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
         eg[] var4 = null;
@@ -89,8 +89,7 @@ final class eg {
                     }
                   }
                 } else {
-                  int discarded$1 = 0;
-                  em.a(10L);
+                  em.a(10L, false);
                   continue L1;
                 }
               }
@@ -148,7 +147,7 @@ final class eg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_h = null;
         field_d = null;

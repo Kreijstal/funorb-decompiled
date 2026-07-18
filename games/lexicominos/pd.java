@@ -136,7 +136,7 @@ final class pd extends kd {
         }
     }
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_5_0 = 0;
@@ -178,8 +178,7 @@ final class pd extends kd {
             L1: {
               L2: {
                 param0 = ne.a('_', "", param0, (byte) -126);
-                int discarded$2 = -79;
-                var3 = ci.a(param1);
+                var3 = ci.a(param1, (byte) -79);
                 if (param0.indexOf(param1) != -1) {
                   break L2;
                 } else {
@@ -278,7 +277,7 @@ final class pd extends kd {
     pd() {
     }
 
-    public static void b() {
+    public static void b(int param0) {
         int var1 = 2;
         field_l = null;
     }

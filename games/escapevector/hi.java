@@ -62,8 +62,7 @@ final class hi extends ah {
                     if (param0 != 10) {
                       break L4;
                     } else {
-                      int discarded$2 = 90;
-                      ui.a();
+                      ui.a(90);
                       var3_int = 0;
                       break L4;
                     }
@@ -145,7 +144,7 @@ final class hi extends ah {
         }
     }
 
-    final static uf c() {
+    final static uf c(boolean param0) {
         if (sl.field_d == null) {
           sl.field_d = new uf();
           sl.field_d.a(-31476, sb.field_a);
@@ -163,7 +162,7 @@ final class hi extends ah {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_s = null;
         field_n = null;
         field_p = null;
@@ -248,7 +247,7 @@ final class hi extends ah {
         return true;
     }
 
-    final static void d() {
+    final static void d(boolean param0) {
         if (bk.field_r != null) {
             bk.field_r.a((byte) -126);
             field_q = -4;

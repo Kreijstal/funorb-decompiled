@@ -94,7 +94,7 @@ final class an {
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         rj.field_c = 20000000L;
         int var2 = 1;
     }
@@ -102,7 +102,7 @@ final class an {
     final static pe a(byte param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        Object var3 = null;
+        String var3 = null;
         pe var4 = null;
         String var5 = null;
         int var6 = 0;
@@ -132,15 +132,15 @@ final class an {
             L0: {
               var2_int = -65 / ((-21 - param0) / 63);
               var7 = (CharSequence) (Object) param1;
-              var3 = (Object) (Object) cl.a(-95, var7);
+              var3 = cl.a(-95, var7);
               if (var3 != null) {
                 break L0;
               } else {
-                var3 = (Object) (Object) var7;
+                var3 = param1;
                 break L0;
               }
             }
-            var4 = (pe) (Object) tc.field_o.a(-7895, (long)((String) var3).hashCode());
+            var4 = (pe) (Object) tc.field_o.a(-7895, (long)var3.hashCode());
             L1: while (true) {
               if (var4 != null) {
                 L2: {
@@ -153,7 +153,7 @@ final class an {
                     break L2;
                   }
                 }
-                if (var5.equals(var3)) {
+                if (var5.equals((Object) (Object) var3)) {
                   stackOut_14_0 = (pe) var4;
                   stackIn_15_0 = stackOut_14_0;
                   return stackIn_15_0;
@@ -214,7 +214,7 @@ final class an {
         }
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         if (ij.field_o == null) {
             return false;
         }

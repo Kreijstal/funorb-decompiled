@@ -477,7 +477,7 @@ final class bc implements Runnable {
             break L0;
           } else {
             var5 = null;
-            ck discarded$2 = bc.a(-6, (byte[]) null);
+            ck discarded$1 = bc.a(-6, (byte[]) null);
             break L0;
           }
         }
@@ -515,8 +515,7 @@ final class bc implements Runnable {
                   return;
                 }
               } else {
-                int discarded$3 = 0;
-                wl.a(1L);
+                wl.a(1L, false);
                 continue L2;
               }
             }
@@ -985,7 +984,7 @@ final class bc implements Runnable {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
         field_c = null;
     }

@@ -11,7 +11,7 @@ final class of {
     static String field_c;
     static int field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_b = null;
         field_c = null;
@@ -54,21 +54,19 @@ final class of {
         try {
           L0: {
             var10 = (CharSequence) (Object) param2;
-            int discarded$4 = -9907;
-            if (!ef.a(var10)) {
+            if (!ef.a(var10, -9907)) {
               stackOut_3_0 = kq.field_Ib;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
               if (ts.field_d == 2) {
-                int discarded$5 = 40;
-                var8 = tr.a(param2);
+                var8 = tr.a(param2, (byte) 40);
                 if (var8 == null) {
                   stackOut_10_0 = vo.a((byte) -18, af.field_c, new String[1]);
                   stackIn_11_0 = stackOut_10_0;
                   return stackIn_11_0;
                 } else {
-                  gn discarded$6 = ne.field_I.b(-7584, (gn) (Object) var8);
+                  gn discarded$1 = ne.field_I.b(-7584, (gn) (Object) var8);
                   L1: while (true) {
                     var7 = (gg) (Object) ne.field_I.c(33);
                     if (var7 == null) {
@@ -85,8 +83,7 @@ final class of {
                         if (param1 >= 4) {
                           break L2;
                         } else {
-                          int discarded$7 = 0;
-                          of.a();
+                          of.a(false);
                           break L2;
                         }
                       }

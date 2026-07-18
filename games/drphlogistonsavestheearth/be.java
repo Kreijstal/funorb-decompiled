@@ -184,9 +184,8 @@ final class be {
         }
     }
 
-    private final static he a(he param0, int param1, int param2, int param3) {
-        int discarded$0 = 4096;
-        return be.a(param0, param0.field_h << 3, param0.field_c << 3, param1 << 4, param2 << 4, param3);
+    private final static he a(he param0, int param1, int param2, int param3, int param4) {
+        return be.a(param0, param0.field_h << 3, param0.field_c << 3, param1 << 4, param2 << 4, param3, 4096);
     }
 
     final static void a(int param0, int param1, int param2) {
@@ -343,7 +342,7 @@ final class be {
         }
     }
 
-    private final static he a(he param0, int param1, int param2, int param3, int param4, int param5) {
+    private final static he a(he param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         he var7 = null;
         int var8 = 0;
         int var9_int = 0;
@@ -1271,8 +1270,7 @@ final class be {
         int var3 = 0;
         he[] var2 = new he[param1];
         for (var3 = 0; var3 < param1; var3++) {
-            int discarded$0 = 4096;
-            var2[var3] = be.a(param0, param0.field_h, param0.field_c, var3 * 65536 / param1 & 65535);
+            var2[var3] = be.a(param0, param0.field_h, param0.field_c, var3 * 65536 / param1 & 65535, 4096);
         }
         lb.field_C.a(101);
         return var2;

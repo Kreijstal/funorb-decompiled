@@ -10,7 +10,7 @@ final class dr {
     static hd field_d;
     static String field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_b = null;
         field_f = null;
@@ -119,8 +119,7 @@ final class dr {
                     }
                   }
                 }
-                int discarded$1 = 180;
-                if (!ps.a()) {
+                if (!ps.a(180)) {
                   stackOut_23_0 = 0;
                   stackIn_24_0 = stackOut_23_0;
                   return stackIn_24_0 != 0;

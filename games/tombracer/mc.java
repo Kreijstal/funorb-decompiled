@@ -26,8 +26,7 @@ final class mc extends nv {
         }
         super.n((byte) 102);
         this.b(1659280738);
-        int discarded$0 = 1;
-        this.j();
+        this.j((byte) 1);
     }
 
     private final void b(int param0) {
@@ -231,7 +230,7 @@ final class mc extends nv {
         return stackIn_6_0 != 0;
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_r = null;
         int var1 = -15;
     }
@@ -405,14 +404,13 @@ final class mc extends nv {
             param1.a(param0, 120);
             ((mc) this).field_n = et.b(param1.a((byte) 55), param1.c(-23), -23);
             this.b(1659280738);
-            int discarded$0 = 1;
-            this.j();
+            this.j((byte) 1);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "mc.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void j() {
+    private final void j(byte param0) {
         int var2 = ((mc) this).field_g.d(3);
         int var3 = ((mc) this).field_g.e(9648);
         int var4 = ((mc) this).field_n >> 8;
@@ -425,12 +423,10 @@ final class mc extends nv {
         this.b(param0 ^ 1659275336);
         if (param0 != 5418) {
           ((mc) this).field_p = 81;
-          int discarded$4 = 1;
-          this.j();
+          this.j((byte) 1);
           return;
         } else {
-          int discarded$5 = 1;
-          this.j();
+          this.j((byte) 1);
           return;
         }
     }

@@ -286,9 +286,7 @@ final class sb {
                     L7: {
                       var14 = new fs(param1.a((byte) 98, var24[var6], var2_int));
                       var14.field_p = var14.field_p + 1;
-                      int discarded$3 = 102;
-                      int discarded$4 = 1;
-                      var5[var6] = pi.a(var14);
+                      var5[var6] = pi.a(var14, true, 102);
                       if (25 <= var5[var6].field_e) {
                         break L7;
                       } else {
@@ -303,8 +301,7 @@ final class sb {
               } else {
                 var6_ref_fs = new fs(param1.a((byte) 94, var23[var5_int], var2_int));
                 var6_ref_fs.field_p = var6_ref_fs.field_p + 1;
-                int discarded$5 = 0;
-                var4[var5_int] = wr.a(true, var6_ref_fs);
+                var4[var5_int] = wr.a(true, var6_ref_fs, false);
                 cb.field_a[var4[var5_int].field_a] = var4[var5_int];
                 var5_int++;
                 continue L1;
@@ -343,9 +340,8 @@ final class sb {
         }
     }
 
-    final static int a(boolean param0, int param1, int param2) {
-        int discarded$0 = 19886;
-        return se.a();
+    final static int a(boolean param0, int param1, int param2, byte param3) {
+        return se.a(19886);
     }
 
     static {

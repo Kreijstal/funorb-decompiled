@@ -28,7 +28,7 @@ final class td {
         }
     }
 
-    final static void a(int param0, java.awt.Canvas param1) {
+    final static void a(int param0, java.awt.Canvas param1, int param2, int param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -92,7 +92,7 @@ final class td {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_b = null;
         field_e = null;
@@ -127,14 +127,13 @@ final class td {
         String stackOut_8_2 = null;
         try {
           L0: {
-            int discarded$9 = 109;
-            if (hn.a(param3, param2, param0)) {
+            if (hn.a(param3, param2, param0, (byte) 109)) {
               L1: {
                 if (param1 == 6887) {
                   break L1;
                 } else {
                   var5 = null;
-                  mg[] discarded$10 = td.a(37, -9, -75, (eh) null);
+                  mg[] discarded$2 = td.a(37, -9, -75, (eh) null);
                   break L1;
                 }
               }

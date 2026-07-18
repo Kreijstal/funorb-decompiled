@@ -85,7 +85,7 @@ abstract class jg {
         return stackIn_5_0;
     }
 
-    final static void a(kg param0) {
+    final static void a(kg param0, int param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;
@@ -216,7 +216,7 @@ abstract class jg {
 
     abstract long a(int param0);
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
         field_e = null;
         field_b = null;

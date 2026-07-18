@@ -164,7 +164,7 @@ abstract class al extends nb {
         return (w) this;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_G = null;
         field_F = null;
         field_C = null;

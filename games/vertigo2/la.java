@@ -34,7 +34,7 @@ final class la {
         }
     }
 
-    final static void a(String param0, String param1) {
+    final static void a(String param0, String param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -134,7 +134,7 @@ final class la {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_d = null;
         field_i = null;

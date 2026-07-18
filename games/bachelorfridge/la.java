@@ -162,9 +162,7 @@ final class la extends bca {
         } else {
           if (null != qt.field_l) {
             kga.field_c = qt.field_l.c((byte) -91);
-            int discarded$3 = -2;
-            int discarded$4 = 2;
-            fga.a();
+            fga.a(2, (byte) -2);
             if (kga.field_c != null) {
               nl.a((java.awt.Canvas) (Object) kga.field_c, (byte) 92);
               var2 = 2;
@@ -198,8 +196,7 @@ final class la extends bca {
               }
             }
           } else {
-            int discarded$5 = 0;
-            kga.field_c = mfa.a(true, 640, 0, 480, ju.field_r);
+            kga.field_c = mfa.a(true, 640, 0, 480, ju.field_r, 0);
             if (kga.field_c != null) {
               nl.a((java.awt.Canvas) (Object) kga.field_c, (byte) 92);
               var2 = 2;

@@ -5,7 +5,7 @@ final class nba {
     static int field_b;
     static int[] field_a;
 
-    final static void a(ff param0, la param1) {
+    final static void a(ff param0, la param1, byte param2) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_9_0 = null;
@@ -119,7 +119,7 @@ final class nba {
         }
     }
 
-    final static void a(fia param0, sq param1, int param2, int param3, int param4, java.awt.Component param5) {
+    final static void a(fia param0, sq param1, int param2, int param3, int param4, java.awt.Component param5, int param6, boolean param7) {
         try {
             kta.a(22050, true, 10);
             ipa.field_P = kta.a(param0, param5, 0, 22050);

@@ -80,7 +80,7 @@ final class v {
                 if (param1.indexOf("<br>") != -1) {
                   break L1;
                 } else {
-                  param4[0] = (String) (Object) param4;
+                  param4[0] = param1;
                   stackOut_3_0 = 1;
                   stackIn_4_0 = stackOut_3_0;
                   return stackIn_4_0;
@@ -229,7 +229,7 @@ final class v {
         return stackIn_21_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }
@@ -278,8 +278,7 @@ final class v {
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                int discarded$2 = 17176;
-                var3 = dg.a(param1.charAt(var4)) + -var3 + (var3 << 5);
+                var3 = dg.a(param1.charAt(var4), 17176) + -var3 + (var3 << 5);
                 var4++;
                 continue L1;
               }
@@ -367,8 +366,7 @@ final class v {
         String stackOut_5_2 = null;
         try {
           if (gm.a(param3, param2, true, param1)) {
-            int discarded$2 = -128;
-            return ql.d();
+            return ql.d(-128);
           } else {
             return null;
           }

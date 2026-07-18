@@ -64,8 +64,7 @@ final class db extends hi {
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0;
               } else {
-                int discarded$6 = -29205;
-                if (!nf.a(var6)) {
+                if (!nf.a(var6, -29205)) {
                   if (pb.a(17032, var6)) {
                     stackOut_12_0 = uj.field_i;
                     stackIn_13_0 = stackOut_12_0;
@@ -286,7 +285,7 @@ final class db extends hi {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_t = null;
         field_r = null;
         field_u = null;
@@ -440,8 +439,7 @@ final class db extends hi {
             var3 = ((db) this).field_q.field_n.toLowerCase();
             var4 = param0.toLowerCase();
             if (var4.length() != 0) {
-              int discarded$6 = 0;
-              if (ja.a(var4, var3)) {
+              if (ja.a(var4, var3, 0)) {
                 var5 = -63 % ((3 - param1) / 42);
                 if (!this.a(123, param0)) {
                   stackOut_9_0 = nd.field_d;

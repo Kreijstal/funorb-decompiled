@@ -60,8 +60,7 @@ final class db {
         if (param1 <= 126) {
             field_f = null;
         }
-        int discarded$0 = 24634;
-        this.c(param0);
+        this.c(param0, 24634);
         if (((db) this).field_h[param0] != null) {
             return true;
         }
@@ -555,7 +554,7 @@ final class db {
         return stackIn_1_0;
     }
 
-    private final synchronized boolean a(int param0, int[] param1, int param2) {
+    private final synchronized boolean a(int param0, int[] param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int[] var6 = null;
@@ -739,8 +738,7 @@ final class db {
                     }
                     try {
                       L8: {
-                        int discarded$1 = -1;
-                        var50 = b.a(var9_array);
+                        var50 = b.a(var9_array, -1);
                         var43 = var50;
                         var36 = var43;
                         var27 = var36;
@@ -1041,7 +1039,7 @@ final class db {
         return stackIn_99_0 != 0;
     }
 
-    private final synchronized void c(int param0) {
+    private final synchronized void c(int param0, int param1) {
         if (((db) this).field_c) {
             ((db) this).field_h[param0] = (Object) (Object) ((db) this).field_g.a(param0, false);
         } else {
@@ -1377,8 +1375,7 @@ final class db {
             } else {
               var4 = ((db) this).field_b.field_e[var3];
               if (null == ((db) this).field_h[var4]) {
-                int discarded$1 = 24634;
-                this.c(var4);
+                this.c(var4, 24634);
                 if (((db) this).field_h[var4] == null) {
                   var2 = 0;
                   var3++;
@@ -1461,8 +1458,7 @@ final class db {
         if (((db) this).field_h[param0] != null) {
             return true;
         }
-        int discarded$1 = 24634;
-        this.c(param0);
+        this.c(param0, 24634);
         if (((db) this).field_h[param0] == null) {
             return false;
         }
@@ -1609,14 +1605,11 @@ final class db {
                     }
                   }
                 }
-                int discarded$3 = 30511;
-                if (this.a(param0, param2, param3)) {
+                if (this.a(param0, param2, param3, 30511)) {
                   break L1;
                 } else {
-                  int discarded$4 = 24634;
-                  this.c(param0);
-                  int discarded$5 = 30511;
-                  if (this.a(param0, param2, param3)) {
+                  this.c(param0, 24634);
+                  if (this.a(param0, param2, param3, 30511)) {
                     break L1;
                   } else {
                     stackOut_8_0 = null;

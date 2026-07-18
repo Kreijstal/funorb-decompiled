@@ -23,7 +23,7 @@ final class kf extends gm {
         field_D = null;
     }
 
-    private final void h() {
+    private final void h(int param0) {
         ((kf) this).field_C = new t[]{this.b(((kf) this).field_J, ((kf) this).field_I, (byte) 49), this.b(((kf) this).field_y, ((kf) this).field_z, (byte) 49)};
         ((kf) this).field_E = this.b(false);
         ((kf) this).field_H = ((kf) this).field_E.b();
@@ -247,7 +247,7 @@ final class kf extends gm {
         this(param0, param1, param2, param3, param4, param5, param6, 8355711 & param5 >> 1, 8355711 & param6 >> 1);
     }
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         cb var4 = null;
@@ -276,8 +276,7 @@ final class kf extends gm {
     final void a(byte param0, int param1, int param2, int param3, int param4) {
         int var6 = -126 / ((66 - param0) / 57);
         super.a((byte) 125, param1, param2, param3, param4);
-        int discarded$0 = -917474783;
-        this.h();
+        this.h(-917474783);
     }
 
     private final t b(boolean param0) {
@@ -439,11 +438,10 @@ final class kf extends gm {
         }
         ((kf) this).field_J = param1;
         ((kf) this).field_z = (param0 & 16711422) >> 1;
-        int discarded$0 = -917474783;
-        this.h();
+        this.h(-917474783);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         Object var2 = null;
         uj.a((String) null, -32082, ol.field_a);
     }

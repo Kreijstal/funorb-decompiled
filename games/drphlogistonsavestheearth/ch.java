@@ -12,7 +12,7 @@ final class ch extends l {
     static String field_w;
     static int field_A;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_z = null;
         field_u = null;
         field_w = null;
@@ -98,7 +98,7 @@ final class ch extends l {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         sh.field_e = false;
         wg.field_h = null;
         ga.field_i = null;

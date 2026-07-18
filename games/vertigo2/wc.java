@@ -64,8 +64,7 @@ final class wc extends da {
                 if (!nh.a(var5, (byte) -113)) {
                   if (!vc.a(-111, var5)) {
                     if (!rh.a(288, var5)) {
-                      int discarded$2 = -67;
-                      if (this.a(param1)) {
+                      if (this.a(param1, (byte) -67)) {
                         stackOut_18_0 = mn.field_u;
                         stackIn_19_0 = stackOut_18_0;
                         return stackIn_19_0;
@@ -190,14 +189,12 @@ final class wc extends da {
             var3 = ((wc) this).field_p.field_w.toLowerCase();
             var4 = param1.toLowerCase();
             if (param0 != ~var4.length()) {
-              int discarded$9 = 0;
-              if (!w.a(var4, var3)) {
+              if (!w.a(var4, var3, 0)) {
                 stackOut_6_0 = ir.field_a;
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0;
               } else {
-                int discarded$10 = -67;
-                if (this.a(param1)) {
+                if (this.a(param1, (byte) -67)) {
                   stackOut_11_0 = ir.field_a;
                   stackIn_12_0 = stackOut_11_0;
                   return stackIn_12_0;
@@ -246,37 +243,52 @@ final class wc extends da {
         return stackIn_14_0;
     }
 
-    final static void a(byte[] param0, int param1) {
+    final static void a(byte[] param0, int param1, int param2, int param3, boolean param4, int param5) {
+        RuntimeException runtimeException = null;
         mi var6 = null;
-        RuntimeException var6_ref = null;
         int var7 = 0;
         int var8 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         try {
           L0: {
-            var6 = uh.field_Wb;
-            var6.j(11, 119);
-            var6.field_u = var6.field_u + 1;
-            var7 = var6.field_u;
-            var6.f(4, -93);
-            var6.f(param1, 94);
-            var8 = 0;
-            var8 += 128;
+            L1: {
+              var6 = uh.field_Wb;
+              var6.j(param2, 119);
+              var6.field_u = var6.field_u + 1;
+              var7 = var6.field_u;
+              var6.f(4, -93);
+              var6.f(param1, 94);
+              if (param3 <= -24) {
+                break L1;
+              } else {
+                field_m = null;
+                break L1;
+              }
+            }
+            L2: {
+              var8 = param5;
+              if (!param4) {
+                break L2;
+              } else {
+                var8 += 128;
+                break L2;
+              }
+            }
             var6.f(var8, 105);
             var6.a(0, -10140, param0, param0.length);
             var6.b((byte) 77, var6.field_u + -var7);
@@ -284,33 +296,33 @@ final class wc extends da {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var6_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var6_ref;
-            stackOut_7_1 = new StringBuilder().append("wc.H(");
-            stackIn_10_0 = stackOut_7_0;
-            stackIn_10_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+          L3: {
+            runtimeException = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) runtimeException;
+            stackOut_8_1 = new StringBuilder().append("wc.H(");
+            stackIn_11_0 = stackOut_8_0;
+            stackIn_11_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L1;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_11_0 = stackOut_8_0;
-              stackIn_11_1 = stackOut_8_1;
-              stackIn_11_2 = stackOut_8_2;
-              break L1;
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_12_0 = stackOut_9_0;
+              stackIn_12_1 = stackOut_9_1;
+              stackIn_12_2 = stackOut_9_2;
+              break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + 11 + ',' + -101 + ',' + true + ',' + 0 + ')');
+          throw wn.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -336,13 +348,21 @@ final class wc extends da {
         String stackOut_6_2 = null;
         try {
           L0: {
+            L1: {
+              if (param1) {
+                break L1;
+              } else {
+                field_m = null;
+                break L1;
+              }
+            }
             stackOut_3_0 = Vertigo2.field_F.equals((Object) (Object) rc.a((CharSequence) (Object) param0, 320));
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
             stackOut_5_1 = new StringBuilder().append("wc.F(");
@@ -357,7 +377,7 @@ final class wc extends da {
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
-              break L1;
+              break L2;
             } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
@@ -365,10 +385,10 @@ final class wc extends da {
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
               stackIn_9_2 = stackOut_6_2;
-              break L1;
+              break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + true + ')');
+          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -405,8 +425,7 @@ final class wc extends da {
         L0: {
           var3 = Vertigo2.field_L ? 1 : 0;
           re.field_a = param1;
-          int discarded$964 = 0;
-          var2 = tk.a("loginm3");
+          var2 = tk.a("loginm3", false);
           if (null == var2) {
             break L0;
           } else {
@@ -415,8 +434,7 @@ final class wc extends da {
           }
         }
         L1: {
-          int discarded$965 = 0;
-          var2 = tk.a("loginm2");
+          var2 = tk.a("loginm2", false);
           if (null == var2) {
             break L1;
           } else {
@@ -425,18 +443,16 @@ final class wc extends da {
           }
         }
         L2: {
-          int discarded$966 = 0;
-          var2 = tk.a("loginm1");
+          var2 = tk.a("loginm1", false);
           if (null != var2) {
-            String discarded$967 = in.a(0, var2);
+            String discarded$220 = in.a(0, var2);
             break L2;
           } else {
             break L2;
           }
         }
         L3: {
-          int discarded$968 = 0;
-          var2 = tk.a("idlemessage20min");
+          var2 = tk.a("idlemessage20min", false);
           if (null == var2) {
             break L3;
           } else {
@@ -445,8 +461,7 @@ final class wc extends da {
           }
         }
         L4: {
-          int discarded$969 = 0;
-          var2 = tk.a("error_js5crc");
+          var2 = tk.a("error_js5crc", false);
           if (null == var2) {
             break L4;
           } else {
@@ -455,8 +470,7 @@ final class wc extends da {
           }
         }
         L5: {
-          int discarded$970 = 0;
-          var2 = tk.a("error_js5io");
+          var2 = tk.a("error_js5io", false);
           if (var2 == null) {
             break L5;
           } else {
@@ -465,8 +479,7 @@ final class wc extends da {
           }
         }
         L6: {
-          int discarded$971 = 0;
-          var2 = tk.a("error_js5connect_full");
+          var2 = tk.a("error_js5connect_full", false);
           if (var2 != null) {
             tq.field_d = in.a(0, var2);
             break L6;
@@ -475,8 +488,7 @@ final class wc extends da {
           }
         }
         L7: {
-          int discarded$972 = 0;
-          var2 = tk.a("error_js5connect");
+          var2 = tk.a("error_js5connect", false);
           if (var2 == null) {
             break L7;
           } else {
@@ -485,8 +497,7 @@ final class wc extends da {
           }
         }
         L8: {
-          int discarded$973 = 0;
-          var2 = tk.a("login_gameupdated");
+          var2 = tk.a("login_gameupdated", false);
           if (var2 != null) {
             cb.field_Pb = in.a(0, var2);
             break L8;
@@ -495,8 +506,7 @@ final class wc extends da {
           }
         }
         L9: {
-          int discarded$974 = 0;
-          var2 = tk.a("create_unable");
+          var2 = tk.a("create_unable", false);
           if (null != var2) {
             ql.field_K = in.a(param0, var2);
             break L9;
@@ -505,8 +515,7 @@ final class wc extends da {
           }
         }
         L10: {
-          int discarded$975 = 0;
-          var2 = tk.a("create_ineligible");
+          var2 = tk.a("create_ineligible", false);
           if (null != var2) {
             af.field_J = in.a(0, var2);
             break L10;
@@ -515,58 +524,52 @@ final class wc extends da {
           }
         }
         L11: {
-          int discarded$976 = 0;
-          var2 = tk.a("usernameprompt");
+          var2 = tk.a("usernameprompt", false);
           if (var2 == null) {
             break L11;
           } else {
-            String discarded$977 = in.a(0, var2);
+            String discarded$221 = in.a(0, var2);
             break L11;
           }
         }
         L12: {
-          int discarded$978 = 0;
-          var2 = tk.a("passwordprompt");
+          var2 = tk.a("passwordprompt", false);
           if (null != var2) {
-            String discarded$979 = in.a(0, var2);
+            String discarded$222 = in.a(0, var2);
             break L12;
           } else {
             break L12;
           }
         }
         L13: {
-          int discarded$980 = 0;
-          var2 = tk.a("andagainprompt");
+          var2 = tk.a("andagainprompt", false);
           if (null != var2) {
-            String discarded$981 = in.a(0, var2);
+            String discarded$223 = in.a(0, var2);
             break L13;
           } else {
             break L13;
           }
         }
         L14: {
-          int discarded$982 = 0;
-          var2 = tk.a("ticketing_read");
+          var2 = tk.a("ticketing_read", false);
           if (null != var2) {
-            String discarded$983 = in.a(0, var2);
+            String discarded$224 = in.a(0, var2);
             break L14;
           } else {
             break L14;
           }
         }
         L15: {
-          int discarded$984 = 0;
-          var2 = tk.a("ticketing_ignore");
+          var2 = tk.a("ticketing_ignore", false);
           if (var2 == null) {
             break L15;
           } else {
-            String discarded$985 = in.a(0, var2);
+            String discarded$225 = in.a(0, var2);
             break L15;
           }
         }
         L16: {
-          int discarded$986 = 0;
-          var2 = tk.a("ticketing_oneunread");
+          var2 = tk.a("ticketing_oneunread", false);
           if (null != var2) {
             ll.field_c = in.a(0, var2);
             break L16;
@@ -575,8 +578,7 @@ final class wc extends da {
           }
         }
         L17: {
-          int discarded$987 = 0;
-          var2 = tk.a("ticketing_xunread");
+          var2 = tk.a("ticketing_xunread", false);
           if (var2 != null) {
             kn.field_a = in.a(param0, var2);
             break L17;
@@ -585,8 +587,7 @@ final class wc extends da {
           }
         }
         L18: {
-          int discarded$988 = 0;
-          var2 = tk.a("ticketing_gotowebsite");
+          var2 = tk.a("ticketing_gotowebsite", false);
           if (null != var2) {
             e.field_j = in.a(0, var2);
             break L18;
@@ -595,18 +596,16 @@ final class wc extends da {
           }
         }
         L19: {
-          int discarded$989 = 0;
-          var2 = tk.a("ticketing_waitingformessages");
+          var2 = tk.a("ticketing_waitingformessages", false);
           if (var2 == null) {
             break L19;
           } else {
-            String discarded$990 = in.a(param0, var2);
+            String discarded$226 = in.a(param0, var2);
             break L19;
           }
         }
         L20: {
-          int discarded$991 = 0;
-          var2 = tk.a("mu_chat_on");
+          var2 = tk.a("mu_chat_on", false);
           if (var2 == null) {
             break L20;
           } else {
@@ -615,8 +614,7 @@ final class wc extends da {
           }
         }
         L21: {
-          int discarded$992 = 0;
-          var2 = tk.a("mu_chat_friends");
+          var2 = tk.a("mu_chat_friends", false);
           if (null != var2) {
             uo.field_j = in.a(0, var2);
             break L21;
@@ -625,8 +623,7 @@ final class wc extends da {
           }
         }
         L22: {
-          int discarded$993 = 0;
-          var2 = tk.a("mu_chat_off");
+          var2 = tk.a("mu_chat_off", false);
           if (var2 == null) {
             break L22;
           } else {
@@ -635,8 +632,7 @@ final class wc extends da {
           }
         }
         L23: {
-          int discarded$994 = 0;
-          var2 = tk.a("mu_chat_lobby");
+          var2 = tk.a("mu_chat_lobby", false);
           if (var2 == null) {
             break L23;
           } else {
@@ -645,8 +641,7 @@ final class wc extends da {
           }
         }
         L24: {
-          int discarded$995 = 0;
-          var2 = tk.a("mu_chat_public");
+          var2 = tk.a("mu_chat_public", false);
           if (var2 != null) {
             ua.field_f = in.a(0, var2);
             break L24;
@@ -655,8 +650,7 @@ final class wc extends da {
           }
         }
         L25: {
-          int discarded$996 = 0;
-          var2 = tk.a("mu_chat_ignore");
+          var2 = tk.a("mu_chat_ignore", false);
           if (var2 != null) {
             dm.field_Ib = in.a(0, var2);
             break L25;
@@ -665,8 +659,7 @@ final class wc extends da {
           }
         }
         L26: {
-          int discarded$997 = 0;
-          var2 = tk.a("mu_chat_tips");
+          var2 = tk.a("mu_chat_tips", false);
           if (var2 != null) {
             cg.field_c = in.a(param0, var2);
             break L26;
@@ -675,8 +668,7 @@ final class wc extends da {
           }
         }
         L27: {
-          int discarded$998 = 0;
-          var2 = tk.a("mu_chat_game");
+          var2 = tk.a("mu_chat_game", false);
           if (null == var2) {
             break L27;
           } else {
@@ -685,8 +677,7 @@ final class wc extends da {
           }
         }
         L28: {
-          int discarded$999 = 0;
-          var2 = tk.a("mu_chat_private");
+          var2 = tk.a("mu_chat_private", false);
           if (var2 != null) {
             ji.field_q = in.a(param0, var2);
             break L28;
@@ -695,8 +686,7 @@ final class wc extends da {
           }
         }
         L29: {
-          int discarded$1000 = 0;
-          var2 = tk.a("mu_x_entered_game");
+          var2 = tk.a("mu_x_entered_game", false);
           if (null != var2) {
             pc.field_d = in.a(0, var2);
             break L29;
@@ -705,8 +695,7 @@ final class wc extends da {
           }
         }
         L30: {
-          int discarded$1001 = 0;
-          var2 = tk.a("mu_x_joined_your_game");
+          var2 = tk.a("mu_x_joined_your_game", false);
           if (var2 != null) {
             nd.field_j = in.a(param0, var2);
             break L30;
@@ -715,8 +704,7 @@ final class wc extends da {
           }
         }
         L31: {
-          int discarded$1002 = 0;
-          var2 = tk.a("mu_x_entered_other_game");
+          var2 = tk.a("mu_x_entered_other_game", false);
           if (var2 != null) {
             hq.field_q = in.a(param0, var2);
             break L31;
@@ -725,8 +713,7 @@ final class wc extends da {
           }
         }
         L32: {
-          int discarded$1003 = 0;
-          var2 = tk.a("mu_x_left_lobby");
+          var2 = tk.a("mu_x_left_lobby", false);
           if (null != var2) {
             og.field_i = in.a(0, var2);
             break L32;
@@ -735,8 +722,7 @@ final class wc extends da {
           }
         }
         L33: {
-          int discarded$1004 = 0;
-          var2 = tk.a("mu_x_lost_con");
+          var2 = tk.a("mu_x_lost_con", false);
           if (null != var2) {
             ea.field_a = in.a(param0, var2);
             break L33;
@@ -745,8 +731,7 @@ final class wc extends da {
           }
         }
         L34: {
-          int discarded$1005 = 0;
-          var2 = tk.a("mu_x_cannot_join_full");
+          var2 = tk.a("mu_x_cannot_join_full", false);
           if (null != var2) {
             va.field_r = in.a(0, var2);
             break L34;
@@ -755,8 +740,7 @@ final class wc extends da {
           }
         }
         L35: {
-          int discarded$1006 = 0;
-          var2 = tk.a("mu_x_cannot_join_inprogress");
+          var2 = tk.a("mu_x_cannot_join_inprogress", false);
           if (var2 != null) {
             de.field_b = in.a(0, var2);
             break L35;
@@ -765,8 +749,7 @@ final class wc extends da {
           }
         }
         L36: {
-          int discarded$1007 = 0;
-          var2 = tk.a("mu_x_declined_invite");
+          var2 = tk.a("mu_x_declined_invite", false);
           if (var2 != null) {
             nk.field_Ib = in.a(0, var2);
             break L36;
@@ -775,8 +758,7 @@ final class wc extends da {
           }
         }
         L37: {
-          int discarded$1008 = 0;
-          var2 = tk.a("mu_x_withdrew_request");
+          var2 = tk.a("mu_x_withdrew_request", false);
           if (null == var2) {
             break L37;
           } else {
@@ -785,8 +767,7 @@ final class wc extends da {
           }
         }
         L38: {
-          int discarded$1009 = 0;
-          var2 = tk.a("mu_x_removed");
+          var2 = tk.a("mu_x_removed", false);
           if (var2 != null) {
             fn.field_A = in.a(param0, var2);
             break L38;
@@ -795,8 +776,7 @@ final class wc extends da {
           }
         }
         L39: {
-          int discarded$1010 = 0;
-          var2 = tk.a("mu_x_dropped_out");
+          var2 = tk.a("mu_x_dropped_out", false);
           if (var2 == null) {
             break L39;
           } else {
@@ -805,8 +785,7 @@ final class wc extends da {
           }
         }
         L40: {
-          int discarded$1011 = 0;
-          var2 = tk.a("mu_entered_other_game");
+          var2 = tk.a("mu_entered_other_game", false);
           if (var2 != null) {
             j.field_s = in.a(param0, var2);
             break L40;
@@ -815,8 +794,7 @@ final class wc extends da {
           }
         }
         L41: {
-          int discarded$1012 = 0;
-          var2 = tk.a("mu_game_is_full");
+          var2 = tk.a("mu_game_is_full", false);
           if (null != var2) {
             sk.field_d = in.a(0, var2);
             break L41;
@@ -825,8 +803,7 @@ final class wc extends da {
           }
         }
         L42: {
-          int discarded$1013 = 0;
-          var2 = tk.a("mu_game_has_started");
+          var2 = tk.a("mu_game_has_started", false);
           if (null == var2) {
             break L42;
           } else {
@@ -835,8 +812,7 @@ final class wc extends da {
           }
         }
         L43: {
-          int discarded$1014 = 0;
-          var2 = tk.a("mu_you_declined_invite");
+          var2 = tk.a("mu_you_declined_invite", false);
           if (var2 == null) {
             break L43;
           } else {
@@ -845,8 +821,7 @@ final class wc extends da {
           }
         }
         L44: {
-          int discarded$1015 = 0;
-          var2 = tk.a("mu_invite_withdrawn");
+          var2 = tk.a("mu_invite_withdrawn", false);
           if (null == var2) {
             break L44;
           } else {
@@ -855,8 +830,7 @@ final class wc extends da {
           }
         }
         L45: {
-          int discarded$1016 = 0;
-          var2 = tk.a("mu_request_declined");
+          var2 = tk.a("mu_request_declined", false);
           if (var2 != null) {
             cf.field_b = in.a(param0, var2);
             break L45;
@@ -865,8 +839,7 @@ final class wc extends da {
           }
         }
         L46: {
-          int discarded$1017 = 0;
-          var2 = tk.a("mu_request_withdrawn");
+          var2 = tk.a("mu_request_withdrawn", false);
           if (var2 != null) {
             fg.field_cb = in.a(0, var2);
             break L46;
@@ -875,8 +848,7 @@ final class wc extends da {
           }
         }
         L47: {
-          int discarded$1018 = 0;
-          var2 = tk.a("mu_all_players_have_left");
+          var2 = tk.a("mu_all_players_have_left", false);
           if (null == var2) {
             break L47;
           } else {
@@ -885,8 +857,7 @@ final class wc extends da {
           }
         }
         L48: {
-          int discarded$1019 = 0;
-          var2 = tk.a("mu_lobby_name");
+          var2 = tk.a("mu_lobby_name", false);
           if (null != var2) {
             kc.field_c = in.a(param0, var2);
             break L48;
@@ -895,8 +866,7 @@ final class wc extends da {
           }
         }
         L49: {
-          int discarded$1020 = 0;
-          var2 = tk.a("mu_lobby_rating");
+          var2 = tk.a("mu_lobby_rating", false);
           if (var2 == null) {
             break L49;
           } else {
@@ -905,8 +875,7 @@ final class wc extends da {
           }
         }
         L50: {
-          int discarded$1021 = 0;
-          var2 = tk.a("mu_lobby_friend_add");
+          var2 = tk.a("mu_lobby_friend_add", false);
           if (null == var2) {
             break L50;
           } else {
@@ -915,8 +884,7 @@ final class wc extends da {
           }
         }
         L51: {
-          int discarded$1022 = 0;
-          var2 = tk.a("mu_lobby_friend_rm");
+          var2 = tk.a("mu_lobby_friend_rm", false);
           if (var2 != null) {
             nf.field_o = in.a(0, var2);
             break L51;
@@ -925,8 +893,7 @@ final class wc extends da {
           }
         }
         L52: {
-          int discarded$1023 = 0;
-          var2 = tk.a("mu_lobby_name_add");
+          var2 = tk.a("mu_lobby_name_add", false);
           if (var2 != null) {
             sl.field_s = in.a(0, var2);
             break L52;
@@ -935,8 +902,7 @@ final class wc extends da {
           }
         }
         L53: {
-          int discarded$1024 = 0;
-          var2 = tk.a("mu_lobby_name_rm");
+          var2 = tk.a("mu_lobby_name_rm", false);
           if (null != var2) {
             eq.field_B = in.a(param0, var2);
             break L53;
@@ -945,8 +911,7 @@ final class wc extends da {
           }
         }
         L54: {
-          int discarded$1025 = 0;
-          var2 = tk.a("mu_lobby_location");
+          var2 = tk.a("mu_lobby_location", false);
           if (var2 == null) {
             break L54;
           } else {
@@ -955,8 +920,7 @@ final class wc extends da {
           }
         }
         L55: {
-          int discarded$1026 = 0;
-          var2 = tk.a("mu_gamelist_all_games");
+          var2 = tk.a("mu_gamelist_all_games", false);
           if (null != var2) {
             il.field_j = in.a(0, var2);
             break L55;
@@ -965,8 +929,7 @@ final class wc extends da {
           }
         }
         L56: {
-          int discarded$1027 = 0;
-          var2 = tk.a("mu_gamelist_status");
+          var2 = tk.a("mu_gamelist_status", false);
           if (var2 != null) {
             pe.field_u = in.a(param0, var2);
             break L56;
@@ -975,8 +938,7 @@ final class wc extends da {
           }
         }
         L57: {
-          int discarded$1028 = 0;
-          var2 = tk.a("mu_gamelist_owner");
+          var2 = tk.a("mu_gamelist_owner", false);
           if (null == var2) {
             break L57;
           } else {
@@ -985,8 +947,7 @@ final class wc extends da {
           }
         }
         L58: {
-          int discarded$1029 = 0;
-          var2 = tk.a("mu_gamelist_players");
+          var2 = tk.a("mu_gamelist_players", false);
           if (null == var2) {
             break L58;
           } else {
@@ -995,8 +956,7 @@ final class wc extends da {
           }
         }
         L59: {
-          int discarded$1030 = 0;
-          var2 = tk.a("mu_gamelist_avg_rating");
+          var2 = tk.a("mu_gamelist_avg_rating", false);
           if (var2 != null) {
             fi.field_j = in.a(0, var2);
             break L59;
@@ -1005,8 +965,7 @@ final class wc extends da {
           }
         }
         L60: {
-          int discarded$1031 = 0;
-          var2 = tk.a("mu_gamelist_options");
+          var2 = tk.a("mu_gamelist_options", false);
           if (var2 != null) {
             eq.field_C = in.a(0, var2);
             break L60;
@@ -1015,8 +974,7 @@ final class wc extends da {
           }
         }
         L61: {
-          int discarded$1032 = 0;
-          var2 = tk.a("mu_gamelist_elapsed_time");
+          var2 = tk.a("mu_gamelist_elapsed_time", false);
           if (null != var2) {
             fm.field_a = in.a(0, var2);
             break L61;
@@ -1025,8 +983,7 @@ final class wc extends da {
           }
         }
         L62: {
-          int discarded$1033 = 0;
-          var2 = tk.a("mu_play_rated");
+          var2 = tk.a("mu_play_rated", false);
           if (var2 != null) {
             ja.field_c = in.a(0, var2);
             break L62;
@@ -1035,8 +992,7 @@ final class wc extends da {
           }
         }
         L63: {
-          int discarded$1034 = 0;
-          var2 = tk.a("mu_create_unrated");
+          var2 = tk.a("mu_create_unrated", false);
           if (var2 != null) {
             vl.field_d = in.a(0, var2);
             break L63;
@@ -1045,8 +1001,7 @@ final class wc extends da {
           }
         }
         L64: {
-          int discarded$1035 = 0;
-          var2 = tk.a("mu_options");
+          var2 = tk.a("mu_options", false);
           if (null == var2) {
             break L64;
           } else {
@@ -1055,8 +1010,7 @@ final class wc extends da {
           }
         }
         L65: {
-          int discarded$1036 = 0;
-          var2 = tk.a("mu_options_whocanjoin");
+          var2 = tk.a("mu_options_whocanjoin", false);
           if (null == var2) {
             break L65;
           } else {
@@ -1065,8 +1019,7 @@ final class wc extends da {
           }
         }
         L66: {
-          int discarded$1037 = 0;
-          var2 = tk.a("mu_options_players");
+          var2 = tk.a("mu_options_players", false);
           if (null == var2) {
             break L66;
           } else {
@@ -1075,8 +1028,7 @@ final class wc extends da {
           }
         }
         L67: {
-          int discarded$1038 = 0;
-          var2 = tk.a("mu_options_dontmind");
+          var2 = tk.a("mu_options_dontmind", false);
           if (var2 == null) {
             break L67;
           } else {
@@ -1085,8 +1037,7 @@ final class wc extends da {
           }
         }
         L68: {
-          int discarded$1039 = 0;
-          var2 = tk.a("mu_options_allow_spectate");
+          var2 = tk.a("mu_options_allow_spectate", false);
           if (var2 == null) {
             break L68;
           } else {
@@ -1095,8 +1046,7 @@ final class wc extends da {
           }
         }
         L69: {
-          int discarded$1040 = 0;
-          var2 = tk.a("mu_options_ratedgametype");
+          var2 = tk.a("mu_options_ratedgametype", false);
           if (var2 != null) {
             um.field_H = in.a(0, var2);
             break L69;
@@ -1105,8 +1055,7 @@ final class wc extends da {
           }
         }
         L70: {
-          int discarded$1041 = 0;
-          var2 = tk.a("yes");
+          var2 = tk.a("yes", false);
           if (null != var2) {
             rg.field_h = in.a(0, var2);
             break L70;
@@ -1115,8 +1064,7 @@ final class wc extends da {
           }
         }
         L71: {
-          int discarded$1042 = 0;
-          var2 = tk.a("no");
+          var2 = tk.a("no", false);
           if (null != var2) {
             nf.field_w = in.a(0, var2);
             break L71;
@@ -1125,8 +1073,7 @@ final class wc extends da {
           }
         }
         L72: {
-          int discarded$1043 = 0;
-          var2 = tk.a("mu_invite_players");
+          var2 = tk.a("mu_invite_players", false);
           if (null != var2) {
             eh.field_g = in.a(param0, var2);
             break L72;
@@ -1135,8 +1082,7 @@ final class wc extends da {
           }
         }
         L73: {
-          int discarded$1044 = 0;
-          var2 = tk.a("close");
+          var2 = tk.a("close", false);
           if (null == var2) {
             break L73;
           } else {
@@ -1145,8 +1091,7 @@ final class wc extends da {
           }
         }
         L74: {
-          int discarded$1045 = 0;
-          var2 = tk.a("add_x_to_friends");
+          var2 = tk.a("add_x_to_friends", false);
           if (null != var2) {
             ln.field_e = in.a(0, var2);
             break L74;
@@ -1155,8 +1100,7 @@ final class wc extends da {
           }
         }
         L75: {
-          int discarded$1046 = 0;
-          var2 = tk.a("add_x_to_ignore");
+          var2 = tk.a("add_x_to_ignore", false);
           if (var2 == null) {
             break L75;
           } else {
@@ -1165,8 +1109,7 @@ final class wc extends da {
           }
         }
         L76: {
-          int discarded$1047 = 0;
-          var2 = tk.a("rm_x_from_friends");
+          var2 = tk.a("rm_x_from_friends", false);
           if (var2 != null) {
             fg.field_X = in.a(0, var2);
             break L76;
@@ -1175,8 +1118,7 @@ final class wc extends da {
           }
         }
         L77: {
-          int discarded$1048 = 0;
-          var2 = tk.a("rm_x_from_ignore");
+          var2 = tk.a("rm_x_from_ignore", false);
           if (null == var2) {
             break L77;
           } else {
@@ -1185,8 +1127,7 @@ final class wc extends da {
           }
         }
         L78: {
-          int discarded$1049 = 0;
-          var2 = tk.a("send_pm_to_x");
+          var2 = tk.a("send_pm_to_x", false);
           if (null == var2) {
             break L78;
           } else {
@@ -1195,8 +1136,7 @@ final class wc extends da {
           }
         }
         L79: {
-          int discarded$1050 = 0;
-          var2 = tk.a("send_qc_to_x");
+          var2 = tk.a("send_qc_to_x", false);
           if (null != var2) {
             hh.field_d = in.a(0, var2);
             break L79;
@@ -1205,8 +1145,7 @@ final class wc extends da {
           }
         }
         L80: {
-          int discarded$1051 = 0;
-          var2 = tk.a("send_pm");
+          var2 = tk.a("send_pm", false);
           if (null != var2) {
             vj.field_e = in.a(0, var2);
             break L80;
@@ -1215,8 +1154,7 @@ final class wc extends da {
           }
         }
         L81: {
-          int discarded$1052 = 0;
-          var2 = tk.a("invite_accept_xs_game");
+          var2 = tk.a("invite_accept_xs_game", false);
           if (null == var2) {
             break L81;
           } else {
@@ -1225,8 +1163,7 @@ final class wc extends da {
           }
         }
         L82: {
-          int discarded$1053 = 0;
-          var2 = tk.a("invite_decline_xs_game");
+          var2 = tk.a("invite_decline_xs_game", false);
           if (null != var2) {
             aq.field_b = in.a(param0, var2);
             break L82;
@@ -1235,8 +1172,7 @@ final class wc extends da {
           }
         }
         L83: {
-          int discarded$1054 = 0;
-          var2 = tk.a("join_xs_game");
+          var2 = tk.a("join_xs_game", false);
           if (var2 != null) {
             kq.field_Ub = in.a(0, var2);
             break L83;
@@ -1245,8 +1181,7 @@ final class wc extends da {
           }
         }
         L84: {
-          int discarded$1055 = 0;
-          var2 = tk.a("join_request_xs_game");
+          var2 = tk.a("join_request_xs_game", false);
           if (null == var2) {
             break L84;
           } else {
@@ -1255,8 +1190,7 @@ final class wc extends da {
           }
         }
         L85: {
-          int discarded$1056 = 0;
-          var2 = tk.a("join_withdraw_request_xs_game");
+          var2 = tk.a("join_withdraw_request_xs_game", false);
           if (null == var2) {
             break L85;
           } else {
@@ -1265,8 +1199,7 @@ final class wc extends da {
           }
         }
         L86: {
-          int discarded$1057 = 0;
-          var2 = tk.a("mu_gameopt_kick_x_from_this_game");
+          var2 = tk.a("mu_gameopt_kick_x_from_this_game", false);
           if (null != var2) {
             vi.field_s = in.a(0, var2);
             break L86;
@@ -1275,8 +1208,7 @@ final class wc extends da {
           }
         }
         L87: {
-          int discarded$1058 = 0;
-          var2 = tk.a("mu_gameopt_withdraw_invite_to_x");
+          var2 = tk.a("mu_gameopt_withdraw_invite_to_x", false);
           if (var2 == null) {
             break L87;
           } else {
@@ -1285,8 +1217,7 @@ final class wc extends da {
           }
         }
         L88: {
-          int discarded$1059 = 0;
-          var2 = tk.a("mu_gameopt_accept_x_into_game");
+          var2 = tk.a("mu_gameopt_accept_x_into_game", false);
           if (var2 != null) {
             te.field_y = in.a(param0, var2);
             break L88;
@@ -1295,8 +1226,7 @@ final class wc extends da {
           }
         }
         L89: {
-          int discarded$1060 = 0;
-          var2 = tk.a("mu_gameopt_reject_x_from_game");
+          var2 = tk.a("mu_gameopt_reject_x_from_game", false);
           if (null != var2) {
             sj.field_a = in.a(param0, var2);
             break L89;
@@ -1305,8 +1235,7 @@ final class wc extends da {
           }
         }
         L90: {
-          int discarded$1061 = 0;
-          var2 = tk.a("mu_gameopt_invite_x_to_game");
+          var2 = tk.a("mu_gameopt_invite_x_to_game", false);
           if (var2 != null) {
             pp.field_v = in.a(param0, var2);
             break L90;
@@ -1315,8 +1244,7 @@ final class wc extends da {
           }
         }
         L91: {
-          int discarded$1062 = 0;
-          var2 = tk.a("report_x_for_abuse");
+          var2 = tk.a("report_x_for_abuse", false);
           if (null != var2) {
             as.field_c = in.a(0, var2);
             break L91;
@@ -1325,8 +1253,7 @@ final class wc extends da {
           }
         }
         L92: {
-          int discarded$1063 = 0;
-          var2 = tk.a("unable_to_send_message_password_a");
+          var2 = tk.a("unable_to_send_message_password_a", false);
           if (null != var2) {
             pd.field_b = in.a(param0, var2);
             break L92;
@@ -1335,8 +1262,7 @@ final class wc extends da {
           }
         }
         L93: {
-          int discarded$1064 = 0;
-          var2 = tk.a("unable_to_send_message_password_b");
+          var2 = tk.a("unable_to_send_message_password_b", false);
           if (var2 == null) {
             break L93;
           } else {
@@ -1345,8 +1271,7 @@ final class wc extends da {
           }
         }
         L94: {
-          int discarded$1065 = 0;
-          var2 = tk.a("mu_chat_lobby_show_all");
+          var2 = tk.a("mu_chat_lobby_show_all", false);
           if (null != var2) {
             c.field_i = in.a(0, var2);
             break L94;
@@ -1355,8 +1280,7 @@ final class wc extends da {
           }
         }
         L95: {
-          int discarded$1066 = 0;
-          var2 = tk.a("mu_chat_lobby_friends_only");
+          var2 = tk.a("mu_chat_lobby_friends_only", false);
           if (var2 != null) {
             jk.field_a = in.a(0, var2);
             break L95;
@@ -1365,8 +1289,7 @@ final class wc extends da {
           }
         }
         L96: {
-          int discarded$1067 = 0;
-          var2 = tk.a("mu_chat_lobby_friends");
+          var2 = tk.a("mu_chat_lobby_friends", false);
           if (var2 != null) {
             mo.field_i = in.a(0, var2);
             break L96;
@@ -1375,8 +1298,7 @@ final class wc extends da {
           }
         }
         L97: {
-          int discarded$1068 = 0;
-          var2 = tk.a("mu_chat_lobby_hide");
+          var2 = tk.a("mu_chat_lobby_hide", false);
           if (null == var2) {
             break L97;
           } else {
@@ -1385,8 +1307,7 @@ final class wc extends da {
           }
         }
         L98: {
-          int discarded$1069 = 0;
-          var2 = tk.a("mu_chat_game_show_all");
+          var2 = tk.a("mu_chat_game_show_all", false);
           if (null == var2) {
             break L98;
           } else {
@@ -1395,8 +1316,7 @@ final class wc extends da {
           }
         }
         L99: {
-          int discarded$1070 = 0;
-          var2 = tk.a("mu_chat_game_friends_only");
+          var2 = tk.a("mu_chat_game_friends_only", false);
           if (null == var2) {
             break L99;
           } else {
@@ -1405,8 +1325,7 @@ final class wc extends da {
           }
         }
         L100: {
-          int discarded$1071 = 0;
-          var2 = tk.a("mu_chat_game_friends");
+          var2 = tk.a("mu_chat_game_friends", false);
           if (var2 == null) {
             break L100;
           } else {
@@ -1415,8 +1334,7 @@ final class wc extends da {
           }
         }
         L101: {
-          int discarded$1072 = 0;
-          var2 = tk.a("mu_chat_game_hide");
+          var2 = tk.a("mu_chat_game_hide", false);
           if (null != var2) {
             sp.field_P = in.a(param0, var2);
             break L101;
@@ -1425,8 +1343,7 @@ final class wc extends da {
           }
         }
         L102: {
-          int discarded$1073 = 0;
-          var2 = tk.a("mu_chat_pm_show_all");
+          var2 = tk.a("mu_chat_pm_show_all", false);
           if (var2 != null) {
             ud.field_E = in.a(0, var2);
             break L102;
@@ -1435,8 +1352,7 @@ final class wc extends da {
           }
         }
         L103: {
-          int discarded$1074 = 0;
-          var2 = tk.a("mu_chat_pm_friends_only");
+          var2 = tk.a("mu_chat_pm_friends_only", false);
           if (var2 != null) {
             gm.field_b = in.a(param0, var2);
             break L103;
@@ -1445,8 +1361,7 @@ final class wc extends da {
           }
         }
         L104: {
-          int discarded$1075 = 0;
-          var2 = tk.a("mu_chat_pm_friends");
+          var2 = tk.a("mu_chat_pm_friends", false);
           if (var2 != null) {
             qf.field_c = in.a(0, var2);
             break L104;
@@ -1455,8 +1370,7 @@ final class wc extends da {
           }
         }
         L105: {
-          int discarded$1076 = 0;
-          var2 = tk.a("mu_chat_invisible_and_silent_mode");
+          var2 = tk.a("mu_chat_invisible_and_silent_mode", false);
           if (null == var2) {
             break L105;
           } else {
@@ -1465,8 +1379,7 @@ final class wc extends da {
           }
         }
         L106: {
-          int discarded$1077 = 0;
-          var2 = tk.a("you_have_been_removed_from_xs_game");
+          var2 = tk.a("you_have_been_removed_from_xs_game", false);
           if (var2 != null) {
             ua.field_b = in.a(0, var2);
             break L106;
@@ -1475,8 +1388,7 @@ final class wc extends da {
           }
         }
         L107: {
-          int discarded$1078 = 0;
-          var2 = tk.a("your_rating_is_x");
+          var2 = tk.a("your_rating_is_x", false);
           if (null != var2) {
             li.field_b = in.a(0, var2);
             break L107;
@@ -1485,8 +1397,7 @@ final class wc extends da {
           }
         }
         L108: {
-          int discarded$1079 = 0;
-          var2 = tk.a("you_are_on_x_server");
+          var2 = tk.a("you_are_on_x_server", false);
           if (var2 == null) {
             break L108;
           } else {
@@ -1495,8 +1406,7 @@ final class wc extends da {
           }
         }
         L109: {
-          int discarded$1080 = 0;
-          var2 = tk.a("rated_game");
+          var2 = tk.a("rated_game", false);
           if (null != var2) {
             ej.field_d = in.a(0, var2);
             break L109;
@@ -1505,8 +1415,7 @@ final class wc extends da {
           }
         }
         L110: {
-          int discarded$1081 = 0;
-          var2 = tk.a("unrated_game");
+          var2 = tk.a("unrated_game", false);
           if (var2 == null) {
             break L110;
           } else {
@@ -1515,8 +1424,7 @@ final class wc extends da {
           }
         }
         L111: {
-          int discarded$1082 = 0;
-          var2 = tk.a("rated_game_tips");
+          var2 = tk.a("rated_game_tips", false);
           if (null != var2) {
             pp.field_y = in.a(param0, var2);
             break L111;
@@ -1525,8 +1433,7 @@ final class wc extends da {
           }
         }
         L112: {
-          int discarded$1083 = 0;
-          var2 = tk.a("searching_for_opponent_singular");
+          var2 = tk.a("searching_for_opponent_singular", false);
           if (null == var2) {
             break L112;
           } else {
@@ -1535,8 +1442,7 @@ final class wc extends da {
           }
         }
         L113: {
-          int discarded$1084 = 0;
-          var2 = tk.a("searching_for_opponents_plural");
+          var2 = tk.a("searching_for_opponents_plural", false);
           if (null != var2) {
             mo.field_g = in.a(0, var2);
             break L113;
@@ -1545,8 +1451,7 @@ final class wc extends da {
           }
         }
         L114: {
-          int discarded$1085 = 0;
-          var2 = tk.a("find_opponent_singular");
+          var2 = tk.a("find_opponent_singular", false);
           if (var2 != null) {
             lj.field_o = in.a(0, var2);
             break L114;
@@ -1555,8 +1460,7 @@ final class wc extends da {
           }
         }
         L115: {
-          int discarded$1086 = 0;
-          var2 = tk.a("find_opponents_plural");
+          var2 = tk.a("find_opponents_plural", false);
           if (null == var2) {
             break L115;
           } else {
@@ -1565,8 +1469,7 @@ final class wc extends da {
           }
         }
         L116: {
-          int discarded$1087 = 0;
-          var2 = tk.a("rated_game_tips_setup_singular");
+          var2 = tk.a("rated_game_tips_setup_singular", false);
           if (var2 != null) {
             h.field_A = in.a(0, var2);
             break L116;
@@ -1575,8 +1478,7 @@ final class wc extends da {
           }
         }
         L117: {
-          int discarded$1088 = 0;
-          var2 = tk.a("rated_game_tips_setup_plural");
+          var2 = tk.a("rated_game_tips_setup_plural", false);
           if (null != var2) {
             gh.field_c = in.a(0, var2);
             break L117;
@@ -1585,8 +1487,7 @@ final class wc extends da {
           }
         }
         L118: {
-          int discarded$1089 = 0;
-          var2 = tk.a("waiting_to_start_hint");
+          var2 = tk.a("waiting_to_start_hint", false);
           if (null != var2) {
             lj.field_A = in.a(param0, var2);
             break L118;
@@ -1595,8 +1496,7 @@ final class wc extends da {
           }
         }
         L119: {
-          int discarded$1090 = 0;
-          var2 = tk.a("your_game");
+          var2 = tk.a("your_game", false);
           if (null != var2) {
             fq.field_a = in.a(0, var2);
             break L119;
@@ -1605,8 +1505,7 @@ final class wc extends da {
           }
         }
         L120: {
-          int discarded$1091 = 0;
-          var2 = tk.a("game_full");
+          var2 = tk.a("game_full", false);
           if (var2 != null) {
             fg.field_db = in.a(0, var2);
             break L120;
@@ -1615,8 +1514,7 @@ final class wc extends da {
           }
         }
         L121: {
-          int discarded$1092 = 0;
-          var2 = tk.a("join_requests_one");
+          var2 = tk.a("join_requests_one", false);
           if (var2 != null) {
             e.field_l = in.a(0, var2);
             break L121;
@@ -1625,8 +1523,7 @@ final class wc extends da {
           }
         }
         L122: {
-          int discarded$1093 = 0;
-          var2 = tk.a("join_requests_many");
+          var2 = tk.a("join_requests_many", false);
           if (var2 != null) {
             uo.field_c = in.a(0, var2);
             break L122;
@@ -1635,8 +1532,7 @@ final class wc extends da {
           }
         }
         L123: {
-          int discarded$1094 = 0;
-          var2 = tk.a("xs_game");
+          var2 = tk.a("xs_game", false);
           if (null == var2) {
             break L123;
           } else {
@@ -1645,8 +1541,7 @@ final class wc extends da {
           }
         }
         L124: {
-          int discarded$1095 = 0;
-          var2 = tk.a("waiting_for_x_to_start_game");
+          var2 = tk.a("waiting_for_x_to_start_game", false);
           if (var2 != null) {
             od.field_Ob = in.a(0, var2);
             break L124;
@@ -1655,8 +1550,7 @@ final class wc extends da {
           }
         }
         L125: {
-          int discarded$1096 = 0;
-          var2 = tk.a("game_options_changed");
+          var2 = tk.a("game_options_changed", false);
           if (null == var2) {
             break L125;
           } else {
@@ -1665,8 +1559,7 @@ final class wc extends da {
           }
         }
         L126: {
-          int discarded$1097 = 0;
-          var2 = tk.a("players_x_of_y");
+          var2 = tk.a("players_x_of_y", false);
           if (null == var2) {
             break L126;
           } else {
@@ -1675,8 +1568,7 @@ final class wc extends da {
           }
         }
         L127: {
-          int discarded$1098 = 0;
-          var2 = tk.a("message_lobby");
+          var2 = tk.a("message_lobby", false);
           if (var2 != null) {
             ck.field_K = in.a(param0, var2);
             break L127;
@@ -1685,8 +1577,7 @@ final class wc extends da {
           }
         }
         L128: {
-          int discarded$1099 = 0;
-          var2 = tk.a("quickchat_lobby");
+          var2 = tk.a("quickchat_lobby", false);
           if (null != var2) {
             ri.field_x = in.a(0, var2);
             break L128;
@@ -1695,8 +1586,7 @@ final class wc extends da {
           }
         }
         L129: {
-          int discarded$1100 = 0;
-          var2 = tk.a("message_game");
+          var2 = tk.a("message_game", false);
           if (var2 == null) {
             break L129;
           } else {
@@ -1705,18 +1595,16 @@ final class wc extends da {
           }
         }
         L130: {
-          int discarded$1101 = 0;
-          var2 = tk.a("message_team");
+          var2 = tk.a("message_team", false);
           if (var2 != null) {
-            String discarded$1102 = in.a(0, var2);
+            String discarded$227 = in.a(0, var2);
             break L130;
           } else {
             break L130;
           }
         }
         L131: {
-          int discarded$1103 = 0;
-          var2 = tk.a("quickchat_game");
+          var2 = tk.a("quickchat_game", false);
           if (null != var2) {
             ja.field_g = in.a(0, var2);
             break L131;
@@ -1725,8 +1613,7 @@ final class wc extends da {
           }
         }
         L132: {
-          int discarded$1104 = 0;
-          var2 = tk.a("kick");
+          var2 = tk.a("kick", false);
           if (null == var2) {
             break L132;
           } else {
@@ -1735,8 +1622,7 @@ final class wc extends da {
           }
         }
         L133: {
-          int discarded$1105 = 0;
-          var2 = tk.a("inviting_x");
+          var2 = tk.a("inviting_x", false);
           if (null == var2) {
             break L133;
           } else {
@@ -1745,8 +1631,7 @@ final class wc extends da {
           }
         }
         L134: {
-          int discarded$1106 = 0;
-          var2 = tk.a("x_wants_to_join");
+          var2 = tk.a("x_wants_to_join", false);
           if (var2 != null) {
             we.field_N = in.a(0, var2);
             break L134;
@@ -1755,8 +1640,7 @@ final class wc extends da {
           }
         }
         L135: {
-          int discarded$1107 = 0;
-          var2 = tk.a("accept");
+          var2 = tk.a("accept", false);
           if (var2 == null) {
             break L135;
           } else {
@@ -1765,8 +1649,7 @@ final class wc extends da {
           }
         }
         L136: {
-          int discarded$1108 = 0;
-          var2 = tk.a("reject");
+          var2 = tk.a("reject", false);
           if (var2 != null) {
             bs.field_ac = in.a(param0, var2);
             break L136;
@@ -1775,8 +1658,7 @@ final class wc extends da {
           }
         }
         L137: {
-          int discarded$1109 = 0;
-          var2 = tk.a("invite");
+          var2 = tk.a("invite", false);
           if (var2 == null) {
             break L137;
           } else {
@@ -1785,8 +1667,7 @@ final class wc extends da {
           }
         }
         L138: {
-          int discarded$1110 = 0;
-          var2 = tk.a("status_concluded");
+          var2 = tk.a("status_concluded", false);
           if (null != var2) {
             np.field_Mb = in.a(0, var2);
             break L138;
@@ -1795,8 +1676,7 @@ final class wc extends da {
           }
         }
         L139: {
-          int discarded$1111 = 0;
-          var2 = tk.a("status_spectate");
+          var2 = tk.a("status_spectate", false);
           if (var2 != null) {
             vo.field_C = in.a(0, var2);
             break L139;
@@ -1805,8 +1685,7 @@ final class wc extends da {
           }
         }
         L140: {
-          int discarded$1112 = 0;
-          var2 = tk.a("status_playing");
+          var2 = tk.a("status_playing", false);
           if (var2 != null) {
             or.field_h = in.a(0, var2);
             break L140;
@@ -1815,8 +1694,7 @@ final class wc extends da {
           }
         }
         L141: {
-          int discarded$1113 = 0;
-          var2 = tk.a("status_join");
+          var2 = tk.a("status_join", false);
           if (var2 == null) {
             break L141;
           } else {
@@ -1825,8 +1703,7 @@ final class wc extends da {
           }
         }
         L142: {
-          int discarded$1114 = 0;
-          var2 = tk.a("status_private");
+          var2 = tk.a("status_private", false);
           if (null == var2) {
             break L142;
           } else {
@@ -1835,8 +1712,7 @@ final class wc extends da {
           }
         }
         L143: {
-          int discarded$1115 = 0;
-          var2 = tk.a("status_full");
+          var2 = tk.a("status_full", false);
           if (var2 == null) {
             break L143;
           } else {
@@ -1845,8 +1721,7 @@ final class wc extends da {
           }
         }
         L144: {
-          int discarded$1116 = 0;
-          var2 = tk.a("players_in_game");
+          var2 = tk.a("players_in_game", false);
           if (null != var2) {
             od.field_Ib = in.a(0, var2);
             break L144;
@@ -1855,8 +1730,7 @@ final class wc extends da {
           }
         }
         L145: {
-          int discarded$1117 = 0;
-          var2 = tk.a("you_are_invited_to_xs_game");
+          var2 = tk.a("you_are_invited_to_xs_game", false);
           if (null == var2) {
             break L145;
           } else {
@@ -1865,8 +1739,7 @@ final class wc extends da {
           }
         }
         L146: {
-          int discarded$1118 = 0;
-          var2 = tk.a("asking_to_join_xs_game");
+          var2 = tk.a("asking_to_join_xs_game", false);
           if (var2 == null) {
             break L146;
           } else {
@@ -1875,8 +1748,7 @@ final class wc extends da {
           }
         }
         L147: {
-          int discarded$1119 = 0;
-          var2 = tk.a("who_can_join");
+          var2 = tk.a("who_can_join", false);
           if (var2 != null) {
             gn.field_c = in.a(0, var2);
             break L147;
@@ -1885,8 +1757,7 @@ final class wc extends da {
           }
         }
         L148: {
-          int discarded$1120 = 0;
-          var2 = tk.a("you_can_join");
+          var2 = tk.a("you_can_join", false);
           if (var2 != null) {
             rm.field_E = in.a(0, var2);
             break L148;
@@ -1895,8 +1766,7 @@ final class wc extends da {
           }
         }
         L149: {
-          int discarded$1121 = 0;
-          var2 = tk.a("you_can_ask_to_join");
+          var2 = tk.a("you_can_ask_to_join", false);
           if (null != var2) {
             to.field_a = in.a(0, var2);
             break L149;
@@ -1905,8 +1775,7 @@ final class wc extends da {
           }
         }
         L150: {
-          int discarded$1122 = 0;
-          var2 = tk.a("you_cannot_join_in_progress");
+          var2 = tk.a("you_cannot_join_in_progress", false);
           if (var2 != null) {
             ia.field_E = in.a(param0, var2);
             break L150;
@@ -1915,8 +1784,7 @@ final class wc extends da {
           }
         }
         L151: {
-          int discarded$1123 = 0;
-          var2 = tk.a("you_can_spectate");
+          var2 = tk.a("you_can_spectate", false);
           if (var2 == null) {
             break L151;
           } else {
@@ -1925,8 +1793,7 @@ final class wc extends da {
           }
         }
         L152: {
-          int discarded$1124 = 0;
-          var2 = tk.a("you_can_not_spectate");
+          var2 = tk.a("you_can_not_spectate", false);
           if (var2 == null) {
             break L152;
           } else {
@@ -1935,8 +1802,7 @@ final class wc extends da {
           }
         }
         L153: {
-          int discarded$1125 = 0;
-          var2 = tk.a("spectate_xs_game");
+          var2 = tk.a("spectate_xs_game", false);
           if (var2 != null) {
             ch.field_g = in.a(0, var2);
             break L153;
@@ -1945,8 +1811,7 @@ final class wc extends da {
           }
         }
         L154: {
-          int discarded$1126 = 0;
-          var2 = tk.a("hide_players_in_xs_game");
+          var2 = tk.a("hide_players_in_xs_game", false);
           if (var2 != null) {
             be.field_s = in.a(0, var2);
             break L154;
@@ -1955,8 +1820,7 @@ final class wc extends da {
           }
         }
         L155: {
-          int discarded$1127 = 0;
-          var2 = tk.a("show_players_in_xs_game");
+          var2 = tk.a("show_players_in_xs_game", false);
           if (null == var2) {
             break L155;
           } else {
@@ -1965,8 +1829,7 @@ final class wc extends da {
           }
         }
         L156: {
-          int discarded$1128 = 0;
-          var2 = tk.a("connecting_to_friend_server_twoline");
+          var2 = tk.a("connecting_to_friend_server_twoline", false);
           if (var2 != null) {
             tn.field_r = in.a(0, var2);
             break L156;
@@ -1975,8 +1838,7 @@ final class wc extends da {
           }
         }
         L157: {
-          int discarded$1129 = 0;
-          var2 = tk.a("loading");
+          var2 = tk.a("loading", false);
           if (null == var2) {
             break L157;
           } else {
@@ -1985,8 +1847,7 @@ final class wc extends da {
           }
         }
         L158: {
-          int discarded$1130 = 0;
-          var2 = tk.a("offline");
+          var2 = tk.a("offline", false);
           if (null == var2) {
             break L158;
           } else {
@@ -1995,8 +1856,7 @@ final class wc extends da {
           }
         }
         L159: {
-          int discarded$1131 = 0;
-          var2 = tk.a("multiconst_invite_only");
+          var2 = tk.a("multiconst_invite_only", false);
           if (var2 != null) {
             fh.field_x = in.a(0, var2);
             break L159;
@@ -2005,8 +1865,7 @@ final class wc extends da {
           }
         }
         L160: {
-          int discarded$1132 = 0;
-          var2 = tk.a("multiconst_clan");
+          var2 = tk.a("multiconst_clan", false);
           if (var2 == null) {
             break L160;
           } else {
@@ -2015,8 +1874,7 @@ final class wc extends da {
           }
         }
         L161: {
-          int discarded$1133 = 0;
-          var2 = tk.a("multiconst_friends");
+          var2 = tk.a("multiconst_friends", false);
           if (var2 != null) {
             fa.field_q = in.a(param0, var2);
             break L161;
@@ -2025,8 +1883,7 @@ final class wc extends da {
           }
         }
         L162: {
-          int discarded$1134 = 0;
-          var2 = tk.a("multiconst_similar_rating");
+          var2 = tk.a("multiconst_similar_rating", false);
           if (var2 != null) {
             ve.field_b = in.a(param0, var2);
             break L162;
@@ -2035,8 +1892,7 @@ final class wc extends da {
           }
         }
         L163: {
-          int discarded$1135 = 0;
-          var2 = tk.a("multiconst_open");
+          var2 = tk.a("multiconst_open", false);
           if (null == var2) {
             break L163;
           } else {
@@ -2045,8 +1901,7 @@ final class wc extends da {
           }
         }
         L164: {
-          int discarded$1136 = 0;
-          var2 = tk.a("no_options_available");
+          var2 = tk.a("no_options_available", false);
           if (null == var2) {
             break L164;
           } else {
@@ -2055,8 +1910,7 @@ final class wc extends da {
           }
         }
         L165: {
-          int discarded$1137 = 0;
-          var2 = tk.a("reportabuse");
+          var2 = tk.a("reportabuse", false);
           if (var2 != null) {
             ad.field_c = in.a(0, var2);
             break L165;
@@ -2065,8 +1919,7 @@ final class wc extends da {
           }
         }
         L166: {
-          int discarded$1138 = 0;
-          var2 = tk.a("presstabtochat");
+          var2 = tk.a("presstabtochat", false);
           if (null != var2) {
             kl.field_Nb = in.a(0, var2);
             break L166;
@@ -2075,8 +1928,7 @@ final class wc extends da {
           }
         }
         L167: {
-          int discarded$1139 = 0;
-          var2 = tk.a("pressf10toquickchat");
+          var2 = tk.a("pressf10toquickchat", false);
           if (null == var2) {
             break L167;
           } else {
@@ -2085,8 +1937,7 @@ final class wc extends da {
           }
         }
         L168: {
-          int discarded$1140 = 0;
-          var2 = tk.a("dob_chatdisabled");
+          var2 = tk.a("dob_chatdisabled", false);
           if (null == var2) {
             break L168;
           } else {
@@ -2095,8 +1946,7 @@ final class wc extends da {
           }
         }
         L169: {
-          int discarded$1141 = 0;
-          var2 = tk.a("dob_enterforchat");
+          var2 = tk.a("dob_enterforchat", false);
           if (null == var2) {
             break L169;
           } else {
@@ -2105,8 +1955,7 @@ final class wc extends da {
           }
         }
         L170: {
-          int discarded$1142 = 0;
-          var2 = tk.a("tab_hidechattemporarily");
+          var2 = tk.a("tab_hidechattemporarily", false);
           if (var2 != null) {
             oe.field_rb = in.a(param0, var2);
             break L170;
@@ -2115,8 +1964,7 @@ final class wc extends da {
           }
         }
         L171: {
-          int discarded$1143 = 0;
-          var2 = tk.a("esc_cancelprivatemessage");
+          var2 = tk.a("esc_cancelprivatemessage", false);
           if (null == var2) {
             break L171;
           } else {
@@ -2125,8 +1973,7 @@ final class wc extends da {
           }
         }
         L172: {
-          int discarded$1144 = 0;
-          var2 = tk.a("esc_cancelthisline");
+          var2 = tk.a("esc_cancelthisline", false);
           if (null != var2) {
             ml.field_x = in.a(0, var2);
             break L172;
@@ -2135,8 +1982,7 @@ final class wc extends da {
           }
         }
         L173: {
-          int discarded$1145 = 0;
-          var2 = tk.a("privatequickchat_from_x");
+          var2 = tk.a("privatequickchat_from_x", false);
           if (var2 != null) {
             af.field_L = in.a(0, var2);
             break L173;
@@ -2145,8 +1991,7 @@ final class wc extends da {
           }
         }
         L174: {
-          int discarded$1146 = 0;
-          var2 = tk.a("privatequickchat_to_x");
+          var2 = tk.a("privatequickchat_to_x", false);
           if (null != var2) {
             di.field_B = in.a(0, var2);
             break L174;
@@ -2155,8 +2000,7 @@ final class wc extends da {
           }
         }
         L175: {
-          int discarded$1147 = 0;
-          var2 = tk.a("privatechat_blankarea_explanation");
+          var2 = tk.a("privatechat_blankarea_explanation", false);
           if (null == var2) {
             break L175;
           } else {
@@ -2165,8 +2009,7 @@ final class wc extends da {
           }
         }
         L176: {
-          int discarded$1148 = 0;
-          var2 = tk.a("publicchat_unavailable_ratedgame");
+          var2 = tk.a("publicchat_unavailable_ratedgame", false);
           if (null != var2) {
             w.field_E = in.a(0, var2);
             break L176;
@@ -2175,8 +2018,7 @@ final class wc extends da {
           }
         }
         L177: {
-          int discarded$1149 = 0;
-          var2 = tk.a("privatechat_friend_offline");
+          var2 = tk.a("privatechat_friend_offline", false);
           if (null != var2) {
             qo.field_E = in.a(0, var2);
             break L177;
@@ -2185,8 +2027,7 @@ final class wc extends da {
           }
         }
         L178: {
-          int discarded$1150 = 0;
-          var2 = tk.a("privatechat_friend_notlisted");
+          var2 = tk.a("privatechat_friend_notlisted", false);
           if (null != var2) {
             bj.field_b = in.a(0, var2);
             break L178;
@@ -2195,8 +2036,7 @@ final class wc extends da {
           }
         }
         L179: {
-          int discarded$1151 = 0;
-          var2 = tk.a("chatviewscrolledup");
+          var2 = tk.a("chatviewscrolledup", false);
           if (null != var2) {
             na.field_l = in.a(0, var2);
             break L179;
@@ -2205,8 +2045,7 @@ final class wc extends da {
           }
         }
         L180: {
-          int discarded$1152 = 0;
-          var2 = tk.a("thisisrunescapeclan");
+          var2 = tk.a("thisisrunescapeclan", false);
           if (var2 == null) {
             break L180;
           } else {
@@ -2215,8 +2054,7 @@ final class wc extends da {
           }
         }
         L181: {
-          int discarded$1153 = 0;
-          var2 = tk.a("thisisrunescapeclan_notowner");
+          var2 = tk.a("thisisrunescapeclan_notowner", false);
           if (var2 != null) {
             e.field_e = in.a(0, var2);
             break L181;
@@ -2225,8 +2063,7 @@ final class wc extends da {
           }
         }
         L182: {
-          int discarded$1154 = 0;
-          var2 = tk.a("runescapeclan");
+          var2 = tk.a("runescapeclan", false);
           if (null == var2) {
             break L182;
           } else {
@@ -2235,18 +2072,16 @@ final class wc extends da {
           }
         }
         L183: {
-          int discarded$1155 = 0;
-          var2 = tk.a("rated_membersonly");
+          var2 = tk.a("rated_membersonly", false);
           if (var2 != null) {
-            String discarded$1156 = in.a(0, var2);
+            String discarded$228 = in.a(0, var2);
             break L183;
           } else {
             break L183;
           }
         }
         L184: {
-          int discarded$1157 = 0;
-          var2 = tk.a("gameopt_membersonly");
+          var2 = tk.a("gameopt_membersonly", false);
           if (var2 == null) {
             break L184;
           } else {
@@ -2255,8 +2090,7 @@ final class wc extends da {
           }
         }
         L185: {
-          int discarded$1158 = 0;
-          var2 = tk.a("gameopt_1moreratedgame");
+          var2 = tk.a("gameopt_1moreratedgame", false);
           if (var2 == null) {
             break L185;
           } else {
@@ -2265,8 +2099,7 @@ final class wc extends da {
           }
         }
         L186: {
-          int discarded$1159 = 0;
-          var2 = tk.a("gameopt_moreratedgames");
+          var2 = tk.a("gameopt_moreratedgames", false);
           if (var2 == null) {
             break L186;
           } else {
@@ -2275,8 +2108,7 @@ final class wc extends da {
           }
         }
         L187: {
-          int discarded$1160 = 0;
-          var2 = tk.a("gameopt_needrating");
+          var2 = tk.a("gameopt_needrating", false);
           if (var2 != null) {
             mf.field_a = in.a(0, var2);
             break L187;
@@ -2285,8 +2117,7 @@ final class wc extends da {
           }
         }
         L188: {
-          int discarded$1161 = 0;
-          var2 = tk.a("gameopt_unratedonly");
+          var2 = tk.a("gameopt_unratedonly", false);
           if (null != var2) {
             le.field_b = in.a(0, var2);
             break L188;
@@ -2295,8 +2126,7 @@ final class wc extends da {
           }
         }
         L189: {
-          int discarded$1162 = 0;
-          var2 = tk.a("gameopt_notunlocked");
+          var2 = tk.a("gameopt_notunlocked", false);
           if (var2 == null) {
             break L189;
           } else {
@@ -2305,8 +2135,7 @@ final class wc extends da {
           }
         }
         L190: {
-          int discarded$1163 = 0;
-          var2 = tk.a("gameopt_cannotbecombined1");
+          var2 = tk.a("gameopt_cannotbecombined1", false);
           if (null != var2) {
             ir.field_b = in.a(0, var2);
             break L190;
@@ -2315,8 +2144,7 @@ final class wc extends da {
           }
         }
         L191: {
-          int discarded$1164 = 0;
-          var2 = tk.a("gameopt_cannotbecombined2");
+          var2 = tk.a("gameopt_cannotbecombined2", false);
           if (null != var2) {
             qc.field_u = in.a(param0, var2);
             break L191;
@@ -2325,8 +2153,7 @@ final class wc extends da {
           }
         }
         L192: {
-          int discarded$1165 = 0;
-          var2 = tk.a("gameopt_playernotmember");
+          var2 = tk.a("gameopt_playernotmember", false);
           if (null == var2) {
             break L192;
           } else {
@@ -2335,8 +2162,7 @@ final class wc extends da {
           }
         }
         L193: {
-          int discarded$1166 = 0;
-          var2 = tk.a("gameopt_younotmember");
+          var2 = tk.a("gameopt_younotmember", false);
           if (var2 != null) {
             ed.field_r = in.a(0, var2);
             break L193;
@@ -2345,8 +2171,7 @@ final class wc extends da {
           }
         }
         L194: {
-          int discarded$1167 = 0;
-          var2 = tk.a("gameopt_playerneedsrating");
+          var2 = tk.a("gameopt_playerneedsrating", false);
           if (null == var2) {
             break L194;
           } else {
@@ -2355,8 +2180,7 @@ final class wc extends da {
           }
         }
         L195: {
-          int discarded$1168 = 0;
-          var2 = tk.a("gameopt_youneedrating");
+          var2 = tk.a("gameopt_youneedrating", false);
           if (var2 != null) {
             uq.field_c = in.a(0, var2);
             break L195;
@@ -2365,8 +2189,7 @@ final class wc extends da {
           }
         }
         L196: {
-          int discarded$1169 = 0;
-          var2 = tk.a("gameopt_playerneedsratedgames");
+          var2 = tk.a("gameopt_playerneedsratedgames", false);
           if (null == var2) {
             break L196;
           } else {
@@ -2375,8 +2198,7 @@ final class wc extends da {
           }
         }
         L197: {
-          int discarded$1170 = 0;
-          var2 = tk.a("gameopt_youneedratedgames");
+          var2 = tk.a("gameopt_youneedratedgames", false);
           if (null == var2) {
             break L197;
           } else {
@@ -2385,8 +2207,7 @@ final class wc extends da {
           }
         }
         L198: {
-          int discarded$1171 = 0;
-          var2 = tk.a("gameopt_playerneeds1ratedgame");
+          var2 = tk.a("gameopt_playerneeds1ratedgame", false);
           if (null != var2) {
             jc.field_c = in.a(0, var2);
             break L198;
@@ -2395,8 +2216,7 @@ final class wc extends da {
           }
         }
         L199: {
-          int discarded$1172 = 0;
-          var2 = tk.a("gameopt_youneed1ratedgame");
+          var2 = tk.a("gameopt_youneed1ratedgame", false);
           if (var2 != null) {
             ak.field_c = in.a(0, var2);
             break L199;
@@ -2405,8 +2225,7 @@ final class wc extends da {
           }
         }
         L200: {
-          int discarded$1173 = 0;
-          var2 = tk.a("gameopt_playerhasntunlocked");
+          var2 = tk.a("gameopt_playerhasntunlocked", false);
           if (var2 != null) {
             qn.field_o = in.a(param0, var2);
             break L200;
@@ -2415,8 +2234,7 @@ final class wc extends da {
           }
         }
         L201: {
-          int discarded$1174 = 0;
-          var2 = tk.a("gameopt_youhaventunlocked");
+          var2 = tk.a("gameopt_youhaventunlocked", false);
           if (var2 != null) {
             fm.field_f = in.a(param0, var2);
             break L201;
@@ -2425,8 +2243,7 @@ final class wc extends da {
           }
         }
         L202: {
-          int discarded$1175 = 0;
-          var2 = tk.a("gameopt_trychanging1");
+          var2 = tk.a("gameopt_trychanging1", false);
           if (null == var2) {
             break L202;
           } else {
@@ -2435,8 +2252,7 @@ final class wc extends da {
           }
         }
         L203: {
-          int discarded$1176 = 0;
-          var2 = tk.a("gameopt_trychanging2");
+          var2 = tk.a("gameopt_trychanging2", false);
           if (null != var2) {
             lb.field_f = in.a(0, var2);
             break L203;
@@ -2445,8 +2261,7 @@ final class wc extends da {
           }
         }
         L204: {
-          int discarded$1177 = 0;
-          var2 = tk.a("gameopt_needchanging1");
+          var2 = tk.a("gameopt_needchanging1", false);
           if (var2 == null) {
             break L204;
           } else {
@@ -2455,8 +2270,7 @@ final class wc extends da {
           }
         }
         L205: {
-          int discarded$1178 = 0;
-          var2 = tk.a("gameopt_needchanging2");
+          var2 = tk.a("gameopt_needchanging2", false);
           if (null == var2) {
             break L205;
           } else {
@@ -2465,8 +2279,7 @@ final class wc extends da {
           }
         }
         L206: {
-          int discarded$1179 = 0;
-          var2 = tk.a("gameopt_mightchange");
+          var2 = tk.a("gameopt_mightchange", false);
           if (null != var2) {
             ac.field_J = in.a(0, var2);
             break L206;
@@ -2475,8 +2288,7 @@ final class wc extends da {
           }
         }
         L207: {
-          int discarded$1180 = 0;
-          var2 = tk.a("gameopt_playersdontqualify");
+          var2 = tk.a("gameopt_playersdontqualify", false);
           if (var2 == null) {
             break L207;
           } else {
@@ -2485,8 +2297,7 @@ final class wc extends da {
           }
         }
         L208: {
-          int discarded$1181 = 0;
-          var2 = tk.a("gameopt_playersdontqualify_selectgametab");
+          var2 = tk.a("gameopt_playersdontqualify_selectgametab", false);
           if (null == var2) {
             break L208;
           } else {
@@ -2495,8 +2306,7 @@ final class wc extends da {
           }
         }
         L209: {
-          int discarded$1182 = 0;
-          var2 = tk.a("gameopt_unselectedoptions");
+          var2 = tk.a("gameopt_unselectedoptions", false);
           if (var2 == null) {
             break L209;
           } else {
@@ -2505,8 +2315,7 @@ final class wc extends da {
           }
         }
         L210: {
-          int discarded$1183 = 0;
-          var2 = tk.a("gameopt_pleaseselectoption1");
+          var2 = tk.a("gameopt_pleaseselectoption1", false);
           if (var2 == null) {
             break L210;
           } else {
@@ -2515,8 +2324,7 @@ final class wc extends da {
           }
         }
         L211: {
-          int discarded$1184 = 0;
-          var2 = tk.a("gameopt_pleaseselectoption2");
+          var2 = tk.a("gameopt_pleaseselectoption2", false);
           if (null == var2) {
             break L211;
           } else {
@@ -2525,8 +2333,7 @@ final class wc extends da {
           }
         }
         L212: {
-          int discarded$1185 = 0;
-          var2 = tk.a("gameopt_badnumplayers");
+          var2 = tk.a("gameopt_badnumplayers", false);
           if (var2 == null) {
             break L212;
           } else {
@@ -2535,8 +2342,7 @@ final class wc extends da {
           }
         }
         L213: {
-          int discarded$1186 = 0;
-          var2 = tk.a("gameopt_inviteplayers_or_trychanging1");
+          var2 = tk.a("gameopt_inviteplayers_or_trychanging1", false);
           if (var2 != null) {
             eg.field_q = in.a(0, var2);
             break L213;
@@ -2545,8 +2351,7 @@ final class wc extends da {
           }
         }
         L214: {
-          int discarded$1187 = 0;
-          var2 = tk.a("gameopt_inviteplayers_or_trychanging2");
+          var2 = tk.a("gameopt_inviteplayers_or_trychanging2", false);
           if (null == var2) {
             break L214;
           } else {
@@ -2555,8 +2360,7 @@ final class wc extends da {
           }
         }
         L215: {
-          int discarded$1188 = 0;
-          var2 = tk.a("gameopt_novalidcombos");
+          var2 = tk.a("gameopt_novalidcombos", false);
           if (var2 != null) {
             qe.field_X = in.a(param0, var2);
             break L215;
@@ -2565,8 +2369,7 @@ final class wc extends da {
           }
         }
         L216: {
-          int discarded$1189 = 0;
-          var2 = tk.a("gameopt_pleasetrychanging");
+          var2 = tk.a("gameopt_pleasetrychanging", false);
           if (var2 != null) {
             ah.field_j = in.a(0, var2);
             break L216;
@@ -2575,8 +2378,7 @@ final class wc extends da {
           }
         }
         L217: {
-          int discarded$1190 = 0;
-          var2 = tk.a("ra_title");
+          var2 = tk.a("ra_title", false);
           if (var2 != null) {
             ol.field_z = in.a(param0, var2);
             break L217;
@@ -2585,8 +2387,7 @@ final class wc extends da {
           }
         }
         L218: {
-          int discarded$1191 = 0;
-          var2 = tk.a("ra_mutethisplayer");
+          var2 = tk.a("ra_mutethisplayer", false);
           if (var2 != null) {
             tb.field_c = in.a(0, var2);
             break L218;
@@ -2595,8 +2396,7 @@ final class wc extends da {
           }
         }
         L219: {
-          int discarded$1192 = 0;
-          var2 = tk.a("ra_suggestmute");
+          var2 = tk.a("ra_suggestmute", false);
           if (var2 != null) {
             hm.field_z = in.a(0, var2);
             break L219;
@@ -2605,8 +2405,7 @@ final class wc extends da {
           }
         }
         L220: {
-          int discarded$1193 = 0;
-          var2 = tk.a("ra_intro");
+          var2 = tk.a("ra_intro", false);
           if (null == var2) {
             break L220;
           } else {
@@ -2615,8 +2414,7 @@ final class wc extends da {
           }
         }
         L221: {
-          int discarded$1194 = 0;
-          var2 = tk.a("ra_intro_no_name");
+          var2 = tk.a("ra_intro_no_name", false);
           if (var2 == null) {
             break L221;
           } else {
@@ -2625,8 +2423,7 @@ final class wc extends da {
           }
         }
         L222: {
-          int discarded$1195 = 0;
-          var2 = tk.a("ra_explanation");
+          var2 = tk.a("ra_explanation", false);
           if (null == var2) {
             break L222;
           } else {
@@ -2635,8 +2432,7 @@ final class wc extends da {
           }
         }
         L223: {
-          int discarded$1196 = 0;
-          var2 = tk.a("rule_pillar_0");
+          var2 = tk.a("rule_pillar_0", false);
           if (null == var2) {
             break L223;
           } else {
@@ -2645,8 +2441,7 @@ final class wc extends da {
           }
         }
         L224: {
-          int discarded$1197 = 0;
-          var2 = tk.a("rule_0_0");
+          var2 = tk.a("rule_0_0", false);
           if (var2 == null) {
             break L224;
           } else {
@@ -2655,8 +2450,7 @@ final class wc extends da {
           }
         }
         L225: {
-          int discarded$1198 = 0;
-          var2 = tk.a("rule_0_1");
+          var2 = tk.a("rule_0_1", false);
           if (var2 == null) {
             break L225;
           } else {
@@ -2665,8 +2459,7 @@ final class wc extends da {
           }
         }
         L226: {
-          int discarded$1199 = 0;
-          var2 = tk.a("rule_0_2");
+          var2 = tk.a("rule_0_2", false);
           if (var2 == null) {
             break L226;
           } else {
@@ -2675,8 +2468,7 @@ final class wc extends da {
           }
         }
         L227: {
-          int discarded$1200 = 0;
-          var2 = tk.a("rule_0_3");
+          var2 = tk.a("rule_0_3", false);
           if (null != var2) {
             dk.field_l = in.a(0, var2);
             break L227;
@@ -2685,8 +2477,7 @@ final class wc extends da {
           }
         }
         L228: {
-          int discarded$1201 = 0;
-          var2 = tk.a("rule_0_4");
+          var2 = tk.a("rule_0_4", false);
           if (null != var2) {
             pp.field_x = in.a(0, var2);
             break L228;
@@ -2695,8 +2486,7 @@ final class wc extends da {
           }
         }
         L229: {
-          int discarded$1202 = 0;
-          var2 = tk.a("rule_0_5");
+          var2 = tk.a("rule_0_5", false);
           if (null == var2) {
             break L229;
           } else {
@@ -2705,8 +2495,7 @@ final class wc extends da {
           }
         }
         L230: {
-          int discarded$1203 = 0;
-          var2 = tk.a("rule_pillar_1");
+          var2 = tk.a("rule_pillar_1", false);
           if (null != var2) {
             lh.field_e = in.a(0, var2);
             break L230;
@@ -2715,8 +2504,7 @@ final class wc extends da {
           }
         }
         L231: {
-          int discarded$1204 = 0;
-          var2 = tk.a("rule_1_0");
+          var2 = tk.a("rule_1_0", false);
           if (null == var2) {
             break L231;
           } else {
@@ -2725,8 +2513,7 @@ final class wc extends da {
           }
         }
         L232: {
-          int discarded$1205 = 0;
-          var2 = tk.a("rule_1_1");
+          var2 = tk.a("rule_1_1", false);
           if (var2 != null) {
             mm.field_b = in.a(0, var2);
             break L232;
@@ -2735,8 +2522,7 @@ final class wc extends da {
           }
         }
         L233: {
-          int discarded$1206 = 0;
-          var2 = tk.a("rule_1_2");
+          var2 = tk.a("rule_1_2", false);
           if (var2 != null) {
             bo.field_p = in.a(param0, var2);
             break L233;
@@ -2745,8 +2531,7 @@ final class wc extends da {
           }
         }
         L234: {
-          int discarded$1207 = 0;
-          var2 = tk.a("rule_1_3");
+          var2 = tk.a("rule_1_3", false);
           if (var2 != null) {
             ac.field_M = in.a(0, var2);
             break L234;
@@ -2755,8 +2540,7 @@ final class wc extends da {
           }
         }
         L235: {
-          int discarded$1208 = 0;
-          var2 = tk.a("rule_1_4");
+          var2 = tk.a("rule_1_4", false);
           if (var2 != null) {
             hr.field_z = in.a(0, var2);
             break L235;
@@ -2765,8 +2549,7 @@ final class wc extends da {
           }
         }
         L236: {
-          int discarded$1209 = 0;
-          var2 = tk.a("rule_pillar_2");
+          var2 = tk.a("rule_pillar_2", false);
           if (null != var2) {
             hl.field_o = in.a(0, var2);
             break L236;
@@ -2775,8 +2558,7 @@ final class wc extends da {
           }
         }
         L237: {
-          int discarded$1210 = 0;
-          var2 = tk.a("rule_2_0");
+          var2 = tk.a("rule_2_0", false);
           if (null != var2) {
             jp.field_j = in.a(0, var2);
             break L237;
@@ -2785,8 +2567,7 @@ final class wc extends da {
           }
         }
         L238: {
-          int discarded$1211 = 0;
-          var2 = tk.a("rule_2_1");
+          var2 = tk.a("rule_2_1", false);
           if (null == var2) {
             break L238;
           } else {
@@ -2795,8 +2576,7 @@ final class wc extends da {
           }
         }
         L239: {
-          int discarded$1212 = 0;
-          var2 = tk.a("rule_2_2");
+          var2 = tk.a("rule_2_2", false);
           if (null == var2) {
             break L239;
           } else {
@@ -2805,18 +2585,16 @@ final class wc extends da {
           }
         }
         L240: {
-          int discarded$1213 = 0;
-          var2 = tk.a("createafreeaccount");
+          var2 = tk.a("createafreeaccount", false);
           if (null == var2) {
             break L240;
           } else {
-            String discarded$1214 = in.a(0, var2);
+            String discarded$229 = in.a(0, var2);
             break L240;
           }
         }
         L241: {
-          int discarded$1215 = 0;
-          var2 = tk.a("cancel");
+          var2 = tk.a("cancel", false);
           if (null == var2) {
             break L241;
           } else {
@@ -2825,18 +2603,16 @@ final class wc extends da {
           }
         }
         L242: {
-          int discarded$1216 = 0;
-          var2 = tk.a("pleaselogintoplay");
+          var2 = tk.a("pleaselogintoplay", false);
           if (null == var2) {
             break L242;
           } else {
-            String discarded$1217 = in.a(param0, var2);
+            String discarded$230 = in.a(param0, var2);
             break L242;
           }
         }
         L243: {
-          int discarded$1218 = 0;
-          var2 = tk.a("pleaselogin");
+          var2 = tk.a("pleaselogin", false);
           if (var2 != null) {
             oc.field_x = in.a(param0, var2);
             break L243;
@@ -2845,8 +2621,7 @@ final class wc extends da {
           }
         }
         L244: {
-          int discarded$1219 = 0;
-          var2 = tk.a("pleaselogin_member");
+          var2 = tk.a("pleaselogin_member", false);
           if (null != var2) {
             ob.field_I = in.a(0, var2);
             break L244;
@@ -2855,8 +2630,7 @@ final class wc extends da {
           }
         }
         L245: {
-          int discarded$1220 = 0;
-          var2 = tk.a("invaliduserorpass");
+          var2 = tk.a("invaliduserorpass", false);
           if (var2 != null) {
             rr.field_y = in.a(param0, var2);
             break L245;
@@ -2865,8 +2639,7 @@ final class wc extends da {
           }
         }
         L246: {
-          int discarded$1221 = 0;
-          var2 = tk.a("pleasetryagain");
+          var2 = tk.a("pleasetryagain", false);
           if (var2 == null) {
             break L246;
           } else {
@@ -2875,18 +2648,16 @@ final class wc extends da {
           }
         }
         L247: {
-          int discarded$1222 = 0;
-          var2 = tk.a("pleasereenterpass");
+          var2 = tk.a("pleasereenterpass", false);
           if (var2 != null) {
-            String discarded$1223 = in.a(0, var2);
+            String discarded$231 = in.a(0, var2);
             break L247;
           } else {
             break L247;
           }
         }
         L248: {
-          int discarded$1224 = 0;
-          var2 = tk.a("playfreeversion");
+          var2 = tk.a("playfreeversion", false);
           if (var2 == null) {
             break L248;
           } else {
@@ -2895,8 +2666,7 @@ final class wc extends da {
           }
         }
         L249: {
-          int discarded$1225 = 0;
-          var2 = tk.a("reloadgame");
+          var2 = tk.a("reloadgame", false);
           if (var2 == null) {
             break L249;
           } else {
@@ -2905,8 +2675,7 @@ final class wc extends da {
           }
         }
         L250: {
-          int discarded$1226 = 0;
-          var2 = tk.a("toserverlist");
+          var2 = tk.a("toserverlist", false);
           if (var2 == null) {
             break L250;
           } else {
@@ -2915,8 +2684,7 @@ final class wc extends da {
           }
         }
         L251: {
-          int discarded$1227 = 0;
-          var2 = tk.a("tocustomersupport");
+          var2 = tk.a("tocustomersupport", false);
           if (null != var2) {
             hm.field_H = in.a(0, var2);
             break L251;
@@ -2925,8 +2693,7 @@ final class wc extends da {
           }
         }
         L252: {
-          int discarded$1228 = 0;
-          var2 = tk.a("changedisplayname");
+          var2 = tk.a("changedisplayname", false);
           if (var2 != null) {
             s.field_v = in.a(0, var2);
             break L252;
@@ -2935,18 +2702,16 @@ final class wc extends da {
           }
         }
         L253: {
-          int discarded$1229 = 0;
-          var2 = tk.a("returntohomepage");
+          var2 = tk.a("returntohomepage", false);
           if (var2 != null) {
-            String discarded$1230 = in.a(0, var2);
+            String discarded$232 = in.a(0, var2);
             break L253;
           } else {
             break L253;
           }
         }
         L254: {
-          int discarded$1231 = 0;
-          var2 = tk.a("justplay");
+          var2 = tk.a("justplay", false);
           if (var2 == null) {
             break L254;
           } else {
@@ -2955,18 +2720,16 @@ final class wc extends da {
           }
         }
         L255: {
-          int discarded$1232 = 0;
-          var2 = tk.a("justplay_excl");
+          var2 = tk.a("justplay_excl", false);
           if (var2 != null) {
-            String discarded$1233 = in.a(0, var2);
+            String discarded$233 = in.a(0, var2);
             break L255;
           } else {
             break L255;
           }
         }
         L256: {
-          int discarded$1234 = 0;
-          var2 = tk.a("login");
+          var2 = tk.a("login", false);
           if (null != var2) {
             wp.field_d = in.a(0, var2);
             break L256;
@@ -2975,8 +2738,7 @@ final class wc extends da {
           }
         }
         L257: {
-          int discarded$1235 = 0;
-          var2 = tk.a("goback");
+          var2 = tk.a("goback", false);
           if (null != var2) {
             tc.field_a = in.a(0, var2);
             break L257;
@@ -2985,48 +2747,43 @@ final class wc extends da {
           }
         }
         L258: {
-          int discarded$1236 = 0;
-          var2 = tk.a("otheroptions");
+          var2 = tk.a("otheroptions", false);
           if (null != var2) {
-            String discarded$1237 = in.a(param0, var2);
+            String discarded$234 = in.a(param0, var2);
             break L258;
           } else {
             break L258;
           }
         }
         L259: {
-          int discarded$1238 = 0;
-          var2 = tk.a("proceed");
+          var2 = tk.a("proceed", false);
           if (null == var2) {
             break L259;
           } else {
-            String discarded$1239 = in.a(0, var2);
+            String discarded$235 = in.a(0, var2);
             break L259;
           }
         }
         L260: {
-          int discarded$1240 = 0;
-          var2 = tk.a("connectingtoserver");
+          var2 = tk.a("connectingtoserver", false);
           if (var2 != null) {
-            String discarded$1241 = in.a(param0, var2);
+            String discarded$236 = in.a(param0, var2);
             break L260;
           } else {
             break L260;
           }
         }
         L261: {
-          int discarded$1242 = 0;
-          var2 = tk.a("pleasewait");
+          var2 = tk.a("pleasewait", false);
           if (var2 != null) {
-            String discarded$1243 = in.a(param0, var2);
+            String discarded$237 = in.a(param0, var2);
             break L261;
           } else {
             break L261;
           }
         }
         L262: {
-          int discarded$1244 = 0;
-          var2 = tk.a("logging_in");
+          var2 = tk.a("logging_in", false);
           if (null == var2) {
             break L262;
           } else {
@@ -3035,48 +2792,43 @@ final class wc extends da {
           }
         }
         L263: {
-          int discarded$1245 = 0;
-          var2 = tk.a("reconnect");
+          var2 = tk.a("reconnect", false);
           if (null != var2) {
-            String discarded$1246 = in.a(0, var2);
+            String discarded$238 = in.a(0, var2);
             break L263;
           } else {
             break L263;
           }
         }
         L264: {
-          int discarded$1247 = 0;
-          var2 = tk.a("backtoerror");
+          var2 = tk.a("backtoerror", false);
           if (null != var2) {
-            String discarded$1248 = in.a(0, var2);
+            String discarded$239 = in.a(0, var2);
             break L264;
           } else {
             break L264;
           }
         }
         L265: {
-          int discarded$1249 = 0;
-          var2 = tk.a("pleasecheckinternet");
+          var2 = tk.a("pleasecheckinternet", false);
           if (null == var2) {
             break L265;
           } else {
-            String discarded$1250 = in.a(0, var2);
+            String discarded$240 = in.a(0, var2);
             break L265;
           }
         }
         L266: {
-          int discarded$1251 = 0;
-          var2 = tk.a("attemptingtoreconnect");
+          var2 = tk.a("attemptingtoreconnect", false);
           if (var2 == null) {
             break L266;
           } else {
-            String discarded$1252 = in.a(param0, var2);
+            String discarded$241 = in.a(param0, var2);
             break L266;
           }
         }
         L267: {
-          int discarded$1253 = 0;
-          var2 = tk.a("connectionlost_reconnecting");
+          var2 = tk.a("connectionlost_reconnecting", false);
           if (null == var2) {
             break L267;
           } else {
@@ -3085,8 +2837,7 @@ final class wc extends da {
           }
         }
         L268: {
-          int discarded$1254 = 0;
-          var2 = tk.a("connectionlost_withreason");
+          var2 = tk.a("connectionlost_withreason", false);
           if (var2 == null) {
             break L268;
           } else {
@@ -3095,18 +2846,16 @@ final class wc extends da {
           }
         }
         L269: {
-          int discarded$1255 = 0;
-          var2 = tk.a("passwordverificationrequired");
+          var2 = tk.a("passwordverificationrequired", false);
           if (null != var2) {
-            String discarded$1256 = in.a(0, var2);
+            String discarded$242 = in.a(0, var2);
             break L269;
           } else {
             break L269;
           }
         }
         L270: {
-          int discarded$1257 = 0;
-          var2 = tk.a("invalidpass");
+          var2 = tk.a("invalidpass", false);
           if (null != var2) {
             lr.field_M = in.a(0, var2);
             break L270;
@@ -3115,8 +2864,7 @@ final class wc extends da {
           }
         }
         L271: {
-          int discarded$1258 = 0;
-          var2 = tk.a("retry");
+          var2 = tk.a("retry", false);
           if (null != var2) {
             bk.field_d = in.a(0, var2);
             break L271;
@@ -3125,8 +2873,7 @@ final class wc extends da {
           }
         }
         L272: {
-          int discarded$1259 = 0;
-          var2 = tk.a("back");
+          var2 = tk.a("back", false);
           if (null != var2) {
             ap.field_f = in.a(param0, var2);
             break L272;
@@ -3135,18 +2882,16 @@ final class wc extends da {
           }
         }
         L273: {
-          int discarded$1260 = 0;
-          var2 = tk.a("exitfullscreenmode");
+          var2 = tk.a("exitfullscreenmode", false);
           if (var2 == null) {
             break L273;
           } else {
-            String discarded$1261 = in.a(0, var2);
+            String discarded$243 = in.a(0, var2);
             break L273;
           }
         }
         L274: {
-          int discarded$1262 = 0;
-          var2 = tk.a("quittowebsite");
+          var2 = tk.a("quittowebsite", false);
           if (var2 == null) {
             break L274;
           } else {
@@ -3155,8 +2900,7 @@ final class wc extends da {
           }
         }
         L275: {
-          int discarded$1263 = 0;
-          var2 = tk.a("connectionrestored");
+          var2 = tk.a("connectionrestored", false);
           if (var2 == null) {
             break L275;
           } else {
@@ -3165,8 +2909,7 @@ final class wc extends da {
           }
         }
         L276: {
-          int discarded$1264 = 0;
-          var2 = tk.a("warning_ifyouquit");
+          var2 = tk.a("warning_ifyouquit", false);
           if (null == var2) {
             break L276;
           } else {
@@ -3175,218 +2918,196 @@ final class wc extends da {
           }
         }
         L277: {
-          int discarded$1265 = 0;
-          var2 = tk.a("warning_ifyouquitorleavepage");
+          var2 = tk.a("warning_ifyouquitorleavepage", false);
           if (null != var2) {
-            String discarded$1266 = in.a(param0, var2);
+            String discarded$244 = in.a(param0, var2);
             break L277;
           } else {
             break L277;
           }
         }
         L278: {
-          int discarded$1267 = 0;
-          var2 = tk.a("resubscribe_withoutlosing_fs");
+          var2 = tk.a("resubscribe_withoutlosing_fs", false);
           if (var2 == null) {
             break L278;
           } else {
-            String discarded$1268 = in.a(0, var2);
+            String discarded$245 = in.a(0, var2);
             break L278;
           }
         }
         L279: {
-          int discarded$1269 = 0;
-          var2 = tk.a("resubscribe_withoutlosing");
+          var2 = tk.a("resubscribe_withoutlosing", false);
           if (var2 != null) {
-            String discarded$1270 = in.a(0, var2);
+            String discarded$246 = in.a(0, var2);
             break L279;
           } else {
             break L279;
           }
         }
         L280: {
-          int discarded$1271 = 0;
-          var2 = tk.a("customersupport_withoutlosing_fs");
+          var2 = tk.a("customersupport_withoutlosing_fs", false);
           if (var2 != null) {
-            String discarded$1272 = in.a(0, var2);
+            String discarded$247 = in.a(0, var2);
             break L280;
           } else {
             break L280;
           }
         }
         L281: {
-          int discarded$1273 = 0;
-          var2 = tk.a("customersupport_withoutlosing");
+          var2 = tk.a("customersupport_withoutlosing", false);
           if (var2 == null) {
             break L281;
           } else {
-            String discarded$1274 = in.a(param0, var2);
+            String discarded$248 = in.a(param0, var2);
             break L281;
           }
         }
         L282: {
-          int discarded$1275 = 0;
-          var2 = tk.a("js5help_withoutlosing_fs");
+          var2 = tk.a("js5help_withoutlosing_fs", false);
           if (null != var2) {
-            String discarded$1276 = in.a(0, var2);
+            String discarded$249 = in.a(0, var2);
             break L282;
           } else {
             break L282;
           }
         }
         L283: {
-          int discarded$1277 = 0;
-          var2 = tk.a("js5help_withoutlosing");
+          var2 = tk.a("js5help_withoutlosing", false);
           if (null == var2) {
             break L283;
           } else {
-            String discarded$1278 = in.a(0, var2);
+            String discarded$250 = in.a(0, var2);
             break L283;
           }
         }
         L284: {
-          int discarded$1279 = 0;
-          var2 = tk.a("checkinternet_withoutlosing_fs");
+          var2 = tk.a("checkinternet_withoutlosing_fs", false);
           if (var2 != null) {
-            String discarded$1280 = in.a(0, var2);
+            String discarded$251 = in.a(0, var2);
             break L284;
           } else {
             break L284;
           }
         }
         L285: {
-          int discarded$1281 = 0;
-          var2 = tk.a("checkinternet_withoutlosing");
+          var2 = tk.a("checkinternet_withoutlosing", false);
           if (null == var2) {
             break L285;
           } else {
-            String discarded$1282 = in.a(0, var2);
+            String discarded$252 = in.a(0, var2);
             break L285;
           }
         }
         L286: {
-          int discarded$1283 = 0;
-          var2 = tk.a("create_intro");
+          var2 = tk.a("create_intro", false);
           if (null == var2) {
             break L286;
           } else {
-            String discarded$1284 = in.a(param0, var2);
+            String discarded$253 = in.a(param0, var2);
             break L286;
           }
         }
         L287: {
-          int discarded$1285 = 0;
-          var2 = tk.a("create_sameaccounttip_unnamed");
+          var2 = tk.a("create_sameaccounttip_unnamed", false);
           if (var2 == null) {
             break L287;
           } else {
-            String discarded$1286 = in.a(0, var2);
+            String discarded$254 = in.a(0, var2);
             break L287;
           }
         }
         L288: {
-          int discarded$1287 = 0;
-          var2 = tk.a("dateofbirthprompt");
+          var2 = tk.a("dateofbirthprompt", false);
           if (var2 != null) {
-            String discarded$1288 = in.a(param0, var2);
+            String discarded$255 = in.a(param0, var2);
             break L288;
           } else {
             break L288;
           }
         }
         L289: {
-          int discarded$1289 = 0;
-          var2 = tk.a("fetchingcountrylist");
+          var2 = tk.a("fetchingcountrylist", false);
           if (null == var2) {
             break L289;
           } else {
-            String discarded$1290 = in.a(0, var2);
+            String discarded$256 = in.a(0, var2);
             break L289;
           }
         }
         L290: {
-          int discarded$1291 = 0;
-          var2 = tk.a("countryprompt");
+          var2 = tk.a("countryprompt", false);
           if (null == var2) {
             break L290;
           } else {
-            String discarded$1292 = in.a(0, var2);
+            String discarded$257 = in.a(0, var2);
             break L290;
           }
         }
         L291: {
-          int discarded$1293 = 0;
-          var2 = tk.a("countrylisterror");
+          var2 = tk.a("countrylisterror", false);
           if (var2 != null) {
-            String discarded$1294 = in.a(0, var2);
+            String discarded$258 = in.a(0, var2);
             break L291;
           } else {
             break L291;
           }
         }
         L292: {
-          int discarded$1295 = 0;
-          var2 = tk.a("theonlypersonalquestions");
+          var2 = tk.a("theonlypersonalquestions", false);
           if (null == var2) {
             break L292;
           } else {
-            String discarded$1296 = in.a(0, var2);
+            String discarded$259 = in.a(0, var2);
             break L292;
           }
         }
         L293: {
-          int discarded$1297 = 0;
-          var2 = tk.a("create_submittingdata");
+          var2 = tk.a("create_submittingdata", false);
           if (null == var2) {
             break L293;
           } else {
-            String discarded$1298 = in.a(0, var2);
+            String discarded$260 = in.a(0, var2);
             break L293;
           }
         }
         L294: {
-          int discarded$1299 = 0;
-          var2 = tk.a("check");
+          var2 = tk.a("check", false);
           if (null != var2) {
-            String discarded$1300 = in.a(param0, var2);
+            String discarded$261 = in.a(param0, var2);
             break L294;
           } else {
             break L294;
           }
         }
         L295: {
-          int discarded$1301 = 0;
-          var2 = tk.a("create_pleasechooseausername");
+          var2 = tk.a("create_pleasechooseausername", false);
           if (var2 != null) {
-            String discarded$1302 = in.a(param0, var2);
+            String discarded$262 = in.a(param0, var2);
             break L295;
           } else {
             break L295;
           }
         }
         L296: {
-          int discarded$1303 = 0;
-          var2 = tk.a("create_usernameblurb");
+          var2 = tk.a("create_usernameblurb", false);
           if (var2 == null) {
             break L296;
           } else {
-            String discarded$1304 = in.a(0, var2);
+            String discarded$263 = in.a(0, var2);
             break L296;
           }
         }
         L297: {
-          int discarded$1305 = 0;
-          var2 = tk.a("checkingavailability");
+          var2 = tk.a("checkingavailability", false);
           if (null != var2) {
-            String discarded$1306 = in.a(param0, var2);
+            String discarded$264 = in.a(param0, var2);
             break L297;
           } else {
             break L297;
           }
         }
         L298: {
-          int discarded$1307 = 0;
-          var2 = tk.a("checking");
+          var2 = tk.a("checking", false);
           if (null != var2) {
             lr.field_L = in.a(0, var2);
             break L298;
@@ -3395,128 +3116,115 @@ final class wc extends da {
           }
         }
         L299: {
-          int discarded$1308 = 0;
-          var2 = tk.a("create_namealreadytaken");
+          var2 = tk.a("create_namealreadytaken", false);
           if (var2 != null) {
-            String discarded$1309 = in.a(0, var2);
+            String discarded$265 = in.a(0, var2);
             break L299;
           } else {
             break L299;
           }
         }
         L300: {
-          int discarded$1310 = 0;
-          var2 = tk.a("create_sameaccounttip_named");
+          var2 = tk.a("create_sameaccounttip_named", false);
           if (var2 != null) {
-            String discarded$1311 = in.a(0, var2);
+            String discarded$266 = in.a(0, var2);
             break L300;
           } else {
             break L300;
           }
         }
         L301: {
-          int discarded$1312 = 0;
-          var2 = tk.a("create_nosuggestions");
+          var2 = tk.a("create_nosuggestions", false);
           if (var2 == null) {
             break L301;
           } else {
-            String discarded$1313 = in.a(0, var2);
+            String discarded$267 = in.a(0, var2);
             break L301;
           }
         }
         L302: {
-          int discarded$1314 = 0;
-          var2 = tk.a("create_alternativelygoback");
+          var2 = tk.a("create_alternativelygoback", false);
           if (var2 != null) {
-            String discarded$1315 = in.a(param0, var2);
+            String discarded$268 = in.a(param0, var2);
             break L302;
           } else {
             break L302;
           }
         }
         L303: {
-          int discarded$1316 = 0;
-          var2 = tk.a("create_available");
+          var2 = tk.a("create_available", false);
           if (var2 != null) {
-            String discarded$1317 = in.a(0, var2);
+            String discarded$269 = in.a(0, var2);
             break L303;
           } else {
             break L303;
           }
         }
         L304: {
-          int discarded$1318 = 0;
-          var2 = tk.a("create_willnowshowtermsandconditions");
+          var2 = tk.a("create_willnowshowtermsandconditions", false);
           if (null != var2) {
-            String discarded$1319 = in.a(0, var2);
+            String discarded$270 = in.a(0, var2);
             break L304;
           } else {
             break L304;
           }
         }
         L305: {
-          int discarded$1320 = 0;
-          var2 = tk.a("fetchingterms");
+          var2 = tk.a("fetchingterms", false);
           if (null == var2) {
             break L305;
           } else {
-            String discarded$1321 = in.a(param0, var2);
+            String discarded$271 = in.a(param0, var2);
             break L305;
           }
         }
         L306: {
-          int discarded$1322 = 0;
-          var2 = tk.a("termserror");
+          var2 = tk.a("termserror", false);
           if (var2 == null) {
             break L306;
           } else {
-            String discarded$1323 = in.a(0, var2);
+            String discarded$272 = in.a(0, var2);
             break L306;
           }
         }
         L307: {
-          int discarded$1324 = 0;
-          var2 = tk.a("create_iagree");
+          var2 = tk.a("create_iagree", false);
           if (var2 != null) {
-            String discarded$1325 = in.a(0, var2);
+            String discarded$273 = in.a(0, var2);
             break L307;
           } else {
             break L307;
           }
         }
         L308: {
-          int discarded$1326 = 0;
-          var2 = tk.a("create_idisagree");
+          var2 = tk.a("create_idisagree", false);
           if (var2 == null) {
             break L308;
           } else {
-            String discarded$1327 = in.a(param0, var2);
+            String discarded$274 = in.a(param0, var2);
             break L308;
           }
         }
         L309: {
-          int discarded$1328 = 0;
-          var2 = tk.a("create_pleasescrolldowntoaccept");
+          var2 = tk.a("create_pleasescrolldowntoaccept", false);
           if (null != var2) {
-            String discarded$1329 = in.a(0, var2);
+            String discarded$275 = in.a(0, var2);
             break L309;
           } else {
             break L309;
           }
         }
         L310: {
-          int discarded$1330 = 0;
-          var2 = tk.a("create_linkaddress");
+          var2 = tk.a("create_linkaddress", false);
           if (var2 != null) {
-            String discarded$1331 = in.a(0, var2);
+            String discarded$276 = in.a(0, var2);
             break L310;
           } else {
             break L310;
           }
         }
         L311: {
-          int discarded$1332 = 0;
-          var2 = tk.a("openinpopupwindow");
+          var2 = tk.a("openinpopupwindow", false);
           if (null == var2) {
             break L311;
           } else {
@@ -3525,8 +3233,7 @@ final class wc extends da {
           }
         }
         L312: {
-          int discarded$1333 = 0;
-          var2 = tk.a("create");
+          var2 = tk.a("create", false);
           if (null != var2) {
             nq.field_K = in.a(param0, var2);
             break L312;
@@ -3535,38 +3242,34 @@ final class wc extends da {
           }
         }
         L313: {
-          int discarded$1334 = 0;
-          var2 = tk.a("create_pleasechooseapassword");
+          var2 = tk.a("create_pleasechooseapassword", false);
           if (var2 != null) {
-            String discarded$1335 = in.a(0, var2);
+            String discarded$277 = in.a(0, var2);
             break L313;
           } else {
             break L313;
           }
         }
         L314: {
-          int discarded$1336 = 0;
-          var2 = tk.a("create_passwordblurb");
+          var2 = tk.a("create_passwordblurb", false);
           if (var2 != null) {
-            String discarded$1337 = in.a(0, var2);
+            String discarded$278 = in.a(0, var2);
             break L314;
           } else {
             break L314;
           }
         }
         L315: {
-          int discarded$1338 = 0;
-          var2 = tk.a("create_nevergivepassword");
+          var2 = tk.a("create_nevergivepassword", false);
           if (var2 == null) {
             break L315;
           } else {
-            String discarded$1339 = in.a(0, var2);
+            String discarded$279 = in.a(0, var2);
             break L315;
           }
         }
         L316: {
-          int discarded$1340 = 0;
-          var2 = tk.a("creatingyouraccount");
+          var2 = tk.a("creatingyouraccount", false);
           if (null != var2) {
             ac.field_L = in.a(0, var2);
             break L316;
@@ -3575,38 +3278,34 @@ final class wc extends da {
           }
         }
         L317: {
-          int discarded$1341 = 0;
-          var2 = tk.a("create_youmustaccept");
+          var2 = tk.a("create_youmustaccept", false);
           if (null == var2) {
             break L317;
           } else {
-            String discarded$1342 = in.a(0, var2);
+            String discarded$280 = in.a(0, var2);
             break L317;
           }
         }
         L318: {
-          int discarded$1343 = 0;
-          var2 = tk.a("create_passwordsdifferent");
+          var2 = tk.a("create_passwordsdifferent", false);
           if (var2 != null) {
-            String discarded$1344 = in.a(0, var2);
+            String discarded$281 = in.a(0, var2);
             break L318;
           } else {
             break L318;
           }
         }
         L319: {
-          int discarded$1345 = 0;
-          var2 = tk.a("create_success");
+          var2 = tk.a("create_success", false);
           if (var2 == null) {
             break L319;
           } else {
-            String discarded$1346 = in.a(0, var2);
+            String discarded$282 = in.a(0, var2);
             break L319;
           }
         }
         L320: {
-          int discarded$1347 = 0;
-          var2 = tk.a("day");
+          var2 = tk.a("day", false);
           if (null == var2) {
             break L320;
           } else {
@@ -3615,8 +3314,7 @@ final class wc extends da {
           }
         }
         L321: {
-          int discarded$1348 = 0;
-          var2 = tk.a("month");
+          var2 = tk.a("month", false);
           if (var2 == null) {
             break L321;
           } else {
@@ -3625,8 +3323,7 @@ final class wc extends da {
           }
         }
         L322: {
-          int discarded$1349 = 0;
-          var2 = tk.a("year");
+          var2 = tk.a("year", false);
           if (var2 == null) {
             break L322;
           } else {
@@ -3635,8 +3332,7 @@ final class wc extends da {
           }
         }
         L323: {
-          int discarded$1350 = 0;
-          var2 = tk.a("monthnames,0");
+          var2 = tk.a("monthnames,0", false);
           if (var2 != null) {
             dp.field_F[0] = in.a(0, var2);
             break L323;
@@ -3645,8 +3341,7 @@ final class wc extends da {
           }
         }
         L324: {
-          int discarded$1351 = 0;
-          var2 = tk.a("monthnames,1");
+          var2 = tk.a("monthnames,1", false);
           if (var2 == null) {
             break L324;
           } else {
@@ -3655,8 +3350,7 @@ final class wc extends da {
           }
         }
         L325: {
-          int discarded$1352 = 0;
-          var2 = tk.a("monthnames,2");
+          var2 = tk.a("monthnames,2", false);
           if (null == var2) {
             break L325;
           } else {
@@ -3665,8 +3359,7 @@ final class wc extends da {
           }
         }
         L326: {
-          int discarded$1353 = 0;
-          var2 = tk.a("monthnames,3");
+          var2 = tk.a("monthnames,3", false);
           if (var2 != null) {
             dp.field_F[3] = in.a(0, var2);
             break L326;
@@ -3675,8 +3368,7 @@ final class wc extends da {
           }
         }
         L327: {
-          int discarded$1354 = 0;
-          var2 = tk.a("monthnames,4");
+          var2 = tk.a("monthnames,4", false);
           if (var2 != null) {
             dp.field_F[4] = in.a(0, var2);
             break L327;
@@ -3685,8 +3377,7 @@ final class wc extends da {
           }
         }
         L328: {
-          int discarded$1355 = 0;
-          var2 = tk.a("monthnames,5");
+          var2 = tk.a("monthnames,5", false);
           if (var2 != null) {
             dp.field_F[5] = in.a(0, var2);
             break L328;
@@ -3695,8 +3386,7 @@ final class wc extends da {
           }
         }
         L329: {
-          int discarded$1356 = 0;
-          var2 = tk.a("monthnames,6");
+          var2 = tk.a("monthnames,6", false);
           if (var2 != null) {
             dp.field_F[6] = in.a(0, var2);
             break L329;
@@ -3705,8 +3395,7 @@ final class wc extends da {
           }
         }
         L330: {
-          int discarded$1357 = 0;
-          var2 = tk.a("monthnames,7");
+          var2 = tk.a("monthnames,7", false);
           if (null != var2) {
             dp.field_F[7] = in.a(0, var2);
             break L330;
@@ -3715,8 +3404,7 @@ final class wc extends da {
           }
         }
         L331: {
-          int discarded$1358 = 0;
-          var2 = tk.a("monthnames,8");
+          var2 = tk.a("monthnames,8", false);
           if (var2 == null) {
             break L331;
           } else {
@@ -3725,8 +3413,7 @@ final class wc extends da {
           }
         }
         L332: {
-          int discarded$1359 = 0;
-          var2 = tk.a("monthnames,9");
+          var2 = tk.a("monthnames,9", false);
           if (var2 != null) {
             dp.field_F[9] = in.a(param0, var2);
             break L332;
@@ -3735,8 +3422,7 @@ final class wc extends da {
           }
         }
         L333: {
-          int discarded$1360 = 0;
-          var2 = tk.a("monthnames,10");
+          var2 = tk.a("monthnames,10", false);
           if (var2 != null) {
             dp.field_F[10] = in.a(0, var2);
             break L333;
@@ -3745,8 +3431,7 @@ final class wc extends da {
           }
         }
         L334: {
-          int discarded$1361 = 0;
-          var2 = tk.a("monthnames,11");
+          var2 = tk.a("monthnames,11", false);
           if (var2 != null) {
             dp.field_F[11] = in.a(0, var2);
             break L334;
@@ -3755,8 +3440,7 @@ final class wc extends da {
           }
         }
         L335: {
-          int discarded$1362 = 0;
-          var2 = tk.a("create_welcome");
+          var2 = tk.a("create_welcome", false);
           if (null != var2) {
             kl.field_Jb = in.a(0, var2);
             break L335;
@@ -3765,18 +3449,16 @@ final class wc extends da {
           }
         }
         L336: {
-          int discarded$1363 = 0;
-          var2 = tk.a("create_u13_welcome");
+          var2 = tk.a("create_u13_welcome", false);
           if (null == var2) {
             break L336;
           } else {
-            String discarded$1364 = in.a(0, var2);
+            String discarded$283 = in.a(0, var2);
             break L336;
           }
         }
         L337: {
-          int discarded$1365 = 0;
-          var2 = tk.a("create_createanaccount");
+          var2 = tk.a("create_createanaccount", false);
           if (null != var2) {
             pk.field_r = in.a(0, var2);
             break L337;
@@ -3785,18 +3467,16 @@ final class wc extends da {
           }
         }
         L338: {
-          int discarded$1366 = 0;
-          var2 = tk.a("create_username");
+          var2 = tk.a("create_username", false);
           if (null != var2) {
-            String discarded$1367 = in.a(param0, var2);
+            String discarded$284 = in.a(param0, var2);
             break L338;
           } else {
             break L338;
           }
         }
         L339: {
-          int discarded$1368 = 0;
-          var2 = tk.a("create_displayname");
+          var2 = tk.a("create_displayname", false);
           if (null == var2) {
             break L339;
           } else {
@@ -3805,8 +3485,7 @@ final class wc extends da {
           }
         }
         L340: {
-          int discarded$1369 = 0;
-          var2 = tk.a("create_password");
+          var2 = tk.a("create_password", false);
           if (var2 != null) {
             uc.field_c = in.a(param0, var2);
             break L340;
@@ -3815,8 +3494,7 @@ final class wc extends da {
           }
         }
         L341: {
-          int discarded$1370 = 0;
-          var2 = tk.a("create_password_confirm");
+          var2 = tk.a("create_password_confirm", false);
           if (var2 == null) {
             break L341;
           } else {
@@ -3825,8 +3503,7 @@ final class wc extends da {
           }
         }
         L342: {
-          int discarded$1371 = 0;
-          var2 = tk.a("create_email");
+          var2 = tk.a("create_email", false);
           if (var2 == null) {
             break L342;
           } else {
@@ -3835,8 +3512,7 @@ final class wc extends da {
           }
         }
         L343: {
-          int discarded$1372 = 0;
-          var2 = tk.a("create_email_confirm");
+          var2 = tk.a("create_email_confirm", false);
           if (null == var2) {
             break L343;
           } else {
@@ -3845,8 +3521,7 @@ final class wc extends da {
           }
         }
         L344: {
-          int discarded$1373 = 0;
-          var2 = tk.a("create_age");
+          var2 = tk.a("create_age", false);
           if (var2 == null) {
             break L344;
           } else {
@@ -3855,68 +3530,61 @@ final class wc extends da {
           }
         }
         L345: {
-          int discarded$1374 = 0;
-          var2 = tk.a("create_u13_email");
+          var2 = tk.a("create_u13_email", false);
           if (var2 != null) {
-            String discarded$1375 = in.a(0, var2);
+            String discarded$285 = in.a(0, var2);
             break L345;
           } else {
             break L345;
           }
         }
         L346: {
-          int discarded$1376 = 0;
-          var2 = tk.a("create_u13_email_confirm");
+          var2 = tk.a("create_u13_email_confirm", false);
           if (null != var2) {
-            String discarded$1377 = in.a(0, var2);
+            String discarded$286 = in.a(0, var2);
             break L346;
           } else {
             break L346;
           }
         }
         L347: {
-          int discarded$1378 = 0;
-          var2 = tk.a("create_dob");
+          var2 = tk.a("create_dob", false);
           if (null == var2) {
             break L347;
           } else {
-            String discarded$1379 = in.a(0, var2);
+            String discarded$287 = in.a(0, var2);
             break L347;
           }
         }
         L348: {
-          int discarded$1380 = 0;
-          var2 = tk.a("create_country");
+          var2 = tk.a("create_country", false);
           if (var2 != null) {
-            String discarded$1381 = in.a(0, var2);
+            String discarded$288 = in.a(0, var2);
             break L348;
           } else {
             break L348;
           }
         }
         L349: {
-          int discarded$1382 = 0;
-          var2 = tk.a("create_alternatives_header");
+          var2 = tk.a("create_alternatives_header", false);
           if (null == var2) {
             break L349;
           } else {
-            String discarded$1383 = in.a(0, var2);
+            String discarded$289 = in.a(0, var2);
             break L349;
           }
         }
         L350: {
-          int discarded$1384 = 0;
-          var2 = tk.a("create_alternatives_select");
+          var2 = tk.a("create_alternatives_select", false);
           if (null != var2) {
-            String discarded$1385 = in.a(param0, var2);
+            String discarded$290 = in.a(param0, var2);
             break L350;
           } else {
             break L350;
           }
         }
         L351: {
-          int discarded$1386 = 0;
-          var2 = tk.a("create_suggestions");
+          var2 = tk.a("create_suggestions", false);
           if (var2 != null) {
             jd.field_a = in.a(0, var2);
             break L351;
@@ -3925,8 +3593,7 @@ final class wc extends da {
           }
         }
         L352: {
-          int discarded$1387 = 0;
-          var2 = tk.a("create_more_suggestions");
+          var2 = tk.a("create_more_suggestions", false);
           if (var2 != null) {
             pl.field_p = in.a(0, var2);
             break L352;
@@ -3935,8 +3602,7 @@ final class wc extends da {
           }
         }
         L353: {
-          int discarded$1388 = 0;
-          var2 = tk.a("create_select_alternative");
+          var2 = tk.a("create_select_alternative", false);
           if (null == var2) {
             break L353;
           } else {
@@ -3945,8 +3611,7 @@ final class wc extends da {
           }
         }
         L354: {
-          int discarded$1389 = 0;
-          var2 = tk.a("create_optin_news");
+          var2 = tk.a("create_optin_news", false);
           if (var2 == null) {
             break L354;
           } else {
@@ -3955,8 +3620,7 @@ final class wc extends da {
           }
         }
         L355: {
-          int discarded$1390 = 0;
-          var2 = tk.a("create_agreeterms");
+          var2 = tk.a("create_agreeterms", false);
           if (null == var2) {
             break L355;
           } else {
@@ -3965,8 +3629,7 @@ final class wc extends da {
           }
         }
         L356: {
-          int discarded$1391 = 0;
-          var2 = tk.a("create_u13terms");
+          var2 = tk.a("create_u13terms", false);
           if (null == var2) {
             break L356;
           } else {
@@ -3975,8 +3638,7 @@ final class wc extends da {
           }
         }
         L357: {
-          int discarded$1392 = 0;
-          var2 = tk.a("login_username_email");
+          var2 = tk.a("login_username_email", false);
           if (null == var2) {
             break L357;
           } else {
@@ -3985,8 +3647,7 @@ final class wc extends da {
           }
         }
         L358: {
-          int discarded$1393 = 0;
-          var2 = tk.a("login_username");
+          var2 = tk.a("login_username", false);
           if (var2 == null) {
             break L358;
           } else {
@@ -3995,8 +3656,7 @@ final class wc extends da {
           }
         }
         L359: {
-          int discarded$1394 = 0;
-          var2 = tk.a("login_email");
+          var2 = tk.a("login_email", false);
           if (null != var2) {
             la.field_c = in.a(0, var2);
             break L359;
@@ -4005,8 +3665,7 @@ final class wc extends da {
           }
         }
         L360: {
-          int discarded$1395 = 0;
-          var2 = tk.a("login_username_tooltip");
+          var2 = tk.a("login_username_tooltip", false);
           if (null != var2) {
             wh.field_A = in.a(0, var2);
             break L360;
@@ -4015,28 +3674,25 @@ final class wc extends da {
           }
         }
         L361: {
-          int discarded$1396 = 0;
-          var2 = tk.a("login_password_tooltip");
+          var2 = tk.a("login_password_tooltip", false);
           if (null == var2) {
             break L361;
           } else {
-            String discarded$1397 = in.a(0, var2);
+            String discarded$291 = in.a(0, var2);
             break L361;
           }
         }
         L362: {
-          int discarded$1398 = 0;
-          var2 = tk.a("login_login_tooltip");
+          var2 = tk.a("login_login_tooltip", false);
           if (null != var2) {
-            String discarded$1399 = in.a(0, var2);
+            String discarded$292 = in.a(0, var2);
             break L362;
           } else {
             break L362;
           }
         }
         L363: {
-          int discarded$1400 = 0;
-          var2 = tk.a("login_create_tooltip");
+          var2 = tk.a("login_create_tooltip", false);
           if (var2 != null) {
             ni.field_h = in.a(0, var2);
             break L363;
@@ -4045,8 +3701,7 @@ final class wc extends da {
           }
         }
         L364: {
-          int discarded$1401 = 0;
-          var2 = tk.a("login_justplay_tooltip");
+          var2 = tk.a("login_justplay_tooltip", false);
           if (null == var2) {
             break L364;
           } else {
@@ -4055,18 +3710,16 @@ final class wc extends da {
           }
         }
         L365: {
-          int discarded$1402 = 0;
-          var2 = tk.a("login_back_tooltip");
+          var2 = tk.a("login_back_tooltip", false);
           if (var2 == null) {
             break L365;
           } else {
-            String discarded$1403 = in.a(0, var2);
+            String discarded$293 = in.a(0, var2);
             break L365;
           }
         }
         L366: {
-          int discarded$1404 = 0;
-          var2 = tk.a("login_no_displayname");
+          var2 = tk.a("login_no_displayname", false);
           if (null != var2) {
             km.field_v = in.a(0, var2);
             break L366;
@@ -4075,28 +3728,25 @@ final class wc extends da {
           }
         }
         L367: {
-          int discarded$1405 = 0;
-          var2 = tk.a("create_username_tooltip");
+          var2 = tk.a("create_username_tooltip", false);
           if (null != var2) {
-            String discarded$1406 = in.a(param0, var2);
+            String discarded$294 = in.a(param0, var2);
             break L367;
           } else {
             break L367;
           }
         }
         L368: {
-          int discarded$1407 = 0;
-          var2 = tk.a("create_username_hint");
+          var2 = tk.a("create_username_hint", false);
           if (null == var2) {
             break L368;
           } else {
-            String discarded$1408 = in.a(0, var2);
+            String discarded$295 = in.a(0, var2);
             break L368;
           }
         }
         L369: {
-          int discarded$1409 = 0;
-          var2 = tk.a("create_displayname_tooltip");
+          var2 = tk.a("create_displayname_tooltip", false);
           if (null != var2) {
             ho.field_d = in.a(0, var2);
             break L369;
@@ -4105,8 +3755,7 @@ final class wc extends da {
           }
         }
         L370: {
-          int discarded$1410 = 0;
-          var2 = tk.a("create_displayname_hint");
+          var2 = tk.a("create_displayname_hint", false);
           if (null == var2) {
             break L370;
           } else {
@@ -4115,8 +3764,7 @@ final class wc extends da {
           }
         }
         L371: {
-          int discarded$1411 = 0;
-          var2 = tk.a("create_password_tooltip");
+          var2 = tk.a("create_password_tooltip", false);
           if (null == var2) {
             break L371;
           } else {
@@ -4125,8 +3773,7 @@ final class wc extends da {
           }
         }
         L372: {
-          int discarded$1412 = 0;
-          var2 = tk.a("create_password_hint");
+          var2 = tk.a("create_password_hint", false);
           if (var2 != null) {
             ag.field_c = in.a(0, var2);
             break L372;
@@ -4135,8 +3782,7 @@ final class wc extends da {
           }
         }
         L373: {
-          int discarded$1413 = 0;
-          var2 = tk.a("create_password_confirm_tooltip");
+          var2 = tk.a("create_password_confirm_tooltip", false);
           if (var2 == null) {
             break L373;
           } else {
@@ -4145,8 +3791,7 @@ final class wc extends da {
           }
         }
         L374: {
-          int discarded$1414 = 0;
-          var2 = tk.a("create_email_tooltip");
+          var2 = tk.a("create_email_tooltip", false);
           if (var2 != null) {
             ak.field_f = in.a(param0, var2);
             break L374;
@@ -4155,8 +3800,7 @@ final class wc extends da {
           }
         }
         L375: {
-          int discarded$1415 = 0;
-          var2 = tk.a("create_email_confirm_tooltip");
+          var2 = tk.a("create_email_confirm_tooltip", false);
           if (null != var2) {
             df.field_i = in.a(0, var2);
             break L375;
@@ -4165,8 +3809,7 @@ final class wc extends da {
           }
         }
         L376: {
-          int discarded$1416 = 0;
-          var2 = tk.a("create_age_tooltip");
+          var2 = tk.a("create_age_tooltip", false);
           if (var2 == null) {
             break L376;
           } else {
@@ -4175,8 +3818,7 @@ final class wc extends da {
           }
         }
         L377: {
-          int discarded$1417 = 0;
-          var2 = tk.a("create_optin_news_tooltip");
+          var2 = tk.a("create_optin_news_tooltip", false);
           if (var2 != null) {
             pq.field_b = in.a(0, var2);
             break L377;
@@ -4185,68 +3827,61 @@ final class wc extends da {
           }
         }
         L378: {
-          int discarded$1418 = 0;
-          var2 = tk.a("create_u13_email_tooltip");
+          var2 = tk.a("create_u13_email_tooltip", false);
           if (var2 != null) {
-            String discarded$1419 = in.a(0, var2);
+            String discarded$296 = in.a(0, var2);
             break L378;
           } else {
             break L378;
           }
         }
         L379: {
-          int discarded$1420 = 0;
-          var2 = tk.a("create_u13_email_confirm_tooltip");
+          var2 = tk.a("create_u13_email_confirm_tooltip", false);
           if (null == var2) {
             break L379;
           } else {
-            String discarded$1421 = in.a(0, var2);
+            String discarded$297 = in.a(0, var2);
             break L379;
           }
         }
         L380: {
-          int discarded$1422 = 0;
-          var2 = tk.a("create_dob_tooltip");
+          var2 = tk.a("create_dob_tooltip", false);
           if (var2 != null) {
-            String discarded$1423 = in.a(0, var2);
+            String discarded$298 = in.a(0, var2);
             break L380;
           } else {
             break L380;
           }
         }
         L381: {
-          int discarded$1424 = 0;
-          var2 = tk.a("create_country_tooltip");
+          var2 = tk.a("create_country_tooltip", false);
           if (null == var2) {
             break L381;
           } else {
-            String discarded$1425 = in.a(0, var2);
+            String discarded$299 = in.a(0, var2);
             break L381;
           }
         }
         L382: {
-          int discarded$1426 = 0;
-          var2 = tk.a("create_optin_tooltip");
+          var2 = tk.a("create_optin_tooltip", false);
           if (var2 == null) {
             break L382;
           } else {
-            String discarded$1427 = in.a(param0, var2);
+            String discarded$300 = in.a(param0, var2);
             break L382;
           }
         }
         L383: {
-          int discarded$1428 = 0;
-          var2 = tk.a("create_continue");
+          var2 = tk.a("create_continue", false);
           if (null != var2) {
-            String discarded$1429 = in.a(0, var2);
+            String discarded$301 = in.a(0, var2);
             break L383;
           } else {
             break L383;
           }
         }
         L384: {
-          int discarded$1430 = 0;
-          var2 = tk.a("create_username_unavailable");
+          var2 = tk.a("create_username_unavailable", false);
           if (null == var2) {
             break L384;
           } else {
@@ -4255,8 +3890,7 @@ final class wc extends da {
           }
         }
         L385: {
-          int discarded$1431 = 0;
-          var2 = tk.a("create_username_available");
+          var2 = tk.a("create_username_available", false);
           if (var2 != null) {
             sf.field_c = in.a(param0, var2);
             break L385;
@@ -4265,8 +3899,7 @@ final class wc extends da {
           }
         }
         L386: {
-          int discarded$1432 = 0;
-          var2 = tk.a("create_alert_namelength");
+          var2 = tk.a("create_alert_namelength", false);
           if (var2 == null) {
             break L386;
           } else {
@@ -4275,8 +3908,7 @@ final class wc extends da {
           }
         }
         L387: {
-          int discarded$1433 = 0;
-          var2 = tk.a("create_alert_namechars");
+          var2 = tk.a("create_alert_namechars", false);
           if (var2 != null) {
             ud.field_w = in.a(0, var2);
             break L387;
@@ -4285,8 +3917,7 @@ final class wc extends da {
           }
         }
         L388: {
-          int discarded$1434 = 0;
-          var2 = tk.a("create_alert_nameleadingspace");
+          var2 = tk.a("create_alert_nameleadingspace", false);
           if (null != var2) {
             vq.field_p = in.a(0, var2);
             break L388;
@@ -4295,8 +3926,7 @@ final class wc extends da {
           }
         }
         L389: {
-          int discarded$1435 = 0;
-          var2 = tk.a("create_alert_doublespace");
+          var2 = tk.a("create_alert_doublespace", false);
           if (var2 != null) {
             mo.field_a = in.a(0, var2);
             break L389;
@@ -4305,8 +3935,7 @@ final class wc extends da {
           }
         }
         L390: {
-          int discarded$1436 = 0;
-          var2 = tk.a("create_alert_passchars");
+          var2 = tk.a("create_alert_passchars", false);
           if (var2 == null) {
             break L390;
           } else {
@@ -4315,8 +3944,7 @@ final class wc extends da {
           }
         }
         L391: {
-          int discarded$1437 = 0;
-          var2 = tk.a("create_alert_passrepeated");
+          var2 = tk.a("create_alert_passrepeated", false);
           if (var2 != null) {
             bq.field_C = in.a(param0, var2);
             break L391;
@@ -4325,8 +3953,7 @@ final class wc extends da {
           }
         }
         L392: {
-          int discarded$1438 = 0;
-          var2 = tk.a("create_alert_passlength");
+          var2 = tk.a("create_alert_passlength", false);
           if (null != var2) {
             nj.field_f = in.a(0, var2);
             break L392;
@@ -4335,8 +3962,7 @@ final class wc extends da {
           }
         }
         L393: {
-          int discarded$1439 = 0;
-          var2 = tk.a("create_alert_passcontainsname");
+          var2 = tk.a("create_alert_passcontainsname", false);
           if (var2 == null) {
             break L393;
           } else {
@@ -4345,8 +3971,7 @@ final class wc extends da {
           }
         }
         L394: {
-          int discarded$1440 = 0;
-          var2 = tk.a("create_alert_passcontainsemail");
+          var2 = tk.a("create_alert_passcontainsemail", false);
           if (null == var2) {
             break L394;
           } else {
@@ -4355,8 +3980,7 @@ final class wc extends da {
           }
         }
         L395: {
-          int discarded$1441 = 0;
-          var2 = tk.a("create_alert_passcontainsname_partial");
+          var2 = tk.a("create_alert_passcontainsname_partial", false);
           if (null != var2) {
             nd.field_l = in.a(0, var2);
             break L395;
@@ -4365,18 +3989,16 @@ final class wc extends da {
           }
         }
         L396: {
-          int discarded$1442 = 0;
-          var2 = tk.a("create_alert_checkname");
+          var2 = tk.a("create_alert_checkname", false);
           if (null != var2) {
-            String discarded$1443 = in.a(param0, var2);
+            String discarded$302 = in.a(param0, var2);
             break L396;
           } else {
             break L396;
           }
         }
         L397: {
-          int discarded$1444 = 0;
-          var2 = tk.a("create_alert_invalidemail");
+          var2 = tk.a("create_alert_invalidemail", false);
           if (var2 != null) {
             sr.field_d = in.a(0, var2);
             break L397;
@@ -4385,8 +4007,7 @@ final class wc extends da {
           }
         }
         L398: {
-          int discarded$1445 = 0;
-          var2 = tk.a("create_alert_email_unavailable");
+          var2 = tk.a("create_alert_email_unavailable", false);
           if (var2 != null) {
             vl.field_b = in.a(0, var2);
             break L398;
@@ -4395,8 +4016,7 @@ final class wc extends da {
           }
         }
         L399: {
-          int discarded$1446 = 0;
-          var2 = tk.a("create_alert_invaliddate");
+          var2 = tk.a("create_alert_invaliddate", false);
           if (null != var2) {
             lb.field_a = in.a(param0, var2);
             break L399;
@@ -4405,8 +4025,7 @@ final class wc extends da {
           }
         }
         L400: {
-          int discarded$1447 = 0;
-          var2 = tk.a("create_alert_invalidage");
+          var2 = tk.a("create_alert_invalidage", false);
           if (null != var2) {
             br.field_S = in.a(0, var2);
             break L400;
@@ -4415,8 +4034,7 @@ final class wc extends da {
           }
         }
         L401: {
-          int discarded$1448 = 0;
-          var2 = tk.a("create_alert_yearrange");
+          var2 = tk.a("create_alert_yearrange", false);
           if (null == var2) {
             break L401;
           } else {
@@ -4425,8 +4043,7 @@ final class wc extends da {
           }
         }
         L402: {
-          int discarded$1449 = 0;
-          var2 = tk.a("create_alert_mismatch");
+          var2 = tk.a("create_alert_mismatch", false);
           if (null != var2) {
             gl.field_a = in.a(param0, var2);
             break L402;
@@ -4435,8 +4052,7 @@ final class wc extends da {
           }
         }
         L403: {
-          int discarded$1450 = 0;
-          var2 = tk.a("create_passwordvalid");
+          var2 = tk.a("create_passwordvalid", false);
           if (var2 != null) {
             vl.field_h = in.a(0, var2);
             break L403;
@@ -4445,8 +4061,7 @@ final class wc extends da {
           }
         }
         L404: {
-          int discarded$1451 = 0;
-          var2 = tk.a("create_emailvalid");
+          var2 = tk.a("create_emailvalid", false);
           if (var2 == null) {
             break L404;
           } else {
@@ -4455,8 +4070,7 @@ final class wc extends da {
           }
         }
         L405: {
-          int discarded$1452 = 0;
-          var2 = tk.a("create_account_success");
+          var2 = tk.a("create_account_success", false);
           if (null == var2) {
             break L405;
           } else {
@@ -4465,8 +4079,7 @@ final class wc extends da {
           }
         }
         L406: {
-          int discarded$1453 = 0;
-          var2 = tk.a("invalid_name");
+          var2 = tk.a("invalid_name", false);
           if (null != var2) {
             or.field_a = in.a(0, var2);
             break L406;
@@ -4475,8 +4088,7 @@ final class wc extends da {
           }
         }
         L407: {
-          int discarded$1454 = 0;
-          var2 = tk.a("cannot_add_yourself");
+          var2 = tk.a("cannot_add_yourself", false);
           if (var2 != null) {
             Vertigo2.field_K = in.a(0, var2);
             break L407;
@@ -4485,8 +4097,7 @@ final class wc extends da {
           }
         }
         L408: {
-          int discarded$1455 = 0;
-          var2 = tk.a("unable_to_add_friend");
+          var2 = tk.a("unable_to_add_friend", false);
           if (null == var2) {
             break L408;
           } else {
@@ -4495,8 +4106,7 @@ final class wc extends da {
           }
         }
         L409: {
-          int discarded$1456 = 0;
-          var2 = tk.a("unable_to_add_ignore");
+          var2 = tk.a("unable_to_add_ignore", false);
           if (null == var2) {
             break L409;
           } else {
@@ -4505,8 +4115,7 @@ final class wc extends da {
           }
         }
         L410: {
-          int discarded$1457 = 0;
-          var2 = tk.a("unable_to_delete_friend");
+          var2 = tk.a("unable_to_delete_friend", false);
           if (null != var2) {
             oa.field_o = in.a(0, var2);
             break L410;
@@ -4515,8 +4124,7 @@ final class wc extends da {
           }
         }
         L411: {
-          int discarded$1458 = 0;
-          var2 = tk.a("unable_to_delete_ignore");
+          var2 = tk.a("unable_to_delete_ignore", false);
           if (var2 == null) {
             break L411;
           } else {
@@ -4525,8 +4133,7 @@ final class wc extends da {
           }
         }
         L412: {
-          int discarded$1459 = 0;
-          var2 = tk.a("friendlistfull");
+          var2 = tk.a("friendlistfull", false);
           if (var2 != null) {
             wh.field_B = in.a(0, var2);
             break L412;
@@ -4535,8 +4142,7 @@ final class wc extends da {
           }
         }
         L413: {
-          int discarded$1460 = 0;
-          var2 = tk.a("friendlistdupe");
+          var2 = tk.a("friendlistdupe", false);
           if (null == var2) {
             break L413;
           } else {
@@ -4545,8 +4151,7 @@ final class wc extends da {
           }
         }
         L414: {
-          int discarded$1461 = 0;
-          var2 = tk.a("friendnotfound");
+          var2 = tk.a("friendnotfound", false);
           if (var2 != null) {
             tq.field_a = in.a(0, var2);
             break L414;
@@ -4555,8 +4160,7 @@ final class wc extends da {
           }
         }
         L415: {
-          int discarded$1462 = 0;
-          var2 = tk.a("ignorelistfull");
+          var2 = tk.a("ignorelistfull", false);
           if (null == var2) {
             break L415;
           } else {
@@ -4565,8 +4169,7 @@ final class wc extends da {
           }
         }
         L416: {
-          int discarded$1463 = 0;
-          var2 = tk.a("ignorelistdupe");
+          var2 = tk.a("ignorelistdupe", false);
           if (null != var2) {
             lk.field_f = in.a(0, var2);
             break L416;
@@ -4575,8 +4178,7 @@ final class wc extends da {
           }
         }
         L417: {
-          int discarded$1464 = 0;
-          var2 = tk.a("ignorenotfound");
+          var2 = tk.a("ignorenotfound", false);
           if (var2 == null) {
             break L417;
           } else {
@@ -4585,8 +4187,7 @@ final class wc extends da {
           }
         }
         L418: {
-          int discarded$1465 = 0;
-          var2 = tk.a("removeignorefirst");
+          var2 = tk.a("removeignorefirst", false);
           if (var2 == null) {
             break L418;
           } else {
@@ -4595,8 +4196,7 @@ final class wc extends da {
           }
         }
         L419: {
-          int discarded$1466 = 0;
-          var2 = tk.a("removefriendfirst");
+          var2 = tk.a("removefriendfirst", false);
           if (null == var2) {
             break L419;
           } else {
@@ -4605,8 +4205,7 @@ final class wc extends da {
           }
         }
         L420: {
-          int discarded$1467 = 0;
-          var2 = tk.a("enterfriend_add");
+          var2 = tk.a("enterfriend_add", false);
           if (null != var2) {
             kj.field_A = in.a(0, var2);
             break L420;
@@ -4615,8 +4214,7 @@ final class wc extends da {
           }
         }
         L421: {
-          int discarded$1468 = 0;
-          var2 = tk.a("enterfriend_del");
+          var2 = tk.a("enterfriend_del", false);
           if (var2 == null) {
             break L421;
           } else {
@@ -4625,8 +4223,7 @@ final class wc extends da {
           }
         }
         L422: {
-          int discarded$1469 = 0;
-          var2 = tk.a("enterignore_add");
+          var2 = tk.a("enterignore_add", false);
           if (var2 == null) {
             break L422;
           } else {
@@ -4635,8 +4232,7 @@ final class wc extends da {
           }
         }
         L423: {
-          int discarded$1470 = 0;
-          var2 = tk.a("enterignore_del");
+          var2 = tk.a("enterignore_del", false);
           if (null != var2) {
             qc.field_y = in.a(param0, var2);
             break L423;
@@ -4645,8 +4241,7 @@ final class wc extends da {
           }
         }
         L424: {
-          int discarded$1471 = 0;
-          var2 = tk.a("text_removed_from_game");
+          var2 = tk.a("text_removed_from_game", false);
           if (null != var2) {
             qp.field_c = in.a(0, var2);
             break L424;
@@ -4655,8 +4250,7 @@ final class wc extends da {
           }
         }
         L425: {
-          int discarded$1472 = 0;
-          var2 = tk.a("text_lobby_pleaselogin_free");
+          var2 = tk.a("text_lobby_pleaselogin_free", false);
           if (var2 == null) {
             break L425;
           } else {
@@ -4665,38 +4259,34 @@ final class wc extends da {
           }
         }
         L426: {
-          int discarded$1473 = 0;
-          var2 = tk.a("opengl");
+          var2 = tk.a("opengl", false);
           if (var2 != null) {
-            String discarded$1474 = in.a(0, var2);
+            String discarded$303 = in.a(0, var2);
             break L426;
           } else {
             break L426;
           }
         }
         L427: {
-          int discarded$1475 = 0;
-          var2 = tk.a("sse");
+          var2 = tk.a("sse", false);
           if (var2 != null) {
-            String discarded$1476 = in.a(0, var2);
+            String discarded$304 = in.a(0, var2);
             break L427;
           } else {
             break L427;
           }
         }
         L428: {
-          int discarded$1477 = 0;
-          var2 = tk.a("purejava");
+          var2 = tk.a("purejava", false);
           if (var2 == null) {
             break L428;
           } else {
-            String discarded$1478 = in.a(0, var2);
+            String discarded$305 = in.a(0, var2);
             break L428;
           }
         }
         L429: {
-          int discarded$1479 = 0;
-          var2 = tk.a("waitingfor_graphics");
+          var2 = tk.a("waitingfor_graphics", false);
           if (var2 == null) {
             break L429;
           } else {
@@ -4705,8 +4295,7 @@ final class wc extends da {
           }
         }
         L430: {
-          int discarded$1480 = 0;
-          var2 = tk.a("waitingfor_models");
+          var2 = tk.a("waitingfor_models", false);
           if (null != var2) {
             ga.field_ib = in.a(0, var2);
             break L430;
@@ -4715,8 +4304,7 @@ final class wc extends da {
           }
         }
         L431: {
-          int discarded$1481 = 0;
-          var2 = tk.a("waitingfor_fonts");
+          var2 = tk.a("waitingfor_fonts", false);
           if (var2 == null) {
             break L431;
           } else {
@@ -4725,8 +4313,7 @@ final class wc extends da {
           }
         }
         L432: {
-          int discarded$1482 = 0;
-          var2 = tk.a("waitingfor_soundeffects");
+          var2 = tk.a("waitingfor_soundeffects", false);
           if (null != var2) {
             lc.field_c = in.a(0, var2);
             break L432;
@@ -4735,8 +4322,7 @@ final class wc extends da {
           }
         }
         L433: {
-          int discarded$1483 = 0;
-          var2 = tk.a("waitingfor_music");
+          var2 = tk.a("waitingfor_music", false);
           if (var2 != null) {
             tm.field_c = in.a(param0, var2);
             break L433;
@@ -4745,18 +4331,16 @@ final class wc extends da {
           }
         }
         L434: {
-          int discarded$1484 = 0;
-          var2 = tk.a("waitingfor_instruments");
+          var2 = tk.a("waitingfor_instruments", false);
           if (null != var2) {
-            String discarded$1485 = in.a(param0, var2);
+            String discarded$306 = in.a(param0, var2);
             break L434;
           } else {
             break L434;
           }
         }
         L435: {
-          int discarded$1486 = 0;
-          var2 = tk.a("waitingfor_levels");
+          var2 = tk.a("waitingfor_levels", false);
           if (null == var2) {
             break L435;
           } else {
@@ -4765,8 +4349,7 @@ final class wc extends da {
           }
         }
         L436: {
-          int discarded$1487 = 0;
-          var2 = tk.a("waitingfor_extradata");
+          var2 = tk.a("waitingfor_extradata", false);
           if (var2 != null) {
             vj.field_a = in.a(param0, var2);
             break L436;
@@ -4775,18 +4358,16 @@ final class wc extends da {
           }
         }
         L437: {
-          int discarded$1488 = 0;
-          var2 = tk.a("waitingfor_languages");
+          var2 = tk.a("waitingfor_languages", false);
           if (var2 != null) {
-            String discarded$1489 = in.a(0, var2);
+            String discarded$307 = in.a(0, var2);
             break L437;
           } else {
             break L437;
           }
         }
         L438: {
-          int discarded$1490 = 0;
-          var2 = tk.a("waitingfor_textures");
+          var2 = tk.a("waitingfor_textures", false);
           if (null == var2) {
             break L438;
           } else {
@@ -4795,8 +4376,7 @@ final class wc extends da {
           }
         }
         L439: {
-          int discarded$1491 = 0;
-          var2 = tk.a("waitingfor_animations");
+          var2 = tk.a("waitingfor_animations", false);
           if (null == var2) {
             break L439;
           } else {
@@ -4805,8 +4385,7 @@ final class wc extends da {
           }
         }
         L440: {
-          int discarded$1492 = 0;
-          var2 = tk.a("loading_graphics");
+          var2 = tk.a("loading_graphics", false);
           if (null == var2) {
             break L440;
           } else {
@@ -4815,8 +4394,7 @@ final class wc extends da {
           }
         }
         L441: {
-          int discarded$1493 = 0;
-          var2 = tk.a("loading_models");
+          var2 = tk.a("loading_models", false);
           if (null != var2) {
             ec.field_D = in.a(0, var2);
             break L441;
@@ -4825,8 +4403,7 @@ final class wc extends da {
           }
         }
         L442: {
-          int discarded$1494 = 0;
-          var2 = tk.a("loading_fonts");
+          var2 = tk.a("loading_fonts", false);
           if (var2 == null) {
             break L442;
           } else {
@@ -4835,8 +4412,7 @@ final class wc extends da {
           }
         }
         L443: {
-          int discarded$1495 = 0;
-          var2 = tk.a("loading_soundeffects");
+          var2 = tk.a("loading_soundeffects", false);
           if (null == var2) {
             break L443;
           } else {
@@ -4845,8 +4421,7 @@ final class wc extends da {
           }
         }
         L444: {
-          int discarded$1496 = 0;
-          var2 = tk.a("loading_music");
+          var2 = tk.a("loading_music", false);
           if (var2 == null) {
             break L444;
           } else {
@@ -4855,18 +4430,16 @@ final class wc extends da {
           }
         }
         L445: {
-          int discarded$1497 = 0;
-          var2 = tk.a("loading_instruments");
+          var2 = tk.a("loading_instruments", false);
           if (null != var2) {
-            String discarded$1498 = in.a(0, var2);
+            String discarded$308 = in.a(0, var2);
             break L445;
           } else {
             break L445;
           }
         }
         L446: {
-          int discarded$1499 = 0;
-          var2 = tk.a("loading_levels");
+          var2 = tk.a("loading_levels", false);
           if (var2 != null) {
             bm.field_D = in.a(0, var2);
             break L446;
@@ -4875,8 +4448,7 @@ final class wc extends da {
           }
         }
         L447: {
-          int discarded$1500 = 0;
-          var2 = tk.a("loading_extradata");
+          var2 = tk.a("loading_extradata", false);
           if (null == var2) {
             break L447;
           } else {
@@ -4885,18 +4457,16 @@ final class wc extends da {
           }
         }
         L448: {
-          int discarded$1501 = 0;
-          var2 = tk.a("loading_languages");
+          var2 = tk.a("loading_languages", false);
           if (null != var2) {
-            String discarded$1502 = in.a(param0, var2);
+            String discarded$309 = in.a(param0, var2);
             break L448;
           } else {
             break L448;
           }
         }
         L449: {
-          int discarded$1503 = 0;
-          var2 = tk.a("loading_textures");
+          var2 = tk.a("loading_textures", false);
           if (null != var2) {
             ua.field_g = in.a(0, var2);
             break L449;
@@ -4905,8 +4475,7 @@ final class wc extends da {
           }
         }
         L450: {
-          int discarded$1504 = 0;
-          var2 = tk.a("loading_animations");
+          var2 = tk.a("loading_animations", false);
           if (var2 != null) {
             kq.field_Vb = in.a(0, var2);
             break L450;
@@ -4915,8 +4484,7 @@ final class wc extends da {
           }
         }
         L451: {
-          int discarded$1505 = 0;
-          var2 = tk.a("unpacking_graphics");
+          var2 = tk.a("unpacking_graphics", false);
           if (var2 == null) {
             break L451;
           } else {
@@ -4925,8 +4493,7 @@ final class wc extends da {
           }
         }
         L452: {
-          int discarded$1506 = 0;
-          var2 = tk.a("unpacking_models");
+          var2 = tk.a("unpacking_models", false);
           if (var2 == null) {
             break L452;
           } else {
@@ -4935,8 +4502,7 @@ final class wc extends da {
           }
         }
         L453: {
-          int discarded$1507 = 0;
-          var2 = tk.a("unpacking_soundeffects");
+          var2 = tk.a("unpacking_soundeffects", false);
           if (var2 == null) {
             break L453;
           } else {
@@ -4945,18 +4511,16 @@ final class wc extends da {
           }
         }
         L454: {
-          int discarded$1508 = 0;
-          var2 = tk.a("unpacking_music");
+          var2 = tk.a("unpacking_music", false);
           if (var2 != null) {
-            String discarded$1509 = in.a(0, var2);
+            String discarded$310 = in.a(0, var2);
             break L454;
           } else {
             break L454;
           }
         }
         L455: {
-          int discarded$1510 = 0;
-          var2 = tk.a("unpacking_levels");
+          var2 = tk.a("unpacking_levels", false);
           if (var2 != null) {
             lk.field_g = in.a(0, var2);
             break L455;
@@ -4965,8 +4529,7 @@ final class wc extends da {
           }
         }
         L456: {
-          int discarded$1511 = 0;
-          var2 = tk.a("unpacking_languages");
+          var2 = tk.a("unpacking_languages", false);
           if (var2 != null) {
             fa.field_v = in.a(param0, var2);
             break L456;
@@ -4975,8 +4538,7 @@ final class wc extends da {
           }
         }
         L457: {
-          int discarded$1512 = 0;
-          var2 = tk.a("unpacking_animations");
+          var2 = tk.a("unpacking_animations", false);
           if (null == var2) {
             break L457;
           } else {
@@ -4985,18 +4547,16 @@ final class wc extends da {
           }
         }
         L458: {
-          int discarded$1513 = 0;
-          var2 = tk.a("unpacking_toolkit");
+          var2 = tk.a("unpacking_toolkit", false);
           if (var2 == null) {
             break L458;
           } else {
-            String discarded$1514 = in.a(0, var2);
+            String discarded$311 = in.a(0, var2);
             break L458;
           }
         }
         L459: {
-          int discarded$1515 = 0;
-          var2 = tk.a("instructions");
+          var2 = tk.a("instructions", false);
           if (var2 == null) {
             break L459;
           } else {
@@ -5005,28 +4565,25 @@ final class wc extends da {
           }
         }
         L460: {
-          int discarded$1516 = 0;
-          var2 = tk.a("tutorial");
+          var2 = tk.a("tutorial", false);
           if (var2 != null) {
-            String discarded$1517 = in.a(0, var2);
+            String discarded$312 = in.a(0, var2);
             break L460;
           } else {
             break L460;
           }
         }
         L461: {
-          int discarded$1518 = 0;
-          var2 = tk.a("playtutorial");
+          var2 = tk.a("playtutorial", false);
           if (var2 != null) {
-            String discarded$1519 = in.a(0, var2);
+            String discarded$313 = in.a(0, var2);
             break L461;
           } else {
             break L461;
           }
         }
         L462: {
-          int discarded$1520 = 0;
-          var2 = tk.a("sound_colon");
+          var2 = tk.a("sound_colon", false);
           if (var2 == null) {
             break L462;
           } else {
@@ -5035,8 +4592,7 @@ final class wc extends da {
           }
         }
         L463: {
-          int discarded$1521 = 0;
-          var2 = tk.a("music_colon");
+          var2 = tk.a("music_colon", false);
           if (var2 != null) {
             qi.field_f = in.a(0, var2);
             break L463;
@@ -5045,8 +4601,7 @@ final class wc extends da {
           }
         }
         L464: {
-          int discarded$1522 = 0;
-          var2 = tk.a("fullscreen");
+          var2 = tk.a("fullscreen", false);
           if (var2 != null) {
             mo.field_b = in.a(0, var2);
             break L464;
@@ -5055,18 +4610,16 @@ final class wc extends da {
           }
         }
         L465: {
-          int discarded$1523 = 0;
-          var2 = tk.a("screensize");
+          var2 = tk.a("screensize", false);
           if (var2 == null) {
             break L465;
           } else {
-            String discarded$1524 = in.a(param0, var2);
+            String discarded$314 = in.a(param0, var2);
             break L465;
           }
         }
         L466: {
-          int discarded$1525 = 0;
-          var2 = tk.a("highscores");
+          var2 = tk.a("highscores", false);
           if (var2 != null) {
             dg.field_c = in.a(0, var2);
             break L466;
@@ -5075,8 +4628,7 @@ final class wc extends da {
           }
         }
         L467: {
-          int discarded$1526 = 0;
-          var2 = tk.a("rankings");
+          var2 = tk.a("rankings", false);
           if (var2 != null) {
             rr.field_A = in.a(0, var2);
             break L467;
@@ -5085,8 +4637,7 @@ final class wc extends da {
           }
         }
         L468: {
-          int discarded$1527 = 0;
-          var2 = tk.a("achievements");
+          var2 = tk.a("achievements", false);
           if (null != var2) {
             rb.field_a = in.a(0, var2);
             break L468;
@@ -5095,38 +4646,34 @@ final class wc extends da {
           }
         }
         L469: {
-          int discarded$1528 = 0;
-          var2 = tk.a("achievementsthisgame");
+          var2 = tk.a("achievementsthisgame", false);
           if (null == var2) {
             break L469;
           } else {
-            String discarded$1529 = in.a(0, var2);
+            String discarded$315 = in.a(0, var2);
             break L469;
           }
         }
         L470: {
-          int discarded$1530 = 0;
-          var2 = tk.a("achievementsthissession");
+          var2 = tk.a("achievementsthissession", false);
           if (null != var2) {
-            String discarded$1531 = in.a(0, var2);
+            String discarded$316 = in.a(0, var2);
             break L470;
           } else {
             break L470;
           }
         }
         L471: {
-          int discarded$1532 = 0;
-          var2 = tk.a("watchintroduction");
+          var2 = tk.a("watchintroduction", false);
           if (null == var2) {
             break L471;
           } else {
-            String discarded$1533 = in.a(0, var2);
+            String discarded$317 = in.a(0, var2);
             break L471;
           }
         }
         L472: {
-          int discarded$1534 = 0;
-          var2 = tk.a("quit");
+          var2 = tk.a("quit", false);
           if (null != var2) {
             ld.field_a = in.a(0, var2);
             break L472;
@@ -5135,8 +4682,7 @@ final class wc extends da {
           }
         }
         L473: {
-          int discarded$1535 = 0;
-          var2 = tk.a("login_createaccount");
+          var2 = tk.a("login_createaccount", false);
           if (null != var2) {
             sp.field_Q = in.a(0, var2);
             break L473;
@@ -5145,18 +4691,16 @@ final class wc extends da {
           }
         }
         L474: {
-          int discarded$1536 = 0;
-          var2 = tk.a("tohighscores");
+          var2 = tk.a("tohighscores", false);
           if (var2 == null) {
             break L474;
           } else {
-            String discarded$1537 = in.a(param0, var2);
+            String discarded$318 = in.a(param0, var2);
             break L474;
           }
         }
         L475: {
-          int discarded$1538 = 0;
-          var2 = tk.a("returntomainmenu");
+          var2 = tk.a("returntomainmenu", false);
           if (var2 == null) {
             break L475;
           } else {
@@ -5165,28 +4709,25 @@ final class wc extends da {
           }
         }
         L476: {
-          int discarded$1539 = 0;
-          var2 = tk.a("returntopausemenu");
+          var2 = tk.a("returntopausemenu", false);
           if (var2 != null) {
-            String discarded$1540 = in.a(0, var2);
+            String discarded$319 = in.a(0, var2);
             break L476;
           } else {
             break L476;
           }
         }
         L477: {
-          int discarded$1541 = 0;
-          var2 = tk.a("returntooptionsmenu_notpaused");
+          var2 = tk.a("returntooptionsmenu_notpaused", false);
           if (null != var2) {
-            String discarded$1542 = in.a(0, var2);
+            String discarded$320 = in.a(0, var2);
             break L477;
           } else {
             break L477;
           }
         }
         L478: {
-          int discarded$1543 = 0;
-          var2 = tk.a("mainmenu");
+          var2 = tk.a("mainmenu", false);
           if (null == var2) {
             break L478;
           } else {
@@ -5195,8 +4736,7 @@ final class wc extends da {
           }
         }
         L479: {
-          int discarded$1544 = 0;
-          var2 = tk.a("pausemenu");
+          var2 = tk.a("pausemenu", false);
           if (var2 != null) {
             po.field_d = in.a(param0, var2);
             break L479;
@@ -5205,48 +4745,43 @@ final class wc extends da {
           }
         }
         L480: {
-          int discarded$1545 = 0;
-          var2 = tk.a("optionsmenu_notpaused");
+          var2 = tk.a("optionsmenu_notpaused", false);
           if (var2 == null) {
             break L480;
           } else {
-            String discarded$1546 = in.a(0, var2);
+            String discarded$321 = in.a(0, var2);
             break L480;
           }
         }
         L481: {
-          int discarded$1547 = 0;
-          var2 = tk.a("menu");
+          var2 = tk.a("menu", false);
           if (var2 != null) {
-            String discarded$1548 = in.a(0, var2);
+            String discarded$322 = in.a(0, var2);
             break L481;
           } else {
             break L481;
           }
         }
         L482: {
-          int discarded$1549 = 0;
-          var2 = tk.a("selectlevel");
+          var2 = tk.a("selectlevel", false);
           if (null == var2) {
             break L482;
           } else {
-            String discarded$1550 = in.a(0, var2);
+            String discarded$323 = in.a(0, var2);
             break L482;
           }
         }
         L483: {
-          int discarded$1551 = 0;
-          var2 = tk.a("nextlevel");
+          var2 = tk.a("nextlevel", false);
           if (null != var2) {
-            String discarded$1552 = in.a(0, var2);
+            String discarded$324 = in.a(0, var2);
             break L483;
           } else {
             break L483;
           }
         }
         L484: {
-          int discarded$1553 = 0;
-          var2 = tk.a("startgame");
+          var2 = tk.a("startgame", false);
           if (null == var2) {
             break L484;
           } else {
@@ -5255,8 +4790,7 @@ final class wc extends da {
           }
         }
         L485: {
-          int discarded$1554 = 0;
-          var2 = tk.a("newgame");
+          var2 = tk.a("newgame", false);
           if (var2 != null) {
             jm.field_C = in.a(0, var2);
             break L485;
@@ -5265,58 +4799,52 @@ final class wc extends da {
           }
         }
         L486: {
-          int discarded$1555 = 0;
-          var2 = tk.a("resumegame");
+          var2 = tk.a("resumegame", false);
           if (null == var2) {
             break L486;
           } else {
-            String discarded$1556 = in.a(0, var2);
+            String discarded$325 = in.a(0, var2);
             break L486;
           }
         }
         L487: {
-          int discarded$1557 = 0;
-          var2 = tk.a("resumetutorial");
+          var2 = tk.a("resumetutorial", false);
           if (null == var2) {
             break L487;
           } else {
-            String discarded$1558 = in.a(0, var2);
+            String discarded$326 = in.a(0, var2);
             break L487;
           }
         }
         L488: {
-          int discarded$1559 = 0;
-          var2 = tk.a("skip");
+          var2 = tk.a("skip", false);
           if (null == var2) {
             break L488;
           } else {
-            String discarded$1560 = in.a(0, var2);
+            String discarded$327 = in.a(0, var2);
             break L488;
           }
         }
         L489: {
-          int discarded$1561 = 0;
-          var2 = tk.a("skiptutorial");
+          var2 = tk.a("skiptutorial", false);
           if (var2 != null) {
-            String discarded$1562 = in.a(0, var2);
+            String discarded$328 = in.a(0, var2);
             break L489;
           } else {
             break L489;
           }
         }
         L490: {
-          int discarded$1563 = 0;
-          var2 = tk.a("skipending");
+          var2 = tk.a("skipending", false);
           if (null != var2) {
-            String discarded$1564 = in.a(param0, var2);
+            String discarded$329 = in.a(param0, var2);
             break L490;
           } else {
             break L490;
           }
         }
         L491: {
-          int discarded$1565 = 0;
-          var2 = tk.a("restartlevel");
+          var2 = tk.a("restartlevel", false);
           if (var2 != null) {
             in.field_a = in.a(0, var2);
             break L491;
@@ -5325,18 +4853,16 @@ final class wc extends da {
           }
         }
         L492: {
-          int discarded$1566 = 0;
-          var2 = tk.a("endtest");
+          var2 = tk.a("endtest", false);
           if (null != var2) {
-            String discarded$1567 = in.a(0, var2);
+            String discarded$330 = in.a(0, var2);
             break L492;
           } else {
             break L492;
           }
         }
         L493: {
-          int discarded$1568 = 0;
-          var2 = tk.a("endgame");
+          var2 = tk.a("endgame", false);
           if (var2 != null) {
             np.field_Jb = in.a(0, var2);
             break L493;
@@ -5345,18 +4871,16 @@ final class wc extends da {
           }
         }
         L494: {
-          int discarded$1569 = 0;
-          var2 = tk.a("endtutorial");
+          var2 = tk.a("endtutorial", false);
           if (var2 != null) {
-            String discarded$1570 = in.a(param0, var2);
+            String discarded$331 = in.a(param0, var2);
             break L494;
           } else {
             break L494;
           }
         }
         L495: {
-          int discarded$1571 = 0;
-          var2 = tk.a("ok");
+          var2 = tk.a("ok", false);
           if (var2 == null) {
             break L495;
           } else {
@@ -5365,28 +4889,25 @@ final class wc extends da {
           }
         }
         L496: {
-          int discarded$1572 = 0;
-          var2 = tk.a("on");
+          var2 = tk.a("on", false);
           if (null == var2) {
             break L496;
           } else {
-            String discarded$1573 = in.a(0, var2);
+            String discarded$332 = in.a(0, var2);
             break L496;
           }
         }
         L497: {
-          int discarded$1574 = 0;
-          var2 = tk.a("off");
+          var2 = tk.a("off", false);
           if (null != var2) {
-            String discarded$1575 = in.a(0, var2);
+            String discarded$333 = in.a(0, var2);
             break L497;
           } else {
             break L497;
           }
         }
         L498: {
-          int discarded$1576 = 0;
-          var2 = tk.a("previous");
+          var2 = tk.a("previous", false);
           if (var2 != null) {
             bb.field_y = in.a(param0, var2);
             break L498;
@@ -5395,18 +4916,16 @@ final class wc extends da {
           }
         }
         L499: {
-          int discarded$1577 = 0;
-          var2 = tk.a("prev");
+          var2 = tk.a("prev", false);
           if (var2 != null) {
-            String discarded$1578 = in.a(0, var2);
+            String discarded$334 = in.a(0, var2);
             break L499;
           } else {
             break L499;
           }
         }
         L500: {
-          int discarded$1579 = 0;
-          var2 = tk.a("next");
+          var2 = tk.a("next", false);
           if (var2 == null) {
             break L500;
           } else {
@@ -5415,28 +4934,25 @@ final class wc extends da {
           }
         }
         L501: {
-          int discarded$1580 = 0;
-          var2 = tk.a("graphics_colon");
+          var2 = tk.a("graphics_colon", false);
           if (var2 == null) {
             break L501;
           } else {
-            String discarded$1581 = in.a(param0, var2);
+            String discarded$335 = in.a(param0, var2);
             break L501;
           }
         }
         L502: {
-          int discarded$1582 = 0;
-          var2 = tk.a("hotseatmultiplayer");
+          var2 = tk.a("hotseatmultiplayer", false);
           if (null != var2) {
-            String discarded$1583 = in.a(0, var2);
+            String discarded$336 = in.a(0, var2);
             break L502;
           } else {
             break L502;
           }
         }
         L503: {
-          int discarded$1584 = 0;
-          var2 = tk.a("entermultiplayerlobby");
+          var2 = tk.a("entermultiplayerlobby", false);
           if (null == var2) {
             break L503;
           } else {
@@ -5445,8 +4961,7 @@ final class wc extends da {
           }
         }
         L504: {
-          int discarded$1585 = 0;
-          var2 = tk.a("singleplayergame");
+          var2 = tk.a("singleplayergame", false);
           if (var2 != null) {
             dh.field_b = in.a(param0, var2);
             break L504;
@@ -5455,8 +4970,7 @@ final class wc extends da {
           }
         }
         L505: {
-          int discarded$1586 = 0;
-          var2 = tk.a("returntogame");
+          var2 = tk.a("returntogame", false);
           if (null == var2) {
             break L505;
           } else {
@@ -5465,18 +4979,16 @@ final class wc extends da {
           }
         }
         L506: {
-          int discarded$1587 = 0;
-          var2 = tk.a("endgameresign");
+          var2 = tk.a("endgameresign", false);
           if (var2 != null) {
-            String discarded$1588 = in.a(param0, var2);
+            String discarded$337 = in.a(param0, var2);
             break L506;
           } else {
             break L506;
           }
         }
         L507: {
-          int discarded$1589 = 0;
-          var2 = tk.a("offerdraw");
+          var2 = tk.a("offerdraw", false);
           if (null == var2) {
             break L507;
           } else {
@@ -5485,8 +4997,7 @@ final class wc extends da {
           }
         }
         L508: {
-          int discarded$1590 = 0;
-          var2 = tk.a("canceldraw");
+          var2 = tk.a("canceldraw", false);
           if (null == var2) {
             break L508;
           } else {
@@ -5495,8 +5006,7 @@ final class wc extends da {
           }
         }
         L509: {
-          int discarded$1591 = 0;
-          var2 = tk.a("acceptdraw");
+          var2 = tk.a("acceptdraw", false);
           if (null != var2) {
             te.field_I = in.a(0, var2);
             break L509;
@@ -5505,8 +5015,7 @@ final class wc extends da {
           }
         }
         L510: {
-          int discarded$1592 = 0;
-          var2 = tk.a("resign");
+          var2 = tk.a("resign", false);
           if (var2 != null) {
             fn.field_B = in.a(0, var2);
             break L510;
@@ -5515,8 +5024,7 @@ final class wc extends da {
           }
         }
         L511: {
-          int discarded$1593 = 0;
-          var2 = tk.a("returntolobby");
+          var2 = tk.a("returntolobby", false);
           if (null == var2) {
             break L511;
           } else {
@@ -5525,8 +5033,7 @@ final class wc extends da {
           }
         }
         L512: {
-          int discarded$1594 = 0;
-          var2 = tk.a("cont");
+          var2 = tk.a("cont", false);
           if (var2 == null) {
             break L512;
           } else {
@@ -5535,408 +5042,367 @@ final class wc extends da {
           }
         }
         L513: {
-          int discarded$1595 = 0;
-          var2 = tk.a("continue_spectating");
+          var2 = tk.a("continue_spectating", false);
           if (null != var2) {
-            String discarded$1596 = in.a(0, var2);
+            String discarded$338 = in.a(0, var2);
             break L513;
           } else {
             break L513;
           }
         }
         L514: {
-          int discarded$1597 = 0;
-          var2 = tk.a("messages");
+          var2 = tk.a("messages", false);
           if (null != var2) {
-            String discarded$1598 = in.a(param0, var2);
+            String discarded$339 = in.a(param0, var2);
             break L514;
           } else {
             break L514;
           }
         }
         L515: {
-          int discarded$1599 = 0;
-          var2 = tk.a("graphics_fastest");
+          var2 = tk.a("graphics_fastest", false);
           if (null == var2) {
             break L515;
           } else {
-            String discarded$1600 = in.a(0, var2);
+            String discarded$340 = in.a(0, var2);
             break L515;
           }
         }
         L516: {
-          int discarded$1601 = 0;
-          var2 = tk.a("graphics_medium");
+          var2 = tk.a("graphics_medium", false);
           if (var2 == null) {
             break L516;
           } else {
-            String discarded$1602 = in.a(0, var2);
+            String discarded$341 = in.a(0, var2);
             break L516;
           }
         }
         L517: {
-          int discarded$1603 = 0;
-          var2 = tk.a("graphics_best");
+          var2 = tk.a("graphics_best", false);
           if (var2 == null) {
             break L517;
           } else {
-            String discarded$1604 = in.a(0, var2);
+            String discarded$342 = in.a(0, var2);
             break L517;
           }
         }
         L518: {
-          int discarded$1605 = 0;
-          var2 = tk.a("graphics_directx");
+          var2 = tk.a("graphics_directx", false);
           if (null != var2) {
-            String discarded$1606 = in.a(param0, var2);
+            String discarded$343 = in.a(param0, var2);
             break L518;
           } else {
             break L518;
           }
         }
         L519: {
-          int discarded$1607 = 0;
-          var2 = tk.a("graphics_opengl");
+          var2 = tk.a("graphics_opengl", false);
           if (null != var2) {
-            String discarded$1608 = in.a(0, var2);
+            String discarded$344 = in.a(0, var2);
             break L519;
           } else {
             break L519;
           }
         }
         L520: {
-          int discarded$1609 = 0;
-          var2 = tk.a("graphics_java");
+          var2 = tk.a("graphics_java", false);
           if (var2 == null) {
             break L520;
           } else {
-            String discarded$1610 = in.a(0, var2);
+            String discarded$345 = in.a(0, var2);
             break L520;
           }
         }
         L521: {
-          int discarded$1611 = 0;
-          var2 = tk.a("graphics_quality_high");
+          var2 = tk.a("graphics_quality_high", false);
           if (null == var2) {
             break L521;
           } else {
-            String discarded$1612 = in.a(0, var2);
+            String discarded$346 = in.a(0, var2);
             break L521;
           }
         }
         L522: {
-          int discarded$1613 = 0;
-          var2 = tk.a("graphics_quality_low");
+          var2 = tk.a("graphics_quality_low", false);
           if (var2 != null) {
-            String discarded$1614 = in.a(0, var2);
+            String discarded$347 = in.a(0, var2);
             break L522;
           } else {
             break L522;
           }
         }
         L523: {
-          int discarded$1615 = 0;
-          var2 = tk.a("graphics_mode");
+          var2 = tk.a("graphics_mode", false);
           if (var2 == null) {
             break L523;
           } else {
-            String discarded$1616 = in.a(0, var2);
+            String discarded$348 = in.a(0, var2);
             break L523;
           }
         }
         L524: {
-          int discarded$1617 = 0;
-          var2 = tk.a("graphics_quality");
+          var2 = tk.a("graphics_quality", false);
           if (null == var2) {
             break L524;
           } else {
-            String discarded$1618 = in.a(0, var2);
+            String discarded$349 = in.a(0, var2);
             break L524;
           }
         }
         L525: {
-          int discarded$1619 = 0;
-          var2 = tk.a("mode");
+          var2 = tk.a("mode", false);
           if (var2 != null) {
-            String discarded$1620 = in.a(param0, var2);
+            String discarded$350 = in.a(param0, var2);
             break L525;
           } else {
             break L525;
           }
         }
         L526: {
-          int discarded$1621 = 0;
-          var2 = tk.a("quality");
+          var2 = tk.a("quality", false);
           if (null != var2) {
-            String discarded$1622 = in.a(0, var2);
+            String discarded$351 = in.a(0, var2);
             break L526;
           } else {
             break L526;
           }
         }
         L527: {
-          int discarded$1623 = 0;
-          var2 = tk.a("keys");
+          var2 = tk.a("keys", false);
           if (var2 == null) {
             break L527;
           } else {
-            String discarded$1624 = in.a(param0, var2);
+            String discarded$352 = in.a(param0, var2);
             break L527;
           }
         }
         L528: {
-          int discarded$1625 = 0;
-          var2 = tk.a("objective");
+          var2 = tk.a("objective", false);
           if (null != var2) {
-            String discarded$1626 = in.a(param0, var2);
+            String discarded$353 = in.a(param0, var2);
             break L528;
           } else {
             break L528;
           }
         }
         L529: {
-          int discarded$1627 = 0;
-          var2 = tk.a("currentobjective");
+          var2 = tk.a("currentobjective", false);
           if (null == var2) {
             break L529;
           } else {
-            String discarded$1628 = in.a(0, var2);
+            String discarded$354 = in.a(0, var2);
             break L529;
           }
         }
         L530: {
-          int discarded$1629 = 0;
-          var2 = tk.a("pressescforpausemenu");
+          var2 = tk.a("pressescforpausemenu", false);
           if (null == var2) {
             break L530;
           } else {
-            String discarded$1630 = in.a(0, var2);
+            String discarded$355 = in.a(0, var2);
             break L530;
           }
         }
         L531: {
-          int discarded$1631 = 0;
-          var2 = tk.a("pressescforpausemenuortoskiptutorial");
+          var2 = tk.a("pressescforpausemenuortoskiptutorial", false);
           if (var2 == null) {
             break L531;
           } else {
-            String discarded$1632 = in.a(param0, var2);
+            String discarded$356 = in.a(param0, var2);
             break L531;
           }
         }
         L532: {
-          int discarded$1633 = 0;
-          var2 = tk.a("pressescforoptionsmenu_doesntpause");
+          var2 = tk.a("pressescforoptionsmenu_doesntpause", false);
           if (null == var2) {
             break L532;
           } else {
-            String discarded$1634 = in.a(0, var2);
+            String discarded$357 = in.a(0, var2);
             break L532;
           }
         }
         L533: {
-          int discarded$1635 = 0;
-          var2 = tk.a("pressescforoptionsmenu_doesntpause_short");
+          var2 = tk.a("pressescforoptionsmenu_doesntpause_short", false);
           if (null == var2) {
             break L533;
           } else {
-            String discarded$1636 = in.a(param0, var2);
+            String discarded$358 = in.a(param0, var2);
             break L533;
           }
         }
         L534: {
-          int discarded$1637 = 0;
-          var2 = tk.a("powerups");
+          var2 = tk.a("powerups", false);
           if (null != var2) {
-            String discarded$1638 = in.a(0, var2);
+            String discarded$359 = in.a(0, var2);
             break L534;
           } else {
             break L534;
           }
         }
         L535: {
-          int discarded$1639 = 0;
-          var2 = tk.a("latestlevel_suffix");
+          var2 = tk.a("latestlevel_suffix", false);
           if (var2 == null) {
             break L535;
           } else {
-            String discarded$1640 = in.a(0, var2);
+            String discarded$360 = in.a(0, var2);
             break L535;
           }
         }
         L536: {
-          int discarded$1641 = 0;
-          var2 = tk.a("unreachedlevel_name");
+          var2 = tk.a("unreachedlevel_name", false);
           if (var2 == null) {
             break L536;
           } else {
-            String discarded$1642 = in.a(param0, var2);
+            String discarded$361 = in.a(param0, var2);
             break L536;
           }
         }
         L537: {
-          int discarded$1643 = 0;
-          var2 = tk.a("unreachedlevel_cannotplayreason");
+          var2 = tk.a("unreachedlevel_cannotplayreason", false);
           if (var2 == null) {
             break L537;
           } else {
-            String discarded$1644 = in.a(0, var2);
+            String discarded$362 = in.a(0, var2);
             break L537;
           }
         }
         L538: {
-          int discarded$1645 = 0;
-          var2 = tk.a("unreachedlevel_cannotplayreason_shorter");
+          var2 = tk.a("unreachedlevel_cannotplayreason_shorter", false);
           if (var2 != null) {
-            String discarded$1646 = in.a(0, var2);
+            String discarded$363 = in.a(0, var2);
             break L538;
           } else {
             break L538;
           }
         }
         L539: {
-          int discarded$1647 = 0;
-          var2 = tk.a("unreachedworld_cannotplayreason");
+          var2 = tk.a("unreachedworld_cannotplayreason", false);
           if (var2 != null) {
-            String discarded$1648 = in.a(0, var2);
+            String discarded$364 = in.a(0, var2);
             break L539;
           } else {
             break L539;
           }
         }
         L540: {
-          int discarded$1649 = 0;
-          var2 = tk.a("memberslevel_name");
+          var2 = tk.a("memberslevel_name", false);
           if (var2 != null) {
-            String discarded$1650 = in.a(0, var2);
+            String discarded$365 = in.a(0, var2);
             break L540;
           } else {
             break L540;
           }
         }
         L541: {
-          int discarded$1651 = 0;
-          var2 = tk.a("memberslevel_cannotplayreason");
+          var2 = tk.a("memberslevel_cannotplayreason", false);
           if (null == var2) {
             break L541;
           } else {
-            String discarded$1652 = in.a(0, var2);
+            String discarded$366 = in.a(0, var2);
             break L541;
           }
         }
         L542: {
-          int discarded$1653 = 0;
-          var2 = tk.a("membersworld_cannotplayreason");
+          var2 = tk.a("membersworld_cannotplayreason", false);
           if (var2 != null) {
-            String discarded$1654 = in.a(param0, var2);
+            String discarded$367 = in.a(param0, var2);
             break L542;
           } else {
             break L542;
           }
         }
         L543: {
-          int discarded$1655 = 0;
-          var2 = tk.a("unreachedlevel_createtip");
+          var2 = tk.a("unreachedlevel_createtip", false);
           if (null != var2) {
-            String discarded$1656 = in.a(0, var2);
+            String discarded$368 = in.a(0, var2);
             break L543;
           } else {
             break L543;
           }
         }
         L544: {
-          int discarded$1657 = 0;
-          var2 = tk.a("unreachedlevel_createtip_line1");
+          var2 = tk.a("unreachedlevel_createtip_line1", false);
           if (null == var2) {
             break L544;
           } else {
-            String discarded$1658 = in.a(0, var2);
+            String discarded$369 = in.a(0, var2);
             break L544;
           }
         }
         L545: {
-          int discarded$1659 = 0;
-          var2 = tk.a("unreachedlevel_createtip_line2");
+          var2 = tk.a("unreachedlevel_createtip_line2", false);
           if (var2 == null) {
             break L545;
           } else {
-            String discarded$1660 = in.a(0, var2);
+            String discarded$370 = in.a(0, var2);
             break L545;
           }
         }
         L546: {
-          int discarded$1661 = 0;
-          var2 = tk.a("unreachedlevel_logintip");
+          var2 = tk.a("unreachedlevel_logintip", false);
           if (var2 != null) {
-            String discarded$1662 = in.a(param0, var2);
+            String discarded$371 = in.a(param0, var2);
             break L546;
           } else {
             break L546;
           }
         }
         L547: {
-          int discarded$1663 = 0;
-          var2 = tk.a("memberslevel_logintip");
+          var2 = tk.a("memberslevel_logintip", false);
           if (var2 == null) {
             break L547;
           } else {
-            String discarded$1664 = in.a(0, var2);
+            String discarded$372 = in.a(0, var2);
             break L547;
           }
         }
         L548: {
-          int discarded$1665 = 0;
-          var2 = tk.a("displayname_none");
+          var2 = tk.a("displayname_none", false);
           if (null == var2) {
             break L548;
           } else {
-            String discarded$1666 = in.a(0, var2);
+            String discarded$373 = in.a(0, var2);
             break L548;
           }
         }
         L549: {
-          int discarded$1667 = 0;
-          var2 = tk.a("levelxofy1");
+          var2 = tk.a("levelxofy1", false);
           if (var2 != null) {
-            String discarded$1668 = in.a(0, var2);
+            String discarded$374 = in.a(0, var2);
             break L549;
           } else {
             break L549;
           }
         }
         L550: {
-          int discarded$1669 = 0;
-          var2 = tk.a("levelxofy2");
+          var2 = tk.a("levelxofy2", false);
           if (null == var2) {
             break L550;
           } else {
-            String discarded$1670 = in.a(0, var2);
+            String discarded$375 = in.a(0, var2);
             break L550;
           }
         }
         L551: {
-          int discarded$1671 = 0;
-          var2 = tk.a("levelxofy");
+          var2 = tk.a("levelxofy", false);
           if (var2 == null) {
             break L551;
           } else {
-            String discarded$1672 = in.a(0, var2);
+            String discarded$376 = in.a(0, var2);
             break L551;
           }
         }
         L552: {
-          int discarded$1673 = 0;
-          var2 = tk.a("ingame_level");
+          var2 = tk.a("ingame_level", false);
           if (null != var2) {
-            String discarded$1674 = in.a(param0, var2);
+            String discarded$377 = in.a(param0, var2);
             break L552;
           } else {
             break L552;
           }
         }
         L553: {
-          int discarded$1675 = 0;
-          var2 = tk.a("mouseoveranicon");
+          var2 = tk.a("mouseoveranicon", false);
           if (var2 == null) {
             break L553;
           } else {
@@ -5945,8 +5411,7 @@ final class wc extends da {
           }
         }
         L554: {
-          int discarded$1676 = 0;
-          var2 = tk.a("notyetachieved");
+          var2 = tk.a("notyetachieved", false);
           if (null != var2) {
             cr.field_Z = in.a(0, var2);
             break L554;
@@ -5955,8 +5420,7 @@ final class wc extends da {
           }
         }
         L555: {
-          int discarded$1677 = 0;
-          var2 = tk.a("achieved");
+          var2 = tk.a("achieved", false);
           if (null != var2) {
             wj.field_a = in.a(param0, var2);
             break L555;
@@ -5965,28 +5429,25 @@ final class wc extends da {
           }
         }
         L556: {
-          int discarded$1678 = 0;
-          var2 = tk.a("orbpoints");
+          var2 = tk.a("orbpoints", false);
           if (var2 == null) {
             break L556;
           } else {
-            String discarded$1679 = in.a(0, var2);
+            String discarded$378 = in.a(0, var2);
             break L556;
           }
         }
         L557: {
-          int discarded$1680 = 0;
-          var2 = tk.a("orbcoins");
+          var2 = tk.a("orbcoins", false);
           if (null == var2) {
             break L557;
           } else {
-            String discarded$1681 = in.a(0, var2);
+            String discarded$379 = in.a(0, var2);
             break L557;
           }
         }
         L558: {
-          int discarded$1682 = 0;
-          var2 = tk.a("orbpoints_colon");
+          var2 = tk.a("orbpoints_colon", false);
           if (var2 != null) {
             pl.field_j = in.a(0, var2);
             break L558;
@@ -5995,8 +5456,7 @@ final class wc extends da {
           }
         }
         L559: {
-          int discarded$1683 = 0;
-          var2 = tk.a("orbcoins_colon");
+          var2 = tk.a("orbcoins_colon", false);
           if (null != var2) {
             vl.field_f = in.a(0, var2);
             break L559;
@@ -6005,28 +5465,25 @@ final class wc extends da {
           }
         }
         L560: {
-          int discarded$1684 = 0;
-          var2 = tk.a("achieved_colon_description");
+          var2 = tk.a("achieved_colon_description", false);
           if (var2 == null) {
             break L560;
           } else {
-            String discarded$1685 = in.a(0, var2);
+            String discarded$380 = in.a(0, var2);
             break L560;
           }
         }
         L561: {
-          int discarded$1686 = 0;
-          var2 = tk.a("secretachievement");
+          var2 = tk.a("secretachievement", false);
           if (var2 == null) {
             break L561;
           } else {
-            String discarded$1687 = in.a(0, var2);
+            String discarded$381 = in.a(0, var2);
             break L561;
           }
         }
         L562: {
-          int discarded$1688 = 0;
-          var2 = tk.a("no_highscores");
+          var2 = tk.a("no_highscores", false);
           if (var2 == null) {
             break L562;
           } else {
@@ -6035,98 +5492,88 @@ final class wc extends da {
           }
         }
         L563: {
-          int discarded$1689 = 0;
-          var2 = tk.a("hs_name");
+          var2 = tk.a("hs_name", false);
           if (null == var2) {
             break L563;
           } else {
-            String discarded$1690 = in.a(0, var2);
+            String discarded$382 = in.a(0, var2);
             break L563;
           }
         }
         L564: {
-          int discarded$1691 = 0;
-          var2 = tk.a("hs_level");
+          var2 = tk.a("hs_level", false);
           if (null != var2) {
-            String discarded$1692 = in.a(param0, var2);
+            String discarded$383 = in.a(param0, var2);
             break L564;
           } else {
             break L564;
           }
         }
         L565: {
-          int discarded$1693 = 0;
-          var2 = tk.a("hs_fromlevel");
+          var2 = tk.a("hs_fromlevel", false);
           if (var2 != null) {
-            String discarded$1694 = in.a(0, var2);
+            String discarded$384 = in.a(0, var2);
             break L565;
           } else {
             break L565;
           }
         }
         L566: {
-          int discarded$1695 = 0;
-          var2 = tk.a("hs_tolevel");
+          var2 = tk.a("hs_tolevel", false);
           if (var2 != null) {
-            String discarded$1696 = in.a(0, var2);
+            String discarded$385 = in.a(0, var2);
             break L566;
           } else {
             break L566;
           }
         }
         L567: {
-          int discarded$1697 = 0;
-          var2 = tk.a("hs_score");
+          var2 = tk.a("hs_score", false);
           if (var2 != null) {
-            String discarded$1698 = in.a(param0, var2);
+            String discarded$386 = in.a(param0, var2);
             break L567;
           } else {
             break L567;
           }
         }
         L568: {
-          int discarded$1699 = 0;
-          var2 = tk.a("hs_end");
+          var2 = tk.a("hs_end", false);
           if (var2 != null) {
-            String discarded$1700 = in.a(0, var2);
+            String discarded$387 = in.a(0, var2);
             break L568;
           } else {
             break L568;
           }
         }
         L569: {
-          int discarded$1701 = 0;
-          var2 = tk.a("ingame_score");
+          var2 = tk.a("ingame_score", false);
           if (null == var2) {
             break L569;
           } else {
-            String discarded$1702 = in.a(0, var2);
+            String discarded$388 = in.a(0, var2);
             break L569;
           }
         }
         L570: {
-          int discarded$1703 = 0;
-          var2 = tk.a("score_colon");
+          var2 = tk.a("score_colon", false);
           if (var2 != null) {
-            String discarded$1704 = in.a(0, var2);
+            String discarded$389 = in.a(0, var2);
             break L570;
           } else {
             break L570;
           }
         }
         L571: {
-          int discarded$1705 = 0;
-          var2 = tk.a("mp_leavegame");
+          var2 = tk.a("mp_leavegame", false);
           if (var2 != null) {
-            String discarded$1706 = in.a(0, var2);
+            String discarded$390 = in.a(0, var2);
             break L571;
           } else {
             break L571;
           }
         }
         L572: {
-          int discarded$1707 = 0;
-          var2 = tk.a("mp_offerrematch");
+          var2 = tk.a("mp_offerrematch", false);
           if (var2 != null) {
             fq.field_f = in.a(0, var2);
             break L572;
@@ -6135,8 +5582,7 @@ final class wc extends da {
           }
         }
         L573: {
-          int discarded$1708 = 0;
-          var2 = tk.a("mp_offerrematch_unrated");
+          var2 = tk.a("mp_offerrematch_unrated", false);
           if (var2 != null) {
             oq.field_H = in.a(0, var2);
             break L573;
@@ -6145,8 +5591,7 @@ final class wc extends da {
           }
         }
         L574: {
-          int discarded$1709 = 0;
-          var2 = tk.a("mp_acceptrematch");
+          var2 = tk.a("mp_acceptrematch", false);
           if (var2 == null) {
             break L574;
           } else {
@@ -6155,8 +5600,7 @@ final class wc extends da {
           }
         }
         L575: {
-          int discarded$1710 = 0;
-          var2 = tk.a("mp_acceptrematch_unrated");
+          var2 = tk.a("mp_acceptrematch_unrated", false);
           if (null != var2) {
             bh.field_H = in.a(0, var2);
             break L575;
@@ -6165,8 +5609,7 @@ final class wc extends da {
           }
         }
         L576: {
-          int discarded$1711 = 0;
-          var2 = tk.a("mp_cancelrematch");
+          var2 = tk.a("mp_cancelrematch", false);
           if (var2 == null) {
             break L576;
           } else {
@@ -6175,8 +5618,7 @@ final class wc extends da {
           }
         }
         L577: {
-          int discarded$1712 = 0;
-          var2 = tk.a("mp_cancelrematch_unrated");
+          var2 = tk.a("mp_cancelrematch_unrated", false);
           if (null == var2) {
             break L577;
           } else {
@@ -6185,8 +5627,7 @@ final class wc extends da {
           }
         }
         L578: {
-          int discarded$1713 = 0;
-          var2 = tk.a("mp_rematchnewgame");
+          var2 = tk.a("mp_rematchnewgame", false);
           if (null != var2) {
             ii.field_A = in.a(0, var2);
             break L578;
@@ -6195,8 +5636,7 @@ final class wc extends da {
           }
         }
         L579: {
-          int discarded$1714 = 0;
-          var2 = tk.a("mp_rematchnewgame_unrated");
+          var2 = tk.a("mp_rematchnewgame_unrated", false);
           if (null == var2) {
             break L579;
           } else {
@@ -6205,8 +5645,7 @@ final class wc extends da {
           }
         }
         L580: {
-          int discarded$1715 = 0;
-          var2 = tk.a("mp_x_wantstodraw");
+          var2 = tk.a("mp_x_wantstodraw", false);
           if (null == var2) {
             break L580;
           } else {
@@ -6215,8 +5654,7 @@ final class wc extends da {
           }
         }
         L581: {
-          int discarded$1716 = 0;
-          var2 = tk.a("mp_x_offersrematch");
+          var2 = tk.a("mp_x_offersrematch", false);
           if (var2 == null) {
             break L581;
           } else {
@@ -6225,8 +5663,7 @@ final class wc extends da {
           }
         }
         L582: {
-          int discarded$1717 = 0;
-          var2 = tk.a("mp_x_offersrematch_unrated");
+          var2 = tk.a("mp_x_offersrematch_unrated", false);
           if (null != var2) {
             me.field_d = in.a(param0, var2);
             break L582;
@@ -6235,8 +5672,7 @@ final class wc extends da {
           }
         }
         L583: {
-          int discarded$1718 = 0;
-          var2 = tk.a("mp_youofferrematch");
+          var2 = tk.a("mp_youofferrematch", false);
           if (var2 == null) {
             break L583;
           } else {
@@ -6245,8 +5681,7 @@ final class wc extends da {
           }
         }
         L584: {
-          int discarded$1719 = 0;
-          var2 = tk.a("mp_youofferrematch_unrated");
+          var2 = tk.a("mp_youofferrematch_unrated", false);
           if (var2 == null) {
             break L584;
           } else {
@@ -6263,8 +5698,7 @@ final class wc extends da {
           }
         }
         L586: {
-          int discarded$1720 = 0;
-          var2 = tk.a("mp_youofferdraw");
+          var2 = tk.a("mp_youofferdraw", false);
           if (null == var2) {
             break L586;
           } else {
@@ -6273,8 +5707,7 @@ final class wc extends da {
           }
         }
         L587: {
-          int discarded$1721 = 0;
-          var2 = tk.a("mp_youresigned");
+          var2 = tk.a("mp_youresigned", false);
           if (null != var2) {
             cd.field_c = in.a(0, var2);
             break L587;
@@ -6283,18 +5716,16 @@ final class wc extends da {
           }
         }
         L588: {
-          int discarded$1722 = 0;
-          var2 = tk.a("mp_youresigned_rematch");
+          var2 = tk.a("mp_youresigned_rematch", false);
           if (var2 != null) {
-            String discarded$1723 = in.a(0, var2);
+            String discarded$391 = in.a(0, var2);
             break L588;
           } else {
             break L588;
           }
         }
         L589: {
-          int discarded$1724 = 0;
-          var2 = tk.a("mp_x_hasresignedandleft");
+          var2 = tk.a("mp_x_hasresignedandleft", false);
           if (var2 != null) {
             kd.field_m = in.a(param0, var2);
             break L589;
@@ -6303,18 +5734,16 @@ final class wc extends da {
           }
         }
         L590: {
-          int discarded$1725 = 0;
-          var2 = tk.a("mp_x_hasresigned_rematch");
+          var2 = tk.a("mp_x_hasresigned_rematch", false);
           if (null == var2) {
             break L590;
           } else {
-            String discarded$1726 = in.a(0, var2);
+            String discarded$392 = in.a(0, var2);
             break L590;
           }
         }
         L591: {
-          int discarded$1727 = 0;
-          var2 = tk.a("mp_x_hasresigned");
+          var2 = tk.a("mp_x_hasresigned", false);
           if (null != var2) {
             ca.field_e = in.a(0, var2);
             break L591;
@@ -6323,8 +5752,7 @@ final class wc extends da {
           }
         }
         L592: {
-          int discarded$1728 = 0;
-          var2 = tk.a("mp_x_hasleft");
+          var2 = tk.a("mp_x_hasleft", false);
           if (null != var2) {
             mn.field_p = in.a(0, var2);
             break L592;
@@ -6333,78 +5761,70 @@ final class wc extends da {
           }
         }
         L593: {
-          int discarded$1729 = 0;
-          var2 = tk.a("mp_x_haswon");
+          var2 = tk.a("mp_x_haswon", false);
           if (var2 != null) {
-            String discarded$1730 = in.a(param0, var2);
+            String discarded$393 = in.a(param0, var2);
             break L593;
           } else {
             break L593;
           }
         }
         L594: {
-          int discarded$1731 = 0;
-          var2 = tk.a("mp_youhavewon");
+          var2 = tk.a("mp_youhavewon", false);
           if (var2 != null) {
-            String discarded$1732 = in.a(0, var2);
+            String discarded$394 = in.a(0, var2);
             break L594;
           } else {
             break L594;
           }
         }
         L595: {
-          int discarded$1733 = 0;
-          var2 = tk.a("mp_gamedrawn");
+          var2 = tk.a("mp_gamedrawn", false);
           if (null == var2) {
             break L595;
           } else {
-            String discarded$1734 = in.a(0, var2);
+            String discarded$395 = in.a(0, var2);
             break L595;
           }
         }
         L596: {
-          int discarded$1735 = 0;
-          var2 = tk.a("mp_timeremaining");
+          var2 = tk.a("mp_timeremaining", false);
           if (var2 == null) {
             break L596;
           } else {
-            String discarded$1736 = in.a(param0, var2);
+            String discarded$396 = in.a(param0, var2);
             break L596;
           }
         }
         L597: {
-          int discarded$1737 = 0;
-          var2 = tk.a("mp_x_turn");
+          var2 = tk.a("mp_x_turn", false);
           if (var2 != null) {
-            String discarded$1738 = in.a(param0, var2);
+            String discarded$397 = in.a(param0, var2);
             break L597;
           } else {
             break L597;
           }
         }
         L598: {
-          int discarded$1739 = 0;
-          var2 = tk.a("mp_yourturn");
+          var2 = tk.a("mp_yourturn", false);
           if (null != var2) {
-            String discarded$1740 = in.a(0, var2);
+            String discarded$398 = in.a(0, var2);
             break L598;
           } else {
             break L598;
           }
         }
         L599: {
-          int discarded$1741 = 0;
-          var2 = tk.a("gameover");
+          var2 = tk.a("gameover", false);
           if (var2 != null) {
-            String discarded$1742 = in.a(param0, var2);
+            String discarded$399 = in.a(param0, var2);
             break L599;
           } else {
             break L599;
           }
         }
         L600: {
-          int discarded$1743 = 0;
-          var2 = tk.a("mp_hidechat");
+          var2 = tk.a("mp_hidechat", false);
           if (var2 == null) {
             break L600;
           } else {
@@ -6413,8 +5833,7 @@ final class wc extends da {
           }
         }
         L601: {
-          int discarded$1744 = 0;
-          var2 = tk.a("mp_showchat_nounread");
+          var2 = tk.a("mp_showchat_nounread", false);
           if (null == var2) {
             break L601;
           } else {
@@ -6423,8 +5842,7 @@ final class wc extends da {
           }
         }
         L602: {
-          int discarded$1745 = 0;
-          var2 = tk.a("mp_showchat_unread1");
+          var2 = tk.a("mp_showchat_unread1", false);
           if (var2 == null) {
             break L602;
           } else {
@@ -6433,8 +5851,7 @@ final class wc extends da {
           }
         }
         L603: {
-          int discarded$1746 = 0;
-          var2 = tk.a("mp_showchat_unread2");
+          var2 = tk.a("mp_showchat_unread2", false);
           if (null == var2) {
             break L603;
           } else {
@@ -6443,8 +5860,7 @@ final class wc extends da {
           }
         }
         L604: {
-          int discarded$1747 = 0;
-          var2 = tk.a("click_to_quickchat");
+          var2 = tk.a("click_to_quickchat", false);
           if (null != var2) {
             pb.field_c = in.a(0, var2);
             break L604;
@@ -6453,8 +5869,7 @@ final class wc extends da {
           }
         }
         L605: {
-          int discarded$1748 = 0;
-          var2 = tk.a("autorespond");
+          var2 = tk.a("autorespond", false);
           if (var2 == null) {
             break L605;
           } else {
@@ -6463,8 +5878,7 @@ final class wc extends da {
           }
         }
         L606: {
-          int discarded$1749 = 0;
-          var2 = tk.a("quickchat_help");
+          var2 = tk.a("quickchat_help", false);
           if (var2 != null) {
             br.field_W = in.a(0, var2);
             break L606;
@@ -6473,8 +5887,7 @@ final class wc extends da {
           }
         }
         L607: {
-          int discarded$1750 = 0;
-          var2 = tk.a("quickchat_help_title");
+          var2 = tk.a("quickchat_help_title", false);
           if (null != var2) {
             ac.field_N = in.a(0, var2);
             break L607;
@@ -6483,8 +5896,7 @@ final class wc extends da {
           }
         }
         L608: {
-          int discarded$1751 = 0;
-          var2 = tk.a("quickchat_shortcut_help,0");
+          var2 = tk.a("quickchat_shortcut_help,0", false);
           if (var2 != null) {
             sd.field_M[0] = in.a(0, var2);
             break L608;
@@ -6493,8 +5905,7 @@ final class wc extends da {
           }
         }
         L609: {
-          int discarded$1752 = 0;
-          var2 = tk.a("quickchat_shortcut_help,1");
+          var2 = tk.a("quickchat_shortcut_help,1", false);
           if (var2 != null) {
             sd.field_M[1] = in.a(0, var2);
             break L609;
@@ -6503,8 +5914,7 @@ final class wc extends da {
           }
         }
         L610: {
-          int discarded$1753 = 0;
-          var2 = tk.a("quickchat_shortcut_help,2");
+          var2 = tk.a("quickchat_shortcut_help,2", false);
           if (var2 != null) {
             sd.field_M[2] = in.a(0, var2);
             break L610;
@@ -6513,8 +5923,7 @@ final class wc extends da {
           }
         }
         L611: {
-          int discarded$1754 = 0;
-          var2 = tk.a("quickchat_shortcut_help,3");
+          var2 = tk.a("quickchat_shortcut_help,3", false);
           if (null != var2) {
             sd.field_M[3] = in.a(0, var2);
             break L611;
@@ -6523,8 +5932,7 @@ final class wc extends da {
           }
         }
         L612: {
-          int discarded$1755 = 0;
-          var2 = tk.a("quickchat_shortcut_help,4");
+          var2 = tk.a("quickchat_shortcut_help,4", false);
           if (var2 != null) {
             sd.field_M[4] = in.a(0, var2);
             break L612;
@@ -6533,8 +5941,7 @@ final class wc extends da {
           }
         }
         L613: {
-          int discarded$1756 = 0;
-          var2 = tk.a("quickchat_shortcut_help,5");
+          var2 = tk.a("quickchat_shortcut_help,5", false);
           if (null != var2) {
             sd.field_M[5] = in.a(tk.a(param0, 0), var2);
             break L613;
@@ -6543,8 +5950,7 @@ final class wc extends da {
           }
         }
         L614: {
-          int discarded$1757 = 0;
-          var2 = tk.a("quickchat_shortcut_keys,0");
+          var2 = tk.a("quickchat_shortcut_keys,0", false);
           if (var2 != null) {
             qr.field_k[0] = in.a(0, var2);
             break L614;
@@ -6553,8 +5959,7 @@ final class wc extends da {
           }
         }
         L615: {
-          int discarded$1758 = 0;
-          var2 = tk.a("quickchat_shortcut_keys,1");
+          var2 = tk.a("quickchat_shortcut_keys,1", false);
           if (null == var2) {
             break L615;
           } else {
@@ -6563,8 +5968,7 @@ final class wc extends da {
           }
         }
         L616: {
-          int discarded$1759 = 0;
-          var2 = tk.a("quickchat_shortcut_keys,2");
+          var2 = tk.a("quickchat_shortcut_keys,2", false);
           if (null != var2) {
             qr.field_k[2] = in.a(0, var2);
             break L616;
@@ -6573,8 +5977,7 @@ final class wc extends da {
           }
         }
         L617: {
-          int discarded$1760 = 0;
-          var2 = tk.a("quickchat_shortcut_keys,3");
+          var2 = tk.a("quickchat_shortcut_keys,3", false);
           if (null != var2) {
             qr.field_k[3] = in.a(0, var2);
             break L617;
@@ -6583,8 +5986,7 @@ final class wc extends da {
           }
         }
         L618: {
-          int discarded$1761 = 0;
-          var2 = tk.a("quickchat_shortcut_keys,4");
+          var2 = tk.a("quickchat_shortcut_keys,4", false);
           if (var2 != null) {
             qr.field_k[4] = in.a(0, var2);
             break L618;
@@ -6593,8 +5995,7 @@ final class wc extends da {
           }
         }
         L619: {
-          int discarded$1762 = 0;
-          var2 = tk.a("quickchat_shortcut_keys,5");
+          var2 = tk.a("quickchat_shortcut_keys,5", false);
           if (var2 == null) {
             break L619;
           } else {
@@ -6603,8 +6004,7 @@ final class wc extends da {
           }
         }
         L620: {
-          int discarded$1763 = 0;
-          var2 = tk.a("keychar_the_character_under_questionmark");
+          var2 = tk.a("keychar_the_character_under_questionmark", false);
           if (var2 == null) {
             break L620;
           } else {
@@ -6613,8 +6013,7 @@ final class wc extends da {
           }
         }
         L621: {
-          int discarded$1764 = 0;
-          var2 = tk.a("rating_noratings");
+          var2 = tk.a("rating_noratings", false);
           if (null == var2) {
             break L621;
           } else {
@@ -6623,8 +6022,7 @@ final class wc extends da {
           }
         }
         L622: {
-          int discarded$1765 = 0;
-          var2 = tk.a("rating_rating");
+          var2 = tk.a("rating_rating", false);
           if (null == var2) {
             break L622;
           } else {
@@ -6633,8 +6031,7 @@ final class wc extends da {
           }
         }
         L623: {
-          int discarded$1766 = 0;
-          var2 = tk.a("rating_played");
+          var2 = tk.a("rating_played", false);
           if (var2 != null) {
             jl.field_h = in.a(0, var2);
             break L623;
@@ -6643,8 +6040,7 @@ final class wc extends da {
           }
         }
         L624: {
-          int discarded$1767 = 0;
-          var2 = tk.a("rating_won");
+          var2 = tk.a("rating_won", false);
           if (null == var2) {
             break L624;
           } else {
@@ -6653,8 +6049,7 @@ final class wc extends da {
           }
         }
         L625: {
-          int discarded$1768 = 0;
-          var2 = tk.a("rating_lost");
+          var2 = tk.a("rating_lost", false);
           if (var2 != null) {
             to.field_b = in.a(0, var2);
             break L625;
@@ -6663,8 +6058,7 @@ final class wc extends da {
           }
         }
         L626: {
-          int discarded$1769 = 0;
-          var2 = tk.a("rating_drawn");
+          var2 = tk.a("rating_drawn", false);
           if (null == var2) {
             break L626;
           } else {
@@ -6673,38 +6067,34 @@ final class wc extends da {
           }
         }
         L627: {
-          int discarded$1770 = 0;
-          var2 = tk.a("benefits_fullscreen");
+          var2 = tk.a("benefits_fullscreen", false);
           if (null != var2) {
-            String discarded$1771 = in.a(0, var2);
+            String discarded$400 = in.a(0, var2);
             break L627;
           } else {
             break L627;
           }
         }
         L628: {
-          int discarded$1772 = 0;
-          var2 = tk.a("benefits_noadverts");
+          var2 = tk.a("benefits_noadverts", false);
           if (var2 != null) {
-            String discarded$1773 = in.a(0, var2);
+            String discarded$401 = in.a(0, var2);
             break L628;
           } else {
             break L628;
           }
         }
         L629: {
-          int discarded$1774 = 0;
-          var2 = tk.a("benefits_price");
+          var2 = tk.a("benefits_price", false);
           if (null != var2) {
-            String discarded$1775 = in.a(param0, var2);
+            String discarded$402 = in.a(param0, var2);
             break L629;
           } else {
             break L629;
           }
         }
         L630: {
-          int discarded$1776 = 0;
-          var2 = tk.a("members_expansion_benefits,0");
+          var2 = tk.a("members_expansion_benefits,0", false);
           if (var2 != null) {
             nq.field_J[0] = in.a(0, var2);
             break L630;
@@ -6713,8 +6103,7 @@ final class wc extends da {
           }
         }
         L631: {
-          int discarded$1777 = 0;
-          var2 = tk.a("members_expansion_benefits,1");
+          var2 = tk.a("members_expansion_benefits,1", false);
           if (null != var2) {
             nq.field_J[1] = in.a(tk.a(param0, 0), var2);
             break L631;
@@ -6723,8 +6112,7 @@ final class wc extends da {
           }
         }
         L632: {
-          int discarded$1778 = 0;
-          var2 = tk.a("members_expansion_benefits,2");
+          var2 = tk.a("members_expansion_benefits,2", false);
           if (var2 != null) {
             nq.field_J[2] = in.a(0, var2);
             break L632;
@@ -6733,28 +6121,25 @@ final class wc extends da {
           }
         }
         L633: {
-          int discarded$1779 = 0;
-          var2 = tk.a("members_expansion_price_top");
+          var2 = tk.a("members_expansion_price_top", false);
           if (null != var2) {
-            String discarded$1780 = in.a(0, var2);
+            String discarded$403 = in.a(0, var2);
             break L633;
           } else {
             break L633;
           }
         }
         L634: {
-          int discarded$1781 = 0;
-          var2 = tk.a("members_expansion_price_bottom");
+          var2 = tk.a("members_expansion_price_bottom", false);
           if (var2 != null) {
-            String discarded$1782 = in.a(0, var2);
+            String discarded$404 = in.a(0, var2);
             break L634;
           } else {
             break L634;
           }
         }
         L635: {
-          int discarded$1783 = 0;
-          var2 = tk.a("reconnect_lost_seq,0");
+          var2 = tk.a("reconnect_lost_seq,0", false);
           if (null != var2) {
             ff.field_n[0] = in.a(param0, var2);
             break L635;
@@ -6763,8 +6148,7 @@ final class wc extends da {
           }
         }
         L636: {
-          int discarded$1784 = 0;
-          var2 = tk.a("reconnect_lost_seq,1");
+          var2 = tk.a("reconnect_lost_seq,1", false);
           if (var2 == null) {
             break L636;
           } else {
@@ -6773,8 +6157,7 @@ final class wc extends da {
           }
         }
         L637: {
-          int discarded$1785 = 0;
-          var2 = tk.a("reconnect_lost_seq,2");
+          var2 = tk.a("reconnect_lost_seq,2", false);
           if (var2 == null) {
             break L637;
           } else {
@@ -6783,8 +6166,7 @@ final class wc extends da {
           }
         }
         L638: {
-          int discarded$1786 = 0;
-          var2 = tk.a("reconnect_lost_seq,3");
+          var2 = tk.a("reconnect_lost_seq,3", false);
           if (var2 == null) {
             break L638;
           } else {
@@ -6793,128 +6175,115 @@ final class wc extends da {
           }
         }
         L639: {
-          int discarded$1787 = 0;
-          var2 = tk.a("reconnect_lost");
+          var2 = tk.a("reconnect_lost", false);
           if (var2 == null) {
             break L639;
           } else {
-            String discarded$1788 = in.a(param0, var2);
+            String discarded$405 = in.a(param0, var2);
             break L639;
           }
         }
         L640: {
-          int discarded$1789 = 0;
-          var2 = tk.a("reconnect_restored");
+          var2 = tk.a("reconnect_restored", false);
           if (var2 != null) {
-            String discarded$1790 = in.a(0, var2);
+            String discarded$406 = in.a(0, var2);
             break L640;
           } else {
             break L640;
           }
         }
         L641: {
-          int discarded$1791 = 0;
-          var2 = tk.a("reconnect_please_check");
+          var2 = tk.a("reconnect_please_check", false);
           if (var2 != null) {
-            String discarded$1792 = in.a(param0, var2);
+            String discarded$407 = in.a(param0, var2);
             break L641;
           } else {
             break L641;
           }
         }
         L642: {
-          int discarded$1793 = 0;
-          var2 = tk.a("reconnect_wait");
+          var2 = tk.a("reconnect_wait", false);
           if (var2 != null) {
-            String discarded$1794 = in.a(param0, var2);
+            String discarded$408 = in.a(param0, var2);
             break L642;
           } else {
             break L642;
           }
         }
         L643: {
-          int discarded$1795 = 0;
-          var2 = tk.a("reconnect_retry");
+          var2 = tk.a("reconnect_retry", false);
           if (var2 == null) {
             break L643;
           } else {
-            String discarded$1796 = in.a(param0, var2);
+            String discarded$409 = in.a(param0, var2);
             break L643;
           }
         }
         L644: {
-          int discarded$1797 = 0;
-          var2 = tk.a("reconnect_resume");
+          var2 = tk.a("reconnect_resume", false);
           if (var2 != null) {
-            String discarded$1798 = in.a(0, var2);
+            String discarded$410 = in.a(0, var2);
             break L644;
           } else {
             break L644;
           }
         }
         L645: {
-          int discarded$1799 = 0;
-          var2 = tk.a("reconnect_or");
+          var2 = tk.a("reconnect_or", false);
           if (var2 == null) {
             break L645;
           } else {
-            String discarded$1800 = in.a(0, var2);
+            String discarded$411 = in.a(0, var2);
             break L645;
           }
         }
         L646: {
-          int discarded$1801 = 0;
-          var2 = tk.a("reconnect_exitfs");
+          var2 = tk.a("reconnect_exitfs", false);
           if (var2 == null) {
             break L646;
           } else {
-            String discarded$1802 = in.a(0, var2);
+            String discarded$412 = in.a(0, var2);
             break L646;
           }
         }
         L647: {
-          int discarded$1803 = 0;
-          var2 = tk.a("reconnect_exitfs_quit");
+          var2 = tk.a("reconnect_exitfs_quit", false);
           if (var2 != null) {
-            String discarded$1804 = in.a(0, var2);
+            String discarded$413 = in.a(0, var2);
             break L647;
           } else {
             break L647;
           }
         }
         L648: {
-          int discarded$1805 = 0;
-          var2 = tk.a("reconnect_quit");
+          var2 = tk.a("reconnect_quit", false);
           if (var2 != null) {
-            String discarded$1806 = in.a(0, var2);
+            String discarded$414 = in.a(0, var2);
             break L648;
           } else {
             break L648;
           }
         }
         L649: {
-          int discarded$1807 = 0;
-          var2 = tk.a("reconnect_check_fs");
+          var2 = tk.a("reconnect_check_fs", false);
           if (var2 != null) {
-            String discarded$1808 = in.a(0, var2);
+            String discarded$415 = in.a(0, var2);
             break L649;
           } else {
             break L649;
           }
         }
         L650: {
-          int discarded$1809 = 0;
-          var2 = tk.a("reconnect_check_nonfs");
+          var2 = tk.a("reconnect_check_nonfs", false);
           if (var2 == null) {
             break L650;
           } else {
-            String discarded$1810 = in.a(param0, var2);
+            String discarded$416 = in.a(param0, var2);
             break L650;
           }
         }
         L651: {
-          int discarded$1811 = 0;
-          var2 = tk.a("fs_accept_beforeaccept");
+          var2 = tk.a("fs_accept_beforeaccept", false);
           if (var2 != null) {
             am.field_e = in.a(param0, var2);
             break L651;
@@ -6923,8 +6292,7 @@ final class wc extends da {
           }
         }
         L652: {
-          int discarded$1812 = 0;
-          var2 = tk.a("fs_button_accept");
+          var2 = tk.a("fs_button_accept", false);
           if (var2 == null) {
             break L652;
           } else {
@@ -6933,8 +6301,7 @@ final class wc extends da {
           }
         }
         L653: {
-          int discarded$1813 = 0;
-          var2 = tk.a("fs_accept_afteraccept");
+          var2 = tk.a("fs_accept_afteraccept", false);
           if (var2 == null) {
             break L653;
           } else {
@@ -6943,8 +6310,7 @@ final class wc extends da {
           }
         }
         L654: {
-          int discarded$1814 = 0;
-          var2 = tk.a("fs_button_cancel");
+          var2 = tk.a("fs_button_cancel", false);
           if (var2 != null) {
             wn.field_i = in.a(0, var2);
             break L654;
@@ -6953,8 +6319,7 @@ final class wc extends da {
           }
         }
         L655: {
-          int discarded$1815 = 0;
-          var2 = tk.a("fs_accept_aftercancel");
+          var2 = tk.a("fs_accept_aftercancel", false);
           if (var2 != null) {
             dc.field_K = in.a(0, var2);
             break L655;
@@ -6963,8 +6328,7 @@ final class wc extends da {
           }
         }
         L656: {
-          int discarded$1816 = 0;
-          var2 = tk.a("fs_accept_countdown_sing");
+          var2 = tk.a("fs_accept_countdown_sing", false);
           if (var2 == null) {
             break L656;
           } else {
@@ -6973,8 +6337,7 @@ final class wc extends da {
           }
         }
         L657: {
-          int discarded$1817 = 0;
-          var2 = tk.a("fs_accept_countdown_pl");
+          var2 = tk.a("fs_accept_countdown_pl", false);
           if (null != var2) {
             ro.field_f = in.a(param0, var2);
             break L657;
@@ -6983,8 +6346,7 @@ final class wc extends da {
           }
         }
         L658: {
-          int discarded$1818 = 0;
-          var2 = tk.a("fs_nonmember");
+          var2 = tk.a("fs_nonmember", false);
           if (null != var2) {
             qr.field_o = in.a(0, var2);
             break L658;
@@ -6993,8 +6355,7 @@ final class wc extends da {
           }
         }
         L659: {
-          int discarded$1819 = 0;
-          var2 = tk.a("fs_button_close");
+          var2 = tk.a("fs_button_close", false);
           if (var2 != null) {
             lr.field_N = in.a(0, var2);
             break L659;
@@ -7003,8 +6364,7 @@ final class wc extends da {
           }
         }
         L660: {
-          int discarded$1820 = 0;
-          var2 = tk.a("fs_button_members");
+          var2 = tk.a("fs_button_members", false);
           if (var2 != null) {
             dc.field_M = in.a(0, var2);
             break L660;
@@ -7013,8 +6373,7 @@ final class wc extends da {
           }
         }
         L661: {
-          int discarded$1821 = 0;
-          var2 = tk.a("fs_unavailable");
+          var2 = tk.a("fs_unavailable", false);
           if (null == var2) {
             break L661;
           } else {
@@ -7023,8 +6382,7 @@ final class wc extends da {
           }
         }
         L662: {
-          int discarded$1822 = 0;
-          var2 = tk.a("fs_unavailable_try_signed_applet");
+          var2 = tk.a("fs_unavailable_try_signed_applet", false);
           if (null != var2) {
             ko.field_U = in.a(0, var2);
             break L662;
@@ -7033,8 +6391,7 @@ final class wc extends da {
           }
         }
         L663: {
-          int discarded$1823 = 0;
-          var2 = tk.a("fs_focus");
+          var2 = tk.a("fs_focus", false);
           if (var2 != null) {
             lh.field_a = in.a(0, var2);
             break L663;
@@ -7043,8 +6400,7 @@ final class wc extends da {
           }
         }
         L664: {
-          int discarded$1824 = 0;
-          var2 = tk.a("fs_focus_or_resolution");
+          var2 = tk.a("fs_focus_or_resolution", false);
           if (var2 == null) {
             break L664;
           } else {
@@ -7053,8 +6409,7 @@ final class wc extends da {
           }
         }
         L665: {
-          int discarded$1825 = 0;
-          var2 = tk.a("fs_timeout");
+          var2 = tk.a("fs_timeout", false);
           if (null != var2) {
             w.field_D = in.a(param0, var2);
             break L665;
@@ -7063,8 +6418,7 @@ final class wc extends da {
           }
         }
         L666: {
-          int discarded$1826 = 0;
-          var2 = tk.a("fs_button_tryagain");
+          var2 = tk.a("fs_button_tryagain", false);
           if (null == var2) {
             break L666;
           } else {
@@ -7073,108 +6427,97 @@ final class wc extends da {
           }
         }
         L667: {
-          int discarded$1827 = 0;
-          var2 = tk.a("graphics_ui_fs_countdown");
+          var2 = tk.a("graphics_ui_fs_countdown", false);
           if (var2 == null) {
             break L667;
           } else {
-            String discarded$1828 = in.a(0, var2);
+            String discarded$417 = in.a(0, var2);
             break L667;
           }
         }
         L668: {
-          int discarded$1829 = 0;
-          var2 = tk.a("mb_caption_title");
+          var2 = tk.a("mb_caption_title", false);
           if (null == var2) {
             break L668;
           } else {
-            String discarded$1830 = in.a(0, var2);
+            String discarded$418 = in.a(0, var2);
             break L668;
           }
         }
         L669: {
-          int discarded$1831 = 0;
-          var2 = tk.a("mb_including_gamename");
+          var2 = tk.a("mb_including_gamename", false);
           if (var2 != null) {
-            String discarded$1832 = in.a(0, var2);
+            String discarded$419 = in.a(0, var2);
             break L669;
           } else {
             break L669;
           }
         }
         L670: {
-          int discarded$1833 = 0;
-          var2 = tk.a("mb_full_access_1");
+          var2 = tk.a("mb_full_access_1", false);
           if (null != var2) {
-            String discarded$1834 = in.a(param0, var2);
+            String discarded$420 = in.a(param0, var2);
             break L670;
           } else {
             break L670;
           }
         }
         L671: {
-          int discarded$1835 = 0;
-          var2 = tk.a("mb_full_access_2");
+          var2 = tk.a("mb_full_access_2", false);
           if (var2 == null) {
             break L671;
           } else {
-            String discarded$1836 = in.a(0, var2);
+            String discarded$421 = in.a(0, var2);
             break L671;
           }
         }
         L672: {
-          int discarded$1837 = 0;
-          var2 = tk.a("mb_achievement_count_1");
+          var2 = tk.a("mb_achievement_count_1", false);
           if (var2 != null) {
-            String discarded$1838 = in.a(0, var2);
+            String discarded$422 = in.a(0, var2);
             break L672;
           } else {
             break L672;
           }
         }
         L673: {
-          int discarded$1839 = 0;
-          var2 = tk.a("mb_achievement_count_2");
+          var2 = tk.a("mb_achievement_count_2", false);
           if (var2 == null) {
             break L673;
           } else {
-            String discarded$1840 = in.a(param0, var2);
+            String discarded$423 = in.a(param0, var2);
             break L673;
           }
         }
         L674: {
-          int discarded$1841 = 0;
-          var2 = tk.a("mb_exclusive_1");
+          var2 = tk.a("mb_exclusive_1", false);
           if (null == var2) {
             break L674;
           } else {
-            String discarded$1842 = in.a(param0, var2);
+            String discarded$424 = in.a(param0, var2);
             break L674;
           }
         }
         L675: {
-          int discarded$1843 = 0;
-          var2 = tk.a("mb_exclusive_2");
+          var2 = tk.a("mb_exclusive_2", false);
           if (var2 != null) {
-            String discarded$1844 = in.a(0, var2);
+            String discarded$425 = in.a(0, var2);
             break L675;
           } else {
             break L675;
           }
         }
         L676: {
-          int discarded$1845 = 0;
-          var2 = tk.a("me_extra_benefits");
+          var2 = tk.a("me_extra_benefits", false);
           if (var2 != null) {
-            String discarded$1846 = in.a(0, var2);
+            String discarded$426 = in.a(0, var2);
             break L676;
           } else {
             break L676;
           }
         }
         L677: {
-          int discarded$1847 = 0;
-          var2 = tk.a("hs_friend_tip");
+          var2 = tk.a("hs_friend_tip", false);
           if (var2 != null) {
             tr.field_O = in.a(0, var2);
             break L677;
@@ -7183,18 +6526,16 @@ final class wc extends da {
           }
         }
         L678: {
-          int discarded$1848 = 0;
-          var2 = tk.a("hs_friend_tip_multi");
+          var2 = tk.a("hs_friend_tip_multi", false);
           if (var2 == null) {
             break L678;
           } else {
-            String discarded$1849 = in.a(0, var2);
+            String discarded$427 = in.a(0, var2);
             break L678;
           }
         }
         L679: {
-          int discarded$1850 = 0;
-          var2 = tk.a("hs_mode_name,0");
+          var2 = tk.a("hs_mode_name,0", false);
           if (var2 == null) {
             break L679;
           } else {
@@ -7203,8 +6544,7 @@ final class wc extends da {
           }
         }
         L680: {
-          int discarded$1851 = 0;
-          var2 = tk.a("hs_mode_name,1");
+          var2 = tk.a("hs_mode_name,1", false);
           if (null == var2) {
             break L680;
           } else {
@@ -7213,8 +6553,7 @@ final class wc extends da {
           }
         }
         L681: {
-          int discarded$1852 = 0;
-          var2 = tk.a("hs_mode_name,2");
+          var2 = tk.a("hs_mode_name,2", false);
           if (null == var2) {
             break L681;
           } else {
@@ -7223,8 +6562,7 @@ final class wc extends da {
           }
         }
         L682: {
-          int discarded$1853 = 0;
-          var2 = tk.a("rating_mode_name,0");
+          var2 = tk.a("rating_mode_name,0", false);
           if (null != var2) {
             df.field_n[0] = in.a(tk.a(param0, 0), var2);
             break L682;
@@ -7233,8 +6571,7 @@ final class wc extends da {
           }
         }
         L683: {
-          int discarded$1854 = 0;
-          var2 = tk.a("rating_mode_name,1");
+          var2 = tk.a("rating_mode_name,1", false);
           if (var2 == null) {
             break L683;
           } else {
@@ -7243,8 +6580,7 @@ final class wc extends da {
           }
         }
         L684: {
-          int discarded$1855 = 0;
-          var2 = tk.a("rating_mode_long_name,0");
+          var2 = tk.a("rating_mode_long_name,0", false);
           if (null != var2) {
             lq.field_e[0] = in.a(0, var2);
             break L684;
@@ -7253,8 +6589,7 @@ final class wc extends da {
           }
         }
         L685: {
-          int discarded$1856 = 0;
-          var2 = tk.a("rating_mode_long_name,1");
+          var2 = tk.a("rating_mode_long_name,1", false);
           if (var2 != null) {
             lq.field_e[1] = in.a(0, var2);
             break L685;
@@ -7263,88 +6598,79 @@ final class wc extends da {
           }
         }
         L686: {
-          int discarded$1857 = 0;
-          var2 = tk.a("graphics_config_fixed_size");
+          var2 = tk.a("graphics_config_fixed_size", false);
           if (var2 == null) {
             break L686;
           } else {
-            String discarded$1858 = in.a(0, var2);
+            String discarded$428 = in.a(0, var2);
             break L686;
           }
         }
         L687: {
-          int discarded$1859 = 0;
-          var2 = tk.a("graphics_config_resizable");
+          var2 = tk.a("graphics_config_resizable", false);
           if (null != var2) {
-            String discarded$1860 = in.a(0, var2);
+            String discarded$429 = in.a(0, var2);
             break L687;
           } else {
             break L687;
           }
         }
         L688: {
-          int discarded$1861 = 0;
-          var2 = tk.a("graphics_config_fullscreen");
+          var2 = tk.a("graphics_config_fullscreen", false);
           if (var2 != null) {
-            String discarded$1862 = in.a(param0, var2);
+            String discarded$430 = in.a(param0, var2);
             break L688;
           } else {
             break L688;
           }
         }
         L689: {
-          int discarded$1863 = 0;
-          var2 = tk.a("graphics_config_done");
+          var2 = tk.a("graphics_config_done", false);
           if (null == var2) {
             break L689;
           } else {
-            String discarded$1864 = in.a(0, var2);
+            String discarded$431 = in.a(0, var2);
             break L689;
           }
         }
         L690: {
-          int discarded$1865 = 0;
-          var2 = tk.a("graphics_config_apply");
+          var2 = tk.a("graphics_config_apply", false);
           if (null != var2) {
-            String discarded$1866 = in.a(0, var2);
+            String discarded$432 = in.a(0, var2);
             break L690;
           } else {
             break L690;
           }
         }
         L691: {
-          int discarded$1867 = 0;
-          var2 = tk.a("graphics_config_title");
+          var2 = tk.a("graphics_config_title", false);
           if (var2 != null) {
-            String discarded$1868 = in.a(0, var2);
+            String discarded$433 = in.a(0, var2);
             break L691;
           } else {
             break L691;
           }
         }
         L692: {
-          int discarded$1869 = 0;
-          var2 = tk.a("graphics_config_instruction");
+          var2 = tk.a("graphics_config_instruction", false);
           if (var2 != null) {
-            String discarded$1870 = in.a(0, var2);
+            String discarded$434 = in.a(0, var2);
             break L692;
           } else {
             break L692;
           }
         }
         L693: {
-          int discarded$1871 = 0;
-          var2 = tk.a("graphics_config_need_memory");
+          var2 = tk.a("graphics_config_need_memory", false);
           if (var2 == null) {
             break L693;
           } else {
-            String discarded$1872 = in.a(0, var2);
+            String discarded$435 = in.a(0, var2);
             break L693;
           }
         }
         L694: {
-          int discarded$1873 = 0;
-          var2 = tk.a("pleasewait_dotdotdot");
+          var2 = tk.a("pleasewait_dotdotdot", false);
           if (var2 == null) {
             break L694;
           } else {
@@ -7353,8 +6679,7 @@ final class wc extends da {
           }
         }
         L695: {
-          int discarded$1874 = 0;
-          var2 = tk.a("serviceunavailable");
+          var2 = tk.a("serviceunavailable", false);
           if (null != var2) {
             sd.field_G = in.a(0, var2);
             break L695;
@@ -7363,8 +6688,7 @@ final class wc extends da {
           }
         }
         L696: {
-          int discarded$1875 = 0;
-          var2 = tk.a("createtouse");
+          var2 = tk.a("createtouse", false);
           if (null != var2) {
             vg.field_b = in.a(0, var2);
             break L696;
@@ -7373,28 +6697,25 @@ final class wc extends da {
           }
         }
         L697: {
-          int discarded$1876 = 0;
-          var2 = tk.a("achievementsoffline");
+          var2 = tk.a("achievementsoffline", false);
           if (var2 == null) {
             break L697;
           } else {
-            String discarded$1877 = in.a(0, var2);
+            String discarded$436 = in.a(0, var2);
             break L697;
           }
         }
         L698: {
-          int discarded$1878 = 0;
-          var2 = tk.a("warning");
+          var2 = tk.a("warning", false);
           if (var2 == null) {
             break L698;
           } else {
-            String discarded$1879 = in.a(0, var2);
+            String discarded$437 = in.a(0, var2);
             break L698;
           }
         }
         L699: {
-          int discarded$1880 = 0;
-          var2 = tk.a("DEFAULT_PLAYER_NAME");
+          var2 = tk.a("DEFAULT_PLAYER_NAME", false);
           if (null != var2) {
             dh.field_a = in.a(0, var2);
             break L699;
@@ -7403,8 +6724,7 @@ final class wc extends da {
           }
         }
         L700: {
-          int discarded$1881 = 0;
-          var2 = tk.a("mustlogin1");
+          var2 = tk.a("mustlogin1", false);
           if (null != var2) {
             jl.field_f = in.a(param0, var2);
             break L700;
@@ -7413,8 +6733,7 @@ final class wc extends da {
           }
         }
         L701: {
-          int discarded$1882 = 0;
-          var2 = tk.a("mustlogin2,1");
+          var2 = tk.a("mustlogin2,1", false);
           if (null == var2) {
             break L701;
           } else {
@@ -7423,8 +6742,7 @@ final class wc extends da {
           }
         }
         L702: {
-          int discarded$1883 = 0;
-          var2 = tk.a("mustlogin2,2");
+          var2 = tk.a("mustlogin2,2", false);
           if (null == var2) {
             break L702;
           } else {
@@ -7433,8 +6751,7 @@ final class wc extends da {
           }
         }
         L703: {
-          int discarded$1884 = 0;
-          var2 = tk.a("mustlogin2,3");
+          var2 = tk.a("mustlogin2,3", false);
           if (var2 == null) {
             break L703;
           } else {
@@ -7443,8 +6760,7 @@ final class wc extends da {
           }
         }
         L704: {
-          int discarded$1885 = 0;
-          var2 = tk.a("mustlogin2,4");
+          var2 = tk.a("mustlogin2,4", false);
           if (var2 == null) {
             break L704;
           } else {
@@ -7453,8 +6769,7 @@ final class wc extends da {
           }
         }
         L705: {
-          int discarded$1886 = 0;
-          var2 = tk.a("mustlogin2,5");
+          var2 = tk.a("mustlogin2,5", false);
           if (null != var2) {
             m.field_y[5] = in.a(0, var2);
             break L705;
@@ -7463,8 +6778,7 @@ final class wc extends da {
           }
         }
         L706: {
-          int discarded$1887 = 0;
-          var2 = tk.a("mustlogin2,6");
+          var2 = tk.a("mustlogin2,6", false);
           if (var2 != null) {
             m.field_y[6] = in.a(tk.a(param0, 0), var2);
             break L706;
@@ -7473,8 +6787,7 @@ final class wc extends da {
           }
         }
         L707: {
-          int discarded$1888 = 0;
-          var2 = tk.a("mustlogin2,7");
+          var2 = tk.a("mustlogin2,7", false);
           if (null == var2) {
             break L707;
           } else {
@@ -7483,8 +6796,7 @@ final class wc extends da {
           }
         }
         L708: {
-          int discarded$1889 = 0;
-          var2 = tk.a("mustlogin3,1");
+          var2 = tk.a("mustlogin3,1", false);
           if (null != var2) {
             eh.field_d[1] = in.a(param0, var2);
             break L708;
@@ -7493,8 +6805,7 @@ final class wc extends da {
           }
         }
         L709: {
-          int discarded$1890 = 0;
-          var2 = tk.a("mustlogin3,2");
+          var2 = tk.a("mustlogin3,2", false);
           if (null == var2) {
             break L709;
           } else {
@@ -7503,8 +6814,7 @@ final class wc extends da {
           }
         }
         L710: {
-          int discarded$1891 = 0;
-          var2 = tk.a("mustlogin3,3");
+          var2 = tk.a("mustlogin3,3", false);
           if (var2 == null) {
             break L710;
           } else {
@@ -7513,8 +6823,7 @@ final class wc extends da {
           }
         }
         L711: {
-          int discarded$1892 = 0;
-          var2 = tk.a("mustlogin3,4");
+          var2 = tk.a("mustlogin3,4", false);
           if (null != var2) {
             eh.field_d[4] = in.a(param0, var2);
             break L711;
@@ -7523,8 +6832,7 @@ final class wc extends da {
           }
         }
         L712: {
-          int discarded$1893 = 0;
-          var2 = tk.a("mustlogin3,5");
+          var2 = tk.a("mustlogin3,5", false);
           if (null == var2) {
             break L712;
           } else {
@@ -7533,8 +6841,7 @@ final class wc extends da {
           }
         }
         L713: {
-          int discarded$1894 = 0;
-          var2 = tk.a("mustlogin3,6");
+          var2 = tk.a("mustlogin3,6", false);
           if (var2 == null) {
             break L713;
           } else {
@@ -7543,8 +6850,7 @@ final class wc extends da {
           }
         }
         L714: {
-          int discarded$1895 = 0;
-          var2 = tk.a("mustlogin3,7");
+          var2 = tk.a("mustlogin3,7", false);
           if (null != var2) {
             eh.field_d[7] = in.a(0, var2);
             break L714;
@@ -7553,8 +6859,7 @@ final class wc extends da {
           }
         }
         L715: {
-          int discarded$1896 = 0;
-          var2 = tk.a("discard");
+          var2 = tk.a("discard", false);
           if (var2 == null) {
             break L715;
           } else {
@@ -7563,8 +6868,7 @@ final class wc extends da {
           }
         }
         L716: {
-          int discarded$1897 = 0;
-          var2 = tk.a("mustlogin4,1");
+          var2 = tk.a("mustlogin4,1", false);
           if (var2 != null) {
             qn.field_t[1] = in.a(0, var2);
             break L716;
@@ -7573,8 +6877,7 @@ final class wc extends da {
           }
         }
         L717: {
-          int discarded$1898 = 0;
-          var2 = tk.a("mustlogin4,2");
+          var2 = tk.a("mustlogin4,2", false);
           if (var2 != null) {
             qn.field_t[2] = in.a(param0, var2);
             break L717;
@@ -7583,8 +6886,7 @@ final class wc extends da {
           }
         }
         L718: {
-          int discarded$1899 = 0;
-          var2 = tk.a("mustlogin4,3");
+          var2 = tk.a("mustlogin4,3", false);
           if (null == var2) {
             break L718;
           } else {
@@ -7593,8 +6895,7 @@ final class wc extends da {
           }
         }
         L719: {
-          int discarded$1900 = 0;
-          var2 = tk.a("mustlogin4,4");
+          var2 = tk.a("mustlogin4,4", false);
           if (null == var2) {
             break L719;
           } else {
@@ -7603,8 +6904,7 @@ final class wc extends da {
           }
         }
         L720: {
-          int discarded$1901 = 0;
-          var2 = tk.a("mustlogin4,5");
+          var2 = tk.a("mustlogin4,5", false);
           if (var2 != null) {
             qn.field_t[5] = in.a(0, var2);
             break L720;
@@ -7613,8 +6913,7 @@ final class wc extends da {
           }
         }
         L721: {
-          int discarded$1902 = 0;
-          var2 = tk.a("mustlogin4,6");
+          var2 = tk.a("mustlogin4,6", false);
           if (null == var2) {
             break L721;
           } else {
@@ -7623,8 +6922,7 @@ final class wc extends da {
           }
         }
         L722: {
-          int discarded$1903 = 0;
-          var2 = tk.a("mustlogin4,7");
+          var2 = tk.a("mustlogin4,7", false);
           if (null != var2) {
             qn.field_t[7] = in.a(0, var2);
             break L722;
@@ -7633,18 +6931,16 @@ final class wc extends da {
           }
         }
         L723: {
-          int discarded$1904 = 0;
-          var2 = tk.a("mustlogin_notloggedin");
+          var2 = tk.a("mustlogin_notloggedin", false);
           if (var2 != null) {
-            String discarded$1905 = in.a(0, var2);
+            String discarded$438 = in.a(0, var2);
             break L723;
           } else {
             break L723;
           }
         }
         L724: {
-          int discarded$1906 = 0;
-          var2 = tk.a("mustlogin_alternate,1");
+          var2 = tk.a("mustlogin_alternate,1", false);
           if (null != var2) {
             sk.field_f[1] = in.a(0, var2);
             break L724;
@@ -7653,8 +6949,7 @@ final class wc extends da {
           }
         }
         L725: {
-          int discarded$1907 = 0;
-          var2 = tk.a("mustlogin_alternate,2");
+          var2 = tk.a("mustlogin_alternate,2", false);
           if (null != var2) {
             sk.field_f[2] = in.a(0, var2);
             break L725;
@@ -7663,8 +6958,7 @@ final class wc extends da {
           }
         }
         L726: {
-          int discarded$1908 = 0;
-          var2 = tk.a("mustlogin_alternate,3");
+          var2 = tk.a("mustlogin_alternate,3", false);
           if (var2 == null) {
             break L726;
           } else {
@@ -7673,8 +6967,7 @@ final class wc extends da {
           }
         }
         L727: {
-          int discarded$1909 = 0;
-          var2 = tk.a("mustlogin_alternate,4");
+          var2 = tk.a("mustlogin_alternate,4", false);
           if (var2 != null) {
             sk.field_f[4] = in.a(0, var2);
             break L727;
@@ -7683,8 +6976,7 @@ final class wc extends da {
           }
         }
         L728: {
-          int discarded$1910 = 0;
-          var2 = tk.a("mustlogin_alternate,5");
+          var2 = tk.a("mustlogin_alternate,5", false);
           if (var2 == null) {
             break L728;
           } else {
@@ -7693,8 +6985,7 @@ final class wc extends da {
           }
         }
         L729: {
-          int discarded$1911 = 0;
-          var2 = tk.a("mustlogin_alternate,6");
+          var2 = tk.a("mustlogin_alternate,6", false);
           if (var2 == null) {
             break L729;
           } else {
@@ -7703,8 +6994,7 @@ final class wc extends da {
           }
         }
         L730: {
-          int discarded$1912 = 0;
-          var2 = tk.a("mustlogin_alternate,7");
+          var2 = tk.a("mustlogin_alternate,7", false);
           if (null == var2) {
             break L730;
           } else {
@@ -7713,8 +7003,7 @@ final class wc extends da {
           }
         }
         L731: {
-          int discarded$1913 = 0;
-          var2 = tk.a("subscription_cost_monthly,0");
+          var2 = tk.a("subscription_cost_monthly,0", false);
           if (var2 != null) {
             nn.field_t[0] = in.a(0, var2);
             break L731;
@@ -7723,8 +7012,7 @@ final class wc extends da {
           }
         }
         L732: {
-          int discarded$1914 = 0;
-          var2 = tk.a("subscription_cost_monthly,1");
+          var2 = tk.a("subscription_cost_monthly,1", false);
           if (null == var2) {
             break L732;
           } else {
@@ -7733,8 +7021,7 @@ final class wc extends da {
           }
         }
         L733: {
-          int discarded$1915 = 0;
-          var2 = tk.a("subscription_cost_monthly,2");
+          var2 = tk.a("subscription_cost_monthly,2", false);
           if (var2 == null) {
             break L733;
           } else {
@@ -7743,8 +7030,7 @@ final class wc extends da {
           }
         }
         L734: {
-          int discarded$1916 = 0;
-          var2 = tk.a("subscription_cost_monthly,3");
+          var2 = tk.a("subscription_cost_monthly,3", false);
           if (var2 != null) {
             nn.field_t[3] = in.a(0, var2);
             break L734;
@@ -7753,8 +7039,7 @@ final class wc extends da {
           }
         }
         L735: {
-          int discarded$1917 = 0;
-          var2 = tk.a("subscription_cost_monthly,4");
+          var2 = tk.a("subscription_cost_monthly,4", false);
           if (null == var2) {
             break L735;
           } else {
@@ -7763,8 +7048,7 @@ final class wc extends da {
           }
         }
         L736: {
-          int discarded$1918 = 0;
-          var2 = tk.a("subscription_cost_monthly,5");
+          var2 = tk.a("subscription_cost_monthly,5", false);
           if (var2 != null) {
             nn.field_t[5] = in.a(0, var2);
             break L736;
@@ -7773,8 +7057,7 @@ final class wc extends da {
           }
         }
         L737: {
-          int discarded$1919 = 0;
-          var2 = tk.a("subscription_cost_monthly,6");
+          var2 = tk.a("subscription_cost_monthly,6", false);
           if (var2 == null) {
             break L737;
           } else {
@@ -7783,8 +7066,7 @@ final class wc extends da {
           }
         }
         L738: {
-          int discarded$1920 = 0;
-          var2 = tk.a("subscription_cost_monthly,7");
+          var2 = tk.a("subscription_cost_monthly,7", false);
           if (null != var2) {
             nn.field_t[7] = in.a(0, var2);
             break L738;
@@ -7793,8 +7075,7 @@ final class wc extends da {
           }
         }
         L739: {
-          int discarded$1921 = 0;
-          var2 = tk.a("subscription_cost_monthly,8");
+          var2 = tk.a("subscription_cost_monthly,8", false);
           if (null == var2) {
             break L739;
           } else {
@@ -7803,8 +7084,7 @@ final class wc extends da {
           }
         }
         L740: {
-          int discarded$1922 = 0;
-          var2 = tk.a("subscription_cost_monthly,9");
+          var2 = tk.a("subscription_cost_monthly,9", false);
           if (var2 == null) {
             break L740;
           } else {
@@ -7813,8 +7093,7 @@ final class wc extends da {
           }
         }
         L741: {
-          int discarded$1923 = 0;
-          var2 = tk.a("subscription_cost_monthly,10");
+          var2 = tk.a("subscription_cost_monthly,10", false);
           if (null == var2) {
             break L741;
           } else {
@@ -7823,8 +7102,7 @@ final class wc extends da {
           }
         }
         L742: {
-          int discarded$1924 = 0;
-          var2 = tk.a("subscription_cost_monthly,11");
+          var2 = tk.a("subscription_cost_monthly,11", false);
           if (null != var2) {
             nn.field_t[11] = in.a(0, var2);
             break L742;
@@ -7833,8 +7111,7 @@ final class wc extends da {
           }
         }
         L743: {
-          int discarded$1925 = 0;
-          var2 = tk.a("subscription_cost_monthly,12");
+          var2 = tk.a("subscription_cost_monthly,12", false);
           if (var2 == null) {
             break L743;
           } else {
@@ -7843,12 +7120,11 @@ final class wc extends da {
           }
         }
         L744: {
-          int discarded$1926 = 0;
-          var2 = tk.a("sentence_separator");
+          var2 = tk.a("sentence_separator", false);
           if (var2 == null) {
             break L744;
           } else {
-            String discarded$1927 = in.a(param0, var2);
+            String discarded$439 = in.a(param0, var2);
             break L744;
           }
         }
@@ -8002,9 +7278,9 @@ final class wc extends da {
         }
     }
 
-    private final boolean a(String param0) {
-        RuntimeException var3 = null;
-        String var3_ref = null;
+    private final boolean a(String param0, byte param1) {
+        String var3 = null;
+        RuntimeException var3_ref = null;
         String var4 = null;
         int var5 = 0;
         String var6 = null;
@@ -8034,28 +7310,36 @@ final class wc extends da {
         try {
           L0: {
             L1: {
-              var3_ref = ((wc) this).field_l.field_w.toLowerCase();
-              var4 = param0.toLowerCase();
-              if (var3_ref.length() <= 0) {
+              if (param1 == -67) {
                 break L1;
               } else {
+                field_m = null;
+                break L1;
+              }
+            }
+            L2: {
+              var3 = ((wc) this).field_l.field_w.toLowerCase();
+              var4 = param0.toLowerCase();
+              if (var3.length() <= 0) {
+                break L2;
+              } else {
                 if (var4.length() > 0) {
-                  var5 = var3_ref.lastIndexOf("@");
+                  var5 = var3.lastIndexOf("@");
                   if (var5 < 0) {
-                    break L1;
+                    break L2;
                   } else {
-                    if (~var5 <= ~(var3_ref.length() + -1)) {
-                      break L1;
+                    if (~var5 <= ~(var3.length() + -1)) {
+                      break L2;
                     } else {
-                      var6 = var3_ref.substring(0, var5);
-                      var7 = var3_ref.substring(var5 + 1);
+                      var6 = var3.substring(0, var5);
+                      var7 = var3.substring(var5 + 1);
                       if (var4.indexOf(var6) < 0) {
                         if (var4.indexOf(var7) >= 0) {
                           stackOut_19_0 = 1;
                           stackIn_20_0 = stackOut_19_0;
                           return stackIn_20_0 != 0;
                         } else {
-                          break L1;
+                          break L2;
                         }
                       } else {
                         stackOut_14_0 = 1;
@@ -8065,7 +7349,7 @@ final class wc extends da {
                     }
                   }
                 } else {
-                  break L1;
+                  break L2;
                 }
               }
             }
@@ -8075,9 +7359,9 @@ final class wc extends da {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var3;
+          L3: {
+            var3_ref = decompiledCaughtException;
+            stackOut_23_0 = (RuntimeException) var3_ref;
             stackOut_23_1 = new StringBuilder().append("wc.G(");
             stackIn_26_0 = stackOut_23_0;
             stackIn_26_1 = stackOut_23_1;
@@ -8090,7 +7374,7 @@ final class wc extends da {
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
-              break L2;
+              break L3;
             } else {
               stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
               stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
@@ -8098,10 +7382,10 @@ final class wc extends da {
               stackIn_27_0 = stackOut_24_0;
               stackIn_27_1 = stackOut_24_1;
               stackIn_27_2 = stackOut_24_2;
-              break L2;
+              break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + -67 + ')');
+          throw wn.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param1 + ')');
         }
         return stackIn_22_0 != 0;
     }

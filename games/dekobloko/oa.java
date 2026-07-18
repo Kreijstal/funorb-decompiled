@@ -49,7 +49,7 @@ final class oa {
         }
     }
 
-    final static String a(String param0) {
+    final static String a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -124,7 +124,7 @@ final class oa {
         return stackIn_5_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_e = null;
         field_b = null;

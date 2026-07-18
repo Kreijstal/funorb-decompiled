@@ -331,21 +331,18 @@ final class db {
               ii.field_F = lj.field_C;
               ii.field_F = ei.a(new CharSequence[3], (byte) 127);
               ei.field_G.o(3);
-              int discarded$4 = -21923;
-              qh.b();
+              qh.b(-21923);
               return;
             } else {
               ii.field_F = h.a(be.field_e, 0, new String[1]);
               ii.field_F = ei.a(new CharSequence[3], (byte) 127);
               ei.field_G.o(3);
-              int discarded$5 = -21923;
-              qh.b();
+              qh.b(-21923);
               return;
             }
           } else {
             ei.field_G.o(3);
-            int discarded$6 = -21923;
-            qh.b();
+            qh.b(-21923);
             return;
           }
         } else {

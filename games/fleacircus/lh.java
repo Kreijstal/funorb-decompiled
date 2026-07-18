@@ -149,7 +149,7 @@ class lh {
         }
     }
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;
@@ -199,8 +199,7 @@ class lh {
         try {
           L0: {
             if (!fm.a(true, param0)) {
-              int discarded$15 = 1;
-              if (hg.a(param0)) {
+              if (hg.a(param0, 1)) {
                 stackOut_5_0 = 0;
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0 != 0;
@@ -215,8 +214,7 @@ class lh {
                     stackIn_14_0 = stackOut_13_0;
                     return stackIn_14_0 != 0;
                   } else {
-                    int discarded$16 = 0;
-                    if (!hj.a(param0, param1)) {
+                    if (!hj.a(param0, param1, 0)) {
                       if (!hf.a((byte) 98, param0, param1)) {
                         if (gl.a(param1, -1, param0)) {
                           stackOut_23_0 = 0;

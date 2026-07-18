@@ -7,7 +7,7 @@ abstract class se {
     static int field_d;
     static String field_a;
 
-    final static int a() {
+    final static int a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -82,7 +82,7 @@ abstract class se {
 
     abstract nb a(byte param0);
 
-    final static String a(CharSequence[] param0, int param1, int param2) {
+    final static String a(CharSequence[] param0, int param1, int param2, int param3) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -226,7 +226,7 @@ abstract class se {
         return (lg.a(param1, -22, param2) | ((8192 & param1) != 0 ? true : false) | mb.a(true, param2, param1)) & ((param2 & 55) == 0 ? true : false);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;

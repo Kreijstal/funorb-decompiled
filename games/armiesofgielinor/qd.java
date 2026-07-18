@@ -23,7 +23,7 @@ final class qd extends tj implements nq, he {
         field_J = null;
     }
 
-    private final String a() {
+    private final String a(byte param0) {
         return "</col></u>";
     }
 
@@ -156,8 +156,7 @@ final class qd extends tj implements nq, he {
         String stackOut_32_2 = null;
         try {
           L0: {
-            int discarded$15 = 0;
-            if (ab.a(param0)) {
+            if (ab.a(param0, 0)) {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
@@ -167,8 +166,7 @@ final class qd extends tj implements nq, he {
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0 != 0;
               } else {
-                int discarded$16 = 0;
-                if (!pd.a(param0)) {
+                if (!pd.a(param0, 0)) {
                   if (param1.length() == 0) {
                     stackOut_13_0 = 1;
                     stackIn_14_0 = stackOut_13_0;
@@ -355,11 +353,10 @@ final class qd extends tj implements nq, he {
             jj.a(-93, param0);
             lg.a(32381, param0);
             gs.a(54);
-            int discarded$13 = 1;
-            ng.b();
+            ng.b(true);
             if (param1 <= 70) {
                 Object var5 = null;
-                boolean discarded$14 = qd.a((String) null, (String) null, true);
+                boolean discarded$0 = qd.a((String) null, (String) null, true);
             }
             ib.field_j = 0 - fw.field_C;
         } catch (RuntimeException runtimeException) {
@@ -396,7 +393,6 @@ final class qd extends tj implements nq, he {
             ((qd) this).field_H = param0;
             ((qd) this).field_M = new fw(ro.field_kb, (qo) null);
             ((qd) this).field_M.field_k = (kh) (Object) new nu();
-            int discarded$1 = -117;
             var7 = fo.a(4800, ih.field_R, new String[2]);
             var3 = 20;
             var4 = new lk(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.field_H, -1, 2147483647, true);

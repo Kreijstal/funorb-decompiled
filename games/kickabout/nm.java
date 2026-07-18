@@ -135,7 +135,7 @@ final class nm {
         this(param0, param0.b(param1, -1), param2);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_g = null;
         field_i = null;

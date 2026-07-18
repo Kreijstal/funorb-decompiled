@@ -274,7 +274,7 @@ final class jm extends wm {
         return stackIn_18_0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_q = null;
         field_r = null;
         field_u = null;
@@ -457,8 +457,7 @@ final class jm extends wm {
               vi.field_A.a(pd.field_h[1], false);
               vi.field_A.a(pd.field_h[2], false);
               vi.field_A.a(pd.field_h[3], false);
-              int discarded$2 = 0;
-              i.a(vi.field_A);
+              i.a(vi.field_A, 0);
               vi.field_A.d(-1, param2);
               param1.a(vi.field_A, (byte) 124);
               we.field_b.field_n = 0;
@@ -526,8 +525,7 @@ final class jm extends wm {
                 break L7;
               }
             }
-            int discarded$3 = 0;
-            re.a(uk.field_p, ea.field_k, (wl) (Object) we.field_b, vi.field_A);
+            re.a(uk.field_p, ea.field_k, (wl) (Object) we.field_b, vi.field_A, 0);
             we.field_b.b(true, we.field_b.field_n - var5_int);
             wj.c(4792, -1);
             break L0;

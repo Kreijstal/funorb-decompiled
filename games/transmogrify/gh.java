@@ -10,26 +10,25 @@ final class gh extends wf {
     static sd field_m;
     static boolean field_i;
 
-    final static void d() {
+    final static void d(int param0) {
         cf var1 = null;
         hj var2 = null;
         var1 = (cf) (Object) mh.field_e.a((byte) -95);
         if (var1 == null) {
-          int discarded$10 = 1;
-          pc.a();
+          pc.a(1);
           return;
         } else {
           var2 = nf.field_l;
-          int discarded$11 = var2.c((byte) -126);
-          int discarded$12 = var2.c((byte) -108);
-          int discarded$13 = var2.c((byte) -105);
-          int discarded$14 = var2.c((byte) -119);
+          int discarded$8 = var2.c((byte) -126);
+          int discarded$9 = var2.c((byte) -108);
+          int discarded$10 = var2.c((byte) -105);
+          int discarded$11 = var2.c((byte) -119);
           var1.c(5);
           return;
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_m = null;
         field_g = null;
     }
@@ -38,7 +37,7 @@ final class gh extends wf {
         throw new Error();
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;

@@ -8,7 +8,7 @@ abstract class wc extends hl {
 
     abstract qm a(boolean param0, float param1);
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -85,7 +85,8 @@ abstract class wc extends hl {
     abstract in a(boolean param0);
 
     final static fi a(int param0, String param1) {
-        Object var2 = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
         fi var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -93,22 +94,22 @@ abstract class wc extends hl {
         CharSequence var7 = null;
         Object stackIn_3_0 = null;
         fi stackIn_16_0 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        Object stackIn_21_0 = null;
+        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        Object stackIn_22_0 = null;
+        RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         fi stackOut_15_0 = null;
         Object stackOut_2_0 = null;
-        Object stackOut_19_0 = null;
+        RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
-        Object stackOut_21_0 = null;
+        RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
         String stackOut_21_2 = null;
-        Object stackOut_20_0 = null;
+        RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         String stackOut_20_2 = null;
         var5 = HoldTheLine.field_D;
@@ -116,9 +117,9 @@ abstract class wc extends hl {
           if (ah.field_a != null) {
             L0: {
               var6 = (CharSequence) (Object) param1;
-              var2 = (Object) (Object) kf.a(var6, (byte) -76);
+              var2 = kf.a(var6, (byte) -76);
               if (var2 == null) {
-                var2 = (Object) (Object) var6;
+                var2 = param1;
                 break L0;
               } else {
                 break L0;
@@ -132,7 +133,7 @@ abstract class wc extends hl {
                 break L1;
               }
             }
-            var3 = (fi) (Object) ah.field_a.a(-25839, (long)((String) var2).hashCode());
+            var3 = (fi) (Object) ah.field_a.a(-25839, (long)var2.hashCode());
             L2: while (true) {
               if (var3 != null) {
                 L3: {
@@ -145,7 +146,7 @@ abstract class wc extends hl {
                     break L3;
                   }
                 }
-                if (!var4.equals(var2)) {
+                if (!var4.equals((Object) (Object) var2)) {
                   var3 = (fi) (Object) ah.field_a.a(20240);
                   continue L2;
                 } else {
@@ -165,15 +166,15 @@ abstract class wc extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_19_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var2_ref;
             stackOut_19_1 = new StringBuilder().append("wc.RA(").append(param0).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param1 == null) {
-              stackOut_21_0 = stackIn_21_0;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
@@ -181,7 +182,7 @@ abstract class wc extends hl {
               stackIn_22_2 = stackOut_21_2;
               break L4;
             } else {
-              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
               stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
@@ -196,13 +197,12 @@ abstract class wc extends hl {
 
     abstract in a(byte param0, float param1);
 
-    final static int e() {
+    final static int e(int param0) {
         ra.field_Z.a(true);
         if (ce.field_n.a((byte) 83)) {
             return 0;
         }
-        int discarded$0 = 1;
-        return qk.b();
+        return qk.b(1);
     }
 
     abstract qm a(int param0);
@@ -228,12 +228,12 @@ abstract class wc extends hl {
     wc() {
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_i = null;
         field_j = null;
     }
 
-    final static wd a(wd param0, float param1, float param2) {
+    final static wd a(wd param0, float param1, float param2, byte param3) {
         RuntimeException var4 = null;
         dd stackIn_2_0 = null;
         hn stackIn_4_0 = null;

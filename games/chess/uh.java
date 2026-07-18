@@ -55,8 +55,7 @@ final class uh extends vm {
                 if (param0.equals((Object) (Object) ((uh) this).field_t)) {
                   break L1;
                 } else {
-                  int discarded$2 = 1;
-                  var4 = sb.b(param0);
+                  var4 = sb.b(param0, true);
                   if (var4 != null) {
                     if (null == var4.field_e) {
                       ((uh) this).field_t = param0;
@@ -148,7 +147,7 @@ final class uh extends vm {
         return var3;
     }
 
-    final static void j() {
+    final static void j(int param0) {
         if (!(ad.field_b)) {
             throw new IllegalStateException();
         }
@@ -162,7 +161,7 @@ final class uh extends vm {
         ((uh) this).field_t = null;
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_u = null;
         field_r = null;
         field_m = null;
@@ -206,8 +205,7 @@ final class uh extends vm {
           L0: {
             var3_int = -38 / ((-49 - param0) / 62);
             var5 = (CharSequence) (Object) param1;
-            int discarded$11 = -1;
-            if (!eb.a(var5)) {
+            if (!eb.a(var5, -1)) {
               stackOut_2_0 = qk.field_b;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -215,8 +213,7 @@ final class uh extends vm {
               L1: {
                 if (!param1.equals((Object) (Object) ((uh) this).field_t)) {
                   L2: {
-                    int discarded$12 = 1;
-                    var4 = sb.b(param1);
+                    var4 = sb.b(param1, true);
                     if (var4 == null) {
                       break L2;
                     } else {

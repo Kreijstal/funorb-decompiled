@@ -19,7 +19,7 @@ final class kf extends ck {
     static String[] field_A;
     static gh field_y;
 
-    public static void d() {
+    public static void d(int param0) {
         field_r = null;
         field_B = null;
         field_t = null;

@@ -6,7 +6,7 @@ final class ml extends hb {
     static int field_s;
     static String field_r;
 
-    final static String e() {
+    final static String e(int param0) {
         if (uj.field_c) {
             return null;
         }
@@ -31,7 +31,7 @@ final class ml extends hb {
         super(param0, param1);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_t = null;
         field_r = null;
     }

@@ -22,7 +22,7 @@ final class jb extends ji {
         bi.c(param2, param0, param1, param4);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_H = null;
         field_L = null;
         field_A = null;

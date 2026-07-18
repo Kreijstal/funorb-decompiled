@@ -34,7 +34,7 @@ final class ik extends wi {
     private dd field_E;
     private int field_N;
 
-    final static pd a(sf param0) {
+    final static pd a(sf param0, byte param1) {
         RuntimeException var2 = null;
         pd stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -780,7 +780,7 @@ final class ik extends wi {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_C = null;
     }
 

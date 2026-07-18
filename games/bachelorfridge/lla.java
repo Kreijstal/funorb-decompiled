@@ -45,20 +45,18 @@ final class lla extends pu {
         }
         iaa.a(-123);
         if (dga.field_a != 0) {
-          if (dga.field_a == 1) {
-            mda.field_b.a(400, 31407, 400, 105, 350);
+          if (dga.field_a != 1) {
             qm.field_d = new wl("foodlist", mda.field_b, bu.field_j, nha.field_e);
-            int discarded$3 = 0;
-            uaa.a();
+            uaa.a(false);
             lf.a(114);
             qg.field_b.a(507, 31407, 170, 442, 161);
             ug.field_q = new wl("basket", qg.field_b, bu.field_j, ika.field_a);
             ug.field_q.a(0, 161, false, 19, 122, 442, 170);
             return;
           } else {
+            mda.field_b.a(400, 31407, 400, 105, 350);
             qm.field_d = new wl("foodlist", mda.field_b, bu.field_j, nha.field_e);
-            int discarded$4 = 0;
-            uaa.a();
+            uaa.a(false);
             lf.a(114);
             qg.field_b.a(507, 31407, 170, 442, 161);
             ug.field_q = new wl("basket", qg.field_b, bu.field_j, ika.field_a);
@@ -68,8 +66,7 @@ final class lla extends pu {
         } else {
           mda.field_b.a(jfa.field_q[baa.field_Q].field_d * 100, 31407, 400, 105, 350);
           qm.field_d = new wl("foodlist", mda.field_b, bu.field_j, nha.field_e);
-          int discarded$5 = 0;
-          uaa.a();
+          uaa.a(false);
           lf.a(114);
           qg.field_b.a(507, 31407, 170, 442, 161);
           ug.field_q = new wl("basket", qg.field_b, bu.field_j, ika.field_a);

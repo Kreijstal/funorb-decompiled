@@ -300,7 +300,7 @@ abstract class mc extends shb implements nea {
         }
     }
 
-    final static void a(ml param0) {
+    final static void a(ml param0, int param1) {
         ml var3 = null;
         ml var4 = null;
         try {

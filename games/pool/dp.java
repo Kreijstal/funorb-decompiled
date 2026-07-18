@@ -236,7 +236,7 @@ final class dp implements in {
         }
     }
 
-    final static void a(vh param0, vh param1) {
+    final static void a(vh param0, vh param1, int param2) {
         param1.field_qb = param0.field_gb + -param1.field_gb >> 1;
         try {
             param1.field_eb = param0.field_Db + (-param1.field_Db + -10);
@@ -264,8 +264,7 @@ final class dp implements in {
         nk.field_m.b((byte) -46);
         int var1 = 55 / ((25 - param0) / 40);
         if (!sq.field_c.d(-2147483648)) {
-            int discarded$0 = -27108;
-            return ug.g();
+            return ug.g(-27108);
         }
         return 0;
     }

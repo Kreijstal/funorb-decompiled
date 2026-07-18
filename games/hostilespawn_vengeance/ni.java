@@ -95,7 +95,7 @@ final class ni {
         return stackIn_23_0 != 0;
     }
 
-    final static void c() {
+    final static void c(int param0) {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {

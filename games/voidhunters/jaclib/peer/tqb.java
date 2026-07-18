@@ -8,7 +8,7 @@ public final class tqb {
     private jaclib.peer.PeerReference c;
     private jaclib.peer.PeerReference a;
 
-    private final void a() {
+    private final void a(int param0) {
         java.lang.ref.Reference var2 = null;
         jaclib.peer.PeerReference var3 = null;
         L0: while (true) {
@@ -28,18 +28,15 @@ public final class tqb {
     }
 
     public final void a(byte param0) {
-        int discarded$6 = -18289;
-        this.a();
+        this.a(-18289);
         L0: while (true) {
           if (null == ((jaclib.peer.tqb) this).c) {
             if (param0 <= 56) {
               ((jaclib.peer.tqb) this).b = null;
-              int discarded$7 = -18289;
-              this.a();
+              this.a(-18289);
               return;
             } else {
-              int discarded$8 = -18289;
-              this.a();
+              this.a(-18289);
               return;
             }
           } else {
@@ -97,8 +94,7 @@ public final class tqb {
     }
 
     public final void a(boolean param0) {
-        int discarded$0 = -18289;
-        this.a();
+        this.a(-18289);
         if (!param0) {
             return;
         }

@@ -53,9 +53,8 @@ final class wd {
         }
     }
 
-    final static void c() {
-        int discarded$0 = -120;
-        kb.b();
+    final static void c(int param0) {
+        kb.b(-120);
     }
 
     final rc a(boolean param0) {
@@ -146,8 +145,7 @@ final class wd {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$2 = 107;
-                ik.a(var4, param1);
+                ik.a(var4, param1, (byte) 107);
                 var4 = (re) (Object) nj.field_f.d(1);
                 continue L1;
               }
@@ -218,7 +216,7 @@ final class wd {
         ((wd) this).field_g.field_l = ((wd) this).field_g;
     }
 
-    final static df a(boolean param0, long param1, String param2, String param3) {
+    final static df a(boolean param0, long param1, String param2, String param3, boolean param4) {
         RuntimeException var6 = null;
         th stackIn_4_0 = null;
         nk stackIn_6_0 = null;

@@ -120,9 +120,8 @@ final class sn extends kn implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static void b() {
-        int discarded$0 = 0;
-        oe.a(false, 0);
+    final static void b(byte param0) {
+        oe.a(false, 0, false);
     }
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {

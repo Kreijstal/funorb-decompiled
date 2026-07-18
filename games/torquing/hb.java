@@ -12,16 +12,13 @@ final class hb extends am {
     private int field_v;
 
     final static da a(boolean param0) {
-        int discarded$0 = 20;
-        String var1 = ki.i();
+        String var1 = ki.i(20);
         if (var1 != null) {
             if (0 <= var1.indexOf('@')) {
                 var1 = "";
             }
         }
-        int discarded$1 = 20;
-        int discarded$2 = 1;
-        return new da(ki.i(), dc.b());
+        return new da(ki.i(20), dc.b(true));
     }
 
     final static void a(int param0, boolean param1, t param2, int param3, int param4, int param5, int param6, int param7) {
@@ -262,7 +259,7 @@ final class hb extends am {
         vg.field_o = vg.field_o + 1;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_x = null;
         field_u = null;
     }

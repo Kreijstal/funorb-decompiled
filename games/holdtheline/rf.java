@@ -10,7 +10,7 @@ final class rf extends u implements pi {
     static String field_bb;
     static String[] field_Y;
 
-    private final rm a(tb param0, String param1) {
+    private final rm a(tb param0, String param1, int param2) {
         rm var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -151,8 +151,7 @@ final class rf extends u implements pi {
             if (param1 != ((rf) this).field_Z) {
               break L0;
             } else {
-              int discarded$2 = 49;
-              this.h();
+              this.h((byte) 49);
               return;
             }
           }
@@ -259,8 +258,7 @@ final class rf extends u implements pi {
             var4.field_k = 0;
             var4.field_l = (dh) (Object) new dk(mo.field_w, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((rf) this).a(true, var4);
-            int discarded$2 = 25105;
-            ((rf) this).field_Z = this.a((tb) this, h.field_f);
+            ((rf) this).field_Z = this.a((tb) this, h.field_f, 25105);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -320,20 +318,20 @@ final class rf extends u implements pi {
         }
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_bb = null;
         field_Y = null;
         field_ab = null;
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         if (!((rf) this).field_F) {
             return;
         }
         ((rf) this).field_F = false;
     }
 
-    final static int a(int param0, Random param1) {
+    final static int a(int param0, Random param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

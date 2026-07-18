@@ -10,7 +10,7 @@ final class cu {
     static String[] field_d;
     static String[] field_e;
 
-    final static cf a(boolean param0, int param1, int param2, int param3) {
+    final static cf a(boolean param0, int param1, int param2, int param3, boolean param4, boolean param5) {
         cf var6 = (cf) (Object) field_a.b((byte) -32);
         if (!(var6 != null)) {
             var6 = new cf();
@@ -174,8 +174,7 @@ final class cu {
           L0: {
             var3_int = param2.field_n;
             var5 = (CharSequence) (Object) param1;
-            int discarded$2 = 106;
-            var4 = ok.a(var5);
+            var4 = ok.a(var5, (byte) 106);
             param2.f(-53, var4.length);
             param2.field_n = param2.field_n + os.field_I.a(-1, var4.length, param2.field_n, param2.field_f, var4, 0);
             stackOut_0_0 = param2.field_n + -var3_int;

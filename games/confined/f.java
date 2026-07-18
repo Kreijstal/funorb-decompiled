@@ -6,7 +6,7 @@ final class f {
     static String field_a;
     static String field_c;
 
-    final static nf[] a(int param0, nf[] param1) {
+    final static nf[] a(int param0, nf[] param1, int param2) {
         nf[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -84,13 +84,13 @@ final class f {
         return stackIn_7_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;
     }
 
-    final static byte a(char param0) {
+    final static byte a(char param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         L0: {

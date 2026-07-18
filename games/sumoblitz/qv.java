@@ -10,7 +10,7 @@ final class qv extends ms {
     int field_n;
     static da field_k;
 
-    final static void a() {
+    final static void a(int param0) {
         ts.field_a = ts.field_a + 13;
         fb.field_a = fb.field_a - 9;
         kn.field_b = kn.field_b - 4;
@@ -176,7 +176,7 @@ final class qv extends ms {
         return stackIn_32_0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_l = null;
         field_k = null;
         field_o = null;

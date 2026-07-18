@@ -7,7 +7,7 @@ class ih extends qf {
     ih() {
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 
@@ -204,7 +204,7 @@ class ih extends qf {
         return stackIn_3_0;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         if (!(null == vk.field_E)) {
             vk.field_E.a(true);
             vk.field_E = null;

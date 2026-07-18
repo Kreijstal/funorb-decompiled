@@ -10,7 +10,7 @@ final class vda extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void a(eab param0, dra param1, java.awt.Component param2) {
+    final static void a(eab param0, dra param1, java.awt.Component param2, boolean param3, int param4, int param5, byte param6, int param7) {
         try {
             vka.a(22050, true, 10);
             flb.field_o = vka.a(param0, param2, 0, 22050);
@@ -278,7 +278,7 @@ final class vda extends rqa {
         return stackIn_3_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_p = null;
         field_o = null;
         field_q = null;

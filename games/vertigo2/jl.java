@@ -31,7 +31,7 @@ final class jl {
         }
     }
 
-    final static void a(r param0) {
+    final static void a(r param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -88,8 +88,7 @@ final class jl {
                   }
                 }
               } else {
-                int discarded$1 = 1;
-                cg.field_b[var4] = di.a(var8);
+                cg.field_b[var4] = di.a(var8, true);
                 var4++;
                 continue L1;
               }
@@ -132,7 +131,7 @@ final class jl {
         return ((jl) this).c(-115);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_a = null;
         field_h = null;

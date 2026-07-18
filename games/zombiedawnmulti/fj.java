@@ -22,7 +22,7 @@ final class fj extends gn {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         try {
             if (null != bg.field_e) {
                 try {

@@ -4,7 +4,7 @@
 final class sb {
     static double field_a;
 
-    final static void a() {
+    final static void a(int param0) {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -63,7 +63,7 @@ final class sb {
         }
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, byte param9) {
         RuntimeException var10 = null;
         int[] var10_array = null;
         int var11 = 0;

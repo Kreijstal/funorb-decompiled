@@ -16,7 +16,7 @@ abstract class dk {
     java.awt.Image field_j;
     static kc field_k;
 
-    final static void a() {
+    final static void a(int param0) {
         ho.field_i = null;
         ph.field_c = null;
         be.field_d = null;
@@ -35,8 +35,7 @@ abstract class dk {
     abstract void a(int param0, java.awt.Graphics param1, int param2, int param3);
 
     final static void a(boolean param0, int param1) {
-        int discarded$2 = 0;
-        if (!bj.g()) {
+        if (!bj.g(false)) {
             return;
         }
         de.e(0, 0, de.field_e, de.field_j, 0, 192);
@@ -45,12 +44,12 @@ abstract class dk {
 
     final static void a(String param0, byte param1, boolean param2, int param3, boolean param4) {
         RuntimeException var5 = null;
-        String var5_ref = null;
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        String var11 = null;
         int stackIn_23_0 = 0;
         int stackIn_34_0 = 0;
         int stackIn_35_0 = 0;
@@ -85,14 +84,13 @@ abstract class dk {
             L1: {
               sb.field_a = true;
               i.field_d = param3;
-              var5_ref = param0;
+              var11 = param0;
               var6 = ArcanistsMulti.field_H;
               if (0 != i.field_d) {
                 if (1 != i.field_d) {
                   throw new IllegalArgumentException();
                 } else {
-                  int discarded$2 = 21230;
-                  var7 = hf.a(of.field_e, var5_ref, 480, ob.field_T);
+                  var7 = hf.a(of.field_e, var11, 480, ob.field_T, 21230);
                   var8 = var7 + 2;
                   ln.field_M = new int[var8];
                   pm.field_f = new String[var8];
@@ -122,8 +120,7 @@ abstract class dk {
                   }
                 }
               } else {
-                int discarded$3 = 21230;
-                var7 = hf.a(of.field_e, var5_ref, 480, ob.field_T);
+                var7 = hf.a(of.field_e, var11, 480, ob.field_T, 21230);
                 var8 = var7 + 3;
                 pm.field_f = new String[var8];
                 ln.field_M = new int[var8];
@@ -259,7 +256,7 @@ abstract class dk {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_b = null;
         field_i = null;
         field_k = null;

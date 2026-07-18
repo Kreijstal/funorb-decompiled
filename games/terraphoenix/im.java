@@ -9,7 +9,7 @@ final class im {
     static String field_b;
     static String field_a;
 
-    final static int a(int param0) {
+    final static int a(int param0, boolean param1) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -50,13 +50,13 @@ final class im {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_b = null;
         field_a = null;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, byte param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -83,9 +83,7 @@ final class im {
         String stackOut_14_2 = null;
         var5 = Terraphoenix.field_V;
         try {
-          int discarded$4 = 0;
-          int discarded$5 = 121;
-          var3 = jl.a(param0);
+          var3 = jl.a(param0, 121, false);
           if (var3 == null) {
             var4 = 0;
             L0: while (true) {
@@ -139,7 +137,7 @@ final class im {
         }
     }
 
-    final static char a(byte param0) {
+    final static char a(byte param0, int param1) {
         int var3 = 0;
         int var2 = param0 & 255;
         if (!(var2 != 0)) {

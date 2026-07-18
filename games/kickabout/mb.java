@@ -210,15 +210,13 @@ final class mb extends wj implements ur, vh {
             }
             if (((mb) this).field_E != param1) {
               if (param1 == ((mb) this).field_B) {
-                int discarded$4 = -81;
-                this.k();
+                this.k(-81);
                 break L0;
               } else {
                 return;
               }
             } else {
-              int discarded$5 = -25085;
-              nn.a();
+              nn.a(-25085);
               return;
             }
           }
@@ -360,9 +358,7 @@ final class mb extends wj implements ur, vh {
         var2.a(50, 1, 20, 270, var3);
         ((mb) this).a(-86, var2);
         var3 += 50;
-        int discarded$0 = 170;
-        int discarded$1 = 29;
-        var3 = var3 + (5 + this.a(var3, jk.field_i, ua.field_f, (fd) (Object) ((mb) this).field_C));
+        var3 = var3 + (5 + this.a(var3, jk.field_i, ua.field_f, (fd) (Object) ((mb) this).field_C, (byte) 29, 170));
         ((mb) this).field_B.a(40, 1, -var5 + 496 >> 1, var5, var3);
         ((mb) this).field_E.a(40, 1, var4 + 3, 60, 15 + var3);
         ((mb) this).field_E.field_k = (jv) this;
@@ -375,14 +371,14 @@ final class mb extends wj implements ur, vh {
         ((mb) this).a(var4 + (var3 - -55), 1, 0, 496, 0);
     }
 
-    private final boolean l() {
+    private final boolean l(int param0) {
         if (this.a(496, (cw) (Object) ((mb) this).field_C)) {
             return true;
         }
         return false;
     }
 
-    private final int a(int param0, String param1, String param2, fd param3) {
+    private final int a(int param0, String param1, String param2, fd param3, byte param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -614,16 +610,14 @@ final class mb extends wj implements ur, vh {
     final void a(byte param0, fd param1, int param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = 20;
-            ((mb) this).field_B.field_y = this.l();
+            ((mb) this).field_B.field_y = this.l(20);
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) (Object) runtimeException, "mb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final void k() {
-        int discarded$0 = 20;
-        if (!this.l()) {
+    private final void k(int param0) {
+        if (!this.l(20)) {
             return;
         }
         fn.a((byte) 19, ((mb) this).field_C.field_q);

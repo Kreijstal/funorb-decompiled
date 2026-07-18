@@ -11,9 +11,8 @@ final class wh implements Iterator {
     private int field_c;
     private rf field_d;
 
-    final static void b() {
-        int discarded$0 = -1;
-        qb.b();
+    final static void b(int param0) {
+        qb.b(-1);
         ic.field_a = true;
         tc.field_x = true;
         ti.field_b.l(26756);
@@ -57,7 +56,7 @@ final class wh implements Iterator {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
     }
 
@@ -109,6 +108,8 @@ final class wh implements Iterator {
                   break L1;
                 } else {
                   var3 = (Object) (Object) qi.field_b;
+                  var4 = var3;
+                  var4 = var3;
                   break L1;
                 }
               }
@@ -125,8 +126,7 @@ final class wh implements Iterator {
                 }
               }
             }
-            int discarded$2 = 1;
-            stackOut_9_0 = ig.a((String) var3, -1, (String) var4, param1);
+            stackOut_9_0 = ig.a((String) var3, -1, (String) var4, param1, 1);
             stackIn_10_0 = stackOut_9_0;
             break L0;
           }

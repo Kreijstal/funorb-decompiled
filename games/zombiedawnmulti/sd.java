@@ -13,7 +13,7 @@ final class sd extends rg {
         return db.field_c * var3 / 224;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0, byte param1, int param2, int param3) {
         if (!nh.field_m) {
           if (!ee.field_b) {
             if (eo.a(15, true, 13)) {
@@ -36,11 +36,9 @@ final class sd extends rg {
     final static boolean h(int param0) {
         if (param0 != 3853) {
             boolean discarded$0 = sd.h(-41);
-            int discarded$1 = 61;
-            return ho.a(jl.b(0));
+            return ho.a(jl.b(0), 61);
         }
-        int discarded$2 = 61;
-        return ho.a(jl.b(0));
+        return ho.a(jl.b(0), 61);
     }
 
     final static int a(byte param0, int param1, int param2) {
@@ -52,7 +50,7 @@ final class sd extends rg {
         return param2 * var3 + var6 * var4 - -(var7 * var4 >> 16);
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_E = null;
         field_G = null;
     }

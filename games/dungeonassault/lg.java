@@ -79,7 +79,7 @@ final class lg {
         }
     }
 
-    final static char a(byte param0) {
+    final static char a(byte param0, int param1) {
         int var3 = 0;
         int var2 = param0 & 255;
         if (!(var2 != 0)) {
@@ -177,7 +177,7 @@ final class lg {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         jd var1 = (jd) (Object) ta.field_f.e(-24172);
         if (!(var1 != null)) {
             tl.a(-63);

@@ -85,7 +85,7 @@ final class aa extends pg {
             ia.field_c = (dj) (Object) rm.a("arezzo14", param1, "commonui", -120, param3);
             go.field_k = (dj) (Object) rm.a("arezzo14bold", param1, "commonui", -123, param3);
             var17 = new qb(param2.a("", "button.gif", -1), (java.awt.Component) (Object) on.field_c);
-            ll discarded$2 = af.a("dropdown", "commonui", 19412, param3);
+            ll discarded$1 = af.a("dropdown", "commonui", 19412, param3);
             var5 = pk.a("commonui", 0, "screen_options", param3);
             fg.field_k = new ll[4];
             oa.field_d = new ll[4];
@@ -108,8 +108,7 @@ final class aa extends pg {
                 L2: while (true) {
                   if (var9 >= 3) {
                     var9 = var17.field_y;
-                    int discarded$3 = 65280;
-                    ec.a();
+                    ec.a(65280);
                     var17.a();
                     de.e(0, 0, de.field_e, de.field_j);
                     var15 = new qb(var9, var9);
@@ -241,7 +240,7 @@ final class aa extends pg {
         return var2;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_j = null;
         field_i = null;
         field_h = null;
@@ -330,8 +329,7 @@ final class aa extends pg {
                     return stackIn_10_0;
                   }
                 } else {
-                  int discarded$1 = 1;
-                  ao.a(10L);
+                  ao.a(10L, 1);
                   continue L1;
                 }
               }

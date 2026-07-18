@@ -146,7 +146,7 @@ final class hh {
         }
     }
 
-    final static void a(oc param0) {
+    final static void a(oc param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -267,14 +267,14 @@ final class hh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
         field_b = null;
         field_d = null;
     }
 
-    final static tl[] a(df param0) {
+    final static tl[] a(df param0, int param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
         tl[] var4 = null;

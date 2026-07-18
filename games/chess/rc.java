@@ -364,7 +364,7 @@ final class rc {
         return stackIn_3_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         an.field_c = false;
         if (null == tl.field_Fb) {
           if (0 != vk.field_g) {
@@ -388,7 +388,7 @@ final class rc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_f = null;
         field_b = null;

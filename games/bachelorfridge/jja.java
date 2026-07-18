@@ -43,14 +43,12 @@ final class jja extends tda {
                   var5 = param2;
                   L2: while (true) {
                     if (var6.field_r >= var5) {
-                      int discarded$2 = 12;
-                      this.a(var5, param0, var4_int, var4_int + var5, var6);
+                      this.a(var5, param0, var4_int, var4_int + var5, var6, (byte) 12);
                       var6.field_r = var6.field_r - var5;
                       var6 = (fh) (Object) ((jja) this).field_k.c(0);
                       continue L1;
                     } else {
-                      int discarded$3 = 12;
-                      this.a(var6.field_r, param0, var4_int, var5 + var4_int, var6);
+                      this.a(var6.field_r, param0, var4_int, var5 + var4_int, var6, (byte) 12);
                       var5 = var5 - var6.field_r;
                       var4_int = var4_int + var6.field_r;
                       if (!((jja) this).field_l.a(var4_int, var6, param0, var5, false)) {
@@ -100,7 +98,7 @@ final class jja extends tda {
         }
     }
 
-    private final void a(int param0, int[] param1, int param2, int param3, fh param4) {
+    private final void a(int param0, int[] param1, int param2, int param3, fh param4, byte param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -374,8 +372,7 @@ final class jja extends tda {
     }
 
     final static void c(int param0) {
-        int discarded$0 = 1;
-        lq.g();
+        lq.g(1);
     }
 
     final static void b(int param0) {

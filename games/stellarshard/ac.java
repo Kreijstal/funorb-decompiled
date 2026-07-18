@@ -221,8 +221,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
                   System.out.println("error_game_" + param1);
                   try {
                     L2: {
-                      int discarded$2 = 78;
-                      Object discarded$3 = sh.a("loggedout", hf.a((byte) -7));
+                      Object discarded$1 = sh.a("loggedout", hf.a((byte) -7), (byte) 78);
                       break L2;
                     }
                   } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -826,8 +825,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
                                   if (!rg.a((byte) 19, (CharSequence) (Object) var4)) {
                                     break L5;
                                   } else {
-                                    int discarded$4 = 125;
-                                    if (10 > pf.a((CharSequence) (Object) var4)) {
+                                    if (10 > pf.a((CharSequence) (Object) var4, (byte) 125)) {
                                       ((ac) this).a(1, "wrongjava");
                                       if (var5 == 0) {
                                         break L2;
@@ -918,7 +916,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
                         if (null != var2_ref) {
                           try {
                             L16: {
-                              Object discarded$5 = var2_ref.invoke(var1, new Object[1]);
+                              Object discarded$1 = var2_ref.invoke(var1, new Object[1]);
                               break L16;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -937,8 +935,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
                       ((ac) this).c(31178);
                       pd.field_h = cg.a((java.awt.Component) (Object) qd.field_j, false, lk.field_j, td.field_d);
                       ((ac) this).a(true);
-                      int discarded$6 = -17887;
-                      rb.field_u = qb.f();
+                      rb.field_u = qb.f(-17887);
                       L18: while (true) {
                         L19: {
                           L20: {
@@ -984,8 +981,7 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
                                 }
                               }
                             }
-                            int discarded$7 = 56;
-                            this.e();
+                            this.e((byte) 56);
                             ni.a(ic.field_d, (Object) (Object) qd.field_j, -127);
                             break L22;
                           }
@@ -1171,11 +1167,11 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
     }
 
     private final void a(int param0, boolean param1) {
+        Exception exception = null;
+        Throwable throwable = null;
         Object var3 = null;
         Object var3_ref = null;
-        Exception var3_ref2 = null;
-        Throwable var3_ref3 = null;
-        RuntimeException var3_ref4 = null;
+        RuntimeException var3_ref2 = null;
         Throwable var4 = null;
         Throwable decompiledCaughtException = null;
         try {
@@ -1199,84 +1195,88 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
                 break L2;
               }
             }
-            try {
-              L3: {
-                ((ac) this).f((byte) 100);
-                break L3;
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L4: {
-                var3_ref2 = (Exception) (Object) decompiledCaughtException;
-                break L4;
-              }
-            }
-            L5: {
-              if (null != qd.field_j) {
-                try {
-                  L6: {
-                    qd.field_j.removeFocusListener((java.awt.event.FocusListener) this);
-                    qd.field_j.getParent().remove((java.awt.Component) (Object) qd.field_j);
-                    break L6;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter1) {
-                  decompiledCaughtException = decompiledCaughtParameter1;
-                  L7: {
-                    var3_ref2 = (Exception) (Object) decompiledCaughtException;
-                    break L7;
-                  }
+            if (param0 == -1) {
+              try {
+                L3: {
+                  ((ac) this).f((byte) 100);
+                  break L3;
                 }
-                break L5;
-              } else {
-                break L5;
-              }
-            }
-            L8: {
-              if (ic.field_d == null) {
-                break L8;
-              } else {
-                try {
-                  L9: {
-                    ic.field_d.c(0);
-                    break L9;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter2) {
-                  decompiledCaughtException = decompiledCaughtParameter2;
-                  L10: {
-                    var3_ref2 = (Exception) (Object) decompiledCaughtException;
-                    break L10;
-                  }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L4: {
+                  exception = (Exception) (Object) decompiledCaughtException;
+                  break L4;
                 }
-                break L8;
               }
-            }
-            L11: {
-              ((ac) this).c((byte) -128);
-              if (null == ah.field_q) {
-                break L11;
-              } else {
-                try {
-                  L12: {
-                    System.exit(0);
-                    break L12;
+              L5: {
+                if (null != qd.field_j) {
+                  try {
+                    L6: {
+                      qd.field_j.removeFocusListener((java.awt.event.FocusListener) this);
+                      qd.field_j.getParent().remove((java.awt.Component) (Object) qd.field_j);
+                      break L6;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    L7: {
+                      exception = (Exception) (Object) decompiledCaughtException;
+                      break L7;
+                    }
                   }
-                } catch (java.lang.Throwable decompiledCaughtParameter3) {
-                  decompiledCaughtException = decompiledCaughtParameter3;
-                  L13: {
-                    var3_ref3 = decompiledCaughtException;
-                    break L13;
-                  }
+                  break L5;
+                } else {
+                  break L5;
                 }
-                break L11;
               }
+              L8: {
+                if (ic.field_d == null) {
+                  break L8;
+                } else {
+                  try {
+                    L9: {
+                      ic.field_d.c(~param0);
+                      break L9;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter2) {
+                    decompiledCaughtException = decompiledCaughtParameter2;
+                    L10: {
+                      exception = (Exception) (Object) decompiledCaughtException;
+                      break L10;
+                    }
+                  }
+                  break L8;
+                }
+              }
+              L11: {
+                ((ac) this).c((byte) -128);
+                if (null == ah.field_q) {
+                  break L11;
+                } else {
+                  try {
+                    L12: {
+                      System.exit(0);
+                      break L12;
+                    }
+                  } catch (java.lang.Throwable decompiledCaughtParameter3) {
+                    decompiledCaughtException = decompiledCaughtParameter3;
+                    L13: {
+                      throwable = decompiledCaughtException;
+                      break L13;
+                    }
+                  }
+                  break L11;
+                }
+              }
+              System.out.println("Shutdown complete - clean:" + param1);
+              break L0;
+            } else {
+              return;
             }
-            System.out.println("Shutdown complete - clean:" + param1);
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
-          var3_ref4 = (RuntimeException) (Object) decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var3_ref4, "ac.OA(" + -1 + ',' + param1 + ')');
+          var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var3_ref2, "ac.OA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1540,70 +1540,74 @@ public abstract class ac extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    private final void e() {
-        RuntimeException var2 = null;
+    private final void e(byte param0) {
+        RuntimeException runtimeException = null;
         long var2_long = 0L;
         long var4 = 0L;
         java.awt.Insets var6 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              var2_long = ih.a((byte) -98);
-              var4 = vg.field_t[bl.field_b];
-              vg.field_t[bl.field_b] = var2_long;
-              bl.field_b = bl.field_b - -1 & 31;
-              if (var4 == 0L) {
-                break L1;
-              } else {
-                if (var2_long > var4) {
+            if (param0 == 56) {
+              L1: {
+                var2_long = ih.a((byte) -98);
+                var4 = vg.field_t[bl.field_b];
+                vg.field_t[bl.field_b] = var2_long;
+                bl.field_b = bl.field_b - -1 & 31;
+                if (var4 == 0L) {
                   break L1;
                 } else {
-                  break L1;
+                  if (var2_long > var4) {
+                    break L1;
+                  } else {
+                    break L1;
+                  }
                 }
               }
-            }
-            L2: {
-              int fieldTemp$1 = ab.field_a;
-              ab.field_a = ab.field_a + 1;
-              if (fieldTemp$1 > 50) {
-                L3: {
-                  L4: {
-                    ab.field_a = ab.field_a - 50;
-                    of.field_F = true;
-                    qd.field_j.setSize(lk.field_j, td.field_d);
-                    qd.field_j.setVisible(true);
-                    if (null == ah.field_q) {
-                      break L4;
-                    } else {
-                      if (la.field_L == null) {
-                        break L3;
-                      } else {
+              L2: {
+                int fieldTemp$2 = ab.field_a;
+                ab.field_a = ab.field_a + 1;
+                if (fieldTemp$2 > 50) {
+                  L3: {
+                    L4: {
+                      ab.field_a = ab.field_a - 50;
+                      of.field_F = true;
+                      qd.field_j.setSize(lk.field_j, td.field_d);
+                      qd.field_j.setVisible(true);
+                      if (null == ah.field_q) {
                         break L4;
+                      } else {
+                        if (la.field_L == null) {
+                          break L3;
+                        } else {
+                          break L4;
+                        }
                       }
                     }
+                    qd.field_j.setLocation(fb.field_f, df.field_c);
+                    if (stellarshard.field_B == 0) {
+                      break L2;
+                    } else {
+                      break L3;
+                    }
                   }
-                  qd.field_j.setLocation(fb.field_f, df.field_c);
-                  if (stellarshard.field_B == 0) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
+                  var6 = ah.field_q.getInsets();
+                  qd.field_j.setLocation(var6.left - -fb.field_f, var6.top - -df.field_c);
+                  break L2;
+                } else {
+                  break L2;
                 }
-                var6 = ah.field_q.getInsets();
-                qd.field_j.setLocation(var6.left - -fb.field_f, var6.top - -df.field_c);
-                break L2;
-              } else {
-                break L2;
               }
+              ((ac) this).d(-20880);
+              break L0;
+            } else {
+              return;
             }
-            ((ac) this).d(-20880);
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2, "ac.PA(" + 56 + ')');
+          runtimeException = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) runtimeException, "ac.PA(" + param0 + ')');
         }
     }
 

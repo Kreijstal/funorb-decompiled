@@ -79,12 +79,11 @@ final class b extends id {
         return stackIn_4_0;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         if (Character.isISOControl(param0)) {
           return false;
         } else {
-          int discarded$6 = 0;
-          if (!od.a(param0)) {
+          if (!od.a(param0, false)) {
             if (param0 != 45) {
               if (160 != param0) {
                 if (param0 != 32) {
@@ -108,7 +107,7 @@ final class b extends id {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_u = null;
     }
 

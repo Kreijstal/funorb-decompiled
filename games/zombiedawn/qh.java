@@ -68,8 +68,7 @@ final class qh extends vo {
                       break L5;
                     } else {
                       var3_int = 0;
-                      int discarded$2 = -70;
-                      jp.a();
+                      jp.a((byte) -70);
                       break L5;
                     }
                   }

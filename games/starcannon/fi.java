@@ -13,7 +13,7 @@ abstract class fi {
 
     abstract int a(byte param0, long param1);
 
-    final static void c() {
+    final static void c(byte param0) {
         hl var1 = null;
         hl var2 = null;
         int var3 = 0;
@@ -38,7 +38,7 @@ abstract class fi {
         }
     }
 
-    final static int a(boolean param0, int param1, String param2, String param3, int param4, String param5) {
+    final static int a(boolean param0, int param1, String param2, String param3, int param4, String param5, byte param6) {
         ma var7 = null;
         RuntimeException var7_ref = null;
         ma var8 = null;
@@ -181,7 +181,7 @@ abstract class fi {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_e = null;
         field_g = null;

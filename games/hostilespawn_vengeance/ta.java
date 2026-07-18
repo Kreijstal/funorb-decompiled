@@ -71,7 +71,7 @@ final class ta extends me {
             wk.field_h = false;
             tb.field_N = 0;
             ec.a((byte) -123, hk.field_q);
-            boolean discarded$6 = ib.a((byte) -72);
+            boolean discarded$3 = ib.a((byte) -72);
             rl.field_c = param1;
             if (bm.field_c != 0) {
               break L1;
@@ -130,8 +130,7 @@ final class ta extends me {
                 var2_int = 1;
                 L7: while (true) {
                   if (var2_int >= kh.field_Q.length) {
-                    int discarded$7 = 0;
-                    pf.a(kh.field_ib);
+                    pf.a(kh.field_ib, false);
                     kh.field_U[1] = 0;
                     kh.field_U[0] = 0;
                     break L6;
@@ -184,8 +183,7 @@ final class ta extends me {
               var2_int = 0;
               L12: while (true) {
                 if (var2_int >= kh.field_Q.length) {
-                  int discarded$8 = 0;
-                  pf.a(kh.field_ib);
+                  pf.a(kh.field_ib, false);
                   kh.field_ib[0] = 1200;
                   kh.field_U[0] = 1;
                   kh.field_U[1] = 0;
@@ -300,8 +298,7 @@ final class ta extends me {
                   ti.field_f.a(-1, 8360, -1);
                   ln.field_a = null;
                   ln.field_a = new id(oc.field_h[bm.field_c][rl.field_c]);
-                  int discarded$9 = 1;
-                  mm.a(ln.field_a);
+                  mm.a(ln.field_a, true);
                   if (0 <= ti.field_f.field_e) {
                     break L21;
                   } else {
@@ -607,9 +604,9 @@ final class ta extends me {
                               if ((var6 & 1 << var9) == 0) {
                                 break L39;
                               } else {
-                                int incrementValue$10 = var8;
+                                int incrementValue$4 = var8;
                                 var8++;
-                                md.field_g[incrementValue$10] = new lf(var9, 0, 640);
+                                md.field_g[incrementValue$4] = new lf(var9, 0, 640);
                                 break L39;
                               }
                             }
@@ -644,9 +641,9 @@ final class ta extends me {
                         continue L22;
                       } else {
                         L42: {
-                          int incrementValue$11 = var4;
+                          int incrementValue$5 = var4;
                           var4++;
-                          if (!var5[incrementValue$11]) {
+                          if (!var5[incrementValue$5]) {
                             break L42;
                           } else {
                             si.a(var7, var6, 16384);
@@ -732,7 +729,7 @@ final class ta extends me {
         return stackIn_1_0;
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_jb = null;
         field_mb = null;
         field_kb = null;

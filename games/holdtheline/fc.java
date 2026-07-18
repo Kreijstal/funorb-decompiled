@@ -188,7 +188,7 @@ final class fc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = -15;
         field_b = null;
     }

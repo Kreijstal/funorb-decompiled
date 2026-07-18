@@ -5,7 +5,7 @@ final class wc extends qg {
     static ag field_B;
     static bj field_A;
 
-    final static void j() {
+    final static void j(int param0) {
     }
 
     final static void a(int param0, int param1, int param2) {

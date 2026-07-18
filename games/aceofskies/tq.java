@@ -9,16 +9,14 @@ final class tq extends fa {
     static vd[] field_h;
     static String[] field_e;
 
-    final static boolean c() {
-        int discarded$8 = -16;
-        if (!(ei.a("jaclib"))) {
+    final static boolean c(boolean param0) {
+        if (!(ei.a("jaclib", (byte) -16))) {
             return false;
         }
-        int discarded$9 = -16;
-        return ei.a("hw3d");
+        return ei.a("hw3d", (byte) -16);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_h = null;
         field_d = null;
@@ -41,8 +39,7 @@ final class tq extends fa {
         aa.field_b[2] = new nk(2);
         if (qr.field_a > 0) {
           L1: {
-            int discarded$5 = 75;
-            if (cn.a(pt.field_b)) {
+            if (cn.a(pt.field_b, (byte) 75)) {
               za.a(32, new int[6], 180, 170, 1, 470, (byte) 121);
               aa.field_b[1] = new nk(1);
               za.a(32, new int[4], 180, 170, 7, 470, (byte) 87);
@@ -57,28 +54,24 @@ final class tq extends fa {
             if (ln.field_d < 2) {
               return;
             } else {
-              int discarded$6 = 1;
-              si.c();
+              si.c(true);
               return;
             }
           } else {
-            int discarded$7 = 1;
-            si.c();
+            si.c(true);
             return;
           }
         } else {
           co.field_b = 0;
           if ((64 & hg.field_D) == 0) {
             if (ln.field_d >= 2) {
-              int discarded$8 = 1;
-              si.c();
+              si.c(true);
               return;
             } else {
               return;
             }
           } else {
-            int discarded$9 = 1;
-            si.c();
+            si.c(true);
             return;
           }
         }

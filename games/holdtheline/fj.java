@@ -30,8 +30,7 @@ class fj extends ln {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = -115;
-            stackOut_0_0 = wc.a(param2, 0.0f, param1);
+            stackOut_0_0 = wc.a(param2, 0.0f, param1, (byte) -115);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -72,7 +71,7 @@ class fj extends ln {
         vk.a(param0, true, -113);
     }
 
-    final static void f() {
+    final static void f(int param0) {
         ka.field_g = 0;
     }
 
@@ -232,7 +231,7 @@ class fj extends ln {
         return stackIn_1_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_p = null;
         field_s = null;
         field_q = null;

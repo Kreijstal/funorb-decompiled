@@ -14,11 +14,11 @@ final class gk {
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         sc.d((byte) 87);
     }
 
-    final static void a(boolean param0, int param1, String param2) {
+    final static void a(boolean param0, int param1, String param2, int param3, boolean param4) {
         RuntimeException var5 = null;
         String var6 = null;
         int var7 = 0;

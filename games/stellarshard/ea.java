@@ -12,7 +12,7 @@ final class ea extends lk {
     static String field_k;
     static String field_n;
 
-    final static void a(int param0, nf param1) {
+    final static void a(int param0, nf param1, byte param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;

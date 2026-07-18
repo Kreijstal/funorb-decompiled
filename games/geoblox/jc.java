@@ -391,7 +391,7 @@ final class jc {
         }
     }
 
-    final static fd[] a(pk param0) {
+    final static fd[] a(pk param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -495,7 +495,7 @@ final class jc {
         return stackIn_13_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;

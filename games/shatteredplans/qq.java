@@ -76,11 +76,9 @@ final class qq extends oh {
         String stackOut_6_2 = null;
         try {
           L0: {
-            int discarded$4 = 20;
-            var3 = mg.a(param0, param2);
+            var3 = mg.a(param0, param2, 20);
             var5 = 7;
-            int discarded$5 = 20;
-            var4 = mg.a(param0, param2);
+            var4 = mg.a(param0, param2, 20);
             var6 = param2.f(-20976);
             stackOut_0_0 = new mg(var3, var4, var6);
             stackIn_1_0 = stackOut_0_0;
@@ -154,7 +152,7 @@ final class qq extends oh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_w = null;
         field_N = null;
         field_I = null;
@@ -168,7 +166,7 @@ final class qq extends oh {
         field_s = null;
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         cg.field_E.setLength(0);
         em.field_h = 0;
     }

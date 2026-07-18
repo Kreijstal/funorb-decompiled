@@ -14,8 +14,7 @@ final class bk extends m {
 
     final long a(int param0) {
         if (param0 == 1) {
-          int discarded$4 = 0;
-          ((bk) this).field_h = ((bk) this).field_h + this.c();
+          ((bk) this).field_h = ((bk) this).field_h + this.c(false);
           if (~((bk) this).field_h > ~((bk) this).field_f) {
             return (-((bk) this).field_h + ((bk) this).field_f) / 1000000L;
           } else {
@@ -23,8 +22,7 @@ final class bk extends m {
           }
         } else {
           field_d = null;
-          int discarded$5 = 0;
-          ((bk) this).field_h = ((bk) this).field_h + this.c();
+          ((bk) this).field_h = ((bk) this).field_h + this.c(false);
           if (~((bk) this).field_h > ~((bk) this).field_f) {
             return (-((bk) this).field_h + ((bk) this).field_f) / 1000000L;
           } else {
@@ -33,7 +31,7 @@ final class bk extends m {
         }
     }
 
-    private final long c() {
+    private final long c(boolean param0) {
         long var2 = 0L;
         long var4 = 0L;
         long var6 = 0L;
@@ -196,7 +194,7 @@ final class bk extends m {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_e = null;
         int var1 = -77;

@@ -14,11 +14,12 @@ final class ai {
     private int field_c;
     static String[] field_a;
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1, int param2) {
         int var3 = 0;
         String var4 = null;
         Object var5 = null;
-        CharSequence var6 = null;
+        Object var6 = null;
+        CharSequence var7 = null;
         if (me.field_a != null) {
           var3 = me.field_a.a(3, param0);
           if (var3 != 0) {
@@ -27,8 +28,8 @@ final class ai {
                 if (!me.field_a.field_db.equals((Object) (Object) "")) {
                   L0: {
                     if (me.field_a.field_db.charAt(0) != 91) {
-                      var6 = (CharSequence) (Object) me.field_a.field_db;
-                      var4 = ad.a(var6, -2);
+                      var7 = (CharSequence) (Object) me.field_a.field_db;
+                      var4 = ad.a(var7, -2);
                       break L0;
                     } else {
                       var4 = me.field_a.field_db;
@@ -56,8 +57,7 @@ final class ai {
                     if (pk.field_b != 2) {
                       break L3;
                     } else {
-                      int discarded$2 = 64;
-                      var5 = (Object) (Object) a.a(13, var4);
+                      var5 = (Object) (Object) a.a(13, var4, (byte) 64);
                       break L3;
                     }
                   }
@@ -70,8 +70,8 @@ final class ai {
                     }
                   }
                   if (var5 != null) {
-                    int discarded$3 = 0;
-                    lc.a(var4, (String) null, 2, 0, (String) var5);
+                    var6 = null;
+                    lc.a(var4, (String) null, 2, 0, (String) var5, false);
                     pk.field_b = -1;
                     me.field_a = null;
                     return;
@@ -1024,7 +1024,7 @@ final class ai {
         return (ai) this;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_h = null;
     }

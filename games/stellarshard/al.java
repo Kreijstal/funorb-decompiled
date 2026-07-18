@@ -104,7 +104,7 @@ final class al {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

@@ -175,7 +175,7 @@ final class mm {
         return (int)((-var2 + 1.5707963267948966) / (Math.atan(0.625) * 2.0) * 480.0);
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         if (Double.isNaN(((mm) this).field_d)) {
             ((mm) this).field_d = 0.0;
         }
@@ -391,7 +391,7 @@ final class mm {
         }
     }
 
-    private final void a(double param0, double param1, double param2) {
+    private final void a(double param0, double param1, double param2, int param3) {
         if (!(2.945243112740431 >= param1)) {
             param1 = 2.945243112740431;
         }
@@ -408,8 +408,7 @@ final class mm {
         if (param3 != -6861) {
             field_c = null;
         }
-        int discarded$0 = 144;
-        this.a(param0, param1, param2);
+        this.a(param0, param1, param2, 144);
         ((mm) this).c((byte) -40);
     }
 
@@ -560,7 +559,7 @@ final class mm {
               if (param1 == -78) {
                 break L13;
               } else {
-                int discarded$2 = ((mm) this).b(-34);
+                int discarded$1 = ((mm) this).b(-34);
                 break L13;
               }
             }
@@ -586,8 +585,7 @@ final class mm {
                 break L14;
               }
             }
-            int discarded$3 = 108;
-            this.d();
+            this.d((byte) 108);
             ((mm) this).c((byte) -40);
             stackOut_41_0 = var5;
             stackIn_42_0 = stackOut_41_0;
@@ -744,7 +742,7 @@ final class mm {
         return stackIn_13_0;
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         ((mm) this).field_f = 288.0;
         ((mm) this).field_m = 144.0;
         ((mm) this).field_d = 288.0;
@@ -836,8 +834,7 @@ final class mm {
             qp.field_ec = param14;
             qa.field_t = param4;
             el.b(84, param1, param7, param6, param12);
-            int discarded$1 = -92;
-            mp.a(param18, param0, param13);
+            mp.a(param18, param0, param13, -92);
             if (param16 == 2) {
               ci.a(param17, 26790, param10, param3, param5, param19);
               w.a(param9, -17, param2);
@@ -980,8 +977,7 @@ final class mm {
     }
 
     mm() {
-        int discarded$0 = -24;
-        this.b();
+        this.b((byte) -24);
     }
 
     static {

@@ -33,7 +33,7 @@ final class rg {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1 = 36;
         if (!(pk.field_G == null)) {
             pk.field_G.a();
@@ -43,7 +43,7 @@ final class rg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_h = null;
         field_f = null;

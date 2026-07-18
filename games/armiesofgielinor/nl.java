@@ -1056,7 +1056,7 @@ abstract class nl extends kb implements gw {
         return var2;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_C = null;
         field_D = null;
         field_G = null;
@@ -1200,8 +1200,7 @@ abstract class nl extends kb implements gw {
             if (80 == var5_int) {
               L3: {
                 if (!br.field_f[81]) {
-                  int discarded$3 = 107;
-                  stackOut_11_0 = this.a(param0);
+                  stackOut_11_0 = this.a(param0, (byte) 107);
                   stackIn_12_0 = stackOut_11_0;
                   break L3;
                 } else {
@@ -1581,7 +1580,7 @@ abstract class nl extends kb implements gw {
         return stackIn_6_0 != 0;
     }
 
-    private final boolean a(kb param0) {
+    private final boolean a(kb param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;

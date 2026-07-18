@@ -9,15 +9,14 @@ final class aq {
     static java.util.zip.CRC32 field_d;
     private wl field_c;
 
-    final static void b() {
+    final static void b(int param0) {
         ll var1 = null;
         ll var2 = null;
         int var3 = 0;
         int var4 = AceOfSkies.field_G ? 1 : 0;
         try {
             var1 = new ll(540, 140);
-            int discarded$0 = -14492;
-            cm.a(var1);
+            cm.a(var1, -14492);
             re.a();
             vp.a();
             it.field_c = 0;
@@ -29,8 +28,7 @@ final class aq {
             }
             oo.field_W.b();
             var1.d(0, 0);
-            int discarded$1 = 2765;
-            sl.c();
+            sl.c(2765);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "aq.C(" + 540 + ')');
         }

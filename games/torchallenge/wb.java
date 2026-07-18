@@ -22,7 +22,7 @@ final class wb implements Runnable {
     static String field_q;
     static int field_j;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_q = null;
         field_p = null;
         field_n = null;
@@ -187,8 +187,7 @@ final class wb implements Runnable {
                         if (param2 >= 57) {
                           break L4;
                         } else {
-                          int discarded$1 = 1;
-                          wb.a();
+                          wb.a(true);
                           break L4;
                         }
                       }

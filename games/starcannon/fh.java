@@ -9,7 +9,7 @@ class fh extends hd {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_p, -1, 2147483647, false);
     }
 
-    final static String a(String param0, java.applet.Applet param1) {
+    final static String a(String param0, java.applet.Applet param1, byte param2) {
         try {
             String var3 = null;
             Throwable var3_ref = null;
@@ -54,8 +54,7 @@ class fh extends hd {
             String stackOut_16_2 = null;
             try {
               try {
-                int discarded$2 = 1;
-                var3 = (String) mb.a(param1, "getcookies");
+                var3 = (String) mb.a(param1, "getcookies", true);
                 var4 = uj.a(-89, ';', var3);
                 var5 = 0;
                 L0: while (true) {
@@ -149,7 +148,7 @@ class fh extends hd {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         dg var4 = null;
@@ -166,15 +165,13 @@ class fh extends hd {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$6 = 5;
-                    la.a(0, var5);
+                    la.a(0, var5, 5);
                     var5 = (we) (Object) ma.field_h.a(-16913);
                     continue L2;
                   }
                 }
               } else {
-                int discarded$7 = 5;
-                tj.a((byte) 69, var4);
+                tj.a((byte) 69, var4, 5);
                 var4 = (dg) (Object) vb.field_k.a(-16913);
                 continue L1;
               }
@@ -187,7 +184,7 @@ class fh extends hd {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 0;
         field_q = null;
         field_r = null;

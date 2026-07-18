@@ -31,7 +31,7 @@ final class oc extends fc {
         ((oc) this).field_l = param0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_j = null;
         field_m = null;

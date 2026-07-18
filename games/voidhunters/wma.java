@@ -43,7 +43,7 @@ final class wma {
     short[] field_j;
     short[] field_G;
 
-    public static void b() {
+    public static void b(int param0) {
         field_M = null;
     }
 

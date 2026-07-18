@@ -38,7 +38,7 @@ abstract class pm extends um implements ok {
         return ((pm) this).a(((pm) this).field_d.field_o, (byte) -117);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, vn[] param8, int param9, vn[] param10, rb param11, vn[] param12) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, vn[] param8, int param9, vn[] param10, rb param11, vn[] param12, byte param13, int param14) {
         int var15_int = 0;
         RuntimeException var15 = null;
         int var16 = 0;

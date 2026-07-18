@@ -9,7 +9,7 @@ final class fl extends vb {
     static int field_v;
     static ka[] field_s;
 
-    public static void e() {
+    public static void e(int param0) {
         field_s = null;
         field_t = null;
     }
@@ -147,8 +147,7 @@ final class fl extends vb {
                 }
                 L4: {
                   ((fl) this).field_u = (wb) param1;
-                  int discarded$2 = 2;
-                  this.d();
+                  this.d((byte) 2);
                   this.a(param0, (byte) -71);
                   ((fl) this).field_o.field_q = 0;
                   ((fl) this).field_p = null;
@@ -156,7 +155,7 @@ final class fl extends vb {
                     break L4;
                   } else {
                     var7 = null;
-                    boolean discarded$3 = fl.a((pa) null, (byte) 59);
+                    boolean discarded$1 = fl.a((pa) null, (byte) 59);
                     break L4;
                   }
                 }
@@ -279,7 +278,7 @@ final class fl extends vb {
         ((fl) this).field_f = (byte)(int)(255.0 * Math.random() + 1.0);
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;

@@ -220,7 +220,7 @@ final class qj {
         return stackIn_1_0;
     }
 
-    final static fe a() {
+    final static fe a(byte param0) {
         if (!(null != ca.field_b)) {
             ca.field_b = new fe();
             ca.field_b.a(32, sg.field_a);

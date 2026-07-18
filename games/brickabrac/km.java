@@ -19,8 +19,7 @@ abstract class km extends gf {
         L0: {
           var3 = BrickABrac.field_J ? 1 : 0;
           if (im.field_e <= 0) {
-            int discarded$2 = 1;
-            pa.a();
+            pa.a(true);
             break L0;
           } else {
             var2 = (-50 + im.field_e) * 640 / 50;
@@ -36,8 +35,7 @@ abstract class km extends gf {
           }
         }
         if (param0 < -14) {
-          int discarded$3 = 0;
-          pg.d();
+          pg.d(0);
           return;
         } else {
           return;
@@ -78,8 +76,7 @@ abstract class km extends gf {
     private final void c(boolean param0, int param1) {
         if (((km) this).field_h.field_j != -1) {
             if (param1 != ((km) this).field_h.field_j) {
-                int discarded$0 = -44;
-                j.a(ta.field_e[0], -106, lh.g() / 4);
+                j.a(ta.field_e[0], -106, lh.g((byte) -44) / 4);
             }
         }
     }
@@ -354,7 +351,7 @@ abstract class km extends gf {
         return false;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -498,12 +495,10 @@ abstract class km extends gf {
                         if (((km) this).field_h.a((byte) 113)) {
                           if (og.h(-26090)) {
                             sl.field_z = -2;
-                            int discarded$9 = 46;
-                            dk.a(sb.field_b, true, 0, param1);
+                            dk.a(sb.field_b, true, 0, param1, 46);
                             break L0;
                           } else {
-                            int discarded$10 = 1;
-                            cb.b();
+                            cb.b(true);
                             break L0;
                           }
                         } else {
@@ -546,8 +541,7 @@ abstract class km extends gf {
                                             if (!((km) this).field_h.b(-103)) {
                                               break L2;
                                             } else {
-                                              int discarded$11 = -44;
-                                              if (lh.g() > 0) {
+                                              if (lh.g((byte) -44) > 0) {
                                                 ma.a((byte) -113, 0);
                                                 var7 = 1;
                                                 break L2;
@@ -560,8 +554,7 @@ abstract class km extends gf {
                                             if (!((km) this).field_h.a(-1)) {
                                               break L3;
                                             } else {
-                                              int discarded$12 = -44;
-                                              if (~lh.g() <= ~re.e((byte) 44)) {
+                                              if (~lh.g((byte) -44) <= ~re.e((byte) 44)) {
                                                 break L3;
                                               } else {
                                                 ma.a((byte) 47, re.e((byte) 31));
@@ -574,8 +567,7 @@ abstract class km extends gf {
                                             if (!((km) this).field_h.g((byte) -57)) {
                                               break L4;
                                             } else {
-                                              int discarded$13 = -44;
-                                              if (lh.g() > 0) {
+                                              if (lh.g((byte) -44) > 0) {
                                                 k.d((byte) 116);
                                                 var7 = 1;
                                                 break L4;
@@ -588,13 +580,11 @@ abstract class km extends gf {
                                             if (!((km) this).field_h.c(-98)) {
                                               break L5;
                                             } else {
-                                              int discarded$14 = -44;
-                                              if (lh.g() >= re.e((byte) 90)) {
+                                              if (lh.g((byte) -44) >= re.e((byte) 90)) {
                                                 break L5;
                                               } else {
                                                 var7 = 1;
-                                                int discarded$15 = -63;
-                                                th.a();
+                                                th.a((byte) -63);
                                                 break L5;
                                               }
                                             }
@@ -673,8 +663,7 @@ abstract class km extends gf {
                                                       if (!((km) this).field_h.a((byte) 113)) {
                                                         break L0;
                                                       } else {
-                                                        int discarded$16 = 122;
-                                                        da.f();
+                                                        da.f((byte) 122);
                                                         break L0;
                                                       }
                                                     } else {
@@ -686,8 +675,7 @@ abstract class km extends gf {
                                                             L9: {
                                                               var12 = null;
                                                               he.a((String) null, true, (byte) 123);
-                                                              int discarded$17 = -1;
-                                                              if (!ib.a(pl.field_b)) {
+                                                              if (!ib.a(pl.field_b, -1)) {
                                                                 if (null != fj.field_Ub) {
                                                                   stackOut_142_0 = 5;
                                                                   stackIn_143_0 = stackOut_142_0;
@@ -1036,8 +1024,7 @@ abstract class km extends gf {
               } else {
                 L2: {
                   if ((1 << var11 & param1.field_S) != 0) {
-                    int discarded$7 = 115;
-                    oc.a(var8, var11, var7_int, param1, param0);
+                    oc.a(var8, var11, var7_int, param1, param0, (byte) 115);
                     var7_int += 25;
                     var9++;
                     if (var9 != param5) {
@@ -1208,7 +1195,7 @@ abstract class km extends gf {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_o = null;
         field_n = null;
         field_k = null;

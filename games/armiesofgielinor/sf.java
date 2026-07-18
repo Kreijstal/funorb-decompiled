@@ -242,14 +242,13 @@ abstract class sf extends wl {
                 break L1;
               } else {
                 var5 = null;
-                int discarded$4 = sf.a(-112, (String) null, (vh) null);
+                int discarded$2 = sf.a(-112, (String) null, (vh) null);
                 break L1;
               }
             }
             var3_int = param2.field_q;
             var6 = (CharSequence) (Object) param1;
-            int discarded$5 = 0;
-            var4 = nr.a(var6);
+            var4 = nr.a(var6, false);
             param2.a(true, var4.length);
             param2.field_q = param2.field_q + ds.field_c.a(0, var4, var4.length, param2.field_o, param2.field_q, (byte) 28);
             stackOut_2_0 = param2.field_q + -var3_int;
@@ -530,8 +529,7 @@ abstract class sf extends wl {
                                 break L4;
                               } else {
                                 if (4 == var9) {
-                                  int discarded$1 = 0;
-                                  ab.a(35 + param5, og.field_p[param4] + param4, param3 + 30);
+                                  ab.a(35 + param5, og.field_p[param4] + param4, param3 + 30, false);
                                   break L4;
                                 } else {
                                   break L4;

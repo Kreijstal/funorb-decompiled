@@ -16,7 +16,7 @@ final class vh {
     private byte[] field_e;
     static float[] field_h;
 
-    private final void a() {
+    private final void a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -191,8 +191,7 @@ final class vh {
                           if (((vh) this).field_a != 512) {
                             break L6;
                           } else {
-                            int discarded$2 = 0;
-                            this.a();
+                            this.a(false);
                             ((vh) this).field_a = 0;
                             ((vh) this).field_k = 0;
                             break L6;
@@ -219,8 +218,7 @@ final class vh {
                             ((vh) this).field_a = ((vh) this).field_a + (8 - var7);
                             ((vh) this).field_k = ((vh) this).field_k + 1;
                             if (((vh) this).field_a == 512) {
-                              int discarded$3 = 0;
-                              this.a();
+                              this.a(false);
                               ((vh) this).field_k = 0;
                               ((vh) this).field_a = 0;
                               break L8;
@@ -320,8 +318,7 @@ final class vh {
                 }
               }
               if (var3 == null) {
-                int discarded$4 = 60;
-                dea.a();
+                dea.a(60);
                 return;
               } else {
                 L3: {
@@ -345,12 +342,12 @@ final class vh {
                         L6: while (true) {
                           if (var6_int >= var4) {
                             ri.a(var5, (byte) 29);
-                            String[][] dupTemp$5 = new String[2][var5];
-                            var3.field_h = dupTemp$5;
-                            var6 = dupTemp$5;
-                            int[][] dupTemp$6 = new int[2][4 * var5];
-                            var3.field_m = dupTemp$6;
-                            var7 = dupTemp$6;
+                            String[][] dupTemp$2 = new String[2][var5];
+                            var3.field_h = dupTemp$2;
+                            var6 = dupTemp$2;
+                            int[][] dupTemp$3 = new int[2][4 * var5];
+                            var3.field_m = dupTemp$3;
+                            var7 = dupTemp$3;
                             var8 = ola.field_Eb;
                             var9 = 0;
                             var10 = 0;
@@ -414,8 +411,7 @@ final class vh {
                             }
                           } else {
                             L11: {
-                              int discarded$7 = 0;
-                              dga.a((uia) (Object) var14);
+                              dga.a((uia) (Object) var14, 0);
                               if (var6_int != 0) {
                                 qt.a(kc.field_b, vd.field_p, ir.field_a, var6_int, tna.field_f, (byte) -90);
                                 break L11;
@@ -514,14 +510,13 @@ final class vh {
               } else {
                 L2: while (true) {
                   if (((vh) this).field_k >= 64) {
-                    int discarded$4 = 0;
-                    this.a();
+                    this.a(false);
                     ((vh) this).field_k = 0;
                     break L1;
                   } else {
-                    int fieldTemp$5 = ((vh) this).field_k;
+                    int fieldTemp$2 = ((vh) this).field_k;
                     ((vh) this).field_k = ((vh) this).field_k + 1;
-                    ((vh) this).field_e[fieldTemp$5] = (byte) 0;
+                    ((vh) this).field_e[fieldTemp$2] = (byte) 0;
                     continue L2;
                   }
                 }
@@ -530,8 +525,7 @@ final class vh {
             L3: while (true) {
               if (((vh) this).field_k >= 32) {
                 lua.a(((vh) this).field_d, 0, ((vh) this).field_e, 32, 32);
-                int discarded$6 = 0;
-                this.a();
+                this.a(false);
                 var4_int = 0;
                 var5 = param0;
                 L4: while (true) {
@@ -553,9 +547,9 @@ final class vh {
                   }
                 }
               } else {
-                int fieldTemp$7 = ((vh) this).field_k;
+                int fieldTemp$3 = ((vh) this).field_k;
                 ((vh) this).field_k = ((vh) this).field_k + 1;
-                ((vh) this).field_e[fieldTemp$7] = (byte) 0;
+                ((vh) this).field_e[fieldTemp$3] = (byte) 0;
                 continue L3;
               }
             }

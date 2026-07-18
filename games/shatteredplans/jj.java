@@ -115,7 +115,7 @@ final class jj extends me {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_p = null;
         field_l = null;
         field_o = null;

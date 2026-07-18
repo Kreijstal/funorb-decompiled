@@ -440,10 +440,8 @@ final class ub extends qr {
             nh.a(param10, param3, param0, param12, 2);
             as.a(param17, 20, param18, param2);
             wi.a(2, (byte) 67, param19, param7, param11, param15);
-            int discarded$2 = 0;
-            fs.a(param16, param4);
-            int discarded$3 = 102;
-            bs.a(param13, param8, param14);
+            fs.a(param16, param4, false);
+            bs.a(param13, param8, param14, (byte) 102);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -641,8 +639,7 @@ final class ub extends qr {
               }
             }
             L3: while (true) {
-              int discarded$10 = 55;
-              if (!cc.e()) {
+              if (!cc.e((byte) 55)) {
                 L4: {
                   if (50 + u.field_a >= cl.field_n) {
                     break L4;
@@ -700,9 +697,9 @@ final class ub extends qr {
                       break L6;
                     }
                   } else {
-                    int fieldTemp$11 = bj.field_L - 1;
+                    int fieldTemp$1 = bj.field_L - 1;
                     bj.field_L = bj.field_L - 1;
-                    if (fieldTemp$11 > 0) {
+                    if (fieldTemp$1 > 0) {
                       break L6;
                     } else {
                       L7: {
@@ -713,8 +710,7 @@ final class ub extends qr {
                           uc.field_v = 50;
                           ta.a(0, 0, (byte) 96, false);
                           rn.a(param0 + 1048483);
-                          int discarded$12 = 1;
-                          ne.d();
+                          ne.d(true);
                           break L7;
                         } else {
                           break L7;
@@ -740,43 +736,36 @@ final class ub extends qr {
                   }
                 }
                 L9: {
-                  int discarded$13 = -128;
-                  ej.b();
+                  ej.b(-128);
                   if (ui.field_m != 0) {
                     if (1 == ui.field_m) {
-                      int discarded$14 = 119;
-                      tr.a();
+                      tr.a((byte) 119);
                       break L9;
                     } else {
                       if (2 != ui.field_m) {
                         if (ui.field_m == 3) {
-                          int discarded$15 = 118;
-                          ak.f();
+                          ak.f((byte) 118);
                           break L9;
                         } else {
                           if (ui.field_m == 4) {
-                            int discarded$16 = 0;
-                            ld.d();
+                            ld.d(0);
                             break L9;
                           } else {
                             if (ui.field_m != 5) {
                               break L9;
                             } else {
-                              int discarded$17 = -72;
-                              gl.a();
+                              gl.a((byte) -72);
                               break L9;
                             }
                           }
                         }
                       } else {
-                        int discarded$18 = -63;
-                        um.b();
+                        um.b(-63);
                         break L9;
                       }
                     }
                   } else {
-                    int discarded$19 = 44;
-                    lh.d();
+                    lh.d((byte) 44);
                     break L9;
                   }
                 }

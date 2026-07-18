@@ -232,8 +232,7 @@ final class kl extends pm {
         try {
           L0: {
             L1: {
-              int discarded$1 = 0;
-              this.c();
+              this.c(false);
               if (param2 <= -5) {
                 break L1;
               } else {
@@ -589,7 +588,7 @@ final class kl extends pm {
         return (double)var3 * kd.field_r;
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

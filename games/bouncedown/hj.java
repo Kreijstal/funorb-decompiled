@@ -22,7 +22,7 @@ final class hj {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        int stackIn_14_0 = 0;
+        boolean stackIn_14_0 = false;
         int stackIn_31_0 = 0;
         int stackIn_31_1 = 0;
         int stackIn_33_0 = 0;
@@ -43,7 +43,7 @@ final class hj {
         StringBuilder stackIn_72_1 = null;
         String stackIn_72_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
+        boolean stackOut_13_0 = false;
         int stackOut_30_0 = 0;
         int stackOut_30_1 = 0;
         int stackOut_33_0 = 0;
@@ -72,12 +72,11 @@ final class hj {
               var5_int = wb.a((byte) 100, (-param4 + param3) * 3);
               var6 = 3 * param4;
               var7 = var5_int - 10;
-              int discarded$2 = 0;
-              jg.k();
+              jg.k(0);
               if (param1 < -127) {
                 break L1;
               } else {
-                int discarded$3 = hj.a(23);
+                int discarded$1 = hj.a(23);
                 break L1;
               }
             }
@@ -104,15 +103,15 @@ final class hj {
                     var9 = param2.field_O[var8];
                     var10 = param2.field_P[var8];
                     var11 = param2.field_l[var8];
-                    stackOut_13_0 = 0;
-                    stackIn_55_0 = stackOut_13_0;
+                    stackOut_13_0 = param0;
+                    stackIn_55_0 = stackOut_13_0 ? 1 : 0;
                     stackIn_14_0 = stackOut_13_0;
                     if (var19 != 0) {
                       break L4;
                     } else {
                       L6: {
                         L7: {
-                          if (stackIn_14_0 == 0) {
+                          if (!stackIn_14_0) {
                             break L7;
                           } else {
                             var12 = ca.field_c[var9];
@@ -306,7 +305,7 @@ final class hj {
           L19: {
             var5 = decompiledCaughtException;
             stackOut_68_0 = (RuntimeException) var5;
-            stackOut_68_1 = new StringBuilder().append("hj.B(").append(false).append(',').append(param1).append(',');
+            stackOut_68_1 = new StringBuilder().append("hj.B(").append(param0).append(',').append(param1).append(',');
             stackIn_71_0 = stackOut_68_0;
             stackIn_71_1 = stackOut_68_1;
             stackIn_69_0 = stackOut_68_0;

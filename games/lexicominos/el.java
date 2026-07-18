@@ -7,7 +7,7 @@ final class el {
     static String field_d;
     static fc field_c;
 
-    final static char a(byte param0) {
+    final static char a(byte param0, byte param1) {
         int var3 = 0;
         int var2 = 255 & param0;
         if (0 == var2) {
@@ -56,7 +56,7 @@ final class el {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return null != jc.field_b && uf.field_m.b(-2);
     }
 

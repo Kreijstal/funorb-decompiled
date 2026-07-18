@@ -262,9 +262,9 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
+        RuntimeException runtimeException = null;
         long var2_long = 0L;
-        RuntimeException var2 = null;
         long var4 = 0L;
         int var6_int = 0;
         java.awt.Insets var6 = null;
@@ -272,63 +272,67 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
         try {
           L0: {
             var2_long = bva.b((byte) -107);
-            L1: {
-              var4 = eia.field_r[sla.field_d];
-              eia.field_r[sla.field_d] = var2_long;
-              if (var4 == 0L) {
-                break L1;
-              } else {
-                if (var2_long <= var4) {
+            if (param0 == 270) {
+              L1: {
+                var4 = eia.field_r[sla.field_d];
+                eia.field_r[sla.field_d] = var2_long;
+                if (var4 == 0L) {
                   break L1;
                 } else {
-                  var6_int = (int)(-var4 + var2_long);
-                  oea.field_f = (32000 - -(var6_int >> 1)) / var6_int;
-                  break L1;
+                  if (var2_long <= var4) {
+                    break L1;
+                  } else {
+                    var6_int = (int)(-var4 + var2_long);
+                    oea.field_f = (32000 - -(var6_int >> 1)) / var6_int;
+                    break L1;
+                  }
                 }
               }
-            }
-            L2: {
-              sla.field_d = 31 & 1 + sla.field_d;
-              int fieldTemp$1 = nsa.field_d;
-              nsa.field_d = nsa.field_d + 1;
-              if (fieldTemp$1 <= 50) {
-                break L2;
-              } else {
-                L3: {
-                  L4: {
-                    bsa.field_k = true;
-                    nsa.field_d = nsa.field_d - 50;
-                    nma.field_l.setSize(mma.field_a, qf.field_i);
-                    nma.field_l.setVisible(true);
-                    if (null == rla.field_x) {
-                      break L4;
-                    } else {
-                      if (null == nb.field_d) {
-                        break L3;
-                      } else {
+              L2: {
+                sla.field_d = 31 & 1 + sla.field_d;
+                int fieldTemp$2 = nsa.field_d;
+                nsa.field_d = nsa.field_d + 1;
+                if (fieldTemp$2 <= 50) {
+                  break L2;
+                } else {
+                  L3: {
+                    L4: {
+                      bsa.field_k = true;
+                      nsa.field_d = nsa.field_d - 50;
+                      nma.field_l.setSize(mma.field_a, qf.field_i);
+                      nma.field_l.setVisible(true);
+                      if (null == rla.field_x) {
                         break L4;
+                      } else {
+                        if (null == nb.field_d) {
+                          break L3;
+                        } else {
+                          break L4;
+                        }
                       }
                     }
+                    nma.field_l.setLocation(lp.field_g, vu.field_f);
+                    if (!TombRacer.field_G) {
+                      break L2;
+                    } else {
+                      break L3;
+                    }
                   }
-                  nma.field_l.setLocation(lp.field_g, vu.field_f);
-                  if (!TombRacer.field_G) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
+                  var6 = rla.field_x.getInsets();
+                  nma.field_l.setLocation(lp.field_g + var6.left, var6.top - -vu.field_f);
+                  break L2;
                 }
-                var6 = rla.field_x.getInsets();
-                nma.field_l.setLocation(lp.field_g + var6.left, var6.top - -vu.field_f);
-                break L2;
               }
+              ((jna) this).c(0);
+              break L0;
+            } else {
+              return;
             }
-            ((jna) this).c(0);
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2, "jna.O(" + 270 + ')');
+          runtimeException = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) runtimeException, "jna.O(" + param0 + ')');
         }
     }
 
@@ -336,7 +340,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
         return true;
     }
 
-    private final void g() {
+    private final void g(int param0) {
         long var2_long = 0L;
         RuntimeException var2 = null;
         long var4 = 0L;
@@ -346,25 +350,33 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
         try {
           L0: {
             L1: {
+              if (param0 == -6) {
+                break L1;
+              } else {
+                ((jna) this).field_b = true;
+                break L1;
+              }
+            }
+            L2: {
               var2_long = bva.b((byte) -107);
               var4 = bv.field_xb[aaa.field_b];
               bv.field_xb[aaa.field_b] = var2_long;
               aaa.field_b = 31 & 1 + aaa.field_b;
               if (var4 == 0L) {
-                break L1;
+                break L2;
               } else {
                 if (~var4 <= ~var2_long) {
-                  break L1;
+                  break L2;
                 } else {
-                  break L1;
+                  break L2;
                 }
               }
             }
             var6 = this;
             synchronized (var6) {
-              L2: {
+              L3: {
                 bn.field_n = oea.field_k;
-                break L2;
+                break L3;
               }
             }
             ((jna) this).a(true);
@@ -373,7 +385,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2, "jna.H(" + -6 + ')');
+          throw tba.a((Throwable) (Object) var2, "jna.H(" + param0 + ')');
         }
     }
 
@@ -859,12 +871,10 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
                                     }
                                   }
                                   var4 = var2.substring(6, var3);
-                                  int discarded$6 = -3;
-                                  if (!sqa.a((CharSequence) (Object) var4)) {
+                                  if (!sqa.a((CharSequence) (Object) var4, -3)) {
                                     break L5;
                                   } else {
-                                    int discarded$7 = 70;
-                                    if (jb.a((CharSequence) (Object) var4) >= 10) {
+                                    if (jb.a((CharSequence) (Object) var4, (byte) 70) >= 10) {
                                       break L5;
                                     } else {
                                       ((jna) this).a(-6738, "wrongjava");
@@ -966,7 +976,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
                         } else {
                           try {
                             L17: {
-                              Object discarded$8 = var2_ref.invoke(var1, new Object[1]);
+                              Object discarded$1 = var2_ref.invoke(var1, new Object[1]);
                               break L17;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -979,8 +989,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
                           break L16;
                         }
                       }
-                      int discarded$9 = -84;
-                      wk.a();
+                      wk.a((byte) -84);
                       ((jna) this).b((byte) 68);
                       gn.field_C = ns.a(117, mma.field_a, (java.awt.Component) (Object) nma.field_l, qf.field_i);
                       ((jna) this).h(-71);
@@ -1017,8 +1026,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
                               if (mt.field_a <= var3) {
                                 break L24;
                               } else {
-                                int discarded$10 = -6;
-                                this.g();
+                                this.g(-6);
                                 var3++;
                                 if (var5 != 0) {
                                   break L23;
@@ -1031,8 +1039,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
                                 }
                               }
                             }
-                            int discarded$11 = 270;
-                            this.f();
+                            this.f(270);
                             kla.a(dsa.field_c, (byte) 86, (Object) (Object) nma.field_l);
                             break L23;
                           }
@@ -1223,11 +1230,11 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
     public abstract void init();
 
     private final void a(byte param0, boolean param1) {
+        Exception exception = null;
+        RuntimeException runtimeException = null;
         Object var3 = null;
         Object var3_ref = null;
-        Exception var3_ref2 = null;
-        Throwable var3_ref3 = null;
-        RuntimeException var3_ref4 = null;
+        Throwable var3_ref2 = null;
         Throwable var4 = null;
         Throwable decompiledCaughtException = null;
         try {
@@ -1253,73 +1260,81 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
             }
             try {
               L3: {
-                ((jna) this).d(-66);
+                L4: {
+                  if (param0 == 109) {
+                    break L4;
+                  } else {
+                    boolean discarded$2 = jna.a(false, -94, 60, (cn) null);
+                    break L4;
+                  }
+                }
+                ((jna) this).d(param0 ^ -45);
                 break L3;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L4: {
-                var3_ref2 = (Exception) (Object) decompiledCaughtException;
-                break L4;
+              L5: {
+                exception = (Exception) (Object) decompiledCaughtException;
+                break L5;
               }
             }
-            L5: {
+            L6: {
               if (nma.field_l == null) {
-                break L5;
+                break L6;
               } else {
                 try {
-                  L6: {
+                  L7: {
                     nma.field_l.removeFocusListener((java.awt.event.FocusListener) this);
                     nma.field_l.getParent().remove((java.awt.Component) (Object) nma.field_l);
-                    break L6;
+                    break L7;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
-                  L7: {
-                    var3_ref2 = (Exception) (Object) decompiledCaughtException;
-                    break L7;
+                  L8: {
+                    exception = (Exception) (Object) decompiledCaughtException;
+                    break L8;
                   }
                 }
-                break L5;
+                break L6;
               }
             }
-            L8: {
+            L9: {
               if (dsa.field_c == null) {
-                break L8;
+                break L9;
               } else {
                 try {
-                  L9: {
+                  L10: {
                     dsa.field_c.b((byte) 59);
-                    break L9;
+                    break L10;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
-                  L10: {
-                    var3_ref2 = (Exception) (Object) decompiledCaughtException;
-                    break L10;
+                  L11: {
+                    exception = (Exception) (Object) decompiledCaughtException;
+                    break L11;
                   }
                 }
-                break L8;
+                break L9;
               }
             }
-            L11: {
+            L12: {
               ((jna) this).e(-3666);
               if (rla.field_x != null) {
                 try {
-                  L12: {
+                  L13: {
                     System.exit(0);
-                    break L12;
+                    break L13;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
-                  L13: {
-                    var3_ref3 = decompiledCaughtException;
-                    break L13;
+                  L14: {
+                    var3_ref2 = decompiledCaughtException;
+                    break L14;
                   }
                 }
-                break L11;
+                break L12;
               } else {
-                break L11;
+                break L12;
               }
             }
             System.out.println("Shutdown complete - clean:" + param1);
@@ -1327,8 +1342,8 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
-          var3_ref4 = (RuntimeException) (Object) decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3_ref4, "jna.J(" + 109 + ',' + param1 + ')');
+          runtimeException = (RuntimeException) (Object) decompiledCaughtException;
+          throw tba.a((Throwable) (Object) runtimeException, "jna.J(" + param0 + ',' + param1 + ')');
         }
     }
 

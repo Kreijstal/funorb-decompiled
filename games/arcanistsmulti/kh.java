@@ -232,9 +232,7 @@ abstract class kh {
                     break L3;
                   }
                 }
-                int discarded$10 = -126;
-                int discarded$11 = -6885;
-                io.a(qj.field_h, bb.b(), var3_int != 0, tl.c((byte) -77));
+                io.a(qj.field_h, bb.b((byte) -126), var3_int != 0, tl.c((byte) -77), -6885);
                 break L2;
               }
             }
@@ -380,7 +378,7 @@ abstract class kh {
         return param0 ^ param1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_e = null;
         field_a = null;
@@ -470,8 +468,7 @@ abstract class kh {
           L0: {
             vd.field_c = param12;
             ob.field_T = param16;
-            int discarded$1 = 109;
-            ib.a(param4, param6, param10, param11);
+            ib.a(param4, param6, param10, param11, 109);
             sk.a(param14, -28995, param2, param17);
             kh.a(param9, param18, param7, param3, -1, param1);
             ho.a((byte) 101, param0, param5);

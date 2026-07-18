@@ -27,10 +27,8 @@ final class li extends tc {
           L0: {
             L1: {
               var1_int = pr.field_g.field_i >> 16;
-              int discarded$10 = 1;
-              var2 = we.a(var1_int);
-              int discarded$11 = -34;
-              io.a(var2);
+              var2 = we.a(var1_int, true);
+              io.a(var2, (byte) -34);
               if (bv.field_w.field_sb <= -1) {
                 stackOut_3_0 = bv.field_w.field_gb;
                 stackIn_4_0 = stackOut_3_0;
@@ -66,7 +64,7 @@ final class li extends tc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_p = null;
         field_k = null;
         field_m = null;

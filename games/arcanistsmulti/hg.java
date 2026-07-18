@@ -13,8 +13,7 @@ abstract class hg {
     final int a(long param0, int param1) {
         long var4 = ((hg) this).a((byte) 52);
         if (var4 > 0L) {
-            int discarded$0 = 1;
-            ao.a(var4);
+            ao.a(var4, 1);
         }
         if (param1 != -1) {
             field_e = null;
@@ -26,7 +25,7 @@ abstract class hg {
         return String.valueOf(param1);
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0, boolean param1, boolean param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         vn var4 = null;
@@ -327,40 +326,36 @@ abstract class hg {
         return mk.field_O.b((byte) -52);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
         field_e = null;
         field_c = null;
         field_a = null;
     }
 
-    final static void a() {
-        int discarded$4 = 6;
-        u.b();
+    final static void a(boolean param0) {
+        u.b(6);
         if (!(on.field_c == null)) {
             qm.a(on.field_c, (byte) 91);
         }
         mh.g((byte) 45);
         ng.a((byte) -23);
-        int discarded$17 = 11670;
-        ba.b();
+        ba.b(11670);
         if (!(!tm.a(true))) {
             he.field_e.b((byte) -107, 1);
             we.a(0, (byte) 94);
         }
-        int discarded$18 = 0;
-        ka.b();
+        ka.b(false);
     }
 
-    final static void a(eg param0, boolean param1, eg param2) {
+    final static void a(eg param0, boolean param1, eg param2, byte param3) {
         try {
             ul.a(md.field_b, mi.field_A, nj.field_d, ml.field_S, hh.field_c, true, j.field_f, (dj) (Object) th.field_k, 27874, hh.field_d, pg.field_c, vn.field_i);
             tl.field_a = qe.a(param2, "chatfilter", "lobby", 119);
             cf.field_b[2] = ag.field_A;
             cf.field_b[1] = u.field_d;
             cf.field_b[0] = nb.field_e;
-            int discarded$0 = 3896;
-            hj.a((dj) (Object) ea.field_w, param0);
+            hj.a((dj) (Object) ea.field_w, param0, 3896);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "hg.F(" + (param0 != null ? "{...}" : "null") + ',' + true + ',' + (param2 != null ? "{...}" : "null") + ',' + -103 + ')');
         }

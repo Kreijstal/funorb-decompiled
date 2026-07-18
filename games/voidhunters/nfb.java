@@ -17,7 +17,7 @@ final class nfb implements dja {
         return (tv[]) (Object) new lja[param1];
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 25;
         field_a = null;
     }

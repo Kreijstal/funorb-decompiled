@@ -92,7 +92,7 @@ final class vk extends wl {
         field_u = null;
     }
 
-    final static void a(byte[] param0, va param1, java.math.BigInteger param2, boolean param3, int param4, java.math.BigInteger param5) {
+    final static void a(byte[] param0, va param1, java.math.BigInteger param2, boolean param3, int param4, java.math.BigInteger param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int[] var8 = null;

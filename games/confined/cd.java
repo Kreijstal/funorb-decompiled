@@ -31,7 +31,7 @@ final class cd extends rb implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static boolean c() {
+    final static boolean c(byte param0) {
         return dh.field_vb.a(false);
     }
 

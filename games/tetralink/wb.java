@@ -17,7 +17,7 @@ final class wb extends java.awt.Canvas {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_a = null;
         field_f = null;

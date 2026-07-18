@@ -174,8 +174,7 @@ abstract class mna {
                   break L11;
                 }
               }
-              int discarded$1 = 94;
-              var11 = moa.a(var15);
+              var11 = moa.a(var15, 94);
               var12 = var11 + il.c(var15.field_f);
               var13 = uaa.a((byte) -116, var15);
               var15.field_l = new jea(0L, bn.field_t, var12);

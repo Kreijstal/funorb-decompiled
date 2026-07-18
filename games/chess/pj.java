@@ -21,13 +21,11 @@ final class pj {
         if (param0 != -6446) {
           pj.b(27, 37);
           var2.c(4, (byte) -71);
-          int discarded$4 = 73;
-          var2.c(jg.m(), (byte) -88);
+          var2.c(jg.m(73), (byte) -88);
           return;
         } else {
           var2.c(4, (byte) -71);
-          int discarded$5 = 73;
-          var2.c(jg.m(), (byte) -88);
+          var2.c(jg.m(73), (byte) -88);
           return;
         }
     }
@@ -76,8 +74,7 @@ final class pj {
               mn.field_h.d(ol.field_S[1], (byte) -81);
               mn.field_h.d(ol.field_S[2], (byte) -81);
               mn.field_h.d(ol.field_S[3], (byte) -81);
-              int discarded$2 = 109;
-              sa.a(mn.field_h);
+              sa.a(mn.field_h, 109);
               mn.field_h.b(param3, 104);
               param4.a(mn.field_h, (byte) 123);
               qn.field_U.field_l = 0;
@@ -128,8 +125,7 @@ final class pj {
             }
             L6: {
               qn.field_U.c(var6, (byte) 52);
-              int discarded$3 = 87;
-              var7 = m.a(bh.i(81));
+              var7 = m.a(bh.i(81), (byte) 87);
               if (var7 == null) {
                 var7 = "";
                 break L6;
@@ -331,7 +327,7 @@ final class pj {
     private pj(int param0, int param1, int param2) {
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_h = null;
         field_b = null;

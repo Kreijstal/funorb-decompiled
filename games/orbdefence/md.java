@@ -378,7 +378,7 @@ final class md extends rg {
         return stackIn_22_0;
     }
 
-    final static void c() {
+    final static void c(int param0) {
     }
 
     final static boolean a(int param0, String param1) {
@@ -475,8 +475,7 @@ final class md extends rg {
             if (hi.field_k == 10) {
               break L1;
             } else {
-              int discarded$4 = 85;
-              if (!ld.a()) {
+              if (!ld.a((byte) 85)) {
                 break L1;
               } else {
                 break L0;

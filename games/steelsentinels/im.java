@@ -12,7 +12,7 @@ final class im {
     static gh field_f;
     static boolean field_b;
 
-    final static wk a(cm param0, int param1, int param2) {
+    final static wk a(cm param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         wk stackIn_4_0 = null;
@@ -37,8 +37,7 @@ final class im {
         try {
           L0: {
             if (wa.a((byte) 30, param1, param2, param0)) {
-              int discarded$2 = -100;
-              stackOut_3_0 = ij.j();
+              stackOut_3_0 = ij.j(-100);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -147,8 +146,7 @@ final class im {
     final static boolean a(char param0, boolean param1) {
         if (!Character.isISOControl(param0)) {
           if (!param1) {
-            int discarded$3 = -91;
-            if (dn.a(param0)) {
+            if (dn.a(param0, -91)) {
               return true;
             } else {
               L0: {
@@ -173,9 +171,8 @@ final class im {
               return true;
             }
           } else {
-            boolean discarded$4 = im.a('M', true);
-            int discarded$5 = -91;
-            if (dn.a(param0)) {
+            boolean discarded$1 = im.a('M', true);
+            if (dn.a(param0, -91)) {
               return true;
             } else {
               if (param0 != 45) {
@@ -202,7 +199,7 @@ final class im {
         }
     }
 
-    final static void a(wk[] param0, int param1, int param2, int param3, wk[] param4, int param5, int param6, int param7, int param8, int param9, mi param10, int param11, wk[] param12) {
+    final static void a(wk[] param0, int param1, int param2, int param3, wk[] param4, int param5, int param6, int param7, int param8, int param9, mi param10, int param11, wk[] param12, int param13, int param14) {
         int var15_int = 0;
         RuntimeException var15 = null;
         int var16 = 0;
@@ -270,8 +267,7 @@ final class im {
         try {
           var15_int = param10.field_F + param10.field_U;
           var16 = param10.field_U;
-          int discarded$2 = 8;
-          va.a(8, 8, param10, 16777215, var16, 320, param12, param0, 240, 1146810, var15_int, -1, var15_int, 2, 0, var16, param4, 8, param10);
+          va.a(8, 8, param10, 16777215, var16, 320, param12, param0, 240, 1146810, var15_int, -1, var15_int, 2, 0, var16, param4, 8, param10, 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -380,7 +376,7 @@ final class im {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
@@ -437,7 +433,7 @@ final class im {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_f = null;
         field_d = null;

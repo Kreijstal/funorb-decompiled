@@ -10,7 +10,7 @@ final class ok extends uf {
     static boolean field_i;
     private static String field_z;
 
-    final static jh a() {
+    final static jh a(boolean param0, int param1) {
         jh var2 = new jh();
         qc.field_a.a((uf) (Object) var2, -16611);
         da.a(0, 6);

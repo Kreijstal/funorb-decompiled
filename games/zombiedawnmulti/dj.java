@@ -74,7 +74,7 @@ final class dj extends gf implements fi, qg {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_o = null;
         field_k = null;
         field_p = null;

@@ -171,7 +171,7 @@ final class hd extends um {
         }
     }
 
-    final static void a(hl param0) {
+    final static void a(hl param0, byte param1) {
         hl var4 = null;
         hl var5 = null;
         int var3 = TetraLink.field_J;

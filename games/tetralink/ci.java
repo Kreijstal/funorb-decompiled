@@ -10,7 +10,7 @@ final class ci extends mf {
     static String field_D;
     static int field_B;
 
-    final static void a(int param0, rb param1, boolean param2) {
+    final static void a(int param0, rb param1, boolean param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -470,8 +470,7 @@ final class ci extends mf {
                   if (null == qb.field_N) {
                     break L22;
                   } else {
-                    int discarded$3 = 63;
-                    if (!s.b()) {
+                    if (!s.b(63)) {
                       break L22;
                     } else {
                       if (~oj.field_c == ~var12.field_Nb) {
@@ -785,8 +784,7 @@ final class ci extends mf {
                             if (param1 != v.field_x) {
                               break L41;
                             } else {
-                              int discarded$4 = 63;
-                              if (!s.b()) {
+                              if (!s.b(63)) {
                                 break L41;
                               } else {
                                 if (var26 == 0) {
@@ -811,8 +809,7 @@ final class ci extends mf {
                           if (param1 != v.field_x) {
                             break L42;
                           } else {
-                            int discarded$5 = 63;
-                            if (s.b()) {
+                            if (s.b(63)) {
                               break L42;
                             } else {
                               var27 = qb.field_N.field_ec;
@@ -1052,7 +1049,7 @@ final class ci extends mf {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, oh[] param4) {
+    final static void a(int param0, int param1, int param2, int param3, oh[] param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -1214,7 +1211,7 @@ final class ci extends mf {
         this(od.field_S, param0);
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_A = null;
         field_D = null;
         field_C = null;
@@ -1225,7 +1222,7 @@ final class ci extends mf {
         lg.a(param1, 1, true);
     }
 
-    final static oh[] d() {
+    final static oh[] d(int param0) {
         oh[] var1 = null;
         int var2 = 0;
         int var3 = 0;

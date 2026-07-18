@@ -1070,8 +1070,7 @@ final class oj extends pw {
                   }
                 }
                 crb.field_v = null;
-                int discarded$2 = 0;
-                lnb.d();
+                lnb.d(0);
                 break L0;
               }
             }

@@ -25,7 +25,7 @@ final class ql implements pa {
     private jd field_d;
     private int field_f;
 
-    private final void f() {
+    private final void f(int param0) {
         this.a(-128, ((ql) this).field_r, ((ql) this).field_f);
     }
 
@@ -518,7 +518,7 @@ final class ql implements pa {
         return stackIn_58_0 != 0;
     }
 
-    private final void i() {
+    private final void i(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -622,7 +622,7 @@ final class ql implements pa {
         }
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -697,7 +697,7 @@ final class ql implements pa {
             break L0;
           } else {
             var4 = null;
-            boolean discarded$7 = ((ql) this).a(116, -87, 41, (oj) null);
+            boolean discarded$1 = ((ql) this).a(116, -87, 41, (oj) null);
             break L0;
           }
         }
@@ -712,28 +712,23 @@ final class ql implements pa {
                 if (2 != var2) {
                   if (var2 != 6) {
                     if (var2 == 7) {
-                      int discarded$8 = 20;
-                      this.d();
+                      this.d(20);
                       break L1;
                     } else {
                       if (var2 == 14) {
-                        int discarded$9 = 0;
-                        this.a();
+                        this.a(false);
                         break L1;
                       } else {
                         if (var2 == 13) {
-                          int discarded$10 = 10;
-                          this.g();
+                          this.g(10);
                           break L1;
                         } else {
                           if (var2 == 12) {
-                            int discarded$11 = 10;
-                            this.i();
+                            this.i(10);
                             break L1;
                           } else {
                             if (11 == var2) {
-                              int discarded$12 = -117;
-                              this.e();
+                              this.e((byte) -117);
                               break L1;
                             } else {
                               if (var2 == 10) {
@@ -743,8 +738,7 @@ final class ql implements pa {
                                 if (8 != var2) {
                                   break L1;
                                 } else {
-                                  int discarded$13 = 3;
-                                  this.f();
+                                  this.f(3);
                                   break L1;
                                 }
                               }
@@ -802,7 +796,7 @@ final class ql implements pa {
         field_l = null;
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -858,7 +852,7 @@ final class ql implements pa {
         return false;
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         if (40 > ((ql) this).field_h) {
             if (((ql) this).field_h >= 20) {
                 hh.field_d.d(-((ql) this).field_h + ((ql) this).field_b.field_m + 20, -((ql) this).field_h + -70 + ((ql) this).field_b.field_v, (-20 + ((ql) this).field_h) * 2 + 80, 100, (10200 - 255 * ((ql) this).field_h) / 20);
@@ -889,7 +883,7 @@ final class ql implements pa {
         en.field_E.c(Integer.toString(((ql) this).field_m), ((ql) this).field_b.field_m - -40, ((ql) this).field_b.field_v - 15, 16777215, 0);
     }
 
-    private final void g() {
+    private final void g(int param0) {
         int var3 = 0;
         wk stackIn_3_0 = null;
         int stackIn_3_1 = 0;
@@ -1081,7 +1075,7 @@ final class ql implements pa {
           if (param0 == 31337) {
             break L0;
           } else {
-            boolean discarded$4 = ql.h(-19);
+            boolean discarded$2 = ql.h(-19);
             break L0;
           }
         }
@@ -1097,8 +1091,7 @@ final class ql implements pa {
                   if (vt.field_n <= 0) {
                     break L3;
                   } else {
-                    int discarded$5 = 10;
-                    if (du.c()) {
+                    if (du.c(10)) {
                       break L3;
                     } else {
                       break L2;

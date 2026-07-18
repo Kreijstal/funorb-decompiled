@@ -268,20 +268,18 @@ final class da extends ae {
                   }
                   L9: {
                     if (jc.field_a == qe.field_C) {
-                      int discarded$10 = 520;
-                      if (fh.a()) {
+                      if (fh.a(520)) {
                         L10: {
                           nl.field_e = ne.field_a.f((byte) 28);
                           sl.field_j = ne.field_a.h(16383);
-                          int discarded$11 = ne.field_a.h(16383);
+                          int discarded$6 = ne.field_a.h(16383);
                           hk.field_d = ne.field_a.d((byte) -67);
                           var6_ref = ne.field_a.d(19016);
                           var7 = ne.field_a.h(16383);
                           if ((1 & var7) == 0) {
                             break L10;
                           } else {
-                            int discarded$12 = 8770;
-                            qi.b();
+                            qi.b(8770);
                             break L10;
                           }
                         }
@@ -324,9 +322,9 @@ final class da extends ae {
                           if (!mk.field_c) {
                             break L14;
                           } else {
-                            int discarded$13 = ne.field_a.h(16383);
-                            int discarded$14 = ne.field_a.h(16383);
-                            int discarded$15 = ne.field_a.e((byte) 113);
+                            int discarded$7 = ne.field_a.h(16383);
+                            int discarded$8 = ne.field_a.h(16383);
+                            int discarded$9 = ne.field_a.e((byte) 113);
                             jd.field_d = ne.field_a.d((byte) -118);
                             qa.field_a = new byte[jd.field_d];
                             var8 = 0;
@@ -344,8 +342,7 @@ final class da extends ae {
                         L16: {
                           ue.field_a = ne.field_a.g(0);
                           var11 = (CharSequence) (Object) ue.field_a;
-                          int discarded$16 = -11133;
-                          dd.field_p = r.a(var11);
+                          dd.field_p = r.a(var11, -11133);
                           si.field_d = ne.field_a.h(16383);
                           jc.field_a = ka.field_b;
                           if (af.field_o.a(false) != nd.field_M) {
@@ -379,7 +376,7 @@ final class da extends ae {
                               } else {
                                 try {
                                   L20: {
-                                    Object discarded$17 = sj.a((byte) -128, "unzap", gd.b((byte) 77));
+                                    Object discarded$10 = sj.a((byte) -128, "unzap", gd.b((byte) 77));
                                     break L20;
                                   }
                                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -395,7 +392,7 @@ final class da extends ae {
                           }
                           try {
                             L22: {
-                              Object discarded$18 = sj.a(gd.b((byte) 77), new Object[1], 7648, "zap");
+                              Object discarded$11 = sj.a(gd.b((byte) 77), new Object[1], 7648, "zap");
                               break L22;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -440,8 +437,7 @@ final class da extends ae {
                     if (jc.field_a != ij.field_j) {
                       break L26;
                     } else {
-                      int discarded$19 = 520;
-                      if (!fh.a()) {
+                      if (!fh.a(520)) {
                         break L26;
                       } else {
                         L27: {
@@ -588,12 +584,12 @@ final class da extends ae {
         ((da) this).field_i = (byte)(int)(1.0 + 255.0 * Math.random());
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_n = null;
         field_p = null;
     }
 
-    private final void a(boolean param0) {
+    private final void a(boolean param0, int param1) {
         try {
             IOException iOException = null;
             Exception var4 = null;
@@ -737,7 +733,7 @@ final class da extends ae {
     public da() {
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         try {
             IOException var2 = null;
             Exception var3 = null;
@@ -812,10 +808,8 @@ final class da extends ae {
                   }
                 }
                 ((da) this).field_q = (bc) param2;
-                int discarded$2 = -42;
-                this.d();
-                int discarded$3 = 0;
-                this.a(param1);
+                this.d((byte) -42);
+                this.a(param1, 0);
                 ((da) this).field_l = null;
                 ((da) this).field_a.field_k = 0;
                 L4: while (true) {

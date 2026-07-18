@@ -149,10 +149,8 @@ final class bj extends ob implements vb {
             ((bj) this).field_rb.field_k = 80;
             ((bj) this).field_rb.field_r = (pf) (Object) new jm(go.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((bj) this).c(-108, ((bj) this).field_rb);
-            int discarded$2 = 1;
-            ((bj) this).field_nb = this.a((wc) this, ln.field_R);
-            int discarded$3 = 1;
-            ((bj) this).field_lb = this.a((wc) this, ki.field_t);
+            ((bj) this).field_nb = this.a((wc) this, ln.field_R, true);
+            ((bj) this).field_lb = this.a((wc) this, ki.field_t, true);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -187,23 +185,19 @@ final class bj extends ob implements vb {
         }
     }
 
-    public static void l() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void l(byte param0) {
         try {
-          L0: {
             field_jb = null;
             field_kb = null;
             field_qb = null;
             field_ob = null;
             field_pb = null;
             field_sb = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "bj.G(" + -46 + ')');
+            if (param0 != -46) {
+                field_mb = false;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "bj.G(" + param0 + ')');
         }
     }
 
@@ -331,8 +325,7 @@ final class bj extends ob implements vb {
                 if (var7 > 0) {
                   break L3;
                 } else {
-                  int discarded$1 = 6;
-                  u.b();
+                  u.b(6);
                   this.k((byte) 119);
                   ((bj) this).field_H.b((qm) (Object) new qn(((bj) this).field_H, bh.field_c), param2 ^ 15807);
                   if (!ArcanistsMulti.field_G) {
@@ -482,7 +475,7 @@ final class bj extends ob implements vb {
               var3_int = ((dn) (Object) stackIn_5_0).a(stackIn_5_1 != 0, (byte) 98, ga.field_r - -2, 2, (3 * ga.field_r + 6) * param2, param0) ? 1 : 0;
               var4 = nl.field_Gb.field_Eb.field_G;
               var5 = null;
-              if (jb.field_t != 2) {
+              if (param1 != ~jb.field_t) {
                 L3: {
                   L4: {
                     lj.field_j.field_rb = ba.field_f;
@@ -505,10 +498,10 @@ final class bj extends ob implements vb {
                 break L2;
               } else {
                 ec.field_d.field_ub = true;
-                lj.field_j.field_rb = tj.a(-97, new String[1], e.field_C);
+                lj.field_j.field_rb = tj.a(param1 + -94, new String[1], e.field_C);
                 nl.field_Gb.field_Db.field_Hb.field_rb = null;
                 var6 = null;
-                var7 = (wa) (Object) var4.b(12623);
+                var7 = (wa) (Object) var4.b(param1 ^ -12622);
                 L5: while (true) {
                   L6: {
                     L7: {
@@ -590,9 +583,9 @@ final class bj extends ob implements vb {
                               var7.field_Jb.field_eb = var11;
                               var7.field_Fb.field_ob = var10;
                               var7.field_Jb.field_ob = var10;
-                              kc fieldTemp$2 = var7.field_Jb;
+                              kc fieldTemp$1 = var7.field_Jb;
                               var7.field_Fb.field_J = var11;
-                              fieldTemp$2.field_J = var11;
+                              fieldTemp$1.field_J = var11;
                               var7.field_Fb.field_zb = var11;
                               var7.field_Jb.field_zb = var11;
                               var13 = 0;
@@ -714,8 +707,7 @@ final class bj extends ob implements vb {
                                   if (var7.field_Lb == null) {
                                     break L24;
                                   } else {
-                                    int discarded$3 = -31046;
-                                    if (tc.a(eo.field_c.field_h)) {
+                                    if (tc.a(eo.field_c.field_h, -31046)) {
                                       break L24;
                                     } else {
                                       if (!wh.field_g) {
@@ -724,7 +716,7 @@ final class bj extends ob implements vb {
                                             break L25;
                                           } else {
                                             var17 = eo.field_c;
-                                            var18 = tj.a(126, new String[1], mb.field_S);
+                                            var18 = tj.a(param1 ^ -125, new String[1], mb.field_S);
                                             var17.field_l.a(8, var18, (byte) -26);
                                             break L25;
                                           }
@@ -788,7 +780,7 @@ final class bj extends ob implements vb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var3, "bj.J(" + param0 + ',' + -3 + ',' + param2 + ')');
+          throw aa.a((Throwable) (Object) var3, "bj.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         return (wa) (Object) stackIn_98_0;
     }
@@ -821,8 +813,7 @@ final class bj extends ob implements vb {
                   if (((bj) this).field_lb != param4) {
                     break L1;
                   } else {
-                    int discarded$4 = 6;
-                    u.b();
+                    u.b(6);
                     this.k((byte) 104);
                     if (!ArcanistsMulti.field_G) {
                       break L1;
@@ -839,7 +830,7 @@ final class bj extends ob implements vb {
               if (param0) {
                 break L3;
               } else {
-                boolean discarded$5 = ((bj) this).a((qm) null, (byte) 73, 'ﾻ', -7);
+                boolean discarded$2 = ((bj) this).a((qm) null, (byte) 73, 'ﾻ', -7);
                 break L3;
               }
             }
@@ -877,7 +868,7 @@ final class bj extends ob implements vb {
         }
     }
 
-    final static boolean g() {
+    final static boolean g(boolean param0) {
         RuntimeException var1 = null;
         int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -886,34 +877,42 @@ final class bj extends ob implements vb {
         try {
           L0: {
             L1: {
-              L2: {
+              if (!param0) {
+                break L1;
+              } else {
+                int discarded$2 = bj.a(121, (byte) -115);
+                break L1;
+              }
+            }
+            L2: {
+              L3: {
                 if (pm.field_e == null) {
-                  break L2;
+                  break L3;
                 } else {
                   if (pm.field_e.g(7213) == null) {
-                    break L2;
+                    break L3;
                   } else {
                     stackOut_7_0 = 1;
                     stackIn_10_0 = stackOut_7_0;
-                    break L1;
+                    break L2;
                   }
                 }
               }
               stackOut_9_0 = 0;
               stackIn_10_0 = stackOut_9_0;
-              break L1;
+              break L2;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "bj.H(" + false + ')');
+          throw aa.a((Throwable) (Object) var1, "bj.H(" + param0 + ')');
         }
         return stackIn_10_0 != 0;
     }
 
-    final static void a(int[] param0) {
+    final static void a(int[] param0, int param1) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -937,7 +936,7 @@ final class bj extends ob implements vb {
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            var2_int = 0;
+            var2_int = param1;
             var3 = -7 + param0.length;
             L1: while (true) {
               L2: {
@@ -1037,11 +1036,11 @@ final class bj extends ob implements vb {
               break L7;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + 0 + ')');
+          throw aa.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ')');
         }
     }
 
-    private final ag a(wc param0, String param1) {
+    private final ag a(wc param0, String param1, boolean param2) {
         ag var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -1080,8 +1079,16 @@ final class bj extends ob implements vb {
         String stackOut_10_2 = null;
         try {
           L0: {
-            var4 = new ag(param1, param0);
-            var4.field_r = (pf) (Object) new mm();
+            L1: {
+              var4 = new ag(param1, param0);
+              var4.field_r = (pf) (Object) new mm();
+              if (param2) {
+                break L1;
+              } else {
+                field_mb = true;
+                break L1;
+              }
+            }
             var5 = -6 + ((bj) this).field_k;
             ((bj) this).field_k = ((bj) this).field_k + 38;
             var4.a(30, var5, ((bj) this).field_v + -30, 15, -76);
@@ -1093,7 +1100,7 @@ final class bj extends ob implements vb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var4_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4_ref;
             stackOut_5_1 = new StringBuilder().append("bj.C(");
@@ -1108,7 +1115,7 @@ final class bj extends ob implements vb {
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
-              break L1;
+              break L2;
             } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
@@ -1116,10 +1123,10 @@ final class bj extends ob implements vb {
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
               stackIn_9_2 = stackOut_6_2;
-              break L1;
+              break L2;
             }
           }
-          L2: {
+          L3: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
             stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_12_0 = stackOut_9_0;
@@ -1133,7 +1140,7 @@ final class bj extends ob implements vb {
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L2;
+              break L3;
             } else {
               stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
               stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
@@ -1141,17 +1148,17 @@ final class bj extends ob implements vb {
               stackIn_13_0 = stackOut_10_0;
               stackIn_13_1 = stackOut_10_1;
               stackIn_13_2 = stackOut_10_2;
-              break L2;
+              break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + true + ')');
+          throw aa.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param2 + ')');
         }
         return stackIn_4_0;
     }
 
-    final static boolean a(char param0, CharSequence param1) {
-        RuntimeException var3 = null;
+    final static boolean a(char param0, CharSequence param1, byte param2) {
         int var3_int = 0;
+        RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -1180,7 +1187,15 @@ final class bj extends ob implements vb {
         String stackOut_23_2 = null;
         try {
           L0: {
-            if (qo.a(param0, 0)) {
+            L1: {
+              if (param2 == -71) {
+                break L1;
+              } else {
+                field_ub = false;
+                break L1;
+              }
+            }
+            if (qo.a(param0, param2 + 71)) {
               if (param1 == null) {
                 stackOut_9_0 = 0;
                 stackIn_10_0 = stackOut_9_0;
@@ -1188,17 +1203,17 @@ final class bj extends ob implements vb {
               } else {
                 var3_int = param1.length();
                 if (var3_int < 12) {
-                  L1: {
+                  L2: {
                     if (rk.a((byte) -51, param0)) {
                       if (var3_int != 0) {
-                        break L1;
+                        break L2;
                       } else {
                         stackOut_18_0 = 0;
                         stackIn_19_0 = stackOut_18_0;
                         return stackIn_19_0 != 0;
                       }
                     } else {
-                      break L1;
+                      break L2;
                     }
                   }
                   stackOut_20_0 = 1;
@@ -1218,7 +1233,7 @@ final class bj extends ob implements vb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var3 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var3;
             stackOut_22_1 = new StringBuilder().append("bj.F(").append(param0).append(',');
@@ -1233,7 +1248,7 @@ final class bj extends ob implements vb {
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
-              break L2;
+              break L3;
             } else {
               stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
               stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
@@ -1241,10 +1256,10 @@ final class bj extends ob implements vb {
               stackIn_26_0 = stackOut_23_0;
               stackIn_26_1 = stackOut_23_1;
               stackIn_26_2 = stackOut_23_2;
-              break L2;
+              break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + -71 + ')');
+          throw aa.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param2 + ')');
         }
         return stackIn_21_0 != 0;
     }

@@ -27,7 +27,11 @@ public class NativeInterface {
     final native void copyLighting(short[] param0, byte[] param1, short[] param2, short[] param3, short[] param4, short[] param5, byte[] param6, int param7, int param8, short[] param9, int param10, int param11, int param12, long param13);
 
     public NativeInterface(int param0, int param1) {
-        this.init(param0, param1);
+        try {
+            this.init(param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
+        }
     }
 
     final native void copyColours(short[] param0, byte[] param1, short[] param2, int param3, short[] param4, int param5, int param6, int param7, long param8);

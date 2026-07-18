@@ -15,7 +15,7 @@ final class uf {
     static kl field_f;
     private String field_h;
 
-    final static void a(ls[] param0) {
+    final static void a(ls[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -54,8 +54,7 @@ final class uf {
                     if (var5 < 0) {
                       break L3;
                     } else {
-                      int discarded$9 = 30549;
-                      if (!nf.a(var4, param0[var5])) {
+                      if (!nf.a(var4, param0[var5], 30549)) {
                         break L3;
                       } else {
                         param0[1 + var5] = param0[var5];
@@ -158,7 +157,7 @@ final class uf {
             qn.b(0, 0, var2, var3, 0, 128);
             var4 = 5 + (rs.field_n.a(((uf) this).field_h, 200, 0) + 30);
             fe.b(212, -(var4 >> 1) + (-8 + var3 / 2), 216, 16 + var4, io.field_m, nd.field_b, 0, 128);
-            int discarded$3 = rs.field_n.a(((uf) this).field_h, var2 / 2 - 100, -(var4 >> 1) + var3 / 2, 200, var4, 16777215, 0, 1, 0, 0);
+            int discarded$1 = rs.field_n.a(((uf) this).field_h, var2 / 2 - 100, -(var4 >> 1) + var3 / 2, 200, var4, 16777215, 0, 1, 0, 0);
             if (!wg.a(param0 + -1619621026, var2 / 2 + -100, 318, -30 + var3 / 2 - -(var4 >> 1), (var4 >> 1) + var3 / 2)) {
               stackOut_4_0 = nd.field_b;
               stackIn_5_0 = stackOut_4_0;
@@ -194,10 +193,8 @@ final class uf {
           var7 = var9;
           var5 = var7;
           fe.a(var2 / 2 + 2, -30 + (var3 / 2 - -(var4 >> 1)), 98, 30, il.field_s, var15, 0, 128, true);
-          int discarded$4 = 1;
-          fe.c(nt.field_p, 50 + (-100 + var2 / 2), 17 + (var4 >> 1) + var3 / 2 - 15, 0);
-          int discarded$5 = 1;
-          fe.c(oa.field_G, -50 + var2 / 2 + 100, 2 + (var3 / 2 + (var4 >> 1)), 0);
+          fe.c(nt.field_p, 50 + (-100 + var2 / 2), 17 + (var4 >> 1) + var3 / 2 - 15, 0, true);
+          fe.c(oa.field_G, -50 + var2 / 2 + 100, 2 + (var3 / 2 + (var4 >> 1)), 0, true);
           return;
         } else {
           return;

@@ -26,7 +26,7 @@ final class cl extends bc {
         this(2188450, 2591221, 9543);
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         e var2 = null;

@@ -39,8 +39,7 @@ final class sf {
         } else {
             ((sf) this).field_w = false;
         }
-        int discarded$0 = 65;
-        gh var3 = this.b();
+        gh var3 = this.b((byte) 65);
         if (var3 != null) {
             if (!(((sf) this).field_j != null)) {
                 ((sf) this).field_j = var3.field_I;
@@ -117,7 +116,7 @@ final class sf {
         return true;
     }
 
-    private final gh b() {
+    private final gh b(byte param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = SteelSentinels.field_G;
@@ -156,8 +155,7 @@ final class sf {
         if (param0 <= 57) {
             field_d = 94;
         }
-        int discarded$0 = 65;
-        gh var4 = this.b();
+        gh var4 = this.b((byte) 65);
         gh var5 = var4;
         if (var5 != null) {
             if (null != ((sf) this).field_j) {
@@ -167,7 +165,7 @@ final class sf {
         ((sf) this).field_j = null;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_l = null;
         field_b = null;
@@ -235,7 +233,7 @@ final class sf {
         }
     }
 
-    final static dm a(String param0) {
+    final static dm a(String param0, int param1) {
         RuntimeException var2 = null;
         dm stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -377,7 +375,7 @@ final class sf {
                 if (param1 == 23123) {
                   break L2;
                 } else {
-                  boolean discarded$2 = ((sf) this).a(115, -6);
+                  boolean discarded$1 = ((sf) this).a(115, -6);
                   break L2;
                 }
               }
@@ -419,8 +417,7 @@ final class sf {
               }
               L5: {
                 L6: {
-                  int discarded$3 = 65;
-                  var9 = this.b();
+                  var9 = this.b((byte) 65);
                   if (var9 == null) {
                     break L6;
                   } else {

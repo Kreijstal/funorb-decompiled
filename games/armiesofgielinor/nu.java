@@ -105,8 +105,7 @@ final class nu extends lk {
                           } else {
                             try {
                               L5: {
-                                int discarded$1 = -73;
-                                var22 = lf.a(var10, var4, param1);
+                                var22 = lf.a(var10, var4, param1, (byte) -73);
                                 var10.field_n[var22.field_v] = var22;
                                 break L5;
                               }
@@ -315,9 +314,8 @@ final class nu extends lk {
               }
             }
             var8 = stackIn_19_0;
-            int discarded$2 = -3225;
-            wn.a(var7, ((nu) this).field_v, param0.field_l, param1 + param0.field_B, param0.field_p + param4 - -(-((nu) this).field_v[0].field_x + param0.field_w >> 1));
-            int discarded$3 = ((nu) this).field_q.a(param0.field_v, param0.field_B + param1, param4 - -param0.field_p - 2, param0.field_l, param0.field_w, var8, -1, 1, 1, ((nu) this).field_q.field_H);
+            wn.a(var7, ((nu) this).field_v, param0.field_l, param1 + param0.field_B, param0.field_p + param4 - -(-((nu) this).field_v[0].field_x + param0.field_w >> 1), -3225);
+            int discarded$1 = ((nu) this).field_q.a(param0.field_v, param0.field_B + param1, param4 - -param0.field_p - 2, param0.field_l, param0.field_w, var8, -1, 1, 1, ((nu) this).field_q.field_H);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -365,9 +363,7 @@ final class nu extends lk {
     }
 
     private static void $cfr$clinit() {
-        int discarded$0 = 50;
-        int discarded$1 = -81;
-        bm.a();
+        bm.a((byte) -81, 50);
         field_z = new int[]{20, 10, 5};
         field_w = "Store";
     }

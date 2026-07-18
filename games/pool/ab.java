@@ -12,7 +12,7 @@ final class ab {
     static String field_h;
     static String field_e;
 
-    final static boolean a(di param0) {
+    final static boolean a(di param0, boolean param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -71,7 +71,7 @@ final class ab {
         return stackIn_3_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_a = null;
         field_i = null;
@@ -81,7 +81,7 @@ final class ab {
         field_c = null;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         try {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;

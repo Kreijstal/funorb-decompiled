@@ -10,8 +10,7 @@ abstract class ei extends hp {
     static int[] field_G;
 
     boolean e(byte param0) {
-        int discarded$2 = 35;
-        ((ei) this).field_I = this.i();
+        ((ei) this).field_I = this.i(35);
         if (param0 == 28) {
           if (-1 == ((ei) this).field_I) {
             if (((ei) this).field_H) {
@@ -36,7 +35,7 @@ abstract class ei extends hp {
         }
     }
 
-    private final int i() {
+    private final int i(int param0) {
         return !((ei) this).field_H ? 0 : (Object) (Object) ((ei) this).field_F.c(true) == this ? 256 : 0;
     }
 
@@ -1020,8 +1019,7 @@ abstract class ei extends hp {
         if (param0 != 2634) {
           L0: {
             ((ei) this).a((byte) -43, -14, -18);
-            int discarded$2 = 35;
-            var2 = this.i();
+            var2 = this.i(35);
             var3 = -((ei) this).field_I + var2;
             if (var3 > 0) {
               ((ei) this).field_I = ((ei) this).field_I + (-1 + (var3 - -8)) / 8;
@@ -1060,8 +1058,7 @@ abstract class ei extends hp {
           }
         } else {
           L3: {
-            int discarded$3 = 35;
-            var2 = this.i();
+            var2 = this.i(35);
             var3 = -((ei) this).field_I + var2;
             if (var3 > 0) {
               ((ei) this).field_I = ((ei) this).field_I + (-1 + (var3 - -8)) / 8;
@@ -1104,7 +1101,7 @@ abstract class ei extends hp {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_G = null;
     }
 

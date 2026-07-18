@@ -23,8 +23,7 @@ final class qh {
     }
 
     final static void a(boolean param0) {
-        int discarded$3 = -21923;
-        qh.b();
+        qh.b(-21923);
         if (!param0) {
             return;
         }
@@ -226,7 +225,7 @@ final class qh {
         field_a = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         na.field_d.e((byte) 109);
         if (qf.field_d == null) {
             qf.field_d = new ql(na.field_d, ii.field_F);

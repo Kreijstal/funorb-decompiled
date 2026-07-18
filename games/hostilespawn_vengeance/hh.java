@@ -576,7 +576,7 @@ final class hh {
         }
     }
 
-    final static void a(int param0, int param1, fd param2, int param3, String param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, fd param2, int param3, String param4, int param5, int param6, int param7, int param8) {
         try {
             hn.field_a = param6;
             jj.field_k = param2;
@@ -1107,7 +1107,7 @@ final class hh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_b = null;

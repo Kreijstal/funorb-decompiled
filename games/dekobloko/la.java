@@ -208,8 +208,7 @@ final class la {
               if (param1 == 32373) {
                 break L1;
               } else {
-                int discarded$1 = 92;
-                la.a();
+                la.a((byte) 92);
                 break L1;
               }
             }
@@ -254,7 +253,7 @@ final class la {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_h = null;
     }

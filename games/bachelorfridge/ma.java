@@ -44,7 +44,7 @@ final class ma {
     int[] field_M;
     byte field_n;
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
     }
 

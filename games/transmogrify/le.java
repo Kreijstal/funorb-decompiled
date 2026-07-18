@@ -336,7 +336,7 @@ class le extends lj {
         }
     }
 
-    final static Boolean d() {
+    final static Boolean d(boolean param0) {
         Boolean var1 = ch.field_f;
         ch.field_f = null;
         return var1;

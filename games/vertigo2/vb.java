@@ -9,18 +9,18 @@ final class vb extends dh {
     static boolean field_g;
     static int field_h;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_j = null;
     }
 
-    final static String c() {
+    final static String c(int param0) {
         if (qe.field_V == null) {
             return "";
         }
         return qe.field_V;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         try {
             IOException var1 = null;
             RuntimeException var1_ref = null;

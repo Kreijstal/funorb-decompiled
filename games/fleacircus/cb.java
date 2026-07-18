@@ -70,7 +70,7 @@ abstract class cb extends pa {
         ((cb) this).field_r = param0;
     }
 
-    final static String a(String param0, String param1, rh param2) {
+    final static String a(String param0, String param1, rh param2, byte param3) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;

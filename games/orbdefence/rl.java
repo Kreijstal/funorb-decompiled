@@ -15,7 +15,7 @@ final class rl {
         return pc.field_db;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_b = null;
         field_c = null;

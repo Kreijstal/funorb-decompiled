@@ -19,9 +19,8 @@ final class ud extends ck {
     static int field_y;
     static int field_C;
 
-    final static void a() {
-        int discarded$0 = -21;
-        bj.a(-128, wl.d());
+    final static void a(boolean param0) {
+        bj.a(-128, wl.d((byte) -21));
     }
 
     final static boolean e(int param0) {
@@ -41,7 +40,7 @@ final class ud extends ck {
     ud() {
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_A = null;
         field_w = null;
     }

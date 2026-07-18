@@ -191,8 +191,7 @@ final class a {
               L0: {
                 L1: {
                   if (vh.field_i.startsWith("win")) {
-                    int discarded$8 = 0;
-                    if (fq.a(param1)) {
+                    if (fq.a(param1, 0)) {
                       return;
                     } else {
                       break L1;

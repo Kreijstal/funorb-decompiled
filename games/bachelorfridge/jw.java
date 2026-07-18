@@ -16,7 +16,7 @@ final class jw extends ana {
         field_v = null;
     }
 
-    private final void e() {
+    private final void e(int param0) {
         aga var2 = null;
         iv var3 = null;
         int var5 = 0;
@@ -43,7 +43,7 @@ final class jw extends ana {
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
     }
 
     final boolean c(byte param0) {
@@ -52,15 +52,13 @@ final class jw extends ana {
         if (!(fieldTemp$0 > -1)) {
             if (-26 == ((jw) this).field_l) {
                 jja.a(256, -1, 33);
-                int discarded$1 = -23403;
-                this.e();
+                this.e(-23403);
                 return false;
             }
             return false;
         }
         int var2 = -38 / ((param0 - 71) / 47);
-        int discarded$2 = 7;
-        this.f();
+        this.f(7);
         return true;
     }
 

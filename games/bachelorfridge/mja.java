@@ -161,7 +161,7 @@ final class mja extends td {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_q = null;
         field_r = null;
         int var1 = -25;

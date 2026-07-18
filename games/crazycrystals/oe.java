@@ -7,7 +7,7 @@ final class oe {
     static int[] field_c;
     static fq[] field_a;
 
-    final static si a(boolean param0) {
+    final static si a(boolean param0, byte param1) {
         si var2 = new si(true);
         var2.field_f = param0 ? true : false;
         return var2;

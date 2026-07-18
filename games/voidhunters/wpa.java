@@ -78,7 +78,7 @@ final class wpa extends rqa {
         return stackIn_3_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_o = null;
         field_q = null;
     }
@@ -91,8 +91,7 @@ final class wpa extends rqa {
             return wba.field_p.b(4);
         }
         if (param0 != 52) {
-            int discarded$5 = 1;
-            wpa.b();
+            wpa.b(true);
             if (!(dw.field_c != lrb.field_b)) {
                 return wba.field_p.b(4);
             }

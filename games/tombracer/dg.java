@@ -121,7 +121,7 @@ abstract class dg extends vg implements fo, noa {
         ((dg) this).field_f = param0;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return true;
     }
 
@@ -1402,8 +1402,7 @@ abstract class dg extends vg implements fo, noa {
         if (param0 != 48) {
             return true;
         }
-        int discarded$0 = -105;
-        return this.g();
+        return this.g((byte) -105);
     }
 
     void a(gr param0, gma param1, byte param2) {
@@ -1434,7 +1433,7 @@ abstract class dg extends vg implements fo, noa {
 
     abstract void a(iq param0, int param1, int param2, int param3, byte param4);
 
-    private final boolean g() {
+    private final boolean g(byte param0) {
         int var2 = 0;
         var2 = 0;
         if (((dg) this).a((byte) 74)) {

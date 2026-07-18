@@ -203,12 +203,11 @@ final class ln {
         return stackIn_14_0;
     }
 
-    final static ik a() {
-        int discarded$0 = 105;
-        return new ik(hl.d(87), jk.c());
+    final static ik a(byte param0) {
+        return new ik(hl.d(87), jk.c((byte) 105));
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -299,8 +298,7 @@ final class ln {
                           }
                           break L5;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = oi.a(var6, var5, param0, var4);
+                          int discarded$1 = oi.a(var17, var5, param0, var4, 9);
                           break L5;
                         }
                       }
@@ -358,7 +356,7 @@ final class ln {
         return stackIn_21_0;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, boolean param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -385,9 +383,7 @@ final class ln {
         String stackOut_15_2 = null;
         var5 = SteelSentinels.field_G;
         try {
-          int discarded$4 = 88;
-          int discarded$5 = 0;
-          var3 = jd.a(param0);
+          var3 = jd.a(param0, false, 88);
           if (var3 == null) {
             var4 = 0;
             L0: while (true) {
@@ -441,7 +437,7 @@ final class ln {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_c = null;
     }

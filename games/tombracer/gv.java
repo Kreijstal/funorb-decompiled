@@ -15,7 +15,7 @@ final class gv extends qda {
     public gv() {
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_v = null;
         field_q = null;
         field_s = null;
@@ -602,8 +602,7 @@ final class gv extends qda {
                               if (param0 > 26) {
                                 break L23;
                               } else {
-                                int discarded$1 = 0;
-                                gv.a();
+                                gv.a(false);
                                 break L23;
                               }
                             }

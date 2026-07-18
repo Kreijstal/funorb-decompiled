@@ -18,7 +18,7 @@ final class wh implements Runnable {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_g = null;
         field_a = null;
@@ -327,7 +327,7 @@ final class wh implements Runnable {
         ((wh) this).field_d = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         try {
             int var1 = 0;
             Exception var1_ref_Exception = null;

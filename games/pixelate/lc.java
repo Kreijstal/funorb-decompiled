@@ -15,13 +15,13 @@ final class lc extends fa {
     String[][] field_o;
     static String[][] field_l;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_t = null;
         field_l = null;
         field_q = null;
     }
 
-    final static int a(aa param0) {
+    final static int a(aa param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

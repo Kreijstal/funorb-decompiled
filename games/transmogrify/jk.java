@@ -55,8 +55,7 @@ final class jk extends aj implements df {
               } else {
                 if (param0 != ((jk) this).field_w) {
                   if (((jk) this).field_C == param0) {
-                    int discarded$18 = 4;
-                    gg.b();
+                    gg.b(4);
                     break L1;
                   } else {
                     break L1;
@@ -70,7 +69,7 @@ final class jk extends aj implements df {
             if (param1 == 17) {
               break L0;
             } else {
-              int discarded$19 = jk.l(-1);
+              int discarded$1 = jk.l(-1);
               return;
             }
           }
@@ -150,7 +149,7 @@ final class jk extends aj implements df {
         int var7 = -112 / ((param3 - 77) / 34);
     }
 
-    final static char a(char param0) {
+    final static char a(char param0, boolean param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = Transmogrify.field_A ? 1 : 0;
@@ -658,13 +657,13 @@ final class jk extends aj implements df {
         return stackIn_10_0;
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_y = null;
         field_D = null;
         field_x = null;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return 1;
     }
 

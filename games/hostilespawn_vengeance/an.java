@@ -458,7 +458,7 @@ final class an extends ql {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_j = null;
         field_d = null;
         field_l = null;

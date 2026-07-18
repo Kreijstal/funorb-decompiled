@@ -17,8 +17,7 @@ final class mj {
     static int field_b;
 
     private final tf a(int param0, int param1, int param2) {
-        int discarded$0 = 0;
-        return this.a(false, param1, param2);
+        return this.a(false, param1, param2, 0);
     }
 
     final static void a(int param0, int param1) {
@@ -73,7 +72,7 @@ final class mj {
         return ((mj) this).a(param1 + -param0, param3 - param0, param3 - -param0, param0 + param1, true);
     }
 
-    private final tf a(boolean param0, int param1, int param2) {
+    private final tf a(boolean param0, int param1, int param2, int param3) {
         if (~param1 <= ~((mj) this).field_m) {
             return null;
         }
@@ -392,8 +391,7 @@ final class mj {
               }
             }
             L2: {
-              int discarded$2 = 0;
-              var5 = this.a(true, param0, param3);
+              var5 = this.a(true, param0, param3, 0);
               if (var5 == null) {
                 break L2;
               } else {
@@ -435,7 +433,7 @@ final class mj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         int var1 = -6;
     }

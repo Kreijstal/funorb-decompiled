@@ -16,7 +16,7 @@ final class fi extends qe {
     static String field_x;
     private rh field_D;
 
-    private final int a(int param0) {
+    private final int a(int param0, byte param1) {
         int var3 = 120;
         int var4 = nk.field_Fb[param0];
         if (var4 == 27) {
@@ -67,8 +67,7 @@ final class fi extends qe {
             var5 = this.a(false, var4);
             if (nl.a(var4, (byte) -124)) {
               if (param2 >= this.a((byte) -4, var4)) {
-                int discarded$1 = -93;
-                if (param2 < this.a(var4)) {
+                if (param2 < this.a(var4, (byte) -93)) {
                   if (param0 >= var5) {
                     if (param0 < this.c(30, var4) + var5) {
                       return var4;
@@ -118,8 +117,7 @@ final class fi extends qe {
           var5 = this.a(-13, var4);
           var6 = ne.field_c.b(var5);
           var7 = this.a((byte) -4, param1);
-          int discarded$1 = -93;
-          var8 = this.a(param1);
+          var8 = this.a(param1, (byte) -93);
           var9 = this.a(false, param1);
           var10 = var8 - (-var7 + var6) >> 1;
           if (!param0) {
@@ -211,8 +209,7 @@ final class fi extends qe {
             }
           }
           L2: while (true) {
-            int discarded$7 = 47;
-            if (!ha.b()) {
+            if (!ha.b((byte) 47)) {
               nk.field_Jb.a(-7734, this.a(hm.field_k, (byte) 116, lc.field_c), this.a(eh.field_h, (byte) 116, hj.field_S));
               if (-1 == nk.field_Jb.field_b) {
                 break L0;
@@ -274,8 +271,7 @@ final class fi extends qe {
         ((fi) this).field_w = new tf[nk.field_Jb.field_i];
         ((fi) this).field_z = new kl();
         jh.a(((fi) this).field_e);
-        int discarded$2 = -128;
-        bf.a(false);
+        bf.a(false, -128);
         kn.field_e = false;
         c.a(0, 640, 0, (byte) 44);
         c.a(0, 640, 40, (byte) 44);
@@ -283,8 +279,7 @@ final class fi extends qe {
         vf.a(432, true, 599, 117, 48);
         vf.a(32, true, 164, -110, 8);
         vf.a(32, true, 468, -2, 8);
-        int discarded$3 = 1;
-        un.a(41, (byte) -98, 558, 416);
+        un.a(41, (byte) -98, 558, 416, true);
         ad.field_e.h(41, 48);
         ad.field_e.j(-ad.field_e.field_d + 599, 48);
         ad.field_e.f(164 - ad.field_e.field_d, -ad.field_e.field_b + 40);
@@ -393,11 +388,8 @@ final class fi extends qe {
                 }
                 L5: {
                   ((fi) this).field_A.b(90, 32, 87);
-                  int discarded$4 = 125;
-                  int discarded$5 = 446;
-                  this.a(87, 3740, 200, en.field_a[mo.field_e]);
-                  int discarded$6 = 31139;
-                  wk.a(552, bj.a(mo.field_e, 77), (se) (Object) ne.field_c, 366, ag.field_c);
+                  this.a(87, 3740, 200, en.field_a[mo.field_e], 446, 125);
+                  wk.a(552, bj.a(mo.field_e, 77), (se) (Object) ne.field_c, 366, ag.field_c, 31139);
                   if (!kn.field_e) {
                     break L5;
                   } else {
@@ -465,7 +457,7 @@ final class fi extends qe {
                     }
                     pi.a(0, (String) var4, cm.field_M, 30 + var6, (se) (Object) ne.field_c, var5 + var7);
                     var7 = var7 + (5 + var5);
-                    int discarded$7 = la.field_b.a((String) var3, 30 + var6, var7, var8 - 60, -30 + var9, 16777215, -1, 0, 0, la.field_b.field_H + la.field_b.field_E);
+                    int discarded$1 = la.field_b.a((String) var3, 30 + var6, var7, var8 - 60, -30 + var9, 16777215, -1, 0, 0, la.field_b.field_H + la.field_b.field_E);
                     break L5;
                   }
                 }
@@ -588,8 +580,7 @@ final class fi extends qe {
         int stackOut_1_0 = 0;
         L0: {
           var4 = this.a((byte) -4, param2);
-          int discarded$2 = -93;
-          var5 = this.a(param2);
+          var5 = this.a(param2, (byte) -93);
           var6 = this.a(false, param2);
           var7 = this.c(30, param2);
           gf.e(-4 + var4, -6 + var6, 8 + (var5 + -var4), 8 + var7, 0);
@@ -833,7 +824,7 @@ final class fi extends qe {
         field_u = null;
     }
 
-    private final void a(int param0, int param1, int param2, String param3) {
+    private final void a(int param0, int param1, int param2, String param3, int param4, int param5) {
         String[] var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
@@ -1034,8 +1025,7 @@ final class fi extends qe {
           var5 = this.a(-13, var4);
           var6 = ne.field_c.b(var5);
           var7 = this.a((byte) -4, param1);
-          int discarded$1 = -93;
-          var8 = this.a(param1);
+          var8 = this.a(param1, (byte) -93);
           var9 = this.a(false, param1);
           var10 = -var6 + (var8 - -var7) >> 1;
           if (param2) {

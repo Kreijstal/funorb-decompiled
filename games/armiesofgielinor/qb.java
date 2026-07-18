@@ -15,7 +15,7 @@ final class qb {
     static String field_l;
     int field_g;
 
-    final static void b() {
+    final static void b(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

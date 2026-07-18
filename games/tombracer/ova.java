@@ -5,7 +5,7 @@ final class ova extends me {
     static String field_j;
     static String field_k;
 
-    public static void d() {
+    public static void d(byte param0) {
         field_k = null;
         field_j = null;
     }
@@ -105,8 +105,7 @@ final class ova extends me {
             if (param0 >= 19) {
               L1: {
                 jg.field_a.a(qi.field_K[3], (byte) 104);
-                int discarded$1 = 77;
-                ni.a(jg.field_a);
+                ni.a(jg.field_a, (byte) 77);
                 jg.field_a.f(-1477662136, param2);
                 param3.a(jg.field_a, false);
                 ql.field_k.field_h = 0;

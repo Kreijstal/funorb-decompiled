@@ -11,7 +11,7 @@ final class mc extends sq {
     static int field_g;
     static uo[][] field_f;
 
-    final static void c() {
+    final static void c(byte param0) {
         kh.field_Vb.field_Db = 240;
         kh.field_Vb.field_Fb = 3;
         kh.field_Vb.field_ob = kh.field_Vb.field_F[1].field_A;
@@ -267,7 +267,7 @@ final class mc extends sq {
         return var3;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_j = null;
         field_k = null;
         field_f = null;

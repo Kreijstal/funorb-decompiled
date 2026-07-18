@@ -31,8 +31,7 @@ final class gi {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 21197;
-            stackOut_0_0 = pi.a(param1, 0, param1.length);
+            stackOut_0_0 = pi.a(param1, 0, param1.length, 21197);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -79,7 +78,7 @@ final class gi {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         int var1 = 2;

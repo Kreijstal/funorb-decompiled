@@ -44,14 +44,13 @@ class rn extends ag {
         }
     }
 
-    final static void m() {
+    final static void m(int param0) {
         if (!(pe.field_Jb)) {
             if (!(ce.field_i != null)) {
                 ce.field_i = tj.a(4, -21402);
             }
             if (ce.field_i.field_l) {
-                int discarded$0 = 1;
-                ad.field_f = ko.a(ad.field_f, ce.field_i.field_i);
+                ad.field_f = ko.a(ad.field_f, ce.field_i.field_i, true);
                 ce.field_i = null;
                 pe.field_Jb = true;
             }
@@ -86,8 +85,7 @@ class rn extends ag {
             ((bn) (Object) ((rn) this).field_o).a((rn) this, -20626);
         }
         if (param0 != -22706) {
-            int discarded$0 = 0;
-            this.c();
+            this.c(false);
         }
     }
 
@@ -128,8 +126,7 @@ class rn extends ag {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              int discarded$3 = -100;
-              this.h();
+              this.h((byte) -100);
               if (((rn) this).field_t == 1) {
                 L2: {
                   if (!(((rn) this).field_r instanceof ac)) {
@@ -218,7 +215,7 @@ class rn extends ag {
         ((rn) this).l(-22706);
     }
 
-    final static void i() {
+    final static void i(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         cg var3 = null;
@@ -285,9 +282,8 @@ class rn extends ag {
         }
     }
 
-    private final void j() {
-        int discarded$0 = 56;
-        this.g();
+    private final void j(byte param0) {
+        this.g((byte) 56);
         this.j(-10292);
     }
 
@@ -300,8 +296,7 @@ class rn extends ag {
               L0: {
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.j(-10292);
-                int discarded$1 = -34;
-                this.a(var2);
+                this.a(var2, (byte) -34);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -334,7 +329,7 @@ class rn extends ag {
         }
     }
 
-    public static void n() {
+    public static void n(int param0) {
         field_L = null;
         field_K = null;
         field_S = null;
@@ -463,9 +458,9 @@ class rn extends ag {
                             L6: {
                               if (((rn) this).field_N >= ((rn) this).field_g.length()) {
                                 ((rn) this).field_g = ((rn) this).field_g + param2;
-                                int dupTemp$4 = ((rn) this).field_g.length();
-                                ((rn) this).field_N = dupTemp$4;
-                                ((rn) this).field_J = dupTemp$4;
+                                int dupTemp$1 = ((rn) this).field_g.length();
+                                ((rn) this).field_N = dupTemp$1;
+                                ((rn) this).field_J = dupTemp$1;
                                 break L6;
                               } else {
                                 ((rn) this).field_g = ((rn) this).field_g.substring(0, ((rn) this).field_N) + param2 + ((rn) this).field_g.substring(((rn) this).field_N, ((rn) this).field_g.length());
@@ -533,8 +528,7 @@ class rn extends ag {
                                           if (param3 != 65) {
                                             break L9;
                                           } else {
-                                            int discarded$5 = 122;
-                                            this.j();
+                                            this.j((byte) 122);
                                             stackOut_60_0 = 1;
                                             stackIn_61_0 = stackOut_60_0;
                                             return stackIn_61_0 != 0;
@@ -548,8 +542,7 @@ class rn extends ag {
                                           if (66 != param3) {
                                             break L10;
                                           } else {
-                                            int discarded$6 = 56;
-                                            this.g();
+                                            this.g((byte) 56);
                                             stackOut_64_0 = 1;
                                             stackIn_65_0 = stackOut_64_0;
                                             return stackIn_65_0 != 0;
@@ -569,8 +562,7 @@ class rn extends ag {
                                         }
                                       }
                                     } else {
-                                      int discarded$7 = 0;
-                                      this.c();
+                                      this.c(false);
                                       stackOut_56_0 = 1;
                                       stackIn_57_0 = stackOut_56_0;
                                       return stackIn_57_0 != 0;
@@ -714,7 +706,7 @@ class rn extends ag {
         return stackIn_77_0 != 0;
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         kh var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -802,7 +794,7 @@ class rn extends ag {
         }
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         if (((rn) this).field_o instanceof bn) {
             ((bn) (Object) ((rn) this).field_o).b((rn) this, 117);
         }
@@ -905,7 +897,7 @@ class rn extends ag {
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, byte param1) {
         int var3_int = 0;
         if (((rn) this).field_H != -1) {
             var3_int = ((rn) this).field_H - ((rn) this).field_g.length();
@@ -965,68 +957,34 @@ class rn extends ag {
                 var4 = hd.a(param1, (byte) 126) ? 1 : 0;
                 var5 = new vg();
                 var5.field_f = (short)param1.d(28089, 16);
-                int discarded$37 = 16;
-                int discarded$38 = 16;
-                var5.field_b = eo.a(param1, var5.field_b);
-                int discarded$39 = 16;
-                int discarded$40 = 16;
-                var5.field_B = eo.a(param1, var5.field_B);
-                int discarded$41 = 16;
-                int discarded$42 = 16;
-                var5.field_L = eo.a(param1, var5.field_L);
+                var5.field_b = eo.a(param1, var5.field_b, 16, 16);
+                var5.field_B = eo.a(param1, var5.field_B, 16, 16);
+                var5.field_L = eo.a(param1, var5.field_L, 16, 16);
                 var5.field_G = (short)param1.d(28089, 16);
-                int discarded$43 = 16;
-                int discarded$44 = 16;
-                var5.field_U = eo.a(param1, var5.field_U);
-                int discarded$45 = 16;
-                int discarded$46 = 16;
-                var5.field_T = eo.a(param1, var5.field_T);
-                int discarded$47 = 16;
-                int discarded$48 = 16;
-                var5.field_O = eo.a(param1, var5.field_O);
+                var5.field_U = eo.a(param1, var5.field_U, 16, 16);
+                var5.field_T = eo.a(param1, var5.field_T, 16, 16);
+                var5.field_O = eo.a(param1, var5.field_O, 16, 16);
                 if (var3 == 0) {
                   break L1;
                 } else {
                   var5.field_A = (short)param1.d(28089, 16);
-                  int discarded$49 = 16;
-                  int discarded$50 = 16;
-                  var5.field_r = eo.a(param1, var5.field_r);
-                  int discarded$51 = 16;
-                  int discarded$52 = 16;
-                  var5.field_e = eo.a(param1, var5.field_e);
-                  int discarded$53 = 16;
-                  int discarded$54 = 16;
-                  var5.field_S = eo.a(param1, var5.field_S);
-                  int discarded$55 = 16;
-                  int discarded$56 = 16;
-                  var5.field_w = eo.a(param1, var5.field_w);
-                  int discarded$57 = 16;
-                  int discarded$58 = 16;
-                  var5.field_q = eo.a(param1, var5.field_q);
-                  int discarded$59 = 16;
-                  int discarded$60 = 16;
-                  var5.field_u = eo.a(param1, var5.field_u);
+                  var5.field_r = eo.a(param1, var5.field_r, 16, 16);
+                  var5.field_e = eo.a(param1, var5.field_e, 16, 16);
+                  var5.field_S = eo.a(param1, var5.field_S, 16, 16);
+                  var5.field_w = eo.a(param1, var5.field_w, 16, 16);
+                  var5.field_q = eo.a(param1, var5.field_q, 16, 16);
+                  var5.field_u = eo.a(param1, var5.field_u, 16, 16);
                   break L1;
                 }
               }
               L2: {
                 if (var4 != 0) {
-                  int discarded$61 = param1.d(28089, 16);
-                  int discarded$62 = 16;
-                  int discarded$63 = 16;
-                  var5.field_Q = eo.a(param1, var5.field_Q);
-                  int discarded$64 = 16;
-                  int discarded$65 = 16;
-                  var5.field_d = eo.a(param1, var5.field_d);
-                  int discarded$66 = 16;
-                  int discarded$67 = 16;
-                  var5.field_D = eo.a(param1, var5.field_D);
-                  int discarded$68 = 16;
-                  int discarded$69 = 16;
-                  var5.field_s = eo.a(param1, var5.field_s);
-                  int discarded$70 = 16;
-                  int discarded$71 = 16;
-                  var5.field_h = eo.a(param1, var5.field_h);
+                  int discarded$1 = param1.d(28089, 16);
+                  var5.field_Q = eo.a(param1, var5.field_Q, 16, 16);
+                  var5.field_d = eo.a(param1, var5.field_d, 16, 16);
+                  var5.field_D = eo.a(param1, var5.field_D, 16, 16);
+                  var5.field_s = eo.a(param1, var5.field_s, 16, 16);
+                  var5.field_h = eo.a(param1, var5.field_h, 16, 16);
                   break L2;
                 } else {
                   break L2;
@@ -1036,9 +994,7 @@ class rn extends ag {
                 if (!hd.a(param1, (byte) 126)) {
                   break L3;
                 } else {
-                  int discarded$72 = 16;
-                  int discarded$73 = 16;
-                  var5.field_z = eo.a(param1, var5.field_z);
+                  var5.field_z = eo.a(param1, var5.field_z, 16, 16);
                   break L3;
                 }
               }
@@ -1112,16 +1068,14 @@ class rn extends ag {
         return stackIn_21_0;
     }
 
-    private final void g() {
-        int discarded$0 = -23916;
-        String var2 = this.k();
+    private final void g(byte param0) {
+        String var2 = this.k(-23916);
         if (var2.length() > 0) {
-            int discarded$1 = -23916;
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.k()), (java.awt.datatransfer.ClipboardOwner) null);
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.k(-23916)), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
-    private final String k() {
+    private final String k(int param0) {
         int var2 = ((rn) this).field_J >= ((rn) this).field_N ? ((rn) this).field_N : ((rn) this).field_J;
         int var3 = ((rn) this).field_N <= ((rn) this).field_J ? ((rn) this).field_J : ((rn) this).field_N;
         return ((rn) this).field_g.substring(var2, var3);

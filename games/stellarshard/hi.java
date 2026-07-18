@@ -73,7 +73,7 @@ final class hi extends java.awt.Canvas {
         }
     }
 
-    final static bk a(String param0) {
+    final static bk a(String param0, boolean param1) {
         RuntimeException var2 = null;
         bk stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -144,7 +144,7 @@ final class hi extends java.awt.Canvas {
         return stackIn_4_0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         vi.a(true);
     }
 

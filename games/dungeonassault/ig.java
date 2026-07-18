@@ -9,7 +9,7 @@ final class ig {
         im.field_b.a(param1, false);
     }
 
-    final static void a(String[] args) {
+    final static void a(String[] args, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -51,8 +51,7 @@ final class ig {
                   if (var2_int == -1) {
                     break L2;
                   } else {
-                    int discarded$7 = 30496;
-                    args[var4] = jk.a(new String[1], "<col=<%0>>") + var5;
+                    args[var4] = jk.a(new String[1], "<col=<%0>>", 30496) + var5;
                     break L2;
                   }
                 }
@@ -65,8 +64,7 @@ final class ig {
                       break L3;
                     } else {
                       var9 = var5.substring(5 + var6, var8);
-                      int discarded$8 = 16;
-                      var2_int = hl.a(-120, (CharSequence) (Object) var9);
+                      var2_int = hl.a(-120, (CharSequence) (Object) var9, 16);
                       break L3;
                     }
                   } else {
@@ -117,7 +115,7 @@ final class ig {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         int var1 = 0;
         if (oo.field_d <= 32) {
             sf.d(-110, 0);
@@ -130,11 +128,11 @@ final class ig {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 
-    final static int b() {
+    final static int b(int param0) {
         int var1 = 0;
         int var2 = 0;
         if (null != dd.field_E) {

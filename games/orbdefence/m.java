@@ -10,7 +10,7 @@ final class m {
     static String field_e;
     static int field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_e = null;
         field_d = null;
@@ -57,8 +57,7 @@ final class m {
             if (param5.b((byte) -100)) {
               L1: {
                 if (param1 == 0) {
-                  int discarded$2 = -119;
-                  var10 = a.a(param5);
+                  var10 = a.a(param5, -119);
                   var6_array = var10;
                   if (var6_array != null) {
                     var7_int = 0;
@@ -101,8 +100,7 @@ final class m {
                       stackIn_27_0 = stackOut_26_0;
                       break L0;
                     } else {
-                      int discarded$3 = -23144;
-                      tj.a(param5, var7);
+                      tj.a(param5, var7, -23144);
                       stackOut_24_0 = null;
                       stackIn_25_0 = stackOut_24_0;
                       return (java.awt.Frame) (Object) stackIn_25_0;
@@ -156,7 +154,7 @@ final class m {
         return stackIn_27_0;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         bm.field_d.a((byte) 82, 0, 0);
     }
 

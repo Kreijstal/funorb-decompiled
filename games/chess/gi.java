@@ -29,10 +29,8 @@ final class gi {
         StringBuilder stackOut_5_1 = null;
         String stackOut_5_2 = null;
         try {
-          int discarded$9 = 83;
-          if (tj.a(param2, param0, param3)) {
-            int discarded$10 = 0;
-            return th.b();
+          if (tj.a(param2, param0, param3, (byte) 83)) {
+            return th.b(0);
           } else {
             return null;
           }
@@ -68,7 +66,7 @@ final class gi {
         }
     }
 
-    final static void a(int param0, le param1, int param2, boolean param3, le param4) {
+    final static void a(int param0, le param1, int param2, boolean param3, le param4, int param5) {
         try {
             ek.field_b = 2;
             kl.field_i = 8;
@@ -80,7 +78,7 @@ final class gi {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_g = null;
         field_a = null;

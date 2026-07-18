@@ -24,15 +24,14 @@ final class ne extends cj implements nc, ij {
         }
     }
 
-    private final void i() {
+    private final void i(int param0) {
         if (!(this.k(-76))) {
             return;
         }
-        int discarded$0 = -70;
-        kr.a(((ne) this).field_H.field_w);
+        kr.a(((ne) this).field_H.field_w, (byte) -70);
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         il.field_k = new cr(0L, (cr) null);
         if (!(!db.field_S)) {
             il.field_k.b(bf.field_c, 121);
@@ -45,7 +44,7 @@ final class ne extends cj implements nc, ij {
         jr.a(98);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_G = null;
         field_O = null;
         field_N = null;
@@ -54,8 +53,7 @@ final class ne extends cj implements nc, ij {
     }
 
     private final boolean k(int param0) {
-        int discarded$0 = 1;
-        if (!(this.a((ik) (Object) ((ne) this).field_H))) {
+        if (!(this.a((ik) (Object) ((ne) this).field_H, true))) {
             return false;
         }
         int var2 = -24 / ((param0 - -7) / 56);
@@ -250,8 +248,7 @@ final class ne extends cj implements nc, ij {
                 if (param1 != ((ne) this).field_L) {
                   break L1;
                 } else {
-                  int discarded$2 = -95;
-                  this.i();
+                  this.i(-95);
                   break L1;
                 }
               }
@@ -291,7 +288,7 @@ final class ne extends cj implements nc, ij {
         }
     }
 
-    private final int a(String param0, String param1, iq param2, int param3, int param4) {
+    private final int a(String param0, String param1, iq param2, int param3, int param4, boolean param5) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -464,8 +461,7 @@ final class ne extends cj implements nc, ij {
         var2.a(false, 20, var3, 50, 270);
         var3 += 50;
         ((ne) this).c((byte) -117, var2);
-        int discarded$0 = 0;
-        var3 = var3 + (this.a(kd.field_q, jg.field_m, (iq) (Object) ((ne) this).field_H, 170, var3) - -5);
+        var3 = var3 + (this.a(kd.field_q, jg.field_m, (iq) (Object) ((ne) this).field_H, 170, var3, false) - -5);
         ((ne) this).field_L.a(false, -var5 + 496 >> 1, var3, 40, var5);
         ((ne) this).field_M.a(false, 3 + var4, var3 + 15, 40, 60);
         ((ne) this).field_M.field_v = (uf) this;
@@ -480,6 +476,7 @@ final class ne extends cj implements nc, ij {
 
     final boolean a(char param0, int param1, int param2, iq param3) {
         RuntimeException var5 = null;
+        Object var6 = null;
         int stackIn_5_0 = 0;
         boolean stackIn_8_0 = false;
         boolean stackIn_11_0 = false;
@@ -510,8 +507,8 @@ final class ne extends cj implements nc, ij {
               if (param1 == 13) {
                 break L1;
               } else {
-                int discarded$4 = 0;
-                int discarded$5 = this.a((String) null, (String) null, (iq) null, -104, -105);
+                var6 = null;
+                int discarded$2 = this.a((String) null, (String) null, (iq) null, -104, -105, false);
                 break L1;
               }
             }
@@ -570,7 +567,7 @@ final class ne extends cj implements nc, ij {
         return stackIn_13_0 != 0;
     }
 
-    private final boolean a(ik param0) {
+    private final boolean a(ik param0, boolean param1) {
         of var3 = null;
         RuntimeException var3_ref = null;
         ba var4 = null;

@@ -101,7 +101,7 @@ final class pi extends mi {
               break L0;
             } else {
               var12 = null;
-              boolean discarded$4 = ((pi) this).a((ea) null, (byte) -125);
+              boolean discarded$1 = ((pi) this).a((ea) null, (byte) -125);
               break L0;
             }
           }
@@ -143,8 +143,7 @@ final class pi extends mi {
                     if (var10 > ms.field_c.field_n) {
                       break L4;
                     } else {
-                      int discarded$5 = -14492;
-                      cm.a(ms.field_c);
+                      cm.a(ms.field_c, -14492);
                       vp.a();
                       break L3;
                     }
@@ -152,13 +151,11 @@ final class pi extends mi {
                 }
               }
               ms.field_c = new ll(var9, var10);
-              int discarded$6 = -14492;
-              cm.a(ms.field_c);
+              cm.a(ms.field_c, -14492);
               break L3;
             }
             var15.a(112, 144, var15.field_v << 4, var15.field_q << 4, -((pi) this).field_y << 10, 4096);
-            int discarded$7 = 2765;
-            sl.c();
+            sl.c(2765);
             ms.field_c.d(var5 + -var15.field_v, -var15.field_q + var6, 256);
             break L1;
           }
@@ -249,8 +246,9 @@ final class pi extends mi {
             Throwable var8_ref_Throwable = null;
             int var8 = 0;
             int var9 = 0;
-            String var10 = null;
-            CharSequence var11 = null;
+            Object var10 = null;
+            String var11 = null;
+            CharSequence var12 = null;
             int stackIn_5_0 = 0;
             int stackIn_29_0 = 0;
             int stackIn_41_0 = 0;
@@ -324,12 +322,11 @@ final class pi extends mi {
                   } else {
                     L3: {
                       if (!param5) {
-                        int discarded$13 = 0;
-                        dq.field_a = op.a(param4, false, param1);
+                        dq.field_a = op.a(param4, false, param1, false);
                         break L3;
                       } else {
-                        int discarded$14 = 1;
-                        dq.field_a = wb.a(false, (String) null, param4, as.field_b);
+                        var10 = null;
+                        dq.field_a = wb.a(false, (String) null, param4, as.field_b, true);
                         break L3;
                       }
                     }
@@ -401,8 +398,7 @@ final class pi extends mi {
                               ag.field_s = -1;
                               break L7;
                             } else {
-                              int discarded$15 = 1;
-                              te.b();
+                              te.b(true);
                               ld.field_d = false;
                               stackOut_28_0 = var6_int;
                               stackIn_29_0 = stackOut_28_0;
@@ -429,13 +425,12 @@ final class pi extends mi {
                       L10: {
                         as.field_b = nm.field_c.h((byte) -87);
                         ln.field_d = nm.field_c.g(37);
-                        int discarded$16 = nm.field_c.g(103);
+                        int discarded$6 = nm.field_c.g(103);
                         qr.field_a = nm.field_c.i((byte) 0);
-                        var10 = nm.field_c.e((byte) -122);
+                        var11 = nm.field_c.e((byte) -122);
                         var7 = nm.field_c.g(118);
                         if (0 != (1 & var7)) {
-                          int discarded$17 = 0;
-                          eu.b();
+                          eu.b(0);
                           break L10;
                         } else {
                           break L10;
@@ -480,9 +475,9 @@ final class pi extends mi {
                         if (!gl.field_a) {
                           break L14;
                         } else {
-                          int discarded$18 = nm.field_c.g(-83);
-                          int discarded$19 = nm.field_c.g(105);
-                          int discarded$20 = nm.field_c.a((byte) 123);
+                          int discarded$7 = nm.field_c.g(-83);
+                          int discarded$8 = nm.field_c.g(105);
+                          int discarded$9 = nm.field_c.a((byte) 123);
                           ag.field_r = nm.field_c.i((byte) 0);
                           nc.field_c = new byte[ag.field_r];
                           var8 = 0;
@@ -499,8 +494,8 @@ final class pi extends mi {
                       }
                       L16: {
                         fj.field_a = nm.field_c.h(-17883);
-                        var11 = (CharSequence) (Object) fj.field_a;
-                        cf.field_h = vu.a(127, var11);
+                        var12 = (CharSequence) (Object) fj.field_a;
+                        cf.field_h = vu.a(127, var12);
                         un.field_c = nm.field_c.g(-95);
                         ca.field_f = wq.field_e;
                         if (dq.field_a.a(-78) == jd.field_a) {
@@ -517,10 +512,10 @@ final class pi extends mi {
                       }
                       L17: {
                         ld.field_d = false;
-                        if (var10 == null) {
+                        if (var11 == null) {
                           break L17;
                         } else {
-                          sf.a((byte) -122, bm.m(123), var10);
+                          sf.a((byte) -122, bm.m(123), var11);
                           break L17;
                         }
                       }
@@ -534,7 +529,7 @@ final class pi extends mi {
                             } else {
                               try {
                                 L20: {
-                                  Object discarded$21 = fe.a("unzap", (byte) -108, bm.m(115));
+                                  Object discarded$10 = fe.a("unzap", (byte) -108, bm.m(115));
                                   break L20;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -550,8 +545,7 @@ final class pi extends mi {
                         }
                         try {
                           L22: {
-                            int discarded$22 = 28304;
-                            Object discarded$23 = fe.a("zap", -15201, new Object[1], bm.m(119));
+                            Object discarded$11 = fe.a("zap", -15201, new Object[1], bm.m(119));
                             break L22;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -597,8 +591,7 @@ final class pi extends mi {
                       break L26;
                     } else {
                       L27: {
-                        int discarded$24 = 1;
-                        te.b();
+                        te.b(true);
                         if (qs.field_b != 7) {
                           break L27;
                         } else {
@@ -632,8 +625,7 @@ final class pi extends mi {
                   if (null == ft.field_l) {
                     if (ld.field_d) {
                       L30: {
-                        int discarded$25 = -1;
-                        if (30000L < gm.g()) {
+                        if (30000L < gm.g(-1)) {
                           rp.field_m = rm.field_c;
                           break L30;
                         } else {

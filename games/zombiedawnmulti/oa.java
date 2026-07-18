@@ -7,7 +7,7 @@ final class oa {
     static ao field_a;
     static String field_b;
 
-    final static fq a(ga param0) {
+    final static fq a(ga param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -164,7 +164,7 @@ final class oa {
         return stackIn_8_0 != 0;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -253,7 +253,7 @@ final class oa {
         return stackIn_20_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
     }

@@ -7,7 +7,7 @@ final class ej {
     static String field_b;
     static uca[] field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_b = null;
@@ -68,8 +68,7 @@ final class ej {
                   if (var3_int > 12) {
                     break L1;
                   } else {
-                    int discarded$1 = -107;
-                    ej.a();
+                    ej.a(-107);
                     var4 = jd.a(1, param2);
                     if (var4 == null) {
                       stackOut_13_0 = 0;

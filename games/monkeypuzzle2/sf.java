@@ -1059,8 +1059,8 @@ final class sf extends ug {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
+                                    int discarded$3 = sf.f(16);
                                     int discarded$4 = sf.f(16);
-                                    int discarded$5 = sf.f(16);
                                     field_x[var6] = sf.f(8);
                                     var6++;
                                     continue L6;
@@ -1085,7 +1085,7 @@ final class sf extends ug {
                       }
                     }
                   } else {
-                    int discarded$6 = sf.f(16);
+                    int discarded$5 = sf.f(16);
                     var3++;
                     continue L2;
                   }
@@ -1145,8 +1145,7 @@ final class sf extends ug {
                               continue L0;
                             }
                           } else {
-                            int discarded$7 = 76;
-                            var9[var11] = bc.a(var11, var10);
+                            var9[var11] = bc.a(var11, var10, (byte) 76);
                             var11++;
                             continue L12;
                           }

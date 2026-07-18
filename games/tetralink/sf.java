@@ -24,7 +24,7 @@ final class sf implements Iterator {
         ((sf) this).field_f = null;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_a = null;

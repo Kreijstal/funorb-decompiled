@@ -138,7 +138,7 @@ final class dg implements ub {
         }
     }
 
-    final static String b() {
+    final static String b(int param0) {
         if (null == tb.field_cb) {
             return "";
         }
@@ -427,9 +427,8 @@ final class dg implements ub {
         return null == pn.field_i ? null : (om) (Object) pn.field_i.a((long)param0, -1);
     }
 
-    final static void a() {
-        int discarded$0 = 1;
-        bd.a(17);
+    final static void a(boolean param0) {
+        bd.a(17, true);
     }
 
     final static void a(int param0, int param1, int param2, jp param3, jp param4, int param5, int param6, jp param7, int param8, int param9) {

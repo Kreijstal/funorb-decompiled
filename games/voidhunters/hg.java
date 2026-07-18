@@ -97,7 +97,7 @@ final class hg implements ntb {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_a = null;
     }
@@ -127,7 +127,7 @@ final class hg implements ntb {
             L1: {
               var5 = (hg) (Object) param1;
               var6 = var5;
-              var6.field_d = var5.field_d;
+              var6.field_d = ((hg) this).field_d;
               if (param0 > 54) {
                 break L1;
               } else {
@@ -245,8 +245,7 @@ final class hg implements ntb {
                   break L5;
                 }
               }
-              int discarded$2 = 0;
-              fpb.a(param1);
+              fpb.a(param1, 0);
               break L0;
             }
           }
@@ -321,7 +320,7 @@ final class hg implements ntb {
             L1: {
               var3 = (hg) (Object) param1;
               var4 = -84 % ((22 - param0) / 59);
-              if (var3.field_d == var3.field_d) {
+              if (((hg) this).field_d == var3.field_d) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -403,9 +402,9 @@ final class hg implements ntb {
             if (param1 <= -19) {
               L1: {
                 var4 = 0;
-                if (var3.field_d != var3.field_d) {
+                if (((hg) this).field_d != var3.field_d) {
                   var4 = 1;
-                  iva.a(-6940, "int playerid has changed. before=" + var3.field_d + ", now=" + var3.field_d);
+                  iva.a(-6940, "int playerid has changed. before=" + var3.field_d + ", now=" + ((hg) this).field_d);
                   break L1;
                 } else {
                   break L1;

@@ -6,7 +6,7 @@ final class pl {
     static String field_a;
     static String field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_b = null;

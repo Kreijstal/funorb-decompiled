@@ -15,13 +15,13 @@ final class kg extends kn {
     private int field_U;
     private lh field_Q;
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_O = null;
         field_P = null;
         field_T = null;
     }
 
-    final static int b() {
+    final static int b(boolean param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -34,8 +34,7 @@ final class kg extends kn {
           L0: {
             var1_int = 0;
             L1: while (true) {
-              int discarded$8 = 18954;
-              if (!kf.d()) {
+              if (!kf.d(18954)) {
                 L2: {
                   nj.field_u.a(qn.a((byte) 107, re.field_m, ag.field_f), 99, qn.a((byte) 107, hn.field_k, rf.field_b));
                   if (nj.field_u.d((byte) 55)) {
@@ -53,8 +52,7 @@ final class kg extends kn {
                     if (nj.field_u.field_h >= 0) {
                       var2 = eh.field_L[nj.field_u.field_h];
                       if (var2 == 2) {
-                        int discarded$9 = 5;
-                        um.a();
+                        um.a(5);
                         break L3;
                       } else {
                         break L3;

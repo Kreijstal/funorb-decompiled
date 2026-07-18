@@ -42,8 +42,7 @@ final class vq extends oq {
         }
         lb.b(0, 0, 640, 480);
         ((vq) this).g(124);
-        int discarded$0 = 0;
-        pg.d();
+        pg.d(0);
         ((vq) this).a(0);
     }
 

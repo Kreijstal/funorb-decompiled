@@ -139,7 +139,7 @@ final class ni {
         field_b = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         dj.field_l = new vo();
     }
 

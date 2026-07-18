@@ -167,9 +167,7 @@ final class ti implements Runnable {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            int discarded$5 = 38;
-            stackOut_0_0 = qc.a(param1);
+            stackOut_0_0 = qc.a(param1, 38, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -206,12 +204,12 @@ final class ti implements Runnable {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_b = null;
     }
 
-    private final void a(ql param0) {
+    private final void a(ql param0, boolean param1) {
         synchronized (((ti) this).field_d) {
             ((ti) this).field_d.a((pj) (Object) param0, (byte) -120);
             ((ti) this).field_e = ((ti) this).field_e + 1;
@@ -263,8 +261,7 @@ final class ti implements Runnable {
             var5.field_x = param1;
             var5.field_t = false;
             var5.field_y = param2;
-            int discarded$2 = 1;
-            this.a(var5);
+            this.a(var5, true);
             stackOut_0_0 = (ql) var5;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -357,8 +354,7 @@ final class ti implements Runnable {
             var5 = 119 % ((56 - param1) / 55);
             var4.field_t = false;
             var4.field_w = param2;
-            int discarded$2 = 1;
-            this.a(var4);
+            this.a(var4, true);
             stackOut_0_0 = (ql) var4;
             stackIn_1_0 = stackOut_0_0;
             break L0;

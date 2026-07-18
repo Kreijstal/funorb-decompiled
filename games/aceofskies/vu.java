@@ -90,13 +90,12 @@ final class vu {
                               var6++;
                               break L5;
                             } else {
-                              int discarded$2 = -70;
-                              var8 = rr.a((char) var7);
+                              var8 = rr.a((char) var7, (byte) -70);
                               if (var8 == 0) {
                                 var6++;
                                 break L5;
                               } else {
-                                StringBuilder discarded$3 = var5.append((char) var8);
+                                StringBuilder discarded$1 = var5.append((char) var8);
                                 var6++;
                                 break L5;
                               }
@@ -260,7 +259,7 @@ final class vu {
         return stackIn_11_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
     }
 

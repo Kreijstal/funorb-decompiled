@@ -7,12 +7,12 @@ final class vi {
     static String field_a;
     static String field_b;
 
-    final static void a() {
+    final static void a(int param0) {
         kg.field_m = -1;
         nd.field_i.d((byte) 66);
     }
 
-    final static byte a(char param0) {
+    final static byte a(char param0, boolean param1) {
         int var2 = 0;
         if (0 < param0) {
           if (param0 >= 128) {

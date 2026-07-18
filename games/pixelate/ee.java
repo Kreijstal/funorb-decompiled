@@ -46,7 +46,7 @@ final class ee {
         return stackIn_9_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         pc var1_ref = null;
         int var2 = 0;
@@ -140,9 +140,9 @@ final class ee {
                 if (var6 == null) {
                   var6 = new im();
                   hq.field_q.a(false, (lm) (Object) var6, (long)var8.hashCode());
-                  int fieldTemp$5 = aj.field_t;
+                  int fieldTemp$2 = aj.field_t;
                   aj.field_t = aj.field_t + 1;
-                  var6.field_Kb = fieldTemp$5;
+                  var6.field_Kb = fieldTemp$2;
                   bq.field_b.a(22125, (fa) (Object) var6);
                   break L7;
                 } else {
@@ -169,15 +169,18 @@ final class ee {
                   if (var2 != 3) {
                     if (4 != var2) {
                       jo.a(1, "F1: " + jm.b(-8), (Throwable) null);
-                      na.a(true);
-                      break L0;
+                      if (param0 < -89) {
+                        na.a(true);
+                        break L0;
+                      } else {
+                        return;
+                      }
                     } else {
                       gk.field_db = 1;
                       var3 = var1_ref.h(5);
                       qp.field_L = var3.intern();
                       var4 = var1_ref.f(255);
-                      int discarded$6 = -113;
-                      vm.b(var4);
+                      vm.b(var4, (byte) -113);
                       return;
                     }
                   } else {
@@ -214,13 +217,11 @@ final class ee {
                 L12: {
                   var4_ref_String = var1_ref.h(5);
                   var5 = var1_ref.h(5);
-                  int discarded$7 = -1;
-                  var6 = re.a(var4_ref_String);
+                  var6 = re.a(var4_ref_String, -1);
                   if (null != var6) {
                     break L12;
                   } else {
-                    int discarded$8 = -1;
-                    var6 = re.a(var5);
+                    var6 = re.a(var5, -1);
                     if (null != var6) {
                       vm.field_b.a(false, (lm) (Object) var6, (long)dh.a((CharSequence) (Object) var4_ref_String, (byte) 29).hashCode());
                       break L12;
@@ -233,9 +234,9 @@ final class ee {
                   if (null == var6) {
                     var6 = new im();
                     vm.field_b.a(false, (lm) (Object) var6, (long)dh.a((CharSequence) (Object) var4_ref_String, (byte) 70).hashCode());
-                    int fieldTemp$9 = f.field_q;
+                    int fieldTemp$3 = f.field_q;
                     f.field_q = f.field_q + 1;
-                    var6.field_Kb = fieldTemp$9;
+                    var6.field_Kb = fieldTemp$3;
                     vp.field_Hb.a(22125, (fa) (Object) var6);
                     break L13;
                   } else {
@@ -308,7 +309,7 @@ final class ee {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "ee.C(" + -123 + ')');
+          throw aa.a((Throwable) (Object) var1, "ee.C(" + param0 + ')');
         }
     }
 
@@ -368,11 +369,19 @@ final class ee {
         return stackIn_12_0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
+            L1: {
+              if (param0 == -3) {
+                break L1;
+              } else {
+                field_c = null;
+                break L1;
+              }
+            }
             field_a = null;
             field_c = null;
             break L0;
@@ -380,7 +389,7 @@ final class ee {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "ee.H(" + -3 + ')');
+          throw aa.a((Throwable) (Object) var1, "ee.H(" + param0 + ')');
         }
     }
 
@@ -474,7 +483,7 @@ final class ee {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException runtimeException = null;
         int var1_int = 0;
         int var2 = 0;
@@ -484,7 +493,7 @@ final class ee {
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
-            var1_int = kb.field_N[0];
+            var1_int = kb.field_N[param0];
             var2 = 1;
             L1: while (true) {
               L2: {
@@ -515,7 +524,7 @@ final class ee {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) runtimeException, "ee.A(" + 0 + ')');
+          throw aa.a((Throwable) (Object) runtimeException, "ee.A(" + param0 + ')');
         }
     }
 

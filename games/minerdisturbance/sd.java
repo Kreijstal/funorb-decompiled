@@ -13,7 +13,7 @@ final class sd implements Iterable {
     static int[] field_c;
     static ta field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_d = null;
         field_g = null;

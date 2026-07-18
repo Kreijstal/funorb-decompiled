@@ -9,7 +9,7 @@ final class dk {
         field_b = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
     }
 
     final static aa a(int param0, byte param1) {
@@ -18,8 +18,7 @@ final class dk {
         int var4 = 0;
         aa[] var5 = null;
         var4 = TrackController.field_F ? 1 : 0;
-        int discarded$2 = 0;
-        var5 = fi.e();
+        var5 = fi.e(0);
         var2 = var5;
         var3 = 0;
         L0: while (true) {

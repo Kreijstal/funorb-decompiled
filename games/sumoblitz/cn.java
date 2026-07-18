@@ -9,7 +9,7 @@ final class cn extends dq {
     int field_kb;
     static String field_hb;
 
-    final static void a(String param0, java.applet.Applet param1) {
+    final static void a(String param0, java.applet.Applet param1, byte param2) {
         try {
             java.net.URL var3 = null;
             Exception var3_ref = null;
@@ -123,13 +123,13 @@ final class cn extends dq {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_ib = null;
         field_hb = null;
         field_P = null;
     }
 
-    final static void a(float param0, ab param1, int param2, byte[] param3, int param4, float param5, float param6, float param7, int param8, float param9) {
+    final static void a(float param0, ab param1, int param2, byte[] param3, int param4, float param5, float param6, float param7, int param8, float param9, int param10, int param11, int param12) {
         int var13_int = 0;
         RuntimeException var13 = null;
         int var14 = 0;
@@ -240,7 +240,7 @@ final class cn extends dq {
         super(0L, (dq) null);
     }
 
-    final static String[] a(char param0, String param1) {
+    final static String[] a(char param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;

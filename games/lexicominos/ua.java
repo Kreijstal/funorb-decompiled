@@ -594,7 +594,7 @@ final class ua {
         }
     }
 
-    final static la a(String param0) {
+    final static la a(String param0, int param1) {
         RuntimeException var2 = null;
         la stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;

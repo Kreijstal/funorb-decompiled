@@ -169,8 +169,7 @@ final class cd {
           L0: {
             if (!hk.a(true, param0)) {
               if (!fm.a((byte) -111, param0)) {
-                int discarded$8 = 25326;
-                if (va.b(param0)) {
+                if (va.b(param0, 25326)) {
                   stackOut_8_0 = 0;
                   stackIn_9_0 = stackOut_8_0;
                   return stackIn_9_0 != 0;

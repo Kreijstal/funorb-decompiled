@@ -64,7 +64,7 @@ final class ru extends tn {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_j = null;
         field_d = null;
         field_l = null;

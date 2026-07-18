@@ -48,8 +48,7 @@ final class ib extends kj implements tb, sg {
                 if (!eh.a(param1 ^ 43)) {
                   qg.b();
                   v.e(240, 320, 101);
-                  int discarded$56 = 0;
-                  nj.a(0, 0, param0);
+                  nj.a(0, 0, param0, 0);
                   break L2;
                 } else {
                   if (gj.field_c != 0) {
@@ -57,8 +56,7 @@ final class ib extends kj implements tb, sg {
                     break L2;
                   } else {
                     ll.a(0, false, param2);
-                    int discarded$57 = 0;
-                    nj.a(0, 0, param0);
+                    nj.a(0, 0, param0, 0);
                     break L2;
                   }
                 }
@@ -163,9 +161,7 @@ final class ib extends kj implements tb, sg {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$4 = 35;
-            int discarded$5 = 83;
-            stackOut_0_0 = this.a(170, param4, param5, 70, param0);
+            stackOut_0_0 = this.a(170, param4, param5, 70, param0, 83, 35);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -408,8 +404,7 @@ final class ib extends kj implements tb, sg {
                   break L2;
                 }
               } else {
-                int discarded$8 = 116;
-                nd.b();
+                nd.b((byte) 116);
                 break L2;
               }
             }
@@ -601,8 +596,7 @@ final class ib extends kj implements tb, sg {
                     case 4: {
                         try {
                             var2 = "tuhstatbut";
-                            int discarded$2 = 20511;
-                            var3 = (String) ff.a("getcookies", param1);
+                            var3 = (String) ff.a("getcookies", param1, 20511);
                             var4 = dl.a(var3, ';', -26);
                             var5 = 0;
                             statePc = 5;
@@ -923,7 +917,7 @@ final class ib extends kj implements tb, sg {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_M = null;
         field_N = null;
         field_O = null;
@@ -985,7 +979,7 @@ final class ib extends kj implements tb, sg {
         }
     }
 
-    private final int a(int param0, String param1, ee param2, int param3, String param4) {
+    private final int a(int param0, String param1, ee param2, int param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         dh var9 = null;
         bg var10 = null;
@@ -1255,8 +1249,7 @@ final class ib extends kj implements tb, sg {
               pk.field_e.a(wa.field_rb[1], false);
               pk.field_e.a(wa.field_rb[2], false);
               pk.field_e.a(wa.field_rb[3], false);
-              int discarded$1 = -13;
-              hc.a(pk.field_e);
+              hc.a(pk.field_e, (byte) -13);
               pk.field_e.a(param0, (byte) 106);
               param3.a(pk.field_e, -76);
               dk.field_s.field_q = 0;

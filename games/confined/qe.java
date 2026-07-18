@@ -244,7 +244,7 @@ final class qe extends am {
         return stackIn_10_0 != 0;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_J = null;
         field_O = null;
     }

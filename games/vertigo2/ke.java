@@ -508,7 +508,7 @@ final class ke {
         return stackIn_14_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_e = null;
         field_c = null;
@@ -962,8 +962,7 @@ final class ke {
                   if (param0 == null) {
                     break L1;
                   } else {
-                    int discarded$2 = 0;
-                    var3_ref = gb.a(param0);
+                    var3_ref = gb.a(param0, false);
                     break L1;
                   }
                 }
@@ -1049,7 +1048,7 @@ final class ke {
                         L6: {
                           if (var4.field_b == 1) {
                             var5 = (DataInputStream) var4.field_d;
-                            int discarded$3 = var5.read();
+                            int discarded$1 = var5.read();
                             var5.close();
                             break L6;
                           } else {

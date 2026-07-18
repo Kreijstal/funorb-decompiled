@@ -9,7 +9,7 @@ final class ea {
     static float field_d;
     static bd field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_b = null;
         field_a = null;
@@ -38,8 +38,7 @@ final class ea {
         try {
           L0: {
             L1: {
-              int discarded$6 = 118;
-              me.a((java.awt.Component) (Object) param0);
+              me.a((java.awt.Component) (Object) param0, 118);
               dc.a((java.awt.Component) (Object) param0, (byte) 48);
               if (null == h.field_b) {
                 break L1;

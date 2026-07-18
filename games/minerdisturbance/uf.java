@@ -488,7 +488,7 @@ final class uf extends ch {
         field_p = null;
     }
 
-    private final void a(boolean param0) {
+    private final void a(boolean param0, int param1) {
         try {
             IOException iOException = null;
             Exception var4 = null;
@@ -562,7 +562,7 @@ final class uf extends ch {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -636,10 +636,8 @@ final class uf extends ch {
                   }
                 }
                 ((uf) this).field_s = (ll) param0;
-                int discarded$2 = -101;
-                this.e();
-                int discarded$3 = -18232;
-                this.a(param1);
+                this.e(-101);
+                this.a(param1, -18232);
                 if (param2 == 24458) {
                   ((uf) this).field_c = null;
                   ((uf) this).field_a.field_o = 0;

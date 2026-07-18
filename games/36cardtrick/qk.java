@@ -1329,7 +1329,7 @@ final class qk {
         return (byte[]) (Object) stackIn_26_0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         int var1 = 123;
         field_i = null;
         field_h = null;

@@ -10,7 +10,7 @@ abstract class og {
 
     abstract void a(int param0, int param1, int param2, java.awt.Graphics param3);
 
-    final static void a(int param0, ut[] param1) {
+    final static void a(int param0, ut[] param1, int param2, int param3) {
         RuntimeException var4 = null;
         ut var4_ref = null;
         int var5 = 0;
@@ -228,7 +228,7 @@ abstract class og {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              StringBuilder discarded$3 = dj.a(0, ' ', -11407, c.field_a);
+              StringBuilder discarded$2 = dj.a(0, ' ', -11407, c.field_a);
               var3_int = 0;
               var4 = 0;
               var5 = -1;
@@ -268,10 +268,9 @@ abstract class og {
                     if (var11_int == 0) {
                       break L4;
                     } else {
-                      StringBuilder discarded$4 = c.field_a.append((char) var11_int);
+                      StringBuilder discarded$3 = c.field_a.append((char) var11_int);
                       var3_int++;
-                      int discarded$5 = -104;
-                      var11_int = (char)(255 & mf.a((char) var11_int));
+                      var11_int = (char)(255 & mf.a((char) var11_int, (byte) -104));
                       break L4;
                     }
                   }

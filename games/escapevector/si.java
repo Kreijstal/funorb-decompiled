@@ -231,7 +231,7 @@ final class si extends fl {
         field_u = null;
     }
 
-    final static void a(float param0, String param1, boolean param2) {
+    final static void a(float param0, String param1, boolean param2, byte param3) {
         try {
             if (!(null != jb.field_r)) {
                 jb.field_r = new w(bo.field_F, dj.field_b);
@@ -239,8 +239,7 @@ final class si extends fl {
             }
             jb.field_r.a(-100, param1, param0, param2);
             em.d();
-            int discarded$0 = 17113;
-            se.a(true);
+            se.a(true, 17113);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "si.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + 14 + ')');
         }

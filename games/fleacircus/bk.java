@@ -35,8 +35,7 @@ final class bk {
           L0: {
             if (param1 != null) {
               var2 = new dj(param1, vg.field_I, b.field_b, ij.field_H, ob.field_a, rd.field_d, of.field_d);
-              int discarded$2 = -28210;
-              c.o();
+              c.o(-28210);
               stackOut_4_0 = (dj) var2;
               stackIn_5_0 = stackOut_4_0;
               break L0;

@@ -109,8 +109,7 @@ class ul extends hc {
                           if (((ul) this).field_L == ((ul) this).field_P) {
                             break L4;
                           } else {
-                            int discarded$9 = 0;
-                            this.k();
+                            this.k(0);
                             break L4;
                           }
                         }
@@ -129,9 +128,9 @@ class ul extends hc {
                           L7: {
                             if (~((ul) this).field_L <= ~((ul) this).field_l.length()) {
                               ((ul) this).field_l = ((ul) this).field_l + param1;
-                              int dupTemp$10 = ((ul) this).field_l.length();
-                              ((ul) this).field_L = dupTemp$10;
-                              ((ul) this).field_P = dupTemp$10;
+                              int dupTemp$1 = ((ul) this).field_l.length();
+                              ((ul) this).field_L = dupTemp$1;
+                              ((ul) this).field_P = dupTemp$1;
                               break L7;
                             } else {
                               ((ul) this).field_l = ((ul) this).field_l.substring(0, ((ul) this).field_L) + param1 + ((ul) this).field_l.substring(((ul) this).field_L, ((ul) this).field_l.length());
@@ -154,8 +153,7 @@ class ul extends hc {
                   L8: {
                     if (param2 == 85) {
                       if (((ul) this).field_P != ((ul) this).field_L) {
-                        int discarded$11 = 0;
-                        this.k();
+                        this.k(0);
                         stackOut_63_0 = 1;
                         stackIn_64_0 = stackOut_63_0;
                         return stackIn_64_0 != 0;
@@ -164,8 +162,7 @@ class ul extends hc {
                           break L8;
                         } else {
                           ((ul) this).field_P = ((ul) this).field_L + -1;
-                          int discarded$12 = 0;
-                          this.k();
+                          this.k(0);
                           stackOut_61_0 = 1;
                           stackIn_62_0 = stackOut_61_0;
                           return stackIn_62_0 != 0;
@@ -214,9 +211,8 @@ class ul extends hc {
                                   stackIn_48_0 = stackOut_46_0;
                                   stackIn_47_0 = stackOut_46_0;
                                   if (ik.field_h[82]) {
-                                    int discarded$13 = 1;
                                     stackOut_48_0 = this;
-                                    stackOut_48_1 = this.o();
+                                    stackOut_48_1 = this.o(1);
                                     stackIn_49_0 = stackOut_48_0;
                                     stackIn_49_1 = stackOut_48_1;
                                     break L10;
@@ -278,16 +274,14 @@ class ul extends hc {
                                       if (param2 != 67) {
                                         break L8;
                                       } else {
-                                        int discarded$14 = 87;
-                                        this.q();
+                                        this.q(87);
                                         stackOut_36_0 = 1;
                                         stackIn_37_0 = stackOut_36_0;
                                         return stackIn_37_0 != 0;
                                       }
                                     }
                                   } else {
-                                    int discarded$15 = 0;
-                                    this.n();
+                                    this.n(0);
                                     stackOut_26_0 = 1;
                                     stackIn_27_0 = stackOut_26_0;
                                     return stackIn_27_0 != 0;
@@ -304,8 +298,7 @@ class ul extends hc {
                         }
                       } else {
                         if (((ul) this).field_P != ((ul) this).field_L) {
-                          int discarded$16 = 0;
-                          this.k();
+                          this.k(0);
                           stackOut_16_0 = 1;
                           stackIn_17_0 = stackOut_16_0;
                           return stackIn_17_0 != 0;
@@ -314,8 +307,7 @@ class ul extends hc {
                             break L8;
                           } else {
                             ((ul) this).field_P = ((ul) this).field_L + 1;
-                            int discarded$17 = 0;
-                            this.k();
+                            this.k(0);
                             stackOut_14_0 = 1;
                             stackIn_15_0 = stackOut_14_0;
                             return stackIn_15_0 != 0;
@@ -367,7 +359,7 @@ class ul extends hc {
         return stackIn_77_0 != 0;
     }
 
-    private final String l() {
+    private final String l(int param0) {
         int var2 = ((ul) this).field_P < ((ul) this).field_L ? ((ul) this).field_P : ((ul) this).field_L;
         int var3 = ((ul) this).field_L > ((ul) this).field_P ? ((ul) this).field_L : ((ul) this).field_P;
         return ((ul) this).field_l.substring(var2, var3);
@@ -392,7 +384,7 @@ class ul extends hc {
         }
     }
 
-    private final int o() {
+    private final int o(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -491,7 +483,7 @@ class ul extends hc {
         }
     }
 
-    private final void n() {
+    private final void n(int param0) {
         if (((ul) this).field_q instanceof rj) {
           ((rj) (Object) ((ul) this).field_q).a(true, (ul) this);
           int discarded$4 = ul.a(-65, 47, 47);
@@ -771,8 +763,7 @@ class ul extends hc {
                   } else {
                     L4: {
                       ((ul) this).field_P = this.p(-121);
-                      int discarded$1 = 1;
-                      ((ul) this).field_L = this.o();
+                      ((ul) this).field_L = this.o(1);
                       if (-1 <= ((ul) this).field_L) {
                         break L4;
                       } else {
@@ -830,7 +821,7 @@ class ul extends hc {
         return stackIn_18_0 != 0;
     }
 
-    final static ed a(int param0, int param1, mf param2) {
+    final static ed a(int param0, int param1, mf param2, byte param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -850,8 +841,7 @@ class ul extends hc {
         String stackOut_5_2 = null;
         try {
           if (uc.a(param2, 105, param0, param1)) {
-            int discarded$2 = 108;
-            return al.a();
+            return al.a((byte) 108);
           } else {
             return null;
           }
@@ -945,7 +935,7 @@ class ul extends hc {
         }
     }
 
-    private final void m() {
+    private final void m(int param0) {
         int var8 = EscapeVector.field_A;
         if (!((ul) this).field_J) {
             ((ul) this).field_n = 0;
@@ -967,7 +957,7 @@ class ul extends hc {
         }
     }
 
-    private final void q() {
+    private final void q(int param0) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -975,8 +965,7 @@ class ul extends hc {
             try {
               L0: {
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                int discarded$1 = 0;
-                this.k();
+                this.k(0);
                 this.a((byte) -120, var2);
                 break L0;
               }
@@ -998,18 +987,16 @@ class ul extends hc {
         if (param0 != 8) {
           ((ul) this).a(-32, (byte) 101, 85, 10);
           this.e((byte) 90);
-          int discarded$4 = 0;
-          this.k();
+          this.k(0);
           return;
         } else {
           this.e((byte) 90);
-          int discarded$5 = 0;
-          this.k();
+          this.k(0);
           return;
         }
     }
 
-    private final void k() {
+    private final void k(int param0) {
         int var2 = 0;
         int var3 = 0;
         if (!(((ul) this).field_L == ((ul) this).field_P)) {
@@ -1096,8 +1083,7 @@ class ul extends hc {
               }
             }
             L2: {
-              int discarded$2 = -22686;
-              this.m();
+              this.m(-22686);
               if (((ul) this).field_t != 1) {
                 break L2;
               } else {
@@ -1191,11 +1177,9 @@ class ul extends hc {
             if (param0 <= 86) {
               L0: {
                 ((ul) this).field_L = -80;
-                int discarded$4 = 100;
-                var2 = this.l();
+                var2 = this.l(100);
                 if (var2.length() > 0) {
-                  int discarded$5 = 100;
-                  java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.l()), (java.awt.datatransfer.ClipboardOwner) null);
+                  java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.l(100)), (java.awt.datatransfer.ClipboardOwner) null);
                   break L0;
                 } else {
                   break L0;
@@ -1204,11 +1188,9 @@ class ul extends hc {
               return;
             } else {
               L1: {
-                int discarded$6 = 100;
-                var2 = this.l();
+                var2 = this.l(100);
                 if (var2.length() > 0) {
-                  int discarded$7 = 100;
-                  java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.l()), (java.awt.datatransfer.ClipboardOwner) null);
+                  java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.l(100)), (java.awt.datatransfer.ClipboardOwner) null);
                   break L1;
                 } else {
                   break L1;

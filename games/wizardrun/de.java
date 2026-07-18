@@ -263,7 +263,7 @@ final class de implements Iterable {
         throw new Error();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
     }
@@ -302,18 +302,15 @@ final class de implements Iterable {
             if (var4 >= 10) {
               if (ef.field_H.field_z - 40 < var4) {
                 var4 = -40 + ef.field_H.field_z;
-                int discarded$3 = 0;
-                df.a(30, 0, ef.field_H, 0, 80, param3, param2, var4);
+                df.a(30, 0, ef.field_H, 0, 80, param3, param2, var4, 0);
                 break L0;
               } else {
-                int discarded$4 = 0;
-                df.a(30, 0, ef.field_H, 0, 80, param3, param2, var4);
+                df.a(30, 0, ef.field_H, 0, 80, param3, param2, var4, 0);
                 return;
               }
             } else {
               var4 = 10;
-              int discarded$5 = 0;
-              df.a(30, 0, ef.field_H, 0, 80, param3, param2, var4);
+              df.a(30, 0, ef.field_H, 0, 80, param3, param2, var4, 0);
               return;
             }
           } else {

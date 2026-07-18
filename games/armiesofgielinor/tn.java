@@ -84,8 +84,7 @@ final class tn extends sf implements he {
                   break L2;
                 }
               } else {
-                int discarded$8 = 0;
-                ed.a();
+                ed.a(false);
                 this.o(param1 + -10);
                 break L2;
               }
@@ -481,11 +480,7 @@ final class tn extends sf implements he {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$8 = 20;
-            int discarded$9 = 30;
-            int discarded$10 = 14;
-            int discarded$11 = 4;
-            stackOut_2_0 = (long)de.a(-111, param2);
+            stackOut_2_0 = (long)de.a(-111, param2, 4, 14, 30, 20);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -523,8 +518,7 @@ final class tn extends sf implements he {
     }
 
     final static wk[] a(boolean param0, int param1, int param2) {
-        int discarded$0 = 1;
-        return ft.a(param1, (byte) -114, param2);
+        return ft.a(param1, (byte) -114, param2, 1);
     }
 
     static {

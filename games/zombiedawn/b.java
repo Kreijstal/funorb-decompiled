@@ -114,7 +114,7 @@ final class b extends le {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_n = null;
         field_i = null;
         field_j = null;

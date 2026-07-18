@@ -67,8 +67,7 @@ final class sc extends qt {
           L0: {
             L1: {
               super.a(param0, param1, -126, param3);
-              int discarded$2 = 0;
-              this.a();
+              this.a(false);
               if (param1) {
                 ((sc) this).field_C = param0;
                 break L1;
@@ -133,11 +132,11 @@ final class sc extends qt {
         }
     }
 
-    final static void g() {
+    final static void g(byte param0) {
         eo.b(ug.a(0, (int)wm.field_C), lf.a((byte) -125, (int)cq.field_f), 10, 16711680);
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         ((sc) this).field_A.a(true, ((sc) this).field_A.field_q, (f.field_d >> 1) - (((sc) this).field_A.field_q >> 1), 100 + (vc.field_B >> 1), ((sc) this).field_A.field_mb);
     }
 
@@ -145,7 +144,7 @@ final class sc extends qt {
         ((sc) this).field_C = 0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_F = null;
         field_B = null;
     }

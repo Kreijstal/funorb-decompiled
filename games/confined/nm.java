@@ -204,7 +204,7 @@ final class nm extends gk {
         return stackIn_7_0 != 0;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_D = null;
         field_F = null;
         field_C = null;

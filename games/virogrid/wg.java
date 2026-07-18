@@ -37,8 +37,7 @@ final class wg {
             }
             {
                 if (0 <= var2_int) {
-                    int discarded$2 = -126;
-                    if (af.b() <= 30000L) {
+                    if (af.b(-126) <= 30000L) {
                         return false;
                     }
                 }
@@ -52,7 +51,7 @@ final class wg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_h = null;

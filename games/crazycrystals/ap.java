@@ -103,8 +103,7 @@ final class ap extends ob {
                   }
                 }
                 ((ap) this).field_q = (j) param1;
-                int discarded$1 = -121;
-                this.d();
+                this.d((byte) -121);
                 this.a(param0, 25);
                 ((ap) this).field_h = null;
                 ((ap) this).field_i.field_f = 0;
@@ -365,7 +364,7 @@ final class ap extends ob {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         try {
             int var2_int = 0;
             RuntimeException var2 = null;
@@ -374,7 +373,7 @@ final class ap extends ob {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var2_int = 0;
+                var2_int = -62 % ((19 - param0) / 51);
                 if (null != ((ap) this).field_q) {
                   {
                     L1: {
@@ -394,7 +393,7 @@ final class ap extends ob {
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var2 = (RuntimeException) (Object) decompiledCaughtException;
-              throw dn.a((Throwable) (Object) var2, "ap.L(" + -121 + ')');
+              throw dn.a((Throwable) (Object) var2, "ap.L(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -467,7 +466,7 @@ final class ap extends ob {
                 var3_int = stackIn_14_0;
                 var4_ref_String = var1_ref.i(117);
                 if (var3_int != 0) {
-                  String discarded$6 = var1_ref.i(110);
+                  String discarded$3 = var1_ref.i(110);
                   break L4;
                 } else {
                   break L4;
@@ -512,9 +511,9 @@ final class ap extends ob {
                 if (var5_ref == null) {
                   var5_ref = new ce();
                   vl.field_d.a((ij) (Object) var5_ref, (long)var7.hashCode(), (byte) 104);
-                  int fieldTemp$7 = hl.field_h;
+                  int fieldTemp$4 = hl.field_h;
                   hl.field_h = hl.field_h + 1;
-                  var5_ref.field_db = fieldTemp$7;
+                  var5_ref.field_db = fieldTemp$4;
                   g.field_b.b(0, (jb) (Object) var5_ref);
                   break L8;
                 } else {
@@ -565,9 +564,9 @@ final class ap extends ob {
                   } else {
                     var6 = new ce();
                     me.field_f.a((ij) (Object) var6, (long)fe.a(60136, (CharSequence) (Object) var4_ref_String).hashCode(), (byte) 85);
-                    int fieldTemp$8 = ob.field_g;
+                    int fieldTemp$5 = ob.field_g;
                     ob.field_g = ob.field_g + 1;
-                    var6.field_db = fieldTemp$8;
+                    var6.field_db = fieldTemp$5;
                     df.field_b.b(0, (jb) (Object) var6);
                     break L12;
                   }
@@ -619,8 +618,7 @@ final class ap extends ob {
                           break L17;
                         }
                       }
-                      int discarded$9 = 47;
-                      rf.a((jb) (Object) stackIn_67_0, (jb) (Object) var6);
+                      rf.a((jb) (Object) stackIn_67_0, (jb) (Object) var6, 47);
                       if (var8 == 0) {
                         break L15;
                       } else {
@@ -646,9 +644,7 @@ final class ap extends ob {
                     return;
                   } else {
                     if (4 != var2) {
-                      int discarded$10 = -1815;
-                      int discarded$11 = 21862;
-                      wp.a((Throwable) null, "F1: " + ug.a());
+                      wp.a((Throwable) null, "F1: " + ug.a(-1815), 21862);
                       jj.a(4);
                       break L0;
                     } else {

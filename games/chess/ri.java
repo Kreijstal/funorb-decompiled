@@ -154,7 +154,7 @@ final class ri extends jb implements ha, we {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_k = null;
         field_h = null;
     }
@@ -166,7 +166,7 @@ final class ri extends jb implements ha, we {
         return ((ri) this).field_j.h((byte) -123);
     }
 
-    final static void a(int param0, pa param1) {
+    final static void a(int param0, pa param1, int param2) {
         nk var3 = null;
         try {
             var3 = qn.field_U;

@@ -70,8 +70,7 @@ final class oj extends ns implements bp {
                   }
                 }
               } else {
-                int discarded$1 = 6;
-                vc.field_d[var4] = ec.a(var8);
+                vc.field_d[var4] = ec.a(var8, (byte) 6);
                 var4++;
                 continue L1;
               }
@@ -109,7 +108,7 @@ final class oj extends ns implements bp {
         }
     }
 
-    public static void q() {
+    public static void q(int param0) {
         field_Cb = null;
         field_zb = null;
         field_Ib = null;
@@ -310,8 +309,7 @@ final class oj extends ns implements bp {
                     } else {
                       L3: {
                         if (!param1) {
-                          int discarded$3 = -1;
-                          kp.c();
+                          kp.c(-1);
                           break L3;
                         } else {
                           break L3;
@@ -351,7 +349,7 @@ final class oj extends ns implements bp {
                       break L5;
                     }
                   } else {
-                    kg discarded$4 = var5.a((ko) this, 125, gq.field_b);
+                    kg discarded$2 = var5.a((ko) this, 125, gq.field_b);
                     break L5;
                   }
                 }
@@ -371,7 +369,7 @@ final class oj extends ns implements bp {
                   ((oj) this).b((vg) (Object) new pe((oj) this), -51);
                   return;
                 } else {
-                  kg discarded$5 = var5.a((ko) this, 122, gq.field_b);
+                  kg discarded$3 = var5.a((ko) this, 122, gq.field_b);
                   break L4;
                 }
               }

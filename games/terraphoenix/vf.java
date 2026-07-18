@@ -88,8 +88,7 @@ final class vf {
               var8 = new tj(jl.field_I, param0);
               var7 = var8;
               jl.field_I.a((gl) (Object) var8, (byte) -1);
-              int discarded$4 = 41108;
-              if (va.b()) {
+              if (va.b(41108)) {
                 var8.q(127);
                 stackOut_11_0 = 1;
                 stackIn_12_0 = stackOut_11_0;
@@ -225,12 +224,12 @@ final class vf {
         return stackIn_12_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -250,8 +249,7 @@ final class vf {
         String stackOut_3_2 = null;
         try {
           uc.b(121, param0);
-          int discarded$2 = 10;
-          ta.a(fh.field_x, false);
+          ta.a(fh.field_x, false, 10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

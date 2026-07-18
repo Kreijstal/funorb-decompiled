@@ -14,7 +14,7 @@ final class vf {
         field_b = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -235,8 +235,7 @@ final class vf {
                   } else {
                     v.field_e.field_Gb.field_Ib.field_cb = mk.field_c;
                     v.field_e.field_rb = false;
-                    int discarded$1 = 0;
-                    wd.a(v.field_e.field_Fb);
+                    wd.a(v.field_e.field_Fb, false);
                     break L2;
                   }
                 }
@@ -409,7 +408,7 @@ final class vf {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Exception var2_ref = null;

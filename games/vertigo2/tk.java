@@ -19,7 +19,7 @@ abstract class tk {
     volatile int field_m;
     ia field_h;
 
-    final static int c() {
+    final static int c(int param0) {
         return 1;
     }
 
@@ -329,7 +329,7 @@ abstract class tk {
         field_c = null;
     }
 
-    final static byte[] a(String param0) {
+    final static byte[] a(String param0, boolean param1) {
         RuntimeException var2 = null;
         byte[] stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;

@@ -24,7 +24,7 @@ class ba extends wd {
         }
     }
 
-    private final void i() {
+    private final void i(int param0) {
         if (((ba) this).field_n instanceof gl) {
             ((gl) (Object) ((ba) this).field_n).a((byte) -51, (ba) this);
         }
@@ -37,14 +37,13 @@ class ba extends wd {
         return ((ba) this).field_h.substring(var2, var3);
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         int var2 = 0;
         this.i((byte) 84);
-        int discarded$0 = 1;
-        this.b();
+        this.b(true);
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         if (!(((ba) this).field_K == ((ba) this).field_G)) {
@@ -178,7 +177,7 @@ class ba extends wd {
         }
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         try {
             int var2_int = 0;
             Exception var2 = null;
@@ -188,8 +187,7 @@ class ba extends wd {
               L0: {
                 var2_int = 0;
                 var3 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                int discarded$1 = 1;
-                this.b();
+                this.b(true);
                 this.a(28383, var3);
                 break L0;
               }
@@ -240,8 +238,7 @@ class ba extends wd {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              int discarded$3 = 126;
-              this.e();
+              this.e((byte) 126);
               if (1 == ((ba) this).field_u) {
                 L2: {
                   if (!(((ba) this).field_j instanceof sf)) {
@@ -458,8 +455,7 @@ class ba extends wd {
                           if (~((ba) this).field_G == ~((ba) this).field_K) {
                             break L4;
                           } else {
-                            int discarded$9 = 1;
-                            this.b();
+                            this.b(true);
                             break L4;
                           }
                         }
@@ -483,9 +479,9 @@ class ba extends wd {
                               break L7;
                             } else {
                               ((ba) this).field_h = ((ba) this).field_h + param1;
-                              int dupTemp$10 = ((ba) this).field_h.length();
-                              ((ba) this).field_G = dupTemp$10;
-                              ((ba) this).field_K = dupTemp$10;
+                              int dupTemp$1 = ((ba) this).field_h.length();
+                              ((ba) this).field_G = dupTemp$1;
+                              ((ba) this).field_K = dupTemp$1;
                               break L7;
                             }
                           }
@@ -512,8 +508,7 @@ class ba extends wd {
                               } else {
                                 if (103 != param2) {
                                   if (param2 == 84) {
-                                    int discarded$11 = 30483;
-                                    this.i();
+                                    this.i(30483);
                                     stackOut_71_0 = 1;
                                     stackIn_72_0 = stackOut_71_0;
                                     return stackIn_72_0 != 0;
@@ -523,8 +518,7 @@ class ba extends wd {
                                         break L9;
                                       } else {
                                         if (param2 == 65) {
-                                          int discarded$12 = 107;
-                                          this.f();
+                                          this.f((byte) 107);
                                           stackOut_69_0 = 1;
                                           stackIn_70_0 = stackOut_69_0;
                                           return stackIn_70_0 != 0;
@@ -553,8 +547,7 @@ class ba extends wd {
                                       if (param2 != 67) {
                                         break L8;
                                       } else {
-                                        int discarded$13 = -11;
-                                        this.g();
+                                        this.g((byte) -11);
                                         stackOut_67_0 = 1;
                                         stackIn_68_0 = stackOut_67_0;
                                         return stackIn_68_0 != 0;
@@ -632,16 +625,14 @@ class ba extends wd {
                         }
                       } else {
                         if (~((ba) this).field_K != ~((ba) this).field_G) {
-                          int discarded$14 = 1;
-                          this.b();
+                          this.b(true);
                           stackOut_34_0 = 1;
                           stackIn_35_0 = stackOut_34_0;
                           return stackIn_35_0 != 0;
                         } else {
                           if (((ba) this).field_G < ((ba) this).field_h.length()) {
                             ((ba) this).field_K = ((ba) this).field_G + 1;
-                            int discarded$15 = 1;
-                            this.b();
+                            this.b(true);
                             stackOut_32_0 = 1;
                             stackIn_33_0 = stackOut_32_0;
                             return stackIn_33_0 != 0;
@@ -656,16 +647,14 @@ class ba extends wd {
                     break L0;
                   } else {
                     if (((ba) this).field_K != ((ba) this).field_G) {
-                      int discarded$16 = 1;
-                      this.b();
+                      this.b(true);
                       stackOut_26_0 = 1;
                       stackIn_27_0 = stackOut_26_0;
                       return stackIn_27_0 != 0;
                     } else {
                       if (0 < ((ba) this).field_G) {
                         ((ba) this).field_K = -1 + ((ba) this).field_G;
-                        int discarded$17 = 1;
-                        this.b();
+                        this.b(true);
                         stackOut_24_0 = 1;
                         stackIn_25_0 = stackOut_24_0;
                         return stackIn_25_0 != 0;
@@ -725,7 +714,7 @@ class ba extends wd {
         }
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         int var8 = Bounce.field_N;
         if (!(((ba) this).field_H)) {
             ((ba) this).field_v = 0;
@@ -973,7 +962,7 @@ class ba extends wd {
         return stackIn_19_0 != 0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_E = null;
     }
 

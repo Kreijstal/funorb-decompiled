@@ -44,7 +44,7 @@ class bha implements ntb {
             L1: {
               var3_int = 0;
               var4 = (bha) (Object) param1;
-              if (var4.field_a) {
+              if (((bha) this).field_a) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -216,7 +216,7 @@ class bha implements ntb {
             L1: {
               var3 = (bha) (Object) param0;
               var4 = 0;
-              stackOut_0_0 = var3.field_a;
+              stackOut_0_0 = ((bha) this).field_a;
               stackIn_2_0 = stackOut_0_0;
               stackIn_1_0 = stackOut_0_0;
               if (var3.field_a) {
@@ -236,7 +236,7 @@ class bha implements ntb {
             L2: {
               if ((stackIn_3_0 ? 1 : 0) == stackIn_3_1) {
                 var4 = 1;
-                iva.a(-6940, "boolean connected has changed. before=" + var3.field_a + ", now=" + var3.field_a);
+                iva.a(-6940, "boolean connected has changed. before=" + var3.field_a + ", now=" + ((bha) this).field_a);
                 break L2;
               } else {
                 break L2;
@@ -365,7 +365,7 @@ class bha implements ntb {
         try {
             var5 = (bha) (Object) param1;
             var6 = var5;
-            var6.field_a = var5.field_a;
+            var6.field_a = ((bha) this).field_a;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "bha.D(" + 93 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

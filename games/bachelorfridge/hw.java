@@ -6,7 +6,7 @@ final class hw extends sna {
     int field_vb;
     static String field_wb;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_wb = null;
         field_xb = null;
     }

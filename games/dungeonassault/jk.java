@@ -14,7 +14,7 @@ final class jk extends hf {
         }
     }
 
-    final static void j() {
+    final static void j(byte param0) {
         ai[] var5 = null;
         int var2 = 0;
         ai var3 = null;
@@ -30,21 +30,18 @@ final class jk extends hf {
             im.field_e = null;
             if (!gl.field_Lb) {
                 kh.e(108);
-                int discarded$0 = 8;
-                ra.c();
+                ra.c(8);
             } else {
-                int discarded$1 = -107;
-                li.b();
+                li.b(-107);
                 of.a(-91);
             }
-            int discarded$2 = 16;
-            df.b();
+            df.b(16);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "jk.M(" + 59 + ')');
         }
     }
 
-    final static String a(String[] args, String param1) {
+    final static String a(String[] args, String param1, int param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -120,8 +117,7 @@ final class jk extends hf {
                         }
                       }
                       var9 = param1.substring(var8 + 2, var5);
-                      int discarded$5 = 10;
-                      if (!sj.a((CharSequence) (Object) var9)) {
+                      if (!sj.a((CharSequence) (Object) var9, 10)) {
                         continue L2;
                       } else {
                         if (var5 >= var3_int) {
@@ -132,16 +128,16 @@ final class jk extends hf {
                           } else {
                             var5++;
                             var10 = ri.a((byte) 118, (CharSequence) (Object) var9);
-                            StringBuilder discarded$6 = var6.append(param1.substring(var7, var8));
+                            StringBuilder discarded$3 = var6.append(param1.substring(var7, var8));
                             var7 = var5;
-                            StringBuilder discarded$7 = var6.append(args[var10]);
+                            StringBuilder discarded$4 = var6.append(args[var10]);
                             continue L2;
                           }
                         }
                       }
                     }
                   } else {
-                    StringBuilder discarded$8 = var6.append(param1.substring(var7));
+                    StringBuilder discarded$5 = var6.append(param1.substring(var7));
                     stackOut_22_0 = var6.toString();
                     stackIn_23_0 = stackOut_22_0;
                     break L0;
@@ -163,8 +159,7 @@ final class jk extends hf {
                     }
                   }
                   var7_ref_String = param1.substring(2 + var6_int, var5);
-                  int discarded$9 = 10;
-                  if (!sj.a((CharSequence) (Object) var7_ref_String)) {
+                  if (!sj.a((CharSequence) (Object) var7_ref_String, 10)) {
                     continue L1;
                   } else {
                     if (var3_int <= var5) {
@@ -242,7 +237,7 @@ final class jk extends hf {
         return stackIn_23_0;
     }
 
-    public static void n() {
+    public static void n(int param0) {
         field_Bb = null;
         field_Cb = null;
         field_Db = null;

@@ -7,7 +7,7 @@ final class ii extends em {
     private String field_h;
     static String field_g;
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         param0.setFocusTraversalKeysEnabled(false);
         try {
             param0.addKeyListener((java.awt.event.KeyListener) (Object) tf.field_p);
@@ -44,12 +44,12 @@ final class ii extends em {
         return gh.field_a;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
         field_i = null;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var6 = 0;

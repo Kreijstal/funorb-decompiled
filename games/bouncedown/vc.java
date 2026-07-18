@@ -258,8 +258,7 @@ class vc extends wd {
             var7 = var5.a(param3, -116, (lk) this);
             var8 = var5.a(param1, (lk) this, (byte) 51);
             do {
-                int discarded$0 = 14677;
-                ck.a(-2 + var6.field_h + var7, 2 + var6.field_r, var6.field_i + 2, var8 + var6.field_l + -2);
+                ck.a(-2 + var6.field_h + var7, 2 + var6.field_r, var6.field_i + 2, var8 + var6.field_l + -2, 14677);
                 var6 = var6.field_n;
             } while (var6 != null);
         }

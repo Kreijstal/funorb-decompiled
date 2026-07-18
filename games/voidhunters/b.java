@@ -293,7 +293,6 @@ final class b extends ka {
 
     b(sob param0, cbb param1, int param2, int param3, int param4, int param5) {
         d var7 = null;
-        int[] var8 = null;
         int var9_int = 0;
         long[] var9 = null;
         int var10 = 0;
@@ -356,7 +355,6 @@ final class b extends ka {
         float var52 = 0.0f;
         float var53 = 0.0f;
         int var54 = 0;
-        int[] var55 = null;
         bqa var56 = null;
         opa var57 = null;
         long[] var58 = null;
@@ -366,9 +364,7 @@ final class b extends ka {
         opa var62 = null;
         float[] var65 = null;
         float[] var66 = null;
-        int[] var67 = null;
         long[] var68 = null;
-        int[] var71 = null;
         long[] var72 = null;
         int[] var75 = null;
         long[] var76 = null;
@@ -420,10 +416,6 @@ final class b extends ka {
         ((b) this).field_k = param1.field_m;
         ((b) this).field_h = param1.field_r;
         var75 = new int[((b) this).field_c];
-        var71 = var75;
-        var67 = var71;
-        var55 = var67;
-        var8 = var55;
         var9_int = 0;
         L0: while (true) {
           if (var9_int >= ((b) this).field_c) {
@@ -463,8 +455,7 @@ final class b extends ka {
                       } else {
                         L5: {
                           var59 = param1.field_g[var54];
-                          int discarded$6 = 0;
-                          var60 = jm.a(var59.field_e);
+                          var60 = jm.a(var59.field_e, 0);
                           var14 = mpb.field_h[param1.field_b[var59.field_b] & 65535] & 16777215;
                           stackOut_49_0 = var14;
                           stackOut_49_1 = 255;
@@ -501,8 +492,7 @@ final class b extends ka {
                 }
                 ((b) this).field_q = new float[((b) this).field_c][];
                 ((b) this).field_a = new float[((b) this).field_c][];
-                int discarded$7 = -3;
-                var11 = ao.a(param1, var8, ((b) this).field_c);
+                var11 = ao.a(param1, var75, ((b) this).field_c, -3);
                 var61 = ((b) this).field_f.a((Runnable) (Object) Thread.currentThread());
                 var78 = var61.field_a;
                 var14 = 0;
@@ -525,7 +515,7 @@ final class b extends ka {
                         if ((((b) this).field_x & 32) == 0) {
                           break L8;
                         } else {
-                          int[][] discarded$8 = param1.a((byte) -37, true);
+                          int[][] discarded$3 = param1.a((byte) -37, true);
                           break L8;
                         }
                       }
@@ -537,7 +527,7 @@ final class b extends ka {
                         if ((((b) this).field_x & 384) == 0) {
                           break L9;
                         } else {
-                          int[][] discarded$9 = param1.b(0);
+                          int[][] discarded$4 = param1.b(0);
                           break L9;
                         }
                       }
@@ -549,7 +539,7 @@ final class b extends ka {
                         if ((((b) this).field_x & 1024) == 0) {
                           break L10;
                         } else {
-                          int[][] discarded$10 = param1.a(-125);
+                          int[][] discarded$5 = param1.a(-125);
                           break L10;
                         }
                       }
@@ -959,8 +949,7 @@ final class b extends ka {
                         var56 = param1.field_g[var19_int];
                         if (var12 == var56.field_b) {
                           L28: {
-                            int discarded$11 = 0;
-                            var21_ref_sr = jm.a(var56.field_e);
+                            var21_ref_sr = jm.a(var56.field_e, 0);
                             if (!var21_ref_sr.field_a) {
                               break L28;
                             } else {

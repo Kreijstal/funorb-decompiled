@@ -157,12 +157,9 @@ abstract class hn extends kna {
               var5.b((byte) 105, false);
               var5.a((byte) -128, ((hn) this).a(param2, false, false));
               var5.a(((hn) this).a(5, false, param2), (byte) -94);
-              int discarded$6 = -114;
-              var5.a(this.a(false, param2), 2);
-              int discarded$7 = -1;
-              var5.b(true, this.A());
-              int discarded$8 = 123;
-              var5.a(false, this.B());
+              var5.a(this.a(false, param2, (byte) -114), 2);
+              var5.b(true, this.A(-1));
+              var5.a(false, this.B(123));
               var6.a((byte) 83, (nv) (Object) var5);
               stackOut_3_0 = (fsa) var6;
               stackIn_4_0 = stackOut_3_0;
@@ -380,7 +377,7 @@ abstract class hn extends kna {
         return 7;
     }
 
-    private final fsa a(boolean param0, la param1) {
+    private final fsa a(boolean param0, la param1, byte param2) {
         RuntimeException var4 = null;
         int var5 = 0;
         ue var6 = null;
@@ -492,7 +489,7 @@ abstract class hn extends kna {
 
     abstract fsa a(int param0, boolean param1, la param2);
 
-    private final int B() {
+    private final int B(int param0) {
         return 0;
     }
 
@@ -823,11 +820,11 @@ abstract class hn extends kna {
         super(param0, param1);
     }
 
-    private final int A() {
+    private final int A(int param0) {
         return ((hn) this).field_I;
     }
 
-    public static void e() {
+    public static void e(boolean param0) {
         field_G = null;
         field_F = null;
     }

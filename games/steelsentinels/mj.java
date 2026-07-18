@@ -28,7 +28,7 @@ final class mj extends gh {
         this.a(param2, param5, 0);
     }
 
-    final static void a(ak param0) {
+    final static void a(ak param0, int param1, int param2, int param3) {
         try {
             cl.field_b = 8;
             int var4_int = 0;
@@ -39,7 +39,7 @@ final class mj extends gh {
         }
     }
 
-    final static String b(long param0) {
+    final static String b(long param0, int param1) {
         pg.field_x.setTime(new Date(param0));
         int var3 = pg.field_x.get(7);
         int var4 = pg.field_x.get(5);
@@ -371,7 +371,7 @@ final class mj extends gh {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_Vb = null;
         field_Sb = null;
         field_Yb = null;

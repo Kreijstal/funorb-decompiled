@@ -10,7 +10,7 @@ final class dn extends hd {
     static String field_Ab;
     static String[] field_Eb;
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = -1;
     }
 
@@ -28,7 +28,7 @@ final class dn extends hd {
         ((dn) this).field_q = 5 + (var2.field_o - -5);
     }
 
-    final static String a(String param0) {
+    final static String a(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -137,7 +137,7 @@ final class dn extends hd {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_zb = null;
         field_Db = null;
         field_Ab = null;

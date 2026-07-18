@@ -19,19 +19,18 @@ final class lk extends id {
 
     final void f(byte param0) {
         if (param0 < -79) {
-          int fieldTemp$6 = ((lk) this).field_H + 1;
+          int fieldTemp$4 = ((lk) this).field_H + 1;
           ((lk) this).field_H = ((lk) this).field_H + 1;
-          if (fieldTemp$6 >= 4) {
+          if (fieldTemp$4 >= 4) {
             ((lk) this).field_H = 0;
-            int fieldTemp$7 = ((lk) this).field_M + 1;
+            int fieldTemp$5 = ((lk) this).field_M + 1;
             ((lk) this).field_M = ((lk) this).field_M + 1;
-            if (fieldTemp$7 >= od.field_Fb.length) {
+            if (fieldTemp$5 >= od.field_Fb.length) {
               if (((lk) this).field_S == 1) {
                 ((lk) this).field_O = true;
                 return;
               } else {
-                int discarded$8 = -11;
-                this.h();
+                this.h((byte) -11);
                 return;
               }
             } else {
@@ -55,8 +54,7 @@ final class lk extends id {
           ((lk) this).field_O = false;
           ((lk) this).field_z = param0 << 16;
           ((lk) this).field_Q = param0;
-          int discarded$4 = -11;
-          this.h();
+          this.h((byte) -11);
           var5 = od.field_Fb.length;
           ((lk) this).field_H = hp.a((byte) 68, g.field_a, 10);
           ((lk) this).field_K = hp.a((byte) 107, g.field_a, param1);
@@ -66,8 +64,7 @@ final class lk extends id {
           ((lk) this).field_O = false;
           ((lk) this).field_z = param0 << 16;
           ((lk) this).field_Q = param0;
-          int discarded$5 = -11;
-          this.h();
+          this.h((byte) -11);
           var5 = od.field_Fb.length;
           ((lk) this).field_H = hp.a((byte) 68, g.field_a, 10);
           ((lk) this).field_K = hp.a((byte) 107, g.field_a, param1);
@@ -301,7 +298,7 @@ final class lk extends id {
         }
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         ((lk) this).field_F = 128 - -hp.a((byte) -85, g.field_a, 127);
         ((lk) this).field_M = 0;
         ((lk) this).field_z = ((lk) this).field_Q + -12 + hp.a((byte) -106, g.field_a, 24) << 16;

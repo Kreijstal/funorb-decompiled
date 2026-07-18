@@ -91,8 +91,7 @@ final class dp extends vw {
                       var6 = ka.a((byte) -95, param1.a("gl", (byte) 122, "environment_mapped_water_v"), 35633, param0);
                       var4 = var6;
                       var5 = ka.a((byte) 123, param1.a("gl", (byte) 127, "environment_mapped_water_f"), 35632, param0);
-                      int discarded$2 = 1;
-                      ((dp) this).field_k = jm.a(new pr[2], param0);
+                      ((dp) this).field_k = jm.a(new pr[2], param0, 1);
                       stackOut_8_0 = this;
                       stackIn_11_0 = stackOut_8_0;
                       stackIn_9_0 = stackOut_8_0;
@@ -275,7 +274,7 @@ final class dp extends vw {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_i = null;
         field_j = null;
         field_g = null;

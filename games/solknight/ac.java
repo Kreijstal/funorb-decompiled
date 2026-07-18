@@ -8,7 +8,7 @@ final class ac {
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2_int = 0;
         Object var2 = null;

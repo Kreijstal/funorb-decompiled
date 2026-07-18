@@ -98,7 +98,7 @@ final class rd {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_b = null;
         field_e = null;
@@ -161,8 +161,7 @@ final class rd {
                 return stackIn_6_0 != 0;
               } else {
                 L1: {
-                  int discarded$14 = 3231;
-                  if (gf.a(param1, ((rd) this).field_g, param0)) {
+                  if (gf.a(param1, ((rd) this).field_g, param0, 3231)) {
                     stackOut_9_0 = 0;
                     stackIn_10_0 = stackOut_9_0;
                     break L1;

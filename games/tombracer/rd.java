@@ -5,7 +5,7 @@ final class rd extends wv {
     private dea field_q;
     static ur field_r;
 
-    public static void d() {
+    public static void d(int param0) {
         field_r = null;
     }
 
@@ -73,8 +73,7 @@ final class rd extends wv {
     final void a(byte param0, boolean param1) {
         int var3 = ((rd) this).field_q.e(param0 + 111);
         gg.field_f.a(aaa.a(false) - gg.field_f.a() >> 1, var3 - -(gg.field_f.c() / 2));
-        int discarded$0 = 3;
-        this.h(var3);
+        this.h(var3, 3);
         super.a(param0, param1);
     }
 
@@ -87,7 +86,7 @@ final class rd extends wv {
         }
     }
 
-    private final void h(int param0) {
+    private final void h(int param0, int param1) {
         int var3 = 500;
         int var4 = aaa.a(false) / 2 - var3 / 2;
         int var5 = param0 + 100;

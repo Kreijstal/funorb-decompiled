@@ -28,13 +28,12 @@ final class pka extends rqa {
         try {
           L0: {
             L1: {
-              int discarded$6 = 104;
-              g.e();
+              g.e((byte) 104);
               if (param1 < -119) {
                 break L1;
               } else {
                 var4 = null;
-                nc discarded$7 = ((pka) this).a((nc[]) null, -109);
+                nc discarded$2 = ((pka) this).a((nc[]) null, -109);
                 break L1;
               }
             }

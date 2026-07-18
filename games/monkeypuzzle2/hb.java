@@ -68,7 +68,7 @@ final class hb extends gk {
         return ((hb) this).field_g[fieldTemp$0] - ((hb) this).field_j.c(0) & 255;
     }
 
-    final static int a() {
+    final static int a(boolean param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -107,7 +107,7 @@ final class hb extends gk {
         return stackIn_7_0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_l = null;
         field_k = null;
         field_m = null;
@@ -364,7 +364,7 @@ final class hb extends gk {
         return var5;
     }
 
-    final static void b() {
+    final static void b(int param0, boolean param1) {
         int var2 = -57 % 0;
         cc.a(192, true, true);
     }

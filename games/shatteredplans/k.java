@@ -347,7 +347,7 @@ final class k {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_e = null;
         field_j = null;

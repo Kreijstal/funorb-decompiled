@@ -29,8 +29,7 @@ final class pb {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$4 = 3;
-                    ak.a(-14722, var5);
+                    ak.a(-14722, var5, 3);
                     var5 = (ll) (Object) jj.field_S.b((byte) -105);
                     continue L2;
                   }
@@ -49,7 +48,7 @@ final class pb {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -80,7 +79,7 @@ final class pb {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_a = null;
         field_b = null;

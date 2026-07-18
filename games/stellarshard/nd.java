@@ -217,7 +217,7 @@ final class nd extends ig {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_F = null;
         int var1 = -67;
     }
@@ -296,10 +296,8 @@ final class nd extends ig {
         try {
           L0: {
             L1: {
-              int discarded$36 = 0;
-              ah.a((java.awt.Component) (Object) param1);
-              int discarded$37 = 103;
-              sl.a((java.awt.Component) (Object) param1);
+              ah.a((java.awt.Component) (Object) param1, false);
+              sl.a((java.awt.Component) (Object) param1, (byte) 103);
               if (og.field_c != null) {
                 og.field_c.a(24186, (java.awt.Component) (Object) param1);
                 break L1;
@@ -341,7 +339,7 @@ final class nd extends ig {
         }
     }
 
-    final static void g() {
+    final static void g(int param0) {
         try {
             Exception var1 = null;
             Throwable decompiledCaughtException = null;

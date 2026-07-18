@@ -10,7 +10,7 @@ final class sh {
     static String field_e;
     static int field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_e = null;
         field_f = null;

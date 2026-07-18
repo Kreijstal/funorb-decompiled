@@ -137,7 +137,7 @@ final class vh extends ca {
         return stackIn_7_0 != 0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_s = null;
         field_k = null;
         field_q = null;

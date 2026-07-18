@@ -104,14 +104,13 @@ abstract class ll extends gb {
         }
     }
 
-    final static String f() {
+    final static String f(int param0) {
         return kb.field_q.g((byte) 81);
     }
 
     final static void a(int param0, String param1) {
         try {
-            int discarded$0 = 1;
-            ng.a(param1);
+            ng.a(param1, true);
             uf.a(ec.field_d, false, false);
         } catch (RuntimeException runtimeException) {
             throw oi.a((Throwable) (Object) runtimeException, "ll.G(" + -3 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -122,7 +121,7 @@ abstract class ll extends gb {
 
     abstract int a(boolean param0);
 
-    public static void b() {
+    public static void b(byte param0) {
         field_y = null;
         field_u = null;
         field_E = null;
@@ -155,7 +154,7 @@ abstract class ll extends gb {
         }
     }
 
-    final static void a(int param0, oh[] param1, jb param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, oh[] param13, int param14, int param15, jb param16, int param17, int param18, oh[] param19) {
+    final static void a(int param0, oh[] param1, jb param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, oh[] param13, int param14, int param15, jb param16, int param17, int param18, oh[] param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

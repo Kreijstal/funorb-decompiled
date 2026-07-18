@@ -28,7 +28,7 @@ final class hga extends am {
         }
     }
 
-    public static void o() {
+    public static void o(int param0) {
         field_U = null;
     }
 
@@ -247,23 +247,18 @@ final class hga extends am {
                 var4 = lka.field_E[var2_int][1];
                 var5 = lka.field_E[var2_int][2];
                 var6 = bm.a(80, var2_int);
-                int discarded$12 = -16306;
-                var7 = vc.a(var2_int, 3);
+                var7 = vc.a(var2_int, 3, -16306);
                 var8 = dha.a((byte) -38, var2_int);
                 var9 = jfa.a(false, var2_int);
-                int discarded$13 = -16306;
-                var10 = vc.a(var2_int, 15);
+                var10 = vc.a(var2_int, 15, -16306);
                 if (1 != var6) {
                   if (2 != var6) {
                     if (var6 == 4) {
                       var11 = dna.b(var2_int, false);
                       var12 = te.a(var2_int, (byte) 65);
-                      int discarded$14 = -16306;
-                      var13 = vc.a(var2_int, 8);
-                      int discarded$15 = -16306;
-                      var14 = vc.a(var2_int, 9);
-                      int discarded$16 = -16306;
-                      var15 = vc.a(var2_int, 10);
+                      var13 = vc.a(var2_int, 8, -16306);
+                      var14 = vc.a(var2_int, 9, -16306);
+                      var15 = vc.a(var2_int, 10, -16306);
                       var16 = mq.a(13, 207, var2_int);
                       var8 = dha.a((byte) -113, var2_int);
                       bea.a(var15, var10, var12, var16, var11, var3, -52, var14, var13, var8, var9, var4, var5);
@@ -274,8 +269,7 @@ final class hga extends am {
                         var2_int++;
                         continue L1;
                       } else {
-                        int discarded$17 = -16306;
-                        var11 = vc.a(var2_int, 10);
+                        var11 = vc.a(var2_int, 10, -16306);
                         var12 = te.a(var2_int, (byte) -53);
                         pm.a(var9, var3, 12635, var7, var8, var11, var4, var5, var12);
                         var2_int++;
@@ -292,21 +286,15 @@ final class hga extends am {
                   var11 = eka.a((byte) 125, var2_int);
                   var12 = dna.b(var2_int, false);
                   var13 = te.a(var2_int, (byte) 64);
-                  int discarded$18 = -16306;
-                  var14 = vc.a(var2_int, 8);
-                  int discarded$19 = -16306;
-                  var15 = vc.a(var2_int, 9);
-                  int discarded$20 = -16306;
-                  var16 = vc.a(var2_int, 10);
-                  int discarded$21 = -16306;
-                  var17 = vc.a(var2_int, 11);
-                  int discarded$22 = -16306;
-                  var18 = vc.a(var2_int, 12);
+                  var14 = vc.a(var2_int, 8, -16306);
+                  var15 = vc.a(var2_int, 9, -16306);
+                  var16 = vc.a(var2_int, 10, -16306);
+                  var17 = vc.a(var2_int, 11, -16306);
+                  var18 = vc.a(var2_int, 12, -16306);
                   var19 = mq.a(13, 207, var2_int);
                   var20 = oaa.a(-74, var2_int);
                   var21 = wg.a(var2_int, (byte) 83);
-                  int discarded$23 = -4313;
-                  ag.a(var7, var4, var16, var15, var5, var19, var10, var13, var20, var21, var14, var12, var6, var8, var11, var9, var17, var3, var18);
+                  ag.a(var7, var4, var16, var15, var5, var19, var10, var13, var20, var21, var14, var12, var6, var8, var11, var9, var17, var3, var18, -4313);
                   var2_int++;
                   var2_int++;
                   continue L1;

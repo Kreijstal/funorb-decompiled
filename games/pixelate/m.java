@@ -6,7 +6,7 @@ final class m extends fa {
     static String field_l;
     int field_m;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_l = null;
     }
 
@@ -14,7 +14,7 @@ final class m extends fa {
         throw new Error();
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -88,7 +88,7 @@ final class m extends fa {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         String var1 = null;
         if (!to.field_s) {
           throw new IllegalStateException();
@@ -101,8 +101,7 @@ final class m extends fa {
               break L0;
             }
           }
-          int discarded$2 = 0;
-          var1 = dd.a();
+          var1 = dd.a(0);
           nf.field_b = new be(var1, (String) null, true, false, false);
           wa.field_c.b(-6183, (ng) (Object) ph.field_l);
           ph.field_l.c((ng) (Object) nf.field_b, -127);

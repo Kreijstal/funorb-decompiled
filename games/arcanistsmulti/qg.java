@@ -193,7 +193,7 @@ final class qg extends RuntimeException {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
     }

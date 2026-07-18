@@ -145,7 +145,7 @@ final class lia extends pp {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_j = null;
     }
 

@@ -635,7 +635,7 @@ final class hba extends vja {
         return (pp) (Object) stackIn_1_0;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

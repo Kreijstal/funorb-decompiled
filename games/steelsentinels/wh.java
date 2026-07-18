@@ -102,7 +102,7 @@ final class wh implements Iterator {
         ((wh) this).field_f = null;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_i = null;
         field_h = null;

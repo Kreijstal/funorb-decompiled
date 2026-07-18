@@ -131,11 +131,11 @@ final class ika extends rna implements ntb {
             var4 = 0;
             if (param1 <= -19) {
               L1: {
-                if (var3.field_b == var3.field_b) {
+                if (((ika) this).field_b == var3.field_b) {
                   break L1;
                 } else {
                   var4 = 1;
-                  System.out.println("int team has changed. before=" + var3.field_b + ", now=" + var3.field_b);
+                  System.out.println("int team has changed. before=" + var3.field_b + ", now=" + ((ika) this).field_b);
                   break L1;
                 }
               }
@@ -348,13 +348,13 @@ final class ika extends rna implements ntb {
             return;
         }
         try {
-            var4.field_b = var4.field_b;
+            var4.field_b = ((ika) this).field_b;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "ika.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_a = null;
     }

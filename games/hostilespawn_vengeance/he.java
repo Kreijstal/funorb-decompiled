@@ -23,7 +23,7 @@ final class he extends ch {
         field_s = null;
     }
 
-    final static pg[] c() {
+    final static pg[] c(int param0) {
         int var2 = 0;
         int var3 = HostileSpawn.field_I ? 1 : 0;
         pg[] var1 = new pg[sc.field_c];

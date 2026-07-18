@@ -6,7 +6,7 @@ final class pa {
     static long field_b;
     static volatile int field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
     }
 
@@ -27,16 +27,13 @@ final class pa {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$8 = 5;
-                    gj.a(2, var5);
+                    gj.a(2, var5, 5);
                     var5 = (nk) (Object) qh.field_e.a(10);
                     continue L2;
                   }
                 }
               } else {
-                int discarded$9 = 5;
-                int discarded$10 = 0;
-                me.a(var4);
+                me.a(var4, 0, 5);
                 var4 = (dh) (Object) field_c.a(10);
                 continue L1;
               }
@@ -49,7 +46,7 @@ final class pa {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         return af.a(9819, gd.b((byte) 77));
     }
 

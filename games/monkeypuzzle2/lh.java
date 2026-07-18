@@ -87,9 +87,8 @@ final class lh {
             t.field_z = (ta) (Object) cb.a("commonui", param0, -99, param1, "arezzo14");
             pj.field_c = (ta) (Object) cb.a("commonui", param0, -75, param1, "arezzo14bold");
             var18 = new le(param2.a("", "button.gif", -128), (java.awt.Component) (Object) ie.field_e);
-            ai discarded$2 = df.a("commonui", param1, (byte) 118, "dropdown");
-            int discarded$3 = 0;
-            var5 = uj.a("commonui", "screen_options", param1);
+            ai discarded$1 = df.a("commonui", param1, (byte) 118, "dropdown");
+            var5 = uj.a("commonui", "screen_options", param1, false);
             vj.field_d = new ai[4];
             oa.field_D = new ai[4];
             tf.field_a = new ai[4];
@@ -296,7 +295,7 @@ final class lh {
         return stackIn_1_0;
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         return MonkeyPuzzle2.field_D.f(-1);
     }
 

@@ -8,7 +8,7 @@ final class ki {
     static boolean[] field_a;
     static String field_c;
 
-    final static void a(eh param0) {
+    final static void a(eh param0, int param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -70,9 +70,8 @@ final class ki {
         field_d = null;
     }
 
-    final static void a() {
-        int discarded$5 = 0;
-        if (!(vc.a())) {
+    final static void a(byte param0) {
+        if (!(vc.a(0))) {
             return;
         }
         gj.a(-1, 4, false);

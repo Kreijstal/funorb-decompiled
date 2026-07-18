@@ -18,8 +18,7 @@ final class gj extends rh {
     }
 
     final static db[] a(int param0, int param1, boolean param2, int param3) {
-        int discarded$0 = 3;
-        return wb.a(param0, param1, 1, param3);
+        return wb.a(param0, param1, 1, param3, 3);
     }
 
     final boolean d(byte param0) {

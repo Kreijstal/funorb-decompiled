@@ -19,7 +19,7 @@ abstract class o {
 
     abstract void a(int param0, int param1, int param2);
 
-    final static void b() {
+    final static void b(int param0) {
         ha var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -30,14 +30,13 @@ abstract class o {
           L0: {
             var1 = pg.field_fb;
             L1: while (true) {
-              int discarded$9 = 1816;
-              if (!wk.b()) {
+              if (!wk.b(1816)) {
                 break L0;
               } else {
                 var1.f(8, 950);
-                int fieldTemp$10 = var1.field_k + 1;
+                int fieldTemp$5 = var1.field_k + 1;
                 var1.field_k = var1.field_k + 1;
-                var2 = fieldTemp$10;
+                var2 = fieldTemp$5;
                 qh.a(124, var1);
                 pg.field_fb.a(var1.field_k + -var2, (byte) -75);
                 continue L1;
@@ -52,11 +51,10 @@ abstract class o {
     }
 
     final static pf a(int param0, int param1, int param2, boolean param3, boolean param4) {
-        int discarded$0 = 1;
-        return na.a(1, 255, param2, false, false);
+        return na.a(1, 255, param2, false, false, true);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
         field_g = null;
         field_h = null;
@@ -168,7 +166,7 @@ abstract class o {
 
     abstract void a(int param0, int param1);
 
-    final static void a(qe param0) {
+    final static void a(qe param0, boolean param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var4 = 0;
@@ -238,8 +236,7 @@ abstract class o {
                   if (qe.field_e != 2047) {
                     break L4;
                   } else {
-                    int discarded$2 = 1;
-                    hj.a(250, 5);
+                    hj.a(250, 5, 1);
                     break L4;
                   }
                 }
@@ -398,8 +395,7 @@ abstract class o {
                     if (!pk.a(-12663, 0)) {
                       break L18;
                     } else {
-                      int discarded$3 = 1;
-                      hj.a(242, 13);
+                      hj.a(242, 13, 1);
                       break L18;
                     }
                   }

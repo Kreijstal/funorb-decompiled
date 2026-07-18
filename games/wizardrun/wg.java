@@ -200,14 +200,14 @@ final class wg {
         return stackIn_14_0;
     }
 
-    final static o[] a(int param0) {
+    final static o[] a(int param0, int param1) {
         o[] var3 = new o[9];
         o[] var2 = var3;
         var3[4] = id.a((byte) 98, param0, 64);
         return var2;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_f = null;
         field_e = null;

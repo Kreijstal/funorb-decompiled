@@ -35,7 +35,7 @@ final class fm extends an {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -60,8 +60,7 @@ final class fm extends an {
               if (var2 != 0) {
                 if (var2 != 1) {
                   if (2 != var2) {
-                    int discarded$3 = 3;
-                    ae.a((Throwable) null, 10331, "A1: " + cb.f());
+                    ae.a((Throwable) null, 10331, "A1: " + cb.f(3));
                     p.a(1);
                     break L1;
                   } else {
@@ -70,8 +69,7 @@ final class fm extends an {
                       p.a(1);
                       return;
                     } else {
-                      int discarded$4 = 14821;
-                      var14.field_k = ae.a();
+                      var14.field_k = ae.a(14821);
                       var14.field_o = true;
                       var14.b(-27598);
                       break L1;
@@ -88,8 +86,7 @@ final class fm extends an {
                   }
                 }
               } else {
-                int discarded$5 = 14821;
-                var10 = ae.a();
+                var10 = ae.a(14821);
                 var3 = var10;
                 var9 = var10;
                 var4 = var9;
@@ -131,7 +128,7 @@ final class fm extends an {
         super.b(param0, -73, param2, param3);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_H = null;
         field_G = null;
         field_I = null;
@@ -203,8 +200,7 @@ final class fm extends an {
                       if (param1 < -34) {
                         break L4;
                       } else {
-                        int discarded$3 = 1;
-                        fm.b();
+                        fm.b(true);
                         break L4;
                       }
                     }
@@ -219,13 +215,12 @@ final class fm extends an {
                       } else {
                         L6: {
                           var7 = param0.charAt(var6);
-                          int discarded$4 = 0;
-                          if (bh.a((char) var7)) {
+                          if (bh.a((char) var7, false)) {
                             var8 = qj.a(-122, (char) var7);
                             if (var8 == 0) {
                               break L6;
                             } else {
-                              StringBuilder discarded$5 = var5.append((char) var8);
+                              StringBuilder discarded$1 = var5.append((char) var8);
                               break L6;
                             }
                           } else {

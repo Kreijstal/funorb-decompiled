@@ -410,8 +410,7 @@ final class un implements Runnable {
                         } else {
                           try {
                             L9: {
-                              int discarded$7 = 122;
-                              var8_ref.field_b = (Object) (Object) sj.a(var8_ref.field_f, (String) var8_ref.field_e).a(true);
+                              var8_ref.field_b = (Object) (Object) sj.a(var8_ref.field_f, (String) var8_ref.field_e, (byte) 122).a(true);
                               break L9;
                             }
                           } catch (java.lang.Exception decompiledCaughtParameter1) {
@@ -491,7 +490,7 @@ final class un implements Runnable {
                                                 ((un) this).field_x.a(var8_ref.field_f >>> 16, var8_ref.field_g >> 16, (byte) -108, 65535 & var8_ref.field_f, var14, var8_ref.field_g & 65535);
                                                 break L8;
                                               } else {
-                                                Object discarded$8 = Class.forName("bg").getMethod("enter", new Class[5]).invoke(((un) this).field_v, new Object[5]);
+                                                Object discarded$6 = Class.forName("bg").getMethod("enter", new Class[5]).invoke(((un) this).field_v, new Object[5]);
                                                 break L8;
                                               }
                                             } else {
@@ -515,7 +514,7 @@ final class un implements Runnable {
                                                             ((un) this).field_t.a(var4_int, var3_int, 0);
                                                             break L8;
                                                           } else {
-                                                            Object discarded$9 = Class.forName("up").getDeclaredMethod("movemouse", new Class[2]).invoke(((un) this).field_w, new Object[2]);
+                                                            Object discarded$7 = Class.forName("up").getDeclaredMethod("movemouse", new Class[2]).invoke(((un) this).field_w, new Object[2]);
                                                             break L8;
                                                           }
                                                         }
@@ -542,7 +541,7 @@ final class un implements Runnable {
                                                           var3_int = stackIn_57_0;
                                                           var11 = (java.awt.Component) var8_ref.field_e;
                                                           if (!((un) this).field_i) {
-                                                            Object discarded$10 = Class.forName("up").getDeclaredMethod("showcursor", new Class[2]).invoke(((un) this).field_w, new Object[2]);
+                                                            Object discarded$8 = Class.forName("up").getDeclaredMethod("showcursor", new Class[2]).invoke(((un) this).field_w, new Object[2]);
                                                             break L8;
                                                           } else {
                                                             ((un) this).field_t.a(var3_int != 0, var11, (byte) 88);
@@ -557,7 +556,7 @@ final class un implements Runnable {
                                                       } else {
                                                         if (var2_int == 17) {
                                                           var13 = (Object[]) var8_ref.field_e;
-                                                          Object discarded$11 = Class.forName("up").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((un) this).field_w, new Object[5]);
+                                                          Object discarded$9 = Class.forName("up").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((un) this).field_w, new Object[5]);
                                                           break L8;
                                                         } else {
                                                           break L14;
@@ -586,7 +585,7 @@ final class un implements Runnable {
                                                             var5 = 0;
                                                             L17: while (true) {
                                                               if (~var5 <= ~var12.length()) {
-                                                                Process discarded$12 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var12 + "\"");
+                                                                Process discarded$10 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var12 + "\"");
                                                                 var8_ref.field_b = null;
                                                                 break L15;
                                                               } else {
@@ -618,7 +617,7 @@ final class un implements Runnable {
                                                 }
                                               } else {
                                                 if (!((un) this).field_i) {
-                                                  Object discarded$13 = Class.forName("bg").getMethod("exit", new Class[0]).invoke(((un) this).field_v, new Object[0]);
+                                                  Object discarded$11 = Class.forName("bg").getMethod("exit", new Class[0]).invoke(((un) this).field_v, new Object[0]);
                                                   break L8;
                                                 } else {
                                                   ((un) this).field_x.a((byte) 54, (java.awt.Frame) var8_ref.field_e);

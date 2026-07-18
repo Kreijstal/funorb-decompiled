@@ -229,7 +229,7 @@ final class nl {
         }
     }
 
-    final static wv a(int param0) {
+    final static wv a(int param0, byte param1) {
         return uw.field_g[param0];
     }
 
@@ -306,7 +306,7 @@ final class nl {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_e = null;
         field_f = null;

@@ -193,7 +193,7 @@ final class ul extends bg {
         return stackIn_11_0 != 0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_m = null;
         field_n = null;
         field_p = null;

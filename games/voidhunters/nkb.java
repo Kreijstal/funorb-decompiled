@@ -92,7 +92,7 @@ final class nkb extends rqa {
         return stackIn_3_0;
     }
 
-    final static tpa a() {
+    final static tpa a(int param0) {
         if (dn.field_r == kla.field_d) {
             throw new IllegalStateException();
         }

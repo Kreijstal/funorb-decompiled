@@ -51,7 +51,7 @@ final class vd {
         return null;
     }
 
-    final static String a(CharSequence[] param0) {
+    final static String a(CharSequence[] param0, byte param1) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;

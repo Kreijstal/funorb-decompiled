@@ -48,7 +48,7 @@ final class vf extends kd {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_m = null;
         field_s = null;
     }

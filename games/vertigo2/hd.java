@@ -129,7 +129,7 @@ final class hd {
         return 1900 + new Date().getYear();
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_b = null;
         field_c = null;
@@ -282,7 +282,7 @@ final class hd {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         nm.field_J = false;
         rp.field_e = null;
         bl.field_z = null;

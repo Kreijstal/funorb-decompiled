@@ -11,7 +11,7 @@ final class ug extends pv {
     static String field_k;
     static kv field_o;
 
-    final static Object a(boolean param0, byte[] param1) {
+    final static Object a(boolean param0, byte[] param1, int param2) {
         gla var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
@@ -85,21 +85,21 @@ final class ug extends pv {
         return (Object) (Object) stackIn_6_0;
     }
 
-    private final void b() {
+    private final void b(int param0) {
     }
 
     private final int c(int param0) {
         return Math.abs(((ug) this).field_j) * 100 / 56 >> 1;
     }
 
-    private final int d() {
+    private final int d(int param0) {
         return (int)((double)((ug) this).field_g * ((ug) this).field_p) - -((ug) this).field_n;
     }
 
     final boolean b(boolean param0) {
-        int fieldTemp$5 = ((ug) this).field_g + 1;
+        int fieldTemp$1 = ((ug) this).field_g + 1;
         ((ug) this).field_g = ((ug) this).field_g + 1;
-        if (fieldTemp$5 <= this.c(-137)) {
+        if (fieldTemp$1 <= this.c(-137)) {
           if (((ug) this).field_j != 0) {
             if (!param0) {
               L0: {
@@ -112,8 +112,7 @@ final class ug extends pv {
                   break L0;
                 }
               }
-              int discarded$6 = -27656;
-              ((ug) this).field_f.field_n = this.d();
+              ((ug) this).field_f.field_n = this.d(-27656);
               return false;
             } else {
               L1: {
@@ -125,18 +124,15 @@ final class ug extends pv {
                   break L1;
                 }
               }
-              int discarded$7 = -27656;
-              ((ug) this).field_f.field_n = this.d();
+              ((ug) this).field_f.field_n = this.d(-27656);
               return false;
             }
           } else {
-            int discarded$8 = 1;
-            this.b();
+            this.b(1);
             return true;
           }
         } else {
-          int discarded$9 = 1;
-          this.b();
+          this.b(1);
           return true;
         }
     }
@@ -203,7 +199,7 @@ final class ug extends pv {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_l = null;
         field_m = null;
         field_k = null;

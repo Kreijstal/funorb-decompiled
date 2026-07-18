@@ -5,12 +5,12 @@ final class uc {
     static vh field_b;
     static vh field_a;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         if (Character.isISOControl(param0)) {
           return false;
         } else {

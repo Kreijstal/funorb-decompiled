@@ -113,7 +113,7 @@ final class uu extends ms {
         ((uu) this).field_A = null;
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         pd var1 = null;
         pl var2 = null;
         var1 = (pd) (Object) vu.field_g.b(103);

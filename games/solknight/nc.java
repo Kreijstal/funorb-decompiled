@@ -99,7 +99,7 @@ final class nc {
         return var2;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_b = null;
         field_d = null;
     }
@@ -189,8 +189,7 @@ final class nc {
                 break L1;
               }
             }
-            int discarded$5 = -122;
-            sj.a((java.awt.Component) (Object) param1);
+            sj.a((java.awt.Component) (Object) param1, -122);
             if (ah.field_d == null) {
               break L0;
             } else {
@@ -382,10 +381,7 @@ final class nc {
           if (kj.field_R >= 10) {
             if (!uk.h(250)) {
               mi.a();
-              int discarded$8 = 18;
-              int discarded$9 = 320;
-              int discarded$10 = 240;
-              vg.b();
+              vg.b(240, 320, 18);
               uf.a((byte) 99, 0, 0, param0);
               return;
             } else {
@@ -409,8 +405,7 @@ final class nc {
                 break L1;
               }
             }
-            int discarded$11 = -100;
-            la.a(ak.a(true), ae.field_e, 82, var3_int != 0, mc.a());
+            la.a(ak.a(true), ae.field_e, 82, var3_int != 0, mc.a(-100));
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

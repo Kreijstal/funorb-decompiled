@@ -563,11 +563,11 @@ class ka extends pm {
         }
     }
 
-    final static boolean k() {
+    final static boolean k(int param0) {
         return in.field_h;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -1085,7 +1085,7 @@ class ka extends pm {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_G = null;
         field_N = null;
         field_F = null;

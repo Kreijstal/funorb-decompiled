@@ -6,7 +6,7 @@ final class im {
     static String field_a;
     static int[] field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;
@@ -17,8 +17,7 @@ final class im {
             param1 = false;
         }
         kq.a((byte) -57, param1);
-        int discarded$0 = 20975;
-        ms.b();
+        ms.b(20975);
     }
 
     final static void a(fs param0, ob param1, int param2) {
@@ -150,7 +149,7 @@ final class im {
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
@@ -174,8 +173,7 @@ final class im {
         try {
           L0: {
             var2_int = 0;
-            int discarded$2 = 0;
-            stackOut_0_0 = nn.a(-105, param0);
+            stackOut_0_0 = nn.a(-105, param0, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

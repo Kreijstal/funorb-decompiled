@@ -32,13 +32,11 @@ final class ij extends vd implements kn, qk {
           L0: {
             L1: {
               if (((ij) this).field_H == param3) {
-                int discarded$10 = 5109;
-                fa.a();
+                fa.a(5109);
                 break L1;
               } else {
                 if (((ij) this).field_E == param3) {
-                  int discarded$11 = 496;
-                  this.j();
+                  this.j(496);
                   break L1;
                 } else {
                   break L1;
@@ -80,13 +78,12 @@ final class ij extends vd implements kn, qk {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_J = null;
     }
 
     private final boolean l(int param0) {
-        int discarded$2 = -99;
-        if (!this.a((sk) (Object) ((ij) this).field_G)) {
+        if (!this.a((sk) (Object) ((ij) this).field_G, (byte) -99)) {
           return false;
         } else {
           if (param0 != -6790) {
@@ -191,7 +188,7 @@ final class ij extends vd implements kn, qk {
         return stackIn_12_0 != 0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, boolean param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -253,7 +250,7 @@ final class ij extends vd implements kn, qk {
         }
     }
 
-    final static int k() {
+    final static int k(int param0) {
         int var1 = 0;
         int var2 = 0;
         L0: {
@@ -363,7 +360,7 @@ final class ij extends vd implements kn, qk {
         }
     }
 
-    private final boolean a(sk param0) {
+    private final boolean a(sk param0, byte param1) {
         bg var3 = null;
         RuntimeException var3_ref = null;
         bm var4 = null;
@@ -444,7 +441,7 @@ final class ij extends vd implements kn, qk {
         return stackIn_7_0 != 0;
     }
 
-    private final int a(String param0, String param1, byte param2, int param3, int param4, ag param5) {
+    private final int a(String param0, String param1, byte param2, int param3, int param4, ag param5, int param6) {
         RuntimeException var8 = null;
         al var9 = null;
         int var10 = 0;
@@ -677,7 +674,7 @@ final class ij extends vd implements kn, qk {
         ((ij) this).a(496, 0, 0, 0, var4 + (var3 - -55));
     }
 
-    private final void j() {
+    private final void j(int param0) {
         if (!(this.l(-6790))) {
             return;
         }
@@ -742,8 +739,7 @@ final class ij extends vd implements kn, qk {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$2 = 35;
-            stackOut_0_0 = this.a(param2, param5, (byte) 71, 70, 170, param1);
+            stackOut_0_0 = this.a(param2, param5, (byte) 71, 70, 170, param1, 35);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

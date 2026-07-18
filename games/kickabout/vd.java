@@ -40,7 +40,7 @@ final class vd {
         throw new IllegalStateException();
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         int var1 = 0;
         int stackIn_17_0 = 0;
         int stackOut_16_0 = 0;

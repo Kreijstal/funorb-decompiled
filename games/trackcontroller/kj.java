@@ -18,20 +18,20 @@ final class kj extends fc {
     static int field_o;
     static int field_k;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_l = null;
         field_s = null;
         field_q = null;
         field_t = null;
     }
 
-    final static ng a() {
+    final static ng a(byte param0) {
         ng var1 = new ng(ab.field_a, qe.field_p, ka.field_f[0], vb.field_a[0], cf.field_p[0], j.field_f[0], qk.field_M[0], qe.field_z);
         ff.b(60);
         return var1;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         if (-vi.field_c != fb.field_a) {
             if (-vi.field_c + 250 == fb.field_a) {
             }

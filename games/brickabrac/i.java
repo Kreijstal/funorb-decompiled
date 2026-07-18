@@ -126,7 +126,7 @@ final class i extends nm {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_s = null;
         field_o = null;
         field_m = null;
@@ -216,8 +216,7 @@ final class i extends nm {
                         var11 = var13;
                         var6 = var11;
                         if (var3 == 1) {
-                          int discarded$2 = 9;
-                          int discarded$3 = tc.a(var6, var5, param1, var4);
+                          int discarded$1 = tc.a(var17, var5, param1, var4, 9);
                           break L5;
                         } else {
                           var7 = (Object) (Object) ae.field_d;
@@ -438,7 +437,7 @@ final class i extends nm {
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         int var2 = 0;
         var2 = BrickABrac.field_J ? 1 : 0;
         if (!pe.field_o.c(116)) {
@@ -560,8 +559,7 @@ final class i extends nm {
         tp var12 = null;
         tp var13 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
-        int discarded$1 = -75;
-        if (eo.a(((i) this).field_t.field_t, ((i) this).field_r)) {
+        if (eo.a(((i) this).field_t.field_t, ((i) this).field_r, (byte) -75)) {
           if (((i) this).field_r == nf.field_P) {
             L0: {
               L1: {

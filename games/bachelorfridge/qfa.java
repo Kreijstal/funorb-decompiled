@@ -160,7 +160,7 @@ final class qfa extends cga {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4, String param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, byte param3, int param4, String param5, int param6, int param7, int param8) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -342,7 +342,7 @@ final class qfa extends cga {
     qfa() {
     }
 
-    final static String a(int param0, String param1) {
+    final static String a(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
@@ -461,12 +461,12 @@ final class qfa extends cga {
         return stackIn_28_0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_w = null;
         field_t = null;
     }
 
-    final static void h() {
+    final static void h(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -571,11 +571,10 @@ final class qfa extends cga {
                 break L0;
               } else {
                 var1.c(8, (byte) 119);
-                int fieldTemp$10 = var1.field_g + 1;
+                int fieldTemp$5 = var1.field_g + 1;
                 var1.field_g = var1.field_g + 1;
-                var2 = fieldTemp$10;
-                int discarded$11 = 108;
-                sia.a(var1);
+                var2 = fieldTemp$5;
+                sia.a(var1, 108);
                 sja.field_fb.b((byte) -68, var1.field_g - var2);
                 continue L2;
               }

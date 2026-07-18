@@ -9,18 +9,13 @@ final class bv {
     static int field_e;
 
     private final void a(byte param0, int param1, int param2) {
-        RuntimeException var4 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            int discarded$3 = 0;
-            this.a(param1, 127, param2);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var4, "bv.F(" + 113 + ',' + param1 + ',' + param2 + ')');
+            this.a(param1, 127, param2, false);
+            if (param0 != 113) {
+                field_d = true;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "bv.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -111,7 +106,7 @@ final class bv {
                     }
                   }
                 }
-                stackOut_11_0 = 30;
+                stackOut_11_0 = param2;
                 stackOut_11_1 = 30;
                 stackIn_12_0 = stackOut_11_0;
                 stackIn_12_1 = stackOut_11_1;
@@ -160,7 +155,7 @@ final class bv {
           }
           L6: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(30).append(',').append(param3).append(',');
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_24_0 = stackOut_21_0;
             stackIn_24_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -189,17 +184,13 @@ final class bv {
     }
 
     private final void a(int param0, int param1) {
-        RuntimeException var3 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
             this.a((byte) 113, 100, param1);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var3, "bv.J(" + -26476 + ',' + param1 + ')');
+            if (param0 != -26476) {
+                this.a((rsb) null, (lta) null, 111, -69, (int[]) null, (String) null, -41);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "bv.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -492,8 +483,7 @@ final class bv {
             L1: {
               var10_int = -16384;
               var11 = -2048;
-              int discarded$1 = 13879;
-              var12 = tea.a(param7, param6);
+              var12 = tea.a(param7, param6, 13879);
               var13 = onb.field_a;
               var14 = lj.field_a;
               var15 = param0[0];
@@ -1016,7 +1006,7 @@ final class bv {
         ((bv) this).field_c = -1;
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void a(int param0, int param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -1029,13 +1019,17 @@ final class bv {
                   break L1;
                 } else {
                   L2: {
-                    if (-1 == vl.field_o) {
+                    if (param3) {
                       break L2;
                     } else {
-                      if (param2 != vl.field_o) {
-                        break L1;
-                      } else {
+                      if (-1 == vl.field_o) {
                         break L2;
+                      } else {
+                        if (param2 != vl.field_o) {
+                          break L1;
+                        } else {
+                          break L2;
+                        }
                       }
                     }
                   }
@@ -1044,12 +1038,20 @@ final class bv {
                 }
               }
             }
+            L3: {
+              if (param1 > 85) {
+                break L3;
+              } else {
+                field_a = null;
+                break L3;
+              }
+            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var5, "bv.G(" + param0 + ',' + 127 + ',' + param2 + ',' + false + ')');
+          throw rta.a((Throwable) (Object) var5, "bv.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

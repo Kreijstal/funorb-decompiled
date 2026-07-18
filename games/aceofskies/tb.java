@@ -11,7 +11,7 @@ final class tb extends wf {
     private int field_f;
     private String field_k;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         int var1 = -1;
         field_g = null;

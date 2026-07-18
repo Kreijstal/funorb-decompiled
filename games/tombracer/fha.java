@@ -4,7 +4,7 @@
 final class fha {
     static String[] field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         int var1 = 0;
     }
@@ -87,7 +87,7 @@ final class fha {
             mj.field_J = (il) (Object) oo.a(param2, param1, false, "commonui", "arezzo14");
             ft.field_c = (il) (Object) oo.a(param2, param1, false, "commonui", "arezzo14bold");
             var17 = new iu(param3.a("button.gif", (byte) 118, ""), (java.awt.Component) (Object) nma.field_l);
-            hja discarded$2 = uv.a("dropdown", param2, "commonui", 8864);
+            hja discarded$1 = uv.a("dropdown", param2, "commonui", 8864);
             var5 = tw.a((byte) 127, "screen_options", "commonui", param2);
             ita.field_e = new hja[4];
             rra.field_a = new hja[4];
@@ -110,8 +110,7 @@ final class fha {
                 L2: while (true) {
                   if (var9 >= 3) {
                     var9 = var17.field_q;
-                    int discarded$3 = -29711;
-                    gb.a();
+                    gb.a(-29711);
                     var17.c();
                     bea.a(0, 0, bea.field_g, bea.field_a);
                     var15 = new iu(var9, var9);

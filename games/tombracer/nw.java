@@ -177,7 +177,7 @@ final class nw extends ci {
         }
     }
 
-    final static Boolean e() {
+    final static Boolean e(byte param0) {
         Boolean var1 = kia.field_b;
         kia.field_b = null;
         return var1;
@@ -697,7 +697,7 @@ final class nw extends ci {
         }
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var3 = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         Random var5 = new Random((long)((nw) this).field_n);
@@ -716,8 +716,7 @@ final class nw extends ci {
             return;
         }
         ((nw) this).field_q = pca.a(((nw) this).field_n, (byte) 76);
-        int discarded$0 = -94;
-        this.c();
+        this.c(-94);
     }
 
     final static ha a(int param0, int param1, d param2, int param3, cn param4, java.awt.Canvas param5) {
@@ -787,8 +786,7 @@ final class nw extends ci {
                 break L1;
               }
             }
-            int discarded$2 = -17441;
-            stackOut_2_0 = ha.a(param2, var7, param4, param3, var6_int, param0, param5);
+            stackOut_2_0 = ha.a(param2, var7, param4, param3, var6_int, param0, param5, -17441);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

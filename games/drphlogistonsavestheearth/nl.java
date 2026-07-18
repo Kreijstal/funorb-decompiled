@@ -14,17 +14,14 @@ final class nl extends gi {
     static String field_o;
     int field_j;
 
-    final static void d() {
-        int discarded$0 = 0;
-        int var1 = ie.a();
-        int discarded$1 = 115;
-        int var2 = ig.a();
+    final static void d(int param0) {
+        int var1 = ie.a(false);
+        int var2 = ig.a((byte) 115);
         cb.field_a.a(var2 + (di.field_d << 1), -df.field_h + si.field_B, var1 + (df.field_h << 1), jd.field_N - di.field_d, 7453);
-        int discarded$2 = 17077;
-        tf.n();
+        tf.n(17077);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_n = null;
         field_o = null;
         field_i = null;

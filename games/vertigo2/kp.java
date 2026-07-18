@@ -155,7 +155,7 @@ class kp extends d {
         }
     }
 
-    private final int k() {
+    private final int k(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -203,7 +203,7 @@ class kp extends d {
         var2 = 55 / ((-22 - param0) / 32);
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_12_0 = null;
@@ -532,8 +532,7 @@ class kp extends d {
                     } else {
                       L6: {
                         ((kp) this).field_L = this.l(44);
-                        int discarded$1 = -27539;
-                        ((kp) this).field_K = this.k();
+                        ((kp) this).field_K = this.k(-27539);
                         if (((kp) this).field_K <= 0) {
                           break L6;
                         } else {
@@ -806,9 +805,9 @@ class kp extends d {
                             break L6;
                           } else {
                             ((kp) this).field_w = ((kp) this).field_w + param0;
-                            int dupTemp$3 = ((kp) this).field_w.length();
-                            ((kp) this).field_K = dupTemp$3;
-                            ((kp) this).field_L = dupTemp$3;
+                            int dupTemp$1 = ((kp) this).field_w.length();
+                            ((kp) this).field_K = dupTemp$1;
+                            ((kp) this).field_L = dupTemp$1;
                             break L6;
                           }
                         }
@@ -844,9 +843,8 @@ class kp extends d {
                                   stackIn_70_1 = stackOut_69_1;
                                   break L8;
                                 } else {
-                                  int discarded$4 = -27539;
                                   stackOut_68_0 = this;
-                                  stackOut_68_1 = this.k();
+                                  stackOut_68_1 = this.k(-27539);
                                   stackIn_70_0 = stackOut_68_0;
                                   stackIn_70_1 = stackOut_68_1;
                                   break L8;
@@ -907,8 +905,7 @@ class kp extends d {
                                     if (param2 != 67) {
                                       break L7;
                                     } else {
-                                      int discarded$5 = -35;
-                                      this.i();
+                                      this.i((byte) -35);
                                       stackOut_59_0 = 1;
                                       stackIn_60_0 = stackOut_59_0;
                                       return stackIn_60_0 != 0;
@@ -1091,7 +1088,7 @@ class kp extends d {
         }
     }
 
-    private final void i() {
+    private final void i(byte param0) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -1100,8 +1097,7 @@ class kp extends d {
               L0: {
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.m(-59);
-                int discarded$1 = 100;
-                this.a(var2);
+                this.a(var2, (byte) 100);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {

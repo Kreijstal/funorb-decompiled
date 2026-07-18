@@ -81,8 +81,7 @@ final class wt {
                 break L0;
               }
             }
-            int discarded$4 = 1;
-            cjb.field_b = rv.a(stackIn_10_0 != 0);
+            cjb.field_b = rv.a(stackIn_10_0 != 0, 1);
             return;
           } else {
             L1: {
@@ -97,8 +96,7 @@ final class wt {
                 }
               }
             }
-            int discarded$5 = -124;
-            cjb.field_b = tma.a(param0, param3);
+            cjb.field_b = tma.a(param0, param3, (byte) -124);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

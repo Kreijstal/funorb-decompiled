@@ -13,7 +13,7 @@ final class iea {
     nh field_a;
     iea field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_e = null;
     }

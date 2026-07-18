@@ -33,7 +33,7 @@ final class bc extends c implements nh {
         }
     }
 
-    final static void s() {
+    final static void s(int param0) {
         ok.field_w = false;
         c.field_S = 0;
         gf.field_b = null;

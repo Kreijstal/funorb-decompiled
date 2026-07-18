@@ -6,7 +6,7 @@ final class fj {
     static volatile int field_c;
     static hu field_b;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_b = null;
     }
 
@@ -22,7 +22,7 @@ final class fj {
         return param1 >>> 28 | param1 << 4;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         wd.field_l.k(119);
         if (!(nm.field_d != null)) {
             nm.field_d = new oj(wd.field_l, st.field_m);
@@ -86,8 +86,7 @@ final class fj {
                               var2.a((gn) (Object) new lk(bp.field_Gb, -1 + var3.field_c), 3);
                               continue L1;
                             } else {
-                              int discarded$1 = 0;
-                              var2.a((gn) (Object) tl.a(var3), 3);
+                              var2.a((gn) (Object) tl.a(var3, false), 3);
                               continue L1;
                             }
                           }

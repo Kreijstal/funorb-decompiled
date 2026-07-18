@@ -94,7 +94,7 @@ abstract class nl {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_b = null;
     }

@@ -168,7 +168,7 @@ final class co {
         ak.field_d.a(-4 + (lb.field_d + -120), 0, 438 * var4 / var3 + (202 + var2), 438, (byte) 64);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         int var1 = -1;
         field_j = null;
@@ -517,8 +517,7 @@ final class co {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            fo.a(param1);
+            fo.a(param1, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -553,7 +552,7 @@ final class co {
         }
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return lk.field_p + -nc.field_k;
     }
 

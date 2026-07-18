@@ -120,8 +120,7 @@ final class hn extends se {
         try {
           L0: {
             L1: {
-              int discarded$8 = -114;
-              if (ab.a(param0) != null) {
+              if (ab.a(param0, (byte) -114) != null) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -181,7 +180,7 @@ final class hn extends se {
         return stackIn_11_0;
     }
 
-    final static String b() {
+    final static String b(boolean param0) {
         return kd.field_n.i(114);
     }
 

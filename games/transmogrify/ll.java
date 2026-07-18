@@ -80,14 +80,14 @@ final class ll extends bi implements df {
         }
     }
 
-    public static void q() {
+    public static void q(int param0) {
         field_V = null;
         field_Q = null;
         field_W = null;
         field_T = null;
     }
 
-    final static int s() {
+    final static int s(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -125,15 +125,13 @@ final class ll extends bi implements df {
                       } else {
                         var3 = uj.field_d[bk.field_c.field_d];
                         if (var3 == 2) {
-                          int discarded$3 = 0;
-                          i.a();
+                          i.a(false);
                           break L3;
                         } else {
                           if (var3 != 5) {
                             break L3;
                           } else {
-                            int discarded$4 = 0;
-                            i.a();
+                            i.a(false);
                             break L3;
                           }
                         }
@@ -146,8 +144,7 @@ final class ll extends bi implements df {
                     if (q.field_a == 2) {
                       break L3;
                     } else {
-                      int discarded$5 = 0;
-                      i.a();
+                      i.a(false);
                       break L3;
                     }
                   }
@@ -206,8 +203,7 @@ final class ll extends bi implements df {
           return;
         } else {
           if (param0 != -28589) {
-            int discarded$4 = 109;
-            int discarded$5 = ll.s();
+            int discarded$2 = ll.s(109);
             ((ll) this).field_A = false;
             return;
           } else {
@@ -260,8 +256,7 @@ final class ll extends bi implements df {
                 if (fi.field_w == param1) {
                   ((ll) this).field_h = ((ll) this).field_h + 10;
                   var3 = (Object) (Object) n.field_b;
-                  int discarded$5 = -106;
-                  if (!hi.b()) {
+                  if (!hi.b(-106)) {
                     break L1;
                   } else {
                     ((ll) this).field_h = ((ll) this).field_h + 20;
@@ -467,7 +462,7 @@ final class ll extends bi implements df {
         return stackIn_3_0;
     }
 
-    final static boolean c() {
+    final static boolean c(boolean param0) {
         return ej.field_n;
     }
 

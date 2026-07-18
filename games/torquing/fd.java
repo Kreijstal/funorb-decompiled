@@ -115,7 +115,7 @@ final class fd {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -170,8 +170,7 @@ final class fd {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_2_0 = vd.a(-127, param1);
+            stackOut_2_0 = vd.a(-127, param1, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -208,7 +207,7 @@ final class fd {
         return stackIn_3_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_k = null;
     }
 

@@ -207,7 +207,7 @@ final class ma extends jc {
         return stackIn_9_0;
     }
 
-    final static int o() {
+    final static int o(int param0) {
         return -cg.field_o + si.field_d;
     }
 
@@ -565,7 +565,7 @@ final class ma extends jc {
         ((ma) this).field_J = ((ma) this).field_u;
     }
 
-    public static void n() {
+    public static void n(int param0) {
         field_O = null;
     }
 

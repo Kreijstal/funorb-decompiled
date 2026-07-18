@@ -7,7 +7,7 @@ final class tb extends pe implements ha, qd {
     wj field_H;
     private p field_E;
 
-    private final boolean d() {
+    private final boolean d(boolean param0) {
         if (!this.a(3, (wa) (Object) ((tb) this).field_E)) {
             return false;
         }
@@ -168,8 +168,7 @@ final class tb extends pe implements ha, qd {
                 Object var6 = null;
                 int discarded$0 = this.a(-69, (String) null, (String) null, -121, -105, (ub) null);
             }
-            int discarded$1 = 0;
-            ((tb) this).field_F.field_B = this.d();
+            ((tb) this).field_F.field_B = this.d(false);
         } catch (RuntimeException runtimeException) {
             throw bd.a((Throwable) (Object) runtimeException, "tb.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -261,15 +260,13 @@ final class tb extends pe implements ha, qd {
             if (param0 == -18905) {
               if (param1 != ((tb) this).field_G) {
                 if (param1 == ((tb) this).field_F) {
-                  int discarded$4 = 104;
-                  this.g();
+                  this.g(104);
                   break L0;
                 } else {
                   return;
                 }
               } else {
-                int discarded$5 = -1;
-                pc.a();
+                pc.a(-1);
                 return;
               }
             } else {
@@ -308,9 +305,8 @@ final class tb extends pe implements ha, qd {
         }
     }
 
-    private final void g() {
-        int discarded$0 = 0;
-        if (!this.d()) {
+    private final void g(int param0) {
+        if (!this.d(false)) {
             return;
         }
         vc.a(-125, ((tb) this).field_E.field_k);

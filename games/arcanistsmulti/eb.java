@@ -20,8 +20,7 @@ final class eb implements pf {
             var4.field_p = 0;
             var4.field_t = 10;
             pe.field_Lb.b((pg) (Object) var4, -1);
-            int discarded$2 = 7;
-            fj.a(-26971, var4);
+            fj.a(-26971, var4, 7);
             return var4;
           } else {
             if (var4.field_p != 0) {
@@ -34,7 +33,7 @@ final class eb implements pf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_d = null;
@@ -104,7 +103,7 @@ final class eb implements pf {
         }
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, boolean param1) {
         ul.field_A = param0;
         if (!(null == jl.field_h)) {
             jl.field_h.a(param0, (byte) -66);
@@ -345,7 +344,7 @@ final class eb implements pf {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         mj.a(-6578, param0);
         if (!(null == kh.field_c)) {
             fk.a(0, kh.field_c);
@@ -358,8 +357,7 @@ final class eb implements pf {
             mj.field_r = param3;
             int var4_int = 51;
             tg.field_d = param1;
-            int discarded$0 = 403300833;
-            eg.b();
+            eg.b(403300833);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "eb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + -117 + ',' + param3 + ')');
         }

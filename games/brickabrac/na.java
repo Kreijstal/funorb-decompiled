@@ -550,13 +550,11 @@ final class na extends ug {
               break L7;
             } else {
               if (ea.field_g) {
-                int discarded$24 = -1;
-                ml.a(param3);
+                ml.a(param3, -1);
                 break L7;
               } else {
                 if (-1 < go.field_c) {
-                  int discarded$25 = -1;
-                  ml.a(param3);
+                  ml.a(param3, -1);
                   break L7;
                 } else {
                   if (kb.field_Yb < 2) {
@@ -565,8 +563,7 @@ final class na extends ug {
                     if (!pe.field_l[12]) {
                       break L7;
                     } else {
-                      int discarded$26 = -1;
-                      ml.a(param3);
+                      ml.a(param3, -1);
                       break L7;
                     }
                   }
@@ -577,24 +574,15 @@ final class na extends ug {
           L8: {
             if (td.field_v.field_L != 0) {
               if (1 != w.field_n.length) {
-                int discarded$27 = -102;
-                int discarded$28 = 0;
-                int discarded$29 = 1;
-                pl.a(param3, on.field_O, pf.field_i);
+                pl.a(param3, on.field_O, pf.field_i, true, 0, (byte) -102);
                 break L8;
               } else {
                 if (pf.field_i == w.field_n[0]) {
-                  int discarded$30 = -102;
-                  int discarded$31 = 0;
-                  int discarded$32 = 1;
-                  pl.a(param3, on.field_O, pf.field_i);
+                  pl.a(param3, on.field_O, pf.field_i, true, 0, (byte) -102);
                   break L8;
                 } else {
                   pf.field_i = w.field_n[0];
-                  int discarded$33 = -102;
-                  int discarded$34 = 0;
-                  int discarded$35 = 1;
-                  pl.a(param3, on.field_O, pf.field_i);
+                  pl.a(param3, on.field_O, pf.field_i, true, 0, (byte) -102);
                   break L8;
                 }
               }
@@ -764,13 +752,11 @@ final class na extends ug {
               break L17;
             } else {
               if (ea.field_g) {
-                int discarded$36 = -1;
-                ml.a(param3);
+                ml.a(param3, -1);
                 break L17;
               } else {
                 if (-1 < go.field_c) {
-                  int discarded$37 = -1;
-                  ml.a(param3);
+                  ml.a(param3, -1);
                   break L17;
                 } else {
                   if (kb.field_Yb < 2) {
@@ -779,8 +765,7 @@ final class na extends ug {
                     if (!pe.field_l[12]) {
                       break L17;
                     } else {
-                      int discarded$38 = -1;
-                      ml.a(param3);
+                      ml.a(param3, -1);
                       break L17;
                     }
                   }
@@ -791,24 +776,15 @@ final class na extends ug {
           L18: {
             if (td.field_v.field_L != 0) {
               if (1 != w.field_n.length) {
-                int discarded$39 = -102;
-                int discarded$40 = 0;
-                int discarded$41 = 1;
-                pl.a(param3, on.field_O, pf.field_i);
+                pl.a(param3, on.field_O, pf.field_i, true, 0, (byte) -102);
                 break L18;
               } else {
                 if (pf.field_i == w.field_n[0]) {
-                  int discarded$42 = -102;
-                  int discarded$43 = 0;
-                  int discarded$44 = 1;
-                  pl.a(param3, on.field_O, pf.field_i);
+                  pl.a(param3, on.field_O, pf.field_i, true, 0, (byte) -102);
                   break L18;
                 } else {
                   pf.field_i = w.field_n[0];
-                  int discarded$45 = -102;
-                  int discarded$46 = 0;
-                  int discarded$47 = 1;
-                  pl.a(param3, on.field_O, pf.field_i);
+                  pl.a(param3, on.field_O, pf.field_i, true, 0, (byte) -102);
                   break L18;
                 }
               }
@@ -1441,7 +1417,7 @@ final class na extends ug {
         }
     }
 
-    public static void k() {
+    public static void k(byte param0) {
         int var1 = -6;
         field_L = null;
         field_Q = null;

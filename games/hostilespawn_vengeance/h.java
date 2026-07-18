@@ -12,7 +12,7 @@ final class h implements nn {
     private vm field_d;
     private int field_i;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_b = null;
     }

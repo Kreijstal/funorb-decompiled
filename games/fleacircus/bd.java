@@ -298,16 +298,16 @@ class bd extends oh implements da {
                         var8_int = 1;
                         L5: while (true) {
                           if (var8_int >= var5) {
-                            String[][] dupTemp$8 = new String[3][var6];
-                            var4.field_i = dupTemp$8;
-                            var8 = dupTemp$8;
+                            String[][] dupTemp$6 = new String[3][var6];
+                            var4.field_i = dupTemp$6;
+                            var8 = dupTemp$6;
                             var9 = new String[3][var6];
-                            long[][] dupTemp$9 = new long[3][var6];
-                            var4.field_u = dupTemp$9;
-                            var10 = dupTemp$9;
-                            int[][] dupTemp$10 = new int[3][var6 * var7];
-                            var4.field_p = dupTemp$10;
-                            var11 = dupTemp$10;
+                            long[][] dupTemp$7 = new long[3][var6];
+                            var4.field_u = dupTemp$7;
+                            var10 = dupTemp$7;
+                            int[][] dupTemp$8 = new int[3][var6 * var7];
+                            var4.field_p = dupTemp$8;
+                            var11 = dupTemp$8;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -336,9 +336,9 @@ class bd extends oh implements da {
                                         if (var7 <= var25) {
                                           break L7;
                                         } else {
-                                          int incrementValue$11 = var15;
+                                          int incrementValue$9 = var15;
                                           var15++;
-                                          var11[0][incrementValue$11] = var28.c((byte) 127);
+                                          var11[0][incrementValue$9] = var28.c((byte) 127);
                                           var25++;
                                           continue L8;
                                         }
@@ -351,8 +351,7 @@ class bd extends oh implements da {
                                     if (var21 == null) {
                                       break L9;
                                     } else {
-                                      int discarded$12 = 7;
-                                      if (!ng.a(var21)) {
+                                      if (!ng.a(var21, (byte) 7)) {
                                         break L9;
                                       } else {
                                         var8[1][var13] = b.field_e;
@@ -365,9 +364,9 @@ class bd extends oh implements da {
                                           if (var25 >= var7) {
                                             break L9;
                                           } else {
-                                            int incrementValue$13 = var16;
+                                            int incrementValue$10 = var16;
                                             var16++;
-                                            var11[1][incrementValue$13] = var28.c((byte) -31);
+                                            var11[1][incrementValue$10] = var28.c((byte) -31);
                                             var25++;
                                             continue L10;
                                           }
@@ -391,9 +390,9 @@ class bd extends oh implements da {
                                           if (var25 >= var7) {
                                             break L11;
                                           } else {
-                                            int incrementValue$14 = var17;
+                                            int incrementValue$11 = var17;
                                             var17++;
-                                            var11[2][incrementValue$14] = var28.c((byte) 123);
+                                            var11[2][incrementValue$11] = var28.c((byte) 123);
                                             var25++;
                                             continue L12;
                                           }
@@ -438,8 +437,7 @@ class bd extends oh implements da {
                 }
               } else {
                 if (var2 != 1) {
-                  int discarded$15 = 1;
-                  ud.a("HS1: " + ak.a(), (Throwable) null, 0);
+                  ud.a("HS1: " + ak.a(true), (Throwable) null, 0);
                   k.c(-28354);
                   break L1;
                 } else {
@@ -520,8 +518,7 @@ class bd extends oh implements da {
           L0: {
             L1: {
               if (!((bd) this).field_nb) {
-                int discarded$2 = 0;
-                qg.a("tochangedisplayname.ws", rl.a((byte) -72));
+                qg.a("tochangedisplayname.ws", rl.a((byte) -72), 0);
                 break L1;
               } else {
                 cg.a((byte) -105, 3);

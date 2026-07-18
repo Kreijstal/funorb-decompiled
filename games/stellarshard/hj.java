@@ -79,7 +79,7 @@ final class hj {
         return stackIn_3_0 != 0;
     }
 
-    final static void a(pf param0) {
+    final static void a(pf param0, int param1) {
         ad.a(param0.a("headers.packvorbis", "", (byte) -12));
         ad var2 = ad.a(param0, "jagex logo2.packvorbis", "");
         try {
@@ -90,8 +90,7 @@ final class hj {
     }
 
     final static void a(pb param0, int param1) {
-        int discarded$3 = 0;
-        kg.d();
+        kg.d(false);
         if (param1 != 1) {
             return;
         }
@@ -102,7 +101,7 @@ final class hj {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         int var3 = 0;
         lh.field_d = lh.field_d + param1;
         lg.field_f = lg.field_f + ed.field_b * param1;
@@ -115,8 +114,7 @@ final class hj {
           hf.field_i.b(-46, (gg) (Object) new jf(param1));
           if (!e.field_c) {
             if (!ah.a(-1)) {
-              int discarded$4 = 4;
-              kl discarded$5 = vj.a(lh.field_d, ed.field_b, (byte) 15, hk.field_p, lg.field_f, param1, param0);
+              kl discarded$2 = vj.a(lh.field_d, ed.field_b, (byte) 15, hk.field_p, lg.field_f, param1, param0, 4);
               return;
             } else {
               ue.field_c.b(-47, (gg) (Object) new kl(param1, param0, hk.field_p, lg.field_f, lh.field_d, ed.field_b));
@@ -128,7 +126,7 @@ final class hj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_b = null;

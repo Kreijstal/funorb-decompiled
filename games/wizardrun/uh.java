@@ -9,7 +9,7 @@ abstract class uh {
     static int field_c;
     static int field_a;
 
-    final static boolean a(int param0, int param1, boolean param2) {
+    final static boolean a(int param0, int param1, boolean param2, byte param3) {
         int var4 = 0;
         int var5 = 0;
         int stackIn_38_0 = 0;

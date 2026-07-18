@@ -86,7 +86,7 @@ final class oh implements ca {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_a = null;
         field_q = null;
@@ -95,7 +95,7 @@ final class oh implements ca {
         field_o = null;
     }
 
-    final static me a(String param0) {
+    final static me a(String param0, int param1) {
         RuntimeException var2 = null;
         me stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -180,8 +180,7 @@ final class oh implements ca {
                     }
                     gf.b(-8 + var3, -8 + var4, of.field_f.field_y + 16, of.field_f.field_v - -16, 16777215, 16);
                     gf.b(var3 + -4, -4 + var4, 8 + of.field_f.field_y, of.field_f.field_v + 8, 0, 64);
-                    int discarded$0 = 99;
-                    bp.a(var4, uo.field_a, var3);
+                    bp.a(var4, uo.field_a, var3, (byte) 99);
                     of.field_f.h(var3, var4);
                 }
             }

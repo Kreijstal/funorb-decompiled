@@ -367,12 +367,12 @@ final class pjb extends llb {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_vb = null;
         field_Db = null;
     }
 
-    final static jk a(long param0) {
+    final static jk a(long param0, boolean param1) {
         return (jk) (Object) icb.field_p.a(-1, param0);
     }
 

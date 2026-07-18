@@ -59,14 +59,12 @@ final class mg extends gh {
               this.c(-89, 0);
               ((mg) this).field_Sb = param0;
               ((mg) this).field_mc = ((mg) this).field_Vb[((mg) this).field_Sb];
-              int discarded$250 = -116;
-              wc.a(((mg) this).field_mc);
+              wc.a(((mg) this).field_mc, -116);
               ((mg) this).field_mc.c(43, 12);
               break L0;
             } else {
               if (((mg) this).field_bc[param0] == -1) {
-                int discarded$251 = -6;
-                jd.m();
+                jd.m(-6);
                 ke.a(2);
                 break L0;
               } else {
@@ -86,8 +84,7 @@ final class mg extends gh {
                 }
                 L2: {
                   if (ei.a(var6, 1) == 2) {
-                    int discarded$252 = -18853;
-                    il.a(1, var6, param1);
+                    il.a(1, var6, param1, -18853);
                     break L2;
                   } else {
                     break L2;
@@ -270,8 +267,7 @@ final class mg extends gh {
                   if (0 >= ((mg) this).field_cc[var13]) {
                     break L2;
                   } else {
-                    int discarded$1 = 29448;
-                    param6[var13] = var11 + fa.a(((mg) this).field_cc[var13]).toUpperCase() + ": " + var12 + param6[var13];
+                    param6[var13] = var11 + fa.a(((mg) this).field_cc[var13], 29448).toUpperCase() + ": " + var12 + param6[var13];
                     break L2;
                   }
                 }

@@ -85,7 +85,7 @@ final class ej extends mc {
         return stackIn_3_0;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1, byte param2) {
         int var3 = 0;
         int var4 = 0;
         String var5 = null;
@@ -138,8 +138,7 @@ final class ej extends mc {
                   }
                   L3: {
                     if (ke.field_c == 2) {
-                      int discarded$1 = 2;
-                      var6 = (Object) (Object) li.a(13, var5);
+                      var6 = (Object) (Object) li.a(13, var5, 2);
                       break L3;
                     } else {
                       break L3;
@@ -177,7 +176,7 @@ final class ej extends mc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_r = null;
         field_v = null;
         field_o = null;

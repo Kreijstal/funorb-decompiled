@@ -6,7 +6,7 @@ final class tja extends pb {
     static qaa field_q;
     private Object field_o;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_p = null;
         field_q = null;
     }

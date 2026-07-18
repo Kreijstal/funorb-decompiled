@@ -5,12 +5,12 @@ final class tk {
     static ed[] field_a;
     static qh field_b;
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return af.field_e.a(false);
     }
 
@@ -124,9 +124,7 @@ final class tk {
                   }
                 }
               } else {
-                int discarded$4 = 1;
-                int discarded$5 = 4;
-                sm.a(var5);
+                sm.a(var5, 4, true);
                 var5 = (qd) (Object) mi.field_l.b((byte) 70);
                 continue L1;
               }

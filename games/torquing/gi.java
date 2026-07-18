@@ -7,7 +7,7 @@ final class gi {
     static int field_d;
     static int field_c;
 
-    final static void a(rm param0) {
+    final static void a(rm param0, byte param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -62,7 +62,7 @@ final class gi {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }

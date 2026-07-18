@@ -27,18 +27,14 @@ final class re extends ae {
         if (!(uh.field_b == null)) {
             oa.a((byte) -128, uh.field_b);
         }
-        int discarded$12 = -9648;
-        rl.b();
+        rl.b(-9648);
         jl.a(109);
-        int discarded$33 = -25676;
-        bm.a();
-        int discarded$40 = -14688;
-        if (!(!wm.c())) {
+        bm.a(-25676);
+        if (!(!wm.c(-14688))) {
             nd.field_Lb.f(1, (byte) -92);
             ak.a((byte) -86, 0);
         }
-        int discarded$41 = 0;
-        mk.a();
+        mk.a(false);
     }
 
     final static boolean a(byte param0, int param1) {
@@ -65,7 +61,7 @@ final class re extends ae {
         }
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         RuntimeException runtimeException = null;
         int var1_int = 0;
         gd var2 = null;

@@ -290,8 +290,7 @@ final class uk extends q {
               fc.field_d.c((byte) 95, hl.field_D[1]);
               fc.field_d.c((byte) 95, hl.field_D[2]);
               fc.field_d.c((byte) 95, hl.field_D[3]);
-              int discarded$1 = 1;
-              wh.a(fc.field_d);
+              wh.a(fc.field_d, true);
               fc.field_d.e(param1, 28695);
               param3.a(124, fc.field_d);
               fj.field_q.field_f = 0;
@@ -633,8 +632,7 @@ final class uk extends q {
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
         if (param0 >= 29) {
-          int discarded$9 = 9313;
-          qg.b();
+          qg.b(9313);
           if (!fh.c(-117)) {
             if (hj.field_c) {
               return true;
@@ -648,8 +646,7 @@ final class uk extends q {
           }
         } else {
           field_m = null;
-          int discarded$10 = 9313;
-          qg.b();
+          qg.b(9313);
           if (fh.c(-117)) {
             return true;
           } else {
@@ -678,7 +675,7 @@ final class uk extends q {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_m = null;
         field_p = null;
         field_i = null;

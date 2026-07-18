@@ -276,7 +276,7 @@ final class an {
         return stackIn_50_0;
     }
 
-    final static void a(boolean param0, int param1, boolean param2) {
+    final static void a(boolean param0, int param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         cr var5 = null;
         cr var6 = null;
@@ -807,9 +807,7 @@ final class an {
               if (null != sj.field_d) {
                 L28: {
                   if (ne.field_G.field_tb != 0) {
-                    int discarded$2 = 11;
-                    int discarded$3 = -74;
-                    hc.a();
+                    hc.a(-74, 11);
                     break L28;
                   } else {
                     break L28;
@@ -989,16 +987,14 @@ final class an {
           L0: {
             L1: {
               if (hn.field_w == 11) {
-                int discarded$4 = -111;
-                pc.b();
+                pc.b((byte) -111);
                 break L1;
               } else {
                 break L1;
               }
             }
             mg.a(1, nq.field_E, d.field_C, li.field_h);
-            int discarded$5 = 0;
-            dh.a(0, (byte) -99, param1);
+            dh.a(0, (byte) -99, param1, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1033,7 +1029,7 @@ final class an {
         }
     }
 
-    final static void a(long param0) {
+    final static void a(long param0, boolean param1) {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
@@ -1079,8 +1075,7 @@ final class an {
         }
         L1: {
           if (cn.field_r) {
-            int discarded$1 = -48;
-            lk.a(((an) this).field_d);
+            lk.a(((an) this).field_d, (byte) -48);
             var13 = sf.field_b;
             var2 = var13;
             var3 = sf.field_b.field_y << 4;
@@ -1271,7 +1266,7 @@ final class an {
         wn.a(bi.field_l, var5, 0, 0, 0, 0, param2, param3, var6);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_e = null;
     }
@@ -1349,7 +1344,7 @@ final class an {
         fq.field_j = fq.field_j + 0.00125;
     }
 
-    final static u[] a(int param0, r param1, int param2) {
+    final static u[] a(int param0, r param1, int param2, byte param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         u[] stackIn_4_0 = null;

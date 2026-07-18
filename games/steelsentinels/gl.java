@@ -182,8 +182,7 @@ final class gl extends al {
     }
 
     final long a(byte param0) {
-        int discarded$0 = -84;
-        ((gl) this).field_k = ((gl) this).field_k + this.d();
+        ((gl) this).field_k = ((gl) this).field_k + this.d((byte) -84);
         if (!(((gl) this).field_k >= ((gl) this).field_m)) {
             return (-((gl) this).field_k + ((gl) this).field_m) / 1000000L;
         }
@@ -193,7 +192,7 @@ final class gl extends al {
         return 0L;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_l = null;
         field_j = null;
         field_y = null;
@@ -253,7 +252,7 @@ final class gl extends al {
         }
     }
 
-    private final long d() {
+    private final long d(byte param0) {
         long var2 = 0L;
         long var4 = 0L;
         long var6 = 0L;

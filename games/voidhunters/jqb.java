@@ -246,8 +246,7 @@ final class jqb extends rqa {
             if (param2.a(0)) {
               L1: {
                 if (param1 == 0) {
-                  int discarded$1 = -30334;
-                  var10 = dtb.a(param2);
+                  var10 = dtb.a(param2, -30334);
                   var6_array = var10;
                   if (var6_array != null) {
                     var7_int = 0;

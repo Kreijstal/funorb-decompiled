@@ -9,14 +9,14 @@ final class vd {
     static int field_f;
     static long field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_d = null;
         field_e = null;
         int var1 = 0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -40,8 +40,7 @@ final class vd {
                 }
               }
             }
-            int discarded$4 = -60;
-            int discarded$5 = vd.c();
+            int discarded$2 = vd.c(-60);
             vj.field_d = null;
             cg.field_g = null;
             break L0;
@@ -53,7 +52,7 @@ final class vd {
         }
     }
 
-    final static int c() {
+    final static int c(int param0) {
         return cf.field_f;
     }
 

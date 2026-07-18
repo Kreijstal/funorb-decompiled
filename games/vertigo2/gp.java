@@ -9,7 +9,7 @@ class gp extends li {
     static String field_r;
     static String field_q;
 
-    public static void g() {
+    public static void g(int param0) {
         field_s = null;
         int var1 = 1;
         field_r = null;

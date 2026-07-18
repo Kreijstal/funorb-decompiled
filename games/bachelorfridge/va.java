@@ -121,7 +121,7 @@ final class va {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ov.field_g = null;
         jl.field_s = -1;
         eaa.field_b = -1;

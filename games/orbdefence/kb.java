@@ -467,11 +467,11 @@ final class kb extends ca {
         return stackIn_4_0 != 0;
     }
 
-    final static void a(mg param0) {
+    final static void a(mg param0, boolean param1) {
         try {
+            Exception exception = null;
+            RuntimeException runtimeException = null;
             byte[] var2 = null;
-            RuntimeException var2_ref = null;
-            Exception var3 = null;
             int var3_int = 0;
             int var4 = 0;
             int var5 = 0;
@@ -503,22 +503,30 @@ final class kb extends ca {
             var5 = OrbDefence.field_D ? 1 : 0;
             try {
               L0: {
-                var2 = new byte[24];
                 L1: {
-                  L2: {
+                  var2 = new byte[24];
+                  if (!param1) {
+                    break L1;
+                  } else {
+                    field_m = -86;
+                    break L1;
+                  }
+                }
+                L2: {
+                  L3: {
                     if (null == s.field_y) {
-                      break L2;
+                      break L3;
                     } else {
                       try {
-                        L3: {
+                        L4: {
                           s.field_y.a(0L, -1);
                           s.field_y.a(var2, 4);
                           var3_int = 0;
-                          L4: while (true) {
-                            L5: {
-                              L6: {
+                          L5: while (true) {
+                            L6: {
+                              L7: {
                                 if (var3_int >= 24) {
-                                  break L6;
+                                  break L7;
                                 } else {
                                   stackOut_7_0 = -1;
                                   stackOut_7_1 = ~var2[var3_int];
@@ -527,24 +535,24 @@ final class kb extends ca {
                                   stackIn_8_0 = stackOut_7_0;
                                   stackIn_8_1 = stackOut_7_1;
                                   if (var5 != 0) {
-                                    break L5;
+                                    break L6;
                                   } else {
-                                    L7: {
+                                    L8: {
                                       if (stackIn_8_0 == stackIn_8_1) {
-                                        break L7;
+                                        break L8;
                                       } else {
                                         if (var5 == 0) {
-                                          break L6;
-                                        } else {
                                           break L7;
+                                        } else {
+                                          break L8;
                                         }
                                       }
                                     }
                                     var3_int++;
                                     if (var5 == 0) {
-                                      continue L4;
+                                      continue L5;
                                     } else {
-                                      break L6;
+                                      break L7;
                                     }
                                   }
                                 }
@@ -553,11 +561,11 @@ final class kb extends ca {
                               stackOut_17_1 = ~var3_int;
                               stackIn_18_0 = stackOut_17_0;
                               stackIn_18_1 = stackOut_17_1;
-                              break L5;
+                              break L6;
                             }
                             if (stackIn_18_0 < stackIn_18_1) {
                               decompiledRegionSelector0 = 0;
-                              break L3;
+                              break L4;
                             } else {
                               throw new IOException();
                             }
@@ -565,50 +573,50 @@ final class kb extends ca {
                         }
                       } catch (java.lang.Exception decompiledCaughtParameter0) {
                         decompiledCaughtException = decompiledCaughtParameter0;
-                        L8: {
-                          var3 = (Exception) (Object) decompiledCaughtException;
+                        L9: {
+                          exception = (Exception) (Object) decompiledCaughtException;
                           var4 = 0;
-                          L9: while (true) {
-                            L10: {
+                          L10: while (true) {
+                            L11: {
                               if (var4 >= 24) {
-                                break L10;
+                                break L11;
                               } else {
                                 var2[var4] = (byte) -1;
                                 var4++;
                                 if (var5 != 0) {
                                   decompiledRegionSelector0 = 1;
-                                  break L8;
+                                  break L9;
                                 } else {
                                   if (var5 == 0) {
-                                    continue L9;
+                                    continue L10;
                                   } else {
-                                    break L10;
+                                    break L11;
                                   }
                                 }
                               }
                             }
                             decompiledRegionSelector0 = 0;
-                            break L8;
+                            break L9;
                           }
                         }
                       }
                       if (decompiledRegionSelector0 == 0) {
-                        break L2;
+                        break L3;
                       } else {
-                        break L1;
+                        break L2;
                       }
                     }
                   }
                   param0.a(0, 24, (byte) -11, var2);
-                  break L1;
+                  break L2;
                 }
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L11: {
-                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_30_0 = (RuntimeException) var2_ref;
+              L12: {
+                runtimeException = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_30_0 = (RuntimeException) runtimeException;
                 stackOut_30_1 = new StringBuilder().append("kb.D(");
                 stackIn_33_0 = stackOut_30_0;
                 stackIn_33_1 = stackOut_30_1;
@@ -621,7 +629,7 @@ final class kb extends ca {
                   stackIn_34_0 = stackOut_33_0;
                   stackIn_34_1 = stackOut_33_1;
                   stackIn_34_2 = stackOut_33_2;
-                  break L11;
+                  break L12;
                 } else {
                   stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
                   stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
@@ -629,10 +637,10 @@ final class kb extends ca {
                   stackIn_34_0 = stackOut_31_0;
                   stackIn_34_1 = stackOut_31_1;
                   stackIn_34_2 = stackOut_31_2;
-                  break L11;
+                  break L12;
                 }
               }
-              throw dd.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + false + ')');
+              throw dd.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -686,25 +694,29 @@ final class kb extends ca {
                   L1: {
                     var3 = param0.getParameter("cookieprefix");
                     var4 = param0.getParameter("cookiehost");
-                    L2: {
-                      L3: {
-                        var5 = var3 + "settings=" + param2 + "; version=1; path=/; domain=" + var4;
-                        if (param2.length() == 0) {
-                          break L3;
-                        } else {
-                          var5 = var5 + "; Expires=" + dh.a(-15591, ji.b(-78) + 94608000000L) + "; Max-Age=" + 94608000L;
-                          if (!OrbDefence.field_D) {
-                            break L2;
-                          } else {
+                    if (!param1) {
+                      L2: {
+                        L3: {
+                          var5 = var3 + "settings=" + param2 + "; version=1; path=/; domain=" + var4;
+                          if (param2.length() == 0) {
                             break L3;
+                          } else {
+                            var5 = var5 + "; Expires=" + dh.a(-15591, ji.b(-78) + 94608000000L) + "; Max-Age=" + 94608000L;
+                            if (!OrbDefence.field_D) {
+                              break L2;
+                            } else {
+                              break L3;
+                            }
                           }
                         }
+                        var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                        break L2;
                       }
-                      var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                      break L2;
+                      gm.a((byte) -17, "document.cookie=\"" + var5 + "\"", param0);
+                      break L1;
+                    } else {
+                      return;
                     }
-                    gm.a((byte) -17, "document.cookie=\"" + var5 + "\"", param0);
-                    break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -746,7 +758,7 @@ final class kb extends ca {
               }
               L6: {
                 stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(false).append(',');
+                stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param1).append(',');
                 stackIn_18_0 = stackOut_15_0;
                 stackIn_18_1 = stackOut_15_1;
                 stackIn_16_0 = stackOut_15_0;

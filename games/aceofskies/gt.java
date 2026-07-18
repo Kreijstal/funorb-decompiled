@@ -9,8 +9,7 @@ final class gt extends wt {
     private wl field_q;
 
     protected final void finalize() throws Throwable {
-        int discarded$0 = -95;
-        this.c();
+        this.c((byte) -95);
         super.finalize();
     }
 
@@ -28,9 +27,8 @@ final class gt extends wt {
         }
     }
 
-    final static cd a() {
-        int discarded$0 = 114;
-        return new cd(ve.a(true), oh.a());
+    final static cd a(byte param0) {
+        return new cd(ve.a(true), oh.a((byte) 114));
     }
 
     final static ha a(int param0, d param1, java.awt.Canvas param2, gk param3, int param4) {
@@ -88,10 +86,8 @@ final class gt extends wt {
         String stackOut_18_2 = null;
         try {
           L0: {
-            int discarded$13 = 1;
-            if (tq.c()) {
-              int discarded$14 = -16;
-              if (!ei.a("jaggl")) {
+            if (tq.c(true)) {
+              if (!ei.a("jaggl", (byte) -16)) {
                 throw new RuntimeException("");
               } else {
                 L1: {
@@ -345,7 +341,7 @@ final class gt extends wt {
         }
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         if (!(((gt) this).field_p <= 0L)) {
             ((gt) this).field_q.field_kc.releasePbuffer(((gt) this).field_p);
             ((gt) this).field_p = 0L;

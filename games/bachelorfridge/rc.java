@@ -39,7 +39,7 @@ final class rc extends k {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_l = null;
         field_k = null;
     }

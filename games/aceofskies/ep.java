@@ -62,8 +62,7 @@ final class ep extends ab implements bh, dn {
         String stackOut_11_2 = null;
         try {
           L0: {
-            int discarded$2 = 170;
-            stackOut_2_0 = this.a(param4, 126, 70, param0, 35, param5);
+            stackOut_2_0 = this.a(param4, 126, 70, param0, 35, param5, 170);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -193,7 +192,7 @@ final class ep extends ab implements bh, dn {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         if (!(this.h(25))) {
             return;
         }
@@ -201,7 +200,7 @@ final class ep extends ab implements bh, dn {
         gj.a(true, ((ep) this).field_w.field_f);
     }
 
-    private final int a(String param0, int param1, int param2, ea param3, int param4, String param5) {
+    private final int a(String param0, int param1, int param2, ea param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         kb var9 = null;
         bc var10 = null;
@@ -517,7 +516,7 @@ final class ep extends ab implements bh, dn {
         return stackIn_12_0 != 0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_x = null;
         field_u = null;
         int var1 = 64;
@@ -620,12 +619,10 @@ final class ep extends ab implements bh, dn {
     public final void a(int param0, mi param1, int param2, int param3, byte param4) {
         try {
             if (param1 == ((ep) this).field_y) {
-                int discarded$1 = 4754;
-                ua.e();
+                ua.e(4754);
             } else {
                 if (!(((ep) this).field_v != param1)) {
-                    int discarded$2 = -128;
-                    this.d();
+                    this.d((byte) -128);
                 }
             }
             int var6_int = 96 % ((param4 - -27) / 61);

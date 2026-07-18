@@ -10,7 +10,7 @@ final class he {
     static String field_c;
     static String field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_b = null;
         field_f = null;
@@ -23,8 +23,7 @@ final class he {
     final static void a(int param0, String param1) {
         try {
             vi.a((byte) 84, param1);
-            int discarded$0 = -1;
-            jn.a(bj.field_qb, false);
+            jn.a(bj.field_qb, false, -1);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "he.A(" + 1 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

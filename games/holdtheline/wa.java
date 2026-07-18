@@ -102,7 +102,7 @@ final class wa extends gd {
         return stackIn_12_0;
     }
 
-    final static ij a(boolean param0) {
+    final static ij a(boolean param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -173,22 +173,21 @@ final class wa extends gd {
         }
         L4: {
           if (1 == ch.field_m) {
-            int discarded$5 = var8.k(95);
-            String discarded$6 = var8.j(-1231);
+            int discarded$4 = var8.k(95);
+            String discarded$5 = var8.j(-1231);
             break L4;
           } else {
             if (ch.field_m != 4) {
               break L4;
             } else {
-              int discarded$7 = var8.k(95);
-              String discarded$8 = var8.j(-1231);
+              int discarded$6 = var8.k(95);
+              String discarded$7 = var8.j(-1231);
               break L4;
             }
           }
         }
         if (!param0) {
-          int discarded$9 = 0;
-          fi.field_kb = ta.a(80, (th) (Object) var8);
+          fi.field_kb = ta.a(80, (th) (Object) var8, false);
           lm.field_d = null;
           return new ij(param0);
         } else {
@@ -357,15 +356,13 @@ final class wa extends gd {
                 }
               }
               var5 = var4;
-              int discarded$26 = -27;
-              if (wc.a(var5)) {
+              if (wc.a(var5, (byte) -27)) {
                 stackOut_7_0 = mf.field_b;
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;
               } else {
                 if (!t.a(0, var5)) {
-                  int discarded$27 = 1;
-                  if (aa.a(var5)) {
+                  if (aa.a(var5, 1)) {
                     stackOut_14_0 = ak.field_a;
                     stackIn_15_0 = stackOut_14_0;
                     return stackIn_15_0;
@@ -377,8 +374,7 @@ final class wa extends gd {
                     } else {
                       if (0 < var6.length()) {
                         if (!ka.a(var5, (byte) 126, var6)) {
-                          int discarded$28 = 95;
-                          if (jc.a(var5, var6)) {
+                          if (jc.a(var5, var6, 95)) {
                             stackOut_28_0 = mc.field_c;
                             stackIn_29_0 = stackOut_28_0;
                             return stackIn_29_0;

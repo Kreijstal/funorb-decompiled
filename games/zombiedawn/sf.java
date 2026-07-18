@@ -48,8 +48,7 @@ final class sf {
         if (param0 != 463) {
             sf.c(64);
         }
-        int discarded$0 = -115;
-        this.a();
+        this.a((byte) -115);
         ((sf) this).field_k.c(-88);
     }
 
@@ -393,8 +392,7 @@ final class sf {
                     }
                   }
                 }
-                int discarded$2 = -115;
-                this.a();
+                this.a((byte) -115);
                 break L2;
               }
             }
@@ -409,8 +407,7 @@ final class sf {
                   ((sf) this).field_e = ((sf) this).field_e + (long)var5_int;
                   param3 = param3 - var5_int;
                   ((sf) this).field_m = ((sf) this).field_b.length;
-                  int discarded$3 = -115;
-                  this.a();
+                  this.a((byte) -115);
                   break L4;
                 } else {
                   break L4;
@@ -573,7 +570,7 @@ final class sf {
         }
     }
 
-    private final void a() throws IOException {
+    private final void a(byte param0) throws IOException {
         long var2 = 0L;
         long var4 = 0L;
         int var6 = 0;

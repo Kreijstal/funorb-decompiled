@@ -1081,8 +1081,7 @@ final class rg extends am {
                   }
                 }
               }
-              int discarded$1 = 1559487076;
-              mc.c();
+              mc.c(1559487076);
               break L1;
             }
             var66 = new int[param2.field_C];

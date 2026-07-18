@@ -138,7 +138,7 @@ final class bj extends ak {
         return stackIn_8_0;
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_E = null;
     }
 
@@ -161,7 +161,6 @@ final class bj extends ak {
             Exception var6_ref3 = null;
             Throwable var6_ref4 = null;
             int var6_int = 0;
-            String var7 = null;
             String var8 = null;
             int var9 = 0;
             String[] var10 = null;
@@ -176,9 +175,10 @@ final class bj extends ak {
             int var17 = 0;
             Object var18 = null;
             byte[][] var19 = null;
-            byte[][] var20 = null;
+            String var20 = null;
             byte[][] var21 = null;
             byte[][] var22 = null;
+            byte[][] var23 = null;
             RuntimeException stackIn_34_0 = null;
             StringBuilder stackIn_34_1 = null;
             RuntimeException stackIn_35_0 = null;
@@ -254,7 +254,7 @@ final class bj extends ak {
                                         }
                                       }
                                     }
-                                    var7 = param0.b(true);
+                                    var20 = param0.b(true);
                                     var8 = param0.b(true);
                                     var9 = param0.d((byte) -82);
                                     var10 = new String[var9];
@@ -262,10 +262,10 @@ final class bj extends ak {
                                     L7: while (true) {
                                       if (~var9 >= ~var11_int) {
                                         L8: {
-                                          var22 = new byte[var9][];
+                                          var23 = new byte[var9][];
+                                          var22 = var23;
                                           var21 = var22;
-                                          var20 = var21;
-                                          var19 = var20;
+                                          var19 = var21;
                                           var11 = var19;
                                           if (var6_int != 3) {
                                             break L8;
@@ -277,7 +277,7 @@ final class bj extends ak {
                                               } else {
                                                 var13 = param0.j(-3);
                                                 var11[var12_int] = new byte[var13];
-                                                param0.a((byte) 124, var13, var22[var12_int], 0);
+                                                param0.a((byte) 124, var13, var23[var12_int], 0);
                                                 var12_int++;
                                                 continue L9;
                                               }
@@ -290,13 +290,11 @@ final class bj extends ak {
                                         var13 = var17;
                                         L10: while (true) {
                                           if (~var17 <= ~var9) {
-                                            int discarded$5 = -1;
-                                            ((hh) var18).field_s[var5] = param3.a(var8, pf.a(var7), 8532, var12);
-                                            ((hh) var18).field_m[var5] = var22;
+                                            ((hh) var18).field_s[var5] = param3.a(var8, pf.a(var20, -1), 8532, var12);
+                                            ((hh) var18).field_m[var5] = var23;
                                             break L3;
                                           } else {
-                                            int discarded$6 = -1;
-                                            var12[var17] = pf.a(var10[var17]);
+                                            var12[var17] = pf.a(var10[var17], -1);
                                             var17++;
                                             continue L10;
                                           }
@@ -312,12 +310,10 @@ final class bj extends ak {
                               }
                             }
                             L11: {
-                              String dupTemp$7 = param0.b(true);
-                              var16 = dupTemp$7;
-                              var7 = dupTemp$7;
-                              String dupTemp$8 = param0.b(true);
-                              var15 = dupTemp$8;
-                              var8 = dupTemp$8;
+                              var16 = param0.b(true);
+                              String dupTemp$1 = param0.b(true);
+                              var15 = dupTemp$1;
+                              var8 = dupTemp$1;
                               var9 = 0;
                               if (var6_int == 1) {
                                 var9 = param0.j(-3);
@@ -328,8 +324,7 @@ final class bj extends ak {
                             }
                             ((hh) var18).field_o[var5] = var6_int;
                             ((hh) var18).field_l[var5] = var9;
-                            int discarded$9 = -1;
-                            ((hh) var18).field_n[var5] = param3.a(var15, pf.a(var16), (byte) 48);
+                            ((hh) var18).field_n[var5] = param3.a(var15, pf.a(var16, -1), (byte) 48);
                             break L4;
                           }
                           break L3;
@@ -690,7 +685,7 @@ final class bj extends ak {
         }
     }
 
-    final static String j() {
+    final static String j(int param0) {
         if (!(null != ja.field_b)) {
             return "";
         }

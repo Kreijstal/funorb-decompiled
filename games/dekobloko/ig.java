@@ -69,8 +69,7 @@ final class ig extends w {
                 ce.a(param3, (byte) -85, pk.field_r, ed.field_c, var6, (String) null);
                 rb.a(fm.field_d, ed.field_c, -94, pk.field_r, var6);
                 pf.a(false);
-                int discarded$25 = 11;
-                h.a();
+                h.a((byte) 11);
                 break L0;
               } else {
                 cc.a(8);
@@ -379,7 +378,7 @@ final class ig extends w {
         this.b((byte) 67, 12);
     }
 
-    final static boolean a() {
+    final static boolean a(int param0, int param1, int param2, byte param3) {
         if (w.field_H != null) {
             if (!(!w.field_H.c(-3))) {
                 tf.i((byte) -125);
@@ -402,7 +401,7 @@ final class ig extends w {
         return true;
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_Xb = null;
         field_cc = null;
         field_ac = null;
@@ -552,8 +551,7 @@ final class ig extends w {
                   if (0 >= ((ig) this).field_Wb[var13]) {
                     break L2;
                   } else {
-                    int discarded$1 = -9;
-                    param6[var13] = var11 + pf.a(((ig) this).field_Wb[var13]).toUpperCase() + ": " + var12 + param6[var13];
+                    param6[var13] = var11 + pf.a(((ig) this).field_Wb[var13], (byte) -9).toUpperCase() + ": " + var12 + param6[var13];
                     break L2;
                   }
                 }
@@ -771,7 +769,7 @@ final class ig extends w {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         return uc.field_g == cd.field_m.field_Xb;
     }
 

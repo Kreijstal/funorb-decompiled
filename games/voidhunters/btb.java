@@ -8,7 +8,7 @@ final class btb {
     static boolean field_a;
     private static String field_z;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_d = null;

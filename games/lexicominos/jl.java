@@ -6,7 +6,7 @@ final class jl {
     static boolean field_c;
     static String[] field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }

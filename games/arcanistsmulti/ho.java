@@ -412,7 +412,7 @@ final class ho {
         return stackIn_4_0;
     }
 
-    final static String b() {
+    final static String b(byte param0) {
         String var1 = "";
         if (null != wh.field_f) {
             var1 = wh.field_f.e(true);
@@ -427,7 +427,7 @@ final class ho {
         return var1;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         int var1 = 61;
         return bj.field_mb;
     }

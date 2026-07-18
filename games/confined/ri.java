@@ -6,7 +6,7 @@ final class ri {
     static bi field_b;
     static String[] field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -117;
         field_c = null;
         field_b = null;
@@ -41,17 +41,14 @@ final class ri {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         qh.c(4);
         if (fb.field_b != null) {
             fa.a(fb.field_b, -122);
         }
-        int discarded$12 = -58;
-        hl.b();
-        int discarded$25 = 18;
-        vd.b();
-        int discarded$32 = 37;
-        vm.h();
+        hl.b((byte) -58);
+        vd.b((byte) 18);
+        vm.h((byte) 37);
         if (!(!pa.a(false))) {
             vh.field_a.b(true, 1);
             tb.a(0, 125);
@@ -130,7 +127,7 @@ final class ri {
                 break L1;
               } else {
                 if (param2.indexOf("<br>") == -1) {
-                  args[0] = (String) (Object) args;
+                  args[0] = param2;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;

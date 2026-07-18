@@ -32,7 +32,7 @@ final class qb extends hk {
         return var5;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_F = null;
         field_M = null;
         field_N = null;

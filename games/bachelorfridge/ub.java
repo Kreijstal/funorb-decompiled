@@ -9,7 +9,7 @@ final class ub extends at {
     private lc field_n;
     private int field_m;
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
     }
 
@@ -31,8 +31,7 @@ final class ub extends at {
                     if (var5 == null) {
                       break L0;
                     } else {
-                      int discarded$6 = 1;
-                      sja.a(param0, var5);
+                      sja.a(param0, var5, true);
                       var5 = (mha) (Object) wba.field_g.c(param1 + -1);
                       continue L2;
                     }
@@ -41,8 +40,7 @@ final class ub extends at {
                   return;
                 }
               } else {
-                int discarded$7 = -8692;
-                qn.a(param0, var4);
+                qn.a(param0, var4, -8692);
                 var4 = (nc) (Object) tb.field_c.c(0);
                 continue L1;
               }

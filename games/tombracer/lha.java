@@ -26,8 +26,7 @@ final class lha extends kl {
             ((lha) this).field_r = param2;
             ((lha) this).field_q = param3;
             ((lha) this).field_h.a(true, (kl) this);
-            int discarded$0 = 20934;
-            jaggl.OpenGL.glTexImage3Dub(((lha) this).field_e, 0, ((lha) this).field_c, ((lha) this).field_r, ((lha) this).field_q, ((lha) this).field_o, 0, sja.b(((lha) this).field_c), 5121, (byte[]) null, 0);
+            jaggl.OpenGL.glTexImage3Dub(((lha) this).field_e, 0, ((lha) this).field_c, ((lha) this).field_r, ((lha) this).field_q, ((lha) this).field_o, 0, sja.b(((lha) this).field_c, 20934), 5121, (byte[]) null, 0);
             ((lha) this).b(true, 3);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "lha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -138,8 +137,7 @@ final class lha extends kl {
                   }
                   L2: {
                     if (0L <= param3) {
-                      int discarded$1 = -1;
-                      var7 = var9 + "; Expires=" + ida.a(param3 * 1000L + bva.b((byte) -107)) + "; Max-Age=" + param3;
+                      var7 = var9 + "; Expires=" + ida.a(param3 * 1000L + bva.b((byte) -107), -1) + "; Max-Age=" + param3;
                       break L2;
                     } else {
                       var7 = var9 + "; Discard;";

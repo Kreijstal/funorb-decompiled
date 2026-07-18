@@ -13,7 +13,7 @@ final class ib {
     static mk field_f;
     static int field_g;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, boolean param1) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;
@@ -91,11 +91,11 @@ final class ib {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         mh.a(pi.field_Rb, (byte) 95);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_f = null;
         field_h = null;

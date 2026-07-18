@@ -7,7 +7,7 @@ final class hb extends e {
     static String field_q;
     private te field_r;
 
-    private final void a(boolean param0, hb param1) {
+    private final void a(boolean param0, hb param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         te var5 = null;
@@ -327,8 +327,7 @@ final class hb extends e {
     hb(hb param0, boolean param1) {
         this();
         try {
-            int discarded$0 = 70;
-            param0.a(param1, (hb) this);
+            param0.a(param1, (hb) this, (byte) 70);
         } catch (RuntimeException runtimeException) {
             throw pf.a((Throwable) (Object) runtimeException, "hb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -413,7 +412,7 @@ final class hb extends e {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_q = null;
         int var1 = -32;
     }

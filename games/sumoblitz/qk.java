@@ -53,8 +53,7 @@ final class qk extends hf implements ai {
                 break L2;
               } else {
                 ib.d(1);
-                int discarded$3 = 1;
-                this.e();
+                this.e(true);
                 ((qk) this).field_E.a((byte) 121, (pk) (Object) new u(((qk) this).field_E, ta.field_f));
                 break L2;
               }
@@ -64,8 +63,7 @@ final class qk extends hf implements ai {
                 break L3;
               } else {
                 if (null == gk.field_o) {
-                  int discarded$4 = 1;
-                  this.e();
+                  this.e(true);
                   ((qk) this).field_E.a((byte) 97, (pk) (Object) new u(((qk) this).field_E, am.field_e));
                   break L3;
                 } else {
@@ -78,8 +76,7 @@ final class qk extends hf implements ai {
                 break L4;
               } else {
                 if (gk.field_o.field_a) {
-                  int discarded$5 = 1;
-                  this.e();
+                  this.e(true);
                   ((qk) this).field_E.a((byte) 122, (pk) (Object) new u(((qk) this).field_E, am.field_e));
                   break L4;
                 } else {
@@ -389,7 +386,7 @@ final class qk extends hf implements ai {
         return stackIn_3_0;
     }
 
-    private final void e() {
+    private final void e(boolean param0) {
         if (!((qk) this).field_D) {
             return;
         }
@@ -430,16 +427,14 @@ final class qk extends hf implements ai {
           L0: {
             L1: {
               if (((qk) this).field_P == param2) {
-                int discarded$4 = 1;
-                this.e();
+                this.e(true);
                 break L1;
               } else {
                 if (param2 != ((qk) this).field_Q) {
                   break L1;
                 } else {
                   ib.d(param1 ^ 711);
-                  int discarded$5 = 1;
-                  this.e();
+                  this.e(true);
                   break L1;
                 }
               }

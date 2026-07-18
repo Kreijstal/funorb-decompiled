@@ -426,7 +426,7 @@ class gd extends rj {
         throw new RuntimeException("Unsupported");
     }
 
-    final static int a(Random param0) {
+    final static int a(Random param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -550,7 +550,7 @@ class gd extends rj {
         this(param0, param1, param2, param3, param4, param5, param6, 0);
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_A = null;
         field_D = null;
         field_J = null;

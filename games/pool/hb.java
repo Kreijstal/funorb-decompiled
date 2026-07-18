@@ -294,7 +294,7 @@ final class hb implements Iterator {
         ((hb) this).field_i = null;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         ((hb) this).field_i = null;
         ((hb) this).field_m = ((hb) this).field_h.field_k[0].field_d;
         ((hb) this).field_o = 1;
@@ -328,8 +328,7 @@ final class hb implements Iterator {
         ((hb) this).field_i = null;
         try {
             ((hb) this).field_h = param0;
-            int discarded$0 = 43;
-            this.a();
+            this.a((byte) 43);
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) (Object) runtimeException, "hb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

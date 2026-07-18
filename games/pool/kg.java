@@ -23,7 +23,7 @@ final class kg extends ma {
         return qg.field_a;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_q = null;
         field_r = null;
         field_t = null;
@@ -32,7 +32,7 @@ final class kg extends ma {
         field_l = null;
     }
 
-    final static void a() {
+    final static void a(int param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;

@@ -22,7 +22,7 @@ final class sg {
     static String field_k;
     int[] field_f;
 
-    private final void a(byte[] param0) {
+    private final void a(byte[] param0, byte param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -445,7 +445,7 @@ final class sg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_i = null;
     }
@@ -475,8 +475,7 @@ final class sg {
                     }
                 }
             }
-            int discarded$0 = -56;
-            this.a(param0);
+            this.a(param0, (byte) -56);
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) (Object) runtimeException, "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

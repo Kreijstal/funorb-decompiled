@@ -7,7 +7,7 @@ final class kb extends tm {
     static String field_D;
     static eg[] field_B;
 
-    public static void g() {
+    public static void g(int param0) {
         field_D = null;
         field_B = null;
         field_E = null;
@@ -137,7 +137,7 @@ final class kb extends tm {
         return var2;
     }
 
-    final static void h() {
+    final static void h(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

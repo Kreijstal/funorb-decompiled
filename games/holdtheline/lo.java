@@ -249,8 +249,7 @@ class lo {
                       field_c = null;
                       break L0;
                     } else {
-                      int discarded$1 = 45;
-                      qe.a(50L);
+                      qe.a(50L, (byte) 45);
                       continue L2;
                     }
                   }

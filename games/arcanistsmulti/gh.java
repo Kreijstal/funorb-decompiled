@@ -853,7 +853,7 @@ final class gh extends sg {
         }
     }
 
-    private final void d(int param0) {
+    private final void d(int param0, int param1) {
         o var3 = null;
         int var4 = 0;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
@@ -1328,8 +1328,7 @@ final class gh extends sg {
                     if (var5 != 123) {
                       break L21;
                     } else {
-                      int discarded$1 = 27652;
-                      this.d(var4);
+                      this.d(var4, 27652);
                       break L21;
                     }
                   }
@@ -1578,14 +1577,13 @@ final class gh extends sg {
         if (param1) {
             this.a(-1, 0);
         } else {
-            int discarded$0 = 27652;
-            this.d(-1);
+            this.d(-1, 27652);
         }
         this.c(268269032, -1);
         int var3 = 0;
         if (param0 >= -86) {
             Object var5 = null;
-            boolean discarded$1 = ((gh) this).a(103, -78, 68, (int[]) null, (o) null);
+            boolean discarded$0 = ((gh) this).a(103, -78, 68, (int[]) null, (o) null);
         }
         while (var3 < 16) {
             ((gh) this).field_q[var3] = ((gh) this).field_k[var3];

@@ -112,7 +112,7 @@ final class kj extends hb {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_D = null;
     }
 
@@ -494,7 +494,7 @@ final class kj extends hb {
         }
     }
 
-    final static void a(int param0, vl param1) {
+    final static void a(int param0, vl param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

@@ -40,7 +40,7 @@ final class gb {
     int field_u;
     static String field_J;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_J = null;
         field_x = null;

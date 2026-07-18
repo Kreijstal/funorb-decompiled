@@ -10,7 +10,7 @@ final class ac {
     static String field_d;
     private boolean field_c;
 
-    public static void c() {
+    public static void c(int param0) {
         field_b = null;
         field_d = null;
     }
@@ -23,7 +23,7 @@ final class ac {
         return ((ac) this).field_a;
     }
 
-    final static id a(long param0) {
+    final static id a(long param0, int param1) {
         return (id) (Object) BrickABrac.field_F.a(param0, -1);
     }
 
@@ -55,12 +55,11 @@ final class ac {
         bl.f(0);
         param3 = h.a(param11, param0, param1, (byte) -126, param8, param3, param7);
         c.a(param13, 16777215, param11, param6, param2, (byte) 126, param4, param10, param3, param5);
-        int discarded$0 = -126;
-        sq.a(param2, param13);
+        sq.a(param2, param13, -126);
         wg.a(param13, param7, -1, param3);
     }
 
-    final static void a(jp[] param0, int param1, int param2, int param3, int param4) {
+    final static void a(jp[] param0, int param1, int param2, int param3, int param4, byte param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;

@@ -17,11 +17,11 @@ final class ql {
         return var4;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         np.field_Jb.a((gn) (Object) new ha(), 3);
     }
 
-    final static av a(String param0, int param1) {
+    final static av a(String param0, int param1, int param2) {
         dq var3 = null;
         RuntimeException var3_ref = null;
         dq stackIn_1_0 = null;
@@ -84,7 +84,7 @@ final class ql {
         return (av) (Object) stackIn_1_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_d = null;
         field_b = null;
@@ -212,8 +212,7 @@ final class ql {
               } else {
                 L2: {
                   sk.a(1, var3_int);
-                  int discarded$24 = 14839;
-                  od.a(param2, var3_int, vt.field_c.field_R);
+                  od.a(param2, var3_int, vt.field_c.field_R, 14839);
                   if (vu.field_Cb == -2) {
                     break L2;
                   } else {
@@ -231,8 +230,7 @@ final class ql {
             if (!u.field_c) {
               break L0;
             } else {
-              int discarded$25 = -85;
-              kt.b();
+              kt.b((byte) -85);
               return;
             }
           }
@@ -268,7 +266,7 @@ final class ql {
         }
     }
 
-    final static void a(Object[] param0, sr param1) {
+    final static void a(Object[] param0, sr param1, byte param2) {
         try {
             oh.a(param1, -1 + param0.length, param0, 29921, 0);
             int var3_int = 0;

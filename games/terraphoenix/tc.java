@@ -19,7 +19,7 @@ final class tc implements Iterable {
         return (Iterator) (Object) new ne((tc) this);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_f = null;
         field_c = null;
@@ -38,7 +38,7 @@ final class tc implements Iterable {
         return var2;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

@@ -5,7 +5,7 @@ final class mq {
     static String[] field_a;
     static kv[] field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }

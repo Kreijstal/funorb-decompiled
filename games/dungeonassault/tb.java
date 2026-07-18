@@ -31,7 +31,7 @@ final class tb {
         return null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = -104;
         vj.field_c = null;
         no.field_a = 0;
@@ -81,7 +81,7 @@ final class tb {
         return null;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
         field_h = null;
         int var1 = 0;

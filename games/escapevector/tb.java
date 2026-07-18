@@ -112,7 +112,7 @@ final class tb extends r {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         return km.field_n != null && km.field_n.c(124);
     }
 

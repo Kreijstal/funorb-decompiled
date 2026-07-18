@@ -13,7 +13,7 @@ final class bw {
         return (int)((param2 << 16) / param0);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_c = null;
         field_d = null;

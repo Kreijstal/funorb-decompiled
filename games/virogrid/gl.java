@@ -454,7 +454,7 @@ final class gl {
         }
     }
 
-    final static void a(dh param0, byte param1) {
+    final static void a(dh param0, byte param1, int param2) {
         hg var3 = null;
         try {
             var3 = gk.field_g;

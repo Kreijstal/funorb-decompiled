@@ -145,8 +145,7 @@ final class an extends hh {
               }
             }
             param3 = stackIn_3_0;
-            int discarded$3 = 255;
-            stackOut_3_0 = ln.a(param2, ib.a((byte) -126, param0, param3));
+            stackOut_3_0 = ln.a(param2, ib.a((byte) -126, param0, param3), 255);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
@@ -183,7 +182,7 @@ final class an extends hh {
         return stackIn_4_0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_y = null;
         field_z = null;
         field_x = null;
@@ -263,8 +262,7 @@ final class an extends hh {
             }
             L2: {
               var11 = (ck) (Object) stackIn_3_0;
-              int discarded$2 = 0;
-              d.a(param1.field_q + param2, param1.field_s + (param1.field_v + param3), param1.field_x + param2 + param1.field_q, param1.field_v + param3);
+              d.a(param1.field_q + param2, param1.field_s + (param1.field_v + param3), param1.field_x + param2 + param1.field_q, param1.field_v + param3, false);
               if (var11 == null) {
                 break L2;
               } else {
@@ -346,8 +344,7 @@ final class an extends hh {
             }
             L8: {
               ((an) this).field_A.a(0, param1, param3, param2, (an) this);
-              int discarded$3 = 1;
-              ti.c();
+              ti.c(true);
               if (param0 == 34) {
                 break L8;
               } else {

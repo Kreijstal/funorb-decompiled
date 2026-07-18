@@ -146,7 +146,7 @@ final class il {
         return true;
     }
 
-    final static String a(String param0, int param1) {
+    final static String a(String param0, int param1, byte param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         ml var5 = null;
@@ -184,8 +184,7 @@ final class il {
         try {
           L0: {
             var6 = (CharSequence) (Object) param0;
-            int discarded$9 = -9907;
-            if (!ef.a(var6)) {
+            if (!ef.a(var6, -9907)) {
               stackOut_2_0 = kq.field_Ib;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -265,7 +264,7 @@ final class il {
         return (String) (Object) stackIn_24_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_a = null;
         int var1 = 89;

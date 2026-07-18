@@ -11,7 +11,7 @@ final class bg extends le {
     static vk field_l;
     static vn[] field_o;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_o = null;
         field_i = null;
         field_n = null;
@@ -33,7 +33,7 @@ final class bg extends le {
         return qo.b((byte) -123);
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return ~rc.field_x != ~rc.field_p;
     }
 
@@ -298,8 +298,7 @@ final class bg extends le {
                       l.field_d = var9;
                       break L8;
                     } else {
-                      int discarded$3 = 0;
-                      boolean discarded$4 = ck.a((byte) -103, lo.a());
+                      boolean discarded$1 = ck.a((byte) -103, lo.a(false));
                       ba.field_g = new Boolean(uh.a((byte) -36, (de) (Object) fj.field_g));
                       fj.field_g.field_j = 0;
                       break L8;
@@ -354,8 +353,7 @@ final class bg extends le {
               if (qo.field_w != ic.field_T) {
                 break L12;
               } else {
-                int discarded$5 = -2887;
-                if (!nn.a()) {
+                if (!nn.a(-2887)) {
                   break L12;
                 } else {
                   L13: {

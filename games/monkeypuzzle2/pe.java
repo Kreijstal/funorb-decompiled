@@ -7,7 +7,7 @@ final class pe {
     static wg[] field_d;
     static String field_c;
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_c = null;
         field_d = null;
@@ -154,7 +154,7 @@ final class pe {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = -69;
         if (!(!ok.field_e)) {
             pl.field_e.c("Clearances With Monkeys: " + dc.field_e, 635, 30, 16711680, 1);

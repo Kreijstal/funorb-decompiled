@@ -224,7 +224,6 @@ final class fia {
         int[] var5_ref_int__ = null;
         int var6 = 0;
         int[][] var6_ref_int____ = null;
-        int[] var6_ref_int__ = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -239,14 +238,15 @@ final class fia {
         int[] var20 = null;
         lta var21 = null;
         int[] var22 = null;
-        int[] var25 = null;
+        int[] var23 = null;
         int[] var26 = null;
-        int[] var29 = null;
+        int[] var27 = null;
         int[] var30 = null;
         int[] var31 = null;
         int[] var32 = null;
         int[] var33 = null;
         int[] var34 = null;
+        int[] var35 = null;
         RuntimeException decompiledCaughtException = null;
         var14 = VoidHunters.field_G;
         try {
@@ -291,15 +291,15 @@ final class fia {
                                             } else {
                                               var17 = uob.field_g[uob.field_g.length + -1];
                                               if (1 < var17.length) {
-                                                var33 = new int[var17.length + -2];
-                                                var29 = var33;
-                                                var25 = var29;
-                                                var18 = var25;
+                                                var34 = new int[var17.length + -2];
+                                                var30 = var34;
+                                                var26 = var30;
+                                                var18 = var26;
                                                 var2 = var18;
                                                 var3_int = 0;
                                                 L6: while (true) {
-                                                  if (var33.length <= var3_int) {
-                                                    uob.field_g[uob.field_g.length - 1] = var33;
+                                                  if (var34.length <= var3_int) {
+                                                    uob.field_g[uob.field_g.length - 1] = var34;
                                                     break L5;
                                                   } else {
                                                     var2[var3_int] = var17[var3_int];
@@ -347,10 +347,10 @@ final class fia {
                                                         }
                                                       }
                                                       System.out.print("{");
-                                                      var32 = uob.field_g[var1_int];
+                                                      var33 = uob.field_g[var1_int];
                                                       var3_int = 0;
                                                       L10: while (true) {
-                                                        if (~var3_int <= ~var32.length) {
+                                                        if (~var3_int <= ~var33.length) {
                                                           System.out.print("}");
                                                           var1_int++;
                                                           continue L8;
@@ -363,7 +363,7 @@ final class fia {
                                                               break L11;
                                                             }
                                                           }
-                                                          System.out.print("" + var32[var3_int]);
+                                                          System.out.print("" + var33[var3_int]);
                                                           var3_int++;
                                                           continue L10;
                                                         }
@@ -388,10 +388,10 @@ final class fia {
                                                       }
                                                     }
                                                     System.out.print("{");
-                                                    var31 = hw.field_d[var1_int];
+                                                    var32 = hw.field_d[var1_int];
                                                     var3_int = 0;
                                                     L14: while (true) {
-                                                      if (~var3_int <= ~var31.length) {
+                                                      if (~var3_int <= ~var32.length) {
                                                         System.out.print("}");
                                                         var1_int++;
                                                         continue L12;
@@ -404,7 +404,7 @@ final class fia {
                                                             break L15;
                                                           }
                                                         }
-                                                        System.out.print("" + var31[var3_int]);
+                                                        System.out.print("" + var32[var3_int]);
                                                         var3_int++;
                                                         continue L14;
                                                       }
@@ -466,8 +466,7 @@ final class fia {
                                 L18: {
                                   if (!khb.field_b) {
                                     nkb.a(false, "Saving content data");
-                                    int discarded$4 = -118;
-                                    web.a();
+                                    web.a(-118);
                                     break L18;
                                   } else {
                                     break L18;
@@ -564,16 +563,14 @@ final class fia {
                     if (au.field_c != 1) {
                       if (au.field_c == 2) {
                         L28: {
-                          var22 = uob.field_g[-1 + uob.field_g.length];
-                          var3 = var22;
+                          var23 = uob.field_g[-1 + uob.field_g.length];
+                          var3 = var23;
                           var4 = var21.a(true, pk.field_o);
                           var5 = var21.a(0, noa.field_q);
                           if (ujb.field_c == 1) {
                             if (si.field_o[81]) {
-                              int discarded$5 = -14;
-                              uob.field_g[-1 + uob.field_g.length] = qi.a(var4, false, var3);
-                              int discarded$6 = -14;
-                              uob.field_g[-1 + uob.field_g.length] = qi.a(var5, false, uob.field_g[-1 + uob.field_g.length]);
+                              uob.field_g[-1 + uob.field_g.length] = qi.a(var4, false, var23, (byte) -14);
+                              uob.field_g[-1 + uob.field_g.length] = qi.a(var5, false, uob.field_g[-1 + uob.field_g.length], (byte) -14);
                               break L28;
                             } else {
                               break L28;
@@ -606,7 +603,7 @@ final class fia {
                           var7 = 2147483647;
                           var8 = 0;
                           L31: while (true) {
-                            if (var22.length <= var8) {
+                            if (var23.length <= var8) {
                               if (var6 == -1) {
                                 break L27;
                               } else {
@@ -619,13 +616,13 @@ final class fia {
                                     break L32;
                                   }
                                 }
-                                var22[var6] = var4;
+                                var23[var6] = var4;
                                 var3[1 + var6] = var5;
                                 break L27;
                               }
                             } else {
                               L33: {
-                                var9 = var22[var8];
+                                var9 = var23[var8];
                                 var10 = var3[1 + var8];
                                 var11 = var9 + -var4;
                                 var12 = var10 + -var5;
@@ -655,26 +652,25 @@ final class fia {
                         } else {
                           var3_int = -1;
                           var4 = 2147483647;
-                          var34 = var19.field_v;
-                          var30 = var34;
-                          var26 = var30;
-                          var20 = var26;
+                          var35 = var19.field_v;
+                          var31 = var35;
+                          var27 = var31;
+                          var20 = var27;
                           var5_ref_int__ = var20;
                           var6 = 0;
                           L35: while (true) {
-                            if (~var34.length >= ~var6) {
+                            if (~var35.length >= ~var6) {
                               if (-1 != var3_int) {
                                 nkb.a(false, "Adding point " + var3_int);
-                                var6_ref_int__ = hw.field_d[-1 + hw.field_d.length];
-                                int discarded$7 = -14;
-                                hw.field_d[-1 + hw.field_d.length] = qi.a(var3_int, true, var6_ref_int__);
+                                var22 = hw.field_d[-1 + hw.field_d.length];
+                                hw.field_d[-1 + hw.field_d.length] = qi.a(var3_int, true, var22, (byte) -14);
                                 break L34;
                               } else {
                                 break L34;
                               }
                             } else {
                               L36: {
-                                var7 = var34[var6];
+                                var7 = var35[var6];
                                 var8 = var5_ref_int__[var6 + 1];
                                 var9 = var21.a(var7, (byte) 125);
                                 var10 = var21.b(true, var8);
@@ -727,7 +723,7 @@ final class fia {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

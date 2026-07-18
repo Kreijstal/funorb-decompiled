@@ -55,8 +55,7 @@ final class pe extends kc {
                         return false;
                     }
                 }
-                int discarded$1 = 0;
-                ka.b();
+                ka.b(false);
             }
             return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -793,8 +792,8 @@ final class pe extends kc {
                       if (var12.field_Qb != null) {
                         var31 += 2;
                         var37 = new StringBuilder(64);
-                        StringBuilder discarded$5 = var37.append(ad.field_a);
-                        StringBuilder discarded$6 = var37.append(var12.field_Qb[0]);
+                        StringBuilder discarded$4 = var37.append(ad.field_a);
+                        StringBuilder discarded$5 = var37.append(var12.field_Qb[0]);
                         var38_int = 1;
                         L37: while (true) {
                           if (var12.field_Rb <= var38_int) {
@@ -805,8 +804,8 @@ final class pe extends kc {
                             var31 = var31 + ga.field_r * var39;
                             break L36;
                           } else {
-                            StringBuilder discarded$7 = var37.append(", ");
-                            StringBuilder discarded$8 = var37.append(var12.field_Qb[var38_int]);
+                            StringBuilder discarded$6 = var37.append(", ");
+                            StringBuilder discarded$7 = var37.append(var12.field_Qb[var38_int]);
                             var38_int++;
                             continue L37;
                           }
@@ -962,8 +961,7 @@ final class pe extends kc {
                       } else {
                         if (!var12.e(-125)) {
                           if (0 == var12.field_Zb.field_U) {
-                            int discarded$9 = 1;
-                            je.a(949002930, var12, var32);
+                            je.a(949002930, var12, var32, true);
                             break L52;
                           } else {
                             L53: {
@@ -1073,8 +1071,7 @@ final class pe extends kc {
                 return true;
             }
         }
-        int discarded$4 = 0;
-        if (!(!lo.e())) {
+        if (!(!lo.e(false))) {
             return true;
         }
         if (eh.a(false, param1, param3, param0)) {
@@ -1087,7 +1084,7 @@ final class pe extends kc {
         return false;
     }
 
-    final static ho e() {
+    final static ho e(boolean param0) {
         if (!(in.field_Gb != uj.field_h)) {
             throw new IllegalStateException();
         }
@@ -1095,8 +1092,7 @@ final class pe extends kc {
             in.field_Gb = uj.field_h;
             return i.field_i;
         }
-        int discarded$0 = -113;
-        pe.g();
+        pe.g(-113);
         return null;
     }
 
@@ -1122,7 +1118,7 @@ final class pe extends kc {
         return ((pe) this).field_Cb;
     }
 
-    final static void h() {
+    final static void h(int param0) {
     }
 
     final static void a(int param0, nf param1, byte param2, int param3, int param4, qb param5, ll param6) {
@@ -1401,7 +1397,7 @@ final class pe extends kc {
         }
     }
 
-    final static kc f() {
+    final static kc f(int param0) {
         return dd.field_c.field_Eb;
     }
 
@@ -1422,7 +1418,7 @@ final class pe extends kc {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_Nb = null;
         field_Fb = null;
         field_Db = null;
@@ -1457,8 +1453,7 @@ final class pe extends kc {
             var6 = var6 + 2 * ((pe) this).field_Bb;
             var7 = ((pe) this).field_Kb * ((pe) this).field_Mb + ((pe) this).field_Sb - -((pe) this).field_Sb;
             if (param2 == -29466) {
-              int discarded$1 = 246;
-              var8 = ih.a(param4, var6, param0);
+              var8 = ih.a(param4, var6, param0, 246);
               var9 = ql.a(10, param1, var7, param3);
               ((pe) this).a(var6, var8, var9, var7, (byte) -120);
               var10 = 0;

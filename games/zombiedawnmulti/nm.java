@@ -43,7 +43,7 @@ final class nm {
         ((nm) this).field_l = param4;
     }
 
-    private final void b() {
+    private final void b(int param0) {
         float var2 = 0.0f;
         float var3 = 0.0f;
         int var4 = 0;
@@ -169,12 +169,11 @@ final class nm {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
-        int discarded$0 = 540;
-        m.c();
+        m.c(540);
         oo.e(param0, param4, param3, param1);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_u = null;
         field_w = null;
@@ -196,8 +195,7 @@ final class nm {
         } else {
           ((nm) this).field_g = ((nm) this).field_g - param1;
           ((nm) this).field_k = ((nm) this).field_k - param0;
-          int discarded$2 = 27;
-          this.b();
+          this.b(27);
           return;
         }
     }
@@ -272,8 +270,7 @@ final class nm {
             if (param4 != -91) {
               return;
             } else {
-              int discarded$8 = 27;
-              this.b();
+              this.b(27);
               return;
             }
           } else {
@@ -294,8 +291,7 @@ final class nm {
               if (param4 != -91) {
                 return;
               } else {
-                int discarded$9 = 27;
-                this.b();
+                this.b(27);
                 return;
               }
             } else {
@@ -303,8 +299,7 @@ final class nm {
               if (param4 != -91) {
                 return;
               } else {
-                int discarded$10 = 27;
-                this.b();
+                this.b(27);
                 return;
               }
             }
@@ -363,8 +358,7 @@ final class nm {
                   if (param4 != -91) {
                     return;
                   } else {
-                    int discarded$11 = 27;
-                    this.b();
+                    this.b(27);
                     return;
                   }
                 } else {
@@ -382,8 +376,7 @@ final class nm {
                   if (param4 != -91) {
                     return;
                   } else {
-                    int discarded$12 = 27;
-                    this.b();
+                    this.b(27);
                     return;
                   }
                 }
@@ -418,8 +411,7 @@ final class nm {
                 if (param4 != -91) {
                   return;
                 } else {
-                  int discarded$13 = 27;
-                  this.b();
+                  this.b(27);
                   return;
                 }
               }
@@ -490,8 +482,7 @@ final class nm {
               if (param4 != -91) {
                 return;
               } else {
-                int discarded$14 = 27;
-                this.b();
+                this.b(27);
                 return;
               }
             }
@@ -570,8 +561,7 @@ final class nm {
             if (param4 != -91) {
               return;
             } else {
-              int discarded$15 = 27;
-              this.b();
+              this.b(27);
               return;
             }
           }
@@ -605,8 +595,7 @@ final class nm {
     final void a(int param0, byte param1, int param2) {
         ((nm) this).field_g = param0;
         ((nm) this).field_k = param2;
-        int discarded$0 = 27;
-        this.b();
+        this.b(27);
         if (param1 > -35) {
         }
     }

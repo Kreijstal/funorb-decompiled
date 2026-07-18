@@ -47,7 +47,7 @@ class wf {
         int var1 = 0;
     }
 
-    final static void a(long param0) {
+    final static void a(long param0, boolean param1) {
         if (0L >= param0) {
           return;
         } else {

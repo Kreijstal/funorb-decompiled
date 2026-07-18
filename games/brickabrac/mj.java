@@ -7,7 +7,7 @@ final class mj {
     static String field_b;
     static String field_a;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
         field_a = null;
         int var1 = -69;
@@ -230,7 +230,7 @@ final class mj {
         return null == ua.field_d ? qa.field_r : true;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1, boolean param2, int param3) {
         eb.field_n = 0;
         vq.field_A = 1;
         cc.field_H = 2;

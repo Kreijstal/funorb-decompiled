@@ -104,12 +104,12 @@ final class vk {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_x = null;
         int var1 = -52;
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String a(boolean param0, CharSequence param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;

@@ -73,7 +73,7 @@ final class sk extends rqa {
         super(param0, param1, param2);
     }
 
-    final static le a(ds param0) {
+    final static le a(ds param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         le var3 = null;

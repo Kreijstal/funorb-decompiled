@@ -15,7 +15,7 @@ final class f implements Iterator {
     static int field_b;
     static String field_h;
 
-    final static String a() {
+    final static String a(int param0) {
         if (!(pa.field_l != ao.field_Kb)) {
             return ea.field_e;
         }
@@ -315,8 +315,7 @@ final class f implements Iterator {
             dk.field_v.h(1026);
         }
         if (!(sd.field_e == 0)) {
-            int discarded$0 = 121;
-            re.c();
+            re.c((byte) 121);
         }
         if (param0 > -26) {
             f.b((byte) -19);
@@ -394,7 +393,7 @@ final class f implements Iterator {
         }
     }
 
-    final static String a(char param0, int param1) {
+    final static String a(char param0, int param1, byte param2) {
         int var4 = 0;
         int var5 = Virogrid.field_F ? 1 : 0;
         char[] var6 = new char[param1];

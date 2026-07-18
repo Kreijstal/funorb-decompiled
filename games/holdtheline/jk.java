@@ -29,7 +29,7 @@ final class jk extends hl {
         mm.field_e.a((byte) -112, (hl) this);
     }
 
-    final static void a() {
+    final static void a(int param0) {
         try {
             IOException var1 = null;
             RuntimeException var1_ref = null;
@@ -122,13 +122,13 @@ final class jk extends hl {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_p = null;
         field_r = null;
         field_l = null;
     }
 
-    final static void a(gn param0) {
+    final static void a(gn param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;

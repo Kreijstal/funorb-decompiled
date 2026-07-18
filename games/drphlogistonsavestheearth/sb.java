@@ -14,30 +14,13 @@ final class sb {
     private static long[] field_c;
 
     final static boolean b(int param0) {
-        int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        if (af.field_b >= 10) {
-          if (gf.field_G) {
+        if (af.field_b < 10) {
             return false;
-          } else {
-            L0: {
-              int discarded$6 = 64;
-              if (n.a()) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
-                break L0;
-              } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                break L0;
-              }
-            }
-            return stackIn_6_0 != 0;
-          }
-        } else {
-          return false;
         }
+        if (gf.field_G) {
+            return false;
+        }
+        return !n.a(64) ? true : false;
     }
 
     final boolean a(int param0) {
@@ -53,8 +36,7 @@ final class sb {
               var4 = var5;
               var2 = var4;
               if (!var5.field_b.a(0)) {
-                int discarded$4 = 52;
-                this.a(var2, 0);
+                this.a(var5, 0, (byte) 52);
                 return false;
               } else {
                 L1: {
@@ -62,8 +44,7 @@ final class sb {
                     break L1;
                   } else {
                     if (!var5.field_b.c(var5.field_l, 29691)) {
-                      int discarded$5 = 52;
-                      this.a(var2, var5.field_b.a(24, var5.field_l));
+                      this.a(var2, var5.field_b.a(24, var5.field_l), (byte) 52);
                       return false;
                     } else {
                       break L1;
@@ -75,8 +56,7 @@ final class sb {
                     break L2;
                   } else {
                     if (!var5.field_b.a(255, var5.field_h)) {
-                      int discarded$6 = 52;
-                      this.a(var2, var5.field_b.b(10461, var5.field_h));
+                      this.a(var2, var5.field_b.b(10461, var5.field_h), (byte) 52);
                       return false;
                     } else {
                       break L2;
@@ -94,8 +74,7 @@ final class sb {
                         break L3;
                       } else {
                         if (!var5.field_b.c((byte) 66)) {
-                          int discarded$7 = 52;
-                          this.a(var2, var5.field_b.d((byte) 95));
+                          this.a(var2, var5.field_b.d((byte) 95), (byte) 52);
                           return false;
                         } else {
                           break L3;
@@ -116,7 +95,7 @@ final class sb {
         }
     }
 
-    private final void a(uf param0, int param1) {
+    private final void a(uf param0, int param1, byte param2) {
         float var4_float = 0.0f;
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -180,7 +159,7 @@ final class sb {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_g = null;
         field_i = null;
@@ -191,17 +170,14 @@ final class sb {
         throw new Error();
     }
 
-    final static void b() {
-        int discarded$7 = 6;
-        af.b();
+    final static void b(byte param0) {
+        af.b(6);
         if (n.field_g != null) {
           L0: {
             hb.a(-5, n.field_g);
-            int discarded$8 = -19495;
-            oe.b();
+            oe.b(-19495);
             de.e(-86);
-            int discarded$9 = -120;
-            oi.b();
+            oi.b((byte) -120);
             if (DrPhlogistonSavesTheEarth.t(18137)) {
               nj.field_p.d(1, -18392);
               qj.a(0, 14656);
@@ -210,16 +186,13 @@ final class sb {
               break L0;
             }
           }
-          int discarded$10 = 126;
-          eg.a();
+          eg.a((byte) 126);
           return;
         } else {
           L1: {
-            int discarded$11 = -19495;
-            oe.b();
+            oe.b(-19495);
             de.e(-86);
-            int discarded$12 = -120;
-            oi.b();
+            oi.b((byte) -120);
             if (DrPhlogistonSavesTheEarth.t(18137)) {
               nj.field_p.d(1, -18392);
               qj.a(0, 14656);
@@ -228,8 +201,7 @@ final class sb {
               break L1;
             }
           }
-          int discarded$13 = 126;
-          eg.a();
+          eg.a((byte) 126);
           return;
         }
     }

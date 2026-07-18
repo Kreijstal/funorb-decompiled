@@ -19,7 +19,7 @@ final class q extends rt {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_p = null;
         int var1 = -126;
         field_o = null;

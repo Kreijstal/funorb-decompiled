@@ -303,7 +303,7 @@ final class be {
         return "" + ((be) this).field_k;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_j = null;
         field_h = null;
@@ -668,7 +668,7 @@ final class be {
         }
     }
 
-    final static void a(int param0, vd param1, String param2, dj param3) {
+    final static void a(int param0, vd param1, String param2, dj param3, byte param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -851,7 +851,7 @@ final class be {
         }
     }
 
-    final static long a(CharSequence param0) {
+    final static long a(CharSequence param0, boolean param1) {
         long var2_long = 0L;
         RuntimeException var2 = null;
         int var4 = 0;

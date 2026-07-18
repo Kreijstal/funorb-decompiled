@@ -6,7 +6,7 @@ final class kea {
     static su field_c;
     static String field_a;
 
-    final static void b() {
+    final static void b(int param0) {
         wu.field_a.e(true);
         wu.field_a.c((ae) (Object) new at(wu.field_a), 89);
     }

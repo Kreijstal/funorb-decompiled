@@ -8,7 +8,7 @@ final class qj {
     static long field_d;
     static String field_c;
 
-    final static void a(String param0, long param1) {
+    final static void a(String param0, long param1, byte param2) {
         CharSequence var5 = null;
         jo.field_k = param0;
         try {
@@ -16,8 +16,7 @@ final class qj {
             var5 = (CharSequence) (Object) param0;
             fp.field_d = dh.a(var5, (byte) 74);
             fp.field_e = param1;
-            int discarded$0 = 20558;
-            ib.b();
+            ib.b(20558);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "qj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + 8 + ')');
         }
@@ -31,7 +30,7 @@ final class qj {
         var3.b(1276387944, param1);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_e = null;
         field_a = null;

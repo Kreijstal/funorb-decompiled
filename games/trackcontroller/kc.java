@@ -31,7 +31,7 @@ final class kc {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;

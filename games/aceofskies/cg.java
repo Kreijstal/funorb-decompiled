@@ -19,7 +19,7 @@ final class cg extends ua implements tl {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_p = null;
     }
 
@@ -92,8 +92,7 @@ final class cg extends ua implements tl {
             gm.field_x = od.a("", 66);
             gm.field_x.a(false, false);
             kg.a(4, param2, param4, param1);
-            int discarded$0 = -8129;
-            nj.d();
+            nj.d(-8129);
             nb.field_c = dk.field_h;
             ht.field_k = dk.field_h;
         } catch (RuntimeException runtimeException) {

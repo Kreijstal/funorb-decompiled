@@ -42,8 +42,7 @@ final class ck extends fk {
                   }
                 }
               } else {
-                int discarded$2 = 0;
-                i.a(4, var4);
+                i.a(4, var4, 0);
                 var4 = (eh) (Object) qn.field_t.a((byte) -70);
                 continue L1;
               }

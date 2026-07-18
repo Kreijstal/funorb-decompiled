@@ -67,8 +67,7 @@ final class eg {
         try {
           L0: {
             if (param1 >= 69) {
-              int discarded$2 = 1;
-              stackOut_3_0 = fj.a(16, param2, 84);
+              stackOut_3_0 = fj.a(16, param2, 84, true);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -120,7 +119,7 @@ final class eg {
         field_g = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(uj.field_j == null)) {
             uj.field_j.b(50);
             uj.field_j = null;

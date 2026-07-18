@@ -137,7 +137,7 @@ final class ml {
         return sja.field_i.length;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
     }
 

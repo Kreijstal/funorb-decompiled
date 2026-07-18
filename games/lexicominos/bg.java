@@ -94,7 +94,7 @@ final class bg implements Iterable {
         }
     }
 
-    final static tf a(String param0) {
+    final static tf a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -201,7 +201,7 @@ final class bg implements Iterable {
         return (Iterator) (Object) new ec((bg) this);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_a = null;
         field_d = null;

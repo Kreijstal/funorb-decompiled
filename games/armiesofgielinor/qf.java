@@ -10,7 +10,7 @@ final class qf {
     static String field_a;
     static String field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         int var1 = 0;
         field_c = null;
@@ -39,7 +39,7 @@ final class qf {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
     }
 
     final static void a(int param0) {
@@ -50,7 +50,7 @@ final class qf {
         rl.field_C.a((kb) (Object) pq.field_a, 0);
     }
 
-    final static void a(nr param0, int param1, int param2, nr param3) {
+    final static void a(nr param0, int param1, int param2, nr param3, int param4, int param5) {
         try {
             et.field_b = 8;
             el.field_c = 8;

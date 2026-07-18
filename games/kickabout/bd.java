@@ -26,8 +26,7 @@ final class bd extends qt {
         int stackOut_1_0 = 0;
         L0: {
           super.a((byte) 117, param1);
-          int discarded$3 = -3;
-          if (up.a()) {
+          if (up.a((byte) -3)) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -40,8 +39,7 @@ final class bd extends qt {
         var3 = rp.a(stackIn_3_0 != 0, -587);
         if (var3 == 3) {
           if (null == e.field_m) {
-            int discarded$4 = 126;
-            cq.a(so.a(-98));
+            cq.a(so.a(-98), (byte) 126);
             if (var3 != 1) {
               L1: {
                 if (var3 == 2) {
@@ -68,8 +66,7 @@ final class bd extends qt {
             }
           } else {
             fd.h(0);
-            int discarded$5 = 126;
-            cq.a(so.a(-98));
+            cq.a(so.a(-98), (byte) 126);
             if (var3 == 1) {
               L3: {
                 jm.a(0, false, -2);
@@ -138,7 +135,7 @@ final class bd extends qt {
     bd() {
     }
 
-    final static void e() {
+    final static void e(int param0) {
         int var1 = 0;
         int var2 = 0;
         var2 = Kickabout.field_G;
@@ -152,25 +149,20 @@ final class bd extends qt {
           if (var1 > 0) {
             if (var1 != 1) {
               st.field_m = vo.a((byte) -18, tk.field_Lb, new String[1]);
-              int discarded$8 = 0;
-              st.field_m = kr.a(new CharSequence[3]);
+              st.field_m = kr.a(new CharSequence[3], false);
               rk.field_f.q(-105);
-              int discarded$9 = -45;
-              fj.a();
+              fj.a(-45);
               return;
             } else {
               st.field_m = dq.field_h;
-              int discarded$10 = 0;
-              st.field_m = kr.a(new CharSequence[3]);
+              st.field_m = kr.a(new CharSequence[3], false);
               rk.field_f.q(-105);
-              int discarded$11 = -45;
-              fj.a();
+              fj.a(-45);
               return;
             }
           } else {
             rk.field_f.q(-105);
-            int discarded$12 = -45;
-            fj.a();
+            fj.a(-45);
             return;
           }
         }

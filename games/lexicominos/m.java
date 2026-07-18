@@ -6,7 +6,7 @@ final class m {
     static byte[][] field_a;
     static String field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }
@@ -154,8 +154,7 @@ final class m {
               if (!ab.field_b.startsWith("win")) {
                 break L1;
               } else {
-                int discarded$8 = 14080;
-                if (ul.a(param2)) {
+                if (ul.a(param2, 14080)) {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {

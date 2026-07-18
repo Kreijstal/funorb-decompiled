@@ -281,7 +281,7 @@ final class lg {
         return stackIn_32_0;
     }
 
-    final static io a(java.applet.Applet param0) {
+    final static io a(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         io[] var3 = null;
@@ -313,15 +313,13 @@ final class lg {
         var6 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
-            int discarded$4 = -85;
-            var2 = qn.a(param0, "jagex-last-login-method");
+            var2 = qn.a(param0, "jagex-last-login-method", (byte) -85);
             if (var2 == null) {
               stackOut_3_0 = cd.field_c;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              int discarded$5 = -8;
-              var3 = h.a();
+              var3 = h.a((byte) -8);
               var4 = 0;
               L1: while (true) {
                 if (var4 >= var3.length) {
@@ -375,7 +373,7 @@ final class lg {
         return stackIn_13_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
         field_b = null;
@@ -454,7 +452,7 @@ final class lg {
         }
     }
 
-    final static void a(sb param0, int param1, int param2, sb param3) {
+    final static void a(sb param0, int param1, int param2, sb param3, int param4, int param5) {
         try {
             bd.field_c = 8;
             tm.field_N = param3;
@@ -514,6 +512,8 @@ final class lg {
                   break L1;
                 } else {
                   var3 = (Object) (Object) jp.field_c;
+                  var4 = var3;
+                  var4 = var3;
                   break L1;
                 }
               }
@@ -530,8 +530,7 @@ final class lg {
                 }
               }
             }
-            int discarded$2 = -1;
-            stackOut_7_0 = ub.a(-102, param2, (String) var3, (String) var4);
+            stackOut_7_0 = ub.a(-102, param2, (String) var3, (String) var4, -1);
             stackIn_8_0 = stackOut_7_0;
             break L0;
           }

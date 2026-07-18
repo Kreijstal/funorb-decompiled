@@ -4,7 +4,7 @@
 class rr extends o {
     static int field_t;
 
-    final static a a(pf param0, int param1, int param2) {
+    final static a a(pf param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         a var5 = null;
         int var6 = 0;
@@ -97,7 +97,7 @@ class rr extends o {
         }
     }
 
-    final static boolean a(vd param0, pf param1) {
+    final static boolean a(vd param0, pf param1, byte param2) {
         oh var3 = null;
         RuntimeException var3_ref = null;
         vd var4 = null;

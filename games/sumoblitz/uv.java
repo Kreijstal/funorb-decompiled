@@ -66,11 +66,10 @@ final class uv extends gm {
                     if (var6_int >= 8) {
                       break L0;
                     } else {
-                      int discarded$3 = -96;
-                      var7 = new float[]{0.0f, (float)(-(1 + fi.a(param5, he.field_o)))};
-                      float[] dupTemp$4 = kt.a((byte) -92, var7, (float)(0.0 + 0.017453292519943295 * (double)(2048.0f / (float)var6_int)));
-                      var11 = dupTemp$4;
-                      var7 = dupTemp$4;
+                      var7 = new float[]{0.0f, (float)(-(1 + fi.a(param5, he.field_o, (byte) -96)))};
+                      float[] dupTemp$1 = kt.a((byte) -92, var7, (float)(0.0 + 0.017453292519943295 * (double)(2048.0f / (float)var6_int)));
+                      var11 = dupTemp$1;
+                      var7 = dupTemp$1;
                       var8 = new vt(24, param3, param1, param0, (int)var11[0] << 8, (int)var11[1] << 8, 1);
                       param4.a((ms) (Object) var8, (byte) 39);
                       var6_int++;
@@ -78,8 +77,7 @@ final class uv extends gm {
                     }
                   }
                 } else {
-                  int discarded$5 = -96;
-                  var7 = new float[]{0.0f, (float)(-(fi.a(param5, he.field_o) + 1))};
+                  var7 = new float[]{0.0f, (float)(-(fi.a(param5, he.field_o, (byte) -96) + 1))};
                   var15 = kt.a((byte) -115, var7, (float)(0.0 + (double)(2048.0f / (float)var6_int) * 0.017453292519943295));
                   var14 = var15;
                   var13 = var14;
@@ -281,7 +279,7 @@ final class uv extends gm {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_o = null;
     }
 

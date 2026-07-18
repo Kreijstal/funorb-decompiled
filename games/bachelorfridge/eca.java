@@ -210,7 +210,7 @@ final class eca extends bi {
         }
     }
 
-    private final String e() {
+    private final String e(byte param0) {
         int var2 = 0;
         String[] var3 = null;
         int[] var4 = null;
@@ -240,19 +240,13 @@ final class eca extends bi {
         var3 = ri.field_b.field_k[ks.field_i];
         var4 = ri.field_b.field_g[ks.field_i];
         var5 = ((eca) this).field_k.field_u + 108;
-        int discarded$6 = 0;
-        this.a(0, od.field_z);
+        this.a(0, od.field_z, 0);
         var6 = 0;
-        int discarded$7 = 0;
-        this.a(1, hea.field_q);
-        int discarded$8 = 0;
-        this.a(2, aj.field_b);
-        int discarded$9 = 0;
-        this.a(3, ej.field_n);
-        int discarded$10 = 0;
-        this.a(4, es.field_h);
-        int discarded$11 = 0;
-        this.a(5, eg.field_q);
+        this.a(1, hea.field_q, 0);
+        this.a(2, aj.field_b, 0);
+        this.a(3, ej.field_n, 0);
+        this.a(4, es.field_h, 0);
+        this.a(5, eg.field_q, 0);
         var7 = 0;
         L0: while (true) {
           if (var7 >= 10) {
@@ -391,8 +385,7 @@ final class eca extends bi {
         if (param0 == 1) {
           if (ri.field_b.field_p) {
             if (null != ri.field_b.field_k) {
-              int discarded$2 = 9;
-              var9 = this.e();
+              var9 = this.e((byte) 9);
               var3 = 95 - -((eca) this).field_k.field_u - -253;
               ((eca) this).field_k.a(var9, 320, var3, 3518976, -1);
               return;
@@ -412,8 +405,7 @@ final class eca extends bi {
           ((eca) this).field_k = null;
           if (ri.field_b.field_p) {
             if (null != ri.field_b.field_k) {
-              int discarded$3 = 9;
-              var6 = this.e();
+              var6 = this.e((byte) 9);
               var3 = 95 - -((eca) this).field_k.field_u - -253;
               ((eca) this).field_k.a(var6, 320, var3, 3518976, -1);
               return;
@@ -434,8 +426,7 @@ final class eca extends bi {
 
     final void l(int param0) {
         ((eca) this).i(-12988);
-        int discarded$14 = 0;
-        j.a(wa.field_l, 40, 16760896, true, 320);
+        j.a(wa.field_l, 40, 16760896, true, 320, false);
         dg.a(40, 60, 560, 335, 20, 0, 80);
         if (param0 == 9) {
           if (bp.e(param0 + -29928)) {
@@ -583,7 +574,7 @@ final class eca extends bi {
         }
     }
 
-    private final void a(int param0, String param1) {
+    private final void a(int param0, String param1, int param2) {
         int var4_int = 0;
         pia var5 = null;
         try {

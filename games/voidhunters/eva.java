@@ -187,7 +187,7 @@ final class eva extends rqa {
         return stackIn_3_0;
     }
 
-    final static void a(br param0) {
+    final static void a(br param0, int param1, int param2) {
         faa var3 = null;
         try {
             var3 = dpa.field_p;

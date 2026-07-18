@@ -5,7 +5,7 @@ final class oc {
     static int[] field_b;
     static String[] field_a;
 
-    final static int a() {
+    final static int a(boolean param0) {
         return oh.field_d;
     }
 
@@ -222,7 +222,7 @@ final class oc {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_b = null;
         field_a = null;
     }

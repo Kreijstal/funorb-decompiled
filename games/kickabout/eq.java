@@ -14,7 +14,7 @@ final class eq {
     static ot field_h;
     private ci field_i;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_b = null;
         field_c = null;
@@ -30,8 +30,7 @@ final class eq {
         int var2 = -(pg.field_b * pg.field_b) + var1;
         int var3 = c.field_c + var2 * (-c.field_c + na.field_Ab) / var1;
         g.field_a.a(true, 640, df.field_H, var3, 120);
-        int discarded$0 = 0;
-        cf.a(124, mj.field_b, 640, 5, eb.field_b, na.field_Ab - 24);
+        cf.a(124, mj.field_b, 640, 5, eb.field_b, na.field_Ab - 24, 0);
     }
 
     final static boolean a(boolean param0) {

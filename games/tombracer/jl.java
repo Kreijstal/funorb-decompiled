@@ -5,7 +5,7 @@ final class jl {
     static String field_a;
     private static String[] field_b;
 
-    final static int[] a(int param0, int param1) {
+    final static int[] a(int param0, int param1, int param2) {
         int var3 = cr.a(true, param1);
         int var4 = pla.b(61, param1);
         int var5 = cr.a(true, param0);

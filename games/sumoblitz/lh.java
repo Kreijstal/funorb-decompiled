@@ -9,7 +9,7 @@ final class lh extends ms {
     static ji field_l;
     static String field_p;
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_l = null;
         field_n = null;
@@ -17,7 +17,7 @@ final class lh extends ms {
         int var1 = 90;
     }
 
-    final static dk a(String param0) {
+    final static dk a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -62,8 +62,7 @@ final class lh extends ms {
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0;
               } else {
-                int discarded$4 = -27224;
-                var3 = cn.a('.', param0);
+                var3 = cn.a('.', param0, -27224);
                 if (var3.length < 2) {
                   stackOut_10_0 = qo.field_a;
                   stackIn_11_0 = stackOut_10_0;
@@ -78,8 +77,7 @@ final class lh extends ms {
                       break L0;
                     } else {
                       var6 = var4[var5];
-                      int discarded$5 = -1;
-                      var7 = fh.a(var6);
+                      var7 = fh.a(var6, -1);
                       if (var7 != null) {
                         stackOut_16_0 = (dk) var7;
                         stackIn_17_0 = stackOut_16_0;

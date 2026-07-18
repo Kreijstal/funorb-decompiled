@@ -152,7 +152,7 @@ final class rt {
         ((rt) this).field_f = null;
     }
 
-    final static int c() {
+    final static int c(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -172,11 +172,10 @@ final class rt {
         var2 = VoidHunters.field_G;
         try {
           L0: {
-            boolean discarded$28 = klb.field_r.a((byte) -5, wua.field_k, dmb.field_c, true);
+            boolean discarded$12 = klb.field_r.a((byte) -5, wua.field_k, dmb.field_c, true);
             klb.field_r.h(19976);
             L1: while (true) {
-              int discarded$29 = 127;
-              if (!ata.e()) {
+              if (!ata.e(127)) {
                 if (ci.field_b != -1) {
                   var1_int = ci.field_b;
                   cea.a(-59, -1);
@@ -213,7 +212,7 @@ final class rt {
                   }
                 }
               } else {
-                boolean discarded$30 = klb.field_r.a(-9445, pma.field_o, jl.field_r);
+                boolean discarded$13 = klb.field_r.a(-9445, pma.field_o, jl.field_r);
                 continue L1;
               }
             }

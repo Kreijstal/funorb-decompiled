@@ -16,11 +16,11 @@ final class km {
     private vj field_i;
     static String[] field_j;
 
-    final static int a() {
+    final static int a(int param0) {
         return kw.field_R;
     }
 
-    final static je c() {
+    final static je c(int param0) {
         return mw.field_E.field_Nb;
     }
 
@@ -76,8 +76,7 @@ final class km {
         var4.field_o = 0;
         var4.field_q = 10;
         s.field_a.a((byte) -119, (tc) (Object) var4);
-        int discarded$0 = -64;
-        tf.a(7, var4);
+        tf.a(7, var4, (byte) -64);
         return var4;
     }
 

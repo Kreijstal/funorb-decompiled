@@ -353,7 +353,7 @@ final class sg implements Runnable {
         return stackIn_29_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_h = null;
         field_i = null;

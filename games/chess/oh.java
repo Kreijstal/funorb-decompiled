@@ -8,11 +8,11 @@ final class oh {
     static String field_d;
     static String field_c;
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return ge.field_fb.a(false);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_c = null;
         field_a = null;

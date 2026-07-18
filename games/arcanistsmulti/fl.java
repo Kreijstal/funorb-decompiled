@@ -188,8 +188,7 @@ final class fl {
             var2 = new qb(param1.a("", "final_frame.jpg", -1), (java.awt.Component) (Object) on.field_c);
             var3 = var2.field_q;
             var4 = var2.field_y;
-            int discarded$0 = 65280;
-            ec.a();
+            ec.a(65280);
             mi.field_E = new qb(var3, 3 * var4 / 4);
             mi.field_E.a();
             var2.h(0, 0);

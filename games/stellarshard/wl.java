@@ -115,7 +115,7 @@ abstract class wl extends tb {
         super.i(param0);
     }
 
-    final static void l() {
+    final static void l(int param0) {
         o.field_g = null;
         pd.field_g = null;
         qh.field_g = false;
@@ -321,7 +321,7 @@ abstract class wl extends tb {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         int var1 = 47;
         field_W = null;
         field_T = null;
@@ -447,8 +447,7 @@ abstract class wl extends tb {
     }
 
     final static pf a(int param0, int param1) {
-        int discarded$0 = 1;
-        return na.a(1, 255, param1, false, false);
+        return na.a(1, 255, param1, false, false, true);
     }
 
     static {

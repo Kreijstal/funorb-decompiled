@@ -6,7 +6,7 @@ final class sl implements dja {
     static boolean field_b;
     static int field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = -108;
         field_c = null;
     }

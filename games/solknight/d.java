@@ -6,7 +6,7 @@ final class d {
     static ne field_b;
     static long field_c;
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -47,8 +47,7 @@ final class d {
                   }
                   dc.field_n.a();
                   mi.a();
-                  int discarded$12 = -63;
-                  ad.field_b.a(bb.a(ma.field_m, new String[1]), 128, ad.field_b.field_F, 16777215, 8421504);
+                  ad.field_b.a(bb.a(ma.field_m, new String[1], -63), 128, ad.field_b.field_F, 16777215, 8421504);
                   hj.field_e.a(true);
                   dc.field_n.a(cb.field_a, 46, 107, 0, 125);
                   break L2;
@@ -72,8 +71,7 @@ final class d {
                   }
                   dc.field_n.a();
                   mi.a();
-                  int discarded$13 = -63;
-                  ad.field_b.a(bb.a(ha.field_p, new String[1]), 128, ad.field_b.field_F, 16777215, 8421504);
+                  ad.field_b.a(bb.a(ha.field_p, new String[1], -63), 128, ad.field_b.field_F, 16777215, 8421504);
                   hj.field_e.a(true);
                   dc.field_n.a(ci.field_ib, 46, 109, 0, 475);
                   break L4;
@@ -104,16 +102,14 @@ final class d {
                     if (1 != bi.field_h) {
                       break L8;
                     } else {
-                      int discarded$14 = -63;
-                      ad.field_b.a(bb.a(pk.field_T, new String[1]), 320, 32, 16711680, 8421504);
+                      ad.field_b.a(bb.a(pk.field_T, new String[1], -63), 320, 32, 16711680, 8421504);
                       break L8;
                     }
                   }
                   if (bi.field_h != 2) {
                     break L6;
                   } else {
-                    int discarded$15 = -63;
-                    ad.field_b.a(bb.a(og.field_i, new String[1]), 320, 32, 16776960, 8421504);
+                    ad.field_b.a(bb.a(og.field_i, new String[1], -63), 320, 32, 16776960, 8421504);
                     break L6;
                   }
                 }
@@ -122,10 +118,8 @@ final class d {
               }
             }
             L9: {
-              int discarded$16 = -63;
-              var2_int = 30 + ug.field_g.b(bb.a(wk.field_a, new String[1]));
-              int discarded$17 = -63;
-              var3 = 30 + ug.field_g.b(bb.a(nb.field_b, new String[1]));
+              var2_int = 30 + ug.field_g.b(bb.a(wk.field_a, new String[1], -63));
+              var3 = 30 + ug.field_g.b(bb.a(nb.field_b, new String[1], -63));
               if (~var2_int <= ~var3) {
                 break L9;
               } else {
@@ -143,13 +137,10 @@ final class d {
               }
             }
             L11: {
-              int discarded$18 = 2;
-              uj.a(var2_int - -15, 47, 0, dh.field_f, 433);
-              int discarded$19 = -63;
-              ug.field_g.c(bb.a(wk.field_a, new String[1]), 30, 467, 16777215, -1);
+              uj.a(var2_int - -15, 47, 0, dh.field_f, 433, 2);
+              ug.field_g.c(bb.a(wk.field_a, new String[1], -63), 30, 467, 16777215, -1);
               if (-ud.field_k + (qh.field_a[kb.field_b] + -lk.field_f) > 0) {
-                int discarded$20 = -63;
-                ug.field_g.c(bb.a(nb.field_b, new String[1]), 30, 455, 16777215, -1);
+                ug.field_g.c(bb.a(nb.field_b, new String[1], -63), 30, 455, 16777215, -1);
                 break L11;
               } else {
                 break L11;
@@ -172,8 +163,7 @@ final class d {
             L13: while (true) {
               if (~uf.field_p >= ~var6) {
                 L14: {
-                  int discarded$21 = 2;
-                  uj.a(var2_int + 15, 47, -15 + (640 - var2_int), le.field_d, 433);
+                  uj.a(var2_int + 15, 47, -15 + (640 - var2_int), le.field_d, 433, 2);
                   if (0 < uf.field_p) {
                     L15: {
                       if (lk.field_b >= 50) {
@@ -217,8 +207,7 @@ final class d {
                           }
                         }
                       }
-                      int discarded$22 = -63;
-                      int discarded$23 = ad.field_b.a(bb.a(fj.field_j, new String[2]), 0, 0, 640, 480, var6, -1, 1, 1, 24);
+                      int discarded$1 = ad.field_b.a(bb.a(fj.field_j, new String[2], -63), 0, 0, 640, 480, var6, -1, 1, 1, 24);
                       break L14;
                     } else {
                       break L14;
@@ -243,19 +232,17 @@ final class d {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }
 
     final static void a(da param0, boolean param1, byte param2, da param3, da param4) {
-        int discarded$0 = 0;
-        td.field_h = hh.a("");
+        td.field_h = hh.a("", false);
         td.field_h.a(false, (byte) -75);
         ci.a(param0, false, param3, param4);
         try {
-            int discarded$1 = -13408;
-            ff.b();
+            ff.b(-13408);
             ma.field_o = el.field_p;
             gb.field_i = el.field_p;
         } catch (RuntimeException runtimeException) {

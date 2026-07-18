@@ -11,7 +11,7 @@ final class bl {
     static int field_a;
     static ri field_g;
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_d = null;
         field_b = null;
@@ -19,7 +19,7 @@ final class bl {
         field_f = null;
     }
 
-    final static int c() {
+    final static int c(int param0) {
         return mc.field_e + -ch.field_i;
     }
 
@@ -47,10 +47,8 @@ final class bl {
         String stackOut_7_2 = null;
         try {
           L0: {
-            int discarded$9 = -42;
-            if (ud.a(param1, param2, param3)) {
-              int discarded$10 = 15;
-              stackOut_4_0 = gl.a();
+            if (ud.a(param1, param2, param3, (byte) -42)) {
+              stackOut_4_0 = gl.a(15);
               stackIn_5_0 = stackOut_4_0;
               break L0;
             } else {
@@ -104,7 +102,7 @@ final class bl {
         return vn.field_b + var1;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -193,12 +191,9 @@ final class bl {
                 if (!ch.field_k) {
                   break L6;
                 } else {
-                  int discarded$6 = 1481707568;
-                  ld.j();
-                  int discarded$7 = -28264;
-                  wc.i();
-                  int discarded$8 = -8328;
-                  cf.d();
+                  ld.j(1481707568);
+                  wc.i(-28264);
+                  cf.d(-8328);
                   ch.field_k = false;
                   break L6;
                 }

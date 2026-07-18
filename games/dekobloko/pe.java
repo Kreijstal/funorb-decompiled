@@ -10,7 +10,7 @@ final class pe {
     static String field_b;
     static w field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_b = null;
         field_c = null;
@@ -18,7 +18,7 @@ final class pe {
         field_d = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

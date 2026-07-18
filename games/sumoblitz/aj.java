@@ -201,7 +201,7 @@ final class aj extends nt {
         return stackIn_3_0;
     }
 
-    final static Object a(byte param0, byte[] param1) {
+    final static Object a(byte param0, byte[] param1, boolean param2) {
         si var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
@@ -310,7 +310,7 @@ final class aj extends nt {
         }
     }
 
-    final static hr[] a(ri[] param0, ha param1) {
+    final static hr[] a(ri[] param0, ha param1, int param2) {
         hr[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -425,7 +425,7 @@ final class aj extends nt {
         return stackIn_5_0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_y = null;
         field_x = null;
         field_t = null;

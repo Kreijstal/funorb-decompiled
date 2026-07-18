@@ -10,7 +10,7 @@ final class en extends IOException {
         super(param0);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

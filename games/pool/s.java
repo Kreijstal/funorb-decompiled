@@ -10,7 +10,7 @@ final class s {
     static ob[] field_c;
     static String[] field_d;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -97,7 +97,7 @@ final class s {
         }
     }
 
-    final static String a(ge param0) {
+    final static String a(ge param0, int param1, boolean param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -293,7 +293,7 @@ final class s {
         return stackIn_15_0;
     }
 
-    final static char a(byte param0) {
+    final static char a(byte param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         var2 = param0 & 255;
@@ -322,7 +322,7 @@ final class s {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_g = null;
         field_e = null;

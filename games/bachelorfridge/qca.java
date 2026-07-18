@@ -186,7 +186,7 @@ final class qca extends k {
         }
     }
 
-    final static pia a(byte[] param0, int param1, boolean param2, ee[] param3) {
+    final static pia a(byte[] param0, int param1, boolean param2, ee[] param3, int param4, int param5) {
         RuntimeException var6 = null;
         int[] var6_array = null;
         int[] var7 = null;
@@ -552,7 +552,7 @@ final class qca extends k {
         }
     }
 
-    final static sna e() {
+    final static sna e(int param0) {
         return nr.field_w.field_wb;
     }
 
@@ -565,7 +565,7 @@ final class qca extends k {
         ((qca) this).field_k = 0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_m = null;
         field_l = null;
         field_p = null;

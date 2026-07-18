@@ -74,8 +74,7 @@ final class nv extends sna {
             if (((nv) this).field_Hb[param1] == null) {
               if (((nv) this).field_yb[param1] == -1) {
                 js.a(121);
-                int discarded$133 = -26;
-                ki.g();
+                ki.g(-26);
                 break L0;
               } else {
                 L1: {
@@ -103,10 +102,8 @@ final class nv extends sna {
                 var8 = null;
                 no.a(var5, gk.field_d, 110, (String) null, bd.field_k, param2);
                 ob.a(eaa.field_a, (byte) -47, gk.field_d, var5, bd.field_k);
-                int discarded$134 = -26;
-                ki.g();
-                int discarded$135 = 1;
-                vca.c();
+                ki.g(-26);
+                vca.c(true);
                 break L0;
               }
             } else {
@@ -659,8 +656,7 @@ final class nv extends sna {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  int discarded$2 = -26;
-                  ki.g();
+                  ki.g(-26);
                   return true;
                 }
               }

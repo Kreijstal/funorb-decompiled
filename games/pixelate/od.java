@@ -580,7 +580,7 @@ final class od extends ak {
         }
     }
 
-    final static sn a(fm param0, int param1) {
+    final static sn a(fm param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -647,7 +647,7 @@ final class od extends ak {
         return stackIn_4_0;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_Nb = null;
         field_Fb = null;
         field_Ib = null;

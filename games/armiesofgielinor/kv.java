@@ -112,7 +112,7 @@ final class kv extends tj implements he {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int[] var2 = new int[3];
         int[] var1 = var2;
         var2[0] = 1;
@@ -124,7 +124,7 @@ final class kv extends tj implements he {
         tm.b(0.75f);
     }
 
-    final static fl k() {
+    final static fl k(int param0) {
         if (iv.field_b == null) {
             iv.field_b = new fl();
             iv.field_b.a(13421772, ArmiesOfGielinor.field_J);
@@ -147,11 +147,10 @@ final class kv extends tj implements he {
         }
         ka var5 = ArmiesOfGielinor.field_J;
         if (param2 > -82) {
-            int discarded$0 = 1;
-            kv.b();
+            kv.b(true);
         }
         if (!(((kv) this).field_H == null)) {
-            int discarded$1 = var5.a(we.field_i, param0 + ((kv) this).field_B, param1 + ((kv) this).field_p, ((kv) this).field_l, 20, 16777215, -1, 0, 0, var5.field_L + var5.field_H);
+            int discarded$0 = var5.a(we.field_i, param0 + ((kv) this).field_B, param1 + ((kv) this).field_p, ((kv) this).field_l, 20, 16777215, -1, 0, 0, var5.field_L + var5.field_H);
         }
     }
 
@@ -437,7 +436,7 @@ final class kv extends tj implements he {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_I = null;
         field_J = null;
     }

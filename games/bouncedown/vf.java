@@ -4,7 +4,7 @@
 final class vf {
     static String field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
@@ -85,7 +85,7 @@ final class vf {
         return stackIn_17_0 != 0;
     }
 
-    final static void a(int param0, ng param1, boolean param2, boolean param3) {
+    final static void a(int param0, ng param1, boolean param2, boolean param3, int param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;

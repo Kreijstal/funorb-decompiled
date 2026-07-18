@@ -16,14 +16,14 @@ final class er extends fe {
     static String field_T;
     static int field_R;
 
-    public static void g() {
+    public static void g(byte param0) {
         field_T = null;
         field_N = null;
         field_Q = null;
         int var1 = 0;
     }
 
-    final static void a() {
+    final static void a(int param0, boolean param1, int param2) {
         int var8 = 0;
         var8 = Pool.field_O;
         if (im.field_fc < 0) {

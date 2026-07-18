@@ -78,8 +78,7 @@ final class ih extends lw {
 
     final static void e(int param0) {
         if (param0 != jv.field_j) {
-          int discarded$4 = 37;
-          if (uga.e()) {
+          if (uga.e(37)) {
             wk.field_b = true;
             return;
           } else {
@@ -138,15 +137,13 @@ final class ih extends lw {
 
     final static void d(byte param0) {
         di.c(67);
-        int discarded$0 = 48;
-        c.f();
+        c.f((byte) 48);
         wt.field_n = null;
         int var1 = 62 % ((58 - param0) / 40);
-        int discarded$1 = -26;
-        ki.g();
+        ki.g(-26);
     }
 
-    final static void d() {
+    final static void d(int param0) {
     }
 
     final void a(byte param0) {

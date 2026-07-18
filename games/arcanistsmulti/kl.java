@@ -1178,7 +1178,7 @@ abstract class kl extends qm implements a {
         return stackIn_21_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_D = null;
         field_F = null;
         field_y = null;

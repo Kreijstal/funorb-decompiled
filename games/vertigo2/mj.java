@@ -238,18 +238,13 @@ final class mj {
         String stackOut_45_2 = null;
         try {
           L0: {
-            int discarded$5 = 0;
-            t.a(param1, param16, param19, param9);
-            int discarded$6 = -52;
-            bs.a(param9);
+            t.a(param1, param16, param19, param9, false);
+            bs.a(param9, -52);
             ha.a(1, param6, param5, param12, param8, param7, param15, param18, param3, 0, param10, param13, param4, param11, param9);
             ti.a(true, param9, 4, param2);
-            int discarded$7 = 13;
-            sq.a();
-            int discarded$8 = 0;
-            ne.c();
-            int discarded$9 = 26780;
-            gl.a();
+            sq.a((byte) 13);
+            ne.c(false);
+            gl.a(26780);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -907,7 +902,7 @@ final class mj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;

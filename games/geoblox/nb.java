@@ -24,8 +24,7 @@ final class nb {
         String stackOut_4_2 = null;
         try {
           L0: {
-            int discarded$6 = 0;
-            kc.a((java.awt.Component) (Object) param1);
+            kc.a((java.awt.Component) (Object) param1, 0);
             df.a(false, (java.awt.Component) (Object) param1);
             if (null == vc.field_f) {
               break L0;
@@ -454,39 +453,33 @@ final class nb {
         if (param4 > param7) {
           if (param4 >= param15) {
             if (param15 <= param7) {
-              int discarded$6 = -1275583984;
-              wh.a(param12, param2, param8, param1, param4, param5, param11, param0, param15, param14, param6, vb.field_c, param3, param13, param9, param7);
+              wh.a(param12, param2, param8, param1, param4, param5, param11, param0, param15, param14, param6, vb.field_c, param3, param13, param9, param7, -1275583984);
               return;
             } else {
-              int discarded$7 = -1275583984;
-              wh.a(param12, param6, param14, param3, param4, param5, param11, param9, param7, param8, param2, vb.field_c, param1, param13, param0, param15);
+              wh.a(param12, param6, param14, param3, param4, param5, param11, param9, param7, param8, param2, vb.field_c, param1, param13, param0, param15, -1275583984);
               return;
             }
           } else {
-            int discarded$8 = -1275583984;
-            wh.a(param3, param6, param14, param12, param15, param9, param2, param5, param7, param13, param11, vb.field_c, param1, param8, param0, param4);
+            wh.a(param3, param6, param14, param12, param15, param9, param2, param5, param7, param13, param11, vb.field_c, param1, param8, param0, param4, -1275583984);
             return;
           }
         } else {
           if (param15 <= param7) {
             if (param15 <= param4) {
-              int discarded$9 = -1275583984;
-              wh.a(param1, param2, param8, param12, param7, param0, param6, param5, param15, param13, param11, vb.field_c, param3, param14, param9, param4);
+              wh.a(param1, param2, param8, param12, param7, param0, param6, param5, param15, param13, param11, vb.field_c, param3, param14, param9, param4, -1275583984);
               return;
             } else {
-              int discarded$10 = -1275583984;
-              wh.a(param1, param11, param13, param3, param7, param0, param6, param9, param4, param8, param2, vb.field_c, param12, param14, param5, param15);
+              wh.a(param1, param11, param13, param3, param7, param0, param6, param9, param4, param8, param2, vb.field_c, param12, param14, param5, param15, -1275583984);
               return;
             }
           } else {
-            int discarded$11 = -1275583984;
-            wh.a(param3, param11, param13, param1, param15, param9, param2, param0, param4, param14, param6, vb.field_c, param12, param8, param5, param7);
+            wh.a(param3, param11, param13, param1, param15, param9, param2, param0, param4, param14, param6, vb.field_c, param12, param8, param5, param7, -1275583984);
             return;
           }
         }
     }
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         if (rb.field_d == null) {
             return false;
         }

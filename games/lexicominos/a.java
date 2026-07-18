@@ -19,7 +19,7 @@ final class a extends kb {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean b(int param0, int param1) {
         try {
             if (!(param0 > ig.field_a.field_h)) {
                 return true;
@@ -57,7 +57,7 @@ final class a extends kb {
         }
     }
 
-    final static String a() {
+    final static String a(int param0) {
         if (null == og.field_c) {
             return "";
         }
@@ -71,7 +71,7 @@ final class a extends kb {
         return jf.field_M;
     }
 
-    final static int c() {
+    final static int c(boolean param0) {
         return cg.field_l;
     }
 
@@ -116,24 +116,23 @@ final class a extends kb {
             L2: while (true) {
               if (var4 == null) {
                 var3 = 0;
-                int discarded$8 = -23588;
-                dd.a(var2);
+                dd.a(var2, -23588);
                 var4 = (bd) (Object) param1.a(true);
                 L3: while (true) {
                   if (var4 == null) {
                     break L0;
                   } else {
-                    int incrementValue$9 = var3;
+                    int incrementValue$6 = var3;
                     var3++;
-                    var4.field_h = var2[incrementValue$9];
+                    var4.field_h = var2[incrementValue$6];
                     var4 = (bd) (Object) param1.f(2);
                     continue L3;
                   }
                 }
               } else {
-                int incrementValue$10 = var3;
+                int incrementValue$7 = var3;
                 var3++;
-                var6[incrementValue$10] = var4.field_h;
+                var6[incrementValue$7] = var4.field_h;
                 var4 = (bd) (Object) param1.f(2);
                 continue L2;
               }

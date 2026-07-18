@@ -14,7 +14,7 @@ final class qo extends ib implements vf, en {
     ri field_R;
     static int field_O;
 
-    private final int a(int param0, String param1, oc param2, String param3) {
+    private final int a(int param0, String param1, oc param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -66,8 +66,7 @@ final class qo extends ib implements vf, en {
         String stackOut_11_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_2_0 = this.a(param1, 170, 70, param2, 35, param3);
+            stackOut_2_0 = this.a(param1, 170, 70, param2, 35, param3, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -185,8 +184,7 @@ final class qo extends ib implements vf, en {
                     var3_int++;
                     break L2;
                   } else {
-                    int discarded$26 = 0;
-                    var6 = hm.a(true, qh.field_i[var3_int]);
+                    var6 = hm.a(true, qh.field_i[var3_int], 0);
                     var4 = var4 + kn.field_y;
                     var7 = wi.field_k + -(var6 >> 1);
                     if (!bg.a(var7 + -cn.field_c, (jb.field_H << 1) + b.field_c, var6 - -(cn.field_c << 1), (byte) 65, param1, param2, var4)) {
@@ -292,7 +290,7 @@ final class qo extends ib implements vf, en {
         return stackIn_10_0;
     }
 
-    private final int a(String param0, int param1, int param2, oc param3, int param4, String param5) {
+    private final int a(String param0, int param1, int param2, oc param3, int param4, String param5, boolean param6) {
         RuntimeException var8 = null;
         nf var9 = null;
         ma var10 = null;
@@ -478,8 +476,7 @@ final class qo extends ib implements vf, en {
                 break L1;
               } else {
                 if (param4 == ((qo) this).field_Q) {
-                  int discarded$5 = 28462;
-                  this.a();
+                  this.a(28462);
                   break L1;
                 } else {
                   break L1;
@@ -528,8 +525,7 @@ final class qo extends ib implements vf, en {
     final void a(oc param0, byte param1, int param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = 92;
-            ((qo) this).field_Q.field_J = this.h();
+            ((qo) this).field_Q.field_J = this.h((byte) 92);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "qo.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -616,13 +612,11 @@ final class qo extends ib implements vf, en {
         return stackIn_7_0 != 0;
     }
 
-    private final void a() {
-        int discarded$0 = 92;
-        if (!(this.h())) {
+    private final void a(int param0) {
+        if (!(this.h((byte) 92))) {
             return;
         }
-        int discarded$1 = -96;
-        kb.a(((qo) this).field_L.field_A);
+        kb.a(((qo) this).field_L.field_A, -96);
     }
 
     public qo() {
@@ -644,8 +638,7 @@ final class qo extends ib implements vf, en {
         var2.a(50, 20, var3, (byte) -119, 270);
         var3 += 50;
         ((qo) this).a(var2, true);
-        int discarded$0 = 170;
-        var3 = var3 + (this.a(-14, of.field_j, (oc) (Object) ((qo) this).field_L, dj.field_h) + 5);
+        var3 = var3 + (this.a(-14, of.field_j, (oc) (Object) ((qo) this).field_L, dj.field_h, var3, 170) + 5);
         ((qo) this).field_Q.a(40, 496 + -var5 >> 1, var3, (byte) -119, var5);
         ((qo) this).field_K.a(40, var4 - -3, var3 - -15, (byte) -119, 60);
         ((qo) this).field_K.field_i = (uh) this;
@@ -658,7 +651,7 @@ final class qo extends ib implements vf, en {
         ((qo) this).a(var4 + (55 + var3), 0, 0, (byte) -119, 496);
     }
 
-    private final boolean h() {
+    private final boolean h(byte param0) {
         if (!this.a(-68, (je) (Object) ((qo) this).field_L)) {
             return false;
         }

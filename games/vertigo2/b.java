@@ -60,8 +60,7 @@ final class b {
                 }
                 if (2 == ba.field_d) {
                   L3: {
-                    int discarded$1 = 1;
-                    var7 = this.a();
+                    var7 = this.a(true);
                     var4_ref = var7;
                     var5 = vo.a(((b) this).field_k, 0);
                     var6 = iq.b(((b) this).field_k, 100) ? 1 : 0;
@@ -334,8 +333,7 @@ final class b {
             if (((b) this).field_o == ao.field_N) {
               break L0;
             } else {
-              int discarded$2 = 1;
-              var3 = this.a();
+              var3 = this.a(true);
               var2 = var3;
               ((b) this).field_n.a(Vertigo2.a(new String[1], as.field_c, -121), 17, 0);
               break L0;
@@ -473,7 +471,7 @@ final class b {
         }
     }
 
-    private final boolean b(int param0, int param1) {
+    private final boolean b(int param0, int param1, byte param2) {
         int var5 = Vertigo2.field_L ? 1 : 0;
         if (param1 != 8) {
             if (param1 != 18) {
@@ -485,12 +483,11 @@ final class b {
                     if (param1 != 13) {
                         if (14 != param1) {
                             if (param1 == 20) {
-                                int discarded$0 = -10;
-                                g.a();
+                                g.a((byte) -10);
                                 return true;
                             }
                             if (param1 == 19) {
-                                boolean discarded$1 = qm.a(((b) this).field_g, ((b) this).field_k, (byte) 114, ((b) this).field_c, ((b) this).field_o);
+                                boolean discarded$0 = qm.a(((b) this).field_g, ((b) this).field_k, (byte) 114, ((b) this).field_c, ((b) this).field_o);
                                 return true;
                             }
                             return false;
@@ -511,7 +508,7 @@ final class b {
         return true;
     }
 
-    private final String a() {
+    private final String a(boolean param0) {
         String var2 = null;
         if (((b) this).field_e != null) {
             var2 = ((b) this).field_e;
@@ -539,18 +536,16 @@ final class b {
         if (var6 != -2) {
           if (param4 != 2) {
             ((b) this).field_n = null;
-            boolean discarded$10 = this.a(var6, param0, (byte) 41);
-            boolean discarded$11 = this.a(param2, var6, 0);
-            int discarded$12 = 110;
-            boolean discarded$13 = this.b(param2, var6);
-            boolean discarded$14 = this.b(59, var6, param3);
+            boolean discarded$8 = this.a(var6, param0, (byte) 41);
+            boolean discarded$9 = this.a(param2, var6, 0);
+            boolean discarded$10 = this.b(param2, var6, (byte) 110);
+            boolean discarded$11 = this.b(59, var6, param3);
             return true;
           } else {
-            boolean discarded$15 = this.a(var6, param0, (byte) 41);
-            boolean discarded$16 = this.a(param2, var6, 0);
-            int discarded$17 = 110;
-            boolean discarded$18 = this.b(param2, var6);
-            boolean discarded$19 = this.b(59, var6, param3);
+            boolean discarded$12 = this.a(var6, param0, (byte) 41);
+            boolean discarded$13 = this.a(param2, var6, 0);
+            boolean discarded$14 = this.b(param2, var6, (byte) 110);
+            boolean discarded$15 = this.b(59, var6, param3);
             return true;
           }
         } else {
@@ -597,60 +592,51 @@ final class b {
                 var10 = en.a(((b) this).field_k, (byte) 67, ((b) this).field_e, param0);
                 if (var10 != null) {
                   dh.a((byte) -52, var10, 2, (String) null, 0, ((b) this).field_k);
-                  int discarded$17 = -5;
-                  boolean discarded$18 = this.b(-26, 104);
+                  boolean discarded$8 = this.b(-26, 104, (byte) -5);
                   return true;
                 } else {
-                  int discarded$19 = -5;
-                  boolean discarded$20 = this.b(-26, 104);
+                  boolean discarded$9 = this.b(-26, 104, (byte) -5);
                   return true;
                 }
               } else {
                 return false;
               }
             } else {
-              int discarded$21 = 100;
-              var9 = br.a(((b) this).field_k, param0);
+              var9 = br.a(((b) this).field_k, param0, 100);
               if (var9 != null) {
                 dh.a((byte) -52, var9, 2, (String) null, 0, ((b) this).field_k);
-                int discarded$22 = -5;
-                boolean discarded$23 = this.b(-26, 104);
+                boolean discarded$10 = this.b(-26, 104, (byte) -5);
                 return true;
               } else {
-                int discarded$24 = -5;
-                boolean discarded$25 = this.b(-26, 104);
+                boolean discarded$11 = this.b(-26, 104, (byte) -5);
                 return true;
               }
             }
           } else {
             var8 = lk.a((byte) -41, param0, ((b) this).field_k);
             if (var8 == null) {
-              int discarded$26 = -5;
-              boolean discarded$27 = this.b(-26, 104);
+              boolean discarded$12 = this.b(-26, 104, (byte) -5);
               return true;
             } else {
               dh.a((byte) -52, var8, 2, (String) null, 0, ((b) this).field_k);
-              int discarded$28 = -5;
-              boolean discarded$29 = this.b(-26, 104);
+              boolean discarded$13 = this.b(-26, 104, (byte) -5);
               return true;
             }
           }
         } else {
           var7 = ia.a(-96, param0, ((b) this).field_k);
           if (var7 == null) {
-            int discarded$30 = -5;
-            boolean discarded$31 = this.b(-26, 104);
+            boolean discarded$14 = this.b(-26, 104, (byte) -5);
             return true;
           } else {
             dh.a((byte) -52, var7, 2, (String) null, 0, ((b) this).field_k);
-            int discarded$32 = -5;
-            boolean discarded$33 = this.b(-26, 104);
+            boolean discarded$15 = this.b(-26, 104, (byte) -5);
             return true;
           }
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_m = null;
         field_a = null;
         field_f = null;
@@ -668,12 +654,10 @@ final class b {
         if (((b) this).field_k != null) {
           if (ao.field_N != ((b) this).field_o) {
             if (null != gd.field_j) {
-              int discarded$2 = 0;
-              if (cn.b()) {
+              if (cn.b(false)) {
                 var7 = jg.a(((b) this).field_o, -119);
                 var4 = eq.a(((b) this).field_o, (byte) 84);
-                int discarded$3 = 1;
-                var5 = this.a();
+                var5 = this.a(true);
                 if (var4 == null) {
                   if (var7 != null) {
                     if (gd.field_j.field_vc) {
@@ -816,8 +800,7 @@ final class b {
             hk.a(param1, (byte) 60, ((b) this).field_j);
         } else {
             if (param0 == 3) {
-                int discarded$0 = 18964;
-                qk.d(((b) this).field_j, param1);
+                qk.d(((b) this).field_j, param1, 18964);
                 return true;
             }
             if (param0 == -11) {

@@ -24,11 +24,11 @@ final class vi extends dl implements cg, ae, oj {
     static String field_P;
     static String field_ab;
 
-    private final String j() {
+    private final String j(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final boolean k() {
+    private final boolean k(int param0) {
         if (!(this.h((byte) 35))) {
             return false;
         }
@@ -37,11 +37,10 @@ final class vi extends dl implements cg, ae, oj {
             var2 = Integer.parseInt(((vi) this).field_eb.field_y);
         } catch (NumberFormatException numberFormatException) {
         }
-        int discarded$0 = 1;
-        return rl.a(((vi) this).field_cb.field_y, (vi) this, ((vi) this).field_hb.field_y, var2, ((vi) this).field_Y.field_y, ((vi) this).field_ib.field_T);
+        return rl.a(((vi) this).field_cb.field_y, (vi) this, ((vi) this).field_hb.field_y, var2, ((vi) this).field_Y.field_y, ((vi) this).field_ib.field_T, true);
     }
 
-    final static boolean l() {
+    final static boolean l(int param0) {
         return ni.b(12) || rd.field_b <= 0;
     }
 
@@ -97,20 +96,14 @@ final class vi extends dl implements cg, ae, oj {
         li dupTemp$1 = new li(10000536);
         ((vi) this).field_Q.field_p = (qk) (Object) dupTemp$1;
         ((vi) this).field_hb.field_p = (qk) (Object) dupTemp$1;
-        int discarded$2 = -99;
-        int discarded$3 = 170;
         String var2 = db.a(te.field_e, -95, new String[2]);
         int var3 = 20;
-        int discarded$4 = 126;
-        var3 = var3 + this.a((lh) (Object) ((vi) this).field_Y, 170, nc.field_i, var3);
-        int discarded$5 = 170;
-        var3 = var3 + (5 + this.a(var3, true, g.field_m, (lh) (Object) ((vi) this).field_jb, "", 20));
-        int discarded$6 = 126;
-        var3 = var3 + this.a((lh) (Object) ((vi) this).field_hb, 170, jh.field_c, var3);
+        var3 = var3 + this.a((lh) (Object) ((vi) this).field_Y, 170, nc.field_i, var3, 126);
+        var3 = var3 + (5 + this.a(var3, true, g.field_m, (lh) (Object) ((vi) this).field_jb, "", 20, 170));
+        var3 = var3 + this.a((lh) (Object) ((vi) this).field_hb, 170, jh.field_c, var3, 126);
         var3 = var3 + (this.a(qb.field_N, 170, g.field_b, 12973, (lh) (Object) ((vi) this).field_Q, var3) - -5);
         var3 = var3 + (5 + this.a(bl.field_b, 170, cf.field_s, 12973, (lh) (Object) ((vi) this).field_cb, var3));
-        int discarded$7 = 170;
-        var3 = var3 + this.a(var3, false, ee.field_L, (lh) (Object) ((vi) this).field_eb);
+        var3 = var3 + this.a(var3, false, ee.field_L, (lh) (Object) ((vi) this).field_eb, 170);
         hc var4 = new hc(46, var3, ((vi) this).field_x + -90, 25, (lh) (Object) ((vi) this).field_ib, true, -120 + ((vi) this).field_x, 5, rc.field_m, 11579568, ic.field_cb);
         ((vi) this).a((lh) (Object) var4, -125);
         var3 = var3 + var4.field_E;
@@ -137,7 +130,7 @@ final class vi extends dl implements cg, ae, oj {
         ((vi) this).a(0, (byte) -80, 0, 496, var6 + 55 + var3);
     }
 
-    private final int a(int param0, boolean param1, String param2, lh param3) {
+    private final int a(int param0, boolean param1, String param2, lh param3, int param4) {
         hc var6 = null;
         RuntimeException var6_ref = null;
         lk var7 = null;
@@ -275,7 +268,7 @@ final class vi extends dl implements cg, ae, oj {
         }
     }
 
-    private final int a(int param0, boolean param1, String param2, lh param3, String param4, int param5) {
+    private final int a(int param0, boolean param1, String param2, lh param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         ff var9 = null;
         hc var10 = null;
@@ -473,8 +466,7 @@ final class vi extends dl implements cg, ae, oj {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$2 = 170;
-            stackOut_0_0 = this.a(param5, true, param0, param4, param2, 35);
+            stackOut_0_0 = this.a(param5, true, param0, param4, param2, 35, 170);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -561,7 +553,7 @@ final class vi extends dl implements cg, ae, oj {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_gb = null;
         field_X = null;
         field_P = null;
@@ -585,7 +577,7 @@ final class vi extends dl implements cg, ae, oj {
         }
     }
 
-    final static void i() {
+    final static void i(int param0) {
         try {
             Class var5 = null;
             Class var2 = null;
@@ -652,8 +644,7 @@ final class vi extends dl implements cg, ae, oj {
               if (((vi) this).field_U != param3) {
                 break L0;
               } else {
-                int discarded$4 = -1;
-                boolean discarded$5 = this.k();
+                boolean discarded$2 = this.k(-1);
                 return;
               }
             }
@@ -872,7 +863,7 @@ final class vi extends dl implements cg, ae, oj {
         return stackIn_16_0 != 0;
     }
 
-    private final String m() {
+    private final String m(int param0) {
         return "</col></u>";
     }
 
@@ -952,13 +943,11 @@ final class vi extends dl implements cg, ae, oj {
     }
 
     final static void a(byte param0, boolean param1, cm param2, cm param3, cm param4) {
-        int discarded$0 = 16;
-        gf.field_a = sf.a("");
+        gf.field_a = sf.a("", 16);
         try {
             gf.field_a.a(200, false);
             ci.a(param3, (byte) 99, param4, param2);
-            int discarded$1 = 1;
-            ik.a();
+            ik.a(true);
             cb.field_j = mm.field_e;
             jn.field_b = mm.field_e;
         } catch (RuntimeException runtimeException) {
@@ -974,7 +963,7 @@ final class vi extends dl implements cg, ae, oj {
         }
     }
 
-    private final int a(lh param0, int param1, String param2, int param3) {
+    private final int a(lh param0, int param1, String param2, int param3, int param4) {
         hc var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;

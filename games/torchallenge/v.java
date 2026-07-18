@@ -21,8 +21,7 @@ abstract class v extends b {
         var4.field_n = new int[1];
         var4.field_j = param3;
         gf.field_q.a((da) (Object) var4, -104);
-        int discarded$12 = 5;
-        ue.a(var4, param1 ^ 258);
+        ue.a(var4, param1 ^ 258, 5);
         if (param1 != 256) {
             v.b(-126, -115, -75, 79, 102);
         }
@@ -253,13 +252,12 @@ abstract class v extends b {
             }
           }
           L3: {
-            int discarded$2 = -9;
-            ie.b();
+            ie.b((byte) -9);
             if (param2 >= 40) {
               break L3;
             } else {
               var9 = null;
-              ka[] discarded$3 = v.a((String) null, 32, (String) null, (lj) null);
+              ka[] discarded$1 = v.a((String) null, 32, (String) null, (lj) null);
               break L3;
             }
           }
@@ -322,8 +320,7 @@ abstract class v extends b {
     }
 
     final static void a(boolean param0, byte param1, boolean param2, String param3) {
-        int discarded$0 = 126;
-        fg.i();
+        fg.i(126);
         t.field_b.i(8389905);
         try {
             kb.field_O = new fg(lg.field_b, (String) null, eb.field_m, param2, param0);
@@ -334,9 +331,8 @@ abstract class v extends b {
         }
     }
 
-    final static boolean f() {
-        int discarded$0 = 1;
-        return lc.a();
+    final static boolean f(byte param0) {
+        return lc.a(1);
     }
 
     boolean j(int param0) {
@@ -368,8 +364,7 @@ abstract class v extends b {
         if (param1 < 66) {
             return null;
         }
-        int discarded$0 = 1;
-        return ma.a(param0, param3, 1, param2);
+        return ma.a(param0, param3, 1, param2, true);
     }
 
     final void a(int param0, int param1, int param2, boolean param3) {
@@ -554,7 +549,7 @@ abstract class v extends b {
         return stackIn_3_0;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_X = null;
         field_S = null;
         field_Y = null;
@@ -619,8 +614,7 @@ abstract class v extends b {
             ug.a(0, param3);
             wl.a(-2681, param3);
             u.a(true, param3);
-            int discarded$0 = -50;
-            dg.k();
+            dg.k(-50);
             td.b((byte) 112);
             jc.field_c = -vk.field_h;
         } catch (RuntimeException runtimeException) {

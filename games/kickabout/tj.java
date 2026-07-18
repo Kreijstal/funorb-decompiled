@@ -25,7 +25,7 @@ class tj extends mo {
     int field_m;
     int field_p;
 
-    public static void f() {
+    public static void f(int param0) {
         field_w = null;
         field_f = null;
         field_g = null;
@@ -300,8 +300,7 @@ class tj extends mo {
         try {
           L0: {
             L1: {
-              int discarded$3 = -39;
-              if (!mu.a(param0)) {
+              if (!mu.a(param0, (byte) -39)) {
                 break L1;
               } else {
                 ((tj) this).field_m = -1 + param0.l(2, param1 ^ 42);
@@ -311,8 +310,7 @@ class tj extends mo {
             }
             if (param1 == 17) {
               L2: {
-                int discarded$4 = -39;
-                if (mu.a(param0)) {
+                if (mu.a(param0, (byte) -39)) {
                   ((tj) this).field_t = ((tj) this).field_t + ew.a((byte) 125, 17, param0, 0, 22, 30);
                   ((tj) this).field_p = ((tj) this).field_p + ew.a((byte) 125, 17, param0, 0, 22, 30);
                   ((tj) this).field_v = ((tj) this).field_v + ew.a((byte) 125, 20, param0, 0, 24, 30);
@@ -324,8 +322,7 @@ class tj extends mo {
                   break L2;
                 }
               }
-              int discarded$5 = -39;
-              if (!mu.a(param0)) {
+              if (!mu.a(param0, (byte) -39)) {
                 break L0;
               } else {
                 ((tj) this).field_r = hq.a(22531, 9, param0, 0);

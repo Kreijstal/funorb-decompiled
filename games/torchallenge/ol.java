@@ -19,7 +19,7 @@ final class ol {
         return (int)(1000000000L / cj.field_i);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_b = null;
         field_e = null;
@@ -56,12 +56,11 @@ final class ol {
                 break L1;
               } else {
                 var4 = null;
-                e discarded$4 = ol.a(-70, (fe) null, -27);
+                e discarded$2 = ol.a(-70, (fe) null, -27);
                 break L1;
               }
             }
-            int discarded$5 = 6222;
-            stackOut_2_0 = we.a(nc.a(param1, 100, param2));
+            stackOut_2_0 = we.a(nc.a(param1, 100, param2), 6222);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -98,7 +97,7 @@ final class ol {
         return stackIn_3_0;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, boolean param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;

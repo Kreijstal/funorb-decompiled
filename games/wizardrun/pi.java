@@ -113,8 +113,7 @@ final class pi {
                   }
                 }
               }
-              int discarded$1 = 0;
-              ia.b();
+              ia.b(0);
               break L1;
             }
             field_a = null;
@@ -366,7 +365,7 @@ final class pi {
         }
     }
 
-    final static o[] b() {
+    final static o[] b(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -387,7 +386,7 @@ final class pi {
         return var1;
     }
 
-    final static Object a(byte[] param0) {
+    final static Object a(byte[] param0, int param1, boolean param2) {
         kh var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;

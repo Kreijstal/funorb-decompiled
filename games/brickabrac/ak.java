@@ -1730,7 +1730,7 @@ final class ak {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_d = null;
         field_e = null;
     }
@@ -2350,8 +2350,7 @@ final class ak {
             ((ak) this).a(false);
             break L1;
           } else {
-            int discarded$4 = -6;
-            if (!wn.a(var2)) {
+            if (!wn.a(var2, (byte) -6)) {
               break L1;
             } else {
               ((ak) this).field_h = ed.b(9, var2 + -1);

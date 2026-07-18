@@ -63,7 +63,7 @@ final class gv extends gn {
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1) {
+    final static boolean a(boolean param0, CharSequence param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

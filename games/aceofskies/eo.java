@@ -6,7 +6,7 @@ final class eo {
     static int field_a;
     int field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 
@@ -110,8 +110,7 @@ final class eo {
           L0: {
             if (tn.a(param0, (byte) -127, param1, param3)) {
               var5_int = -53;
-              int discarded$2 = 544;
-              stackOut_3_0 = gl.a(param4.a(param3, -10470, param1));
+              stackOut_3_0 = gl.a(param4.a(param3, -10470, param1), 544);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

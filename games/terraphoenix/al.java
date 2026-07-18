@@ -19,20 +19,11 @@ abstract class al extends ei {
         return super.i(61);
     }
 
-    final static ci[] a() {
-        int discarded$0 = 65793;
-        int discarded$1 = 0;
-        int discarded$2 = 1;
-        int discarded$3 = 1;
-        int discarded$4 = 0;
-        int discarded$5 = 3;
-        int discarded$6 = 1;
-        int discarded$7 = 1;
-        int discarded$8 = 0;
-        return oh.a();
+    final static ci[] a(int param0, int param1, int param2, int param3, byte param4) {
+        return oh.a(0, 1, 1, 3, 0, 1, 1, 0, 65793);
     }
 
-    private final void b(gl param0) {
+    private final void b(gl param0, byte param1) {
         try {
             if (((al) this).field_Z != null) {
                 ((al) this).field_Z.b((byte) 12);
@@ -133,15 +124,13 @@ abstract class al extends ei {
           if (param0 != 109) {
             ((al) this).field_ab = 3;
             ((al) this).field_ab = 0;
-            int discarded$4 = -68;
-            this.b(((al) this).field_Y);
+            this.b(((al) this).field_Y, (byte) -68);
             ((al) this).field_Y = null;
             ((al) this).field_Z.field_J = 0;
             return;
           } else {
             ((al) this).field_ab = 0;
-            int discarded$5 = -68;
-            this.b(((al) this).field_Y);
+            this.b(((al) this).field_Y, (byte) -68);
             ((al) this).field_Y = null;
             ((al) this).field_Z.field_J = 0;
             return;
@@ -156,8 +145,7 @@ abstract class al extends ei {
             ((al) this).field_db = param3;
             ((al) this).field_X = param3;
             ((al) this).field_eb = param4;
-            int discarded$0 = -68;
-            this.b(param1);
+            this.b(param1, (byte) -68);
         } catch (RuntimeException runtimeException) {
             throw qk.a((Throwable) (Object) runtimeException, "al.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -167,8 +155,7 @@ abstract class al extends ei {
         if (!(null == ((al) this).field_fb)) {
             if (!(((al) this).field_fb == dc.field_n)) {
                 ((al) this).b(98, ((al) this).field_cb + 12 - -((al) this).field_Y.field_n, 12 - -((al) this).field_Y.field_p);
-                int discarded$0 = -68;
-                this.b(((al) this).field_Y);
+                this.b(((al) this).field_Y, (byte) -68);
             }
             ((al) this).field_fb = null;
             ((al) this).field_Z.field_J = 256;
@@ -176,7 +163,7 @@ abstract class al extends ei {
         super.j(param0);
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_bb = null;
         field_W = null;
     }

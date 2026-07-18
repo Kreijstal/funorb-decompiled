@@ -131,11 +131,11 @@ final class ws {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         return is.field_b;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

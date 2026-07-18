@@ -32,7 +32,7 @@ final class dg implements Iterator {
         ((dg) this).field_g = null;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_d = null;
         field_c = null;
@@ -208,9 +208,8 @@ final class dg implements Iterator {
         return ((dg) this).field_f != ((dg) this).field_a.field_a;
     }
 
-    final static boolean b() {
-        int discarded$0 = -78;
-        return rg.a(se.h(25144));
+    final static boolean b(int param0) {
+        return rg.a(se.h(25144), (byte) -78);
     }
 
     dg(uh param0) {

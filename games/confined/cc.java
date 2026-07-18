@@ -7,7 +7,7 @@ final class cc extends rk {
     static String field_p;
     static int field_m;
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         cc var3 = null;
@@ -57,8 +57,7 @@ final class cc extends rk {
                     var6_int = 1;
                     L4: while (true) {
                       if (var6_int >= var4) {
-                        int discarded$2 = -63;
-                        fg.a(var5, var4);
+                        fg.a(var5, var4, (byte) -63);
                         var6_int = 0;
                         L5: while (true) {
                           if (var6_int >= var4) {
@@ -129,8 +128,7 @@ final class cc extends rk {
                             }
                           } else {
                             L10: {
-                              int discarded$3 = -45;
-                              bd.a((kg) (Object) var15);
+                              bd.a((kg) (Object) var15, (byte) -45);
                               if (0 == var6_int) {
                                 cl.a(eh.field_R, qg.field_h, var6_int, dj.field_gb, (byte) -127, ll.field_d);
                                 break L10;
@@ -172,13 +170,12 @@ final class cc extends rk {
         return we.a(param0, false, (byte) -106, true, 1, false);
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return null == dn.field_d ? on.field_e : true;
     }
 
     final static int a(boolean param0, byte param1, int param2, int param3) {
-        int discarded$0 = 1;
-        return oc.b();
+        return oc.b(1);
     }
 
     public static void b(boolean param0) {

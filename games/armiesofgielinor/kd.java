@@ -429,8 +429,6 @@ final class kd extends tj implements nq, he, mf {
         ol dupTemp$1 = new ol(10000536);
         ((kd) this).field_K.field_k = (kh) (Object) dupTemp$1;
         ((kd) this).field_V.field_k = (kh) (Object) dupTemp$1;
-        int discarded$2 = 150;
-        int discarded$3 = 29406;
         String var2 = fo.a(4800, qq.field_D, new String[2]);
         int var3 = 20;
         var3 = var3 + this.a(tn.field_X, var3, 170, (byte) 18, (kb) (Object) ((kd) this).field_I);
@@ -438,8 +436,7 @@ final class kd extends tj implements nq, he, mf {
         var3 = var3 + this.a(jj.field_h, var3, 170, (byte) 18, (kb) (Object) ((kd) this).field_V);
         var3 = var3 + (this.a(st.field_B, (kb) (Object) ((kd) this).field_K, 170, tf.field_m, 210, var3) + 5);
         var3 = var3 + (5 + this.a(dn.field_Ob, (kb) (Object) ((kd) this).field_O, 170, fq.field_k, 210, var3));
-        int discarded$4 = 27270;
-        var3 = var3 + this.a(var3, (kb) (Object) ((kd) this).field_N, 170, field_S);
+        var3 = var3 + this.a(var3, (kb) (Object) ((kd) this).field_N, 170, field_S, 27270);
         ta var4 = new ta(46, var3, ((kd) this).field_l + -90, 25, (kb) (Object) ((kd) this).field_ab, true, ((kd) this).field_l + -120, 5, gl.field_e, 11579568, wg.field_c);
         ((kd) this).a((byte) 10, (kb) (Object) var4);
         var3 = var3 + var4.field_w;
@@ -466,7 +463,7 @@ final class kd extends tj implements nq, he, mf {
         ((kd) this).a(0, 496, 0, 8192, var3 + (55 + var6));
     }
 
-    private final String m() {
+    private final String m(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -664,7 +661,7 @@ final class kd extends tj implements nq, he, mf {
         }
     }
 
-    private final int a(int param0, kb param1, int param2, String param3) {
+    private final int a(int param0, kb param1, int param2, String param3, int param4) {
         RuntimeException var6 = null;
         kw var7 = null;
         ta var8 = null;
@@ -804,8 +801,7 @@ final class kd extends tj implements nq, he, mf {
                 break L2;
               } else {
                 if (param4 == ((kd) this).field_bb) {
-                  int discarded$10 = -1;
-                  boolean discarded$11 = this.a();
+                  boolean discarded$5 = this.a(-1);
                   break L2;
                 } else {
                   break L2;
@@ -855,7 +851,7 @@ final class kd extends tj implements nq, he, mf {
         }
     }
 
-    private final String l() {
+    private final String l(int param0) {
         return "</col></u>";
     }
 
@@ -1376,7 +1372,7 @@ final class kd extends tj implements nq, he, mf {
     final static void a(int param0, int param1, boolean param2) {
         int var3 = 0;
         CharSequence var6 = null;
-        Object var5 = null;
+        String var5 = null;
         String var4 = null;
         if (null != tb.field_e) {
             var3 = tb.field_e.b(true, param2);
@@ -1389,25 +1385,25 @@ final class kd extends tj implements nq, he, mf {
                                 var4 = tb.field_e.field_X;
                             } else {
                                 var6 = (CharSequence) (Object) tb.field_e.field_X;
-                                int discarded$0 = 0;
-                                var4 = k.a(var6);
+                                var4 = k.a(var6, false);
+                                var5 = var4;
+                                var5 = var4;
                             }
                             var5 = null;
                             if (!(0 != ut.field_fb)) {
-                                var5 = (Object) (Object) op.a(20, var4, param1);
+                                var5 = op.a(20, var4, param1);
                             }
                             if (!(ut.field_fb != 1)) {
-                                var5 = (Object) (Object) nw.a(var4, (byte) -27, param1);
+                                var5 = nw.a(var4, (byte) -27, param1);
                             }
                             if (!(ut.field_fb != 2)) {
-                                var5 = (Object) (Object) se.a(var4, param1, param0 + -83);
+                                var5 = se.a(var4, param1, param0 + -83);
                             }
                             if (ut.field_fb == 3) {
-                                var5 = (Object) (Object) fq.a(param1, var4, false, var4);
+                                var5 = fq.a(param1, var4, false, var4);
                             }
                             if (!(var5 == null)) {
-                                int discarded$1 = 0;
-                                ta.a((String) null, 2, param0 ^ -18117, var4, (String) var5);
+                                ta.a((String) null, 2, param0 ^ -18117, var4, var5, 0);
                             }
                         }
                     }
@@ -1421,7 +1417,7 @@ final class kd extends tj implements nq, he, mf {
         }
     }
 
-    private final boolean a() {
+    private final boolean a(int param0) {
         if (!(this.k(97))) {
             return false;
         }

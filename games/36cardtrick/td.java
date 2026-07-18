@@ -278,7 +278,7 @@ final class td {
         throw new IllegalStateException();
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         int var1 = 0;
         field_a = null;
@@ -292,7 +292,7 @@ final class td {
         return ja.field_a;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         gh.a(4, 31888);
     }
 

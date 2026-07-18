@@ -216,8 +216,7 @@ final class pc extends ci {
             var18 = 26 + var15_int;
             var19 = var16 + 34;
             var20 = ao.a(var18, true, param0, param2);
-            int discarded$3 = 0;
-            var21 = sg.a(param1, var19, param3);
+            var21 = sg.a(param1, var19, param3, 0);
             ((pc) this).a(var20, var18, -2147483648, var19, var21);
             break L0;
           } else {
@@ -334,7 +333,7 @@ final class pc extends ci {
                   if (param11 == null) {
                     break L6;
                   } else {
-                    StringBuilder discarded$4 = ((pc) this).field_Pb.append(param11);
+                    StringBuilder discarded$1 = ((pc) this).field_Pb.append(param11);
                     break L6;
                   }
                 }
@@ -474,8 +473,7 @@ final class pc extends ci {
                     var23 = var19 + 26;
                     var24 = 24 + var22 + (var17 + 10);
                     var25 = ao.a(var23, true, param0, param2);
-                    int discarded$5 = 0;
-                    var26 = sg.a(param1, var24, param3);
+                    var26 = sg.a(param1, var24, param3, 0);
                     ((pc) this).a(var25, var23, -2147483648, var24, var26);
                     break L0;
                   } else {
@@ -1561,8 +1559,7 @@ final class pc extends ci {
                   if (sc.field_d.field_L == 0) {
                     break L45;
                   } else {
-                    int discarded$2 = 28113;
-                    db.a(param4, pd.field_Rb.g((byte) -80));
+                    db.a(param4, pd.field_Rb.g((byte) -80), 28113);
                     break L45;
                   }
                 }
@@ -1590,8 +1587,7 @@ final class pc extends ci {
                     break L48;
                   }
                 }
-                int discarded$3 = 1;
-                t.a(pd.field_Rb, false, param4);
+                t.a(pd.field_Rb, false, param4, true);
                 break L44;
               } else {
                 break L44;
@@ -1606,7 +1602,7 @@ final class pc extends ci {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_Qb = null;
         field_Mb = null;
     }

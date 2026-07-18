@@ -230,8 +230,7 @@ final class rd {
               }
             }
             if (!lg.a(-117, param1)) {
-              int discarded$6 = 19;
-              if (!fl.a(param1)) {
+              if (!fl.a(param1, (byte) 19)) {
                 if (!rd.a(param1, -122)) {
                   if (param2.length() == 0) {
                     stackOut_13_0 = 1;

@@ -10,7 +10,7 @@ final class ue {
     static int field_d;
     static hc field_e;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
         field_c = null;
     }
@@ -19,11 +19,10 @@ final class ue {
         return param0 ^ param1;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         wf.field_b = ae.field_N.e((byte) 95);
         CharSequence var2 = (CharSequence) (Object) wf.field_b;
-        int discarded$0 = 0;
-        wb.field_b = nh.a(var2);
+        wb.field_b = nh.a(var2, false);
     }
 
     final static void a(byte param0, int param1) {

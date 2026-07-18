@@ -52,7 +52,7 @@ final class wb extends pi {
         }
     }
 
-    final static byte[] a(int param0, int param1, byte[] param2) {
+    final static byte[] a(int param0, int param1, byte[] param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5_int = 0;

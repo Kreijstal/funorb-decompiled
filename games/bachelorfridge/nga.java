@@ -44,7 +44,7 @@ final class nga extends vo {
         pna.a(var7, ((nga) this).field_f, param1 ^ param1, var5, var4, var6);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_j = null;
         field_g = null;
@@ -58,7 +58,7 @@ final class nga extends vo {
         ((nga) this).field_h = param1;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         fda.field_i = lia.a(5);
         gja.field_m = new rp();
         nw.a(true, true, (byte) -107);

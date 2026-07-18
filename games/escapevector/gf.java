@@ -174,7 +174,7 @@ final class gf {
         }
     }
 
-    private final int a() {
+    private final int a(byte param0) {
         int var2 = this.a(-73);
         int var3 = ((gf) this).field_l > var2 ? (-var2 + ((gf) this).field_l) * ((gf) this).field_h / ((gf) this).field_l : 0;
         return var3;
@@ -198,7 +198,8 @@ final class gf {
     }
 
     final static tg a(String param0, byte param1) {
-        Object var2 = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
         tg var3 = null;
         String var4_ref_String = null;
         int var4 = 0;
@@ -208,23 +209,23 @@ final class gf {
         Object stackIn_3_0 = null;
         tg stackIn_14_0 = null;
         Object stackIn_17_0 = null;
-        Object stackIn_19_0 = null;
+        RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        Object stackIn_21_0 = null;
+        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_16_0 = null;
         tg stackOut_13_0 = null;
         Object stackOut_2_0 = null;
-        Object stackOut_18_0 = null;
+        RuntimeException stackOut_18_0 = null;
         StringBuilder stackOut_18_1 = null;
-        Object stackOut_20_0 = null;
+        RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         String stackOut_20_2 = null;
-        Object stackOut_19_0 = null;
+        RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
         String stackOut_19_2 = null;
         var5 = EscapeVector.field_A;
@@ -233,15 +234,15 @@ final class gf {
             if (null != ml.field_a) {
               L1: {
                 var6 = (CharSequence) (Object) param0;
-                var2 = (Object) (Object) sf.a(-104, var6);
+                var2 = sf.a(-104, var6);
                 if (var2 == null) {
-                  var2 = (Object) (Object) var6;
+                  var2 = param0;
                   break L1;
                 } else {
                   break L1;
                 }
               }
-              var3 = (tg) (Object) ml.field_a.a(-82, (long)((String) var2).hashCode());
+              var3 = (tg) (Object) ml.field_a.a(-82, (long)var2.hashCode());
               L2: while (true) {
                 if (var3 == null) {
                   var4 = -98 / ((param1 - -63) / 57);
@@ -259,7 +260,7 @@ final class gf {
                       break L3;
                     }
                   }
-                  if (!var4_ref_String.equals(var2)) {
+                  if (!var4_ref_String.equals((Object) (Object) var2)) {
                     var3 = (tg) (Object) ml.field_a.a((byte) -36);
                     continue L2;
                   } else {
@@ -278,15 +279,15 @@ final class gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_18_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var2_ref;
             stackOut_18_1 = new StringBuilder().append("gf.F(");
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param0 == null) {
-              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
               stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
@@ -294,7 +295,7 @@ final class gf {
               stackIn_21_2 = stackOut_20_2;
               break L4;
             } else {
-              stackOut_19_0 = stackIn_19_0;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
               stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
@@ -318,8 +319,7 @@ final class gf {
           var3 = ((gf) this).field_m + ((gf) this).field_k;
           var4 = this.a(-41);
           if (((gf) this).field_n) {
-            int discarded$2 = -57;
-            var5 = this.a();
+            var5 = this.a((byte) -57);
             eh.a(var5, ((gf) this).field_j, ((gf) this).field_k, ((gf) this).field_i, ((gf) this).field_f, var3, -3, var2, ((gf) this).field_d, ((gf) this).field_c, var4);
             return;
           } else {
@@ -331,8 +331,7 @@ final class gf {
           var3 = ((gf) this).field_m + ((gf) this).field_k;
           var4 = this.a(-41);
           if (((gf) this).field_n) {
-            int discarded$3 = -57;
-            var5 = this.a();
+            var5 = this.a((byte) -57);
             eh.a(var5, ((gf) this).field_j, ((gf) this).field_k, ((gf) this).field_i, ((gf) this).field_f, var3, -3, var2, ((gf) this).field_d, ((gf) this).field_c, var4);
             return;
           } else {
@@ -342,7 +341,7 @@ final class gf {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_b = null;
     }

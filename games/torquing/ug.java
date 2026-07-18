@@ -5,7 +5,7 @@ final class ug {
     static String field_a;
     static int field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 

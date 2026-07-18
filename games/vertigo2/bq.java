@@ -22,7 +22,7 @@ final class bq extends ji {
         ((bq) this).field_z = true;
     }
 
-    final static void a(aa param0) {
+    final static void a(aa param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -284,8 +284,7 @@ final class bq extends ji {
                         L6: while (true) {
                           if (var18 >= 3) {
                             ti.a(ba.field_g, (byte) -53, false, false, true, tf.field_o, var17);
-                            int discarded$1 = 73;
-                            pb.a(var12, var8, var13, var17, var7, var14, var9);
+                            pb.a(var12, var8, var13, var17, var7, var14, var9, 73);
                             var15++;
                             continue L4;
                           } else {

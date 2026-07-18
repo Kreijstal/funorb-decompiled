@@ -21,8 +21,7 @@ final class kb extends vd {
             return;
         }
         CharSequence var2 = (CharSequence) (Object) ln.field_o;
-        int discarded$0 = 1;
-        ci.field_d = ji.a(var2);
+        ci.field_d = ji.a(var2, true);
     }
 
     kb(int param0, int param1, int param2, int param3, String param4, int param5, boolean param6) {
@@ -327,8 +326,7 @@ final class kb extends vd {
                   }
                 }
                 L11: {
-                  int discarded$1 = 1;
-                  var9 = or.a(stackIn_26_0 != 0, t.field_c[var8]);
+                  var9 = or.a(stackIn_26_0 != 0, t.field_c[var8], true);
                   if (pr.field_d[var8] != -1) {
                     var9 = var9 + 2 * js.field_g;
                     break L11;
@@ -381,7 +379,7 @@ final class kb extends vd {
         }
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_w = null;
         field_v = null;
         field_y = null;
@@ -395,8 +393,7 @@ final class kb extends vd {
         var2.h(param1, 255);
         var2.c(2, (byte) -59);
         var2.c(4, (byte) -84);
-        int discarded$0 = 0;
-        var2.c(mr.a(), (byte) -76);
+        var2.c(mr.a(0), (byte) -76);
     }
 
     final void a(int param0) {

@@ -55,8 +55,7 @@ class vf implements io, ak {
             }
             L2: {
               if (((vf) this).field_e) {
-                int discarded$2 = -23803;
-                ((ad) (Object) param1.field_t).a(((vf) this).b(12307, param1), (byte) -106, this.a(param1), ((vf) this).field_m, ((vf) this).field_n, ((vf) this).field_i, ((vf) this).field_h, ((vf) this).a((byte) 127, param1));
+                ((ad) (Object) param1.field_t).a(((vf) this).b(12307, param1), (byte) -106, this.a(param1, -23803), ((vf) this).field_m, ((vf) this).field_n, ((vf) this).field_i, ((vf) this).field_h, ((vf) this).a((byte) 127, param1));
                 break L2;
               } else {
                 this.c(26289, param1);
@@ -241,7 +240,7 @@ class vf implements io, ak {
         return stackIn_4_0;
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6, int param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -270,8 +269,7 @@ class vf implements io, ak {
             L1: {
               g.a(param2 - -param6.field_j, (byte) 99, param6.field_i + (param4 + param6.field_k), param6.field_n + (param6.field_j + param2), param4 - -param6.field_k);
               var9_int = ((vf) this).a((byte) 123, param6);
-              int discarded$2 = -23803;
-              var10 = this.a(param6);
+              var10 = this.a(param6, -23803);
               if (!((vf) this).field_e) {
                 L2: {
                   var12 = ((vf) this).field_i;
@@ -324,7 +322,7 @@ class vf implements io, ak {
                 ((vf) this).field_m.c(((vf) this).b(12307, param6), this.a(true, param6, 0, param4), var11 + this.a(param6, 0, (byte) 24, param2), param3, param5);
                 break L1;
               } else {
-                int discarded$3 = ((vf) this).field_m.a(((vf) this).b(12307, param6), this.a(true, param6, 0, param4), this.a(param6, 0, (byte) 24, param2), var9_int, var10, param3, param5, ((vf) this).field_h, ((vf) this).field_i, ((vf) this).field_n);
+                int discarded$1 = ((vf) this).field_m.a(((vf) this).b(12307, param6), this.a(true, param6, 0, param4), this.a(param6, 0, (byte) 24, param2), var9_int, var10, param3, param5, ((vf) this).field_h, ((vf) this).field_i, ((vf) this).field_n);
                 break L1;
               }
             }
@@ -1216,7 +1214,7 @@ class vf implements io, ak {
         return stackIn_3_0;
     }
 
-    private final int a(ga param0) {
+    private final int a(ga param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -1295,8 +1293,7 @@ class vf implements io, ak {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 72;
-            this.a(0, 0, param0, ((vf) this).field_l, param2, ((vf) this).field_q, param3);
+            this.a(0, 0, param0, ((vf) this).field_l, param2, ((vf) this).field_q, param3, 72);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1437,8 +1434,7 @@ class vf implements io, ak {
             }
             L2: {
               var3_int = ((vf) this).a((byte) 112, param1);
-              int discarded$1 = -23803;
-              var4 = this.a(param1);
+              var4 = this.a(param1, -23803);
               var6 = ((vf) this).field_i;
               if (var6 != 0) {
                 if (var6 != 2) {
@@ -1599,9 +1595,8 @@ class vf implements io, ak {
                   var9 = var14.a((byte) -72, param0);
                   var10 = this.a(true, param4, var9, param1);
                   var11 = ((vf) this).a(param4, 1, param2) - -Math.max(0, var8.field_b);
-                  int discarded$1 = -23803;
                   stackOut_2_0 = ((vf) this).a(param4, 1, param2);
-                  stackOut_2_1 = this.a(param4);
+                  stackOut_2_1 = this.a(param4, -23803);
                   stackOut_2_2 = var8.field_g;
                   stackIn_4_0 = stackOut_2_0;
                   stackIn_4_1 = stackOut_2_1;

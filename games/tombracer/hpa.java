@@ -70,8 +70,7 @@ final class hpa extends aa {
               if (0 != param1.field_d) {
                 break L2;
               } else {
-                int discarded$2 = 0;
-                if (nga.c()) {
+                if (nga.c(0)) {
                   break L2;
                 } else {
                   if (null != uu.field_a) {
@@ -103,8 +102,7 @@ final class hpa extends aa {
               if (param1.field_d != 1) {
                 break L4;
               } else {
-                int discarded$3 = 0;
-                if (nga.c()) {
+                if (nga.c(0)) {
                   break L4;
                 } else {
                   if (uu.field_a == null) {

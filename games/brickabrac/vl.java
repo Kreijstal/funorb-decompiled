@@ -33,7 +33,7 @@ final class vl {
         }
     }
 
-    final static String a(int param0, String param1) {
+    final static String a(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -152,7 +152,7 @@ final class vl {
         return stackIn_25_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
         field_a = null;
     }
@@ -379,7 +379,7 @@ final class vl {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -403,8 +403,7 @@ final class vl {
             try {
               try {
                 var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-                int discarded$2 = -1;
-                param0.getAppletContext().showDocument(hg.a(param0, var2), "_top");
+                param0.getAppletContext().showDocument(hg.a(param0, var2, -1), "_top");
                 return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -551,7 +550,7 @@ final class vl {
         }
     }
 
-    final static void a(vm param0) {
+    final static void a(vm param0, int param1, boolean param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

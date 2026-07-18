@@ -128,11 +128,11 @@ final class os extends hn {
         return (param1 - -var3) / param0 - var3;
     }
 
-    final static boolean e() {
+    final static boolean e(int param0) {
         return !vi.field_d;
     }
 
-    final static int g() {
+    final static int g(int param0) {
         return av.field_a;
     }
 
@@ -500,7 +500,7 @@ final class os extends hn {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_q = null;
     }
 

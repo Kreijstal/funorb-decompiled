@@ -9,11 +9,11 @@ abstract class lk {
 
     abstract byte[] a(int param0, boolean param1);
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 
-    final static void a(db param0) {
+    final static void a(db param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -46,8 +46,7 @@ abstract class lk {
             var10 = var8;
             var3 = var10.h(255);
             var10.f((byte) 50);
-            int discarded$1 = -95;
-            ud.field_S = rd.a(var10);
+            ud.field_S = rd.a(var10, -95);
             je.field_d = new int[var3][];
             rn.field_o = new jg[var3];
             var4 = 0;
@@ -111,7 +110,7 @@ abstract class lk {
 
     abstract qg a(int param0);
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return sg.field_b == l.field_b;
     }
 

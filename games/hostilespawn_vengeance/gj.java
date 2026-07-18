@@ -76,7 +76,7 @@ final class gj {
         return -24.0 + (24.0 * param0 - (double)uj.field_p.field_e);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_b = null;
     }

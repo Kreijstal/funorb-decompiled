@@ -12,7 +12,7 @@ abstract class kl {
 
     abstract byte[] a(int param0, byte param1);
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         int var1 = 0;
         field_f = null;

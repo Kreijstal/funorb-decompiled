@@ -17,8 +17,8 @@ final class ra extends bq {
 
     final boolean b(byte param0) {
         if (param0 > -64) {
-            int discarded$0 = 1;
-            boolean discarded$1 = ra.a(-87, (CharSequence) null, 43);
+            Object var3 = null;
+            boolean discarded$0 = ra.a(-87, (CharSequence) null, 43, true);
             return true;
         }
         return true;
@@ -72,7 +72,7 @@ final class ra extends bq {
         return (java.applet.Applet) (Object) ke.field_a;
     }
 
-    final static boolean a(int param0, CharSequence param1, int param2) {
+    final static boolean a(int param0, CharSequence param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

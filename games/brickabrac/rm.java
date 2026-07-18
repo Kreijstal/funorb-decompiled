@@ -9,7 +9,7 @@ final class rm implements bp {
     static String field_c;
     static String field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_f = null;
@@ -45,8 +45,7 @@ final class rm implements bp {
           L0: {
             if (param1 != null) {
               var2 = new hl(param1, ag.field_K, dl.field_d, jh.field_b, gg.field_t, cn.field_a);
-              int discarded$2 = 96;
-              ee.d();
+              ee.d((byte) 96);
               stackOut_5_0 = (hl) var2;
               stackIn_6_0 = stackOut_5_0;
               break L0;
@@ -89,7 +88,7 @@ final class rm implements bp {
         return stackIn_6_0;
     }
 
-    final static ac a(String param0) {
+    final static ac a(String param0, int param1) {
         RuntimeException var2 = null;
         ac stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;

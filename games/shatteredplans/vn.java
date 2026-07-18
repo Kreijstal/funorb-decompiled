@@ -25,7 +25,7 @@ final class vn extends oh {
     static qr field_t;
     static qr field_y;
 
-    final static void d() {
+    final static void d(int param0) {
         RuntimeException runtimeException = null;
         int var1_int = 0;
         int var2 = 0;
@@ -70,7 +70,7 @@ final class vn extends oh {
         return new Date().getYear() + 1900;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -291,8 +291,7 @@ final class vn extends oh {
                     var4 = param1.substring(var2_int - -1);
                     var5 = uc.a(-77, var3);
                     if (var5 == null) {
-                      int discarded$2 = 111;
-                      stackOut_12_0 = fg.a(var4);
+                      stackOut_12_0 = fg.a(var4, (byte) 111);
                       stackIn_13_0 = stackOut_12_0;
                       break L0;
                     } else {

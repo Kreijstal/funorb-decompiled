@@ -409,8 +409,7 @@ class bc extends kf {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 1;
-            stackOut_0_0 = rk.a(10, true, param1);
+            stackOut_0_0 = rk.a(10, true, param1, true);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

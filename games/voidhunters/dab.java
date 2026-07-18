@@ -6,7 +6,7 @@ final class dab extends wm implements ntb {
     static dja field_c;
     static boolean field_e;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
     }
 
@@ -98,7 +98,7 @@ final class dab extends wm implements ntb {
             super.b((byte) 83, param1);
             var5 = (dab) (Object) param1;
             var6 = var5;
-            var6.field_d = var5.field_d;
+            var6.field_d = ((dab) this).field_d;
             if (param0 > 54) {
               break L0;
             } else {
@@ -193,8 +193,8 @@ final class dab extends wm implements ntb {
               var3 = (dab) (Object) param0;
               super.a(param0, -44);
               var4 = 0;
-              if (var3.field_d != var3.field_d) {
-                System.out.println("int tick has changed. before=" + var3.field_d + ", now=" + var3.field_d);
+              if (var3.field_d != ((dab) this).field_d) {
+                System.out.println("int tick has changed. before=" + var3.field_d + ", now=" + ((dab) this).field_d);
                 var4 = 1;
                 break L2;
               } else {
@@ -492,7 +492,7 @@ final class dab extends wm implements ntb {
                 if (super.a((byte) -70, param1)) {
                   break L2;
                 } else {
-                  if (var3.field_d == var3.field_d) {
+                  if (var3.field_d == ((dab) this).field_d) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
                     break L1;

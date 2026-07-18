@@ -196,8 +196,7 @@ final class bb extends nb implements jk {
                         }
                       }
                     } else {
-                      int discarded$1 = -126;
-                      ((bb) this).field_D[var4_int] = pj.a((CharSequence) (Object) param0[var4_int]).replace(' ', ' ');
+                      ((bb) this).field_D[var4_int] = pj.a((CharSequence) (Object) param0[var4_int], (byte) -126).replace(' ', ' ');
                       var4_int++;
                       continue L2;
                     }
@@ -410,7 +409,7 @@ final class bb extends nb implements jk {
         }
     }
 
-    final static boolean a(CharSequence param0, boolean param1) {
+    final static boolean a(CharSequence param0, boolean param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -462,8 +461,7 @@ final class bb extends nb implements jk {
                   if (var3_int > 12) {
                     break L1;
                   } else {
-                    int discarded$26 = -48;
-                    var4 = ck.a(param0);
+                    var4 = ck.a(param0, (byte) -48);
                     if (var4 == null) {
                       stackOut_13_0 = 0;
                       stackIn_14_0 = stackOut_13_0;
@@ -471,12 +469,10 @@ final class bb extends nb implements jk {
                     } else {
                       if (var4.length() >= 1) {
                         L2: {
-                          int discarded$27 = 78;
-                          if (cf.a(var4.charAt(0))) {
+                          if (cf.a(var4.charAt(0), (byte) 78)) {
                             break L2;
                           } else {
-                            int discarded$28 = 78;
-                            if (cf.a(var4.charAt(-1 + var4.length()))) {
+                            if (cf.a(var4.charAt(-1 + var4.length()), (byte) 78)) {
                               break L2;
                             } else {
                               var5 = 0;
@@ -493,8 +489,7 @@ final class bb extends nb implements jk {
                                 } else {
                                   L4: {
                                     var7 = param0.charAt(var6);
-                                    int discarded$29 = 78;
-                                    if (!cf.a((char) var7)) {
+                                    if (!cf.a((char) var7, (byte) 78)) {
                                       var5 = 0;
                                       break L4;
                                     } else {
@@ -570,7 +565,7 @@ final class bb extends nb implements jk {
         return stackIn_33_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_F = null;
         field_C = null;
         field_K = null;

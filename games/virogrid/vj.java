@@ -5,12 +5,12 @@ final class vj {
     static String field_a;
     static int[] field_b;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static void a(eh param0, eh param1, boolean param2) {
+    final static void a(eh param0, eh param1, boolean param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -108,10 +108,9 @@ final class vj {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var2 = Virogrid.field_F ? 1 : 0;
-        int discarded$2 = -20;
-        if (!lb.a()) {
+        if (!lb.a((byte) -20)) {
             if (null != ih.field_b) {
                 if (!(!ih.field_b.field_a)) {
                     am.a((byte) -16);
@@ -121,10 +120,10 @@ final class vj {
             return;
         }
         try {
-            boolean discarded$11 = ig.field_c.a(uf.field_p, dc.field_P, (byte) -127, true);
+            boolean discarded$8 = ig.field_c.a(uf.field_p, dc.field_P, (byte) -127, true);
             ig.field_c.i(16);
             while (nd.b((byte) -98)) {
-                boolean discarded$12 = ig.field_c.a(um.field_Gb, nm.field_d, -97);
+                boolean discarded$9 = ig.field_c.a(um.field_Gb, nm.field_d, -97);
             }
             int var1_int = 0;
         } catch (RuntimeException runtimeException) {

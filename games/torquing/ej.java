@@ -251,16 +251,16 @@ final class ej implements lm {
               break L1;
             } else {
               var2 = (ej) (Object) param0;
-              if (var2.field_e != var2.field_e) {
+              if (((ej) this).field_e != var2.field_e) {
                 break L1;
               } else {
-                if (var2.field_v != var2.field_v) {
+                if (((ej) this).field_v != var2.field_v) {
                   break L1;
                 } else {
-                  if (var2.field_f != var2.field_f) {
+                  if (((ej) this).field_f != var2.field_f) {
                     break L1;
                   } else {
-                    if (var2.field_a != var2.field_a) {
+                    if (((ej) this).field_a != var2.field_a) {
                       break L1;
                     } else {
                       stackOut_5_0 = 1;

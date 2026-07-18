@@ -11,8 +11,7 @@ final class vdb extends uj {
         if (param2 <= 110) {
             return null;
         }
-        int discarded$0 = 1;
-        return ul.a(param0, param1, 1, param3);
+        return ul.a(param0, param1, 1, param3, true);
     }
 
     final int b(byte param0) {
@@ -47,7 +46,7 @@ final class vdb extends uj {
         return false;
     }
 
-    final static int d() {
+    final static int d(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -60,8 +59,7 @@ final class vdb extends uj {
           L0: {
             var1_int = 0;
             L1: while (true) {
-              int discarded$8 = 127;
-              if (!ata.e()) {
+              if (!ata.e(127)) {
                 L2: {
                   ei.field_c.a(rkb.a(qs.field_a, 3841, oq.field_H), 5620, rkb.a(uia.field_b, 3841, kc.field_b));
                   if (!ei.field_c.e((byte) -126)) {
@@ -81,8 +79,7 @@ final class vdb extends uj {
                       if (var2 != 2) {
                         break L3;
                       } else {
-                        int discarded$9 = 0;
-                        ek.b();
+                        ek.b(false);
                         break L3;
                       }
                     } else {

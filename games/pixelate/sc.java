@@ -28,7 +28,7 @@ final class sc {
         return he.field_f != null ? true : false;
     }
 
-    final static String c() {
+    final static String c(int param0) {
         if (!(hf.field_q >= 2)) {
             return td.field_d;
         }
@@ -164,7 +164,7 @@ final class sc {
         return ((sc) this).field_b;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_h = null;
         field_c = null;

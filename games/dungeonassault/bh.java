@@ -13,7 +13,7 @@ class bh extends ck {
     static String[] field_N;
     private md field_S;
 
-    final static int b(int param0, int param1) {
+    final static int b(int param0, int param1, boolean param2) {
         int var3 = tg.field_f[param1][param0];
         if (ke.a(71, var3)) {
             return 260;
@@ -31,7 +31,7 @@ class bh extends ck {
         return cc.field_e[param1];
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_J = null;
         int var1 = 32;
         field_L = null;
@@ -423,15 +423,14 @@ class bh extends ck {
                       L11: {
                         hg.field_s = ra.field_c.c((byte) 53);
                         nh.field_k = ra.field_c.c(true);
-                        int discarded$8 = ra.field_c.c(true);
+                        int discarded$6 = ra.field_c.c(true);
                         pb.field_G = ra.field_c.k(0);
                         var6_ref = ra.field_c.b(true);
                         var7 = ra.field_c.c(true);
                         if ((1 & var7) == 0) {
                           break L11;
                         } else {
-                          int discarded$9 = 0;
-                          l.b();
+                          l.b(false);
                           break L11;
                         }
                       }
@@ -472,9 +471,9 @@ class bh extends ck {
                       }
                       L15: {
                         if (fa.field_j) {
-                          int discarded$10 = ra.field_c.c(true);
-                          int discarded$11 = ra.field_c.c(true);
-                          int discarded$12 = ra.field_c.h(-59);
+                          int discarded$7 = ra.field_c.c(true);
+                          int discarded$8 = ra.field_c.c(true);
+                          int discarded$9 = ra.field_c.h(-59);
                           ao.field_k = ra.field_c.k(0);
                           ti.field_q = new byte[ao.field_k];
                           var8 = 0;
@@ -528,7 +527,7 @@ class bh extends ck {
                             } else {
                               try {
                                 L21: {
-                                  Object discarded$13 = ee.a((byte) -21, m.c(true), "unzap");
+                                  Object discarded$10 = ee.a((byte) -21, m.c(true), "unzap");
                                   break L21;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -544,8 +543,7 @@ class bh extends ck {
                         }
                         try {
                           L23: {
-                            int discarded$14 = -1;
-                            Object discarded$15 = ee.a("zap", m.c(true), 15647, new Object[1]);
+                            Object discarded$11 = ee.a("zap", m.c(true), 15647, new Object[1]);
                             break L23;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {

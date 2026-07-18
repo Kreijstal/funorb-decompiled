@@ -13,7 +13,7 @@ final class gb implements Iterable {
     static String field_e;
     static String field_a;
 
-    final static void a() {
+    final static void a(byte param0) {
         hf.a(29, new int[9], 0, 0, 146, 577, 250);
         hf.a(31, new int[5], 0, 1, 320, 288, 32);
         hf.a(31, new int[7], 0, 2, 320, 288, 32);
@@ -348,7 +348,7 @@ final class gb implements Iterable {
         ((gb) this).field_g.field_i = ((gb) this).field_g;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
         field_e = null;
         field_b = null;

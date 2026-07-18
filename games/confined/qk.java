@@ -6,7 +6,7 @@ final class qk {
     static int field_c;
     static String field_b;
 
-    final static int a() {
+    final static int a(byte param0) {
         return ka.field_L;
     }
 

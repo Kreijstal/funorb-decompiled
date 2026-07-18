@@ -10,7 +10,7 @@ final class ub extends nb {
     int field_C;
     static qm field_z;
 
-    public static void f() {
+    public static void f(int param0) {
         field_z = null;
         field_E = null;
         int var1 = 0;
@@ -38,7 +38,7 @@ final class ub extends nb {
         return hm.a(d.field_Gb, oc.field_n, -24236);
     }
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         hg var2 = gk.field_g;
         var2.g(11, 8);
         var2.a(1, -126);
@@ -89,8 +89,7 @@ final class ub extends nb {
                 break L1;
               } else {
                 if (!param1.equals((Object) (Object) w.field_I.a(32))) {
-                  int discarded$2 = 0;
-                  w.field_I = oe.a(param1);
+                  w.field_I = oe.a(param1, false);
                   break L1;
                 } else {
                   break L1;
@@ -142,7 +141,7 @@ final class ub extends nb {
         }
     }
 
-    final static void a(java.awt.Color param0, boolean param1, String param2, int param3) {
+    final static void a(java.awt.Color param0, boolean param1, String param2, int param3, int param4) {
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;

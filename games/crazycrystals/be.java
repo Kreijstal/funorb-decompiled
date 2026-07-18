@@ -11,7 +11,7 @@ final class be implements Iterable {
     static am field_d;
     static String field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         int var1 = -11;
         field_e = null;

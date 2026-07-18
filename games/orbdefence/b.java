@@ -196,7 +196,7 @@ final class b extends hi {
         return stackIn_1_0;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_q = null;
         field_p = null;
         field_n = null;

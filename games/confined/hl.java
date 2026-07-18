@@ -65,7 +65,7 @@ final class hl implements de {
         return true;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -83,7 +83,7 @@ final class hl implements de {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return tg.field_H > 250;
     }
 

@@ -62,8 +62,7 @@ final class kh extends q {
                     break L3;
                   }
                 }
-                int discarded$4 = 60;
-                var5.field_m = qi.a(var3, var5.field_m);
+                var5.field_m = qi.a(var3, var5.field_m, (byte) 60);
                 var4 = param0.field_q;
                 if (null == var4.field_u) {
                   break L2;
@@ -84,12 +83,9 @@ final class kh extends q {
                 } else {
                   var3 = var5.field_k;
                   var5.field_s = cc.a(var3, (byte) 23, var5.field_s);
-                  int discarded$5 = 60;
-                  var5.field_u = qi.a(var3, var5.field_u);
-                  int discarded$6 = 60;
-                  var5.field_n = qi.a(var3, var5.field_n);
-                  int discarded$7 = 60;
-                  var5.field_x = qi.a(var3, var5.field_x);
+                  var5.field_u = qi.a(var3, var5.field_u, (byte) 60);
+                  var5.field_n = qi.a(var3, var5.field_n, (byte) 60);
+                  var5.field_x = qi.a(var3, var5.field_x, (byte) 60);
                   break L4;
                 }
               }

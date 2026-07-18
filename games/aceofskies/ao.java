@@ -17,7 +17,7 @@ abstract class ao {
         field_b = null;
     }
 
-    final static byte[] a(dl param0, byte[] param1) {
+    final static byte[] a(dl param0, byte[] param1, boolean param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -173,7 +173,7 @@ abstract class ao {
         return stackIn_18_0;
     }
 
-    final static String a(java.applet.Applet param0) {
+    final static String a(java.applet.Applet param0, boolean param1) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;

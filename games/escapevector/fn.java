@@ -9,7 +9,7 @@ final class fn {
     static String field_a;
     int field_b;
 
-    final static boolean a(boolean param0) {
+    final static boolean a(boolean param0, int param1) {
         L0: {
           if (di.field_d.field_e) {
             rk.field_e.a(oa.field_w, 100, 1536 * qm.field_c / 64, 8192);
@@ -44,16 +44,16 @@ final class fn {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_f = null;
         field_e = null;
     }
 
-    final static int b() {
-        RuntimeException var1 = null;
+    final static int b(int param0) {
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
@@ -89,13 +89,11 @@ final class fn {
                       } else {
                         var3 = wh.field_j[cb.field_c.field_h];
                         if (2 == var3) {
-                          int discarded$3 = 0;
-                          ah.e();
+                          ah.e(0);
                           break L3;
                         } else {
                           if (var3 == 5) {
-                            int discarded$4 = 0;
-                            ah.e();
+                            ah.e(0);
                             break L3;
                           } else {
                             break L3;
@@ -110,8 +108,7 @@ final class fn {
                     if (f.field_j == 2) {
                       break L3;
                     } else {
-                      int discarded$5 = 0;
-                      ah.e();
+                      ah.e(0);
                       break L3;
                     }
                   }
@@ -169,7 +166,7 @@ final class fn {
         return param0 & param1;
     }
 
-    final static String a(n param0) {
+    final static String a(n param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -251,7 +248,7 @@ final class fn {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         if (!Character.isISOControl(param0)) {
           if (k.a(true, param0)) {
             return true;

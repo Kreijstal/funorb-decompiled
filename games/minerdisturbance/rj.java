@@ -38,8 +38,7 @@ final class rj implements uj {
         int var2 = 0;
         int var3 = 0;
         var3 = MinerDisturbance.field_ab;
-        int discarded$5 = -31391;
-        if (!il.e()) {
+        if (!il.e(-31391)) {
           if (ke.field_V) {
             pl.field_h = param1;
             var2 = param1;

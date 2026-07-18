@@ -268,8 +268,7 @@ final class of {
         try {
           L0: {
             var8 = (CharSequence) (Object) param2;
-            int discarded$5 = 21257;
-            if (ed.a(var8)) {
+            if (ed.a(var8, 21257)) {
               if (2 != ld.field_g) {
                 stackOut_5_0 = vf.field_e;
                 stackIn_6_0 = stackOut_5_0;
@@ -711,7 +710,7 @@ final class of {
         return ((of) this).field_j == 102 ? true : false;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         uk.field_e = false;
         ei.field_u = 0;
         eg.field_j = null;
@@ -765,7 +764,7 @@ final class of {
         return stackIn_8_0 != 0;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_b = null;
         field_i = null;
     }

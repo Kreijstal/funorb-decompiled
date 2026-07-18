@@ -1110,7 +1110,7 @@ final class vl extends nm {
         return stackIn_6_0;
     }
 
-    private final void a(boolean param0) {
+    private final void a(boolean param0, byte param1) {
         int var3 = 0;
         int var4 = Chess.field_G;
         if (param0) {
@@ -1601,14 +1601,13 @@ final class vl extends nm {
     private final synchronized void b(int param0, boolean param1) {
         ((vl) this).field_v.g();
         ((vl) this).field_W = null;
-        int discarded$0 = -38;
-        this.a(param1);
+        this.a(param1, (byte) -38);
         if (param0 < 20) {
             ((vl) this).field_S = null;
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_I = null;
         field_A = null;
         field_M = null;
@@ -1784,8 +1783,7 @@ final class vl extends nm {
                             }
                           }
                         }
-                        int discarded$1 = -38;
-                        this.a(true);
+                        this.a(true, (byte) -38);
                         ((vl) this).field_v.g();
                         return;
                       }
@@ -1821,11 +1819,19 @@ final class vl extends nm {
 
     private final synchronized void a(int param0, int param1, byte param2) {
         int var4 = 0;
-        int var5 = Chess.field_G;
-        for (var4 = 0; 16 > var4; var4++) {
-            ((vl) this).field_z[var4] = 256;
-        }
+        int var5 = 0;
+        var5 = Chess.field_G;
         var4 = 0;
+        L0: while (true) {
+          if (16 <= var4) {
+            var4 = 0;
+            return;
+          } else {
+            ((vl) this).field_z[var4] = 256;
+            var4++;
+            continue L0;
+          }
+        }
     }
 
     private final void b(int param0, int param1, int param2, int param3) {
@@ -2146,8 +2152,7 @@ final class vl extends nm {
                       if (var3 != 255) {
                         return;
                       } else {
-                        int discarded$1 = -38;
-                        this.a(true);
+                        this.a(true, (byte) -38);
                         return;
                       }
                     } else {
@@ -2684,8 +2689,7 @@ final class vl extends nm {
         ((vl) this).field_B = new mi((vl) this);
         ((vl) this).field_s = new kl(128);
         this.a(256, -1, (byte) -101);
-        int discarded$0 = -38;
-        this.a(true);
+        this.a(true, (byte) -38);
     }
 
     static {

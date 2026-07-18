@@ -32,7 +32,7 @@ final class ju extends ua implements cr {
         field_p = null;
     }
 
-    final static void g() {
+    final static void g(int param0) {
         wt.field_h[1] = iv.field_i;
         wt.field_h[0] = ki.field_f;
         wt.field_h[2] = hc.field_f;
@@ -82,8 +82,7 @@ final class ju extends ua implements cr {
                         kk.a((byte) -118);
                         return false;
                       } else {
-                        int discarded$3 = 26560;
-                        if (uc.b() <= 30000L) {
+                        if (uc.b(26560) <= 30000L) {
                           break L0;
                         } else {
                           kk.a((byte) -118);

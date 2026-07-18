@@ -151,8 +151,7 @@ class jl {
         ((jl) this).field_o = var2 * 3 / 4;
         ((jl) this).field_f = ((jl) this).c((byte) 111);
         ((jl) this).field_i = ((jl) this).field_f / 2;
-        int discarded$0 = 113;
-        ((jl) this).field_e = ((jl) this).field_f + (((jl) this).field_i - -this.a(((jl) this).field_b));
+        ((jl) this).field_e = ((jl) this).field_f + (((jl) this).field_i - -this.a(((jl) this).field_b, (byte) 113));
     }
 
     final static void b(int param0) {
@@ -273,7 +272,7 @@ class jl {
         return ((jl) this).field_e;
     }
 
-    private final int a(String[] param0) {
+    private final int a(String[] param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;

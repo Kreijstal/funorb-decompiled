@@ -14,7 +14,7 @@ final class caa implements Runnable {
     private java.net.URL field_b;
     private fia field_g;
 
-    final static void a(ff param0, la param1) {
+    final static void a(ff param0, la param1, int param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -323,8 +323,7 @@ final class caa implements Runnable {
 
     final static void a(byte param0) {
         bh.field_p = true;
-        int discarded$0 = 64;
-        bja.a(pl.a(), (byte) 126, 3);
+        bja.a(pl.a((byte) 64), (byte) 126, 3);
         int var1 = 72 / ((param0 - 55) / 46);
         rba.field_a.e((byte) 106);
     }
@@ -358,7 +357,7 @@ final class caa implements Runnable {
         ((caa) this).field_d = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

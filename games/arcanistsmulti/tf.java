@@ -79,8 +79,7 @@ class tf extends pg {
                       break L0;
                     } else {
                       var6 = var4[var5];
-                      int discarded$2 = 45;
-                      var7 = mo.a(var6);
+                      var7 = mo.a(var6, 45);
                       if (var7 != null) {
                         stackOut_19_0 = (ri) var7;
                         stackIn_20_0 = stackOut_19_0;

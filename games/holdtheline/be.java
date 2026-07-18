@@ -7,7 +7,7 @@ final class be extends hl {
     static ah field_j;
     byte[] field_k;
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(null == sb.field_c)) {
             sb.field_c.h((byte) -80);
         }
@@ -15,7 +15,7 @@ final class be extends hl {
         sm.field_c.a((n) (Object) vf.field_l, (byte) -104);
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_i = null;
         field_j = null;
         field_l = null;

@@ -15,7 +15,7 @@ final class mm extends ne {
     static String field_j;
     int field_p;
 
-    final static di a(ec param0) {
+    final static di a(ec param0, boolean param1) {
         di var2 = null;
         RuntimeException var2_ref = null;
         di stackIn_1_0 = null;
@@ -77,7 +77,7 @@ final class mm extends ne {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         field_j = null;
         field_s = null;
@@ -87,7 +87,7 @@ final class mm extends ne {
         throw new Error();
     }
 
-    final static int a(CharSequence param0, boolean param1, int param2) {
+    final static int a(CharSequence param0, boolean param1, int param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

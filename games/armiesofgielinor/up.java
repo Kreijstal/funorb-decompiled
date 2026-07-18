@@ -10,7 +10,7 @@ final class up implements lv {
     static String field_f;
     private ha field_d;
 
-    public static void d() {
+    public static void d(int param0) {
         field_f = null;
         field_g = null;
         field_b = null;

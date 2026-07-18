@@ -6,7 +6,7 @@ import java.io.*;
 final class af {
     private int[] field_a;
 
-    final static void a() {
+    final static void a(int param0) {
         try {
             int var1_int = 0;
             int var3 = OrbDefence.field_D ? 1 : 0;
@@ -149,7 +149,7 @@ final class af {
         return var3;
     }
 
-    final static boolean a(mg param0) {
+    final static boolean a(mg param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

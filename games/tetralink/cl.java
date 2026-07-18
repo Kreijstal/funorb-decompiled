@@ -130,8 +130,7 @@ final class cl {
                                                           break L5;
                                                         } else {
                                                           var4 = 1;
-                                                          int discarded$7 = -127;
-                                                          v.a();
+                                                          v.a(-127);
                                                           break L5;
                                                         }
                                                       }
@@ -142,8 +141,7 @@ final class cl {
                                                       } else {
                                                         if (wb.field_c < 256) {
                                                           var4 = 1;
-                                                          int discarded$8 = 256;
-                                                          bh.a();
+                                                          bh.a(256);
                                                           break L6;
                                                         } else {
                                                           break L6;
@@ -164,7 +162,7 @@ final class cl {
                                                           }
                                                         }
                                                       }
-                                                      bf discarded$9 = lb.a(sk.field_a, 573509761);
+                                                      bf discarded$3 = lb.a(sk.field_a, 573509761);
                                                       b.field_c = dh.field_e - -20;
                                                       break L0;
                                                     }
@@ -227,8 +225,7 @@ final class cl {
                                                       }
                                                       L12: {
                                                         if (((of) (Object) stackIn_77_0).a(stackIn_77_1 != 0)) {
-                                                          int discarded$10 = 32;
-                                                          me.a();
+                                                          me.a(32);
                                                           break L12;
                                                         } else {
                                                           break L12;
@@ -237,8 +234,7 @@ final class cl {
                                                       if (!((cl) this).field_h.c(97)) {
                                                         break L0;
                                                       } else {
-                                                        int discarded$11 = 127;
-                                                        go.a();
+                                                        go.a((byte) 127);
                                                         break L0;
                                                       }
                                                     } else {
@@ -254,9 +250,9 @@ final class cl {
                                                                 if (!((cl) this).field_h.b((byte) 111)) {
                                                                   break L0;
                                                                 } else {
-                                                                  int fieldTemp$12 = qe.field_g + 1;
+                                                                  int fieldTemp$4 = qe.field_g + 1;
                                                                   qe.field_g = qe.field_g + 1;
-                                                                  if (~fieldTemp$12 <= ~qf.field_f.length) {
+                                                                  if (~fieldTemp$4 <= ~qf.field_f.length) {
                                                                     qe.field_g = 2;
                                                                     break L13;
                                                                   } else {
@@ -264,9 +260,9 @@ final class cl {
                                                                   }
                                                                 }
                                                               } else {
-                                                                int fieldTemp$13 = qe.field_g - 1;
+                                                                int fieldTemp$5 = qe.field_g - 1;
                                                                 qe.field_g = qe.field_g - 1;
-                                                                if (2 <= fieldTemp$13) {
+                                                                if (2 <= fieldTemp$5) {
                                                                   break L13;
                                                                 } else {
                                                                   qe.field_g = qf.field_f.length - 1;
@@ -743,7 +739,7 @@ final class cl {
         }
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void a(boolean param0, int param1, byte param2) {
         int var4 = hg.field_f[((cl) this).field_c][param1];
         this.a(param1, var4, false);
         if (!(!((cl) this).field_h.h(32))) {
@@ -752,8 +748,7 @@ final class cl {
                     bf discarded$0 = lb.a(sk.field_a, 573509761);
                 }
             }
-            int discarded$1 = 0;
-            vf.a(param0, var4);
+            vf.a(param0, var4, false);
         }
     }
 
@@ -831,12 +826,12 @@ final class cl {
                       break L4;
                     } else {
                       if (!ug.o(-70)) {
-                        int discarded$5 = mk.field_b.a(om.field_Lb, 160, 240, 320, 80, 8437759, -1, 1, 0, 20);
+                        int discarded$3 = mk.field_b.a(om.field_Lb, 160, 240, 320, 80, 8437759, -1, 1, 0, 20);
                         break L4;
                       } else {
                         mk.field_b.a(ei.field_e, 320, 270, 8437759, -1);
                         mk.field_b.a(rm.field_h, 320, 290, 8437759, -1);
-                        int discarded$6 = mk.field_b.a(om.field_Lb, 160, 210, 320, 80, 8437759, -1, 1, 0, 20);
+                        int discarded$4 = mk.field_b.a(om.field_Lb, 160, 210, 320, 80, 8437759, -1, 1, 0, 20);
                         break L4;
                       }
                     }
@@ -894,8 +889,7 @@ final class cl {
                       }
                     }
                     L9: {
-                      int discarded$7 = 1;
-                      this.a(240, var6, false, 128, 158 + var7);
+                      this.a(240, var6, false, 128, 158 + var7, 1);
                       if (af.field_a[var6] < 1) {
                         break L9;
                       } else {
@@ -932,7 +926,7 @@ final class cl {
                       mk.field_b.b(Integer.toString(sk.field_b[var6]), 420, var7 + 128, 8437759, -1);
                       mk.field_b.c(nl.field_c, 420, var7 + 148, 8437759, -1);
                       mk.field_b.b(Integer.toString(af.field_a[var6]), 420, var7 - -148, 8437759, -1);
-                      int discarded$8 = mk.field_b.a(nh.field_Ob[var6], 320, var7 + 158, 160, 80, 8437759, -1, 1, 0, 20);
+                      int discarded$5 = mk.field_b.a(nh.field_Ob[var6], 320, var7 + 158, 160, 80, 8437759, -1, 1, 0, 20);
                       break L4;
                     } else {
                       break L4;
@@ -944,8 +938,7 @@ final class cl {
                 L12: {
                   if (uk.b(1, var6)) {
                     var7 = var6;
-                    int discarded$9 = 1;
-                    this.a(var4, var7, true, rj.field_o[var7], var5);
+                    this.a(var4, var7, true, rj.field_o[var7], var5, 1);
                     var4 += 40;
                     break L12;
                   } else {
@@ -1098,17 +1091,12 @@ final class cl {
           return;
         } else {
           if (ug.o(122)) {
-            int discarded$5 = 117;
-            this.a();
+            this.a((byte) 117);
             return;
           } else {
             L0: {
               if (null == cm.field_x) {
-                int discarded$6 = 8;
-                int discarded$7 = 7;
-                int discarded$8 = 68;
-                int discarded$9 = 0;
-                cm.field_x = af.a();
+                cm.field_x = af.a(0, (byte) 68, 7, 8);
                 break L0;
               } else {
                 break L0;
@@ -1315,8 +1303,7 @@ final class cl {
                                           if (pf.field_d != 5) {
                                             continue L1;
                                           } else {
-                                            int discarded$4 = 0;
-                                            vf.a(false, 8);
+                                            vf.a(false, 8, false);
                                             continue L1;
                                           }
                                         }
@@ -1324,8 +1311,7 @@ final class cl {
                                     }
                                   }
                                 }
-                                int discarded$5 = 0;
-                                vf.a(false, 8);
+                                vf.a(false, 8, false);
                                 continue L1;
                               }
                             }
@@ -1333,16 +1319,14 @@ final class cl {
                         }
                       }
                     }
-                    int discarded$6 = 0;
-                    vf.a(false, 2);
+                    vf.a(false, 2, false);
                     continue L1;
                   } else {
                     this.a(-49);
                     if (((cl) this).field_h.field_b == -1) {
                       continue L1;
                     } else {
-                      int discarded$7 = -29;
-                      this.a(false, ((cl) this).field_h.field_b);
+                      this.a(false, ((cl) this).field_h.field_b, (byte) -29);
                       continue L1;
                     }
                   }
@@ -1582,7 +1566,7 @@ final class cl {
         }
     }
 
-    private final void a(int param0, int param1, boolean param2, int param3, int param4) {
+    private final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         oh var7 = null;
         int var8 = 0;
         oh var9 = null;
@@ -1648,7 +1632,7 @@ final class cl {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_b = null;
         field_d = null;
         field_a = null;
@@ -1714,13 +1698,12 @@ final class cl {
                   if (-1 == ((cl) this).field_h.field_b) {
                     break L3;
                   } else {
-                    int discarded$2 = -29;
-                    this.a(true, ((cl) this).field_h.field_b);
+                    this.a(true, ((cl) this).field_h.field_b, (byte) -29);
                     break L3;
                   }
                 }
                 if (((cl) this).field_h.field_b != var10) {
-                  bf discarded$3 = lb.a(bo.field_A, 573509761);
+                  bf discarded$1 = lb.a(bo.field_A, 573509761);
                   break L0;
                 } else {
                   break L0;
@@ -1740,7 +1723,7 @@ final class cl {
         return 30;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         mk.field_b.a(dj.field_c, 320, 115 - (-mk.field_b.field_N + -94), 8437759, -1);
     }

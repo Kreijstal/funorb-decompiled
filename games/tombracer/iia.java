@@ -517,7 +517,7 @@ final class iia extends ci {
         }
     }
 
-    final static int d(int param0) {
+    final static int d(int param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_6_0 = 0;
@@ -1000,7 +1000,7 @@ final class iia extends ci {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_r = null;
         field_q = null;
         field_v = null;

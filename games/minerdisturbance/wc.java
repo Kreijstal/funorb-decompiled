@@ -7,7 +7,7 @@ final class wc implements uj {
     static int[] field_a;
     static String field_d;
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         int var1 = 36;
         return !wm.field_f.a(0) ? true : false;
     }
@@ -75,19 +75,13 @@ final class wc implements uj {
                     break L1;
                   } else {
                     g.a(false, -47, param2);
-                    int discarded$14 = 310;
-                    int discarded$15 = 0;
-                    int discarded$16 = 0;
-                    cl.a(param1);
+                    cl.a(param1, 0, 0, 310);
                     break L1;
                   }
                 } else {
                   eh.d();
                   pd.a(10853, 320, 240);
-                  int discarded$17 = 310;
-                  int discarded$18 = 0;
-                  int discarded$19 = 0;
-                  cl.a(param1);
+                  cl.a(param1, 0, 0, 310);
                   break L1;
                 }
               } else {
@@ -101,8 +95,7 @@ final class wc implements uj {
                     break L2;
                   }
                 }
-                int discarded$20 = -105;
-                MinerDisturbance.a(qm.field_j, (byte) 36, k.g(-22962), var3_int != 0, te.a());
+                MinerDisturbance.a(qm.field_j, (byte) 36, k.g(-22962), var3_int != 0, te.a(-105));
                 break L1;
               }
             }
@@ -145,7 +138,7 @@ final class wc implements uj {
         return "Clear All Fluid";
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

@@ -13,7 +13,7 @@ final class jca {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         fe.field_h = 20000000L;
     }
 

@@ -5,7 +5,7 @@ final class kia {
     static String field_a;
     static String field_b;
 
-    final static void a() {
+    final static void a(byte param0) {
         String var1 = null;
         if (!tla.field_c) {
           throw new IllegalStateException();
@@ -18,8 +18,7 @@ final class kia {
               break L0;
             }
           }
-          int discarded$2 = -118;
-          var1 = mr.m();
+          var1 = mr.m((byte) -118);
           jt.field_o = new vla(var1, (String) null, true, false, false);
           klb.field_r.a(false, (shb) (Object) s.field_o);
           s.field_o.b((shb) (Object) jt.field_o, -110);
@@ -28,7 +27,7 @@ final class kia {
         }
     }
 
-    final static im a(int param0, qfa param1, int param2, byte[] param3) {
+    final static im a(int param0, qfa param1, int param2, byte[] param3, int param4, boolean param5, int param6, int param7) {
         RuntimeException var8 = null;
         im stackIn_8_0 = null;
         im stackIn_10_0 = null;
@@ -74,12 +73,10 @@ final class kia {
                 break L1;
               } else {
                 L2: {
-                  int discarded$8 = -95;
-                  if (!bd.a(param2)) {
+                  if (!bd.a(param2, (byte) -95)) {
                     break L2;
                   } else {
-                    int discarded$9 = -95;
-                    if (bd.a(param0)) {
+                    if (bd.a(param0, (byte) -95)) {
                       break L1;
                     } else {
                       break L2;

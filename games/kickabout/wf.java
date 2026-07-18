@@ -572,8 +572,7 @@ final class wf extends qt {
                               }
                             }
                             ta.e(120);
-                            int discarded$1 = -51;
-                            sd.a(var13);
+                            sd.a(var13, (byte) -51);
                             var7[var8 >> 3][qj.b(3, var8 >> 1)][qj.b(var8, 1)] = var13;
                             var8++;
                             continue L4;
@@ -654,8 +653,7 @@ final class wf extends qt {
             if (!(!ds.field_g)) {
                 return;
             }
-            int discarded$0 = 30353;
-            this.e();
+            this.e(30353);
             this.a(true, (byte) -126);
             return;
         }
@@ -735,8 +733,7 @@ final class wf extends qt {
     }
 
     final void a(boolean param0, int param1) {
-        int discarded$4 = -12452;
-        ig.b(((wf) this).field_j);
+        ig.b(((wf) this).field_j, -12452);
         if (param1 < 99) {
             ((wf) this).field_F = -63;
         }
@@ -812,7 +809,7 @@ final class wf extends qt {
         }
     }
 
-    private final boolean a(vc param0) {
+    private final boolean a(vc param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         vc var4 = null;
@@ -1124,8 +1121,7 @@ final class wf extends qt {
                 }
               } else {
                 L18: {
-                  int discarded$1 = 117;
-                  if (this.a(ui.field_w[var9])) {
+                  if (this.a(ui.field_w[var9], (byte) 117)) {
                     this.a(ui.field_w[var9], 640);
                     break L18;
                   } else {
@@ -1175,7 +1171,7 @@ final class wf extends qt {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         long var2 = 0L;
         if (la.a(100)) {
           return;
@@ -1307,18 +1303,17 @@ final class wf extends qt {
               } else {
                 if (tu.field_E.c(-3)) {
                   if (tu.field_E.a((byte) -97)) {
-                    int discarded$5 = 25;
-                    rm.e();
-                    wh discarded$6 = sp.c(49, 55);
+                    rm.e(25);
+                    wh discarded$4 = sp.c(49, 55);
                     break L5;
                   } else {
                     tb.a((byte) 126, 33);
-                    wh discarded$7 = sp.c(53, -126);
+                    wh discarded$5 = sp.c(53, -126);
                     break L5;
                   }
                 } else {
                   tb.a((byte) 126, 6);
-                  wh discarded$8 = sp.c(53, -120);
+                  wh discarded$6 = sp.c(53, -120);
                   break L5;
                 }
               }
@@ -1343,7 +1338,7 @@ final class wf extends qt {
                 L8: {
                   if (((wf) this).field_E[var5].field_sb == 1) {
                     ((wf) this).field_U = ((wf) this).field_U ^ 1 << var5;
-                    wh discarded$9 = sp.c(61, -118);
+                    wh discarded$7 = sp.c(61, -118);
                     break L8;
                   } else {
                     break L8;
@@ -1422,15 +1417,13 @@ final class wf extends qt {
               var9 = stackIn_4_0;
               var2_ref = var9;
               var3 = new String[]{var9, rp.field_D};
-              int discarded$4 = 1;
-              var4 = wk.a(true);
+              var4 = wk.a(true, true);
               var4.field_k = 15;
               var4.field_w = 0;
               var4.field_R = 15;
               var5 = tu.field_E;
               if (param1) {
-                int discarded$5 = 1;
-                var10 = wk.a(false);
+                var10 = wk.a(false, true);
                 var5 = var10;
                 var10.field_o = 2;
                 var10.field_K = 0;
@@ -1469,7 +1462,7 @@ final class wf extends qt {
                   um.field_e.field_o.field_Q[1] = var4.field_R;
                   if (!param1) {
                     um.field_e.b(26415, 2);
-                    gv discarded$6 = gm.a(de.field_a, true, (byte) -117);
+                    gv discarded$1 = gm.a(de.field_a, true, (byte) -117);
                     break L5;
                   } else {
                     um.field_e.field_o.field_b[0][0] = var5.field_i[2];
@@ -1482,8 +1475,7 @@ final class wf extends qt {
                     um.field_e.field_o.field_s = true;
                     um.field_e.field_o.field_b[1][3] = var4.field_i[3];
                     um.field_e.b(26415, 4);
-                    int discarded$7 = 0;
-                    la.a(um.field_e.field_o);
+                    la.a(um.field_e.field_o, 0);
                     break L5;
                   }
                 }
@@ -1602,8 +1594,7 @@ final class wf extends qt {
                     if (((wf) this).field_D + -5 > ((wf) this).field_T.a(false)) {
                       break L1;
                     } else {
-                      int discarded$2 = 30353;
-                      this.e();
+                      this.e(30353);
                       break L1;
                     }
                   }

@@ -17,7 +17,7 @@ final class l {
         }
     }
 
-    private final boolean b(java.awt.Canvas param0) {
+    private final boolean b(java.awt.Canvas param0, int param1) {
         vu var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_13_0 = 0;
@@ -58,8 +58,7 @@ final class l {
                   }
                 }
               }
-              int discarded$2 = 91;
-              this.a(param0);
+              this.a(param0, 91);
               break L1;
             }
             L3: {
@@ -279,11 +278,10 @@ final class l {
     }
 
     l(int param0, int param1, d param2) {
-        this(da.a(param0, 1), cm.a(param1, (byte) 118), param2, pt.field_b, an.a());
-        int discarded$0 = 0;
+        this(da.a(param0, 1), cm.a(param1, (byte) 118), param2, pt.field_b, an.a(false));
     }
 
-    private final void a(java.awt.Canvas param0) {
+    private final void a(java.awt.Canvas param0, int param1) {
         Object var3 = null;
         sn[] var4 = null;
         int var5 = 0;
@@ -1659,9 +1657,7 @@ final class l {
 
     final boolean a(int param0) {
         int var2 = 10 / ((param0 - 68) / 53);
-        int discarded$0 = -8213;
-        int discarded$1 = 118;
-        return this.b(fa.a());
+        return this.b(fa.a(-8213), 118);
     }
 
     final ha a(byte param0) {

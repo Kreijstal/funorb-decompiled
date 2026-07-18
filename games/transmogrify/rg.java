@@ -15,7 +15,7 @@ class rg extends lj {
     private int field_M;
     private long field_C;
 
-    private final void o() {
+    private final void o(int param0) {
         int var2 = 0;
         int var3 = 0;
         if (((rg) this).field_F != ((rg) this).field_H) {
@@ -75,7 +75,7 @@ class rg extends lj {
         }
     }
 
-    private final int m() {
+    private final int m(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -100,11 +100,9 @@ class rg extends lj {
         }
     }
 
-    private final void k() {
-        int discarded$0 = 0;
-        this.d();
-        int discarded$1 = 1;
-        this.o();
+    private final void k(int param0) {
+        this.d(false);
+        this.o(1);
     }
 
     private final void a(int param0, boolean param1) {
@@ -207,7 +205,7 @@ class rg extends lj {
         }
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -215,8 +213,7 @@ class rg extends lj {
             try {
               L0: {
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                int discarded$1 = 1;
-                this.o();
+                this.o(1);
                 this.a(true, var2);
                 break L0;
               }
@@ -357,7 +354,7 @@ class rg extends lj {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_I = null;
         field_B = null;
         field_D = null;
@@ -600,8 +597,7 @@ class rg extends lj {
                   } else {
                     L4: {
                       ((rg) this).field_F = this.l(-119);
-                      int discarded$1 = -7638;
-                      ((rg) this).field_H = this.m();
+                      ((rg) this).field_H = this.m(-7638);
                       if (0 >= ((rg) this).field_H) {
                         break L4;
                       } else {
@@ -841,8 +837,7 @@ class rg extends lj {
                     if (param3 <= 126) {
                       L2: {
                         if (~((rg) this).field_H != ~((rg) this).field_F) {
-                          int discarded$11 = 1;
-                          this.o();
+                          this.o(1);
                           break L2;
                         } else {
                           break L2;
@@ -863,9 +858,9 @@ class rg extends lj {
                         L5: {
                           if (((rg) this).field_H >= ((rg) this).field_k.length()) {
                             ((rg) this).field_k = ((rg) this).field_k + param3;
-                            int dupTemp$12 = ((rg) this).field_k.length();
-                            ((rg) this).field_H = dupTemp$12;
-                            ((rg) this).field_F = dupTemp$12;
+                            int dupTemp$1 = ((rg) this).field_k.length();
+                            ((rg) this).field_H = dupTemp$1;
+                            ((rg) this).field_F = dupTemp$1;
                             break L5;
                           } else {
                             ((rg) this).field_k = ((rg) this).field_k.substring(0, ((rg) this).field_H) + param3 + ((rg) this).field_k.substring(((rg) this).field_H, ((rg) this).field_k.length());
@@ -888,8 +883,7 @@ class rg extends lj {
                 L6: {
                   if (param0 == 85) {
                     if (~((rg) this).field_F != ~((rg) this).field_H) {
-                      int discarded$13 = 1;
-                      this.o();
+                      this.o(1);
                       stackOut_61_0 = 1;
                       stackIn_62_0 = stackOut_61_0;
                       return stackIn_62_0 != 0;
@@ -898,8 +892,7 @@ class rg extends lj {
                         break L6;
                       } else {
                         ((rg) this).field_F = -1 + ((rg) this).field_H;
-                        int discarded$14 = 1;
-                        this.o();
+                        this.o(1);
                         stackOut_59_0 = 1;
                         stackIn_60_0 = stackOut_59_0;
                         return stackIn_60_0 != 0;
@@ -908,8 +901,7 @@ class rg extends lj {
                   } else {
                     if (param0 == 101) {
                       if (~((rg) this).field_F != ~((rg) this).field_H) {
-                        int discarded$15 = 1;
-                        this.o();
+                        this.o(1);
                         stackOut_55_0 = 1;
                         stackIn_56_0 = stackOut_55_0;
                         return stackIn_56_0 != 0;
@@ -918,8 +910,7 @@ class rg extends lj {
                           break L6;
                         } else {
                           ((rg) this).field_F = ((rg) this).field_H + 1;
-                          int discarded$16 = 1;
-                          this.o();
+                          this.o(1);
                           stackOut_53_0 = 1;
                           stackIn_54_0 = stackOut_53_0;
                           return stackIn_54_0 != 0;
@@ -940,9 +931,8 @@ class rg extends lj {
                                 stackIn_46_0 = stackOut_44_0;
                                 stackIn_45_0 = stackOut_44_0;
                                 if (ve.field_B[82]) {
-                                  int discarded$17 = -7638;
                                   stackOut_46_0 = this;
-                                  stackOut_46_1 = this.m();
+                                  stackOut_46_1 = this.m(-7638);
                                   stackIn_47_0 = stackOut_46_0;
                                   stackIn_47_1 = stackOut_46_1;
                                   break L7;
@@ -965,8 +955,7 @@ class rg extends lj {
                             if (param0 != 102) {
                               if (103 != param0) {
                                 if (84 == param0) {
-                                  int discarded$18 = 24349;
-                                  this.j();
+                                  this.j(24349);
                                   stackOut_40_0 = 1;
                                   stackIn_41_0 = stackOut_40_0;
                                   return stackIn_41_0 != 0;
@@ -976,8 +965,7 @@ class rg extends lj {
                                       break L8;
                                     } else {
                                       if (65 == param0) {
-                                        int discarded$19 = 62;
-                                        this.k();
+                                        this.k(62);
                                         stackOut_38_0 = 1;
                                         stackIn_39_0 = stackOut_38_0;
                                         return stackIn_39_0 != 0;
@@ -993,8 +981,7 @@ class rg extends lj {
                                       if (param0 != 66) {
                                         break L9;
                                       } else {
-                                        int discarded$20 = 0;
-                                        this.d();
+                                        this.d(false);
                                         stackOut_31_0 = 1;
                                         stackIn_32_0 = stackOut_31_0;
                                         return stackIn_32_0 != 0;
@@ -1005,8 +992,7 @@ class rg extends lj {
                                     break L6;
                                   } else {
                                     if (param0 == 67) {
-                                      int discarded$21 = 115;
-                                      this.h();
+                                      this.h((byte) 115);
                                       stackOut_36_0 = 1;
                                       stackIn_37_0 = stackOut_36_0;
                                       return stackIn_37_0 != 0;
@@ -1126,13 +1112,13 @@ class rg extends lj {
         }
     }
 
-    private final void j() {
+    private final void j(int param0) {
         if (!(!(((rg) this).field_m instanceof fb))) {
             ((fb) (Object) ((rg) this).field_m).a(1330, (rg) this);
         }
     }
 
-    private final void d() {
+    private final void d(boolean param0) {
         String var2 = this.f((byte) 77);
         if (!(var2.length() <= 0)) {
             java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.f((byte) 9)), (java.awt.datatransfer.ClipboardOwner) null);

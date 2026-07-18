@@ -24,7 +24,7 @@ final class lc extends da {
         return param1 < 2048 ? k.field_d[-param1 + 2048] : -k.field_d[-2048 + param1];
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         ll.field_i = true;
         ji.field_y = 15000L + ol.a(256);
         return gj.field_c == 11 ? true : false;
@@ -343,7 +343,7 @@ final class lc extends da {
         return var2;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_m = null;
         field_n = null;
         field_p = null;

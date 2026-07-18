@@ -347,7 +347,7 @@ abstract class rg extends cf implements dh {
         }
     }
 
-    private final boolean a(cf param0) {
+    private final boolean a(cf param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -677,8 +677,7 @@ abstract class rg extends cf implements dh {
                   stackIn_12_0 = stackOut_11_0;
                   break L3;
                 } else {
-                  int discarded$3 = -125;
-                  stackOut_10_0 = this.a(param2);
+                  stackOut_10_0 = this.a(param2, (byte) -125);
                   stackIn_12_0 = stackOut_10_0;
                   break L3;
                 }

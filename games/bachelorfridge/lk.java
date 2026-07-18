@@ -312,7 +312,7 @@ final class lk extends bca {
         return null != ola.field_g ? (uha) (Object) ola.field_g.a((long)param1, (byte) -87) : null;
     }
 
-    final static boolean d() {
+    final static boolean d(int param0) {
         if (null == wh.field_p) {
             return false;
         }

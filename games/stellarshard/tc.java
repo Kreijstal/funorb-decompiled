@@ -35,7 +35,7 @@ final class tc extends id {
         return dupTemp$0;
     }
 
-    final static void a(kl param0) {
+    final static void a(kl param0, int param1, boolean param2) {
         try {
             nl.field_e.b(-104, (gg) (Object) param0);
             ca.a(4, param0, (byte) 71);
@@ -53,7 +53,7 @@ final class tc extends id {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_s = null;
         field_u = null;
         field_q = null;
@@ -146,7 +146,7 @@ final class tc extends id {
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
     }
 
     final static int a(int param0, byte param1) {

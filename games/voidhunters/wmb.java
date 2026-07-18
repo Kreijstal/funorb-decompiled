@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wmb extends rqa {
-    final static int a() {
+    final static int a(int param0) {
         return 1;
     }
 

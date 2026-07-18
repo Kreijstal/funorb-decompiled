@@ -74,7 +74,7 @@ final class kw {
         ((kw) this).field_e = param0 ? true : false;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (!nb.field_f) {
             throw new IllegalStateException();
         }
@@ -109,7 +109,7 @@ final class kw {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_b = null;
         field_a = null;
         field_g = null;
@@ -125,7 +125,7 @@ final class kw {
         return ((kw) this).field_d;
     }
 
-    final static void b(boolean param0) {
+    final static void b(boolean param0, byte param1) {
         int var2 = 0;
         Object var2_ref = null;
         int var3 = 0;
@@ -190,8 +190,7 @@ final class kw {
               break L0;
             } else {
               if (!dr.field_a) {
-                int discarded$14 = 0;
-                rm.a();
+                rm.a(false);
                 if (!dr.field_a) {
                   wt.field_x = el.field_A;
                   us.field_j = n.field_m;
@@ -307,7 +306,7 @@ final class kw {
                       L8: {
                         L9: {
                           var2_ref = stackIn_155_0;
-                          wu discarded$15 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
+                          wu discarded$12 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
                           vd.field_c = nl.field_p;
                           dn.field_yb = sm.field_q;
                           ip.field_a = wj.field_A;
@@ -423,7 +422,7 @@ final class kw {
                     L17: {
                       L18: {
                         var2_ref = stackIn_129_0;
-                        wu discarded$16 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
+                        wu discarded$13 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
                         vd.field_c = nl.field_p;
                         dn.field_yb = sm.field_q;
                         ip.field_a = wj.field_A;
@@ -480,8 +479,7 @@ final class kw {
           if (!param0) {
             if (dr.field_a) {
               L21: {
-                int discarded$17 = 634588072;
-                im.h();
+                im.h(634588072);
                 if (!dr.field_a) {
                   wt.field_x = el.field_A;
                   us.field_j = n.field_m;
@@ -514,7 +512,7 @@ final class kw {
                     }
                   }
                   var2_ref = stackIn_111_0;
-                  wu discarded$18 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
+                  wu discarded$14 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
                   break L21;
                 }
               }
@@ -600,7 +598,7 @@ final class kw {
                     }
                   }
                   var2_ref = stackIn_91_0;
-                  wu discarded$19 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
+                  wu discarded$15 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
                   break L28;
                 }
               }
@@ -782,7 +780,7 @@ final class kw {
               L45: {
                 L46: {
                   var2_ref = stackIn_61_0;
-                  wu discarded$20 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
+                  wu discarded$16 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
                   vd.field_c = nl.field_p;
                   dn.field_yb = sm.field_q;
                   ip.field_a = wj.field_A;
@@ -960,7 +958,7 @@ final class kw {
             L59: {
               L60: {
                 var2_ref = stackIn_18_0;
-                wu discarded$21 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
+                wu discarded$17 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) var2_ref);
                 vd.field_c = nl.field_p;
                 dn.field_yb = sm.field_q;
                 ip.field_a = wj.field_A;

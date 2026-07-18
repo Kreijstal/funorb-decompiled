@@ -8,13 +8,33 @@ final class kg {
     int field_e;
     int field_b;
 
-    public static void a() {
-        field_c = null;
+    public static void a(byte param0) {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 < -43) {
+                break L1;
+              } else {
+                field_c = null;
+                break L1;
+              }
+            }
+            field_c = null;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ig.a((Throwable) (Object) var1, "kg.A(" + param0 + ')');
+        }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
+        int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -27,6 +47,7 @@ final class kg {
         int stackOut_3_0 = 0;
         int stackOut_11_0 = 0;
         int stackOut_9_0 = 0;
+        int stackOut_6_0 = 0;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
         RuntimeException stackOut_16_0 = null;
@@ -42,18 +63,24 @@ final class kg {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
             } else {
-              L1: {
-                if (0 > param0.toLowerCase().indexOf(wl.field_I.toLowerCase())) {
-                  stackOut_11_0 = 0;
-                  stackIn_12_0 = stackOut_11_0;
-                  break L1;
-                } else {
-                  stackOut_9_0 = 1;
-                  stackIn_12_0 = stackOut_9_0;
-                  break L1;
+              if (param1 > 34) {
+                L1: {
+                  if (0 > param0.toLowerCase().indexOf(wl.field_I.toLowerCase())) {
+                    stackOut_11_0 = 0;
+                    stackIn_12_0 = stackOut_11_0;
+                    break L1;
+                  } else {
+                    stackOut_9_0 = 1;
+                    stackIn_12_0 = stackOut_9_0;
+                    break L1;
+                  }
                 }
+                break L0;
+              } else {
+                stackOut_6_0 = 0;
+                stackIn_7_0 = stackOut_6_0;
+                return stackIn_7_0 != 0;
               }
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,7 +111,7 @@ final class kg {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + 75 + ')');
+          throw ig.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ')');
         }
         return stackIn_12_0 != 0;
     }

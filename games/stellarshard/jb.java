@@ -22,7 +22,7 @@ final class jb {
     private int field_l;
     private boolean field_f;
 
-    final static void a(int param0, int param1, qc param2) {
+    final static void a(int param0, int param1, qc param2, int param3) {
         try {
             int var4_int = 0;
             sa.field_h = param1;
@@ -90,16 +90,15 @@ final class jb {
               }
             }
             if (((jb) this).field_f) {
-              int fieldTemp$4 = ((jb) this).field_g - 1;
+              int fieldTemp$2 = ((jb) this).field_g - 1;
               ((jb) this).field_g = ((jb) this).field_g - 1;
-              if (fieldTemp$4 <= 0) {
+              if (fieldTemp$2 <= 0) {
                 ((jb) this).field_g = ((jb) this).field_o;
                 if (fh.field_m < ((jb) this).field_d) {
                   ((jb) this).field_f = false;
                   return;
                 } else {
-                  int discarded$5 = -15;
-                  this.a();
+                  this.a((byte) -15);
                   return;
                 }
               } else {
@@ -159,16 +158,15 @@ final class jb {
               }
             }
             if (((jb) this).field_f) {
-              int fieldTemp$6 = ((jb) this).field_g - 1;
+              int fieldTemp$3 = ((jb) this).field_g - 1;
               ((jb) this).field_g = ((jb) this).field_g - 1;
-              if (fieldTemp$6 <= 0) {
+              if (fieldTemp$3 <= 0) {
                 ((jb) this).field_g = ((jb) this).field_o;
                 if (fh.field_m < ((jb) this).field_d) {
                   ((jb) this).field_f = false;
                   return;
                 } else {
-                  int discarded$7 = -15;
-                  this.a();
+                  this.a((byte) -15);
                   return;
                 }
               } else {
@@ -204,7 +202,7 @@ final class jb {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

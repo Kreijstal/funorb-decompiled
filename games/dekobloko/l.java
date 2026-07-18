@@ -13,12 +13,11 @@ final class l {
     static long field_h;
     static int[] field_g;
 
-    final static w a() {
-        int discarded$0 = -122;
-        return wf.c();
+    final static w a(int param0) {
+        return wf.c(-122);
     }
 
-    final static int[] c() {
+    final static int[] c(int param0) {
         int var2 = 0;
         int var3 = client.field_A ? 1 : 0;
         int[] var4 = new int[4];
@@ -29,7 +28,7 @@ final class l {
         return var1;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_e = null;
         field_j = null;

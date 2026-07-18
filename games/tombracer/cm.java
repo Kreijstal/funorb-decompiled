@@ -120,7 +120,7 @@ final class cm implements bo {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 
@@ -372,8 +372,7 @@ final class cm implements bo {
           } else {
             L2: {
               L3: {
-                int discarded$2 = 8192;
-                if (!mka.b()) {
+                if (!mka.b(8192)) {
                   break L3;
                 } else {
                   if (param1.field_ec) {
@@ -404,8 +403,7 @@ final class cm implements bo {
                 if (!bf.field_b[0][2].field_pb) {
                   break L4;
                 } else {
-                  int discarded$3 = 8192;
-                  if (mka.b()) {
+                  if (mka.b(8192)) {
                     qda.field_b = jsa.field_y;
                     break L4;
                   } else {

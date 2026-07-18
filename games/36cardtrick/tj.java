@@ -11,7 +11,7 @@ final class tj extends g implements qh {
     static String field_J;
     static boolean field_K;
 
-    public static void l() {
+    public static void l(int param0) {
         field_D = null;
         field_F = null;
         field_H = null;
@@ -143,11 +143,11 @@ final class tj extends g implements qh {
 
     final static void a(boolean param0, java.applet.Applet param1) {
         try {
-            java.net.URL var2 = null;
-            Throwable var2_ref = null;
-            RuntimeException var2_ref2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
             String var3 = null;
             Object var4 = null;
+            java.net.URL var5 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
@@ -168,9 +168,8 @@ final class tj extends g implements qh {
               try {
                 L0: {
                   L1: {
-                    var2 = param1.getCodeBase();
-                    int discarded$7 = -1;
-                    var3 = fh.a(param1, var2).getFile();
+                    var5 = param1.getCodeBase();
+                    var3 = fh.a(param1, var5, -1).getFile();
                     if (param0) {
                       break L1;
                     } else {
@@ -179,25 +178,25 @@ final class tj extends g implements qh {
                       break L1;
                     }
                   }
-                  Object discarded$8 = vh.a(new Object[2], "updatelinks", (byte) -30, param1);
-                  Object discarded$9 = vh.a(new Object[2], "updatelinks", (byte) 121, param1);
-                  Object discarded$10 = vh.a(new Object[2], "updatelinks", (byte) 117, param1);
-                  Object discarded$11 = vh.a(new Object[2], "updatelinks", (byte) 118, param1);
-                  Object discarded$12 = vh.a(new Object[2], "updatelinks", (byte) -43, param1);
-                  Object discarded$13 = vh.a(new Object[2], "updatelinks", (byte) 119, param1);
+                  Object discarded$6 = vh.a(new Object[2], "updatelinks", (byte) -30, param1);
+                  Object discarded$7 = vh.a(new Object[2], "updatelinks", (byte) 121, param1);
+                  Object discarded$8 = vh.a(new Object[2], "updatelinks", (byte) 117, param1);
+                  Object discarded$9 = vh.a(new Object[2], "updatelinks", (byte) 118, param1);
+                  Object discarded$10 = vh.a(new Object[2], "updatelinks", (byte) -43, param1);
+                  Object discarded$11 = vh.a(new Object[2], "updatelinks", (byte) 119, param1);
                   break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = decompiledCaughtException;
+                var2 = decompiledCaughtException;
                 return;
               }
               return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
-                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref2;
+                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var2_ref;
                 stackOut_6_1 = new StringBuilder().append("tj.D(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
@@ -262,8 +261,7 @@ final class tj extends g implements qh {
                   if (param3 != ((tj) this).field_G) {
                     break L1;
                   } else {
-                    int discarded$2 = 4;
-                    lc.a();
+                    lc.a(4);
                     break L1;
                   }
                 }

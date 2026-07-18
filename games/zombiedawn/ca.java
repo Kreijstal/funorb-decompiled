@@ -91,7 +91,7 @@ final class ca {
         }
     }
 
-    final static vn[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static vn[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9 = 0;
         vn[] var10 = null;
         int var11 = 0;
@@ -258,7 +258,7 @@ final class ca {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
     }
 
@@ -296,8 +296,7 @@ final class ca {
             }
             if (ke.field_c.field_d == 0) {
               if (param2 == 2) {
-                int discarded$2 = 1400888196;
-                qc.b();
+                qc.b(1400888196);
                 break L0;
               } else {
                 hm.a(9);
@@ -310,8 +309,7 @@ final class ca {
                 if (param2 != 0) {
                   break L0;
                 } else {
-                  int discarded$3 = 74;
-                  vj.c();
+                  vj.c(74);
                   break L0;
                 }
               }

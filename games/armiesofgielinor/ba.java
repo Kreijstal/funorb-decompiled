@@ -83,11 +83,11 @@ final class ba extends dr {
         lt.field_g.a((kb) (Object) new ce(), (byte) 66);
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_E = null;
     }
 
-    final static int h() {
+    final static int h(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

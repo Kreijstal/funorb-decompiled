@@ -24,7 +24,7 @@ final class pm {
         return (pm) this;
     }
 
-    final static void a(int param0, we param1) {
+    final static void a(int param0, we param1, byte param2) {
         md var5 = tp.field_f;
         var5.d(8, 5);
         var5.field_f = var5.field_f + 1;

@@ -8,7 +8,7 @@ final class w extends um {
     static String field_q;
     static oh field_r;
 
-    public static void g() {
+    public static void g(int param0) {
         field_s = null;
         int var1 = 0;
         field_q = null;
@@ -120,8 +120,7 @@ final class w extends um {
         try {
           L0: {
             var4 = (CharSequence) (Object) param1;
-            int discarded$11 = 10;
-            if (!ni.a(var4)) {
+            if (!ni.a(var4, 10)) {
               stackOut_2_0 = db.field_h;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -129,8 +128,7 @@ final class w extends um {
               if (param0 == 0) {
                 L1: {
                   var5 = (CharSequence) (Object) param1;
-                  int discarded$12 = 10;
-                  var3_int = rc.a(var5);
+                  var3_int = rc.a(var5, 10);
                   if (var3_int <= 0) {
                     break L1;
                   } else {

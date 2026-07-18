@@ -7,7 +7,7 @@ final class ks extends rqa {
     static String field_p;
     static pr field_r;
 
-    public static void e() {
+    public static void e(byte param0) {
         field_r = null;
         field_p = null;
         field_q = null;

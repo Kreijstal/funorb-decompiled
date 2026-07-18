@@ -9,7 +9,7 @@ final class rh extends nv implements ut {
     static String field_r;
     private jma field_p;
 
-    public static void l() {
+    public static void l(int param0) {
         field_o = null;
         field_q = null;
         field_r = null;

@@ -27,7 +27,7 @@ final class qa implements Runnable {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_i = null;
         field_b = null;
@@ -237,7 +237,7 @@ final class qa implements Runnable {
         ((qa) this).field_c = null;
     }
 
-    final static int b() {
+    final static int b(int param0) {
         return je.field_c;
     }
 

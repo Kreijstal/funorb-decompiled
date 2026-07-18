@@ -22,7 +22,7 @@ final class rf {
     static int field_k;
     private int[] field_s;
 
-    final static void a() {
+    final static void a(int param0) {
         vka.c((byte) 73);
     }
 
@@ -459,8 +459,7 @@ final class rf {
                 if (param2.length != 64) {
                     throw new RuntimeException();
                 }
-                int discarded$0 = 8;
-                ((rf) this).field_a = ln.a(param0.length, param0, 0);
+                ((rf) this).field_a = ln.a(param0.length, param0, 0, 8);
                 for (var4_int = 0; 64 > var4_int; var4_int++) {
                     if (((rf) this).field_a[var4_int] != param2[var4_int]) {
                         throw new RuntimeException();

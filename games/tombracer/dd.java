@@ -246,11 +246,9 @@ final class dd {
     final static cn a(int param0, int param1) {
         if (param1 != 1) {
           dd.a(10);
-          int discarded$4 = 1;
-          return nt.a(param0, 1, 5200, false, false);
+          return nt.a(param0, 1, 5200, false, false, true);
         } else {
-          int discarded$5 = 1;
-          return nt.a(param0, 1, 5200, false, false);
+          return nt.a(param0, 1, 5200, false, false, true);
         }
     }
 
@@ -356,8 +354,7 @@ final class dd {
         try {
           L0: {
             if (param2 <= ((dd) this).field_g) {
-              int discarded$2 = 1;
-              this.a(param3);
+              this.a(param3, 1);
               ((dd) this).field_e = ((dd) this).field_e - param2;
               L1: while (true) {
                 if (((dd) this).field_e >= 0) {
@@ -439,7 +436,7 @@ final class dd {
         }
     }
 
-    private final void a(long param0) {
+    private final void a(long param0, int param1) {
         pb var4 = (pb) (Object) ((dd) this).field_c.a(param0, false);
         this.a(1, var4);
     }

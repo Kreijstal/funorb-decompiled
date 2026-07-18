@@ -7,7 +7,7 @@ final class wh {
     static ks field_a;
     static kj field_c;
 
-    final static long a() {
+    final static long a(int param0) {
         return pr.a(14274) + -pf.field_e;
     }
 
@@ -20,7 +20,7 @@ final class wh {
         ta.field_b.a((byte) -113, (oh) (Object) var1);
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_b = null;
         field_a = null;
         field_c = null;

@@ -161,7 +161,8 @@ final class pa extends in {
             Throwable var8_ref_Throwable = null;
             int var8 = 0;
             int var9 = 0;
-            CharSequence var10 = null;
+            Object var10 = null;
+            CharSequence var11 = null;
             int stackIn_5_0 = 0;
             int stackIn_33_0 = 0;
             int stackIn_45_0 = 0;
@@ -239,12 +240,11 @@ final class pa extends in {
                   if (ul.field_c == ug.field_a) {
                     L3: {
                       if (!param1) {
-                        int discarded$9 = 0;
-                        ab.field_G = dg.a(param5, 16711935, param0);
+                        ab.field_G = dg.a(param5, 16711935, param0, false);
                         break L3;
                       } else {
-                        int discarded$10 = 0;
-                        ab.field_G = pl.a(md.field_a, (String) null, 127, param0);
+                        var10 = null;
+                        ab.field_G = pl.a(md.field_a, (String) null, 127, param0, false);
                         break L3;
                       }
                     }
@@ -354,8 +354,7 @@ final class pa extends in {
                         if ((var7 & 1) == 0) {
                           break L11;
                         } else {
-                          int discarded$11 = 0;
-                          oe.a();
+                          oe.a(0);
                           break L11;
                         }
                       }
@@ -423,9 +422,9 @@ final class pa extends in {
                         if (!el.field_k) {
                           break L17;
                         } else {
-                          int discarded$12 = sh.field_qb.g(11132);
-                          int discarded$13 = sh.field_qb.g(11132);
-                          int discarded$14 = sh.field_qb.d((byte) 98);
+                          int discarded$5 = sh.field_qb.g(11132);
+                          int discarded$6 = sh.field_qb.g(11132);
+                          int discarded$7 = sh.field_qb.d((byte) 98);
                           rn.field_e = sh.field_qb.c((byte) 127);
                           lj.field_d = new byte[rn.field_e];
                           var8 = 0;
@@ -442,8 +441,8 @@ final class pa extends in {
                       }
                       L19: {
                         mi.field_d = sh.field_qb.h(-126);
-                        var10 = (CharSequence) (Object) mi.field_d;
-                        wn.field_n = c.a(var10, true);
+                        var11 = (CharSequence) (Object) mi.field_d;
+                        wn.field_n = c.a(var11, true);
                         mf.field_h = sh.field_qb.g(11132);
                         ug.field_a = kh.field_c;
                         if (ab.field_G.a(true) != qg.field_r) {
@@ -477,7 +476,7 @@ final class pa extends in {
                             } else {
                               try {
                                 L23: {
-                                  Object discarded$15 = q.b("unzap", 6168, mb.g((byte) 32));
+                                  Object discarded$8 = q.b("unzap", 6168, mb.g((byte) 32));
                                   break L23;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -493,7 +492,7 @@ final class pa extends in {
                         }
                         try {
                           L25: {
-                            Object discarded$16 = q.a(mb.g((byte) 61), -8582, new Object[1], "zap");
+                            Object discarded$9 = q.a(mb.g((byte) 61), -8582, new Object[1], "zap");
                             break L25;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -580,8 +579,7 @@ final class pa extends in {
                       break L32;
                     } else {
                       L33: {
-                        int discarded$17 = -126;
-                        if (af.b() <= 30000L) {
+                        if (af.b(-126) <= 30000L) {
                           ld.field_g = ll.field_a;
                           break L33;
                         } else {

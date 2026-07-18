@@ -40,15 +40,12 @@ final class kq extends hf implements ai {
             }
           }
           if (param2 == ((kq) this).field_U) {
-            int discarded$6 = 0;
-            bf.a();
-            int discarded$7 = 0;
-            this.e();
+            bf.a(0);
+            this.e(false);
             return;
           } else {
             if (((kq) this).field_P == param2) {
-              int discarded$8 = 0;
-              this.e();
+              this.e(false);
               return;
             } else {
               return;
@@ -97,8 +94,7 @@ final class kq extends hf implements ai {
             var2.field_q = ((kq) this).field_q;
             var2.field_w = (mh) (Object) new gm(jm.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((kq) this).a(var2, 60);
-            int discarded$8 = 9;
-            if (vs.b()) {
+            if (vs.b((byte) 9)) {
                 ((kq) this).field_U = this.a(25566, (qm) this, pp.field_f);
             }
             ((kq) this).field_P = this.a(25566, (qm) this, jh.field_I);
@@ -107,7 +103,7 @@ final class kq extends hf implements ai {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_S = null;
         field_Q = null;
         field_R = null;
@@ -115,7 +111,7 @@ final class kq extends hf implements ai {
         field_O = null;
     }
 
-    final static byte[] a(int param0, File param1) {
+    final static byte[] a(int param0, File param1, byte param2) {
         try {
             byte[] var3 = null;
             IOException var3_ref = null;
@@ -191,7 +187,7 @@ final class kq extends hf implements ai {
         }
     }
 
-    private final void e() {
+    private final void e(boolean param0) {
         if (!((kq) this).field_D) {
             return;
         }
@@ -306,7 +302,7 @@ final class kq extends hf implements ai {
         return stackIn_3_0;
     }
 
-    final static void l() {
+    final static void l(int param0) {
         ag.b(0);
     }
 

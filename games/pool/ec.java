@@ -14,7 +14,7 @@ final class ec implements eb {
     static int field_c;
     private pq field_a;
 
-    final static void a(int param0, int param1, int param2, String[] param3, java.applet.Applet param4) {
+    final static void a(int param0, int param1, int param2, String[] param3, java.applet.Applet param4, int param5) {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -282,9 +282,7 @@ final class ec implements eb {
                       }
                     }
                   }
-                  int discarded$6 = 1;
-                  int discarded$7 = 1;
-                  cl.a(16711680, 1, param0, ol.a(new int[3]), ol.a(new int[3]));
+                  cl.a(16711680, 1, param0, ol.a(new int[3], (byte) 1), ol.a(new int[3], (byte) 1));
                   break L3;
                 }
                 L5: {
@@ -303,9 +301,7 @@ final class ec implements eb {
                       }
                     }
                   }
-                  int discarded$8 = 1;
-                  int discarded$9 = 1;
-                  cl.a(65280, 1, param0, ol.a(new int[3]), ol.a(new int[3]));
+                  cl.a(65280, 1, param0, ol.a(new int[3], (byte) 1), ol.a(new int[3], (byte) 1));
                   break L5;
                 }
                 L7: {
@@ -319,9 +315,7 @@ final class ec implements eb {
                     }
                   }
                 }
-                int discarded$10 = 1;
-                int discarded$11 = 1;
-                cl.a(16776960, 1, param0, ol.a(new int[3]), ol.a(new int[3]));
+                cl.a(16776960, 1, param0, ol.a(new int[3], (byte) 1), ol.a(new int[3], (byte) 1));
                 break L2;
               }
             }
@@ -367,7 +361,7 @@ final class ec implements eb {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1, int param2, int param3) {
         return param2 * param2 * (param2 * 256) / param1 / param1 / param1;
     }
 
@@ -472,7 +466,7 @@ final class ec implements eb {
         return kn.field_e.j(-125);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_d = null;
         field_j = null;

@@ -55,7 +55,7 @@ final class ib extends mk {
               if (param0 >= 89) {
                 break L1;
               } else {
-                int discarded$18 = ib.a(false, -126, -33, 30, 79, -34, 49, -91, -77);
+                int discarded$2 = ib.a(false, -126, -33, 30, 79, -34, 49, -91, -77);
                 break L1;
               }
             }
@@ -63,10 +63,8 @@ final class ib extends mk {
             var4 = param1.toLowerCase();
             if (0 != var4.length()) {
               var5 = var4;
-              int discarded$19 = 0;
-              if (!pd.a(var5)) {
-                int discarded$20 = 0;
-                if (ab.a(var5)) {
+              if (!pd.a(var5, 0)) {
+                if (ab.a(var5, 0)) {
                   stackOut_10_0 = ea.field_c;
                   stackIn_11_0 = stackOut_10_0;
                   return stackIn_11_0;
@@ -76,8 +74,7 @@ final class ib extends mk {
                     stackIn_15_0 = stackOut_14_0;
                     return stackIn_15_0;
                   } else {
-                    int discarded$21 = 127;
-                    if (this.a(param1)) {
+                    if (this.a(param1, 127)) {
                       stackOut_18_0 = p.field_d;
                       stackIn_19_0 = stackOut_18_0;
                       return stackIn_19_0;
@@ -200,8 +197,7 @@ final class ib extends mk {
                 }
               }
               if (qd.a(var4, var3, false)) {
-                int discarded$2 = 127;
-                if (this.a(param1)) {
+                if (this.a(param1, 127)) {
                   stackOut_11_0 = rn.field_e;
                   stackIn_12_0 = stackOut_11_0;
                   break L0;
@@ -906,7 +902,7 @@ final class ib extends mk {
         }
     }
 
-    private final boolean a(String param0) {
+    private final boolean a(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -1034,8 +1030,7 @@ final class ib extends mk {
         if (tr.field_A != 0) {
             if (!(var4 != 0)) {
                 param1 = false;
-                int discarded$0 = -3;
-                qu.e();
+                qu.e(-3);
             }
         }
         if (param1) {

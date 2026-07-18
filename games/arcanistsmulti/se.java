@@ -21,7 +21,7 @@ final class se extends wn {
         int var2 = 71;
     }
 
-    final static dk a(int param0, java.awt.Component param1, int param2) {
+    final static dk a(int param0, java.awt.Component param1, int param2, byte param3) {
         try {
             Class var4 = null;
             Throwable var4_ref = null;
@@ -1147,7 +1147,7 @@ final class se extends wn {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_H = null;
         field_J = null;
         field_L = null;

@@ -241,8 +241,7 @@ final class u extends sk {
                       q.field_p.b(-1336879960, 18);
                       q.field_p.field_g = q.field_p.field_g + 2;
                       var10 = q.field_p.field_g;
-                      int discarded$7 = 0;
-                      var11_ref_String = ao.a(bm.m(108));
+                      var11_ref_String = ao.a(bm.m(108), false);
                       if (var11_ref_String == null) {
                         var11_ref_String = "";
                         break L5;
@@ -346,16 +345,14 @@ final class u extends sk {
                   if (var9 == 248) {
                     oj.a(26099, bm.m(112));
                     rp.field_m = wo.field_h;
-                    int discarded$8 = 1;
-                    te.b();
+                    te.b(true);
                     ld.field_d = false;
                     stackOut_34_0 = var9;
                     stackIn_35_0 = stackOut_34_0;
                     return stackIn_35_0;
                   } else {
                     if (var9 == 99) {
-                      int discarded$9 = 1;
-                      boolean discarded$10 = wo.a(km.a(), true);
+                      boolean discarded$1 = wo.a(km.a(1), true);
                       qj.field_r = new Boolean(b.a(true, (rb) (Object) nm.field_c));
                       nm.field_c.field_g = 0;
                       break L8;
@@ -388,8 +385,7 @@ final class u extends sk {
                     var12 = 0;
                     L11: while (true) {
                       if (var11 <= var12) {
-                        int discarded$11 = 1;
-                        te.b();
+                        te.b(true);
                         ld.field_d = false;
                         stackOut_44_0 = 100 - -var11;
                         stackIn_45_0 = stackOut_44_0;
@@ -425,8 +421,7 @@ final class u extends sk {
                       break L13;
                     }
                   }
-                  int discarded$12 = 1;
-                  te.b();
+                  te.b(true);
                   ld.field_d = false;
                   stackOut_54_0 = qs.field_b;
                   stackIn_55_0 = stackOut_54_0;
@@ -446,8 +441,7 @@ final class u extends sk {
                   break L14;
                 } else {
                   L15: {
-                    int discarded$13 = -1;
-                    if (gm.g() <= 30000L) {
+                    if (gm.g(-1) <= 30000L) {
                       rp.field_m = jf.field_b;
                       break L15;
                     } else {
@@ -615,7 +609,7 @@ final class u extends sk {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_i = null;
         field_g = null;
     }

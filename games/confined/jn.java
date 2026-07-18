@@ -127,7 +127,7 @@ final class jn extends ga implements el {
         return stackIn_4_0;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_O = null;
         field_U = null;
         field_R = null;

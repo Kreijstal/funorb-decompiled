@@ -183,8 +183,7 @@ class af extends ta implements qh {
               break L0;
             } else {
               if (((af) this).field_nb) {
-                int discarded$4 = -96;
-                ff.b();
+                ff.b(-96);
                 break L0;
               } else {
                 break L0;
@@ -202,7 +201,7 @@ class af extends ta implements qh {
         return gh.field_k;
     }
 
-    final static java.awt.Container t() {
+    final static java.awt.Container t(int param0) {
         if (null != q.field_g) {
             return (java.awt.Container) (Object) q.field_g;
         }

@@ -21,8 +21,7 @@ final class tg {
     private final boolean b(int param0, byte param1, int param2) {
         int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 == 0) {
-            int discarded$1 = 6;
-            ra.a(((tg) this).field_f, param2);
+            ra.a(((tg) this).field_f, param2, 6);
         } else {
             if (param0 == 1) {
                 te.a(param2, ((tg) this).field_f, (byte) 108);
@@ -55,25 +54,26 @@ final class tg {
 
     private final boolean a(int param0, boolean param1, int param2) {
         Object var4 = null;
-        String var4_ref = null;
+        String var5 = null;
+        String var6 = null;
+        String var7 = null;
+        String var8 = null;
         var4 = null;
         if (param2 != 4) {
           if (param2 != 5) {
             if (param2 == 6) {
-              var4_ref = se.a(((tg) this).field_m, param0, -127);
-              if (var4_ref != null) {
-                int discarded$4 = 0;
-                ta.a((String) null, 2, -18119, ((tg) this).field_m, var4_ref);
+              var8 = se.a(((tg) this).field_m, param0, -127);
+              if (var8 != null) {
+                ta.a((String) null, 2, -18119, ((tg) this).field_m, var8, 0);
                 return true;
               } else {
                 return true;
               }
             } else {
               if (param2 == 7) {
-                var4_ref = fq.a(param0, ((tg) this).field_h, false, ((tg) this).field_m);
-                if (var4_ref != null) {
-                  int discarded$5 = 0;
-                  ta.a((String) null, 2, -18119, ((tg) this).field_m, var4_ref);
+                var7 = fq.a(param0, ((tg) this).field_h, false, ((tg) this).field_m);
+                if (var7 != null) {
+                  ta.a((String) null, 2, -18119, ((tg) this).field_m, var7, 0);
                   return true;
                 } else {
                   return true;
@@ -83,22 +83,20 @@ final class tg {
               }
             }
           } else {
-            var4_ref = nw.a(((tg) this).field_m, (byte) -27, param0);
-            if (var4_ref == null) {
+            var6 = nw.a(((tg) this).field_m, (byte) -27, param0);
+            if (var6 == null) {
               return true;
             } else {
-              int discarded$6 = 0;
-              ta.a((String) null, 2, -18119, ((tg) this).field_m, var4_ref);
+              ta.a((String) null, 2, -18119, ((tg) this).field_m, var6, 0);
               return true;
             }
           }
         } else {
-          var4_ref = op.a(20, ((tg) this).field_m, param0);
-          if (var4_ref == null) {
+          var5 = op.a(20, ((tg) this).field_m, param0);
+          if (var5 == null) {
             return true;
           } else {
-            int discarded$7 = 0;
-            ta.a((String) null, 2, -18119, ((tg) this).field_m, var4_ref);
+            ta.a((String) null, 2, -18119, ((tg) this).field_m, var5, 0);
             return true;
           }
         }
@@ -195,8 +193,7 @@ final class tg {
           if (((tg) this).field_m != null) {
             if (((tg) this).field_f != oh.field_H) {
               if (null != vu.field_M) {
-                int discarded$2 = 0;
-                if (vu.b()) {
+                if (vu.b(false)) {
                   var11 = tr.a((byte) 121, ((tg) this).field_f);
                   var4 = hr.a(((tg) this).field_f, -86);
                   var5 = this.b(param0 + -24004);
@@ -260,8 +257,7 @@ final class tg {
           if (((tg) this).field_m != null) {
             if (((tg) this).field_f != oh.field_H) {
               if (null != vu.field_M) {
-                int discarded$3 = 0;
-                if (vu.b()) {
+                if (vu.b(false)) {
                   var10 = tr.a((byte) 121, ((tg) this).field_f);
                   var7 = var10;
                   var4 = hr.a(((tg) this).field_f, -86);
@@ -637,8 +633,7 @@ final class tg {
                     var7 = this.b(-97);
                     var4_ref = var7;
                     var5 = lg.a(((tg) this).field_m, (byte) -34);
-                    int discarded$2 = -3404;
-                    var6 = si.a(((tg) this).field_m) ? 1 : 0;
+                    var6 = si.a(((tg) this).field_m, -3404) ? 1 : 0;
                     if (var5 != null) {
                       break L3;
                     } else {
@@ -714,7 +709,7 @@ final class tg {
               if (param1 == 7) {
                 break L7;
               } else {
-                String discarded$3 = this.b(-101);
+                String discarded$1 = this.b(-101);
                 break L7;
               }
             }

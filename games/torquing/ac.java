@@ -73,7 +73,7 @@ final class ac extends nk {
         return stackIn_1_0;
     }
 
-    final static int d() {
+    final static int d(byte param0) {
         return jl.field_S;
     }
 
@@ -102,29 +102,30 @@ final class ac extends nk {
         }
     }
 
-    final static ae a(String param0) {
-        Object var2 = null;
+    final static ae a(String param0, int param1) {
+        String var2 = null;
+        RuntimeException var2_ref = null;
         ae var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
         ae stackIn_14_0 = null;
-        Object stackIn_18_0 = null;
+        RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        Object stackIn_19_0 = null;
+        RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         ae stackOut_13_0 = null;
-        Object stackOut_17_0 = null;
+        RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
-        Object stackOut_19_0 = null;
+        RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
         String stackOut_19_2 = null;
-        Object stackOut_18_0 = null;
+        RuntimeException stackOut_18_0 = null;
         StringBuilder stackOut_18_1 = null;
         String stackOut_18_2 = null;
         var5 = Torquing.field_u;
@@ -132,15 +133,15 @@ final class ac extends nk {
           if (null != ed.field_c) {
             L0: {
               var6 = (CharSequence) (Object) param0;
-              var2 = (Object) (Object) hf.a(var6, 102);
+              var2 = hf.a(var6, 102);
               if (var2 != null) {
                 break L0;
               } else {
-                var2 = (Object) (Object) var6;
+                var2 = param0;
                 break L0;
               }
             }
-            var3 = (ae) (Object) ed.field_c.a((long)((String) var2).hashCode(), -56);
+            var3 = (ae) (Object) ed.field_c.a((long)var2.hashCode(), -56);
             L1: while (true) {
               if (var3 != null) {
                 L2: {
@@ -153,7 +154,7 @@ final class ac extends nk {
                     break L2;
                   }
                 }
-                if (!var4.equals(var2)) {
+                if (!var4.equals((Object) (Object) var2)) {
                   var3 = (ae) (Object) ed.field_c.b(-1);
                   continue L1;
                 } else {
@@ -171,15 +172,15 @@ final class ac extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_17_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var2_ref;
             stackOut_17_1 = new StringBuilder().append("ac.H(");
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param0 == null) {
-              stackOut_19_0 = stackIn_19_0;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
               stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
@@ -187,7 +188,7 @@ final class ac extends nk {
               stackIn_20_2 = stackOut_19_2;
               break L3;
             } else {
-              stackOut_18_0 = stackIn_18_0;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
               stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;

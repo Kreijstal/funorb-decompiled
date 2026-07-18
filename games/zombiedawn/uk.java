@@ -12,19 +12,17 @@ final class uk {
         field_a = null;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         if (ld.field_j < 20) {
             return true;
         }
-        int discarded$2 = 18840;
-        if (!bj.d()) {
+        if (!bj.d(18840)) {
             return true;
         }
         if (sd.field_b <= 0) {
             return false;
         }
-        int discarded$6 = -23022;
-        if (nm.c()) {
+        if (nm.c(-23022)) {
             return false;
         }
         return true;

@@ -8,7 +8,7 @@ final class ff {
     static int field_a;
     static byte[][] field_c;
 
-    final static String a() {
+    final static String a(byte param0) {
         return gk.field_F;
     }
 

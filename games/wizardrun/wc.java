@@ -79,8 +79,7 @@ final class wc {
                 if (jg.field_k != 2) {
                   break L3;
                 } else {
-                  int discarded$7 = -85;
-                  if (!aa.a(((wc) this).field_b)) {
+                  if (!aa.a(((wc) this).field_b, (byte) -85)) {
                     break L3;
                   } else {
                     return 1;

@@ -232,13 +232,12 @@ final class bm extends ji {
             ji.field_n.a((byte) 34);
         }
         if (!(ui.field_g == param0)) {
-            int discarded$0 = 0;
-            fb.h();
+            fb.h(0);
         }
         gr.field_Y = 0;
     }
 
-    final static void a(si param0, boolean param1) {
+    final static void a(si param0, boolean param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -258,8 +257,7 @@ final class bm extends ji {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 256;
-            gh.a(param0, (byte) -123, param1);
+            gh.a(param0, (byte) -123, param1, 256);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -294,7 +292,7 @@ final class bm extends ji {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_G = null;
         field_A = null;
         field_D = null;

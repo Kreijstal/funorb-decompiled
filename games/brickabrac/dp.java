@@ -41,42 +41,40 @@ final class dp extends ki {
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
+        pb var7 = null;
         pb var8 = null;
-        pb var9 = null;
         if (param0) {
           if (((dp) this).b((byte) -106)) {
             L0: {
-              int discarded$3 = -20777;
-              var9 = ge.a(((dp) this).field_m, param3);
-              if (!var9.a((byte) -84, param3, ((dp) this).field_m)) {
-                s.a(ch.field_m, 1, param3, th.field_j, var9, 0, (byte) -86, va.field_b);
-                var9.a(((dp) this).field_m, param3, (byte) 78);
+              var8 = ge.a(((dp) this).field_m, param3, -20777);
+              if (!var8.a((byte) -84, param3, ((dp) this).field_m)) {
+                s.a(ch.field_m, 1, param3, th.field_j, var8, 0, (byte) -86, va.field_b);
+                var8.a(((dp) this).field_m, param3, (byte) 78);
                 break L0;
               } else {
                 break L0;
               }
             }
-            qh.a(1, 0, ni.field_Ub, param1, nf.field_U, 67, 640, param4, var9.field_p, param2);
+            qh.a(1, 0, ni.field_Ub, param1, nf.field_U, 67, 640, param4, var8.field_p, param2);
             return;
           } else {
             lb.g(param4, param2, 640, 480, kg.field_d[param3], 22953);
             return;
           }
         } else {
-          jp[] discarded$4 = ((dp) this).a(-127, false);
+          jp[] discarded$1 = ((dp) this).a(-127, false);
           if (((dp) this).b((byte) -106)) {
             L1: {
-              int discarded$5 = -20777;
-              var8 = ge.a(((dp) this).field_m, param3);
-              if (!var8.a((byte) -84, param3, ((dp) this).field_m)) {
-                s.a(ch.field_m, 1, param3, th.field_j, var8, 0, (byte) -86, va.field_b);
-                var8.a(((dp) this).field_m, param3, (byte) 78);
+              var7 = ge.a(((dp) this).field_m, param3, -20777);
+              if (!var7.a((byte) -84, param3, ((dp) this).field_m)) {
+                s.a(ch.field_m, 1, param3, th.field_j, var7, 0, (byte) -86, va.field_b);
+                var7.a(((dp) this).field_m, param3, (byte) 78);
                 break L1;
               } else {
                 break L1;
               }
             }
-            qh.a(1, 0, ni.field_Ub, param1, nf.field_U, 67, 640, param4, var8.field_p, param2);
+            qh.a(1, 0, ni.field_Ub, param1, nf.field_U, 67, 640, param4, var7.field_p, param2);
             return;
           } else {
             lb.g(param4, param2, 640, 480, kg.field_d[param3], 22953);
@@ -106,10 +104,8 @@ final class dp extends ki {
         ch.field_m = jh.a(0, dj.field_e);
         th.field_j = jh.a(0, ee.field_p);
         ba.field_A = pl.a("halloween", "halloween_character", (byte) -106, i.field_m);
-        int discarded$0 = 2;
-        ej.field_L[0] = cr.a("halloween", i.field_m, "halloween_caps");
-        int discarded$1 = 2;
-        qg.field_r[0] = cr.a("halloween", i.field_m, "halloween_segs");
+        ej.field_L[0] = cr.a("halloween", i.field_m, "halloween_caps", 2);
+        qg.field_r[0] = cr.a("halloween", i.field_m, "halloween_segs", 2);
         ap.field_c[0] = pl.a("halloween", "halloween_centre", (byte) -118, i.field_m);
         ej.field_L[1] = ig.a(ej.field_L[0], param0);
         qg.field_r[1] = ig.a(qg.field_r[0], param0);
@@ -309,7 +305,7 @@ final class dp extends ki {
         return ba.field_A;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_r = null;
         field_t = null;
         field_s = null;

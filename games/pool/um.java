@@ -25,16 +25,13 @@ abstract class um {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    int discarded$10 = 6;
-                    int discarded$11 = 1;
-                    hi.a();
+                    hi.a(1, 6);
                     var2 = ke.field_f.f((byte) -5);
                     continue L2;
                   }
                 }
               } else {
-                int discarded$12 = 6;
-                fr.a(98, var4);
+                fr.a(98, var4, 6);
                 var4 = (kg) (Object) we.field_c.f((byte) -5);
                 continue L1;
               }

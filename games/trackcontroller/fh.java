@@ -106,7 +106,7 @@ abstract class fh {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         if (!(-1 != hd.field_o)) {
             if (!(hf.a(1, false))) {
                 return false;

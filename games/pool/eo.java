@@ -18,7 +18,7 @@ final class eo extends vh {
     static int field_Lb;
     static int field_Tb;
 
-    public static void f() {
+    public static void f(byte param0) {
         field_Rb = null;
         field_Xb = null;
     }

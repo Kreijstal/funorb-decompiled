@@ -31,18 +31,18 @@ final class qob implements ntb {
             L1: {
               var5 = (qob) (Object) param0;
               var4 = 0;
-              if (var5.field_c == var5.field_c) {
+              if (((qob) this).field_c == var5.field_c) {
                 break L1;
               } else {
                 var4 = 1;
-                System.out.println("int x has changed. before=" + var5.field_c + ", now=" + var5.field_c);
+                System.out.println("int x has changed. before=" + var5.field_c + ", now=" + ((qob) this).field_c);
                 break L1;
               }
             }
             L2: {
-              if (var5.field_a != var5.field_a) {
+              if (var5.field_a != ((qob) this).field_a) {
                 var4 = 1;
-                System.out.println("int y has changed. before=" + var5.field_a + ", now=" + var5.field_a);
+                System.out.println("int y has changed. before=" + var5.field_a + ", now=" + ((qob) this).field_a);
                 break L2;
               } else {
                 break L2;
@@ -124,10 +124,10 @@ final class qob implements ntb {
               L2: {
                 var3 = (qob) (Object) param1;
                 var4 = -105 % ((param0 - 22) / 59);
-                if (var3.field_c != var3.field_c) {
+                if (var3.field_c != ((qob) this).field_c) {
                   break L2;
                 } else {
-                  if (var3.field_a == var3.field_a) {
+                  if (var3.field_a == ((qob) this).field_a) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
                     break L1;
@@ -175,7 +175,7 @@ final class qob implements ntb {
         return stackIn_5_0 != 0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = -59;
         if (!(hwa.field_o == null)) {
             hwa.field_o.l((byte) -106);
@@ -404,8 +404,8 @@ final class qob implements ntb {
             }
             var5 = (qob) (Object) param1;
             var6 = var5;
-            var6.field_c = var5.field_c;
-            var6.field_a = var5.field_a;
+            var6.field_c = ((qob) this).field_c;
+            var6.field_a = ((qob) this).field_a;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "qob.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

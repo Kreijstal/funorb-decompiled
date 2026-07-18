@@ -204,7 +204,7 @@ abstract class db extends wd {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         ob.a(209, gd.b((byte) 77));
     }
 
@@ -297,7 +297,7 @@ abstract class db extends wd {
         return stackIn_12_0 != 0;
     }
 
-    final static void a(int param0, int param1, qj param2, int param3, int param4) {
+    final static void a(int param0, int param1, qj param2, int param3, int param4, byte param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

@@ -9,11 +9,11 @@ final class gj {
     static String field_d;
     static String field_e;
 
-    final static int a() {
+    final static int a(byte param0) {
         return da.field_o;
     }
 
-    final static void a(int param0, nk param1) {
+    final static void a(int param0, nk param1, int param2) {
         la var3 = null;
         try {
             var3 = ra.field_C;
@@ -64,8 +64,7 @@ final class gj {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              int discarded$2 = 19664;
-              var3 = qi.c();
+              var3 = qi.c(19664);
               var4 = 0;
               L1: while (true) {
                 if (var4 >= var3.length) {
@@ -119,7 +118,7 @@ final class gj {
         return stackIn_16_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = -33;
         field_f = null;
         field_a = null;

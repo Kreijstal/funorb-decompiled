@@ -27,7 +27,7 @@ final class eo {
         return true;
     }
 
-    final static int b() {
+    final static int b(int param0) {
         return kl.field_a.field_p[1];
     }
 
@@ -378,7 +378,7 @@ final class eo {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
     }
@@ -533,8 +533,7 @@ final class eo {
               L1: {
                 var9 = new oe(rl.field_C, param1);
                 rl.field_C.a((kb) (Object) var9, 0);
-                int discarded$16 = -8327;
-                if (!ig.a()) {
+                if (!ig.a(-8327)) {
                   L2: {
                     cd.field_e = param3;
                     p.field_a = null;

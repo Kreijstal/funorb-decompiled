@@ -25,7 +25,7 @@ final class ae {
         wa.a(param0, false, -96);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_b = null;
         int var1 = 6;

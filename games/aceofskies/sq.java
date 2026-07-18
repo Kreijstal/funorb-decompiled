@@ -34,10 +34,9 @@ final class sq extends mi {
         }
     }
 
-    final static wp a() {
+    final static wp a(int param0) {
         wp var1 = new wp(pu.field_a, cc.field_i, lh.field_a[0], lg.field_j[0], ji.field_b[0], ee.field_e[0], fk.field_a[0], ud.field_e);
-        int discarded$0 = 1;
-        kf.f();
+        kf.f(1);
         return var1;
     }
 

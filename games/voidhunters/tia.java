@@ -14,7 +14,7 @@ final class tia extends mu {
     int field_I;
     private no field_E;
 
-    public static void a() {
+    public static void a(int param0) {
         field_J = null;
         field_M = null;
         field_G = null;
@@ -122,8 +122,7 @@ final class tia extends mu {
     }
 
     final static int a(boolean param0, int param1, int param2, boolean param3) {
-        int discarded$0 = 1;
-        return rt.c();
+        return rt.c(1);
     }
 
     final int e(int param0) {

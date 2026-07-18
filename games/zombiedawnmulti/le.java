@@ -117,7 +117,7 @@ final class le extends cf {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(int param0, byte param1) {
         return (1 & pb.field_d) != 0;
     }
 
@@ -145,8 +145,7 @@ final class le extends cf {
         var6 = 0;
         L0: while (true) {
           if (var6 >= ((le) this).field_w) {
-            int discarded$1 = 1;
-            ql.a();
+            ql.a(true);
             return var14;
           } else {
             L1: {
@@ -190,7 +189,7 @@ final class le extends cf {
         }
     }
 
-    private final ja g() {
+    private final ja g(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -211,12 +210,11 @@ final class le extends cf {
             }
         }
         var5 = 0;
-        int discarded$0 = 1;
-        ql.a();
+        ql.a(true);
         return var3;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_G = null;
         field_I = null;
         field_P = null;
@@ -224,8 +222,7 @@ final class le extends cf {
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
         super.b(param0, param1, param2, param3, param4);
-        int discarded$0 = -506198655;
-        this.f();
+        this.f(-506198655);
     }
 
     final void a(int param0, cf param1, int param2, int param3) {
@@ -316,8 +313,7 @@ final class le extends cf {
         if (((le) this).field_B < 65536) {
             nm.a(var5 + (((le) this).field_n * ((le) this).field_B >> 16), ((le) this).field_w + var6, (byte) 105, ((le) this).field_n + var5, var6);
             this.a((byte) 116, ((le) this).field_F[1], var5, var6);
-            int discarded$0 = 1;
-            ql.a();
+            ql.a(true);
         }
     }
 
@@ -331,8 +327,7 @@ final class le extends cf {
         ((le) this).field_E = param1;
         ((le) this).field_N = param0;
         ((le) this).field_K = param0 >> 1 & 8355711;
-        int discarded$0 = -506198655;
-        this.f();
+        this.f(-506198655);
     }
 
     private final void a(byte param0, ja param1, int param2, int param3) {
@@ -366,8 +361,7 @@ final class le extends cf {
             L1: while (true) {
               if (var6 >= var5_int) {
                 L2: {
-                  int discarded$3 = 1;
-                  ql.a();
+                  ql.a(true);
                   if (oo.field_f > ((le) this).field_M.field_x + param2) {
                     break L2;
                   } else {
@@ -375,8 +369,7 @@ final class le extends cf {
                     param1.g(-((le) this).field_J, 0);
                     param1.g(((le) this).field_D * 2 + -((le) this).field_J, 0);
                     ((le) this).field_O.e(0, 0);
-                    int discarded$4 = 1;
-                    ql.a();
+                    ql.a(true);
                     ((le) this).field_C.g(param2, param3);
                     break L2;
                   }
@@ -390,8 +383,7 @@ final class le extends cf {
                         param1.g(-var7, 0);
                         param1.g(2 * ((le) this).field_D - var7, 0);
                         ((le) this).field_M.e(0, 0);
-                        int discarded$5 = 1;
-                        ql.a();
+                        ql.a(true);
                         ((le) this).field_C.g(var5_int + -((le) this).field_M.field_x, param3);
                         break L3;
                       } else {
@@ -452,10 +444,9 @@ final class le extends cf {
         ((le) this).b(param0, param1, 28972, param2, param3);
     }
 
-    private final void f() {
+    private final void f(int param0) {
         ((le) this).field_F = new ja[]{this.b(-16711936, ((le) this).field_N, ((le) this).field_E), this.b(-16711936, ((le) this).field_K, ((le) this).field_H)};
-        int discarded$0 = 113;
-        ((le) this).field_M = this.g();
+        ((le) this).field_M = this.g(113);
         ((le) this).field_O = ((le) this).field_M.f();
         ((le) this).field_C = new ja(((le) this).field_w >> 1, ((le) this).field_w);
     }

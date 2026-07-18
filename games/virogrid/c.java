@@ -94,12 +94,11 @@ final class c {
                           if (!bn.a(-110, (char) var7)) {
                             break L6;
                           } else {
-                            int discarded$2 = 4;
-                            var8 = dm.a((char) var7);
+                            var8 = dm.a((char) var7, (byte) 4);
                             if (var8 == 0) {
                               break L6;
                             } else {
-                              StringBuilder discarded$3 = var5.append((char) var8);
+                              StringBuilder discarded$1 = var5.append((char) var8);
                               break L6;
                             }
                           }

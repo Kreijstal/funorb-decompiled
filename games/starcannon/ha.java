@@ -9,7 +9,7 @@ final class ha {
     static int field_c;
     static hl[] field_a;
 
-    final static String a(rb param0) {
+    final static String a(rb param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -150,7 +150,7 @@ final class ha {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }

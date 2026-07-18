@@ -160,7 +160,7 @@ final class dd {
         return "A Billion";
     }
 
-    final static int a() {
+    final static int a(boolean param0) {
         if (f.field_E >= 2) {
           L0: {
             field_a = false;

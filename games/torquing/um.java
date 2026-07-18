@@ -222,7 +222,7 @@ final class um extends gf {
         return stackIn_15_0;
     }
 
-    final static void a(uc param0, int param1, uc param2) {
+    final static void a(uc param0, int param1, uc param2, int param3) {
         try {
             sp.field_Q = param2;
             bo.field_e = param0;
@@ -250,8 +250,7 @@ final class um extends gf {
           var7 = param4 + -param2;
           if (var6 != 0) {
             if (var7 == 0) {
-              int discarded$1 = 115;
-              ef.a(param3, param1, param2, param0);
+              ef.a(param3, param1, param2, param0, 115);
               return;
             } else {
               var12 = (var7 << 12) / var6;
@@ -594,7 +593,7 @@ final class um extends gf {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_q = null;
         field_m = null;
     }

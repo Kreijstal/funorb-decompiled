@@ -13,7 +13,7 @@ final class rc extends qb {
     static kc[] field_k;
     static boolean field_m;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_i = null;
         field_k = null;
         field_l = null;
@@ -22,8 +22,7 @@ final class rc extends qb {
     }
 
     final static void a(byte param0, int param1) {
-        int discarded$0 = 0;
-        fd.a(ca.field_c[param1], jd.field_c[param1]);
+        fd.a(ca.field_c[param1], jd.field_c[param1], false);
     }
 
     rc() {

@@ -25,8 +25,7 @@ final class om extends qm {
             ((om) this).field_G = 79;
         }
         super.a(param0, param1, param2, param3, -125);
-        int discarded$0 = -385446591;
-        this.e();
+        this.e(-385446591);
     }
 
     final void b(int param0, boolean param1, int param2) {
@@ -37,11 +36,10 @@ final class om extends qm {
         ((om) this).field_J = (16711422 & param0) >> 1;
         ((om) this).field_K = (16711422 & param2) >> 1;
         ((om) this).field_C = param2;
-        int discarded$0 = -385446591;
-        this.e();
+        this.e(-385446591);
     }
 
-    final static void g() {
+    final static void g(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -68,8 +66,7 @@ final class om extends qm {
               if (var2 == 0) {
                 var4 = (aa) (Object) ve.field_o.b(12623);
                 if (var4 == null) {
-                  int discarded$5 = 0;
-                  ka.b();
+                  ka.b(false);
                   return;
                 } else {
                   L2: {
@@ -100,11 +97,8 @@ final class om extends qm {
                 }
               } else {
                 if (1 != var2) {
-                  int discarded$6 = -25;
-                  int discarded$7 = 20;
-                  jh.a((Throwable) null, "LR1: " + nn.g());
-                  int discarded$8 = 0;
-                  ka.b();
+                  jh.a((Throwable) null, "LR1: " + nn.g((byte) -25), (byte) 20);
+                  ka.b(false);
                   break L1;
                 } else {
                   var4_int = var9.i(-1);
@@ -130,8 +124,7 @@ final class om extends qm {
                       }
                     }
                     if (var5_ref_ko == null) {
-                      int discarded$9 = 0;
-                      ka.b();
+                      ka.b(false);
                       return;
                     } else {
                       var5_ref_ko.a(true);
@@ -267,8 +260,7 @@ final class om extends qm {
         try {
           L0: {
             if (fc.a(-124, param3, param1, param0)) {
-              int discarded$2 = 0;
-              stackOut_4_0 = gg.a();
+              stackOut_4_0 = gg.a(0);
               stackIn_5_0 = stackOut_4_0;
               break L0;
             } else {
@@ -425,14 +417,14 @@ final class om extends qm {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         ((om) this).field_N = new qb[]{this.a(((om) this).field_y, -5179, ((om) this).field_C), this.a(((om) this).field_J, -5179, ((om) this).field_K)};
         ((om) this).field_D = this.a(1);
         ((om) this).field_F = ((om) this).field_D.b();
         ((om) this).field_A = new qb(((om) this).field_k >> 1, ((om) this).field_k);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_M = null;
         field_L = null;
         field_x = null;

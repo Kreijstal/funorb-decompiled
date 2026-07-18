@@ -521,7 +521,7 @@ final class vd extends um {
         return null;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_s = null;
         int var1 = 7;
         field_x = null;

@@ -8,8 +8,7 @@ final class mb {
 
     final static void a(String param0, int param1, boolean param2, boolean param3) {
         try {
-            int discarded$0 = -23687;
-            j.j();
+            j.j(-23687);
             sd.field_c.k(126);
             i.field_a = new ak(ng.field_y, (String) null, ei.field_e, param2, param3);
             vb.field_h = new ej(sd.field_c, (lk) (Object) i.field_a);
@@ -152,7 +151,7 @@ final class mb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;

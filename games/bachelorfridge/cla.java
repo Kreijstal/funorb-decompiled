@@ -121,7 +121,7 @@ final class cla {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         int var1 = -34;
     }

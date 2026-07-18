@@ -32,9 +32,7 @@ final class fl {
             if (param1 >= -107) {
                 field_f = null;
             }
-            int discarded$0 = 1;
-            int discarded$1 = 9;
-            hf.a(param0);
+            hf.a(param0, (byte) 9, true);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "fl.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -378,9 +376,9 @@ final class fl {
             ((fl) this).field_v = 15658734;
             ((fl) this).field_r = 3;
             var4.field_o = 15658734;
-            ip discarded$12 = var4.a(0, (byte) -102).a(15658734, (byte) -108).a(ue.a(10066329, 8947848, 1, 7829367), 53);
-            ip discarded$13 = var4.a(1, (byte) -119).a(ue.a(10066329, 11184810, 1, 13421772), 31);
-            ip discarded$14 = var4.a(3, (byte) -128).a(ue.a(7829367, 8947848, 1, 10066329), -128).a(1, 1).a((byte) 81, 1);
+            ip discarded$10 = var4.a(0, (byte) -102).a(15658734, (byte) -108).a(ue.a(10066329, 8947848, 1, 7829367), 53);
+            ip discarded$11 = var4.a(1, (byte) -119).a(ue.a(10066329, 11184810, 1, 13421772), 31);
+            ip discarded$12 = var4.a(3, (byte) -128).a(ue.a(7829367, 8947848, 1, 10066329), -128).a(1, 1).a((byte) 81, 1);
             var5 = new wk[9];
             var16 = new nj(32, 32);
             var18 = var16;
@@ -388,24 +386,22 @@ final class fl {
             L1: while (true) {
               if (var7_int >= var18.field_B.length) {
                 var5[4] = (wk) (Object) var18;
-                ip discarded$15 = var4.a(4, (byte) -105).a(true, (byte) 66).a(var5, param0 + -13421900);
-                ip discarded$16 = var4.a(5, (byte) -113).a(mg.a(65793, 0, (byte) -125, 0, 0), -126).a(true, (byte) 121).a(-1, (byte) -109);
+                ip discarded$13 = var4.a(4, (byte) -105).a(true, (byte) 66).a(var5, param0 + -13421900);
+                ip discarded$14 = var4.a(5, (byte) -113).a(mg.a(65793, 0, (byte) -125, 0, 0), -126).a(true, (byte) 121).a(-1, (byte) -109);
                 ((fl) this).field_j = (kh) (Object) var4;
                 var6 = new ao(var4, true);
                 var6.field_n = 0;
                 var7 = new ao(var4, true);
                 var7.field_n = 0;
-                int discarded$17 = 5;
-                var7.a(-128, ak.b(8947848));
-                int discarded$18 = 5;
-                ip discarded$19 = var7.a(1, (byte) -85).a(ak.b(11184810), 67).a(2236962, (byte) -127);
+                var7.a(-128, ak.b(8947848, 5));
+                ip discarded$15 = var7.a(1, (byte) -85).a(ak.b(11184810, 5), 67).a(2236962, (byte) -127);
                 ((fl) this).field_i = (kh) (Object) new tk(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                or discarded$20 = new or(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                kp discarded$21 = new kp(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                or discarded$16 = new or(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                kp discarded$17 = new kp(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
                 var8 = new ao();
                 var17.a((lk) (Object) var8, param0 ^ 13413726);
-                ip discarded$22 = var8.a(0, (byte) -128).a(ue.a(7829367, 15658734, param0 ^ 13421773, 10066329), 36).a(1118481, (byte) 27).b(-1, param0 ^ 13421751);
-                ip discarded$23 = var8.a(4, (byte) -108).a(true, (byte) 104).a(var5, -126);
+                ip discarded$18 = var8.a(0, (byte) -128).a(ue.a(7829367, 15658734, param0 ^ 13421773, 10066329), 36).a(1118481, (byte) 27).b(-1, param0 ^ 13421751);
+                ip discarded$19 = var8.a(4, (byte) -108).a(true, (byte) 104).a(var5, -126);
                 ((fl) this).field_w = (kh) (Object) var8;
                 var9 = new wk[9];
                 var10 = new wk[9];

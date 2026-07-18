@@ -108,8 +108,7 @@ final class gqa {
         try {
           L0: {
             L1: {
-              int discarded$3 = 0;
-              via.a(param4, param0, 0, param5, param3, param2, 51);
+              via.a(param4, param0, 0, param5, param3, param2, 51, 0);
               if (param1 == -83584144) {
                 break L1;
               } else {
@@ -151,7 +150,7 @@ final class gqa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_k = null;
     }

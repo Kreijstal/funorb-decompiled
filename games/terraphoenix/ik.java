@@ -6,12 +6,12 @@ final class ik {
     static int field_b;
     static String field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
     }
 
-    final static void a(fa param0) {
+    final static void a(fa param0, byte param1) {
         ci var2 = null;
         int var3 = 0;
         int var4 = 0;

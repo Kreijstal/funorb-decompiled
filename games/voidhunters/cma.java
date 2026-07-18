@@ -4,7 +4,7 @@
 final class cma {
     static volatile int field_a;
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0, int param1, int param2) {
         return iua.a(param0, (byte) 119, param1) & bdb.a(param0, false, param1);
     }
 

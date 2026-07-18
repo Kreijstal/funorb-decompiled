@@ -136,9 +136,9 @@ class bm extends mi {
                           L6: {
                             if (~((bm) this).field_B <= ~((bm) this).field_f.length()) {
                               ((bm) this).field_f = ((bm) this).field_f + param2;
-                              int dupTemp$4 = ((bm) this).field_f.length();
-                              ((bm) this).field_B = dupTemp$4;
-                              ((bm) this).field_D = dupTemp$4;
+                              int dupTemp$1 = ((bm) this).field_f.length();
+                              ((bm) this).field_B = dupTemp$1;
+                              ((bm) this).field_D = dupTemp$1;
                               break L6;
                             } else {
                               ((bm) this).field_f = ((bm) this).field_f.substring(0, ((bm) this).field_B) + param2 + ((bm) this).field_f.substring(((bm) this).field_B, ((bm) this).field_f.length());
@@ -245,8 +245,7 @@ class bm extends mi {
                                         break L10;
                                       } else {
                                         if (param1 == 65) {
-                                          int discarded$5 = 1;
-                                          this.b();
+                                          this.b(true);
                                           stackOut_46_0 = 1;
                                           stackIn_47_0 = stackOut_46_0;
                                           return stackIn_47_0 != 0;
@@ -275,16 +274,14 @@ class bm extends mi {
                                       if (67 != param1) {
                                         break L7;
                                       } else {
-                                        int discarded$6 = -1;
-                                        this.l();
+                                        this.l(-1);
                                         stackOut_44_0 = 1;
                                         stackIn_45_0 = stackOut_44_0;
                                         return stackIn_45_0 != 0;
                                       }
                                     }
                                   } else {
-                                    int discarded$7 = -1;
-                                    this.j();
+                                    this.j(-1);
                                     stackOut_33_0 = 1;
                                     stackIn_34_0 = stackOut_33_0;
                                     return stackIn_34_0 != 0;
@@ -384,7 +381,7 @@ class bm extends mi {
         return stackIn_75_0 != 0;
     }
 
-    private final void l() {
+    private final void l(int param0) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -393,8 +390,7 @@ class bm extends mi {
               L0: {
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.a((byte) -81);
-                int discarded$1 = 126;
-                this.a(var2);
+                this.a(var2, (byte) 126);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -565,8 +561,7 @@ class bm extends mi {
         try {
           L0: {
             if (param0 == -70) {
-              int discarded$2 = 0;
-              stackOut_3_0 = am.a(param1);
+              stackOut_3_0 = am.a(param1, false);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -713,7 +708,7 @@ class bm extends mi {
         }
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         this.i(-120);
         this.a((byte) -85);
     }
@@ -732,7 +727,7 @@ class bm extends mi {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         pp var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -856,8 +851,7 @@ class bm extends mi {
           L0: {
             L1: {
               super.a((byte) 126, param1, param2, param3);
-              int discarded$2 = 0;
-              this.h();
+              this.h(0);
               if (((bm) this).field_i != 1) {
                 break L1;
               } else {
@@ -929,14 +923,14 @@ class bm extends mi {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_x = null;
         field_I = null;
         field_C = null;
         field_w = null;
     }
 
-    private final void j() {
+    private final void j(int param0) {
         if (!(!(((bm) this).field_o instanceof dr))) {
             ((dr) (Object) ((bm) this).field_o).b((bm) this, -40);
         }
@@ -1009,7 +1003,7 @@ class bm extends mi {
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;

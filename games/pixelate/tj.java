@@ -8,12 +8,12 @@ final class tj extends ah {
     static int field_y;
     static int field_v;
 
-    public static void j() {
+    public static void j(int param0) {
         field_z = null;
         field_w = null;
     }
 
-    final static boolean a(pc param0) {
+    final static boolean a(pc param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -108,14 +108,13 @@ final class tj extends ah {
         }
     }
 
-    final static hh b() {
+    final static hh b(byte param0) {
         hh var1 = new hh(field_y, jb.field_a, fa.field_b[0], e.field_b[0], gf.field_g[0], ge.field_c[0], wo.field_f[0], fl.field_g);
-        int discarded$0 = 140;
-        re.b();
+        re.b(140);
         return var1;
     }
 
-    final static void h() {
+    final static void h(int param0) {
         uj.j(-705633312);
         gj.field_V = true;
         to.field_s = true;
@@ -127,8 +126,7 @@ final class tj extends ah {
         try {
             Object var16 = null;
             da.a((tf[]) null, 320, param8, 0, param10, 0, ce.field_b, param4, 480, 8, (byte) -100, param14, 8, 240, 2, param13, param5, param9, sl.field_l, qo.field_s, param7);
-            int discarded$0 = 6;
-            ai.a(param1);
+            ai.a(param1, 6);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "tj.D(" + 240 + ',' + param1 + ',' + 8 + ',' + 8 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + 320 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + 122 + ',' + 2 + ',' + param13 + ',' + param14 + ')');
         }
@@ -141,7 +139,7 @@ final class tj extends ah {
         return ((tj) this).field_x;
     }
 
-    final static int a(int param0, CharSequence param1) {
+    final static int a(int param0, CharSequence param1, boolean param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -384,7 +382,7 @@ final class tj extends ah {
         }
     }
 
-    final static void i() {
+    final static void i(int param0) {
         int var1 = 0;
         if (ia.field_h < 224) {
             var1 = ia.field_h % 32;

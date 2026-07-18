@@ -247,7 +247,7 @@ final class sp {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_m = null;
     }
@@ -262,7 +262,7 @@ final class sp {
         gf.g(param0, param4, param2, param5, param3);
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         ln[] var3 = null;
@@ -528,8 +528,7 @@ final class sp {
           L0: {
             L1: {
               if (((sp) this).field_n) {
-                int discarded$2 = 0;
-                this.a(param3, param0, param1);
+                this.a(param3, param0, param1, 0);
                 break L1;
               } else {
                 this.a(-116, param0, param3, param1);
@@ -578,7 +577,7 @@ final class sp {
         }
     }
 
-    private final void a(String param0, int param1, int param2) {
+    private final void a(String param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;

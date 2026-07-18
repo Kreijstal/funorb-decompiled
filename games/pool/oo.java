@@ -234,9 +234,7 @@ abstract class oo {
             var13 = param2.field_I.field_l[param3];
             var6 = (long)(-param0.field_g + var13.field_g);
             var8 = (long)(var13.field_k - param0.field_f);
-            int discarded$2 = 0;
-            int discarded$3 = 0;
-            var10 = bm.a(-126, od.a(var6, var6) - -od.a(var8, var8));
+            var10 = bm.a(-126, od.a(var6, var6, false) - -od.a(var8, var8, false));
             var13.b(true);
             if (var13.field_j <= 4194304) {
               L1: {
@@ -379,14 +377,12 @@ abstract class oo {
             var24 = (var22 + var21) / 2;
             var25 = var18.a(var19 + -var23, var21 - var24, 0);
             var26 = var18.a(-var23 + var20, -var24 + var22, 0);
-            int discarded$0 = 1;
-            var27 = var18.a(var19 - var23, var21 + -var24, sb.a(-16.0f));
-            int discarded$1 = 1;
-            var28 = var18.a(var20 - var23, var22 - var24, sb.a(-16.0f));
-            int discarded$2 = var18.a(var25, var27, var26, (byte) 1, hh.a((byte) -123, this.e(31761)), this.c(99));
-            int discarded$3 = var18.a(var28, var26, var27, (byte) 1, hh.a((byte) 94, this.e(31761)), this.c(97));
-            int discarded$4 = var18.a(var25, var26, var27, (byte) 1, hh.a((byte) 93, this.e(31761)), this.c(100));
-            int discarded$5 = var18.a(var28, var27, var26, (byte) 1, hh.a((byte) 42, this.e(31761)), this.c(95));
+            var27 = var18.a(var19 - var23, var21 + -var24, sb.a(-16.0f, true));
+            var28 = var18.a(var20 - var23, var22 - var24, sb.a(-16.0f, true));
+            int discarded$0 = var18.a(var25, var27, var26, (byte) 1, hh.a((byte) -123, this.e(31761)), this.c(99));
+            int discarded$1 = var18.a(var28, var26, var27, (byte) 1, hh.a((byte) 94, this.e(31761)), this.c(97));
+            int discarded$2 = var18.a(var25, var26, var27, (byte) 1, hh.a((byte) 93, this.e(31761)), this.c(100));
+            int discarded$3 = var18.a(var28, var27, var26, (byte) 1, hh.a((byte) 42, this.e(31761)), this.c(95));
             var12[var16] = var18;
             var13[var16] = new p((nc) (Object) var12[var16].a(((oo) this).field_C, ((oo) this).field_x, ((oo) this).field_q, ((oo) this).field_e, ((oo) this).field_u), new int[3]);
         }
@@ -394,7 +390,7 @@ abstract class oo {
         ((oo) this).field_o[param5] = var13;
     }
 
-    private final void k() {
+    private final void k(int param0) {
         hh.field_c = true;
         id.field_c.field_g = true;
         if (null != ba.field_ub) {
@@ -1960,10 +1956,8 @@ abstract class oo {
               this.f(2);
               this.a(param0.field_w, -33);
               this.a((byte) -92, param0.field_c);
-              int discarded$6 = 16;
-              this.a(param0.field_c);
-              int discarded$7 = 0;
-              this.k();
+              this.a(param0.field_c, 16);
+              this.k(0);
               if (param1 != 21894) {
                 var4 = null;
                 this.a((byte) 111, (bf[]) null);
@@ -2658,7 +2652,7 @@ abstract class oo {
         }
     }
 
-    private final void a(bf[] param0) {
+    private final void a(bf[] param0, int param1) {
         long var3_long = 0L;
         RuntimeException var3 = null;
         int[][] var5 = null;
@@ -2716,9 +2710,7 @@ abstract class oo {
                       var9 = param0[var19[var15][1]].a((byte) -127) - param0[var19[var15][0]].a((byte) -127);
                       ((oo) this).field_a[var15][0] = -var9 >> 13;
                       ((oo) this).field_a[var15][1] = var8 >> 13;
-                      int discarded$5 = 0;
-                      int discarded$6 = 0;
-                      var10 = bm.a(-111, od.a((long)var8, (long)var8) - -od.a((long)var9, (long)var9));
+                      var10 = bm.a(-111, od.a((long)var8, (long)var8, false) - -od.a((long)var9, (long)var9, false));
                       if (var10 > 2147483647L) {
                         break L3;
                       } else {
@@ -2746,15 +2738,13 @@ abstract class oo {
                   } else {
                     var9_long = (long)(param0[var7].a(99) + -param0[var8].a(117));
                     var11 = (long)(param0[var7].a((byte) -127) - param0[var8].a((byte) -127));
-                    int discarded$7 = 0;
-                    int discarded$8 = 0;
-                    var13 = od.a(var9_long, var9_long) + od.a(var11, var11);
+                    var13 = od.a(var9_long, var9_long, false) + od.a(var11, var11, false);
                     if (var3_long < var13) {
                       var3_long = var13;
                       var6 = 0;
-                      int incrementValue$9 = var6;
+                      int incrementValue$1 = var6;
                       var6++;
-                      var5[incrementValue$9] = new int[2];
+                      var5[incrementValue$1] = new int[2];
                       var8++;
                       continue L4;
                     } else {
@@ -2930,8 +2920,7 @@ abstract class oo {
             double var17 = var7 * (double)(1 + 2 * var16) / 2.0;
             for (var19 = 0; var3 > var19; var19++) {
                 double var20 = var5 * (double)(1 + var19 * 2) / 2.0;
-                int discarded$2 = -30100;
-                ((oo) this).field_y[var16 * var3 - -var19] = new p(var15, ib.a(new double[3]));
+                ((oo) this).field_y[var16 * var3 - -var19] = new p(var15, ib.a(new double[3], -30100));
             }
         }
     }

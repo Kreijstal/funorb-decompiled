@@ -121,7 +121,7 @@ final class cf extends f implements bp {
         return stackIn_5_0;
     }
 
-    final static void a(pf param0) {
+    final static void a(pf param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -145,8 +145,7 @@ final class cf extends f implements bp {
         try {
           L0: {
             L1: {
-              int discarded$2 = 2;
-              ds.field_c = rr.a(param0, bb.field_b, pd.field_k);
+              ds.field_c = rr.a(param0, bb.field_b, pd.field_k, 2);
               if (je.field_d != 1) {
                 if (rf.field_n != 1) {
                   L2: {
@@ -203,8 +202,7 @@ final class cf extends f implements bp {
                 ba.field_c = td.field_P;
                 ck.field_e = nh.field_p;
                 uq.field_i = 0;
-                int discarded$3 = 2;
-                vn.field_s = rr.a(param0, td.field_P, nh.field_p);
+                vn.field_s = rr.a(param0, td.field_P, nh.field_p, 2);
                 break L1;
               }
             }
@@ -371,8 +369,7 @@ final class cf extends f implements bp {
         int stackOut_12_10 = 0;
         int stackOut_12_11 = 0;
         L0: {
-          int discarded$6 = 58;
-          mf.d();
+          mf.d(58);
           if (np.field_a != null) {
             if (tf.a(true, np.field_a.field_Lb)) {
               stackOut_4_0 = 1;
@@ -715,7 +712,7 @@ final class cf extends f implements bp {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_H = null;
         field_I = null;
         field_M = null;

@@ -12,13 +12,13 @@ final class rd extends da {
     static int[] field_p;
     int field_o;
 
-    final static void a(int param0) {
+    final static void a(int param0, byte param1) {
         ta.field_Ab = ob.field_a[param0];
         ol.field_f = ik.field_c[param0];
         sd.field_g = pk.field_c[param0];
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_p = null;
         field_j = null;
         field_i = null;

@@ -59,8 +59,7 @@ final class nj {
                     case 1: {
                         try {
                             var3 = (String) oa.a(true, param2, "getcookies");
-                            int discarded$2 = -125;
-                            var4 = dc.a(var3, ';');
+                            var4 = dc.a(var3, ';', (byte) -125);
                             var5 = 0;
                             statePc = 2;
                             continue stateLoop;

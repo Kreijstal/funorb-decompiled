@@ -194,7 +194,7 @@ final class gi extends hd {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_Bb = null;
     }
 
@@ -217,8 +217,7 @@ final class gi extends hd {
         var2 = Kickabout.field_G;
         try {
           L0: {
-            int discarded$2 = -28;
-            gp.b();
+            gp.b((byte) -28);
             var3 = (wh) (Object) pn.field_z.g(24009);
             L1: while (true) {
               if (var3 == null) {

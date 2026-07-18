@@ -104,7 +104,7 @@ final class bh extends ma {
         return stackIn_13_0;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_q = null;
         field_o = null;
         field_m = null;
@@ -191,8 +191,7 @@ final class bh extends ma {
         String stackOut_15_2 = null;
         try {
           L0: {
-            int discarded$1 = 8;
-            ee.a(32, param19, new h(param18), param2, 0, 24, 0, 240, 2, 320, 0, 480, param14, param5, param20, 24, 18, new h(param4), param8, new h(param7));
+            ee.a(32, param19, new h(param18), param2, 0, 24, 0, 240, 2, 320, 0, 480, param14, param5, param20, 24, 18, new h(param4), param8, new h(param7), 8);
             var21_int = -9;
             break L0;
           }
@@ -442,7 +441,7 @@ final class bh extends ma {
         return stackIn_13_0 != 0;
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

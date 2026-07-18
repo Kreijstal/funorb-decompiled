@@ -14,7 +14,7 @@ final class ta {
     static int field_b;
     static String field_h;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_h = null;
         field_k = null;
@@ -59,8 +59,7 @@ final class ta {
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                int discarded$2 = 28;
-                var4 = (var4 << 5) + (-var4 - -j.a(param0.charAt(var5)));
+                var4 = (var4 << 5) + (-var4 - -j.a(param0.charAt(var5), (byte) 28));
                 var5++;
                 continue L1;
               }
@@ -107,8 +106,7 @@ final class ta {
           if (param0 <= -22) {
             break L0;
           } else {
-            int discarded$2 = 0;
-            ta.a();
+            ta.a(false);
             break L0;
           }
         }
@@ -333,8 +331,7 @@ final class ta {
         ((ta) this).field_j = true;
         ((ta) this).field_c = param1 ? true : false;
         if (param0 != -21) {
-            int discarded$0 = 0;
-            ta.a();
+            ta.a(false);
         }
     }
 

@@ -4,7 +4,7 @@
 final class bk {
     static ci[] field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, ci[] param4) {
+    final static void a(int param0, int param1, int param2, int param3, ci[] param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -95,7 +95,7 @@ final class bk {
         }
     }
 
-    final static int d() {
+    final static int d(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -143,7 +143,7 @@ final class bk {
         return stackIn_11_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         Terraphoenix.field_O = 0;
     }
 
@@ -155,8 +155,8 @@ final class bk {
     }
 
     final static boolean a(byte param0, boolean param1, int param2, CharSequence param3) {
-        int var4_int = 0;
         RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -165,30 +165,30 @@ final class bk {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_27_0 = 0;
-        int stackIn_31_0 = 0;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
+        int stackIn_20_0 = 0;
+        int stackIn_24_0 = 0;
+        int stackIn_29_0 = 0;
+        int stackIn_33_0 = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
+        RuntimeException stackIn_36_0 = null;
+        StringBuilder stackIn_36_1 = null;
+        RuntimeException stackIn_37_0 = null;
+        StringBuilder stackIn_37_1 = null;
+        String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_30_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_21_0 = 0;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
+        int stackOut_32_0 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_28_0 = 0;
+        int stackOut_23_0 = 0;
         RuntimeException stackOut_34_0 = null;
         StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
+        RuntimeException stackOut_36_0 = null;
+        StringBuilder stackOut_36_1 = null;
+        String stackOut_36_2 = null;
+        RuntimeException stackOut_35_0 = null;
+        StringBuilder stackOut_35_1 = null;
+        String stackOut_35_2 = null;
         var12 = Terraphoenix.field_V;
         try {
           L0: {
@@ -200,8 +200,8 @@ final class bk {
             var9 = 0;
             L1: while (true) {
               if (var9 >= var8) {
-                stackOut_30_0 = var5;
-                stackIn_31_0 = stackOut_30_0;
+                stackOut_32_0 = var5;
+                stackIn_33_0 = stackOut_32_0;
                 break L0;
               } else {
                 L2: {
@@ -248,9 +248,9 @@ final class bk {
                       }
                     }
                     if (var10 < 97) {
-                      stackOut_17_0 = 0;
-                      stackIn_18_0 = stackOut_17_0;
-                      return stackIn_18_0 != 0;
+                      stackOut_19_0 = 0;
+                      stackIn_20_0 = stackOut_19_0;
+                      return stackIn_20_0 != 0;
                     } else {
                       if (var10 <= 122) {
                         var10 -= 87;
@@ -275,14 +275,14 @@ final class bk {
                       var6 = var11;
                       break L2;
                     } else {
-                      stackOut_26_0 = 0;
-                      stackIn_27_0 = stackOut_26_0;
-                      return stackIn_27_0 != 0;
+                      stackOut_28_0 = 0;
+                      stackIn_29_0 = stackOut_28_0;
+                      return stackIn_29_0 != 0;
                     }
                   } else {
-                    stackOut_21_0 = 0;
-                    stackIn_22_0 = stackOut_21_0;
-                    return stackIn_22_0 != 0;
+                    stackOut_23_0 = 0;
+                    stackIn_24_0 = stackOut_23_0;
+                    return stackIn_24_0 != 0;
                   }
                 }
                 var9++;
@@ -294,36 +294,36 @@ final class bk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var4 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) var4;
-            stackOut_32_1 = new StringBuilder().append("bk.A(").append(120).append(',').append(true).append(',').append(10).append(',');
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+            stackOut_34_0 = (RuntimeException) var4;
+            stackOut_34_1 = new StringBuilder().append("bk.A(").append(120).append(',').append(true).append(',').append(10).append(',');
+            stackIn_36_0 = stackOut_34_0;
+            stackIn_36_1 = stackOut_34_1;
+            stackIn_35_0 = stackOut_34_0;
+            stackIn_35_1 = stackOut_34_1;
             if (param3 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
+              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
+              stackOut_36_2 = "null";
+              stackIn_37_0 = stackOut_36_0;
+              stackIn_37_1 = stackOut_36_1;
+              stackIn_37_2 = stackOut_36_2;
               break L8;
             } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
+              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
+              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_2 = "{...}";
+              stackIn_37_0 = stackOut_35_0;
+              stackIn_37_1 = stackOut_35_1;
+              stackIn_37_2 = stackOut_35_2;
               break L8;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ')');
+          throw qk.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ')');
         }
-        return stackIn_31_0 != 0;
+        return stackIn_33_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

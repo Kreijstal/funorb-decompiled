@@ -78,7 +78,7 @@ final class bk {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = 0;
         int var2 = 0;
         var2 = TetraLink.field_J;
@@ -91,21 +91,18 @@ final class bk {
               wg.field_b = pl.field_g;
               wg.field_b = kj.a((byte) 109, new CharSequence[3]);
               fl.field_u.r(-125);
-              int discarded$5 = 1;
-              of.b();
+              of.b(true);
               return;
             } else {
               wg.field_b = sk.a(new String[1], ll.field_z, 121);
               wg.field_b = kj.a((byte) 109, new CharSequence[3]);
               fl.field_u.r(-125);
-              int discarded$6 = 1;
-              of.b();
+              of.b(true);
               return;
             }
           } else {
             fl.field_u.r(-125);
-            int discarded$7 = 1;
-            of.b();
+            of.b(true);
             return;
           }
         } else {

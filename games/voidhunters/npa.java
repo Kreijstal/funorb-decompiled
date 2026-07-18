@@ -186,7 +186,7 @@ final class npa implements dja {
         return (String) (Object) stackIn_19_0;
     }
 
-    final static StringBuilder a(int param0, boolean param1, StringBuilder param2) {
+    final static StringBuilder a(int param0, boolean param1, StringBuilder param2, char param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -270,7 +270,7 @@ final class npa implements dja {
         return stackIn_7_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_b = null;
     }

@@ -312,9 +312,7 @@ final class vj {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$4 = 96;
-            int discarded$5 = 100;
-            stackOut_0_0 = mn.a(-24296, nb.b(param1));
+            stackOut_0_0 = mn.a(-24296, nb.b(param1, 100, 96));
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

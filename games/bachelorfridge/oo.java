@@ -353,7 +353,7 @@ final class oo extends bca {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_q = null;
         int var1 = -102;
     }

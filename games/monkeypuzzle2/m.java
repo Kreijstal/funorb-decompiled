@@ -258,7 +258,7 @@ final class m extends ug {
         }
     }
 
-    final static void a(String param0, java.awt.Color param1, int param2, boolean param3) {
+    final static void a(String param0, java.awt.Color param1, int param2, boolean param3, int param4) {
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;
@@ -447,7 +447,7 @@ final class m extends ug {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         m var3 = null;

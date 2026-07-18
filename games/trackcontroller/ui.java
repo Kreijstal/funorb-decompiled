@@ -108,7 +108,7 @@ final class ui extends di {
         return stackIn_12_0;
     }
 
-    final static void g() {
+    final static void g(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -516,15 +516,13 @@ final class ui extends di {
             var4 = param0.toLowerCase();
             if (var4.length() != 0) {
               var5 = var4;
-              int discarded$14 = -23797;
-              if (ac.a(var5)) {
+              if (ac.a(var5, -23797)) {
                 stackOut_7_0 = nl.field_c;
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;
               } else {
                 if (!sd.a(var5, (byte) 115)) {
-                  int discarded$15 = 0;
-                  if (!ba.a(var5)) {
+                  if (!ba.a(var5, false)) {
                     if (!this.b(param0, 35)) {
                       if (var6.length() <= 0) {
                         stackOut_30_0 = pf.field_N;

@@ -220,7 +220,7 @@ final class hm extends tm {
         return stackIn_1_0;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -258,11 +258,11 @@ final class hm extends tm {
         }
     }
 
-    final static mc h() {
+    final static mc h(int param0) {
         return (mc) (Object) new vi();
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_G = null;
         field_H = null;
         field_E = null;

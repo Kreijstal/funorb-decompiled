@@ -8,7 +8,7 @@ abstract class wf {
     static String field_b;
     static char[] field_a;
 
-    final static sk a(long param0, String param1, int param2, String param3) {
+    final static sk a(long param0, String param1, int param2, String param3, boolean param4) {
         RuntimeException var6 = null;
         Object stackIn_2_0 = null;
         hf stackIn_6_0 = null;

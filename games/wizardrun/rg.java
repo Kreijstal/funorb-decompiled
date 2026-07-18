@@ -74,8 +74,7 @@ abstract class rg extends tj {
                 L1: {
                   var3_ref = "";
                   if (param0 != null) {
-                    int discarded$3 = -91;
-                    var3_ref = mj.a(param0);
+                    var3_ref = mj.a(param0, (byte) -91);
                     break L1;
                   } else {
                     break L1;
@@ -167,15 +166,14 @@ abstract class rg extends tj {
                           break L7;
                         } else {
                           var5 = (DataInputStream) var4.field_e;
-                          int discarded$4 = var5.read();
+                          int discarded$1 = var5.read();
                           var5.close();
                           break L7;
                         }
                       }
                       break L0;
                     } else {
-                      int discarded$5 = 0;
-                      tg.a(1L);
+                      tg.a(1L, false);
                       continue L6;
                     }
                   }

@@ -8,7 +8,7 @@ final class tv {
     static boolean field_a;
     static String field_e;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         int var1 = 0;
         field_e = null;

@@ -293,9 +293,9 @@ final class bk extends ma {
         return stackIn_11_0 != 0;
     }
 
-    final static boolean a(pq[] param0) {
-        RuntimeException var2 = null;
+    final static boolean a(pq[] param0, byte param1) {
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
@@ -322,18 +322,26 @@ final class bk extends ma {
         var3 = Pool.field_O;
         try {
           L0: {
+            L1: {
+              if (param1 == 57) {
+                break L1;
+              } else {
+                field_x = null;
+                break L1;
+              }
+            }
             var2_int = 0;
-            L1: while (true) {
-              L2: {
-                L3: {
+            L2: while (true) {
+              L3: {
+                L4: {
                   if (var2_int >= param0.length) {
-                    break L3;
+                    break L4;
                   } else {
                     stackOut_6_0 = param0[var2_int].field_v;
                     stackIn_15_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
                     if (var3 != 0) {
-                      break L2;
+                      break L3;
                     } else {
                       if (stackIn_7_0 != 0) {
                         stackOut_11_0 = 1;
@@ -342,9 +350,9 @@ final class bk extends ma {
                       } else {
                         var2_int++;
                         if (var3 == 0) {
-                          continue L1;
+                          continue L2;
                         } else {
-                          break L3;
+                          break L4;
                         }
                       }
                     }
@@ -352,14 +360,14 @@ final class bk extends ma {
                 }
                 stackOut_14_0 = 0;
                 stackIn_15_0 = stackOut_14_0;
-                break L2;
+                break L3;
               }
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var2 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var2;
             stackOut_16_1 = new StringBuilder().append("bk.B(");
@@ -374,7 +382,7 @@ final class bk extends ma {
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
-              break L4;
+              break L5;
             } else {
               stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
               stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
@@ -382,10 +390,10 @@ final class bk extends ma {
               stackIn_20_0 = stackOut_17_0;
               stackIn_20_1 = stackOut_17_1;
               stackIn_20_2 = stackOut_17_2;
-              break L4;
+              break L5;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + 57 + ')');
+          throw wm.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ')');
         }
         return stackIn_15_0 != 0;
     }

@@ -229,7 +229,7 @@ abstract class ofa extends gn {
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0, int param1, byte param2) {
         return (param0 & 384) != 0;
     }
 
@@ -258,7 +258,7 @@ abstract class ofa extends gn {
         }
     }
 
-    final static boolean d() {
+    final static boolean d(boolean param0) {
         return cl.field_o;
     }
 

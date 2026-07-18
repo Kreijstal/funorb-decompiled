@@ -9,7 +9,7 @@ final class dg {
     static String[] field_b;
     static int field_c;
 
-    final static int b() {
+    final static int b(byte param0) {
         return uf.field_a;
     }
 
@@ -222,8 +222,7 @@ final class dg {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int discarded$0 = -1;
-        return param0 + rf.a(param2 + -param0 - -1, in.field_c);
+        return param0 + rf.a(param2 + -param0 - -1, in.field_c, -1);
     }
 
     public static void a(int param0) {
@@ -407,7 +406,7 @@ final class dg {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ih var4 = null;
         int var3 = HoldTheLine.field_D;
         try {
@@ -419,8 +418,7 @@ final class dg {
             int var2 = 96;
             var4 = (ih) (Object) fb.field_n.b((byte) 121);
             while (var4 != null) {
-                int discarded$0 = -79;
-                na.a(4, var4);
+                na.a(4, var4, (byte) -79);
                 var4 = (ih) (Object) fb.field_n.c((byte) -75);
             }
             if (of.a(-969)) {

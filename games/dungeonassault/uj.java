@@ -101,7 +101,7 @@ final class uj {
         return stackIn_12_0;
     }
 
-    final static String a(long param0) {
+    final static String a(long param0, int param1) {
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;
@@ -158,14 +158,14 @@ final class uj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_e = null;
         field_b = null;
     }
 
-    final static void a(en param0) {
+    final static void a(en param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

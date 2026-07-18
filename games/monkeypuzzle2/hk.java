@@ -597,7 +597,7 @@ final class hk extends ug {
         }
     }
 
-    final static ai[] a() {
+    final static ai[] a(byte param0) {
         int var2 = 0;
         int var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         ai[] var1 = new ai[eg.field_c];
@@ -608,7 +608,7 @@ final class hk extends ug {
         return var1;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_k = null;
         field_i = null;
         field_f = null;

@@ -32,7 +32,7 @@ final class iq {
         return false;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         pi.a(135, true, 170, true, new int[11], 470, 1, 30);
         pi.a(118, true, 170, true, new int[8], 460, 2, 34);
         pi.a(430, false, 0, true, new int[2], 640, 3, 40);

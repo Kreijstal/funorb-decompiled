@@ -27,8 +27,7 @@ final class q {
               if (~((q) this).field_g != ~fe.field_P) {
                 if (param0 <= -41) {
                   if (field_a == 2) {
-                    int discarded$4 = 2;
-                    if (ie.a(((q) this).field_d)) {
+                    if (ie.a(((q) this).field_d, 2)) {
                       return 1;
                     } else {
                       return 0;
@@ -39,8 +38,7 @@ final class q {
                 } else {
                   q.a(4);
                   if (field_a == 2) {
-                    int discarded$5 = 2;
-                    if (!ie.a(((q) this).field_d)) {
+                    if (!ie.a(((q) this).field_d, 2)) {
                       return 0;
                     } else {
                       return 1;
@@ -59,8 +57,7 @@ final class q {
             if (~((q) this).field_g != ~fe.field_P) {
               if (param0 <= -41) {
                 if (field_a == 2) {
-                  int discarded$6 = 2;
-                  if (!ie.a(((q) this).field_d)) {
+                  if (!ie.a(((q) this).field_d, 2)) {
                     return 0;
                   } else {
                     return 1;
@@ -71,8 +68,7 @@ final class q {
               } else {
                 q.a(4);
                 if (field_a == 2) {
-                  int discarded$7 = 2;
-                  if (!ie.a(((q) this).field_d)) {
+                  if (!ie.a(((q) this).field_d, 2)) {
                     return 0;
                   } else {
                     return 1;
@@ -90,7 +86,7 @@ final class q {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         la var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -146,7 +142,7 @@ final class q {
         ((q) this).field_n = li.field_l;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -187,8 +183,7 @@ final class q {
                     }
                   }
                   var5 = new java.net.URL(param0.getCodeBase(), var4);
-                  int discarded$2 = 0;
-                  param0.getAppletContext().showDocument(of.a(param0, var5), "_self");
+                  param0.getAppletContext().showDocument(of.a(param0, var5, false), "_self");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {

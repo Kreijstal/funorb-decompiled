@@ -13,7 +13,7 @@ final class qj {
     static String field_f;
     static int field_g;
 
-    final static StringBuilder a(int param0, StringBuilder param1) {
+    final static StringBuilder a(int param0, StringBuilder param1, char param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -87,7 +87,7 @@ final class qj {
         return stackIn_6_0;
     }
 
-    final static hh a() {
+    final static hh a(byte param0) {
         try {
             int var1_int = 0;
             Throwable var1 = null;
@@ -130,7 +130,7 @@ final class qj {
         return df.field_z.l(-1);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_h = null;
         field_e = null;
         field_i = null;

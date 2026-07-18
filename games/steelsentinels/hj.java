@@ -29,7 +29,7 @@ final class hj extends ck {
     int field_z;
     int field_J;
 
-    public static void e() {
+    public static void e(int param0) {
         field_s = null;
         field_u = null;
         field_H = null;

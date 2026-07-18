@@ -16,7 +16,7 @@ final class cq extends f implements bp {
         super.a(param0, param1, param2, param3);
     }
 
-    final static int d() {
+    final static int d(boolean param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -33,8 +33,7 @@ final class cq extends f implements bp {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              int discarded$18 = 55;
-              if (!cc.e()) {
+              if (!cc.e((byte) 55)) {
                 L2: {
                   dc.field_l.a(-1, kq.a(nh.field_p, td.field_P, 16777215), kq.a(pd.field_k, bb.field_b, 16777215));
                   if (!dc.field_l.a((byte) -76)) {
@@ -63,8 +62,7 @@ final class cq extends f implements bp {
                             }
                           }
                         }
-                        int discarded$19 = -15;
-                        jf.b();
+                        jf.b((byte) -15);
                         break L3;
                       } else {
                         break L4;
@@ -77,8 +75,7 @@ final class cq extends f implements bp {
                     if (2 == eh.field_C) {
                       break L3;
                     } else {
-                      int discarded$20 = -15;
-                      jf.b();
+                      jf.b((byte) -15);
                       break L3;
                     }
                   }
@@ -139,8 +136,7 @@ final class cq extends f implements bp {
         if (!(ed.field_h == null)) {
             ed.field_h.p(8305);
         }
-        int discarded$0 = 14745;
-        ga.g();
+        ga.g(14745);
     }
 
     final boolean a(int param0, char param1, int param2, vg param3) {
@@ -249,8 +245,7 @@ final class cq extends f implements bp {
         try {
           if (param1 == 6) {
             if (((cq) this).field_J == param0) {
-              int discarded$2 = 0;
-              la.a();
+              la.a(false);
               return;
             } else {
               if (((cq) this).field_H != param0) {
@@ -300,7 +295,7 @@ final class cq extends f implements bp {
         }
     }
 
-    final static void a(nq param0) {
+    final static void a(nq param0, boolean param1) {
         try {
             ss.field_b = param0;
             hs.field_j = rp.i(0);
@@ -311,7 +306,7 @@ final class cq extends f implements bp {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -69;
         field_I = null;
         field_F = null;

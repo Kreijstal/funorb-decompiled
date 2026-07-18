@@ -20,7 +20,7 @@ final class ud {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
     }
 

@@ -266,7 +266,7 @@ final class sta extends rva {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_A = null;
         field_G = null;
         field_H = null;
@@ -357,7 +357,7 @@ final class sta extends rva {
         ((sta) this).field_I = var5;
     }
 
-    private final void c(int param0, int param1) {
+    private final void c(int param0, int param1, int param2) {
         int var4 = null == ((sta) this).field_C ? 0 : ((sta) this).field_C.length;
         ae[] var5 = new ae[var4 * param0];
         if (null != ((sta) this).field_w) {
@@ -562,11 +562,11 @@ final class sta extends rva {
         return stackIn_3_0;
     }
 
-    final static boolean g() {
+    final static boolean g(byte param0) {
         return wba.field_o != null && wba.field_o.a((byte) -127);
     }
 
-    private final void e(int param0, int param1) {
+    private final void e(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
         int var4 = ((sta) this).field_F != null ? ((sta) this).field_F.length : 0;
@@ -597,15 +597,14 @@ final class sta extends rva {
             lua.a(var10, 0, param5, 1);
             var9 = new int[param6];
             lua.a(var9, 0, param6, 1);
-            int discarded$0 = -97;
-            this.a(var10);
+            this.a(var10, (byte) -97);
             this.a(var9, 48);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "sta.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
-    private final void a(int[] param0) {
+    private final void a(int[] param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         int[] var5 = null;
@@ -625,8 +624,7 @@ final class sta extends rva {
                 var6++;
             }
             var6 = -21;
-            int discarded$0 = 192;
-            this.e(var4, var3_int);
+            this.e(var4, var3_int, 192);
             this.d(var3_int, -110, var4);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "sta.M(" + (param0 != null ? "{...}" : "null") + ',' + -97 + ')');
@@ -652,8 +650,7 @@ final class sta extends rva {
                 var5[var6] = var7 + var5[var6];
                 var6++;
             }
-            int discarded$0 = 0;
-            this.c(var4, var3_int);
+            this.c(var4, var3_int, 0);
             this.f(28705, var3_int, var4);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "sta.U(" + (param0 != null ? "{...}" : "null") + ',' + 48 + ')');

@@ -267,12 +267,10 @@ abstract class da {
     final static void a(cm param0, int param1, int param2, wg param3) {
         try {
             vc.field_c = param2 * sj.a((byte) -108) / 1000;
-            int discarded$0 = 1728986241;
-            ea.a(param0);
+            ea.a(param0, 1728986241);
             nl.a((byte) 90, param0);
             ah.a(77, param0);
-            int discarded$1 = 1;
-            lk.a();
+            lk.a(true);
             ee.a(true);
             vn.field_h = 0 - vc.field_c;
         } catch (RuntimeException runtimeException) {
@@ -329,8 +327,9 @@ abstract class da {
         return var2;
     }
 
-    final static ah a(String param0) {
-        Object var2 = null;
+    final static ah a(String param0, byte param1) {
+        String var2 = null;
+        RuntimeException var2_ref = null;
         ah var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -338,22 +337,22 @@ abstract class da {
         CharSequence var7 = null;
         Object stackIn_3_0 = null;
         ah stackIn_15_0 = null;
-        Object stackIn_19_0 = null;
+        RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        Object stackIn_21_0 = null;
+        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         ah stackOut_14_0 = null;
         Object stackOut_2_0 = null;
-        Object stackOut_18_0 = null;
+        RuntimeException stackOut_18_0 = null;
         StringBuilder stackOut_18_1 = null;
-        Object stackOut_20_0 = null;
+        RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         String stackOut_20_2 = null;
-        Object stackOut_19_0 = null;
+        RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
         String stackOut_19_2 = null;
         var5 = SteelSentinels.field_G;
@@ -361,15 +360,15 @@ abstract class da {
           if (null != db.field_h) {
             L0: {
               var6 = (CharSequence) (Object) param0;
-              var2 = (Object) (Object) ui.a(1, var6);
+              var2 = ui.a(1, var6);
               if (var2 == null) {
-                var2 = (Object) (Object) var6;
+                var2 = param0;
                 break L0;
               } else {
                 break L0;
               }
             }
-            var3 = (ah) (Object) db.field_h.a((long)((String) var2).hashCode(), (byte) -81);
+            var3 = (ah) (Object) db.field_h.a((long)var2.hashCode(), (byte) -81);
             L1: while (true) {
               if (var3 != null) {
                 L2: {
@@ -382,7 +381,7 @@ abstract class da {
                     break L2;
                   }
                 }
-                if (!var4.equals(var2)) {
+                if (!var4.equals((Object) (Object) var2)) {
                   var3 = (ah) (Object) db.field_h.c((byte) 116);
                   continue L1;
                 } else {
@@ -402,15 +401,15 @@ abstract class da {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_18_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var2_ref;
             stackOut_18_1 = new StringBuilder().append("da.D(");
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param0 == null) {
-              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
               stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
@@ -418,7 +417,7 @@ abstract class da {
               stackIn_21_2 = stackOut_20_2;
               break L3;
             } else {
-              stackOut_19_0 = stackIn_19_0;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
               stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
@@ -625,11 +624,10 @@ abstract class da {
             pb.f(fg.field_Tb.field_d.field_Y, fg.field_Tb.field_d.field_eb, fg.field_Tb.field_d.field_zb, fg.field_Tb.field_d.field_Lb);
             fg.field_Tb.field_d.a(param0, (byte) 127);
         }
-        int discarded$0 = -125;
-        il.a(param0);
+        il.a(param0, (byte) -125);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_a = null;
         field_i = null;

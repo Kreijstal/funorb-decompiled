@@ -505,7 +505,7 @@ final class ma extends pn {
         return stackIn_3_0;
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -573,16 +573,16 @@ final class ma extends pn {
                         var8_int = 1;
                         L5: while (true) {
                           if (var5 <= var8_int) {
-                            String[][] dupTemp$8 = new String[3][var6];
-                            var4.field_i = dupTemp$8;
-                            var8 = dupTemp$8;
+                            String[][] dupTemp$6 = new String[3][var6];
+                            var4.field_i = dupTemp$6;
+                            var8 = dupTemp$6;
                             var9 = new String[3][var6];
-                            long[][] dupTemp$9 = new long[3][var6];
-                            var4.field_k = dupTemp$9;
-                            var10 = dupTemp$9;
-                            int[][] dupTemp$10 = new int[3][var6 * var7];
-                            var4.field_l = dupTemp$10;
-                            var11 = dupTemp$10;
+                            long[][] dupTemp$7 = new long[3][var6];
+                            var4.field_k = dupTemp$7;
+                            var10 = dupTemp$7;
+                            int[][] dupTemp$8 = new int[3][var6 * var7];
+                            var4.field_l = dupTemp$8;
+                            var11 = dupTemp$8;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -613,9 +613,9 @@ final class ma extends pn {
                                         if (var7 <= var25) {
                                           break L7;
                                         } else {
-                                          int incrementValue$11 = var15;
+                                          int incrementValue$9 = var15;
                                           var15++;
-                                          var11[0][incrementValue$11] = var27.b((byte) -104);
+                                          var11[0][incrementValue$9] = var27.b((byte) -104);
                                           var25++;
                                           continue L8;
                                         }
@@ -641,9 +641,9 @@ final class ma extends pn {
                                           if (var7 <= var25) {
                                             break L9;
                                           } else {
-                                            int incrementValue$12 = var16;
+                                            int incrementValue$10 = var16;
                                             var16++;
-                                            var11[1][incrementValue$12] = var27.b((byte) -125);
+                                            var11[1][incrementValue$10] = var27.b((byte) -125);
                                             var25++;
                                             continue L10;
                                           }
@@ -667,9 +667,9 @@ final class ma extends pn {
                                           if (var7 <= var25) {
                                             break L11;
                                           } else {
-                                            int incrementValue$13 = var17;
+                                            int incrementValue$11 = var17;
                                             var17++;
-                                            var11[2][incrementValue$13] = var27.b((byte) -120);
+                                            var11[2][incrementValue$11] = var27.b((byte) -120);
                                             var25++;
                                             continue L12;
                                           }
@@ -711,9 +711,7 @@ final class ma extends pn {
                 }
               } else {
                 if (var2 != 1) {
-                  int discarded$14 = -1815;
-                  int discarded$15 = 21862;
-                  wp.a((Throwable) null, "HS1: " + ug.a());
+                  wp.a((Throwable) null, "HS1: " + ug.a(-1815), 21862);
                   jj.a(4);
                   break L1;
                 } else {

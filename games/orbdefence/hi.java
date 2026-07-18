@@ -12,7 +12,7 @@ abstract class hi extends wb implements jb {
     static int[] field_i;
     static int field_m;
 
-    final static void a(fj param0, int param1, boolean param2, int param3, boolean param4) {
+    final static void a(fj param0, int param1, boolean param2, int param3, boolean param4, int param5) {
         Object var6 = null;
         RuntimeException var6_ref = null;
         Throwable var7 = null;
@@ -85,7 +85,7 @@ abstract class hi extends wb implements jb {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -399,7 +399,7 @@ abstract class hi extends wb implements jb {
         }
     }
 
-    final static int i() {
+    final static int i(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -416,8 +416,7 @@ abstract class hi extends wb implements jb {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              int discarded$7 = 32722;
-              if (!nf.e()) {
+              if (!nf.e(32722)) {
                 L2: {
                   ab.field_j.a(jc.a(ig.field_fb, (byte) 81, bg.field_c), -1, jc.a(ua.field_a, (byte) 37, vl.field_d));
                   if (!ab.field_j.a((byte) -1)) {
@@ -511,7 +510,7 @@ abstract class hi extends wb implements jb {
         return stackIn_28_0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_e = null;
         field_h = null;
         field_f = null;
@@ -522,7 +521,7 @@ abstract class hi extends wb implements jb {
 
     abstract String a(int param0, String param1);
 
-    final static boolean h() {
+    final static boolean h(int param0) {
         return !bd.field_u.a(false);
     }
 

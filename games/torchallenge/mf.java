@@ -5,7 +5,7 @@ final class mf {
     static String[] field_b;
     static String field_a;
 
-    final static void c() {
+    final static void c(int param0) {
     }
 
     final static boolean a(byte param0) {
@@ -13,7 +13,7 @@ final class mf {
         return true;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }
@@ -140,13 +140,13 @@ final class mf {
               fg.field_N = 0;
               var6 = 5;
               if (param0) {
-                int incrementValue$14 = var4_int;
+                int incrementValue$13 = var4_int;
                 var4_int++;
-                var7 = param1[incrementValue$14];
+                var7 = param1[incrementValue$13];
                 if (var7 == 1) {
-                  int incrementValue$15 = var4_int;
+                  int incrementValue$14 = var4_int;
                   var4_int++;
-                  fh.field_e = param1[incrementValue$15];
+                  fh.field_e = param1[incrementValue$14];
                   break L1;
                 } else {
                   break L1;
@@ -155,9 +155,9 @@ final class mf {
                 break L1;
               }
             }
-            int incrementValue$16 = var4_int;
+            int incrementValue$15 = var4_int;
             var4_int++;
-            var7 = param1[incrementValue$16];
+            var7 = param1[incrementValue$15];
             var5 = 0;
             L2: while (true) {
               L3: {
@@ -190,9 +190,9 @@ final class mf {
                       break L6;
                     } else {
                       L7: {
-                        int incrementValue$17 = var4_int;
+                        int incrementValue$16 = var4_int;
                         var4_int++;
-                        var8 = param1[incrementValue$17];
+                        var8 = param1[incrementValue$16];
                         if (var8 < 0) {
                           var8 = var8 + 256;
                           break L7;
@@ -201,9 +201,9 @@ final class mf {
                         }
                       }
                       L8: {
-                        int incrementValue$18 = var4_int;
+                        int incrementValue$17 = var4_int;
                         var4_int++;
-                        var9 = param1[incrementValue$18];
+                        var9 = param1[incrementValue$17];
                         if (var9 < 0) {
                           var9 = 256 - -var9;
                           break L8;
@@ -257,15 +257,14 @@ final class mf {
                             }
                           }
                           ol.field_g = ba.field_i;
-                          boolean discarded$19 = pg.d(0);
+                          boolean discarded$18 = pg.d(0);
                           qk.field_lb = 0;
                           wj.field_a = 0;
                           cb.field_c = new int[w.field_m][4];
                           var5 = 0;
                           L14: while (true) {
                             if (~w.field_m >= ~var5) {
-                              int discarded$20 = 0;
-                              ch.a(bl.field_O[0], bl.field_O[1]);
+                              ch.a(bl.field_O[0], bl.field_O[1], 0);
                               break L6;
                             } else {
                               var17 = 0;
@@ -283,18 +282,18 @@ final class mf {
                           }
                         } else {
                           L16: {
+                            int incrementValue$19 = var4_int;
+                            var4_int++;
+                            var10 = param1[incrementValue$19];
+                            int incrementValue$20 = var4_int;
+                            var4_int++;
+                            var11 = param1[incrementValue$20];
                             int incrementValue$21 = var4_int;
                             var4_int++;
-                            var10 = param1[incrementValue$21];
+                            var12 = param1[incrementValue$21];
                             int incrementValue$22 = var4_int;
                             var4_int++;
-                            var11 = param1[incrementValue$22];
-                            int incrementValue$23 = var4_int;
-                            var4_int++;
-                            var12 = param1[incrementValue$23];
-                            int incrementValue$24 = var4_int;
-                            var4_int++;
-                            var13 = param1[incrementValue$24];
+                            var13 = param1[incrementValue$22];
                             ea.field_g[var5] = new qe(var11, var12, var10, var13);
                             if (var10 != 28) {
                               break L16;
@@ -307,9 +306,9 @@ final class mf {
                             if (var10 != 19) {
                               break L17;
                             } else {
-                              int incrementValue$25 = var4_int;
+                              int incrementValue$23 = var4_int;
                               var4_int++;
-                              ea.field_g[var5].field_hb = param1[incrementValue$25];
+                              ea.field_g[var5].field_hb = param1[incrementValue$23];
                               break L17;
                             }
                           }
@@ -361,7 +360,7 @@ final class mf {
                           }
                           L22: {
                             ea.field_g[var5].field_y = var5;
-                            int discarded$26 = kf.a(ea.field_g[var5], var5, 8);
+                            int discarded$24 = kf.a(ea.field_g[var5], var5, 8);
                             if (var10 == 0) {
                               wb.field_p = ea.field_g[var5];
                               break L22;
@@ -418,9 +417,9 @@ final class mf {
                       var8++;
                       continue L5;
                     } else {
-                      int incrementValue$27 = var4_int;
+                      int incrementValue$25 = var4_int;
                       var4_int++;
-                      ic.field_E[var8][var9] = param1[incrementValue$27];
+                      ic.field_E[var8][var9] = param1[incrementValue$25];
                       var9++;
                       continue L26;
                     }
@@ -461,7 +460,7 @@ final class mf {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int[] var4 = null;
         int[] var6 = null;
         int[] var8 = null;

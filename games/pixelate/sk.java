@@ -61,7 +61,7 @@ final class sk {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_e = null;
         field_c = null;
@@ -70,13 +70,10 @@ final class sk {
         int var1 = 0;
     }
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6, byte param7, boolean param8, int param9, boolean param10, int param11, boolean param12) {
+    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6, byte param7, boolean param8, int param9, boolean param10, int param11, boolean param12, int param13) {
         up.field_o = null;
         ug.a(2586);
-        int discarded$0 = 11;
-        int discarded$1 = 0;
-        int discarded$2 = 13;
-        param12 = bq.a((byte) -124, 15, 14, param12);
+        param12 = bq.a((byte) -124, 15, 14, param12, 13, 0, 11);
         i.a(11, param10, true, param0, param3, 16777215, -28362, param12, param4, 16777215);
         oh.a(param0, 0, param4);
         bd.a((byte) -64, param12, param4, 0);

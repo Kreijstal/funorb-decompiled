@@ -6,7 +6,7 @@ final class rga {
     int field_a;
     private int field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 

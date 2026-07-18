@@ -62,8 +62,7 @@ final class j {
           L0: {
             h.a((java.awt.Component) (Object) param0, -8662);
             var2_int = -50 / ((-56 - param1) / 59);
-            int discarded$5 = 1;
-            sa.a((java.awt.Component) (Object) param0);
+            sa.a((java.awt.Component) (Object) param0, true);
             if (wb.field_u == null) {
               break L0;
             } else {
@@ -181,7 +180,7 @@ final class j {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_F = null;
         field_a = null;
     }

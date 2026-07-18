@@ -37,7 +37,7 @@ final class ge extends no {
         this(param0, param1, param2, 0);
     }
 
-    final static pb a(int param0, int param1) {
+    final static pb a(int param0, int param1, int param2) {
         return so.a(0, param1, param0, ip.field_s);
     }
 

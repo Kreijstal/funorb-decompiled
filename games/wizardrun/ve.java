@@ -153,7 +153,7 @@ final class ve {
         System.out.println("Error: " + md.a("%0a", param1, 28834, "\n"));
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_a = null;
         field_c = null;

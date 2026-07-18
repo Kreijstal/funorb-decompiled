@@ -32,9 +32,9 @@ final class qg extends kl implements ud {
         }
     }
 
-    final static int n() {
-        RuntimeException var1 = null;
+    final static int n(byte param0) {
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
@@ -78,8 +78,7 @@ final class qg extends kl implements ud {
                             }
                           }
                         }
-                        int discarded$2 = 3;
-                        ch.c();
+                        ch.c(3);
                         break L3;
                       } else {
                         break L4;
@@ -92,8 +91,7 @@ final class qg extends kl implements ud {
                     if (re.field_g == 2) {
                       break L3;
                     } else {
-                      int discarded$3 = 3;
-                      ch.c();
+                      ch.c(3);
                       break L3;
                     }
                   }
@@ -220,8 +218,7 @@ final class qg extends kl implements ud {
             var6 = -127 / ((param4 - 40) / 53);
             var5_int = param3.a(param2, (byte) -104);
             var7 = param3.a((byte) -66, param1, var5_int);
-            int discarded$2 = 65245;
-            stackOut_0_0 = tc.a(var7, param3, var5_int, param0);
+            stackOut_0_0 = tc.a(var7, param3, var5_int, param0, 65245);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -377,8 +374,7 @@ final class qg extends kl implements ud {
                     var4 = var4 + s.field_g;
                     break L2;
                   } else {
-                    int discarded$3 = 1;
-                    var6 = u.a(sg.field_f[var3_int], true);
+                    var6 = u.a(sg.field_f[var3_int], true, true);
                     var4 = var4 + ig.field_h;
                     var7 = -(var6 >> 1) + ji.field_f;
                     if (g.a((dg.field_d << 1) + var6, (byte) -108, ni.field_p + (wa.field_N << 1), var4, var7 - dg.field_d, param0, param2)) {
@@ -415,7 +411,7 @@ final class qg extends kl implements ud {
         return jj.field_d;
     }
 
-    final static void a(od param0) {
+    final static void a(od param0, byte param1) {
         int var2_int = 0;
         try {
             ah.field_K = param0.j(-788751192) << 5;
@@ -878,7 +874,7 @@ final class qg extends kl implements ud {
         }
     }
 
-    final static int m() {
+    final static int m(int param0) {
         return th.field_e;
     }
 

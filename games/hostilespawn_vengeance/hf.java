@@ -33,8 +33,7 @@ final class hf {
         String stackOut_5_2 = null;
         try {
           if (rl.a(2884, param1, param2, param3)) {
-            int discarded$2 = 0;
-            return rg.b();
+            return rg.b(0);
           } else {
             return null;
           }
@@ -70,7 +69,7 @@ final class hf {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_g = null;
         field_d = null;

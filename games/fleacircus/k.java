@@ -128,8 +128,7 @@ final class k {
                     break L5;
                   } else {
                     L7: {
-                      int discarded$2 = 98;
-                      this.b();
+                      this.b(98);
                       var9_int = param2;
                       if (((k) this).field_i >= var9_int) {
                         break L7;
@@ -168,9 +167,9 @@ final class k {
                           if (var9_int <= param1) {
                             break L9;
                           } else {
-                            int incrementValue$3 = param1;
+                            int incrementValue$1 = param1;
                             param1++;
-                            param0[incrementValue$3] = (byte) 0;
+                            param0[incrementValue$1] = (byte) 0;
                             param2--;
                             ((k) this).field_d = ((k) this).field_d + 1L;
                             continue L11;
@@ -551,7 +550,7 @@ final class k {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_l = null;
         field_c = null;
@@ -658,7 +657,7 @@ final class k {
         }
     }
 
-    private final void b() throws IOException {
+    private final void b(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = fleas.field_A ? 1 : 0;

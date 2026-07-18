@@ -10,7 +10,7 @@ final class v {
     private int field_b;
     private ii field_f;
 
-    final static int a(int param0, CharSequence param1, int param2) {
+    final static int a(int param0, CharSequence param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -333,7 +333,7 @@ final class v {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_g = null;
     }

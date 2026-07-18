@@ -199,7 +199,7 @@ final class df {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_b = null;
         field_c = null;
@@ -209,7 +209,7 @@ final class df {
         return param0 ^ param1;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Exception var2_ref = null;

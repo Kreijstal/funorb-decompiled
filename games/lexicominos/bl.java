@@ -144,11 +144,11 @@ class bl {
         return stackIn_14_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = Lexicominos.field_L ? 1 : 0;

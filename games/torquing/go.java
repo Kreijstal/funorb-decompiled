@@ -290,15 +290,13 @@ final class go extends am {
         var6 = Torquing.field_u;
         try {
           L0: {
-            int discarded$4 = -118;
-            var2 = nb.a("jagex-last-login-method", param1);
+            var2 = nb.a("jagex-last-login-method", param1, (byte) -118);
             if (var2 == null) {
               stackOut_3_0 = jf.field_c;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              int discarded$5 = 21169;
-              var3 = ji.b();
+              var3 = ji.b(21169);
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {

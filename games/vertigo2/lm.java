@@ -202,7 +202,7 @@ final class lm extends ji {
         return stackIn_1_0;
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -355,8 +355,7 @@ final class lm extends ji {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$2 = 1;
-            var5 = gk.a(param3, param0, param2);
+            var5 = gk.a(param3, param0, param2, true);
             var4 = var5;
             var5[1].field_x = var5[1].field_y;
             var5[3].field_B = var5[3].field_t;
@@ -449,7 +448,7 @@ final class lm extends ji {
         return stackIn_1_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_H = null;
         int var1 = -25;
         field_F = null;

@@ -145,12 +145,9 @@ final class dva extends rqa {
 
     final static void e(byte param0) {
         fja.a(11);
-        int discarded$12 = 0;
-        ce.b();
-        int discarded$19 = 64;
-        wlb.f();
-        int discarded$23 = 118;
-        jk.h();
+        ce.b(false);
+        wlb.f((byte) 64);
+        jk.h(118);
         if (param0 <= 87) {
             field_o = true;
         }

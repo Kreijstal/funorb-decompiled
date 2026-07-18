@@ -5,7 +5,7 @@ final class ica extends rqa {
     static String field_p;
     static String field_o;
 
-    final static int a() {
+    final static int a(int param0) {
         return 9;
     }
 
@@ -77,7 +77,7 @@ final class ica extends rqa {
         return stackIn_4_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
         field_p = null;
     }

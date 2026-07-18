@@ -293,7 +293,7 @@ final class ha extends fc {
         ((ha) this).field_B = null;
     }
 
-    final static oi a(String param0) {
+    final static oi a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -336,8 +336,7 @@ final class ha extends fc {
                     var4 = param0.substring(var2_int + 1);
                     var5 = tf.a(0, var3);
                     if (var5 == null) {
-                      int discarded$2 = 255;
-                      stackOut_11_0 = jd.a(var4);
+                      stackOut_11_0 = jd.a(var4, 255);
                       stackIn_12_0 = stackOut_11_0;
                       break L0;
                     } else {
@@ -392,7 +391,7 @@ final class ha extends fc {
         return stackIn_12_0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_m = null;
         field_x = null;
         field_E = null;

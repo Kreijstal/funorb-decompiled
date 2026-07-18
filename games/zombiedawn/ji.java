@@ -124,7 +124,7 @@ final class ji {
         return ((ji) this).field_b;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
         int var1 = 0;
         field_c = null;
@@ -157,8 +157,7 @@ final class ji {
         try {
           L0: {
             if (ph.a(param2, 31043, param3, param0)) {
-              int discarded$2 = 110;
-              stackOut_5_0 = ro.a();
+              stackOut_5_0 = ro.a((byte) 110);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

@@ -136,31 +136,43 @@ final class qjb implements ntb {
         RuntimeException var3 = null;
         int var4 = 0;
         qjb var5 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_23_2 = null;
+        int stackIn_12_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_15_1 = 0;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_14_1 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_13_1 = 0;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
         try {
           L0: {
             L1: {
               var5 = (qjb) (Object) param0;
-              if (var5.field_e == null) {
+              if (((qjb) this).field_e == null) {
                 break L1;
               } else {
                 if (var5.field_e != null) {
-                  var5.field_e.a((tv) (Object) var5.field_e, -104);
+                  ((qjb) this).field_e.a((tv) (Object) var5.field_e, -104);
                   break L1;
                 } else {
                   break L1;
@@ -169,84 +181,119 @@ final class qjb implements ntb {
             }
             L2: {
               var4 = 0;
-              if (var5.field_b == var5.field_b) {
+              if (var5.field_b == ((qjb) this).field_b) {
                 break L2;
               } else {
                 var4 = 1;
-                System.out.println("int reload has changed. before=" + var5.field_b + ", now=" + var5.field_b);
+                System.out.println("int reload has changed. before=" + var5.field_b + ", now=" + ((qjb) this).field_b);
                 break L2;
               }
             }
             L3: {
-              if (var5.field_c != var5.field_c) {
+              if (((qjb) this).field_c != var5.field_c) {
                 var4 = 1;
-                System.out.println("int weapontype has changed. before=" + var5.field_c + ", now=" + var5.field_c);
+                System.out.println("int weapontype has changed. before=" + var5.field_c + ", now=" + ((qjb) this).field_c);
                 break L3;
               } else {
                 break L3;
               }
             }
-            odb discarded$1 = var5.field_e;
             L4: {
-              if (null == var5.field_e) {
+              if (null != ((qjb) this).field_e) {
+                stackOut_11_0 = 0;
+                stackIn_12_0 = stackOut_11_0;
                 break L4;
               } else {
-                if (var5.field_e.a((byte) -43, (tv) (Object) var5.field_e)) {
-                  System.out.println("TargetLock target_lock has changed. before=" + (Object) (Object) var5.field_e + ", now=" + (Object) (Object) var5.field_e);
-                  var4 = 1;
-                  break L4;
-                } else {
-                  break L4;
-                }
+                stackOut_10_0 = 1;
+                stackIn_12_0 = stackOut_10_0;
+                break L4;
               }
             }
             L5: {
-              if (param1 < -19) {
+              stackOut_12_0 = stackIn_12_0;
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_13_0 = stackOut_12_0;
+              if (null != var5.field_e) {
+                stackOut_14_0 = stackIn_14_0;
+                stackOut_14_1 = 0;
+                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_1 = stackOut_14_1;
                 break L5;
               } else {
-                ((qjb) this).field_e = null;
+                stackOut_13_0 = stackIn_13_0;
+                stackOut_13_1 = 1;
+                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_1 = stackOut_13_1;
                 break L5;
               }
             }
             L6: {
+              L7: {
+                if ((stackIn_15_0 ^ stackIn_15_1) != 0) {
+                  break L7;
+                } else {
+                  if (null == ((qjb) this).field_e) {
+                    break L6;
+                  } else {
+                    if (((qjb) this).field_e.a((byte) -43, (tv) (Object) var5.field_e)) {
+                      break L7;
+                    } else {
+                      break L6;
+                    }
+                  }
+                }
+              }
+              System.out.println("TargetLock target_lock has changed. before=" + (Object) (Object) var5.field_e + ", now=" + (Object) (Object) ((qjb) this).field_e);
+              var4 = 1;
+              break L6;
+            }
+            L8: {
+              if (param1 < -19) {
+                break L8;
+              } else {
+                ((qjb) this).field_e = null;
+                break L8;
+              }
+            }
+            L9: {
               if (var4 == 0) {
-                break L6;
+                break L9;
               } else {
                 System.out.println("This instance of WeaponBehaviour has changed");
-                break L6;
+                break L9;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L10: {
             var3 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var3;
-            stackOut_20_1 = new StringBuilder().append("qjb.F(");
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackOut_25_0 = (RuntimeException) var3;
+            stackOut_25_1 = new StringBuilder().append("qjb.F(");
+            stackIn_27_0 = stackOut_25_0;
+            stackIn_27_1 = stackOut_25_1;
+            stackIn_26_0 = stackOut_25_0;
+            stackIn_26_1 = stackOut_25_1;
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
-              break L7;
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "null";
+              stackIn_28_0 = stackOut_27_0;
+              stackIn_28_1 = stackOut_27_1;
+              stackIn_28_2 = stackOut_27_2;
+              break L10;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
-              break L7;
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "{...}";
+              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_1 = stackOut_26_1;
+              stackIn_28_2 = stackOut_26_2;
+              break L10;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ')');
         }
     }
 
@@ -760,8 +807,7 @@ final class qjb implements ntb {
                           }
                         }
                       }
-                      int discarded$1 = 0;
-                      var25 = gqb.a();
+                      var25 = gqb.a(false);
                       var25.a(var20, var21, (byte) 118);
                       var25.a(param8, -122);
                       var25.h(17704, var22);
@@ -1046,9 +1092,9 @@ final class qjb implements ntb {
             L1: {
               var4 = (qjb) (Object) param1;
               var3 = var4;
-              var4.field_c = var4.field_c;
-              var4.field_b = var4.field_b;
-              if (var4.field_e != null) {
+              var4.field_c = ((qjb) this).field_c;
+              var4.field_b = ((qjb) this).field_b;
+              if (((qjb) this).field_e != null) {
                 L2: {
                   if (null != var3.field_e) {
                     break L2;
@@ -1057,7 +1103,7 @@ final class qjb implements ntb {
                     break L2;
                   }
                 }
-                var4.field_e.b((byte) 79, (tv) (Object) var3.field_e);
+                ((qjb) this).field_e.b((byte) 79, (tv) (Object) var3.field_e);
                 break L1;
               } else {
                 var4.field_e = null;
@@ -1110,92 +1156,136 @@ final class qjb implements ntb {
         qjb var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        int stackIn_9_0 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
+        int stackIn_5_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_8_1 = 0;
+        int stackIn_14_0 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_5_0 = 0;
         int stackOut_7_0 = 0;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        int stackOut_7_1 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_6_1 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_12_0 = 0;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
         try {
           L0: {
             L1: {
               L2: {
                 var4 = -72 / ((22 - param0) / 59);
                 var3 = (qjb) (Object) param1;
-                if (var3.field_b != var3.field_b) {
+                if (var3.field_b != ((qjb) this).field_b) {
                   break L2;
                 } else {
-                  if (var3.field_c != var3.field_c) {
+                  if (var3.field_c != ((qjb) this).field_c) {
                     break L2;
                   } else {
-                    odb discarded$2 = var3.field_e;
                     L3: {
-                      if (var3.field_e == null) {
+                      if (null != ((qjb) this).field_e) {
+                        stackOut_4_0 = 0;
+                        stackIn_5_0 = stackOut_4_0;
                         break L3;
                       } else {
-                        if (!var3.field_e.a((byte) 91, (tv) (Object) var3.field_e)) {
-                          break L3;
-                        } else {
-                          break L2;
-                        }
+                        stackOut_3_0 = 1;
+                        stackIn_5_0 = stackOut_3_0;
+                        break L3;
                       }
                     }
-                    stackOut_8_0 = 0;
-                    stackIn_9_0 = stackOut_8_0;
-                    break L1;
+                    L4: {
+                      stackOut_5_0 = stackIn_5_0;
+                      stackIn_7_0 = stackOut_5_0;
+                      stackIn_6_0 = stackOut_5_0;
+                      if (var3.field_e != null) {
+                        stackOut_7_0 = stackIn_7_0;
+                        stackOut_7_1 = 0;
+                        stackIn_8_0 = stackOut_7_0;
+                        stackIn_8_1 = stackOut_7_1;
+                        break L4;
+                      } else {
+                        stackOut_6_0 = stackIn_6_0;
+                        stackOut_6_1 = 1;
+                        stackIn_8_0 = stackOut_6_0;
+                        stackIn_8_1 = stackOut_6_1;
+                        break L4;
+                      }
+                    }
+                    if ((stackIn_8_0 ^ stackIn_8_1) != 0) {
+                      break L2;
+                    } else {
+                      L5: {
+                        if (((qjb) this).field_e == null) {
+                          break L5;
+                        } else {
+                          if (!((qjb) this).field_e.a((byte) 91, (tv) (Object) var3.field_e)) {
+                            break L5;
+                          } else {
+                            break L2;
+                          }
+                        }
+                      }
+                      stackOut_13_0 = 0;
+                      stackIn_14_0 = stackOut_13_0;
+                      break L1;
+                    }
                   }
                 }
               }
-              stackOut_7_0 = 1;
-              stackIn_9_0 = stackOut_7_0;
+              stackOut_12_0 = 1;
+              stackIn_14_0 = stackOut_12_0;
               break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L6: {
             var3_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3_ref;
-            stackOut_10_1 = new StringBuilder().append("qjb.C(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackOut_15_0 = (RuntimeException) var3_ref;
+            stackOut_15_1 = new StringBuilder().append("qjb.C(").append(param0).append(',');
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
-              break L4;
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L6;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
-              break L4;
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
-        return stackIn_9_0 != 0;
+        return stackIn_14_0 != 0;
     }
 
     public final void b(faa param0, int param1) {

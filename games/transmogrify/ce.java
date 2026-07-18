@@ -354,7 +354,7 @@ final class ce implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }

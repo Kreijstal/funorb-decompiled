@@ -166,7 +166,7 @@ final class bk {
         return stackIn_10_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_a = null;
     }
@@ -241,7 +241,7 @@ final class bk {
                 break L1;
               } else {
                 if (-1 == param1.indexOf("<br>")) {
-                  param4[0] = (String) (Object) param4;
+                  param4[0] = param1;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;

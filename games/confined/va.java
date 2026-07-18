@@ -360,7 +360,7 @@ final class va {
         return param0 & param1;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return hd.field_d;
     }
 

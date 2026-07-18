@@ -24,7 +24,7 @@ final class br {
         np.field_Jb.a((gn) (Object) new i(35, (lv) null, var2, var4), 3);
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         if (null == k.field_m) {
             return false;
         }

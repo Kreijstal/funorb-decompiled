@@ -148,7 +148,7 @@ final class tba extends rqa {
         }
     }
 
-    final static Boolean a() {
+    final static Boolean a(int param0) {
         int var1 = 0;
         Boolean var2 = ehb.field_f;
         ehb.field_f = null;

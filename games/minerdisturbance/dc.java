@@ -22,7 +22,7 @@ final class dc extends java.awt.Canvas {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
     }

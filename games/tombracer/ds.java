@@ -40,49 +40,41 @@ final class ds {
           if (var4 != 7) {
             if (5 == var4) {
               this.e(-127, param1);
-              int discarded$10 = -98;
-              this.d(param1);
+              this.d(param1, -98);
               return;
             } else {
               if (var4 == 12) {
                 this.f(-112, param1);
-                int discarded$11 = -98;
-                this.d(param1);
+                this.d(param1, -98);
                 return;
               } else {
                 if (var4 == 10) {
                   this.c(param1, -11);
-                  int discarded$12 = -98;
-                  this.d(param1);
+                  this.d(param1, -98);
                   return;
                 } else {
                   if (15 == var4) {
                     this.c(param1, -11);
-                    int discarded$13 = -98;
-                    this.d(param1);
+                    this.d(param1, -98);
                     return;
                   } else {
                     if (var4 == 14) {
                       this.b(-5, param1);
-                      int discarded$14 = -98;
-                      this.d(param1);
+                      this.d(param1, -98);
                       return;
                     } else {
                       if (var4 != 3) {
                         if (var4 == 4) {
                           this.b(-5, param1);
-                          int discarded$15 = -98;
-                          this.d(param1);
+                          this.d(param1, -98);
                           return;
                         } else {
-                          int discarded$16 = -98;
-                          this.d(param1);
+                          this.d(param1, -98);
                           return;
                         }
                       } else {
                         this.b(-5, param1);
-                        int discarded$17 = -98;
-                        this.d(param1);
+                        this.d(param1, -98);
                         return;
                       }
                     }
@@ -91,10 +83,8 @@ final class ds {
               }
             }
           } else {
-            int discarded$18 = 9266;
-            this.a(param1);
-            int discarded$19 = -98;
-            this.d(param1);
+            this.a(param1, 9266);
+            this.d(param1, -98);
             return;
           }
         } else {
@@ -109,7 +99,7 @@ final class ds {
         ((ds) this).field_b[param0] = fh.a(((ds) this).field_b[param0], 1 << param1);
     }
 
-    final static void a() {
+    final static void a(byte param0, boolean param1) {
         int var2 = 0;
         var2 = 0;
         if (!lca.a(false)) {
@@ -158,7 +148,7 @@ final class ds {
         ((ds) this).field_m[param1] = ((ds) this).field_m[param1] + 1;
     }
 
-    private final void a(int param0) {
+    private final void a(int param0, int param1) {
         ((ds) this).field_p[param0] = ((ds) this).field_p[param0] + 1;
     }
 
@@ -169,7 +159,7 @@ final class ds {
         }
     }
 
-    private final void d(int param0) {
+    private final void d(int param0, int param1) {
         int var3 = 0;
         ((ds) this).field_i[param0] = true;
     }

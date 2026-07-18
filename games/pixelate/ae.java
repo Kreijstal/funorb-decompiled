@@ -385,7 +385,7 @@ final class ae {
         }
     }
 
-    private final int a() {
+    private final int a(boolean param0) {
         int var2 = (((ae) this).field_h >> 2) * (((ae) this).field_h >> 2) - (-((((ae) this).field_g >> 2) * (((ae) this).field_g >> 2)) + -((((ae) this).field_i >> 2) * (((ae) this).field_i >> 2)));
         if (!(var2 >= 0)) {
             throw new RuntimeException();
@@ -405,8 +405,7 @@ final class ae {
         int var4 = 0;
         int var5 = 0;
         var5 = Pixelate.field_H ? 1 : 0;
-        int discarded$4 = 1;
-        var2 = this.a() >> 1;
+        var2 = this.a(true) >> 1;
         var3 = 15;
         L0: while (true) {
           if (65536 > var2) {
@@ -414,8 +413,7 @@ final class ae {
             ((ae) this).field_g = (((ae) this).field_g << var3) / var2;
             ((ae) this).field_i = (((ae) this).field_i << var3) / var2;
             if (param0 == -7) {
-              int discarded$5 = 1;
-              var4 = this.a();
+              var4 = this.a(true);
               if (var4 >= 64512) {
                 if (66560 < var4) {
                   throw new RuntimeException();
@@ -436,7 +434,7 @@ final class ae {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
         int var1 = 3;
         field_j = null;

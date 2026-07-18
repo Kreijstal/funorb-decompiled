@@ -9,13 +9,13 @@ final class sl {
     static long field_a;
     static ed[][] field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_d = null;
     }
 
-    final static byte[][][] a(mf param0, mf param1, int[] param2, byte[][][] param3, int param4) {
+    final static byte[][][] a(mf param0, mf param1, int[] param2, byte[][][] param3, int param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -322,15 +322,13 @@ final class sl {
               }
             }
           }
-          int discarded$4 = var8.f(1952);
-          String discarded$5 = var8.c(false);
+          int discarded$2 = var8.f(1952);
+          String discarded$3 = var8.c(false);
           break L4;
         }
         L6: {
           if (!param0) {
-            int discarded$6 = 80;
-            int discarded$7 = 10241;
-            od.field_d = fn.a((n) (Object) var8);
+            od.field_d = fn.a((n) (Object) var8, 10241, 80);
             bo.field_H = null;
             break L6;
           } else {
@@ -369,7 +367,7 @@ final class sl {
         return new gi(param0);
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean a(boolean param0, byte param1) {
         L0: {
           if (sk.field_d == null) {
             sk.field_d = ca.field_c.a(ej.field_b, 4, cn.field_h);

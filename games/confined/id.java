@@ -590,8 +590,7 @@ abstract class id extends ee {
         String stackOut_8_2 = null;
         try {
           L0: {
-            int discarded$6 = 23221;
-            var9 = af.a(param4, param5, param3, param2, param1);
+            var9 = af.a(param4, param5, param3, param2, param1, 23221);
             var6 = var9;
             if (var9 != null) {
               L1: {
@@ -599,13 +598,13 @@ abstract class id extends ee {
                   break L1;
                 } else {
                   var8 = null;
-                  gj discarded$7 = id.a(62, (df) null, 51, -70, 79, 121);
+                  gj discarded$4 = id.a(62, (df) null, 51, -70, 79, 121);
                   break L1;
                 }
               }
               var7 = new gj();
               var7.field_e = var9;
-              java.awt.Component discarded$8 = var7.field_e.add((java.awt.Component) (Object) var7);
+              java.awt.Component discarded$5 = var7.field_e.add((java.awt.Component) (Object) var7);
               var7.setBounds(0, 0, param2, param5);
               var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
               var7.requestFocus();
@@ -1283,7 +1282,7 @@ abstract class id extends ee {
         }
     }
 
-    final static void c() {
+    final static void c(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         bj var4 = null;
@@ -1300,8 +1299,7 @@ abstract class id extends ee {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$4 = 21821;
-                    dh.a(3, var5);
+                    dh.a(3, var5, 21821);
                     var5 = (qn) (Object) na.field_T.d(2123);
                     continue L2;
                   }

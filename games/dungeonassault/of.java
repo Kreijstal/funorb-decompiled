@@ -86,8 +86,7 @@ final class of {
         try {
           L0: {
             L1: {
-              int discarded$2 = 0;
-              cb.a(param1, param4.field_o, param4.field_m, param0, 5471, param2);
+              cb.a(param1, param4.field_o, param4.field_m, param0, 5471, param2, 0);
               if (param3 <= -110) {
                 break L1;
               } else {
@@ -232,7 +231,7 @@ final class of {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_q = null;
         field_j = null;
         field_p = null;

@@ -274,7 +274,7 @@ final class ab extends ae {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_R = null;
         field_U = null;
         field_V = null;

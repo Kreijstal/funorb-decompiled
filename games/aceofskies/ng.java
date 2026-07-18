@@ -58,7 +58,7 @@ final class ng extends rg {
         }
     }
 
-    final static void a(hc param0, String param1, co param2, int param3) {
+    final static void a(hc param0, String param1, co param2, int param3, byte param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -242,7 +242,7 @@ final class ng extends rg {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_J = null;
     }
 

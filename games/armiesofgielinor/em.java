@@ -68,12 +68,12 @@ final class em {
         }
     }
 
-    final static void a(kl param0) {
+    final static void a(kl param0, int param1) {
         byte[] var2 = null;
         int var3 = 0;
-        int stackIn_3451_0 = 0;
+        int stackIn_3452_0 = 0;
+        int stackOut_3451_0 = 0;
         int stackOut_3450_0 = 0;
-        int stackOut_3449_0 = 0;
         L0: {
           var3 = ArmiesOfGielinor.field_M ? 1 : 0;
           sb.field_e = param0;
@@ -11677,790 +11677,795 @@ final class em {
             break L1288;
           }
         }
-        L1289: {
-          var2 = fk.a(false, "TRT_TEXT,7");
-          if (var2 == null) {
-            break L1289;
-          } else {
-            r.field_E[7] = uu.a(var2, (byte) -118);
-            break L1289;
-          }
-        }
-        L1290: {
-          var2 = fk.a(false, "TRT_TEXT,8");
-          if (var2 != null) {
-            r.field_E[8] = uu.a(var2, (byte) 100);
-            break L1290;
-          } else {
-            break L1290;
-          }
-        }
-        L1291: {
-          var2 = fk.a(false, "TRT_TEXT,9");
-          if (null != var2) {
-            r.field_E[9] = uu.a(var2, (byte) -96);
-            break L1291;
-          } else {
-            break L1291;
-          }
-        }
-        L1292: {
-          var2 = fk.a(false, "TRT_TEXT,10");
-          if (var2 != null) {
-            r.field_E[10] = uu.a(var2, (byte) 121);
-            break L1292;
-          } else {
-            break L1292;
-          }
-        }
-        L1293: {
-          var2 = fk.a(false, "TRT_TEXT,11");
-          if (null == var2) {
-            break L1293;
-          } else {
-            r.field_E[11] = uu.a(var2, (byte) -107);
-            break L1293;
-          }
-        }
-        L1294: {
-          var2 = fk.a(false, "TRT_TEXT,12");
-          if (null != var2) {
-            r.field_E[12] = uu.a(var2, (byte) -97);
-            break L1294;
-          } else {
-            break L1294;
-          }
-        }
-        L1295: {
-          var2 = fk.a(false, "TRT_TEXT,13");
-          if (var2 == null) {
-            break L1295;
-          } else {
-            r.field_E[13] = uu.a(var2, (byte) -107);
-            break L1295;
-          }
-        }
-        L1296: {
-          var2 = fk.a(false, "TRT_TEXT,14");
-          if (null == var2) {
-            break L1296;
-          } else {
-            r.field_E[14] = uu.a(var2, (byte) -124);
-            break L1296;
-          }
-        }
-        L1297: {
-          var2 = fk.a(false, "TRT_TEXT,15");
-          if (var2 != null) {
-            r.field_E[15] = uu.a(var2, (byte) -125);
-            break L1297;
-          } else {
-            break L1297;
-          }
-        }
-        L1298: {
-          var2 = fk.a(false, "TRT_TEXT,16");
-          if (var2 != null) {
-            r.field_E[16] = uu.a(var2, (byte) -128);
-            break L1298;
-          } else {
-            break L1298;
-          }
-        }
-        L1299: {
-          var2 = fk.a(false, "TRT_TEXT,17");
-          if (var2 == null) {
-            break L1299;
-          } else {
-            r.field_E[17] = uu.a(var2, (byte) -94);
-            break L1299;
-          }
-        }
-        L1300: {
-          var2 = fk.a(false, "TRT_TEXT,18");
-          if (var2 == null) {
-            break L1300;
-          } else {
-            r.field_E[18] = uu.a(var2, (byte) -126);
-            break L1300;
-          }
-        }
-        L1301: {
-          var2 = fk.a(false, "TRT_TEXT,19");
-          if (var2 == null) {
-            break L1301;
-          } else {
-            r.field_E[19] = uu.a(var2, (byte) 86);
-            break L1301;
-          }
-        }
-        L1302: {
-          var2 = fk.a(false, "TRT_TEXT,20");
-          if (var2 != null) {
-            r.field_E[20] = uu.a(var2, (byte) 16);
-            break L1302;
-          } else {
-            break L1302;
-          }
-        }
-        L1303: {
-          var2 = fk.a(false, "TRT_TEXT,21");
-          if (null != var2) {
-            r.field_E[21] = uu.a(var2, (byte) -108);
-            break L1303;
-          } else {
-            break L1303;
-          }
-        }
-        L1304: {
-          var2 = fk.a(false, "TRT_TEXT,22");
-          if (var2 != null) {
-            r.field_E[22] = uu.a(var2, (byte) 127);
-            break L1304;
-          } else {
-            break L1304;
-          }
-        }
-        L1305: {
-          var2 = fk.a(false, "TRT_TEXT,23");
-          if (var2 == null) {
-            break L1305;
-          } else {
-            r.field_E[23] = uu.a(var2, (byte) 3);
-            break L1305;
-          }
-        }
-        L1306: {
-          var2 = fk.a(false, "TRT_TEXT,24");
-          if (null != var2) {
-            r.field_E[24] = uu.a(var2, (byte) -108);
-            break L1306;
-          } else {
-            break L1306;
-          }
-        }
-        L1307: {
-          var2 = fk.a(false, "TRT_TEXT,25");
-          if (var2 != null) {
-            r.field_E[25] = uu.a(var2, (byte) 102);
-            break L1307;
-          } else {
-            break L1307;
-          }
-        }
-        L1308: {
-          var2 = fk.a(false, "TRT_TEXT,26");
-          if (var2 == null) {
-            break L1308;
-          } else {
-            r.field_E[26] = uu.a(var2, (byte) -107);
-            break L1308;
-          }
-        }
-        L1309: {
-          var2 = fk.a(false, "TRT_TEXT,27");
-          if (var2 != null) {
-            r.field_E[27] = uu.a(var2, (byte) 60);
-            break L1309;
-          } else {
-            break L1309;
-          }
-        }
-        L1310: {
-          var2 = fk.a(false, "TRT_TEXT,28");
-          if (var2 == null) {
-            break L1310;
-          } else {
-            r.field_E[28] = uu.a(var2, (byte) -127);
-            break L1310;
-          }
-        }
-        L1311: {
-          var2 = fk.a(false, "TRT_TEXT,29");
-          if (null != var2) {
-            r.field_E[29] = uu.a(var2, (byte) -120);
-            break L1311;
-          } else {
-            break L1311;
-          }
-        }
-        L1312: {
-          var2 = fk.a(false, "TRT_TEXT,30");
-          if (null != var2) {
-            r.field_E[30] = uu.a(var2, (byte) 88);
-            break L1312;
-          } else {
-            break L1312;
-          }
-        }
-        L1313: {
-          var2 = fk.a(false, "TRT_TEXT,31");
-          if (var2 == null) {
-            break L1313;
-          } else {
-            r.field_E[31] = uu.a(var2, (byte) -108);
-            break L1313;
-          }
-        }
-        L1314: {
-          var2 = fk.a(false, "TRT_TEXT,32");
-          if (var2 != null) {
-            r.field_E[32] = uu.a(var2, (byte) -110);
-            break L1314;
-          } else {
-            break L1314;
-          }
-        }
-        L1315: {
-          var2 = fk.a(false, "TRT_TEXT,33");
-          if (var2 == null) {
-            break L1315;
-          } else {
-            r.field_E[33] = uu.a(var2, (byte) 95);
-            break L1315;
-          }
-        }
-        L1316: {
-          var2 = fk.a(false, "trinketcongratulations,0");
-          if (null != var2) {
-            us.field_b[0] = uu.a(var2, (byte) -128);
-            break L1316;
-          } else {
-            break L1316;
-          }
-        }
-        L1317: {
-          var2 = fk.a(false, "trinketcongratulations,1");
-          if (var2 == null) {
-            break L1317;
-          } else {
-            us.field_b[1] = uu.a(var2, (byte) 88);
-            break L1317;
-          }
-        }
-        L1318: {
-          var2 = fk.a(false, "trinketcongratulations,2");
-          if (var2 == null) {
-            break L1318;
-          } else {
-            us.field_b[2] = uu.a(var2, (byte) -109);
-            break L1318;
-          }
-        }
-        L1319: {
-          var2 = fk.a(false, "trinketcongratulations,3");
-          if (null == var2) {
-            break L1319;
-          } else {
-            us.field_b[3] = uu.a(var2, (byte) -99);
-            break L1319;
-          }
-        }
-        L1320: {
-          var2 = fk.a(false, "trinketcongratulations,4");
-          if (var2 != null) {
-            us.field_b[4] = uu.a(var2, (byte) -94);
-            break L1320;
-          } else {
-            break L1320;
-          }
-        }
-        L1321: {
-          var2 = fk.a(false, "trinketcongratulations,5");
-          if (null == var2) {
-            break L1321;
-          } else {
-            us.field_b[5] = uu.a(var2, (byte) 40);
-            break L1321;
-          }
-        }
-        L1322: {
-          var2 = fk.a(false, "trinketcongratulations,6");
-          if (var2 == null) {
-            break L1322;
-          } else {
-            us.field_b[6] = uu.a(var2, (byte) 105);
-            break L1322;
-          }
-        }
-        L1323: {
-          var2 = fk.a(false, "trinketcongratulations,7");
-          if (null != var2) {
-            us.field_b[7] = uu.a(var2, (byte) 58);
-            break L1323;
-          } else {
-            break L1323;
-          }
-        }
-        L1324: {
-          var2 = fk.a(false, "trinketcongratulations,8");
-          if (var2 != null) {
-            us.field_b[8] = uu.a(var2, (byte) 7);
-            break L1324;
-          } else {
-            break L1324;
-          }
-        }
-        L1325: {
-          var2 = fk.a(false, "trinketcongratulations,9");
-          if (var2 != null) {
-            us.field_b[9] = uu.a(var2, (byte) -95);
-            break L1325;
-          } else {
-            break L1325;
-          }
-        }
-        L1326: {
-          var2 = fk.a(false, "trinketcongratulations,10");
-          if (var2 == null) {
-            break L1326;
-          } else {
-            us.field_b[10] = uu.a(var2, (byte) 57);
-            break L1326;
-          }
-        }
-        L1327: {
-          var2 = fk.a(false, "trinketcongratulations,11");
-          if (null != var2) {
-            us.field_b[11] = uu.a(var2, (byte) 47);
-            break L1327;
-          } else {
-            break L1327;
-          }
-        }
-        L1328: {
-          var2 = fk.a(false, "trinketcongratulations,12");
-          if (null == var2) {
-            break L1328;
-          } else {
-            us.field_b[12] = uu.a(var2, (byte) -125);
-            break L1328;
-          }
-        }
-        L1329: {
-          var2 = fk.a(false, "trinketcongratulations,13");
-          if (null == var2) {
-            break L1329;
-          } else {
-            us.field_b[13] = uu.a(var2, (byte) 68);
-            break L1329;
-          }
-        }
-        L1330: {
-          var2 = fk.a(false, "trinketcongratulations,14");
-          if (null != var2) {
-            us.field_b[14] = uu.a(var2, (byte) -107);
-            break L1330;
-          } else {
-            break L1330;
-          }
-        }
-        L1331: {
-          var2 = fk.a(false, "trinketcongratulations,15");
-          if (null != var2) {
-            us.field_b[15] = uu.a(var2, (byte) -115);
-            break L1331;
-          } else {
-            break L1331;
-          }
-        }
-        L1332: {
-          var2 = fk.a(false, "trinketcongratulations,16");
-          if (null == var2) {
-            break L1332;
-          } else {
-            us.field_b[16] = uu.a(var2, (byte) 46);
-            break L1332;
-          }
-        }
-        L1333: {
-          var2 = fk.a(false, "trinketcongratulations,17");
-          if (null == var2) {
-            break L1333;
-          } else {
-            us.field_b[17] = uu.a(var2, (byte) 42);
-            break L1333;
-          }
-        }
-        L1334: {
-          var2 = fk.a(false, "trinketcongratulations,18");
-          if (null == var2) {
-            break L1334;
-          } else {
-            us.field_b[18] = uu.a(var2, (byte) 93);
-            break L1334;
-          }
-        }
-        L1335: {
-          var2 = fk.a(false, "trinketcongratulations,19");
-          if (var2 != null) {
-            us.field_b[19] = uu.a(var2, (byte) -112);
-            break L1335;
-          } else {
-            break L1335;
-          }
-        }
-        L1336: {
-          var2 = fk.a(false, "trinketcongratulations,20");
-          if (null == var2) {
-            break L1336;
-          } else {
-            us.field_b[20] = uu.a(var2, (byte) 95);
-            break L1336;
-          }
-        }
-        L1337: {
-          var2 = fk.a(false, "trinketcongratulations,21");
-          if (null == var2) {
-            break L1337;
-          } else {
-            us.field_b[21] = uu.a(var2, (byte) 79);
-            break L1337;
-          }
-        }
-        L1338: {
-          var2 = fk.a(false, "trinketcongratulations,22");
-          if (null != var2) {
-            us.field_b[22] = uu.a(var2, (byte) -104);
-            break L1338;
-          } else {
-            break L1338;
-          }
-        }
-        L1339: {
-          var2 = fk.a(false, "trinketcongratulations,23");
-          if (null != var2) {
-            us.field_b[23] = uu.a(var2, (byte) -105);
-            break L1339;
-          } else {
-            break L1339;
-          }
-        }
-        L1340: {
-          var2 = fk.a(false, "trinketcongratulations,24");
-          if (var2 == null) {
-            break L1340;
-          } else {
-            us.field_b[24] = uu.a(var2, (byte) -105);
-            break L1340;
-          }
-        }
-        L1341: {
-          var2 = fk.a(false, "trinketcongratulations,25");
-          if (var2 != null) {
-            us.field_b[25] = uu.a(var2, (byte) 42);
-            break L1341;
-          } else {
-            break L1341;
-          }
-        }
-        L1342: {
-          var2 = fk.a(false, "trinketcongratulations,26");
-          if (null == var2) {
-            break L1342;
-          } else {
-            us.field_b[26] = uu.a(var2, (byte) -121);
-            break L1342;
-          }
-        }
-        L1343: {
-          var2 = fk.a(false, "trinketcongratulations,27");
-          if (var2 == null) {
-            break L1343;
-          } else {
-            us.field_b[27] = uu.a(var2, (byte) 111);
-            break L1343;
-          }
-        }
-        L1344: {
-          var2 = fk.a(false, "trinketcongratulations,28");
-          if (null != var2) {
-            us.field_b[28] = uu.a(var2, (byte) 31);
-            break L1344;
-          } else {
-            break L1344;
-          }
-        }
-        L1345: {
-          var2 = fk.a(false, "LABEL_EQUIPMENTSELECT");
-          if (var2 != null) {
-            String discarded$29 = uu.a(var2, (byte) 58);
-            break L1345;
-          } else {
-            break L1345;
-          }
-        }
-        L1346: {
-          var2 = fk.a(false, "LABEL_EQUIPMENTNAVIGATE");
-          if (var2 != null) {
-            ae.field_x = uu.a(var2, (byte) 109);
-            break L1346;
-          } else {
-            break L1346;
-          }
-        }
-        L1347: {
-          var2 = fk.a(false, "LABEL_EQUIPMENTSTOCK");
-          if (var2 == null) {
-            break L1347;
-          } else {
-            ar.field_x = uu.a(var2, (byte) 63);
-            break L1347;
-          }
-        }
-        L1348: {
-          var2 = fk.a(false, "LABEL_STOCK");
-          if (null != var2) {
-            ou.field_j = uu.a(var2, (byte) 20);
-            break L1348;
-          } else {
-            break L1348;
-          }
-        }
-        L1349: {
-          var2 = fk.a(false, "LABEL_STORE");
-          if (var2 == null) {
-            break L1349;
-          } else {
-            l.field_e = uu.a(var2, (byte) 23);
-            break L1349;
-          }
-        }
-        L1350: {
-          var2 = fk.a(false, "LABEL_EQUIPPED");
-          if (null == var2) {
-            break L1350;
-          } else {
-            cp.field_c = uu.a(var2, (byte) 30);
-            break L1350;
-          }
-        }
-        L1351: {
-          var2 = fk.a(false, "LABEL_STOCKBUTTON");
-          if (null == var2) {
-            break L1351;
-          } else {
-            fu.field_b = uu.a(var2, (byte) 94);
-            break L1351;
-          }
-        }
-        L1352: {
-          var2 = fk.a(false, "LABEL_STOREBUTTON");
-          if (var2 != null) {
-            nu.field_w = uu.a(var2, (byte) -113);
-            break L1352;
-          } else {
-            break L1352;
-          }
-        }
-        L1353: {
-          var2 = fk.a(false, "LABEL_EQUIP");
-          if (var2 == null) {
-            break L1353;
-          } else {
-            wi.field_h = uu.a(var2, (byte) -117);
-            break L1353;
-          }
-        }
-        L1354: {
-          var2 = fk.a(false, "LABEL_DEQUIP");
-          if (null == var2) {
-            break L1354;
-          } else {
-            ni.field_c = uu.a(var2, (byte) 45);
-            break L1354;
-          }
-        }
-        L1355: {
-          var2 = fk.a(false, "caption1");
-          if (null != var2) {
-            hi.field_a = uu.a(var2, (byte) -109);
-            break L1355;
-          } else {
-            break L1355;
-          }
-        }
-        L1356: {
-          var2 = fk.a(false, "caption2");
-          if (var2 != null) {
-            gm.field_b = uu.a(var2, (byte) 119);
-            break L1356;
-          } else {
-            break L1356;
-          }
-        }
-        L1357: {
-          var2 = fk.a(false, "caption3");
-          if (null == var2) {
-            break L1357;
-          } else {
-            ft.field_o = uu.a(var2, (byte) -112);
-            break L1357;
-          }
-        }
-        L1358: {
-          var2 = fk.a(false, "caption4");
-          if (var2 == null) {
-            break L1358;
-          } else {
-            pp.field_S = uu.a(var2, (byte) 10);
-            break L1358;
-          }
-        }
-        L1359: {
-          var2 = fk.a(false, "caption5");
-          if (null == var2) {
-            break L1359;
-          } else {
-            bj.field_q = uu.a(var2, (byte) 107);
-            break L1359;
-          }
-        }
-        L1360: {
-          var2 = fk.a(false, "membersExpanionTitle");
-          if (null == var2) {
-            break L1360;
-          } else {
-            bi.field_c = uu.a(var2, (byte) -99);
-            break L1360;
-          }
-        }
-        L1361: {
-          var2 = fk.a(false, "PRESTIGE_LEVEL");
-          if (var2 == null) {
-            break L1361;
-          } else {
-            hf.field_e = uu.a(var2, (byte) 30);
-            break L1361;
-          }
-        }
-        L1362: {
-          var2 = fk.a(false, "PRESTIGE_GOT");
-          if (null != var2) {
-            gt.field_g = uu.a(var2, (byte) -100);
-            break L1362;
-          } else {
-            break L1362;
-          }
-        }
-        L1363: {
-          var2 = fk.a(false, "PRESTIGE_DETAILS");
-          if (var2 == null) {
-            break L1363;
-          } else {
-            hw.field_w = uu.a(var2, (byte) 66);
-            break L1363;
-          }
-        }
-        L1364: {
-          var2 = fk.a(false, "PRESTIGE_REFUNDING");
-          if (var2 != null) {
-            qf.field_b = uu.a(var2, (byte) 47);
-            break L1364;
-          } else {
-            break L1364;
-          }
-        }
-        L1365: {
-          var2 = fk.a(false, "TRINKET_USE_MESSAGE");
-          if (null == var2) {
-            break L1365;
-          } else {
-            jr.field_e = uu.a(var2, (byte) 67);
-            break L1365;
-          }
-        }
-        L1366: {
-          var2 = fk.a(false, "TRINKET_ACCESSORY_CONFIRM");
-          if (var2 == null) {
-            break L1366;
-          } else {
-            io.field_u = uu.a(var2, (byte) 11);
-            break L1366;
-          }
-        }
-        L1367: {
-          var2 = fk.a(false, "TRINKET_ARMOUR_CONFIRM");
-          if (null == var2) {
-            break L1367;
-          } else {
-            oo.field_o = uu.a(var2, (byte) -123);
-            break L1367;
-          }
-        }
-        L1368: {
-          var2 = fk.a(false, "TRINKET_WEAPON_CONFIRM");
-          if (null != var2) {
-            rb.field_c = uu.a(var2, (byte) -108);
-            break L1368;
-          } else {
-            break L1368;
-          }
-        }
-        L1369: {
-          var2 = fk.a(false, "TRINKET_TURN_LIMIT");
-          if (var2 == null) {
-            break L1369;
-          } else {
-            ae.field_w = uu.a(var2, (byte) 118);
-            break L1369;
-          }
-        }
-        L1370: {
-          var2 = fk.a(false, "TRINKET_EMPTY");
-          if (null != var2) {
-            st.field_y = uu.a(var2, (byte) -111);
-            break L1370;
-          } else {
-            break L1370;
-          }
-        }
-        L1371: {
-          var2 = fk.a(false, "TRINKET_SCROLL");
-          if (null != var2) {
-            dq.field_g = uu.a(var2, (byte) -126);
-            break L1371;
-          } else {
-            break L1371;
-          }
-        }
-        L1372: {
-          var2 = fk.a(false, "MEMBERS_ONLY");
-          if (var2 != null) {
-            bn.field_g = uu.a(var2, (byte) -107);
-            break L1372;
-          } else {
-            break L1372;
-          }
-        }
-        L1373: {
-          var2 = fk.a(false, "ZERO");
-          if (var2 != null) {
-            dv.field_g = uu.a(var2, (byte) -111);
-            break L1373;
-          } else {
-            break L1373;
-          }
-        }
-        sb.field_e = null;
-        L1374: {
-          if (var3 == 0) {
-            break L1374;
-          } else {
-            L1375: {
-              if (!iv.field_k) {
-                stackOut_3450_0 = 1;
-                stackIn_3451_0 = stackOut_3450_0;
-                break L1375;
-              } else {
-                stackOut_3449_0 = 0;
-                stackIn_3451_0 = stackOut_3449_0;
-                break L1375;
-              }
+        if (param1 == 10207) {
+          L1289: {
+            var2 = fk.a(false, "TRT_TEXT,7");
+            if (var2 == null) {
+              break L1289;
+            } else {
+              r.field_E[7] = uu.a(var2, (byte) -118);
+              break L1289;
             }
-            iv.field_k = stackIn_3451_0 != 0;
-            break L1374;
           }
+          L1290: {
+            var2 = fk.a(false, "TRT_TEXT,8");
+            if (var2 != null) {
+              r.field_E[8] = uu.a(var2, (byte) 100);
+              break L1290;
+            } else {
+              break L1290;
+            }
+          }
+          L1291: {
+            var2 = fk.a(false, "TRT_TEXT,9");
+            if (null != var2) {
+              r.field_E[9] = uu.a(var2, (byte) -96);
+              break L1291;
+            } else {
+              break L1291;
+            }
+          }
+          L1292: {
+            var2 = fk.a(false, "TRT_TEXT,10");
+            if (var2 != null) {
+              r.field_E[10] = uu.a(var2, (byte) 121);
+              break L1292;
+            } else {
+              break L1292;
+            }
+          }
+          L1293: {
+            var2 = fk.a(false, "TRT_TEXT,11");
+            if (null == var2) {
+              break L1293;
+            } else {
+              r.field_E[11] = uu.a(var2, (byte) -107);
+              break L1293;
+            }
+          }
+          L1294: {
+            var2 = fk.a(false, "TRT_TEXT,12");
+            if (null != var2) {
+              r.field_E[12] = uu.a(var2, (byte) -97);
+              break L1294;
+            } else {
+              break L1294;
+            }
+          }
+          L1295: {
+            var2 = fk.a(false, "TRT_TEXT,13");
+            if (var2 == null) {
+              break L1295;
+            } else {
+              r.field_E[13] = uu.a(var2, (byte) -107);
+              break L1295;
+            }
+          }
+          L1296: {
+            var2 = fk.a(false, "TRT_TEXT,14");
+            if (null == var2) {
+              break L1296;
+            } else {
+              r.field_E[14] = uu.a(var2, (byte) -124);
+              break L1296;
+            }
+          }
+          L1297: {
+            var2 = fk.a(false, "TRT_TEXT,15");
+            if (var2 != null) {
+              r.field_E[15] = uu.a(var2, (byte) -125);
+              break L1297;
+            } else {
+              break L1297;
+            }
+          }
+          L1298: {
+            var2 = fk.a(false, "TRT_TEXT,16");
+            if (var2 != null) {
+              r.field_E[16] = uu.a(var2, (byte) -128);
+              break L1298;
+            } else {
+              break L1298;
+            }
+          }
+          L1299: {
+            var2 = fk.a(false, "TRT_TEXT,17");
+            if (var2 == null) {
+              break L1299;
+            } else {
+              r.field_E[17] = uu.a(var2, (byte) -94);
+              break L1299;
+            }
+          }
+          L1300: {
+            var2 = fk.a(false, "TRT_TEXT,18");
+            if (var2 == null) {
+              break L1300;
+            } else {
+              r.field_E[18] = uu.a(var2, (byte) -126);
+              break L1300;
+            }
+          }
+          L1301: {
+            var2 = fk.a(false, "TRT_TEXT,19");
+            if (var2 == null) {
+              break L1301;
+            } else {
+              r.field_E[19] = uu.a(var2, (byte) 86);
+              break L1301;
+            }
+          }
+          L1302: {
+            var2 = fk.a(false, "TRT_TEXT,20");
+            if (var2 != null) {
+              r.field_E[20] = uu.a(var2, (byte) 16);
+              break L1302;
+            } else {
+              break L1302;
+            }
+          }
+          L1303: {
+            var2 = fk.a(false, "TRT_TEXT,21");
+            if (null != var2) {
+              r.field_E[21] = uu.a(var2, (byte) -108);
+              break L1303;
+            } else {
+              break L1303;
+            }
+          }
+          L1304: {
+            var2 = fk.a(false, "TRT_TEXT,22");
+            if (var2 != null) {
+              r.field_E[22] = uu.a(var2, (byte) 127);
+              break L1304;
+            } else {
+              break L1304;
+            }
+          }
+          L1305: {
+            var2 = fk.a(false, "TRT_TEXT,23");
+            if (var2 == null) {
+              break L1305;
+            } else {
+              r.field_E[23] = uu.a(var2, (byte) 3);
+              break L1305;
+            }
+          }
+          L1306: {
+            var2 = fk.a(false, "TRT_TEXT,24");
+            if (null != var2) {
+              r.field_E[24] = uu.a(var2, (byte) -108);
+              break L1306;
+            } else {
+              break L1306;
+            }
+          }
+          L1307: {
+            var2 = fk.a(false, "TRT_TEXT,25");
+            if (var2 != null) {
+              r.field_E[25] = uu.a(var2, (byte) 102);
+              break L1307;
+            } else {
+              break L1307;
+            }
+          }
+          L1308: {
+            var2 = fk.a(false, "TRT_TEXT,26");
+            if (var2 == null) {
+              break L1308;
+            } else {
+              r.field_E[26] = uu.a(var2, (byte) -107);
+              break L1308;
+            }
+          }
+          L1309: {
+            var2 = fk.a(false, "TRT_TEXT,27");
+            if (var2 != null) {
+              r.field_E[27] = uu.a(var2, (byte) 60);
+              break L1309;
+            } else {
+              break L1309;
+            }
+          }
+          L1310: {
+            var2 = fk.a(false, "TRT_TEXT,28");
+            if (var2 == null) {
+              break L1310;
+            } else {
+              r.field_E[28] = uu.a(var2, (byte) -127);
+              break L1310;
+            }
+          }
+          L1311: {
+            var2 = fk.a(false, "TRT_TEXT,29");
+            if (null != var2) {
+              r.field_E[29] = uu.a(var2, (byte) -120);
+              break L1311;
+            } else {
+              break L1311;
+            }
+          }
+          L1312: {
+            var2 = fk.a(false, "TRT_TEXT,30");
+            if (null != var2) {
+              r.field_E[30] = uu.a(var2, (byte) 88);
+              break L1312;
+            } else {
+              break L1312;
+            }
+          }
+          L1313: {
+            var2 = fk.a(false, "TRT_TEXT,31");
+            if (var2 == null) {
+              break L1313;
+            } else {
+              r.field_E[31] = uu.a(var2, (byte) -108);
+              break L1313;
+            }
+          }
+          L1314: {
+            var2 = fk.a(false, "TRT_TEXT,32");
+            if (var2 != null) {
+              r.field_E[32] = uu.a(var2, (byte) -110);
+              break L1314;
+            } else {
+              break L1314;
+            }
+          }
+          L1315: {
+            var2 = fk.a(false, "TRT_TEXT,33");
+            if (var2 == null) {
+              break L1315;
+            } else {
+              r.field_E[33] = uu.a(var2, (byte) 95);
+              break L1315;
+            }
+          }
+          L1316: {
+            var2 = fk.a(false, "trinketcongratulations,0");
+            if (null != var2) {
+              us.field_b[0] = uu.a(var2, (byte) -128);
+              break L1316;
+            } else {
+              break L1316;
+            }
+          }
+          L1317: {
+            var2 = fk.a(false, "trinketcongratulations,1");
+            if (var2 == null) {
+              break L1317;
+            } else {
+              us.field_b[1] = uu.a(var2, (byte) 88);
+              break L1317;
+            }
+          }
+          L1318: {
+            var2 = fk.a(false, "trinketcongratulations,2");
+            if (var2 == null) {
+              break L1318;
+            } else {
+              us.field_b[2] = uu.a(var2, (byte) -109);
+              break L1318;
+            }
+          }
+          L1319: {
+            var2 = fk.a(false, "trinketcongratulations,3");
+            if (null == var2) {
+              break L1319;
+            } else {
+              us.field_b[3] = uu.a(var2, (byte) -99);
+              break L1319;
+            }
+          }
+          L1320: {
+            var2 = fk.a(false, "trinketcongratulations,4");
+            if (var2 != null) {
+              us.field_b[4] = uu.a(var2, (byte) -94);
+              break L1320;
+            } else {
+              break L1320;
+            }
+          }
+          L1321: {
+            var2 = fk.a(false, "trinketcongratulations,5");
+            if (null == var2) {
+              break L1321;
+            } else {
+              us.field_b[5] = uu.a(var2, (byte) 40);
+              break L1321;
+            }
+          }
+          L1322: {
+            var2 = fk.a(false, "trinketcongratulations,6");
+            if (var2 == null) {
+              break L1322;
+            } else {
+              us.field_b[6] = uu.a(var2, (byte) 105);
+              break L1322;
+            }
+          }
+          L1323: {
+            var2 = fk.a(false, "trinketcongratulations,7");
+            if (null != var2) {
+              us.field_b[7] = uu.a(var2, (byte) 58);
+              break L1323;
+            } else {
+              break L1323;
+            }
+          }
+          L1324: {
+            var2 = fk.a(false, "trinketcongratulations,8");
+            if (var2 != null) {
+              us.field_b[8] = uu.a(var2, (byte) 7);
+              break L1324;
+            } else {
+              break L1324;
+            }
+          }
+          L1325: {
+            var2 = fk.a(false, "trinketcongratulations,9");
+            if (var2 != null) {
+              us.field_b[9] = uu.a(var2, (byte) -95);
+              break L1325;
+            } else {
+              break L1325;
+            }
+          }
+          L1326: {
+            var2 = fk.a(false, "trinketcongratulations,10");
+            if (var2 == null) {
+              break L1326;
+            } else {
+              us.field_b[10] = uu.a(var2, (byte) 57);
+              break L1326;
+            }
+          }
+          L1327: {
+            var2 = fk.a(false, "trinketcongratulations,11");
+            if (null != var2) {
+              us.field_b[11] = uu.a(var2, (byte) 47);
+              break L1327;
+            } else {
+              break L1327;
+            }
+          }
+          L1328: {
+            var2 = fk.a(false, "trinketcongratulations,12");
+            if (null == var2) {
+              break L1328;
+            } else {
+              us.field_b[12] = uu.a(var2, (byte) -125);
+              break L1328;
+            }
+          }
+          L1329: {
+            var2 = fk.a(false, "trinketcongratulations,13");
+            if (null == var2) {
+              break L1329;
+            } else {
+              us.field_b[13] = uu.a(var2, (byte) 68);
+              break L1329;
+            }
+          }
+          L1330: {
+            var2 = fk.a(false, "trinketcongratulations,14");
+            if (null != var2) {
+              us.field_b[14] = uu.a(var2, (byte) -107);
+              break L1330;
+            } else {
+              break L1330;
+            }
+          }
+          L1331: {
+            var2 = fk.a(false, "trinketcongratulations,15");
+            if (null != var2) {
+              us.field_b[15] = uu.a(var2, (byte) -115);
+              break L1331;
+            } else {
+              break L1331;
+            }
+          }
+          L1332: {
+            var2 = fk.a(false, "trinketcongratulations,16");
+            if (null == var2) {
+              break L1332;
+            } else {
+              us.field_b[16] = uu.a(var2, (byte) 46);
+              break L1332;
+            }
+          }
+          L1333: {
+            var2 = fk.a(false, "trinketcongratulations,17");
+            if (null == var2) {
+              break L1333;
+            } else {
+              us.field_b[17] = uu.a(var2, (byte) 42);
+              break L1333;
+            }
+          }
+          L1334: {
+            var2 = fk.a(false, "trinketcongratulations,18");
+            if (null == var2) {
+              break L1334;
+            } else {
+              us.field_b[18] = uu.a(var2, (byte) 93);
+              break L1334;
+            }
+          }
+          L1335: {
+            var2 = fk.a(false, "trinketcongratulations,19");
+            if (var2 != null) {
+              us.field_b[19] = uu.a(var2, (byte) -112);
+              break L1335;
+            } else {
+              break L1335;
+            }
+          }
+          L1336: {
+            var2 = fk.a(false, "trinketcongratulations,20");
+            if (null == var2) {
+              break L1336;
+            } else {
+              us.field_b[20] = uu.a(var2, (byte) 95);
+              break L1336;
+            }
+          }
+          L1337: {
+            var2 = fk.a(false, "trinketcongratulations,21");
+            if (null == var2) {
+              break L1337;
+            } else {
+              us.field_b[21] = uu.a(var2, (byte) 79);
+              break L1337;
+            }
+          }
+          L1338: {
+            var2 = fk.a(false, "trinketcongratulations,22");
+            if (null != var2) {
+              us.field_b[22] = uu.a(var2, (byte) -104);
+              break L1338;
+            } else {
+              break L1338;
+            }
+          }
+          L1339: {
+            var2 = fk.a(false, "trinketcongratulations,23");
+            if (null != var2) {
+              us.field_b[23] = uu.a(var2, (byte) -105);
+              break L1339;
+            } else {
+              break L1339;
+            }
+          }
+          L1340: {
+            var2 = fk.a(false, "trinketcongratulations,24");
+            if (var2 == null) {
+              break L1340;
+            } else {
+              us.field_b[24] = uu.a(var2, (byte) -105);
+              break L1340;
+            }
+          }
+          L1341: {
+            var2 = fk.a(false, "trinketcongratulations,25");
+            if (var2 != null) {
+              us.field_b[25] = uu.a(var2, (byte) 42);
+              break L1341;
+            } else {
+              break L1341;
+            }
+          }
+          L1342: {
+            var2 = fk.a(false, "trinketcongratulations,26");
+            if (null == var2) {
+              break L1342;
+            } else {
+              us.field_b[26] = uu.a(var2, (byte) -121);
+              break L1342;
+            }
+          }
+          L1343: {
+            var2 = fk.a(false, "trinketcongratulations,27");
+            if (var2 == null) {
+              break L1343;
+            } else {
+              us.field_b[27] = uu.a(var2, (byte) 111);
+              break L1343;
+            }
+          }
+          L1344: {
+            var2 = fk.a(false, "trinketcongratulations,28");
+            if (null != var2) {
+              us.field_b[28] = uu.a(var2, (byte) 31);
+              break L1344;
+            } else {
+              break L1344;
+            }
+          }
+          L1345: {
+            var2 = fk.a(false, "LABEL_EQUIPMENTSELECT");
+            if (var2 != null) {
+              String discarded$29 = uu.a(var2, (byte) 58);
+              break L1345;
+            } else {
+              break L1345;
+            }
+          }
+          L1346: {
+            var2 = fk.a(false, "LABEL_EQUIPMENTNAVIGATE");
+            if (var2 != null) {
+              ae.field_x = uu.a(var2, (byte) 109);
+              break L1346;
+            } else {
+              break L1346;
+            }
+          }
+          L1347: {
+            var2 = fk.a(false, "LABEL_EQUIPMENTSTOCK");
+            if (var2 == null) {
+              break L1347;
+            } else {
+              ar.field_x = uu.a(var2, (byte) 63);
+              break L1347;
+            }
+          }
+          L1348: {
+            var2 = fk.a(false, "LABEL_STOCK");
+            if (null != var2) {
+              ou.field_j = uu.a(var2, (byte) 20);
+              break L1348;
+            } else {
+              break L1348;
+            }
+          }
+          L1349: {
+            var2 = fk.a(false, "LABEL_STORE");
+            if (var2 == null) {
+              break L1349;
+            } else {
+              l.field_e = uu.a(var2, (byte) 23);
+              break L1349;
+            }
+          }
+          L1350: {
+            var2 = fk.a(false, "LABEL_EQUIPPED");
+            if (null == var2) {
+              break L1350;
+            } else {
+              cp.field_c = uu.a(var2, (byte) 30);
+              break L1350;
+            }
+          }
+          L1351: {
+            var2 = fk.a(false, "LABEL_STOCKBUTTON");
+            if (null == var2) {
+              break L1351;
+            } else {
+              fu.field_b = uu.a(var2, (byte) 94);
+              break L1351;
+            }
+          }
+          L1352: {
+            var2 = fk.a(false, "LABEL_STOREBUTTON");
+            if (var2 != null) {
+              nu.field_w = uu.a(var2, (byte) -113);
+              break L1352;
+            } else {
+              break L1352;
+            }
+          }
+          L1353: {
+            var2 = fk.a(false, "LABEL_EQUIP");
+            if (var2 == null) {
+              break L1353;
+            } else {
+              wi.field_h = uu.a(var2, (byte) -117);
+              break L1353;
+            }
+          }
+          L1354: {
+            var2 = fk.a(false, "LABEL_DEQUIP");
+            if (null == var2) {
+              break L1354;
+            } else {
+              ni.field_c = uu.a(var2, (byte) 45);
+              break L1354;
+            }
+          }
+          L1355: {
+            var2 = fk.a(false, "caption1");
+            if (null != var2) {
+              hi.field_a = uu.a(var2, (byte) -109);
+              break L1355;
+            } else {
+              break L1355;
+            }
+          }
+          L1356: {
+            var2 = fk.a(false, "caption2");
+            if (var2 != null) {
+              gm.field_b = uu.a(var2, (byte) 119);
+              break L1356;
+            } else {
+              break L1356;
+            }
+          }
+          L1357: {
+            var2 = fk.a(false, "caption3");
+            if (null == var2) {
+              break L1357;
+            } else {
+              ft.field_o = uu.a(var2, (byte) -112);
+              break L1357;
+            }
+          }
+          L1358: {
+            var2 = fk.a(false, "caption4");
+            if (var2 == null) {
+              break L1358;
+            } else {
+              pp.field_S = uu.a(var2, (byte) 10);
+              break L1358;
+            }
+          }
+          L1359: {
+            var2 = fk.a(false, "caption5");
+            if (null == var2) {
+              break L1359;
+            } else {
+              bj.field_q = uu.a(var2, (byte) 107);
+              break L1359;
+            }
+          }
+          L1360: {
+            var2 = fk.a(false, "membersExpanionTitle");
+            if (null == var2) {
+              break L1360;
+            } else {
+              bi.field_c = uu.a(var2, (byte) -99);
+              break L1360;
+            }
+          }
+          L1361: {
+            var2 = fk.a(false, "PRESTIGE_LEVEL");
+            if (var2 == null) {
+              break L1361;
+            } else {
+              hf.field_e = uu.a(var2, (byte) 30);
+              break L1361;
+            }
+          }
+          L1362: {
+            var2 = fk.a(false, "PRESTIGE_GOT");
+            if (null != var2) {
+              gt.field_g = uu.a(var2, (byte) -100);
+              break L1362;
+            } else {
+              break L1362;
+            }
+          }
+          L1363: {
+            var2 = fk.a(false, "PRESTIGE_DETAILS");
+            if (var2 == null) {
+              break L1363;
+            } else {
+              hw.field_w = uu.a(var2, (byte) 66);
+              break L1363;
+            }
+          }
+          L1364: {
+            var2 = fk.a(false, "PRESTIGE_REFUNDING");
+            if (var2 != null) {
+              qf.field_b = uu.a(var2, (byte) 47);
+              break L1364;
+            } else {
+              break L1364;
+            }
+          }
+          L1365: {
+            var2 = fk.a(false, "TRINKET_USE_MESSAGE");
+            if (null == var2) {
+              break L1365;
+            } else {
+              jr.field_e = uu.a(var2, (byte) 67);
+              break L1365;
+            }
+          }
+          L1366: {
+            var2 = fk.a(false, "TRINKET_ACCESSORY_CONFIRM");
+            if (var2 == null) {
+              break L1366;
+            } else {
+              io.field_u = uu.a(var2, (byte) 11);
+              break L1366;
+            }
+          }
+          L1367: {
+            var2 = fk.a(false, "TRINKET_ARMOUR_CONFIRM");
+            if (null == var2) {
+              break L1367;
+            } else {
+              oo.field_o = uu.a(var2, (byte) -123);
+              break L1367;
+            }
+          }
+          L1368: {
+            var2 = fk.a(false, "TRINKET_WEAPON_CONFIRM");
+            if (null != var2) {
+              rb.field_c = uu.a(var2, (byte) -108);
+              break L1368;
+            } else {
+              break L1368;
+            }
+          }
+          L1369: {
+            var2 = fk.a(false, "TRINKET_TURN_LIMIT");
+            if (var2 == null) {
+              break L1369;
+            } else {
+              ae.field_w = uu.a(var2, (byte) 118);
+              break L1369;
+            }
+          }
+          L1370: {
+            var2 = fk.a(false, "TRINKET_EMPTY");
+            if (null != var2) {
+              st.field_y = uu.a(var2, (byte) -111);
+              break L1370;
+            } else {
+              break L1370;
+            }
+          }
+          L1371: {
+            var2 = fk.a(false, "TRINKET_SCROLL");
+            if (null != var2) {
+              dq.field_g = uu.a(var2, (byte) -126);
+              break L1371;
+            } else {
+              break L1371;
+            }
+          }
+          L1372: {
+            var2 = fk.a(false, "MEMBERS_ONLY");
+            if (var2 != null) {
+              bn.field_g = uu.a(var2, (byte) -107);
+              break L1372;
+            } else {
+              break L1372;
+            }
+          }
+          L1373: {
+            var2 = fk.a(false, "ZERO");
+            if (var2 != null) {
+              dv.field_g = uu.a(var2, (byte) -111);
+              break L1373;
+            } else {
+              break L1373;
+            }
+          }
+          sb.field_e = null;
+          L1374: {
+            if (var3 == 0) {
+              break L1374;
+            } else {
+              L1375: {
+                if (!iv.field_k) {
+                  stackOut_3451_0 = 1;
+                  stackIn_3452_0 = stackOut_3451_0;
+                  break L1375;
+                } else {
+                  stackOut_3450_0 = 0;
+                  stackIn_3452_0 = stackOut_3450_0;
+                  break L1375;
+                }
+              }
+              iv.field_k = stackIn_3452_0 != 0;
+              break L1374;
+            }
+          }
+          return;
+        } else {
+          return;
         }
     }
 
@@ -12511,44 +12516,48 @@ final class em {
             var3_ref.field_a = param2.k(0);
             var3_ref.field_e = param2.h((byte) 121);
             var3_ref.field_b = param2.e((byte) -104);
-            var4 = param2.k(0);
-            var5 = 0;
-            L1: while (true) {
-              L2: {
-                L3: {
-                  if (~var5 <= ~var4) {
-                    break L3;
-                  } else {
-                    var6 = param2.k(0);
-                    var7 = param0.field_q[var6];
-                    int fieldTemp$1 = var7.field_o;
-                    var7.field_o = var7.field_o + 1;
-                    var7.field_k[fieldTemp$1] = var3_ref;
-                    if (var9 != 0) {
-                      break L2;
+            if (param1 == -7) {
+              var4 = param2.k(0);
+              var5 = 0;
+              L1: while (true) {
+                L2: {
+                  L3: {
+                    if (~var5 <= ~var4) {
+                      break L3;
                     } else {
-                      L4: {
-                        if (~var7.field_o != ~var7.field_k.length) {
-                          break L4;
-                        } else {
-                          var8 = var7.field_k;
-                          var7.field_k = new id[10 + var8.length];
-                          vm.a((Object[]) (Object) var8, 0, (Object[]) (Object) var7.field_k, 0, var8.length);
-                          break L4;
-                        }
-                      }
-                      var5++;
-                      if (var9 == 0) {
-                        continue L1;
+                      var6 = param2.k(param1 + 7);
+                      var7 = param0.field_q[var6];
+                      int fieldTemp$1 = var7.field_o;
+                      var7.field_o = var7.field_o + 1;
+                      var7.field_k[fieldTemp$1] = var3_ref;
+                      if (var9 != 0) {
+                        break L2;
                       } else {
-                        break L3;
+                        L4: {
+                          if (~var7.field_o != ~var7.field_k.length) {
+                            break L4;
+                          } else {
+                            var8 = var7.field_k;
+                            var7.field_k = new id[10 + var8.length];
+                            vm.a((Object[]) (Object) var8, 0, (Object[]) (Object) var7.field_k, 0, var8.length);
+                            break L4;
+                          }
+                        }
+                        var5++;
+                        if (var9 == 0) {
+                          continue L1;
+                        } else {
+                          break L3;
+                        }
                       }
                     }
                   }
+                  break L2;
                 }
-                break L2;
+                break L0;
               }
-              break L0;
+            } else {
+              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -12581,7 +12590,7 @@ final class em {
           }
           L6: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(-7).append(',');
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',');
             stackIn_19_0 = stackOut_16_0;
             stackIn_19_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -12712,8 +12721,7 @@ final class em {
                           l.field_b[17].b(param7, -40 + param3, param0, param8);
                           mv.a(param7 - -20, (byte) -95, ug.field_b + param4, var11, param3);
                           if (var11 > -1) {
-                            int discarded$3 = -10374;
-                            ks.a(mn.field_k[76][var11], false, -40 + param3, pr.field_g, 128, 150, param7, (js) null);
+                            ks.a(mn.field_k[76][var11], false, -40 + param3, pr.field_g, 128, 150, param7, (js) null, -10374);
                             break L14;
                           } else {
                             break L14;
@@ -12735,8 +12743,7 @@ final class em {
                             break L16;
                           }
                         }
-                        int discarded$4 = -10374;
-                        ks.a(mn.field_k[76][var11], false, param3 - 40, pr.field_g, 128, 150, param7, (js) null);
+                        ks.a(mn.field_k[76][var11], false, param3 - 40, pr.field_g, 128, 150, param7, (js) null, -10374);
                         if (var13 == 0) {
                           break L11;
                         } else {
@@ -12799,8 +12806,7 @@ final class em {
                             if (var10 != 4) {
                               break L21;
                             } else {
-                              int discarded$5 = 0;
-                              la.a(param3 - -20, og.field_p[param4] + param4, param8, 40 + param7, param0);
+                              la.a(param3 - -20, og.field_p[param4] + param4, param8, 40 + param7, param0, false);
                               if (var13 == 0) {
                                 break L11;
                               } else {
@@ -12859,7 +12865,7 @@ final class em {
                     break L24;
                   }
                 }
-                var11 = bv.field_w.b(31, param2, param6, -1);
+                var11 = bv.field_w.b(param5 + 31, param2, param6, -1);
                 var12 = vs.field_e[param4].field_h;
                 if (4 == var12) {
                   break L1;
@@ -12873,7 +12879,7 @@ final class em {
                       if (0 == (var11 & 1)) {
                         break L1;
                       } else {
-                        jr.a(var9_int, 117, param3, ug.field_b, param7);
+                        jr.a(var9_int, param5 ^ 117, param3, ug.field_b, param7);
                         break L1;
                       }
                     }
@@ -12883,21 +12889,37 @@ final class em {
                 break L1;
               }
             }
+            L25: {
+              if (param5 == 0) {
+                break L25;
+              } else {
+                em.a((cf) null, (byte) -46, (bv) null);
+                break L25;
+              }
+            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var9, "em.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + 0 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw ig.a((Throwable) (Object) var9, "em.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            field_b = null;
+            L1: {
+              field_b = null;
+              if (param0 == 1) {
+                break L1;
+              } else {
+                field_c = null;
+                break L1;
+              }
+            }
             field_e = null;
             field_c = null;
             field_d = null;
@@ -12906,7 +12928,7 @@ final class em {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var1, "em.B(" + 1 + ')');
+          throw ig.a((Throwable) (Object) var1, "em.B(" + param0 + ')');
         }
     }
 

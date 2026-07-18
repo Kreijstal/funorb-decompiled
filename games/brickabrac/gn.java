@@ -148,15 +148,13 @@ final class gn extends ld {
 
     final static void a(boolean param0, mf param1, mf param2, mf param3, int param4) {
         try {
-            int discarded$0 = 16711935;
-            ma.field_I = rm.a("");
+            ma.field_I = rm.a("", 16711935);
             ma.field_I.a(false, 20892);
             if (param4 <= 11) {
                 field_D = null;
             }
             nq.a(param3, param1, (byte) -59, param2);
-            int discarded$1 = 0;
-            np.b();
+            np.b(false);
             ka.field_l = ej.field_P;
             ik.field_g = ej.field_P;
         } catch (RuntimeException runtimeException) {
@@ -178,12 +176,10 @@ final class gn extends ld {
     final void c(int param0) {
         if (param0 != -1) {
             gn.i(-22);
-            int discarded$0 = 122;
-            da.f();
+            da.f((byte) 122);
             return;
         }
-        int discarded$1 = 122;
-        da.f();
+        da.f((byte) 122);
     }
 
     gn() {

@@ -7,7 +7,7 @@ final class hg {
     static b field_b;
     static int[] field_a;
 
-    final static void b() {
+    final static void b(int param0) {
         if (!(null == e.field_S)) {
             e.field_S.e((byte) -36);
         }
@@ -17,7 +17,7 @@ final class hg {
         jk.b(0);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         vn var1 = null;
         vn var2 = null;
         int var4 = 0;
@@ -28,8 +28,7 @@ final class hg {
             en.c();
             bi.d();
             ej.field_x = 0;
-            int discarded$0 = 30549;
-            gk.j();
+            gk.j(30549);
             var2 = var1.e();
             int var3 = 0;
             for (var4 = 0; var4 < 15; var4++) {
@@ -161,7 +160,7 @@ final class hg {
         return (oh) (Object) stackIn_18_0;
     }
 
-    final static vn a(int param0, int param1, dj param2) {
+    final static vn a(int param0, int param1, dj param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         vn stackIn_6_0 = null;
@@ -186,8 +185,7 @@ final class hg {
         try {
           L0: {
             if (ph.a(param1, 31043, param0, param2)) {
-              int discarded$2 = 72;
-              stackOut_5_0 = em.i();
+              stackOut_5_0 = em.i((byte) 72);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

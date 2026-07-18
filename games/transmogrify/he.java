@@ -5,7 +5,7 @@ final class he extends wf {
     static String field_h;
     static String field_g;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_h = null;
     }
@@ -66,8 +66,7 @@ final class he extends wf {
                     break L2;
                   }
                 }
-                int discarded$1 = -116;
-                de.field_a = de.a(stackIn_12_0 != 0);
+                de.field_a = de.a(stackIn_12_0 != 0, (byte) -116);
                 var6 = null;
                 dj.a(false, (String[]) null);
                 break L1;
@@ -147,7 +146,7 @@ final class he extends wf {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         L0: {
           L1: {
             if (ba.field_q == null) {

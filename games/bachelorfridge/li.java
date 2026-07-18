@@ -5,7 +5,7 @@ final class li extends lw {
     static cf field_l;
     static boolean field_m;
 
-    final static void e() {
+    final static void e(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -87,7 +87,7 @@ final class li extends lw {
                 break L1;
               } else {
                 var7 = null;
-                iga discarded$4 = li.a(51, true, (String) null, (String) null);
+                iga discarded$2 = li.a(51, true, (String) null, (String) null);
                 break L1;
               }
             }
@@ -98,8 +98,7 @@ final class li extends lw {
                 break L2;
               } else {
                 var8 = (CharSequence) (Object) param2;
-                int discarded$5 = 1;
-                var4_long = mp.a(var8);
+                var4_long = mp.a(var8, true);
                 break L2;
               }
             }
@@ -183,7 +182,7 @@ final class li extends lw {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_l = null;
     }
 

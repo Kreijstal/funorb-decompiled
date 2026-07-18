@@ -14,8 +14,7 @@ final class rg extends RuntimeException {
 
     final static void a(boolean param0) {
         em.field_h = 0;
-        int discarded$0 = 0;
-        bo.r();
+        bo.r(0);
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
@@ -76,7 +75,7 @@ final class rg extends RuntimeException {
     final static void b(boolean param0) {
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -136,8 +135,7 @@ final class rg extends RuntimeException {
                   }
                 }
                 L4: {
-                  int discarded$1 = 1;
-                  var7 = or.a(stackIn_13_0 != 0, var6);
+                  var7 = or.a(stackIn_13_0 != 0, var6, true);
                   var8 = ol.field_e + -(var7 >> 1);
                   if (var4 < 0) {
                     break L4;
@@ -356,14 +354,12 @@ final class rg extends RuntimeException {
     final static int a(int param0, int param1, byte param2) {
         if (param2 < 81) {
             field_d = -104;
-            int discarded$0 = -11;
-            return hi.a(param0 + (-param1 + 1), tg.field_b) - -param1;
+            return hi.a(param0 + (-param1 + 1), tg.field_b, -11) - -param1;
         }
-        int discarded$1 = -11;
-        return hi.a(param0 + (-param1 + 1), tg.field_b) - -param1;
+        return hi.a(param0 + (-param1 + 1), tg.field_b, -11) - -param1;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_c = null;
         field_f = null;

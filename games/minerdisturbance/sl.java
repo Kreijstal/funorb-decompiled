@@ -121,8 +121,7 @@ final class sl extends pi {
                   }
                 }
               }
-              int discarded$2 = -29;
-              wc.c();
+              wc.c((byte) -29);
               break L1;
             }
             L3: {
@@ -137,7 +136,7 @@ final class sl extends pi {
               if (param0 == -1) {
                 break L3;
               } else {
-                vi discarded$3 = sl.e(-76);
+                vi discarded$1 = sl.e(-76);
                 break L3;
               }
             }
@@ -410,7 +409,7 @@ final class sl extends pi {
         return cn.field_v;
     }
 
-    final static hn a(byte param0, String param1, String param2) {
+    final static hn a(byte param0, String param1, String param2, boolean param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -462,8 +461,7 @@ final class sl extends pi {
                 break L1;
               }
             }
-            int discarded$2 = 0;
-            stackOut_3_0 = qg.a(var4_long, param2, 0, (String) var6);
+            stackOut_3_0 = qg.a(var4_long, param2, 0, (String) var6, false);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }

@@ -23,7 +23,7 @@ final class dc extends cj {
         this.a(param3, param4, (byte) 119);
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_Lb = null;
         int var1 = 12;
         field_Ib = null;

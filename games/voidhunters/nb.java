@@ -76,7 +76,7 @@ final class nb extends rqa {
         return stackIn_4_0;
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         int stackIn_5_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_4_0 = 0;
@@ -105,9 +105,8 @@ final class nb extends rqa {
         return stackIn_5_0 != 0;
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         RuntimeException var1 = null;
-        String var1_ref = null;
         lta var2 = null;
         int var3 = 0;
         wfb var3_ref_wfb = null;
@@ -142,9 +141,7 @@ final class nb extends rqa {
             og.field_r.GA(0);
             L1: {
               var16 = "Component editor";
-              var1_ref = var16;
-              int discarded$3 = 13879;
-              pm.a(ip.field_p.width / 2 - (tea.a(1, var1_ref) >> 1), -1, 30, var16, 1, 16756480, (byte) -94);
+              pm.a(ip.field_p.width / 2 - (tea.a(1, var16, 13879) >> 1), -1, 30, var16, 1, 16756480, (byte) -94);
               var2 = new lta();
               var2.field_b = de.field_o;
               var2.field_c = gt.field_p;
@@ -156,15 +153,13 @@ final class nb extends rqa {
                 var22 = new wfb(var34, 0, 0);
                 ta.a(var34, 114, var22);
                 var22.a(102, 15);
-                int discarded$4 = 0;
-                fr.a(var2, var22);
+                fr.a(var2, var22, false);
                 break L1;
               } else {
                 L2: {
                   var3_ref_wfb = hab.field_g[fe.field_p];
                   if (var3_ref_wfb != null) {
-                    int discarded$5 = 0;
-                    fr.a(var2, var3_ref_wfb);
+                    fr.a(var2, var3_ref_wfb, false);
                     try {
                       L3: {
                         L4: {
@@ -305,7 +300,7 @@ final class nb extends rqa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 

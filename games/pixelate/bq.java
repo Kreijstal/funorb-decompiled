@@ -598,7 +598,7 @@ final class bq {
         return param0 | param1;
     }
 
-    final static boolean a(byte param0, int param1, int param2, boolean param3) {
+    final static boolean a(byte param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         if (!(!tm.a((byte) 117))) {
             vd.a(param3, 15, 13, (byte) -86);
             if (null != eg.field_n) {
@@ -607,16 +607,14 @@ final class bq {
                     param3 = false;
                 }
             }
-            int discarded$0 = 0;
-            sm.a(13, param3);
-            int discarded$1 = 14;
-            gb.a((byte) 120, param3);
+            sm.a(13, param3, 0);
+            gb.a((byte) 120, param3, 14);
             param3 = false;
         }
         return param3;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_a = null;
         field_b = null;

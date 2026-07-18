@@ -9,7 +9,7 @@ final class qf extends o {
     int field_l;
     int field_h;
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -31,8 +31,7 @@ final class qf extends o {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_0_0 = mi.a(-120, param0);
+            stackOut_0_0 = mi.a(-120, param0, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -104,7 +103,7 @@ final class qf extends o {
         }
     }
 
-    final static String a(String param0, int param1, String param2, gk param3) {
+    final static String a(String param0, int param1, String param2, gk param3, int param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;
@@ -251,7 +250,7 @@ final class qf extends o {
         return stackIn_5_0;
     }
 
-    final static void a(byte[] param0, rb param1, int param2, java.math.BigInteger param3, int param4, java.math.BigInteger param5) {
+    final static void a(byte[] param0, rb param1, int param2, java.math.BigInteger param3, int param4, java.math.BigInteger param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int[] var8 = null;
@@ -508,7 +507,7 @@ final class qf extends o {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_k = null;
     }
 

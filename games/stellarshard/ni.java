@@ -9,13 +9,13 @@ final class ni {
     static boolean field_a;
     static int field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_b = null;
         field_c = null;
     }
 
-    final static boolean a(pf param0, pf param1, pf param2) {
+    final static boolean a(pf param0, pf param1, pf param2, byte param3) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;

@@ -135,7 +135,7 @@ final class ql extends java.awt.Canvas implements java.awt.event.FocusListener {
         int discarded$0 = qm.a((byte) 57);
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return !wl.field_p;
     }
 
@@ -243,7 +243,7 @@ final class ql extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_b = null;
         field_d = null;

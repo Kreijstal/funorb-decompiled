@@ -143,12 +143,12 @@ abstract class sm implements el {
 
     abstract rf d(int param0);
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_a = null;
         field_d = null;
     }
 
-    final static void a(qd param0) {
+    final static void a(qd param0, int param1, boolean param2) {
         c var3 = null;
         int var4 = 0;
         try {
@@ -177,13 +177,10 @@ abstract class sm implements el {
         if (s.field_x > 0) {
           if (km.field_n == null) {
             L0: {
-              int discarded$4 = 0;
-              int discarded$5 = 0;
-              df.field_d = al.a(640, -16493, g.field_r, 480);
+              df.field_d = al.a(640, -16493, g.field_r, 480, 0, 0);
               if (null != df.field_d) {
                 var2 = 2;
-                int discarded$6 = 1;
-                rc.a((java.awt.Canvas) (Object) df.field_d);
+                rc.a((java.awt.Canvas) (Object) df.field_d, true);
                 break L0;
               } else {
                 var2 = 3;
@@ -209,8 +206,7 @@ abstract class sm implements el {
               ue.b(2, (byte) 101);
               if (null != df.field_d) {
                 var2 = 2;
-                int discarded$7 = 1;
-                rc.a((java.awt.Canvas) (Object) df.field_d);
+                rc.a((java.awt.Canvas) (Object) df.field_d, true);
                 break L2;
               } else {
                 var2 = 3;

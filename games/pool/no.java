@@ -103,7 +103,7 @@ abstract class no {
 
     abstract void a(byte param0);
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -144,9 +144,7 @@ abstract class no {
             var17 = aj.a(var12, false, var12) - -aj.a(var13, false, var13);
             if (var17 != 0) {
               L1: {
-                int discarded$18 = 0;
-                int discarded$19 = 0;
-                var18 = 2L * (od.a((long)var14, (long)var12) - -od.a((long)var15, (long)var13));
+                var18 = 2L * (od.a((long)var14, (long)var12, false) - -od.a((long)var15, (long)var13, false));
                 if (var18 > 2147483647L) {
                   break L1;
                 } else {
@@ -160,12 +158,8 @@ abstract class no {
                         if (2147483647 < (var15 >> 16) * (var15 >> 16)) {
                           break L2;
                         } else {
-                          int discarded$20 = 0;
-                          int discarded$21 = 0;
-                          var20 = od.a((long)var14, (long)var14) - -od.a((long)var15, (long)var15) + -(long)(var16 << 16);
-                          int discarded$22 = 0;
-                          int discarded$23 = 0;
-                          var22 = od.a(var18, var18) + -(4L * od.a((long)var17, var20));
+                          var20 = od.a((long)var14, (long)var14, false) - -od.a((long)var15, (long)var15, false) + -(long)(var16 << 16);
+                          var22 = od.a(var18, var18, false) + -(4L * od.a((long)var17, var20, false));
                           if (0L <= var22) {
                             var24 = bm.a(-107, var22);
                             if (var24 > 2147483647L) {
@@ -287,9 +281,7 @@ abstract class no {
               var17 = aj.a(var12, false, var12) - -aj.a(var13, false, var13);
               if (var17 != 0) {
                 L8: {
-                  int discarded$24 = 0;
-                  int discarded$25 = 0;
-                  var18 = 2L * (od.a((long)var14, (long)var12) - -od.a((long)var15, (long)var13));
+                  var18 = 2L * (od.a((long)var14, (long)var12, false) - -od.a((long)var15, (long)var13, false));
                   if (var18 > 2147483647L) {
                     break L8;
                   } else {
@@ -303,12 +295,8 @@ abstract class no {
                           if (2147483647 < (var15 >> 16) * (var15 >> 16)) {
                             break L9;
                           } else {
-                            int discarded$26 = 0;
-                            int discarded$27 = 0;
-                            var20 = od.a((long)var14, (long)var14) - -od.a((long)var15, (long)var15) + -(long)(var16 << 16);
-                            int discarded$28 = 0;
-                            int discarded$29 = 0;
-                            var22 = od.a(var18, var18) + -(4L * od.a((long)var17, var20));
+                            var20 = od.a((long)var14, (long)var14, false) - -od.a((long)var15, (long)var15, false) + -(long)(var16 << 16);
+                            var22 = od.a(var18, var18, false) + -(4L * od.a((long)var17, var20, false));
                             if (0L <= var22) {
                               var24 = bm.a(-107, var22);
                               if (var24 <= 2147483647L) {
@@ -425,9 +413,7 @@ abstract class no {
               var17 = aj.a(var12, false, var12) - -aj.a(var13, false, var13);
               if (var17 != 0) {
                 L18: {
-                  int discarded$30 = 0;
-                  int discarded$31 = 0;
-                  var18 = 2L * (od.a((long)var14, (long)var12) - -od.a((long)var15, (long)var13));
+                  var18 = 2L * (od.a((long)var14, (long)var12, false) - -od.a((long)var15, (long)var13, false));
                   if (var18 > 2147483647L) {
                     break L18;
                   } else {
@@ -441,12 +427,8 @@ abstract class no {
                           if (2147483647 < (var15 >> 16) * (var15 >> 16)) {
                             break L19;
                           } else {
-                            int discarded$32 = 0;
-                            int discarded$33 = 0;
-                            var20 = od.a((long)var14, (long)var14) - -od.a((long)var15, (long)var15) + -(long)(var16 << 16);
-                            int discarded$34 = 0;
-                            int discarded$35 = 0;
-                            var22 = od.a(var18, var18) + -(4L * od.a((long)var17, var20));
+                            var20 = od.a((long)var14, (long)var14, false) - -od.a((long)var15, (long)var15, false) + -(long)(var16 << 16);
+                            var22 = od.a(var18, var18, false) + -(4L * od.a((long)var17, var20, false));
                             if (0L <= var22) {
                               L20: {
                                 var24 = bm.a(-107, var22);
@@ -542,7 +524,7 @@ abstract class no {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_s = null;
         field_b = null;
         field_k = null;

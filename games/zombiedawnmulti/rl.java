@@ -74,7 +74,7 @@ final class rl {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         if (nb.field_a != null) {
             nb.field_a.g((byte) 118);
             return;
@@ -94,24 +94,21 @@ final class rl {
             var7.field_gb = param0;
             ((rl) this).field_m.field_d[var7.field_gb] = ((rl) this).field_m.field_d[var7.field_gb] + param3.o(-116);
             ((rl) this).field_u.a((br) (Object) var7, false);
-            int discarded$0 = 0;
-            this.a(param3, var7, param1);
+            this.a(param3, var7, param1, false);
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) (Object) runtimeException, "rl.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(int param0) {
-        int discarded$0 = -32724;
-        this.d();
+        this.d(-32724);
         if (param0 != -198) {
             return;
         }
-        int discarded$1 = 120;
-        this.a();
+        this.a(120);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
         field_c = null;
         field_h = null;
@@ -302,7 +299,7 @@ final class rl {
         return (pa) (Object) var3;
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -622,10 +619,7 @@ final class rl {
                         var18 = 0;
                         L6: while (true) {
                           if (var18 >= 3) {
-                            int discarded$3 = 0;
-                            int discarded$4 = 0;
-                            int discarded$5 = -121;
-                            sa.a(var17, ak.field_a, true, hl.field_c);
+                            sa.a(var17, ak.field_a, true, hl.field_c, (byte) -121, false, false);
                             gh.a(var17, var7, (byte) 116, var12, var14, var9, var13, var8);
                             var15++;
                             continue L4;
@@ -706,8 +700,7 @@ final class rl {
                   break L0;
                 } else {
                   if (param1.field_f >= var3.field_f) {
-                    int discarded$2 = 0;
-                    qc.a((br) (Object) param1, (br) (Object) var3);
+                    qc.a((br) (Object) param1, (br) (Object) var3, 0);
                     return;
                   } else {
                     var3 = (ae) (Object) ((rl) this).field_q.c((byte) 123);
@@ -1686,7 +1679,7 @@ final class rl {
         return (ge) (Object) var3;
     }
 
-    private final void d() {
+    private final void d(int param0) {
         Object var3_ref2 = null;
         br var2_ref_br = null;
         int var2 = 0;
@@ -2269,7 +2262,7 @@ final class rl {
         }
     }
 
-    private final void a(lm param0, ge param1, ge param2) {
+    private final void a(lm param0, ge param1, ge param2, boolean param3) {
         sj var5 = null;
         try {
             var5 = new sj(((rl) this).field_m.field_H, param2 != null ? param2.field_x : -1, param0.field_x, param1.field_x, param0.field_G, param0.field_E, param1.field_gb);

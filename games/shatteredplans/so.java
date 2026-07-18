@@ -139,18 +139,14 @@ final class so extends qe {
 
     final static void a(int param0, boolean param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, int param8, int param9, int param10, boolean param11, int param12, boolean param13) {
         dn.field_k = null;
-        int discarded$0 = -15887;
-        wf.a();
+        wf.a(-15887);
         param13 = ak.a(true, param7, param5, param13, param8, param10, param9);
-        int discarded$1 = 0;
-        int discarded$2 = 1;
-        fb.a(param13, param11, param10, 16777215, param12, param6, param4, param3);
-        int discarded$3 = -1043;
-        pf.a(param12, param11);
+        fb.a(param13, param11, param10, 16777215, param12, param6, param4, param3, true, 0);
+        pf.a(param12, param11, -1043);
         cc.a(-115, param7, param12, param13);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_t = null;
         field_s = null;
         field_q = null;

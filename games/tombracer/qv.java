@@ -120,7 +120,7 @@ final class qv extends ci {
         return var15;
     }
 
-    final static int[][] a(boolean param0, int param1, int param2, float param3, int param4, byte param5) {
+    final static int[][] a(boolean param0, int param1, int param2, float param3, int param4, byte param5, int param6, int param7, int param8) {
         int var11 = 0;
         int var12 = TombRacer.field_G ? 1 : 0;
         if (param5 >= -46) {
@@ -229,7 +229,7 @@ final class qv extends ci {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_o = null;
     }
 

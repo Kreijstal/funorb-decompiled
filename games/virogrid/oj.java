@@ -417,7 +417,7 @@ final class oj extends km {
           if (param0 <= -118) {
             break L0;
           } else {
-            boolean discarded$3 = ((oj) this).a(false, -98, -15);
+            boolean discarded$1 = ((oj) this).a(false, -98, -15);
             break L0;
           }
         }
@@ -433,8 +433,7 @@ final class oj extends km {
               break L1;
             } else {
               if (((oj) this).field_Sb[param2] == -1) {
-                int discarded$4 = 83;
-                aa.a();
+                aa.a((byte) 83);
                 f.a((byte) -38);
                 break L1;
               } else {
@@ -464,8 +463,7 @@ final class oj extends km {
                 jl.a(var5, sd.field_e, va.field_d, param1, (byte) 39, (String) null);
                 uk.a(var5, 5, va.field_d, sd.field_e, oc.field_n);
                 f.a((byte) -128);
-                int discarded$5 = 15810;
-                gg.a();
+                gg.a(15810);
                 break L1;
               }
             }
@@ -591,7 +589,7 @@ final class oj extends km {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         int var1 = 0;
         field_Xb = null;
         field_Fb = null;
@@ -600,9 +598,8 @@ final class oj extends km {
         field_Gb = null;
     }
 
-    final static boolean j() {
-        int discarded$0 = 123;
-        return nm.a(mb.g((byte) -90));
+    final static boolean j(int param0) {
+        return nm.a(mb.g((byte) -90), 123);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {

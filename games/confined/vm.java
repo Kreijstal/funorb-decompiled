@@ -22,10 +22,9 @@ final class vm extends hf {
         }
     }
 
-    final static void a(nf param0) {
+    final static void a(nf param0, int param1) {
         try {
-            int discarded$0 = 128;
-            mk.b();
+            mk.b(128);
             fn.a(param0.field_z, param0.field_t, param0.field_x);
         } catch (RuntimeException runtimeException) {
             throw sd.a((Throwable) (Object) runtimeException, "vm.J(" + (param0 != null ? "{...}" : "null") + ',' + -8409 + ')');
@@ -62,7 +61,7 @@ final class vm extends hf {
         }
     }
 
-    final static void h() {
+    final static void h(byte param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -436,8 +435,8 @@ final class vm extends hf {
               }
             }
           }
-          int discarded$3 = var8.a((byte) 25);
-          String discarded$4 = var8.d(true);
+          int discarded$2 = var8.a((byte) 25);
+          String discarded$3 = var8.d(true);
           break L4;
         }
         L6: {
@@ -473,8 +472,7 @@ final class vm extends hf {
             }
             break L6;
           } else {
-            int discarded$5 = -118;
-            q.field_j = tb.a(80, (kg) (Object) var8);
+            q.field_j = tb.a(80, (kg) (Object) var8, -118);
             lk.field_b = null;
             break L6;
           }
@@ -482,7 +480,7 @@ final class vm extends hf {
         return new oc(param1);
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_bb = null;
         field_fb = null;
         field_cb = null;

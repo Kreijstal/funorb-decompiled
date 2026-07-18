@@ -25,7 +25,7 @@ final class mm extends am {
         field_k = null;
     }
 
-    final static void a(id param0) {
+    final static void a(id param0, boolean param1) {
         RuntimeException var2 = null;
         oj[] var2_array = null;
         int var3 = 0;

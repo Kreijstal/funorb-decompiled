@@ -16,7 +16,7 @@ final class id {
     int[] field_a;
     int field_f;
 
-    public static void b() {
+    public static void b(int param0) {
         field_l = null;
         field_i = null;
         field_b = null;
@@ -94,8 +94,7 @@ final class id {
                 return 1;
               } else {
                 if (ha.field_g == 2) {
-                  int discarded$14 = 66;
-                  if (!fa.a(((id) this).field_m)) {
+                  if (!fa.a(((id) this).field_m, (byte) 66)) {
                     return 0;
                   } else {
                     return 1;
@@ -114,8 +113,7 @@ final class id {
                   return 1;
                 } else {
                   if (ha.field_g == 2) {
-                    int discarded$15 = 66;
-                    if (!fa.a(((id) this).field_m)) {
+                    if (!fa.a(((id) this).field_m, (byte) 66)) {
                       return 0;
                     } else {
                       return 1;

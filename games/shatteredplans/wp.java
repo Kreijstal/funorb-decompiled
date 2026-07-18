@@ -50,7 +50,7 @@ final class wp {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -167,7 +167,7 @@ final class wp {
         }
     }
 
-    final static String a(byte param0, CharSequence param1) {
+    final static String a(byte param0, CharSequence param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -216,19 +216,16 @@ final class wp {
                     break L1;
                   } else {
                     L2: {
-                      int discarded$22 = 1;
-                      var4 = ji.a(param1);
+                      var4 = ji.a(param1, true);
                       if (var4 == null) {
                         break L2;
                       } else {
                         if (var4.length() >= 1) {
                           L3: {
-                            int discarded$23 = 2;
-                            if (tc.a(var4.charAt(0))) {
+                            if (tc.a(var4.charAt(0), 2)) {
                               break L3;
                             } else {
-                              int discarded$24 = 2;
-                              if (!tc.a(var4.charAt(-1 + var4.length()))) {
+                              if (!tc.a(var4.charAt(-1 + var4.length()), 2)) {
                                 var5 = 0;
                                 var6 = 0;
                                 L4: while (true) {
@@ -243,8 +240,7 @@ final class wp {
                                   } else {
                                     L5: {
                                       var7 = param1.charAt(var6);
-                                      int discarded$25 = 2;
-                                      if (!tc.a((char) var7)) {
+                                      if (!tc.a((char) var7, 2)) {
                                         var5 = 0;
                                         break L5;
                                       } else {

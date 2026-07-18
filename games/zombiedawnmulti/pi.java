@@ -16,7 +16,7 @@ final class pi {
         ((pi) this).field_d = param0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_h = null;
         field_c = null;
@@ -68,8 +68,7 @@ final class pi {
               pm.field_R.b(-111, mj.field_Fb[1]);
               pm.field_R.b(-111, mj.field_Fb[2]);
               pm.field_R.b(-99, mj.field_Fb[3]);
-              int discarded$1 = 13746;
-              jq.a(pm.field_R);
+              jq.a(pm.field_R, 13746);
               pm.field_R.a(param4, (byte) -54);
               param3.a(pm.field_R, -1);
               ma.field_a.field_j = 0;

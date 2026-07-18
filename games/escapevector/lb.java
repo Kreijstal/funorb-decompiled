@@ -7,7 +7,7 @@ final class lb extends ah {
     static String[] field_n;
     private ul field_o;
 
-    public static void g() {
+    public static void g(int param0) {
         field_n = null;
     }
 
@@ -258,8 +258,7 @@ final class lb extends ah {
                   if (of.a((char) var3, (byte) 103)) {
                     break L3;
                   } else {
-                    int discarded$9 = 0;
-                    if (!on.a((char) var3)) {
+                    if (!on.a((char) var3, false)) {
                       stackOut_8_0 = 1;
                       stackIn_9_0 = stackOut_8_0;
                       return stackIn_9_0 != 0;
@@ -315,7 +314,7 @@ final class lb extends ah {
         }
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -395,9 +394,7 @@ final class lb extends ah {
         em.d();
         fh.field_g.c(param1, 160, 22, param2, -1);
         md.field_D.a(122);
-        int discarded$34 = 1;
-        int discarded$36 = 1;
-        cf.a(mj.field_b);
+        cf.a(mj.field_b, true, 1);
         if (param3 > -109) {
             return;
         }

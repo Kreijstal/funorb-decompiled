@@ -17,11 +17,11 @@ final class ccb implements dja {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
     }
 
-    final static int a(Random param0, int[] param1) {
+    final static int a(Random param0, int[] param1, byte param2, boolean param3) {
         RuntimeException var4 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

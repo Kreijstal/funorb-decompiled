@@ -60,20 +60,17 @@ final class qga {
                   break L1;
                 }
               }
-              int discarded$6 = 1;
-              jra.field_a = rv.a(stackIn_10_0 != 0);
+              jra.field_a = rv.a(stackIn_10_0 != 0, 1);
               var6 = null;
               mfb.a((String[]) null, 11113);
               break L0;
             } else {
               if (param1 < 100) {
-                int discarded$7 = -124;
-                jra.field_a = tma.a(param1, param0);
+                jra.field_a = tma.a(param1, param0, (byte) -124);
                 return;
               } else {
                 if (param1 > 105) {
-                  int discarded$8 = -124;
-                  jra.field_a = tma.a(param1, param0);
+                  jra.field_a = tma.a(param1, param0, (byte) -124);
                   return;
                 } else {
                   var4 = param3;
@@ -141,7 +138,7 @@ final class qga {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         int var1 = 94;
     }

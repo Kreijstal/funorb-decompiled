@@ -172,7 +172,7 @@ class ic implements t, dl {
         return stackIn_7_0;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return rl.field_N >= 10 && 13 <= gl.field_I;
     }
 

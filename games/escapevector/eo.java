@@ -5,7 +5,7 @@ abstract class eo {
     static String field_a;
     static String field_b;
 
-    final static String a() {
+    final static String a(byte param0) {
         if (!un.field_u) {
           if (ei.field_j >= ef.field_d) {
             if (ei.field_j >= ef.field_d - -qf.field_l) {
@@ -76,7 +76,7 @@ abstract class eo {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_a = null;
     }

@@ -10,7 +10,7 @@ final class mj {
     static String field_b;
     static String field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_c = null;
         field_b = null;
@@ -18,19 +18,15 @@ final class mj {
 
     final static void a(boolean param0, boolean param1, boolean param2) {
         if (!param2) {
-          gf.a();
-          int discarded$4 = -106;
-          un.a(param2);
-          return;
-        } else {
-          gf.b(0, 0, gf.field_i, gf.field_c, 0, 192);
-          int discarded$5 = -106;
-          un.a(param2);
-          return;
+            gf.a();
+            un.a(param2, (byte) -106);
+            return;
         }
+        gf.b(0, 0, gf.field_i, gf.field_c, 0, 192);
+        un.a(param2, (byte) -106);
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;

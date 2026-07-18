@@ -207,7 +207,7 @@ final class rg extends pa {
         ((rg) this).field_z.a(param0);
     }
 
-    final static void a(oi param0) {
+    final static void a(oi param0, boolean param1) {
         int var2_int = 0;
         vn var3 = null;
         if (hm.field_E == null) {

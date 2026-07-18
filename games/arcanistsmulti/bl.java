@@ -506,7 +506,7 @@ final class bl extends ee implements bn, ak {
         }
     }
 
-    final static boolean d() {
+    final static boolean d(int param0) {
         oh var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -585,7 +585,7 @@ final class bl extends ee implements bn, ak {
         return ((bl) this).field_h.j(-28612);
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = 0;
         field_i = null;
     }

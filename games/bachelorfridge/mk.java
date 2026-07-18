@@ -650,9 +650,8 @@ final class mk {
         L0: {
           var11 = BachelorFridge.field_y;
           wq.field_k.e(0, 0);
-          int discarded$3 = 0;
-          j.a(((mk) this).field_v, 34, 16762880, true, 444);
-          int discarded$4 = wt.field_k.a(rn.field_s.field_g.field_o.field_a, 350, 40, 240, 100, 16777215, -1, 0, 1, 14);
+          j.a(((mk) this).field_v, 34, 16762880, true, 444, false);
+          int discarded$1 = wt.field_k.a(rn.field_s.field_g.field_o.field_a, 350, 40, 240, 100, 16777215, -1, 0, 1, 14);
           jha.field_g.a(hl.field_G[2], 414, 178, 15204352, -1);
           hfa.field_z.a(hl.field_G[2], 414, 178, 65793, -1);
           jha.field_g.a(hl.field_G[3], 412, 206, 818659, -1);
@@ -682,8 +681,7 @@ final class mk {
               this.a((byte) 21, ((mk) this).field_d[3], in.field_b, 184, 472, 3);
               this.a((byte) 21, ((mk) this).field_d[0], fk.field_s, 216, 472, 0);
               this.a((byte) 21, ((mk) this).field_d[1], vaa.field_b, 243, 472, 1);
-              int discarded$5 = 0;
-              this.c();
+              this.c(false);
               pw.field_y.e(470, 320);
               stackOut_5_0 = jha.field_g;
               stackOut_5_1 = di.field_l;
@@ -768,7 +766,7 @@ final class mk {
                     if (!param0) {
                       break L4;
                     } else {
-                      sd.a(rn.field_s.field_g.a(var6, -5313), var9, var6, (byte) 74, var10);
+                      sd.a(rn.field_s.field_g.a(var6, -5313), var9, var6, (byte) 74, var10, var7, var8);
                       break L4;
                     }
                   } else {
@@ -866,7 +864,7 @@ final class mk {
         }
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1121,7 +1119,7 @@ final class mk {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -1276,8 +1274,7 @@ final class mk {
         }
         be var2 = jga.field_y[param0];
         if (!(var2 == null)) {
-            int discarded$0 = 1;
-            cq discarded$1 = ol.a(var2);
+            cq discarded$0 = ol.a(var2, true);
         }
     }
 
@@ -1437,8 +1434,7 @@ final class mk {
               ((mk) this).field_u = new sna("confirm", rn.field_v, 470, 320, jha.field_g.a(di.field_l) - -40, 40, di.field_l);
               hha.field_w = new hw[5];
               bf.field_g = new hw[15];
-              int discarded$2 = 1;
-              uma.n();
+              uma.n(1);
               var8 = new kv(350, 80);
               var8.b();
               dg.c(0, 0, 330, 30, 5667119);
@@ -1496,7 +1492,7 @@ final class mk {
                       rn.field_s.field_g.field_f = -1;
                       qm.a(13, 7758);
                       ct.c(0, -121);
-                      int[] discarded$3 = a.a(15843842, 32, 16763049, 16435458);
+                      int[] discarded$1 = a.a(15843842, 32, 16763049, 16435458);
                       uca.a(16, (byte) -61);
                       break L0;
                     } else {

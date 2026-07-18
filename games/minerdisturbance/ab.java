@@ -91,7 +91,7 @@ final class ab {
         }
     }
 
-    final static String a(int param0, int param1, boolean param2, long param3) {
+    final static String a(int param0, int param1, boolean param2, long param3, boolean param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -157,7 +157,7 @@ final class ab {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -312,11 +312,9 @@ final class ab {
         String stackOut_7_2 = null;
         try {
           L0: {
-            int discarded$14 = 1;
-            kd.a((java.awt.Component) (Object) param1);
+            kd.a((java.awt.Component) (Object) param1, true);
             L1: {
-              int discarded$15 = 73;
-              dl.a((java.awt.Component) (Object) param1);
+              dl.a((java.awt.Component) (Object) param1, (byte) 73);
               if (null != pf.field_e) {
                 pf.field_e.a((java.awt.Component) (Object) param1, 0);
                 break L1;

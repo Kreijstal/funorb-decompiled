@@ -261,7 +261,7 @@ final class sn extends df implements ro, vb {
         return stackIn_12_0 != 0;
     }
 
-    private final int a(int param0, String param1, int param2, qm param3, String param4) {
+    private final int a(int param0, String param1, int param2, qm param3, String param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -400,7 +400,7 @@ final class sn extends df implements ro, vb {
         return stackIn_1_0;
     }
 
-    private final boolean a() {
+    private final boolean a(int param0) {
         if (!this.a(315, (el) (Object) ((sn) this).field_D)) {
             return false;
         }
@@ -414,7 +414,7 @@ final class sn extends df implements ro, vb {
         ((dg) (Object) ((sn) this).field_D.a(0)).e(127);
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_F = null;
         field_H = null;
         field_N = null;
@@ -531,8 +531,7 @@ final class sn extends df implements ro, vb {
         var2.a(50, var3, 270, 20, -85);
         ((sn) this).c(-85, var2);
         var3 += 50;
-        int discarded$0 = -124;
-        var3 = var3 + (5 + this.a(var3, bj.field_kb, 170, (qm) (Object) ((sn) this).field_D, ch.field_h));
+        var3 = var3 + (5 + this.a(var3, bj.field_kb, 170, (qm) (Object) ((sn) this).field_D, ch.field_h, -124));
         ((sn) this).field_O.a(40, var3, var5, -var5 + 496 >> 1, -67);
         ((sn) this).field_I.a(40, var3 - -15, 60, 3 + var4, -126);
         ((sn) this).field_I.field_o = (wc) this;
@@ -545,9 +544,8 @@ final class sn extends df implements ro, vb {
         ((sn) this).a(55 + var3 + var4, 0, 496, 0, -76);
     }
 
-    private final void e() {
-        int discarded$0 = 16777215;
-        if (!(this.a())) {
+    private final void e(boolean param0) {
+        if (!(this.a(16777215))) {
             return;
         }
         he.a(1, ((sn) this).field_D.field_g);
@@ -578,8 +576,7 @@ final class sn extends df implements ro, vb {
                 if (param4 != ((sn) this).field_O) {
                   break L1;
                 } else {
-                  int discarded$2 = 1;
-                  this.e();
+                  this.e(true);
                   break L1;
                 }
               } else {
@@ -652,8 +649,7 @@ final class sn extends df implements ro, vb {
                 ((sn) this).a(false, -6, 41, -17, (ag) null);
             }
             super.a(param0, param1, param2, param3);
-            int discarded$0 = 16777215;
-            ((sn) this).field_O.field_B = this.a();
+            ((sn) this).field_O.field_B = this.a(16777215);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "sn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

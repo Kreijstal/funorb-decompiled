@@ -6,7 +6,7 @@ final class ug {
     static vg field_a;
     static String field_b;
 
-    final static StringBuilder a(StringBuilder param0) {
+    final static StringBuilder a(StringBuilder param0, byte param1, char param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -238,7 +238,7 @@ final class ug {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }

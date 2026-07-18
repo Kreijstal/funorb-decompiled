@@ -102,7 +102,7 @@ final class lc extends lk {
         return stackIn_14_0;
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -283,7 +283,7 @@ final class lc extends lk {
         }
     }
 
-    final static li[] e() {
+    final static li[] e(byte param0) {
         return new li[]{ua.field_a, de.field_d, il.field_u, g.field_z, g.field_A, ok.field_c, bb.field_m, va.field_b, kf.field_a, ef.field_n, ui.field_C, s.field_f, be.field_c, tf.field_b};
     }
 
@@ -415,8 +415,7 @@ final class lc extends lk {
                   stackIn_9_0 = stackOut_8_0;
                   return stackIn_9_0;
                 } else {
-                  int discarded$8 = 19;
-                  if (fl.a(var6)) {
+                  if (fl.a(var6, (byte) 19)) {
                     stackOut_12_0 = pe.field_b;
                     stackIn_13_0 = stackOut_12_0;
                     return stackIn_13_0;

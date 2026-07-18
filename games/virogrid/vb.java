@@ -22,8 +22,7 @@ final class vb {
         int var4 = 0;
         lc[] var5 = null;
         var4 = Virogrid.field_F ? 1 : 0;
-        int discarded$2 = -104;
-        var5 = cc.a();
+        var5 = cc.a((byte) -104);
         var2 = var5;
         var3 = 0;
         L0: while (true) {
@@ -40,12 +39,12 @@ final class vb {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         he.field_Xb = null;
         int var1 = 0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_i = null;
         field_a = null;
         field_d = null;

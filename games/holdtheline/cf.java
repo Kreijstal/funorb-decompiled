@@ -38,7 +38,7 @@ final class cf extends jj {
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, byte param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -119,7 +119,7 @@ final class cf extends jj {
         }
     }
 
-    final static void h() {
+    final static void h(int param0) {
         int var1 = -63;
         go.a(0, 17);
     }

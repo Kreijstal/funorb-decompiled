@@ -481,7 +481,7 @@ final class pa extends qi {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_U = null;
         field_db = null;
         field_gb = null;

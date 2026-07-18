@@ -203,8 +203,7 @@ final class tj extends kf {
                             if (~param2.field_k != ~param3.field_g[param0][var6]) {
                               break L3;
                             } else {
-                              int discarded$1 = 0;
-                              if (mc.a(param3.field_n[param0][var6])) {
+                              if (mc.a(param3.field_n[param0][var6], 0)) {
                                 var7 = 0;
                                 L4: while (true) {
                                   if (var7 >= var4_int) {
@@ -298,7 +297,7 @@ final class tj extends kf {
         return stackIn_23_0;
     }
 
-    final static void a(byte param0, dg param1) {
+    final static void a(byte param0, dg param1, int param2) {
         ia var3 = null;
         int var4 = 0;
         try {
@@ -571,7 +570,7 @@ final class tj extends kf {
         }
     }
 
-    final static id[] h() {
+    final static id[] h(int param0) {
         int var2 = 0;
         int var3 = StarCannon.field_A;
         id[] var1 = new id[bj.field_b];

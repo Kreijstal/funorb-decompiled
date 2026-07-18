@@ -9,7 +9,6 @@ final class ce {
 
     final static void a(int param0, boolean param1, boolean param2, boolean param3) {
         RuntimeException var4 = null;
-        int[] var4_array = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -17,6 +16,11 @@ final class ce {
         int var9 = 0;
         int var14 = 0;
         int[] var15 = null;
+        int[] var16 = null;
+        int[] var18 = null;
+        int[] var20 = null;
+        int[] var22 = null;
+        int[] var23 = null;
         int[] stackIn_4_0 = null;
         int stackIn_11_0 = 0;
         int stackIn_21_0 = 0;
@@ -45,8 +49,12 @@ final class ce {
                 break L1;
               }
             }
-            var15 = stackIn_4_0;
-            var4_array = var15;
+            var22 = stackIn_4_0;
+            var20 = var22;
+            var18 = var20;
+            var16 = var18;
+            var15 = var16;
+            var23 = var15;
             if (var15 != null) {
               var5 = 0;
               var6 = 0;
@@ -58,8 +66,7 @@ final class ce {
                   break L0;
                 } else {
                   L3: {
-                    int discarded$1 = -827843803;
-                    if (!nm.a(var7, var15)) {
+                    if (!nm.a(var7, var22, -827843803)) {
                       stackOut_10_0 = 0;
                       stackIn_11_0 = stackOut_10_0;
                       break L3;
@@ -130,7 +137,7 @@ final class ce {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int[] var2 = new int[]{14, 1, 5, 6, 12, 2, 3, 4};
         int[] var1 = var2;
         nb.field_i[4] = new ml(4, var1, 10, 200, kb.field_c == 2 ? 350 : 320, 270, 270 / var2.length, true, 1);
@@ -156,7 +163,7 @@ final class ce {
         return var5 * var4 + (var3 * param2 + (var4 * var6 >> 16));
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_d = null;
         field_a = null;

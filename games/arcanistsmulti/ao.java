@@ -228,7 +228,7 @@ final class ao {
         }
     }
 
-    final static void a(long param0) {
+    final static void a(long param0, int param1) {
         if (0L < param0) {
           if (param0 % 10L == 0L) {
             ng.a(true, -1L + param0);
@@ -247,7 +247,7 @@ final class ao {
         return rf.field_o;
     }
 
-    final static void a() {
+    final static void a(int param0) {
     }
 
     final static void a(byte param0) {

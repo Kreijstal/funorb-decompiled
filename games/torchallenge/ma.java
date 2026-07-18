@@ -6,7 +6,7 @@ abstract class ma extends ui implements cc {
     static int field_j;
     static int field_k;
 
-    final static void e() {
+    final static void e(int param0) {
         pa var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -21,11 +21,10 @@ abstract class ma extends ui implements cc {
                 break L0;
               } else {
                 var1.d(25, 8);
-                int fieldTemp$10 = var1.field_q + 1;
+                int fieldTemp$5 = var1.field_q + 1;
                 var1.field_q = var1.field_q + 1;
-                var2 = fieldTemp$10;
-                int discarded$11 = -95;
-                hb.a(var1);
+                var2 = fieldTemp$5;
+                hb.a(var1, -95);
                 dk.field_s.a(var1.field_q - var2, -111);
                 continue L1;
               }
@@ -38,7 +37,7 @@ abstract class ma extends ui implements cc {
         }
     }
 
-    final static vi b(String param0) {
+    final static vi b(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -217,7 +216,7 @@ abstract class ma extends ui implements cc {
         }
     }
 
-    final static ka[] a(int param0, int param1, int param2, int param3) {
+    final static ka[] a(int param0, int param1, int param2, int param3, boolean param4) {
         ka[] var6 = new ka[9];
         ka[] var5 = var6;
         ka dupTemp$0 = e.a(param1, 1, (byte) -113);

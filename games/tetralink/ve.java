@@ -16,11 +16,10 @@ final class ve {
 
     final static ah b(int param0, int param1) {
         int var2 = 33 / ((param0 - 4) / 40);
-        int discarded$0 = 1;
-        return ai.a(false, param1, false, 1, (byte) 38);
+        return ai.a(false, param1, false, 1, (byte) 38, true);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ec.field_i = 0;
         ph.field_z = -1;
         sc.field_c = null;

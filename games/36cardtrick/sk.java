@@ -79,7 +79,7 @@ final class sk {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -88,9 +88,7 @@ final class sk {
     final static rc a(int param0, byte param1) {
         rc var2 = new rc();
         ue.field_b.a((qb) (Object) var2, 27362);
-        int discarded$0 = 4;
-        int discarded$1 = 1;
-        fl.b();
+        fl.b(1, 4);
         return var2;
     }
 

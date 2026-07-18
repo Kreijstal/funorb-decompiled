@@ -141,7 +141,7 @@ final class pg extends nm {
         return stackIn_7_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_o = null;
         field_i = null;
@@ -150,7 +150,7 @@ final class pg extends nm {
         field_n = null;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         nh.a(642, 482, -40, -1, cd.field_h, -1);
     }
 

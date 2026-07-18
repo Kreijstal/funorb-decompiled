@@ -174,7 +174,7 @@ final class bc extends a {
         return dupTemp$0;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;

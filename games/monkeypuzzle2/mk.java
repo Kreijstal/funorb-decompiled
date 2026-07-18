@@ -9,7 +9,7 @@ final class mk extends ug {
     byte[] field_g;
     static int field_h;
 
-    final static void f() {
+    final static void f(int param0) {
         int var1 = 0;
         int var2 = 0;
         var2 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -26,9 +26,9 @@ final class mk extends ug {
             }
           } else {
             if (var1 == 1) {
-              int fieldTemp$8 = s.field_O;
+              int fieldTemp$6 = s.field_O;
               s.field_O = s.field_O + 1;
-              if (fieldTemp$8 > 150) {
+              if (fieldTemp$6 > 150) {
                 qc.field_N = 2;
                 return;
               } else {
@@ -36,12 +36,11 @@ final class mk extends ug {
               }
             } else {
               if (var1 == 2) {
-                int fieldTemp$9 = em.field_B;
+                int fieldTemp$7 = em.field_B;
                 em.field_B = em.field_B + 1;
-                if (480 < fieldTemp$9) {
-                  ug discarded$10 = mb.field_e.d(4011);
-                  int discarded$11 = 8192;
-                  ke.b();
+                if (480 < fieldTemp$7) {
+                  ug discarded$8 = mb.field_e.d(4011);
+                  ke.b(8192);
                   return;
                 } else {
                   return;
@@ -56,11 +55,11 @@ final class mk extends ug {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
     }
 
-    final static String e() {
+    final static String e(int param0) {
         if (!(cf.field_b != ch.field_d)) {
             return ac.field_c;
         }
@@ -71,7 +70,7 @@ final class mk extends ug {
         throw new Error();
     }
 
-    final static String a(long param0) {
+    final static String a(long param0, int param1) {
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;

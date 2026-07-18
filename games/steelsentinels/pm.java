@@ -59,7 +59,7 @@ final class pm extends dl implements fd, ae {
           L0: {
             L1: {
               if (param1 == ((pm) this).field_V) {
-                boolean discarded$4 = ((pm) this).field_Q.a(1, (lh) this);
+                boolean discarded$2 = ((pm) this).field_Q.a(1, (lh) this);
                 break L1;
               } else {
                 break L1;
@@ -69,8 +69,7 @@ final class pm extends dl implements fd, ae {
               if (param1 != ((pm) this).field_Q) {
                 break L2;
               } else {
-                int discarded$5 = 0;
-                this.i();
+                this.i(0);
                 break L2;
               }
             }
@@ -246,13 +245,11 @@ final class pm extends dl implements fd, ae {
             L1: {
               var6_int = -6 / ((-85 - param1) / 36);
               if (((pm) this).field_bb == param3) {
-                int discarded$134 = 0;
-                this.i();
+                this.i(0);
                 break L1;
               } else {
                 if (param3 == ((pm) this).field_X) {
-                  int discarded$135 = 45;
-                  nj.h();
+                  nj.h((byte) 45);
                   break L1;
                 } else {
                   if (param3 != ((pm) this).field_R) {
@@ -267,8 +264,7 @@ final class pm extends dl implements fd, ae {
                         break L1;
                       }
                     } else {
-                      int discarded$136 = 121;
-                      tj.a();
+                      tj.a(121);
                       break L1;
                     }
                   }
@@ -309,7 +305,7 @@ final class pm extends dl implements fd, ae {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_Y = null;
         field_P = null;
         field_db = null;
@@ -590,8 +586,7 @@ final class pm extends dl implements fd, ae {
             }
             L13: {
               var8 = qe.field_c;
-              int discarded$3 = -21;
-              var9 = db.a((byte) -60, wl.d());
+              var9 = db.a((byte) -60, wl.d((byte) -21));
               if (var9 != qd.field_o) {
                 if (var9 != mj.field_Vb) {
                   break L13;
@@ -605,13 +600,13 @@ final class pm extends dl implements fd, ae {
               }
             }
             L14: {
-              hc dupTemp$4 = new hc(10, ((pm) this).field_z, ((pm) this).field_x + -20, 25, (lh) (Object) ((pm) this).field_V, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$4;
-              ((pm) this).a((lh) (Object) dupTemp$4, -100);
+              hc dupTemp$2 = new hc(10, ((pm) this).field_z, ((pm) this).field_x + -20, 25, (lh) (Object) ((pm) this).field_V, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$2;
+              ((pm) this).a((lh) (Object) dupTemp$2, -100);
               ((pm) this).field_z = ((pm) this).field_z + (5 + ((lh) (Object) var12).field_E);
-              hc dupTemp$5 = new hc(10, ((pm) this).field_z, ((pm) this).field_x + -20, 25, (lh) (Object) ((pm) this).field_Q, false, 80, 3, var7, 16777215, jh.field_c);
-              var13 = dupTemp$5;
-              ((pm) this).a((lh) (Object) dupTemp$5, -120);
+              hc dupTemp$3 = new hc(10, ((pm) this).field_z, ((pm) this).field_x + -20, 25, (lh) (Object) ((pm) this).field_Q, false, 80, 3, var7, 16777215, jh.field_c);
+              var13 = dupTemp$3;
+              ((pm) this).a((lh) (Object) dupTemp$3, -120);
               ((pm) this).field_bb.field_A = (tn) this;
               ((pm) this).field_z = ((pm) this).field_z + (((lh) (Object) var13).field_E - -5);
               if (null == ((pm) this).field_X) {
@@ -761,11 +756,10 @@ final class pm extends dl implements fd, ae {
         int var2 = -123 % ((11 - param0) / 41);
     }
 
-    private final void i() {
+    private final void i(int param0) {
         L0: {
           L1: {
-            int discarded$8 = 42;
-            if (nn.a()) {
+            if (nn.a((byte) 42)) {
               break L1;
             } else {
               if (((pm) this).field_V.field_y.length() <= 0) {
@@ -779,8 +773,7 @@ final class pm extends dl implements fd, ae {
               }
             }
           }
-          int discarded$9 = 50;
-          hh.a(((pm) this).field_V.field_y, ((pm) this).field_Q.field_y);
+          hh.a(((pm) this).field_V.field_y, ((pm) this).field_Q.field_y, 50);
           break L0;
         }
     }
@@ -870,7 +863,7 @@ final class pm extends dl implements fd, ae {
         }
     }
 
-    final static void k() {
+    final static void k(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         ud var3 = null;
@@ -1037,7 +1030,7 @@ final class pm extends dl implements fd, ae {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;

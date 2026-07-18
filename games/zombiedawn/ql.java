@@ -10,10 +10,9 @@ final class ql extends pm {
     static float field_j;
     static vn field_g;
 
-    final static void d() {
+    final static void d(int param0) {
         int var1 = rf.a(false);
-        int discarded$0 = -13043;
-        int var2 = co.b();
+        int var2 = co.b(-13043);
         cj.field_i.a(var1 + (af.field_b << 1), wm.field_d + -ia.field_c, wh.field_c + -af.field_b, (byte) -80, var2 - -(ia.field_c << 1));
         d.a(false);
     }

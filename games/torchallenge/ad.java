@@ -23,7 +23,7 @@ final class ad extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static nf a(lj param0, lj param1, String param2, String param3) {
+    final static nf a(lj param0, lj param1, String param2, String param3, boolean param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -94,8 +94,7 @@ final class ad extends java.awt.Canvas implements java.awt.event.FocusListener {
           L0: {
             var5_int = param0.a(param2, -91);
             var6 = param0.a(var5_int, param3, (byte) 91);
-            int discarded$2 = -127;
-            stackOut_0_0 = al.a(param0, var6, var5_int, param1);
+            stackOut_0_0 = al.a(param0, var6, var5_int, param1, -127);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -218,7 +217,7 @@ final class ad extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         try {
             param0.setFocusTraversalKeysEnabled(false);
             param0.addKeyListener((java.awt.event.KeyListener) (Object) hl.field_d);
@@ -228,7 +227,7 @@ final class ad extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_h = null;
         field_f = null;

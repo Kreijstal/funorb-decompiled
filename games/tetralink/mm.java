@@ -14,12 +14,9 @@ final class mm extends um {
     static String[] field_x;
     static String[] field_v;
 
-    final static void a(ri param0) {
+    final static void a(ri param0, byte param1, boolean param2) {
         try {
-            int discarded$0 = 113;
-            int discarded$1 = 1;
-            int discarded$2 = 256;
-            fe.a(param0);
+            fe.a(param0, 256, true, 113);
         } catch (RuntimeException runtimeException) {
             throw oi.a((Throwable) (Object) runtimeException, "mm.D(" + (param0 != null ? "{...}" : "null") + ',' + -71 + ',' + true + ')');
         }
@@ -126,7 +123,7 @@ final class mm extends um {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_v = null;
         field_x = null;
         field_s = null;
@@ -287,8 +284,7 @@ final class mm extends um {
             var4 = param0.toLowerCase();
             if (var4.length() != 0) {
               var5 = var4;
-              int discarded$10 = 17510;
-              if (pi.a(var5)) {
+              if (pi.a(var5, 17510)) {
                 stackOut_5_0 = ka.field_i;
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0;
@@ -304,7 +300,7 @@ final class mm extends um {
                         break L1;
                       } else {
                         var6 = null;
-                        boolean discarded$11 = this.a((String) null, (byte) -27);
+                        boolean discarded$2 = this.a((String) null, (byte) -27);
                         break L1;
                       }
                     }

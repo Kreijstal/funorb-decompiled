@@ -58,8 +58,7 @@ final class hc extends dj implements nl {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = -121;
-            stackOut_0_0 = bi.a(false, param1);
+            stackOut_0_0 = bi.a(false, param1, (byte) -121);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

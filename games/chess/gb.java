@@ -20,15 +20,13 @@ abstract class gb extends fa {
     private boolean field_z;
     static int field_s;
 
-    private final void h() {
+    private final void h(byte param0) {
         int var2 = 0;
         wc.field_t[2] = true;
     }
 
     final void a(boolean param0, int param1, boolean param2, boolean param3, boolean param4, boolean param5, boolean param6) {
-        int discarded$0 = 101;
-        int discarded$1 = 1;
-        this.a();
+        this.a(true, (byte) 101);
         if (param1 != 10231) {
             Object var9 = null;
             this.a(true, -127, (String) null, -38, 34);
@@ -37,8 +35,7 @@ abstract class gb extends fa {
             this.k(13);
         }
         if (!(!param3)) {
-            int discarded$2 = -81;
-            this.h();
+            this.h((byte) -81);
         }
         if (!(!param2)) {
             this.j(param1 ^ 10227);
@@ -50,12 +47,11 @@ abstract class gb extends fa {
             this.h(18);
         }
         if (param0) {
-            int discarded$3 = -62;
-            this.g();
+            this.g((byte) -62);
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_o = null;
         field_A = null;
     }
@@ -101,8 +97,7 @@ abstract class gb extends fa {
                             } else {
                               if (var2 != 6) {
                                 if (var2 == 7) {
-                                  int discarded$6 = -109;
-                                  this.i();
+                                  this.i((byte) -109);
                                   break L1;
                                 } else {
                                   if (var2 == 8) {
@@ -110,8 +105,7 @@ abstract class gb extends fa {
                                     break L1;
                                   } else {
                                     if (16 == var2) {
-                                      int discarded$7 = 49;
-                                      aj.a();
+                                      aj.a((byte) 49);
                                       break L1;
                                     } else {
                                       L2: {
@@ -136,8 +130,7 @@ abstract class gb extends fa {
                                                 }
                                               }
                                             } else {
-                                              int discarded$8 = 115;
-                                              am.a();
+                                              am.a((byte) 115);
                                               break L1;
                                             }
                                           }
@@ -168,21 +161,18 @@ abstract class gb extends fa {
                                   }
                                 }
                               } else {
-                                int discarded$9 = 125;
-                                pi.a();
+                                pi.a(125);
                                 break L1;
                               }
                             }
                           } else {
-                            int discarded$10 = -243;
-                            uj.a();
+                            uj.a(-243);
                             break L1;
                           }
                         }
                       }
                     } else {
-                      int discarded$11 = 49;
-                      dh.c();
+                      dh.c((byte) 49);
                       break L1;
                     }
                   }
@@ -201,7 +191,7 @@ abstract class gb extends fa {
         }
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         wc.field_t[13] = true;
         wc.field_t[12] = true;
         wc.field_t[11] = true;
@@ -214,8 +204,7 @@ abstract class gb extends fa {
             return -1;
           } else {
             if (!bg.field_ab) {
-              int discarded$2 = 1633075718;
-              var2 = ji.a(((gb) this).field_y, true, si.f(), ob.d((byte) -99), (byte) 113, ((gb) this).field_z);
+              var2 = ji.a(((gb) this).field_y, true, si.f(1633075718), ob.d((byte) -99), (byte) 113, ((gb) this).field_z);
               if (var2 == -1) {
                 return -1;
               } else {
@@ -353,17 +342,16 @@ abstract class gb extends fa {
                   break L2;
                 }
               }
-              int discarded$12 = this.a((byte) stackIn_11_1, stackIn_11_2 != 0, false);
+              int discarded$11 = this.a((byte) stackIn_11_1, stackIn_11_2 != 0, false);
               break L1;
             } else {
               if (10 <= il.field_a) {
                 if (!mk.b((byte) -119)) {
-                  int discarded$13 = 0;
-                  ni.b();
+                  ni.b(0);
                   break L1;
                 } else {
                   if (0 == rm.field_Q) {
-                    int discarded$14 = this.a((byte) 110, false, false);
+                    int discarded$12 = this.a((byte) 110, false, false);
                     break L1;
                   } else {
                     cf.a(fl.field_p, (byte) -101);
@@ -563,7 +551,7 @@ abstract class gb extends fa {
         sk.field_r[4] = -1;
     }
 
-    private final void a() {
+    private final void a(boolean param0, byte param1) {
         wc.field_t[18] = true;
         wc.field_t[7] = true;
         wc.field_t[0] = true;
@@ -573,7 +561,7 @@ abstract class gb extends fa {
         wc.field_t[8] = true;
     }
 
-    private final static void e() {
+    private final static void e(int param0) {
         li.field_f = null;
         ga.field_a = null;
     }
@@ -703,8 +691,7 @@ abstract class gb extends fa {
               if (null != rm.field_R) {
                 break L1;
               } else {
-                int discarded$19 = -110;
-                var6 = a.a();
+                var6 = a.a((byte) -110);
                 var4_ref_java_awt_Dimension = var6.getSize();
                 ch.field_gb.a(var4_ref_java_awt_Dimension.width, -83, var4_ref_java_awt_Dimension.height);
                 break L1;
@@ -715,17 +702,13 @@ abstract class gb extends fa {
           }
         }
         L2: {
-          int discarded$20 = 12;
-          cb.a();
-          int discarded$21 = 1;
-          fl.a();
-          int discarded$22 = 30065;
-          if (je.h()) {
+          cb.a((byte) 12);
+          fl.a(true);
+          if (je.h(30065)) {
             break L2;
           } else {
             if (11 != rm.field_Q) {
-              int discarded$23 = 114;
-              e.i();
+              e.i((byte) 114);
               break L2;
             } else {
               break L2;
@@ -741,18 +724,15 @@ abstract class gb extends fa {
           }
         }
         L4: {
-          int discarded$24 = 21549;
-          if (!ub.a()) {
+          if (!ub.a(21549)) {
             break L4;
           } else {
             L5: {
-              int discarded$25 = -31137;
-              var3 = qd.d() * 1200;
+              var3 = qd.d(-31137) * 1200;
               if (((gb) this).field_n) {
                 break L5;
               } else {
-                int discarded$26 = -16;
-                if (~ea.h() >= ~var3) {
+                if (~ea.h((byte) -16) >= ~var3) {
                   break L4;
                 } else {
                   if (var3 >= ib.a(true)) {
@@ -767,8 +747,7 @@ abstract class gb extends fa {
             si.d(65280);
             dh.c(12);
             jc.a(2, fe.field_e, (byte) 97);
-            int discarded$27 = -121;
-            ia.a();
+            ia.a((byte) -121);
             bg.field_ab = true;
             ma.field_E = 15000L + ud.a(2);
             break L4;
@@ -800,8 +779,7 @@ abstract class gb extends fa {
           }
           L9: {
             var4 = stackIn_22_0;
-            int discarded$28 = -98;
-            cf.field_Lb = la.a();
+            cf.field_Lb = la.a((byte) -98);
             if (var4 == 0) {
               break L9;
             } else {
@@ -948,8 +926,7 @@ abstract class gb extends fa {
         }
         L16: {
           if (0 == il.field_a) {
-            int discarded$29 = 25331;
-            if (oh.a()) {
+            if (oh.a(25331)) {
               il.field_a = 1;
               break L16;
             } else {
@@ -998,8 +975,7 @@ abstract class gb extends fa {
                     if (qa.field_c.b("", 100)) {
                       gm.a(qa.field_c, -44);
                       qa.field_c = null;
-                      int discarded$30 = 0;
-                      ob.f();
+                      ob.f(0);
                       break L20;
                     } else {
                       break L20;
@@ -1026,10 +1002,8 @@ abstract class gb extends fa {
               if (ml.a(0, bi.field_a)) {
                 L22: {
                   L23: {
-                    int discarded$31 = -5;
-                    gb.e();
-                    int discarded$32 = -119;
-                    ag.a();
+                    gb.e(-5);
+                    ag.a((byte) -119);
                     vh.field_e = false;
                     ih.field_T = ca.field_c;
                     n.a(fl.field_m, bi.field_a, ln.field_Kb, 0, Chess.field_B);
@@ -1091,8 +1065,7 @@ abstract class gb extends fa {
                 }
                 L26: {
                   if (se.field_X) {
-                    int discarded$33 = 1;
-                    jg.b();
+                    jg.b(true);
                     break L26;
                   } else {
                     break L26;
@@ -1101,8 +1074,7 @@ abstract class gb extends fa {
                 L27: {
                   if (pe.field_f == null) {
                     pe.field_f = ke.a(-27212);
-                    int discarded$34 = 46;
-                    qf.field_i = rb.a();
+                    qf.field_i = rb.a((byte) 46);
                     break L27;
                   } else {
                     break L27;
@@ -1113,8 +1085,7 @@ abstract class gb extends fa {
                 Chess.field_B = null;
                 fl.field_m = null;
                 ml.a((java.applet.Applet) this, (byte) -43);
-                int discarded$35 = 0;
-                ob.f();
+                ob.f(0);
                 il.field_a = 10;
                 break L21;
               } else {
@@ -1219,8 +1190,7 @@ abstract class gb extends fa {
             if (!hf.field_a) {
               break L37;
             } else {
-              int discarded$36 = -114;
-              kl.a(ja.field_h);
+              kl.a(ja.field_h, (byte) -114);
               ((gb) this).d((byte) 125);
               ca.a(13369344, ja.field_h);
               break L37;
@@ -1231,16 +1201,14 @@ abstract class gb extends fa {
           if (!wc.field_t[8]) {
             break L38;
           } else {
-            int discarded$37 = 8;
-            jj.c();
+            jj.c(8);
             break L38;
           }
         }
     }
 
-    private final void i() {
-        int discarded$0 = -54;
-        String var2 = rf.a();
+    private final void i(byte param0) {
+        String var2 = rf.a((byte) -54);
         qa.a((byte) 26, var2, bh.i(81));
     }
 
@@ -1256,8 +1224,7 @@ abstract class gb extends fa {
         sc.a(se.field_V, false);
         jn.a(((gb) this).field_u, oc.field_l, ((gb) this).field_w, se.field_V, ((gb) this).field_r, 5000, ((gb) this).field_x, ((gb) this).field_p, (byte) -121, 5000, param5, ((gb) this).field_m, param4, ((gb) this).field_q);
         jb.a(350, ((gb) this).field_w, se.field_V, param4, ((gb) this).field_r, oc.field_l, ((gb) this).field_q, ((gb) this).field_x, ((gb) this).field_m);
-        int discarded$0 = 69;
-        bf.g();
+        bf.g((byte) 69);
         ii.field_L = sa.b(param6 + 28);
         ca.a(13369344, ja.field_h);
         nk.field_q = param2;
@@ -1266,8 +1233,7 @@ abstract class gb extends fa {
         m.field_b = param7;
         rm.field_U = param1;
         this.c(false);
-        int discarded$1 = 0;
-        ug.b();
+        ug.b(false);
     }
 
     private final void k(int param0) {
@@ -1295,10 +1261,7 @@ abstract class gb extends fa {
                 L0: {
                   if (var4 == 1) {
                     L1: {
-                      int discarded$10 = -12316;
-                      int discarded$11 = 117;
-                      int discarded$12 = 1;
-                      var5_int = cg.a(pg.a(), n.a());
+                      var5_int = cg.a(pg.a(-12316), n.a((byte) 117), true);
                       if (var5_int == -1) {
                         break L1;
                       } else {
@@ -1321,9 +1284,7 @@ abstract class gb extends fa {
                 }
                 L2: {
                   if (var4 == 2) {
-                    int discarded$13 = -5;
-                    int discarded$14 = 1633075718;
-                    var5_int = nj.a(true, ob.d((byte) -126), ((gb) this).field_y, od.a(), jb.f(-127), Chess.t(0), si.f());
+                    var5_int = nj.a(true, ob.d((byte) -126), ((gb) this).field_y, od.a(-5), jb.f(-127), Chess.t(0), si.f(1633075718));
                     if (var5_int == -1) {
                       break L2;
                     } else {
@@ -1357,8 +1318,7 @@ abstract class gb extends fa {
                       bg.field_ab = false;
                       break L3;
                     } else {
-                      int discarded$15 = 1633075718;
-                      var5_int = ji.a(((gb) this).field_y, false, si.f(), ob.d((byte) -119), (byte) 82, ((gb) this).field_z);
+                      var5_int = ji.a(((gb) this).field_y, false, si.f(1633075718), ob.d((byte) -119), (byte) 82, ((gb) this).field_z);
                       if (var5_int != -1) {
                         if (0 != var5_int) {
                           jc.a(var5_int, n.field_c, (byte) 81);
@@ -1384,8 +1344,7 @@ abstract class gb extends fa {
                       ad.field_b = true;
                       break L5;
                     } else {
-                      int discarded$16 = -161;
-                      gh.a(bh.i(81));
+                      gh.a(bh.i(81), -161);
                       break L5;
                     }
                   } else {
@@ -1396,8 +1355,7 @@ abstract class gb extends fa {
                   if (var4 != 5) {
                     break L6;
                   } else {
-                    int discarded$17 = 1;
-                    dh.a(bh.i(81));
+                    dh.a(bh.i(81), true);
                     break L6;
                   }
                 }
@@ -1423,8 +1381,7 @@ abstract class gb extends fa {
                 }
                 L9: {
                   if (var4 == 8) {
-                    int discarded$18 = -161;
-                    gh.a(bh.i(81));
+                    gh.a(bh.i(81), -161);
                     break L9;
                   } else {
                     break L9;
@@ -1458,8 +1415,7 @@ abstract class gb extends fa {
                   if (12 != var4) {
                     break L13;
                   } else {
-                    int discarded$19 = 115;
-                    sg.a(bh.i(81), (byte) 125, un.g());
+                    sg.a(bh.i(81), (byte) 125, un.g(115));
                     break L13;
                   }
                 }

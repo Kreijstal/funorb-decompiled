@@ -59,7 +59,7 @@ final class ac {
         return false;
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         int var2_int = 0;
         try {
             if (!(!ed.c(true))) {
@@ -88,7 +88,7 @@ final class ac {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_D = null;
         field_n = null;
         field_f = null;

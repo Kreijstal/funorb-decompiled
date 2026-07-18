@@ -15,7 +15,7 @@ final class ik extends q {
     t field_j;
     int field_n;
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -41,8 +41,7 @@ final class ik extends q {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
             } else {
-              int discarded$6 = 34;
-              if (!wa.a(param0)) {
+              if (!wa.a(param0, (byte) 34)) {
                 var6 = ra.field_d;
                 var2 = var6;
                 var3 = 0;

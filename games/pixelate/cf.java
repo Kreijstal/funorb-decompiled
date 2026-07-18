@@ -30,7 +30,7 @@ abstract class cf extends lm {
         field_x = null;
     }
 
-    final static boolean a(long param0, int[] param1, String param2, int param3) {
+    final static boolean a(long param0, int[] param1, String param2, int param3, int param4) {
         RuntimeException var6 = null;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_8_0 = null;

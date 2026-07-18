@@ -271,10 +271,8 @@ final class cc extends ca {
                     return stackIn_33_0;
                   } else {
                     if (var9 == 99) {
-                      int discarded$3 = 115;
-                      boolean discarded$4 = hi.b(tn.a(), (byte) 40);
-                      int discarded$5 = 87;
-                      wd.field_u = new Boolean(v.a((th) (Object) rd.field_e));
+                      boolean discarded$1 = hi.b(tn.a((byte) 115), (byte) 40);
+                      wd.field_u = new Boolean(v.a((th) (Object) rd.field_e, (byte) 87));
                       rd.field_e.field_l = 0;
                       break L8;
                     } else {
@@ -743,7 +741,7 @@ final class cc extends ca {
         in.field_h = 0;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_C = null;
         field_A = null;
         field_y = null;

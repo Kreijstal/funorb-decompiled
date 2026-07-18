@@ -1746,7 +1746,7 @@ final class ro extends pn implements Cloneable {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_q = null;
         field_t = null;
         field_r = null;

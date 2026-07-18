@@ -11,7 +11,7 @@ final class jr extends wt {
     static String field_r;
     int[] field_t;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_r = null;
         field_n = null;
         field_p = null;

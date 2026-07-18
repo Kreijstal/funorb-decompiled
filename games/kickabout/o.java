@@ -239,7 +239,7 @@ final class o {
         return var2;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         nl var2 = null;
@@ -248,8 +248,7 @@ final class o {
         var3 = Kickabout.field_G;
         try {
           L0: {
-            int discarded$2 = 1;
-            df.d();
+            df.d(true);
             var1_int = 0;
             L1: while (true) {
               if (var1_int >= 3) {

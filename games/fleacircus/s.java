@@ -6,7 +6,7 @@ final class s {
     static String[] field_c;
     static String field_a;
 
-    final static void a(oa param0, int param1) {
+    final static void a(oa param0, int param1, boolean param2) {
         int var4 = 0;
         ih var5 = ud.field_b;
         var5.e(8, param1);
@@ -29,7 +29,7 @@ final class s {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
         field_c = null;

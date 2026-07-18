@@ -137,8 +137,7 @@ final class ka extends ig {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 87;
-            stackOut_0_0 = na.a(10, true, param1);
+            stackOut_0_0 = na.a(10, true, param1, 87);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -232,7 +231,7 @@ final class ka extends ig {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         if (fm.field_H) {
           qh.g(qh.field_b, qh.field_c, qh.field_j + -qh.field_b, qh.field_g + -qh.field_c);
           e.field_a.a((byte) -79, false);
@@ -242,7 +241,7 @@ final class ka extends ig {
         }
     }
 
-    final static void h() {
+    final static void h(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

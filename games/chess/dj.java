@@ -10,7 +10,7 @@ final class dj extends l {
     static String field_w;
     private int[][] field_r;
 
-    final static void a() {
+    final static void a(boolean param0) {
         vj.field_c = new jc();
     }
 
@@ -199,8 +199,7 @@ final class dj extends l {
                           }
                           break L5;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = en.a(var7, var6, param0, var5);
+                          int discarded$1 = en.a(var18, var6, param0, var5, 9);
                           break L5;
                         }
                       }
@@ -264,7 +263,7 @@ final class dj extends l {
         ib.field_c.a(param0, bh.field_G.field_pb - 20, 20, -3, sc.field_e, 0, bh.field_G.field_M);
     }
 
-    final static gm h() {
+    final static gm h(int param0) {
         return (gm) (Object) new kh();
     }
 
@@ -522,7 +521,7 @@ final class dj extends l {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_q = null;
         field_t = null;
         field_w = null;

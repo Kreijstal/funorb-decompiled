@@ -61,8 +61,7 @@ final class gm {
                     var4 = param1.substring(var2_int - -1);
                     var5 = bk.a(110, var3);
                     if (var5 == null) {
-                      int discarded$2 = 0;
-                      stackOut_11_0 = d.a(var4);
+                      stackOut_11_0 = d.a(var4, false);
                       stackIn_12_0 = stackOut_11_0;
                       break L0;
                     } else {
@@ -115,7 +114,7 @@ final class gm {
         return stackIn_12_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_c = null;

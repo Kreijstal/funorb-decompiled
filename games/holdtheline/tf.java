@@ -158,7 +158,7 @@ final class tf extends tj {
         }
     }
 
-    final static hj[] a(int param0, gn param1, int param2) {
+    final static hj[] a(int param0, gn param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         hj[] stackIn_4_0 = null;
@@ -183,9 +183,8 @@ final class tf extends tj {
         try {
           L0: {
             if (qg.a(param2, param0, (byte) -27, param1)) {
-              java.awt.Container discarded$4 = tf.e(-27);
-              int discarded$5 = -128;
-              stackOut_3_0 = jd.h();
+              java.awt.Container discarded$2 = tf.e(-27);
+              stackOut_3_0 = jd.h(-128);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -642,7 +641,7 @@ final class tf extends tj {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_r = null;
         int var1 = 19;
         field_n = null;

@@ -20,14 +20,13 @@ final class ij {
                 ij.a((um) null, false, (um) null, (byte) 17);
             }
             nk.field_x[0] = fm.field_Q;
-            int discarded$0 = 1513239;
-            dm.a((lh) (Object) v.field_k, param0);
+            dm.a((lh) (Object) v.field_k, param0, 1513239);
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "ij.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_b = null;
         field_f = null;
@@ -36,7 +35,7 @@ final class ij {
         field_e = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         i.a(true, oc.field_o, -5136, ih.field_Q);
         ag.field_e = true;
     }

@@ -67,8 +67,7 @@ final class bl {
         int stackOut_12_3 = 0;
         int stackOut_12_4 = 0;
         L0: {
-          int discarded$6 = -1;
-          nm.c();
+          nm.c(-1);
           if (null != io.field_c) {
             if (kn.a(true, io.field_c.field_mc)) {
               stackOut_4_0 = 1;
@@ -188,7 +187,7 @@ final class bl {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_d = null;
         field_a = null;
@@ -200,7 +199,7 @@ final class bl {
         return wb.field_b;
     }
 
-    final static v a() {
+    final static v a(int param0) {
         try {
             Throwable var1 = null;
             v stackIn_3_0 = null;

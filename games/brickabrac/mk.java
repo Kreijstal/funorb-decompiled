@@ -174,7 +174,7 @@ final class mk {
         return ((mk) this).a(false);
     }
 
-    final static void a() {
+    final static void a(int param0) {
     }
 
     final void a(long param0, tk param1, int param2) {
@@ -196,7 +196,7 @@ final class mk {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_i = null;
         field_c = null;
         field_b = null;

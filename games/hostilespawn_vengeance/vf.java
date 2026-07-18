@@ -7,7 +7,7 @@ final class vf extends ph {
     static String field_I;
     static String field_J;
 
-    final static boolean l() {
+    final static boolean l(int param0) {
         return uh.field_o;
     }
 
@@ -340,7 +340,7 @@ final class vf extends ph {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -27;
         field_G = null;
         field_I = null;
@@ -408,7 +408,7 @@ final class vf extends ph {
         return var2 + param1;
     }
 
-    final static void k() {
+    final static void k(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         ne var3 = null;

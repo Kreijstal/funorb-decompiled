@@ -41,7 +41,7 @@ final class sia extends kj {
         return 0 >= fieldTemp$0 ? true : false;
     }
 
-    final static void a(pf param0) {
+    final static void a(pf param0, int param1) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;

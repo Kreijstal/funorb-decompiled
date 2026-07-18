@@ -240,7 +240,7 @@ final class ih {
         ml.field_t = param0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_b = null;
     }

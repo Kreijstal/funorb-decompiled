@@ -102,8 +102,8 @@ abstract class ib implements dg {
     }
 
     final static void d(int param0) {
-        int discarded$5 = 7697781;
-        f.b("", (String) null);
+        Object var2 = null;
+        f.b("", (String) null, 7697781);
         if (param0 != 24107) {
             field_a = false;
         }

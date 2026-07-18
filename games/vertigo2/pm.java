@@ -465,9 +465,7 @@ final class pm implements Runnable {
         if (param1 <= 122) {
             field_d = true;
         }
-        int discarded$0 = 1;
-        int discarded$1 = 0;
-        return vo.a(false, 126, 1, param0);
+        return vo.a(false, 126, 1, param0, false, true);
     }
 
     private pm(java.net.Socket param0, jj param1, int param2) throws IOException {

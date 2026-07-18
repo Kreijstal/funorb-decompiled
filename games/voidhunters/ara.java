@@ -12,7 +12,7 @@ class ara extends ksa implements ntb {
         field_g = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
@@ -60,8 +60,7 @@ class ara extends ksa implements ntb {
                 ((ara) this).field_e = 34;
             }
             param0.a(-632, ((ara) this).field_e, 32);
-            int discarded$0 = 0;
-            this.b(param0);
+            this.b(param0, false);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "ara.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -92,39 +91,39 @@ class ara extends ksa implements ntb {
             L1: {
               var5 = (ara) (Object) param0;
               var4 = 0;
-              if (var5.field_d != var5.field_d) {
+              if (var5.field_d != ((ara) this).field_d) {
                 var4 = 1;
-                System.out.println("int x has changed. before=" + var5.field_d + ", now=" + var5.field_d);
+                System.out.println("int x has changed. before=" + var5.field_d + ", now=" + ((ara) this).field_d);
                 break L1;
               } else {
                 break L1;
               }
             }
             L2: {
-              if (var5.field_e != var5.field_e) {
+              if (var5.field_e != ((ara) this).field_e) {
                 var4 = 1;
-                System.out.println("int y has changed. before=" + var5.field_e + ", now=" + var5.field_e);
+                System.out.println("int y has changed. before=" + var5.field_e + ", now=" + ((ara) this).field_e);
                 break L2;
               } else {
                 break L2;
               }
             }
             L3: {
-              if (var5.field_f == var5.field_f) {
+              if (((ara) this).field_f == var5.field_f) {
                 break L3;
               } else {
-                System.out.println("int dx has changed. before=" + var5.field_f + ", now=" + var5.field_f);
+                System.out.println("int dx has changed. before=" + var5.field_f + ", now=" + ((ara) this).field_f);
                 var4 = 1;
                 break L3;
               }
             }
             if (param1 <= -19) {
               L4: {
-                if (var5.field_h == var5.field_h) {
+                if (((ara) this).field_h == var5.field_h) {
                   break L4;
                 } else {
                   var4 = 1;
-                  System.out.println("int dy has changed. before=" + var5.field_h + ", now=" + var5.field_h);
+                  System.out.println("int dy has changed. before=" + var5.field_h + ", now=" + ((ara) this).field_h);
                   break L4;
                 }
               }
@@ -199,10 +198,10 @@ class ara extends ksa implements ntb {
               L2: {
                 var3_int = -111 / ((22 - param0) / 59);
                 var4 = (ara) (Object) param1;
-                if (var4.field_d != var4.field_d) {
+                if (var4.field_d != ((ara) this).field_d) {
                   break L2;
                 } else {
-                  if (var4.field_e == var4.field_e) {
+                  if (((ara) this).field_e == var4.field_e) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
                     break L1;
@@ -256,19 +255,19 @@ class ara extends ksa implements ntb {
         try {
             var5 = (ara) (Object) param1;
             var6 = var5;
-            var6.field_d = var5.field_d;
+            var6.field_d = ((ara) this).field_d;
             if (param0 <= 54) {
                 ((ara) this).field_h = 125;
             }
-            var6.field_f = var5.field_f;
-            var6.field_h = var5.field_h;
-            var6.field_e = var5.field_e;
+            var6.field_f = ((ara) this).field_f;
+            var6.field_h = ((ara) this).field_h;
+            var6.field_e = ((ara) this).field_e;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "ara.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void b(faa param0) {
+    private final void b(faa param0, boolean param1) {
         RuntimeException var3 = null;
         faa stackIn_3_0 = null;
         int stackIn_3_1 = 0;
@@ -396,7 +395,7 @@ class ara extends ksa implements ntb {
     ara() {
     }
 
-    private final void c(faa param0) {
+    private final void c(faa param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -463,8 +462,7 @@ class ara extends ksa implements ntb {
                 field_g = null;
             }
             ((ara) this).field_e = param0.i(0, 32);
-            int discarded$0 = 32;
-            this.c(param0);
+            this.c(param0, 32);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "ara.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

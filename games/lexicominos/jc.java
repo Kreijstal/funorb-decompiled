@@ -20,7 +20,7 @@ final class jc extends java.awt.Canvas {
         int var1 = -24 / ((param0 - 43) / 46);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

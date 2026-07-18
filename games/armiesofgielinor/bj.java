@@ -10,7 +10,7 @@ final class bj extends tc {
     int field_m;
     static wk[] field_p;
 
-    final static wk e() {
+    final static wk e(int param0) {
         int[] var20 = null;
         int[] var16 = null;
         int[] var13 = null;

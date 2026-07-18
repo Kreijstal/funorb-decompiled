@@ -11,7 +11,7 @@ final class cs implements mw {
     private fr field_c;
     private ft[] field_d;
 
-    final static int g() {
+    final static int g(int param0) {
         wt.field_i.c((byte) 66);
         if (jk.field_b.c((byte) 119)) {
             return 0;
@@ -41,12 +41,10 @@ final class cs implements mw {
         ((cs) this).field_h = ((cs) this).field_h & -2;
         if (param0 != -20745) {
           ((cs) this).c(-86);
-          int discarded$4 = 24909;
-          ((cs) this).field_f = this.f();
+          ((cs) this).field_f = this.f(24909);
           return;
         } else {
-          int discarded$5 = 24909;
-          ((cs) this).field_f = this.f();
+          ((cs) this).field_f = this.f(24909);
           return;
         }
     }
@@ -158,7 +156,7 @@ final class cs implements mw {
         }
     }
 
-    private final int f() {
+    private final int f(int param0) {
         if ((4 & ((cs) this).field_h) != 0) {
             return 36160;
         }
@@ -179,8 +177,7 @@ final class cs implements mw {
     public final void a(boolean param0) {
         jaggl.OpenGL.glBindFramebufferEXT(36009, 0);
         ((cs) this).field_h = ((cs) this).field_h & -3;
-        int discarded$0 = 24909;
-        ((cs) this).field_f = this.f();
+        ((cs) this).field_f = this.f(24909);
         if (param0) {
             ((cs) this).field_d = null;
         }
@@ -335,8 +332,7 @@ final class cs implements mw {
     public final void c(int param0) {
         jaggl.OpenGL.glBindFramebufferEXT(36008, ((cs) this).field_a);
         ((cs) this).field_h = ((cs) this).field_h | 1;
-        int discarded$0 = 24909;
-        ((cs) this).field_f = this.f();
+        ((cs) this).field_f = this.f(24909);
         if (param0 != 195) {
             ((cs) this).field_d = null;
         }
@@ -348,8 +344,7 @@ final class cs implements mw {
           return;
         } else {
           ((cs) this).field_h = ((cs) this).field_h & -5;
-          int discarded$2 = 24909;
-          ((cs) this).field_f = this.f();
+          ((cs) this).field_f = this.f(24909);
           return;
         }
     }
@@ -376,8 +371,7 @@ final class cs implements mw {
         } else {
           jaggl.OpenGL.glBindFramebufferEXT(36160, ((cs) this).field_a);
           ((cs) this).field_h = ((cs) this).field_h | 4;
-          int discarded$2 = 24909;
-          ((cs) this).field_f = this.f();
+          ((cs) this).field_f = this.f(24909);
           return;
         }
     }
@@ -388,8 +382,7 @@ final class cs implements mw {
         } else {
           jaggl.OpenGL.glBindFramebufferEXT(36009, ((cs) this).field_a);
           ((cs) this).field_h = ((cs) this).field_h | 2;
-          int discarded$2 = 24909;
-          ((cs) this).field_f = this.f();
+          ((cs) this).field_f = this.f(24909);
           return;
         }
     }

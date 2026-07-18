@@ -14,7 +14,7 @@ final class jj {
     static wk[] field_k;
     static String field_b;
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return gb.field_c.b(64);
     }
 
@@ -131,9 +131,7 @@ final class jj {
                         ic.field_T = qi.a(false, li.field_w, param5, 0, (String) null);
                         break L4;
                       } else {
-                        int discarded$13 = 0;
-                        int discarded$14 = -20407;
-                        ic.field_T = ak.a(param2, param5);
+                        ic.field_T = ak.a(param2, param5, -20407, false);
                         break L4;
                       }
                     }
@@ -237,8 +235,7 @@ final class jj {
                         var6_ref = rf.field_d.g(-122);
                         var7 = rf.field_d.f((byte) -128);
                         if (0 != (1 & var7)) {
-                          int discarded$15 = -105;
-                          ed.b();
+                          ed.b((byte) -105);
                           break L10;
                         } else {
                           break L10;
@@ -306,9 +303,9 @@ final class jj {
                       }
                       L16: {
                         if (cd.field_a) {
-                          int discarded$16 = rf.field_d.f((byte) -118);
-                          int discarded$17 = rf.field_d.f((byte) -83);
-                          int discarded$18 = rf.field_d.i(0);
+                          int discarded$5 = rf.field_d.f((byte) -118);
+                          int discarded$6 = rf.field_d.f((byte) -83);
+                          int discarded$7 = rf.field_d.i(0);
                           ag.field_q = rf.field_d.c((byte) -60);
                           nj.field_Y = new byte[ag.field_q];
                           var8 = 0;
@@ -332,13 +329,11 @@ final class jj {
                         ua.field_o = rf.field_d.f((byte) -106);
                         rn.field_v = jd.field_sb;
                         if (ic.field_T.a((byte) 69) == nk.field_F) {
-                          int discarded$19 = -21;
-                          qd.field_o.a(-48, wl.d());
+                          qd.field_o.a(-48, wl.d((byte) -21));
                           break L18;
                         } else {
                           if (ic.field_T.a((byte) 108) == ol.field_Sb) {
-                            int discarded$20 = -21;
-                            mj.field_Vb.a(-70, wl.d());
+                            mj.field_Vb.a(-70, wl.d((byte) -21));
                             break L18;
                           } else {
                             break L18;
@@ -350,8 +345,7 @@ final class jj {
                         if (var6_ref == null) {
                           break L19;
                         } else {
-                          int discarded$21 = -21;
-                          ri.a(var6_ref, wl.d(), 124);
+                          ri.a(var6_ref, wl.d((byte) -21), 124);
                           break L19;
                         }
                       }
@@ -363,8 +357,7 @@ final class jj {
                             if (!ok.field_g) {
                               try {
                                 L22: {
-                                  int discarded$22 = -21;
-                                  Object discarded$23 = hn.a(wl.d(), (byte) -96, "unzap");
+                                  Object discarded$8 = hn.a(wl.d((byte) -21), (byte) -96, "unzap");
                                   break L22;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -382,8 +375,7 @@ final class jj {
                         }
                         try {
                           L24: {
-                            int discarded$24 = -21;
-                            Object discarded$25 = hn.a("zap", (byte) -41, wl.d(), new Object[1]);
+                            Object discarded$9 = hn.a("zap", (byte) -41, wl.d((byte) -21), new Object[1]);
                             break L24;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -552,7 +544,7 @@ final class jj {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
         field_e = null;
         field_j = null;

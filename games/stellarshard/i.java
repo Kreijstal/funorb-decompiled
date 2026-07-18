@@ -11,8 +11,7 @@ abstract class i {
     final static void a(java.awt.Canvas param0, int param1) {
         try {
             if (!(11 != eg.field_d)) {
-                int discarded$0 = 1;
-                tc.d();
+                tc.d(1);
             }
             if (param1 >= -96) {
                 field_a = 100;
@@ -69,8 +68,7 @@ abstract class i {
                     var3 = param1.substring(0, var2_int);
                     var4 = param1.substring(var2_int + 1);
                     var6 = 0;
-                    int discarded$2 = 1;
-                    var5 = ok.a(var3);
+                    var5 = ok.a(var3, 1);
                     if (var5 != null) {
                       stackOut_10_0 = (wb) var5;
                       stackIn_11_0 = stackOut_10_0;
@@ -125,7 +123,7 @@ abstract class i {
 
     abstract byte[] a(int param0);
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_e = null;
         field_c = null;

@@ -186,12 +186,12 @@ final class sh implements fo {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         bg.field_g = false;
         ae.field_b = sa.field_a.j(-99) == 0 ? true : false;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
     }
 
@@ -331,8 +331,7 @@ final class sh implements fo {
                       if (var8_ref_nf.field_h) {
                         break L9;
                       } else {
-                        int discarded$2 = 1;
-                        if (!ti.a(var8_ref_nf.field_b)) {
+                        if (!ti.a(var8_ref_nf.field_b, true)) {
                           break L9;
                         } else {
                           break L8;
@@ -372,8 +371,7 @@ final class sh implements fo {
               }
               var10 = hg.a(false, var8_ref_nf);
               var11 = var10 + nq.a(var8_ref_nf.field_k);
-              int discarded$3 = -73;
-              var12 = jl.a(var8_ref_nf);
+              var12 = jl.a(var8_ref_nf, (byte) -73);
               var8_ref_nf.field_j = new qr(0L, bh.field_k, var11);
               var8_ref_nf.field_j.field_nb = ho.field_f;
               var8_ref_nf.field_j.field_jb = -(var12 >> 1 & 8355711) + var12 + (8355711 & bh.field_k.field_jb >> 1);

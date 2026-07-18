@@ -147,8 +147,7 @@ final class ih extends qe {
             break L0;
           }
         }
-        int discarded$1 = -36;
-        ho.b();
+        ho.b((byte) -36);
     }
 
     final void a(boolean param0) {
@@ -249,8 +248,7 @@ final class ih extends qe {
             L7: while (true) {
               if (var4 == null) {
                 L8: {
-                  int discarded$1 = 0;
-                  this.g();
+                  this.g(0);
                   ((ih) this).field_y.d();
                   ((ih) this).field_D.d();
                   if (((ih) this).field_b == null) {
@@ -527,8 +525,7 @@ final class ih extends qe {
                     }
                   }
                 }
-                int discarded$6 = 95;
-                uj.a(var4);
+                uj.a(var4, 95);
                 break L1;
               }
             }
@@ -563,7 +560,7 @@ final class ih extends qe {
                         }
                         ((ih) this).field_F = new wd(var18.field_e, var18.field_t, rf.field_M);
                         if (null != var18.field_p) {
-                          o discarded$7 = gd.a(64, var18.field_p);
+                          o discarded$2 = gd.a(64, var18.field_p);
                           break L6;
                         } else {
                           break L6;
@@ -608,8 +605,7 @@ final class ih extends qe {
                                         }
                                       }
                                     }
-                                    int discarded$8 = -36;
-                                    ho.b();
+                                    ho.b((byte) -36);
                                     break L9;
                                   } else {
                                     break L9;
@@ -636,7 +632,7 @@ final class ih extends qe {
                                         if (var21.field_u != var20.field_b.field_n) {
                                           var20.field_b.a(124, var21.field_u);
                                           if (var20.field_n.field_p != null) {
-                                            o discarded$9 = gd.a(64, var21.field_p);
+                                            o discarded$3 = gd.a(64, var21.field_p);
                                             break L6;
                                           } else {
                                             break L6;
@@ -657,8 +653,7 @@ final class ih extends qe {
                                   var19 = ((u) (Object) op.field_d.field_l).field_Q;
                                   um.field_i[var2] = new hb(var2, var19.field_w);
                                   um.field_i[var2].field_b = new wd(var19.field_e);
-                                  int discarded$10 = -36;
-                                  ho.b();
+                                  ho.b((byte) -36);
                                   op.field_d.a((byte) 80);
                                   break L6;
                                 }
@@ -691,8 +686,7 @@ final class ih extends qe {
                   if (var2_ref_hb != null) {
                     um.field_i[((ih) this).field_C] = new hb(((ih) this).field_C, var17.field_c);
                     um.field_i[((ih) this).field_C].field_b = new wd(var17.field_n.field_e);
-                    int discarded$11 = -36;
-                    ho.b();
+                    ho.b((byte) -36);
                     this.a((byte) -112, -1);
                     break L6;
                   } else {
@@ -807,22 +801,17 @@ final class ih extends qe {
         this.a(0, 0);
         ((ih) this).field_q = new sa(262, 412, 280, 56);
         ((ih) this).field_q.a(true, lg.field_h, (byte) 91, a.field_m, 16777215);
-        int discarded$0 = 30496;
-        hl.field_b.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c));
-        int discarded$1 = 30496;
-        hi.field_a.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c));
-        int discarded$2 = 30496;
-        kl.field_h.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c));
-        int discarded$3 = 30496;
-        cd.field_d.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c));
-        int discarded$4 = 30496;
-        am.field_f.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c));
+        hl.field_b.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c, 30496));
+        hi.field_a.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c, 30496));
+        kl.field_h.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c, 30496));
+        cd.field_d.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c, 30496));
+        am.field_f.field_n = (en) (Object) new e(jk.a(new String[1], ib.field_c, 30496));
         nl.field_a.field_n = (en) (Object) new e((String) null, pm.field_o, nk.field_Lb);
         sn.field_b.field_n = (en) (Object) new e((String) null, ud.field_u, oi.field_M);
         this.a((byte) -112, -1);
     }
 
-    private final void g() {
+    private final void g(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1183,8 +1172,7 @@ final class ih extends qe {
         var2 = 0;
         L0: while (true) {
           if (var2 >= 8) {
-            int discarded$1 = -36;
-            ho.b();
+            ho.b((byte) -36);
             return;
           } else {
             um.field_i[var2] = gm.field_d.field_a[var2];
@@ -1298,14 +1286,12 @@ final class ih extends qe {
                 }
               }
               mi.a(in.field_y, ae.field_e, (se) (Object) ne.field_c, 13195, jm.field_i);
-              int discarded$2 = 30496;
-              in.field_y.field_n = (en) (Object) new e((String) null, jk.a(new String[2], t.field_c), (String) null);
+              in.field_y.field_n = (en) (Object) new e((String) null, jk.a(new String[2], t.field_c, 30496), (String) null);
               in.field_y.field_w = true;
               break L1;
             } else {
               mi.a(in.field_y, sa.field_e, (se) (Object) ne.field_c, 13195, jm.field_i);
-              int discarded$3 = 30496;
-              in.field_y.field_n = (en) (Object) new e((String) null, jk.a(new String[2], e.field_g), (String) null);
+              in.field_y.field_n = (en) (Object) new e((String) null, jk.a(new String[2], e.field_g, 30496), (String) null);
               in.field_y.field_w = true;
               break L1;
             }
@@ -1375,8 +1361,7 @@ final class ih extends qe {
             return;
           } else {
             L0: while (true) {
-              int discarded$20 = 47;
-              if (!ha.b()) {
+              if (!ha.b((byte) 47)) {
                 L1: {
                   this.f(-24900);
                   if (((ih) this).field_b == null) {
@@ -1406,8 +1391,7 @@ final class ih extends qe {
                   if (!kn.field_g) {
                     break L3;
                   } else {
-                    int discarded$21 = 0;
-                    bl.a();
+                    bl.a(0);
                     break L3;
                   }
                 }

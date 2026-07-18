@@ -125,7 +125,7 @@ final class qua {
         }
     }
 
-    final static long a(CharSequence param0) {
+    final static long a(CharSequence param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         long var3 = 0L;
@@ -514,6 +514,7 @@ final class qua {
 
     final static tpa a(boolean param0, String param1) {
         RuntimeException var2 = null;
+        Object var3 = null;
         Object stackIn_7_0 = null;
         tpa stackIn_9_0 = null;
         RuntimeException stackIn_11_0 = null;
@@ -538,7 +539,7 @@ final class qua {
           L0: {
             if (dw.field_c != lrb.field_b) {
               L1: {
-                int discarded$6 = 1;
+                var3 = null;
                 if (gka.field_o != lrb.field_b) {
                   break L1;
                 } else {
@@ -595,7 +596,7 @@ final class qua {
         return stackIn_9_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
     }

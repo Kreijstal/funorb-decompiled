@@ -103,7 +103,7 @@ final class fc {
         return ((fc) this).field_l[param1];
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -471,7 +471,7 @@ final class fc {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -493,7 +493,7 @@ final class fc {
         }
     }
 
-    final static int a() {
+    final static int a(int param0) {
         if (uh.field_H < 2) {
           return 0;
         } else {
@@ -635,10 +635,8 @@ final class fc {
               throw new IllegalStateException("" + var2_int);
             } else {
               L1: {
-                int discarded$5 = 98;
-                var3 = ma.a(param1) ? 1 : 0;
-                int discarded$6 = 98;
-                var4 = ma.a(param1) ? 1 : 0;
+                var3 = ma.a(param1, (byte) 98) ? 1 : 0;
+                var4 = ma.a(param1, (byte) 98) ? 1 : 0;
                 var5 = new ee();
                 var5.field_m = (short)param1.a(false, 16);
                 var5.field_D = dc.a(-25076, var5.field_D, 16, param1);
@@ -665,7 +663,7 @@ final class fc {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  int discarded$7 = param1.a(false, 16);
+                  int discarded$1 = param1.a(false, 16);
                   var5.field_F = dc.a(-25076, var5.field_F, 16, param1);
                   var5.field_s = dc.a(-25076, var5.field_s, 16, param1);
                   var5.field_A = dc.a(-25076, var5.field_A, 16, param1);
@@ -675,8 +673,7 @@ final class fc {
                 }
               }
               L3: {
-                int discarded$8 = 98;
-                if (!ma.a(param1)) {
+                if (!ma.a(param1, (byte) 98)) {
                   break L3;
                 } else {
                   var5.field_x = dc.a(-25076, var5.field_x, 16, param1);
@@ -684,8 +681,7 @@ final class fc {
                 }
               }
               L4: {
-                int discarded$9 = 98;
-                if (!ma.a(param1)) {
+                if (!ma.a(param1, (byte) 98)) {
                   break L4;
                 } else {
                   var5.field_f = ig.a(16, 125, param1, var5.field_f);

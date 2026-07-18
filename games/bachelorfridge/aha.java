@@ -6055,8 +6055,7 @@ class aha extends hf {
                   var8 = var6.a(param3, 0, (wj) this);
                   var9 = var6.a((wj) this, param1, (byte) -54);
                   L2: while (true) {
-                    int discarded$1 = 0;
-                    uv.a(var7.field_k - -2, -2 + var9 - -var7.field_h, var7.field_j - -2, var8 - -var7.field_f + -2);
+                    uv.a(var7.field_k - -2, -2 + var9 - -var7.field_h, var7.field_j - -2, var8 - -var7.field_f + -2, false);
                     var7 = var7.field_i;
                     if (null != var7) {
                       continue L2;
@@ -6128,13 +6127,21 @@ class aha extends hf {
         return stackIn_17_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            field_A = null;
-            field_H = null;
+            L1: {
+              field_A = null;
+              field_H = null;
+              if (param0) {
+                break L1;
+              } else {
+                aha.a((byte) 76, (vr) null);
+                break L1;
+              }
+            }
             field_F = null;
             field_D = null;
             break L0;
@@ -6142,7 +6149,7 @@ class aha extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "aha.G(" + true + ')');
+          throw pe.a((Throwable) (Object) var1, "aha.G(" + param0 + ')');
         }
     }
 

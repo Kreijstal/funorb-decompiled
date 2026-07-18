@@ -11,7 +11,7 @@ final class uv extends k {
         return jq.field_k;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -380,7 +380,7 @@ final class uv extends k {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_k = null;
     }
 

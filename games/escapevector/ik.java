@@ -14,7 +14,7 @@ final class ik extends hg {
     int field_k;
     int field_i;
 
-    public static void d() {
+    public static void d(int param0) {
         field_h = null;
     }
 

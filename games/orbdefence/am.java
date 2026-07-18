@@ -11,7 +11,7 @@ final class am {
     static long field_a;
     static String field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_b = null;
         field_h = null;
@@ -102,8 +102,7 @@ final class am {
                   }
                 }
               } else {
-                int discarded$2 = 4;
-                tl.a(-128, var3);
+                tl.a(-128, var3, 4);
                 var3 = (ha) (Object) oa.field_d.d(853);
                 continue L1;
               }

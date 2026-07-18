@@ -302,15 +302,13 @@ final class fm extends hn implements ng {
                 if (((fm) this).field_D != param1) {
                   if (param1 != ((fm) this).field_C) {
                     if (((fm) this).field_B == param1) {
-                      int discarded$5 = 90;
-                      eh.c();
+                      eh.c((byte) 90);
                       break L1;
                     } else {
                       break L1;
                     }
                   } else {
-                    int discarded$6 = 11;
-                    m.a();
+                    m.a(11);
                     break L1;
                   }
                 } else {
@@ -380,7 +378,7 @@ final class fm extends hn implements ng {
         ((fm) this).a((gm) (Object) ((fm) this).field_B, -6938);
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_F = null;
     }
 

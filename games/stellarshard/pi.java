@@ -167,8 +167,7 @@ final class pi {
             ((pi) this).field_d = var5;
             ((pi) this).field_c = var7;
             var9 = 23 % ((-63 - param1) / 61);
-            int discarded$1 = -75;
-            this.a();
+            this.a((byte) -75);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -203,7 +202,7 @@ final class pi {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         double var2 = 0.0;
         var2 = ((pi) this).field_c * ((pi) this).field_c + (((pi) this).field_d * ((pi) this).field_d + ((pi) this).field_b * ((pi) this).field_b) + ((pi) this).field_a * ((pi) this).field_a;
         if (0.999999999999 <= var2) {
@@ -231,7 +230,7 @@ final class pi {
         ((pi) this).field_b = 1.0;
     }
 
-    final static String a(String param0, pf param1, String param2) {
+    final static String a(String param0, pf param1, String param2, int param3) {
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;

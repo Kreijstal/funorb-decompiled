@@ -88,8 +88,7 @@ abstract class oh extends gb {
                                         L2: {
                                           L3: {
                                             var13 = (CharSequence) (Object) var9_ref_String.substring(4);
-                                            int discarded$1 = 10;
-                                            var10 = uk.a(var13);
+                                            var10 = uk.a(var13, 10);
                                             var11_ref_fd = ((oh) this).field_L[var10];
                                             if (((oh) this).field_D == null) {
                                               stackOut_25_0 = var11_ref_fd.field_k;
@@ -541,8 +540,7 @@ abstract class oh extends gb {
                     }
                   } else {
                     var4 = (CharSequence) (Object) param0.substring(6);
-                    int discarded$1 = 10;
-                    field_t = uk.a(var4);
+                    field_t = uk.a(var4, 10);
                     break L1;
                   }
                 } else {
@@ -611,8 +609,7 @@ abstract class oh extends gb {
                                         try {
                                           L2: {
                                             var10 = (CharSequence) (Object) var8.substring(4);
-                                            int discarded$1 = 10;
-                                            var9_int = uk.a(var10);
+                                            var9_int = uk.a(var10, 10);
                                             var4 = var4 + ((oh) this).field_L[var9_int].field_g;
                                             var3 = 0;
                                             var6++;
@@ -748,10 +745,7 @@ abstract class oh extends gb {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          int discarded$9 = 1;
-          int discarded$10 = 0;
-          int discarded$11 = 32;
-          StringBuilder discarded$12 = wd.a(field_C);
+          StringBuilder discarded$5 = wd.a(field_C, ' ', 0, 1);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -787,9 +781,9 @@ abstract class oh extends gb {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$13 = field_C.append('<');
-                        StringBuilder discarded$14 = field_C.append(var15);
-                        StringBuilder discarded$15 = field_C.append('>');
+                        StringBuilder discarded$6 = field_C.append('<');
+                        StringBuilder discarded$7 = field_C.append(var15);
+                        StringBuilder discarded$8 = field_C.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -805,8 +799,7 @@ abstract class oh extends gb {
                                             try {
                                               L4: {
                                                 var18 = (CharSequence) (Object) var15.substring(4);
-                                                int discarded$16 = 10;
-                                                var16_int = uk.a(var18);
+                                                var16_int = uk.a(var18, 10);
                                                 var4 = var4 + ((oh) this).field_L[var16_int].field_g;
                                                 var10 = 0;
                                                 break L4;
@@ -977,7 +970,7 @@ abstract class oh extends gb {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$17 = field_C.append((char) var14);
+                        StringBuilder discarded$9 = field_C.append((char) var14);
                         var14 = (char)(hj.a((char) var14, (byte) -128) & 255);
                         var4 = var4 + ((oh) this).field_K[var14];
                         if (((oh) this).field_J == null) {
@@ -1280,8 +1273,7 @@ abstract class oh extends gb {
                                           L5: {
                                             var8++;
                                             var19 = (CharSequence) (Object) var12_ref_String.substring(4);
-                                            int discarded$1 = 10;
-                                            var15 = uk.a(var19);
+                                            var15 = uk.a(var19, 10);
                                             var16_ref_fd = ((oh) this).field_L[var15];
                                             if (((oh) this).field_D == null) {
                                               stackOut_31_0 = var16_ref_fd.field_k;

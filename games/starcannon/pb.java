@@ -83,13 +83,13 @@ final class pb {
         }
         L4: {
           if (1 == pf.field_e) {
-            int discarded$6 = var8.i(-1174051992);
-            String discarded$7 = var8.a(-95);
+            int discarded$4 = var8.i(-1174051992);
+            String discarded$5 = var8.a(-95);
             break L4;
           } else {
             if (pf.field_e == 4) {
-              int discarded$8 = var8.i(-1174051992);
-              String discarded$9 = var8.a(-95);
+              int discarded$6 = var8.i(-1174051992);
+              String discarded$7 = var8.a(-95);
               break L4;
             } else {
               break L4;
@@ -97,9 +97,7 @@ final class pb {
           }
         }
         if (!param1) {
-          int discarded$10 = 0;
-          int discarded$11 = 80;
-          vd.field_e = ha.a((rb) (Object) var8);
+          vd.field_e = ha.a((rb) (Object) var8, 80, 0);
           se.field_o = null;
           return new fb(param1);
         } else {
@@ -134,7 +132,7 @@ final class pb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

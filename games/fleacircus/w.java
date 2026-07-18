@@ -98,7 +98,7 @@ abstract class w {
 
     abstract void a(byte param0);
 
-    public static void c() {
+    public static void c(int param0) {
         field_i = null;
         int var1 = 114;
         field_e = null;
@@ -134,8 +134,7 @@ abstract class w {
           L0: {
             var4_int = 0;
             if (ha.a(param3, -32180, param2, param1)) {
-              int discarded$2 = -128;
-              stackOut_3_0 = fc.b();
+              stackOut_3_0 = fc.b(-128);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -307,8 +306,7 @@ abstract class w {
                         try {
                             var2 = param1.getParameter("cookieprefix");
                             var3 = var2 + "settings";
-                            int discarded$2 = -250;
-                            var4 = (String) eb.a("getcookies", param1);
+                            var4 = (String) eb.a("getcookies", param1, -250);
                             var5 = m.a(';', 122, var4);
                             var6 = 0;
                             statePc = 2;

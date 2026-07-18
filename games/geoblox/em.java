@@ -11,7 +11,7 @@ final class em {
     static String field_a;
     private qc field_b;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         if (null == vl.field_n) {
             return false;
         }
@@ -334,8 +334,7 @@ final class em {
               if (var5.length != 65) {
                 throw new RuntimeException();
               } else {
-                int discarded$1 = 8;
-                var17 = wh.a(-var16.length + var10.field_f - 5, 5, var10.field_j);
+                var17 = wh.a(-var16.length + var10.field_f - 5, 5, var10.field_j, 8);
                 var7 = 0;
                 L3: while (true) {
                   if (var7 >= 64) {

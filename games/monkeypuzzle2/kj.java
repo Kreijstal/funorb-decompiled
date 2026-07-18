@@ -75,12 +75,11 @@ final class kj extends jk {
                 break L1;
               } else {
                 var5 = null;
-                le discarded$9 = kj.a(4, (ad) null, 48, 57);
+                le discarded$2 = kj.a(4, (ad) null, 48, 57);
                 break L1;
               }
             }
-            int discarded$10 = -3;
-            if (wg.a(param3, param0, param1)) {
+            if (wg.a(param3, param0, param1, -3)) {
               stackOut_5_0 = od.b(param2 + -17093);
               stackIn_6_0 = stackOut_5_0;
               break L0;
@@ -160,7 +159,7 @@ final class kj extends jk {
         }
     }
 
-    final static boolean m() {
+    final static boolean m(int param0) {
         i var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -232,7 +231,7 @@ final class kj extends jk {
         return stackIn_21_0 != 0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         int var1 = -86;
         field_E = null;
         field_F = null;

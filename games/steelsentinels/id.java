@@ -26,7 +26,7 @@ final class id extends gh {
         ((id) this).field_Vb.a(0, 0, ((id) this).field_Lb, var3, ((id) this).field_zb - var3);
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_Wb = null;
         field_Ub = null;
         field_Zb = null;
@@ -221,7 +221,7 @@ final class id extends gh {
         }
     }
 
-    final static String a(String param0) {
+    final static String a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;

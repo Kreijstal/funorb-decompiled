@@ -27,7 +27,7 @@ final class gj {
         throw new IllegalStateException();
     }
 
-    final static void a(cn param0) {
+    final static void a(cn param0, boolean param1) {
         RuntimeException var2 = null;
         jea var3 = null;
         jea var5 = null;
@@ -143,7 +143,7 @@ final class gj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         field_o = null;
         field_e = null;

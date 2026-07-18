@@ -246,7 +246,7 @@ final class pv {
         }
     }
 
-    final static ru a(String param0, String param1, kl param2) {
+    final static ru a(String param0, String param1, kl param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -302,8 +302,7 @@ final class pv {
           L0: {
             var4_int = param2.a(param0, 124);
             var5 = param2.a((byte) 121, var4_int, param1);
-            int discarded$2 = -80;
-            stackOut_2_0 = ls.a(var5, param2, var4_int);
+            stackOut_2_0 = ls.a(var5, param2, var4_int, -80);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -390,7 +389,7 @@ final class pv {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_d = null;
         field_a = null;

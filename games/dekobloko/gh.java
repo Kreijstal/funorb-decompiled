@@ -12,8 +12,7 @@ final class gh {
     final static void a(boolean param0) {
         if (hc.field_d != 10) {
           if (!bd.d((byte) -124)) {
-            int discarded$4 = -5;
-            ne.e();
+            ne.e(-5);
             hc.field_d = 11;
             tf.field_bb = true;
             return;
@@ -22,8 +21,7 @@ final class gh {
             return;
           }
         } else {
-          int discarded$5 = -5;
-          ne.e();
+          ne.e(-5);
           hc.field_d = 11;
           tf.field_bb = true;
           return;
@@ -38,7 +36,7 @@ final class gh {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_f = null;
         field_b = null;

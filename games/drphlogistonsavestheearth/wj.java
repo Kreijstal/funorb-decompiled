@@ -1100,9 +1100,8 @@ final class wj {
         wj.c(param0 + param2 - 1, param1, param3, param4);
     }
 
-    final static void g() {
-        int discarded$0 = 140;
-        wj.a(field_l, 0, 0 * field_k, 4, 0, 540, field_k - 540);
+    final static void g(int param0, int param1, int param2, int param3, int param4, int param5) {
+        wj.a(field_l, 0, 0 * field_k, 4, 0, 540, field_k - 540, 140);
         wj.a(field_l, 0, 0 * field_k, 4, 0, 140, field_k - 540, 0, 540);
     }
 
@@ -2160,7 +2159,7 @@ final class wj {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;

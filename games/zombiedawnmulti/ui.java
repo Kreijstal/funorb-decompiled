@@ -1404,7 +1404,7 @@ final class ui extends br {
         return 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_i = null;
         field_j = null;

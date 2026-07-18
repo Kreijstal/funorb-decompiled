@@ -24,7 +24,7 @@ final class ra {
         return new Date().getYear() - -1900;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_k = null;
         field_a = null;
         field_f = null;

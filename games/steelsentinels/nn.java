@@ -27,7 +27,7 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static void a(String[] args, int param1, String param2) {
+    final static void a(String[] args, int param1, String param2, byte param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int stackIn_9_0 = 0;
@@ -81,8 +81,7 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
                     break L2;
                   }
                 }
-                int discarded$1 = 69;
-                qf.field_d = fn.a(stackIn_9_0 != 0);
+                qf.field_d = fn.a(stackIn_9_0 != 0, (byte) 69);
                 break L1;
               } else {
                 L3: {
@@ -174,7 +173,7 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
     nn() {
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
         field_e = null;
         field_h = null;
@@ -194,11 +193,11 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return de.field_d;
     }
 
-    final static int a(int[] param0) {
+    final static int a(int[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -317,7 +316,7 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
         return stackIn_22_0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wk param4) {
+    final static void a(int param0, int param1, int param2, int param3, wk param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;

@@ -55,8 +55,7 @@ final class cn extends java.awt.Canvas {
               }
             }
             if (vj.a(param2, param0, param1, (byte) 121)) {
-              int discarded$2 = 1;
-              stackOut_5_0 = cl.a(param3.a(param4 + -24766, param1, param2));
+              stackOut_5_0 = cl.a(param3.a(param4 + -24766, param1, param2), true);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
@@ -145,11 +144,11 @@ final class cn extends java.awt.Canvas {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return qi.field_c;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_b = null;
     }

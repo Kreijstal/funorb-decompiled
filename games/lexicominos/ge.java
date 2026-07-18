@@ -107,7 +107,7 @@ final class ge implements Runnable {
         this(param0, param1, 5000);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
     }
 
@@ -782,16 +782,13 @@ final class ge implements Runnable {
     }
 
     final static void f(int param0) {
-        int discarded$0 = -1980;
-        int var1 = hc.f();
+        int var1 = hc.f(-1980);
         if (param0 < 55) {
             field_e = null;
         }
-        int discarded$1 = -6;
-        int var2 = eb.d();
+        int var2 = eb.d((byte) -6);
         ki.field_a.a(rf.field_c + -id.field_v, (id.field_v << 1) + var2, var1 - -(wh.field_f << 1), me.field_v - wh.field_f, -1160208572);
-        int discarded$2 = 0;
-        hi.b();
+        hi.b(0);
     }
 
     final int e(int param0) throws IOException {

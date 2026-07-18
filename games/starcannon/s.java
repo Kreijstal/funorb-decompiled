@@ -15,7 +15,7 @@ final class s {
     static sg field_i;
     static boolean field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_h = null;
         field_e = null;

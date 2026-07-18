@@ -156,7 +156,7 @@ final class md extends r {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         int var1 = -13;
         field_D = null;
         field_E = null;

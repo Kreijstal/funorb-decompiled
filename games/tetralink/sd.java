@@ -204,7 +204,7 @@ final class sd extends ml {
         return stackIn_1_0;
     }
 
-    public static void p() {
+    public static void p(int param0) {
         field_pb = null;
         field_qb = null;
         field_rb = null;

@@ -13,7 +13,7 @@ final class lb {
     static int field_i;
     static int field_j;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_h = null;
         field_f = null;
@@ -179,8 +179,7 @@ final class lb {
             var1 = ok.field_a.e((byte) 28);
         }
         if (var1.length() == 0) {
-            int discarded$0 = -113;
-            var1 = gj.a();
+            var1 = gj.a(-113);
         }
         if (!(0 != var1.length())) {
             var1 = nf.field_q;
@@ -188,7 +187,7 @@ final class lb {
         return var1;
     }
 
-    final static q a(String param0) {
+    final static q a(String param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

@@ -6,7 +6,7 @@ final class otb extends rqa {
     static String field_p;
     static String field_o;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_o = null;
         field_p = null;
     }

@@ -405,7 +405,7 @@ final class dg extends da {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_O = null;
         field_G = null;
         field_P = null;

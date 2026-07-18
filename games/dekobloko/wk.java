@@ -99,7 +99,7 @@ class wk extends fm {
         }
     }
 
-    final static int b() {
+    final static int b(int param0) {
         return -ad.field_a + fb.field_f;
     }
 
@@ -149,8 +149,7 @@ class wk extends fm {
             return;
           }
         } else {
-          int discarded$1 = 1;
-          da.a(param2);
+          da.a(param2, true);
           return;
         }
     }

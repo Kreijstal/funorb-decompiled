@@ -18,7 +18,7 @@ final class vd implements Runnable {
     private java.net.Socket field_e;
     static String field_l;
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_l = null;
     }
@@ -309,7 +309,7 @@ final class vd implements Runnable {
         }
     }
 
-    final static String d() {
+    final static String d(int param0) {
         String var1 = "";
         if (!(null == om.field_p)) {
             var1 = om.field_p.j(-102);
@@ -485,7 +485,7 @@ final class vd implements Runnable {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;

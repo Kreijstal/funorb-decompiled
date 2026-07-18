@@ -13,7 +13,7 @@ final class gh {
     static String field_j;
     static wh field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_b = null;
         field_d = null;

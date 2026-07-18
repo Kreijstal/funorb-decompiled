@@ -12,7 +12,7 @@ final class is {
     static boolean field_c;
     static String field_f;
 
-    final static void a(hu param0, String param1, qj param2, int param3) {
+    final static void a(hu param0, String param1, qj param2, int param3, int param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -204,7 +204,7 @@ final class is {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -230,7 +230,7 @@ final class is {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_f = null;
         field_e = null;

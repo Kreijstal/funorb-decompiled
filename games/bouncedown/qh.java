@@ -39,7 +39,7 @@ final class qh {
         return ((qh) this).field_h;
     }
 
-    final static void a(ke param0) {
+    final static void a(ke param0, int param1, int param2) {
         ii var5 = null;
         int var4 = 0;
         try {

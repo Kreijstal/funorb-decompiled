@@ -332,7 +332,7 @@ final class uo extends el {
         ((uo) this).field_p = false;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_n = null;
         field_l = null;
         int var1 = 69;

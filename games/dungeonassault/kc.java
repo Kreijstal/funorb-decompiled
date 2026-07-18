@@ -133,7 +133,7 @@ final class kc extends ii implements vg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_M = null;
         field_V = null;
         field_S = null;
@@ -283,7 +283,7 @@ final class kc extends ii implements vg {
         ((kc) this).field_T = var3;
     }
 
-    final static ab a(String param0) {
+    final static ab a(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -330,8 +330,7 @@ final class kc extends ii implements vg {
                   } else {
                     var3 = param0.substring(0, var2_int);
                     var4 = param0.substring(var2_int + 1);
-                    int discarded$2 = 1;
-                    var5 = mo.a(var3);
+                    var5 = mo.a(var3, true);
                     if (var5 == null) {
                       stackOut_12_0 = ed.a(-97, var4);
                       stackIn_13_0 = stackOut_12_0;

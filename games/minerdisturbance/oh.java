@@ -25,7 +25,7 @@ final class oh extends bl {
         }
     }
 
-    final static String a(long param0) {
+    final static String a(long param0, int param1) {
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;
@@ -82,7 +82,7 @@ final class oh extends bl {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_A = null;
         int var1 = -2;
         field_C = null;

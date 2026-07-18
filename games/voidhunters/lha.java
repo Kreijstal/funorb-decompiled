@@ -67,9 +67,7 @@ final class lha extends rqa {
         try {
           L0: {
             if (param0 <= -85) {
-              int discarded$4 = 96;
-              int discarded$5 = 100;
-              stackOut_3_0 = ka.a(61, fga.a(param1));
+              stackOut_3_0 = ka.a(61, fga.a(param1, 100, 96));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

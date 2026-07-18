@@ -245,17 +245,17 @@ final class tc {
         int var39 = 0;
         int var40 = 0;
         int[] var41 = null;
-        byte[] var43 = null;
         int var44 = 0;
         si var45 = null;
-        int[] var49 = null;
-        int[] var53 = null;
-        int[] var57 = null;
-        int[] var59 = null;
+        int[] var50 = null;
+        int[] var55 = null;
         int[] var60 = null;
-        int[] var61 = null;
-        int[] var62 = null;
+        byte[] var62 = null;
         int[] var63 = null;
+        int[] var64 = null;
+        int[] var65 = null;
+        int[] var66 = null;
+        int[] var67 = null;
         int stackIn_14_0 = 0;
         int[] stackIn_15_0 = null;
         int[] stackIn_16_0 = null;
@@ -315,27 +315,25 @@ final class tc {
                   if (1 >= var45.field_h) {
                     break L2;
                   } else {
-                    var43 = var45.field_J;
-                    int discarded$2 = 0;
-                    qj.a(0, 0, var43, ge.field_e);
+                    var62 = var45.field_J;
+                    qj.a(0, 0, var62, ge.field_e, 0);
                     break L1;
                   }
                 }
               }
-              int discarded$3 = 124;
-              pb.b();
+              pb.b((byte) 124);
               break L1;
             }
-            var62 = new int[param7.field_p];
-            var57 = var62;
-            var53 = var57;
-            var49 = var53;
-            var41 = var49;
+            var66 = new int[param7.field_p];
+            var60 = var66;
+            var55 = var60;
+            var50 = var55;
+            var41 = var50;
             var8_array = var41;
-            var63 = new int[param7.field_p];
-            var60 = field_b;
-            var61 = lj.field_j;
-            var59 = nb.field_d;
+            var67 = new int[param7.field_p];
+            var64 = field_b;
+            var65 = lj.field_j;
+            var63 = nb.field_d;
             var13 = 0;
             L3: while (true) {
               if (var13 >= param7.field_p) {
@@ -431,8 +429,8 @@ final class tc {
                             break L11;
                           } else {
                             L12: {
-                              var28 = var62[var18];
-                              var29 = var63[var18];
+                              var28 = var66[var18];
+                              var29 = var67[var18];
                               if (var21_ref == null) {
                                 stackOut_40_0 = 8355711;
                                 stackIn_41_0 = stackOut_40_0;
@@ -454,12 +452,12 @@ final class tc {
                         }
                       }
                       L13: {
-                        var28 = var62[var18];
-                        var29 = var62[var19];
-                        var30 = var62[var20];
-                        var31 = var63[var18];
-                        var32 = var63[var19];
-                        var33 = var63[var20];
+                        var28 = var66[var18];
+                        var29 = var66[var19];
+                        var30 = var66[var20];
+                        var31 = var67[var18];
+                        var32 = var67[var19];
+                        var33 = var67[var20];
                         if (var21_ref != null) {
                           stackOut_44_0 = var21_ref.field_a;
                           stackIn_45_0 = stackOut_44_0;
@@ -488,7 +486,7 @@ final class tc {
                 }
               } else {
                 L14: {
-                  var14 = param1 * var59[var13] + param6 * var60[var13] - -(var61[var13] * param5) >> 8;
+                  var14 = param1 * var63[var13] + param6 * var64[var13] - -(var65[var13] * param5) >> 8;
                   if (0 <= var14) {
                     break L14;
                   } else {
@@ -515,7 +513,7 @@ final class tc {
                 }
                 L16: {
                   var14 = stackIn_14_0;
-                  var15 = param3 * var59[var13] + (var60[var13] * param0 + param2 * var61[var13]) >> 8;
+                  var15 = param3 * var63[var13] + (var64[var13] * param0 + param2 * var65[var13]) >> 8;
                   stackOut_14_0 = h.field_b;
                   stackIn_16_0 = stackOut_14_0;
                   stackIn_15_0 = stackOut_14_0;
@@ -535,8 +533,8 @@ final class tc {
                 }
                 var15 = stackIn_17_0[stackIn_17_1];
                 var14 = var14 * (256 + -var15) >>> 8;
-                var62[var13] = var14;
-                var63[var13] = var15;
+                var66[var13] = var14;
+                var67[var13] = var15;
                 var13++;
                 continue L3;
               }
@@ -574,7 +572,7 @@ final class tc {
         }
     }
 
-    final static boolean a(byte param0, CharSequence param1) {
+    final static boolean a(byte param0, CharSequence param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

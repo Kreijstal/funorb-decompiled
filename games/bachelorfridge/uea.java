@@ -14,7 +14,7 @@ final class uea extends kj {
         ((uea) this).field_f.a(param2, param0, var4);
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_j = null;
         field_g = null;
         int var1 = 0;

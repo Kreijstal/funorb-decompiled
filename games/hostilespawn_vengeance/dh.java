@@ -124,12 +124,12 @@ final class dh implements Runnable {
         return stackIn_17_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ei.field_t = false;
         int discarded$0 = sc.field_g.l(32270);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
     }
 
@@ -446,7 +446,7 @@ final class dh implements Runnable {
         return stackIn_3_0;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;

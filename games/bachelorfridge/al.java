@@ -143,7 +143,7 @@ final class al {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         eha.field_s = null;
         baa.field_P = null;
         fd.field_D = null;

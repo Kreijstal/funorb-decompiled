@@ -226,13 +226,13 @@ final class wk extends ch implements tb {
         return stackIn_3_0;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_N = null;
         field_V = null;
         field_T = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -299,7 +299,7 @@ final class wk extends ch implements tb {
         }
     }
 
-    final static void a(boolean param0, int param1, boolean param2) {
+    final static void a(boolean param0, int param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         vh var4_ref = null;
         int var4_int = 0;
@@ -778,9 +778,7 @@ final class wk extends ch implements tb {
               } else {
                 L28: {
                   if (ok.field_ob.field_R != 0) {
-                    int discarded$4 = -29;
-                    int discarded$5 = 11;
-                    te.b();
+                    te.b(11, -29);
                     break L28;
                   } else {
                     break L28;
@@ -789,9 +787,7 @@ final class wk extends ch implements tb {
                 L29: {
                   if (0 != d.field_c.field_R) {
                     if (kh.field_Ac) {
-                      int discarded$6 = 11;
-                      int discarded$7 = -118;
-                      me.b();
+                      me.b(-118, 11);
                       break L29;
                     } else {
                       qd.a((byte) 81, 11);
@@ -814,7 +810,7 @@ final class wk extends ch implements tb {
         }
     }
 
-    final static boolean a(eo param0, eo param1) {
+    final static boolean a(eo param0, eo param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_13_0 = 0;
@@ -951,7 +947,7 @@ final class wk extends ch implements tb {
         return stackIn_13_0 != 0;
     }
 
-    final static void a(int param0, int param1, lr param2, int param3, lr param4, int param5, int param6, nm param7, int param8, int param9, nm param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, nm param18, int param19) {
+    final static void a(int param0, int param1, lr param2, int param3, lr param4, int param5, int param6, nm param7, int param8, int param9, nm param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, nm param18, int param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -1034,15 +1030,9 @@ final class wk extends ch implements tb {
             ao.a((byte) -83, 480, param2, param4);
             kg.a(param12, true, param13, param5, param19);
             nj.a(240, 320, -128);
-            int discarded$6 = 8;
-            int discarded$7 = 8;
-            mf.a((byte) -91, 2, param10, param7);
+            mf.a((byte) -91, 2, param10, param7, 8, 8);
             ve.a(111, param15, param17, param18);
-            int discarded$8 = 13421772;
-            int discarded$9 = 4;
-            int discarded$10 = 3;
-            int discarded$11 = -96;
-            ta.a();
+            ta.a((byte) -96, 3, 4, 13421772);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

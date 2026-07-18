@@ -434,8 +434,7 @@ final class b {
         if (null == rm.field_R) {
             return;
         }
-        int discarded$0 = -114;
-        kl.a((java.awt.Canvas) (Object) rm.field_R);
+        kl.a((java.awt.Canvas) (Object) rm.field_R, (byte) -114);
         rm.field_R.a(oc.field_l, -3);
         rm.field_R = null;
         if (null != ch.field_gb) {
@@ -444,7 +443,7 @@ final class b {
         ja.field_h.requestFocus();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_h = null;
         field_g = null;
@@ -755,7 +754,7 @@ final class b {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;

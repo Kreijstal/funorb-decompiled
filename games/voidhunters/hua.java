@@ -8,7 +8,7 @@ final class hua extends ksa {
         ((hua) this).field_d = param0;
     }
 
-    final static void a(aib param0) {
+    final static void a(aib param0, byte param1) {
         try {
             hg.field_b = param0;
             int var2_int = -1;

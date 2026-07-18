@@ -197,7 +197,7 @@ final class ji {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_n = null;
         field_a = null;
         field_i = null;

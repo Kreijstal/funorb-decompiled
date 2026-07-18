@@ -50,7 +50,7 @@ final class we implements Runnable {
         ((we) this).field_n = null;
     }
 
-    final static e a(nc param0) {
+    final static e a(nc param0, int param1) {
         e var2 = null;
         RuntimeException var2_ref = null;
         e stackIn_1_0 = null;
@@ -337,7 +337,7 @@ final class we implements Runnable {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         if (TorChallenge.field_H == null) {
             return false;
         }
@@ -347,7 +347,7 @@ final class we implements Runnable {
         return true;
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         var4 = (-((param0 + 1) * param0) + param1 * (1 + param1)) / (2 * param0);
@@ -372,7 +372,7 @@ final class we implements Runnable {
         return null;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
         field_m = null;
         field_e = null;

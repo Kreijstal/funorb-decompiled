@@ -149,7 +149,7 @@ final class ub {
         return stackIn_11_0;
     }
 
-    final static java.net.URL a(int param0, java.net.URL param1, String param2, String param3) {
+    final static java.net.URL a(int param0, java.net.URL param1, String param2, String param3, int param4) {
         try {
             RuntimeException var5 = null;
             String var5_ref = null;

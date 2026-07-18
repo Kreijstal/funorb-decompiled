@@ -7,7 +7,7 @@ final class ema extends rqa {
     static mfb[] field_o;
     static String field_r;
 
-    public static void a() {
+    public static void a(int param0) {
         field_r = null;
         field_q = null;
         field_p = null;

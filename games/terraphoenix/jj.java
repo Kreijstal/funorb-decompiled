@@ -33,12 +33,12 @@ final class jj {
         }
     }
 
-    final static void e() {
+    final static void e(int param0) {
         ag.field_a = null;
         t.field_e = null;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_e = null;
         field_c = null;
@@ -112,8 +112,7 @@ final class jj {
                 break L1;
               }
             }
-            int discarded$7 = 1;
-            if (vh.a(param3, param1, param0)) {
+            if (vh.a(param3, param1, param0, true)) {
               stackOut_5_0 = km.a(param2 + 97);
               stackIn_6_0 = stackOut_5_0;
               break L0;

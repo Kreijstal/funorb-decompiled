@@ -42,7 +42,7 @@ final class un {
         int var2 = 0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         if (224 > ll.field_q) {
           var1 = ll.field_q % 32;

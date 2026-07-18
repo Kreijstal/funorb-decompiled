@@ -390,7 +390,7 @@ final class nb implements ci {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  int discarded$3 = param1.g(16, -1);
+                  int discarded$1 = param1.g(16, -1);
                   var5.field_n = jc.a(param1, 16, 21, var5.field_n);
                   var5.field_J = jc.a(param1, 16, 21, var5.field_J);
                   var5.field_t = jc.a(param1, 16, 21, var5.field_t);
@@ -411,9 +411,7 @@ final class nb implements ci {
                 if (!di.a((byte) -97, param1)) {
                   break L4;
                 } else {
-                  int discarded$4 = 16;
-                  int discarded$5 = 17259;
-                  var5.field_D = di.a(var5.field_D, param1);
+                  var5.field_D = di.a(var5.field_D, param1, 17259, 16);
                   var6 = 0;
                   var7 = 0;
                   L5: while (true) {

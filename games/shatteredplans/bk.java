@@ -92,7 +92,7 @@ final class bk {
         return stackIn_27_0 != 0;
     }
 
-    final static void a(ik[] param0) {
+    final static void a(ik[] param0, int param1) {
         RuntimeException var2 = null;
         ik[] var2_array = null;
         ik var2_ref = null;
@@ -133,7 +133,7 @@ final class bk {
         try {
           L0: {
             var2_array = param0;
-            var3_int = 0;
+            var3_int = param1;
             L1: while (true) {
               L2: {
                 L3: {
@@ -219,7 +219,7 @@ final class bk {
                               break L12;
                             } else {
                               if (var2_ref.field_k > var5.field_k) {
-                                tc.a(24, var5, false, var2_ref);
+                                tc.a(param1 ^ 24, var5, false, var2_ref);
                                 if (var6 == 0) {
                                   break L11;
                                 } else {
@@ -277,7 +277,7 @@ final class bk {
               break L13;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + ',' + 0 + ')');
+          throw r.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + ',' + param1 + ')');
         }
     }
 
@@ -307,7 +307,7 @@ final class bk {
         }
     }
 
-    final static String b() {
+    final static String b(int param0) {
         Object var1 = null;
         Object var2 = null;
         int var3 = 0;
@@ -331,7 +331,7 @@ final class bk {
             L1: {
               var1 = null;
               var2 = null;
-              var3 = 85;
+              var3 = 85 / ((-64 - param0) / 60);
               if (0 != em.field_h) {
                 break L1;
               } else {
@@ -370,8 +370,7 @@ final class bk {
                     break L2;
                   } else {
                     md.a(2, (String) var2, 0, (String) null, (String) null, -16169);
-                    int discarded$1 = 0;
-                    eo.f();
+                    eo.f(false);
                     break L2;
                   }
                 }
@@ -560,7 +559,7 @@ final class bk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (Object) (Object) decompiledCaughtException;
-          throw r.a((Throwable) var1, "bk.A(" + -127 + ')');
+          throw r.a((Throwable) var1, "bk.A(" + param0 + ')');
         }
         return (String) (Object) stackIn_97_0;
     }

@@ -11,7 +11,7 @@ final class ogb extends rqa {
         si.field_r = 21845;
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, dja param4, int param5, dja param6, int param7, int param8, int param9, int param10, int param11, dja param12) {
+    final static void a(boolean param0, int param1, int param2, int param3, dja param4, int param5, dja param6, int param7, int param8, int param9, int param10, int param11, dja param12, int param13, byte param14) {
         try {
             qha.field_o = 72;
             ehb.field_g = 70;
@@ -35,7 +35,7 @@ final class ogb extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

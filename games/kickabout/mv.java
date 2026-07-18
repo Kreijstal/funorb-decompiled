@@ -5,7 +5,7 @@ final class mv {
     static String field_a;
     static int field_b;
 
-    final static up b() {
+    final static up b(boolean param0) {
         up var2 = new up();
         up var1 = var2;
         var1.field_n = 50;
@@ -16,7 +16,7 @@ final class mv {
         return var1;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 
@@ -25,14 +25,12 @@ final class mv {
           field_b = 48;
           gu.b(1, (byte) 60, vc.field_E[3]);
           gu.b(2, (byte) 60, vc.field_E[5]);
-          int discarded$4 = 2147483647;
-          ui.a(0, fn.field_c, vc.field_E[0]);
+          ui.a(0, fn.field_c, vc.field_E[0], 2147483647);
           return;
         } else {
           gu.b(1, (byte) 60, vc.field_E[3]);
           gu.b(2, (byte) 60, vc.field_E[5]);
-          int discarded$5 = 2147483647;
-          ui.a(0, fn.field_c, vc.field_E[0]);
+          ui.a(0, fn.field_c, vc.field_E[0], 2147483647);
           return;
         }
     }

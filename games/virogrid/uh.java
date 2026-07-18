@@ -227,9 +227,7 @@ final class uh {
         }
         try {
             sm.a(j.field_i, true, j.field_g, ne.field_g);
-            int discarded$0 = 0;
-            int discarded$1 = 0;
-            td.a(-30179, param1);
+            td.a(-30179, param1, 0, 0);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) (Object) runtimeException, "uh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -331,7 +329,7 @@ final class uh {
         }
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, byte param1) {
         try {
             param0.setFocusTraversalKeysEnabled(false);
             param0.addKeyListener((java.awt.event.KeyListener) (Object) w.field_L);
@@ -349,7 +347,7 @@ final class uh {
         return param0 ^ param1;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
         field_d = null;
         field_e = null;

@@ -15,9 +15,8 @@ abstract class ki extends ah {
 
     abstract int a(boolean param0);
 
-    final static void f() {
-        int discarded$0 = -1;
-        jf.d();
+    final static void f(int param0) {
+        jf.d(-1);
         gk.field_a = true;
         ie.field_r = true;
         na.field_d.e((byte) 67);

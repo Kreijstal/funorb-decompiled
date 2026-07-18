@@ -8,7 +8,7 @@ final class f extends dk {
     private vc field_I;
     static int[] field_F;
 
-    final static void d() {
+    final static void d(byte param0) {
         try {
             Exception var1 = null;
             Throwable decompiledCaughtException = null;

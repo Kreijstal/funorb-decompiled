@@ -170,8 +170,7 @@ final class pbb implements wwa {
             if (!sab.e((byte) 121)) {
               throw new RuntimeException("");
             } else {
-              int discarded$9 = 114;
-              if (!gpb.a("jaggl")) {
+              if (!gpb.a("jaggl", (byte) 114)) {
                 throw new RuntimeException("");
               } else {
                 var9 = new jaggl.OpenGL();
@@ -271,7 +270,7 @@ final class pbb implements wwa {
         return (ha) (Object) stackIn_12_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

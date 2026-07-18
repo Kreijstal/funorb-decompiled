@@ -15,7 +15,7 @@ final class lg implements cg {
     static int field_f;
     private int field_k;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
@@ -26,15 +26,14 @@ final class lg implements cg {
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
-            int discarded$18 = 0;
-            if (fa.d()) {
-              boolean discarded$19 = hg.field_S.a(jd.field_P, fl.field_f, true, 0);
+            if (fa.d(0)) {
+              boolean discarded$12 = hg.field_S.a(jd.field_P, fl.field_f, true, 0);
               hg.field_S.b(false);
               L1: while (true) {
                 if (!th.a(-109)) {
                   break L0;
                 } else {
-                  boolean discarded$20 = hg.field_S.a(di.field_c, sj.field_g, 121);
+                  boolean discarded$13 = hg.field_S.a(di.field_c, sj.field_g, 121);
                   continue L1;
                 }
               }
@@ -44,8 +43,7 @@ final class lg implements cg {
                   break L2;
                 } else {
                   if (df.field_l.field_h) {
-                    int discarded$21 = 6;
-                    af.b();
+                    af.b(6);
                     hg.field_S.a((byte) -115, (vg) (Object) new ae(hg.field_S, uf.field_a));
                     break L2;
                   } else {

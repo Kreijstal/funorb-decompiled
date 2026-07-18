@@ -263,7 +263,7 @@ final class gca extends rqa {
         return (sg) (Object) stackIn_24_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_p = null;
         field_q = null;

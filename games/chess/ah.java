@@ -39,8 +39,7 @@ final class ah extends ub {
             var7 = param4.b(param1);
             var8.field_i[param0] = -(var7 >> 1) + param2;
             var8.field_i[param1.length()] = param2 - -(var7 >> 1);
-            int discarded$0 = 79;
-            me.a(param1, 0, var8, param4);
+            me.a(param1, 0, var8, param4, (byte) 79);
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "ah.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -259,16 +258,15 @@ final class ah extends ub {
             var8 = var7;
             var7.field_i[0] = param1;
             var8.field_i[param0.length()] = param2.b(param0) + param1;
-            int discarded$0 = 79;
-            me.a(param0, 0, var8, param2);
+            me.a(param0, 0, var8, param2, (byte) 79);
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "ah.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, String param3, lh param4) {
-        fj var7 = null;
         fj var8 = null;
+        fj var9 = null;
         if (param3 == null) {
             ((ah) this).field_a = null;
             return;
@@ -289,12 +287,11 @@ final class ah extends ub {
             ((ah) this).field_l = 2;
             ((ah) this).field_h = param4;
             ((ah) this).field_k = param3;
-            var7 = this.a(param1, -109, param4, param3);
-            var8 = var7;
-            var8.field_i[param0] = param2 + -param4.b(param3);
-            var7.field_i[param3.length()] = param2;
-            int discarded$0 = 79;
-            me.a(param3, 0, var8, param4);
+            var8 = this.a(param1, -109, param4, param3);
+            var9 = var8;
+            var9.field_i[param0] = param2 + -param4.b(param3);
+            var9.field_i[param3.length()] = param2;
+            me.a(param3, 0, var9, param4, (byte) 79);
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "ah.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -552,8 +549,7 @@ final class ah extends ub {
                             break L9;
                           }
                         }
-                        int discarded$1 = 79;
-                        me.a(stackIn_41_0, stackIn_41_1, var14, param7);
+                        me.a(stackIn_41_0, stackIn_41_1, var14, param7, (byte) 79);
                         break L8;
                       }
                     }
@@ -628,7 +624,7 @@ final class ah extends ub {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -665,8 +661,7 @@ final class ah extends ub {
               } else {
                 L2: {
                   var3 = param0.charAt(var2_int);
-                  int discarded$5 = 104;
-                  if (b.a((char) var3)) {
+                  if (b.a((char) var3, (byte) 104)) {
                     break L2;
                   } else {
                     if (!di.a(-49, (char) var3)) {
@@ -716,28 +711,22 @@ final class ah extends ub {
         return stackIn_12_0 != 0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_g = null;
         field_i = null;
     }
 
-    final static boolean a(byte param0, int param1, boolean param2) {
+    final static boolean a(byte param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         if (lk.a((byte) 95)) {
-            int discarded$10 = -1;
-            int discarded$12 = 15;
-            ih.a(13, param2);
+            ih.a(13, param2, 15, -1);
             if (pi.field_d != null) {
                 if (!(!pi.field_d.a(11, param2, 13, 0, -11))) {
                     fi.a(-393711775);
                     param2 = false;
                 }
             }
-            int discarded$13 = 13;
-            int discarded$14 = 3;
-            ai.a(param2);
-            int discarded$15 = 4239;
-            int discarded$16 = 14;
-            kj.a(param2);
+            ai.a(param2, 3, 13);
+            kj.a(param2, 14, 4239);
             param2 = false;
         }
         int var7 = 0;

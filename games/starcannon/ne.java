@@ -15,7 +15,7 @@ abstract class ne {
     static String field_a;
     static long field_j;
 
-    final static void a(boolean param0, String param1, String param2) {
+    final static void a(boolean param0, String param1, String param2, int param3) {
         try {
             lc.field_hb = param2;
             sd.field_b = param1;
@@ -27,12 +27,11 @@ abstract class ne {
 
     abstract void c(int param0, int param1);
 
-    final static void b(int param0) {
-        int discarded$0 = -78;
-        int discarded$1 = mg.a();
+    final static void b(int param0, int param1) {
+        int discarded$0 = mg.a((byte) -78);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
         field_c = null;
         field_i = null;

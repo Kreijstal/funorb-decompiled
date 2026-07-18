@@ -6,7 +6,7 @@ final class sc extends hn implements fp, ng {
     private rb field_D;
     private lg field_E;
 
-    private final String h() {
+    private final String h(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -39,8 +39,6 @@ final class sc extends hn implements fp, ng {
             ((sc) this).field_C = param0;
             ((sc) this).field_E = new lg(vd.field_d, (ca) null);
             ((sc) this).field_E.field_q = (el) (Object) new rf();
-            int discarded$2 = -29996;
-            int discarded$3 = 119;
             var7 = ff.a(new String[2], 0, md.field_d);
             var3 = 20;
             var4 = new pc(dg.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, dg.field_e.field_x, -1, 2147483647, true);
@@ -306,18 +304,15 @@ final class sc extends hn implements fp, ng {
                   if (2 != param2) {
                     break L0;
                   } else {
-                    int discarded$6 = 31;
-                    d.a("conduct.ws");
+                    d.a("conduct.ws", (byte) 31);
                     return;
                   }
                 } else {
-                  int discarded$7 = 31;
-                  d.a("privacy.ws");
+                  d.a("privacy.ws", (byte) 31);
                   return;
                 }
               } else {
-                int discarded$8 = 31;
-                d.a("terms.ws");
+                d.a("terms.ws", (byte) 31);
                 return;
               }
             } else {
@@ -509,7 +504,7 @@ final class sc extends hn implements fp, ng {
         return stackIn_12_0 != 0;
     }
 
-    private final String i() {
+    private final String i(int param0) {
         return "</col></u>";
     }
 

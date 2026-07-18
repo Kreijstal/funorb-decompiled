@@ -13,7 +13,7 @@ final class mc {
     static int[] field_j;
     static String field_e;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_d = null;
         field_e = null;
@@ -22,7 +22,7 @@ final class mc {
         field_g = null;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_1_0 = false;
@@ -230,7 +230,6 @@ final class mc {
         field_i = "HELIX LASER - Switches the Nova Ray to use the defensive burst of the helix laser.";
         field_g = new byte[65536];
         field_e = "Close";
-        int discarded$0 = -128;
-        ug.a(field_g, 0, 65536);
+        ug.a(field_g, 0, 65536, (byte) -128);
     }
 }

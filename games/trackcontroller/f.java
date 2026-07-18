@@ -7,7 +7,7 @@ final class f {
     static byte[][] field_b;
     static int field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
     }
@@ -60,8 +60,7 @@ final class f {
                     if (param2.field_i.peekEvent() == null) {
                       break L2;
                     } else {
-                      int discarded$2 = 0;
-                      wl.a(1L);
+                      wl.a(1L, false);
                       var3_int++;
                       continue L1;
                     }

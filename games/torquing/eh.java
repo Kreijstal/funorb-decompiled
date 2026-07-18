@@ -16,12 +16,12 @@ abstract class eh {
         this(0.0, 0.0, 0.0);
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         gp.j((byte) -34);
         od.b(128, 4);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         int var1 = 1;
         field_i = null;
@@ -78,28 +78,19 @@ abstract class eh {
               break L0;
             }
           }
-          if (var4 >= 10) {
-            if (jg.field_t.field_s - 40 < var4) {
-              var4 = jg.field_t.field_s - 40;
-              int discarded$9 = 30;
-              int discarded$10 = 0;
-              int discarded$11 = 80;
-              eq.a(jg.field_t, 0, 1, var4, param1, param0);
+          if (var4 < 10) {
+            var4 = 10;
+            eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
+            return;
+          } else {
+            if (jg.field_t.field_s - 40 >= var4) {
+              eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
               return;
             } else {
-              int discarded$12 = 30;
-              int discarded$13 = 0;
-              int discarded$14 = 80;
-              eq.a(jg.field_t, 0, 1, var4, param1, param0);
+              var4 = jg.field_t.field_s - 40;
+              eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
               return;
             }
-          } else {
-            var4 = 10;
-            int discarded$15 = 30;
-            int discarded$16 = 0;
-            int discarded$17 = 80;
-            eq.a(jg.field_t, 0, 1, var4, param1, param0);
-            return;
           }
         } else {
           return;

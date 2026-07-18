@@ -55,8 +55,7 @@ final class je extends vm {
               if (var4.length() != 0) {
                 var5 = var4;
                 if (!gl.a(0, var5)) {
-                  int discarded$18 = -29;
-                  if (ah.a(var5)) {
+                  if (ah.a(var5, (byte) -29)) {
                     stackOut_11_0 = q.field_a;
                     stackIn_12_0 = stackOut_11_0;
                     return stackIn_12_0;
@@ -72,8 +71,7 @@ final class je extends vm {
                         return stackIn_20_0;
                       } else {
                         if (0 < var6.length()) {
-                          int discarded$19 = 0;
-                          if (ml.a(var6, var5)) {
+                          if (ml.a(var6, var5, 0)) {
                             stackOut_26_0 = ab.field_t;
                             stackIn_27_0 = stackOut_26_0;
                             return stackIn_27_0;
@@ -147,7 +145,7 @@ final class je extends vm {
         return stackIn_34_0;
     }
 
-    final static hl d() {
+    final static hl d(boolean param0) {
         if (!(ic.field_e != null)) {
             ic.field_e = new hl(rc.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, rc.field_a.field_C, -1, 2147483647, true);
         }
@@ -361,7 +359,7 @@ final class je extends vm {
         return stackIn_12_0;
     }
 
-    final static boolean h() {
+    final static boolean h(int param0) {
         if (il.field_a < 20) {
             return true;
         }

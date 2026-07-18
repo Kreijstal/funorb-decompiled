@@ -10,7 +10,7 @@ final class eh {
     static int[] field_e;
     static boolean field_d;
 
-    final static bm a(String param0, String param1, pf param2, pf param3) {
+    final static bm a(String param0, String param1, pf param2, pf param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -247,8 +247,7 @@ final class eh {
                     }
                   }
                   if (var4 == null) {
-                    int discarded$9 = -2290;
-                    oj.c();
+                    oj.c(-2290);
                     return;
                   } else {
                     L4: {
@@ -264,16 +263,16 @@ final class eh {
                         var8_int = 1;
                         L5: while (true) {
                           if (var5 <= var8_int) {
-                            String[][] dupTemp$10 = new String[3][var6];
-                            var4.field_u = dupTemp$10;
-                            var8 = dupTemp$10;
+                            String[][] dupTemp$6 = new String[3][var6];
+                            var4.field_u = dupTemp$6;
+                            var8 = dupTemp$6;
                             var9 = new String[3][var6];
-                            long[][] dupTemp$11 = new long[3][var6];
-                            var4.field_w = dupTemp$11;
-                            var10 = dupTemp$11;
-                            int[][] dupTemp$12 = new int[3][var6 * var7];
-                            var4.field_o = dupTemp$12;
-                            var11 = dupTemp$12;
+                            long[][] dupTemp$7 = new long[3][var6];
+                            var4.field_w = dupTemp$7;
+                            var10 = dupTemp$7;
+                            int[][] dupTemp$8 = new int[3][var6 * var7];
+                            var4.field_o = dupTemp$8;
+                            var11 = dupTemp$8;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -304,9 +303,9 @@ final class eh {
                                           var12++;
                                           break L7;
                                         } else {
-                                          int incrementValue$13 = var15;
+                                          int incrementValue$9 = var15;
                                           var15++;
-                                          var11[0][incrementValue$13] = var28.b(false);
+                                          var11[0][incrementValue$9] = var28.b(false);
                                           var25++;
                                           continue L8;
                                         }
@@ -332,9 +331,9 @@ final class eh {
                                           if (var25 >= var7) {
                                             break L9;
                                           } else {
-                                            int incrementValue$14 = var16;
+                                            int incrementValue$10 = var16;
                                             var16++;
-                                            var11[1][incrementValue$14] = var28.b(false);
+                                            var11[1][incrementValue$10] = var28.b(false);
                                             var25++;
                                             continue L10;
                                           }
@@ -360,9 +359,9 @@ final class eh {
                                           if (var25 >= var7) {
                                             break L11;
                                           } else {
-                                            int incrementValue$15 = var17;
+                                            int incrementValue$11 = var17;
                                             var17++;
-                                            var11[2][incrementValue$15] = var28.b(false);
+                                            var11[2][incrementValue$11] = var28.b(false);
                                             var25++;
                                             continue L12;
                                           }
@@ -401,8 +400,7 @@ final class eh {
               } else {
                 if (var2 != 1) {
                   qe.a(-121, "HS1: " + bh.b((byte) -106), (Throwable) null);
-                  int discarded$16 = -2290;
-                  oj.c();
+                  oj.c(-2290);
                   break L1;
                 } else {
                   var3 = var28.c((byte) 83);
@@ -422,8 +420,7 @@ final class eh {
                       }
                     }
                     if (var6_ref_nf == null) {
-                      int discarded$17 = -2290;
-                      oj.c();
+                      oj.c(-2290);
                       return;
                     } else {
                       var6_ref_nf.field_k = var4_long;
@@ -496,7 +493,7 @@ final class eh {
         return var2;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_c = null;
         field_f = null;

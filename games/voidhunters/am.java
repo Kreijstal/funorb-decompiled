@@ -6,7 +6,7 @@ final class am extends rqa {
     static String field_o;
     static String field_p;
 
-    final static void a() {
+    final static void a(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

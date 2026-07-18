@@ -5,7 +5,7 @@ final class up extends rqa {
     static String field_p;
     static khb field_o;
 
-    public static void e() {
+    public static void e(byte param0) {
         field_p = null;
         int var1 = -126;
         field_o = null;

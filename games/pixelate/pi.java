@@ -17,7 +17,7 @@ final class pi extends ak {
     private tf[] field_Kb;
     private int field_Hb;
 
-    final static String a(CharSequence[] param0, int param1, int param2) {
+    final static String a(CharSequence[] param0, int param1, int param2, int param3) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -152,7 +152,7 @@ final class pi extends ak {
         return stackIn_26_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_Rb = null;
     }
 
@@ -283,8 +283,7 @@ final class pi extends ak {
           if (var7 >= ((pi) this).field_Hb) {
             var6 = var6 + 2 * ((pi) this).field_Ob;
             var7 = ((pi) this).field_Qb * ((pi) this).field_Hb + (((pi) this).field_Eb - -((pi) this).field_Eb);
-            int discarded$1 = -1;
-            var8 = ui.a(param4, param1, var6);
+            var8 = ui.a(param4, param1, var6, (byte) -1);
             var9 = pj.a(var7, param3, param0, (byte) 45);
             ((pi) this).a(var9, var7, var8, 256, var6);
             var10 = 0;

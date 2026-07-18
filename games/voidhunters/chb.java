@@ -23,7 +23,7 @@ final class chb {
         dq.a((byte) 44, param1, param2);
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (null == bjb.field_p) {
             bjb.field_p = new qsa[32];
             hcb.field_p = 0;

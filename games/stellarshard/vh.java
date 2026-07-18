@@ -135,10 +135,8 @@ final class vh {
                     case 4: {
                         try {
                             var9 = "tuhstatbut";
-                            int discarded$4 = 78;
-                            var3 = (String) sh.a("getcookies", param1);
-                            int discarded$5 = 10287;
-                            var4 = qj.a(';', var3);
+                            var3 = (String) sh.a("getcookies", param1, (byte) 78);
+                            var4 = qj.a(';', var3, 10287);
                             var5 = 0;
                             statePc = 5;
                             continue stateLoop;
@@ -624,7 +622,7 @@ final class vh {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_h = null;
     }
 

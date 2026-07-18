@@ -31,7 +31,7 @@ abstract class fi {
 
     abstract void a(byte param0);
 
-    private final void b() {
+    private final void b(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -280,8 +280,7 @@ abstract class fi {
         ((fi) this).field_f = param2;
         ((fi) this).field_d = param3;
         this.a(-15063);
-        int discarded$0 = -256;
-        this.b();
+        this.b(-256);
     }
 
     static {

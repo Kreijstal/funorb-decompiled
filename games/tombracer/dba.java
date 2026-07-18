@@ -11,7 +11,7 @@ final class dba implements bo {
     static String field_c;
     static int[] field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
         field_c = null;
@@ -37,8 +37,7 @@ final class dba implements bo {
     final static void a(java.awt.Canvas param0, byte param1) {
         try {
             if (gda.field_c == 11) {
-                int discarded$0 = 96;
-                wja.d();
+                wja.d((byte) 96);
             }
             if (param1 < 84) {
                 field_c = null;
@@ -59,40 +58,8 @@ final class dba implements bo {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        int var3 = 0;
-        boolean stackIn_3_0 = false;
-        int stackIn_6_0 = 0;
-        boolean stackOut_2_0 = false;
-        boolean stackOut_1_0 = false;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        L0: {
-          if ((55 & param0) != 0) {
-            int discarded$7 = -19531;
-            stackOut_2_0 = oba.c(param2, param0);
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            int discarded$8 = 36864;
-            stackOut_1_0 = no.a(param0, param2);
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        L1: {
-          var3 = stackIn_3_0 ? 1 : 0;
-          if (0 == (65536 & param2)) {
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            break L1;
-          } else {
-            stackOut_4_0 = 1;
-            stackIn_6_0 = stackOut_4_0;
-            break L1;
-          }
-        }
-        int discarded$9 = 0;
-        return stackIn_6_0 != 0 | kaa.a(param0, param2) | var3 != 0;
+        int var3 = (55 & param0) == 0 ? no.a(param0, param2, 36864) ? 1 : 0 : oba.c(param2, param0, -19531) ? 1 : 0;
+        return (0 != (65536 & param2) ? true : false) | kaa.a(param0, param2, false) | var3 != 0;
     }
 
     public final void a(int param0, kh param1) {

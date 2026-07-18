@@ -376,9 +376,7 @@ final class t {
           if (var12_int >= 3) {
             try {
               L1: {
-                int discarded$2 = 0;
-                int discarded$3 = 0;
-                t.a(var11 != 0);
+                t.a(var11 != 0, false, 0);
                 break L1;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -413,7 +411,7 @@ final class t {
         }
     }
 
-    private final static void a(boolean param0) {
+    private final static void a(boolean param0, boolean param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;

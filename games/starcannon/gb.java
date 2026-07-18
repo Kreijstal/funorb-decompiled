@@ -10,7 +10,7 @@ final class gb extends hd {
     static hl[] field_v;
     private int field_s;
 
-    public static void b() {
+    public static void b(int param0) {
         field_r = null;
         field_v = null;
     }

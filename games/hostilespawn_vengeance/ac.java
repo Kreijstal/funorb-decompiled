@@ -381,8 +381,7 @@ final class ac {
 
     final static void a(boolean param0, boolean param1, int param2, String param3) {
         try {
-            int discarded$0 = -1;
-            de.c();
+            de.c(-1);
             im.field_e.f((byte) 32);
             ib.field_e = new lk(rf.field_e, (String) null, li.field_o, param1, param0);
             ke.field_s = new ta(im.field_e, (ag) (Object) ib.field_e);
@@ -468,7 +467,7 @@ final class ac {
         return stackIn_16_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_f = null;
         field_e = null;

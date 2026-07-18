@@ -254,7 +254,7 @@ final class uj implements Runnable {
         return stackIn_4_0;
     }
 
-    final static ai[] a(String param0, String param1, ad param2) {
+    final static ai[] a(String param0, String param1, ad param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -483,7 +483,7 @@ final class uj implements Runnable {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         hd.field_u.a(ri.field_b, 0);
         ok.field_a.a(ri.field_b, 0);
         wd.field_h.a(ri.field_b, 0);
@@ -571,7 +571,7 @@ final class uj implements Runnable {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_k = null;
         field_c = null;
@@ -802,8 +802,7 @@ final class uj implements Runnable {
         try {
             var2 = param0.a((Runnable) this, 5, 0);
             while (0 == var2.field_g) {
-                int discarded$0 = 0;
-                em.a(10L);
+                em.a(10L, false);
             }
             if (2 == var2.field_g) {
                 throw new RuntimeException();

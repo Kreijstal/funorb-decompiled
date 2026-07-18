@@ -548,10 +548,10 @@ final class et implements ntb {
               L2: {
                 var3_int = -51 % ((22 - param0) / 59);
                 var4 = (et) (Object) param1;
-                if (var4.field_a != var4.field_a) {
+                if (((et) this).field_a != var4.field_a) {
                   break L2;
                 } else {
-                  if (var4.field_b == var4.field_b) {
+                  if (var4.field_b == ((et) this).field_b) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
                     break L1;

@@ -10,7 +10,7 @@ final class nd {
     static mh field_a;
     static String field_g;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_a = null;
         field_e = null;

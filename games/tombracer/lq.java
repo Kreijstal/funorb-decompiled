@@ -35,8 +35,7 @@ final class lq extends ela {
                 break L1;
               }
             }
-            int discarded$2 = 30001;
-            mn.h();
+            mn.h(30001);
             stackOut_2_0 = new bfa((Object) (Object) "void");
             stackIn_3_0 = stackOut_2_0;
             break L0;

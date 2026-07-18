@@ -50,8 +50,7 @@ final class oa implements Runnable {
           L0: {
             var2 = li.a(param1, "jagex-last-login-method", true);
             if (var2 != null) {
-              int discarded$2 = -1;
-              var3 = nd.a();
+              var3 = nd.a(-1);
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -134,7 +133,7 @@ final class oa implements Runnable {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_i = null;
         field_d = null;

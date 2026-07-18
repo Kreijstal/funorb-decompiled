@@ -312,7 +312,7 @@ final class ub {
         je.a(27, param1);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

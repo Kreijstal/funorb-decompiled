@@ -33,8 +33,7 @@ abstract class rb {
         try {
           L0: {
             var3 = (CharSequence) (Object) param1;
-            int discarded$2 = -11133;
-            stackOut_0_0 = dd.field_p.equals((Object) (Object) r.a(var3));
+            stackOut_0_0 = dd.field_p.equals((Object) (Object) r.a(var3, -11133));
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -392,7 +391,7 @@ abstract class rb {
         return -1;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_d = null;
         field_c = null;

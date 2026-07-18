@@ -7,7 +7,7 @@ final class in {
     static pa[] field_c;
     private wl field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_c = null;
     }
@@ -91,14 +91,12 @@ final class in {
                   var5 = 0;
                   L1: while (true) {
                     if (var5 >= var4.length) {
-                      int discarded$4 = -120;
-                      stackOut_20_0 = we.a(var3[-1 + var3.length]);
+                      stackOut_20_0 = we.a(var3[-1 + var3.length], -120);
                       stackIn_21_0 = stackOut_20_0;
                       break L0;
                     } else {
                       var6 = var4[var5];
-                      int discarded$5 = 0;
-                      var7 = ic.a(var6);
+                      var7 = ic.a(var6, false);
                       if (var7 != null) {
                         stackOut_17_0 = (w) var7;
                         stackIn_18_0 = stackOut_17_0;

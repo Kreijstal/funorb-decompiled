@@ -67,7 +67,7 @@ final class fh extends ln {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         int var1 = 112;
         field_i = null;

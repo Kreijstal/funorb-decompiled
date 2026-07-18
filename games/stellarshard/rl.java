@@ -6,7 +6,7 @@ final class rl {
     static String[] field_c;
     static int field_b;
 
-    final static void a(int param0, ka param1, java.math.BigInteger param2, java.math.BigInteger param3, byte[] param4, int param5) {
+    final static void a(int param0, ka param1, java.math.BigInteger param2, java.math.BigInteger param3, byte[] param4, int param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int[] var8 = null;
@@ -298,8 +298,7 @@ final class rl {
                     break L2;
                   }
                 }
-                int discarded$1 = 50;
-                ph.a(cd.h(-1064120735), 2, qf.field_a, ia.l(), var3_int != 0);
+                ph.a(cd.h(-1064120735), 2, qf.field_a, ia.l(50), var3_int != 0);
                 break L1;
               } else {
                 if (gh.b((byte) 105)) {
@@ -353,11 +352,11 @@ final class rl {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;

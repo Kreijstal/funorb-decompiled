@@ -26,13 +26,11 @@ class gk extends ca implements vn {
             if (!((gk) this).field_Eb) {
               return;
             } else {
-              int discarded$4 = -73;
-              ai.h();
+              ai.h(-73);
               return;
             }
           } else {
-            int discarded$5 = 1;
-            qf.a();
+            qf.a(true);
             return;
           }
         } else {
@@ -73,7 +71,7 @@ class gk extends ca implements vn {
         }
     }
 
-    final static void a(w param0) {
+    final static void a(w param0, boolean param1) {
         w var4 = null;
         w var5 = null;
         int var3 = client.field_A ? 1 : 0;
@@ -404,7 +402,7 @@ class gk extends ca implements vn {
         }
     }
 
-    public static void p() {
+    public static void p(int param0) {
         field_Gb = null;
         field_yb = null;
         int var1 = 1;

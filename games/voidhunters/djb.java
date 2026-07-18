@@ -64,8 +64,7 @@ final class djb extends qc {
             break L0;
           }
         }
-        int discarded$3 = 28;
-        var17 = this.a(var6);
+        var17 = this.a(var6, (byte) 28);
         if (var17.c(param0 + 35) != 0) {
           var8 = new StringBuilder();
           var9 = var6.length();
@@ -87,7 +86,7 @@ final class djb extends qc {
                       L4: while (true) {
                         if (var13 == null) {
                           if (var10 != 0) {
-                            StringBuilder discarded$4 = var8.append((char) var12);
+                            StringBuilder discarded$2 = var8.append((char) var12);
                             var9++;
                             continue L2;
                           } else {
@@ -127,7 +126,7 @@ final class djb extends qc {
                     break L6;
                   } else {
                     var12++;
-                    StringBuilder discarded$5 = var8.append("()");
+                    StringBuilder discarded$3 = var8.append("()");
                     if (var17.c(0) != 1) {
                       break L6;
                     } else {
@@ -195,6 +194,7 @@ final class djb extends qc {
         }
         L1: {
           var12 = ((djb) this).field_p.l(-14453);
+          var6 = var12;
           var3 = ((djb) this).field_p.j(0);
           var4 = dib.a(var12, 83);
           var5 = aab.a(var4, -25223, var3);
@@ -210,6 +210,7 @@ final class djb extends qc {
                 break L2;
               } else {
                 if (var8_int > 0) {
+                  var12 = var6;
                   var6 = var13.field_d.substring(0, Math.min(var13.field_d.length(), var8_int));
                   ((djb) this).field_o.field_L = ((djb) this).field_n.b(var12.substring(0, var13.field_g));
                   break L1;
@@ -253,6 +254,7 @@ final class djb extends qc {
                 break L1;
               } else {
                 if (hpa.field_p == var4[var9 - 1].field_e) {
+                  var12 = var6;
                   var6 = var4[var9 + -1].field_d;
                   ((djb) this).field_o.field_L = ((djb) this).field_n.b(var12.substring(0, var4[-1 + var9].field_g));
                   break L1;
@@ -263,8 +265,7 @@ final class djb extends qc {
             }
           }
         }
-        int discarded$2 = 28;
-        var14 = this.a(var6);
+        var14 = this.a(var6, (byte) 28);
         var8 = new String[var14.c(0)];
         var9 = 0;
         var10 = (rqa) (Object) var14.a((byte) -54);
@@ -272,9 +273,9 @@ final class djb extends qc {
           if (var10 == null) {
             return var8;
           } else {
-            int incrementValue$3 = var9;
+            int incrementValue$1 = var9;
             var9++;
-            var8[incrementValue$3] = var10.field_l;
+            var8[incrementValue$1] = var10.field_l;
             var10 = (rqa) (Object) var14.a(1900);
             continue L7;
           }
@@ -594,12 +595,12 @@ final class djb extends qc {
                           }
                         }
                       }
-                      boolean discarded$7 = ((djb) this).field_p.a(101, -1, '￿');
+                      boolean discarded$6 = ((djb) this).field_p.a(101, -1, '￿');
                       break L9;
                     }
                   }
                   L13: {
-                    boolean discarded$8 = super.a(param0, param1, -40);
+                    boolean discarded$7 = super.a(param0, param1, -40);
                     var4 = ((djb) this).field_p.l(-14453);
                     var5 = ((djb) this).field_p.j(0);
                     if (var6 == 0) {
@@ -610,7 +611,7 @@ final class djb extends qc {
                           if (param1 != 34) {
                             break L13;
                           } else {
-                            boolean discarded$9 = ((djb) this).field_p.a(-1, param2 + 39, '"');
+                            boolean discarded$8 = ((djb) this).field_p.a(-1, param2 + 39, '"');
                             ((djb) this).field_p.a(var5, 31401, var5);
                             break L13;
                           }
@@ -625,7 +626,7 @@ final class djb extends qc {
                             if (param1 != 34) {
                               break L13;
                             } else {
-                              boolean discarded$10 = ((djb) this).field_p.a(-1, param2 + 39, '"');
+                              boolean discarded$9 = ((djb) this).field_p.a(-1, param2 + 39, '"');
                               ((djb) this).field_p.a(var5, 31401, var5);
                               break L13;
                             }
@@ -642,7 +643,7 @@ final class djb extends qc {
                           if (param1 != 34) {
                             break L13;
                           } else {
-                            boolean discarded$11 = ((djb) this).field_p.a(-1, param2 + 39, '"');
+                            boolean discarded$10 = ((djb) this).field_p.a(-1, param2 + 39, '"');
                             ((djb) this).field_p.a(var5, 31401, var5);
                             break L13;
                           }
@@ -659,7 +660,7 @@ final class djb extends qc {
                       if (param1 != 39) {
                         break L4;
                       } else {
-                        boolean discarded$12 = ((djb) this).field_p.a(-1, -1, '\'');
+                        boolean discarded$11 = ((djb) this).field_p.a(-1, -1, '\'');
                         ((djb) this).field_p.a(var5, 31401, var5);
                         break L4;
                       }
@@ -669,8 +670,7 @@ final class djb extends qc {
                 ((djb) this).field_p.a((byte) -73, 1 + var5);
                 break L4;
               }
-              int discarded$13 = 107;
-              nv.field_r = bab.a(((djb) this).field_p.l(param2 + -14413));
+              nv.field_r = bab.a(((djb) this).field_p.l(param2 + -14413), 107);
               return true;
             } else {
               if (var8 != 0) {
@@ -772,7 +772,7 @@ final class djb extends qc {
         }
     }
 
-    private final vga a(String param0) {
+    private final vga a(String param0, byte param1) {
         vga var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

@@ -232,7 +232,7 @@ final class gba extends vg {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
     }
 
@@ -243,8 +243,7 @@ final class gba extends vg {
         if (param1 == -1) {
             return lga.field_B;
         }
-        int discarded$0 = 1;
-        return nt.a(param1, 1, 5200, false, true);
+        return nt.a(param1, 1, 5200, false, true, true);
     }
 
     gba(String[] param0) {

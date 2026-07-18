@@ -263,7 +263,7 @@ final class rd {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         vk var1 = (vk) (Object) ea.field_t.b(2);
         if (var1 == null) {
             lj.a((byte) 114);
@@ -528,9 +528,9 @@ final class rd {
             var4.field_c = 15658734;
             ((rd) this).field_t = 5592405;
             ((rd) this).field_u = -1;
-            qi discarded$15 = var4.a((byte) 118, 0).a(15658734, false).a(param0 ^ 13421731, qe.a(8947848, 7829367, 10066329, param0 + -13421771));
-            qi discarded$16 = var4.a((byte) 118, 1).a(param0 + -13421653, qe.a(11184810, 13421772, 10066329, param0 ^ 13421773));
-            qi discarded$17 = var4.a((byte) 118, 3).a(125, qe.a(8947848, 10066329, 7829367, 1)).a(255, 1).a((byte) 85, 1);
+            qi discarded$10 = var4.a((byte) 118, 0).a(15658734, false).a(param0 ^ 13421731, qe.a(8947848, 7829367, 10066329, param0 + -13421771));
+            qi discarded$11 = var4.a((byte) 118, 1).a(param0 + -13421653, qe.a(11184810, 13421772, 10066329, param0 ^ 13421773));
+            qi discarded$12 = var4.a((byte) 118, 3).a(125, qe.a(8947848, 10066329, 7829367, 1)).a(255, 1).a((byte) 85, 1);
             var5 = new qj[9];
             var16 = new d(32, 32);
             var18 = var16;
@@ -538,27 +538,22 @@ final class rd {
             L1: while (true) {
               if (var7_int >= var18.field_z.length) {
                 var5[4] = (qj) (Object) var18;
-                qi discarded$18 = var4.a((byte) 118, 4).a(true, 19749).a(param0 ^ 13421758, var5);
-                int discarded$19 = 0;
-                int discarded$20 = 0;
-                int discarded$21 = 116;
-                int discarded$22 = 0;
-                int discarded$23 = 65793;
-                qi discarded$24 = var4.a((byte) 118, 5).a(113, qi.a()).a(true, 19749).a(-1, false);
+                qi discarded$13 = var4.a((byte) 118, 4).a(true, 19749).a(param0 ^ 13421758, var5);
+                qi discarded$14 = var4.a((byte) 118, 5).a(113, qi.a(65793, 0, (byte) 116, 0, 0)).a(true, 19749).a(-1, false);
                 ((rd) this).field_h = (t) (Object) var4;
                 var6 = new gi(var4, true);
                 var6.field_f = 0;
                 var7 = new gi(var4, true);
                 var7.field_f = 0;
                 var7.a(-75, re.a((byte) 125, 8947848));
-                qi discarded$25 = var7.a((byte) 118, 1).a(124, re.a((byte) 121, 11184810)).a(2236962, false);
+                qi discarded$15 = var7.a((byte) 118, 1).a(124, re.a((byte) 121, 11184810)).a(2236962, false);
                 ((rd) this).field_j = (t) (Object) new ij(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                gh discarded$26 = new gh(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                jd discarded$27 = new jd(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                gh discarded$16 = new gh(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                jd discarded$17 = new jd(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
                 var8 = new gi();
                 var17.a(param0 + -13441169, (ic) (Object) var8);
-                qi discarded$28 = var8.a((byte) 118, 0).a(112, qe.a(15658734, 10066329, 7829367, 1)).a(1118481, false).b(-1, 113);
-                qi discarded$29 = var8.a((byte) 118, 4).a(true, 19749).a(110, var5);
+                qi discarded$18 = var8.a((byte) 118, 0).a(112, qe.a(15658734, 10066329, 7829367, 1)).a(1118481, false).b(-1, 113);
+                qi discarded$19 = var8.a((byte) 118, 4).a(true, 19749).a(110, var5);
                 ((rd) this).field_e = (t) (Object) var8;
                 var9 = new qj[9];
                 var10 = new qj[9];
@@ -623,7 +618,7 @@ final class rd {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_s = null;
         field_o = null;
@@ -631,7 +626,7 @@ final class rd {
         field_i = null;
     }
 
-    final static void a(jf param0) {
+    final static void a(jf param0, int param1, int param2) {
         la var3 = ra.field_C;
         var3.c(7, 7);
         var3.a(param0.field_m, (byte) -89);

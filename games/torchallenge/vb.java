@@ -32,7 +32,7 @@ abstract class vb {
 
     abstract void c(int param0);
 
-    final static String a(boolean param0, boolean param1, boolean param2) {
+    final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
         var4 = 0;
         if (param2) {

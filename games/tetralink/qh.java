@@ -68,28 +68,32 @@ final class qh extends d implements ih, cg {
         }
     }
 
-    final static boolean a(int param0, int param1, byte param2, int param3, int param4, boolean param5) {
-        if (ak.a(3058)) {
-            we.a(param5, 15, -2, 13);
-            if (null != hd.field_s) {
-                if (hd.field_s.a(13, 11, param5, (byte) 53, 0)) {
-                    param5 = false;
-                    int discarded$0 = 43;
-                    gg.c();
-                }
-            }
-            int discarded$1 = 107;
-            int discarded$2 = 13;
-            ej.a(param5);
-            int discarded$3 = 14;
-            int discarded$4 = -1;
-            mn.a(param5);
-            param5 = false;
+    final static boolean a(int param0, int param1, byte param2, int param3, int param4, boolean param5, int param6) {
+        if (!ak.a(3058)) {
+            return param5;
         }
+        we.a(param5, 15, -2, 13);
+        if (null == hd.field_s) {
+            ej.a(param5, 13, (byte) 107);
+            mn.a(param5, -1, 14);
+            param5 = false;
+            return param5;
+        }
+        if (!hd.field_s.a(13, 11, param5, (byte) 53, 0)) {
+            ej.a(param5, 13, (byte) 107);
+            mn.a(param5, -1, 14);
+            param5 = false;
+            return param5;
+        }
+        param5 = false;
+        gg.c((byte) 43);
+        ej.a(param5, 13, (byte) 107);
+        mn.a(param5, -1, 14);
+        param5 = false;
         return param5;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_l = null;
     }
 
@@ -216,7 +220,7 @@ final class qh extends d implements ih, cg {
         return ((qh) this).field_m.h(-30886);
     }
 
-    final static void a(boolean param0, byte param1, int param2, ri param3) {
+    final static void a(boolean param0, byte param1, int param2, ri param3, int param4) {
         try {
             bn.field_c.a(param3, 1048576, false, 256, 1000000, (byte) -128);
             int var5_int = -120;
@@ -225,7 +229,7 @@ final class qh extends d implements ih, cg {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         ck.field_bb.a((byte) -85, 640, 0, param3, param0);
         if (gl.field_o != null) {
           gl.field_o.a(param5, param3, param5 + -d.field_e, param1, param3, 0);

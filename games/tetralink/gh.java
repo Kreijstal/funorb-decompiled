@@ -5,7 +5,7 @@ final class gh {
     static String field_b;
     static int[] field_a;
 
-    final static Boolean a() {
+    final static Boolean a(byte param0) {
         Boolean var1 = ui.field_b;
         ui.field_b = null;
         return var1;
@@ -16,7 +16,7 @@ final class gh {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, oh[] param3) {
+    final static void a(int param0, int param1, int param2, oh[] param3, int param4) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -115,7 +115,7 @@ final class gh {
         }
     }
 
-    final static String a(CharSequence[] param0, int param1, int param2) {
+    final static String a(CharSequence[] param0, int param1, int param2, int param3) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;

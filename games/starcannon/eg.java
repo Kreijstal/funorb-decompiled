@@ -305,12 +305,12 @@ final class eg implements de {
         sd.field_a = param0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         jb.field_c = null;
         nh.field_h = null;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_i = null;
         field_a = null;

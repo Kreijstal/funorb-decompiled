@@ -60,7 +60,7 @@ final class gd {
         return pd.a(-22826) - pi.field_i;
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         ((gd) this).field_J = false;
     }
 
@@ -81,8 +81,7 @@ final class gd {
             ((gd) this).field_B[var6] = (short)(((gd) this).field_B[var6] + param2);
             ((gd) this).field_m[var6] = (short)(((gd) this).field_m[var6] + param0);
         }
-        int discarded$0 = 1;
-        this.a();
+        this.a(true);
     }
 
     final void b(int param0) {
@@ -187,8 +186,7 @@ final class gd {
             if (param0 != 0) {
               return;
             } else {
-              int discarded$2 = 1;
-              this.a();
+              this.a(true);
               return;
             }
           } else {

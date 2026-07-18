@@ -13,7 +13,7 @@ final class sp extends mp {
     private int field_l;
     private String field_i;
 
-    private final td a(fm param0, String param1, int param2) {
+    private final td a(fm param0, String param1, int param2, int param3) {
         td var5 = null;
         RuntimeException var5_ref = null;
         td var6 = null;
@@ -140,8 +140,7 @@ final class sp extends mp {
             ((sp) this).field_o = param2 ? true : false;
             ((sp) this).field_i = param3;
             ((sp) this).field_f = param4;
-            int discarded$0 = 1;
-            var8 = this.a(param4, param3, param1);
+            var8 = this.a(param4, param3, param1, 1);
             var9 = var8;
             var9.field_e[0] = -param4.a(param3) + param0;
             var9.field_e[param3.length()] = param0;
@@ -175,8 +174,7 @@ final class sp extends mp {
             ((sp) this).field_i = param3;
             int var7 = -125 / ((-24 - param1) / 46);
             ((sp) this).field_f = param2;
-            int discarded$0 = 1;
-            var8 = this.a(param2, param3, param4);
+            var8 = this.a(param2, param3, param4, 1);
             var9 = var8;
             var8.field_e[0] = param0;
             var9.field_e[param3.length()] = param0 - -param2.a(param3);
@@ -550,8 +548,7 @@ final class sp extends mp {
             if (param3 != 65) {
                 ((sp) this).field_o = false;
             }
-            int discarded$0 = 1;
-            var8 = this.a(param0, param1, param2);
+            var8 = this.a(param0, param1, param2, 1);
             var7 = param0.a(param1);
             var8.field_e[0] = param4 + -(var7 >> 1);
             var8.field_e[param1.length()] = param4 - -(var7 >> 1);

@@ -29,7 +29,7 @@ final class ie implements Runnable {
     java.awt.EventQueue field_p;
     private Object field_j;
 
-    private final vl a(String param0, int param1, int param2) {
+    private final vl a(String param0, int param1, int param2, boolean param3) {
         return this.a(0, (Object) (Object) param0, 1, 19696, param2);
     }
 
@@ -49,8 +49,7 @@ final class ie implements Runnable {
         if (param2 <= 84) {
             return null;
         }
-        int discarded$0 = 0;
-        return this.a(param1, 63, param0);
+        return this.a(param1, 63, param0, false);
     }
 
     final vl a(boolean param0) {

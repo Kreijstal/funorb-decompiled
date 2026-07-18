@@ -4,7 +4,7 @@
 final class ila extends ksa {
     String field_d;
 
-    final static void c() {
+    final static void c(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -306,7 +306,7 @@ final class ila extends ksa {
         }
     }
 
-    final static String a(byte[] param0) {
+    final static String a(byte[] param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

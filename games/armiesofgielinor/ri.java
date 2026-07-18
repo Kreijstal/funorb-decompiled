@@ -65,7 +65,7 @@ final class ri {
         }
     }
 
-    private final void a(uq param0) {
+    private final void a(uq param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -140,8 +140,7 @@ final class ri {
             ((ri) this).field_a = ((ri) this).field_a - 1;
             while (0 > ((ri) this).field_a) {
                 var6 = (uq) (Object) ((ri) this).field_e.a(false);
-                int discarded$0 = 0;
-                this.a(var6);
+                this.a(var6, 0);
             }
             int var6_int = 0;
             var7 = new f(param0, 1);
@@ -158,8 +157,7 @@ final class ri {
             return;
         }
         uq var4 = (uq) (Object) ((ri) this).field_g.a(13497, param0);
-        int discarded$0 = 0;
-        this.a(var4);
+        this.a(var4, 0);
     }
 
     final void a(Object param0, int param1, long param2) {
@@ -225,7 +223,7 @@ final class ri {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_b = null;
         field_c = null;

@@ -142,8 +142,7 @@ final class ama extends k {
                             break L4;
                           } else {
                             if (var6 == 3) {
-                              int discarded$1 = -128;
-                              ((ama) this).field_n[var4_int] = (vo) (Object) afa.a(param1);
+                              ((ama) this).field_n[var4_int] = (vo) (Object) afa.a(param1, -128);
                               break L4;
                             } else {
                               break L4;
@@ -247,11 +246,8 @@ final class ama extends k {
             L1: {
               var3_int = hh.field_d;
               var4 = bi.field_g;
-              int discarded$54 = -5;
-              tma.a(param1);
-              int discarded$55 = 0;
-              int discarded$56 = -14702;
-              bm.a(it.field_r, 0, wp.field_r);
+              tma.a(param1, -5);
+              bm.a(it.field_r, 0, wp.field_r, -14702, 0);
               if (((ama) this).field_n != null) {
                 var5 = 0;
                 L2: while (true) {

@@ -381,8 +381,7 @@ abstract class jc extends gl implements sf {
                     stackIn_13_0 = stackOut_12_0;
                     break L2;
                   } else {
-                    int discarded$3 = 0;
-                    stackOut_11_0 = this.a(param1);
+                    stackOut_11_0 = this.a(param1, 0);
                     stackIn_13_0 = stackOut_11_0;
                     break L2;
                   }
@@ -428,7 +427,7 @@ abstract class jc extends gl implements sf {
         return stackIn_15_0 != 0;
     }
 
-    private final boolean a(gl param0) {
+    private final boolean a(gl param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;

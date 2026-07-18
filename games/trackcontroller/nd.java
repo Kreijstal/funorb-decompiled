@@ -107,8 +107,7 @@ final class nd extends td implements m {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (param3 != 29221) {
-            int discarded$0 = 0;
-            nd.b();
+            nd.b(false);
         }
         super.a(param0, param1, param2, param3);
         if (param0 != 0) {
@@ -116,11 +115,11 @@ final class nd extends td implements m {
         }
         oh var5 = gk.field_c;
         if (!(null == ((nd) this).field_D)) {
-            int discarded$1 = var5.a(el.field_K, ((nd) this).field_p + param1, ((nd) this).field_m + param2, ((nd) this).field_x, 20, 16777215, -1, 0, 0, var5.field_u + var5.field_G);
+            int discarded$0 = var5.a(el.field_K, ((nd) this).field_p + param1, ((nd) this).field_m + param2, ((nd) this).field_x, 20, 16777215, -1, 0, 0, var5.field_u + var5.field_G);
         }
     }
 
-    final static ng[] a(kk param0, int param1, int param2) {
+    final static ng[] a(kk param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         ng[] stackIn_4_0 = null;
@@ -145,8 +144,7 @@ final class nd extends td implements m {
         try {
           L0: {
             if (sk.a(param1, param0, 1, param2)) {
-              int discarded$2 = -104;
-              stackOut_3_0 = me.d();
+              stackOut_3_0 = me.d(-104);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -591,7 +589,7 @@ final class nd extends td implements m {
         return stackIn_13_0 != 0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_M = null;
         field_H = null;
         field_G = null;

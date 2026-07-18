@@ -8,7 +8,7 @@ class wm extends mo {
     wm() {
     }
 
-    final static char a(char param0) {
+    final static char a(char param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = Vertigo2.field_L ? 1 : 0;

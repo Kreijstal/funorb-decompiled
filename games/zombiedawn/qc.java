@@ -36,7 +36,7 @@ final class qc {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         le var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -71,7 +71,7 @@ final class qc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 

@@ -166,7 +166,7 @@ final class ka implements Runnable {
         return this.a(2, 0, param0, 16266, (Object) (Object) param2);
     }
 
-    private final bk a(int param0, String param1) {
+    private final bk a(int param0, String param1, boolean param2, int param3) {
         return this.a(1, 0, param0, 16266, (Object) (Object) param1);
     }
 
@@ -179,9 +179,7 @@ final class ka implements Runnable {
 
     final bk a(int param0, int param1, String param2) {
         int var4 = 66 % ((-55 - param1) / 35);
-        int discarded$0 = 22;
-        int discarded$1 = 0;
-        return this.a(param0, param2);
+        return this.a(param0, param2, false, 22);
     }
 
     final bk a(Class param0, int param1, String param2) {

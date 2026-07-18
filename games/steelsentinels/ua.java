@@ -44,7 +44,7 @@ final class ua extends ck {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_O = null;
         field_P = null;
         field_x = null;

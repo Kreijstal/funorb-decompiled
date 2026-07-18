@@ -5,7 +5,7 @@ final class pl {
     private long field_a;
     private int field_b;
 
-    final static void a() {
+    final static void a(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -68,7 +68,7 @@ final class pl {
         return 15 & (int)(((pl) this).field_a >> rl.field_e * param0);
     }
 
-    private final void a(rl param0) {
+    private final void a(rl param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -123,7 +123,7 @@ final class pl {
         }
     }
 
-    final static void c() {
+    final static void c(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         ga var4 = null;
@@ -158,50 +158,38 @@ final class pl {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, boolean param15) {
         int var17 = 0;
         var17 = AceOfSkies.field_G ? 1 : 0;
         if (param1 >= param8) {
           if (param4 <= param1) {
             if (param8 >= param4) {
               md.a(param1, param0, param12, param13, param14, vp.field_j, param11, param9, param3, param5, param2, param6, param7, param10, param8, param4, (byte) -46);
-              int discarded$12 = -13;
-              int discarded$13 = 70;
-              pl.c();
+              pl.c(70, -13);
               return;
             } else {
               md.a(param1, param0, param6, param7, param3, vp.field_j, param9, param11, param14, param5, param2, param12, param13, param10, param4, param8, (byte) -24);
-              int discarded$14 = -13;
-              int discarded$15 = 70;
-              pl.c();
+              pl.c(70, -13);
               return;
             }
           } else {
             md.a(param4, param9, param6, param10, param3, vp.field_j, param0, param11, param2, param12, param14, param5, param13, param7, param1, param8, (byte) -120);
-            int discarded$16 = -13;
-            int discarded$17 = 70;
-            pl.c();
+            pl.c(70, -13);
             return;
           }
         } else {
           if (param4 > param8) {
             md.a(param4, param9, param5, param13, param2, vp.field_j, param11, param0, param3, param12, param14, param6, param10, param7, param8, param1, (byte) -70);
-            int discarded$18 = -13;
-            int discarded$19 = 70;
-            pl.c();
+            pl.c(70, -13);
             return;
           } else {
             if (param1 < param4) {
               md.a(param8, param11, param5, param7, param2, vp.field_j, param9, param0, param14, param6, param3, param12, param10, param13, param4, param1, (byte) -65);
-              int discarded$20 = -13;
-              int discarded$21 = 70;
-              pl.c();
+              pl.c(70, -13);
               return;
             } else {
               md.a(param8, param11, param12, param10, param14, vp.field_j, param0, param9, param2, param6, param3, param5, param7, param13, param1, param4, (byte) -102);
-              int discarded$22 = -13;
-              int discarded$23 = 70;
-              pl.c();
+              pl.c(70, -13);
               return;
             }
           }
@@ -234,8 +222,7 @@ final class pl {
               if (param0.length <= var2_int) {
                 break L0;
               } else {
-                int discarded$6 = 15258;
-                this.a(param0[var2_int]);
+                this.a(param0[var2_int], 15258);
                 var2_int++;
                 continue L1;
               }
@@ -281,7 +268,7 @@ final class pl {
         return ((pl) this).field_b;
     }
 
-    final static String b() {
+    final static String b(int param0) {
         int var1 = 1;
         return nm.field_c.h(-17883);
     }

@@ -8,7 +8,7 @@ final class kc {
     static uf field_b;
     static va field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_c = null;
         field_d = null;

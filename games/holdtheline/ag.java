@@ -8,7 +8,7 @@ final class ag extends wj {
     static String field_p;
     private nn field_q;
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_p = null;
         field_r = null;
     }

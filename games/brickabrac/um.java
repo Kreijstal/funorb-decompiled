@@ -53,9 +53,10 @@ class um implements ub, qe {
             Object var19 = null;
             byte[][] var20 = null;
             String var21 = null;
-            byte[][] var22 = null;
+            String var22 = null;
             byte[][] var23 = null;
             byte[][] var24 = null;
+            byte[][] var25 = null;
             RuntimeException stackIn_35_0 = null;
             StringBuilder stackIn_35_1 = null;
             RuntimeException stackIn_36_0 = null;
@@ -120,18 +121,18 @@ class um implements ub, qe {
                               } else {
                                 if (var7_int != 2) {
                                   if (3 == var7_int) {
-                                    var8 = param1.d(-1);
                                     var21 = param1.d(-1);
+                                    var22 = param1.d(-1);
                                     var10 = param1.l(255);
                                     var11 = new String[var10];
                                     var12_int = 0;
                                     L5: while (true) {
                                       if (var12_int >= var10) {
                                         L6: {
-                                          var24 = new byte[var10][];
+                                          var25 = new byte[var10][];
+                                          var24 = var25;
                                           var23 = var24;
-                                          var22 = var23;
-                                          var20 = var22;
+                                          var20 = var23;
                                           var12 = var20;
                                           if (var7_int != 3) {
                                             break L6;
@@ -143,7 +144,7 @@ class um implements ub, qe {
                                               } else {
                                                 var14 = param1.e(255);
                                                 var12[var13_int] = new byte[var14];
-                                                param1.a(0, var24[var13_int], 115, var14);
+                                                param1.a(0, var25[var13_int], 115, var14);
                                                 var13_int++;
                                                 continue L7;
                                               }
@@ -156,13 +157,11 @@ class um implements ub, qe {
                                         var14 = var18;
                                         L8: while (true) {
                                           if (var10 <= var18) {
-                                            int discarded$3 = 1;
-                                            ((bg) var19).field_l[var6] = param3.a(23311, pj.a(var8), var13, var21);
-                                            ((bg) var19).field_m[var6] = var24;
+                                            ((bg) var19).field_l[var6] = param3.a(23311, pj.a(var21, true), var13, var22);
+                                            ((bg) var19).field_m[var6] = var25;
                                             break L3;
                                           } else {
-                                            int discarded$4 = 1;
-                                            var13[var18] = pj.a(var11[var18]);
+                                            var13[var18] = pj.a(var11[var18], true);
                                             var18++;
                                             continue L8;
                                           }
@@ -206,8 +205,7 @@ class um implements ub, qe {
                           }
                           ((bg) var19).field_t[var6] = var7_int;
                           ((bg) var19).field_q[var6] = var10;
-                          int discarded$5 = 1;
-                          ((bg) var19).field_j[var6] = param3.a(124, pj.a(var16), var17);
+                          ((bg) var19).field_j[var6] = param3.a(124, pj.a(var16, true), var17);
                           break L3;
                         }
                         decompiledRegionSelector0 = 0;
@@ -1058,8 +1056,7 @@ class um implements ub, qe {
               }
             }
             var5 = param3.a(var4_int, param2 + -1593955846, param1);
-            int discarded$2 = 1;
-            stackOut_2_0 = ml.a(param3, var4_int, var5);
+            stackOut_2_0 = ml.a(param3, var4_int, var5, 1);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -1564,7 +1561,7 @@ class um implements ub, qe {
         }
     }
 
-    final static void a(boolean param0, int param1, boolean param2, int param3, int param4) {
+    final static void a(boolean param0, int param1, boolean param2, int param3, int param4, int param5, byte param6) {
         int var7_int = 0;
         vl var8 = null;
         long var9 = 0L;
@@ -2368,8 +2365,8 @@ class um implements ub, qe {
                       } else {
                         var32 += 2;
                         var38 = new StringBuilder(64);
-                        StringBuilder discarded$6 = var38.append(th.field_f);
-                        StringBuilder discarded$7 = var38.append(var13.field_Qb[0]);
+                        StringBuilder discarded$4 = var38.append(th.field_f);
+                        StringBuilder discarded$5 = var38.append(var13.field_Qb[0]);
                         var39_int = 1;
                         L37: while (true) {
                           if (var13.field_cc <= var39_int) {
@@ -2380,8 +2377,8 @@ class um implements ub, qe {
                             var32 = var32 + np.field_a * var40;
                             break L36;
                           } else {
-                            StringBuilder discarded$8 = var38.append(", ");
-                            StringBuilder discarded$9 = var38.append(var13.field_Qb[var39_int]);
+                            StringBuilder discarded$6 = var38.append(", ");
+                            StringBuilder discarded$7 = var38.append(var13.field_Qb[var39_int]);
                             var39_int++;
                             continue L37;
                           }
@@ -2409,8 +2406,7 @@ class um implements ub, qe {
                   }
                 }
                 L39: {
-                  int discarded$10 = -15;
-                  var34 = vl.a(var13.field_Zb, var33);
+                  var34 = vl.a(var13.field_Zb, var33, -15);
                   var35 = var34;
                   var35 = var34;
                   if (var34 == null) {
@@ -2562,8 +2558,7 @@ class um implements ub, qe {
                                 break L52;
                               }
                             }
-                            int discarded$11 = 11912;
-                            jb.b(var13.e((byte) -34), param4);
+                            jb.b(var13.e((byte) -34), param4, 11912);
                             break L52;
                           }
                         } else {
@@ -2949,7 +2944,7 @@ class um implements ub, qe {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_p = null;
         field_j = null;
         field_u = null;

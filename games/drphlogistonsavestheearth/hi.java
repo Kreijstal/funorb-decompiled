@@ -17,7 +17,7 @@ final class hi {
     private int field_d;
     static String field_h;
 
-    public static void b() {
+    public static void b(int param0) {
         field_i = null;
         field_h = null;
         field_l = null;

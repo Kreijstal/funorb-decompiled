@@ -52,7 +52,7 @@ final class fb extends qr {
         ((fb) this).field_dc = new byte[param0];
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_Vb = null;
         field_kc = null;
         field_bc = null;
@@ -338,7 +338,7 @@ final class fb extends qr {
         return !((fb) this).a((byte) 98) ? true : false;
     }
 
-    final static void a(boolean param0, boolean param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7) {
+    final static void a(boolean param0, boolean param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, int param9) {
         int var11 = 0;
         L0: {
           var11 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -434,8 +434,7 @@ final class fb extends qr {
           dm.a(param4, 0, ls.field_a, param1, param2);
           break L6;
         }
-        int discarded$1 = 1;
-        ga.a(param1, (byte) 116, 16777215, param6, param2, param4);
+        ga.a(param1, (byte) 116, 16777215, param6, param2, param4, true);
         dm.a(param4, 0, ro.field_a, param1, param2);
         ln.field_w = ln.field_w + 1;
     }

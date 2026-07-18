@@ -77,8 +77,7 @@ final class mj {
               L0: {
                 L1: {
                   if (null == pg.field_c) {
-                    int discarded$9 = 0;
-                    if (sl.a(param4)) {
+                    if (sl.a(param4, (byte) 0)) {
                       break L1;
                     } else {
                       stackOut_4_0 = -1;
@@ -137,8 +136,7 @@ final class mj {
                       if (bo.a(30000, 8)) {
                         va.field_b = om.field_g.i(param0 + -800509814);
                         om.field_g.field_m = 0;
-                        int discarded$10 = -99;
-                        oh.a(f.field_m, param4, param1, param5);
+                        oh.a(f.field_m, param4, param1, param5, (byte) -99);
                         al.field_d = mc.field_b;
                         break L5;
                       } else {
@@ -192,7 +190,7 @@ final class mj {
                         L9: {
                           mg.field_d = om.field_g.i(-800509813);
                           mg.field_b = om.field_g.e(0);
-                          int discarded$11 = om.field_g.e(0);
+                          int discarded$6 = om.field_g.e(0);
                           s.field_x = om.field_g.f(1952);
                           var6_ref = om.field_g.d(-15208);
                           var7 = om.field_g.e(0);
@@ -240,9 +238,9 @@ final class mj {
                         }
                         L13: {
                           if (jc.field_b) {
-                            int discarded$12 = om.field_g.e(param0 ^ 1);
-                            int discarded$13 = om.field_g.e(0);
-                            int discarded$14 = om.field_g.g(param0 + -5054);
+                            int discarded$7 = om.field_g.e(param0 ^ 1);
+                            int discarded$8 = om.field_g.e(0);
+                            int discarded$9 = om.field_g.g(param0 + -5054);
                             kb.field_e = om.field_g.f(1952);
                             lf.field_K = new byte[kb.field_e];
                             var8 = 0;
@@ -296,7 +294,7 @@ final class mj {
                               } else {
                                 try {
                                   L19: {
-                                    Object discarded$15 = sd.a(oc.d((byte) -107), "unzap", param0 + -29156);
+                                    Object discarded$10 = sd.a(oc.d((byte) -107), "unzap", param0 + -29156);
                                     break L19;
                                   }
                                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -312,7 +310,7 @@ final class mj {
                           }
                           try {
                             L21: {
-                              Object discarded$16 = sd.a((byte) 116, oc.d((byte) -128), new Object[1], "zap");
+                              Object discarded$11 = sd.a((byte) 116, oc.d((byte) -128), new Object[1], "zap");
                               break L21;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -395,8 +393,7 @@ final class mj {
                     if (null == pg.field_c) {
                       if (e.field_c) {
                         L29: {
-                          int discarded$17 = 64655;
-                          if (un.e() > 30000L) {
+                          if (un.e(64655) > 30000L) {
                             ca.field_a = fl.field_l;
                             break L29;
                           } else {
@@ -491,7 +488,7 @@ final class mj {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_b = null;
         field_f = null;

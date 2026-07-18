@@ -9,7 +9,7 @@ abstract class bl extends dqa {
     boolean field_z;
     ida field_v;
 
-    private final int c() {
+    private final int c(boolean param0) {
         int stackIn_5_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
@@ -62,8 +62,7 @@ abstract class bl extends dqa {
         int stackOut_10_0 = 0;
         if (param0 == 248) {
           L0: {
-            int discarded$2 = 0;
-            var2 = this.c();
+            var2 = this.c(false);
             var3 = var2 - ((bl) this).field_w;
             if (0 < var3) {
               ((bl) this).field_w = ((bl) this).field_w + (-1 + var3 - -8) / 8;
@@ -125,8 +124,7 @@ abstract class bl extends dqa {
         } else {
           L5: {
             bl.d(true);
-            int discarded$3 = 0;
-            var2 = this.c();
+            var2 = this.c(false);
             var3 = var2 - ((bl) this).field_w;
             if (0 < var3) {
               ((bl) this).field_w = ((bl) this).field_w + (-1 + var3 - -8) / 8;
@@ -268,8 +266,7 @@ abstract class bl extends dqa {
     }
 
     boolean j(byte param0) {
-        int discarded$2 = 0;
-        ((bl) this).field_w = this.c();
+        ((bl) this).field_w = this.c(false);
         if (param0 == 55) {
           if (0 == ((bl) this).field_w) {
             if (((bl) this).field_z) {

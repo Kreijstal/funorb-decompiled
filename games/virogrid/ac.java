@@ -8,7 +8,7 @@ final class ac {
     static String field_b;
     static boolean field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_c = null;
@@ -54,7 +54,7 @@ final class ac {
                   break L3;
                 } else {
                   if (wg.field_f) {
-                    boolean discarded$3 = fh.field_c.a(we.field_c.field_J, we.field_c.field_Bb, (byte) -128, param3);
+                    boolean discarded$1 = fh.field_c.a(we.field_c.field_J, we.field_c.field_Bb, (byte) -128, param3);
                     break L3;
                   } else {
                     fh.field_c = null;
@@ -82,8 +82,7 @@ final class ac {
                       break L6;
                     }
                   }
-                  int discarded$4 = 3063;
-                  var8 = id.a();
+                  var8 = id.a(3063);
                   if (var8 != null) {
                     wc.field_g = var8;
                     break L0;
@@ -101,8 +100,7 @@ final class ac {
                         if (var5.field_nb == 0) {
                           break L8;
                         } else {
-                          int discarded$5 = 20435;
-                          kh.a(var5, var4_int);
+                          kh.a(var5, var4_int, 20435);
                           break L8;
                         }
                       }

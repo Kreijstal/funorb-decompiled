@@ -128,7 +128,7 @@ final class sa {
         return stackIn_18_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_g = null;
         field_a = null;

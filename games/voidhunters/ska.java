@@ -16,7 +16,7 @@ final class ska extends is {
         return ((ska) this).field_l;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_o = null;
         field_m = null;
         field_n = null;

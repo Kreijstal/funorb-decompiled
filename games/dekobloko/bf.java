@@ -277,8 +277,7 @@ final class bf extends bh {
                             if (param3.field_t[param2][var6] != param1.field_o) {
                               break L3;
                             } else {
-                              int discarded$1 = 1;
-                              if (!k.a(param3.field_r[param2][var6])) {
+                              if (!k.a(param3.field_r[param2][var6], true)) {
                                 break L3;
                               } else {
                                 var7 = 0;
@@ -372,7 +371,7 @@ final class bf extends bh {
         return stackIn_23_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_u = null;
         field_q = null;
         field_t = null;

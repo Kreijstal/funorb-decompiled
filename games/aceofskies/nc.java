@@ -7,7 +7,7 @@ final class nc {
     static String field_b;
     static byte[] field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_b = null;

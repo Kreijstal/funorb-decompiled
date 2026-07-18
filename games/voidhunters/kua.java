@@ -9,7 +9,7 @@ final class kua {
     float[][] field_c;
     int[] field_d;
 
-    final static int a() {
+    final static int a(byte param0) {
         return (kib.field_d << 4) + ((idb.field_p << 2) - -lla.field_h);
     }
 

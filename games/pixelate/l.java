@@ -52,12 +52,10 @@ final class l extends de {
           if (dk.field_b) {
             t.a(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.field_nb);
             nd.field_b.field_g.a(param1, 0);
-            int discarded$4 = 34;
-            no.a(param1);
+            no.a(param1, (byte) 34);
             return;
           } else {
-            int discarded$5 = 34;
-            no.a(param1);
+            no.a(param1, (byte) 34);
             return;
           }
         } else {
@@ -73,14 +71,12 @@ final class l extends de {
           }
           am.a((byte) 29, param1);
           if (!dk.field_b) {
-            int discarded$6 = 34;
-            no.a(param1);
+            no.a(param1, (byte) 34);
             return;
           } else {
             t.a(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.field_nb);
             nd.field_b.field_g.a(param1, 0);
-            int discarded$7 = 34;
-            no.a(param1);
+            no.a(param1, (byte) 34);
             return;
           }
         }
@@ -106,8 +102,7 @@ final class l extends de {
     }
 
     final void c(byte param0) {
-        int discarded$5 = -25528;
-        la.a(nc.field_a, nc.field_a, false);
+        la.a(nc.field_a, nc.field_a, false, -25528);
         if (param0 > -13) {
             l.e(-78);
         }
@@ -263,7 +258,7 @@ final class l extends de {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         if (qo.field_o != qa.field_f.field_i) {
             wa.field_i = wa.field_i + (qa.field_f.field_i + -qo.field_o);
             qo.field_o = qa.field_f.field_i;

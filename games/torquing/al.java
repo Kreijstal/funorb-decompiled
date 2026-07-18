@@ -16,7 +16,7 @@ final class al {
         return (int)(0.5 + param0);
     }
 
-    private final void a(d param0) {
+    private final void a(d param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -90,14 +90,13 @@ final class al {
             if (param2 != 116) {
                 int discarded$0 = al.a(0.6495872916691957, (byte) 34);
             }
-            int discarded$1 = 1;
-            this.a(1, param0, param1);
+            this.a(1, param0, param1, true);
         } catch (RuntimeException runtimeException) {
             throw rb.a((Throwable) (Object) runtimeException, "al.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    private final void a(int param0, long param1, Object param2) {
+    private final void a(int param0, long param1, Object param2, boolean param3) {
         d var6 = null;
         en var6_ref = null;
         int var7 = Torquing.field_u;
@@ -105,13 +104,11 @@ final class al {
             if (((al) this).field_b < 1) {
                 throw new IllegalStateException();
             }
-            int discarded$0 = 18998;
-            this.a(param1);
+            this.a(param1, 18998);
             ((al) this).field_g = ((al) this).field_g - 1;
             while (0 > ((al) this).field_g) {
                 var6 = (d) (Object) ((al) this).field_h.a(4);
-                int discarded$1 = 111;
-                this.a(var6);
+                this.a(var6, 111);
             }
             var6_ref = new en(param2, 1);
             ((al) this).field_a.a(param1, (byte) 92, (q) (Object) var6_ref);
@@ -122,10 +119,9 @@ final class al {
         }
     }
 
-    private final void a(long param0) {
+    private final void a(long param0, int param1) {
         d var4 = (d) (Object) ((al) this).field_a.a(param0, -112);
-        int discarded$0 = 111;
-        this.a(var4);
+        this.a(var4, 111);
     }
 
     final Object a(int param0, long param1) {

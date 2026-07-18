@@ -854,8 +854,7 @@ final class uh extends gb implements pa, n {
                     break L1;
                   } else {
                     if (((uh) this).field_O) {
-                      int discarded$1 = -74;
-                      si.m();
+                      si.m(-74);
                       break L1;
                     } else {
                       if (((uh) this).field_Q) {

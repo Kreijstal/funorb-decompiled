@@ -85,7 +85,7 @@ final class lw extends pt {
         }
     }
 
-    public static void j() {
+    public static void j(byte param0) {
         field_ob = null;
         field_kb = null;
         field_pb = null;

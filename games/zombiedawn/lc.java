@@ -257,7 +257,7 @@ final class lc {
         }
     }
 
-    final static void a(dj param0, dj param1) {
+    final static void a(dj param0, dj param1, byte param2) {
         try {
             ge.field_b = param1;
             int var3_int = 58;
@@ -267,7 +267,7 @@ final class lc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_k = null;
     }

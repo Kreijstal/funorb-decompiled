@@ -15,11 +15,11 @@ final class dc extends ca {
         field_h = null;
     }
 
-    final static int c() {
+    final static int c(int param0) {
         return rf.field_C;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         var1 = 0;
         if (null != oj.field_q) {

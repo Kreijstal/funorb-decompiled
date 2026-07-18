@@ -57,8 +57,7 @@ final class uc {
                 L2: {
                   var5 = oa.field_l[var3_int];
                   if (var5 >= 0) {
-                    int discarded$2 = 99;
-                    var6 = fa.a(vc.field_d[var3_int], true);
+                    var6 = fa.a(vc.field_d[var3_int], true, (byte) 99);
                     var4 = var4 + vg.field_N;
                     var7 = sb.field_d + -(var6 >> 1);
                     if (!gh.a(var4, we.field_c + (g.field_l << 1), param0, var6 + (bl.field_i << 1), 16777215, param2, -bl.field_i + var7)) {
@@ -87,7 +86,7 @@ final class uc {
         return stackIn_13_0;
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String a(boolean param0, CharSequence param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -134,19 +133,16 @@ final class uc {
                 } else {
                   if (12 >= var3_int) {
                     L2: {
-                      int discarded$20 = -2;
-                      var4 = jg.a(param1);
+                      var4 = jg.a(param1, -2);
                       if (var4 == null) {
                         break L2;
                       } else {
                         if (1 <= var4.length()) {
                           L3: {
-                            int discarded$21 = 1;
-                            if (ck.a(var4.charAt(0))) {
+                            if (ck.a(var4.charAt(0), true)) {
                               break L3;
                             } else {
-                              int discarded$22 = 1;
-                              if (!ck.a(var4.charAt(var4.length() + -1))) {
+                              if (!ck.a(var4.charAt(var4.length() + -1), true)) {
                                 var5 = 0;
                                 var6 = 0;
                                 L4: while (true) {
@@ -161,8 +157,7 @@ final class uc {
                                   } else {
                                     L5: {
                                       var7 = param1.charAt(var6);
-                                      int discarded$23 = 1;
-                                      if (ck.a((char) var7)) {
+                                      if (ck.a((char) var7, true)) {
                                         var5++;
                                         break L5;
                                       } else {
@@ -258,9 +253,7 @@ final class uc {
     }
 
     private static void $cfr$clinit() {
-        int discarded$0 = 1;
-        int discarded$1 = 50;
-        pg.a();
+        pg.a(50, 1);
         field_j = new nc();
         field_d = "Passwords must be between 5 and 20 letters and numbers";
         field_a = new nc();

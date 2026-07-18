@@ -9,22 +9,18 @@ abstract class dl extends ri {
     static fc field_l;
     static String field_m;
 
-    public static void b() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void b(boolean param0) {
+        field_l = null;
+        field_n = null;
+        if (param0) {
+            return;
+        }
         try {
-          L0: {
-            field_l = null;
-            field_n = null;
             field_q = null;
             field_m = null;
             field_p = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var1, "dl.D(" + false + ')');
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "dl.D(" + param0 + ')');
         }
     }
 
@@ -38,7 +34,7 @@ abstract class dl extends ri {
         }
     }
 
-    final static void a(ci param0) {
+    final static void a(ci param0, byte param1) {
         byte[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -360,7 +356,7 @@ abstract class dl extends ri {
             }
             L34: {
               var2 = qd.a(10, "submit_for_space");
-              var3 = 0;
+              var3 = 66 % ((param1 - 46) / 51);
               if (var2 != null) {
                 tj.field_z = eg.a(106, var2);
                 break L34;
@@ -705,7 +701,7 @@ abstract class dl extends ri {
               break L69;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_250_0, stackIn_250_2 + ',' + 119 + ')');
+          throw ch.a((Throwable) (Object) stackIn_250_0, stackIn_250_2 + ',' + param1 + ')');
         }
     }
 

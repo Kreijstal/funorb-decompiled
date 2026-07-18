@@ -361,7 +361,7 @@ final class gh extends tj implements he {
         return stackIn_3_0;
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         RuntimeException var1 = null;
         int[] var1_array = null;
         int var1_int = 0;
@@ -394,9 +394,7 @@ final class gh extends tj implements he {
               if (!as.field_B) {
                 L2: {
                   if (null == gu.field_b) {
-                    int discarded$5 = 4;
-                    int discarded$6 = -1;
-                    gu.field_b = jc.b();
+                    gu.field_b = jc.b(-1, 4);
                     break L2;
                   } else {
                     break L2;
@@ -428,8 +426,7 @@ final class gh extends tj implements he {
                             gu.field_b = null;
                             as.field_B = true;
                             jd.m(77);
-                            int discarded$7 = 1;
-                            if (rb.a(0, ei.field_e)) {
+                            if (rb.a(0, ei.field_e, 1)) {
                               rt.d((byte) 125);
                               break L3;
                             } else {
@@ -455,8 +452,7 @@ final class gh extends tj implements he {
                   break L1;
                 } else {
                   qj.h(-78);
-                  int discarded$8 = 1;
-                  ws.b();
+                  ws.b(true);
                   if (tg.field_a != 9) {
                     break L1;
                   } else {
@@ -518,8 +514,7 @@ final class gh extends tj implements he {
                     if (null == jr.field_f.field_s) {
                       break L10;
                     } else {
-                      int discarded$9 = 1;
-                      oe.a(jr.field_f.field_s);
+                      oe.a(jr.field_f.field_s, 1);
                       break L10;
                     }
                   }
@@ -1099,9 +1094,7 @@ final class gh extends tj implements he {
             ej.field_G = param19;
             kq.a(param3, param17, (byte) 87, param10, param2);
             cv.a((byte) 123, param18, param5, param16);
-            int discarded$2 = 8;
-            int discarded$3 = -3;
-            op.a(2, 8, param12, param14);
+            op.a(2, 8, param12, param14, -3, 8);
             g.a((byte) -85, 320, 240);
             mi.a(16777215, 128, 255, 3815);
             break L0;

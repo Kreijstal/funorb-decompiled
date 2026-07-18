@@ -239,7 +239,7 @@ abstract class jk extends wf {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_jb = null;
         field_ib = null;
         field_gb = null;
@@ -296,8 +296,7 @@ abstract class jk extends wf {
                     if (null == param1.field_p.peekEvent()) {
                       break L2;
                     } else {
-                      int discarded$2 = -10309;
-                      gf.a(1L);
+                      gf.a(1L, -10309);
                       var3_int++;
                       continue L1;
                     }

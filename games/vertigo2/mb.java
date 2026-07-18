@@ -28,12 +28,11 @@ final class mb extends li {
         var4.field_n = 10;
         var4.field_w = 0;
         ob.field_M.a((li) (Object) var4, false);
-        int discarded$0 = 0;
-        tg.a(7, var4);
+        tg.a(7, var4, 0);
         return var4;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_w = null;
         field_q = null;
         field_t = null;
@@ -41,7 +40,7 @@ final class mb extends li {
         field_v = null;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return null != rc.field_d;
     }
 
@@ -49,8 +48,7 @@ final class mb extends li {
         if (param0 != -110) {
             mb.b((byte) 10);
         }
-        int discarded$0 = -116;
-        lj.a();
+        lj.a((byte) -116);
     }
 
     final static String a(int param0) {
@@ -59,8 +57,7 @@ final class mb extends li {
             var1 = eb.field_d.j(5607);
         }
         if (var1.length() == 0) {
-            int discarded$0 = -15381;
-            var1 = vb.c();
+            var1 = vb.c(-15381);
         }
         if (var1.length() == 0) {
             var1 = dh.field_a;

@@ -371,8 +371,7 @@ final class hq extends km {
         int stackIn_4_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
-        int discarded$6 = -1;
-        var4 = ib.a(pl.field_b) ? 1 : 0;
+        var4 = ib.a(pl.field_b, -1) ? 1 : 0;
         if (param2 < 96) {
           return;
         } else {
@@ -388,9 +387,7 @@ final class hq extends km {
             }
           }
           var5 = stackIn_4_0;
-          int discarded$7 = 126;
-          int discarded$8 = 0;
-          ((hq) this).field_v = oq.field_w + " " + wj.a(-1, rd.a(af.a(var4 != 0, var5 != 0), new String[1], (byte) 103), '#', "<br><br>");
+          ((hq) this).field_v = oq.field_w + " " + wj.a(-1, rd.a(af.a(var4 != 0, var5 != 0, false, 126), new String[1], (byte) 103), '#', "<br><br>");
           return;
         }
     }
@@ -429,7 +426,7 @@ final class hq extends km {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_z = null;
         field_u = null;
         field_x = null;

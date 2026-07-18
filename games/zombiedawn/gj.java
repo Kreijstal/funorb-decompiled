@@ -715,7 +715,7 @@ final class gj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_u = null;
         field_w = null;
         field_m = null;

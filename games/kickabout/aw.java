@@ -9,14 +9,14 @@ final class aw extends i {
     static String field_I;
     static int field_J;
 
-    public static void h() {
+    public static void h(byte param0) {
         field_F = null;
         field_G = null;
         field_K = null;
         field_I = null;
     }
 
-    final static rg g() {
+    final static rg g(byte param0) {
         try {
             Throwable var1 = null;
             rg stackIn_1_0 = null;
@@ -41,7 +41,7 @@ final class aw extends i {
         }
     }
 
-    final static kg a(int param0, int param1, sj param2) {
+    final static kg a(int param0, int param1, sj param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         kg stackIn_4_0 = null;
@@ -66,8 +66,7 @@ final class aw extends i {
         try {
           L0: {
             if (cu.a(param0, param2, param1, 121)) {
-              int discarded$2 = -128;
-              stackOut_3_0 = ub.h();
+              stackOut_3_0 = ub.h((byte) -128);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

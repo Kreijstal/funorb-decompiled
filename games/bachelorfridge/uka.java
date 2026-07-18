@@ -101,7 +101,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
         }
     }
 
-    final static ema a(long param0) {
+    final static ema a(long param0, int param1) {
         return (ema) (Object) wi.field_i.a(param0, (byte) -87);
     }
 
@@ -281,7 +281,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_i = null;
         field_h = null;
         field_k = null;
@@ -290,7 +290,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    final static void a(int param0, kia param1, int param2, boolean param3) {
+    final static void a(int param0, kia param1, int param2, boolean param3, byte param4) {
         try {
             int var5_int = -1;
             kw.field_j.a(param1, !param3 ? true : false, 1000000, 256, 1048576, true);
@@ -321,8 +321,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
         try {
           var4_int = 0;
           if (g.a(param3, param0, -30744, param2)) {
-            int discarded$2 = 10583;
-            return mfa.a();
+            return mfa.a(10583);
           } else {
             return null;
           }

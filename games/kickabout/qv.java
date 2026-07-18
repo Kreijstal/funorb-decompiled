@@ -453,8 +453,7 @@ class qv implements gj, ke {
               var9_int = ((qv) this).a((byte) -124, param4);
               var10 = this.c((byte) -123, param4);
               if (((qv) this).field_k) {
-                int discarded$5 = 0;
-                int discarded$6 = ((qv) this).field_a.a(((qv) this).b((byte) -64, param4), this.b(-31112, param4, param2, 0), this.a(param7, (byte) 90, param4), var9_int, var10, param0, param1, ((qv) this).field_e, ((qv) this).field_m, ((qv) this).field_p);
+                int discarded$1 = ((qv) this).field_a.a(((qv) this).b((byte) -64, param4), this.b(-31112, param4, param2, 0), this.a(param7, (byte) 90, param4, 0), var9_int, var10, param0, param1, ((qv) this).field_e, ((qv) this).field_m, ((qv) this).field_p);
                 break L1;
               } else {
                 L2: {
@@ -490,13 +489,11 @@ class qv implements gj, ke {
                   } else {
                     if (var12 != 3) {
                       if (var12 == 1) {
-                        int discarded$7 = 0;
-                        ((qv) this).field_a.d(((qv) this).b((byte) -123, param4), this.b(-31112, param4, param2, 0) + (var9_int >> 1), var11 + this.a(param7, (byte) 90, param4), param0, param1);
+                        ((qv) this).field_a.d(((qv) this).b((byte) -123, param4), this.b(-31112, param4, param2, 0) + (var9_int >> 1), var11 + this.a(param7, (byte) 90, param4, 0), param0, param1);
                         break L1;
                       } else {
                         if (var12 == 2) {
-                          int discarded$8 = 0;
-                          ((qv) this).field_a.c(((qv) this).b((byte) -113, param4), var9_int + this.b(-31112, param4, param2, 0), this.a(param7, (byte) 90, param4) + var11, param0, param1);
+                          ((qv) this).field_a.c(((qv) this).b((byte) -113, param4), var9_int + this.b(-31112, param4, param2, 0), this.a(param7, (byte) 90, param4, 0) + var11, param0, param1);
                           break L1;
                         } else {
                           break L1;
@@ -507,8 +504,7 @@ class qv implements gj, ke {
                     }
                   }
                 }
-                int discarded$9 = 0;
-                ((qv) this).field_a.a(((qv) this).b((byte) -103, param4), this.b(-31112, param4, param2, 0), this.a(param7, (byte) 90, param4) - -var11, param0, param1);
+                ((qv) this).field_a.a(((qv) this).b((byte) -103, param4), this.b(-31112, param4, param2, 0), this.a(param7, (byte) 90, param4, 0) - -var11, param0, param1);
                 break L1;
               }
             }
@@ -698,8 +694,7 @@ class qv implements gj, ke {
         try {
           L0: {
             if (param0) {
-              int discarded$2 = 0;
-              stackOut_3_0 = this.a(param2, (byte) 90, param1);
+              stackOut_3_0 = this.a(param2, (byte) 90, param1, 0);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -944,7 +939,7 @@ class qv implements gj, ke {
         return stackIn_1_0;
     }
 
-    private final int a(int param0, byte param1, fd param2) {
+    private final int a(int param0, byte param1, fd param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

@@ -69,8 +69,7 @@ final class bna extends vg {
         StringBuilder stackOut_12_1 = null;
         String stackOut_12_2 = null;
         try {
-          int discarded$2 = 0;
-          uu.a(param4.field_h, (byte) -81, param4.field_g, param2, param3, param0);
+          uu.a(param4.field_h, (byte) -81, param4.field_g, param2, param3, param0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -179,7 +178,7 @@ final class bna extends vg {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         pha var1_ref = null;
         ht var1_ref2 = null;

@@ -81,7 +81,7 @@ final class ji {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;
@@ -100,7 +100,7 @@ final class ji {
         }
     }
 
-    final static int a(int param0, ih param1, String[] param2, int param3, int param4, int param5) {
+    final static int a(int param0, ih param1, String[] param2, int param3, int param4, int param5, int param6) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;

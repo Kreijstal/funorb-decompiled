@@ -91,7 +91,7 @@ final class lj extends g implements rf, oi {
         return stackIn_9_0 != 0;
     }
 
-    private final int a(int param0, byte param1, rj param2, String param3, String param4) {
+    private final int a(int param0, byte param1, rj param2, String param3, String param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -254,7 +254,7 @@ final class lj extends g implements rf, oi {
         int var5 = 200;
         var3 += 50;
         ((lj) this).b(4, var2);
-        var3 = var3 + (5 + this.a(170, (byte) 64, (rj) (Object) ((lj) this).field_E, si.field_I, nk.field_h));
+        var3 = var3 + (5 + this.a(170, (byte) 64, (rj) (Object) ((lj) this).field_E, si.field_I, nk.field_h, var3));
         ((lj) this).field_H.b(var5, -var5 + 496 >> 1, var3, 40, 23987);
         ((lj) this).field_G.b(60, 3 + var4, var3 + 15, 40, 23987);
         ((lj) this).field_G.field_v = (lf) this;
@@ -267,7 +267,7 @@ final class lj extends g implements rf, oi {
         ((lj) this).b(496, 0, 0, var3 - (-55 - var4), 23987);
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_C = null;
         field_B = null;
         field_D = null;
@@ -295,8 +295,7 @@ final class lj extends g implements rf, oi {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              int discarded$2 = 34;
-              ((lj) this).field_H.field_E = this.e();
+              ((lj) this).field_H.field_E = this.e((byte) 34);
               if (!param1) {
                 break L1;
               } else {
@@ -509,15 +508,13 @@ final class lj extends g implements rf, oi {
             L1: {
               if (param2 != ((lj) this).field_G) {
                 if (((lj) this).field_H == param2) {
-                  int discarded$5 = 120;
-                  this.f();
+                  this.f((byte) 120);
                   break L1;
                 } else {
                   break L1;
                 }
               } else {
-                int discarded$6 = 32270;
-                ll.c();
+                ll.c(32270);
                 break L1;
               }
             }
@@ -660,16 +657,15 @@ final class lj extends g implements rf, oi {
         return stackIn_13_0;
     }
 
-    private final void f() {
-        int discarded$0 = 34;
-        if (!(this.e())) {
+    private final void f(byte param0) {
+        if (!(this.e((byte) 34))) {
             return;
         }
         gg.a(((lj) this).field_E.field_m, 97);
         int var2 = -72;
     }
 
-    private final boolean e() {
+    private final boolean e(byte param0) {
         if (!this.a(31142, (je) (Object) ((lj) this).field_E)) {
             return false;
         }

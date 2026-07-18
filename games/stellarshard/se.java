@@ -114,7 +114,7 @@ final class se extends g implements oi {
         field_B = null;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         gg var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -183,8 +183,7 @@ final class se extends g implements oi {
             }
           }
           if (param2 == ((se) this).field_F) {
-            int discarded$4 = 32270;
-            ll.c();
+            ll.c(32270);
             return;
           } else {
             if (param2 != ((se) this).field_D) {
@@ -206,8 +205,7 @@ final class se extends g implements oi {
                 return;
               }
             } else {
-              int discarded$5 = 91;
-              ta.a();
+              ta.a((byte) 91);
               return;
             }
           }

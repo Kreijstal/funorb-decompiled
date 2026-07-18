@@ -7,7 +7,7 @@ final class hb {
     static kc field_c;
     static int[] field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_c = null;
     }
@@ -15,7 +15,7 @@ final class hb {
     final static aa a(byte param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        Object var3 = null;
+        String var3 = null;
         aa var4 = null;
         String var5 = null;
         int var6 = 0;
@@ -47,15 +47,15 @@ final class hb {
             L0: {
               var2_int = -89 / ((param0 - 27) / 60);
               var7 = (CharSequence) (Object) param1;
-              var3 = (Object) (Object) ff.a((byte) 116, var7);
+              var3 = ff.a((byte) 116, var7);
               if (var3 == null) {
-                var3 = (Object) (Object) var7;
+                var3 = param1;
                 break L0;
               } else {
                 break L0;
               }
             }
-            var4 = (aa) (Object) sl.field_b.a(-126, (long)((String) var3).hashCode());
+            var4 = (aa) (Object) sl.field_b.a(-126, (long)var3.hashCode());
             L1: while (true) {
               if (var4 != null) {
                 L2: {
@@ -68,7 +68,7 @@ final class hb {
                     break L2;
                   }
                 }
-                if (var5.equals(var3)) {
+                if (var5.equals((Object) (Object) var3)) {
                   stackOut_14_0 = (aa) var4;
                   stackIn_15_0 = stackOut_14_0;
                   return stackIn_15_0;

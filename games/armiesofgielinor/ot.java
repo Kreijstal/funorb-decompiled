@@ -33,7 +33,7 @@ final class ot extends dr {
         }
     }
 
-    final static void g() {
+    final static void g(int param0) {
         if (tn.field_Z != null) {
           if (tn.field_Z.field_g == null) {
             tn.field_Z = null;
@@ -123,7 +123,7 @@ final class ot extends dr {
         return stackIn_4_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_E = null;
         field_H = null;
         int var1 = 0;

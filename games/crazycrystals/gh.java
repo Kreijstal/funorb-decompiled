@@ -131,9 +131,8 @@ final class gh extends ea implements Cloneable {
         return stackIn_14_0;
     }
 
-    final static rh h() {
-        int discarded$0 = -102;
-        return new rh(ac.c(61), km.a());
+    final static rh h(int param0) {
+        return new rh(ac.c(61), km.a((byte) -102));
     }
 
     private final void b(int param0, boolean param1, int param2, int param3, int param4, int param5) {
@@ -649,7 +648,7 @@ final class gh extends ea implements Cloneable {
         return 12;
     }
 
-    private final dl e() {
+    private final dl e(byte param0) {
         if (!(((gh) this).field_G >= 0)) {
             return vp.field_d;
         }
@@ -838,7 +837,7 @@ final class gh extends ea implements Cloneable {
         return stackIn_4_0;
     }
 
-    final static java.net.URL a(java.applet.Applet param0, java.net.URL param1) {
+    final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, byte param2) {
         Object var3 = null;
         Object var4 = null;
         java.net.URL stackIn_9_0 = null;
@@ -971,7 +970,7 @@ final class gh extends ea implements Cloneable {
           if (param5 == 4261) {
             break L0;
           } else {
-            boolean discarded$7 = ((gh) this).g(3);
+            boolean discarded$2 = ((gh) this).g(3);
             break L0;
           }
         }
@@ -991,8 +990,7 @@ final class gh extends ea implements Cloneable {
               if (param3 == 24) {
                 il.field_e.a(param1, param4 - param3);
                 if (param0) {
-                  int discarded$8 = 79;
-                  this.e().a(param1, param4 - param3);
+                  this.e((byte) 79).a(param1, param4 - param3);
                   break L2;
                 } else {
                   break L2;
@@ -1006,8 +1004,7 @@ final class gh extends ea implements Cloneable {
           if (!param0) {
             break L2;
           } else {
-            int discarded$9 = 79;
-            this.e().b(param1, param4 + -param3, 2 * param2, 3 * param3);
+            this.e((byte) 79).b(param1, param4 + -param3, 2 * param2, 3 * param3);
             break L2;
           }
         }
@@ -1108,7 +1105,7 @@ final class gh extends ea implements Cloneable {
         field_A = null;
     }
 
-    final static int a(String param0) {
+    final static int a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
@@ -1506,7 +1503,7 @@ final class gh extends ea implements Cloneable {
         }
     }
 
-    final static void i() {
+    final static void i(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

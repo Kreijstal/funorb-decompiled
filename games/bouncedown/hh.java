@@ -26,7 +26,7 @@ final class hh extends ai {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         try {
             IOException var1 = null;
             RuntimeException var1_ref = null;
@@ -110,7 +110,7 @@ final class hh extends ai {
         }
     }
 
-    final static int a(ve param0, ve param1) {
+    final static int a(ve param0, ve param1, byte param2) {
         RuntimeException var3 = null;
         Object var4 = null;
         int stackIn_1_0 = 0;
@@ -211,21 +211,21 @@ final class hh extends ai {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_r = null;
         field_p = null;
         field_q = null;
         field_h = null;
     }
 
-    final static void b(int param0, int param1, int param2, int param3) {
+    final static void b(int param0, int param1, int param2, int param3, int param4) {
         pb.field_j = param0;
         ed.field_d = param2;
         k.field_D = param3;
         qd.field_b = param1;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         oh.a(94, 17);
     }
 

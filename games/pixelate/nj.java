@@ -11,7 +11,7 @@ final class nj {
     static char field_f;
     static String field_c;
 
-    final static void a(fm param0) {
+    final static void a(fm param0, byte param1) {
         qd var2 = null;
         try {
             qd.a(param0.a((byte) 24, "", "headers.packvorbis"));
@@ -78,9 +78,8 @@ final class nj {
         var2 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
-            int discarded$16 = 114;
-            if (ql.e()) {
-              boolean discarded$17 = lb.field_x.a(qk.field_i, true, (byte) 99, nh.field_b);
+            if (ql.e(114)) {
+              boolean discarded$12 = lb.field_x.a(qk.field_i, true, (byte) 99, nh.field_b);
               lb.field_x.d((byte) 111);
               L1: while (true) {
                 if (!bh.b((byte) 126)) {
@@ -91,7 +90,7 @@ final class nj {
                     return;
                   }
                 } else {
-                  boolean discarded$18 = lb.field_x.a(field_f, ke.field_a, false);
+                  boolean discarded$13 = lb.field_x.a(field_f, ke.field_a, false);
                   continue L1;
                 }
               }

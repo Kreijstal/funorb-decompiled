@@ -420,12 +420,12 @@ final class sh extends ud {
         }
     }
 
-    final static boolean h() {
+    final static boolean h(byte param0) {
         int var1 = 2;
         return sm.field_C != null ? true : false;
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_R = null;
         field_P = null;
         field_O = null;
@@ -600,8 +600,7 @@ final class sh extends ud {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_0_0 = sg.a(-116, param2, param1);
+            stackOut_0_0 = sg.a(-116, param2, param1, (byte) 0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -638,14 +637,8 @@ final class sh extends ud {
         return stackIn_1_0;
     }
 
-    final static void a(boolean param0, int param1, boolean param2, int param3, int param4, byte param5, int param6, int param7, boolean param8, int param9, boolean param10) {
-        int discarded$0 = 16777215;
-        int discarded$1 = -124;
-        int discarded$2 = 0;
-        int discarded$3 = 15;
-        int discarded$4 = 13;
-        int discarded$5 = 16777215;
-        rn.a(14, param6, true, 11, param10, param8, param2, param0);
+    final static void a(boolean param0, int param1, boolean param2, int param3, int param4, byte param5, int param6, int param7, boolean param8, int param9, boolean param10, boolean param11) {
+        rn.a(14, param6, true, 11, param10, param8, param2, param0, 16777215, 13, 15, 0, -124, 16777215);
     }
 
     static {

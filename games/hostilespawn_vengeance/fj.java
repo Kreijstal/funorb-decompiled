@@ -214,13 +214,13 @@ final class fj extends le {
         }
     }
 
-    final static Boolean k() {
+    final static Boolean k(int param0) {
         Boolean var1 = ii.field_h;
         ii.field_h = null;
         return var1;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_Sb = null;
         field_Tb = null;
         field_Kb = null;
@@ -734,7 +734,7 @@ final class fj extends le {
         return stackIn_3_0;
     }
 
-    final static void a(int param0, m param1) {
+    final static void a(int param0, m param1, boolean param2) {
         en var5 = null;
         int var4 = 0;
         try {

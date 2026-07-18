@@ -163,7 +163,7 @@ final class kj {
         ((kj) this).field_a = param0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_c = null;
     }

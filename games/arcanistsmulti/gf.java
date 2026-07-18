@@ -595,8 +595,7 @@ final class gf extends ob implements vb {
             var2.field_n = 0;
             var2.field_r = (pf) (Object) new jm(vc.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((gf) this).c(-107, var2);
-            int discarded$8 = 112;
-            if (lc.a()) {
+            if (lc.a((byte) 112)) {
                 ((gf) this).field_lb = this.a((byte) 103, la.field_e, (wc) this);
             }
             ((gf) this).field_kb = this.a((byte) 103, dd.field_e, (wc) this);
@@ -1123,8 +1122,7 @@ final class gf extends ob implements vb {
           L0: {
             L1: {
               if (((gf) this).field_lb == param4) {
-                int discarded$2 = 4;
-                vn.a();
+                vn.a((byte) 4);
                 this.g(48);
                 break L1;
               } else {
@@ -1179,7 +1177,7 @@ final class gf extends ob implements vb {
         }
     }
 
-    public static void k() {
+    public static void k(byte param0) {
         field_V = null;
         field_jb = null;
         int var1 = 17;

@@ -86,51 +86,51 @@ final class ht implements Iterable {
         int stackIn_64_0 = 0;
         int stackIn_74_0 = 0;
         int stackIn_91_0 = 0;
-        int stackIn_96_0 = 0;
-        int stackIn_114_0 = 0;
-        int stackIn_128_0 = 0;
-        int stackIn_144_0 = 0;
-        int stackIn_154_0 = 0;
-        int stackIn_171_0 = 0;
-        int stackIn_188_0 = 0;
-        int stackIn_215_0 = 0;
-        int stackIn_225_0 = 0;
-        int stackIn_239_0 = 0;
-        int stackIn_248_0 = 0;
-        int stackIn_264_0 = 0;
-        int stackIn_282_0 = 0;
+        int stackIn_98_0 = 0;
+        int stackIn_117_0 = 0;
+        int stackIn_131_0 = 0;
+        int stackIn_147_0 = 0;
+        int stackIn_157_0 = 0;
+        int stackIn_174_0 = 0;
+        int stackIn_191_0 = 0;
+        int stackIn_218_0 = 0;
+        int stackIn_228_0 = 0;
+        int stackIn_242_0 = 0;
+        int stackIn_251_0 = 0;
+        int stackIn_267_0 = 0;
+        int stackIn_285_0 = 0;
         double stackOut_4_0 = 0.0;
         double stackOut_3_0 = 0.0;
         int stackOut_58_0 = 0;
         int stackOut_57_0 = 0;
-        int stackOut_238_0 = 0;
-        int stackOut_237_0 = 0;
-        int stackOut_263_0 = 0;
-        int stackOut_262_0 = 0;
-        int stackOut_247_0 = 0;
-        int stackOut_246_0 = 0;
-        int stackOut_281_0 = 0;
-        int stackOut_280_0 = 0;
-        int stackOut_214_0 = 0;
-        int stackOut_213_0 = 0;
-        int stackOut_224_0 = 0;
-        int stackOut_223_0 = 0;
-        int stackOut_143_0 = 0;
-        int stackOut_142_0 = 0;
-        int stackOut_170_0 = 0;
-        int stackOut_169_0 = 0;
-        int stackOut_153_0 = 0;
-        int stackOut_152_0 = 0;
-        int stackOut_187_0 = 0;
-        int stackOut_186_0 = 0;
+        int stackOut_241_0 = 0;
+        int stackOut_240_0 = 0;
+        int stackOut_266_0 = 0;
+        int stackOut_265_0 = 0;
+        int stackOut_250_0 = 0;
+        int stackOut_249_0 = 0;
+        int stackOut_284_0 = 0;
+        int stackOut_283_0 = 0;
+        int stackOut_217_0 = 0;
+        int stackOut_216_0 = 0;
+        int stackOut_227_0 = 0;
+        int stackOut_226_0 = 0;
+        int stackOut_146_0 = 0;
+        int stackOut_145_0 = 0;
+        int stackOut_173_0 = 0;
+        int stackOut_172_0 = 0;
+        int stackOut_156_0 = 0;
+        int stackOut_155_0 = 0;
+        int stackOut_190_0 = 0;
+        int stackOut_189_0 = 0;
         int stackOut_90_0 = 0;
         int stackOut_89_0 = 0;
-        int stackOut_95_0 = 0;
-        int stackOut_94_0 = 0;
-        int stackOut_127_0 = 0;
-        int stackOut_126_0 = 0;
-        int stackOut_113_0 = 0;
-        int stackOut_112_0 = 0;
+        int stackOut_130_0 = 0;
+        int stackOut_129_0 = 0;
+        int stackOut_116_0 = 0;
+        int stackOut_115_0 = 0;
+        int stackOut_97_0 = 0;
+        int stackOut_96_0 = 0;
         int stackOut_63_0 = 0;
         int stackOut_62_0 = 0;
         int stackOut_73_0 = 0;
@@ -179,8 +179,7 @@ final class ht implements Iterable {
               break L3;
             } else {
               L4: {
-                int discarded$22 = 0;
-                var12_double = mc.a(var10, var2) / var10;
+                var12_double = mc.a(var10, var2, false) / var10;
                 var14 = var12_double * var4;
                 var16 = var12_double * var6;
                 var18 = var12_double * var8;
@@ -221,18 +220,18 @@ final class ht implements Iterable {
               if (hd.field_K >= wm.field_C) {
                 L6: {
                   if (cq.field_f <= jr.field_Gb) {
-                    stackOut_238_0 = 0;
-                    stackIn_239_0 = stackOut_238_0;
+                    stackOut_241_0 = 0;
+                    stackIn_242_0 = stackOut_241_0;
                     break L6;
                   } else {
-                    stackOut_237_0 = 1;
-                    stackIn_239_0 = stackOut_237_0;
+                    stackOut_240_0 = 1;
+                    stackIn_242_0 = stackOut_240_0;
                     break L6;
                   }
                 }
                 L7: {
                   L8: {
-                    var12 = stackIn_239_0;
+                    var12 = stackIn_242_0;
                     jr.field_Gb = jr.field_Gb + tf.field_a;
                     if (var12 == 0) {
                       if (var12 != 0) {
@@ -243,18 +242,18 @@ final class ht implements Iterable {
                         } else {
                           L9: {
                             if (la.field_d <= hw.field_f) {
-                              stackOut_263_0 = 0;
-                              stackIn_264_0 = stackOut_263_0;
+                              stackOut_266_0 = 0;
+                              stackIn_267_0 = stackOut_266_0;
                               break L9;
                             } else {
-                              stackOut_262_0 = 1;
-                              stackIn_264_0 = stackOut_262_0;
+                              stackOut_265_0 = 1;
+                              stackIn_267_0 = stackOut_265_0;
                               break L9;
                             }
                           }
                           L10: {
                             L11: {
-                              var12 = stackIn_264_0;
+                              var12 = stackIn_267_0;
                               hw.field_f = hw.field_f + o.field_e;
                               if (var12 == 0) {
                                 break L11;
@@ -275,8 +274,7 @@ final class ht implements Iterable {
                               } else {
                                 L12: {
                                   hw.field_f = la.field_d;
-                                  int discarded$23 = -320;
-                                  sp.i();
+                                  sp.i(-320);
                                   if (0.0 == fw.field_G) {
                                     break L12;
                                   } else {
@@ -289,8 +287,7 @@ final class ht implements Iterable {
                               }
                             }
                           }
-                          int discarded$24 = -320;
-                          sp.i();
+                          sp.i(-320);
                           if (0.0 != fw.field_G) {
                             fw.field_G = fw.field_G * -0.9;
                             hw.field_i = (int)hw.field_f >> 3;
@@ -319,18 +316,18 @@ final class ht implements Iterable {
                         }
                         L14: {
                           if (la.field_d <= hw.field_f) {
-                            stackOut_247_0 = 0;
-                            stackIn_248_0 = stackOut_247_0;
+                            stackOut_250_0 = 0;
+                            stackIn_251_0 = stackOut_250_0;
                             break L14;
                           } else {
-                            stackOut_246_0 = 1;
-                            stackIn_248_0 = stackOut_246_0;
+                            stackOut_249_0 = 1;
+                            stackIn_251_0 = stackOut_249_0;
                             break L14;
                           }
                         }
                         L15: {
                           L16: {
-                            var12 = stackIn_248_0;
+                            var12 = stackIn_251_0;
                             hw.field_f = hw.field_f + o.field_e;
                             if (var12 == 0) {
                               break L16;
@@ -355,8 +352,7 @@ final class ht implements Iterable {
                           }
                         }
                         L17: {
-                          int discarded$25 = -320;
-                          sp.i();
+                          sp.i(-320);
                           if (0.0 == fw.field_G) {
                             break L17;
                           } else {
@@ -374,16 +370,16 @@ final class ht implements Iterable {
                 }
                 L18: {
                   if (la.field_d <= hw.field_f) {
-                    stackOut_281_0 = 0;
-                    stackIn_282_0 = stackOut_281_0;
+                    stackOut_284_0 = 0;
+                    stackIn_285_0 = stackOut_284_0;
                     break L18;
                   } else {
-                    stackOut_280_0 = 1;
-                    stackIn_282_0 = stackOut_280_0;
+                    stackOut_283_0 = 1;
+                    stackIn_285_0 = stackOut_283_0;
                     break L18;
                   }
                 }
-                var12 = stackIn_282_0;
+                var12 = stackIn_285_0;
                 hw.field_f = hw.field_f + o.field_e;
                 if (var12 == 0) {
                   L19: {
@@ -395,8 +391,7 @@ final class ht implements Iterable {
                       } else {
                         L20: {
                           hw.field_f = la.field_d;
-                          int discarded$26 = -320;
-                          sp.i();
+                          sp.i(-320);
                           if (0.0 == fw.field_G) {
                             break L20;
                           } else {
@@ -409,8 +404,7 @@ final class ht implements Iterable {
                       }
                     }
                   }
-                  int discarded$27 = -320;
-                  sp.i();
+                  sp.i(-320);
                   if (0.0 == fw.field_G) {
                     hw.field_i = (int)hw.field_f >> 3;
                     return;
@@ -434,8 +428,7 @@ final class ht implements Iterable {
                       }
                     }
                     L22: {
-                      int discarded$28 = -320;
-                      sp.i();
+                      sp.i(-320);
                       if (0.0 == fw.field_G) {
                         break L22;
                       } else {
@@ -448,8 +441,7 @@ final class ht implements Iterable {
                   } else {
                     L23: {
                       hw.field_f = la.field_d;
-                      int discarded$29 = -320;
-                      sp.i();
+                      sp.i(-320);
                       if (0.0 == fw.field_G) {
                         break L23;
                       } else {
@@ -465,19 +457,19 @@ final class ht implements Iterable {
                 L24: {
                   hd.field_K = wm.field_C;
                   if (cq.field_f <= jr.field_Gb) {
-                    stackOut_214_0 = 0;
-                    stackIn_215_0 = stackOut_214_0;
+                    stackOut_217_0 = 0;
+                    stackIn_218_0 = stackOut_217_0;
                     break L24;
                   } else {
-                    stackOut_213_0 = 1;
-                    stackIn_215_0 = stackOut_213_0;
+                    stackOut_216_0 = 1;
+                    stackIn_218_0 = stackOut_216_0;
                     break L24;
                   }
                 }
                 L25: {
                   L26: {
                     L27: {
-                      var12 = stackIn_215_0;
+                      var12 = stackIn_218_0;
                       jr.field_Gb = jr.field_Gb + tf.field_a;
                       if (var12 == 0) {
                         break L27;
@@ -504,18 +496,18 @@ final class ht implements Iterable {
                 }
                 L28: {
                   if (la.field_d <= hw.field_f) {
-                    stackOut_224_0 = 0;
-                    stackIn_225_0 = stackOut_224_0;
+                    stackOut_227_0 = 0;
+                    stackIn_228_0 = stackOut_227_0;
                     break L28;
                   } else {
-                    stackOut_223_0 = 1;
-                    stackIn_225_0 = stackOut_223_0;
+                    stackOut_226_0 = 1;
+                    stackIn_228_0 = stackOut_226_0;
                     break L28;
                   }
                 }
                 L29: {
                   L30: {
-                    var12 = stackIn_225_0;
+                    var12 = stackIn_228_0;
                     hw.field_f = hw.field_f + o.field_e;
                     if (var12 == 0) {
                       break L30;
@@ -540,8 +532,7 @@ final class ht implements Iterable {
                   }
                 }
                 L31: {
-                  int discarded$30 = -320;
-                  sp.i();
+                  sp.i(-320);
                   if (0.0 == fw.field_G) {
                     break L31;
                   } else {
@@ -555,17 +546,17 @@ final class ht implements Iterable {
             } else {
               L32: {
                 if (cq.field_f <= jr.field_Gb) {
-                  stackOut_143_0 = 0;
-                  stackIn_144_0 = stackOut_143_0;
+                  stackOut_146_0 = 0;
+                  stackIn_147_0 = stackOut_146_0;
                   break L32;
                 } else {
-                  stackOut_142_0 = 1;
-                  stackIn_144_0 = stackOut_142_0;
+                  stackOut_145_0 = 1;
+                  stackIn_147_0 = stackOut_145_0;
                   break L32;
                 }
               }
               L33: {
-                var12 = stackIn_144_0;
+                var12 = stackIn_147_0;
                 jr.field_Gb = jr.field_Gb + tf.field_a;
                 if (var12 == 0) {
                   if (var12 != 0) {
@@ -574,18 +565,18 @@ final class ht implements Iterable {
                     if (cq.field_f <= jr.field_Gb) {
                       L34: {
                         if (la.field_d <= hw.field_f) {
-                          stackOut_170_0 = 0;
-                          stackIn_171_0 = stackOut_170_0;
+                          stackOut_173_0 = 0;
+                          stackIn_174_0 = stackOut_173_0;
                           break L34;
                         } else {
-                          stackOut_169_0 = 1;
-                          stackIn_171_0 = stackOut_169_0;
+                          stackOut_172_0 = 1;
+                          stackIn_174_0 = stackOut_172_0;
                           break L34;
                         }
                       }
                       L35: {
                         L36: {
-                          var12 = stackIn_171_0;
+                          var12 = stackIn_174_0;
                           hw.field_f = hw.field_f + o.field_e;
                           if (var12 == 0) {
                             break L36;
@@ -606,8 +597,7 @@ final class ht implements Iterable {
                           } else {
                             L37: {
                               hw.field_f = la.field_d;
-                              int discarded$31 = -320;
-                              sp.i();
+                              sp.i(-320);
                               if (0.0 == fw.field_G) {
                                 break L37;
                               } else {
@@ -620,8 +610,7 @@ final class ht implements Iterable {
                           }
                         }
                       }
-                      int discarded$32 = -320;
-                      sp.i();
+                      sp.i(-320);
                       if (0.0 != fw.field_G) {
                         fw.field_G = fw.field_G * -0.9;
                         hw.field_i = (int)hw.field_f >> 3;
@@ -651,18 +640,18 @@ final class ht implements Iterable {
                     }
                     L39: {
                       if (la.field_d <= hw.field_f) {
-                        stackOut_153_0 = 0;
-                        stackIn_154_0 = stackOut_153_0;
+                        stackOut_156_0 = 0;
+                        stackIn_157_0 = stackOut_156_0;
                         break L39;
                       } else {
-                        stackOut_152_0 = 1;
-                        stackIn_154_0 = stackOut_152_0;
+                        stackOut_155_0 = 1;
+                        stackIn_157_0 = stackOut_155_0;
                         break L39;
                       }
                     }
                     L40: {
                       L41: {
-                        var12 = stackIn_154_0;
+                        var12 = stackIn_157_0;
                         hw.field_f = hw.field_f + o.field_e;
                         if (var12 == 0) {
                           break L41;
@@ -687,8 +676,7 @@ final class ht implements Iterable {
                       }
                     }
                     L42: {
-                      int discarded$33 = -320;
-                      sp.i();
+                      sp.i(-320);
                       if (0.0 == fw.field_G) {
                         break L42;
                       } else {
@@ -706,16 +694,16 @@ final class ht implements Iterable {
               }
               L43: {
                 if (la.field_d <= hw.field_f) {
-                  stackOut_187_0 = 0;
-                  stackIn_188_0 = stackOut_187_0;
+                  stackOut_190_0 = 0;
+                  stackIn_191_0 = stackOut_190_0;
                   break L43;
                 } else {
-                  stackOut_186_0 = 1;
-                  stackIn_188_0 = stackOut_186_0;
+                  stackOut_189_0 = 1;
+                  stackIn_191_0 = stackOut_189_0;
                   break L43;
                 }
               }
-              var12 = stackIn_188_0;
+              var12 = stackIn_191_0;
               hw.field_f = hw.field_f + o.field_e;
               if (var12 == 0) {
                 L44: {
@@ -727,8 +715,7 @@ final class ht implements Iterable {
                     } else {
                       L45: {
                         hw.field_f = la.field_d;
-                        int discarded$34 = -320;
-                        sp.i();
+                        sp.i(-320);
                         if (0.0 == fw.field_G) {
                           break L45;
                         } else {
@@ -741,8 +728,7 @@ final class ht implements Iterable {
                     }
                   }
                 }
-                int discarded$35 = -320;
-                sp.i();
+                sp.i(-320);
                 if (0.0 != fw.field_G) {
                   fw.field_G = fw.field_G * -0.9;
                   hw.field_i = (int)hw.field_f >> 3;
@@ -766,8 +752,7 @@ final class ht implements Iterable {
                     }
                   }
                   L47: {
-                    int discarded$36 = -320;
-                    sp.i();
+                    sp.i(-320);
                     if (0.0 == fw.field_G) {
                       break L47;
                     } else {
@@ -780,8 +765,7 @@ final class ht implements Iterable {
                 } else {
                   L48: {
                     hw.field_f = la.field_d;
-                    int discarded$37 = -320;
-                    sp.i();
+                    sp.i(-320);
                     if (0.0 == fw.field_G) {
                       break L48;
                     } else {
@@ -819,118 +803,121 @@ final class ht implements Iterable {
                   break L50;
                 }
               }
-              L51: {
-                var12 = stackIn_91_0;
-                jr.field_Gb = jr.field_Gb + tf.field_a;
-                if (var12 == 0) {
-                  break L51;
-                } else {
-                  if (jr.field_Gb <= cq.field_f) {
-                    break L51;
-                  } else {
-                    L52: {
-                      jr.field_Gb = cq.field_f;
-                      if (la.field_d <= hw.field_f) {
-                        stackOut_95_0 = 0;
-                        stackIn_96_0 = stackOut_95_0;
-                        break L52;
-                      } else {
-                        stackOut_94_0 = 1;
-                        stackIn_96_0 = stackOut_94_0;
-                        break L52;
-                      }
+              var12 = stackIn_91_0;
+              jr.field_Gb = jr.field_Gb + tf.field_a;
+              if (var12 != 0) {
+                if (jr.field_Gb > cq.field_f) {
+                  L51: {
+                    jr.field_Gb = cq.field_f;
+                    if (la.field_d <= hw.field_f) {
+                      stackOut_130_0 = 0;
+                      stackIn_131_0 = stackOut_130_0;
+                      break L51;
+                    } else {
+                      stackOut_129_0 = 1;
+                      stackIn_131_0 = stackOut_129_0;
+                      break L51;
                     }
+                  }
+                  L52: {
                     L53: {
-                      L54: {
-                        var12 = stackIn_96_0;
-                        hw.field_f = hw.field_f + o.field_e;
-                        if (var12 == 0) {
-                          break L54;
-                        } else {
-                          if (hw.field_f > la.field_d) {
-                            hw.field_f = la.field_d;
-                            break L53;
-                          } else {
-                            break L54;
-                          }
-                        }
-                      }
-                      if (var12 != 0) {
+                      var12 = stackIn_131_0;
+                      hw.field_f = hw.field_f + o.field_e;
+                      if (var12 == 0) {
                         break L53;
                       } else {
-                        if (la.field_d <= hw.field_f) {
-                          break L53;
-                        } else {
+                        if (hw.field_f > la.field_d) {
                           hw.field_f = la.field_d;
+                          break L52;
+                        } else {
                           break L53;
                         }
                       }
                     }
-                    L55: {
-                      int discarded$38 = -320;
-                      sp.i();
-                      if (0.0 == fw.field_G) {
+                    if (var12 != 0) {
+                      break L52;
+                    } else {
+                      if (la.field_d <= hw.field_f) {
+                        break L52;
+                      } else {
+                        hw.field_f = la.field_d;
+                        break L52;
+                      }
+                    }
+                  }
+                  L54: {
+                    sp.i(-320);
+                    if (0.0 == fw.field_G) {
+                      break L54;
+                    } else {
+                      fw.field_G = fw.field_G * -0.9;
+                      break L54;
+                    }
+                  }
+                  hw.field_i = (int)hw.field_f >> 3;
+                  return;
+                } else {
+                  L55: {
+                    if (var12 != 0) {
+                      break L55;
+                    } else {
+                      if (cq.field_f > jr.field_Gb) {
+                        jr.field_Gb = cq.field_f;
                         break L55;
                       } else {
-                        fw.field_G = fw.field_G * -0.9;
                         break L55;
                       }
                     }
-                    hw.field_i = (int)hw.field_f >> 3;
-                    return;
                   }
-                }
-              }
-              if (var12 != 0) {
-                L56: {
-                  if (la.field_d <= hw.field_f) {
-                    stackOut_127_0 = 0;
-                    stackIn_128_0 = stackOut_127_0;
-                    break L56;
-                  } else {
-                    stackOut_126_0 = 1;
-                    stackIn_128_0 = stackOut_126_0;
-                    break L56;
-                  }
-                }
-                L57: {
-                  L58: {
-                    var12 = stackIn_128_0;
-                    hw.field_f = hw.field_f + o.field_e;
-                    if (var12 == 0) {
-                      break L58;
+                  L56: {
+                    if (la.field_d <= hw.field_f) {
+                      stackOut_116_0 = 0;
+                      stackIn_117_0 = stackOut_116_0;
+                      break L56;
                     } else {
-                      if (hw.field_f > la.field_d) {
-                        hw.field_f = la.field_d;
+                      stackOut_115_0 = 1;
+                      stackIn_117_0 = stackOut_115_0;
+                      break L56;
+                    }
+                  }
+                  L57: {
+                    L58: {
+                      var12 = stackIn_117_0;
+                      hw.field_f = hw.field_f + o.field_e;
+                      if (var12 == 0) {
+                        break L58;
+                      } else {
+                        if (hw.field_f > la.field_d) {
+                          hw.field_f = la.field_d;
+                          break L57;
+                        } else {
+                          break L58;
+                        }
+                      }
+                    }
+                    if (var12 != 0) {
+                      break L57;
+                    } else {
+                      if (la.field_d <= hw.field_f) {
                         break L57;
                       } else {
-                        break L58;
+                        hw.field_f = la.field_d;
+                        break L57;
                       }
                     }
                   }
-                  if (var12 != 0) {
-                    break L57;
-                  } else {
-                    if (la.field_d <= hw.field_f) {
-                      break L57;
+                  L59: {
+                    sp.i(-320);
+                    if (0.0 == fw.field_G) {
+                      break L59;
                     } else {
-                      hw.field_f = la.field_d;
-                      break L57;
+                      fw.field_G = fw.field_G * -0.9;
+                      break L59;
                     }
                   }
+                  hw.field_i = (int)hw.field_f >> 3;
+                  return;
                 }
-                L59: {
-                  int discarded$39 = -320;
-                  sp.i();
-                  if (0.0 == fw.field_G) {
-                    break L59;
-                  } else {
-                    fw.field_G = fw.field_G * -0.9;
-                    break L59;
-                  }
-                }
-                hw.field_i = (int)hw.field_f >> 3;
-                return;
               } else {
                 L60: {
                   if (cq.field_f > jr.field_Gb) {
@@ -942,18 +929,18 @@ final class ht implements Iterable {
                 }
                 L61: {
                   if (la.field_d <= hw.field_f) {
-                    stackOut_113_0 = 0;
-                    stackIn_114_0 = stackOut_113_0;
+                    stackOut_97_0 = 0;
+                    stackIn_98_0 = stackOut_97_0;
                     break L61;
                   } else {
-                    stackOut_112_0 = 1;
-                    stackIn_114_0 = stackOut_112_0;
+                    stackOut_96_0 = 1;
+                    stackIn_98_0 = stackOut_96_0;
                     break L61;
                   }
                 }
                 L62: {
                   L63: {
-                    var12 = stackIn_114_0;
+                    var12 = stackIn_98_0;
                     hw.field_f = hw.field_f + o.field_e;
                     if (var12 == 0) {
                       break L63;
@@ -978,8 +965,7 @@ final class ht implements Iterable {
                   }
                 }
                 L64: {
-                  int discarded$40 = -320;
-                  sp.i();
+                  sp.i(-320);
                   if (0.0 == fw.field_G) {
                     break L64;
                   } else {
@@ -1069,8 +1055,7 @@ final class ht implements Iterable {
                 }
               }
               L72: {
-                int discarded$41 = -320;
-                sp.i();
+                sp.i(-320);
                 if (0.0 == fw.field_G) {
                   break L72;
                 } else {
@@ -1091,8 +1076,7 @@ final class ht implements Iterable {
               break L73;
             } else {
               L74: {
-                int discarded$42 = 0;
-                var12_double = mc.a(var10, var2) / var10;
+                var12_double = mc.a(var10, var2, false) / var10;
                 var14 = var12_double * var4;
                 var16 = var12_double * var6;
                 var18 = var12_double * var8;
@@ -1235,8 +1219,7 @@ final class ht implements Iterable {
             }
           }
           L84: {
-            int discarded$43 = -320;
-            sp.i();
+            sp.i(-320);
             if (0.0 == fw.field_G) {
               break L84;
             } else {
@@ -1263,7 +1246,7 @@ final class ht implements Iterable {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_c = null;
         field_a = null;

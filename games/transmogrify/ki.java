@@ -12,7 +12,7 @@ final class ki extends h {
         var2.f(6389, 0);
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         return si.field_l > 250;
     }
 
@@ -195,14 +195,13 @@ final class ki extends h {
     ki(ki param0, boolean param1) {
         this();
         try {
-            int discarded$0 = 0;
-            param0.a(param1, (ki) this);
+            param0.a(param1, (ki) this, false);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) (Object) runtimeException, "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final void a(boolean param0, ki param1) {
+    private final void a(boolean param0, ki param1, boolean param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         ab var5 = null;

@@ -48,7 +48,7 @@ final class qb extends hd {
         return (int)((qb) this).f((byte) 98);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_Qb = null;
         field_Vb = null;
         field_lc = null;

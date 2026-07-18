@@ -8,7 +8,7 @@ final class tj {
     static String field_b;
     private static String field_z;
 
-    final static String a(String param0, String param1, String param2) {
+    final static String a(String param0, String param1, String param2, byte param3) {
         int var5 = fleas.field_A ? 1 : 0;
         int var4 = param1.indexOf(param0);
         while (var4 != -1) {
@@ -18,7 +18,7 @@ final class tj {
         return param1;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
     }
 

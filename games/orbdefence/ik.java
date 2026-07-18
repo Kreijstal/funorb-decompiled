@@ -11,7 +11,7 @@ final class ik extends ca {
     dl[] field_g;
     short[] field_m;
 
-    final static hf a(bb param0) {
+    final static hf a(bb param0, int param1) {
         hf var2 = null;
         RuntimeException var2_ref = null;
         hf stackIn_1_0 = null;
@@ -186,8 +186,7 @@ final class ik extends ca {
                   }
                 }
               } else {
-                int discarded$2 = 0;
-                jk.a(param1, var3);
+                jk.a(param1, var3, false);
                 var3 = (ef) (Object) sd.field_a.d(853);
                 continue L1;
               }
@@ -202,6 +201,7 @@ final class ik extends ca {
 
     final static int a(ee param0, ee param1, int param2) {
         RuntimeException var3 = null;
+        Object var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -245,8 +245,8 @@ final class ik extends ca {
                 break L1;
               }
             }
-            int discarded$2 = -23739;
-            stackOut_2_0 = jk.a(0, 0, param0, (String) null, param1, false);
+            var4 = null;
+            stackOut_2_0 = jk.a(0, 0, param0, (String) null, param1, false, -23739);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

@@ -71,21 +71,20 @@ final class ip implements Iterator {
                   break L0;
                 } else {
                   L2: {
-                    int discarded$111 = -95;
-                    if (!ng.a(param1)) {
+                    if (!ng.a(param1, (byte) -95)) {
                       var6 = param1.b((byte) 127, a.a(var5 + -1, 1));
                       var4[var5] = var4[var6];
                       var5++;
                       break L2;
                     } else {
                       var6_ref_hc = new hc();
-                      int discarded$112 = param1.b((byte) 122, 24);
-                      int discarded$113 = param1.b((byte) 80, 24);
+                      int discarded$126 = param1.b((byte) 122, 24);
+                      int discarded$127 = param1.b((byte) 80, 24);
                       var6_ref_hc.field_a = param1.b((byte) 87, 24);
-                      int discarded$114 = param1.b((byte) 100, 9);
-                      int discarded$115 = param1.b((byte) 122, 12);
-                      int discarded$116 = param1.b((byte) 106, 12);
-                      int discarded$117 = param1.b((byte) 122, 12);
+                      int discarded$128 = param1.b((byte) 100, 9);
+                      int discarded$129 = param1.b((byte) 122, 12);
+                      int discarded$130 = param1.b((byte) 106, 12);
+                      int discarded$131 = param1.b((byte) 122, 12);
                       var4[var5] = var6_ref_hc;
                       var5++;
                       break L2;
@@ -139,7 +138,7 @@ final class ip implements Iterator {
         return ~np.field_a.field_fc == ~ec.field_p ? true : false;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_h = null;
         field_g = null;

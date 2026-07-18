@@ -29,12 +29,12 @@ final class k {
         field_h = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         ug.field_n = new dg();
         bg.field_K.c(0, (ee) (Object) ug.field_n);
     }
 
-    final static int a(byte[] param0, int param1) {
+    final static int a(byte[] param0, int param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

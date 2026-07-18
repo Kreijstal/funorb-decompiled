@@ -222,8 +222,7 @@ final class mo implements Runnable {
                       break L1;
                     }
                   } else {
-                    int discarded$2 = 23;
-                    vg.a(1L);
+                    vg.a(1L, (byte) 23);
                     continue L2;
                   }
                 }

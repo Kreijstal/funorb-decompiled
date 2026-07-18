@@ -16,7 +16,7 @@ final class qd extends pv {
         ((qd) this).field_f.field_k = ((qd) this).field_f.b(true);
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_k = null;
         field_p = null;
         field_l = null;
@@ -39,9 +39,9 @@ final class qd extends pv {
         int stackOut_10_0 = 0;
         Object stackOut_10_1 = null;
         int stackOut_10_2 = 0;
-        int fieldTemp$4 = ((qd) this).field_g + 1;
+        int fieldTemp$2 = ((qd) this).field_g + 1;
         ((qd) this).field_g = ((qd) this).field_g + 1;
-        if (fieldTemp$4 <= this.c(false)) {
+        if (fieldTemp$2 <= this.c(false)) {
           if (((qd) this).field_m != 0) {
             L0: {
               if (1 == ((qd) this).field_g) {
@@ -82,8 +82,7 @@ final class qd extends pv {
                   }
                 }
                 if (stackIn_12_0 <= this.c(stackIn_12_2 != 0) - 25) {
-                  int discarded$5 = -102;
-                  ((qd) this).field_f.field_k = this.b();
+                  ((qd) this).field_f.field_k = this.b(-102);
                   break L1;
                 } else {
                   if (!param0) {
@@ -118,11 +117,11 @@ final class qd extends pv {
         return 40 * Math.abs(((qd) this).field_m) / 39;
     }
 
-    private final int b() {
+    private final int b(int param0) {
         return (int)((double)(((qd) this).field_g - 18) * ((qd) this).field_j) - -((qd) this).field_o;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;

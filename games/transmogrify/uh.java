@@ -39,7 +39,7 @@ abstract class uh {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_d = null;
         field_o = null;
         field_r = null;
@@ -133,8 +133,7 @@ abstract class uh {
         try {
           L0: {
             L1: {
-              int discarded$3 = 1024;
-              aj.a(param0, param1, 22290, param4, param5, param1, param3);
+              aj.a(param0, param1, 22290, param4, param5, param1, param3, 1024);
               if (param2 == -21) {
                 break L1;
               } else {

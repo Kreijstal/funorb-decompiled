@@ -125,7 +125,7 @@ final class kf implements uk {
         return ce.field_e;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_d = null;
         field_b = null;
@@ -241,8 +241,7 @@ final class kf implements uk {
                   }
                 }
               }
-              int discarded$1 = 124;
-              vj.b();
+              vj.b((byte) 124);
               break L1;
             }
             var66 = new int[param6.field_D];
@@ -579,7 +578,7 @@ final class kf implements uk {
         }
     }
 
-    final static String b() {
+    final static String b(int param0) {
         return kl.field_o;
     }
 

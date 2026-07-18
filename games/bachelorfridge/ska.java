@@ -5,7 +5,7 @@ final class ska extends k {
     private int field_l;
     static kv field_k;
 
-    public static void e() {
+    public static void e(byte param0) {
         field_k = null;
     }
 

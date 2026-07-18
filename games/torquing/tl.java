@@ -15,7 +15,7 @@ final class tl extends eh {
     private int field_m;
     static int field_u;
 
-    final static ak a(fj param0) {
+    final static ak a(fj param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         ak stackIn_1_0 = null;
@@ -114,7 +114,7 @@ final class tl extends eh {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_s = null;
         field_l = null;
         field_p = null;
@@ -740,8 +740,7 @@ final class tl extends eh {
         try {
           L0: {
             L1: {
-              int discarded$2 = 0;
-              var3_double = ap.b(param1, param0, ((tl) this).field_g) - 30.0;
+              var3_double = ap.b(param1, param0, ((tl) this).field_g, 0) - 30.0;
               if ((double)this.e(param0 ^ -127) <= var3_double) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;

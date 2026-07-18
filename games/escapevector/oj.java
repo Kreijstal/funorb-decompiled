@@ -24,7 +24,7 @@ final class oj extends hc {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_K = null;
         field_N = null;
         field_O = null;
@@ -286,14 +286,14 @@ final class oj extends hc {
         }
     }
 
-    final static int[] k() {
+    final static int[] k(int param0) {
         if (!(null == bk.field_r)) {
             return bk.field_r.d(31304);
         }
         return null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!mj.a((byte) 93)) {
             return;
         }

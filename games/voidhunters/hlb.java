@@ -84,7 +84,7 @@ final class hlb extends rqa {
         return stackIn_4_0;
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void a(int param0, boolean param1, int param2, int param3) {
         qea.a(nna.field_w, -57, param1, param2, qs.field_c, param0, jk.field_Cb);
     }
 

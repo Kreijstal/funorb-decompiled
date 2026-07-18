@@ -224,20 +224,17 @@ final class ar extends vd implements pc, lja {
           L0: {
             L1: {
               if (param0 == 0) {
-                int discarded$29 = 12;
-                ffa.a("terms.ws");
+                ffa.a("terms.ws", 12);
                 break L1;
               } else {
                 if (param0 == 1) {
-                  int discarded$30 = 12;
-                  ffa.a("privacy.ws");
+                  ffa.a("privacy.ws", 12);
                   break L1;
                 } else {
                   if (2 != param0) {
                     break L1;
                   } else {
-                    int discarded$31 = 12;
-                    ffa.a("conduct.ws");
+                    ffa.a("conduct.ws", 12);
                     break L1;
                   }
                 }
@@ -319,7 +316,6 @@ final class ar extends vd implements pc, lja {
             ((ar) this).field_F = param0;
             ((ar) this).field_E = new hf(tj.field_a, (pl) null);
             ((ar) this).field_E.field_f = (qda) (Object) new ff();
-            int discarded$1 = -121;
             var7 = lga.a(true, new String[2], aja.field_m);
             var3 = 20;
             var4 = new gha(jca.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, jca.field_a.field_u, -1, 2147483647, true);
@@ -451,7 +447,7 @@ final class ar extends vd implements pc, lja {
         return stackIn_10_0;
     }
 
-    private final String d() {
+    private final String d(byte param0) {
         return "<u=2164A2><col=2164A2>";
     }
 

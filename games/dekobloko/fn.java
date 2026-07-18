@@ -17,7 +17,7 @@ final class fn extends mk {
         return var3;
     }
 
-    final static void a(ji param0, ji param1, ji param2) {
+    final static void a(ji param0, ji param1, ji param2, int param3) {
         RuntimeException var4 = null;
         pi[] var5 = null;
         pi[][] var6 = null;
@@ -242,7 +242,7 @@ final class fn extends mk {
     fn() {
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_f = null;
     }

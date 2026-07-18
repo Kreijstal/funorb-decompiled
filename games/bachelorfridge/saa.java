@@ -24,7 +24,7 @@ final class saa {
     boolean field_i;
     private int field_n;
 
-    private final void c() {
+    private final void c(byte param0) {
         int var2_int = 0;
         jfa var2 = null;
         int var3 = 0;
@@ -755,7 +755,7 @@ final class saa {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_r = null;
         field_u = null;
         int var1 = -41;
@@ -791,7 +791,7 @@ final class saa {
         }
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         sna var2 = mka.a(13558251, 13558251, 13558251, (byte) -124, (po) (Object) jha.field_g, 13558251, 16777215, 13558251);
         var2.field_eb = wd.field_w;
         var2.field_A = bla.field_p;
@@ -1124,8 +1124,7 @@ final class saa {
             break L7;
           } else {
             if (param2) {
-              int discarded$1 = 1;
-              kla.b();
+              kla.b(true);
               break L7;
             } else {
               break L7;
@@ -1228,8 +1227,7 @@ final class saa {
             ((saa) this).field_d.field_c.field_k.d(-123);
             ((saa) this).field_q = null;
             ln.e(-122);
-            int discarded$10 = 90;
-            mea.e();
+            mea.e((byte) 90);
             if (bp.e(-29919)) {
               if (!hs.a(false, nga.field_i)) {
                 lg.a(true, 0, param0);
@@ -1319,11 +1317,9 @@ final class saa {
           L0: {
             ((saa) this).field_d = new ua(param0, mg.field_m);
             ((saa) this).field_d.field_c.a(false, (saa) this);
-            int discarded$6 = 13;
-            this.c();
-            nl discarded$7 = new nl(((saa) this).field_d.field_c);
-            int discarded$8 = 0;
-            this.a();
+            this.c((byte) 13);
+            nl discarded$2 = new nl(((saa) this).field_d.field_c);
+            this.a(false);
             ((saa) this).field_g = -1;
             ((saa) this).field_l = -1;
             var5 = nga.field_i;

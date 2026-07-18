@@ -217,9 +217,9 @@ final class at extends ofa implements tsa {
                               if (var3_ref_dh__[var5] == null) {
                                 break L5;
                               } else {
-                                int incrementValue$5 = var4;
+                                int incrementValue$1 = var4;
                                 var4++;
-                                ((at) this).field_P[incrementValue$5] = var3_ref_dh__[var5];
+                                ((at) this).field_P[incrementValue$1] = var3_ref_dh__[var5];
                                 break L5;
                               }
                             }
@@ -311,8 +311,7 @@ final class at extends ofa implements tsa {
             }
             L11: {
               ((at) this).field_M = stackIn_31_1 != 0;
-              int discarded$6 = 97;
-              if (!sta.g()) {
+              if (!sta.g((byte) 97)) {
                 stackOut_33_0 = 0;
                 stackIn_34_0 = stackOut_33_0;
                 break L11;
@@ -523,13 +522,11 @@ final class at extends ofa implements tsa {
             }
             L23: {
               L24: {
-                int discarded$7 = 30815;
-                ((at) this).field_Z = this.a((qc) this, po.field_i);
+                ((at) this).field_Z = this.a((qc) this, po.field_i, 30815);
                 var5 = ((at) this).field_Z.field_m / 2 + ((at) this).field_Z.field_i;
                 ((at) this).field_Z.field_m = 150;
                 ((at) this).field_Z.field_i = -((at) this).field_Z.field_m + (var5 - 20);
-                int discarded$8 = 30815;
-                ((at) this).field_L = this.a((qc) this, wm.field_b);
+                ((at) this).field_L = this.a((qc) this, wm.field_b, 30815);
                 ((at) this).field_L.field_y = false;
                 ((at) this).field_L.field_i = var5 - -20;
                 ((at) this).field_L.field_m = ((at) this).field_Z.field_m;
@@ -567,8 +564,7 @@ final class at extends ofa implements tsa {
             }
             L26: {
               ((at) this).field_O = false;
-              int discarded$9 = -46;
-              var6 = this.g();
+              var6 = this.g(-46);
               if (var6 == null) {
                 break L26;
               } else {
@@ -1149,8 +1145,7 @@ final class at extends ofa implements tsa {
           L0: {
             L1: {
               if (param2 == ((at) this).field_Z) {
-                int discarded$1 = -8266;
-                this.h();
+                this.h(-8266);
                 break L1;
               } else {
                 if (((at) this).field_L != param2) {
@@ -1250,7 +1245,7 @@ final class at extends ofa implements tsa {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         if (!((at) this).field_B) {
             return;
         }
@@ -1266,34 +1261,33 @@ final class at extends ofa implements tsa {
         rj stackIn_2_0 = null;
         rj stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         rj stackOut_0_0 = null;
         rj stackOut_2_0 = null;
         int stackOut_2_1 = 0;
         rj stackOut_1_0 = null;
         int stackOut_1_1 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         try {
           L0: {
             L1: {
               ((at) this).field_S = param1;
-              boolean discarded$167 = param1.a((ae) this, false);
-              int discarded$168 = -46;
-              var3 = this.g();
+              boolean discarded$3 = param1.a((ae) this, false);
+              var3 = this.g(-46);
               stackOut_0_0 = ((at) this).field_L;
               stackIn_2_0 = stackOut_0_0;
               stackIn_1_0 = stackOut_0_0;
@@ -1312,14 +1306,10 @@ final class at extends ofa implements tsa {
               }
             }
             L2: {
-              L3: {
-                stackIn_3_0.field_y = stackIn_3_1 != 0;
-                if (param1 != ((at) this).field_V) {
-                  break L3;
-                } else {
-                  if (var3 != param1) {
-                    break L3;
-                  } else {
+              stackIn_3_0.field_y = stackIn_3_1 != 0;
+              if (param1 == ((at) this).field_V) {
+                if (var3 == param1) {
+                  L3: {
                     if (((at) this).field_ab != null) {
                       L4: {
                         var4 = ((at) this).field_ab.i((byte) 126);
@@ -1327,26 +1317,30 @@ final class at extends ofa implements tsa {
                         if (wba.field_o.field_s != var5.field_a) {
                           break L4;
                         } else {
-                          if (wba.field_o.field_p == var5.field_c) {
-                            break L3;
-                          } else {
+                          if (wba.field_o.field_p != var5.field_c) {
                             break L4;
+                          } else {
+                            this.j((byte) -30);
+                            break L2;
                           }
                         }
                       }
                       ((at) this).field_L.field_y = true;
                       break L3;
                     } else {
-                      int discarded$169 = -30;
-                      this.j();
-                      break L2;
+                      break L3;
                     }
                   }
+                  this.j((byte) -30);
+                  break L2;
+                } else {
+                  this.j((byte) -30);
+                  break L2;
                 }
+              } else {
+                this.j((byte) -30);
+                break L2;
               }
-              int discarded$170 = -30;
-              this.j();
-              break L2;
             }
             break L0;
           }
@@ -1354,39 +1348,39 @@ final class at extends ofa implements tsa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3_ref;
-            stackOut_13_1 = new StringBuilder().append("at.D(").append(20306).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackOut_16_0 = (RuntimeException) var3_ref;
+            stackOut_16_1 = new StringBuilder().append("at.D(").append(20306).append(',');
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
     }
 
-    final static boolean f() {
+    final static boolean f(int param0) {
         return ota.a(ica.field_b, (byte) 13, mn.field_n);
     }
 
-    private final rj a(qc param0, String param1) {
+    private final rj a(qc param0, String param1, int param2) {
         rj var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -1492,7 +1486,7 @@ final class at extends ofa implements tsa {
         return stackIn_3_0;
     }
 
-    private final rj g() {
+    private final rj g(int param0) {
         if (dq.field_f != null) {
             return ((at) this).field_V;
         }
@@ -1513,17 +1507,13 @@ final class at extends ofa implements tsa {
           L1: {
             var3 = TombRacer.field_G ? 1 : 0;
             if (((at) this).field_W == ((at) this).field_S) {
-              int discarded$4 = 0;
-              og.b();
-              int discarded$5 = 0;
-              kla.b();
+              og.b(0);
+              kla.b(0);
               break L1;
             } else {
               if (((at) this).field_S == ((at) this).field_N) {
-                int discarded$6 = 0;
-                og.b();
-                int discarded$7 = -117;
-                cva.a();
+                og.b(0);
+                cva.a(-117);
                 break L1;
               } else {
                 if (((at) this).field_S == ((at) this).field_V) {
@@ -1556,7 +1546,7 @@ final class at extends ofa implements tsa {
         }
     }
 
-    private final void j() {
+    private final void j(byte param0) {
         int var3 = 0;
         rj var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
@@ -1568,7 +1558,7 @@ final class at extends ofa implements tsa {
         }
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_Q = null;
         field_R = null;
         int var1 = -46;
@@ -1621,7 +1611,7 @@ final class at extends ofa implements tsa {
                       if (!var7.field_f) {
                         break L3;
                       } else {
-                        boolean discarded$6 = var7.a((ae) this, false);
+                        boolean discarded$3 = var7.a((ae) this, false);
                         break L3;
                       }
                     }
@@ -1638,8 +1628,7 @@ final class at extends ofa implements tsa {
                 if (vpa.a(127)) {
                   break L4;
                 } else {
-                  int discarded$7 = -8266;
-                  this.h();
+                  this.h(-8266);
                   ((at) this).field_z.c((ae) (Object) new at(((at) this).field_z), 109);
                   break L4;
                 }

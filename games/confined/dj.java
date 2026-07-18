@@ -253,12 +253,12 @@ final class dj extends ee {
         }
     }
 
-    public static void n() {
+    public static void n(int param0) {
         field_W = null;
         field_Ib = null;
     }
 
-    final static Boolean i() {
+    final static Boolean i(byte param0) {
         Boolean var1 = ca.field_o;
         ca.field_o = null;
         return var1;
@@ -3578,44 +3578,28 @@ final class dj extends ee {
         double var7 = 0.0;
         double var9 = 0.0;
         double var11 = 0.0;
-        ka var13 = null;
-        L0: {
-          ((dj) this).field_A.field_m.m(10959);
-          ((dj) this).field_A.field_m.field_D = ((dj) this).field_A.field_m.field_O;
-          ((dj) this).field_A.field_m.field_E = ((dj) this).field_A.field_m.field_T;
-          ((dj) this).field_A.field_m.field_t = ((dj) this).field_A.field_m.field_L;
-          ((dj) this).field_A.field_m.field_X = new da(((dj) this).field_A.field_m.field_W);
-          var13 = ((dj) this).a((byte) 107, ri.field_b, 2.0);
-          var13.field_M.field_w = ((dj) this).field_C * 2.0;
-          int discarded$3 = -1;
-          this.m();
-          int discarded$4 = 94;
-          this.h();
-          int discarded$5 = 0;
-          this.d();
-          if (((dj) this).field_A.field_L > 0) {
+        ((dj) this).field_A.field_m.m(10959);
+        ((dj) this).field_A.field_m.field_D = ((dj) this).field_A.field_m.field_O;
+        ((dj) this).field_A.field_m.field_E = ((dj) this).field_A.field_m.field_T;
+        ((dj) this).field_A.field_m.field_t = ((dj) this).field_A.field_m.field_L;
+        ((dj) this).field_A.field_m.field_X = new da(((dj) this).field_A.field_m.field_W);
+        ka var13 = ((dj) this).a((byte) 107, ri.field_b, 2.0);
+        var13.field_M.field_w = ((dj) this).field_C * 2.0;
+        this.m(-1);
+        this.h((byte) 94);
+        this.d(false);
+        if (!(((dj) this).field_A.field_L <= 0)) {
             var3 = ((dj) this).field_A.field_A * ((dj) this).field_A.field_A;
             var5 = ((dj) this).field_E - ((dj) this).field_A.field_s;
             var7 = ((dj) this).field_t - ((dj) this).field_A.field_r;
             var9 = -((dj) this).field_A.field_E + ((dj) this).field_D;
             var11 = var7 * var7 + var5 * var5 + var9 * var9;
-            if (var11 > var3) {
-              break L0;
-            } else {
-              di.a(-30867, 245, 10);
-              break L0;
+            if (var11 <= var3) {
+                di.a(-30867, 245, 10);
             }
-          } else {
-            break L0;
-          }
         }
-        L1: {
-          if (param0 == 26402) {
-            break L1;
-          } else {
+        if (param0 != 26402) {
             ((dj) this).field_Sb = false;
-            break L1;
-          }
         }
     }
 
@@ -3635,8 +3619,7 @@ final class dj extends ee {
             if (!(((dj) this).field_lb < 16)) {
                 var3 = new double[12];
                 ((dj) this).field_jb.a((byte) 34, var3);
-                int discarded$0 = 0;
-                rf.a(param0, 0.015625 * (double)((dj) this).field_lb, ((dj) this).field_pb, (dj) this, var3);
+                rf.a(param0, 0.015625 * (double)((dj) this).field_lb, ((dj) this).field_pb, (dj) this, var3, false);
             }
             ((dj) this).field_Bb.a(-96, param0);
             int var3_int = 81 % ((param1 - -2) / 62);
@@ -3791,7 +3774,7 @@ final class dj extends ee {
         }
     }
 
-    private final void d() {
+    private final void d(boolean param0) {
         ((dj) this).field_X = true;
         if (((dj) this).field_yb > 0) {
             ((dj) this).field_xb = 120;
@@ -3880,7 +3863,7 @@ final class dj extends ee {
         return stackIn_6_0 != 0;
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         ((dj) this).field_Bb.b(-790952351);
         ((dj) this).field_Z = 0;
         ((dj) this).field_lb = 0;
@@ -3919,7 +3902,7 @@ final class dj extends ee {
         return true;
     }
 
-    private final void m() {
+    private final void m(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

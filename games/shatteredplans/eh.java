@@ -79,7 +79,7 @@ final class eh extends ek implements bp {
         return (hb) (Object) stackIn_1_0;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_N = null;
         field_I = null;
         field_L = null;

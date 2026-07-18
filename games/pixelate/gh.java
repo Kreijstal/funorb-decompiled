@@ -13,8 +13,7 @@ class gh extends uc {
     public final void a(ng param0, byte param1, int param2, int param3, boolean param4) {
         try {
             if (param4) {
-                int discarded$0 = -51;
-                kk.a(param3 - -param0.field_z, param0.field_C, param0.field_p + param2, param0.field_E);
+                kk.a(param3 - -param0.field_z, param0.field_C, param0.field_p + param2, param0.field_E, (byte) -51);
             }
             super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
@@ -41,16 +40,14 @@ class gh extends uc {
               }
             }
             L2: while (true) {
-              int discarded$13 = -91;
-              if (!lf.a()) {
+              if (!lf.a((byte) -91)) {
                 break L0;
               } else {
                 var1.g(8, 15514);
-                int fieldTemp$14 = var1.field_m + 1;
+                int fieldTemp$5 = var1.field_m + 1;
                 var1.field_m = var1.field_m + 1;
-                var2 = fieldTemp$14;
-                int discarded$15 = -20;
-                ao.a(var1);
+                var2 = fieldTemp$5;
+                ao.a(var1, -20);
                 aa.field_f.f(var1.field_m + -var2, param0 ^ -9);
                 continue L2;
               }
@@ -63,7 +60,7 @@ class gh extends uc {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_q = null;
         field_s = null;
         field_w = null;
@@ -71,7 +68,7 @@ class gh extends uc {
         field_r = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;

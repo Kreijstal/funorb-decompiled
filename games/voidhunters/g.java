@@ -74,10 +74,9 @@ final class g extends rqa {
         return stackIn_3_0;
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         System.out.println("load_settings(\"");
-        int discarded$0 = 106;
-        ug.e();
+        ug.e((byte) 106);
         System.out.println("\")");
     }
 

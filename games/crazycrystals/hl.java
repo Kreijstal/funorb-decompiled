@@ -391,30 +391,28 @@ final class hl extends l {
             break L4;
           } else {
             var8 = null;
-            boolean discarded$8 = hl.a((java.applet.Applet) null, 102);
+            boolean discarded$5 = hl.a((java.applet.Applet) null, 102);
             break L4;
           }
         }
         L5: {
           if (lj.field_b == 1) {
-            int discarded$9 = var9.c((byte) -7);
-            String discarded$10 = var9.i(111);
+            int discarded$6 = var9.c((byte) -7);
+            String discarded$7 = var9.i(111);
             break L5;
           } else {
             if (lj.field_b != 4) {
               break L5;
             } else {
-              int discarded$11 = var9.c((byte) -7);
-              String discarded$12 = var9.i(111);
+              int discarded$8 = var9.c((byte) -7);
+              String discarded$9 = var9.i(111);
               break L5;
             }
           }
         }
         L6: {
           if (!param1) {
-            int discarded$13 = 80;
-            int discarded$14 = 116;
-            fb.field_b = s.a((ng) (Object) var9);
+            fb.field_b = s.a((ng) (Object) var9, 116, 80);
             so.field_f = null;
             break L6;
           } else {
@@ -441,8 +439,7 @@ final class hl extends l {
               decompiledCaughtException = decompiledCaughtParameter0;
               L9: {
                 var6 = (Exception) (Object) decompiledCaughtException;
-                int discarded$15 = 21862;
-                wp.a((Throwable) (Object) var6, "CC1");
+                wp.a((Throwable) (Object) var6, "CC1", 21862);
                 fb.field_b = null;
                 so.field_f = null;
                 break L9;

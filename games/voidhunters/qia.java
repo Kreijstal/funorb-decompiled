@@ -67,7 +67,7 @@ final class qia extends rqa {
         return stackIn_1_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
         field_p = null;
         int var1 = 0;

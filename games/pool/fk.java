@@ -71,8 +71,7 @@ final class fk extends oo {
                 L2: while (true) {
                   if (var3_int >= 16) {
                     v.field_i = ta.a(new int[4], param1 + -22022);
-                    int discarded$1 = 10;
-                    this.o();
+                    this.o(10);
                     ((fk) this).field_K = new ji[12];
                     var3_int = 0;
                     L3: while (true) {
@@ -166,23 +165,23 @@ final class fk extends oo {
           if (var6 == 5) {
             var6 = ga.a(4, true, ea.field_r);
             if (0 == var6) {
-              kf discarded$14 = kp.a(100, ((fk) this).field_hb, param3, param1);
+              kf discarded$12 = kp.a(100, ((fk) this).field_hb, param3, param1);
               break L0;
             } else {
               if (var6 != 1) {
                 if (var6 == 2) {
-                  kf discarded$15 = kp.a(100, ((fk) this).field_db, param3, param1);
+                  kf discarded$13 = kp.a(100, ((fk) this).field_db, param3, param1);
                   break L0;
                 } else {
                   if (var6 == 3) {
-                    kf discarded$16 = kp.a(100, ((fk) this).field_T, param3, param1);
+                    kf discarded$14 = kp.a(100, ((fk) this).field_T, param3, param1);
                     break L0;
                   } else {
                     break L0;
                   }
                 }
               } else {
-                kf discarded$17 = kp.a(100, ((fk) this).field_N, param3, param1);
+                kf discarded$15 = kp.a(100, ((fk) this).field_N, param3, param1);
                 break L0;
               }
             }
@@ -190,21 +189,21 @@ final class fk extends oo {
             if (2 != var6) {
               if (3 != var6) {
                 if (var6 == 7) {
-                  kf discarded$18 = kp.a(100, ((fk) this).field_W, param3, param1);
+                  kf discarded$16 = kp.a(100, ((fk) this).field_W, param3, param1);
                   break L0;
                 } else {
                   if (var6 == 8) {
-                    kf discarded$19 = kp.a(100, ((fk) this).field_Q, param3, param1);
+                    kf discarded$17 = kp.a(100, ((fk) this).field_Q, param3, param1);
                     break L0;
                   } else {
                     if (var6 != 6) {
                       if (var6 == 4) {
-                        kf discarded$20 = kp.a(100, ((fk) this).field_J, param3, param1);
+                        kf discarded$18 = kp.a(100, ((fk) this).field_J, param3, param1);
                         break L0;
                       } else {
                         if (var6 != 9) {
                           if (var6 == 10) {
-                            kf discarded$21 = kp.a(100, ((fk) this).field_fb, param3, param1 * 64 >> 8);
+                            kf discarded$19 = kp.a(100, ((fk) this).field_fb, param3, param1 * 64 >> 8);
                             break L0;
                           } else {
                             break L0;
@@ -218,28 +217,26 @@ final class fk extends oo {
                               break L1;
                             }
                           }
-                          int discarded$22 = 0;
-                          int discarded$23 = 256;
-                          ((fk) this).field_bb = nb.a(((fk) this).field_U);
+                          ((fk) this).field_bb = nb.a(((fk) this).field_U, 256, 0);
                           ((fk) this).field_bb.e(-1);
-                          kf discarded$24 = mn.a(-24296, ((fk) this).field_bb);
+                          kf discarded$20 = mn.a(-24296, ((fk) this).field_bb);
                           ((fk) this).field_bb.d(4096, 16 * param1 >> 8);
                           break L0;
                         }
                       }
                     } else {
-                      kf discarded$25 = kp.a(100, ((fk) this).field_O, param3, param1);
+                      kf discarded$21 = kp.a(100, ((fk) this).field_O, param3, param1);
                       System.out.println("playing respot the white");
                       break L0;
                     }
                   }
                 }
               } else {
-                kf discarded$26 = kp.a(100, ((fk) this).field_Y, param3, param1);
+                kf discarded$22 = kp.a(100, ((fk) this).field_Y, param3, param1);
                 break L0;
               }
             } else {
-              kf discarded$27 = kp.a(100, ((fk) this).field_P, param3, param1);
+              kf discarded$23 = kp.a(100, ((fk) this).field_P, param3, param1);
               break L0;
             }
           }
@@ -668,7 +665,7 @@ final class fk extends oo {
         return (byte) -128;
     }
 
-    private final void a(pq[] param0) {
+    private final void a(pq[] param0, byte param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         jd[] var3_array = null;
@@ -1214,8 +1211,7 @@ final class fk extends oo {
                 ((fk) this).field_K[var3_int].a((byte) -43);
             }
             this.n(2);
-            int discarded$0 = -122;
-            this.a(param1.field_I.field_l);
+            this.a(param1.field_I.field_l, (byte) -122);
             mf.field_l = mf.field_l - 1;
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) (Object) runtimeException, "fk.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -2175,7 +2171,7 @@ final class fk extends oo {
         ((fk) this).field_M = new int[2];
     }
 
-    private final void o() {
+    private final void o(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

@@ -86,7 +86,7 @@ final class i extends vn {
             hl.field_g = (qi) (Object) ga.a("commonui", "arezzo14", param1, (byte) 35, param3);
             de.field_I = (qi) (Object) ga.a("commonui", "arezzo14bold", param1, (byte) 35, param3);
             var17 = new hj(param2.a("", false, "button.gif"), (java.awt.Component) (Object) kd.field_b);
-            bm discarded$2 = hc.a("dropdown", param3, -120, "commonui");
+            bm discarded$1 = hc.a("dropdown", param3, -120, "commonui");
             var5 = oc.a("screen_options", param3, (byte) 32, "commonui");
             ef.field_g = new bm[4];
             ef.field_d = new bm[4];
@@ -122,8 +122,7 @@ final class i extends vn {
                     var12 = new hj(var17.field_s + -(2 * var9), var9);
                     var12.f();
                     var17.b(-var9, 0);
-                    int discarded$3 = -10;
-                    dm.b();
+                    dm.b((byte) -10);
                     vm.field_Ab = new hj[]{var15, var12, var11};
                     break L0;
                   } else {
@@ -231,7 +230,7 @@ final class i extends vn {
         }
     }
 
-    final static int a(gj param0, gj param1) {
+    final static int a(gj param0, gj param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         float var5 = 0.0f;
@@ -305,10 +304,8 @@ final class i extends vn {
               var11.a(var6, (byte) 109);
               if (0.0010000000474974513f > var9) {
                 L1: {
-                  int discarded$6 = 0;
-                  mm.field_d = ha.a(param1.field_t, var11);
-                  int discarded$7 = 0;
-                  lk.field_b = ha.a(param0.field_t, var11);
+                  mm.field_d = ha.a(param1.field_t, var11, false);
+                  lk.field_b = ha.a(param0.field_t, var11, false);
                   if (!param1.a(mm.field_d, 13012)) {
                     break L1;
                   } else {
@@ -329,11 +326,9 @@ final class i extends vn {
                   var12 = new qm(var11);
                   var11.a(var7, (byte) 122);
                   var12.a(var7, -13201);
-                  int discarded$8 = 0;
-                  mm.field_d = ha.a(param1.field_t, var11);
+                  mm.field_d = ha.a(param1.field_t, var11, false);
                   var13 = 0;
-                  int discarded$9 = 0;
-                  lk.field_b = ha.a(param0.field_t, var11);
+                  lk.field_b = ha.a(param0.field_t, var11, false);
                   if (!param1.a(mm.field_d, 13012)) {
                     break L2;
                   } else {
@@ -346,10 +341,8 @@ final class i extends vn {
                   }
                 }
                 L3: {
-                  int discarded$10 = 0;
-                  rb.field_g = ha.a(param1.field_t, var12);
-                  int discarded$11 = 0;
-                  cj.field_G = ha.a(param0.field_t, var12);
+                  rb.field_g = ha.a(param1.field_t, var12, false);
+                  cj.field_G = ha.a(param0.field_t, var12, false);
                   if (!param1.a(rb.field_g, 13012)) {
                     break L3;
                   } else {
@@ -486,8 +479,7 @@ final class i extends vn {
             var6 = param3 + "_decelerate";
             var7 = new oa(var5, param2);
             var8 = new oa(var6, param4);
-            int discarded$2 = 89;
-            var7.field_m = oh.a((el) (Object) var7, param1);
+            var7.field_m = oh.a((el) (Object) var7, param1, 89);
             var7.field_l = var7.field_n.length;
             stackOut_2_0 = new tk(var7, var8);
             stackIn_3_0 = stackOut_2_0;
@@ -534,7 +526,7 @@ final class i extends vn {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_m = null;
         field_j = null;
         field_i = null;

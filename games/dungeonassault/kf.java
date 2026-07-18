@@ -117,7 +117,7 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
         return param0 == ((kf) this).field_n;
     }
 
-    private final synchronized void b() {
+    private final synchronized void b(int param0) {
         if (!(((kf) this).field_n != null)) {
             return;
         }
@@ -209,9 +209,8 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
         try {
           L0: {
             L1: {
-              int discarded$5 = 0;
-              this.b();
-              boolean discarded$6 = param2.drawImage(((kf) this).field_a, param0, param3, (java.awt.image.ImageObserver) this);
+              this.b(0);
+              boolean discarded$3 = param2.drawImage(((kf) this).field_a, param0, param3, (java.awt.image.ImageObserver) this);
               if (param1) {
                 break L1;
               } else {
@@ -261,16 +260,13 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
             ((kf) this).field_g = new int[param3 * param2 - -1];
             ((kf) this).field_l = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
             ((kf) this).field_a = param1.createImage((java.awt.image.ImageProducer) this);
-            int discarded$0 = 0;
-            this.b();
+            this.b(0);
+            boolean discarded$0 = param1.prepareImage(((kf) this).field_a, (java.awt.image.ImageObserver) this);
+            this.b(0);
             boolean discarded$1 = param1.prepareImage(((kf) this).field_a, (java.awt.image.ImageObserver) this);
-            int discarded$2 = 0;
-            this.b();
-            boolean discarded$3 = param1.prepareImage(((kf) this).field_a, (java.awt.image.ImageObserver) this);
             int var5_int = -26 % ((-15 - param0) / 33);
-            int discarded$4 = 0;
-            this.b();
-            boolean discarded$5 = param1.prepareImage(((kf) this).field_a, (java.awt.image.ImageObserver) this);
+            this.b(0);
+            boolean discarded$2 = param1.prepareImage(((kf) this).field_a, (java.awt.image.ImageObserver) this);
             ((kf) this).a(true);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "kf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

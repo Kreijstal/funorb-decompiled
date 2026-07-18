@@ -12,7 +12,7 @@ final class es extends bw {
         pr.field_h[((es) this).field_g].a(12 + (((es) this).field_i + param1), -20 + ((es) this).field_f, param0);
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_h = null;
         field_j = null;
     }

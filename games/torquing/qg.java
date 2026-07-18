@@ -227,7 +227,7 @@ final class qg extends am {
         return stackIn_4_0;
     }
 
-    final static void a(double param0, double[] param1, int param2, double param3) {
+    final static void a(double param0, double[] param1, int param2, double param3, boolean param4) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -287,8 +287,7 @@ final class qg extends am {
                   }
                   L3: {
                     if (null != ie.field_b) {
-                      int discarded$1 = 0;
-                      var11 = ap.b(ie.field_b.field_P.field_g, 0, param1);
+                      var11 = ap.b(ie.field_b.field_P.field_g, 0, param1, 0);
                       if (var11 <= 200.0) {
                         break L3;
                       } else {

@@ -7,7 +7,7 @@ final class pd {
     static int[] field_d;
     static int field_b;
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_26_0 = null;
@@ -140,11 +140,11 @@ final class pd {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
     }
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

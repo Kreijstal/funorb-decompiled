@@ -190,7 +190,7 @@ final class dk {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_s = null;
         field_c = null;
@@ -235,8 +235,7 @@ final class dk {
             this.a(param1, param2, param0, 1);
             return;
           } else {
-            int discarded$2 = -103;
-            this.b(param2, param1, param0);
+            this.b(param2, param1, param0, -103);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -508,7 +507,7 @@ final class dk {
         }
     }
 
-    private final void b(int param0, String param1, int param2) {
+    private final void b(int param0, String param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

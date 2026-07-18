@@ -7,7 +7,7 @@ final class ca {
     static int field_a;
     static int field_d;
 
-    final static void a(String param0, boolean param1) {
+    final static void a(String param0, boolean param1, int param2) {
         try {
             ij.field_g = param1;
             r.field_p = true;
@@ -18,25 +18,21 @@ final class ca {
         }
     }
 
-    final static void a(qk param0, qj param1, int param2) {
+    final static void a(qk param0, qj param1, int param2, int param3) {
         try {
-            int discarded$0 = 22018;
-            vb.field_b = va.a() * param2 / 1000;
+            vb.field_b = va.a(22018) * param2 / 1000;
             ch.a(-114, param0);
             kk.a(-16998, param0);
-            int discarded$1 = 0;
-            ab.a(param0);
-            int discarded$2 = 260;
-            pf.d();
-            int discarded$3 = -124;
-            ri.a();
+            ab.a(param0, 0);
+            pf.d(260);
+            ri.a((byte) -124);
             h.field_F = -vb.field_b;
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) (Object) runtimeException, "ca.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + 0 + ')');
         }
     }
 
-    final static void a(qk param0, qk param1, qk param2) {
+    final static void a(qk param0, qk param1, qk param2, int param3) {
         RuntimeException var4 = null;
         wb[] var5 = null;
         wb[][] var6 = null;
@@ -105,19 +101,16 @@ final class ca {
         var13 = Main.field_T;
         try {
           L0: {
-            int discarded$5 = -13244;
-            se.field_G = gl.a("frame_top", param1, "commonui");
-            int discarded$6 = -13244;
-            rc.field_k = gl.a("frame_bottom", param1, "commonui");
+            se.field_G = gl.a("frame_top", param1, "commonui", -13244);
+            rc.field_k = gl.a("frame_bottom", param1, "commonui", -13244);
             pb.field_k = ce.a(-126, "jagex_logo_grey", "commonui", param1);
-            int discarded$7 = -13244;
-            eg.field_c = gl.a("button", param1, "commonui");
+            eg.field_c = gl.a("button", param1, "commonui", -13244);
             gh.field_n = vc.a("validation", "commonui", 0, param1);
             me.field_c = (ee) (Object) ec.a("commonui", param2, false, "arezzo12", param1);
             j.field_C = (ee) (Object) ec.a("commonui", param2, false, "arezzo14", param1);
             vd.field_p = (ee) (Object) ec.a("commonui", param2, false, "arezzo14bold", param1);
             var17 = new kc(param0.a((byte) 7, "", "button.gif"), (java.awt.Component) (Object) tb.field_c);
-            wb discarded$8 = lh.a("dropdown", param1, "commonui", 105);
+            wb discarded$1 = lh.a("dropdown", param1, "commonui", 105);
             var5 = lk.a("screen_options", "commonui", (byte) 98, param1);
             ri.field_d = new wb[4];
             fb.field_b = new wb[4];
@@ -165,8 +158,7 @@ final class ca {
                         var9++;
                         continue L2;
                       } else {
-                        int discarded$9 = -88;
-                        var14[var11_int] = a.a(var5[var9], var21[var11_int]);
+                        var14[var11_int] = a.a(var5[var9], var21[var11_int], -88);
                         var11_int++;
                         continue L3;
                       }
@@ -266,7 +258,7 @@ final class ca {
         return (gk) (Object) new ec();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
     }
 

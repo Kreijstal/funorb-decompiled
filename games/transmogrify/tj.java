@@ -432,8 +432,7 @@ final class tj extends uh {
                   }
                 }
                 ((tj) this).field_x = (gj) param1;
-                int discarded$1 = 0;
-                this.a();
+                this.a(false);
                 this.a(3, param0);
                 ((tj) this).field_e = null;
                 if (param2 == 20) {
@@ -622,7 +621,7 @@ final class tj extends uh {
         }
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -660,7 +659,7 @@ final class tj extends uh {
     public tj() {
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_z = null;
         field_w = null;
         field_v = null;

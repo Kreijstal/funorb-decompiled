@@ -14,8 +14,7 @@ final class jm {
         ee.field_e.a(0, pg.field_e, dg.field_E.field_K, (byte) -90, 0);
         se.field_c.a(0, 18, dg.field_E.field_K + (-oc.field_k - 84), (byte) -65, pg.field_e + 2);
         if (param0 != 36) {
-            int discarded$0 = 30;
-            boolean discarded$1 = jm.a();
+            boolean discarded$0 = jm.a((byte) 30);
         }
         wb.field_m.a(-80 + -oc.field_k + (dg.field_E.field_K - 2), 18, oc.field_k + 82, (byte) -45, 2 + pg.field_e);
         ve.field_q.a(dg.field_E.field_K, 0, 2, -20 + (-2 + -pg.field_e + dg.field_E.field_ub), oc.field_k, 20 + (2 + pg.field_e), 20, 0);
@@ -316,7 +315,7 @@ final class jm {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         int var1 = 0;
         int stackIn_5_0 = 0;
         int stackOut_4_0 = 0;

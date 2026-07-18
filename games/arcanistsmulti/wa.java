@@ -18,7 +18,7 @@ final class wa extends kc {
     String field_Ib;
     static boolean field_Ob;
 
-    public static void f() {
+    public static void f(byte param0) {
         field_Db = null;
         field_Eb = null;
         field_Pb = null;
@@ -29,7 +29,7 @@ final class wa extends kc {
         super(0L, (kc) null);
     }
 
-    final static int a(char param0, CharSequence param1) {
+    final static int a(char param0, CharSequence param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

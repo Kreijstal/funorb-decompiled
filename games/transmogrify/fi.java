@@ -108,7 +108,7 @@ abstract class fi extends qg implements pb {
         ((fi) this).field_v.c((byte) 85);
     }
 
-    private final boolean b(qg param0) {
+    private final boolean b(qg param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -596,29 +596,30 @@ abstract class fi extends qg implements pb {
         return stackIn_6_0 != 0;
     }
 
-    final static uk b(String param0) {
-        Object var2 = null;
+    final static uk b(String param0, byte param1) {
+        String var2 = null;
+        RuntimeException var2_ref = null;
         uk var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
         uk stackIn_14_0 = null;
-        Object stackIn_18_0 = null;
+        RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        Object stackIn_19_0 = null;
+        RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         uk stackOut_13_0 = null;
-        Object stackOut_17_0 = null;
+        RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
-        Object stackOut_19_0 = null;
+        RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
         String stackOut_19_2 = null;
-        Object stackOut_18_0 = null;
+        RuntimeException stackOut_18_0 = null;
         StringBuilder stackOut_18_1 = null;
         String stackOut_18_2 = null;
         var5 = Transmogrify.field_A ? 1 : 0;
@@ -626,15 +627,15 @@ abstract class fi extends qg implements pb {
           if (null != rb.field_b) {
             L0: {
               var6 = (CharSequence) (Object) param0;
-              var2 = (Object) (Object) hj.a((byte) -126, var6);
+              var2 = hj.a((byte) -126, var6);
               if (var2 != null) {
                 break L0;
               } else {
-                var2 = (Object) (Object) var6;
+                var2 = param0;
                 break L0;
               }
             }
-            var3 = (uk) (Object) rb.field_b.a((long)((String) var2).hashCode(), (byte) -50);
+            var3 = (uk) (Object) rb.field_b.a((long)var2.hashCode(), (byte) -50);
             L1: while (true) {
               if (var3 != null) {
                 L2: {
@@ -647,7 +648,7 @@ abstract class fi extends qg implements pb {
                     break L2;
                   }
                 }
-                if (!var4.equals(var2)) {
+                if (!var4.equals((Object) (Object) var2)) {
                   var3 = (uk) (Object) rb.field_b.a(93);
                   continue L1;
                 } else {
@@ -665,15 +666,15 @@ abstract class fi extends qg implements pb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_17_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var2_ref;
             stackOut_17_1 = new StringBuilder().append("fi.J(");
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param0 == null) {
-              stackOut_19_0 = stackIn_19_0;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
               stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
@@ -681,7 +682,7 @@ abstract class fi extends qg implements pb {
               stackIn_20_2 = stackOut_19_2;
               break L3;
             } else {
-              stackOut_18_0 = stackIn_18_0;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
               stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
@@ -743,13 +744,11 @@ abstract class fi extends qg implements pb {
             if (80 == var5_int) {
               L2: {
                 if (!ve.field_B[81]) {
-                  int discarded$5 = -128;
-                  stackOut_9_0 = this.a(param1);
+                  stackOut_9_0 = this.a(param1, (byte) -128);
                   stackIn_10_0 = stackOut_9_0;
                   break L2;
                 } else {
-                  int discarded$6 = 32;
-                  stackOut_8_0 = this.b(param1);
+                  stackOut_8_0 = this.b(param1, 32);
                   stackIn_10_0 = stackOut_8_0;
                   break L2;
                 }
@@ -1009,9 +1008,7 @@ abstract class fi extends qg implements pb {
                 mc.field_c.a((wf) (Object) new gd(param2, param1, nc.field_t, ud.field_b, jk.field_B, gh.field_l), -94);
                 return true;
               } else {
-                int discarded$3 = 75;
-                int discarded$4 = 4;
-                gd discarded$5 = nh.a(jk.field_B, ud.field_b, param1, nc.field_t, param2, gh.field_l);
+                gd discarded$2 = nh.a(jk.field_B, ud.field_b, param1, nc.field_t, param2, gh.field_l, 4, 75);
                 return true;
               }
             } else {
@@ -1086,7 +1083,7 @@ abstract class fi extends qg implements pb {
         }
     }
 
-    private final boolean a(qg param0) {
+    private final boolean a(qg param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;

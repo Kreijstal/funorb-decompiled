@@ -25,7 +25,7 @@ final class dd {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }
@@ -104,11 +104,9 @@ final class dd {
     final static boolean a(byte param0) {
         if (param0 <= 25) {
             boolean discarded$0 = dd.a((byte) 121);
-            int discarded$1 = 1;
-            return sc.a(ll.b(116));
+            return sc.a(ll.b(116), true);
         }
-        int discarded$2 = 1;
-        return sc.a(ll.b(116));
+        return sc.a(ll.b(116), true);
     }
 
     static {

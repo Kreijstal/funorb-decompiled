@@ -113,7 +113,7 @@ final class ku extends qe {
         ((ku) this).a((byte) -120);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_j = null;
     }
 

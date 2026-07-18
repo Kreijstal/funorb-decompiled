@@ -9,7 +9,7 @@ final class k extends rqa {
     static String field_q;
     static String field_o;
 
-    public static void e() {
+    public static void e(byte param0) {
         int var1 = 33;
         field_q = null;
         field_o = null;
@@ -161,7 +161,7 @@ final class k extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, boolean param1, String param2, boolean param3) {
+    final static void a(int param0, boolean param1, String param2, boolean param3, byte param4) {
         RuntimeException var5 = null;
         String var6 = null;
         int var7 = 0;

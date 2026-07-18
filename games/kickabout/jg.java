@@ -16,7 +16,7 @@ final class jg extends ct {
     private boolean field_B;
     private int field_C;
 
-    final static void a(int param0, cn param1) {
+    final static void a(int param0, cn param1, byte param2) {
         try {
             wo.field_m = 150;
             ll.field_o = param1;
@@ -126,7 +126,7 @@ final class jg extends ct {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_F = null;
         int var1 = 35;
         field_I = null;
@@ -701,7 +701,7 @@ final class jg extends ct {
         ((jg) this).field_C = ((jg) this).field_g;
     }
 
-    final static void a(int param0, byte param1, boolean param2) {
+    final static void a(int param0, byte param1, boolean param2, int param3) {
         if (!(kd.field_s)) {
             return;
         }

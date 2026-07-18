@@ -9,7 +9,7 @@ final class fg {
         sd.field_a = 320;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

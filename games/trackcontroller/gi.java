@@ -17,7 +17,7 @@ final class gi extends ic {
         return dupTemp$0;
     }
 
-    private final void a(boolean param0, gi param1) {
+    private final void a(boolean param0, gi param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         qi var5 = null;
@@ -149,8 +149,7 @@ final class gi extends ic {
     gi(gi param0, boolean param1) {
         this();
         try {
-            int discarded$0 = 11;
-            param0.a(param1, (gi) this);
+            param0.a(param1, (gi) this, 11);
         } catch (RuntimeException runtimeException) {
             throw sl.a((Throwable) (Object) runtimeException, "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

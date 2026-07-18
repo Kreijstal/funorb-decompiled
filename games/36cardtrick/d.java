@@ -25,7 +25,7 @@ final class d {
     private byte[] field_v;
     private int[] field_m;
 
-    private final void a(byte[] param0) {
+    private final void a(byte[] param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -449,7 +449,7 @@ final class d {
         field_u = null;
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         try {
             param0.removeMouseListener((java.awt.event.MouseListener) (Object) wc.field_B);
             param0.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) wc.field_B);
@@ -471,16 +471,14 @@ final class d {
                 if (64 != param2.length) {
                     throw new RuntimeException();
                 }
-                int discarded$0 = 0;
-                ((d) this).field_v = ti.a(0, param0, param0.length);
+                ((d) this).field_v = ti.a(0, param0, param0.length, 0);
                 for (var4_int = 0; var4_int < 64; var4_int++) {
                     if (((d) this).field_v[var4_int] != param2[var4_int]) {
                         throw new RuntimeException();
                     }
                 }
             }
-            int discarded$1 = -4451;
-            this.a(param0);
+            this.a(param0, -4451);
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) (Object) runtimeException, "d.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -10,7 +10,7 @@ final class ga extends ki implements ge, ka {
     static nc field_E;
     private qb field_K;
 
-    public static void h() {
+    public static void h(int param0) {
         field_E = null;
         field_H = null;
     }
@@ -26,7 +26,7 @@ final class ga extends ki implements ge, ka {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         if (!(this.e((byte) -96))) {
             return;
         }
@@ -448,8 +448,7 @@ final class ga extends ki implements ge, ka {
                 if (param3 != ((ga) this).field_J) {
                   break L0;
                 } else {
-                  int discarded$2 = 59;
-                  this.f();
+                  this.f((byte) 59);
                   return;
                 }
               } else {

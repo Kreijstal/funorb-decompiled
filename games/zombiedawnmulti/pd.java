@@ -11,7 +11,7 @@ final class pd {
     static String field_e;
     static int field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_f = null;
         field_a = null;
@@ -30,7 +30,7 @@ final class pd {
         return hp.a((byte) 99, g.field_a, 256) << 16 | hp.a((byte) -91, g.field_a, 256) << 8 | hp.a((byte) -97, g.field_a, 256);
     }
 
-    final static boolean a(long param0, String param1) {
+    final static boolean a(long param0, String param1, int param2) {
         ml var4 = null;
         RuntimeException var4_ref = null;
         int stackIn_3_0 = 0;
@@ -57,8 +57,7 @@ final class pd {
         try {
           L0: {
             L1: {
-              int discarded$2 = 0;
-              var4 = dn.a(param1);
+              var4 = dn.a(param1, false);
               if (var4 == null) {
                 break L1;
               } else {

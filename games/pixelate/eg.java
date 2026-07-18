@@ -16,7 +16,7 @@ final class eg extends eh {
     static java.awt.Frame field_i;
     static java.awt.Frame field_j;
 
-    private final java.net.Socket a(int param0, String param1, String param2) throws IOException {
+    private final java.net.Socket a(int param0, String param1, String param2, byte param3) throws IOException {
         RuntimeException var5 = null;
         OutputStream var6 = null;
         BufferedReader var7 = null;
@@ -282,8 +282,7 @@ final class eg extends eh {
                   gb.field_c = 2;
                   break L3;
                 } else {
-                  int discarded$23 = -33;
-                  gb.field_c = na.a((CharSequence) (Object) var6);
+                  gb.field_c = na.a((CharSequence) (Object) var6, (byte) -33);
                   break L3;
                 }
               }
@@ -361,7 +360,7 @@ final class eg extends eh {
         }
     }
 
-    final static String f() {
+    final static String f(int param0) {
         if (rj.field_F == tm.field_X) {
             return vp.field_Nb;
         }
@@ -374,7 +373,7 @@ final class eg extends eh {
         return h.field_U;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -523,7 +522,7 @@ final class eg extends eh {
           if (Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
             break L0;
           } else {
-            String discarded$3 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           }
         }
@@ -628,7 +627,7 @@ final class eg extends eh {
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
           return ((eg) this).b(-2);
         }
-        boolean discarded$4 = var3.addAll((Collection) (Object) var4);
+        boolean discarded$3 = var3.addAll((Collection) (Object) var4);
         var6_array = var3.toArray();
         var7 = null;
         var8_array = var6_array;
@@ -653,8 +652,7 @@ final class eg extends eh {
             var11 = (java.net.Proxy) var10;
             try {
               L7: {
-                int discarded$5 = 26251;
-                var12_ref2 = this.a(var11);
+                var12_ref2 = this.a(var11, 26251);
                 if (var12_ref2 != null) {
                   stackOut_20_0 = (java.net.Socket) var12_ref2;
                   stackIn_21_0 = stackOut_20_0;
@@ -693,7 +691,7 @@ final class eg extends eh {
         }
     }
 
-    final static void e() {
+    final static void e(int param0) {
         int var1 = 0;
         if (wn.field_u >= 224) {
             jg.a(256, 114);
@@ -703,7 +701,7 @@ final class eg extends eh {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_i = null;
         field_k = null;
         field_j = null;
@@ -785,7 +783,7 @@ final class eg extends eh {
         }
     }
 
-    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0, int param1) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;
@@ -869,8 +867,7 @@ final class eg extends eh {
                       break L3;
                     }
                   }
-                  int discarded$1 = 115;
-                  stackOut_17_0 = this.a(var4_ref.getPort(), var4_ref.getHostName(), (String) var5);
+                  stackOut_17_0 = this.a(var4_ref.getPort(), var4_ref.getHostName(), (String) var5, (byte) 115);
                   stackIn_18_0 = stackOut_17_0;
                   break L0;
                 } else {

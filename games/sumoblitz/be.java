@@ -108,7 +108,7 @@ final class be extends nt {
         return 6407;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_t = null;
         field_v = null;
         field_s = null;

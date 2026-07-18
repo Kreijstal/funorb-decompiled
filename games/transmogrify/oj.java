@@ -331,7 +331,7 @@ final class oj extends ag {
         return 2;
     }
 
-    final static void a(ti param0) {
+    final static void a(ti param0, int param1) {
         try {
             og.a((byte) 92);
             sb.a(param0.field_w, param0.field_r, param0.field_s);

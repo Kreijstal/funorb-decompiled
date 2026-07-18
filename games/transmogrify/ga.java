@@ -5,7 +5,7 @@ final class ga {
     static volatile int field_b;
     static rj field_a;
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -42,12 +42,10 @@ final class ga {
               } else {
                 L2: {
                   var3 = param0.charAt(var2_int);
-                  int discarded$14 = -37;
-                  if (k.a((char) var3)) {
+                  if (k.a((char) var3, -37)) {
                     break L2;
                   } else {
-                    int discarded$15 = 1;
-                    if (!dj.a((char) var3)) {
+                    if (!dj.a((char) var3, true)) {
                       stackOut_6_0 = 1;
                       stackIn_7_0 = stackOut_6_0;
                       return stackIn_7_0 != 0;
@@ -132,8 +130,7 @@ final class ga {
               stackIn_6_0 = stackOut_5_0;
               return stackIn_6_0;
             } else {
-              int discarded$2 = 87;
-              var3 = hd.b();
+              var3 = hd.b((byte) 87);
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -191,7 +188,7 @@ final class ga {
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (si.field_l != -tf.field_a) {
           if (si.field_l == 250 - tf.field_a) {
             si.field_l = si.field_l + 1;

@@ -8,13 +8,13 @@ final class vf {
     static int field_b;
     static String field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_d = null;
         field_c = null;
     }
 
-    final static StringBuilder a(StringBuilder param0, int param1, int param2) {
+    final static StringBuilder a(StringBuilder param0, int param1, int param2, char param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

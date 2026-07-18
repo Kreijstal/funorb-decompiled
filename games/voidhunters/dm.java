@@ -4,7 +4,7 @@
 final class dm extends mfb {
     static boolean field_b;
 
-    final static llb i() {
+    final static llb i(byte param0) {
         return re.field_n.field_yb;
     }
 

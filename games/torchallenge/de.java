@@ -7,7 +7,7 @@ final class de {
     static boolean[][] field_c;
     static int field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
         field_c = null;
@@ -34,8 +34,7 @@ final class de {
         var2 = 0;
         L0: while (true) {
           if (vl.field_b <= var2) {
-            int discarded$1 = 0;
-            p.a();
+            p.a(0);
             return var1;
           } else {
             var3 = lg.field_e[var2] * pg.field_r[var2];

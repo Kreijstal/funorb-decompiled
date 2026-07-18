@@ -304,7 +304,7 @@ final class ba extends gq {
         return ((ba) this).d();
     }
 
-    private final void a(mb param0, int param1) {
+    private final void a(mb param0, int param1, boolean param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -445,13 +445,11 @@ final class ba extends gq {
                 var2 = param0;
                 L2: while (true) {
                   if (var3.field_D >= var2) {
-                    int discarded$9 = 0;
-                    this.a(var3, var2);
+                    this.a(var3, var2, false);
                     var3.field_D = var3.field_D - var2;
                     break L1;
                   } else {
-                    int discarded$10 = 0;
-                    this.a(var3, var3.field_D);
+                    this.a(var3, var3.field_D, false);
                     var2 = var2 - var3.field_D;
                     if (!((ba) this).field_n.a(var3, var2, 0, (int[]) null, 22)) {
                       continue L2;

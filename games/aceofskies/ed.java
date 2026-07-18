@@ -106,8 +106,7 @@ final class ed extends cq implements qi {
             jaggl.OpenGL.glPixelStorei(3317, 1);
             var10_int = 49 % ((param4 - 67) / 37);
             jaggl.OpenGL.glPixelStorei(3314, param8);
-            int discarded$3 = -29824;
-            jaggl.OpenGL.glTexSubImage2Dub(((ed) this).field_e, 0, param7, param0, param1, param3, gq.a(param6), 5121, param5, param2);
+            jaggl.OpenGL.glTexSubImage2Dub(((ed) this).field_e, 0, param7, param0, param1, param3, gq.a(param6, -29824), 5121, param5, param2);
             jaggl.OpenGL.glPixelStorei(3314, 0);
             jaggl.OpenGL.glPixelStorei(3317, 4);
             break L0;
@@ -208,8 +207,7 @@ final class ed extends cq implements qi {
             ((ed) this).field_g.a((jj) this, -9135);
             var10_int = 25 % ((param1 - -57) / 57);
             jaggl.OpenGL.glPixelStorei(3314, param5);
-            int discarded$3 = -29824;
-            jaggl.OpenGL.glTexSubImage2Df(((ed) this).field_e, 0, param3, param2, param8, param6, gq.a(param7), 5121, param0, param4);
+            jaggl.OpenGL.glTexSubImage2Df(((ed) this).field_e, 0, param3, param2, param8, param6, gq.a(param7, -29824), 5121, param0, param4);
             jaggl.OpenGL.glPixelStorei(3314, 0);
             break L0;
           }
@@ -343,8 +341,7 @@ final class ed extends cq implements qi {
                   }
                 }
                 jaggl.OpenGL.glPixelStorei(3314, param7);
-                int discarded$1 = -29824;
-                jaggl.OpenGL.glTexImage2Dub(((ed) this).field_e, 0, ((ed) this).a(false), param2, param3, 0, gq.a(((ed) this).field_h), 5121, param5, param6);
+                jaggl.OpenGL.glTexImage2Dub(((ed) this).field_e, 0, ((ed) this).a(false), param2, param3, 0, gq.a(((ed) this).field_h, -29824), 5121, param5, param6);
                 jaggl.OpenGL.glPixelStorei(3314, 0);
                 if (!AceOfSkies.field_G) {
                   break L1;
@@ -644,8 +641,7 @@ final class ed extends cq implements qi {
                   }
                 }
                 jaggl.OpenGL.glPixelStorei(3314, param7);
-                int discarded$1 = -29824;
-                jaggl.OpenGL.glTexImage2Df(((ed) this).field_e, 0, ((ed) this).a(false), param2, param3, 0, gq.a(((ed) this).field_h), 5126, param5, 4 * param6);
+                jaggl.OpenGL.glTexImage2Df(((ed) this).field_e, 0, ((ed) this).a(false), param2, param3, 0, gq.a(((ed) this).field_h, -29824), 5126, param5, 4 * param6);
                 jaggl.OpenGL.glPixelStorei(3314, 0);
                 if (!AceOfSkies.field_G) {
                   break L1;
@@ -794,8 +790,7 @@ final class ed extends cq implements qi {
             ((ed) this).field_k = param4;
             ((ed) this).field_j = param3;
             ((ed) this).field_g.a((jj) this, -9135);
-            int discarded$3 = -29824;
-            jaggl.OpenGL.glTexImage2Dub(((ed) this).field_e, 0, ((ed) this).a(false), param3, param4, 0, gq.a(((ed) this).field_h), kk.a(((ed) this).field_c, (byte) -96), (byte[]) null, 0);
+            jaggl.OpenGL.glTexImage2Dub(((ed) this).field_e, 0, ((ed) this).a(false), param3, param4, 0, gq.a(((ed) this).field_h, -29824), kk.a(((ed) this).field_c, (byte) -96), (byte[]) null, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1063,8 +1058,7 @@ final class ed extends cq implements qi {
             L1: {
               var5_int = ek.a((byte) 103, (-param0 + param3) * 3);
               var6 = param0 * 3;
-              int discarded$2 = 0;
-              pl.a();
+              pl.a(0);
               if (param2 < -60) {
                 break L1;
               } else {
@@ -1080,8 +1074,7 @@ final class ed extends cq implements qi {
                 if (param1.field_x == null) {
                   break L2;
                 } else {
-                  int discarded$3 = 8;
-                  dt.b();
+                  dt.b(8);
                   break L2;
                 }
               }

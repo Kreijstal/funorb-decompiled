@@ -385,8 +385,7 @@ final class b implements fe {
                     if (var5 >= var3_int) {
                       break L4;
                     } else {
-                      int discarded$5 = -58;
-                      if (!hc.a(param1.charAt(var5))) {
+                      if (!hc.a(param1.charAt(var5), -58)) {
                         break L4;
                       } else {
                         var5++;
@@ -425,8 +424,7 @@ final class b implements fe {
                         if (var3_int <= var5) {
                           break L7;
                         } else {
-                          int discarded$6 = -58;
-                          if (!hc.a(param1.charAt(var5))) {
+                          if (!hc.a(param1.charAt(var5), -58)) {
                             break L7;
                           } else {
                             var5++;
@@ -444,8 +442,8 @@ final class b implements fe {
                           } else {
                             var5++;
                             var10 = cc.a(true, (CharSequence) (Object) var9);
-                            StringBuilder discarded$7 = var6.append(param1.substring(var7, var8));
-                            StringBuilder discarded$8 = var6.append(args[var10]);
+                            StringBuilder discarded$3 = var6.append(param1.substring(var7, var8));
+                            StringBuilder discarded$4 = var6.append(args[var10]);
                             var7 = var5;
                             continue L5;
                           }
@@ -455,7 +453,7 @@ final class b implements fe {
                       }
                     }
                   } else {
-                    StringBuilder discarded$9 = var6.append(param1.substring(var7));
+                    StringBuilder discarded$5 = var6.append(param1.substring(var7));
                     stackOut_26_0 = var6.toString();
                     stackIn_27_0 = stackOut_26_0;
                     break L0;
@@ -789,7 +787,7 @@ final class b implements fe {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_k = null;
         field_j = null;

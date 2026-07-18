@@ -120,7 +120,7 @@ final class fa extends go implements ki {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_T = null;
         field_W = null;
         field_Y = null;

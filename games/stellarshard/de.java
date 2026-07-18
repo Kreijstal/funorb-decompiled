@@ -85,9 +85,9 @@ final class de {
                                   break L5;
                                 }
                               }
-                              int incrementValue$2 = var8;
+                              int incrementValue$1 = var8;
                               var8++;
-                              fj.field_b[incrementValue$2] = var12;
+                              fj.field_b[incrementValue$1] = var12;
                               break L4;
                             }
                           }
@@ -114,8 +114,7 @@ final class de {
                         L8: {
                           var9 = fj.field_b[var8];
                           var10 = fj.field_b[var8 - -1];
-                          int discarded$3 = 41;
-                          if (!hf.a(var10, param5, var9)) {
+                          if (!hf.a(var10, param5, var9, (byte) 41)) {
                             break L8;
                           } else {
                             fj.field_b[var8] = var10;

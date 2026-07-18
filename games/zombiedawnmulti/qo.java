@@ -8,7 +8,7 @@ class qo extends qa {
     static int field_u;
     static String field_t;
 
-    final static byte[] a(CharSequence param0) {
+    final static byte[] a(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;
@@ -260,7 +260,7 @@ class qo extends qa {
     qo() {
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_q = null;
         field_r = null;
         field_t = null;

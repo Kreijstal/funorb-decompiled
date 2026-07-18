@@ -23,7 +23,7 @@ final class rba implements Iterator {
         return (Object) (Object) var1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_e = null;
         field_a = null;

@@ -8,7 +8,7 @@ final class pn {
     static qb field_c;
     static qb field_e;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
         field_e = null;
         int var1 = 20;
@@ -16,9 +16,8 @@ final class pn {
         field_b = null;
     }
 
-    final static void a() {
-        int discarded$0 = -9685;
-        io.field_n = oo.d();
+    final static void a(int param0) {
+        io.field_n = oo.d(-9685);
         pm.field_e = new h();
         ke.g((byte) 94);
     }
@@ -98,7 +97,7 @@ final class pn {
         return stackIn_6_0;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         Object var2 = null;
         bb.a(on.field_d, -3, (String) null);
     }
@@ -114,15 +113,13 @@ final class pn {
             if (eo.field_c != null) {
               break L1;
             } else {
-              int discarded$7 = -1321;
-              if (rc.c()) {
+              if (rc.c(-1321)) {
                 break L1;
               } else {
                 if (null != db.field_a) {
                   break L1;
                 } else {
-                  int discarded$8 = -80;
-                  if (!we.a()) {
+                  if (!we.a((byte) -80)) {
                     stackOut_6_0 = 0;
                     stackIn_7_0 = stackOut_6_0;
                     break L0;

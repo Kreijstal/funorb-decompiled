@@ -199,8 +199,7 @@ final class nc extends fb {
               return false;
             } else {
               L0: {
-                int discarded$12 = 21549;
-                if (ub.a()) {
+                if (ub.a(21549)) {
                   stackOut_15_0 = 0;
                   stackIn_16_0 = stackOut_15_0;
                   break L0;
@@ -222,8 +221,7 @@ final class nc extends fb {
               return false;
             } else {
               L1: {
-                int discarded$13 = 21549;
-                if (ub.a()) {
+                if (ub.a(21549)) {
                   stackOut_6_0 = 0;
                   stackIn_7_0 = stackOut_6_0;
                   break L1;
@@ -241,7 +239,7 @@ final class nc extends fb {
         }
     }
 
-    final static void i() {
+    final static void i(int param0) {
         RuntimeException var1 = null;
         r var1_ref = null;
         ln var1_ref2 = null;

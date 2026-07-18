@@ -11,7 +11,7 @@ final class t {
     static mh field_f;
     static boolean field_g;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_f = null;
         field_b = null;

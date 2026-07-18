@@ -152,7 +152,7 @@ final class lm extends ae {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_y = null;
         field_z = null;
         field_A = null;
@@ -179,7 +179,7 @@ final class lm extends ae {
     lm() {
     }
 
-    final static boolean a(p param0, p param1) {
+    final static boolean a(p param0, p param1, int param2) {
         RuntimeException var3 = null;
         double var3_double = 0.0;
         double var5 = 0.0;

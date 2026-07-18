@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mm {
-    final static Object a(Object[] param0, java.applet.Applet param1, String param2) throws Throwable {
+    final static Object a(Object[] param0, java.applet.Applet param1, String param2, int param3) throws Throwable {
         return netscape.javascript.JSObject.getWindow(param1).call(param2, param0);
     }
 

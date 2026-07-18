@@ -186,10 +186,8 @@ final class pla {
         return param1 >= 2048 ? -ida.field_b[-2048 + param1] : ida.field_b[2048 - param1];
     }
 
-    final static goa a() {
-        int discarded$0 = 0;
-        int discarded$1 = -107;
-        return new goa(hha.a(), nd.b());
+    final static goa a(int param0) {
+        return new goa(hha.a(false), nd.b((byte) -107));
     }
 
     final int a(int param0, int param1) {

@@ -11,7 +11,7 @@ final class jl extends ff {
     static long field_c;
     static de field_g;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_e = null;
         field_g = null;
     }
@@ -44,7 +44,7 @@ final class jl extends ff {
         return tf.field_o;
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String a(boolean param0, CharSequence param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;

@@ -26,7 +26,7 @@ final class fk extends pg {
         return ql.a(1, (byte) 127, param2, param0);
     }
 
-    final static void d() {
+    final static void d(int param0) {
         L0: {
           L1: {
             if (fj.field_j == 10) {
@@ -427,15 +427,14 @@ final class fk extends pg {
         return stackIn_64_0 != 0;
     }
 
-    final static ll[] c() {
+    final static ll[] c(int param0) {
         int var2 = 0;
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
         ll[] var1 = new ll[h.field_J];
         for (var2 = 0; h.field_J > var2; var2++) {
             var1[var2] = new ll(pb.field_g, gn.field_a, hl.field_l[var2], be.field_d[var2], jg.field_p[var2], ho.field_i[var2], ln.field_I[var2], ph.field_c);
         }
-        int discarded$0 = -18229;
-        dk.a();
+        dk.a(-18229);
         return var1;
     }
 
@@ -445,15 +444,14 @@ final class fk extends pg {
                 Object var3 = null;
                 fk.a((qb) null, -12);
             }
-            int discarded$0 = 65280;
-            ec.a();
+            ec.a(65280);
             de.a(param0.field_A, param0.field_n, param0.field_w);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "fk.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -476,8 +474,7 @@ final class fk extends pg {
               var13 = df.field_z;
               var2 = var13.e((byte) 54);
               if (var2 == 0) {
-                int discarded$8 = 12;
-                var10 = la.b();
+                var10 = la.b((byte) 12);
                 var3 = var10;
                 var9 = var10;
                 var4 = var9;
@@ -493,8 +490,7 @@ final class fk extends pg {
                       var12.a(true);
                       break L1;
                     } else {
-                      int discarded$9 = 0;
-                      ka.b();
+                      ka.b(false);
                       return;
                     }
                   } else {
@@ -507,8 +503,7 @@ final class fk extends pg {
                 if (var2 == 1) {
                   var11 = (cm) (Object) cc.field_e.b(12623);
                   if (var11 == null) {
-                    int discarded$10 = 0;
-                    ka.b();
+                    ka.b(false);
                     return;
                   } else {
                     var11.a(true);
@@ -516,23 +511,18 @@ final class fk extends pg {
                   }
                 } else {
                   if (var2 != 2) {
-                    int discarded$11 = -25;
-                    int discarded$12 = 20;
-                    jh.a((Throwable) null, "A1: " + nn.g());
-                    int discarded$13 = 0;
-                    ka.b();
+                    jh.a((Throwable) null, "A1: " + nn.g((byte) -25), (byte) 20);
+                    ka.b(false);
                     break L1;
                   } else {
                     var14 = (fe) (Object) i.field_e.b(12623);
                     if (var14 != null) {
-                      int discarded$14 = 12;
-                      var14.field_i = la.b();
+                      var14.field_i = la.b((byte) 12);
                       var14.field_l = true;
                       var14.a(true);
                       break L1;
                     } else {
-                      int discarded$15 = 0;
-                      ka.b();
+                      ka.b(false);
                       return;
                     }
                   }
@@ -679,12 +669,11 @@ final class fk extends pg {
             var4 = pg.field_c.field_Z.a(param1, 500);
             var5 = 6 + pg.field_c.field_Z.c(param1, 500);
             var6 = 2 + var4 * ga.field_r;
-            int discarded$0 = 246;
-            var7 = ih.a(var2_int, var5, 12);
+            var7 = ih.a(var2_int, var5, 12, 246);
             var8 = ql.a(10, 20, var6, var3);
             de.a(var7, var8, var5, var6, 0);
             de.d(var7 - -1, 1 + var8, -2 + var5, -2 + var6, 16777088);
-            int discarded$1 = pg.field_c.field_Z.a(param1, var7 + 3, 1 + (var8 - -oc.field_i - pg.field_c.field_Z.field_C), 500, 1000, 0, -1, 0, 0, ga.field_r);
+            int discarded$0 = pg.field_c.field_Z.a(param1, var7 + 3, 1 + (var8 - -oc.field_i - pg.field_c.field_Z.field_C), 500, 1000, 0, -1, 0, 0, ga.field_r);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "fk.D(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

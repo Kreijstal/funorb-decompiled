@@ -15,7 +15,7 @@ final class ql extends ud {
     boolean field_n;
     private byte[] field_i;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_r = null;
         field_p = null;
         field_o = null;
@@ -376,8 +376,7 @@ final class ql extends ud {
         }
         L1: {
           if (0 >= qr.field_a) {
-            int discarded$11 = 1;
-            if (!cn.b()) {
+            if (!cn.b(true)) {
               var2 = 1;
               break L1;
             } else {
@@ -388,9 +387,7 @@ final class ql extends ud {
             L2: {
               if (aj.field_s != null) {
                 jf.field_a = aj.field_s.b((byte) -111);
-                int discarded$12 = 64;
-                int discarded$13 = 2;
-                te.a();
+                te.a(2, 64);
                 break L2;
               } else {
                 jf.field_a = uj.a(pt.field_b, 0, 640, 0, 0, 480);

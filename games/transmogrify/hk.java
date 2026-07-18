@@ -29,7 +29,7 @@ final class hk {
         }
     }
 
-    final static String a(int param0, int param1) {
+    final static String a(int param0, int param1, char param2) {
         int var4 = 0;
         int var5 = Transmogrify.field_A ? 1 : 0;
         char[] var6 = new char[param1];

@@ -306,8 +306,7 @@ class mh extends fe {
             var8 = var6.a(5286, (ei) this, param2);
             var9 = var6.a(param3, (ei) this, (byte) -7);
             do {
-                int discarded$0 = 2187;
-                bj.a(var9 - -var7.field_p - 2, var7.field_q - -2, 2 + var7.field_w, var7.field_n + (var8 - 2));
+                bj.a(var9 - -var7.field_p - 2, var7.field_q - -2, 2 + var7.field_w, var7.field_n + (var8 - 2), 2187);
                 var7 = var7.field_l;
             } while (var7 != null);
         }

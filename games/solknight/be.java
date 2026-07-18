@@ -12,7 +12,7 @@ final class be extends pj {
     int field_N;
     int field_O;
 
-    final static void c() {
+    final static void c(boolean param0) {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -855,7 +855,7 @@ final class be extends pj {
         return stackIn_18_0;
     }
 
-    final static void i() {
+    final static void i(int param0) {
         try {
             Exception var1 = null;
             java.lang.reflect.Method var1_ref = null;

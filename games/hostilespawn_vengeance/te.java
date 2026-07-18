@@ -12,7 +12,7 @@ final class te extends vd implements nk, qk {
     private ph field_I;
     static int[] field_F;
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         try {
             param0.removeMouseListener((java.awt.event.MouseListener) (Object) jc.field_b);
             param0.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) jc.field_b);
@@ -24,11 +24,11 @@ final class te extends vd implements nk, qk {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         ri.field_p.c(0, 0);
     }
 
-    private final String k() {
+    private final String k(int param0) {
         return "</col></u>";
     }
 
@@ -55,8 +55,7 @@ final class te extends vd implements nk, qk {
           L0: {
             var6_int = -3 % ((param4 - -63) / 52);
             if (((te) this).field_I == param3) {
-              int discarded$2 = -25;
-              ul.e();
+              ul.e((byte) -25);
               ((te) this).field_H.g((byte) -120);
               break L0;
             } else {
@@ -95,7 +94,7 @@ final class te extends vd implements nk, qk {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_G = null;
         field_F = null;
         field_M = null;
@@ -287,7 +286,6 @@ final class te extends vd implements nk, qk {
             ((te) this).field_H = param0;
             ((te) this).field_I = new ph(jf.field_e, (mh) null);
             ((te) this).field_I.field_h = (nn) (Object) new ke();
-            int discarded$1 = 4897;
             var7 = vg.a(new String[2], 89, s.field_a);
             var3 = 20;
             var4 = new cn(jd.field_s, 0, 0, 0, 0, 16777215, -1, 3, 0, jd.field_s.field_y, -1, 2147483647, true);

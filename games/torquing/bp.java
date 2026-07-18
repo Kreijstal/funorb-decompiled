@@ -13,7 +13,7 @@ final class bp {
         throw new IllegalStateException();
     }
 
-    final static void a(wc param0) {
+    final static void a(wc param0, int param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -98,7 +98,7 @@ final class bp {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -107,8 +107,7 @@ final class bp {
     final static void a(byte param0) {
         bg var1 = (bg) (Object) rf.field_t.b((byte) -77);
         if (param0 >= -42) {
-            int discarded$0 = 0;
-            bp.a();
+            bp.a(false);
         }
         if (var1 == null) {
             var1 = new bg();

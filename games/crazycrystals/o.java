@@ -7,7 +7,7 @@ final class o extends l {
     static int field_f;
     private l field_g;
 
-    final static void b() {
+    final static void b(int param0) {
         rg.field_a[93] = 43;
         rg.field_a[192] = 28;
         rg.field_a[520] = 59;

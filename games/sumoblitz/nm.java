@@ -336,8 +336,7 @@ final class nm extends ms {
                                       break L19;
                                     } else {
                                       L20: {
-                                        int discarded$4 = 113;
-                                        ro.a(param0);
+                                        ro.a(param0, (byte) 113);
                                         ((nm) this).field_t = 200;
                                         if (12 != oh.field_e) {
                                           break L20;
@@ -419,8 +418,7 @@ final class nm extends ms {
                               }
                             }
                             L27: {
-                              int discarded$5 = 113;
-                              ro.a(param0);
+                              ro.a(param0, (byte) 113);
                               if (oh.field_e == 12) {
                                 bn.field_P = true;
                                 break L27;
@@ -441,8 +439,7 @@ final class nm extends ms {
                           param0.field_E = (int)((double)param0.field_E + 0.00016 * (double)ov.a(-63, var3_int) * Math.pow((double)var3_int, 2.0) / (double)param0.field_o);
                           param0.field_A = (int)((double)param0.field_A + (double)ov.a(-69, var4) * 0.00016 * Math.pow((double)var4, 2.0) / (double)param0.field_o);
                           param0.field_D = true;
-                          int discarded$6 = -96;
-                          tq.a(-111, fi.a(4, he.field_o) + 6, false);
+                          tq.a(-111, fi.a(4, he.field_o, (byte) -96) + 6, false);
                           if (var17 == 0) {
                             break L1;
                           } else {
@@ -487,8 +484,7 @@ final class nm extends ms {
                                       if (~var8.field_s == ~((nm) this).field_s) {
                                         break L31;
                                       } else {
-                                        int discarded$7 = -96;
-                                        if (0 == fi.a(6, he.field_o)) {
+                                        if (0 == fi.a(6, he.field_o, (byte) -96)) {
                                           param0.field_C = var8.field_q;
                                           param0.field_z = var8.field_l;
                                           var8.field_v = 60;
@@ -1167,7 +1163,7 @@ final class nm extends ms {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -1186,8 +1182,7 @@ final class nm extends ms {
                             var2_int = ((nm) this).field_y;
                             if (var2_int == 0) {
                               ((nm) this).field_m = 20;
-                              int discarded$1 = 47;
-                              this.c();
+                              this.c((byte) 47);
                               if (var3 == 0) {
                                 break L1;
                               } else {
@@ -1277,29 +1272,37 @@ final class nm extends ms {
               ((nm) this).field_m = 20;
               break L1;
             }
+            L10: {
+              if (param0 == -115) {
+                break L10;
+              } else {
+                ((nm) this).a(89);
+                break L10;
+              }
+            }
             ((nm) this).field_w = new jn();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var2, "nm.F(" + -115 + ')');
+          throw qo.a((Throwable) (Object) var2, "nm.F(" + param0 + ')');
         }
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         double var2_double = 0.0;
         double var4 = 0.0;
         double var7 = 0.0;
         try {
             var2_double = -1.5707963267948966 + (double)((nm) this).field_o / 65536.0 * 6.283185307179586;
-            int var6 = 0;
+            int var6 = 20 % ((param0 - -24) / 41);
             var4 = 19200.0 * Math.sin(-var2_double);
             var7 = 19200.0 * Math.cos(-var2_double);
             ((nm) this).field_r = (int)((double)((nm) this).field_l + var4);
             ((nm) this).field_B = (int)(var7 + (double)((nm) this).field_q);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "nm.I(" + 47 + ')');
+            throw qo.a((Throwable) (Object) runtimeException, "nm.I(" + param0 + ')');
         }
     }
 
@@ -1310,8 +1313,7 @@ final class nm extends ms {
             ((nm) this).field_q = param1 << 8;
             ((nm) this).field_o = param3;
             ((nm) this).field_y = param0;
-            int discarded$0 = -115;
-            this.a();
+            this.a((byte) -115);
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) (Object) runtimeException, "nm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

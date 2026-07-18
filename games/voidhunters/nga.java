@@ -124,7 +124,7 @@ final class nga implements Iterable {
         ((nga) this).field_g = null;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
         field_c = null;
         field_a = null;

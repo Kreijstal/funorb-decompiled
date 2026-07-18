@@ -51,8 +51,7 @@ final class ae extends gb implements rg, n {
                 if (param0 != ((ae) this).field_K) {
                   break L1;
                 } else {
-                  int discarded$2 = 50;
-                  this.i();
+                  this.i(50);
                   break L1;
                 }
               }
@@ -205,7 +204,7 @@ final class ae extends gb implements rg, n {
         return true;
     }
 
-    private final int a(String param0, String param1, int param2, int param3, gl param4) {
+    private final int a(String param0, String param1, int param2, int param3, gl param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -446,8 +445,7 @@ final class ae extends gb implements rg, n {
         var2.a(var3, (byte) 83, 270, 20, 50);
         ((ae) this).b((byte) 95, var2);
         var3 += 50;
-        int discarded$0 = -117;
-        var3 = var3 + (this.a(ag.field_b, im.field_b, 170, var3, (gl) (Object) ((ae) this).field_J) + 5);
+        var3 = var3 + (this.a(ag.field_b, im.field_b, 170, var3, (gl) (Object) ((ae) this).field_J, -117) + 5);
         ((ae) this).field_K.a(var3, (byte) 46, var5, -var5 + 496 >> 1, 40);
         ((ae) this).field_O.a(var3 - -15, (byte) 73, 60, 3 + var4, 40);
         ((ae) this).field_O.field_r = (sc) this;
@@ -606,12 +604,11 @@ final class ae extends gb implements rg, n {
         return stackIn_3_0;
     }
 
-    private final void i() {
+    private final void i(int param0) {
         if (!this.f((byte) 70)) {
             return;
         }
-        int discarded$0 = 33;
-        vf.a(((ae) this).field_J.field_o);
+        vf.a(((ae) this).field_J.field_o, 33);
     }
 
     public final void a(String param0, int param1) {

@@ -55,7 +55,7 @@ final class se extends ps {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_b = null;
     }
 

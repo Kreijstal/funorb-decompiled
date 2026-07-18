@@ -38,7 +38,7 @@ final class hka extends uj {
         return 111;
     }
 
-    final static void a(asb param0) {
+    final static void a(asb param0, int param1) {
         RuntimeException var2 = null;
         llb var3 = null;
         llb var5 = null;
@@ -61,8 +61,7 @@ final class hka extends uj {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$1 = 1;
-            iqb.field_o = gra.a(param0, "display_name_changed", "basic");
+            iqb.field_o = gra.a(param0, "display_name_changed", "basic", true);
             re.field_n = new wdb(0L, rbb.field_k, jj.field_q, esa.field_o);
             vra.field_b = new wdb(0L, rbb.field_k, bnb.field_q, ci.field_a);
             ci.field_c = new llb(0L, (llb) null);
@@ -119,7 +118,7 @@ final class hka extends uj {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_d = null;
     }
 
@@ -157,22 +156,15 @@ final class hka extends uj {
             if (!lm.a(true)) {
               dma.a();
               uba.a((byte) 82, 320, 240);
-              int discarded$18 = 0;
-              int discarded$19 = 0;
-              int discarded$20 = 0;
-              dh.a(param1);
+              dh.a(param1, 0, 0, 0);
               return;
             } else {
               if (qmb.field_q == 0) {
                 pi.a((byte) -70, false, param2);
-                int discarded$21 = 0;
-                int discarded$22 = 0;
-                int discarded$23 = 0;
-                dh.a(param1);
+                dh.a(param1, 0, 0, 0);
                 return;
               } else {
-                int discarded$24 = 1;
-                pga.a(param1);
+                pga.a(param1, true);
                 return;
               }
             }
@@ -187,9 +179,7 @@ final class hka extends uj {
                 break L0;
               }
             }
-            int discarded$25 = 97;
-            int discarded$26 = -79;
-            skb.a(wpb.field_p, 13, bj.e(), var3_int != 0, dua.e());
+            skb.a(wpb.field_p, 13, bj.e((byte) 97), var3_int != 0, dua.e((byte) -79));
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

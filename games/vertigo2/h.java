@@ -141,7 +141,7 @@ final class h extends ji {
         return ((h) this).field_E;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_D = null;
         field_A = null;
     }

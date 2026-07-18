@@ -7,7 +7,7 @@ final class jl {
     static uw field_a;
     private pv field_c;
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
     }
 
@@ -136,7 +136,7 @@ final class jl {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, boolean param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

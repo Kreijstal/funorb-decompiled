@@ -11,663 +11,318 @@ final class mg {
     }
 
     final static int a(boolean param0) {
-        if (hj.field_f < 2) {
-          return 0;
-        } else {
-          if (ob.field_c == 0) {
-            if (!qd.field_Jb.a(0)) {
-              return 20;
+        RuntimeException var1 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_28_0 = 0;
+        int stackIn_31_0 = 0;
+        int stackIn_36_0 = 0;
+        int stackIn_39_0 = 0;
+        int stackIn_44_0 = 0;
+        int stackIn_49_0 = 0;
+        int stackIn_54_0 = 0;
+        int stackIn_57_0 = 0;
+        int stackIn_62_0 = 0;
+        int stackIn_65_0 = 0;
+        int stackIn_70_0 = 0;
+        int stackIn_75_0 = 0;
+        int stackIn_78_0 = 0;
+        int stackIn_80_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_53_0 = 0;
+        int stackOut_61_0 = 0;
+        int stackOut_69_0 = 0;
+        int stackOut_74_0 = 0;
+        int stackOut_64_0 = 0;
+        int stackOut_56_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_27_0 = 0;
+        int stackOut_35_0 = 0;
+        int stackOut_43_0 = 0;
+        int stackOut_48_0 = 0;
+        int stackOut_38_0 = 0;
+        int stackOut_30_0 = 0;
+        int stackOut_79_0 = 0;
+        int stackOut_77_0 = 0;
+        try {
+          L0: {
+            if (hj.field_f < 2) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
             } else {
-              if (qd.field_Jb.a(255, "commonui")) {
-                if (!sb.field_i.a(0)) {
-                  return 50;
-                } else {
-                  if (sb.field_i.a(255, "commonui")) {
-                    if (!ig.field_t.a(0)) {
-                      return 70;
-                    } else {
-                      if (ig.field_t.c((byte) 54)) {
-                        return 100;
-                      } else {
-                        return 80;
-                      }
-                    }
+              L1: {
+                if (ob.field_c == 0) {
+                  if (!qd.field_Jb.a(0)) {
+                    stackOut_53_0 = 20;
+                    stackIn_54_0 = stackOut_53_0;
+                    return stackIn_54_0;
                   } else {
-                    return 60;
-                  }
-                }
-              } else {
-                return 40;
-              }
-            }
-          } else {
-            if (bi.field_I != null) {
-              if (bi.field_I.a(0)) {
-                if (!bi.field_I.a((byte) 12, "")) {
-                  return 29;
-                } else {
-                  if (bi.field_I.a(255, "")) {
-                    if (!qd.field_Jb.a(0)) {
-                      return 43;
-                    } else {
-                      if (qd.field_Jb.a(255, "commonui")) {
-                        if (!sb.field_i.a(0)) {
-                          return 71;
-                        } else {
-                          if (sb.field_i.a(255, "commonui")) {
-                            if (!ig.field_t.a(0)) {
-                              return 82;
-                            } else {
-                              if (ig.field_t.c((byte) 22)) {
-                                return 100;
-                              } else {
-                                return 86;
-                              }
-                            }
+                    if (qd.field_Jb.a(255, "commonui")) {
+                      if (!sb.field_i.a(0)) {
+                        stackOut_61_0 = 50;
+                        stackIn_62_0 = stackOut_61_0;
+                        return stackIn_62_0;
+                      } else {
+                        if (sb.field_i.a(255, "commonui")) {
+                          if (!ig.field_t.a(0)) {
+                            stackOut_69_0 = 70;
+                            stackIn_70_0 = stackOut_69_0;
+                            return stackIn_70_0;
                           } else {
-                            return 80;
+                            if (!ig.field_t.c((byte) 54)) {
+                              stackOut_74_0 = 80;
+                              stackIn_75_0 = stackOut_74_0;
+                              return stackIn_75_0;
+                            } else {
+                              break L1;
+                            }
+                          }
+                        } else {
+                          stackOut_64_0 = 60;
+                          stackIn_65_0 = stackOut_64_0;
+                          return stackIn_65_0;
+                        }
+                      }
+                    } else {
+                      stackOut_56_0 = 40;
+                      stackIn_57_0 = stackOut_56_0;
+                      return stackIn_57_0;
+                    }
+                  }
+                } else {
+                  L2: {
+                    if (bi.field_I != null) {
+                      if (bi.field_I.a(0)) {
+                        if (!bi.field_I.a((byte) 12, "")) {
+                          stackOut_17_0 = 29;
+                          stackIn_18_0 = stackOut_17_0;
+                          return stackIn_18_0;
+                        } else {
+                          if (!bi.field_I.a(255, "")) {
+                            stackOut_22_0 = 29;
+                            stackIn_23_0 = stackOut_22_0;
+                            return stackIn_23_0;
+                          } else {
+                            break L2;
                           }
                         }
                       } else {
-                        return 57;
+                        stackOut_12_0 = 14;
+                        stackIn_13_0 = stackOut_12_0;
+                        return stackIn_13_0;
                       }
+                    } else {
+                      break L2;
                     }
-                  } else {
-                    return 29;
                   }
-                }
-              } else {
-                return 14;
-              }
-            } else {
-              if (!qd.field_Jb.a(0)) {
-                return 43;
-              } else {
-                if (qd.field_Jb.a(255, "commonui")) {
-                  if (!sb.field_i.a(0)) {
-                    return 71;
+                  if (!qd.field_Jb.a(0)) {
+                    stackOut_27_0 = 43;
+                    stackIn_28_0 = stackOut_27_0;
+                    return stackIn_28_0;
                   } else {
-                    if (sb.field_i.a(255, "commonui")) {
-                      if (!ig.field_t.a(0)) {
-                        return 82;
+                    if (qd.field_Jb.a(255, "commonui")) {
+                      if (!sb.field_i.a(0)) {
+                        stackOut_35_0 = 71;
+                        stackIn_36_0 = stackOut_35_0;
+                        return stackIn_36_0;
                       } else {
-                        if (ig.field_t.c((byte) 22)) {
-                          return 100;
+                        if (sb.field_i.a(255, "commonui")) {
+                          if (!ig.field_t.a(0)) {
+                            stackOut_43_0 = 82;
+                            stackIn_44_0 = stackOut_43_0;
+                            return stackIn_44_0;
+                          } else {
+                            if (!ig.field_t.c((byte) 22)) {
+                              stackOut_48_0 = 86;
+                              stackIn_49_0 = stackOut_48_0;
+                              return stackIn_49_0;
+                            } else {
+                              break L1;
+                            }
+                          }
                         } else {
-                          return 86;
+                          stackOut_38_0 = 80;
+                          stackIn_39_0 = stackOut_38_0;
+                          return stackIn_39_0;
                         }
                       }
                     } else {
-                      return 80;
+                      stackOut_30_0 = 57;
+                      stackIn_31_0 = stackOut_30_0;
+                      return stackIn_31_0;
                     }
                   }
-                } else {
-                  return 57;
                 }
+              }
+              if (param0) {
+                stackOut_79_0 = 100;
+                stackIn_80_0 = stackOut_79_0;
+                break L0;
+              } else {
+                stackOut_77_0 = 119;
+                stackIn_78_0 = stackOut_77_0;
+                return stackIn_78_0;
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ie.a((Throwable) (Object) var1, "mg.A(" + param0 + ')');
         }
+        return stackIn_80_0;
     }
 
     final static void a(int param0, int param1, int param2) {
-        L0: {
-          L1: {
-            if (null == ja.field_t) {
+        RuntimeException var3 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                if (null == ja.field_t) {
+                  break L2;
+                } else {
+                  if (ja.field_t.length < param0) {
+                    break L2;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              ja.field_t = new int[2 * param0];
               break L1;
-            } else {
-              if (ja.field_t.length < param0) {
-                break L1;
-              } else {
-                break L0;
-              }
             }
-          }
-          ja.field_t = new int[2 * param0];
-          break L0;
-        }
-        L2: {
-          L3: {
-            if (null == rc.field_i) {
+            L3: {
+              L4: {
+                if (null == rc.field_i) {
+                  break L4;
+                } else {
+                  if (rc.field_i.length < param0) {
+                    break L4;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              rc.field_i = new int[param0 * 2];
               break L3;
-            } else {
-              if (rc.field_i.length < param0) {
-                break L3;
+            }
+            L5: {
+              if (param1 >= 48) {
+                break L5;
               } else {
-                break L2;
+                int discarded$1 = mg.a(true);
+                break L5;
               }
             }
-          }
-          rc.field_i = new int[param0 * 2];
-          break L2;
-        }
-        L4: {
-          if (null == fi.field_h) {
-            break L4;
-          } else {
-            if (param0 <= fi.field_h.length) {
-              if (kk.field_a == null) {
-                L5: {
-                  L6: {
-                    kk.field_a = new int[param0 * 2];
-                    if (null == qj.field_d) {
-                      break L6;
-                    } else {
-                      if (param0 > qj.field_d.length) {
-                        break L6;
-                      } else {
-                        break L5;
-                      }
-                    }
-                  }
-                  qj.field_d = new int[param0 * 2];
-                  break L5;
-                }
-                L7: {
-                  L8: {
-                    if (null == kf.field_c) {
-                      break L8;
-                    } else {
-                      if (param0 > kf.field_c.length) {
-                        break L8;
-                      } else {
-                        break L7;
-                      }
-                    }
-                  }
-                  kf.field_c = new int[2 * param0];
+            L6: {
+              L7: {
+                if (null == fi.field_h) {
                   break L7;
-                }
-                if (null == bj.field_a) {
-                  L9: {
-                    bj.field_a = new int[2 * (param2 + param0)];
-                    if (null == cb.field_c) {
-                      break L9;
-                    } else {
-                      if (cb.field_c.length >= param0) {
-                        pf.field_f = -2147483648;
-                        ha.field_c = 2147483647;
-                        mh.field_b = -2147483648;
-                        gg.field_b = 0;
-                        cc.field_B = 2147483647;
-                        return;
-                      } else {
-                        break L9;
-                      }
-                    }
+                } else {
+                  if (param0 <= fi.field_h.length) {
+                    break L6;
+                  } else {
+                    break L7;
                   }
-                  cb.field_c = new boolean[param0 * 2];
-                  pf.field_f = -2147483648;
-                  ha.field_c = 2147483647;
-                  mh.field_b = -2147483648;
-                  gg.field_b = 0;
-                  cc.field_B = 2147483647;
-                  return;
+                }
+              }
+              fi.field_h = new int[param0 * 2];
+              break L6;
+            }
+            L8: {
+              L9: {
+                if (kk.field_a == null) {
+                  break L9;
+                } else {
+                  if (~kk.field_a.length <= ~param0) {
+                    break L8;
+                  } else {
+                    break L9;
+                  }
+                }
+              }
+              kk.field_a = new int[param0 * 2];
+              break L8;
+            }
+            L10: {
+              L11: {
+                if (null == qj.field_d) {
+                  break L11;
+                } else {
+                  if (~param0 < ~qj.field_d.length) {
+                    break L11;
+                  } else {
+                    break L10;
+                  }
+                }
+              }
+              qj.field_d = new int[param0 * 2];
+              break L10;
+            }
+            L12: {
+              L13: {
+                if (null == kf.field_c) {
+                  break L13;
+                } else {
+                  if (~param0 < ~kf.field_c.length) {
+                    break L13;
+                  } else {
+                    break L12;
+                  }
+                }
+              }
+              kf.field_c = new int[2 * param0];
+              break L12;
+            }
+            L14: {
+              L15: {
+                if (null == bj.field_a) {
+                  break L15;
                 } else {
                   if (bj.field_a.length >= param2 + param0) {
-                    if (null == cb.field_c) {
-                      cb.field_c = new boolean[param0 * 2];
-                      pf.field_f = -2147483648;
-                      ha.field_c = 2147483647;
-                      mh.field_b = -2147483648;
-                      gg.field_b = 0;
-                      cc.field_B = 2147483647;
-                      return;
-                    } else {
-                      if (cb.field_c.length < param0) {
-                        cb.field_c = new boolean[param0 * 2];
-                        pf.field_f = -2147483648;
-                        ha.field_c = 2147483647;
-                        mh.field_b = -2147483648;
-                        gg.field_b = 0;
-                        cc.field_B = 2147483647;
-                        return;
-                      } else {
-                        pf.field_f = -2147483648;
-                        ha.field_c = 2147483647;
-                        mh.field_b = -2147483648;
-                        gg.field_b = 0;
-                        cc.field_B = 2147483647;
-                        return;
-                      }
-                    }
+                    break L14;
                   } else {
-                    L10: {
-                      bj.field_a = new int[2 * (param2 + param0)];
-                      if (null == cb.field_c) {
-                        break L10;
-                      } else {
-                        if (cb.field_c.length >= param0) {
-                          pf.field_f = -2147483648;
-                          ha.field_c = 2147483647;
-                          mh.field_b = -2147483648;
-                          gg.field_b = 0;
-                          cc.field_B = 2147483647;
-                          return;
-                        } else {
-                          break L10;
-                        }
-                      }
-                    }
-                    cb.field_c = new boolean[param0 * 2];
-                    pf.field_f = -2147483648;
-                    ha.field_c = 2147483647;
-                    mh.field_b = -2147483648;
-                    gg.field_b = 0;
-                    cc.field_B = 2147483647;
-                    return;
-                  }
-                }
-              } else {
-                if (kk.field_a.length >= param0) {
-                  L11: {
-                    L12: {
-                      if (null == qj.field_d) {
-                        break L12;
-                      } else {
-                        if (param0 > qj.field_d.length) {
-                          break L12;
-                        } else {
-                          break L11;
-                        }
-                      }
-                    }
-                    qj.field_d = new int[param0 * 2];
-                    break L11;
-                  }
-                  L13: {
-                    L14: {
-                      if (null == kf.field_c) {
-                        break L14;
-                      } else {
-                        if (param0 > kf.field_c.length) {
-                          break L14;
-                        } else {
-                          break L13;
-                        }
-                      }
-                    }
-                    kf.field_c = new int[2 * param0];
-                    break L13;
-                  }
-                  if (null == bj.field_a) {
-                    bj.field_a = new int[2 * (param2 + param0)];
-                    if (null == cb.field_c) {
-                      cb.field_c = new boolean[param0 * 2];
-                      pf.field_f = -2147483648;
-                      ha.field_c = 2147483647;
-                      mh.field_b = -2147483648;
-                      gg.field_b = 0;
-                      cc.field_B = 2147483647;
-                      return;
-                    } else {
-                      if (cb.field_c.length < param0) {
-                        cb.field_c = new boolean[param0 * 2];
-                        pf.field_f = -2147483648;
-                        ha.field_c = 2147483647;
-                        mh.field_b = -2147483648;
-                        gg.field_b = 0;
-                        cc.field_B = 2147483647;
-                        return;
-                      } else {
-                        pf.field_f = -2147483648;
-                        ha.field_c = 2147483647;
-                        mh.field_b = -2147483648;
-                        gg.field_b = 0;
-                        cc.field_B = 2147483647;
-                        return;
-                      }
-                    }
-                  } else {
-                    if (bj.field_a.length >= param2 + param0) {
-                      if (null == cb.field_c) {
-                        cb.field_c = new boolean[param0 * 2];
-                        pf.field_f = -2147483648;
-                        ha.field_c = 2147483647;
-                        mh.field_b = -2147483648;
-                        gg.field_b = 0;
-                        cc.field_B = 2147483647;
-                        return;
-                      } else {
-                        if (cb.field_c.length < param0) {
-                          cb.field_c = new boolean[param0 * 2];
-                          pf.field_f = -2147483648;
-                          ha.field_c = 2147483647;
-                          mh.field_b = -2147483648;
-                          gg.field_b = 0;
-                          cc.field_B = 2147483647;
-                          return;
-                        } else {
-                          pf.field_f = -2147483648;
-                          ha.field_c = 2147483647;
-                          mh.field_b = -2147483648;
-                          gg.field_b = 0;
-                          cc.field_B = 2147483647;
-                          return;
-                        }
-                      }
-                    } else {
-                      bj.field_a = new int[2 * (param2 + param0)];
-                      if (null == cb.field_c) {
-                        cb.field_c = new boolean[param0 * 2];
-                        pf.field_f = -2147483648;
-                        ha.field_c = 2147483647;
-                        mh.field_b = -2147483648;
-                        gg.field_b = 0;
-                        cc.field_B = 2147483647;
-                        return;
-                      } else {
-                        if (cb.field_c.length < param0) {
-                          cb.field_c = new boolean[param0 * 2];
-                          pf.field_f = -2147483648;
-                          ha.field_c = 2147483647;
-                          mh.field_b = -2147483648;
-                          gg.field_b = 0;
-                          cc.field_B = 2147483647;
-                          return;
-                        } else {
-                          pf.field_f = -2147483648;
-                          ha.field_c = 2147483647;
-                          mh.field_b = -2147483648;
-                          gg.field_b = 0;
-                          cc.field_B = 2147483647;
-                          return;
-                        }
-                      }
-                    }
-                  }
-                } else {
-                  L15: {
-                    L16: {
-                      kk.field_a = new int[param0 * 2];
-                      if (null == qj.field_d) {
-                        break L16;
-                      } else {
-                        if (param0 > qj.field_d.length) {
-                          break L16;
-                        } else {
-                          break L15;
-                        }
-                      }
-                    }
-                    qj.field_d = new int[param0 * 2];
                     break L15;
                   }
-                  L17: {
-                    L18: {
-                      if (null == kf.field_c) {
-                        break L18;
-                      } else {
-                        if (param0 > kf.field_c.length) {
-                          break L18;
-                        } else {
-                          break L17;
-                        }
-                      }
-                    }
-                    kf.field_c = new int[2 * param0];
+                }
+              }
+              bj.field_a = new int[2 * (param2 + param0)];
+              break L14;
+            }
+            L16: {
+              L17: {
+                if (null == cb.field_c) {
+                  break L17;
+                } else {
+                  if (~cb.field_c.length <= ~param0) {
+                    break L16;
+                  } else {
                     break L17;
                   }
-                  L19: {
-                    L20: {
-                      if (null == bj.field_a) {
-                        break L20;
-                      } else {
-                        if (bj.field_a.length >= param2 + param0) {
-                          break L19;
-                        } else {
-                          break L20;
-                        }
-                      }
-                    }
-                    bj.field_a = new int[2 * (param2 + param0)];
-                    break L19;
-                  }
-                  if (null == cb.field_c) {
-                    cb.field_c = new boolean[param0 * 2];
-                    pf.field_f = -2147483648;
-                    ha.field_c = 2147483647;
-                    mh.field_b = -2147483648;
-                    gg.field_b = 0;
-                    cc.field_B = 2147483647;
-                    return;
-                  } else {
-                    if (cb.field_c.length < param0) {
-                      cb.field_c = new boolean[param0 * 2];
-                      pf.field_f = -2147483648;
-                      ha.field_c = 2147483647;
-                      mh.field_b = -2147483648;
-                      gg.field_b = 0;
-                      cc.field_B = 2147483647;
-                      return;
-                    } else {
-                      pf.field_f = -2147483648;
-                      ha.field_c = 2147483647;
-                      mh.field_b = -2147483648;
-                      gg.field_b = 0;
-                      cc.field_B = 2147483647;
-                      return;
-                    }
-                  }
                 }
               }
-            } else {
-              break L4;
+              cb.field_c = new boolean[param0 * 2];
+              break L16;
             }
-          }
-        }
-        fi.field_h = new int[param0 * 2];
-        if (kk.field_a != null) {
-          if (kk.field_a.length < param0) {
-            L21: {
-              L22: {
-                kk.field_a = new int[param0 * 2];
-                if (null == qj.field_d) {
-                  break L22;
-                } else {
-                  if (param0 > qj.field_d.length) {
-                    break L22;
-                  } else {
-                    break L21;
-                  }
-                }
-              }
-              qj.field_d = new int[param0 * 2];
-              break L21;
-            }
-            L23: {
-              L24: {
-                if (null == kf.field_c) {
-                  break L24;
-                } else {
-                  if (param0 > kf.field_c.length) {
-                    break L24;
-                  } else {
-                    break L23;
-                  }
-                }
-              }
-              kf.field_c = new int[2 * param0];
-              break L23;
-            }
-            L25: {
-              L26: {
-                if (null == bj.field_a) {
-                  break L26;
-                } else {
-                  if (bj.field_a.length >= param2 + param0) {
-                    break L25;
-                  } else {
-                    break L26;
-                  }
-                }
-              }
-              bj.field_a = new int[2 * (param2 + param0)];
-              break L25;
-            }
-            L27: {
-              if (null == cb.field_c) {
-                break L27;
-              } else {
-                if (cb.field_c.length >= param0) {
-                  pf.field_f = -2147483648;
-                  ha.field_c = 2147483647;
-                  mh.field_b = -2147483648;
-                  gg.field_b = 0;
-                  cc.field_B = 2147483647;
-                  return;
-                } else {
-                  break L27;
-                }
-              }
-            }
-            cb.field_c = new boolean[param0 * 2];
             pf.field_f = -2147483648;
             ha.field_c = 2147483647;
             mh.field_b = -2147483648;
             gg.field_b = 0;
             cc.field_B = 2147483647;
-            return;
-          } else {
-            L28: {
-              L29: {
-                if (null == qj.field_d) {
-                  break L29;
-                } else {
-                  if (param0 > qj.field_d.length) {
-                    break L29;
-                  } else {
-                    break L28;
-                  }
-                }
-              }
-              qj.field_d = new int[param0 * 2];
-              break L28;
-            }
-            L30: {
-              L31: {
-                if (null == kf.field_c) {
-                  break L31;
-                } else {
-                  if (param0 > kf.field_c.length) {
-                    break L31;
-                  } else {
-                    break L30;
-                  }
-                }
-              }
-              kf.field_c = new int[2 * param0];
-              break L30;
-            }
-            L32: {
-              L33: {
-                if (null == bj.field_a) {
-                  break L33;
-                } else {
-                  if (bj.field_a.length >= param2 + param0) {
-                    break L32;
-                  } else {
-                    break L33;
-                  }
-                }
-              }
-              bj.field_a = new int[2 * (param2 + param0)];
-              break L32;
-            }
-            L34: {
-              if (null == cb.field_c) {
-                break L34;
-              } else {
-                if (cb.field_c.length >= param0) {
-                  pf.field_f = -2147483648;
-                  ha.field_c = 2147483647;
-                  mh.field_b = -2147483648;
-                  gg.field_b = 0;
-                  cc.field_B = 2147483647;
-                  return;
-                } else {
-                  break L34;
-                }
-              }
-            }
-            cb.field_c = new boolean[param0 * 2];
-            pf.field_f = -2147483648;
-            ha.field_c = 2147483647;
-            mh.field_b = -2147483648;
-            gg.field_b = 0;
-            cc.field_B = 2147483647;
-            return;
+            break L0;
           }
-        } else {
-          L35: {
-            L36: {
-              kk.field_a = new int[param0 * 2];
-              if (null == qj.field_d) {
-                break L36;
-              } else {
-                if (param0 > qj.field_d.length) {
-                  break L36;
-                } else {
-                  break L35;
-                }
-              }
-            }
-            qj.field_d = new int[param0 * 2];
-            break L35;
-          }
-          L37: {
-            L38: {
-              if (null == kf.field_c) {
-                break L38;
-              } else {
-                if (param0 > kf.field_c.length) {
-                  break L38;
-                } else {
-                  break L37;
-                }
-              }
-            }
-            kf.field_c = new int[2 * param0];
-            break L37;
-          }
-          L39: {
-            L40: {
-              if (null == bj.field_a) {
-                break L40;
-              } else {
-                if (bj.field_a.length >= param2 + param0) {
-                  break L39;
-                } else {
-                  break L40;
-                }
-              }
-            }
-            bj.field_a = new int[2 * (param2 + param0)];
-            break L39;
-          }
-          L41: {
-            if (null == cb.field_c) {
-              break L41;
-            } else {
-              if (cb.field_c.length >= param0) {
-                pf.field_f = -2147483648;
-                ha.field_c = 2147483647;
-                mh.field_b = -2147483648;
-                gg.field_b = 0;
-                cc.field_B = 2147483647;
-                return;
-              } else {
-                break L41;
-              }
-            }
-          }
-          cb.field_c = new boolean[param0 * 2];
-          pf.field_f = -2147483648;
-          ha.field_c = 2147483647;
-          mh.field_b = -2147483648;
-          gg.field_b = 0;
-          cc.field_B = 2147483647;
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw ie.a((Throwable) (Object) var3, "mg.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -679,44 +334,44 @@ final class mg {
         try {
             Exception var4 = null;
             RuntimeException var4_ref = null;
-            RuntimeException stackIn_14_0 = null;
-            StringBuilder stackIn_14_1 = null;
-            RuntimeException stackIn_15_0 = null;
-            StringBuilder stackIn_15_1 = null;
-            RuntimeException stackIn_16_0 = null;
-            StringBuilder stackIn_16_1 = null;
-            String stackIn_16_2 = null;
             RuntimeException stackIn_17_0 = null;
             StringBuilder stackIn_17_1 = null;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
             RuntimeException stackIn_19_0 = null;
             StringBuilder stackIn_19_1 = null;
-            String stackIn_19_2 = null;
+            RuntimeException stackIn_20_0 = null;
+            StringBuilder stackIn_20_1 = null;
+            String stackIn_20_2 = null;
+            RuntimeException stackIn_21_0 = null;
+            StringBuilder stackIn_21_1 = null;
+            RuntimeException stackIn_23_0 = null;
+            StringBuilder stackIn_23_1 = null;
+            RuntimeException stackIn_24_0 = null;
+            StringBuilder stackIn_24_1 = null;
+            String stackIn_24_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_13_0 = null;
-            StringBuilder stackOut_13_1 = null;
-            RuntimeException stackOut_15_0 = null;
-            StringBuilder stackOut_15_1 = null;
-            String stackOut_15_2 = null;
-            RuntimeException stackOut_14_0 = null;
-            StringBuilder stackOut_14_1 = null;
-            String stackOut_14_2 = null;
             RuntimeException stackOut_16_0 = null;
             StringBuilder stackOut_16_1 = null;
-            RuntimeException stackOut_18_0 = null;
-            StringBuilder stackOut_18_1 = null;
-            String stackOut_18_2 = null;
+            RuntimeException stackOut_19_0 = null;
+            StringBuilder stackOut_19_1 = null;
+            String stackOut_19_2 = null;
             RuntimeException stackOut_17_0 = null;
             StringBuilder stackOut_17_1 = null;
             String stackOut_17_2 = null;
+            RuntimeException stackOut_20_0 = null;
+            StringBuilder stackOut_20_1 = null;
+            RuntimeException stackOut_23_0 = null;
+            StringBuilder stackOut_23_1 = null;
+            String stackOut_23_2 = null;
+            RuntimeException stackOut_21_0 = null;
+            StringBuilder stackOut_21_1 = null;
+            String stackOut_21_2 = null;
             try {
               L0: {
                 L1: {
-                  if (param1.field_h[param1.field_j] != -32) {
+                  if (param1.field_h[param1.field_j] != 31) {
                     break L1;
                   } else {
-                    if (116 == param1.field_h[param1.field_j - -1]) {
+                    if (param1.field_h[param1.field_j - -1] == -117) {
                       L2: {
                         if (null != ((mg) this).field_b) {
                           break L2;
@@ -754,56 +409,56 @@ final class mg {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
                 var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_13_0 = (RuntimeException) var4_ref;
-                stackOut_13_1 = new StringBuilder().append("mg.C(");
-                stackIn_15_0 = stackOut_13_0;
-                stackIn_15_1 = stackOut_13_1;
-                stackIn_14_0 = stackOut_13_0;
-                stackIn_14_1 = stackOut_13_1;
-                if (param0 == null) {
-                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-                  stackOut_15_2 = "null";
-                  stackIn_16_0 = stackOut_15_0;
-                  stackIn_16_1 = stackOut_15_1;
-                  stackIn_16_2 = stackOut_15_2;
-                  break L4;
-                } else {
-                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-                  stackOut_14_2 = "{...}";
-                  stackIn_16_0 = stackOut_14_0;
-                  stackIn_16_1 = stackOut_14_1;
-                  stackIn_16_2 = stackOut_14_2;
-                  break L4;
-                }
-              }
-              L5: {
-                stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
-                stackIn_18_0 = stackOut_16_0;
-                stackIn_18_1 = stackOut_16_1;
+                stackOut_16_0 = (RuntimeException) var4_ref;
+                stackOut_16_1 = new StringBuilder().append("mg.C(");
+                stackIn_19_0 = stackOut_16_0;
+                stackIn_19_1 = stackOut_16_1;
                 stackIn_17_0 = stackOut_16_0;
                 stackIn_17_1 = stackOut_16_1;
-                if (param1 == null) {
-                  stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-                  stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-                  stackOut_18_2 = "null";
-                  stackIn_19_0 = stackOut_18_0;
-                  stackIn_19_1 = stackOut_18_1;
-                  stackIn_19_2 = stackOut_18_2;
-                  break L5;
+                if (param0 == null) {
+                  stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+                  stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+                  stackOut_19_2 = "null";
+                  stackIn_20_0 = stackOut_19_0;
+                  stackIn_20_1 = stackOut_19_1;
+                  stackIn_20_2 = stackOut_19_2;
+                  break L4;
                 } else {
                   stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
                   stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
                   stackOut_17_2 = "{...}";
-                  stackIn_19_0 = stackOut_17_0;
-                  stackIn_19_1 = stackOut_17_1;
-                  stackIn_19_2 = stackOut_17_2;
+                  stackIn_20_0 = stackOut_17_0;
+                  stackIn_20_1 = stackOut_17_1;
+                  stackIn_20_2 = stackOut_17_2;
+                  break L4;
+                }
+              }
+              L5: {
+                stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+                stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
+                stackIn_23_0 = stackOut_20_0;
+                stackIn_23_1 = stackOut_20_1;
+                stackIn_21_0 = stackOut_20_0;
+                stackIn_21_1 = stackOut_20_1;
+                if (param1 == null) {
+                  stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+                  stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+                  stackOut_23_2 = "null";
+                  stackIn_24_0 = stackOut_23_0;
+                  stackIn_24_1 = stackOut_23_1;
+                  stackIn_24_2 = stackOut_23_2;
+                  break L5;
+                } else {
+                  stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+                  stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+                  stackOut_21_2 = "{...}";
+                  stackIn_24_0 = stackOut_21_0;
+                  stackIn_24_1 = stackOut_21_1;
+                  stackIn_24_2 = stackOut_21_2;
                   break L5;
                 }
               }
-              throw ie.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param2 + ')');
+              throw ie.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -812,8 +467,15 @@ final class mg {
         }
     }
 
-    public static void a() {
-        field_a = null;
+    public static void a(byte param0) {
+        if (param0 != 5) {
+            return;
+        }
+        try {
+            field_a = null;
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "mg.B(" + param0 + ')');
+        }
     }
 
     static {

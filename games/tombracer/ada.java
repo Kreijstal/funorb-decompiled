@@ -57,7 +57,7 @@ final class ada extends rva implements tsa {
         }
     }
 
-    final static int b() {
+    final static int b(boolean param0) {
         return tu.field_h;
     }
 

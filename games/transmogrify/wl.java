@@ -53,8 +53,6 @@ final class wl extends aj implements hl, df, tc {
         nc dupTemp$1 = new nc(10000536);
         ((wl) this).field_x.field_q = (ui) (Object) dupTemp$1;
         ((wl) this).field_F.field_q = (ui) (Object) dupTemp$1;
-        int discarded$2 = -122;
-        int discarded$3 = 106;
         String var2 = ij.a(gk.field_g, new String[2], (byte) -72);
         int var3 = 20;
         var3 = var3 + this.a(170, 74, rg.field_I, (qg) (Object) ((wl) this).field_y, var3);
@@ -183,8 +181,8 @@ final class wl extends aj implements hl, df, tc {
         }
     }
 
-    final static boolean a() {
-        return 0 != (hc.field_t & 1);
+    final static boolean a(boolean param0, int param1) {
+        return 0 != (hc.field_t & 1) ? true : false;
     }
 
     private final int a(int param0, int param1, String param2, int param3, qg param4) {
@@ -293,11 +291,11 @@ final class wl extends aj implements hl, df, tc {
         return stackIn_3_0;
     }
 
-    private final String n() {
+    private final String n(int param0) {
         return "</col></u>";
     }
 
-    private final String m() {
+    private final String m(int param0) {
         int var2 = -34;
         return "<u=2164A2><col=2164A2>";
     }
@@ -620,8 +618,7 @@ final class wl extends aj implements hl, df, tc {
             }
             if (param0 != ((wl) this).field_A) {
               if (param0 == ((wl) this).field_G) {
-                int discarded$4 = 2188;
-                boolean discarded$5 = this.l();
+                boolean discarded$2 = this.l(2188);
                 break L0;
               } else {
                 return;
@@ -817,14 +814,13 @@ final class wl extends aj implements hl, df, tc {
         return stackIn_4_0;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0, boolean param1, int param2) {
         Object var4 = null;
         td.a(-110, param0, (String) null, param1);
     }
 
-    private final boolean l() {
-        int discarded$0 = 15;
-        if (!this.o()) {
+    private final boolean l(int param0) {
+        if (!this.o(15)) {
             return false;
         }
         int var2 = -1;
@@ -835,12 +831,12 @@ final class wl extends aj implements hl, df, tc {
         return ej.a((wl) this, ((wl) this).field_y.field_k, ((wl) this).field_F.field_k, ((wl) this).field_w.field_y, false, ((wl) this).field_J.field_k, var2);
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         int var1 = -18;
         field_K = null;
     }
 
-    private final boolean o() {
+    private final boolean o(int param0) {
         if (this.a((byte) 118, (ie) (Object) ((wl) this).field_J)) {
           if (this.a((byte) 98, (ie) (Object) ((wl) this).field_y)) {
             if (this.a((byte) 104, (ie) (Object) ((wl) this).field_E)) {
@@ -1010,14 +1006,13 @@ final class wl extends aj implements hl, df, tc {
     final void a(int param0, byte param1, qg param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = 15;
-            ((wl) this).field_G.field_t = this.o();
+            ((wl) this).field_G.field_t = this.o(15);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) (Object) runtimeException, "wl.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final static void p() {
+    final static void p(int param0) {
     }
 
     static {

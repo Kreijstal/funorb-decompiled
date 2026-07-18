@@ -7,7 +7,7 @@ abstract class nf extends o {
     static String field_n;
     static String field_l;
 
-    final static boolean e() {
+    final static boolean e(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         int stackIn_4_0 = 0;
@@ -39,13 +39,13 @@ abstract class nf extends o {
         ((nf) this).field_m = param0;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_k = null;
         field_l = null;
         field_n = null;
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -136,8 +136,7 @@ abstract class nf extends o {
                           }
                           break L5;
                         } else {
-                          int discarded$2 = 9;
-                          int discarded$3 = ac.a(var6, var5, param0, var4);
+                          int discarded$1 = ac.a(var17, var5, param0, var4, 9);
                           break L5;
                         }
                       }

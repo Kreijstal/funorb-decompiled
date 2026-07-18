@@ -93,7 +93,7 @@ final class rf {
         return stackIn_9_0;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return rj.field_f == 13 || ul.field_b > 0;
     }
 

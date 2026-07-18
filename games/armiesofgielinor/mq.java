@@ -203,11 +203,9 @@ final class mq extends je {
                     }
                     Object var8 = null;
                     it.a(var5, -91, rs.field_t, qd.field_G, param0, (String) null);
-                    int discarded$0 = 19212;
-                    jh.a(qd.field_G, dj.field_e, var5, rs.field_t);
+                    jh.a(qd.field_G, dj.field_e, var5, rs.field_t, 19212);
                     e.a((byte) -126);
-                    int discarded$1 = -20873;
-                    wf.g();
+                    wf.g(-20873);
                 }
             }
         }

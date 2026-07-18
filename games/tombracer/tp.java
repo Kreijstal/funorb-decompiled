@@ -6,7 +6,7 @@ final class tp extends ge {
     static String field_J;
     static nh field_K;
 
-    final static la a(int param0, boolean param1, dt param2, int param3) {
+    final static la a(int param0, boolean param1, dt param2, int param3, byte param4) {
         Object var5 = null;
         g var5_ref = null;
         RuntimeException var5_ref2 = null;
@@ -188,7 +188,7 @@ final class tp extends ge {
         }
     }
 
-    public static void t() {
+    public static void t(byte param0) {
         field_J = null;
         int var1 = 0;
         field_K = null;

@@ -48,7 +48,7 @@ final class vh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_h = null;
         field_f = null;

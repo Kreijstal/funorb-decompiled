@@ -385,7 +385,7 @@ class tc {
         return true;
     }
 
-    final static void a(int param0, rs param1) {
+    final static void a(int param0, rs param1, byte param2) {
         bv var5 = null;
         int var4 = 0;
         try {
@@ -613,8 +613,7 @@ class tc {
     final static int b(int param0) {
         oi.field_c.a(18199);
         if (!ai.field_T.a(true)) {
-            int discarded$0 = -120;
-            return ep.b();
+            return ep.b((byte) -120);
         }
         return 0;
     }

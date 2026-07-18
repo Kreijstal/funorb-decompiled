@@ -458,7 +458,7 @@ final class nn implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static int a(aga param0, aga param1) {
+    final static int a(aga param0, aga param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

@@ -220,12 +220,12 @@ final class ni extends di {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_m = null;
         field_n = null;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         try {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;

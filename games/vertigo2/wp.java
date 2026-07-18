@@ -16,11 +16,10 @@ final class wp {
         if (param1 < 72) {
             return null;
         }
-        int discarded$0 = -33;
-        return nr.a(param3, 1, param2, param0);
+        return nr.a(param3, 1, param2, param0, -33);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_c = null;
         field_b = null;

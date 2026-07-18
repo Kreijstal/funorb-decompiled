@@ -441,12 +441,11 @@ class w extends to {
         field_gb = null;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         int var1 = vo.a(-14225);
         int var2 = b.g((byte) 124);
         p.field_x.a(v.field_a + -dn.field_h, var2 + (wp.field_y << 1), (dn.field_h << 1) + var1, (byte) 79, a.field_d - wp.field_y);
-        int discarded$0 = 122;
-        jn.b();
+        jn.b((byte) 122);
     }
 
     private w(long param0, w param1, int param2, int param3, int param4, int param5, String param6) {

@@ -29,20 +29,18 @@ class aa extends e {
         this(ug.field_e, param0);
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         dd var1 = null;
         dd var2 = null;
         int var3 = 0;
         int var4 = fleas.field_A ? 1 : 0;
         try {
             var1 = new dd(540, 140);
-            int discarded$0 = 45;
-            r.a(var1);
+            r.a(var1, 45);
             bl.b();
             gb.c();
             vg.field_z = 0;
-            int discarded$1 = -515966495;
-            mj.a();
+            mj.a(-515966495);
             var2 = var1.c();
             for (var3 = 0; var3 < 15; var3++) {
                 var2.b(-2, -2, 16777215);
@@ -56,7 +54,7 @@ class aa extends e {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_r = null;
         field_s = null;
     }

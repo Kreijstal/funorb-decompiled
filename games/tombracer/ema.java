@@ -194,7 +194,7 @@ final class ema implements isa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

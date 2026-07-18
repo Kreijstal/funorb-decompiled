@@ -34,7 +34,7 @@ final class gm implements pf {
         return (int)(1000000000L / fd.field_d);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (ob.field_Y == null) {
             throw new IllegalStateException("NGR");
         }

@@ -8,7 +8,7 @@ final class k {
     static String field_d;
     static boolean field_c;
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         return nl.a((byte) 127, qj.field_a, vj.field_o);
     }
 
@@ -242,7 +242,7 @@ final class k {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_b = null;
         field_a = null;

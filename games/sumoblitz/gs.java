@@ -6,13 +6,13 @@ final class gs {
     static String field_c;
     static int[] field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_c = null;
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, boolean param1) {
         param0.addMouseListener((java.awt.event.MouseListener) (Object) wk.field_h);
         try {
             param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) wk.field_h);

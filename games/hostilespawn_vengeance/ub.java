@@ -6,14 +6,14 @@ final class ub {
     static bd field_c;
     static int[][] field_a;
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, byte param4) {
         ka.field_q = param3;
         sd.field_s = param2;
         eh.field_d = param1;
         kb.field_d = param0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         field_a = null;

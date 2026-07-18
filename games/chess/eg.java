@@ -39,7 +39,7 @@ final class eg {
         }
     }
 
-    final static void a(int param0, int param1, int param2, le param3, le param4) {
+    final static void a(int param0, int param1, int param2, le param3, le param4, int param5) {
         ig.field_b = param3;
         mf.field_z = 2;
         uc.field_g = param4;
@@ -56,7 +56,7 @@ final class eg {
         return ((eg) this).field_c.length();
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_g = null;
         field_j = null;

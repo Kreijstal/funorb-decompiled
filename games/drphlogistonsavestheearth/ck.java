@@ -23,8 +23,7 @@ final class ck {
         if (!(ol.field_a == null)) {
             ol.field_a.d(true);
         }
-        int discarded$0 = 0;
-        String var1 = gk.a();
+        String var1 = gk.a(0);
         pi.field_O = new wa(var1, (String) null, true, false, false);
         if (param0 <= 71) {
             field_d = null;
@@ -34,7 +33,7 @@ final class ck {
         fb.field_e.g((byte) -125);
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         lc var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -140,7 +139,7 @@ final class ck {
         return var4;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_l = null;
         field_k = null;

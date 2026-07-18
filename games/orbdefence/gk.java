@@ -67,7 +67,7 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static e a(String param0) {
+    final static e a(String param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -318,7 +318,7 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static hf a(dl param0) {
+    final static hf a(dl param0, byte param1) {
         RuntimeException var2 = null;
         hf stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -340,8 +340,7 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = -129;
-            stackOut_0_0 = ik.a(bb.a(param0, 100, 96));
+            stackOut_0_0 = ik.a(bb.a(param0, 100, 96), -129);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -378,19 +377,17 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1 = 0;
         if (ij.field_g < 224) {
             var1 = ij.field_g % 32;
-            int discarded$0 = -23235;
-            ia.b(32 + ij.field_g + -var1);
+            ia.b(32 + ij.field_g + -var1, -23235);
         } else {
-            int discarded$1 = -23235;
-            ia.b(256);
+            ia.b(256, -23235);
         }
     }
 

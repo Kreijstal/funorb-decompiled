@@ -7,7 +7,7 @@ final class ve {
     static pl field_b;
     static jg field_a;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         int var1 = 9;
         field_b = null;
@@ -90,7 +90,7 @@ final class ve {
         return stackIn_6_0 != 0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         pa.field_d = new sf[17];
         pa.field_d[0] = new sf(0, 170, 170, 300, 0, (wk) null, true);
         pa.field_d[1] = new sf(1, 224, 110, 200, 0, (wk) null, false);
@@ -500,33 +500,21 @@ final class ve {
                 var5 = he.a(-1766, param1) ? 1 : 0;
                 var6 = new pe();
                 var6.field_L = (short)param1.g(71, 16);
-                int discarded$20 = 0;
-                var6.field_z = s.a(var6.field_z, 16, param1);
-                int discarded$21 = 0;
-                var6.field_m = s.a(var6.field_m, 16, param1);
-                int discarded$22 = 0;
-                var6.field_C = s.a(var6.field_C, 16, param1);
+                var6.field_z = s.a(var6.field_z, 16, param1, false);
+                var6.field_m = s.a(var6.field_m, 16, param1, false);
+                var6.field_C = s.a(var6.field_C, 16, param1, false);
                 var6.field_w = (short)param1.g(95, 16);
-                int discarded$23 = 0;
-                var6.field_G = s.a(var6.field_G, 16, param1);
-                int discarded$24 = 0;
-                var6.field_j = s.a(var6.field_j, 16, param1);
-                int discarded$25 = 0;
-                var6.field_x = s.a(var6.field_x, 16, param1);
+                var6.field_G = s.a(var6.field_G, 16, param1, false);
+                var6.field_j = s.a(var6.field_j, 16, param1, false);
+                var6.field_x = s.a(var6.field_x, 16, param1, false);
                 if (var4 != 0) {
                   var6.field_u = (short)param1.g(-113, 16);
-                  int discarded$26 = 0;
-                  var6.field_g = s.a(var6.field_g, 16, param1);
-                  int discarded$27 = 0;
-                  var6.field_H = s.a(var6.field_H, 16, param1);
-                  int discarded$28 = 0;
-                  var6.field_F = s.a(var6.field_F, 16, param1);
-                  int discarded$29 = 0;
-                  var6.field_M = s.a(var6.field_M, 16, param1);
-                  int discarded$30 = 0;
-                  var6.field_V = s.a(var6.field_V, 16, param1);
-                  int discarded$31 = 0;
-                  var6.field_T = s.a(var6.field_T, 16, param1);
+                  var6.field_g = s.a(var6.field_g, 16, param1, false);
+                  var6.field_H = s.a(var6.field_H, 16, param1, false);
+                  var6.field_F = s.a(var6.field_F, 16, param1, false);
+                  var6.field_M = s.a(var6.field_M, 16, param1, false);
+                  var6.field_V = s.a(var6.field_V, 16, param1, false);
+                  var6.field_T = s.a(var6.field_T, 16, param1, false);
                   break L1;
                 } else {
                   break L1;
@@ -534,17 +522,12 @@ final class ve {
               }
               L2: {
                 if (var5 != 0) {
-                  int discarded$32 = param1.g(-113, 16);
-                  int discarded$33 = 0;
-                  var6.field_y = s.a(var6.field_y, 16, param1);
-                  int discarded$34 = 0;
-                  var6.field_i = s.a(var6.field_i, 16, param1);
-                  int discarded$35 = 0;
-                  var6.field_E = s.a(var6.field_E, 16, param1);
-                  int discarded$36 = 0;
-                  var6.field_k = s.a(var6.field_k, 16, param1);
-                  int discarded$37 = 0;
-                  var6.field_Y = s.a(var6.field_Y, 16, param1);
+                  int discarded$1 = param1.g(-113, 16);
+                  var6.field_y = s.a(var6.field_y, 16, param1, false);
+                  var6.field_i = s.a(var6.field_i, 16, param1, false);
+                  var6.field_E = s.a(var6.field_E, 16, param1, false);
+                  var6.field_k = s.a(var6.field_k, 16, param1, false);
+                  var6.field_Y = s.a(var6.field_Y, 16, param1, false);
                   break L2;
                 } else {
                   break L2;
@@ -554,15 +537,13 @@ final class ve {
                 if (!he.a(-1766, param1)) {
                   break L3;
                 } else {
-                  int discarded$38 = 0;
-                  var6.field_e = s.a(var6.field_e, 16, param1);
+                  var6.field_e = s.a(var6.field_e, 16, param1, false);
                   break L3;
                 }
               }
               L4: {
                 if (he.a(-1766, param1)) {
-                  int discarded$39 = -13035;
-                  var6.field_P = ec.a(16, param1, var6.field_P);
+                  var6.field_P = ec.a(16, param1, var6.field_P, -13035);
                   var7 = 0;
                   var8 = 0;
                   L5: while (true) {

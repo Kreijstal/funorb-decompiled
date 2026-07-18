@@ -314,11 +314,11 @@ class lg extends d {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_M = null;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return ik.field_j;
     }
 
@@ -405,7 +405,7 @@ class lg extends d {
         }
     }
 
-    final static void h() {
+    final static void h(int param0) {
         ob.field_E.c((byte) -114);
         dl.field_f = 0;
     }

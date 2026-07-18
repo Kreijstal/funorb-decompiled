@@ -30,8 +30,7 @@ final class tr implements ntb {
             L1: {
               var3 = (tr) (Object) param0;
               var4 = 0;
-              int discarded$16 = 0;
-              if (ikb.a(var3.field_a, var3.field_a)) {
+              if (ikb.a(((tr) this).field_a, var3.field_a, false)) {
                 var4 = 1;
                 System.out.println("int[] values has changed. ");
                 break L1;
@@ -93,7 +92,7 @@ final class tr implements ntb {
         }
         try {
             var3 = (tr) (Object) param1;
-            var3.field_a = dob.a(var3.field_a, (byte) -50, var3.field_a);
+            var3.field_a = dob.a(var3.field_a, (byte) -50, ((tr) this).field_a);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "tr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -190,7 +189,7 @@ final class tr implements ntb {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         int var2 = VoidHunters.field_G;
         try {
@@ -284,7 +283,7 @@ final class tr implements ntb {
         return hab.field_g[param1].field_r;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
     }
 
@@ -321,8 +320,7 @@ final class tr implements ntb {
 
     tr() {
         kga.a(107, sp.field_p);
-        int discarded$0 = -21049;
-        ((tr) this).field_a = ik.a();
+        ((tr) this).field_a = ik.a(-21049);
     }
 
     public final boolean a(byte param0, tv param1) {
@@ -351,8 +349,7 @@ final class tr implements ntb {
           L0: {
             var3 = (tr) (Object) param1;
             var4 = -34 % ((22 - param0) / 59);
-            int discarded$2 = 28;
-            stackOut_0_0 = wpb.a(var3.field_a, var3.field_a);
+            stackOut_0_0 = wpb.a(var3.field_a, ((tr) this).field_a, (byte) 28);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

@@ -42,7 +42,7 @@ final class tk {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(null == mh.field_d)) {
             mh.field_d.c();
         }
@@ -51,7 +51,7 @@ final class tk {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_h = null;
         field_f = null;
         field_c = null;

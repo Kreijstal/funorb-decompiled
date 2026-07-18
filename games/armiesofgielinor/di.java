@@ -19,7 +19,7 @@ final class di extends mk {
         gl.a(124, 4);
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_l = null;
         field_j = null;
         int var1 = -96;

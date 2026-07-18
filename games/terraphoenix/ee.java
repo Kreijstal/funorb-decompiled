@@ -292,8 +292,8 @@ final class ee {
     }
 
     final static void a(byte param0, fa param1) {
+        RuntimeException runtimeException = null;
         tl var2 = null;
-        RuntimeException var2_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -314,15 +314,19 @@ final class ee {
           L0: {
             tl.a(param1.a("headers.packvorbis", "", -21653));
             var2 = tl.a(param1, "jagex logo2.packvorbis", "");
-            gg discarded$1 = var2.a();
-            break L0;
+            if (param0 == 51) {
+              gg discarded$3 = var2.a();
+              break L0;
+            } else {
+              return;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
-            var2_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2_ref;
-            stackOut_4_1 = new StringBuilder().append("ee.D(").append(51).append(',');
+            runtimeException = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) runtimeException;
+            stackOut_4_1 = new StringBuilder().append("ee.D(").append(param0).append(',');
             stackIn_7_0 = stackOut_4_0;
             stackIn_7_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -362,7 +366,7 @@ final class ee {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         uc var1_ref = null;
         int var2 = 0;
@@ -404,17 +408,20 @@ final class ee {
                   return;
                 } else {
                   if (3 != var2) {
-                    if (var2 != 4) {
-                      int discarded$4 = -15465;
-                      bd.a((Throwable) null, "F1: " + r.i(), 111);
-                      gb.g(-17464);
-                      break L0;
+                    if (param0 >= 111) {
+                      if (var2 != 4) {
+                        bd.a((Throwable) null, "F1: " + r.i(-15465), 111);
+                        gb.g(-17464);
+                        break L0;
+                      } else {
+                        jg.field_gb = 1;
+                        var3 = var1_ref.e(-1);
+                        ml.field_t = var3.intern();
+                        var4 = var1_ref.a(-16384);
+                        ve.a(2, var4);
+                        return;
+                      }
                     } else {
-                      jg.field_gb = 1;
-                      var3 = var1_ref.e(-1);
-                      ml.field_t = var3.intern();
-                      var4 = var1_ref.a(-16384);
-                      ve.a(2, var4);
                       return;
                     }
                   } else {
@@ -470,9 +477,9 @@ final class ee {
                   } else {
                     var6 = new q();
                     gb.field_z.a(false, (vh) (Object) var6, (long)hm.a((byte) -121, (CharSequence) (Object) var4_ref_String).hashCode());
-                    int fieldTemp$5 = gj.field_a;
+                    int fieldTemp$3 = gj.field_a;
                     gj.field_a = gj.field_a + 1;
-                    var6.field_Mb = fieldTemp$5;
+                    var6.field_Mb = fieldTemp$3;
                     sb.field_h.a((uf) (Object) var6, -16611);
                     break L6;
                   }
@@ -564,7 +571,7 @@ final class ee {
                 if (var3_int == 0) {
                   break L15;
                 } else {
-                  String discarded$6 = var1_ref.e(-1);
+                  String discarded$4 = var1_ref.e(-1);
                   break L15;
                 }
               }
@@ -596,9 +603,9 @@ final class ee {
                 if (var5_ref == null) {
                   var5_ref = new q();
                   ai.field_f.a(false, (vh) (Object) var5_ref, (long)var7.hashCode());
-                  int fieldTemp$7 = cb.field_I;
+                  int fieldTemp$5 = cb.field_I;
                   cb.field_I = cb.field_I + 1;
-                  var5_ref.field_Mb = fieldTemp$7;
+                  var5_ref.field_Mb = fieldTemp$5;
                   r.field_j.a((uf) (Object) var5_ref, -16611);
                   break L18;
                 } else {
@@ -612,7 +619,7 @@ final class ee {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var1, "ee.E(" + 127 + ')');
+          throw qk.a((Throwable) (Object) var1, "ee.E(" + param0 + ')');
         }
     }
 

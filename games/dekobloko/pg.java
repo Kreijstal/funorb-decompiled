@@ -10,7 +10,7 @@ final class pg {
     static String field_c;
     static double field_b;
 
-    final static Boolean a() {
+    final static Boolean a(int param0) {
         Boolean var1 = wb.field_Ub;
         wb.field_Ub = null;
         return var1;

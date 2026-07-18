@@ -37,7 +37,7 @@ final class le {
         return (char)var2;
     }
 
-    final static void a(u param0, boolean param1, int param2, boolean param3) {
+    final static void a(u param0, boolean param1, int param2, boolean param3, int param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -70,8 +70,7 @@ final class le {
               am.field_n.a(fb.field_b[1], (byte) 119);
               am.field_n.a(fb.field_b[2], (byte) -50);
               am.field_n.a(fb.field_b[3], (byte) -44);
-              int discarded$2 = -102;
-              u.a(am.field_n);
+              u.a(am.field_n, (byte) -102);
               am.field_n.c(param2, -17402);
               param0.a(am.field_n, 119);
               nj.field_p.field_j = 0;
@@ -139,8 +138,7 @@ final class le {
                 break L7;
               }
             }
-            int discarded$3 = 0;
-            i.a((od) (Object) nj.field_p, am.field_n, a.field_b, d.field_a);
+            i.a((od) (Object) nj.field_p, am.field_n, a.field_b, d.field_a, 0);
             nj.field_p.a(-2, nj.field_p.field_j + -var5_int);
             qj.a(-1, 14656);
             break L0;
@@ -177,7 +175,7 @@ final class le {
         }
     }
 
-    final static String a(java.applet.Applet param0, String param1) {
+    final static String a(java.applet.Applet param0, String param1, int param2) {
         try {
             int var3_int = 0;
             Throwable var3 = null;
@@ -233,8 +231,7 @@ final class le {
                     case 1: {
                         try {
                             var3_int = 0;
-                            int discarded$2 = 1;
-                            var4 = (String) pb.a("getcookies", param0);
+                            var4 = (String) pb.a("getcookies", param0, true);
                             var5 = ki.a((byte) -113, ';', var4);
                             var6 = 0;
                             statePc = 2;

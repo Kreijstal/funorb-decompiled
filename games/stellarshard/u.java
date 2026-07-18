@@ -10,7 +10,7 @@ final class u extends gg {
     static int field_p;
     static String field_l;
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_m = null;
         field_l = null;

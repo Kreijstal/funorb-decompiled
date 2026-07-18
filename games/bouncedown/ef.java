@@ -12,20 +12,19 @@ abstract class ef {
     java.awt.Image field_e;
     int[] field_g;
 
-    final static void a() {
+    final static void a(byte param0) {
         qa var1 = null;
         ii var2 = null;
         var1 = (qa) (Object) md.field_t.a((byte) -71);
         if (var1 == null) {
-          int discarded$10 = 18;
-          kc.a();
+          kc.a((byte) 18);
           return;
         } else {
           var2 = jc.field_g;
+          int discarded$8 = var2.j(-3);
+          int discarded$9 = var2.j(-3);
+          int discarded$10 = var2.j(-3);
           int discarded$11 = var2.j(-3);
-          int discarded$12 = var2.j(-3);
-          int discarded$13 = var2.j(-3);
-          int discarded$14 = var2.j(-3);
           var1.c(2);
           return;
         }
@@ -36,16 +35,13 @@ abstract class ef {
         var1 = uf.a((byte) -115);
         if (var1 != null) {
           if (var1.indexOf('@') < 0) {
-            int discarded$6 = 255;
-            return new ve(uf.a((byte) -115), lh.a());
+            return new ve(uf.a((byte) -115), lh.a(255));
           } else {
             var1 = "";
-            int discarded$7 = 255;
-            return new ve(uf.a((byte) -115), lh.a());
+            return new ve(uf.a((byte) -115), lh.a(255));
           }
         } else {
-          int discarded$8 = 255;
-          return new ve(uf.a((byte) -115), lh.a());
+          return new ve(uf.a((byte) -115), lh.a(255));
         }
     }
 

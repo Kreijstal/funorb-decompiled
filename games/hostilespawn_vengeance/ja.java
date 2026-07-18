@@ -13,12 +13,12 @@ final class ja {
     static int[] field_h;
     float field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_h = null;
     }
 
-    final static void a(byte param0, ji param1) {
+    final static void a(byte param0, ji param1, boolean param2) {
         try {
             if (ha.field_w.field_p == param1) {
                 ha.field_w.field_p = null;
@@ -160,7 +160,7 @@ final class ja {
         }
     }
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;
@@ -211,8 +211,7 @@ final class ja {
         String stackOut_30_2 = null;
         try {
           L0: {
-            int discarded$7 = -29205;
-            if (!nf.a(param0)) {
+            if (!nf.a(param0, -29205)) {
               if (pb.a(17032, param0)) {
                 stackOut_5_0 = 0;
                 stackIn_6_0 = stackOut_5_0;

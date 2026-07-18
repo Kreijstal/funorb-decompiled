@@ -14,9 +14,8 @@ final class qk extends og implements fd, vd {
     nh field_A;
     static int field_D;
 
-    private final void i() {
-        int discarded$0 = -32;
-        if (!(this.e())) {
+    private final void i(int param0) {
+        if (!(this.e((byte) -32))) {
             return;
         }
         ba.a((byte) -65, ((qk) this).field_G.field_o);
@@ -41,8 +40,7 @@ final class qk extends og implements fd, vd {
         int var5 = 200;
         var3 += 50;
         ((qk) this).b(var2, 12);
-        int discarded$0 = 122;
-        var3 = var3 + (5 + this.a((qm) (Object) ((qk) this).field_G, tb.field_c, var3, 170, fh.field_g));
+        var3 = var3 + (5 + this.a((qm) (Object) ((qk) this).field_G, tb.field_c, var3, 170, fh.field_g, (byte) 122));
         ((qk) this).field_B.a(40, 496 - var5 >> 1, var3, var5, (byte) -52);
         ((qk) this).field_C.a(40, var4 + 3, 15 + var3, 60, (byte) -52);
         ((qk) this).field_C.field_l = (bi) this;
@@ -55,7 +53,7 @@ final class qk extends og implements fd, vd {
         ((qk) this).a(var4 + (55 + var3), 0, 0, 496, (byte) -52);
     }
 
-    private final boolean a(lf param0) {
+    private final boolean a(lf param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         n var4 = null;
@@ -213,7 +211,7 @@ final class qk extends og implements fd, vd {
         }
     }
 
-    private final int a(int param0, String param1, String param2, int param3, qm param4) {
+    private final int a(int param0, String param1, String param2, int param3, qm param4, int param5, int param6) {
         RuntimeException var8 = null;
         io var9 = null;
         int var10 = 0;
@@ -385,8 +383,7 @@ final class qk extends og implements fd, vd {
           L0: {
             if (gm.a(param2, param3, true, param1)) {
               field_F = 85;
-              int discarded$2 = -119;
-              stackOut_3_0 = wm.a();
+              stackOut_3_0 = wm.a(-119);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -455,8 +452,7 @@ final class qk extends og implements fd, vd {
                 if (((qk) this).field_B != param4) {
                   break L1;
                 } else {
-                  int discarded$2 = -25;
-                  this.i();
+                  this.i(-25);
                   break L1;
                 }
               }
@@ -757,15 +753,14 @@ final class qk extends og implements fd, vd {
         field_H = null;
     }
 
-    private final boolean e() {
-        int discarded$0 = -101;
-        if (!this.a((lf) (Object) ((qk) this).field_G)) {
+    private final boolean e(byte param0) {
+        if (!this.a((lf) (Object) ((qk) this).field_G, -101)) {
             return false;
         }
         return true;
     }
 
-    private final int a(qm param0, String param1, int param2, int param3, String param4) {
+    private final int a(qm param0, String param1, int param2, int param3, String param4, byte param5) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -817,9 +812,7 @@ final class qk extends og implements fd, vd {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$4 = 35;
-            int discarded$5 = 170;
-            stackOut_0_0 = this.a(70, param4, param1, 90, param0);
+            stackOut_0_0 = this.a(70, param4, param1, 90, param0, 170, 35);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -909,8 +902,7 @@ final class qk extends og implements fd, vd {
     final void a(qm param0, int param1, int param2, int param3) {
         try {
             super.a(param0, -111, param2, param3);
-            int discarded$0 = -32;
-            ((qk) this).field_B.field_x = this.e();
+            ((qk) this).field_B.field_x = this.e((byte) -32);
             int var5_int = -17 % ((-50 - param1) / 59);
         } catch (RuntimeException runtimeException) {
             throw dn.a((Throwable) (Object) runtimeException, "qk.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

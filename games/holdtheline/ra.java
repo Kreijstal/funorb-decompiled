@@ -41,7 +41,7 @@ final class ra extends u {
         }
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, boolean param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -49,6 +49,7 @@ final class ra extends u {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        Object var9 = null;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_13_0 = 0;
@@ -103,8 +104,8 @@ final class ra extends u {
                             break L2;
                           } else {
                             if (!ag.a(-2821, var4.charAt(var4.length() + -1))) {
-                              int discarded$4 = 0;
-                              boolean discarded$5 = ra.a((String) null);
+                              var9 = null;
+                              boolean discarded$2 = ra.a((String) null, false);
                               var5 = 0;
                               var6 = 0;
                               L3: while (true) {
@@ -196,7 +197,7 @@ final class ra extends u {
         return stackIn_32_0 != 0;
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_ib = null;
         field_fb = null;
         field_Z = null;
@@ -346,7 +347,7 @@ final class ra extends u {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, boolean param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_1_0 = false;

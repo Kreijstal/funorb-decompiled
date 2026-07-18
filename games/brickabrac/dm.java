@@ -232,7 +232,7 @@ final class dm implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_e = null;
         field_c = null;

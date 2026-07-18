@@ -122,13 +122,11 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
           bd.field_h = kd.field_p;
           if (param2 != 255) {
             if (param2 < 100) {
-              int discarded$6 = 1;
-              sd.field_d = ij.a(param2, param1);
+              sd.field_d = ij.a(param2, param1, true);
               return;
             } else {
               if (param2 > 105) {
-                int discarded$7 = 1;
-                sd.field_d = ij.a(param2, param1);
+                sd.field_d = ij.a(param2, param1, true);
                 return;
               } else {
                 var7 = param3;
@@ -149,8 +147,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
                 break L0;
               }
             }
-            int discarded$8 = 105;
-            sd.field_d = hn.a(stackIn_5_0 != 0);
+            sd.field_d = hn.a(stackIn_5_0 != 0, (byte) 105);
             var6 = null;
             en.a((String[]) null, 18423);
             return;
@@ -261,7 +258,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_l = null;
     }
 
@@ -348,7 +345,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         System.out.println("Error: " + ld.a("\n", -1, param0, "%0a"));
     }
 

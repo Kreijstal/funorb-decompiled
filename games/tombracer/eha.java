@@ -110,7 +110,7 @@ abstract class eha {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, pc param4, int param5) {
+    final static int a(int param0, int param1, int param2, int param3, pc param4, int param5, int param6) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
@@ -262,7 +262,7 @@ abstract class eha {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         rfa.field_B = bha.field_B + " <b>" + vc.field_s + "</b> " + cq.field_c + " <b>" + mha.field_F + "</b> " + kka.field_p + "<br>" + "<br>" + wg.field_k;
     }
 

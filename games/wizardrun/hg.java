@@ -9,7 +9,7 @@ final class hg {
     static java.awt.Image field_b;
     static int field_a;
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, byte param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -161,13 +161,13 @@ final class hg {
         return stackIn_32_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_d = null;
     }
 
-    final static int b(int param0) {
+    final static int b(int param0, byte param1) {
         return cj.field_e[2047 & param0];
     }
 

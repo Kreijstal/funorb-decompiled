@@ -13,7 +13,7 @@ final class rj {
         throw new IllegalStateException();
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_d = null;
         field_a = null;
@@ -202,7 +202,7 @@ final class rj {
         return stackIn_35_0 != 0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -291,8 +291,7 @@ final class rj {
                     }
                   }
                 } else {
-                  int discarded$1 = -15465;
-                  bd.a((Throwable) null, "LR1: " + r.i(), 67);
+                  bd.a((Throwable) null, "LR1: " + r.i(-15465), 67);
                   gb.g(-17464);
                   break L1;
                 }

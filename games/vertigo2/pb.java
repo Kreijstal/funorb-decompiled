@@ -17,14 +17,14 @@ final class pb {
         field_d = null;
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1, int param2, int param3) {
         oi.field_b = 16777215;
         ma.field_m = 16777215;
         int var4 = -60;
         sr.field_a = 16777215;
     }
 
-    final static void a(int param0, int param1, int param2, jp param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, jp param3, int param4, int param5, int param6, int param7) {
         RuntimeException var8 = null;
         int[] var8_array = null;
         int var13 = 0;
@@ -57,17 +57,17 @@ final class pb {
         int var39 = 0;
         int var40 = 0;
         int[] var41 = null;
-        byte[] var43 = null;
         int var44 = 0;
         jp var45 = null;
-        int[] var49 = null;
-        int[] var53 = null;
-        int[] var57 = null;
-        int[] var59 = null;
+        int[] var50 = null;
+        int[] var55 = null;
         int[] var60 = null;
-        int[] var61 = null;
-        int[] var62 = null;
+        byte[] var62 = null;
         int[] var63 = null;
+        int[] var64 = null;
+        int[] var65 = null;
+        int[] var66 = null;
+        int[] var67 = null;
         int stackIn_15_0 = 0;
         int[] stackIn_16_0 = null;
         int[] stackIn_17_0 = null;
@@ -125,29 +125,27 @@ final class pb {
                   break L2;
                 } else {
                   if (var45.field_G > 1) {
-                    var43 = var45.field_x;
-                    int discarded$2 = 0;
-                    op.a(0, oq.field_F, 0, var43);
+                    var62 = var45.field_x;
+                    op.a(0, oq.field_F, 0, var62, false);
                     break L1;
                   } else {
                     break L2;
                   }
                 }
               }
-              int discarded$3 = 0;
-              ln.b();
+              ln.b(0);
               break L1;
             }
-            var62 = new int[param3.field_K];
-            var57 = var62;
-            var53 = var57;
-            var49 = var53;
-            var41 = var49;
+            var66 = new int[param3.field_K];
+            var60 = var66;
+            var55 = var60;
+            var50 = var55;
+            var41 = var50;
             var8_array = var41;
-            var63 = new int[param3.field_K];
-            var59 = pk.field_w;
-            var60 = dp.field_A;
-            var61 = dh.field_d;
+            var67 = new int[param3.field_K];
+            var63 = pk.field_w;
+            var64 = dp.field_A;
+            var65 = dh.field_d;
             var13 = 0;
             L3: while (true) {
               if (param3.field_K <= var13) {
@@ -243,8 +241,8 @@ final class pb {
                             break L11;
                           } else {
                             L12: {
-                              var28 = var62[var18];
-                              var29 = var63[var18];
+                              var28 = var66[var18];
+                              var29 = var67[var18];
                               if (var21_ref != null) {
                                 stackOut_42_0 = var21_ref.field_e;
                                 stackIn_43_0 = stackOut_42_0;
@@ -266,12 +264,12 @@ final class pb {
                         }
                       }
                       L13: {
-                        var28 = var62[var18];
-                        var29 = var62[var19];
-                        var30 = var62[var20];
-                        var31 = var63[var18];
-                        var32 = var63[var19];
-                        var33 = var63[var20];
+                        var28 = var66[var18];
+                        var29 = var66[var19];
+                        var30 = var66[var20];
+                        var31 = var67[var18];
+                        var32 = var67[var19];
+                        var33 = var67[var20];
                         if (var21_ref != null) {
                           stackOut_46_0 = var21_ref.field_e;
                           stackIn_47_0 = stackOut_46_0;
@@ -300,7 +298,7 @@ final class pb {
                 }
               } else {
                 L14: {
-                  var14 = var59[var13] * param4 - -(var60[var13] * param1) + param6 * var61[var13] >> 8;
+                  var14 = var63[var13] * param4 - -(var64[var13] * param1) + param6 * var65[var13] >> 8;
                   if (0 <= var14) {
                     break L14;
                   } else {
@@ -327,7 +325,7 @@ final class pb {
                 }
                 L16: {
                   var14 = stackIn_15_0;
-                  var15 = param2 * var60[var13] + (var59[var13] * param0 + var61[var13] * param5) >> 8;
+                  var15 = param2 * var64[var13] + (var63[var13] * param0 + var65[var13] * param5) >> 8;
                   stackOut_15_0 = bl.field_r;
                   stackIn_17_0 = stackOut_15_0;
                   stackIn_16_0 = stackOut_15_0;
@@ -347,8 +345,8 @@ final class pb {
                 }
                 var15 = stackIn_18_0[stackIn_18_1];
                 var14 = var14 * (256 + -var15) >>> 8;
-                var62[var13] = var14;
-                var63[var13] = var15;
+                var66[var13] = var14;
+                var67[var13] = var15;
                 var13++;
                 continue L3;
               }

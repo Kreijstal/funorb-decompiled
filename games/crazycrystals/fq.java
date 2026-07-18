@@ -1786,8 +1786,7 @@ final class fq extends ea implements Cloneable {
                         if (0 > var3_int) {
                           break L1;
                         } else {
-                          int discarded$2 = -1322;
-                          if (30000L >= wd.d()) {
+                          if (30000L >= wd.d(-1322)) {
                             decompiledRegionSelector0 = 0;
                             break L0;
                           } else {
@@ -2367,7 +2366,7 @@ final class fq extends ea implements Cloneable {
                           }
                           if (param1[var5_int][var6] instanceof fq) {
                             var7 = (fq) (Object) param1[var5_int][var6];
-                            if (var7.field_u != var7.field_u) {
+                            if (((fq) this).field_u != var7.field_u) {
                               break L5;
                             } else {
                               param1[var5_int][var6] = var7.field_l;
@@ -3040,7 +3039,7 @@ final class fq extends ea implements Cloneable {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_G = null;
         field_z = null;
         field_x = null;

@@ -11,7 +11,7 @@ final class ea {
     static String field_b;
     static er[] field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_h = null;
         field_d = null;

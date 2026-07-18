@@ -13,7 +13,7 @@ final class gd extends wf {
     static int[] field_n;
     static int field_m;
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
         field_n = null;
         field_l = null;

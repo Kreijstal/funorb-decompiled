@@ -16,7 +16,7 @@ final class om extends wm implements ntb {
             super.b((byte) 57, param1);
             var5 = (om) (Object) param1;
             var6 = var5;
-            var6.field_d = var5.field_d;
+            var6.field_d = ((om) this).field_d;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "om.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -865,8 +865,8 @@ final class om extends wm implements ntb {
                 super.a(param0, -98);
                 var3 = (om) (Object) param0;
                 var4 = 0;
-                if (var3.field_d != var3.field_d) {
-                  System.out.println("int team_id has changed. before=" + var3.field_d + ", now=" + var3.field_d);
+                if (((om) this).field_d != var3.field_d) {
+                  System.out.println("int team_id has changed. before=" + var3.field_d + ", now=" + ((om) this).field_d);
                   var4 = 1;
                   break L1;
                 } else {
@@ -935,7 +935,7 @@ final class om extends wm implements ntb {
         ((om) this).field_d = param0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
     }
 

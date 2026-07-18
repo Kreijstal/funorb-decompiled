@@ -24,7 +24,7 @@ final class ab extends la {
         }
     }
 
-    final static void a(qk param0) {
+    final static void a(qk param0, int param1) {
         kc var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -56,14 +56,14 @@ final class ab extends la {
         return 100;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_p = null;
         field_w = null;
         field_u = null;
         field_q = null;
     }
 
-    final static String a(pb param0) {
+    final static String a(pb param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;

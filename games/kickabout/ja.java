@@ -52,8 +52,7 @@ final class ja extends ta {
         ((ja) this).field_ab.field_s = ((ja) this).field_j;
         ((ja) this).field_ab.b(0, param1);
         var3 = 44 / ((38 - param0) / 60);
-        int discarded$2 = 0;
-        this.g();
+        this.g(0);
         var4_ref_nt = (nt) (Object) ((ja) this).field_F.field_jb.g(24009);
         L0: while (true) {
           if (var4_ref_nt == null) {
@@ -133,8 +132,7 @@ final class ja extends ta {
                       }
                     }
                   }
-                  int discarded$3 = -3;
-                  this.f();
+                  this.f(-3);
                   break L7;
                 }
                 return;
@@ -231,8 +229,7 @@ final class ja extends ta {
                 L2: while (true) {
                   if (var7 >= var10.length) {
                     ((ja) this).field_U = 0;
-                    int discarded$1 = -3;
-                    this.f();
+                    this.f(-3);
                     return;
                   } else {
                     var8 = var10[var7];
@@ -269,7 +266,7 @@ final class ja extends ta {
         }
     }
 
-    private final void g() {
+    private final void g(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -502,8 +499,7 @@ final class ja extends ta {
             ((ja) this).field_U = 0;
         }
         if (!(((ja) this).field_U == var3)) {
-            int discarded$0 = -3;
-            this.f();
+            this.f(-3);
         }
     }
 
@@ -674,7 +670,7 @@ final class ja extends ta {
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         int var2 = 0;
         Object var3 = null;
         int var4 = 0;
@@ -1002,7 +998,7 @@ final class ja extends ta {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_W = null;
         field_I = null;
         field_S = null;

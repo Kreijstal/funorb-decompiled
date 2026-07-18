@@ -176,7 +176,7 @@ final class ck {
         return stackIn_9_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_c = null;
@@ -186,8 +186,7 @@ final class ck {
     final static void b(int param0) {
         if (wq.field_a != null) {
           L0: {
-            int discarded$2 = 23678;
-            dt.a((java.awt.Canvas) (Object) wq.field_a);
+            dt.a((java.awt.Canvas) (Object) wq.field_a, 23678);
             wq.field_a.a(-30918, ft.field_m);
             wq.field_a = null;
             if (null != ra.field_e) {

@@ -65,7 +65,7 @@ final class va {
         }
     }
 
-    final static boolean a(n param0) {
+    final static boolean a(n param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

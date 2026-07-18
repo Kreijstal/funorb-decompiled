@@ -85,7 +85,7 @@ final class ll extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_f = null;
         field_k = null;

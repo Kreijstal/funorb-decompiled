@@ -100,8 +100,7 @@ final class bj extends s {
                           L5: while (true) {
                             if (3 <= var18) {
                               bg.a(kg.field_i, var17, 90, true, false, false, ve.field_V);
-                              int discarded$1 = 23;
-                              ta.a(var8, var17, var12, var9, var14, var13, var7);
+                              ta.a(var8, var17, var12, var9, var14, var13, var7, (byte) 23);
                               var15++;
                               continue L3;
                             } else {

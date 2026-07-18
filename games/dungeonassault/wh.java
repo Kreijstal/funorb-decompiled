@@ -10,7 +10,7 @@ final class wh {
     vh field_b;
     int field_f;
 
-    final static void a() {
+    final static void a(int param0) {
         if (null == ub.field_n) {
           if (null != hm.field_n) {
             hm.field_n.c();
@@ -29,7 +29,7 @@ final class wh {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_g = null;
     }
@@ -43,7 +43,7 @@ final class wh {
         }
     }
 
-    final static gp a(byte[] param0) {
+    final static gp a(byte[] param0, byte param1) {
         gp var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -70,8 +70,7 @@ final class wh {
           L0: {
             if (param0 != null) {
               var2 = new gp(param0, hg.field_t, fe.field_g, jc.field_f, jn.field_k, ub.field_q);
-              int discarded$2 = 500;
-              sb.a();
+              sb.a(500);
               stackOut_3_0 = (gp) var2;
               stackIn_4_0 = stackOut_3_0;
               break L0;

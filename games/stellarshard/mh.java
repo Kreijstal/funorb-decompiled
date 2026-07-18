@@ -72,13 +72,13 @@ final class mh extends vi implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_h = null;
         field_i = null;
     }
 
-    private final synchronized void b() {
+    private final synchronized void b(boolean param0) {
         Object var3 = null;
         if (((mh) this).field_l == null) {
           return;
@@ -99,15 +99,12 @@ final class mh extends vi implements java.awt.image.ImageProducer, java.awt.imag
             int var5_int = -68 / ((param3 - -79) / 35);
             ((mh) this).field_k = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
             ((mh) this).field_b = param0.createImage((java.awt.image.ImageProducer) this);
-            int discarded$0 = 0;
-            this.b();
+            this.b(false);
+            boolean discarded$0 = param0.prepareImage(((mh) this).field_b, (java.awt.image.ImageObserver) this);
+            this.b(false);
             boolean discarded$1 = param0.prepareImage(((mh) this).field_b, (java.awt.image.ImageObserver) this);
-            int discarded$2 = 0;
-            this.b();
-            boolean discarded$3 = param0.prepareImage(((mh) this).field_b, (java.awt.image.ImageObserver) this);
-            int discarded$4 = 0;
-            this.b();
-            boolean discarded$5 = param0.prepareImage(((mh) this).field_b, (java.awt.image.ImageObserver) this);
+            this.b(false);
+            boolean discarded$2 = param0.prepareImage(((mh) this).field_b, (java.awt.image.ImageObserver) this);
             ((mh) this).a((byte) -107);
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) (Object) runtimeException, "mh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -487,9 +484,8 @@ final class mh extends vi implements java.awt.image.ImageProducer, java.awt.imag
         try {
           L0: {
             L1: {
-              int discarded$5 = 0;
-              this.b();
-              boolean discarded$6 = param1.drawImage(((mh) this).field_b, param0, param3, (java.awt.image.ImageObserver) this);
+              this.b(false);
+              boolean discarded$3 = param1.drawImage(((mh) this).field_b, param0, param3, (java.awt.image.ImageObserver) this);
               if (param2 == -22984) {
                 break L1;
               } else {

@@ -181,7 +181,7 @@ final class ek extends i {
         }
     }
 
-    final static void g() {
+    final static void g(int param0) {
         np.field_Jb.a((gn) (Object) new kn(), 3);
     }
 
@@ -312,7 +312,7 @@ final class ek extends i {
         ((ek) this).field_i[0].field_lb = false;
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_M = null;
     }
 

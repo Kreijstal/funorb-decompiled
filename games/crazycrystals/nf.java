@@ -54,7 +54,7 @@ abstract class nf extends oh {
     nf() {
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_g = null;
     }
 

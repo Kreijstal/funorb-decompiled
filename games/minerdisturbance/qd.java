@@ -222,7 +222,6 @@ final class qd extends kn implements sh {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        String var6_ref_String = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -230,6 +229,8 @@ final class qd extends kn implements sh {
         int var10 = 0;
         String[] var11 = null;
         String[] var12 = null;
+        String var13 = null;
+        String var14 = null;
         int stackIn_22_0 = 0;
         int stackIn_25_0 = 0;
         String[] stackIn_31_0 = null;
@@ -651,9 +652,8 @@ final class qd extends kn implements sh {
                         break L24;
                       } else {
                         L27: {
-                          var6_ref_String = var12[var5];
-                          int discarded$4 = -15388;
-                          var7 = hl.a(var6_ref_String, false);
+                          var14 = var12[var5];
+                          var7 = hl.a(var14, false, -15388);
                           if (var7 <= var3_int) {
                             break L27;
                           } else {
@@ -666,9 +666,8 @@ final class qd extends kn implements sh {
                     }
                   } else {
                     L28: {
-                      var6_ref_String = var11[var5];
-                      int discarded$5 = -15388;
-                      var7 = hl.a(var6_ref_String, false);
+                      var13 = var11[var5];
+                      var7 = hl.a(var13, false, -15388);
                       if (var7 <= var3_int) {
                         break L28;
                       } else {
@@ -713,8 +712,7 @@ final class qd extends kn implements sh {
                         var6 = var6 + vd.field_z;
                         break L32;
                       } else {
-                        int discarded$6 = -15388;
-                        var8 = hl.a(ne.field_K[var5], true);
+                        var8 = hl.a(ne.field_K[var5], true, -15388);
                         var9 = -(var8 >> 1) + rj.field_e;
                         var6 = var6 + hi.field_z;
                         ed.field_a[var5] = new int[4];
@@ -774,8 +772,7 @@ final class qd extends kn implements sh {
               }
             }
             L35: {
-              int discarded$7 = -15388;
-              var5 = hl.a(stackIn_88_0, stackIn_88_1 != 0);
+              var5 = hl.a(stackIn_88_0, stackIn_88_1 != 0, -15388);
               if (var5 <= var3_int) {
                 break L35;
               } else {
@@ -791,14 +788,13 @@ final class qd extends kn implements sh {
     final static void a(int param0, byte param1, sl param2) {
         try {
             tc.field_v.a((byte) -87, (pi) (Object) param2);
-            int discarded$0 = 4;
-            fg.a((byte) 5, param2);
+            fg.a((byte) 5, param2, 4);
         } catch (RuntimeException runtimeException) {
             throw lj.a((Throwable) (Object) runtimeException, "qd.F(" + 4 + ',' + -90 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a() {
+    final static void a(int param0, byte param1) {
         pi var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -821,8 +817,7 @@ final class qd extends kn implements sh {
                   }
                 }
               } else {
-                int discarded$2 = 4;
-                fg.a((byte) 5, var4);
+                fg.a((byte) 5, var4, 4);
                 var4 = (sl) (Object) tc.field_v.b((byte) 56);
                 continue L1;
               }
@@ -840,7 +835,7 @@ final class qd extends kn implements sh {
         field_O = null;
     }
 
-    final static void n() {
+    final static void n(int param0) {
         ff.field_e = oa.a((byte) -81, ff.field_e, new String[1]);
         fb.field_h = oa.a((byte) -72, fb.field_h, new String[1]);
         m.field_g[0] = mn.field_v;

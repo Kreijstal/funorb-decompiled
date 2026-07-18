@@ -247,8 +247,7 @@ class ec extends gg {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 10;
-            stackOut_0_0 = wi.a(-913, true, param1);
+            stackOut_0_0 = wi.a(-913, true, param1, 10);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

@@ -15,16 +15,14 @@ final class qi {
           L0: {
             var1 = as.field_v;
             L1: while (true) {
-              int discarded$8 = 125;
-              if (!gd.b()) {
+              if (!gd.b((byte) 125)) {
                 break L0;
               } else {
                 var1.g(8, 8);
-                int fieldTemp$9 = var1.field_p + 1;
+                int fieldTemp$2 = var1.field_p + 1;
                 var1.field_p = var1.field_p + 1;
-                var2 = fieldTemp$9;
-                int discarded$10 = 127;
-                sd.a(var1);
+                var2 = fieldTemp$2;
+                sd.a(var1, 127);
                 as.field_v.c(var1.field_p + -var2, -13745);
                 continue L1;
               }
@@ -37,7 +35,7 @@ final class qi {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

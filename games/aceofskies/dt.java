@@ -6,7 +6,7 @@ final class dt {
     static String field_b;
     static int[] field_a;
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(null == um.field_m)) {
             um.field_m.d();
         }
@@ -235,13 +235,13 @@ final class dt {
         return stackIn_13_0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_a = null;
         field_b = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

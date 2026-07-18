@@ -39,59 +39,61 @@ final class ob {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int[] var9 = null;
         int[] var10 = null;
-        sa var11 = null;
-        hg var12 = null;
-        ka var13 = null;
-        int[] var14 = null;
-        ka var15 = null;
-        int[] var16 = null;
+        int[] var11 = null;
+        sa var12 = null;
+        hg var13 = null;
+        ka var14 = null;
+        int[] var15 = null;
+        Object var16 = null;
+        ka var16_ref = null;
         int[] var17 = null;
         int[] var18 = null;
+        int[] var19 = null;
         RuntimeException decompiledCaughtException = null;
+        var16 = null;
         var8 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
             if (param0 == 97) {
-              var12 = sh.field_qb;
-              var2 = var12.g(11132);
+              var13 = sh.field_qb;
+              var2 = var13.g(11132);
               if (var2 == 0) {
-                var10 = cf.b(param0 ^ -30578);
-                var18 = var10;
+                var11 = cf.b(param0 ^ -30578);
+                var19 = var11;
+                var18 = var19;
                 var17 = var18;
-                var16 = var17;
-                var14 = var16;
-                var3 = var14;
-                var9 = var10;
-                var4 = var9;
-                var5 = var12;
+                var15 = var17;
+                var3 = var15;
+                var10 = var11;
+                var4 = var10;
+                var5 = var13;
                 var6 = ((jc) (Object) var5).g(param0 + 11035);
                 var7 = 0;
                 L1: while (true) {
                   if (var6 <= var7) {
-                    var15 = (ka) (Object) tf.field_a.a((byte) -24);
-                    if (var15 == null) {
+                    var16_ref = (ka) (Object) tf.field_a.a((byte) -24);
+                    if (var16_ref == null) {
                       tn.a(false);
                       return;
                     } else {
-                      var15.field_h = var3;
-                      var15.field_g = var18[0];
-                      var15.field_l = true;
-                      var15.a(false);
+                      var16_ref.field_h = var3;
+                      var16_ref.field_g = var19[0];
+                      var16_ref.field_l = true;
+                      var16_ref.a(false);
                       break L0;
                     }
                   } else {
-                    var9[var7] = ((jc) (Object) var5).d((byte) 103);
+                    var10[var7] = ((jc) (Object) var5).d((byte) 103);
                     var7++;
                     continue L1;
                   }
                 }
               } else {
                 if (1 == var2) {
-                  var11 = (sa) (Object) fj.field_b.a((byte) -89);
-                  if (var11 != null) {
-                    var11.a(false);
+                  var12 = (sa) (Object) fj.field_b.a((byte) -89);
+                  if (var12 != null) {
+                    var12.a(false);
                     return;
                   } else {
                     tn.a(false);
@@ -99,21 +101,19 @@ final class ob {
                   }
                 } else {
                   if (2 != var2) {
-                    int discarded$2 = 1;
-                    int discarded$3 = 1;
-                    en.a("A1: " + rg.a(), (Throwable) null);
+                    en.a("A1: " + rg.a(true), (Throwable) null, 1);
                     tn.a(false);
                     return;
                   } else {
-                    var13 = (ka) (Object) tf.field_a.a((byte) -127);
-                    if (var13 == null) {
+                    var14 = (ka) (Object) tf.field_a.a((byte) -127);
+                    if (var14 == null) {
                       tn.a(false);
                       return;
                     } else {
-                      var13.field_h = cf.b(-30481);
-                      var13.field_l = true;
-                      var13.field_g = var13.field_h[0];
-                      var13.a(false);
+                      var14.field_h = cf.b(-30481);
+                      var14.field_l = true;
+                      var14.field_g = var14.field_h[0];
+                      var14.a(false);
                       return;
                     }
                   }

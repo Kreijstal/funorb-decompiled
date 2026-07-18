@@ -102,10 +102,8 @@ final class wg extends vh {
           L0: {
             L1: {
               L2: {
-                int discarded$4 = 1;
-                param1 = o.a('_', "", param1);
-                int discarded$5 = 0;
-                var3 = qa.a(param1);
+                param1 = o.a('_', "", param1, 1);
+                var3 = qa.a(param1, 0);
                 if (-1 != param2.indexOf(param1)) {
                   break L2;
                 } else {

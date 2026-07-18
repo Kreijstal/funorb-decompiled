@@ -9,7 +9,7 @@ final class wpb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_p = null;
     }
@@ -84,7 +84,7 @@ final class wpb extends rqa {
         return stackIn_3_0;
     }
 
-    final static boolean a(int[] param0, int[] param1) {
+    final static boolean a(int[] param0, int[] param1, byte param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;

@@ -72,8 +72,7 @@ final class qb extends dd {
                   }
                 }
                 ((qb) this).field_v = (qk) param0;
-                int discarded$1 = -15;
-                this.e();
+                this.e((byte) -15);
                 this.a((byte) -124, param2);
                 var4_int = -84 % ((param1 - -75) / 50);
                 ((qb) this).field_h = null;
@@ -429,8 +428,7 @@ final class qb extends dd {
                     we.field_b.a(true, 16);
                     we.field_b.field_n = we.field_b.field_n + 1;
                     var10 = we.field_b.field_n;
-                    int discarded$7 = 0;
-                    re.a(uk.field_p, ea.field_k, (wl) (Object) we.field_b, vi.field_A);
+                    re.a(uk.field_p, ea.field_k, (wl) (Object) we.field_b, vi.field_A, 0);
                     we.field_b.b(-var10 + we.field_b.field_n, true);
                     break L3;
                   } else {
@@ -450,8 +448,7 @@ final class qb extends dd {
                       vi.field_A.b(8, var15);
                       vi.field_A.b(8, var9);
                       var17 = (CharSequence) (Object) param6;
-                      int discarded$8 = 65;
-                      vi.field_A.b(8, bc.a(var17));
+                      vi.field_A.b(8, bc.a(var17, 65));
                       vi.field_A.d(-1, param4);
                       vi.field_A.a(true, param1);
                       vi.field_A.a(true, var10);
@@ -467,8 +464,7 @@ final class qb extends dd {
                       }
                     }
                     we.field_b.a(0, var12_ref_String);
-                    int discarded$9 = 0;
-                    re.a(uk.field_p, ea.field_k, (wl) (Object) we.field_b, vi.field_A);
+                    re.a(uk.field_p, ea.field_k, (wl) (Object) we.field_b, vi.field_A, 0);
                     we.field_b.b(true, -var11 + we.field_b.field_n);
                     break L3;
                   }
@@ -503,8 +499,7 @@ final class qb extends dd {
                     }
                   }
                   if (var10 == 248) {
-                    int discarded$10 = 0;
-                    jg.a(se.h(25144));
+                    jg.a(se.h(25144), 0);
                     rk.field_Y = tj.field_ic;
                     si.a(89);
                     jd.field_Qb = false;
@@ -513,10 +508,8 @@ final class qb extends dd {
                     return stackIn_31_0;
                   } else {
                     if (99 == var10) {
-                      int discarded$11 = 1;
-                      boolean discarded$12 = pe.b(25973, vi.d());
-                      int discarded$13 = 19;
-                      wb.field_Ub = new Boolean(f.a((wl) (Object) de.field_V));
+                      boolean discarded$1 = pe.b(25973, vi.d(1));
+                      wb.field_Ub = new Boolean(f.a((wl) (Object) de.field_V, 19));
                       de.field_V.field_n = 0;
                       break L8;
                     } else {
@@ -1103,7 +1096,7 @@ final class qb extends dd {
         ((qb) this).field_f = (byte)(int)(Math.random() * 255.0 + 1.0);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_s = null;
         field_q = null;
         field_p = null;
@@ -1238,8 +1231,7 @@ final class qb extends dd {
                   if (param0 == null) {
                     break L1;
                   } else {
-                    int discarded$2 = 37;
-                    var3_ref = j.a(param0);
+                    var3_ref = j.a(param0, (byte) 37);
                     break L1;
                   }
                 }
@@ -1319,7 +1311,7 @@ final class qb extends dd {
                           break L6;
                         } else {
                           var5 = (DataInputStream) var4.field_b;
-                          int discarded$3 = var5.read();
+                          int discarded$1 = var5.read();
                           var5.close();
                           break L6;
                         }
@@ -1348,7 +1340,7 @@ final class qb extends dd {
         }
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;

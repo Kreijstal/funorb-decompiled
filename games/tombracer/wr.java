@@ -77,7 +77,7 @@ final class wr extends ela {
         super(param0, param1, param2);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -38;
         field_o = null;
     }

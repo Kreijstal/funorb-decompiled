@@ -19,8 +19,7 @@ final class rua extends ij implements tsa {
             return;
         }
         try {
-            int discarded$0 = -7694;
-            qr.d();
+            qr.d(-7694);
             ((rua) this).i((byte) 13);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "rua.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -37,11 +36,10 @@ final class rua extends ij implements tsa {
     }
 
     final void h(boolean param0) {
-        int discarded$0 = 114;
-        this.a(7, param0, doa.a(qp.field_v, 248));
+        this.a(7, param0, doa.a(qp.field_v, 248, (byte) 114));
     }
 
-    final static String a(String param0) {
+    final static String a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -122,7 +120,7 @@ final class rua extends ij implements tsa {
         return stackIn_8_0;
     }
 
-    public static void g() {
+    public static void g(boolean param0) {
         field_jb = null;
         field_hb = null;
         field_gb = null;
@@ -164,8 +162,7 @@ final class rua extends ij implements tsa {
                       if (param1) {
                         break L2;
                       } else {
-                        int discarded$3 = 0;
-                        jp.a();
+                        jp.a(false);
                         break L2;
                       }
                     }
@@ -192,7 +189,7 @@ final class rua extends ij implements tsa {
               L3: {
                 if (param2.field_e) {
                   if (!param2.field_a) {
-                    rj discarded$4 = var5.a(aua.field_d, (byte) -102, (qc) this);
+                    rj discarded$2 = var5.a(aua.field_d, (byte) -102, (qc) this);
                     break L3;
                   } else {
                     ((rua) this).a(param0 ^ 86, (ae) (Object) new pg((rua) this));
@@ -210,7 +207,7 @@ final class rua extends ij implements tsa {
                         break L4;
                       }
                     } else {
-                      rj discarded$5 = var5.a(aua.field_d, (byte) -102, (qc) this);
+                      rj discarded$3 = var5.a(aua.field_d, (byte) -102, (qc) this);
                       break L4;
                     }
                   }
@@ -320,10 +317,8 @@ final class rua extends ij implements tsa {
         String stackOut_16_2 = null;
         try {
           L0: {
-            int discarded$9 = -50;
-            if (mja.a()) {
-              int discarded$10 = 480;
-              if (in.a("jaggl")) {
+            if (mja.a((byte) -50)) {
+              if (in.a("jaggl", 480)) {
                 var9 = new jaggl.OpenGL();
                 var6 = var9.init(param3, 8, 8, 8, 24, 0, param4);
                 if (var6 != 0L) {

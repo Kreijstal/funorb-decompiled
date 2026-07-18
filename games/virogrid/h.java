@@ -103,7 +103,7 @@ final class h extends java.awt.Canvas implements java.awt.event.FocusListener {
         return stackIn_13_0 != 0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_f = null;
         field_b = null;

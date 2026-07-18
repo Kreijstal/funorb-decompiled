@@ -170,7 +170,7 @@ final class oda {
         return (pp) (Object) stackIn_3_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -188,7 +188,7 @@ final class oda {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_b = null;
     }

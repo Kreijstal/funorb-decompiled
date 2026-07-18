@@ -306,14 +306,12 @@ abstract class qe {
 
     private final static wb a(int param0, int param1, String param2, cn param3) {
         if (param0 < param1) {
-            int discarded$0 = 30496;
-            return new wb(jk.a(new String[2], vc.field_b), param3, 16711680);
+            return new wb(jk.a(new String[2], vc.field_b, 30496), param3, 16711680);
         }
         if (param0 <= param1) {
             return null;
         }
-        int discarded$1 = 30496;
-        return new wb(jk.a(new String[2], so.field_a), param3, 65280);
+        return new wb(jk.a(new String[2], so.field_a, 30496), param3, 65280);
     }
 
     void c() {
@@ -528,8 +526,7 @@ abstract class qe {
             ((qe) this).field_b.a(false);
             return true;
         }
-        int discarded$0 = 1;
-        eg.a(((qe) this).field_p);
+        eg.a(((qe) this).field_p, true);
         return false;
     }
 
@@ -742,6 +739,7 @@ abstract class qe {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
+        Object var5 = null;
         L0: {
           if (hj.field_S == -1) {
             break L0;
@@ -782,12 +780,11 @@ abstract class qe {
           }
           L3: {
             if (((qe) this).field_q == null) {
-              int discarded$2 = -21;
-              hm.a((sa) null);
+              var5 = null;
+              hm.a((sa) null, -21);
               break L3;
             } else {
-              int discarded$3 = -21;
-              hm.a(((qe) this).field_q);
+              hm.a(((qe) this).field_q, -21);
               ((qe) this).field_q.a(false);
               break L3;
             }

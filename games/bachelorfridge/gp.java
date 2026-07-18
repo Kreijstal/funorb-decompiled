@@ -12,21 +12,19 @@ final class gp extends ana {
 
     final boolean c(byte param0) {
         int var2 = 0;
-        int fieldTemp$6 = ((gp) this).field_l - 1;
+        int fieldTemp$2 = ((gp) this).field_l - 1;
         ((gp) this).field_l = ((gp) this).field_l - 1;
-        if (-1 >= fieldTemp$6) {
+        if (-1 >= fieldTemp$2) {
           if (-26 == ((gp) this).field_l) {
             jja.a(256, -1, 52);
-            int discarded$7 = 44;
-            this.e();
+            this.e(44);
             return false;
           } else {
             return false;
           }
         } else {
           var2 = 89 % ((param0 - 71) / 47);
-          int discarded$8 = 99;
-          this.f();
+          this.f(99);
           return true;
         }
     }
@@ -42,7 +40,7 @@ final class gp extends ana {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         ad var4 = null;
         int var5 = BachelorFridge.field_y;
         aga var2 = ((gp) this).field_w.field_l.a(76, ((gp) this).field_q.field_h);
@@ -96,7 +94,7 @@ final class gp extends ana {
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         int var2 = 0;
     }
 

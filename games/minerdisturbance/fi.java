@@ -5,20 +5,17 @@ final class fi {
     static boolean[] field_a;
     static ea[] field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }
 
     final static void a(byte param0, bj param1, hg param2, int param3) {
         try {
-            int discarded$0 = -116;
-            kc.field_d = param3 * pl.b() / 1000;
+            kc.field_d = param3 * pl.b((byte) -116) / 1000;
             gn.a(param1, (byte) -101);
-            int discarded$1 = 347664612;
-            hj.a(param1);
-            int discarded$2 = 29;
-            dn.a(param1);
+            hj.a(param1, 347664612);
+            dn.a(param1, (byte) 29);
             ul.a(8);
             ii.a(140);
             mn.field_x = -kc.field_d;

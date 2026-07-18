@@ -31,7 +31,7 @@ final class ti extends hc {
         rj.field_e = param2;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_L = null;
         field_P = null;
         field_O = null;
@@ -72,7 +72,7 @@ final class ti extends hc {
         }
     }
 
-    final static ea a() {
+    final static ea a(int param0) {
         int var4_int = 0;
         int var5 = MinerDisturbance.field_ab;
         int var1 = qk.field_b[0] * ng.field_e[0];

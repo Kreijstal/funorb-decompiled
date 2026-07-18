@@ -37,7 +37,7 @@ final class bo {
         }
     }
 
-    final static rh a(al[] param0, int param1) {
+    final static rh a(al[] param0, int param1, int param2) {
         RuntimeException var3 = null;
         rh stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -59,8 +59,7 @@ final class bo {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = -27227;
-            stackOut_0_0 = gg.a(param0[qq.a(20, param0.length)], param1);
+            stackOut_0_0 = gg.a(param0[qq.a(20, param0.length)], param1, -27227);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -172,7 +171,7 @@ final class bo {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         fo var2 = null;
         ((bo) this).field_c.K(((bo) this).field_e);
         if (null != ((bo) this).field_f) {
@@ -199,8 +198,7 @@ final class bo {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 120 % ((param4 - 25) / 44);
-        int discarded$0 = 884;
-        this.b();
+        this.b(884);
         ((bo) this).field_c.T(param1, param3, param0, param2);
     }
 

@@ -83,7 +83,7 @@ final class ij extends hh {
         }
     }
 
-    final static ll a(gk param0, String param1, String param2) {
+    final static ll a(gk param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -328,8 +328,7 @@ final class ij extends hh {
         super(param0);
         try {
             ((ij) this).field_f = param1;
-            int discarded$0 = 118;
-            this.c();
+            this.c((byte) 118);
             ((ij) this).field_d = new ju(((ij) this).field_a, 6406, 2, new byte[2], 6406);
             ((ij) this).field_d.b(false, false);
         } catch (RuntimeException runtimeException) {
@@ -390,7 +389,7 @@ final class ij extends hh {
         field_j = null;
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         ((ij) this).field_e = new si(((ij) this).field_a, 2);
         ((ij) this).field_e.a((byte) -125, 0);
         ((ij) this).field_a.a(false, 1);

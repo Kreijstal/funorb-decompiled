@@ -191,7 +191,7 @@ final class oq extends hq {
         ((oq) this).field_A = ui.field_k;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         int var1 = 0;
         field_z = null;
         field_v = null;

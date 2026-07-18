@@ -36,8 +36,7 @@ final class nm extends mn implements ng {
         if (param0 != 11) {
             return;
         }
-        int discarded$0 = -1;
-        this.a(true, pg.a(248, a.field_a), (byte) -117);
+        this.a(true, pg.a(248, a.field_a, -1), (byte) -117);
     }
 
     final boolean h(int param0) {
@@ -45,8 +44,7 @@ final class nm extends mn implements ng {
         Object var3 = null;
         if (((nm) this).field_D) {
           if (!((nm) this).field_hb) {
-            int discarded$1 = 0;
-            var2 = ji.a();
+            var2 = ji.a(false);
             if (var2 != null) {
               this.a(false, var2, (byte) -110);
               if (param0 != -7) {

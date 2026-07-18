@@ -186,7 +186,7 @@ final class de {
         field_b = null;
     }
 
-    final static pe a() {
+    final static pe a(byte param0) {
         try {
             Throwable var1 = null;
             pe stackIn_2_0 = null;

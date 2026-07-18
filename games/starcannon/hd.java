@@ -498,15 +498,13 @@ class hd implements de, lg {
                     } else {
                       if (1 != var12) {
                         if (var12 == 2) {
-                          int discarded$5 = 0;
-                          ((hd) this).field_f.c(((hd) this).a(param3, false), var9_int + this.a(param3, 0, (byte) 125, param0), this.a(param3, 0, param1) + var11, param4, param7);
+                          ((hd) this).field_f.c(((hd) this).a(param3, false), var9_int + this.a(param3, 0, (byte) 125, param0), this.a(param3, 0, param1, false) + var11, param4, param7);
                           break L1;
                         } else {
                           break L1;
                         }
                       } else {
-                        int discarded$6 = 0;
-                        ((hd) this).field_f.b(((hd) this).a(param3, false), this.a(param3, 0, (byte) 125, param0) - -(var9_int >> 1), this.a(param3, 0, param1) - -var11, param4, param7);
+                        ((hd) this).field_f.b(((hd) this).a(param3, false), this.a(param3, 0, (byte) 125, param0) - -(var9_int >> 1), this.a(param3, 0, param1, false) - -var11, param4, param7);
                         break L1;
                       }
                     }
@@ -514,12 +512,10 @@ class hd implements de, lg {
                     break L4;
                   }
                 }
-                int discarded$7 = 0;
-                ((hd) this).field_f.a(((hd) this).a(param3, false), this.a(param3, 0, (byte) 125, param0), this.a(param3, 0, param1) - -var11, param4, param7);
+                ((hd) this).field_f.a(((hd) this).a(param3, false), this.a(param3, 0, (byte) 125, param0), this.a(param3, 0, param1, false) - -var11, param4, param7);
                 break L1;
               } else {
-                int discarded$8 = 0;
-                int discarded$9 = ((hd) this).field_f.a(((hd) this).a(param3, false), this.a(param3, 0, (byte) 125, param0), this.a(param3, 0, param1), var9_int, var10, param4, param7, ((hd) this).field_h, ((hd) this).field_a, ((hd) this).field_k);
+                int discarded$1 = ((hd) this).field_f.a(((hd) this).a(param3, false), this.a(param3, 0, (byte) 125, param0), this.a(param3, 0, param1, false), var9_int, var10, param4, param7, ((hd) this).field_h, ((hd) this).field_a, ((hd) this).field_k);
                 break L1;
               }
             }
@@ -666,12 +662,11 @@ class hd implements de, lg {
                 break L1;
               } else {
                 var5 = null;
-                int discarded$4 = ((hd) this).b(13, (uj) null);
+                int discarded$2 = ((hd) this).b(13, (uj) null);
                 break L1;
               }
             }
-            int discarded$5 = 0;
-            stackOut_2_0 = this.a(param1, 0, param2);
+            stackOut_2_0 = this.a(param1, 0, param2, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -790,7 +785,7 @@ class hd implements de, lg {
         }
     }
 
-    private final int a(uj param0, int param1, int param2) {
+    private final int a(uj param0, int param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

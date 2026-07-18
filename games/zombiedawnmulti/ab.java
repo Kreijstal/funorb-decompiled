@@ -17,7 +17,7 @@ final class ab extends br {
         throw new Error();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
     }
 

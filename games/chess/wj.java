@@ -10,7 +10,7 @@ final class wj implements jm {
     private int field_f;
     static ci field_g;
 
-    final static void a(le param0, int param1, int param2, le param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, lh param11, int param12, le param13, int param14, int param15, int param16, int param17, lh param18) {
+    final static void a(le param0, int param1, int param2, le param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, lh param11, int param12, le param13, int param14, int param15, int param16, int param17, lh param18, int param19, int param20) {
         int var21_int = 0;
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
@@ -94,13 +94,9 @@ final class wj implements jm {
             cg.a(0, 480, param11, param18);
             g.a((byte) -81, param2, param10, param4, param9);
             di.a(320, -121, 240);
-            int discarded$4 = 2;
-            gi.a(8, param0, 8, false, param13);
+            gi.a(8, param0, 8, false, param13, 2);
             var21_int = 0;
-            int discarded$5 = 200;
-            int discarded$6 = 0;
-            int discarded$7 = 0;
-            td.a(param3);
+            td.a(param3, 0, 0, 200);
             fd.a(param7, 7, param5, param16);
             break L0;
           }
@@ -359,7 +355,7 @@ final class wj implements jm {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_d = null;
         field_c = null;

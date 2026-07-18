@@ -43,14 +43,13 @@ final class ui extends ch implements pe, tb {
               if (param0 != ((ui) this).field_R) {
                 break L1;
               } else {
-                boolean discarded$4 = ((ui) this).field_Q.a((ei) this, (byte) 115);
+                boolean discarded$2 = ((ui) this).field_Q.a((ei) this, (byte) 115);
                 break L1;
               }
             }
             L2: {
               if (param0 == ((ui) this).field_Q) {
-                int discarded$5 = -1;
-                this.i();
+                this.i(-1);
                 break L2;
               } else {
                 break L2;
@@ -665,7 +664,7 @@ final class ui extends ch implements pe, tb {
         }
     }
 
-    private final void i() {
+    private final void i(int param0) {
         L0: {
           L1: {
             if (td.a(true)) {
@@ -703,7 +702,7 @@ final class ui extends ch implements pe, tb {
         return jo.c(16, -54264319, 324);
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1, int param2, boolean param3, int param4) {
         aa var5 = null;
         RuntimeException var5_ref = null;
         lk var6 = null;
@@ -782,7 +781,7 @@ final class ui extends ch implements pe, tb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_ab = null;
         field_V = null;
         field_Z = null;
@@ -832,13 +831,11 @@ final class ui extends ch implements pe, tb {
                     break L1;
                   }
                 } else {
-                  int discarded$47 = 35;
-                  br.f();
+                  br.f(35);
                   break L1;
                 }
               } else {
-                int discarded$48 = -1;
-                this.i();
+                this.i(-1);
                 break L1;
               }
             }

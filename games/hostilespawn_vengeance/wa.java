@@ -97,7 +97,7 @@ final class wa extends sm implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return true;
     }
 
@@ -210,7 +210,7 @@ final class wa extends sm implements java.awt.image.ImageProducer, java.awt.imag
         return stackIn_1_0 != 0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_n = null;
         field_o = null;
         field_q = null;

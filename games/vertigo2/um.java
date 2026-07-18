@@ -521,7 +521,7 @@ abstract class um extends iq implements dq {
         }
     }
 
-    final static void h() {
+    final static void h(int param0) {
         gg var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -859,7 +859,7 @@ abstract class um extends iq implements dq {
         }
     }
 
-    private final iq a() {
+    private final iq a(byte param0) {
         iq[] var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -899,8 +899,7 @@ abstract class um extends iq implements dq {
         if (param0 <= 3) {
             boolean discarded$0 = ((um) this).f(-7);
         }
-        int discarded$1 = -78;
-        return null != this.a() ? true : false;
+        return null != this.a((byte) -78) ? true : false;
     }
 
     final void d(byte param0) {
@@ -940,7 +939,7 @@ abstract class um extends iq implements dq {
         }
     }
 
-    private final boolean a(iq param0) {
+    private final boolean a(iq param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -962,8 +961,7 @@ abstract class um extends iq implements dq {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = -127;
-            stackOut_0_0 = this.a(1, param0);
+            stackOut_0_0 = this.a(1, param0, (byte) -127);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -1092,13 +1090,10 @@ abstract class um extends iq implements dq {
             field_C = null;
         }
         if (param1 % 10L != 0L) {
-            int discarded$1 = 0;
-            an.a(param1);
+            an.a(param1, false);
         } else {
-            int discarded$2 = 0;
-            an.a(-1L + param1);
-            int discarded$3 = 0;
-            an.a(1L);
+            an.a(-1L + param1, false);
+            an.a(1L, false);
         }
     }
 
@@ -1264,7 +1259,7 @@ abstract class um extends iq implements dq {
         super(param0, param1, param2, param3, param4, (uf) null);
     }
 
-    private final boolean a(int param0, iq param1) {
+    private final boolean a(int param0, iq param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         iq var5 = null;
@@ -1432,8 +1427,7 @@ abstract class um extends iq implements dq {
                   if (var5_int == 80) {
                     L3: {
                       if (!cr.field_eb[81]) {
-                        int discarded$3 = 121;
-                        stackOut_18_0 = this.a(param3);
+                        stackOut_18_0 = this.a(param3, (byte) 121);
                         stackIn_19_0 = stackOut_18_0;
                         break L3;
                       } else {

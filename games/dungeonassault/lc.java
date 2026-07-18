@@ -516,8 +516,7 @@ final class lc {
                       break L1;
                     } else {
                       if (param2 <= 184) {
-                        int discarded$2 = 31131;
-                        param0 = param0 + (ig.b() + -94);
+                        param0 = param0 + (ig.b(31131) + -94);
                         var3 = (hm) (Object) nj.field_f.e(-24172);
                         L2: while (true) {
                           if (var3 == null) {
@@ -570,7 +569,7 @@ final class lc {
         return stackIn_17_0;
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -652,8 +651,7 @@ final class lc {
                         var11 = var13;
                         var6 = var11;
                         if (1 == var3) {
-                          int discarded$2 = 9;
-                          int discarded$3 = ej.a(var6, var5, param0, var4);
+                          int discarded$1 = ej.a(var17, var5, param0, var4, 9);
                           break L5;
                         } else {
                           var7 = (Object) (Object) ek.field_f;
@@ -878,7 +876,7 @@ final class lc {
         return stackIn_5_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_h = null;
         field_k = null;
         field_g = null;

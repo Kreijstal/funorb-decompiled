@@ -77,7 +77,7 @@ final class nf {
         }
     }
 
-    final static String a(eg param0) {
+    final static String a(eg param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -245,7 +245,7 @@ final class nf {
         return stackIn_31_0;
     }
 
-    final static int[] a(int[] param0) {
+    final static int[] a(int[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int[] var3 = null;
@@ -407,7 +407,7 @@ final class nf {
         ((nf) this).field_d = jc.field_s;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_i = null;
         field_m = null;
         field_a = null;

@@ -224,7 +224,7 @@ final class cqb extends wm implements ntb {
         return stackIn_5_0 != 0;
     }
 
-    final static rn d() {
+    final static rn d(int param0) {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         rn var2 = null;
@@ -261,16 +261,15 @@ final class cqb extends wm implements ntb {
             super.b((byte) 82, param1);
             var5 = (cqb) (Object) param1;
             var6 = var5;
-            var6.field_d = var5.field_d;
-            var6.field_c = var5.field_c;
+            var6.field_d = ((cqb) this).field_d;
+            var6.field_c = ((cqb) this).field_c;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "cqb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(byte param0) {
-        int discarded$0 = -110;
-        pja.e();
+        pja.e(-110);
         int var1 = -25 / ((46 - param0) / 35);
     }
 
@@ -679,8 +678,8 @@ final class cqb extends wm implements ntb {
               super.a(param0, -64);
               var5 = (cqb) (Object) param0;
               var4 = 0;
-              if (var5.field_c != var5.field_c) {
-                System.out.println("int index has changed. before=" + var5.field_c + ", now=" + var5.field_c);
+              if (var5.field_c != ((cqb) this).field_c) {
+                System.out.println("int index has changed. before=" + var5.field_c + ", now=" + ((cqb) this).field_c);
                 var4 = 1;
                 break L1;
               } else {
@@ -688,11 +687,11 @@ final class cqb extends wm implements ntb {
               }
             }
             L2: {
-              if (var5.field_d == var5.field_d) {
+              if (var5.field_d == ((cqb) this).field_d) {
                 break L2;
               } else {
                 var4 = 1;
-                System.out.println("int value has changed. before=" + var5.field_d + ", now=" + var5.field_d);
+                System.out.println("int value has changed. before=" + var5.field_d + ", now=" + ((cqb) this).field_d);
                 break L2;
               }
             }

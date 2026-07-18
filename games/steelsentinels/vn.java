@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class vn extends v implements fd, aa {
     static String field_j;
     ha field_n;
@@ -15,17 +17,17 @@ final class vn extends v implements fd, aa {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_3_0 = null;
         StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
@@ -47,87 +49,234 @@ final class vn extends v implements fd, aa {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
             stackOut_3_1 = new StringBuilder().append("vn.C(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
+            stackIn_6_0 = stackOut_3_0;
+            stackIn_6_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
               stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_7_0 = stackOut_4_0;
+              stackIn_7_1 = stackOut_4_1;
+              stackIn_7_2 = stackOut_4_2;
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
     final String b(byte param0) {
         int var2_int = 0;
-        NumberFormatException var2 = null;
+        RuntimeException var2 = null;
+        NumberFormatException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        String stackIn_4_0 = null;
-        Object stackIn_7_0 = null;
-        Throwable decompiledCaughtException = null;
-        Object stackOut_6_0 = null;
-        String stackOut_3_0 = null;
-        try {
-          L0: {
-            L1: {
-              var2_int = ((vn) this).field_n.j(-88);
-              var3 = ((vn) this).field_n.k(14879);
-              var4 = ((vn) this).field_n.h((byte) 17);
-              var5 = rg.d(-1900);
-              if (var4 < 1890) {
-                break L1;
-              } else {
-                if (var4 > -3 + var5) {
-                  break L1;
-                } else {
-                  if (param0 == -42) {
-                    if (!oh.a(var4, true, var2_int, var3)) {
-                      break L0;
-                    } else {
-                      return null;
+        String stackIn_7_0 = null;
+        Object stackIn_10_0 = null;
+        Object stackIn_15_0 = null;
+        String stackIn_19_0 = null;
+        String stackOut_6_0 = null;
+        Object stackOut_9_0 = null;
+        Object stackOut_14_0 = null;
+        String stackOut_18_0 = null;
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    try {
+                        var2_int = ((vn) this).field_n.j(-88);
+                        var3 = ((vn) this).field_n.k(14879);
+                        var4 = ((vn) this).field_n.h((byte) 17);
+                        var5 = rg.d(-1900);
+                        if (var4 < 1890) {
+                            statePc = 6;
+                        } else {
+                            statePc = 1;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_0) {
+                        caughtException = stateCaught_0;
+                        statePc = ((Object) stateCaught_0 instanceof NumberFormatException ? 17 : 20);
+                        continue stateLoop;
                     }
-                  } else {
-                    stackOut_6_0 = null;
-                    stackIn_7_0 = stackOut_6_0;
-                    return (String) (Object) stackIn_7_0;
-                  }
                 }
-              }
+                case 1: {
+                    try {
+                        if (~var4 < ~(-3 + var5)) {
+                            statePc = 6;
+                        } else {
+                            statePc = 2;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = ((Object) stateCaught_1 instanceof NumberFormatException ? 17 : 20);
+                        continue stateLoop;
+                    }
+                }
+                case 2: {
+                    try {
+                        statePc = 4;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = ((Object) stateCaught_2 instanceof NumberFormatException ? 17 : 20);
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        statePc = 8;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = ((Object) stateCaught_4 instanceof NumberFormatException ? 17 : 20);
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        stackOut_6_0 = db.a(ce.field_u, -26, new String[2]);
+                        stackIn_7_0 = stackOut_6_0;
+                        statePc = 7;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = ((Object) stateCaught_6 instanceof NumberFormatException ? 17 : 20);
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    return stackIn_7_0;
+                }
+                case 8: {
+                    try {
+                        if (param0 == -42) {
+                            statePc = 11;
+                        } else {
+                            statePc = 9;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_8) {
+                        caughtException = stateCaught_8;
+                        statePc = ((Object) stateCaught_8 instanceof NumberFormatException ? 17 : 20);
+                        continue stateLoop;
+                    }
+                }
+                case 9: {
+                    try {
+                        stackOut_9_0 = null;
+                        stackIn_10_0 = stackOut_9_0;
+                        statePc = 10;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_9) {
+                        caughtException = stateCaught_9;
+                        statePc = ((Object) stateCaught_9 instanceof NumberFormatException ? 17 : 20);
+                        continue stateLoop;
+                    }
+                }
+                case 10: {
+                    return (String) (Object) stackIn_10_0;
+                }
+                case 11: {
+                    try {
+                        if (oh.a(var4, true, var2_int, var3)) {
+                            statePc = 14;
+                        } else {
+                            statePc = 12;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_11) {
+                        caughtException = stateCaught_11;
+                        statePc = ((Object) stateCaught_11 instanceof NumberFormatException ? 17 : 20);
+                        continue stateLoop;
+                    }
+                }
+                case 12: {
+                    try {
+                        statePc = 16;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_12) {
+                        caughtException = stateCaught_12;
+                        statePc = ((Object) stateCaught_12 instanceof NumberFormatException ? 17 : 20);
+                        continue stateLoop;
+                    }
+                }
+                case 14: {
+                    try {
+                        stackOut_14_0 = null;
+                        stackIn_15_0 = stackOut_14_0;
+                        statePc = 15;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_14) {
+                        caughtException = stateCaught_14;
+                        statePc = ((Object) stateCaught_14 instanceof NumberFormatException ? 17 : 20);
+                        continue stateLoop;
+                    }
+                }
+                case 15: {
+                    return (String) (Object) stackIn_15_0;
+                }
+                case 16: {
+                    try {
+                        statePc = 18;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_16) {
+                        caughtException = stateCaught_16;
+                        statePc = 20;
+                        continue stateLoop;
+                    }
+                }
+                case 17: {
+                    try {
+                        var2_ref = (NumberFormatException) (Object) caughtException;
+                        statePc = 18;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_17) {
+                        caughtException = stateCaught_17;
+                        statePc = 20;
+                        continue stateLoop;
+                    }
+                }
+                case 18: {
+                    try {
+                        stackOut_18_0 = da.field_a;
+                        stackIn_19_0 = stackOut_18_0;
+                        statePc = 19;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_18) {
+                        caughtException = stateCaught_18;
+                        statePc = 20;
+                        continue stateLoop;
+                    }
+                }
+                case 19: {
+                    return stackIn_19_0;
+                }
+                case 20: {
+                    var2 = (RuntimeException) (Object) caughtException;
+                    throw ci.a((Throwable) (Object) var2, "vn.P(" + param0 + ')');
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-            stackOut_3_0 = db.a(ce.field_u, -26, new String[2]);
-            stackIn_4_0 = stackOut_3_0;
-            return stackIn_4_0;
-          }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = (NumberFormatException) (Object) decompiledCaughtException;
-            break L2;
-          }
         }
-        return da.field_a;
     }
 
     final static void d(int param0) {
+        RuntimeException runtimeException = null;
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = SteelSentinels.field_G;
@@ -143,44 +292,120 @@ final class vn extends v implements fd, aa {
             kk.field_a = null;
             var1_int = 0;
             L1: while (true) {
-              if (wc.field_h.length <= var1_int) {
-                var1_int = 0;
-                L2: while (true) {
-                  if (cj.field_a.length <= var1_int) {
-                    if (param0 <= -25) {
-                      break L0;
-                    } else {
-                      field_k = null;
-                      return;
-                    }
+              L2: {
+                L3: {
+                  if (~wc.field_h.length >= ~var1_int) {
+                    break L3;
                   } else {
-                    cj.field_a[var1_int] = null;
+                    wc.field_h[var1_int] = null;
                     var1_int++;
-                    continue L2;
+                    if (var2 != 0) {
+                      break L2;
+                    } else {
+                      if (var2 == 0) {
+                        continue L1;
+                      } else {
+                        break L3;
+                      }
+                    }
                   }
                 }
-              } else {
-                wc.field_h[var1_int] = null;
-                var1_int++;
-                continue L1;
+                var1_int = 0;
+                break L2;
+              }
+              L4: while (true) {
+                L5: {
+                  L6: {
+                    if (~cj.field_a.length >= ~var1_int) {
+                      break L6;
+                    } else {
+                      cj.field_a[var1_int] = null;
+                      var1_int++;
+                      if (var2 != 0) {
+                        break L5;
+                      } else {
+                        if (var2 == 0) {
+                          continue L4;
+                        } else {
+                          break L6;
+                        }
+                      }
+                    }
+                  }
+                  if (param0 <= -25) {
+                    break L5;
+                  } else {
+                    field_k = null;
+                    break L5;
+                  }
+                }
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var1, "vn.E(" + param0 + ')');
+          runtimeException = decompiledCaughtException;
+          throw ci.a((Throwable) (Object) runtimeException, "vn.E(" + param0 + ')');
         }
     }
 
     public final void a(jf param0, byte param1) {
-        if (param1 != 89) {
-            return;
-        }
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
-            ((vn) this).a(param1 + -17471);
-        } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "vn.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          L0: {
+            if (param1 == 89) {
+              ((vn) this).a(param1 + -17471);
+              break L0;
+            } else {
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            runtimeException = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) runtimeException;
+            stackOut_4_1 = new StringBuilder().append("vn.K(");
+            stackIn_7_0 = stackOut_4_0;
+            stackIn_7_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_8_0 = stackOut_5_0;
+              stackIn_8_1 = stackOut_5_1;
+              stackIn_8_2 = stackOut_5_2;
+              break L1;
+            }
+          }
+          throw ci.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
     }
 
@@ -188,51 +413,147 @@ final class vn extends v implements fd, aa {
     }
 
     public final boolean b(boolean param0) {
-        if (!param0) {
-            vn.d(false);
-            return ((vn) this).field_n.i(-7034);
+        RuntimeException var2 = null;
+        boolean stackIn_4_0 = false;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_3_0 = false;
+        try {
+          L0: {
+            L1: {
+              if (param0) {
+                break L1;
+              } else {
+                vn.d(false);
+                break L1;
+              }
+            }
+            stackOut_3_0 = ((vn) this).field_n.i(-7034);
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw ci.a((Throwable) (Object) var2, "vn.N(" + param0 + ')');
         }
-        return ((vn) this).field_n.i(-7034);
+        return stackIn_4_0;
     }
 
     static int a(int param0, int param1) {
-        return param0 | param1;
+        RuntimeException var2 = null;
+        int stackIn_1_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_0_0 = 0;
+        try {
+          L0: {
+            stackOut_0_0 = param0 | param1;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw ci.a((Throwable) (Object) var2, "vn.B(" + param0 + ',' + param1 + ')');
+        }
+        return stackIn_1_0;
     }
 
     final static String a(char param0, int param1, int param2) {
+        char[] var3 = null;
+        RuntimeException var3_ref = null;
         int var4 = 0;
-        int var5 = SteelSentinels.field_G;
-        char[] var6 = new char[param2];
-        char[] var3 = var6;
-        for (var4 = 0; param2 > var4; var4++) {
-            var6[var4] = '*';
+        int var5 = 0;
+        Object stackIn_9_0 = null;
+        String stackIn_11_0 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_8_0 = null;
+        String stackOut_10_0 = null;
+        var5 = SteelSentinels.field_G;
+        try {
+          L0: {
+            var3 = new char[param2];
+            var4 = 0;
+            L1: while (true) {
+              L2: {
+                L3: {
+                  if (~param2 >= ~var4) {
+                    break L3;
+                  } else {
+                    var3[var4] = param0;
+                    var4++;
+                    if (var5 != 0) {
+                      break L2;
+                    } else {
+                      if (var5 == 0) {
+                        continue L1;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
+                }
+                if (param1 == -7477) {
+                  break L2;
+                } else {
+                  stackOut_8_0 = null;
+                  stackIn_9_0 = stackOut_8_0;
+                  return (String) (Object) stackIn_9_0;
+                }
+              }
+              stackOut_10_0 = new String(var3);
+              stackIn_11_0 = stackOut_10_0;
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          throw ci.a((Throwable) (Object) var3_ref, "vn.G(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return new String(var3);
+        return stackIn_11_0;
     }
 
     final static void c(int param0) {
-        if (param0 <= 0) {
-            wg discarded$0 = vn.c((byte) -125);
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 > 0) {
+                break L1;
+              } else {
+                wg discarded$2 = vn.c((byte) -125);
+                break L1;
+              }
+            }
             vc.a(-1);
-            return;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ci.a((Throwable) (Object) var1, "vn.D(" + param0 + ')');
         }
-        vc.a(-1);
     }
 
     final vd b(int param0) {
         int var2_int = 0;
-        NumberFormatException var2 = null;
+        RuntimeException var2 = null;
+        NumberFormatException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         vd stackIn_2_0 = null;
-        vd stackIn_6_0 = null;
-        vd stackIn_10_0 = null;
-        int decompiledRegionSelector0 = 0;
+        vd stackIn_7_0 = null;
+        vd stackIn_12_0 = null;
+        vd stackIn_15_0 = null;
+        vd stackIn_20_0 = null;
         Throwable decompiledCaughtException = null;
-        vd stackOut_5_0 = null;
-        vd stackOut_9_0 = null;
+        vd stackOut_6_0 = null;
+        vd stackOut_11_0 = null;
+        vd stackOut_19_0 = null;
         vd stackOut_1_0 = null;
+        vd stackOut_14_0 = null;
         try {
           L0: {
             var2_int = ((vn) this).field_n.j(-127);
@@ -240,18 +561,26 @@ final class vn extends v implements fd, aa {
             var4 = ((vn) this).field_n.h((byte) 79);
             var5 = rg.d(param0 ^ 31644);
             if (var4 >= 1890) {
-              if (var4 > -3 + var5) {
-                stackOut_5_0 = fa.field_d;
-                stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0;
+              if (~var4 < ~(-3 + var5)) {
+                stackOut_6_0 = fa.field_d;
+                stackIn_7_0 = stackOut_6_0;
+                return stackIn_7_0;
               } else {
                 if (!oh.a(var4, true, var2_int, var3)) {
-                  stackOut_9_0 = fa.field_d;
-                  stackIn_10_0 = stackOut_9_0;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
+                  stackOut_11_0 = fa.field_d;
+                  stackIn_12_0 = stackOut_11_0;
+                  return stackIn_12_0;
                 } else {
-                  decompiledRegionSelector0 = 0;
+                  L1: {
+                    if (param0 == -31992) {
+                      break L1;
+                    } else {
+                      field_i = null;
+                      break L1;
+                    }
+                  }
+                  stackOut_19_0 = vf.field_b;
+                  stackIn_20_0 = stackOut_19_0;
                   break L0;
                 }
               }
@@ -261,29 +590,45 @@ final class vn extends v implements fd, aa {
               return stackIn_2_0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          var2 = (RuntimeException) (Object) decompiledCaughtException;
+          throw ci.a((Throwable) (Object) var2, "vn.R(" + param0 + ')');
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = (NumberFormatException) (Object) decompiledCaughtException;
-          return fa.field_d;
+          var2_ref = (NumberFormatException) (Object) decompiledCaughtException;
+          stackOut_14_0 = fa.field_d;
+          stackIn_15_0 = stackOut_14_0;
+          return stackIn_15_0;
         }
-        if (decompiledRegionSelector0 == 0) {
-          if (param0 != -31992) {
-            field_i = null;
-            return vf.field_b;
-          } else {
-            return vf.field_b;
-          }
-        } else {
-          return stackIn_10_0;
-        }
+        return stackIn_20_0;
     }
 
     final static wg c(byte param0) {
-        if (param0 != 83) {
-            vn.d(true);
-            return ll.field_e;
+        RuntimeException var1 = null;
+        wg stackIn_4_0 = null;
+        RuntimeException decompiledCaughtException = null;
+        wg stackOut_3_0 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 83) {
+                break L1;
+              } else {
+                vn.d(true);
+                break L1;
+              }
+            }
+            stackOut_3_0 = ll.field_e;
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ci.a((Throwable) (Object) var1, "vn.F(" + param0 + ')');
         }
-        return ll.field_e;
+        return stackIn_4_0;
     }
 
     public static void d(boolean param0) {
@@ -292,9 +637,13 @@ final class vn extends v implements fd, aa {
         if (param0) {
             return;
         }
-        field_i = null;
-        field_k = null;
-        field_l = null;
+        try {
+            field_i = null;
+            field_k = null;
+            field_l = null;
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "vn.A(" + param0 + ')');
+        }
     }
 
     static {

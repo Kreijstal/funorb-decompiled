@@ -21,14 +21,13 @@ final class qm {
             de.field_c = new le(param0);
             bb.field_b = param2;
             o.field_f = param3;
-            int discarded$0 = 6;
-            fi.a();
+            fi.a((byte) 6);
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "qm.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_e = null;
         field_c = null;
@@ -329,7 +328,7 @@ final class qm {
         }
     }
 
-    final static String a(char param0, String param1, String param2) {
+    final static String a(char param0, String param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

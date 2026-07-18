@@ -28,7 +28,7 @@ final class ga extends k {
         ((ga) this).field_j = (7 + ((ga) this).field_o) / 8;
     }
 
-    final static void i() {
+    final static void i(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         vg var3 = null;
@@ -271,7 +271,7 @@ final class ga extends k {
         }
     }
 
-    final static uc a(String param0) {
+    final static uc a(String param0, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -295,8 +295,7 @@ final class ga extends k {
               break L0;
             } else {
               if (!param0.equals((Object) (Object) tg.field_g.a(31027))) {
-                int discarded$2 = 1;
-                tg.field_g = tg.a(param0);
+                tg.field_g = tg.a(param0, true);
                 break L0;
               } else {
                 break L0;
@@ -388,7 +387,7 @@ final class ga extends k {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_t = null;
         field_u = null;
         field_s = null;

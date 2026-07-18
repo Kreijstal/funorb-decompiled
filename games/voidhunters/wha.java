@@ -13,7 +13,7 @@ final class wha implements dja {
         return (tv[]) (Object) new crb[param1];
     }
 
-    final static void a() {
+    final static void a(int param0) {
         wga.field_a = new lwa(fh.field_g, lo.field_b, kn.field_p, qc.field_q, (llb) (Object) urb.field_o, iga.field_o);
     }
 

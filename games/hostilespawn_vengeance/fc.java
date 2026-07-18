@@ -97,7 +97,7 @@ abstract class fc extends ag implements ai {
         ((fc) this).j(80);
     }
 
-    private final boolean b(ag param0) {
+    private final boolean b(ag param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -189,9 +189,8 @@ abstract class fc extends ag implements ai {
         return var2;
     }
 
-    final static boolean i() {
-        int discarded$0 = 10295;
-        return la.a(bn.c(-1));
+    final static boolean i(int param0) {
+        return la.a(bn.c(-1), 10295);
     }
 
     final boolean g(int param0) {
@@ -944,8 +943,7 @@ abstract class fc extends ag implements ai {
               } else {
                 L2: {
                   if (!qh.field_m[81]) {
-                    int discarded$3 = 10;
-                    stackOut_11_0 = this.b(param1);
+                    stackOut_11_0 = this.b(param1, 10);
                     stackIn_12_0 = stackOut_11_0;
                     break L2;
                   } else {

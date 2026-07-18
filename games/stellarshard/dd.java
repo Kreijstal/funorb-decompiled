@@ -57,10 +57,8 @@ final class dd {
                         try {
                             var9 = param1.getParameter("cookieprefix");
                             var3 = var9 + "settings";
-                            int discarded$4 = 78;
-                            var4 = (String) sh.a("getcookies", param1);
-                            int discarded$5 = 10287;
-                            var5 = qj.a(';', var4);
+                            var4 = (String) sh.a("getcookies", param1, (byte) 78);
+                            var5 = qj.a(';', var4, 10287);
                             var6 = 0;
                             statePc = 2;
                             continue stateLoop;
@@ -404,7 +402,7 @@ final class dd {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

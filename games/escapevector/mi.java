@@ -192,7 +192,7 @@ final class mi extends hg {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_l = null;
         field_j = null;
         field_m = null;

@@ -121,7 +121,7 @@ final class kk extends bca {
         }
     }
 
-    final static boolean d() {
+    final static boolean d(byte param0) {
         return tc.a(24215, nia.d(-31768));
     }
 

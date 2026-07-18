@@ -5,7 +5,7 @@ final class bc {
     static int field_a;
     static String field_b;
 
-    final static void a() {
+    final static void a(int param0) {
         da.field_b = false;
         int discarded$0 = rd.field_j.f(96);
     }
@@ -38,7 +38,7 @@ final class bc {
         }
     }
 
-    final static StringBuilder a(StringBuilder param0) {
+    final static StringBuilder a(StringBuilder param0, char param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

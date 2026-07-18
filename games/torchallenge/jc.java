@@ -22,8 +22,7 @@ abstract class jc {
         for (var2 = 0; var2 < vl.field_b; var2++) {
             var1[var2] = new ge(ij.field_B, le.field_g, ug.field_e[var2], dd.field_t[var2], pg.field_r[var2], lg.field_e[var2], h.field_a[var2], td.field_m);
         }
-        int discarded$0 = 0;
-        p.a();
+        p.a(0);
         return var1;
     }
 
@@ -260,7 +259,7 @@ abstract class jc {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_1_0 = false;
@@ -284,8 +283,7 @@ abstract class jc {
         try {
           L0: {
             var3 = (CharSequence) (Object) param0;
-            int discarded$2 = 21;
-            stackOut_0_0 = td.field_i.equals((Object) (Object) il.a(var3));
+            stackOut_0_0 = td.field_i.equals((Object) (Object) il.a(var3, (byte) 21));
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

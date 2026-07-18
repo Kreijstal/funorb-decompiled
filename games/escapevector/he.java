@@ -52,8 +52,7 @@ final class he extends k {
         try {
           L0: {
             if (uc.a(param0, 96, param3, param2)) {
-              int discarded$2 = 8;
-              stackOut_3_0 = da.b();
+              stackOut_3_0 = da.b((byte) 8);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -308,8 +307,7 @@ final class he extends k {
               if (param2 < -14) {
                 break L8;
               } else {
-                int discarded$1 = 1;
-                he.a();
+                he.a(true);
                 break L8;
               }
             }
@@ -383,8 +381,7 @@ final class he extends k {
                 if (param1 > 65) {
                   break L0;
                 } else {
-                  int discarded$1 = 1;
-                  he.a();
+                  he.a(true);
                   return;
                 }
               } else {
@@ -445,7 +442,7 @@ final class he extends k {
         }
     }
 
-    final static kb a(String param0, int param1) {
+    final static kb a(String param0, int param1, byte param2) {
         jb var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -510,7 +507,7 @@ final class he extends k {
         return (kb) (Object) stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_v = null;
         field_u = null;
         field_q = null;

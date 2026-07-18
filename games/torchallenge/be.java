@@ -184,7 +184,7 @@ final class be {
         return stackIn_26_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_f = null;
         field_c = null;
@@ -198,8 +198,7 @@ final class be {
                 var1 = "";
             }
         }
-        int discarded$0 = 125;
-        return new qa(si.h(16), fc.d());
+        return new qa(si.h(16), fc.d(125));
     }
 
     final static ql a(int param0, int param1) {

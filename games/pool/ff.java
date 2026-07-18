@@ -17,7 +17,7 @@ final class ff {
         uq.field_D.a((byte) -79, param1);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_h = null;
         field_d = null;

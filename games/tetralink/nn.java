@@ -230,7 +230,7 @@ class nn extends ae {
         }
     }
 
-    public static void e() {
+    public static void e(boolean param0) {
         field_T = null;
         field_S = null;
         field_Y = null;
@@ -380,8 +380,7 @@ class nn extends ae {
                     return null;
                   }
                 } else {
-                  int discarded$8 = 0;
-                  if (om.a(param0.charAt(var4))) {
+                  if (om.a(param0.charAt(var4), false)) {
                     var4++;
                     continue L1;
                   } else {
@@ -450,8 +449,7 @@ class nn extends ae {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              int discarded$3 = -85;
-              this.h();
+              this.h((byte) -85);
               if (((nn) this).field_x == 1) {
                 L2: {
                   if (((nn) this).field_H instanceof jh) {
@@ -673,7 +671,7 @@ class nn extends ae {
               if (param2 == 1) {
                 break L1;
               } else {
-                int discarded$3 = nn.i(88);
+                int discarded$2 = nn.i(88);
                 break L1;
               }
             }
@@ -713,9 +711,9 @@ class nn extends ae {
                         L6: {
                           if (((nn) this).field_V >= ((nn) this).field_A.length()) {
                             ((nn) this).field_A = ((nn) this).field_A + param1;
-                            int dupTemp$4 = ((nn) this).field_A.length();
-                            ((nn) this).field_V = dupTemp$4;
-                            ((nn) this).field_Q = dupTemp$4;
+                            int dupTemp$3 = ((nn) this).field_A.length();
+                            ((nn) this).field_V = dupTemp$3;
+                            ((nn) this).field_Q = dupTemp$3;
                             break L6;
                           } else {
                             ((nn) this).field_A = ((nn) this).field_A.substring(0, ((nn) this).field_V) + param1 + ((nn) this).field_A.substring(((nn) this).field_V, ((nn) this).field_A.length());
@@ -823,8 +821,7 @@ class nn extends ae {
                                         break L10;
                                       } else {
                                         if (param0 == 65) {
-                                          int discarded$5 = 1;
-                                          this.f();
+                                          this.f(true);
                                           stackOut_54_0 = 1;
                                           stackIn_55_0 = stackOut_54_0;
                                           return stackIn_55_0 != 0;
@@ -955,7 +952,7 @@ class nn extends ae {
         return stackIn_74_0 != 0;
     }
 
-    private final void f() {
+    private final void f(boolean param0) {
         this.l(93);
         this.h(1);
     }
@@ -1029,7 +1026,7 @@ class nn extends ae {
         return ea.field_a;
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         hi var3 = null;
         int var4 = 0;
         int var5 = 0;

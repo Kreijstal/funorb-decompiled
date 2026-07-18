@@ -80,7 +80,7 @@ final class rd {
         return stackIn_5_0;
     }
 
-    final static km a(int param0, int param1) {
+    final static km a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = Chess.field_G;
         km var6 = new km(param0, param0);
@@ -91,7 +91,7 @@ final class rd {
         return var3;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }

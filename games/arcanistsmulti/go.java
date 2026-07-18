@@ -18,7 +18,7 @@ abstract class go {
 
     abstract java.net.Socket b(byte param0) throws IOException;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_a = null;
         field_d = null;
@@ -33,7 +33,7 @@ abstract class go {
         return new java.net.Socket(((go) this).field_e, ((go) this).field_b);
     }
 
-    final static byte[] a(CharSequence param0) {
+    final static byte[] a(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;

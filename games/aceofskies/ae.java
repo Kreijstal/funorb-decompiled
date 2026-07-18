@@ -12,7 +12,7 @@ final class ae extends sk {
         }
     }
 
-    final static void a(oh param0, int param1) {
+    final static void a(oh param0, int param1, byte param2) {
         dl var3 = q.field_p;
         var3.g(84, param1);
         var3.b(-1336879960, 2);
@@ -594,9 +594,10 @@ final class ae extends sk {
             Object var18 = null;
             byte[][] var19 = null;
             String var20 = null;
-            byte[][] var21 = null;
+            String var21 = null;
             byte[][] var22 = null;
             byte[][] var23 = null;
+            byte[][] var24 = null;
             RuntimeException stackIn_36_0 = null;
             StringBuilder stackIn_36_1 = null;
             RuntimeException stackIn_37_0 = null;
@@ -669,18 +670,18 @@ final class ae extends sk {
                                       }
                                     }
                                   }
-                                  var7 = param1.h(-17883);
                                   var20 = param1.h(-17883);
+                                  var21 = param1.h(-17883);
                                   var9 = param1.g(-60);
                                   var10 = new String[var9];
                                   var11_int = 0;
                                   L6: while (true) {
                                     if (var9 <= var11_int) {
                                       L7: {
-                                        var23 = new byte[var9][];
+                                        var24 = new byte[var9][];
+                                        var23 = var24;
                                         var22 = var23;
-                                        var21 = var22;
-                                        var19 = var21;
+                                        var19 = var22;
                                         var11 = var19;
                                         if (var6_int == 3) {
                                           var12_int = 0;
@@ -690,7 +691,7 @@ final class ae extends sk {
                                             } else {
                                               var13 = param1.a((byte) 117);
                                               var11[var12_int] = new byte[var13];
-                                              param1.a(0, 7186, var13, var23[var12_int]);
+                                              param1.a(0, 7186, var13, var24[var12_int]);
                                               var12_int++;
                                               continue L8;
                                             }
@@ -705,13 +706,11 @@ final class ae extends sk {
                                       var13 = var17;
                                       L9: while (true) {
                                         if (var9 <= var17) {
-                                          int discarded$3 = 1;
-                                          ((bb) var18).field_h[var5] = param3.a(pe.a(var7), var12, var20, true);
-                                          ((bb) var18).field_k[var5] = var23;
+                                          ((bb) var18).field_h[var5] = param3.a(pe.a(var20, 1), var12, var21, true);
+                                          ((bb) var18).field_k[var5] = var24;
                                           break L3;
                                         } else {
-                                          int discarded$4 = 1;
-                                          var12[var17] = pe.a(var10[var17]);
+                                          var12[var17] = pe.a(var10[var17], 1);
                                           var17++;
                                           continue L9;
                                         }
@@ -743,8 +742,7 @@ final class ae extends sk {
                           }
                           ((bb) var18).field_l[var5] = var6_int;
                           ((bb) var18).field_i[var5] = var9;
-                          int discarded$5 = 1;
-                          ((bb) var18).field_f[var5] = param3.a(var15, pe.a(var16), 9);
+                          ((bb) var18).field_f[var5] = param3.a(var15, pe.a(var16, 1), 9);
                           break L3;
                         }
                         break L2;

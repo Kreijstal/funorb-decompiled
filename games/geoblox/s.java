@@ -43,7 +43,7 @@ final class s extends ee implements pe, pl {
         }
     }
 
-    final static void a(vd param0) {
+    final static void a(vd param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         vd var3 = null;
@@ -113,8 +113,7 @@ final class s extends ee implements pe, pl {
                   break L5;
                 }
               }
-              int discarded$2 = 31274;
-              ki.a(param0);
+              ki.a(param0, 31274);
               break L0;
             } else {
               return;
@@ -181,8 +180,6 @@ final class s extends ee implements pe, pl {
             ((s) this).field_C = param0;
             ((s) this).field_K = new hk(cl.field_d, (bb) null);
             ((s) this).field_K.field_q = (dh) (Object) new ml();
-            int discarded$2 = 11501;
-            int discarded$3 = 0;
             var7 = wj.a(nk.field_i, new String[2], (byte) -114);
             var3 = 20;
             var4 = new ff(ng.field_F, 0, 0, 0, 0, 16777215, -1, 3, 0, ng.field_F.field_o, -1, 2147483647, true);
@@ -314,7 +311,7 @@ final class s extends ee implements pe, pl {
         }
     }
 
-    private final String f() {
+    private final String f(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -403,7 +400,7 @@ final class s extends ee implements pe, pl {
         field_F = null;
     }
 
-    private final String c() {
+    private final String c(boolean param0) {
         return "</col></u>";
     }
 

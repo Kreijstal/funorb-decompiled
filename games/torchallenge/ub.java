@@ -17,7 +17,7 @@ final class ub {
     static int field_n;
     static int field_j;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
         int var1 = -61;

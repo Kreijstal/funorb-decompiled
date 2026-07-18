@@ -10,7 +10,7 @@ final class lj {
     static String field_e;
     private static String field_z;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_d = null;
         field_c = null;

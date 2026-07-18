@@ -16,7 +16,7 @@ final class wf extends uf {
     byte[][][] field_o;
     static int field_t;
 
-    final static int a(String param0) {
+    final static int a(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -94,7 +94,7 @@ final class wf extends uf {
         return stackIn_11_0;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         dg.field_d = false;
         ia.field_r = null;
         kj.field_c = null;

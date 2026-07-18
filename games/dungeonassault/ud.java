@@ -11,7 +11,7 @@ final class ud extends qe {
     static cn field_y;
     static String field_u;
 
-    private final int[] a(int[] param0) {
+    private final int[] a(int[] param0, boolean param1) {
         int[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -108,8 +108,7 @@ final class ud extends qe {
 
     private final void a(boolean param0, int param1) {
         ia.field_K.field_w = 0;
-        int discarded$0 = 16;
-        lk.f();
+        lk.f(16);
         gd.a(0, 0, 0, param0);
         cm.a(1.600000023841858f, 0.9200000166893005f, -7788, 0.10000000149011612f, 25.0f);
     }
@@ -245,12 +244,10 @@ final class ud extends qe {
             return;
           } else {
             L0: while (true) {
-              int discarded$4 = 47;
-              if (!ha.b()) {
+              if (!ha.b((byte) 47)) {
                 L1: {
                   if (!ro.field_B) {
-                    int discarded$5 = 22362;
-                    rm.r();
+                    rm.r(22362);
                     if (ro.field_B) {
                       this.d(true);
                       break L1;
@@ -275,7 +272,7 @@ final class ud extends qe {
                           if (~var2 <= ~u.field_T.length) {
                             break L3;
                           } else {
-                            o discarded$6 = gd.a(64, u.field_T[var2]);
+                            o discarded$2 = gd.a(64, u.field_T[var2]);
                             break L3;
                           }
                         }
@@ -286,9 +283,9 @@ final class ud extends qe {
                   }
                 } else {
                   L4: {
-                    int fieldTemp$7 = ub.field_p + 1;
+                    int fieldTemp$3 = ub.field_p + 1;
                     ub.field_p = ub.field_p + 1;
-                    if (fieldTemp$7 >= 150) {
+                    if (fieldTemp$3 >= 150) {
                       sf.field_g = sf.field_g + 8;
                       if (sf.field_g >= 256) {
                         cm.a(0.0f, 0.0f, -7788, 0.10000000149011612f, 0.0f);
@@ -362,8 +359,7 @@ final class ud extends qe {
         }
         ia.field_K.field_y[8] = 2560;
         ia.field_K.field_m[8] = 3200;
-        int discarded$0 = 0;
-        ia.field_K.field_j = this.a(new int[9]);
+        ia.field_K.field_j = this.a(new int[9], false);
         ia.field_K.field_q = this.a(false, new int[9]);
         int var20 = 0;
         var3 = var20;
@@ -400,11 +396,10 @@ final class ud extends qe {
         ia.field_K.field_w = 0;
         var57[4] = 3840;
         cm.a(0.0f, 0.0f, -7788, 0.10000000149011612f, 0.0f);
-        int discarded$1 = 1;
-        t.a(1048576, jd.field_o, false);
+        t.a(1048576, jd.field_o, false, true);
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) in.field_C);
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) in.field_C);

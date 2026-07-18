@@ -239,7 +239,7 @@ final class hg extends gm {
         }
     }
 
-    final static void h() {
+    final static void h(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

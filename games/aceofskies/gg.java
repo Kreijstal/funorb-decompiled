@@ -16,7 +16,7 @@ abstract class gg {
 
     abstract void a(int param0, int param1, byte param2);
 
-    private final void a() {
+    private final void a(byte param0) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -110,7 +110,7 @@ abstract class gg {
 
     abstract void c(int param0);
 
-    final static rh a(al param0, int param1) {
+    final static rh a(al param0, int param1, int param2) {
         RuntimeException var3 = null;
         rh stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -169,7 +169,7 @@ abstract class gg {
         return stackIn_1_0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         nf.field_a = false;
         ss.field_t = false;
         oi.a(-1, 20665);
@@ -424,8 +424,7 @@ abstract class gg {
         ((gg) this).field_e = param3;
         ((gg) this).field_g = param4;
         this.b(48);
-        int discarded$0 = 96;
-        this.a();
+        this.a((byte) 96);
     }
 
     static {

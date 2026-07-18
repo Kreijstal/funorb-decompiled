@@ -57,7 +57,7 @@ final class em extends wk {
         return stackIn_4_0;
     }
 
-    private final void a(String param0, int param1, int param2, cf param3) {
+    private final void a(String param0, int param1, int param2, cf param3, boolean param4) {
         try {
             cp.field_H.b(param0, param3.field_y + param1 - -(param3.field_n >> 1), param3.field_i + (param2 - 5), 16777215, -1);
         } catch (RuntimeException runtimeException) {
@@ -173,8 +173,7 @@ final class em extends wk {
         String stackOut_17_2 = null;
         try {
           L0: {
-            int discarded$1 = 1;
-            jl.a(param4, param18, param3, param20, 480, param14, param8, new pd(param5), new pd(param13), param17, param19, param10, param7, param9, param6, param15, param12, param0, new pd(param16), param1);
+            jl.a(param4, param18, param3, param20, 480, param14, param8, new pd(param5), new pd(param13), param17, param19, param10, param7, param9, param6, param15, param12, param0, new pd(param16), param1, true);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -494,12 +493,9 @@ final class em extends wk {
         }
         param3 = param3 + ((em) this).field_y;
         param1 = param1 + ((em) this).field_i;
-        int discarded$0 = 1;
-        this.a(wg.field_b, param3, param1, (cf) (Object) ((em) this).field_R);
-        int discarded$1 = 1;
-        this.a(eo.field_a, param3, param1, (cf) (Object) ((em) this).field_T);
-        int discarded$2 = 1;
-        this.a(ij.field_a, param3, param1, (cf) (Object) ((em) this).field_Q);
+        this.a(wg.field_b, param3, param1, (cf) (Object) ((em) this).field_R, true);
+        this.a(eo.field_a, param3, param1, (cf) (Object) ((em) this).field_T, true);
+        this.a(ij.field_a, param3, param1, (cf) (Object) ((em) this).field_Q, true);
         if (param0 != -2) {
             field_cb = -58;
         }
@@ -670,56 +666,36 @@ final class em extends wk {
             vm.d(95, 2, 58);
             vm.d(-84, 57, 58);
             vm.d(75, 56, 59);
-            int discarded$20 = 0;
-            wp.a(46, 5, 14);
-            int discarded$21 = 0;
-            wp.a(56, 7, 2);
+            wp.a(46, 5, 14, 0);
+            wp.a(56, 7, 2, 0);
             vm.d(-115, 9, 8);
-            int discarded$22 = 0;
-            wp.a(9, 10, 52);
-            int discarded$23 = 0;
-            wp.a(9, 11, 60);
-            int discarded$24 = 0;
-            wp.a(11, 12, 34);
-            int discarded$25 = 0;
-            wp.a(50, 13, 34);
-            int discarded$26 = 0;
-            wp.a(32, 14, 54);
-            int discarded$27 = 0;
-            wp.a(4, 15, 57);
-            int discarded$28 = 0;
-            wp.a(2, 16, 57);
-            int discarded$29 = 0;
-            wp.a(33, 17, 7);
-            int discarded$30 = 0;
-            wp.a(36, 18, 37);
+            wp.a(9, 10, 52, 0);
+            wp.a(9, 11, 60, 0);
+            wp.a(11, 12, 34, 0);
+            wp.a(50, 13, 34, 0);
+            wp.a(32, 14, 54, 0);
+            wp.a(4, 15, 57, 0);
+            wp.a(2, 16, 57, 0);
+            wp.a(33, 17, 7, 0);
+            wp.a(36, 18, 37, 0);
             vm.d(103, 60, 53);
             vm.d(-109, 55, 3);
             vm.d(-120, 54, 61);
             vm.d(-54, 52, 53);
             vm.d(-128, 51, 8);
-            int discarded$31 = 0;
-            wp.a(52, 50, 51);
+            wp.a(52, 50, 51, 0);
             vm.d(-72, 49, 54);
-            int discarded$32 = 0;
-            wp.a(50, 48, 10);
-            int discarded$33 = 0;
-            wp.a(46, 47, 49);
-            int discarded$34 = 0;
-            wp.a(49, 35, 14);
-            int discarded$35 = 0;
-            wp.a(47, 45, 35);
-            int discarded$36 = 0;
-            wp.a(12, 44, 48);
+            wp.a(50, 48, 10, 0);
+            wp.a(46, 47, 49, 0);
+            wp.a(49, 35, 14, 0);
+            wp.a(47, 45, 35, 0);
+            wp.a(12, 44, 48, 0);
             vm.d(-127, 32, 0);
             vm.d(-94, 33, 56);
             vm.d(125, 34, 51);
-            int discarded$37 = 0;
-            wp.a(55, 46, 32);
-            int discarded$38 = 0;
-            wp.a(7, 36, 15);
-            int discarded$39 = 0;
-            wp.a(33, 37, 16);
+            wp.a(55, 46, 32, 0);
+            wp.a(7, 36, 15, 0);
+            wp.a(33, 37, 16, 0);
             vm.d(-56, 38, 11);
             field_Y = new int[3][5][4];
             var0 = 0;

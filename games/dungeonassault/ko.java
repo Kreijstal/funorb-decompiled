@@ -5,7 +5,7 @@ class ko extends ll {
     static int[] field_v;
     static String field_w;
 
-    final static void a() {
+    final static void a(boolean param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         mm var4 = null;
@@ -28,8 +28,7 @@ class ko extends ll {
                   }
                 }
               } else {
-                int discarded$2 = 1;
-                oj.a(5, var4);
+                oj.a(5, var4, true);
                 var4 = (mm) (Object) m.field_a.a(4);
                 continue L1;
               }
@@ -42,7 +41,7 @@ class ko extends ll {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_v = null;
         field_w = null;
     }

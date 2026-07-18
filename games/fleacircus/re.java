@@ -5,7 +5,7 @@ final class re {
     int field_a;
     static String field_b;
 
-    final static void a() {
+    final static void a(int param0) {
         fh.a(-55);
         jg.field_d = true;
         fk.field_D = true;
@@ -173,7 +173,7 @@ final class re {
         return param0 & param1;
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, boolean param2) {
         int var3 = param0 >>> 31;
         return (param0 - -var3) / param1 - var3;
     }

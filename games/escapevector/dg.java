@@ -79,8 +79,7 @@ final class dg extends ah {
                 if (param1.equals((Object) (Object) ((dg) this).field_n)) {
                   break L1;
                 } else {
-                  int discarded$2 = 1;
-                  var3 = ja.a(param1);
+                  var3 = ja.a(param1, true);
                   if (!var3.b(0)) {
                     stackOut_6_0 = ug.field_c;
                     stackIn_7_0 = stackOut_6_0;
@@ -220,7 +219,7 @@ final class dg extends ah {
         return stackIn_9_0;
     }
 
-    final static int a(int param0, int param1, int param2, CharSequence param3, byte[] param4) {
+    final static int a(int param0, int param1, int param2, CharSequence param3, byte[] param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;

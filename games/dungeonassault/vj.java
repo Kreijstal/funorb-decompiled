@@ -16,7 +16,8 @@ final class vj {
     private int field_f;
 
     final static bo a(String param0, int param1) {
-        Object var2 = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
         bo var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -24,21 +25,21 @@ final class vj {
         CharSequence var7 = null;
         CharSequence var8 = null;
         bo stackIn_18_0 = null;
-        Object stackIn_22_0 = null;
+        RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        Object stackIn_23_0 = null;
+        RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        Object stackIn_24_0 = null;
+        RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         bo stackOut_17_0 = null;
-        Object stackOut_21_0 = null;
+        RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
-        Object stackOut_23_0 = null;
+        RuntimeException stackOut_23_0 = null;
         StringBuilder stackOut_23_1 = null;
         String stackOut_23_2 = null;
-        Object stackOut_22_0 = null;
+        RuntimeException stackOut_22_0 = null;
         StringBuilder stackOut_22_1 = null;
         String stackOut_22_2 = null;
         var5 = DungeonAssault.field_K;
@@ -55,15 +56,15 @@ final class vj {
             }
             L1: {
               var7 = (CharSequence) (Object) param0;
-              var2 = (Object) (Object) jm.a((byte) 59, var7);
+              var2 = jm.a((byte) 59, var7);
               if (var2 == null) {
-                var2 = (Object) (Object) var7;
+                var2 = param0;
                 break L1;
               } else {
                 break L1;
               }
             }
-            var3 = (bo) (Object) lh.field_p.a((byte) 26, (long)((String) var2).hashCode());
+            var3 = (bo) (Object) lh.field_p.a((byte) 26, (long)var2.hashCode());
             L2: while (true) {
               if (var3 != null) {
                 L3: {
@@ -76,7 +77,7 @@ final class vj {
                     break L3;
                   }
                 }
-                if (var4.equals(var2)) {
+                if (var4.equals((Object) (Object) var2)) {
                   stackOut_17_0 = (bo) var3;
                   stackIn_18_0 = stackOut_17_0;
                   return stackIn_18_0;
@@ -94,15 +95,15 @@ final class vj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_21_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_21_0 = (RuntimeException) var2_ref;
             stackOut_21_1 = new StringBuilder().append("vj.B(");
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param0 == null) {
-              stackOut_23_0 = stackIn_23_0;
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
               stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
@@ -110,7 +111,7 @@ final class vj {
               stackIn_24_2 = stackOut_23_2;
               break L4;
             } else {
-              stackOut_22_0 = stackIn_22_0;
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
               stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
@@ -123,7 +124,7 @@ final class vj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_c = null;
         field_d = null;

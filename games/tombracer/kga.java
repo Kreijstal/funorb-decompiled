@@ -539,7 +539,7 @@ final class kga extends dg {
         }
     }
 
-    final static void i() {
+    final static void i(int param0) {
         qpa.a(275, ht.field_Pb, 3, 40, 440, 126, 200);
         qpa.a(275, cla.field_n, 5, 40, 440, 126, 200);
         qpa.a(275, se.field_s, 6, 40, 440, 124, 200);
@@ -592,12 +592,12 @@ final class kga extends dg {
 
     final static void a(cka param0, int param1) {
         RuntimeException runtimeException = null;
-        byte[] var4 = null;
-        byte[] var5 = null;
-        byte[] var6 = null;
         ama var7 = null;
-        dca var8 = null;
-        mq var9 = null;
+        dca var9 = null;
+        mq var11 = null;
+        byte[] var19 = null;
+        byte[] var20 = null;
+        byte[] var21 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -621,9 +621,8 @@ final class kga extends dg {
                 break L1;
               } else {
                 var7 = new ama();
-                var4 = var7.a(16, 128, 0, 128);
-                int discarded$6 = 0;
-                hna.field_e = bw.a(270, var4);
+                var19 = var7.a(16, 128, 0, 128);
+                hna.field_e = bw.a(270, var19, false);
                 break L1;
               }
             }
@@ -631,15 +630,14 @@ final class kga extends dg {
               if (null != gu.field_l) {
                 break L2;
               } else {
-                var8 = new dca();
-                var5 = var8.a(128, 16, 123, 128);
-                int discarded$7 = 0;
-                gu.field_l = bw.a(270, var5);
+                var9 = new dca();
+                var20 = var9.a(128, 16, 123, 128);
+                gu.field_l = bw.a(270, var20, false);
                 break L2;
               }
             }
             L3: {
-              var9 = param0.field_zc;
+              var11 = param0.field_zc;
               if (param1 >= 116) {
                 break L3;
               } else {
@@ -648,13 +646,12 @@ final class kga extends dg {
               }
             }
             L4: {
-              if (!var9.a((byte) 89)) {
+              if (!var11.a((byte) 89)) {
                 break L4;
               } else {
                 if (uga.field_m == null) {
-                  var6 = gaa.a(4.0f, 16.0f, 128, (jg) (Object) new tda(419684), 8, 128, 0.5f, 16, 4, 4.0f, 0.6000000238418579f);
-                  int discarded$8 = 0;
-                  uga.field_m = bw.a(270, var6);
+                  var21 = gaa.a(4.0f, 16.0f, 128, (jg) (Object) new tda(419684), 8, 128, 0.5f, 16, 4, 4.0f, 0.6000000238418579f);
+                  uga.field_m = bw.a(270, var21, false);
                   break L4;
                 } else {
                   return;

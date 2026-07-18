@@ -14,7 +14,7 @@ final class sa {
         nh.field_L = cj.a(6, 5);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_e = null;

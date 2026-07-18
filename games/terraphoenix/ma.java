@@ -9,7 +9,7 @@ final class ma extends rf {
     int field_H;
     byte[] field_G;
 
-    final static boolean a(uc param0) {
+    final static boolean a(uc param0, byte param1) {
         return param0.a(false, 1) == 1;
     }
 
@@ -277,7 +277,7 @@ final class ma extends rf {
     ma() {
     }
 
-    final static oa a(String param0) {
+    final static oa a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;

@@ -8,7 +8,7 @@ final class tf {
     static int field_c;
     static int field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_b = null;
     }
@@ -72,7 +72,7 @@ final class tf {
               }
               L2: {
                 if (var4 != 0) {
-                  int discarded$2 = param1.a(16, true);
+                  int discarded$1 = param1.a(16, true);
                   var5.field_b = pa.a((byte) 87, var5.field_b, 16, param1);
                   var5.field_K = pa.a((byte) 87, var5.field_K, 16, param1);
                   var5.field_O = pa.a((byte) 87, var5.field_O, 16, param1);
@@ -95,8 +95,7 @@ final class tf {
                 if (!vi.a((byte) 104, param1)) {
                   break L4;
                 } else {
-                  int discarded$3 = 16;
-                  var5.field_x = ga.a(104, param1, var5.field_x);
+                  var5.field_x = ga.a(104, param1, var5.field_x, 16);
                   var6 = 0;
                   var7 = 0;
                   L5: while (true) {

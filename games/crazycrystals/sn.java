@@ -6,7 +6,7 @@ final class sn {
     static String field_b;
     static int[] field_a;
 
-    final static byte[] a(CharSequence param0) {
+    final static byte[] a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;
@@ -259,7 +259,7 @@ final class sn {
         field_b = null;
     }
 
-    final static ke a() {
+    final static ke a(int param0) {
         return (ke) (Object) new s();
     }
 

@@ -19,7 +19,7 @@ final class vl extends hl {
         }
     }
 
-    final static String c() {
+    final static String c(int param0) {
         if (ql.field_f != ol.field_i) {
           if (ql.field_f == wd.field_d) {
             return bf.field_o;
@@ -35,19 +35,18 @@ final class vl extends hl {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_l = null;
     }
 
-    final static q[] d() {
+    final static q[] d(int param0) {
         int var2 = 0;
         int var3 = DungeonAssault.field_K;
         q[] var1 = new q[dk.field_d];
         for (var2 = 0; dk.field_d > var2; var2++) {
             var1[var2] = new q(ce.field_x, tb.field_i, hg.field_t[var2], fe.field_g[var2], jc.field_f[var2], jn.field_k[var2], ub.field_q[var2], uo.field_b);
         }
-        int discarded$0 = 500;
-        sb.a();
+        sb.a(500);
         return var1;
     }
 

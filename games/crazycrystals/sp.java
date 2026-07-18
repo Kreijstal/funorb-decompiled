@@ -373,7 +373,7 @@ final class sp {
         return "" + ((sp) this).field_e;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_a = null;
         field_c = null;

@@ -34,7 +34,7 @@ final class cr extends ma {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_o = null;
         field_p = null;
         field_t = null;

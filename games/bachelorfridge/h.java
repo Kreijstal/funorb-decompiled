@@ -4,11 +4,11 @@
 final class h extends td {
     static du field_p;
 
-    final static void c() {
+    final static void c(byte param0) {
         sja.field_fb.c(95, (byte) 104);
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_p = null;
     }
 
@@ -84,7 +84,7 @@ final class h extends td {
         return (ii) (Object) stackIn_4_0;
     }
 
-    final static void a(uha param0) {
+    final static void a(uha param0, int param1) {
         uha var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -245,8 +245,7 @@ final class h extends td {
               var9 = new tea(gja.field_m, param2);
               var8 = 24;
               gja.field_m.a((wj) (Object) var9, (byte) 86);
-              int discarded$16 = 77;
-              if (!kk.d()) {
+              if (!kk.d((byte) 77)) {
                 L1: {
                   ola.field_p = kq.field_j;
                   if (!param1) {

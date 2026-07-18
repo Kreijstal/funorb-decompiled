@@ -234,7 +234,7 @@ final class qd {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_h = null;
         int var1 = 0;

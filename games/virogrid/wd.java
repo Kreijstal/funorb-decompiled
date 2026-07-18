@@ -7,7 +7,7 @@ final class wd {
     static boolean field_a;
     static String field_b;
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int[] var1_array = null;
         int var2 = 0;
@@ -387,7 +387,7 @@ final class wd {
         }
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         int var1 = 0;
         return nf.field_e;
     }

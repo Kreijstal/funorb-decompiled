@@ -510,7 +510,7 @@ final class mb extends ed {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_n = null;
         field_o = null;
         field_q = null;

@@ -156,7 +156,7 @@ abstract class og {
         return stackIn_5_0;
     }
 
-    final static vh a(String param0) {
+    final static vh a(String param0, boolean param1) {
         RuntimeException var2 = null;
         vh stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -217,11 +217,11 @@ abstract class og {
 
     abstract int a(byte param0);
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;

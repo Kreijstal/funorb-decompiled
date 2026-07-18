@@ -99,7 +99,7 @@ final class ba {
         field_f = null;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return ve.a(ge.field_m, 1, 25);
     }
 

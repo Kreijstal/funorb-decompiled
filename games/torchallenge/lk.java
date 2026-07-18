@@ -43,8 +43,7 @@ final class lk {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
             } else {
-              int discarded$2 = 0;
-              ba.a(var5);
+              ba.a(var5, 0);
               stackOut_4_0 = 1;
               stackIn_5_0 = stackOut_4_0;
               break L0;
@@ -147,8 +146,7 @@ final class lk {
             }
             var4_int = param3.a(param2, 115);
             var5 = param3.a(var4_int, param1, (byte) 82);
-            int discarded$2 = 17;
-            stackOut_2_0 = rl.a(var5, var4_int, param3);
+            stackOut_2_0 = rl.a(var5, var4_int, param3, (byte) 17);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -260,9 +258,7 @@ final class lk {
         try {
           L0: {
             if (param0 == -7351) {
-              int discarded$4 = 0;
-              int discarded$5 = 0;
-              stackOut_3_0 = df.a(param1);
+              stackOut_3_0 = df.a(param1, 0, false);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -337,8 +333,7 @@ final class lk {
         try {
           L0: {
             L1: {
-              int discarded$8 = 0;
-              ad.a((java.awt.Component) (Object) param0);
+              ad.a((java.awt.Component) (Object) param0, 0);
               kj.a((byte) 54, (java.awt.Component) (Object) param0);
               if (null != ef.field_l) {
                 ef.field_l.a((java.awt.Component) (Object) param0, (byte) 112);

@@ -15,7 +15,7 @@ final class nf extends am {
     jb[] field_q;
     byte[] field_i;
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -52,8 +52,7 @@ final class nf extends am {
               } else {
                 L2: {
                   var3 = param0.charAt(var2_int);
-                  int discarded$5 = -90;
-                  if (il.a((char) var3)) {
+                  if (il.a((char) var3, (byte) -90)) {
                     break L2;
                   } else {
                     if (qh.a((char) var3, -49)) {
@@ -110,7 +109,7 @@ final class nf extends am {
         return new int[8];
     }
 
-    final static void a(p param0) {
+    final static void a(p param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -174,7 +173,7 @@ final class nf extends am {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_h = null;
         field_p = null;
     }

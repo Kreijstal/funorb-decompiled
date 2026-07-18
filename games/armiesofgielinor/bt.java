@@ -34,7 +34,7 @@ final class bt {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         ft var1 = null;
         ft var2 = null;
         int var3 = 0;

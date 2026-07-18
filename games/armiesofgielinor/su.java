@@ -8,7 +8,7 @@ final class su {
     static String field_c;
     static je field_d;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_d = null;
         field_a = null;

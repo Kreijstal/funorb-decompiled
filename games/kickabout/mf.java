@@ -14,7 +14,7 @@ final class mf extends hd {
     static String field_yb;
     kq[] field_Eb;
 
-    final static void a(ut[] param0) {
+    final static void a(ut[] param0, boolean param1) {
         int var2_int = 0;
         int var3 = Kickabout.field_G;
         try {
@@ -311,8 +311,7 @@ final class mf extends hd {
                             L19: {
                               if (!(cq.field_h instanceof ta)) {
                                 ((mf) this).field_Bb = ((mf) this).field_Hb.a(var9, -123, var2);
-                                int discarded$2 = 15137;
-                                ((mf) this).field_Hb.a(((mf) this).field_Bb, cq.e(), 0);
+                                ((mf) this).field_Hb.a(((mf) this).field_Bb, cq.e(15137), 0);
                                 break L19;
                               } else {
                                 di.a(var2, true, var9);
@@ -322,7 +321,7 @@ final class mf extends hd {
                             ((mf) this).field_Eb[var2] = ((mf) this).field_Eb[var9];
                             ((mf) this).field_Eb[var9] = var3_ref_kq;
                             if (((mf) this).field_zb == 0) {
-                              wh discarded$3 = sp.c(54, -108);
+                              wh discarded$1 = sp.c(54, -108);
                               ((mf) this).field_zb = 5;
                               var2++;
                               continue L2;
@@ -569,8 +568,7 @@ final class mf extends hd {
                             }
                           }
                         }
-                        int discarded$2 = -72;
-                        field_Gb = vc.a(18, -(jh.field_Hb.field_Db.field_J + 5));
+                        field_Gb = vc.a(18, -(jh.field_Hb.field_Db.field_J + 5), (byte) -72);
                         break L5;
                       } else {
                         break L5;
@@ -582,8 +580,7 @@ final class mf extends hd {
                 uv.field_f = false;
                 break L0;
               } else {
-                int discarded$3 = 18653;
-                var7[var8] = lh.a((iw) (Object) un.field_e);
+                var7[var8] = lh.a((iw) (Object) un.field_e, 18653);
                 var8++;
                 continue L2;
               }
@@ -666,7 +663,7 @@ final class mf extends hd {
         return 75 * (param0 / 3);
     }
 
-    final static String a(int param0, CharSequence[] param1) {
+    final static String a(int param0, CharSequence[] param1, int param2, int param3) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -799,7 +796,7 @@ final class mf extends hd {
         return stackIn_23_0;
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_Db = null;
         field_Ab = null;
         field_Cb = null;
@@ -807,7 +804,7 @@ final class mf extends hd {
         field_yb = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException runtimeException = null;
         int var1_int = 0;
         int var2 = 0;
@@ -917,7 +914,7 @@ final class mf extends hd {
         }
     }
 
-    final static byte a(char param0) {
+    final static byte a(char param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -1110,8 +1107,7 @@ final class mf extends hd {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$4 = 7;
-                vg.a(true, var4);
+                vg.a(true, var4, 7);
                 var4 = (wd) (Object) ak.field_i.c(33);
                 continue L2;
               }
@@ -1195,7 +1191,7 @@ final class mf extends hd {
         return var2;
     }
 
-    final static void h() {
+    final static void h(byte param0) {
         if (null == ge.field_o) {
           df.field_F = new String[8];
           df.field_F[7] = kr.field_c;

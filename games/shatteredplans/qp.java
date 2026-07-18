@@ -516,7 +516,7 @@ final class qp extends o {
         return cr.a(param0, 1, -10, param2);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_w = null;
         field_v = null;
     }

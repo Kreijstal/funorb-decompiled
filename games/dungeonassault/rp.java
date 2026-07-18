@@ -138,7 +138,7 @@ final class rp {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(null == a.field_n)) {
             a.field_n.j((byte) 73);
         }
@@ -286,7 +286,7 @@ final class rp {
         return stackIn_3_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_g = null;
         field_h = null;
         field_d = null;

@@ -274,15 +274,15 @@ final class aw extends sm {
         return stackIn_14_0;
     }
 
-    final static void a(co param0, co[] param1) {
+    final static void a(co param0, co[] param1, int param2) {
         try {
-            param1[param0.field_d] = (co) (Object) param1;
+            param1[param0.field_d] = param0;
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "aw.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + -5841 + ')');
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         nt var4 = null;
@@ -295,8 +295,7 @@ final class aw extends sm {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$2 = -64;
-                tf.a(7, var4);
+                tf.a(7, var4, (byte) -64);
                 var4 = (nt) (Object) s.field_a.a((byte) 123);
                 continue L1;
               }
@@ -309,7 +308,7 @@ final class aw extends sm {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = 1;
         field_h = null;
         field_k = null;

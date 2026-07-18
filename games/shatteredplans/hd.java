@@ -88,7 +88,7 @@ final class hd extends oh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_p = null;
         field_j = null;
         field_r = null;
@@ -264,7 +264,7 @@ final class hd extends oh {
         return var2;
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;

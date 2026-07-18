@@ -112,7 +112,7 @@ final class ld {
         return stackIn_6_0;
     }
 
-    final static void a(int param0, sc param1) {
+    final static void a(int param0, sc param1, int param2) {
         mg var3 = null;
         try {
             var3 = n.field_b;

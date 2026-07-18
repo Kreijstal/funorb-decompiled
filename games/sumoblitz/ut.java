@@ -357,7 +357,7 @@ final class ut extends eu {
         ((ut) this).field_d = param0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_o = null;
     }
 
@@ -501,7 +501,7 @@ final class ut extends eu {
         }
     }
 
-    final static void a(int param0, byte param1, tv param2) {
+    final static void a(int param0, byte param1, tv param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

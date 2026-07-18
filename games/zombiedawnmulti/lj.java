@@ -211,7 +211,7 @@ final class lj extends br {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_m = null;
         int var1 = 50;
@@ -224,7 +224,7 @@ final class lj extends br {
         field_v = null;
     }
 
-    final static void a(fm param0, int param1, fm param2) {
+    final static void a(fm param0, int param1, fm param2, int param3) {
         try {
             m.field_C = param0;
             int var4_int = -43;

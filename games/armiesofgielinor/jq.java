@@ -149,7 +149,7 @@ final class jq extends dr {
         super(param0, param1, param2);
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_E = null;
         field_G = null;
         field_H = null;

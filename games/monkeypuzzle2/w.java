@@ -6,7 +6,7 @@ final class w {
     static le[] field_b;
     static String field_a;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1, int param2, int param3) {
         ki.field_s = param0;
         lc.field_e = param2;
         qj.field_D = param1;
@@ -30,7 +30,7 @@ final class w {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;
@@ -90,9 +90,9 @@ final class w {
                               var13 = stackIn_27_0;
                               if (var13 > var7_int) {
                                 hl.field_f[var11] = hl.field_f[var8];
-                                int incrementValue$2 = var8;
+                                int incrementValue$1 = var8;
                                 var8++;
-                                hl.field_f[incrementValue$2] = var12;
+                                hl.field_f[incrementValue$1] = var12;
                                 if (var9 <= var13) {
                                   break L5;
                                 } else {
@@ -151,8 +151,7 @@ final class w {
                         L10: {
                           var9 = hl.field_f[var8];
                           var10 = hl.field_f[var8 - -1];
-                          int discarded$3 = 126;
-                          if (e.a(param4, var10, var9)) {
+                          if (e.a(param4, var10, var9, (byte) 126)) {
                             hl.field_f[var8] = var10;
                             hl.field_f[var8 - -1] = var9;
                             var8++;
@@ -178,7 +177,7 @@ final class w {
         }
     }
 
-    final static int a(int param0, byte[] param1) {
+    final static int a(int param0, byte[] param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

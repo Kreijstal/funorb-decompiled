@@ -334,7 +334,7 @@ final class wb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
@@ -783,7 +783,7 @@ final class wb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         return el.a(-115, true, false, param0, 1, false);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         bi var1 = null;
         int var2 = 0;
         int stackIn_9_0 = 0;

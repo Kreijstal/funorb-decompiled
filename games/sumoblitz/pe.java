@@ -73,7 +73,7 @@ final class pe extends sp implements ai {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_E = null;
         field_F = null;
         field_D = null;
@@ -304,7 +304,7 @@ final class pe extends sp implements ai {
         return rt.field_G[var4];
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return null != qk.field_O && kw.field_c.a(17704);
     }
 

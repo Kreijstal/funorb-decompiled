@@ -72,7 +72,7 @@ final class pc {
         return stackIn_4_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(null == nk.field_b)) {
             nk.field_b.a(true);
             nk.field_b = null;
@@ -254,7 +254,7 @@ final class pc {
         return stackIn_6_0 != 0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
     }
 

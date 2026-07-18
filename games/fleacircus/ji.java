@@ -162,7 +162,7 @@ final class ji {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
     }
 
     final void a(int param0, byte param1) {

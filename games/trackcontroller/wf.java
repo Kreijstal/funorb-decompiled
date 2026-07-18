@@ -83,8 +83,7 @@ final class wf {
             if (hf.field_f == fd.field_h) {
               var8 = new og(gl.field_E, param4);
               gl.field_E.d((byte) -125, (al) (Object) var8);
-              int discarded$16 = 91;
-              if (!pa.b()) {
+              if (!pa.b((byte) 91)) {
                 L1: {
                   bf.field_f = param2;
                   fi.field_l = param3;
@@ -224,7 +223,7 @@ final class wf {
         return stackIn_12_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
     }

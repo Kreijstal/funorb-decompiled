@@ -196,7 +196,7 @@ abstract class hm {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_d = null;
         field_b = null;
@@ -214,7 +214,7 @@ abstract class hm {
         ai.field_P = param0;
     }
 
-    final static fm a(boolean param0, String param1, String param2) {
+    final static fm a(boolean param0, String param1, String param2, int param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -266,8 +266,7 @@ abstract class hm {
                 break L1;
               }
             }
-            int discarded$2 = 0;
-            stackOut_3_0 = sb.a(var4_long, param1, false, (String) var6);
+            stackOut_3_0 = sb.a(var4_long, param1, false, (String) var6, 0);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }

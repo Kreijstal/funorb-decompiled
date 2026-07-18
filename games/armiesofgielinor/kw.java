@@ -151,8 +151,7 @@ final class kw extends fw {
             return ((kw) this).field_O.a((byte) 55);
           }
         } else {
-          int discarded$5 = 1;
-          kw.b();
+          kw.b(true);
           if (!((kw) this).field_t) {
             return null;
           } else {
@@ -214,8 +213,7 @@ final class kw extends fw {
             if (null != bd.field_p) {
               if (var9 <= bd.field_p.field_y) {
                 if (var10 <= bd.field_p.field_v) {
-                  int discarded$10 = 3;
-                  vn.a(bd.field_p);
+                  vn.a(bd.field_p, 3);
                   qn.b();
                   var21.b(112, 144, var21.field_A << 4, var21.field_x << 4, -((kw) this).field_L << 10, 4096);
                   rf.b(-18862);
@@ -223,8 +221,7 @@ final class kw extends fw {
                   return;
                 } else {
                   bd.field_p = new wk(var9, var10);
-                  int discarded$11 = 3;
-                  vn.a(bd.field_p);
+                  vn.a(bd.field_p, 3);
                   var21.b(112, 144, var21.field_A << 4, var21.field_x << 4, -((kw) this).field_L << 10, 4096);
                   rf.b(-18862);
                   bd.field_p.f(-var21.field_A + var5, -var21.field_x + var6, 256);
@@ -232,8 +229,7 @@ final class kw extends fw {
                 }
               } else {
                 bd.field_p = new wk(var9, var10);
-                int discarded$12 = 3;
-                vn.a(bd.field_p);
+                vn.a(bd.field_p, 3);
                 var21.b(112, 144, var21.field_A << 4, var21.field_x << 4, -((kw) this).field_L << 10, 4096);
                 rf.b(-18862);
                 bd.field_p.f(-var21.field_A + var5, -var21.field_x + var6, 256);
@@ -241,8 +237,7 @@ final class kw extends fw {
               }
             } else {
               bd.field_p = new wk(var9, var10);
-              int discarded$13 = 3;
-              vn.a(bd.field_p);
+              vn.a(bd.field_p, 3);
               var21.b(112, 144, var21.field_A << 4, var21.field_x << 4, -((kw) this).field_L << 10, 4096);
               rf.b(-18862);
               bd.field_p.f(-var21.field_A + var5, -var21.field_x + var6, 256);
@@ -274,8 +269,7 @@ final class kw extends fw {
                 if (null != bd.field_p) {
                   if (var9 <= bd.field_p.field_y) {
                     if (var10 <= bd.field_p.field_v) {
-                      int discarded$14 = 3;
-                      vn.a(bd.field_p);
+                      vn.a(bd.field_p, 3);
                       qn.b();
                       var16.b(112, 144, var16.field_A << 4, var16.field_x << 4, -((kw) this).field_L << 10, 4096);
                       rf.b(-18862);
@@ -283,8 +277,7 @@ final class kw extends fw {
                       return;
                     } else {
                       bd.field_p = new wk(var9, var10);
-                      int discarded$15 = 3;
-                      vn.a(bd.field_p);
+                      vn.a(bd.field_p, 3);
                       var16.b(112, 144, var16.field_A << 4, var16.field_x << 4, -((kw) this).field_L << 10, 4096);
                       rf.b(-18862);
                       bd.field_p.f(-var16.field_A + var5, -var16.field_x + var6, 256);
@@ -292,8 +285,7 @@ final class kw extends fw {
                     }
                   } else {
                     bd.field_p = new wk(var9, var10);
-                    int discarded$16 = 3;
-                    vn.a(bd.field_p);
+                    vn.a(bd.field_p, 3);
                     var16.b(112, 144, var16.field_A << 4, var16.field_x << 4, -((kw) this).field_L << 10, 4096);
                     rf.b(-18862);
                     bd.field_p.f(-var16.field_A + var5, -var16.field_x + var6, 256);
@@ -301,8 +293,7 @@ final class kw extends fw {
                   }
                 } else {
                   bd.field_p = new wk(var9, var10);
-                  int discarded$17 = 3;
-                  vn.a(bd.field_p);
+                  vn.a(bd.field_p, 3);
                   var16.b(112, 144, var16.field_A << 4, var16.field_x << 4, -((kw) this).field_L << 10, 4096);
                   rf.b(-18862);
                   bd.field_p.f(-var16.field_A + var5, -var16.field_x + var6, 256);
@@ -324,8 +315,7 @@ final class kw extends fw {
                       if (var10 > bd.field_p.field_v) {
                         break L2;
                       } else {
-                        int discarded$18 = 3;
-                        vn.a(bd.field_p);
+                        vn.a(bd.field_p, 3);
                         qn.b();
                         break L1;
                       }
@@ -333,8 +323,7 @@ final class kw extends fw {
                   }
                 }
                 bd.field_p = new wk(var9, var10);
-                int discarded$19 = 3;
-                vn.a(bd.field_p);
+                vn.a(bd.field_p, 3);
                 break L1;
               }
               var15.b(112, 144, var15.field_A << 4, var15.field_x << 4, -((kw) this).field_L << 10, 4096);
@@ -810,7 +799,7 @@ final class kw extends fw {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_N = null;
         field_M = null;
         field_P = null;

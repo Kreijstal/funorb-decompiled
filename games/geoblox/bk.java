@@ -6,7 +6,7 @@ final class bk {
     static dm field_b;
     static String field_c;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -14,14 +14,11 @@ final class bk {
 
     final static void a(rh param0, int param1, int param2, ob param3) {
         try {
-            int discarded$0 = 1;
-            uf.field_a = param1 * sb.a() / 1000;
+            uf.field_a = param1 * sb.a(true) / 1000;
             ab.a(99, param0);
-            int discarded$1 = 0;
-            ni.a(param0);
+            ni.a(param0, 0);
             ul.a(-21541, param0);
-            int discarded$2 = -91;
-            jk.b();
+            jk.b((byte) -91);
             ad.a((byte) -32);
             gb.field_f = -uf.field_a;
         } catch (RuntimeException runtimeException) {
@@ -100,23 +97,21 @@ final class bk {
         }
         L4: {
           if (gj.field_u == 1) {
-            int discarded$7 = var8.b(true);
-            String discarded$8 = var8.e((byte) 112);
+            int discarded$4 = var8.b(true);
+            String discarded$5 = var8.e((byte) 112);
             break L4;
           } else {
             if (gj.field_u != 4) {
               break L4;
             } else {
-              int discarded$9 = var8.b(true);
-              String discarded$10 = var8.e((byte) 112);
+              int discarded$6 = var8.b(true);
+              String discarded$7 = var8.e((byte) 112);
               break L4;
             }
           }
         }
         if (!param0) {
-          int discarded$11 = 80;
-          int discarded$12 = 0;
-          re.field_f = qa.a((qc) (Object) var8);
+          re.field_f = qa.a((qc) (Object) var8, 0, 80);
           vj.field_c = null;
           return new vd(param0);
         } else {
@@ -142,8 +137,7 @@ final class bk {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            int discarded$13 = 125;
-            gi.a((Throwable) (Object) var6, "CC1");
+            gi.a((Throwable) (Object) var6, "CC1", (byte) 125);
             vj.field_c = null;
             re.field_f = null;
             return new vd(param0);

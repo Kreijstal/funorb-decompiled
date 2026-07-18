@@ -50,13 +50,11 @@ final class lg {
               if (param0 >= 68) {
                 break L1;
               } else {
-                int discarded$6 = lg.a((byte) -92);
+                int discarded$2 = lg.a((byte) -92);
                 break L1;
               }
             }
-            int discarded$7 = 10;
-            int discarded$8 = -17;
-            stackOut_2_0 = hf.a(true, param1);
+            stackOut_2_0 = hf.a(true, param1, -17, 10);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -502,7 +500,7 @@ final class lg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;

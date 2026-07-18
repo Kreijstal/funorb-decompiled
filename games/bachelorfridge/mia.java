@@ -37,8 +37,7 @@ final class mia extends cia {
         if (param0 != -104) {
             mia.b(-95);
         }
-        int discarded$0 = 20;
-        return kja.a();
+        return kja.a((byte) 20);
     }
 
     static {

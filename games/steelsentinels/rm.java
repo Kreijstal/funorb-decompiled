@@ -1109,7 +1109,7 @@ final class rm {
         return 103 == ((rm) this).field_b ? true : false;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_j = null;
         field_h = null;
         field_i = null;

@@ -68,8 +68,7 @@ final class li {
                 ej.field_S = 2;
                 break L3;
               } else {
-                int discarded$23 = 1;
-                if (te.a((CharSequence) (Object) var6)) {
+                if (te.a((CharSequence) (Object) var6, true)) {
                   ej.field_S = ta.a((CharSequence) (Object) var6, -121);
                   break L3;
                 } else {
@@ -393,7 +392,7 @@ final class li {
         return var5 * var4 + var3 * param2 + (var6 * var4 >> 16);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

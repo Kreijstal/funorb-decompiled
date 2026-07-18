@@ -44,8 +44,7 @@ final class da extends fi {
           L0: {
             L1: {
               if (bi.field_L >= 10) {
-                int discarded$45 = 1;
-                if (!ki.b()) {
+                if (!ki.b(true)) {
                   sb.c();
                   ub.a(320, 240, (byte) 116);
                   ah.a(0, 0, (byte) 110, param2);
@@ -71,9 +70,7 @@ final class da extends fi {
                     break L2;
                   }
                 }
-                int discarded$46 = 71;
-                int discarded$47 = 100;
-                jk.a(gj.field_a, (byte) -119, be.b(), mh.b(), var3_int != 0);
+                jk.a(gj.field_a, (byte) -119, be.b(71), mh.b(100), var3_int != 0);
                 break L1;
               }
             }

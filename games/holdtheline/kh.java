@@ -11,21 +11,19 @@ final class kh extends gd {
     static hj field_l;
     private qf field_m;
 
-    final static void b() {
+    final static void b(boolean param0) {
         if (bk.field_w != 10) {
           if (ai.a(-91)) {
             de.field_K = true;
             return;
           } else {
-            int discarded$4 = -1;
-            ka.a();
+            ka.a(-1);
             bk.field_w = 11;
             de.field_K = true;
             return;
           }
         } else {
-          int discarded$5 = -1;
-          ka.a();
+          ka.a(-1);
           bk.field_w = 11;
           de.field_K = true;
           return;
@@ -108,7 +106,7 @@ final class kh extends gd {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_l = null;
         field_i = null;
     }
@@ -196,7 +194,7 @@ final class kh extends gd {
         return stackIn_10_0;
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         try {
             Exception var1 = null;
             java.lang.reflect.Method var1_ref = null;

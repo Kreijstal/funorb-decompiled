@@ -12,7 +12,7 @@ final class jrb extends rqa {
         return rga.field_f.field_wb;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_p = null;
     }
 
@@ -88,7 +88,7 @@ final class jrb extends rqa {
         super(param0, param1, param2);
     }
 
-    final static llb b() {
+    final static llb b(boolean param0) {
         return rgb.field_f.field_wb;
     }
 

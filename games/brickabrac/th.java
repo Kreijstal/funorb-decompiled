@@ -146,12 +146,11 @@ final class th {
         return stackIn_7_0 != 0;
     }
 
-    final static void a() {
-        int discarded$0 = 1;
-        ri.c();
+    final static void a(byte param0) {
+        ri.c(true);
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -210,7 +209,7 @@ final class th {
         return stackIn_1_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (nq.field_p) {
             rd.a(-1);
             return;

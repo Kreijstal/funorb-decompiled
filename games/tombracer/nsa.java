@@ -17,7 +17,7 @@ final class nsa {
     static iv field_i;
     int field_n;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_i = null;
     }

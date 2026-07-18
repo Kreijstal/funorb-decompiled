@@ -139,7 +139,7 @@ final class uf extends wl {
         }
     }
 
-    final static void k() {
+    final static void k(int param0) {
         int var2 = client.field_A ? 1 : 0;
         if (lg.field_W > 0) {
             lg.field_W = lg.field_W - 1;
@@ -240,7 +240,7 @@ final class uf extends wl {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_z = null;
         field_y = null;
         field_t = null;

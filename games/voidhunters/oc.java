@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oc extends rqa {
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -61,7 +61,7 @@ final class oc extends rqa {
         return stackIn_3_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var2 = 0;
         var2 = VoidHunters.field_G;
         if (0 < lia.field_b) {
@@ -84,8 +84,7 @@ final class oc extends rqa {
               }
             }
           } else {
-            int discarded$4 = 1;
-            moa.a();
+            moa.a(true);
             if (nf.field_a <= 0) {
               if (tba.field_p <= 0) {
                 return;
@@ -124,8 +123,7 @@ final class oc extends rqa {
                 }
               }
             } else {
-              int discarded$5 = 1;
-              moa.a();
+              moa.a(true);
               if (nf.field_a <= 0) {
                 if (tba.field_p <= 0) {
                   return;
@@ -163,8 +161,7 @@ final class oc extends rqa {
                   }
                 }
               } else {
-                int discarded$6 = 1;
-                moa.a();
+                moa.a(true);
                 if (nf.field_a <= 0) {
                   if (tba.field_p <= 0) {
                     return;
@@ -185,8 +182,7 @@ final class oc extends rqa {
             } else {
               tba.field_p = tba.field_p - 1;
               if (lia.field_b > 0) {
-                int discarded$7 = 1;
-                moa.a();
+                moa.a(true);
                 if (nf.field_a > 0) {
                   lkb.a(nf.field_a, (byte) -107);
                   if (tba.field_p <= 0) {
@@ -196,10 +192,10 @@ final class oc extends rqa {
                     return;
                   }
                 } else {
-                  if (tba.field_p > 0) {
-                    lkb.a(tba.field_p, (byte) -124);
+                  if (tba.field_p <= 0) {
                     return;
                   } else {
+                    lkb.a(tba.field_p, (byte) -124);
                     return;
                   }
                 }

@@ -4,16 +4,14 @@
 final class bl {
     static String field_a;
 
-    final static void c() {
+    final static void c(int param0) {
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         if (mi.field_C >= 20) {
-          int discarded$8 = -31456;
-          if (fj.f()) {
+          if (fj.f(-31456)) {
             if (ik.field_a > 0) {
-              int discarded$9 = 0;
-              if (ck.b()) {
+              if (ck.b(0)) {
                 return false;
               } else {
                 return true;

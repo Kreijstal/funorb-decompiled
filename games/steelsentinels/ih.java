@@ -13,7 +13,7 @@ final class ih extends ia {
     static String field_u;
     static int field_r;
 
-    public static void c() {
+    public static void c(int param0) {
         field_u = null;
         field_o = null;
         field_s = null;

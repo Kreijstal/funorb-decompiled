@@ -236,7 +236,7 @@ final class bm extends gj implements da {
         return stackIn_3_0;
     }
 
-    final static ll a() {
+    final static ll a(boolean param0, int param1, int param2, int param3, int param4) {
         int var6 = fleas.field_A ? 1 : 0;
         ll var5 = (ll) (Object) jj.field_S.c((byte) 47);
         while (var5 != null) {
@@ -250,8 +250,7 @@ final class bm extends gj implements da {
         var5.field_t = 1;
         var5.field_q = 10;
         jj.field_S.a(false, (lh) (Object) var5);
-        int discarded$0 = 3;
-        ak.a(-14722, var5);
+        ak.a(-14722, var5, 3);
         return var5;
     }
 
@@ -262,7 +261,7 @@ final class bm extends gj implements da {
         return (int)(1000000000L / na.field_f);
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

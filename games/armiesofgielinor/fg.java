@@ -145,7 +145,7 @@ final class fg extends tc {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         int var2 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {

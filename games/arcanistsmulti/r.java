@@ -8,9 +8,8 @@ final class r {
     static String field_c;
     static String field_e;
 
-    final static void a() {
-        int discarded$0 = 120;
-        ed.j();
+    final static void a(boolean param0) {
+        ed.j(120);
         oc.a(112, nn.field_p, tl.field_a[0].field_n, dh.field_Gb, ga.field_r, ra.field_h);
     }
 

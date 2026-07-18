@@ -9,7 +9,7 @@ final class ci {
     private int field_a;
     static String field_e;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_c = null;
     }

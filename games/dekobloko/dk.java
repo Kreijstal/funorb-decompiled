@@ -29,7 +29,7 @@ final class dk extends java.awt.Canvas {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3_ref_int__ = null;
@@ -119,7 +119,7 @@ final class dk extends java.awt.Canvas {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
         field_j = null;
         field_b = null;

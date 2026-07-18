@@ -9,7 +9,7 @@ final class kd {
     static int[] field_f;
     static int field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_e = null;
         field_a = null;
@@ -21,20 +21,17 @@ final class kd {
     final static void b(byte param0) {
         if (param0 > 79) {
           if (10 != hj.field_a) {
-            int discarded$8 = 0;
-            if (ck.b()) {
+            if (ck.b(0)) {
               lb.field_a = true;
               return;
             } else {
-              int discarded$9 = 24;
-              la.f();
+              la.f((byte) 24);
               hj.field_a = 11;
               lb.field_a = true;
               return;
             }
           } else {
-            int discarded$10 = 24;
-            la.f();
+            la.f((byte) 24);
             hj.field_a = 11;
             lb.field_a = true;
             return;

@@ -120,8 +120,7 @@ final class il {
                     break L4;
                   } else {
                     L6: {
-                      int discarded$2 = 66;
-                      this.b();
+                      this.b((byte) 66);
                       var9_int = param1;
                       if (var9_int <= ((il) this).field_c) {
                         break L6;
@@ -163,9 +162,9 @@ final class il {
                             break L8;
                           } else {
                             param1--;
-                            int incrementValue$3 = param2;
+                            int incrementValue$1 = param2;
                             param2++;
-                            param0[incrementValue$3] = (byte) 0;
+                            param0[incrementValue$1] = (byte) 0;
                             ((il) this).field_b = ((il) this).field_b + 1L;
                             continue L10;
                           }
@@ -308,8 +307,7 @@ final class il {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_2_0 = oe.a(param1, (byte) -70);
+            stackOut_2_0 = oe.a(param1, (byte) -70, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -490,7 +488,7 @@ final class il {
         }
     }
 
-    private final void b() throws IOException {
+    private final void b(byte param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

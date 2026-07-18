@@ -31,7 +31,7 @@ final class ol implements Iterator {
         return ((ol) this).field_i != ((ol) this).field_g.field_a;
     }
 
-    final static void a(int param0, qf param1) {
+    final static void a(int param0, qf param1, int param2) {
         se var5 = null;
         int var4 = 0;
         try {
@@ -62,7 +62,7 @@ final class ol implements Iterator {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
     }
 

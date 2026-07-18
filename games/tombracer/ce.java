@@ -54,8 +54,7 @@ final class ce extends dg {
               if (((ce) this).field_r != null) {
                 break L1;
               } else {
-                int discarded$2 = 1;
-                this.a();
+                this.a(true);
                 break L1;
               }
             }
@@ -356,7 +355,7 @@ final class ce extends dg {
         ((ce) this).field_v = null;
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -409,8 +408,7 @@ final class ce extends dg {
             break L0;
           }
         }
-        int discarded$4 = 77;
-        if (this.p()) {
+        if (this.p((byte) 77)) {
           ((ce) this).field_r = new eh[((ce) this).field_z][((ce) this).field_s];
           var5 = 1048576 + (-(((ce) this).field_h.a((byte) 55) / 2) + var4);
           var6 = 0;
@@ -568,8 +566,7 @@ final class ce extends dg {
                                   var9.field_b = var17.e(true).a(100, 0);
                                   var9.field_c = var5 + -var4;
                                   var9.field_d = -var3 + var7;
-                                  int discarded$5 = 2;
-                                  var9.field_f = this.a(var9);
+                                  var9.field_f = this.a(var9, 2);
                                   var7 = var7 + 2097152;
                                   var8++;
                                   continue L3;
@@ -617,8 +614,7 @@ final class ce extends dg {
                   var9.field_b = var17.e(true).a(100, 0);
                   var9.field_c = var5 + -var4;
                   var9.field_d = -var3 + var7;
-                  int discarded$6 = 2;
-                  var9.field_f = this.a(var9);
+                  var9.field_f = this.a(var9, 2);
                   var7 = var7 + 2097152;
                   var8++;
                   continue L3;
@@ -627,8 +623,7 @@ final class ce extends dg {
             }
           }
         } else {
-          int discarded$7 = 95;
-          this.o();
+          this.o((byte) 95);
           return;
         }
     }
@@ -1077,7 +1072,7 @@ final class ce extends dg {
         }
     }
 
-    private final void o() {
+    private final void o(byte param0) {
         ((ce) this).field_s = 1;
         ((ce) this).field_z = 1;
         ((ce) this).field_r = new eh[1][1];
@@ -1089,8 +1084,7 @@ final class ce extends dg {
         var2.field_h = 0;
         var2.field_e = (ce) this;
         var2.field_b = ((ce) this).a(53).e(true).a(100, 0);
-        int discarded$0 = 2;
-        var2.field_f = this.a(var2);
+        var2.field_f = this.a(var3, 2);
         ((ce) this).field_r[0][0] = var3;
     }
 
@@ -1322,18 +1316,17 @@ final class ce extends dg {
         }
     }
 
-    final static void j() {
+    final static void j(int param0) {
         psa var1 = new psa();
         psa var2 = new psa((l) (Object) var1);
         var1.d(128, 9, 32460);
         var2.d(128, 9, 32460);
         ab.field_n = new sq((l) (Object) var1, (l) (Object) var2);
         wea.a(22050, 1024, ab.field_n, true, (java.awt.Component) (Object) nma.field_l, dsa.field_c);
-        int discarded$0 = 0;
-        wra.a();
+        wra.a(0);
     }
 
-    private final int a(eh param0) {
+    private final int a(eh param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -1527,7 +1520,7 @@ final class ce extends dg {
         }
     }
 
-    private final boolean p() {
+    private final boolean p(byte param0) {
         return ((ce) this).field_q != 1;
     }
 

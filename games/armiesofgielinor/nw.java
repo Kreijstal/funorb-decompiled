@@ -381,10 +381,8 @@ final class nw extends oj {
             nl.a(param16, param7, 4, param17, param6, param0, param1, param8, param11, param3, param9, param15, param12, false, 1);
             tg.a(param13, 2, true, param8);
             hf.a(7670);
-            int discarded$2 = 14570;
-            tr.h();
-            int discarded$3 = -112;
-            kc.d();
+            tr.h(14570);
+            kc.d((byte) -112);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -793,9 +791,7 @@ final class nw extends oj {
                 param0.field_zb[((nw) this).field_w.field_O] = param0.field_zb[((nw) this).field_w.field_O] + var3_int;
                 param0.d(((nw) this).field_w.field_O, param0.field_zb[((nw) this).field_w.field_O], 72, 11);
             }
-            int discarded$0 = 1;
-            int discarded$1 = 9;
-            hf.a(param0);
+            hf.a(param0, (byte) 9, true);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "nw.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -918,7 +914,7 @@ final class nw extends oj {
         return (String) (Object) stackIn_15_0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_y = null;
         field_z = null;
     }

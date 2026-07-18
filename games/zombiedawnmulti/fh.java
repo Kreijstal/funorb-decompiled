@@ -68,7 +68,7 @@ final class fh {
             var5 = 0;
             L1: while (true) {
               if (var5 >= param2.length) {
-                var4[param2.length] = (qk) (Object) param2;
+                var4[param2.length] = param1;
                 stackOut_6_0 = (qk[]) var4;
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
@@ -549,8 +549,7 @@ final class fh {
           if (param0 == 48) {
             break L0;
           } else {
-            int discarded$2 = 1;
-            fh.a();
+            fh.a(true);
             break L0;
           }
         }
@@ -571,8 +570,7 @@ final class fh {
                     var2++;
                     continue L2;
                   } else {
-                    int discarded$3 = -71;
-                    ((fh) this).field_a[var2][var9] = this.a(((fh) this).field_q[var2], ((fh) this).field_q[var9]);
+                    ((fh) this).field_a[var2][var9] = this.a(((fh) this).field_q[var2], ((fh) this).field_q[var9], (byte) -71);
                     var9++;
                     continue L3;
                   }
@@ -656,7 +654,7 @@ final class fh {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -665,70 +663,69 @@ final class fh {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int[] var9 = null;
         int[] var10 = null;
-        ra var11 = null;
-        ab var12 = null;
-        ga var13 = null;
-        ra var14 = null;
+        int[] var11 = null;
+        ra var12 = null;
+        ab var13 = null;
+        ga var14 = null;
+        ra var15 = null;
         RuntimeException decompiledCaughtException = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            var13 = s.field_e;
-            var2 = var13.g(31365);
+            var14 = s.field_e;
+            var2 = var14.g(31365);
             L1: {
               if (0 != var2) {
                 if (1 == var2) {
-                  var12 = (ab) (Object) ig.field_a.c(72);
-                  if (var12 == null) {
+                  var13 = (ab) (Object) ig.field_a.c(72);
+                  if (var13 == null) {
                     ak.a((byte) -117);
                     return;
                   } else {
-                    var12.a(true);
+                    var13.a(true);
                     break L1;
                   }
                 } else {
                   if (var2 != 2) {
-                    int discarded$1 = 0;
-                    bd.a("A1: " + ci.a(0), (Throwable) null);
+                    bd.a("A1: " + ci.a(0), (Throwable) null, false);
                     ak.a((byte) -118);
                     break L1;
                   } else {
-                    var14 = (ra) (Object) so.field_j.c(77);
-                    if (var14 == null) {
+                    var15 = (ra) (Object) so.field_j.c(77);
+                    if (var15 == null) {
                       ak.a((byte) -128);
                       return;
                     } else {
-                      var14.field_h = da.a(8);
-                      var14.field_k = true;
-                      var14.a(true);
+                      var15.field_h = da.a(8);
+                      var15.field_k = true;
+                      var15.a(true);
                       break L1;
                     }
                   }
                 }
               } else {
-                var10 = da.a(8);
-                var3 = var10;
-                var9 = var10;
-                var4 = var9;
-                var5 = var13;
+                var11 = da.a(8);
+                var3 = var11;
+                var10 = var11;
+                var4 = var10;
+                var5 = var14;
                 var6 = ((k) (Object) var5).g(31365);
                 var7 = 0;
                 L2: while (true) {
                   if (var7 >= var6) {
-                    var11 = (ra) (Object) so.field_j.c(61);
-                    if (var11 == null) {
+                    var12 = (ra) (Object) so.field_j.c(61);
+                    if (var12 == null) {
                       ak.a((byte) -111);
                       return;
                     } else {
-                      var11.field_h = var3;
-                      var11.field_k = true;
-                      var11.a(true);
+                      var12.field_h = var3;
+                      var12.field_k = true;
+                      var12.a(true);
                       break L1;
                     }
                   } else {
-                    var9[var7] = ((k) (Object) var5).i(-1478490344);
+                    var10[var7] = ((k) (Object) var5).i(-1478490344);
                     var7++;
                     continue L2;
                   }
@@ -993,7 +990,7 @@ final class fh {
         }
     }
 
-    private final int a(qk param0, qk param1) {
+    private final int a(qk param0, qk param1, byte param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -1092,7 +1089,7 @@ final class fh {
         return stackIn_3_0;
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         ((fh) this).field_r = 24 * ((fh) this).field_i.field_d;
         ((fh) this).field_c = ((fh) this).field_i.field_e * 24;
     }
@@ -1126,8 +1123,7 @@ final class fh {
         try {
             ((fh) this).field_i = param0;
             ((fh) this).a(48);
-            int discarded$0 = 1;
-            this.b();
+            this.b(true);
             var10 = ((fh) this).field_i.field_k;
             var9 = var10;
             var8 = var9;
@@ -1253,8 +1249,7 @@ final class fh {
           var9 = new qk(param3, param1);
           var10 = new th();
           var10.a((br) (Object) var9, false);
-          int discarded$3 = -71;
-          var11 = this.a(var9, var8);
+          var11 = this.a(var9, var8, (byte) -71);
           if (var11 >= 0) {
             return var10;
           } else {
@@ -1298,8 +1293,7 @@ final class fh {
                         }
                       } else {
                         L7: {
-                          int discarded$4 = -71;
-                          var18 = this.a(var9, ((fh) this).field_q[var17]);
+                          var18 = this.a(var9, ((fh) this).field_q[var17], (byte) -71);
                           if (var18 < 0) {
                             break L7;
                           } else {
@@ -1379,8 +1373,7 @@ final class fh {
                 }
               } else {
                 L14: {
-                  int discarded$5 = -71;
-                  var15 = this.a(var8, ((fh) this).field_q[var14]);
+                  var15 = this.a(var8, ((fh) this).field_q[var14], (byte) -71);
                   var27[var14] = var15;
                   stackOut_27_0 = (int[]) var13;
                   stackOut_27_1 = var14;
@@ -1780,7 +1773,7 @@ final class fh {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_e = null;
         field_g = null;

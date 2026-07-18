@@ -163,7 +163,7 @@ final class cf extends af {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_n = null;
         field_m = null;
         field_f = null;
@@ -278,15 +278,15 @@ final class cf extends af {
         }
         L4: {
           if (dj.field_e == 1) {
-            int discarded$5 = var8.j(-14477);
-            String discarded$6 = var8.d(0);
+            int discarded$4 = var8.j(-14477);
+            String discarded$5 = var8.d(0);
             break L4;
           } else {
             if (dj.field_e != 4) {
               break L4;
             } else {
-              int discarded$7 = var8.j(-14477);
-              String discarded$8 = var8.d(0);
+              int discarded$6 = var8.j(-14477);
+              String discarded$7 = var8.d(0);
               break L4;
             }
           }
@@ -324,8 +324,7 @@ final class cf extends af {
             }
             break L5;
           } else {
-            int discarded$9 = 45;
-            vl.field_f = ol.a(80, (va) (Object) var8);
+            vl.field_f = ol.a(80, (va) (Object) var8, (byte) 45);
             rh.field_m = null;
             break L5;
           }
@@ -741,8 +740,7 @@ final class cf extends af {
         try {
           L0: {
             if (h.a(param0, param3, param2, -126)) {
-              int discarded$2 = 0;
-              stackOut_3_0 = pi.b();
+              stackOut_3_0 = pi.b(0);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

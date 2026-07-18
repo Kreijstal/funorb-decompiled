@@ -52,7 +52,7 @@ class wc extends hl {
         }
     }
 
-    final static void a(java.awt.Color param0, boolean param1, String param2, int param3) {
+    final static void a(java.awt.Color param0, boolean param1, String param2, int param3, boolean param4) {
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;

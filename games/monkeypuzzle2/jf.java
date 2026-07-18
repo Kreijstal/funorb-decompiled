@@ -15,7 +15,7 @@ final class jf extends ug {
     int[] field_l;
     int field_n;
 
-    final static int a() {
+    final static int a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         ki var2 = null;
@@ -129,7 +129,7 @@ final class jf extends ug {
     jf() {
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_p = null;
         field_f = null;
         field_k = null;

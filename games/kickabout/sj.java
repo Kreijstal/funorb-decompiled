@@ -12,7 +12,7 @@ final class sj {
     static sj field_f;
     private ow field_i;
 
-    final static void b() {
+    final static void b(int param0) {
         nv.field_N = new tf();
     }
 
@@ -262,13 +262,11 @@ final class sj {
                     }
                   }
                 }
-                int discarded$3 = 2;
-                if (this.a(param0, param1, param3)) {
+                if (this.a(param0, param1, param3, 2)) {
                   break L1;
                 } else {
                   this.a(param0, (byte) 86);
-                  int discarded$4 = 2;
-                  if (this.a(param0, param1, param3)) {
+                  if (this.a(param0, param1, param3, 2)) {
                     break L1;
                   } else {
                     stackOut_8_0 = null;
@@ -284,8 +282,7 @@ final class sj {
                   if (((sj) this).field_a[param0][param3] == null) {
                     break L3;
                   } else {
-                    int discarded$5 = 18828;
-                    var7 = lg.a(((sj) this).field_a[param0][param3], false);
+                    var7 = lg.a(((sj) this).field_a[param0][param3], false, 18828);
                     var5 = (Object) (Object) var7;
                     if (var7 != null) {
                       break L3;
@@ -1130,7 +1127,7 @@ final class sj {
         return ((sj) this).field_d.field_e[param1];
     }
 
-    private final synchronized boolean a(int param0, int[] param1, int param2) {
+    private final synchronized boolean a(int param0, int[] param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int[] var6 = null;
@@ -1291,8 +1288,7 @@ final class sj {
                               }
                             }
                           }
-                          int discarded$2 = 18828;
-                          var49 = lg.a(((sj) this).field_e[param0], true);
+                          var49 = lg.a(((sj) this).field_e[param0], true, 18828);
                           var42 = var49;
                           var35 = var42;
                           var25 = var35;
@@ -1302,8 +1298,7 @@ final class sj {
                           break L5;
                         }
                       }
-                      int discarded$3 = 18828;
-                      var9_array = lg.a(((sj) this).field_e[param0], false);
+                      var9_array = lg.a(((sj) this).field_e[param0], false, 18828);
                       break L5;
                     }
                     try {

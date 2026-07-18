@@ -376,18 +376,17 @@ final class oj {
                     var6_int = 1;
                     L5: while (true) {
                       if (var4 <= var6_int) {
-                        int discarded$5 = 71;
-                        lm.a(var5, var4);
+                        lm.a(var5, var4, (byte) 71);
                         var6_int = 0;
                         L6: while (true) {
                           if (var6_int >= var4) {
                             ae.b(94, var5);
-                            String[][] dupTemp$6 = new String[2][var5];
-                            var3.field_p = dupTemp$6;
-                            var6 = dupTemp$6;
-                            int[][] dupTemp$7 = new int[2][var5 * 4];
-                            var3.field_y = dupTemp$7;
-                            var7 = dupTemp$7;
+                            String[][] dupTemp$2 = new String[2][var5];
+                            var3.field_p = dupTemp$2;
+                            var6 = dupTemp$2;
+                            int[][] dupTemp$3 = new int[2][var5 * 4];
+                            var3.field_y = dupTemp$3;
+                            var7 = dupTemp$3;
                             var8 = nd.field_Mb;
                             var9 = 0;
                             var10 = 0;
@@ -451,8 +450,7 @@ final class oj {
                             }
                           } else {
                             L11: {
-                              int discarded$8 = 0;
-                              lb.a((bh) (Object) var15);
+                              lb.a((bh) (Object) var15, false);
                               if (var6_int == 0) {
                                 var3.field_B = tl.field_X;
                                 var3.field_s = fd.field_F;
@@ -481,8 +479,7 @@ final class oj {
                 var3.b(false);
                 break L0;
               } else {
-                int discarded$9 = 0;
-                mk.a();
+                mk.a(false);
                 return;
               }
             }
@@ -610,7 +607,7 @@ final class oj {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -771,14 +768,13 @@ final class oj {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((oj) this).field_d[var2_int] = param0[var2_int];
             }
-            int discarded$0 = 3;
-            this.b();
+            this.b(3);
         } catch (RuntimeException runtimeException) {
             throw oi.a((Throwable) (Object) runtimeException, "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_j = null;
         field_a = null;

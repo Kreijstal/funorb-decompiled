@@ -20,7 +20,7 @@ final class dq {
         return var3;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         if (224 > gn.field_a) {
           var1 = gn.field_a % 32;

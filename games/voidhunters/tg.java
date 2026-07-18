@@ -391,7 +391,7 @@ final class tg extends rqa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_s = null;
         field_p = null;
         field_r = null;

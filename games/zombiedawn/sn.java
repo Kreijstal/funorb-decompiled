@@ -135,7 +135,7 @@ final class sn {
         throw new IllegalStateException();
     }
 
-    final static vn a(int param0, double param1) {
+    final static vn a(int param0, double param1, byte param2) {
         vn var10 = new vn(640, 90);
         ki.a((byte) -97, var10);
         vn var5 = new vn(640, 90);
@@ -162,7 +162,7 @@ final class sn {
         return var10;
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         return hl.a(-127, hc.a(0));
     }
 
@@ -273,13 +273,13 @@ final class sn {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_d = null;
         field_f = null;
     }
 
-    final static void a(int param0, ep param1) {
+    final static void a(int param0, ep param1, int param2) {
         int var4 = 0;
         am var5 = dp.field_e;
         var5.j(11, 6);

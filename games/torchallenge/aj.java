@@ -123,7 +123,7 @@ final class aj {
         return stackIn_19_0;
     }
 
-    final static vi a(String param0) {
+    final static vi a(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -172,8 +172,7 @@ final class aj {
                     var4 = param0.substring(var2_int - -1);
                     var5 = re.a(var3, (byte) 104);
                     if (var5 == null) {
-                      int discarded$2 = 96;
-                      stackOut_12_0 = pl.a(var4);
+                      stackOut_12_0 = pl.a(var4, 96);
                       stackIn_13_0 = stackOut_12_0;
                       break L0;
                     } else {
@@ -222,7 +221,7 @@ final class aj {
         return stackIn_13_0;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         ue var3 = null;
@@ -300,8 +299,7 @@ final class aj {
                                       var20[1][1 + 4 * var15] = rk.field_p[var11];
                                       var20[1][2 + var15 * 4] = ea.field_a[var11];
                                       var20[1][3 + 4 * var15] = cb.field_e[var11];
-                                      int discarded$2 = 26691;
-                                      if (jc.a(mf.field_b[var11])) {
+                                      if (jc.a(mf.field_b[var11], 26691)) {
                                         if (rk.field_p[var11] + (ea.field_a[var11] - -cb.field_e[var11]) == 0) {
                                           var6[1][var15] = null;
                                           var15--;
@@ -326,8 +324,7 @@ final class aj {
                                   var20[0][var10 * 4 - -1] = rk.field_p[var11];
                                   var20[0][var10 * 4 - -2] = ea.field_a[var11];
                                   var20[0][3 + var10 * 4] = cb.field_e[var11];
-                                  int discarded$3 = 26691;
-                                  if (!jc.a(mf.field_b[var11])) {
+                                  if (!jc.a(mf.field_b[var11], 26691)) {
                                     break L9;
                                   } else {
                                     if (ea.field_a[var11] + (rk.field_p[var11] - -cb.field_e[var11]) != 0) {
@@ -381,7 +378,7 @@ final class aj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_i = null;
@@ -391,7 +388,7 @@ final class aj {
         field_c = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -441,8 +438,7 @@ final class aj {
                           } else {
                             if (null != hf.field_d) {
                               L6: {
-                                int discarded$1 = 10;
-                                vl.a(eb.field_l.field_q);
+                                vl.a(eb.field_l.field_q, 10);
                                 if (null != hf.field_d) {
                                   jl.a((byte) 121);
                                   break L6;

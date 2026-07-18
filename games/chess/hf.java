@@ -12,7 +12,7 @@ final class hf {
     static int field_g;
     String field_d;
 
-    final static boolean a(boolean param0, CharSequence param1) {
+    final static boolean a(boolean param0, CharSequence param1, int param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -233,8 +233,7 @@ final class hf {
         try {
           L0: {
             var6 = (CharSequence) (Object) param2;
-            int discarded$2 = 21257;
-            if (!ed.a(var6)) {
+            if (!ed.a(var6, 21257)) {
               stackOut_2_0 = qj.field_a;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -268,8 +267,7 @@ final class hf {
                       stackIn_22_0 = stackOut_21_0;
                       return stackIn_22_0;
                     } else {
-                      int discarded$3 = -19554;
-                      if (va.a(param2)) {
+                      if (va.a(param2, -19554)) {
                         stackOut_25_0 = oc.a(uh.field_n, new String[1], (byte) -42);
                         stackIn_26_0 = stackOut_25_0;
                         return stackIn_26_0;

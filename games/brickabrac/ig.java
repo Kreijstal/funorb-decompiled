@@ -11,7 +11,7 @@ final class ig extends ib implements ha, en {
     static jp field_P;
     static String field_J;
 
-    private final String h() {
+    private final String h(int param0) {
         return "</col></u>";
     }
 
@@ -258,8 +258,6 @@ final class ig extends ib implements ha, en {
             ((ig) this).field_I = param0;
             ((ig) this).field_L = new d(ri.field_L, (uh) null);
             ((ig) this).field_L.field_l = (ub) (Object) new hi();
-            int discarded$2 = 34;
-            int discarded$3 = 0;
             var7 = rd.a(rp.field_z, new String[2], (byte) 103);
             var3 = 20;
             var4 = new um(a.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, a.field_u.field_F, -1, 2147483647, true);
@@ -312,7 +310,7 @@ final class ig extends ib implements ha, en {
         }
     }
 
-    private final String a() {
+    private final String a(byte param0) {
         return "<u=2164A2><col=2164A2>";
     }
 

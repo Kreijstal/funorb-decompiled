@@ -301,13 +301,12 @@ class nk extends hf implements vg {
                 return;
               }
             } else {
-              int discarded$6 = 0;
-              gg.b();
+              gg.b(0);
               return;
             }
           } else {
             var3 = null;
-            boolean discarded$7 = ((nk) this).a((lm) null, 'ﾷ', 86, (byte) -102);
+            boolean discarded$2 = ((nk) this).a((lm) null, 'ﾷ', 86, (byte) -102);
             ((nk) this).field_T = false;
             if (!((nk) this).field_Mb) {
               if (!((nk) this).field_Gb) {
@@ -317,8 +316,7 @@ class nk extends hf implements vg {
                 return;
               }
             } else {
-              int discarded$8 = 0;
-              gg.b();
+              gg.b(0);
               return;
             }
           }
@@ -421,7 +419,7 @@ class nk extends hf implements vg {
         ((nk) this).b(param0 + -4210751, (lm) (Object) var2);
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

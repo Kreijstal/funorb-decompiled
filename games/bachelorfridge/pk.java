@@ -16,7 +16,7 @@ abstract class pk implements qu {
 
     abstract String d(byte param0);
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
         field_b = null;
     }
@@ -48,7 +48,7 @@ abstract class pk implements qu {
         }
     }
 
-    final static String a(bca param0) {
+    final static String a(bca param0, boolean param1) {
         hd var2 = null;
         RuntimeException var2_ref = null;
         RuntimeException stackIn_3_0 = null;

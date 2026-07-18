@@ -29,7 +29,7 @@ abstract class mi extends uh {
         ((mi) this).field_p = param0;
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
@@ -86,7 +86,7 @@ abstract class mi extends uh {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_n = null;
     }
 

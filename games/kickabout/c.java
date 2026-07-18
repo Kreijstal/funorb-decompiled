@@ -14,14 +14,13 @@ final class c {
     static int field_c;
 
     final static void a(int param0, int param1, int param2, int param3) {
-        int discarded$7 = -55;
-        lo.a(0, param1, param2, false);
+        lo.a(0, param1, param2, false, (byte) -55);
         if (param0 != 31) {
             c.a(28, -64, 64, 35);
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_h = null;
         field_f = null;
@@ -30,7 +29,7 @@ final class c {
         field_e = null;
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, boolean param1) {
         if (op.field_y != null) {
           if (param0 >= 0) {
             if (un.field_c != jn.field_rb) {

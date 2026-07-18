@@ -317,16 +317,14 @@ abstract class l {
           L0: {
             var1 = uh.field_Wb;
             L1: while (true) {
-              int discarded$13 = 7;
-              if (!kd.l()) {
+              if (!kd.l(7)) {
                 break L0;
               } else {
                 var1.j(8, 118);
-                int fieldTemp$14 = var1.field_u + 1;
+                int fieldTemp$5 = var1.field_u + 1;
                 var1.field_u = var1.field_u + 1;
-                var2 = fieldTemp$14;
-                int discarded$15 = -25;
-                ml.a(var1);
+                var2 = fieldTemp$5;
+                ml.a(var1, (byte) -25);
                 uh.field_Wb.b((byte) 15, var1.field_u - var2);
                 continue L1;
               }

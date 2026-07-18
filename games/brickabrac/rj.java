@@ -20,7 +20,7 @@ final class rj {
         }
     }
 
-    final static void a(fk param0) {
+    final static void a(fk param0, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -73,7 +73,7 @@ final class rj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
     }

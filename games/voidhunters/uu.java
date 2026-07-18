@@ -6,7 +6,7 @@ final class uu implements dja {
     static java.awt.Canvas field_b;
     static int field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
     }

@@ -7,7 +7,7 @@ abstract class cc {
 
     abstract void a(int param0, java.awt.Component param1);
 
-    final static void b() {
+    final static void b(boolean param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -62,7 +62,7 @@ abstract class cc {
         vj.a(1, param1);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

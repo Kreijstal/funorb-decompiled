@@ -79,12 +79,12 @@ final class wt extends dr {
         return stackIn_3_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_E = null;
         field_F = null;
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, byte param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -304,8 +304,7 @@ final class wt extends dr {
         int stackOut_12_9 = 0;
         int stackOut_12_10 = 0;
         L0: {
-          int discarded$7 = -117;
-          ad.a();
+          ad.a(-117);
           if (vu.field_M != null) {
             if (r.c(vu.field_M.field_Ub, 2)) {
               stackOut_4_0 = 1;
@@ -494,8 +493,7 @@ final class wt extends dr {
           break L2;
         }
         L4: {
-          int discarded$8 = 0;
-          hb.a(stackIn_14_0 != 0, stackIn_14_1, stackIn_14_2, stackIn_14_3 != 0, stackIn_14_4, stackIn_14_5, stackIn_14_6, stackIn_14_7, stackIn_14_8 != 0, stackIn_14_9, stackIn_14_10 != 0, param1, var2 != 0);
+          hb.a(stackIn_14_0 != 0, stackIn_14_1, stackIn_14_2, stackIn_14_3 != 0, stackIn_14_4, stackIn_14_5, stackIn_14_6, stackIn_14_7, stackIn_14_8 != 0, stackIn_14_9, stackIn_14_10 != 0, param1, var2 != 0, 0);
           if (!cp.field_h) {
             break L4;
           } else {

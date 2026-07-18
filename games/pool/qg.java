@@ -75,7 +75,7 @@ final class qg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_g = null;
         field_a = null;
@@ -167,7 +167,7 @@ final class qg {
         return stackIn_7_0;
     }
 
-    final static void a(int[] param0, int param1, int[] param2, int[] param3, int param4, int[] param5) {
+    final static void a(int[] param0, int param1, int[] param2, int[] param3, int param4, int[] param5, byte param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;

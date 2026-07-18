@@ -11,7 +11,7 @@ final class pf {
     private Object[][] field_d;
     private boolean field_a;
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -33,8 +33,7 @@ final class pf {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 1;
-            stackOut_2_0 = uj.a(param0, (byte) 98, 10);
+            stackOut_2_0 = uj.a(param0, (byte) 98, 10, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -569,7 +568,7 @@ final class pf {
               }
               L2: {
                 if (var4 != 0) {
-                  int discarded$2 = param1.e(16, 8);
+                  int discarded$1 = param1.e(16, 8);
                   var5.field_H = vh.a((byte) 23, var5.field_H, 16, param1);
                   var5.field_E = vh.a((byte) 88, var5.field_E, 16, param1);
                   var5.field_P = vh.a((byte) 48, var5.field_P, 16, param1);
@@ -592,8 +591,7 @@ final class pf {
                 if (!mh.a(param1, (byte) -126)) {
                   break L4;
                 } else {
-                  int discarded$3 = 50;
-                  var5.field_g = wh.a(16, param1, var5.field_g);
+                  var5.field_g = wh.a(16, param1, var5.field_g, (byte) 50);
                   var6 = 0;
                   var7 = 0;
                   L5: while (true) {
@@ -1897,7 +1895,7 @@ final class pf {
         return stackIn_9_0;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         try {
             be.a(param0, "", (byte) 110);
             wf.a(63, param0);

@@ -10,7 +10,7 @@ final class jf {
     static long field_d;
     static w field_e;
 
-    final static void a(java.awt.Canvas param0, boolean param1) {
+    final static void a(java.awt.Canvas param0, boolean param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -33,13 +33,9 @@ final class jf {
         var4 = client.field_A ? 1 : 0;
         try {
           if (ca.field_vb >= 10) {
-            int discarded$13 = 480;
-            if (!dl.a()) {
+            if (!dl.a(480)) {
               hk.b();
-              int discarded$14 = 19759;
-              int discarded$15 = 320;
-              int discarded$16 = 240;
-              qc.a();
+              qc.a(240, 320, 19759);
               mf.a(1, 0, 0, param0);
               return;
             } else {
@@ -63,8 +59,7 @@ final class jf {
                 break L0;
               }
             }
-            int discarded$17 = 1;
-            bf.a(cn.b(), var3_int != 0, 6, cf.a(-11777), fb.field_g);
+            bf.a(cn.b(true), var3_int != 0, 6, cf.a(-11777), fb.field_g);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -99,7 +94,7 @@ final class jf {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_f = null;
         int var1 = 0;

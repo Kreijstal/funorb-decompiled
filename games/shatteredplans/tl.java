@@ -26,7 +26,7 @@ abstract class tl extends kf {
         ud.field_c[4] = true;
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         ud.field_c[11] = true;
         ud.field_c[12] = true;
         ud.field_c[13] = true;
@@ -34,8 +34,7 @@ abstract class tl extends kf {
 
     final void a(String param0, int param1, byte param2) {
         try {
-            int discarded$0 = 640;
-            this.a(480, param1, -85, param0);
+            this.a(480, param1, -85, param0, 640);
             int var4_int = -28 % ((57 - param2) / 47);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "tl.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -60,10 +59,7 @@ abstract class tl extends kf {
               L0: {
                 if (var4 == 1) {
                   L1: {
-                    int discarded$7 = 64;
-                    int discarded$8 = 64;
-                    int discarded$9 = 0;
-                    var5_int = wi.a(sl.j(), of.a());
+                    var5_int = wi.a(sl.j((byte) 64), of.a(64), 0);
                     if (var5_int != -1) {
                       wo.a(var5_int, (byte) -88, ae.field_e, nl.field_c);
                       ae.field_e = null;
@@ -73,11 +69,9 @@ abstract class tl extends kf {
                       break L1;
                     }
                   }
-                  int discarded$10 = 0;
-                  var11 = fr.j();
+                  var11 = fr.j(0);
                   if (var11 != null) {
-                    int discarded$11 = 72;
-                    bs.a(var11.booleanValue());
+                    bs.a(var11.booleanValue(), (byte) 72);
                     break L0;
                   } else {
                     break L0;
@@ -90,8 +84,7 @@ abstract class tl extends kf {
                 if (var4 != 2) {
                   break L2;
                 } else {
-                  int discarded$12 = -24;
-                  var5_int = sr.a(bh.d(-97), ((tl) this).field_B, (byte) -42, ob.g(), vj.i(-100), of.a((byte) 42), aq.a(11));
+                  var5_int = sr.a(bh.d(-97), ((tl) this).field_B, (byte) -42, ob.g((byte) -24), vj.i(-100), of.a((byte) 42), aq.a(11));
                   if (var5_int == -1) {
                     break L2;
                   } else {
@@ -180,8 +173,7 @@ abstract class tl extends kf {
                 if (var4 != 7) {
                   break L8;
                 } else {
-                  int discarded$13 = -119;
-                  id.a(kq.f((byte) 127));
+                  id.a(kq.f((byte) 127), (byte) -119);
                   break L8;
                 }
               }
@@ -314,23 +306,19 @@ abstract class tl extends kf {
         dm.a(0, ai.field_e);
         jq.a(0, fa.field_W, 5000, ((tl) this).field_q, 5000, ((tl) this).field_x, param4, param3, ((tl) this).field_w, ai.field_e, ((tl) this).field_r, ((tl) this).field_A, ((tl) this).field_s, ((tl) this).field_t);
         ti.a(param3, ((tl) this).field_q, ((tl) this).field_r, ((tl) this).field_A, ai.field_e, 1491341222, fa.field_W, ((tl) this).field_s, ((tl) this).field_x);
-        int discarded$0 = 100;
-        lm.a();
-        int discarded$1 = 1;
-        aj.field_b = cg.e();
-        int discarded$2 = 0;
-        re.a(tm.field_i);
+        lm.a((byte) 100);
+        aj.field_b = cg.e(true);
+        re.a(tm.field_i, false);
         jj.field_k = param2;
         ai.field_a = param5;
         jc.field_p = param1;
         tp.field_j = param6;
         lo.field_B = param7;
         this.l((byte) 64);
-        int discarded$3 = -120;
-        qj.b();
+        qj.b((byte) -120);
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         ud.field_c[1] = true;
     }
 
@@ -367,24 +355,20 @@ abstract class tl extends kf {
                         break L2;
                       } else {
                         if (4 == var2) {
-                          int discarded$6 = -523;
-                          ej.d();
+                          ej.d(-523);
                           break L2;
                         } else {
                           if (var2 != 5) {
                             if (var2 == 6) {
-                              int discarded$7 = 67;
-                              r.a();
+                              r.a((byte) 67);
                               break L2;
                             } else {
                               if (var2 == 7) {
-                                int discarded$8 = 0;
-                                this.b();
+                                this.b(false);
                                 break L2;
                               } else {
                                 if (var2 == 8) {
-                                  int discarded$9 = -3;
-                                  vq.a((ob) (Object) sa.field_a, fa.field_W, rr.field_t);
+                                  vq.a((ob) (Object) sa.field_a, fa.field_W, rr.field_t, -3);
                                   break L2;
                                 } else {
                                   if (var2 != 16) {
@@ -405,8 +389,7 @@ abstract class tl extends kf {
                                                 q.g(-107);
                                                 break L2;
                                               } else {
-                                                int discarded$10 = -1;
-                                                sh.a();
+                                                sh.a(-1);
                                                 break L2;
                                               }
                                             } else {
@@ -445,8 +428,7 @@ abstract class tl extends kf {
                         }
                       }
                     } else {
-                      int discarded$11 = 104;
-                      ae.a();
+                      ae.a((byte) 104);
                       break L2;
                     }
                   } else {
@@ -480,27 +462,22 @@ abstract class tl extends kf {
         }
         this.b(-73, true);
         if (param6) {
-            int discarded$0 = -111;
-            this.g();
+            this.g((byte) -111);
         }
         if (!(!param5)) {
-            int discarded$1 = 43;
-            this.h();
+            this.h((byte) 43);
         }
         if (param0) {
             this.h(3);
         }
         if (!(!param4)) {
-            int discarded$2 = -63;
-            this.k();
+            this.k((byte) -63);
         }
         if (param1) {
-            int discarded$3 = -31193;
-            this.j();
+            this.j(-31193);
         }
         if (!(!param3)) {
-            int discarded$4 = -45;
-            this.d();
+            this.d((byte) -45);
         }
     }
 
@@ -601,16 +578,13 @@ abstract class tl extends kf {
           }
         }
         L2: {
-          int discarded$11 = -59;
-          we.a();
-          int discarded$12 = 62;
-          ae.b();
+          we.a((byte) -59);
+          ae.b((byte) 62);
           if (uf.a(false)) {
             break L2;
           } else {
             if (gm.field_i != 11) {
-              int discarded$13 = -78;
-              bc.c();
+              bc.c(-78);
               break L2;
             } else {
               break L2;
@@ -634,8 +608,7 @@ abstract class tl extends kf {
               if (((tl) this).field_y) {
                 break L5;
               } else {
-                int discarded$14 = -26918;
-                if (var3 >= ik.a()) {
+                if (var3 >= ik.a(-26918)) {
                   break L4;
                 } else {
                   if (po.b(123) > var3) {
@@ -681,8 +654,7 @@ abstract class tl extends kf {
           }
           L9: {
             var3 = stackIn_24_0;
-            int discarded$15 = -95;
-            qj.field_g = u.a();
+            qj.field_g = u.a(-95);
             if (var3 == 0) {
               break L9;
             } else {
@@ -829,8 +801,7 @@ abstract class tl extends kf {
         }
         L16: {
           if (ma.field_p == 0) {
-            int discarded$16 = 1;
-            if (mp.a()) {
+            if (mp.a(true)) {
               ma.field_p = 1;
               break L16;
             } else {
@@ -878,8 +849,7 @@ abstract class tl extends kf {
                 if (es.field_j.b((byte) 122)) {
                   if (es.field_j.b("", (byte) -116)) {
                     if (es.field_j.a("", 51)) {
-                      int discarded$17 = 1;
-                      vi.a(es.field_j);
+                      vi.a(es.field_j, true);
                       es.field_j = null;
                       u.c(126);
                       break L21;
@@ -910,8 +880,7 @@ abstract class tl extends kf {
             if (!ig.a(rq.field_g, -7526, tq.field_f, l.field_g)) {
               break L22;
             } else {
-              int discarded$18 = 0;
-              if (uq.a(l.field_g)) {
+              if (uq.a(l.field_g, 0)) {
                 L23: {
                   L24: {
                     qr.f(-98);
@@ -992,8 +961,7 @@ abstract class tl extends kf {
                 }
                 L28: {
                   if (null == ns.field_rb) {
-                    int discarded$19 = 3;
-                    ns.field_rb = ae.c();
+                    ns.field_rb = ae.c(3);
                     md.field_M = ji.a(-123);
                     break L28;
                   } else {
@@ -1004,8 +972,7 @@ abstract class tl extends kf {
                 tq.field_f = null;
                 rq.field_g = null;
                 l.field_g = null;
-                int discarded$20 = 4289;
-                we.a((java.applet.Applet) this);
+                we.a((java.applet.Applet) this, 4289);
                 u.c(124);
                 ma.field_p = 10;
                 break L22;
@@ -1113,8 +1080,7 @@ abstract class tl extends kf {
             if (pf.field_c) {
               hs.a(tm.field_i, (byte) 125);
               ((tl) this).f(0);
-              int discarded$21 = 0;
-              re.a(tm.field_i);
+              re.a(tm.field_i, false);
               break L38;
             } else {
               break L38;
@@ -1138,13 +1104,12 @@ abstract class tl extends kf {
         return this.a(true, 1, param1);
     }
 
-    private final void b() {
-        int discarded$0 = 0;
-        String var2 = pc.a();
+    private final void b(boolean param0) {
+        String var2 = pc.a(false);
         hp.a((byte) 112, kq.f((byte) 126), var2);
     }
 
-    private final void k() {
+    private final void k(byte param0) {
         ud.field_c[5] = true;
     }
 
@@ -1207,22 +1172,20 @@ abstract class tl extends kf {
                   break L1;
                 }
               }
-              int discarded$74 = this.a(stackIn_13_1 != 0, stackIn_13_2, stackIn_13_3 != 0);
+              int discarded$32 = this.a(stackIn_13_1 != 0, stackIn_13_2, stackIn_13_3 != 0);
               break L0;
             } else {
               if (ma.field_p >= 10) {
-                int discarded$75 = 250;
-                if (or.a()) {
+                if (or.a(250)) {
                   if (gm.field_i == 0) {
-                    int discarded$76 = this.a(false, 1, false);
+                    int discarded$33 = this.a(false, 1, false);
                     break L0;
                   } else {
                     te.a(0, so.field_o);
                     break L0;
                   }
                 } else {
-                  int discarded$77 = -82;
-                  lc.b();
+                  lc.b(-82);
                   break L0;
                 }
               } else {
@@ -1236,7 +1199,7 @@ abstract class tl extends kf {
         }
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         ud.field_c[2] = true;
         int var2 = 0;
     }
@@ -1305,7 +1268,7 @@ abstract class tl extends kf {
         }
     }
 
-    private final void a(int param0, int param1, int param2, String param3) {
+    private final void a(int param0, int param1, int param2, String param3, int param4) {
         Exception var6 = null;
         RuntimeException var6_ref = null;
         String var6_ref2 = null;
@@ -1477,7 +1440,7 @@ abstract class tl extends kf {
         ue.a(kq.f((byte) 126), var3 != 0, rm.a(var5, 17746), -128);
     }
 
-    private final void j() {
+    private final void j(int param0) {
         ud.field_c[6] = true;
     }
 
@@ -1522,8 +1485,7 @@ abstract class tl extends kf {
             if (param1.a(false)) {
               L1: {
                 if (0 == param2) {
-                  int discarded$1 = -57;
-                  var10 = dc.a(param1);
+                  var10 = dc.a(param1, (byte) -57);
                   var6_array = var10;
                   if (var6_array != null) {
                     var7_int = 0;

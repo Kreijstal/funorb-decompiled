@@ -174,7 +174,7 @@ final class pq extends br {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         ia.field_x = new hn[]{};
     }
 

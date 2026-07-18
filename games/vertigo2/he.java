@@ -83,8 +83,7 @@ final class he extends gp {
             L1: while (true) {
               if (var10_int >= ((he) this).field_v.length) {
                 L2: {
-                  int discarded$2 = -107;
-                  dl.a(param1);
+                  dl.a(param1, (byte) -107);
                   ib.a((byte) -122, param4, param6);
                   var26 = new int[param6 * param4];
                   var10_array = var26;
@@ -222,9 +221,9 @@ final class he extends gp {
                           }
                         }
                         L15: {
-                          int incrementValue$3 = var14;
+                          int incrementValue$1 = var14;
                           var14++;
-                          var26[incrementValue$3] = var23;
+                          var26[incrementValue$1] = var23;
                           if (param3) {
                             var14 = var14 + (-1 + param6);
                             break L15;
@@ -303,7 +302,7 @@ final class he extends gp {
         return stackIn_47_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_B = null;
         field_u = null;
         field_z = null;

@@ -213,7 +213,7 @@ final class nj extends wda {
         return param1;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_v = null;
         field_q = null;
         field_p = null;

@@ -75,8 +75,7 @@ final class ot extends lba {
           L0: {
             if (jna.a(false, param1, param0, param2)) {
               if (param3) {
-                int discarded$2 = 69;
-                stackOut_6_0 = je.a();
+                stackOut_6_0 = je.a((byte) 69);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {

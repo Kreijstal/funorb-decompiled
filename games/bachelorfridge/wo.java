@@ -6,7 +6,7 @@ final class wo extends bia {
     static kv[][] field_k;
     private static String field_z;
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = -121;
         field_k = null;
     }

@@ -9,23 +9,21 @@ final class th implements ui {
     static int field_b;
     static String field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_f = null;
         field_e = null;
     }
 
-    final static void c() {
-        int discarded$0 = -89;
-        jb.a();
+    final static void c(int param0) {
+        jb.a((byte) -89);
         int var1 = -1;
         rn.a(sc.field_e, -128, el.field_z[0].field_v, ri.field_g, on.field_e, fe.field_g);
     }
 
-    final static rk b() {
+    final static rk b(int param0) {
         rk var1 = new rk(cd.field_p, ek.field_a, be.field_a[0], a.field_c[0], wm.field_b[0], b.field_c[0], vk.field_d[0], uh.field_r);
-        int discarded$0 = 4210752;
-        ch.k();
+        ch.k(4210752);
         return var1;
     }
 

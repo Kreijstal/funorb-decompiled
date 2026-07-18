@@ -8,7 +8,7 @@ final class bk {
     static pb field_b;
     private boolean field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         int var1 = 126;
         field_e = null;

@@ -8,7 +8,7 @@ final class rn {
     static hl field_c;
     static int field_b;
 
-    final static void a() {
+    final static void a(int param0) {
         wm.field_p = null;
         gg.field_k = null;
     }

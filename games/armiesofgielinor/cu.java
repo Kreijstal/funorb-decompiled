@@ -7,7 +7,7 @@ final class cu implements gj {
     static wk field_b;
     static boolean field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         int var1 = 0;
         field_b = null;

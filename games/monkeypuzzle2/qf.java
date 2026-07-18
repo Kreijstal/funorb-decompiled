@@ -62,7 +62,6 @@ final class qf extends og {
 
     private final void e() {
         int var1 = 0;
-        int var2 = 0;
         ((qf) this).field_T = 0;
         ((qf) this).field_K = 0;
         ((qf) this).field_B = 0;
@@ -83,16 +82,15 @@ final class qf extends og {
             ((qf) this).field_u = 0;
             ((qf) this).field_l = -1;
             ((qf) this).field_ib = 0;
-            var2 = 0;
-            var1 = var2;
+            var1 = 0;
             L1: while (true) {
-              if (var2 >= ((qf) this).field_X.field_j) {
+              if (var1 >= ((qf) this).field_X.field_j) {
                 ((qf) this).field_K = 1;
                 return;
               } else {
-                ((qf) this).field_R[var2] = null;
-                ((qf) this).field_x[var2] = false;
-                var2++;
+                ((qf) this).field_R[var1] = null;
+                ((qf) this).field_x[var1] = false;
+                var1++;
                 continue L1;
               }
             }
@@ -1739,7 +1737,8 @@ final class qf extends og {
     }
 
     final int a(mj param0) {
-        if (this.d()) {
+        int var2 = this.d() ? 1 : 0;
+        if (var2 != 0) {
             if (!((qf) this).field_P) {
                 return -1;
             }
@@ -1750,7 +1749,7 @@ final class qf extends og {
     }
 
     final synchronized void a(boolean param0) {
-        ((qf) this).field_P = param0 ? true : false;
+        ((qf) this).field_P = param0;
     }
 
     private final void a(int param0, int param1, int param2) {

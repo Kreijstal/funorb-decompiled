@@ -357,7 +357,7 @@ final class gl {
         }
     }
 
-    private final int b(int param0) {
+    private final int b(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         var4 = Lexicominos.field_L ? 1 : 0;
@@ -386,7 +386,7 @@ final class gl {
         this.a(-53, ((gl) this).field_f + param1, param0);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_e = null;
@@ -406,8 +406,7 @@ final class gl {
     }
 
     private final void a(int param0, boolean param1) {
-        int discarded$0 = 12359;
-        int[] var4 = new int[this.b(param0)];
+        int[] var4 = new int[this.b(param0, 12359)];
         int[] var3 = var4;
         o.a(((gl) this).field_d, 0, var4, 0, ((gl) this).field_d.length);
         ((gl) this).field_d = var4;

@@ -382,7 +382,7 @@ final class tg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
         field_e = null;
@@ -455,8 +455,7 @@ final class tg {
         try {
           L0: {
             L1: {
-              int discarded$2 = 4;
-              jl.a(0, param1, param0.field_h, param2, param0.field_f, param4);
+              jl.a(0, param1, param0.field_h, param2, param0.field_f, param4, 4);
               if (param3 < -102) {
                 break L1;
               } else {

@@ -731,8 +731,7 @@ final class rj extends sq {
 
     final static void c(byte param0) {
         qk.field_f.field_hb = dq.a(1, param0 ^ -45, Integer.toString(fr.field_n));
-        int discarded$6 = 93;
-        dk.a(qk.field_f);
+        dk.a(qk.field_f, (byte) 93);
         tn.field_w.field_pb = 2 < fr.field_n ? true : false;
         ih.field_e.field_pb = fr.field_n < 8 ? true : false;
         if (param0 != -45) {
@@ -827,7 +826,7 @@ final class rj extends sq {
         return stackIn_1_0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_j = null;
         field_g = null;
         field_i = null;

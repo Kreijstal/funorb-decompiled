@@ -524,7 +524,7 @@ final class pf extends pn implements Cloneable {
         return (f) (Object) stackIn_7_0;
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_m = null;
     }
 
@@ -1054,7 +1054,7 @@ final class pf extends pn implements Cloneable {
         return stackIn_3_0;
     }
 
-    final static int a(int param0, byte[] param1, int param2) {
+    final static int a(int param0, byte[] param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -1132,7 +1132,7 @@ final class pf extends pn implements Cloneable {
         return param0 & param1;
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -1222,9 +1222,7 @@ final class pf extends pn implements Cloneable {
                     }
                   }
                 } else {
-                  int discarded$2 = -1815;
-                  int discarded$3 = 21862;
-                  wp.a((Throwable) null, "LR1: " + ug.a());
+                  wp.a((Throwable) null, "LR1: " + ug.a(-1815), 21862);
                   jj.a(4);
                   break L1;
                 }

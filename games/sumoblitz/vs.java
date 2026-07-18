@@ -87,15 +87,15 @@ final class vs {
         return stackIn_8_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         return ms.field_a;
     }
 
-    final static boolean a(int[] param0) {
+    final static boolean a(int[] param0, int param1) {
         RuntimeException var2 = null;
         long var2_long = 0L;
         int var4 = 0;
@@ -206,8 +206,7 @@ final class vs {
                   break L5;
                 }
               }
-              int discarded$1 = 119;
-              if (lt.a()) {
+              if (lt.a((byte) 119)) {
                 if (jo.field_c != 0) {
                   L6: {
                     var5 = jo.field_c;

@@ -26,7 +26,7 @@ abstract class vb extends kf implements jl {
 
     abstract boolean k(int param0);
 
-    final static void g() {
+    final static void g(byte param0) {
         Object var2 = null;
         qf.a("", -99, (String) null);
     }
@@ -420,7 +420,7 @@ abstract class vb extends kf implements jl {
         return stackIn_10_0;
     }
 
-    final static String a(char param0, int param1) {
+    final static String a(char param0, int param1, int param2) {
         int var4 = 0;
         int var5 = client.field_A ? 1 : 0;
         char[] var6 = new char[param1];

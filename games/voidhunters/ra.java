@@ -87,7 +87,7 @@ final class ra extends rqa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_q = null;
         field_p = null;
         field_o = null;

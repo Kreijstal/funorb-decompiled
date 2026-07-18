@@ -22,12 +22,12 @@ final class gd {
         return ed.field_h;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         try {
             Exception var1 = null;
             Throwable decompiledCaughtException = null;

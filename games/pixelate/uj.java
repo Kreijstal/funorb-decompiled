@@ -335,7 +335,7 @@ final class uj extends ak {
         return !((uj) this).f(0) ? true : false;
     }
 
-    final static wg a(ae param0, int param1) {
+    final static wg a(ae param0, int param1, int param2) {
         long var3_long = 0L;
         RuntimeException var3 = null;
         long var5 = 0L;
@@ -422,7 +422,7 @@ final class uj extends ak {
         return stackIn_1_0;
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_Kb = null;
     }
 

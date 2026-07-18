@@ -7,7 +7,7 @@ final class hb {
     String field_a;
     static String field_b;
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -55,7 +55,7 @@ final class hb {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -245,17 +245,14 @@ final class hb {
             return;
         }
         if (0L == param0 % 10L) {
-            int discarded$1 = -25680;
-            km.a(param0 + -1L);
-            int discarded$2 = -25680;
-            km.a(1L);
+            km.a(param0 + -1L, -25680);
+            km.a(1L, -25680);
         } else {
-            int discarded$3 = -25680;
-            km.a(param0);
+            km.a(param0, -25680);
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

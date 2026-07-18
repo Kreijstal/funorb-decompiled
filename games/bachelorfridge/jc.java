@@ -381,7 +381,7 @@ final class jc extends eo {
         return (fea) (Object) stackIn_4_0;
     }
 
-    final static boolean f() {
+    final static boolean f(int param0) {
         return pma.field_k;
     }
 

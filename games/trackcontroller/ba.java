@@ -13,7 +13,7 @@ final class ba {
         throw new IllegalStateException();
     }
 
-    final static int a(int param0, boolean param1, String param2, String param3, String param4, int param5) {
+    final static int a(int param0, boolean param1, String param2, String param3, String param4, int param5, int param6) {
         kh var7 = null;
         RuntimeException var7_ref = null;
         kh var8 = null;
@@ -156,7 +156,7 @@ final class ba {
         return stackIn_1_0;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -269,7 +269,7 @@ final class ba {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;

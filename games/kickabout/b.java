@@ -55,8 +55,7 @@ final class b extends ta {
         if (param1 < 99) {
             ((b) this).field_S = 96;
         }
-        int discarded$0 = -12452;
-        ig.b(((b) this).field_j);
+        ig.b(((b) this).field_j, -12452);
     }
 
     final void h(byte param0) {
@@ -79,7 +78,7 @@ final class b extends ta {
         return ((int)((double)hw.field_i * (-hd.field_K + (double)param1)) >> 8) + 320;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_O = null;
         field_F = null;
         field_M = null;

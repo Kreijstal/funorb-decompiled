@@ -123,8 +123,7 @@ final class hl {
         String stackOut_5_2 = null;
         try {
           var4_int = -1;
-          int discarded$7 = 1;
-          if (vh.a(param3, param1, param0)) {
+          if (vh.a(param3, param1, param0, true)) {
             return mc.a((byte) 113);
           } else {
             return null;

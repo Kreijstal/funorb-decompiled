@@ -15,8 +15,7 @@ final class si extends qm {
     final static void a(int param0, java.awt.Canvas param1) {
         try {
             if (!(11 != el.field_b)) {
-                int discarded$0 = 98;
-                am.b();
+                am.b(98);
             }
             mi.a(go.field_f, bf.field_o, -1, ad.field_r);
             fj.a(0, 0, (byte) 113, param1);
@@ -25,11 +24,11 @@ final class si extends qm {
         }
     }
 
-    final static double a(double param0) {
+    final static double a(double param0, boolean param1) {
         return rl.field_f[(int)(param0 * 32768.0 / 3.141592653589793) & 65535];
     }
 
-    final static void a(int param0, byte[] param1, int param2) {
+    final static void a(int param0, byte[] param1, int param2, int param3, boolean param4, byte param5) {
         pc var6 = aa.field_f;
         var6.g(param0, 15514);
         var6.field_m = var6.field_m + 1;

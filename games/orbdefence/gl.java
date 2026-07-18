@@ -45,8 +45,7 @@ final class gl {
           ui.field_b = new pf(param3);
           ak.field_z = param1;
           df.field_d = param0;
-          int discarded$2 = -1178583839;
-          jm.b();
+          jm.b(-1178583839);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

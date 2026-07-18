@@ -31,7 +31,7 @@ final class cc {
         ((cc) this).field_e = 0;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         if (!(i.field_Y)) {
             throw new IllegalStateException();
         }
@@ -40,7 +40,7 @@ final class cc {
         fl.field_a = 0;
     }
 
-    final static void a(de param0) {
+    final static void a(de param0, int param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;
@@ -213,7 +213,7 @@ final class cc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_k = null;
         field_c = null;

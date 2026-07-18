@@ -8,7 +8,7 @@ final class dja extends pu {
     final static void b(boolean param0) {
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_l = null;
     }
 

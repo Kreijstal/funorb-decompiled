@@ -80,9 +80,9 @@ final class coa implements ntb {
           L0: {
             L1: {
               var3 = (coa) (Object) param1;
-              var3.field_b = dob.a(var3.field_b, (byte) -108, var3.field_b);
-              var3.field_c = dob.a(var3.field_c, (byte) -38, var3.field_c);
-              var3.field_a = var3.field_a;
+              var3.field_b = dob.a(var3.field_b, (byte) -108, ((coa) this).field_b);
+              var3.field_c = dob.a(var3.field_c, (byte) -38, ((coa) this).field_c);
+              var3.field_a = ((coa) this).field_a;
               if (param0 >= 54) {
                 break L1;
               } else {
@@ -162,8 +162,7 @@ final class coa implements ntb {
             if (param1 < -19) {
               L1: {
                 var4 = 0;
-                int discarded$50 = 0;
-                if (ikb.a(var5.field_b, var5.field_b)) {
+                if (ikb.a(((coa) this).field_b, var5.field_b, false)) {
                   var4 = 1;
                   System.out.println("int[] voteoption_states has changed. ");
                   break L1;
@@ -172,8 +171,7 @@ final class coa implements ntb {
                 }
               }
               L2: {
-                int discarded$51 = 0;
-                if (!ikb.a(var5.field_c, var5.field_c)) {
+                if (!ikb.a(((coa) this).field_c, var5.field_c, false)) {
                   break L2;
                 } else {
                   var4 = 1;
@@ -196,7 +194,7 @@ final class coa implements ntb {
                 stackOut_10_0 = stackIn_10_0;
                 stackIn_12_0 = stackOut_10_0;
                 stackIn_11_0 = stackOut_10_0;
-                if (var5.field_a) {
+                if (((coa) this).field_a) {
                   stackOut_12_0 = stackIn_12_0;
                   stackOut_12_1 = 0;
                   stackIn_13_0 = stackOut_12_0;
@@ -213,7 +211,7 @@ final class coa implements ntb {
               L5: {
                 if (stackIn_13_0 != stackIn_13_1) {
                   var4 = 1;
-                  System.out.println("boolean copy_to_clipboard_hidden has changed. before=" + var5.field_a + ", now=" + var5.field_a);
+                  System.out.println("boolean copy_to_clipboard_hidden has changed. before=" + var5.field_a + ", now=" + ((coa) this).field_a);
                   break L5;
                 } else {
                   break L5;
@@ -297,7 +295,7 @@ final class coa implements ntb {
         }
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int[] var3 = null;
         int[] var2 = null;
         int[] var4 = null;
@@ -380,9 +378,7 @@ final class coa implements ntb {
     }
 
     public final String toString() {
-        int discarded$0 = 0;
-        int discarded$1 = 0;
-        return "Voteoption states=" + fva.a(((coa) this).field_b) + "\nComponentoption states=" + fva.a(((coa) this).field_c) + "\ncopy_to_clipboard_hidden=" + ((coa) this).field_a + "\nServerside: " + (Object) (Object) ((coa) this).field_e;
+        return "Voteoption states=" + fva.a(((coa) this).field_b, false) + "\nComponentoption states=" + fva.a(((coa) this).field_c, false) + "\ncopy_to_clipboard_hidden=" + ((coa) this).field_a + "\nServerside: " + (Object) (Object) ((coa) this).field_e;
     }
 
     final boolean d(int param0, int param1) {
@@ -664,9 +660,8 @@ final class coa implements ntb {
         return var2;
     }
 
-    private final void b() {
-        int discarded$0 = 13546;
-        this.a();
+    private final void b(boolean param0) {
+        this.a(13546);
     }
 
     public final void a(faa param0, boolean param1) {
@@ -674,8 +669,7 @@ final class coa implements ntb {
             ((coa) this).field_b = wkb.a((byte) 37, ((coa) this).field_b, param0, 8);
             ((coa) this).field_c = wkb.a((byte) 37, ((coa) this).field_c, param0, 8);
             ((coa) this).field_a = kv.a(param1, param0);
-            int discarded$0 = 1;
-            this.b();
+            this.b(true);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "coa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -983,16 +977,14 @@ final class coa implements ntb {
               L2: {
                 var4 = 55 / ((param0 - 22) / 59);
                 var3 = (coa) (Object) param1;
-                int discarded$18 = 28;
-                if (wpb.a(var3.field_b, var3.field_b)) {
+                if (wpb.a(var3.field_b, ((coa) this).field_b, (byte) 28)) {
                   break L2;
                 } else {
-                  int discarded$19 = 28;
-                  if (wpb.a(var3.field_c, var3.field_c)) {
+                  if (wpb.a(var3.field_c, ((coa) this).field_c, (byte) 28)) {
                     break L2;
                   } else {
                     L3: {
-                      if (var3.field_a) {
+                      if (((coa) this).field_a) {
                         stackOut_4_0 = 0;
                         stackIn_5_0 = stackOut_4_0;
                         break L3;

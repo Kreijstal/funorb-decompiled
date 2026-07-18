@@ -84,7 +84,7 @@ final class ga extends nm {
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
         int var1 = 0;
         if (ki.field_d > 32) {
           L0: {
@@ -106,7 +106,7 @@ final class ga extends nm {
         }
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         return !ma.field_I.b(96);
     }
 

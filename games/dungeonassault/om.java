@@ -9,11 +9,10 @@ final class om {
     static String field_e;
 
     final static cd a(boolean param0) {
-        int discarded$0 = -75;
-        return new cd(co.e((byte) 92), f.a());
+        return new cd(co.e((byte) 92), f.a((byte) -75));
     }
 
-    final static boolean a(java.applet.Applet param0) {
+    final static boolean a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -276,7 +275,7 @@ final class om {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_e = null;
         field_b = null;
@@ -284,9 +283,9 @@ final class om {
         field_d = null;
     }
 
-    final static boolean b() {
-        RuntimeException var1 = null;
+    final static boolean b(int param0) {
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int stackIn_4_0 = 0;
@@ -314,20 +313,15 @@ final class om {
                 var1_int = -51;
                 sh.field_a = oh.a(hj.field_Z, "benefits", 11091, "members_benefits_logo");
                 g.field_Gb = new cn[4];
-                int discarded$5 = 71;
-                g.field_Gb[0] = rc.a("", sb.field_a, "mb_da_thumbs_01.jpg");
-                int discarded$6 = 71;
-                g.field_Gb[1] = rc.a("", sb.field_a, "mb_da_thumbs_02.jpg");
-                int discarded$7 = 71;
-                g.field_Gb[2] = rc.a("", sb.field_a, "mb_da_thumbs_06.jpg");
-                int discarded$8 = 71;
-                g.field_Gb[3] = rc.a("", sb.field_a, "mb_da_thumbs_05.jpg");
+                g.field_Gb[0] = rc.a("", sb.field_a, "mb_da_thumbs_01.jpg", (byte) 71);
+                g.field_Gb[1] = rc.a("", sb.field_a, "mb_da_thumbs_02.jpg", (byte) 71);
+                g.field_Gb[2] = rc.a("", sb.field_a, "mb_da_thumbs_06.jpg", (byte) 71);
+                g.field_Gb[3] = rc.a("", sb.field_a, "mb_da_thumbs_05.jpg", (byte) 71);
                 var2 = g.field_Gb.length + -1;
                 L1: while (true) {
                   if (var2 < 0) {
                     bp.a(bl.field_j, (byte) 51, ba.field_h);
-                    int discarded$9 = 80;
-                    eg.a(80, 15, 16744576, 40, 5, rj.field_s, 2, 40, -2400, (se) (Object) ne.field_c);
+                    eg.a(80, 15, 16744576, 40, 5, rj.field_s, 2, 40, -2400, (se) (Object) ne.field_c, 80);
                     ib.a(-4, g.field_Gb);
                     wa.a(123, sh.field_a);
                     stackOut_12_0 = 1;

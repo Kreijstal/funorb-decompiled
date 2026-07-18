@@ -43,8 +43,7 @@ final class ji {
           L0: {
             L1: {
               L2: {
-                int discarded$2 = 2619;
-                param2 = ci.a(param2, '_', "");
+                param2 = ci.a(param2, '_', "", 2619);
                 var3 = la.a(param0, (byte) -36);
                 if (param2.indexOf(param0) != -1) {
                   break L2;

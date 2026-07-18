@@ -33,7 +33,7 @@ final class lk implements Iterable {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_a = null;
         field_e = null;

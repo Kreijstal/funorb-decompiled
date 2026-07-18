@@ -37,7 +37,7 @@ final class ipa extends ra {
         return true;
     }
 
-    final static void s() {
+    final static void s(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         fla var2 = null;
@@ -58,8 +58,7 @@ final class ipa extends ra {
                   if (var2.field_h > 0) {
                     break L2;
                   } else {
-                    int discarded$4 = -42;
-                    bca.a(var2.field_i);
+                    bca.a(var2.field_i, (byte) -42);
                     var2.p(25);
                     break L2;
                   }
@@ -240,7 +239,7 @@ final class ipa extends ra {
         return false;
     }
 
-    public static void D() {
+    public static void D(int param0) {
         field_P = null;
         field_M = null;
         field_O = null;

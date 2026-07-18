@@ -94,7 +94,7 @@ final class gba extends sna {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void a(int param0, int param1, int param2, byte param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -259,8 +259,7 @@ final class gba extends sna {
 
     final void b(int param0, int param1, int param2, byte param3) {
         if (!((gba) this).field_vb) {
-            int discarded$1 = -32;
-            this.a(param0, param2, param1);
+            this.a(param0, param2, param1, (byte) -32);
         } else {
             this.b(param0, param2, true, param1);
         }

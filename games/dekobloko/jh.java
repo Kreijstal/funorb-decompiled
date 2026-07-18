@@ -11,7 +11,7 @@ final class jh {
     static String field_a;
     static boolean field_h;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_b = null;
         field_g = null;
@@ -153,11 +153,15 @@ final class jh {
         ac var4 = null;
         int var5 = 0;
         int var6 = 0;
+        int[] var7 = null;
         int var8 = 0;
         int var9 = 0;
         Object var10 = null;
         Object var11 = null;
         Object var12 = null;
+        int[] var13 = null;
+        int[] var14 = null;
+        int[] var15 = null;
         int[] var16 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -204,15 +208,13 @@ final class jh {
               param2.field_g = 0;
               oi.field_a = new em(var3_int, param2, param2);
               wj.field_Qb = new sm(var3_int, param2, param2, (lh) (Object) new ga());
-              int discarded$3 = 124;
-              var4 = dn.b();
+              var4 = dn.b((byte) 124);
               if (var4 == null) {
                 var11 = null;
                 qb.a((Throwable) null, 16408, "QC2");
                 return;
               } else {
-                int discarded$4 = -1;
-                jc.a(var4);
+                jc.a(var4, -1);
                 var12 = null;
                 fj.field_d = wa.a(2245737, 1513239, 0, 8947848, 5138823, 1127256, 65793, 65793, 4020342, 1513239, 65793, -24447, (mm) null);
                 rd.field_e = wa.a(0, 0, 16764006, 0, 0, 0, 0, 0, 0, 0, 0, -24447, param1);
@@ -220,14 +222,17 @@ final class jh {
                 var5 = hk.field_j;
                 var6 = hk.field_i;
                 var16 = hk.field_l;
+                var15 = var16;
+                var14 = var15;
+                var13 = var14;
+                var7 = var13;
                 qb.field_q = new ck(10, 14);
                 qb.field_q.a();
                 var8 = 2;
                 L1: while (true) {
                   if (var8 >= 7) {
                     hk.a(var16, var5, var6);
-                    int discarded$5 = 0;
-                    vk.field_a = ll.a(ad.field_q, rd.field_e, var4, fj.field_d);
+                    vk.field_a = ll.a(ad.field_q, rd.field_e, var4, fj.field_d, 0);
                     ie.field_c.field_M = new vj();
                     break L0;
                   } else {

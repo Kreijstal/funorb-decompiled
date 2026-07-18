@@ -9,7 +9,7 @@ final class ml {
     static int[] field_f;
     private ug field_b;
 
-    final static void e() {
+    final static void e(int param0) {
         ge.field_c = 0;
         mh.field_Z = -1;
         nh.field_P = false;

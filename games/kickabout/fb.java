@@ -221,7 +221,7 @@ final class fb extends cj {
         }
     }
 
-    final static kg[] i() {
+    final static kg[] i(byte param0) {
         int var2 = 0;
         int var3 = Kickabout.field_G;
         kg[] var1 = new kg[io.field_l];

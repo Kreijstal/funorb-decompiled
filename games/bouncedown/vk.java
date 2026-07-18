@@ -8,7 +8,7 @@ final class vk {
     static String field_e;
     static int field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_e = null;
         field_c = null;
@@ -16,8 +16,7 @@ final class vk {
 
     final static void a(int param0, tg[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, tj param9, tj param10, tg[] param11, int param12, int param13) {
         try {
-            int discarded$0 = 2;
-            va.a();
+            va.a(2);
         } catch (RuntimeException runtimeException) {
             throw ii.a((Throwable) (Object) runtimeException, "vk.A(" + 240 + ',' + (param1 != null ? "{...}" : "null") + ',' + 320 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + 3 + ',' + 2 + ',' + (param9 != null ? "{...}" : "null") + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ')');
         }

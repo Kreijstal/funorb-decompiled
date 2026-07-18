@@ -60,16 +60,16 @@ final class gqa implements ntb {
             L1: {
               var3 = (gqa) (Object) param0;
               var4 = 0;
-              if (var3.field_a == var3.field_a) {
+              if (((gqa) this).field_a == var3.field_a) {
                 break L1;
               } else {
-                iva.a(-6940, "int playerid has changed. before=" + var3.field_a + ", now=" + var3.field_a);
+                iva.a(-6940, "int playerid has changed. before=" + var3.field_a + ", now=" + ((gqa) this).field_a);
                 var4 = 1;
                 break L1;
               }
             }
             L2: {
-              if (var3.field_b.equals((Object) (Object) var3.field_b)) {
+              if (var3.field_b.equals((Object) (Object) ((gqa) this).field_b)) {
                 break L2;
               } else {
                 iva.a(-6940, "String displayname has changed. ");
@@ -134,8 +134,8 @@ final class gqa implements ntb {
             if (param0 <= 54) {
                 ((gqa) this).field_b = null;
             }
-            var6.field_a = var5.field_a;
-            var6.field_b = var5.field_b;
+            var6.field_a = ((gqa) this).field_a;
+            var6.field_b = ((gqa) this).field_b;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "gqa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -170,10 +170,10 @@ final class gqa implements ntb {
               L2: {
                 var4 = 36 / ((22 - param0) / 59);
                 var3 = (gqa) (Object) param1;
-                if (var3.field_a != var3.field_a) {
+                if (((gqa) this).field_a != var3.field_a) {
                   break L2;
                 } else {
-                  if (var3.field_b.equals((Object) (Object) var3.field_b)) {
+                  if (var3.field_b.equals((Object) (Object) ((gqa) this).field_b)) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
                     break L1;

@@ -83,18 +83,16 @@ final class re {
         return stackIn_5_0 != 0;
     }
 
-    final static void a(byte param0, ke param1) {
+    final static void a(byte param0, ke param1, int param2) {
         try {
             uk.field_d.a(1, (ai) (Object) param1);
-            int discarded$0 = -22762;
-            int discarded$1 = 4;
-            qh.a(param1);
+            qh.a(param1, 4, -22762);
         } catch (RuntimeException runtimeException) {
             throw ii.a((Throwable) (Object) runtimeException, "re.A(" + 109 + ',' + (param1 != null ? "{...}" : "null") + ',' + 4 + ')');
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 

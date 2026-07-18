@@ -46,8 +46,7 @@ final class wqa extends kna {
         if (hka.field_b == null) {
           if (!pn.h(9807)) {
             if (null == fj.field_c) {
-              int discarded$4 = 1;
-              if (eba.a()) {
+              if (eba.a(true)) {
                 return true;
               } else {
                 return false;
@@ -180,7 +179,7 @@ final class wqa extends kna {
         return stackIn_1_0;
     }
 
-    public static void e() {
+    public static void e(boolean param0) {
         field_J = null;
         field_F = null;
         field_H = null;

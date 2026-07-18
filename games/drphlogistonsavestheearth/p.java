@@ -348,8 +348,7 @@ final class p {
               try {
                 L0: {
                   var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-                  int discarded$2 = 4767999;
-                  param1.getAppletContext().showDocument(kk.a(var2, param1), "_top");
+                  param1.getAppletContext().showDocument(kk.a(var2, param1, 4767999), "_top");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -397,7 +396,7 @@ final class p {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_e = null;
         field_d = null;

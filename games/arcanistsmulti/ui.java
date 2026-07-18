@@ -76,8 +76,7 @@ final class ui extends rl {
                         stackIn_32_0 = stackOut_31_0;
                         break L0;
                       } else {
-                        int discarded$16 = -1;
-                        if (hm.a(var5, var6)) {
+                        if (hm.a(var5, var6, -1)) {
                           stackOut_21_0 = rg.field_f;
                           stackIn_22_0 = stackOut_21_0;
                           return stackIn_22_0;
@@ -87,8 +86,7 @@ final class ui extends rl {
                             stackIn_26_0 = stackOut_25_0;
                             return stackIn_26_0;
                           } else {
-                            int discarded$17 = 0;
-                            if (w.a(var6, var5)) {
+                            if (w.a(var6, var5, 0)) {
                               stackOut_29_0 = rg.field_f;
                               stackIn_30_0 = stackOut_29_0;
                               return stackIn_30_0;
@@ -159,7 +157,7 @@ final class ui extends rl {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_u = null;
         field_w = null;
         field_q = null;

@@ -10,7 +10,7 @@ abstract class hk extends pb {
     hk() {
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         we var4 = null;
@@ -27,15 +27,13 @@ abstract class hk extends pb {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$6 = 113;
-                    pk.a(5, var5);
+                    pk.a(5, var5, (byte) 113);
                     var5 = (pp) (Object) nh.field_A.a(false);
                     continue L2;
                   }
                 }
               } else {
-                int discarded$7 = 71;
-                pm.a(5, var4);
+                pm.a(5, var4, (byte) 71);
                 var4 = (we) (Object) tb.field_b.a(false);
                 continue L1;
               }
@@ -67,7 +65,7 @@ abstract class hk extends pb {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_e = null;
     }
@@ -111,14 +109,13 @@ abstract class hk extends pb {
                 L0: {
                   var2_int = -109 / ((59 - param0) / 33);
                   var3 = param1.getCodeBase();
-                  int discarded$7 = 67;
-                  var4 = gh.a(param1, var3).getFile();
+                  var4 = gh.a(param1, var3, (byte) 67).getFile();
+                  Object discarded$6 = hi.a(-3729, "updatelinks", param1, new Object[2]);
+                  Object discarded$7 = hi.a(-3729, "updatelinks", param1, new Object[2]);
                   Object discarded$8 = hi.a(-3729, "updatelinks", param1, new Object[2]);
                   Object discarded$9 = hi.a(-3729, "updatelinks", param1, new Object[2]);
                   Object discarded$10 = hi.a(-3729, "updatelinks", param1, new Object[2]);
                   Object discarded$11 = hi.a(-3729, "updatelinks", param1, new Object[2]);
-                  Object discarded$12 = hi.a(-3729, "updatelinks", param1, new Object[2]);
-                  Object discarded$13 = hi.a(-3729, "updatelinks", param1, new Object[2]);
                   break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {

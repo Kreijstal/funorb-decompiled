@@ -86,7 +86,7 @@ class im extends bd {
         return null == nk.field_q ? null : (na) (Object) nk.field_q.a((long)param0, (byte) -102);
     }
 
-    final static void d() {
+    final static void d(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -140,7 +140,7 @@ class im extends bd {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         ab var2 = null;
@@ -153,14 +153,13 @@ class im extends bd {
             var1_int = 23;
             var2 = he.field_e;
             L1: while (true) {
-              int discarded$9 = 0;
-              if (!bl.d()) {
+              if (!bl.d(0)) {
                 break L0;
               } else {
                 var2.b((byte) -66, 8);
-                int fieldTemp$10 = var2.field_g + 1;
+                int fieldTemp$5 = var2.field_g + 1;
                 var2.field_g = var2.field_g + 1;
-                var3 = fieldTemp$10;
+                var3 = fieldTemp$5;
                 ho.a(-5534, var2);
                 he.field_e.b(var2.field_g + -var3, (byte) 43);
                 continue L1;
@@ -406,10 +405,9 @@ class im extends bd {
         }
     }
 
-    final static void a(int param0, gh param1, dl param2, java.awt.Component param3) {
+    final static void a(int param0, gh param1, dl param2, java.awt.Component param3, int param4, boolean param5) {
         try {
-            int discarded$0 = 22050;
-            sm.a(-112, true, 22050, param1, param3, 1024, param2);
+            sm.a(-112, true, 22050, param1, param3, 1024, param2, 22050);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "im.M(" + 22050 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + -22836 + ',' + true + ')');
         }
@@ -455,8 +453,7 @@ class im extends bd {
         try {
           L0: {
             if (fc.a(50, param0, param4, param1)) {
-              int discarded$2 = 45;
-              stackOut_3_0 = mi.a(param2.b(param1, 26219, param4));
+              stackOut_3_0 = mi.a(param2.b(param1, 26219, param4), 45);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

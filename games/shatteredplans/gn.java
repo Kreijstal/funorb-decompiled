@@ -19,7 +19,7 @@ final class gn extends o {
         rm.field_b = param0;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int stackIn_20_0 = 0;
         int stackOut_19_0 = 0;
@@ -41,8 +41,7 @@ final class gn extends o {
             return false;
           } else {
             L1: {
-              int discarded$13 = 0;
-              if (!le.a(13, 12)) {
+              if (!le.a(13, 12, false)) {
                 stackOut_19_0 = 0;
                 stackIn_20_0 = stackOut_19_0;
                 break L1;
@@ -73,8 +72,7 @@ final class gn extends o {
               if (oq.field_j != 13) {
                 break L4;
               } else {
-                int discarded$14 = 0;
-                qq.c();
+                qq.c(false);
                 var4 = 1;
                 sr.field_h = false;
                 break L4;
@@ -118,7 +116,7 @@ final class gn extends o {
         }
     }
 
-    private final void a(gn param0, boolean param1) {
+    private final void a(gn param0, boolean param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         wk var5 = null;
@@ -277,8 +275,7 @@ final class gn extends o {
               if (param0 == -12) {
                 break L1;
               } else {
-                int discarded$2 = 1;
-                gn.b();
+                gn.b(true);
                 break L1;
               }
             }
@@ -354,14 +351,13 @@ final class gn extends o {
     gn(gn param0, boolean param1) {
         this();
         try {
-            int discarded$0 = -21979;
-            param0.a((gn) this, param1);
+            param0.a((gn) this, param1, -21979);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_u = null;
         field_v = null;
         field_w = null;

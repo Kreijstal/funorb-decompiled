@@ -11,7 +11,7 @@ final class pe {
     static String field_b;
     static String field_g;
 
-    final static sa a() {
+    final static sa a(int param0, int param1, int param2, int param3, int param4) {
         sa var5 = null;
         int var6 = 0;
         var6 = Bounce.field_N;
@@ -23,8 +23,7 @@ final class pe {
             var5.field_g = 10;
             var5.field_m = 1;
             jl.field_f.a(1, (ai) (Object) var5);
-            int discarded$2 = 3;
-            ha.a(-17765, var5);
+            ha.a(-17765, var5, 3);
             return var5;
           } else {
             if (var5.field_n == 13) {
@@ -53,15 +52,14 @@ final class pe {
         }
     }
 
-    final static we[] b() {
+    final static we[] b(int param0) {
         int var2 = 0;
         int var3 = Bounce.field_N;
         we[] var1 = new we[nj.field_p];
         for (var2 = 0; nj.field_p > var2; var2++) {
             var1[var2] = new we(se.field_C, fk.field_e, cl.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], ph.field_c[var2], he.field_k);
         }
-        int discarded$0 = 122;
-        vb.a();
+        vb.a((byte) 122);
         return var1;
     }
 

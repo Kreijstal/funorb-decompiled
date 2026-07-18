@@ -69,8 +69,7 @@ final class jh extends java.awt.Canvas {
                         }
                       }
                       L2: {
-                        int discarded$14 = -20675;
-                        if (co.a() <= 2) {
+                        if (co.a(-20675) <= 2) {
                           rm.field_k = 5;
                           break L2;
                         } else {
@@ -82,8 +81,7 @@ final class jh extends java.awt.Canvas {
                     } else {
                       if (rm.field_k == 5) {
                         mo.field_f = oi.field_b;
-                        int discarded$15 = -20675;
-                        if (co.a() <= 1) {
+                        if (co.a(-20675) <= 1) {
                           rm.field_k = 6;
                           break L0;
                         } else {
@@ -166,8 +164,7 @@ final class jh extends java.awt.Canvas {
                     }
                   } else {
                     mo.field_f = vi.field_D;
-                    int discarded$16 = -20675;
-                    if (1 >= co.a()) {
+                    if (1 >= co.a(-20675)) {
                       rm.field_k = 4;
                       break L4;
                     } else {
@@ -189,8 +186,7 @@ final class jh extends java.awt.Canvas {
                     }
                   }
                   L7: {
-                    int discarded$17 = -20675;
-                    if (co.a() <= 2) {
+                    if (co.a(-20675) <= 2) {
                       rm.field_k = 3;
                       break L7;
                     } else {
@@ -230,8 +226,7 @@ final class jh extends java.awt.Canvas {
                           break L9;
                         }
                       }
-                      int discarded$18 = -20675;
-                      if (co.a() > 2) {
+                      if (co.a(-20675) > 2) {
                         break L8;
                       } else {
                         rm.field_k = 5;
@@ -240,8 +235,7 @@ final class jh extends java.awt.Canvas {
                     } else {
                       if (rm.field_k == 5) {
                         mo.field_f = ra.field_g;
-                        int discarded$19 = -20675;
-                        if (co.a() > 1) {
+                        if (co.a(-20675) > 1) {
                           break L8;
                         } else {
                           rm.field_k = 6;
@@ -275,8 +269,7 @@ final class jh extends java.awt.Canvas {
                       }
                     }
                     L12: {
-                      int discarded$20 = -20675;
-                      if (co.a() <= 2) {
+                      if (co.a(-20675) <= 2) {
                         rm.field_k = 5;
                         break L12;
                       } else {
@@ -334,8 +327,7 @@ final class jh extends java.awt.Canvas {
                 }
               }
               mo.field_f = nb.field_f;
-              int discarded$21 = -20675;
-              if (co.a() <= 2) {
+              if (co.a(-20675) <= 2) {
                 rm.field_k = 2;
                 break L14;
               } else {
@@ -357,8 +349,7 @@ final class jh extends java.awt.Canvas {
                   }
                 }
                 L17: {
-                  int discarded$22 = -20675;
-                  if (co.a() > 2) {
+                  if (co.a(-20675) > 2) {
                     break L17;
                   } else {
                     rm.field_k = 2;
@@ -370,8 +361,7 @@ final class jh extends java.awt.Canvas {
               } else {
                 if (2 == rm.field_k) {
                   mo.field_f = be.field_h;
-                  int discarded$23 = -20675;
-                  if (co.a() <= 1) {
+                  if (co.a(-20675) <= 1) {
                     rm.field_k = 3;
                     break L14;
                   } else {
@@ -474,8 +464,7 @@ final class jh extends java.awt.Canvas {
                             }
                           }
                           L24: {
-                            int discarded$24 = -20675;
-                            if (co.a() > 1) {
+                            if (co.a(-20675) > 1) {
                               break L24;
                             } else {
                               rm.field_k = 6;
@@ -495,8 +484,7 @@ final class jh extends java.awt.Canvas {
                         }
                       } else {
                         mo.field_f = gh.field_o;
-                        int discarded$25 = -20675;
-                        if (co.a() <= 2) {
+                        if (co.a(-20675) <= 2) {
                           rm.field_k = 5;
                           break L20;
                         } else {
@@ -611,8 +599,7 @@ final class jh extends java.awt.Canvas {
                           if (rm.field_k != 5) {
                             if (rm.field_k == 6) {
                               mo.field_f = ol.field_e;
-                              int discarded$26 = -20675;
-                              if (co.a() <= 1) {
+                              if (co.a(-20675) <= 1) {
                                 rm.field_k = 7;
                                 break L30;
                               } else {
@@ -845,8 +832,8 @@ final class jh extends java.awt.Canvas {
                 if (240 <= rk.field_O.a(0, true).field_ib) {
                   break L29;
                 } else {
-                  ml dupTemp$27 = rk.field_O.a(0, true);
-                  dupTemp$27.field_ib = dupTemp$27.field_ib + 1;
+                  ml dupTemp$1 = rk.field_O.a(0, true);
+                  dupTemp$1.field_ib = dupTemp$1.field_ib + 1;
                   break L29;
                 }
               }
@@ -1063,8 +1050,7 @@ final class jh extends java.awt.Canvas {
           L0: {
             var3_int = param0.field_g;
             var5 = (CharSequence) (Object) param2;
-            int discarded$2 = -82;
-            var4 = go.a(var5);
+            var4 = go.a(var5, (byte) -82);
             param0.d(var4.length, (byte) -124);
             param0.field_g = param0.field_g + kh.field_g.a(param0.field_j, var4.length, var4, param0.field_g, 1, 0);
             stackOut_0_0 = -var3_int + param0.field_g;
@@ -1129,7 +1115,7 @@ final class jh extends java.awt.Canvas {
         return stackIn_1_0;
     }
 
-    final static void a(Throwable param0, String param1) {
+    final static void a(Throwable param0, String param1, byte param2) {
         try {
             Exception var3 = null;
             String var3_ref = null;
@@ -1274,15 +1260,14 @@ final class jh extends java.awt.Canvas {
                           break L6;
                         } else {
                           var5 = (DataInputStream) var4.field_g;
-                          int discarded$2 = var5.read();
+                          int discarded$1 = var5.read();
                           var5.close();
                           break L6;
                         }
                       }
                       break L0;
                     } else {
-                      int discarded$3 = 1;
-                      ao.a(1L);
+                      ao.a(1L, 1);
                       continue L5;
                     }
                   }
@@ -1302,7 +1287,7 @@ final class jh extends java.awt.Canvas {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;

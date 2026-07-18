@@ -15,7 +15,7 @@ final class vc extends pi {
     short[] field_t;
     static ea[] field_o;
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         return oj.field_J == -1 || nb.field_i[oj.field_J].c(-78);
     }
 

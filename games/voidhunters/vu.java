@@ -88,7 +88,7 @@ final class vu extends llb {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_zb = null;
     }
 

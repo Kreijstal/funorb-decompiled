@@ -49,8 +49,7 @@ final class pj {
                   } else {
                     if (~qh.field_c < ~oo.field_b) {
                       if (oo.field_b == 0) {
-                        int discarded$3 = -7;
-                        gd.a();
+                        gd.a((byte) -7);
                         oo.field_b = oo.field_b + 1;
                         return;
                       } else {
@@ -147,8 +146,7 @@ final class pj {
                     } else {
                       if (~qh.field_c < ~oo.field_b) {
                         if (oo.field_b == 0) {
-                          int discarded$4 = -7;
-                          gd.a();
+                          gd.a((byte) -7);
                           oo.field_b = oo.field_b + 1;
                           return;
                         } else {
@@ -243,8 +241,7 @@ final class pj {
                     } else {
                       if (~qh.field_c < ~oo.field_b) {
                         if (oo.field_b == 0) {
-                          int discarded$5 = -7;
-                          gd.a();
+                          gd.a((byte) -7);
                           oo.field_b = oo.field_b + 1;
                           return;
                         } else {
@@ -462,7 +459,7 @@ final class pj {
         ((pj) this).field_f = true;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_i = null;
     }

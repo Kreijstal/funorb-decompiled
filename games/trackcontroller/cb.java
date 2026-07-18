@@ -340,7 +340,7 @@ final class cb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_e = null;
         field_a = null;
@@ -722,7 +722,7 @@ final class cb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

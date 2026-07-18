@@ -200,11 +200,10 @@ final class pm extends q {
         if (param0 < 73) {
             return;
         }
-        int discarded$0 = 84;
-        oh.a();
+        oh.a((byte) 84);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_p = null;
         field_s = null;
         field_m = null;

@@ -47,7 +47,7 @@ final class bg implements nl {
         int var6 = 0;
         if (param1 <= 43) {
           L0: {
-            boolean discarded$3 = bg.a(-59);
+            boolean discarded$1 = bg.a(-59);
             var3 = mp.a(param0, param2, (byte) -119);
             if (var3 != null) {
               pk.field_b.a(false, (byte) -110);
@@ -63,8 +63,7 @@ final class bg implements nl {
               break L0;
             }
           }
-          int discarded$4 = 39;
-          uf.a(param0, param2);
+          uf.a(param0, param2, (byte) 39);
           return;
         } else {
           L1: {
@@ -83,8 +82,7 @@ final class bg implements nl {
               break L1;
             }
           }
-          int discarded$5 = 39;
-          uf.a(param0, param2);
+          uf.a(param0, param2, (byte) 39);
           return;
         }
     }

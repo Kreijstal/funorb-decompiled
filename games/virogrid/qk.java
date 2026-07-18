@@ -126,8 +126,7 @@ final class qk {
                   jk.field_b.field_ub = 0;
                   var7 = jk.field_b;
                   var7.field_K = 0;
-                  int discarded$1 = 1000;
-                  if (!k.b()) {
+                  if (!k.b(1000)) {
                     var9_ref_String = wl.field_d.field_Qb;
                     qi.field_e.field_V = oi.a(new String[1], ra.field_c, 2).toUpperCase();
                     jk.field_b.a(0, 40, dm.field_r.field_K, (byte) -97, dm.field_r.field_ub + -40);
@@ -764,11 +763,11 @@ final class qk {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_d = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         String var2 = null;
         if (null != cf.field_b) {
             var2 = cf.field_b;
@@ -796,26 +795,18 @@ final class qk {
         int var4 = Virogrid.field_F ? 1 : 0;
         try {
             var1 = new mg(540, 140);
-            int discarded$4 = 16865;
-            kb.a(var1);
+            kb.a(var1, 16865);
             if (param0) {
                 qk.a(true);
             }
             fk.a();
             df.c();
             kf.field_e = 0;
-            int discarded$5 = 11;
-            cm.a();
+            cm.a(11);
             var2 = var1.d();
             for (var3 = 0; var3 < 15; var3++) {
                 var2.d(-2, -2, 16777215);
-                int discarded$6 = 140;
-                int discarded$7 = 540;
-                int discarded$8 = 0;
-                int discarded$9 = 0;
-                int discarded$10 = 4;
-                int discarded$11 = 4;
-                df.d();
+                df.d(4, 4, 0, 0, 540, 140);
             }
             cc.field_u.b();
             var1.e(0, 0);
@@ -868,8 +859,7 @@ final class qk {
                     q.a("document.cookie=\"" + var5 + "\"", -17107, param1);
                 } catch (Throwable throwable) {
                 }
-                int discarded$0 = 49;
-                wf.a(param1);
+                wf.a(param1, 49);
             } catch (RuntimeException runtimeException) {
                 throw kg.a((Throwable) (Object) runtimeException, "qk.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
             }

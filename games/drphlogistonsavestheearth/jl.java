@@ -7,7 +7,7 @@ final class jl extends gi {
     static sb field_k;
     static he field_h;
 
-    final static String a(boolean param0, boolean param1, boolean param2) {
+    final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
         var4 = 0;
         if (param0) {
@@ -103,7 +103,7 @@ final class jl extends gi {
         return var2;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
         field_i = null;
         field_h = null;

@@ -71,7 +71,7 @@ abstract class df extends se {
         hg.field_rb = param1;
     }
 
-    final static String a() {
+    final static String a(int param0) {
         int var1 = 0;
         if (qj.field_p) {
             return vi.field_a[0];
@@ -246,11 +246,10 @@ abstract class df extends se {
                   oo.b();
                   ((df) this).a(true, 0, 0);
                   super.a(param0, -((df) this).field_i + -param1, param2, -param3 - ((df) this).field_y);
-                  int discarded$8 = 1;
-                  ql.a();
+                  ql.a(true);
                   ej.field_g.c(param3 + ((df) this).field_y, param1 - -((df) this).field_i, ((df) this).field_K);
                   if (param0 != -2) {
-                    cf discarded$9 = ((df) this).g(76);
+                    cf discarded$4 = ((df) this).g(76);
                     return;
                   } else {
                     return;
@@ -261,11 +260,10 @@ abstract class df extends se {
                   oo.b();
                   ((df) this).a(true, 0, 0);
                   super.a(param0, -((df) this).field_i + -param1, param2, -param3 - ((df) this).field_y);
-                  int discarded$10 = 1;
-                  ql.a();
+                  ql.a(true);
                   ej.field_g.c(param3 + ((df) this).field_y, param1 - -((df) this).field_i, ((df) this).field_K);
                   if (param0 != -2) {
-                    cf discarded$11 = ((df) this).g(76);
+                    cf discarded$5 = ((df) this).g(76);
                     return;
                   } else {
                     return;
@@ -277,11 +275,10 @@ abstract class df extends se {
                 oo.b();
                 ((df) this).a(true, 0, 0);
                 super.a(param0, -((df) this).field_i + -param1, param2, -param3 - ((df) this).field_y);
-                int discarded$12 = 1;
-                ql.a();
+                ql.a(true);
                 ej.field_g.c(param3 + ((df) this).field_y, param1 - -((df) this).field_i, ((df) this).field_K);
                 if (param0 != -2) {
-                  cf discarded$13 = ((df) this).g(76);
+                  cf discarded$6 = ((df) this).g(76);
                   return;
                 } else {
                   return;
@@ -293,11 +290,10 @@ abstract class df extends se {
               oo.b();
               ((df) this).a(true, 0, 0);
               super.a(param0, -((df) this).field_i + -param1, param2, -param3 - ((df) this).field_y);
-              int discarded$14 = 1;
-              ql.a();
+              ql.a(true);
               ej.field_g.c(param3 + ((df) this).field_y, param1 - -((df) this).field_i, ((df) this).field_K);
               if (param0 != -2) {
-                cf discarded$15 = ((df) this).g(76);
+                cf discarded$7 = ((df) this).g(76);
                 return;
               } else {
                 return;

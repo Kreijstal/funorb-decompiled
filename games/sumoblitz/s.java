@@ -14,7 +14,7 @@ final class s extends ms {
     static jn field_u;
     static String field_k;
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_n = null;
         field_u = null;

@@ -7,7 +7,7 @@ final class bl {
     static String field_c;
     static int[] field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_b = null;
     }
@@ -85,7 +85,7 @@ final class bl {
                 if (-1 != param4.indexOf("<br>")) {
                   break L1;
                 } else {
-                  param2[0] = (String) (Object) param2;
+                  param2[0] = param4;
                   stackOut_3_0 = 1;
                   stackIn_4_0 = stackOut_3_0;
                   return stackIn_4_0;
@@ -267,9 +267,7 @@ final class bl {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            int discarded$5 = 0;
-            stackOut_2_0 = bb.a(param1);
+            stackOut_2_0 = bb.a(param1, 0, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

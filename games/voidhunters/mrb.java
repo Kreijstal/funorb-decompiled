@@ -120,8 +120,7 @@ final class mrb extends rqa {
             var12 = param5 + (var10 + 5);
             hp.field_b.a(0, -69, var9_int, 0, 20);
             me.field_s.a(0, 125, var9_int, 20, var12);
-            int discarded$1 = 3;
-            me.field_s.field_gb = uwa.a(11579568, me.field_s.field_G, 2105376, 8421504, 92);
+            me.field_s.field_gb = uwa.a(11579568, me.field_s.field_G, 2105376, 8421504, 92, 3);
             var12 = var12 + 20;
             qw.field_l.a(param3 + -(var9_int / 2), -99, var9_int, -(var12 / 2) + param1, var12);
             break L0;

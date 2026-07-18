@@ -10,7 +10,7 @@ final class um implements Iterable {
     private ms field_a;
     private int field_e;
 
-    final static void b() {
+    final static void b(int param0) {
         if (!(null == vv.field_b)) {
             vv.field_b.field_g = false;
         }

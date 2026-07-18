@@ -7,10 +7,9 @@ final class jb {
     static int field_d;
     static int[] field_b;
 
-    final static void a(String param0, boolean param1, boolean param2) {
+    final static void a(String param0, boolean param1, boolean param2, int param3) {
         try {
-            int discarded$0 = 640;
-            jf.e();
+            jf.e(640);
             gl.field_E.l(24910);
             ra.field_y = new rl(qg.field_c, (String) null, vg.field_o, param2, param1);
             re.field_g = new pj(gl.field_E, (al) (Object) ra.field_y);
@@ -20,7 +19,7 @@ final class jb {
         }
     }
 
-    final static void a(byte param0, boolean param1, nb param2, int param3, java.awt.Component param4, int param5, uf param6) {
+    final static void a(byte param0, boolean param1, nb param2, int param3, java.awt.Component param4, int param5, uf param6, int param7) {
         try {
             oa.a(22050, true, 10);
             sb.field_b = oa.a(param6, param4, 0, 22050);
@@ -41,7 +40,7 @@ final class jb {
         rj.field_d.field_b = 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
     }

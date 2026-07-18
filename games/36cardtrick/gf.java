@@ -12,7 +12,7 @@ final class gf {
     private int field_f;
     private t[] field_c;
 
-    private final void a(t param0, int param1) {
+    private final void a(t param0, int param1, byte param2) {
         float var4_float = 0.0f;
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
@@ -73,7 +73,7 @@ final class gf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_a = null;
         field_e = null;
@@ -91,8 +91,7 @@ final class gf {
             var4 = ((gf) this).field_c[((gf) this).field_f];
             var2 = var4;
             if (!var4.field_d.b(4)) {
-              int discarded$4 = 73;
-              this.a(var2, 0);
+              this.a(var4, 0, (byte) 73);
               return false;
             } else {
               L1: {
@@ -102,8 +101,7 @@ final class gf {
                   if (var4.field_d.a(var4.field_c, 70)) {
                     break L1;
                   } else {
-                    int discarded$5 = 73;
-                    this.a(var2, var4.field_d.a((byte) 60, var4.field_c));
+                    this.a(var2, var4.field_d.a((byte) 60, var4.field_c), (byte) 73);
                     return false;
                   }
                 }
@@ -113,8 +111,7 @@ final class gf {
                   break L2;
                 } else {
                   if (!var4.field_d.b(4, var4.field_b)) {
-                    int discarded$6 = 73;
-                    this.a(var2, var4.field_d.a(var4.field_b, 0));
+                    this.a(var2, var4.field_d.a(var4.field_b, 0), (byte) 73);
                     return false;
                   } else {
                     break L2;
@@ -132,8 +129,7 @@ final class gf {
                       break L3;
                     } else {
                       if (!var4.field_d.a((byte) 29)) {
-                        int discarded$7 = 73;
-                        this.a(var2, var4.field_d.a(2));
+                        this.a(var2, var4.field_d.a(2), (byte) 73);
                         return false;
                       } else {
                         break L3;

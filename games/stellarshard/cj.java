@@ -7,14 +7,14 @@ final class cj {
     static int field_a;
     static rd field_b;
 
-    final static void b() {
+    final static void b(int param0) {
     }
 
-    final static pb[] a(int param0, int param1, int param2) {
+    final static pb[] a(int param0, int param1, int param2, int param3) {
         return a.a(param1, param0, 1, -128, param2);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 
@@ -84,9 +84,7 @@ final class cj {
     }
 
     private static void $cfr$clinit() {
-        int discarded$0 = 63;
-        int discarded$1 = 50;
-        ef.a();
+        ef.a(50, (byte) 63);
         field_b = new rd();
     }
 }

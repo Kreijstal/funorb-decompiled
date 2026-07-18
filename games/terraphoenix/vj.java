@@ -130,7 +130,7 @@ class vj extends eb {
         }
     }
 
-    final static void g() {
+    final static void g(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -493,13 +493,13 @@ class vj extends eb {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_L = null;
         field_O = null;
         field_K = null;
     }
 
-    final static fa a(boolean param0, boolean param1, int param2) {
+    final static fa a(boolean param0, boolean param1, int param2, byte param3, int param4) {
         return jg.a(30, 1, false, false, param2, true);
     }
 

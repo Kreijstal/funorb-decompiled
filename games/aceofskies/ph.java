@@ -172,7 +172,7 @@ final class ph {
         return var2;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_f = null;
     }
 

@@ -17,7 +17,7 @@ final class ng extends rq {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_f = null;
         field_e = null;
     }
@@ -29,7 +29,7 @@ final class ng extends rq {
         return true;
     }
 
-    final static void e() {
+    final static void e(int param0) {
         jp.b((byte) 126);
     }
 

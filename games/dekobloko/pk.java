@@ -12,7 +12,7 @@ final class pk extends bh {
     int field_p;
     int field_t;
 
-    public static void c() {
+    public static void c(int param0) {
         int var1 = 2;
         field_v = null;
         field_q = null;
@@ -137,7 +137,7 @@ final class pk extends bh {
         }
     }
 
-    final static mi a() {
+    final static mi a(int param0) {
         return vh.field_a;
     }
 

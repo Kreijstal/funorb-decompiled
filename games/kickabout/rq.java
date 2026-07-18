@@ -7,7 +7,7 @@ final class rq extends qt {
     static uo field_E;
     static java.awt.Frame field_A;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_D = null;
         field_E = null;
         field_A = null;

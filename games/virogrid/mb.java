@@ -301,7 +301,7 @@ abstract class mb extends dc {
         }
     }
 
-    final static void i() {
+    final static void i(byte param0) {
         mi.field_d = sh.field_qb.h(-118);
         CharSequence var2 = (CharSequence) (Object) mi.field_d;
         wn.field_n = c.a(var2, true);

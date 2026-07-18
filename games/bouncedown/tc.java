@@ -7,7 +7,7 @@ class tc extends jd {
     static String field_q;
     static int[] field_r;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -32,8 +32,7 @@ class tc extends jd {
               try {
                 L0: {
                   var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-                  int discarded$2 = 0;
-                  param0.getAppletContext().showDocument(ag.a(param0, var2), "_top");
+                  param0.getAppletContext().showDocument(ag.a(param0, var2, false), "_top");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -84,7 +83,7 @@ class tc extends jd {
         this(sg.field_a, param0);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_q = null;
         field_s = null;
         field_r = null;

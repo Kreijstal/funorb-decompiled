@@ -500,7 +500,7 @@ final class nj {
         return stackIn_18_0 != 0;
     }
 
-    final static int b(int param0, int param1) {
+    final static int b(int param0, int param1, int param2) {
         if (param0 < 2) {
             if (param1 >= 5) {
                 return 1;

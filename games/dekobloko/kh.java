@@ -13,7 +13,7 @@ final class kh {
     private int field_g;
     static String field_c;
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

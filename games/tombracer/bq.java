@@ -88,7 +88,7 @@ final class bq {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 31;
         field_b = null;
         field_h = null;

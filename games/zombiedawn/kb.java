@@ -179,7 +179,7 @@ final class kb extends pm {
         return stackIn_9_0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_f = null;
         field_g = null;
         field_i = null;

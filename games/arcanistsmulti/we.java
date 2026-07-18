@@ -81,14 +81,14 @@ final class we {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_d = null;
         int var1 = -1;
         field_e = null;
         field_a = null;
     }
 
-    final static int b() {
+    final static int b(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -121,8 +121,7 @@ final class we {
                     } else {
                       var2 = cf.field_c[wl.field_S.field_h];
                       if (var2 == 2) {
-                        int discarded$1 = 0;
-                        vk.c();
+                        vk.c(false);
                         break L3;
                       } else {
                         break L3;
@@ -152,7 +151,7 @@ final class we {
         return stackIn_15_0;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return null != pm.field_b || oj.field_i;
     }
 

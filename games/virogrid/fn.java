@@ -10,7 +10,7 @@ final class fn {
     static int field_c;
     static km field_e;
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0, int param1, byte param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -91,7 +91,7 @@ final class fn {
                     break L3;
                   } else {
                     L4: {
-                      StringBuilder discarded$14 = oi.field_h.append((char) var5);
+                      StringBuilder discarded$6 = oi.field_h.append((char) var5);
                       var6 = 485;
                       var18 = mi.field_d;
                       var8 = var18;
@@ -127,8 +127,7 @@ final class fn {
                                   var40 = var39 + var20 + ": ";
                                   var6 = var6 - hk.field_Ob.a(var40);
                                   if (~hk.field_Ob.a(oi.field_h.toString()) < ~var6) {
-                                    int discarded$15 = 32;
-                                    StringBuilder discarded$16 = gi.a(oi.field_h, -18340, oi.field_h.length() + -1);
+                                    StringBuilder discarded$7 = gi.a(oi.field_h, -18340, oi.field_h.length() + -1, ' ');
                                     break L7;
                                   } else {
                                     break L7;
@@ -145,8 +144,7 @@ final class fn {
                                     var38 = var37 + var20 + ": ";
                                     var6 = var6 - hk.field_Ob.a(var38);
                                     if (~hk.field_Ob.a(oi.field_h.toString()) < ~var6) {
-                                      int discarded$17 = 32;
-                                      StringBuilder discarded$18 = gi.a(oi.field_h, -18340, oi.field_h.length() + -1);
+                                      StringBuilder discarded$8 = gi.a(oi.field_h, -18340, oi.field_h.length() + -1, ' ');
                                       break L8;
                                     } else {
                                       break L8;
@@ -160,8 +158,7 @@ final class fn {
                                 var36 = var8 + var20 + ": ";
                                 var6 = var6 - hk.field_Ob.a(var36);
                                 if (~hk.field_Ob.a(oi.field_h.toString()) < ~var6) {
-                                  int discarded$19 = 32;
-                                  StringBuilder discarded$20 = gi.a(oi.field_h, -18340, oi.field_h.length() + -1);
+                                  StringBuilder discarded$9 = gi.a(oi.field_h, -18340, oi.field_h.length() + -1, ' ');
                                   break L9;
                                 } else {
                                   break L9;
@@ -194,8 +191,7 @@ final class fn {
                       }
                     }
                     if (~hk.field_Ob.a(oi.field_h.toString()) < ~var6) {
-                      int discarded$21 = 32;
-                      StringBuilder discarded$22 = gi.a(oi.field_h, -18340, oi.field_h.length() + -1);
+                      StringBuilder discarded$10 = gi.a(oi.field_h, -18340, oi.field_h.length() + -1, ' ');
                       break L3;
                     } else {
                       return true;
@@ -211,8 +207,7 @@ final class fn {
                 break L10;
               } else {
                 if (oi.field_h.length() > 0) {
-                  int discarded$23 = 32;
-                  StringBuilder discarded$24 = gi.a(oi.field_h, -18340, -1 + oi.field_h.length());
+                  StringBuilder discarded$11 = gi.a(oi.field_h, -18340, -1 + oi.field_h.length(), ' ');
                   break L10;
                 } else {
                   return true;
@@ -260,23 +255,20 @@ final class fn {
                     var16 = null;
                     var15 = null;
                     gf.a((String) null, 0, false, rl.field_q, 2, (String) null);
-                    int discarded$25 = 121;
-                    re.c();
+                    re.c((byte) 121);
                     return true;
                   }
                 } else {
                   break L12;
                 }
               }
-              int discarded$26 = 121;
-              re.c();
+              re.c((byte) 121);
               break L11;
             } else {
               if (sd.field_e == 0) {
                 break L11;
               } else {
-                int discarded$27 = 121;
-                re.c();
+                re.c((byte) 121);
                 break L11;
               }
             }
@@ -285,7 +277,7 @@ final class fn {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
         field_b = null;
         field_e = null;
@@ -295,7 +287,7 @@ final class fn {
         field_g = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         lk var3 = null;
@@ -437,8 +429,7 @@ final class fn {
                     break L3;
                   } else {
                     if (param0 <= 105) {
-                      int discarded$1 = 7655;
-                      vb.field_c = md.a(param2);
+                      vb.field_c = md.a(param2, 7655);
                       break L1;
                     } else {
                       break L3;

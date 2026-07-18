@@ -4,7 +4,7 @@
 final class gk {
     private static String field_z;
 
-    final static void a(int param0) {
+    final static void a(int param0, byte param1) {
         kh var2 = ql.field_k;
         var2.k(param0, -2988);
         var2.i(1, 0);

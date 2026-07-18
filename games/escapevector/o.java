@@ -61,7 +61,8 @@ final class o extends il {
     private int[] field_V;
 
     final int a(hj param0) {
-        if (this.c()) {
+        int var2 = this.c() ? 1 : 0;
+        if (var2 != 0) {
             if (!((o) this).field_t) {
                 return -1;
             }
@@ -72,7 +73,7 @@ final class o extends il {
     }
 
     final synchronized void a(boolean param0) {
-        ((o) this).field_t = param0 ? true : false;
+        ((o) this).field_t = param0;
     }
 
     private final void a(int param0, int param1, int param2) {
@@ -118,7 +119,6 @@ final class o extends il {
 
     private final void e() {
         int var1 = 0;
-        int var2 = 0;
         ((o) this).field_P = 0;
         ((o) this).field_M = 0;
         ((o) this).field_bb = 0;
@@ -139,16 +139,15 @@ final class o extends il {
             ((o) this).field_q = 0;
             ((o) this).field_C = -1;
             ((o) this).field_hb = 0;
-            var2 = 0;
-            var1 = var2;
+            var1 = 0;
             L1: while (true) {
-              if (var2 >= ((o) this).field_u.field_B) {
+              if (var1 >= ((o) this).field_u.field_B) {
                 ((o) this).field_M = 1;
                 return;
               } else {
-                ((o) this).field_T[var2] = null;
-                ((o) this).field_X[var2] = false;
-                var2++;
+                ((o) this).field_T[var1] = null;
+                ((o) this).field_X[var1] = false;
+                var1++;
                 continue L1;
               }
             }

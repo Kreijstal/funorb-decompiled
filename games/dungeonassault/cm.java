@@ -15,7 +15,7 @@ final class cm extends ii implements pf, vg {
     static int[] field_M;
     static ek field_R;
 
-    private final String i() {
+    private final String i(int param0) {
         return "</col></u>";
     }
 
@@ -239,7 +239,7 @@ final class cm extends ii implements pf, vg {
         return stackIn_33_0;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_M = null;
         field_S = null;
         field_K = null;
@@ -251,7 +251,7 @@ final class cm extends ii implements pf, vg {
         md.a(1.0f, param1, 1.0f, param0, param3, 0, param4);
     }
 
-    private final String a() {
+    private final String a(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -287,18 +287,15 @@ final class cm extends ii implements pf, vg {
             }
           }
           if (param0 == 0) {
-            int discarded$6 = 58;
-            lk.a("terms.ws");
+            lk.a("terms.ws", (byte) 58);
             return;
           } else {
             if (param0 == 1) {
-              int discarded$7 = 58;
-              lk.a("privacy.ws");
+              lk.a("privacy.ws", (byte) 58);
               return;
             } else {
               if (param0 == 2) {
-                int discarded$8 = 58;
-                lk.a("conduct.ws");
+                lk.a("conduct.ws", (byte) 58);
                 return;
               } else {
                 return;
@@ -459,10 +456,7 @@ final class cm extends ii implements pf, vg {
             ((cm) this).field_O = param0;
             ((cm) this).field_N = new ck(gl.field_Jb, (pg) null);
             ((cm) this).field_N.field_o = (ca) (Object) new na();
-            int discarded$3 = 120;
-            int discarded$4 = 115;
-            int discarded$5 = 30496;
-            var7 = jk.a(new String[2], nj.field_a);
+            var7 = jk.a(new String[2], nj.field_a, 30496);
             var3 = 20;
             var4 = new hh(lp.field_C, 0, 0, 0, 0, 16777215, -1, 3, 0, lp.field_C.field_H, -1, 2147483647, true);
             ((cm) this).field_L = new bh(var7, (ca) (Object) var4);
@@ -522,7 +516,6 @@ final class cm extends ii implements pf, vg {
         field_T = new ad(10, 2, 2, 0);
         field_K = "Raider escapes!";
         field_S = "Hoard";
-        int discarded$0 = 64;
-        field_M = rb.b(12632256, 8421504);
+        field_M = rb.b(12632256, 8421504, 64);
     }
 }

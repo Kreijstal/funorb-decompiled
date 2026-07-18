@@ -70,8 +70,7 @@ class id extends fb {
               if (param0 <= -76) {
                 break L1;
               } else {
-                int discarded$1 = 1;
-                this.b();
+                this.b(true);
                 break L1;
               }
             }
@@ -246,7 +245,7 @@ class id extends fb {
         field_L = null;
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         le var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -536,8 +535,8 @@ class id extends fb {
                     } else {
                       var3 = ((id) this).field_z;
                       ck.a(-9, 6836);
-                      fn discarded$3 = kh.a(93, false);
-                      fn discarded$4 = kh.a(94, false);
+                      fn discarded$2 = kh.a(93, false);
+                      fn discarded$3 = kh.a(94, false);
                       var4 = ((id) this).a((byte) -74, 48, 4);
                       L8: while (true) {
                         if (var4 == null) {
@@ -547,8 +546,7 @@ class id extends fb {
                         } else {
                           L9: {
                             if (var3 == var4.field_z) {
-                              int discarded$5 = 1;
-                              ((id) (Object) var4).b();
+                              ((id) (Object) var4).b(true);
                               break L9;
                             } else {
                               break L9;

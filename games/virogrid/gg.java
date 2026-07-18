@@ -36,8 +36,7 @@ abstract class gg extends fd {
               b.field_Eb = new mg(((gg) this).field_g, ((gg) this).field_m);
               break L0;
             }
-            int discarded$2 = 16865;
-            kb.a(b.field_Eb);
+            kb.a(b.field_Eb, 16865);
             df.c();
             ((gg) this).b(0, 23, 0);
             super.a(param0, -param1 + -((gg) this).field_l, -param2 + -((gg) this).field_u, param3);
@@ -289,7 +288,7 @@ abstract class gg extends fd {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         pc.field_b = hc.a(-9986);
         jg.field_e = 0;
     }

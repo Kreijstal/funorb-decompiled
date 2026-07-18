@@ -229,7 +229,7 @@ final class hg {
         return Math.sqrt(param1 * param1 + param2 * param2);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_a = null;
         field_d = null;

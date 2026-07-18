@@ -75,17 +75,15 @@ abstract class u {
               return stackIn_3_0 != 0;
             } else {
               if (!g.b((byte) 99, param0)) {
-                int discarded$26 = 59;
-                if (!kj.a(param0)) {
+                if (!kj.a(param0, (byte) 59)) {
                   var4 = null;
-                  ig discarded$27 = u.a((vj) null, 120, -66);
+                  ig discarded$10 = u.a((vj) null, 120, -66);
                   if (param2.length() == 0) {
                     stackOut_12_0 = 1;
                     stackIn_13_0 = stackOut_12_0;
                     return stackIn_13_0 != 0;
                   } else {
-                    int discarded$28 = -1;
-                    if (rb.a(param2, param0)) {
+                    if (rb.a(param2, param0, -1)) {
                       stackOut_16_0 = 0;
                       stackIn_17_0 = stackOut_16_0;
                       return stackIn_17_0 != 0;
@@ -245,7 +243,7 @@ abstract class u {
         return stackIn_4_0;
     }
 
-    final static int a(String param0, boolean param1) {
+    final static int a(String param0, boolean param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -312,7 +310,7 @@ abstract class u {
         return stackIn_4_0;
     }
 
-    final static void a(od param0) {
+    final static void a(od param0, byte param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;

@@ -234,8 +234,7 @@ final class bl extends tj {
                   if (param0 == null) {
                     break L1;
                   } else {
-                    int discarded$3 = -12895;
-                    var3_ref = ih.a(param0);
+                    var3_ref = ih.a(param0, -12895);
                     break L1;
                   }
                 }
@@ -315,7 +314,7 @@ final class bl extends tj {
                       L6: {
                         if (var4.field_d == 1) {
                           var5_ref_DataInputStream = (DataInputStream) var4.field_b;
-                          int discarded$4 = var5_ref_DataInputStream.read();
+                          int discarded$1 = var5_ref_DataInputStream.read();
                           var5_ref_DataInputStream.close();
                           break L6;
                         } else {
@@ -325,8 +324,7 @@ final class bl extends tj {
                       var5 = 44 % ((17 - param1) / 37);
                       break L0;
                     } else {
-                      int discarded$5 = 45;
-                      qe.a(1L);
+                      qe.a(1L, (byte) 45);
                       continue L5;
                     }
                   }
@@ -711,7 +709,7 @@ final class bl extends tj {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_o = null;
         field_n = null;
         field_r = null;

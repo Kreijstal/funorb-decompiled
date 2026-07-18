@@ -15,15 +15,13 @@ final class rf {
         try {
             var15_int = param9.field_U - -param9.field_F;
             var16 = param9.field_U;
-            int discarded$0 = 53;
-            int discarded$1 = 480;
-            pc.a(var16, param0, 320, param9, 8, 8, 2, 16777215, 8, param6, 0, var15_int, 1146810, 240, var16, 8, param9, var15_int, param14);
+            pc.a(var16, param0, 320, param9, 8, 8, 2, 16777215, 8, param6, 0, var15_int, 1146810, 240, var16, 8, param9, var15_int, param14, 480, 53);
         } catch (RuntimeException runtimeException) {
             throw ci.a((Throwable) (Object) runtimeException, "rf.B(" + (param0 != null ? "{...}" : "null") + ',' + 320 + ',' + 8 + ',' + 8 + ',' + 8 + ',' + 8 + ',' + (param6 != null ? "{...}" : "null") + ',' + 16777215 + ',' + 0 + ',' + (param9 != null ? "{...}" : "null") + ',' + 1146810 + ',' + 240 + ',' + 2 + ',' + -94 + ',' + (param14 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_d = null;
     }
 

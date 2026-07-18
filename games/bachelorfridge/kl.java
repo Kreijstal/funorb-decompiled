@@ -75,7 +75,7 @@ final class kl extends td {
         return (ii) (Object) stackIn_4_0;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         pf var2 = sja.field_fb;
         var2.c(11, (byte) 125);
         var2.d(1, 0);

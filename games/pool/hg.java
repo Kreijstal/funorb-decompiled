@@ -6,7 +6,7 @@ final class hg {
     static vh field_c;
     static int field_a;
 
-    final static void a(String param0) {
+    final static void a(String param0, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -90,14 +90,14 @@ final class hg {
         }
     }
 
-    final static java.awt.Container a() {
+    final static java.awt.Container a(boolean param0) {
         if (!(null == op.field_e)) {
             return (java.awt.Container) (Object) op.field_e;
         }
         return (java.awt.Container) (Object) hk.d(95);
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_c = null;
         field_b = null;
     }

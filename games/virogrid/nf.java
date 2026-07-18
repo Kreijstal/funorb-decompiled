@@ -55,8 +55,7 @@ final class nf {
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                int discarded$2 = 4290;
-                var3 = ij.a(param1.charAt(var4)) + (var3 << 5) - var3;
+                var3 = ij.a(param1.charAt(var4), 4290) + (var3 << 5) - var3;
                 var4++;
                 continue L2;
               }
@@ -299,7 +298,7 @@ final class nf {
         return stackIn_17_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_h = null;

@@ -81,17 +81,13 @@ class ih extends fd {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    int discarded$12 = 4;
-                    int discarded$13 = 2;
-                    ea.a();
+                    ea.a(2, 4);
                     var2 = ne.field_r.d((byte) -24);
                     continue L2;
                   }
                 }
               } else {
-                int discarded$14 = -22762;
-                int discarded$15 = 4;
-                qh.a(var4);
+                qh.a(var4, 4, -22762);
                 var4 = (ke) (Object) uk.field_d.d((byte) -127);
                 continue L1;
               }
@@ -104,7 +100,7 @@ class ih extends fd {
         }
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String a(boolean param0, CharSequence param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -151,19 +147,16 @@ class ih extends fd {
                 } else {
                   if (12 >= var3_int) {
                     L2: {
-                      int discarded$21 = 0;
-                      var4 = ce.a(param1);
+                      var4 = ce.a(param1, 0);
                       if (var4 == null) {
                         break L2;
                       } else {
                         if (var4.length() >= 1) {
                           L3: {
-                            int discarded$22 = 0;
-                            if (f.a(var4.charAt(0))) {
+                            if (f.a(var4.charAt(0), false)) {
                               break L3;
                             } else {
-                              int discarded$23 = 0;
-                              if (!f.a(var4.charAt(-1 + var4.length()))) {
+                              if (!f.a(var4.charAt(-1 + var4.length()), false)) {
                                 var5 = 0;
                                 var6 = 0;
                                 L4: while (true) {
@@ -178,8 +171,7 @@ class ih extends fd {
                                   } else {
                                     L5: {
                                       var7 = param1.charAt(var6);
-                                      int discarded$24 = 0;
-                                      if (!f.a((char) var7)) {
+                                      if (!f.a((char) var7, false)) {
                                         var5 = 0;
                                         break L5;
                                       } else {

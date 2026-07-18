@@ -100,10 +100,9 @@ final class sf extends rg {
                         stackIn_16_0 = stackOut_15_0;
                         stackIn_16_1 = stackOut_15_1;
                         if (var6 != 0) {
-                          int discarded$2 = 8;
                           stackOut_17_0 = (char[]) (Object) stackIn_17_0;
                           stackOut_17_1 = stackIn_17_1;
-                          stackOut_17_2 = s.a((byte) var6);
+                          stackOut_17_2 = s.a((byte) var6, 8);
                           stackIn_18_0 = stackOut_17_0;
                           stackIn_18_1 = stackOut_17_1;
                           stackIn_18_2 = stackOut_17_2;
@@ -143,10 +142,9 @@ final class sf extends rg {
                           stackIn_10_0 = stackOut_9_0;
                           stackIn_10_1 = stackOut_9_1;
                           if (var6 != 0) {
-                            int discarded$3 = 8;
                             stackOut_11_0 = (char[]) (Object) stackIn_11_0;
                             stackOut_11_1 = stackIn_11_1;
-                            stackOut_11_2 = s.a((byte) var6);
+                            stackOut_11_2 = s.a((byte) var6, 8);
                             stackIn_12_0 = stackOut_11_0;
                             stackIn_12_1 = stackOut_11_1;
                             stackIn_12_2 = stackOut_11_2;

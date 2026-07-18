@@ -21,24 +21,17 @@ final class e {
         ((e) this).field_c = param1 ? true : false;
     }
 
-    final static void b() {
-        int discarded$0 = 0;
-        vl.field_f = new am(kg.a(hk.field_e, 100));
-        int discarded$1 = 0;
-        be.field_d = new am(kg.a(rh.field_g, 100));
-        int discarded$2 = 0;
-        tl.field_a = new am(kg.a(mo.field_i, 100));
-        int discarded$3 = 0;
-        jo.field_p = new am(kg.a(pl.field_h, 100));
-        int discarded$4 = 0;
-        sa.field_mb = new am(kg.a(sj.field_d, 100));
-        int discarded$5 = 0;
-        io.field_M = new am(kg.a(jn.field_m, 100));
-        int discarded$6 = 0;
-        ec.field_k = new am(kg.a(bb.field_x, 100));
+    final static void b(byte param0) {
+        vl.field_f = new am(kg.a(hk.field_e, 100, 0));
+        be.field_d = new am(kg.a(rh.field_g, 100, 0));
+        tl.field_a = new am(kg.a(mo.field_i, 100, 0));
+        jo.field_p = new am(kg.a(pl.field_h, 100, 0));
+        sa.field_mb = new am(kg.a(sj.field_d, 100, 0));
+        io.field_M = new am(kg.a(jn.field_m, 100, 0));
+        ec.field_k = new am(kg.a(bb.field_x, 100, 0));
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_b = null;
     }
@@ -138,16 +131,12 @@ final class e {
             p.field_f = wl.a("jagex_logo_grey", param2, 10, "commonui");
             sb.field_B = bf.a(-1, "button", "commonui", param2);
             ao.field_b = we.a("validation", "commonui", param2, false);
-            int discarded$5 = 17153;
-            ba.field_i = (vc) (Object) lj.a(param2, "commonui", param3, "arezzo12");
-            int discarded$6 = 17153;
-            ai.field_h = (vc) (Object) lj.a(param2, "commonui", param3, "arezzo14");
-            int discarded$7 = 17153;
-            mo.field_m = (vc) (Object) lj.a(param2, "commonui", param3, "arezzo14bold");
+            ba.field_i = (vc) (Object) lj.a(param2, "commonui", param3, "arezzo12", 17153);
+            ai.field_h = (vc) (Object) lj.a(param2, "commonui", param3, "arezzo14", 17153);
+            mo.field_m = (vc) (Object) lj.a(param2, "commonui", param3, "arezzo14bold", 17153);
             var17 = new dl(param1.a(7693, "", "button.gif"), (java.awt.Component) (Object) jd.field_D);
-            wj discarded$8 = ee.a(param2, "commonui", (byte) -92, "dropdown");
-            int discarded$9 = 0;
-            var5 = ep.a(param2, "screen_options", "commonui");
+            wj discarded$1 = ee.a(param2, "commonui", (byte) -92, "dropdown");
+            var5 = ep.a(param2, "screen_options", "commonui", false);
             ik.field_g = new wj[4];
             pn.field_i = new wj[4];
             db.field_a = new wj[4];

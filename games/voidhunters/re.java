@@ -387,8 +387,7 @@ final class re extends ar {
                           break L9;
                         }
                       }
-                      int discarded$1 = 18126;
-                      tbb.a(stackIn_40_0, stackIn_40_1, var14, var13);
+                      tbb.a(stackIn_40_0, stackIn_40_1, var14, var13, 18126);
                       break L8;
                     }
                   }
@@ -490,8 +489,7 @@ final class re extends ar {
             if (param2 != -3) {
                 field_n = null;
             }
-            int discarded$0 = 18126;
-            tbb.a(param1, 0, var8, param3);
+            tbb.a(param1, 0, var8, param3, 18126);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "re.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -526,16 +524,15 @@ final class re extends ar {
             var7 = param4.b(param2);
             var8.field_c[0] = -(var7 >> 1) + param1;
             var8.field_c[param2.length()] = (var7 >> 1) + param1;
-            int discarded$0 = 18126;
-            tbb.a(param4, 0, var8, param2);
+            tbb.a(param4, 0, var8, param2, 18126);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "re.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, no param1, int param2, int param3, String param4) {
-        toa var7 = null;
         toa var8 = null;
+        toa var9 = null;
         if (param4 == null) {
             ((re) this).field_c = null;
             return;
@@ -559,12 +556,11 @@ final class re extends ar {
         try {
             ((re) this).field_f = true;
             ((re) this).field_g = param1;
-            var7 = this.a(93, param4, param1, param0);
-            var8 = var7;
-            var8.field_c[0] = -param1.b(param4) + param3;
-            var7.field_c[param4.length()] = param3;
-            int discarded$0 = 18126;
-            tbb.a(param1, 0, var8, param4);
+            var8 = this.a(93, param4, param1, param0);
+            var9 = var8;
+            var9.field_c[0] = -param1.b(param4) + param3;
+            var9.field_c[param4.length()] = param3;
+            tbb.a(param1, 0, var9, param4, 18126);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "re.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

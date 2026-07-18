@@ -212,7 +212,7 @@ final class hg extends ka {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_u = null;
         field_q = null;
         field_s = null;

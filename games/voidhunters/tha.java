@@ -78,7 +78,7 @@ final class tha extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
     }
 

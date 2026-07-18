@@ -7,7 +7,7 @@ final class tt {
     static vd[] field_c;
     static boolean field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         field_c = null;
@@ -36,9 +36,7 @@ final class tt {
                   }
                 }
               } else {
-                int discarded$4 = 62;
-                int discarded$5 = 6;
-                nn.a(var4);
+                nn.a(var4, 6, (byte) 62);
                 var4 = (ds) (Object) cl.field_eb.b((byte) 103);
                 continue L1;
               }
@@ -51,7 +49,7 @@ final class tt {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (null != jf.field_a) {
           pg.a((java.awt.Canvas) (Object) jf.field_a, 87);
           jf.field_a.a((byte) 87, pt.field_b);

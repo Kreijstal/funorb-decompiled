@@ -13,7 +13,7 @@ final class sk extends h {
         ((sk) this).field_K = 256;
     }
 
-    final static void a(String[] args, int param1, oi param2, int param3, boolean param4) {
+    final static void a(String[] args, int param1, oi param2, int param3, boolean param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int[] var7 = null;
@@ -101,8 +101,7 @@ final class sk extends h {
               if (param3 <= var8) {
                 L2: {
                   L3: {
-                    int discarded$1 = 0;
-                    var17 = id.a(hi.field_w);
+                    var17 = id.a(hi.field_w, false);
                     pe.field_o = new qj(args, -1, var6_int, param2, var16, var17);
                     pe.field_o.a((byte) 119, param1);
                     pe.field_o.field_q = true;
@@ -311,10 +310,8 @@ final class sk extends h {
               }
               L7: {
                 if (dp.field_y) {
-                  int discarded$4 = 7;
-                  eq.a();
-                  int discarded$5 = 119;
-                  bf.a();
+                  eq.a(7);
+                  bf.a((byte) 119);
                   uc.e(-94);
                   dp.field_y = false;
                   break L7;
@@ -355,7 +352,7 @@ final class sk extends h {
         var6.b(param1 + ((sk) this).field_o, param0 - -((sk) this).field_w, ((sk) this).field_K);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_J = null;
         field_G = null;
     }

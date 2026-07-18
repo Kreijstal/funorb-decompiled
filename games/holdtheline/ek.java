@@ -142,7 +142,7 @@ final class ek implements dh {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_n = null;
         field_c = null;
         field_u = null;

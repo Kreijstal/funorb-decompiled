@@ -9,7 +9,7 @@ final class uq {
     static String field_e;
     static String field_f;
 
-    final static void a() {
+    final static void a(byte param0) {
         vg.field_Wb = true;
         ov.field_b = 0;
     }

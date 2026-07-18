@@ -9,8 +9,7 @@ abstract class we {
     final static void a(int param0, java.applet.Applet param1) {
         try {
             kc.a(param1, 1263, "");
-            int discarded$0 = -1;
-            q.a(param1);
+            q.a(param1, -1);
         } catch (RuntimeException runtimeException) {
             throw sl.a((Throwable) (Object) runtimeException, "we.D(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -167,7 +166,7 @@ abstract class we {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }

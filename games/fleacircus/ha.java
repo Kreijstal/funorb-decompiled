@@ -13,12 +13,12 @@ final class ha extends lh {
     static sf field_o;
     static boolean field_k;
 
-    final static void a() {
+    final static void a(int param0) {
         ee.field_i = false;
         int discarded$0 = ae.field_a.e(false);
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_p = null;
         field_m = null;
         field_i = null;
@@ -68,7 +68,7 @@ final class ha extends lh {
                 break L1;
               } else {
                 var5 = null;
-                boolean discarded$4 = ha.a((rh) null, -106, -37, 82);
+                boolean discarded$2 = ha.a((rh) null, -106, -37, 82);
                 break L1;
               }
             }
@@ -79,8 +79,7 @@ final class ha extends lh {
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0 != 0;
             } else {
-              int discarded$5 = -91;
-              l.a(var6);
+              l.a(var6, (byte) -91);
               stackOut_6_0 = 1;
               stackIn_7_0 = stackOut_6_0;
               break L0;
@@ -119,7 +118,7 @@ final class ha extends lh {
         return stackIn_7_0 != 0;
     }
 
-    final static mk a(String[] args) {
+    final static mk a(String[] args, int param1) {
         mk var2 = null;
         RuntimeException var2_ref = null;
         mk stackIn_1_0 = null;
@@ -181,7 +180,7 @@ final class ha extends lh {
         return stackIn_1_0;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

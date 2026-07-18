@@ -5,12 +5,12 @@ final class mh {
     static ak field_b;
     static o field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }
 
-    final static void a(fb param0, int param1) {
+    final static void a(fb param0, int param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -108,8 +108,7 @@ final class mh {
         ga.field_k.a((uf) (Object) new hd(param1), -16611);
         if (!kg.field_q) {
             if (!bk.c(-25704)) {
-                int discarded$1 = 43;
-                eg discarded$2 = cl.a(4, -ge.field_e + oe.field_c, oh.field_e, param1, km.field_e, bh.field_a, param2);
+                eg discarded$1 = cl.a(4, -ge.field_e + oe.field_c, oh.field_e, param1, km.field_e, bh.field_a, param2, (byte) 43);
             } else {
                 u.field_c.a((uf) (Object) new eg(param1, param2, -ge.field_e + oe.field_c, km.field_e, oh.field_e, bh.field_a), -16611);
             }

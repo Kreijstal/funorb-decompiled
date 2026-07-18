@@ -232,8 +232,7 @@ final class qj {
         StringBuilder stackOut_5_1 = null;
         String stackOut_5_2 = null;
         try {
-          int discarded$7 = 83;
-          if (tj.a(param1, param0, param3)) {
+          if (tj.a(param1, param0, param3, (byte) 83)) {
             return af.a((byte) -109);
           } else {
             return null;

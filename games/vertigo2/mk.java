@@ -24,12 +24,10 @@ final class mk extends cj implements cm, ij, nc {
     public final void a(int param0, d param1, byte param2, int param3, int param4) {
         try {
             if (((mk) this).field_O == param1) {
-                int discarded$1 = 81;
-                sg.b();
+                sg.b((byte) 81);
             } else {
                 if (param1 == ((mk) this).field_I) {
-                    int discarded$2 = 14;
-                    boolean discarded$3 = this.a();
+                    boolean discarded$0 = this.a((byte) 14);
                 }
             }
             int var6_int = 17 % ((-63 - param2) / 51);
@@ -135,7 +133,7 @@ final class mk extends cj implements cm, ij, nc {
         return stackIn_14_0 != 0;
     }
 
-    private final boolean a() {
+    private final boolean a(byte param0) {
         if (!(this.l(-6551))) {
             return false;
         }
@@ -323,7 +321,7 @@ final class mk extends cj implements cm, ij, nc {
         return stackIn_3_0;
     }
 
-    private final int a(String param0, int param1, iq param2, int param3) {
+    private final int a(String param0, int param1, iq param2, int param3, int param4) {
         mg var6 = null;
         RuntimeException var6_ref = null;
         lr var7 = null;
@@ -456,23 +454,20 @@ final class mk extends cj implements cm, ij, nc {
               break L0;
             } else {
               var7 = null;
-              boolean discarded$8 = ((mk) this).a('', -23, 79, (iq) null);
+              boolean discarded$2 = ((mk) this).a('', -23, 79, (iq) null);
               break L0;
             }
           }
           if (param1 == 0) {
-            int discarded$9 = 12;
-            se.a("terms.ws");
+            se.a("terms.ws", 12);
             return;
           } else {
             if (param1 == 1) {
-              int discarded$10 = 12;
-              se.a("privacy.ws");
+              se.a("privacy.ws", 12);
               return;
             } else {
               if (param1 == 2) {
-                int discarded$11 = 12;
-                se.a("conduct.ws");
+                se.a("conduct.ws", 12);
                 return;
               } else {
                 return;
@@ -511,7 +506,7 @@ final class mk extends cj implements cm, ij, nc {
         }
     }
 
-    private final String i() {
+    private final String i(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -548,7 +543,7 @@ final class mk extends cj implements cm, ij, nc {
         }
     }
 
-    private final String j() {
+    private final String j(int param0) {
         return "</col></u>";
     }
 
@@ -668,21 +663,14 @@ final class mk extends cj implements cm, ij, nc {
         om dupTemp$1 = new om(10000536);
         ((mk) this).field_Q.field_B = (ur) (Object) dupTemp$1;
         ((mk) this).field_U.field_B = (ur) (Object) dupTemp$1;
-        int discarded$2 = 23559;
-        int discarded$3 = 10000536;
         String var2 = Vertigo2.a(new String[2], k.field_b, -125);
         int var3 = 20;
         var3 = var3 + this.b(le.field_c, 48, (iq) (Object) ((mk) this).field_F, 170, var3);
         var3 = var3 + (5 + this.a(27557, var3, 20, (iq) (Object) ((mk) this).field_L, "", 170, re.field_f));
         var3 = var3 + this.b(uc.field_c, 125, (iq) (Object) ((mk) this).field_U, 170, var3);
-        int discarded$4 = 170;
-        int discarded$5 = 0;
-        var3 = var3 + (5 + this.a(ag.field_c, (iq) (Object) ((mk) this).field_Q, var3, ln.field_a));
-        int discarded$6 = 170;
-        int discarded$7 = 0;
-        var3 = var3 + (this.a(jg.field_m, (iq) (Object) ((mk) this).field_H, var3, kd.field_q) - -5);
-        int discarded$8 = 268;
-        var3 = var3 + this.a(po.field_b, 170, (iq) (Object) ((mk) this).field_T, var3);
+        var3 = var3 + (5 + this.a(ag.field_c, (iq) (Object) ((mk) this).field_Q, var3, ln.field_a, 0, 170));
+        var3 = var3 + (this.a(jg.field_m, (iq) (Object) ((mk) this).field_H, var3, kd.field_q, 0, 170) - -5);
+        var3 = var3 + this.a(po.field_b, 170, (iq) (Object) ((mk) this).field_T, var3, 268);
         mg var4 = new mg(46, var3, ((mk) this).field_n + -90, 25, (iq) (Object) ((mk) this).field_R, true, -120 + ((mk) this).field_n, 5, bl.field_N, 11579568, ll.field_d);
         ((mk) this).c((byte) 88, (iq) (Object) var4);
         var3 = var3 + var4.field_s;
@@ -733,7 +721,7 @@ final class mk extends cj implements cm, ij, nc {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_S = null;
         field_K = null;
         field_P = null;
@@ -747,7 +735,7 @@ final class mk extends cj implements cm, ij, nc {
         }
     }
 
-    private final int a(String param0, iq param1, int param2, String param3) {
+    private final int a(String param0, iq param1, int param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;

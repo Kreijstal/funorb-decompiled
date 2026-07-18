@@ -526,8 +526,7 @@ final class iv extends pp {
                   }
                   if (var9 != 248) {
                     if (var9 == 99) {
-                      int discarded$3 = -125;
-                      boolean discarded$4 = ii.b(md.d(), 0);
+                      boolean discarded$1 = ii.b(md.d((byte) -125), 0);
                       vg.field_l = new Boolean(qla.a((byte) 112, (lu) (Object) ig.field_m));
                       ig.field_m.field_g = 0;
                       break L8;
@@ -593,8 +592,7 @@ final class iv extends pp {
                     } else {
                       var9_ref_String = ig.field_m.g((byte) 56);
                       if (var9_ref_String != null) {
-                        int discarded$5 = 3;
-                        hp.a(nia.d(-31768), var9_ref_String);
+                        hp.a(nia.d(-31768), var9_ref_String, 3);
                         break L13;
                       } else {
                         break L13;
@@ -725,7 +723,7 @@ final class iv extends pp {
         return stackIn_64_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
     }
 
@@ -1156,9 +1154,7 @@ final class iv extends pp {
         int var2 = -(eb.field_t * eb.field_t) + var1;
         int var3 = fs.field_f - -((pda.field_p - fs.field_f) * var2 / var1);
         i.field_a.a(120, 31407, 640, ce.field_t, var3);
-        int discarded$0 = 640;
-        int discarded$1 = 0;
-        taa.a(5, gba.field_Bb, 91, -24 + pda.field_p, lm.field_d);
+        taa.a(5, gba.field_Bb, 91, -24 + pda.field_p, lm.field_d, 0, 640);
     }
 
     private final at a(int param0, byte param1, ad param2, int param3, gj param4) {

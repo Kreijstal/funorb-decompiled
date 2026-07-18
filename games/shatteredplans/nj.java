@@ -6,7 +6,7 @@ import java.lang.String;
 final class nj {
     static int field_a;
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = (kh.field_Mb + -640) / 2;
         int var2 = ed.field_f * ed.field_f;
         int var3 = var2 - qa.field_t * qa.field_t;
@@ -57,8 +57,7 @@ final class nj {
             var7 = (CharSequence) (Object) param0;
             if (gb.a((byte) -118, var7)) {
               if (po.field_b == 2) {
-                int discarded$3 = -105;
-                if (!jp.a(param0)) {
+                if (!jp.a(param0, (byte) -105)) {
                   if (da.a(-30106, param0)) {
                     stackOut_11_0 = re.a(tr.field_pb, 4371, new String[1]);
                     stackIn_12_0 = stackOut_11_0;
@@ -82,13 +81,12 @@ final class nj {
                         break L2;
                       } else {
                         var5 = null;
-                        String discarded$4 = nj.a((String) null, -114, (byte) -20);
+                        String discarded$1 = nj.a((String) null, -114, (byte) -20);
                         break L2;
                       }
                     }
                     if (r.field_c < 200) {
-                      int discarded$5 = 1;
-                      if (ti.a(param0)) {
+                      if (ti.a(param0, true)) {
                         stackOut_25_0 = re.a(go.field_G, 4371, new String[1]);
                         stackIn_26_0 = stackOut_25_0;
                         return stackIn_26_0;
@@ -213,7 +211,7 @@ final class nj {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1 = 0;
         var1 = 0;
         fa.field_X = null;

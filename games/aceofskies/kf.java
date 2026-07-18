@@ -58,7 +58,7 @@ final class kf extends sk {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         int var2 = ((kf) this).field_b.n((byte) -103);
         ec var3 = ((kf) this).field_b.t(-11198);
         if (((kf) this).field_f) {
@@ -415,7 +415,7 @@ final class kf extends sk {
         }
     }
 
-    final static void f() {
+    final static void f(int param0) {
         ud.field_e = null;
         ji.field_b = null;
         lh.field_a = null;
@@ -499,8 +499,7 @@ final class kf extends sk {
           ((kf) this).field_b.a(true, 2, true, dl.field_p, false);
           ((kf) this).field_b.a(un.field_i, 0, 0);
           ((kf) this).field_b.a(0, (byte) 109);
-          int discarded$2 = -23521;
-          this.h();
+          this.h(-23521);
           return;
         } else {
           L1: {
@@ -529,8 +528,7 @@ final class kf extends sk {
           ((kf) this).field_b.a(true, 2, true, dl.field_p, false);
           ((kf) this).field_b.a(un.field_i, 0, 0);
           ((kf) this).field_b.a(0, (byte) 109);
-          int discarded$3 = -23521;
-          this.h();
+          this.h(-23521);
           return;
         }
     }

@@ -11,7 +11,7 @@ class vh extends uf {
     vh field_o;
     static String field_h;
 
-    final static boolean a(int param0, int param1, fa param2) {
+    final static boolean a(int param0, int param1, fa param2, boolean param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -44,8 +44,7 @@ class vh extends uf {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
             } else {
-              int discarded$2 = -110;
-              b.a(var5);
+              b.a(var5, (byte) -110);
               stackOut_4_0 = 1;
               stackIn_5_0 = stackOut_4_0;
               break L0;

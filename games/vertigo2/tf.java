@@ -8,7 +8,7 @@ final class tf extends wm {
     static int[] field_p;
     static String field_m;
 
-    final static cr b() {
+    final static cr b(byte param0) {
         return uk.field_v.field_Nb;
     }
 
@@ -27,8 +27,7 @@ final class tf extends wm {
         int stackOut_7_0 = 0;
         if (param0 > 22) {
           if (un.field_Lb == null) {
-            int discarded$5 = -120;
-            if (!mb.a()) {
+            if (!mb.a((byte) -120)) {
               if (up.field_z == null) {
                 if (uj.c((byte) -87)) {
                   return true;

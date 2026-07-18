@@ -19,7 +19,7 @@ final class ud extends rk {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         om var4 = null;

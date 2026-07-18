@@ -175,7 +175,7 @@ final class pf extends mi {
         throw new Error();
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_A = null;
     }
 

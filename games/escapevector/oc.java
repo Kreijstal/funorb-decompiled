@@ -219,7 +219,7 @@ final class oc extends fl {
         return true;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_z = null;
         field_D = null;
         field_r = null;
@@ -255,8 +255,7 @@ final class oc extends fl {
             var8 = stackIn_6_0;
             try {
               L2: {
-                int discarded$2 = 96;
-                var9 = this.e();
+                var9 = this.e((byte) 96);
                 L3: while (true) {
                   if (var7 >= 640) {
                     break L2;
@@ -366,7 +365,7 @@ final class oc extends fl {
         }
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         int var2 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -808,8 +807,7 @@ final class oc extends fl {
         int var7 = -100 % ((-7 - param2) / 38);
         if (rl.field_k == null) {
             rl.field_k = new te(param3 + -param5, param4 - param1, 256);
-            int discarded$0 = -82;
-            this.g();
+            this.g((byte) -82);
         } else {
             rl.field_k.field_g = param0;
             rl.field_k.field_a = param0;
@@ -1072,7 +1070,7 @@ final class oc extends fl {
         }
     }
 
-    private final te e() {
+    private final te e(byte param0) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;

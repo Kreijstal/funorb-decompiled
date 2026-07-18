@@ -11,8 +11,7 @@ final class to extends de {
 
     final static void g(byte param0) {
         if (el.field_b == 10) {
-          int discarded$4 = 20;
-          tj.h();
+          tj.h(20);
           el.field_b = 11;
           go.field_f = true;
           if (param0 > 36) {
@@ -23,8 +22,7 @@ final class to extends de {
           }
         } else {
           if (!ri.a(-88)) {
-            int discarded$5 = 20;
-            tj.h();
+            tj.h(20);
             el.field_b = 11;
             go.field_f = true;
             if (param0 <= 36) {
@@ -53,7 +51,7 @@ final class to extends de {
         ((to) this).b((byte) -71);
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_p = null;
         field_r = null;
         int var1 = 0;

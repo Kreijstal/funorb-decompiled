@@ -14,7 +14,7 @@ final class cg extends ct {
     static String field_L;
     private int field_M;
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -197,7 +197,7 @@ final class cg extends ct {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_E = null;
         field_L = null;
         field_G = null;

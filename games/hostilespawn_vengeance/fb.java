@@ -139,12 +139,11 @@ final class fb extends ql {
                       ln.field_a.field_c[var6] = 4;
                       ln.field_a.field_c[var6 + -1] = 4;
                       ln.field_a.field_c[var6 - -1] = 4;
-                      int fieldTemp$5 = dk.field_o;
+                      int fieldTemp$4 = dk.field_o;
                       dk.field_o = dk.field_o + 1;
-                      vj.field_w[fieldTemp$5] = new qm(ln.field_a, ((fb) this).field_k, 145, rl.field_c, 0, false);
+                      vj.field_w[fieldTemp$4] = new qm(ln.field_a, ((fb) this).field_k, 145, rl.field_c, 0, false);
                       tb.field_N = 150;
-                      int discarded$6 = 1;
-                      tk.a(1, jc.field_c, 31);
+                      tk.a(1, jc.field_c, 31, true);
                       break L3;
                     } else {
                       break L4;
@@ -175,9 +174,9 @@ final class fb extends ql {
                     var9 = new oj(((fb) this).field_d[var4], 18, rl.field_c);
                     var5_ref_oj = var9;
                     var5_ref_oj.field_M = 0;
-                    int fieldTemp$7 = el.field_j;
+                    int fieldTemp$5 = el.field_j;
                     el.field_j = el.field_j + 1;
-                    mm.field_m[fieldTemp$7] = var9;
+                    mm.field_m[fieldTemp$5] = var9;
                     break L6;
                   }
                 }
@@ -281,9 +280,9 @@ final class fb extends ql {
                   ca.a((double)(((fb) this).field_p.field_e - -1), 0, (double)(((fb) this).field_p.field_g - -3), true, 0);
                   ((fb) this).field_o = new qm(ln.field_a, var3, 230, rl.field_c, 0, false);
                   ((fb) this).field_o.field_c = var11.field_c;
-                  int fieldTemp$8 = dk.field_o;
+                  int fieldTemp$6 = dk.field_o;
                   dk.field_o = dk.field_o + 1;
-                  vj.field_w[fieldTemp$8] = ((fb) this).field_o;
+                  vj.field_w[fieldTemp$6] = ((fb) this).field_o;
                   break L10;
                 } else {
                   break L10;
@@ -478,9 +477,9 @@ final class fb extends ql {
                           break L24;
                         }
                       }
-                      int fieldTemp$9 = el.field_j;
+                      int fieldTemp$7 = el.field_j;
                       el.field_j = el.field_j + 1;
-                      mm.field_m[fieldTemp$9] = var10;
+                      mm.field_m[fieldTemp$7] = var10;
                       break L16;
                     } else {
                       break L16;
@@ -693,7 +692,7 @@ final class fb extends ql {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

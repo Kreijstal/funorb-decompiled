@@ -91,14 +91,13 @@ final class id implements Iterator {
                   var5 = sd.field_F[11] >> 8;
                   var6 = nl.field_d << 4;
                   var7 = 0;
-                  int discarded$2 = 51;
-                  var8 = oj.a(var6) >> 8;
+                  var8 = oj.a(var6, (byte) 51) >> 8;
                   var9 = jg.a(8191, var6) >> 8;
                   if (param0 == 439027688) {
                     break L2;
                   } else {
                     var20 = null;
-                    ab discarded$3 = id.a(-29, (String) null);
+                    ab discarded$1 = id.a(-29, (String) null);
                     break L2;
                   }
                 }
@@ -193,7 +192,7 @@ final class id implements Iterator {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_g = null;
         field_c = null;

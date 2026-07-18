@@ -8,7 +8,7 @@ final class ena extends pu {
     static String[] field_o;
     static int field_n;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_p = null;
         field_o = null;
         field_l = null;

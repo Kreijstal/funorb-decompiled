@@ -90,14 +90,14 @@ final class ta extends nl {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_O = null;
         field_M = null;
         field_Q = null;
         field_R = null;
     }
 
-    final static void a(String param0, int param1, int param2, String param3, String param4) {
+    final static void a(String param0, int param1, int param2, String param3, String param4, int param5) {
         mo var6 = null;
         RuntimeException var6_ref = null;
         RuntimeException stackIn_4_0 = null;

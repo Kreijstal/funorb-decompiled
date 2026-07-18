@@ -19,7 +19,7 @@ final class we {
         ug.field_A.a(26, 0, 0);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         field_c = null;
         field_h = null;

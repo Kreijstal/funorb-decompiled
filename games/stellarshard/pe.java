@@ -6,7 +6,7 @@ final class pe {
     static bd field_c;
     static String field_a;
 
-    final static void b() {
+    final static void b(int param0) {
         n.field_i = nk.a(-20);
         na.field_d = new ei();
         th.a(true, true, 4);
@@ -18,10 +18,10 @@ final class pe {
         var1 = (u) (Object) i.field_c.b(-103);
         if (var1 != null) {
           var2 = ae.field_N;
+          int discarded$48 = var2.b(false);
+          int discarded$49 = var2.b(false);
           int discarded$50 = var2.b(false);
           int discarded$51 = var2.b(false);
-          int discarded$52 = var2.b(false);
-          int discarded$53 = var2.b(false);
           if (param0 != 25214) {
             field_c = null;
             var1.c(param0 + -25194);
@@ -31,8 +31,7 @@ final class pe {
             return;
           }
         } else {
-          int discarded$54 = -2290;
-          oj.c();
+          oj.c(-2290);
           return;
         }
     }

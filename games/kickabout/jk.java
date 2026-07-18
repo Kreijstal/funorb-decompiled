@@ -442,7 +442,7 @@ final class jk extends gn {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_o = null;
         field_m = null;
         field_i = null;
@@ -612,9 +612,9 @@ final class jk extends gn {
                                             var13_int = var15_int;
                                             break L8;
                                           } else {
-                                            int incrementValue$11 = var12;
+                                            int incrementValue$9 = var12;
                                             var12++;
-                                            var13_int = incrementValue$11;
+                                            var13_int = incrementValue$9;
                                             break L8;
                                           }
                                         }
@@ -793,8 +793,7 @@ final class jk extends gn {
                                                                                                         var28 = var31;
                                                                                                         continue L32;
                                                                                                       } else {
-                                                                                                        int discarded$12 = -72;
-                                                                                                        var34 = vc.a(var30 + -var27, var32);
+                                                                                                        var34 = vc.a(var30 + -var27, var32, (byte) -72);
                                                                                                         ((jk) this).field_n[var33] = (byte)(var34 * ((jk) this).field_n[var33] - -32 >> 6);
                                                                                                         var32 = var32 + (-var28 + var31);
                                                                                                         var33++;
@@ -877,8 +876,7 @@ final class jk extends gn {
                                                                                                         continue L38;
                                                                                                       } else {
                                                                                                         L43: {
-                                                                                                          int discarded$13 = -72;
-                                                                                                          var34 = vc.a(var30 + -var27, var32);
+                                                                                                          var34 = vc.a(var30 + -var27, var32, (byte) -72);
                                                                                                           var35 = (255 & ((jk) this).field_k[var37]) - -var34;
                                                                                                           if (var35 >= 0) {
                                                                                                             break L43;
@@ -1117,9 +1115,9 @@ final class jk extends gn {
                                                                                 var20 = -1;
                                                                                 break L66;
                                                                               } else {
-                                                                                int incrementValue$14 = var21;
+                                                                                int incrementValue$10 = var21;
                                                                                 var21++;
-                                                                                var20 = var18[incrementValue$14];
+                                                                                var20 = var18[incrementValue$10];
                                                                                 break L66;
                                                                               }
                                                                             }
@@ -1151,9 +1149,9 @@ final class jk extends gn {
                                                                               var20 = -1;
                                                                               break L68;
                                                                             } else {
-                                                                              int incrementValue$15 = var21;
+                                                                              int incrementValue$11 = var21;
                                                                               var21++;
-                                                                              var20 = var10[incrementValue$15];
+                                                                              var20 = var10[incrementValue$11];
                                                                               break L68;
                                                                             }
                                                                           }
@@ -1181,15 +1179,15 @@ final class jk extends gn {
                                                                             var20 = -1;
                                                                             break L71;
                                                                           } else {
-                                                                            int incrementValue$16 = var21;
+                                                                            int incrementValue$12 = var21;
                                                                             var21++;
-                                                                            var20 = var7[incrementValue$16];
+                                                                            var20 = var7[incrementValue$12];
                                                                             break L71;
                                                                           }
                                                                         }
-                                                                        int incrementValue$17 = var8;
+                                                                        int incrementValue$13 = var8;
                                                                         var8++;
-                                                                        var24 = var38.field_f[incrementValue$17] + 16 << 2;
+                                                                        var24 = var38.field_f[incrementValue$13] + 16 << 2;
                                                                         break L70;
                                                                       }
                                                                     }
@@ -1216,15 +1214,15 @@ final class jk extends gn {
                                                                         var20 = -1;
                                                                         break L74;
                                                                       } else {
-                                                                        int incrementValue$18 = var21;
+                                                                        int incrementValue$14 = var21;
                                                                         var21++;
-                                                                        var20 = var4[incrementValue$18];
+                                                                        var20 = var4[incrementValue$14];
                                                                         break L74;
                                                                       }
                                                                     }
-                                                                    int incrementValue$19 = var5;
+                                                                    int incrementValue$15 = var5;
                                                                     var5++;
-                                                                    var23 = var38.field_f[incrementValue$19] + -1;
+                                                                    var23 = var38.field_f[incrementValue$15] + -1;
                                                                     break L73;
                                                                   }
                                                                 }
@@ -1244,9 +1242,9 @@ final class jk extends gn {
                                                           } else {
                                                             L76: {
                                                               if (~var66.length < ~var21) {
-                                                                int incrementValue$20 = var21;
+                                                                int incrementValue$16 = var21;
                                                                 var21++;
-                                                                var20 = var18[incrementValue$20];
+                                                                var20 = var18[incrementValue$16];
                                                                 break L76;
                                                               } else {
                                                                 var20 = -1;
@@ -1291,9 +1289,9 @@ final class jk extends gn {
                                     }
                                   } else {
                                     L77: {
-                                      gl dupTemp$21 = new gl();
-                                      var13[var14] = dupTemp$21;
-                                      var40 = dupTemp$21;
+                                      gl dupTemp$17 = new gl();
+                                      var13[var14] = dupTemp$17;
+                                      var40 = dupTemp$17;
                                       var15 = var40;
                                       var16_int = var38.h((byte) -118);
                                       if (0 >= var16_int) {

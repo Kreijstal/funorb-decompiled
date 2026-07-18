@@ -6,13 +6,13 @@ final class wi {
     static String field_a;
     static rg field_c;
 
-    public static void b() {
+    public static void b(int param0) {
         int var1 = -31;
         field_a = null;
         field_c = null;
     }
 
-    final static java.awt.Container a() {
+    final static java.awt.Container a(byte param0) {
         if (!(ic.field_d == null)) {
             return (java.awt.Container) (Object) ic.field_d;
         }

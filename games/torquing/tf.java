@@ -344,8 +344,7 @@ final class tf {
           L0: {
             if (param0 < -44) {
               L1: {
-                int discarded$12 = -1;
-                og.a((java.awt.Component) (Object) param1);
+                og.a((java.awt.Component) (Object) param1, -1);
                 qk.a(-90, (java.awt.Component) (Object) param1);
                 if (null != wb.field_u) {
                   wb.field_u.a(0, (java.awt.Component) (Object) param1);
@@ -391,7 +390,7 @@ final class tf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }

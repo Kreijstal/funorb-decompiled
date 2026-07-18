@@ -6,7 +6,7 @@ final class ri {
     static String field_b;
     int field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 12;
         field_b = null;
     }

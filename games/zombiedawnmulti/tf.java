@@ -19,8 +19,7 @@ final class tf extends ne implements in {
             return;
         }
         try {
-            int discarded$0 = 62;
-            va.a();
+            va.a((byte) 62);
             ((tf) this).m(-7435);
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) (Object) runtimeException, "tf.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -285,7 +284,7 @@ final class tf extends ne implements in {
         this.a(-6, true, p.a(-97, ba.field_p, param0));
     }
 
-    public static void o() {
+    public static void o(int param0) {
         field_Cb = null;
         field_Hb = null;
         int var1 = 12;

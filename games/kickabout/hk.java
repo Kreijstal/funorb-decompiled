@@ -11,12 +11,12 @@ final class hk extends i {
     static boolean field_G;
     private long field_M;
 
-    public static void g() {
+    public static void g(int param0) {
         field_I = null;
         field_K = null;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, boolean param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -38,8 +38,7 @@ final class hk extends i {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_2_0 = ma.a((byte) -119, param0);
+            stackOut_2_0 = ma.a((byte) -119, param0, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

@@ -21,7 +21,7 @@ final class lb extends pn implements hh {
     private boolean field_Z;
     private an field_X;
 
-    private final an o() {
+    private final an o(int param0) {
         if (cn.field_b != null) {
             return ((lb) this).field_V;
         }
@@ -313,15 +313,13 @@ final class lb extends pn implements hh {
                     }
                   }
                 }
-                int discarded$68 = 0;
-                cn.a(true);
+                cn.a(true, false);
                 ((lb) this).field_F.a((ga) (Object) new nj(((lb) this).field_F), true);
                 break L0;
               }
             } else {
               re.a((byte) -71);
-              int discarded$69 = 114;
-              sj.a();
+              sj.a((byte) 114);
               break L0;
             }
           }
@@ -330,8 +328,8 @@ final class lb extends pn implements hh {
     }
 
     private final void a(an param0, int param1) {
-        RuntimeException runtimeException = null;
         an var3 = null;
+        RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         re var6 = null;
@@ -339,35 +337,34 @@ final class lb extends pn implements hh {
         an stackIn_2_0 = null;
         an stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         an stackOut_0_0 = null;
         an stackOut_2_0 = null;
         int stackOut_2_1 = 0;
         an stackOut_1_0 = null;
         int stackOut_1_1 = 0;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         try {
           L0: {
             L1: {
               ((lb) this).field_ib = param0;
               var4 = -49 / ((param1 - -40) / 47);
-              boolean discarded$6 = param0.a((byte) 68, (ga) this);
-              int discarded$7 = 16;
-              var3 = this.o();
+              boolean discarded$3 = param0.a((byte) 68, (ga) this);
+              var3 = this.o(16);
               stackOut_0_0 = ((lb) this).field_gb;
               stackIn_2_0 = stackOut_0_0;
               stackIn_1_0 = stackOut_0_0;
@@ -387,67 +384,70 @@ final class lb extends pn implements hh {
             }
             L2: {
               stackIn_3_0.field_C = stackIn_3_1 != 0;
-              if (((lb) this).field_V != param0) {
-                break L2;
-              } else {
-                if (var3 != param0) {
-                  break L2;
-                } else {
-                  if (null == ((lb) this).field_hb) {
-                    break L2;
-                  } else {
+              if (((lb) this).field_V == param0) {
+                if (var3 == param0) {
+                  if (null != ((lb) this).field_hb) {
                     L3: {
                       var5 = ((lb) this).field_hb.h(0);
                       var6 = ((lb) this).field_fb[var5];
                       if (var6.field_a != rn.field_b.field_t) {
                         break L3;
                       } else {
-                        if (rn.field_b.field_i == var6.field_d) {
-                          break L2;
-                        } else {
+                        if (rn.field_b.field_i != var6.field_d) {
                           break L3;
+                        } else {
+                          this.n(-18681);
+                          break L2;
                         }
                       }
                     }
                     ((lb) this).field_gb.field_C = true;
+                    this.n(-18681);
+                    break L2;
+                  } else {
+                    this.n(-18681);
                     break L2;
                   }
+                } else {
+                  this.n(-18681);
+                  break L2;
                 }
+              } else {
+                this.n(-18681);
+                break L2;
               }
             }
-            int discarded$8 = -18681;
-            this.n();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            runtimeException = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) runtimeException;
-            stackOut_12_1 = new StringBuilder().append("lb.L(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            var3_ref = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var3_ref;
+            stackOut_16_1 = new StringBuilder().append("lb.L(");
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
               break L4;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ')');
+          throw sh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
         }
     }
 
@@ -750,7 +750,7 @@ final class lb extends pn implements hh {
         return stackIn_73_0;
     }
 
-    private final void n() {
+    private final void n(int param0) {
         int var3 = 0;
         an var4 = null;
         int var5 = ZombieDawn.field_J;
@@ -1071,17 +1071,16 @@ final class lb extends pn implements hh {
                         var5 = 0;
                         L4: while (true) {
                           if (var3_ref_re__.length <= var5) {
-                            int discarded$3 = 0;
-                            wc.a(((lb) this).field_fb);
+                            wc.a(((lb) this).field_fb, 0);
                             break L1;
                           } else {
                             L5: {
                               if (var3_ref_re__[var5] == null) {
                                 break L5;
                               } else {
-                                int incrementValue$4 = var4;
+                                int incrementValue$1 = var4;
                                 var4++;
-                                ((lb) this).field_fb[incrementValue$4] = var3_ref_re__[var5];
+                                ((lb) this).field_fb[incrementValue$1] = var3_ref_re__[var5];
                                 break L5;
                               }
                             }
@@ -1426,8 +1425,7 @@ final class lb extends pn implements hh {
             }
             L26: {
               ((lb) this).field_Z = false;
-              int discarded$5 = 16;
-              var6 = this.o();
+              var6 = this.o(16);
               if (var6 == null) {
                 break L26;
               } else {

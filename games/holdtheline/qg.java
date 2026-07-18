@@ -7,7 +7,7 @@ final class qg {
     static String field_a;
     static String[] field_b;
 
-    final static sh a(String param0) {
+    final static sh a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -265,7 +265,7 @@ final class qg {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_c = null;

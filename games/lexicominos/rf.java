@@ -450,7 +450,7 @@ final class rf {
         return stackIn_18_0 != 0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
     }
 
@@ -490,7 +490,7 @@ final class rf {
         return stackIn_5_0;
     }
 
-    final static int a() {
+    final static int a(int param0) {
         return uc.field_eb;
     }
 

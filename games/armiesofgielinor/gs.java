@@ -12,8 +12,7 @@ final class gs implements kh {
         try {
             ds.field_a = new wk[op.field_c[0].length];
             le.field_c = new wk[op.field_c[0].length];
-            int discarded$0 = -56;
-            rq.a();
+            rq.a((byte) -56);
             for (var1_int = 0; var1_int < op.field_c[0].length; var1_int++) {
                 ds.field_a[var1_int] = new wk(vo.field_d.field_y, vo.field_d.field_v);
                 le.field_c[var1_int] = new wk(im.field_y.field_y, im.field_y.field_v);
@@ -85,7 +84,7 @@ final class gs implements kh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 29;
         field_c = null;
     }
@@ -507,8 +506,7 @@ final class gs implements kh {
                       break L6;
                     }
                   }
-                  int discarded$1 = 2;
-                  if (!jh.g()) {
+                  if (!jh.g(2)) {
                     stackOut_30_0 = 0;
                     stackIn_31_0 = stackOut_30_0;
                     return stackIn_31_0 != 0;

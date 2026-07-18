@@ -40,7 +40,7 @@ final class nm {
         return var2;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         uj var1_ref = null;
         eq var1_ref2 = null;
@@ -224,7 +224,7 @@ final class nm {
         return stackIn_10_0;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         Object var2 = null;
         al.a("", -110, (String) null);
     }
@@ -439,7 +439,7 @@ final class nm {
         return var2;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (fc.field_e == ti.field_t) {
             return;
         }
@@ -461,12 +461,9 @@ final class nm {
             de.field_n = 0;
         }
         if (!(!mi.field_o)) {
-            int discarded$0 = 0;
-            ak.i();
-            int discarded$1 = 23949;
-            kj.a();
-            int discarded$2 = -1;
-            bd.a();
+            ak.i(0);
+            kj.a(23949);
+            bd.a((byte) -1);
             mi.field_o = false;
         }
     }

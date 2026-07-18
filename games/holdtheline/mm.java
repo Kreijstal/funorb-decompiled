@@ -13,7 +13,7 @@ abstract class mm {
 
     abstract void a(int param0, int param1, java.awt.Component param2, int param3);
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_e = null;
         field_g = null;
         field_a = null;
@@ -21,7 +21,7 @@ abstract class mm {
 
     abstract void a(int param0, int param1, java.awt.Graphics param2, int param3);
 
-    final static boolean a(vk param0) {
+    final static boolean a(vk param0, int param1) {
         RuntimeException var2 = null;
         wm var3 = null;
         int var4 = 0;
@@ -346,7 +346,7 @@ abstract class mm {
         return stackIn_100_0 != 0;
     }
 
-    final static sh a(String param0) {
+    final static sh a(String param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

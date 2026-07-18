@@ -19,7 +19,7 @@ final class tc extends ck {
     int field_y;
     static int field_z;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_A = null;
         field_r = null;
         field_s = null;
@@ -31,8 +31,7 @@ final class tc extends ck {
         if (param0 != 800) {
             return null;
         }
-        int discarded$0 = 0;
-        return eh.a();
+        return eh.a(false);
     }
 
     final static db a(String param0, int param1, int param2) {
@@ -185,7 +184,7 @@ final class tc extends ck {
                 if (param3.indexOf("<br>") != -1) {
                   break L1;
                 } else {
-                  param4[0] = (String) (Object) param4;
+                  param4[0] = param3;
                   stackOut_3_0 = 1;
                   stackIn_4_0 = stackOut_3_0;
                   return stackIn_4_0;

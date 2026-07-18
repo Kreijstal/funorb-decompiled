@@ -44,8 +44,7 @@ final class bv extends jd {
         try {
           L0: {
             var4 = (CharSequence) (Object) param0;
-            int discarded$5 = 1;
-            if (ih.a(var4)) {
+            if (ih.a(var4, true)) {
               if (param1 == -5) {
                 L1: {
                   if (!param0.equals((Object) (Object) ((bv) this).field_k)) {
@@ -173,8 +172,7 @@ final class bv extends jd {
               }
             }
             var5 = (CharSequence) (Object) param1;
-            int discarded$2 = 0;
-            var3 = hk.a(var5);
+            var3 = hk.a(var5, false);
             if (var3 != null) {
               stackOut_4_0 = (String) var3;
               stackIn_5_0 = stackOut_4_0;
@@ -436,7 +434,7 @@ final class bv extends jd {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_m = null;
         field_o = null;
         field_p = null;
@@ -444,7 +442,7 @@ final class bv extends jd {
         field_l = null;
     }
 
-    final static void a(boolean param0, int[] param1) {
+    final static void a(boolean param0, int[] param1, int param2) {
         RuntimeException var3 = null;
         int var4_int = 0;
         Object var4 = null;
@@ -554,8 +552,7 @@ final class bv extends jd {
                 L2: while (true) {
                   if (var11 >= 33) {
                     wp.a(uc.field_C, ao.field_i, ra.field_F, 121, gm.field_fb, tf.field_g);
-                    int discarded$5 = 0;
-                    ld.a(ao.field_i, gm.field_fb, uc.field_C, ra.field_F, tf.field_g);
+                    ld.a(ao.field_i, gm.field_fb, uc.field_C, ra.field_F, tf.field_g, false);
                     var14 = var26[0];
                     var26[0].field_k = 0;
                     var15 = var26[0];
@@ -686,18 +683,14 @@ final class bv extends jd {
                         } else {
                           L12: {
                             av.a(var12, 1, var35, var26[var12]);
-                            int discarded$6 = 1;
-                            var9 = fr.a(var26[var12], ao.field_i);
+                            var9 = fr.a(var26[var12], ao.field_i, true);
                             if (var9 == 0) {
                               var36[var12] = 0;
                               break L12;
                             } else {
-                              int discarded$7 = 1;
-                              var19 = fr.a(var26[var12], ra.field_F) / var9 & 255;
-                              int discarded$8 = 1;
-                              var20 = fr.a(var26[var12], tf.field_g) / var9 & 255;
-                              int discarded$9 = 1;
-                              var21 = fr.a(var26[var12], gm.field_fb) / var9 & 255;
+                              var19 = fr.a(var26[var12], ra.field_F, true) / var9 & 255;
+                              var20 = fr.a(var26[var12], tf.field_g, true) / var9 & 255;
+                              var21 = fr.a(var26[var12], gm.field_fb, true) / var9 & 255;
                               var18[var12] = var21 + (var19 << 16) + (var20 << 8);
                               break L12;
                             }

@@ -6,7 +6,7 @@ final class hba {
     static ena field_c;
     static float[] field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
     }

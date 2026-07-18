@@ -147,8 +147,7 @@ final class ke {
             if (param5 == null) {
                 var8.b(param4, 119);
             } else {
-                int discarded$0 = 16711422;
-                int discarded$1 = rm.a((p) (Object) var8, param5);
+                int discarded$0 = rm.a((p) (Object) var8, param5, 16711422);
             }
             var8.a(-var7 + var8.field_l, -1);
         } catch (RuntimeException runtimeException) {
@@ -156,7 +155,7 @@ final class ke {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -313,7 +312,7 @@ final class ke {
         return rm.field_M;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         int var1 = 0;
         field_b = null;
@@ -331,8 +330,7 @@ final class ke {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((ke) this).field_a[var2_int] = param0[var2_int];
             }
-            int discarded$0 = 41;
-            this.b();
+            this.b((byte) 41);
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "ke.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

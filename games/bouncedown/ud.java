@@ -1228,11 +1228,11 @@ final class ud {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1 = 14;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_b = null;
     }

@@ -37,7 +37,7 @@ final class cq extends tc {
         field_C = null;
     }
 
-    final static Class a(Object param0) {
+    final static Class a(Object param0, byte param1) {
         RuntimeException var2 = null;
         Class stackIn_2_0 = null;
         Class stackIn_6_0 = null;
@@ -210,8 +210,7 @@ final class cq extends tc {
                     break L2;
                   }
                 }
-                int discarded$1 = 0;
-                p.field_a = dc.a(stackIn_9_0 != 0);
+                p.field_a = dc.a(stackIn_9_0 != 0, false);
                 break L1;
               } else {
                 L3: {

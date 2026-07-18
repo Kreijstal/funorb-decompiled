@@ -44,8 +44,7 @@ final class v extends dh implements el {
                 if (param2.field_g == 248) {
                   L1: {
                     if (!param1) {
-                      int discarded$3 = 1;
-                      om.b();
+                      om.b(true);
                       break L1;
                     } else {
                       break L1;
@@ -81,7 +80,7 @@ final class v extends dh implements el {
                   break L2;
                 }
               } else {
-                rg discarded$4 = var5.a(gi.field_fb, (uk) this, false);
+                rg discarded$2 = var5.a(gi.field_fb, (uk) this, false);
                 break L2;
               }
             }
@@ -104,7 +103,7 @@ final class v extends dh implements el {
               ((v) this).a((fj) (Object) new pi((v) this), (byte) -72);
               return;
             } else {
-              rg discarded$5 = var5.a(gi.field_fb, (uk) this, false);
+              rg discarded$3 = var5.a(gi.field_fb, (uk) this, false);
               ((v) this).a((fj) (Object) var5, (byte) -72);
               return;
             }

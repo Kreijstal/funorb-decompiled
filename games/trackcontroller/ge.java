@@ -8,7 +8,7 @@ final class ge extends td implements jg, m {
     static int field_G;
     private el field_F;
 
-    private final String j() {
+    private final String j(int param0) {
         return "</col></u>";
     }
 
@@ -125,8 +125,6 @@ final class ge extends td implements jg, m {
             ((ge) this).field_C = param0;
             ((ge) this).field_E = new rh(hd.field_m, (tg) null);
             ((ge) this).field_E.field_y = (t) (Object) new dc();
-            int discarded$2 = 0;
-            int discarded$3 = 11844;
             var7 = dh.a((byte) -81, new String[2], qd.field_b);
             var3 = 20;
             var4 = new ic(gk.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, gk.field_c.field_G, -1, 2147483647, true);
@@ -179,7 +177,7 @@ final class ge extends td implements jg, m {
         }
     }
 
-    private final String k() {
+    private final String k(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -446,8 +444,7 @@ final class ge extends td implements jg, m {
                   break L5;
                 }
               }
-              int discarded$1 = 520;
-              if (fh.a()) {
+              if (fh.a(520)) {
                 if (s.field_b != 0) {
                   L6: {
                     var4 = s.field_b;

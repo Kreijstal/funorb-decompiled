@@ -153,8 +153,7 @@ class oa extends wf {
 
     final static boolean f(byte param0) {
         int var1 = -82 % ((param0 - -57) / 51);
-        int discarded$0 = 0;
-        return vh.a(ha.b(81));
+        return vh.a(ha.b(81), 0);
     }
 
     final void g(int param0, int param1) {
@@ -214,8 +213,7 @@ class oa extends wf {
         try {
           L0: {
             if (rl.a(param4, 0, param3, param2)) {
-              int discarded$2 = 0;
-              stackOut_5_0 = ea.a(param1.a((byte) -93, param4, param3));
+              stackOut_5_0 = ea.a(param1.a((byte) -93, param4, param3), 0);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
@@ -406,12 +404,10 @@ class oa extends wf {
             ((oa) this).field_h = ((oa) this).field_h + 1;
             ((oa) this).field_g[fieldTemp$0] = (byte) 0;
             var4 = (CharSequence) (Object) param0;
-            int discarded$1 = 0;
-            int discarded$2 = -116;
-            ((oa) this).field_h = ((oa) this).field_h + rb.a(((oa) this).field_h, var4, ((oa) this).field_g, param0.length());
-            int fieldTemp$3 = ((oa) this).field_h;
+            ((oa) this).field_h = ((oa) this).field_h + rb.a(((oa) this).field_h, var4, ((oa) this).field_g, param0.length(), (byte) -116, 0);
+            int fieldTemp$1 = ((oa) this).field_h;
             ((oa) this).field_h = ((oa) this).field_h + 1;
-            ((oa) this).field_g[fieldTemp$3] = (byte) 0;
+            ((oa) this).field_g[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) (Object) runtimeException, "oa.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -586,12 +582,10 @@ class oa extends wf {
                 throw new IllegalArgumentException("");
             }
             var5 = (CharSequence) (Object) param1;
-            int discarded$0 = 0;
-            int discarded$1 = -116;
-            ((oa) this).field_h = ((oa) this).field_h + rb.a(((oa) this).field_h, var5, ((oa) this).field_g, param1.length());
-            int fieldTemp$2 = ((oa) this).field_h;
+            ((oa) this).field_h = ((oa) this).field_h + rb.a(((oa) this).field_h, var5, ((oa) this).field_g, param1.length(), (byte) -116, 0);
+            int fieldTemp$0 = ((oa) this).field_h;
             ((oa) this).field_h = ((oa) this).field_h + 1;
-            ((oa) this).field_g[fieldTemp$2] = (byte) 0;
+            ((oa) this).field_g[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) (Object) runtimeException, "oa.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -843,8 +837,7 @@ class oa extends wf {
     }
 
     oa(int param0) {
-        int discarded$0 = -86;
-        ((oa) this).field_g = vk.a(param0);
+        ((oa) this).field_g = vk.a(param0, -86);
         ((oa) this).field_h = 0;
     }
 
@@ -1074,7 +1067,7 @@ class oa extends wf {
         ((oa) this).field_g[fieldTemp$7] = (byte)(int)param1;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_k = null;
         field_m = null;
         field_l = null;

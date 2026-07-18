@@ -133,8 +133,7 @@ final class sk extends oh {
           }
           return new nf(param0);
         } else {
-          int discarded$1 = 80;
-          ke.field_h = pe.a((ob) (Object) var8, param1 + 1);
+          ke.field_h = pe.a((ob) (Object) var8, param1 + 1, 80);
           mb.field_p = null;
           return new nf(param0);
         }

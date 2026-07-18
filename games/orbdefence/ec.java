@@ -243,7 +243,7 @@ final class ec extends ta implements ai {
         }
     }
 
-    final static void a(String param0, int param1, boolean param2, int param3, boolean param4, int param5, int param6, int param7, int param8, long param9, int param10, be param11, int param12) {
+    final static void a(String param0, int param1, boolean param2, int param3, boolean param4, int param5, int param6, int param7, int param8, long param9, int param10, be param11, int param12, int param13) {
         try {
             IOException var15 = null;
             RuntimeException var15_ref = null;
@@ -393,7 +393,7 @@ final class ec extends ta implements ai {
         }
     }
 
-    final static void l() {
+    final static void l(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -449,7 +449,7 @@ final class ec extends ta implements ai {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_E = null;
         field_F = null;
         field_H = null;

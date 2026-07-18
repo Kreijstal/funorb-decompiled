@@ -123,9 +123,8 @@ final class fk extends a {
               }
             }
             var8 = stackIn_18_0;
-            int discarded$2 = -121;
-            rm.a(param2 - (-param4.field_D + -(param4.field_y - ((fk) this).field_C[0].field_C >> 1)), ((fk) this).field_C, param4.field_u + param1, param4.field_t, var7);
-            int discarded$3 = ((fk) this).field_z.a(param4.field_E, param4.field_u + param1, -2 + (param4.field_D + param2), param4.field_t, param4.field_y, var8, -1, 1, 1, ((fk) this).field_z.field_R);
+            rm.a(param2 - (-param4.field_D + -(param4.field_y - ((fk) this).field_C[0].field_C >> 1)), ((fk) this).field_C, param4.field_u + param1, param4.field_t, var7, -121);
+            int discarded$1 = ((fk) this).field_z.a(param4.field_E, param4.field_u + param1, -2 + (param4.field_D + param2), param4.field_t, param4.field_y, var8, -1, 1, 1, ((fk) this).field_z.field_R);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

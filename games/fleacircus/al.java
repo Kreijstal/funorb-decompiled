@@ -78,11 +78,11 @@ final class al {
         }
     }
 
-    final static fh[] b() {
+    final static fh[] b(boolean param0) {
         return new fh[]{ne.field_d, ec.field_b, ae.field_d, cg.field_h, lk.field_A, hf.field_h, qi.field_b, hc.field_b, dl.field_t, tg.field_f, kb.field_l, gg.field_b, kc.field_a, ek.field_a};
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         int var1 = 0;
         if (null == aa.field_r) {
             return false;
@@ -101,7 +101,7 @@ final class al {
         field_c = null;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         RuntimeException stackIn_5_0 = null;

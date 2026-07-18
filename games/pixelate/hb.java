@@ -519,7 +519,7 @@ abstract class hb extends ka {
         super.e(param0);
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_hb = null;
         field_jb = null;
         field_eb = null;

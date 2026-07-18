@@ -9,7 +9,7 @@ final class ui {
     boolean field_c;
     static r field_f;
 
-    final static String a(int param0, dh param1) {
+    final static String a(int param0, dh param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -91,7 +91,7 @@ final class ui {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_e = null;
         field_f = null;

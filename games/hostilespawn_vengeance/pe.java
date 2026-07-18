@@ -22,7 +22,7 @@ final class pe extends wb {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         Object var2 = null;
         ak.a(false, (String) null, fj.field_Sb);
     }
@@ -144,11 +144,11 @@ final class pe extends wb {
         }
     }
 
-    final static fa[] p() {
+    final static fa[] p(int param0) {
         return new fa[]{ub.field_b, wh.field_c, w.field_S};
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         en var2 = s.field_b;
         var2.i(19319, 6);
         var2.d(96, 1);

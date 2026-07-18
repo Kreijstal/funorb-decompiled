@@ -34,7 +34,7 @@ final class wo {
         return oc.field_H[param1];
     }
 
-    final static dd a(int param0, int param1, Random param2) {
+    final static dd a(int param0, int param1, Random param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
@@ -151,7 +151,7 @@ final class wo {
         var2.e(160, 3);
     }
 
-    final static void a() {
+    final static void a(int param0) {
         tf var1 = null;
         int var2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
@@ -174,7 +174,7 @@ final class wo {
         }
     }
 
-    final static mk a(cb param0, int param1, int param2, int param3, int param4) {
+    final static mk a(cb param0, int param1, int param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         mk var7 = null;
@@ -199,14 +199,12 @@ final class wo {
         String stackOut_8_2 = null;
         try {
           L0: {
-            int discarded$6 = 1;
-            int discarded$7 = 0;
-            var8 = uc.a(param0, 0, param4, param2);
+            var8 = uc.a(param0, 0, param4, param2, 0, true);
             var6 = var8;
             if (var8 != null) {
               var7 = new mk();
               var7.field_f = var8;
-              java.awt.Component discarded$8 = var7.field_f.add((java.awt.Component) (Object) var7);
+              java.awt.Component discarded$2 = var7.field_f.add((java.awt.Component) (Object) var7);
               var7.setBounds(0, 0, param4, param2);
               var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
               var7.requestFocus();

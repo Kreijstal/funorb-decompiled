@@ -37,7 +37,7 @@ final class gl {
         return eq.field_k;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int fieldTemp$0 = di.field_m + 1;
         di.field_m = di.field_m + 1;
         if (!(fieldTemp$0 != 350)) {

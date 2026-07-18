@@ -58,7 +58,7 @@ final class pq implements os {
         }
     }
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -119,7 +119,7 @@ final class pq implements os {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         afa.field_c = qk.h(-57);
         ej.field_a = new jta();
         gl.a(true, true, (byte) 97);
@@ -131,8 +131,7 @@ final class pq implements os {
 
     private static void $cfr$clinit() {
         field_f = 0;
-        int discarded$0 = 1;
-        field_e = fqa.e();
+        field_e = fqa.e(true);
         field_d = "Solicitation";
     }
 }

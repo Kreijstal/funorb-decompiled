@@ -7,7 +7,7 @@ final class b extends tc {
     int[] field_l;
     static int field_k;
 
-    final static void a(byte[] param0) {
+    final static void a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -309,7 +309,7 @@ final class b extends tc {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_n = null;
     }
 

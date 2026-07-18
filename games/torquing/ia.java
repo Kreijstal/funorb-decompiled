@@ -10,7 +10,7 @@ final class ia extends af {
     private int field_g;
     static int field_i;
 
-    final static void d() {
+    final static void d(int param0) {
         if (of.field_m < 140) {
             ea.b(-36, of.field_m - -20);
         } else {

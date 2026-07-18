@@ -11,7 +11,7 @@ final class di {
     static String field_c;
     boolean field_e;
 
-    final static void a() {
+    final static void a(int param0) {
         L0: {
           ri.a(-25123);
           if (null != of.field_d) {
@@ -21,14 +21,10 @@ final class di {
             break L0;
           }
         }
-        int discarded$34 = 2;
-        re.d();
-        int discarded$35 = 1;
-        lb.c();
-        int discarded$36 = -16802;
-        ac.d();
-        int discarded$37 = -31879;
-        if (rn.a()) {
+        re.d(2);
+        lb.c(true);
+        ac.d(-16802);
+        if (rn.a(-31879)) {
           om.field_c.a(1, true);
           rn.a(0, 30785);
           nm.a(16);
@@ -65,7 +61,7 @@ final class di {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_d = null;
         field_g = null;
@@ -73,7 +69,7 @@ final class di {
         field_b = null;
     }
 
-    final static void a(ed[] param0, int param1, int param2, int param3, int param4, int param5, wl param6, int param7, ed[] param8, boolean param9, int param10, int param11, wl param12) {
+    final static void a(ed[] param0, int param1, int param2, int param3, int param4, int param5, wl param6, int param7, ed[] param8, boolean param9, int param10, int param11, wl param12, byte param13, int param14) {
         RuntimeException var15 = null;
         Object var16 = null;
         RuntimeException stackIn_3_0 = null;

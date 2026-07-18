@@ -22,12 +22,12 @@ final class kj {
     byte[][] field_d;
     ap field_g;
 
-    public static void b() {
+    public static void b(int param0) {
         field_j = null;
         field_l = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException runtimeException = null;
         int var2 = 0;
         uj var3 = null;
@@ -94,7 +94,7 @@ final class kj {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -214,8 +214,7 @@ final class kj {
         try {
           L0: {
             L1: {
-              int discarded$5 = 0;
-              var17 = new we(la.a(param1));
+              var17 = new we(la.a(param1, 0));
               var4 = var17.f(255);
               if (5 > var4) {
                 break L1;
@@ -275,9 +274,9 @@ final class kj {
                           break L6;
                         } else {
                           L8: {
-                            int dupTemp$6 = var8 + var17.a((byte) -111);
-                            var8 = dupTemp$6;
-                            ((kj) this).field_f[var10] = dupTemp$6;
+                            int dupTemp$4 = var8 + var17.a((byte) -111);
+                            var8 = dupTemp$4;
+                            ((kj) this).field_f[var10] = dupTemp$4;
                             if (((kj) this).field_f[var10] > var9) {
                               var9 = ((kj) this).field_f[var10];
                               break L8;
@@ -296,9 +295,9 @@ final class kj {
                           break L6;
                         } else {
                           L10: {
-                            int dupTemp$7 = var8 + var17.i(9997);
-                            var8 = dupTemp$7;
-                            ((kj) this).field_f[var10] = dupTemp$7;
+                            int dupTemp$5 = var8 + var17.i(9997);
+                            var8 = dupTemp$5;
+                            ((kj) this).field_f[var10] = dupTemp$5;
                             if (var9 < ((kj) this).field_f[var10]) {
                               var9 = ((kj) this).field_f[var10];
                               break L10;
@@ -424,10 +423,10 @@ final class kj {
                                       continue L22;
                                     } else {
                                       L25: {
-                                        int dupTemp$8 = var8 + var17.i(9997);
-                                        var8 = dupTemp$8;
-                                        ((kj) this).field_r[var11][var14] = dupTemp$8;
-                                        var15 = dupTemp$8;
+                                        int dupTemp$6 = var8 + var17.i(9997);
+                                        var8 = dupTemp$6;
+                                        ((kj) this).field_r[var11][var14] = dupTemp$6;
+                                        var15 = dupTemp$6;
                                         if (var13 >= var15) {
                                           break L25;
                                         } else {
@@ -476,10 +475,10 @@ final class kj {
                                       continue L27;
                                     } else {
                                       L30: {
-                                        int dupTemp$9 = var8 + var17.a((byte) -119);
-                                        var8 = dupTemp$9;
-                                        ((kj) this).field_r[var11][var14] = dupTemp$9;
-                                        var15 = dupTemp$9;
+                                        int dupTemp$7 = var8 + var17.a((byte) -119);
+                                        var8 = dupTemp$7;
+                                        ((kj) this).field_r[var11][var14] = dupTemp$7;
+                                        var15 = dupTemp$7;
                                         if (var13 >= var15) {
                                           break L30;
                                         } else {

@@ -25,7 +25,7 @@ final class jm extends hm {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, 8355711 & param6 >> 1);
     }
 
-    final static int[] j() {
+    final static int[] j(int param0) {
         if (bk.field_r == null) {
             return null;
         }
@@ -40,8 +40,7 @@ final class jm extends hm {
             ((jm) this).field_E = null;
         }
         ((jm) this).field_F = (16711422 & param0) >> 1;
-        int discarded$0 = -27800;
-        this.k();
+        this.k(-27800);
     }
 
     private final ed e(byte param0) {
@@ -71,7 +70,7 @@ final class jm extends hm {
         return var3;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_I = null;
         field_M = null;
         field_K = null;
@@ -265,7 +264,7 @@ final class jm extends hm {
         }
     }
 
-    private final void k() {
+    private final void k(int param0) {
         ((jm) this).field_J = new ed[]{this.a(true, ((jm) this).field_H, ((jm) this).field_A), this.a(true, ((jm) this).field_y, ((jm) this).field_F)};
         ((jm) this).field_N = this.e((byte) -122);
         ((jm) this).field_D = ((jm) this).field_N.d();
@@ -403,8 +402,7 @@ final class jm extends hm {
 
     final void a(int param0, int param1, int param2, boolean param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
-        int discarded$0 = -27800;
-        this.k();
+        this.k(-27800);
     }
 
     final void a(int param0, byte param1, int param2, int param3) {

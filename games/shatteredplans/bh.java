@@ -57,7 +57,7 @@ final class bh extends oh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_r = null;
         field_n = null;
         field_m = null;

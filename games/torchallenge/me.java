@@ -11,7 +11,7 @@ final class me implements j {
     private eg field_c;
     private int field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_a = null;
         field_d = null;

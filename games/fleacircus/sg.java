@@ -79,7 +79,7 @@ final class sg {
         return stackIn_3_0;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -242,8 +242,8 @@ final class sg {
               }
             }
           }
-          int discarded$4 = var8.d((byte) -121);
-          String discarded$5 = var8.h(0);
+          int discarded$2 = var8.d((byte) -121);
+          String discarded$3 = var8.h(0);
           break L4;
         }
         L6: {
@@ -287,9 +287,7 @@ final class sg {
             }
             break L7;
           } else {
-            int discarded$6 = 80;
-            int discarded$7 = 0;
-            wf.field_d = tf.a((ni) (Object) var8);
+            wf.field_d = tf.a((ni) (Object) var8, 0, 80);
             l.field_c = null;
             break L7;
           }

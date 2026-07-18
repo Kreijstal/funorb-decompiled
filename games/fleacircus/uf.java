@@ -385,7 +385,7 @@ final class uf {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_l = null;
         field_e = null;
         field_b = null;

@@ -15,7 +15,7 @@ final class lr extends hs {
     static int field_q;
     static String field_j;
 
-    final static void b() {
+    final static void b(byte param0) {
         if (!(null == op.field_y)) {
             op.field_y.a(1);
             op.field_y = null;

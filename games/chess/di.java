@@ -63,7 +63,7 @@ final class di extends ci {
         }
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -369,7 +369,7 @@ final class di extends ci {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_Qb = null;
         field_Ib = null;
     }
@@ -391,16 +391,13 @@ final class di extends ci {
               this.a(0, (byte) -120);
               ((di) this).field_Jb = param2;
               ((di) this).field_Kb = ((di) this).field_Mb[((di) this).field_Jb];
-              int discarded$499 = 0;
-              q.a(((di) this).field_Kb);
+              q.a(((di) this).field_Kb, 0);
               ((di) this).field_Kb.a(12, (byte) -73);
               break L0;
             } else {
               if (((di) this).field_Gb[param2] == -1) {
-                int discarded$500 = 103;
-                lc.a();
-                int discarded$501 = 0;
-                rc.b();
+                lc.a(103);
+                rc.b(0);
                 break L0;
               } else {
                 L1: {
@@ -428,10 +425,8 @@ final class di extends ci {
                 var8 = null;
                 ke.a(9822, vk.field_g, ij.field_c, param1, var5, (String) null);
                 hn.a(ij.field_c, vk.field_g, (byte) -54, var5, re.field_p);
-                int discarded$502 = 0;
-                rc.b();
-                int discarded$503 = -120;
-                e.h();
+                rc.b(0);
+                e.h((byte) -120);
                 break L0;
               }
             }
@@ -902,8 +897,7 @@ final class di extends ci {
         if (((di) this).field_Kb == null) {
             if ((Object) (Object) tl.field_Fb == this) {
                 if (!(var4 == 0)) {
-                    int discarded$0 = 0;
-                    rc.b();
+                    rc.b(0);
                     return true;
                 }
             }
@@ -939,7 +933,7 @@ final class di extends ci {
         cn.a(16384, param1);
     }
 
-    final static void k() {
+    final static void k(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
@@ -1028,8 +1022,7 @@ final class di extends ci {
                         var18 = 0;
                         L5: while (true) {
                           if (var18 >= 3) {
-                            int discarded$1 = 1;
-                            hb.a(false, th.field_c, (byte) -98, ua.field_b, false, var17);
+                            hb.a(false, th.field_c, (byte) -98, ua.field_b, false, var17, true);
                             lf.a(var8, var17, var14, var9, 29521, var12, var13, var7);
                             var15++;
                             continue L3;

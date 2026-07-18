@@ -17,7 +17,7 @@ final class fa extends gg {
         return true;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_p = null;
         field_k = null;
         field_n = null;
@@ -52,9 +52,7 @@ final class fa extends gg {
                 if (var4 == null) {
                   break L0;
                 } else {
-                  int discarded$8 = 107;
-                  int discarded$9 = 2;
-                  ii.a(var4);
+                  ii.a(var4, 2, (byte) 107);
                   var4 = (u) (Object) i.field_c.b((byte) 95);
                   continue L1;
                 }

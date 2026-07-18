@@ -48,7 +48,7 @@ final class va implements Iterable {
         return (Iterator) (Object) new rg((va) this);
     }
 
-    final static int a() {
+    final static int a(int param0) {
         return (int)(1000000000L / qb.field_f);
     }
 

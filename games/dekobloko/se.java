@@ -469,10 +469,8 @@ final class se extends ma {
         try {
             jj.field_f = ui.a(0, "");
             jj.field_f.a(-21, false);
-            int discarded$0 = 0;
-            fn.a(param0, param1, param4);
-            int discarded$1 = -121;
-            bl.g();
+            fn.a(param0, param1, param4, 0);
+            bl.g((byte) -121);
             sh.field_d = uc.field_c;
             if (param2 != 76) {
                 Object var6 = null;

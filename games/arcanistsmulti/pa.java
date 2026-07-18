@@ -124,7 +124,7 @@ final class pa implements Runnable {
         return stackIn_17_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_g = null;
         field_a = null;
@@ -359,7 +359,8 @@ final class pa implements Runnable {
             Exception var2_ref = null;
             Throwable var4 = null;
             int var5 = 0;
-            ea var6 = null;
+            Object var6 = null;
+            ea var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var5 = ArcanistsMulti.field_G ? 1 : 0;
@@ -370,8 +371,8 @@ final class pa implements Runnable {
                 var2 = (Object) (Object) ((pa) this).field_e;
                 synchronized (var2) {
                   L1: {
-                    var6 = (ea) (Object) ((pa) this).field_e.a((byte) 124);
-                    if (var6 == null) {
+                    var7 = (ea) (Object) ((pa) this).field_e.a((byte) 124);
+                    if (var7 == null) {
                       {
                         L2: {
                           ((Object) (Object) ((pa) this).field_e).wait();
@@ -393,17 +394,17 @@ final class pa implements Runnable {
                   try {
                     L4: {
                       L5: {
-                        if (var6.field_A == 2) {
-                          boolean discarded$2 = var6.field_x.a(var6.field_z, true, var6.field_z.length, (int)var6.field_k);
-                          var6.field_p = false;
+                        if (var7.field_A == 2) {
+                          boolean discarded$1 = var7.field_x.a(var7.field_z, true, var7.field_z.length, (int)var7.field_k);
+                          var7.field_p = false;
                           break L5;
                         } else {
-                          if (var6.field_A == 3) {
-                            var6.field_z = var6.field_x.a((int)var6.field_k, -61);
-                            var6.field_p = false;
+                          if (var7.field_A == 3) {
+                            var7.field_z = var7.field_x.a((int)var7.field_k, -61);
+                            var7.field_p = false;
                             break L5;
                           } else {
-                            var6.field_p = false;
+                            var7.field_p = false;
                             break L5;
                           }
                         }
@@ -414,9 +415,9 @@ final class pa implements Runnable {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     L6: {
                       var2_ref = (Exception) (Object) decompiledCaughtException;
-                      int discarded$3 = 20;
-                      jh.a((Throwable) (Object) var2_ref, (String) null);
-                      var6.field_p = false;
+                      var6 = null;
+                      jh.a((Throwable) (Object) var2_ref, (String) null, (byte) 20);
+                      var7.field_p = false;
                       break L6;
                     }
                   }
@@ -437,18 +438,15 @@ final class pa implements Runnable {
         int var1 = -24 % ((71 - param0) / 35);
         hk.field_s = true;
         p.field_b.f(-126);
-        int discarded$0 = -1;
-        jn.a(fi.field_a, false);
+        jn.a(fi.field_a, false, -1);
     }
 
     final static kc c(byte param0) {
         if (param0 > -83) {
             pa.b((byte) -7);
-            int discarded$0 = 0;
-            return pe.f();
+            return pe.f(0);
         }
-        int discarded$1 = 0;
-        return pe.f();
+        return pe.f(0);
     }
 
     final ea a(int param0, boolean param1, be param2) {
@@ -533,8 +531,7 @@ final class pa implements Runnable {
         try {
             var2 = param0.a(126, 5, (Runnable) this);
             while (0 == var2.field_e) {
-                int discarded$0 = 1;
-                ao.a(10L);
+                ao.a(10L, 1);
             }
             if (var2.field_e == 2) {
                 throw new RuntimeException();

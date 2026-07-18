@@ -109,7 +109,7 @@ final class jn extends we {
         int stackOut_25_0 = 0;
         int stackOut_24_0 = 0;
         var15 = TombRacer.field_G ? 1 : 0;
-        int discarded$2 = be.a(sea.field_q.toUpperCase(), 1, qr.field_v, 2497287, -1, 160, 1, param1 - 20, 0, -1, (byte) 60, 320);
+        int discarded$1 = be.a(sea.field_q.toUpperCase(), 1, qr.field_v, 2497287, -1, 160, 1, param1 - 20, 0, -1, (byte) 60, 320);
         ua.a(4, qr.field_v, rka.a(td.field_r, true), 600, -1, param1 + 72, 11288327);
         var16 = vna.field_d[td.field_r];
         var4 = var16;
@@ -120,8 +120,7 @@ final class jn extends we {
         var8 = 0;
         L0: while (true) {
           if (var8 >= var6) {
-            int discarded$3 = -6;
-            se.f();
+            se.f((byte) -6);
             if (param2 < -9) {
               L1: {
                 if (0 == td.field_r) {

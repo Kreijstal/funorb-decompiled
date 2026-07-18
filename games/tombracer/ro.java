@@ -745,7 +745,7 @@ final class ro extends wda {
         return ((ro) this).field_r;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_q = null;
     }
 

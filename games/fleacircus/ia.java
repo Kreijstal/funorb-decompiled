@@ -15,7 +15,7 @@ final class ia extends lh {
     static int[][] field_p;
     static int[] field_q;
 
-    final static sf a() {
+    final static sf a(int param0, int param1, int param2) {
         int var7 = 0;
         int var8 = fleas.field_A ? 1 : 0;
         sf var3 = new sf(22050, 882);
@@ -86,7 +86,7 @@ final class ia extends lh {
         return stackIn_3_0;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_m = null;
         field_l = null;
         field_s = null;
@@ -154,7 +154,7 @@ final class ia extends lh {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
     }
 
     final static void a(int param0) {

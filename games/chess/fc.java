@@ -9,7 +9,7 @@ final class fc {
     static String field_c;
     private static String field_z;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_d = null;

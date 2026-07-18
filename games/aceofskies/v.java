@@ -66,8 +66,7 @@ final class v {
                 L1: {
                   var3_ref = "";
                   if (param2 != null) {
-                    int discarded$4 = -29;
-                    var3_ref = br.a(param2);
+                    var3_ref = br.a(param2, (byte) -29);
                     break L1;
                   } else {
                     break L1;
@@ -89,8 +88,7 @@ final class v {
                     break L2;
                   }
                 }
-                int discarded$5 = 20164;
-                jb.a(var3_ref);
+                jb.a(var3_ref, 20164);
                 var7 = eh.a(":", 113, "%3a", var3_ref);
                 var8 = eh.a("@", -77, "%40", var7);
                 var9 = eh.a("&", 113, "%26", var8);
@@ -159,15 +157,14 @@ final class v {
                           break L6;
                         } else {
                           var5 = (DataInputStream) var4.field_f;
-                          int discarded$6 = var5.read();
+                          int discarded$1 = var5.read();
                           var5.close();
                           break L6;
                         }
                       }
                       break L0;
                     } else {
-                      int discarded$7 = 0;
-                      wf.a(1L);
+                      wf.a(1L, false);
                       continue L5;
                     }
                   }
@@ -187,7 +184,7 @@ final class v {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

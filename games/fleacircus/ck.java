@@ -257,8 +257,7 @@ final class ck extends r {
                     }
                     case 1: {
                         try {
-                            int discarded$2 = -250;
-                            var3 = (String) eb.a("getcookies", param2);
+                            var3 = (String) eb.a("getcookies", param2, -250);
                             var4 = m.a(';', 121, var3);
                             var5 = 0;
                             statePc = 2;

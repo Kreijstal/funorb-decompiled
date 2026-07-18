@@ -26,13 +26,12 @@ final class mj extends cj {
           this.c(0, param1, param3, param2);
           return;
         } else {
-          int discarded$2 = 126;
-          this.b(param2, param1, param3);
+          this.b(param2, param1, param3, 126);
           return;
         }
     }
 
-    private final int b(int param0, boolean param1, int param2) {
+    private final int b(int param0, boolean param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
         int var5 = 0;
@@ -83,7 +82,7 @@ final class mj extends cj {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_Fb = null;
         field_Ob = null;
         field_Mb = null;
@@ -137,16 +136,14 @@ final class mj extends cj {
     final int a(int param0, int param1, int param2) {
         if (param2 == -18367) {
           if (((mj) this).field_Jb) {
-            int discarded$10 = -10596;
-            return this.b(param0, false, param1);
+            return this.b(param0, false, param1, -10596);
           } else {
             return this.a(param0, false, 69, param1);
           }
         } else {
-          boolean discarded$11 = ((mj) this).k(33);
+          boolean discarded$6 = ((mj) this).k(33);
           if (((mj) this).field_Jb) {
-            int discarded$12 = -10596;
-            return this.b(param0, false, param1);
+            return this.b(param0, false, param1, -10596);
           } else {
             return this.a(param0, false, 69, param1);
           }
@@ -193,7 +190,7 @@ final class mj extends cj {
         }
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void b(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;

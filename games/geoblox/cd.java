@@ -72,13 +72,13 @@ final class cd extends jg {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_m = null;
         field_l = null;
         field_i = null;
     }
 
-    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0, byte param1) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;
@@ -297,7 +297,7 @@ final class cd extends jg {
           if (Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
             break L0;
           } else {
-            String discarded$11 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$4 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           }
         }
@@ -402,7 +402,7 @@ final class cd extends jg {
           uRISyntaxException = (java.net.URISyntaxException) (Object) decompiledCaughtException;
           return ((cd) this).a(1);
         }
-        boolean discarded$12 = var3.addAll((Collection) (Object) var4);
+        boolean discarded$5 = var3.addAll((Collection) (Object) var4);
         var6 = var3.toArray();
         var7 = null;
         var8 = var6;
@@ -419,8 +419,7 @@ final class cd extends jg {
             var11 = (java.net.Proxy) var10;
             try {
               L6: {
-                int discarded$13 = -18;
-                var12 = this.a(var11);
+                var12 = this.a(var11, (byte) -18);
                 if (var12 != null) {
                   stackOut_20_0 = (java.net.Socket) var12;
                   stackIn_21_0 = stackOut_20_0;

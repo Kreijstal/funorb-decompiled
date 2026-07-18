@@ -29,8 +29,8 @@ final class me {
     }
 
     final static void a(int param0) {
-        int discarded$5 = 1;
-        rj.a((String) null, we.field_a);
+        Object var2 = null;
+        rj.a((String) null, we.field_a, true);
         if (param0 != 7) {
             me.a((byte) -55);
         }

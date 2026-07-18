@@ -12,13 +12,10 @@ final class du extends rb {
         try {
             la.field_k = bl.a(113) * param0 / 1000;
             op.a(20786, param3);
-            int discarded$0 = 1;
-            hn.a(param3);
-            int discarded$1 = -88;
-            tr.a(param3);
+            hn.a(param3, true);
+            tr.a(param3, (byte) -88);
             lp.a(false);
-            int discarded$2 = 540;
-            aq.b();
+            aq.b(540);
             it.field_c = 0 - la.field_k;
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "du.D(" + param0 + ',' + 37 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

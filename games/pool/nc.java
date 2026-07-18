@@ -1221,8 +1221,7 @@ final class nc extends fa {
                     }
                   }
                 } else {
-                  int discarded$8 = 80;
-                  hq.a(0, field_C, field_m, var7 - 1);
+                  hq.a(0, field_C, field_m, var7 - 1, (byte) 80);
                   if (((nc) this).field_M != null) {
                     var8 = 0;
                     L16: while (true) {
@@ -1356,9 +1355,9 @@ final class nc extends fa {
                       return;
                     } else {
                       L29: {
-                        int incrementValue$9 = var12;
+                        int incrementValue$7 = var12;
                         var12++;
-                        this.b(var14[incrementValue$9]);
+                        this.b(var14[incrementValue$7]);
                         if (var12 != var13) {
                           break L29;
                         } else {
@@ -1392,9 +1391,9 @@ final class nc extends fa {
                           break L31;
                         } else {
                           L32: {
-                            int incrementValue$10 = var12;
+                            int incrementValue$8 = var12;
                             var12++;
-                            this.b(var14[incrementValue$10]);
+                            this.b(var14[incrementValue$8]);
                             if (var12 != var13) {
                               break L32;
                             } else {
@@ -1428,9 +1427,9 @@ final class nc extends fa {
                             break L34;
                           } else {
                             L35: {
-                              int incrementValue$11 = var12;
+                              int incrementValue$9 = var12;
                               var12++;
-                              this.b(var14[incrementValue$11]);
+                              this.b(var14[incrementValue$9]);
                               if (var12 != var13) {
                                 break L35;
                               } else {
@@ -1464,9 +1463,9 @@ final class nc extends fa {
                               break L37;
                             } else {
                               L38: {
-                                int incrementValue$12 = var12;
+                                int incrementValue$10 = var12;
                                 var12++;
-                                this.b(var14[incrementValue$12]);
+                                this.b(var14[incrementValue$10]);
                                 if (var12 != var13) {
                                   break L38;
                                 } else {
@@ -1589,9 +1588,9 @@ final class nc extends fa {
                         }
                       } else {
                         field_C[var7] = (field_x[var9] + field_x[var10] + field_x[var11]) / 3;
-                        int incrementValue$13 = var7;
+                        int incrementValue$11 = var7;
                         var7++;
-                        field_m[incrementValue$13] = var8;
+                        field_m[incrementValue$11] = var8;
                         var8++;
                         continue L3;
                       }
@@ -1608,9 +1607,9 @@ final class nc extends fa {
                     if (!this.a(tp.field_b + fb.field_q, ao.field_Rb + fb.field_d, field_v[var9], field_v[var10], field_v[var11], var12, var13, var14_int)) {
                       break L43;
                     } else {
-                      int fieldTemp$14 = qd.field_g;
+                      int fieldTemp$12 = qd.field_g;
                       qd.field_g = qd.field_g + 1;
-                      dq.field_d[fieldTemp$14] = param2;
+                      dq.field_d[fieldTemp$12] = param2;
                       param1 = false;
                       break L43;
                     }
@@ -1682,9 +1681,9 @@ final class nc extends fa {
                     }
                   } else {
                     field_C[var7] = (field_x[var9] + field_x[var10] + field_x[var11]) / 3;
-                    int incrementValue$15 = var7;
+                    int incrementValue$13 = var7;
                     var7++;
-                    field_m[incrementValue$15] = var8;
+                    field_m[incrementValue$13] = var8;
                     var8++;
                     continue L3;
                   }

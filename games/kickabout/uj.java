@@ -136,7 +136,7 @@ final class uj extends tm {
         return stackIn_8_0 != 0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_A = null;
         field_B = null;
         field_C = null;
@@ -378,8 +378,7 @@ final class uj extends tm {
                             }
                           }
                         }
-                        int discarded$3 = -116;
-                        lr.b();
+                        lr.b((byte) -116);
                         break L1;
                       }
                       break L0;
@@ -411,8 +410,7 @@ final class uj extends tm {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   L4: {
                     var2_ref_IOException = (IOException) (Object) decompiledCaughtException;
-                    int discarded$4 = -116;
-                    lr.b();
+                    lr.b((byte) -116);
                     break L4;
                   }
                 }
@@ -445,7 +443,7 @@ final class uj extends tm {
         we.field_a.m(4000);
     }
 
-    final static sj a(int param0, byte param1) {
+    final static sj a(int param0, byte param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
             int var6_int = 0;
             IOException var6 = null;

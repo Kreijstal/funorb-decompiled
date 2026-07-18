@@ -24,32 +24,27 @@ final class tk implements uj {
 
     final static void a(String param0, java.applet.Applet param1, byte param2) {
         try {
-            String var7 = null;
+            String var3 = null;
             String var6 = null;
             String var4 = null;
-            String var8 = null;
             try {
                 w.field_T = param0;
                 try {
-                    var7 = param1.getParameter("cookieprefix");
-                    var6 = var7;
-                    var6 = var7;
+                    var3 = param1.getParameter("cookieprefix");
+                    var6 = var3;
+                    var6 = var3;
                     int var5 = 108 / ((60 - param2) / 59);
                     var4 = param1.getParameter("cookiehost");
                     var6 = var4;
                     var6 = var4;
-                    var8 = var7 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
-                    var6 = var8;
-                    var6 = var8;
+                    var6 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
                     if (param0.length() == 0) {
-                        var6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                        var6 = var6 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
-                    int discarded$0 = -106;
-                    lk.a(param1, "document.cookie=\"" + var6 + "\"");
+                    lk.a(param1, "document.cookie=\"" + var6 + "\"", (byte) -106);
                 } catch (Throwable throwable) {
                 }
-                int discarded$1 = 1;
-                ie.a(param1);
+                ie.a(param1, true);
             } catch (RuntimeException runtimeException) {
                 throw lj.a((Throwable) (Object) runtimeException, "tk.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
             }
@@ -60,7 +55,7 @@ final class tk implements uj {
         }
     }
 
-    final static void a(bi param0, int param1) {
+    final static void a(bi param0, int param1, byte param2) {
         ld var3 = null;
         try {
             var3 = sn.field_c;
@@ -72,11 +67,11 @@ final class tk implements uj {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return null != ll.field_a && ll.field_a.e((byte) 83) != null;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
         field_e = null;

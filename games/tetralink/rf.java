@@ -5,15 +5,14 @@ final class rf {
     static int field_b;
     static int[] field_a;
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(mf.field_s == null)) {
             mf.field_s.e((byte) -110);
         }
         if (!(nl.field_a == null)) {
             nl.field_a.e(true);
         }
-        int discarded$0 = -83;
-        ve.a();
+        ve.a((byte) -83);
     }
 
     final static mh a(int param0, String param1) {
@@ -478,7 +477,7 @@ final class rf {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         int var1 = 0;
     }

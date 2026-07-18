@@ -4,11 +4,11 @@
 final class ah {
     static String field_a;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
     }
 
-    final static tf a(String param0) {
+    final static tf a(String param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -189,7 +189,7 @@ final class ah {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -221,7 +221,7 @@ final class ah {
         return stackIn_6_0;
     }
 
-    final static aj[] a() {
+    final static aj[] a(byte param0) {
         return new aj[]{gj.field_w, q.field_d, rk.field_n, vb.field_l, rk.field_d, uj.field_c, rj.field_b, li.field_R, nl.field_b, he.field_c, w.field_n, vf.field_m, fb.field_l, qb.field_d};
     }
 

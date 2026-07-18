@@ -44,8 +44,7 @@ final class eh {
         try {
           L0: {
             var10 = (CharSequence) (Object) param2;
-            int discarded$4 = -16;
-            var3_int = wa.a(param1, var10);
+            var3_int = wa.a(param1, var10, (byte) -16);
             var4 = new String[var3_int - -1];
             var5 = 0;
             var6 = 0;
@@ -60,9 +59,9 @@ final class eh {
                 var8 = var6;
                 L2: while (true) {
                   if (param1 == param2.charAt(var8)) {
-                    int incrementValue$5 = var5;
+                    int incrementValue$2 = var5;
                     var5++;
-                    var4[incrementValue$5] = param2.substring(var6, var8);
+                    var4[incrementValue$2] = param2.substring(var6, var8);
                     var6 = var8 + 1;
                     var7++;
                     continue L1;
@@ -107,19 +106,18 @@ final class eh {
         return stackIn_8_0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         ce var1 = (ce) (Object) lh.field_c.b(12623);
         int var2 = 0;
         if (var1 == null) {
-            int discarded$0 = 0;
-            ka.b();
+            ka.b(false);
             return;
         }
         ab var3 = df.field_z;
+        int discarded$0 = var3.d(-10674);
         int discarded$1 = var3.d(-10674);
         int discarded$2 = var3.d(-10674);
         int discarded$3 = var3.d(-10674);
-        int discarded$4 = var3.d(-10674);
         var1.a(true);
     }
 
@@ -271,7 +269,7 @@ final class eh {
         return (String) (Object) stackIn_27_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         int var1 = 0;
         field_d = null;
@@ -588,8 +586,7 @@ final class eh {
                 }
               }
             }
-            int discarded$1 = 1;
-            dn.a(-13214, 0, ml.field_m, param3, ef.field_t);
+            dn.a(-13214, 0, ml.field_m, param3, ef.field_t, true);
             break L10;
           } else {
             break L10;

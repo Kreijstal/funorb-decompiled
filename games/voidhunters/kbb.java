@@ -283,7 +283,7 @@ final class kbb extends le {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_q = null;
         int var1 = 0;
     }

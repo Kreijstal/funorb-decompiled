@@ -674,7 +674,7 @@ final class po extends bja {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_i = null;
         field_l = null;
     }

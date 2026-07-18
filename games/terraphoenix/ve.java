@@ -6,11 +6,11 @@ final class ve {
     static ci field_a;
     static int field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
-    final static String a(int param0, CharSequence[] param1, int param2) {
+    final static String a(int param0, CharSequence[] param1, int param2, int param3) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;

@@ -99,8 +99,7 @@ final class nc {
                         var18 = 0;
                         L5: while (true) {
                           if (var18 >= 3) {
-                            int discarded$1 = 1;
-                            sh.a(false, false, 88, la.field_d, var17, fb.field_l);
+                            sh.a(false, false, 88, la.field_d, var17, fb.field_l, true);
                             kb.a(var9, 65793, var12, var17, var14, var8, var7, var13);
                             var15++;
                             continue L3;
@@ -429,8 +428,7 @@ final class nc {
           L0: {
             ck.field_f = ck.field_f + 65536;
             L1: while (true) {
-              int discarded$3 = -117;
-              if (fk.a(ck.field_f, kk.field_e) < 65536) {
+              if (fk.a(ck.field_f, kk.field_e, (byte) -117) < 65536) {
                 L2: {
                   var2_int = -1;
                   if (og.field_d == null) {
@@ -605,9 +603,7 @@ final class nc {
                   }
                 }
                 L12: {
-                  int discarded$4 = 1;
-                  int discarded$5 = 1;
-                  ea.field_a.a(td.a(rg.field_B, kc.field_Q), td.a(pe.field_d, la.field_c), -104);
+                  ea.field_a.a(td.a(rg.field_B, kc.field_Q, true), td.a(pe.field_d, la.field_c, true), -104);
                   if (!ea.field_a.g(0)) {
                     break L12;
                   } else {
@@ -757,7 +753,7 @@ final class nc {
         return stackIn_9_0 != 0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
         field_d = null;
         int var1 = 0;
@@ -765,12 +761,11 @@ final class nc {
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = ii.a(6940);
         int var2 = wc.d(20);
         u.field_c.a(-qf.field_g + p.field_g, (qf.field_g << 1) + var1, 122, nd.field_m + -qc.field_g, var2 - -(qc.field_g << 1));
-        int discarded$0 = 1000;
-        bg.b();
+        bg.b(1000);
     }
 
     private nc(int param0, int param1, int param2) {

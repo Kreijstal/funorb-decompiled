@@ -9,7 +9,7 @@ final class ip {
     static int field_f;
     static ri field_e;
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         td.field_g = 20000000L;
     }
 
@@ -22,7 +22,7 @@ final class ip {
         }
     }
 
-    final static void a(int param0, java.awt.Color param1, boolean param2, String param3) {
+    final static void a(int param0, java.awt.Color param1, boolean param2, String param3, int param4) {
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;
@@ -206,7 +206,7 @@ final class ip {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_c = null;
         field_d = null;
         field_a = null;

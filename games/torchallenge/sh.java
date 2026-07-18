@@ -260,8 +260,7 @@ abstract class sh extends w {
 
     final static ge d(int param0) {
         ge var1 = new ge(ij.field_B, le.field_g, ug.field_e[0], dd.field_t[0], pg.field_r[0], lg.field_e[0], h.field_a[0], td.field_m);
-        int discarded$0 = 0;
-        p.a();
+        p.a(0);
         return var1;
     }
 

@@ -47,7 +47,7 @@ final class bb extends ki implements pi, ka {
             }
             L2: {
               if (((bb) this).field_O == param0) {
-                boolean discarded$4 = ((bb) this).field_L.a(-1463, (rc) this);
+                boolean discarded$2 = ((bb) this).field_L.a(-1463, (rc) this);
                 break L2;
               } else {
                 break L2;
@@ -57,8 +57,7 @@ final class bb extends ki implements pi, ka {
               if (param0 != ((bb) this).field_L) {
                 break L3;
               } else {
-                int discarded$5 = -1525;
-                this.k();
+                this.k(-1525);
                 break L3;
               }
             }
@@ -96,7 +95,7 @@ final class bb extends ki implements pi, ka {
         }
     }
 
-    final static String a(String param0, String[] param1) {
+    final static String a(String param0, String[] param1, int param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -178,11 +177,10 @@ final class bb extends ki implements pi, ka {
                         } else {
                           if (param0.charAt(var5) == 62) {
                             var5++;
-                            int discarded$5 = 6054;
-                            var10 = il.a((CharSequence) (Object) var9);
-                            StringBuilder discarded$6 = var6.append(param0.substring(var7, var8));
+                            var10 = il.a((CharSequence) (Object) var9, 6054);
+                            StringBuilder discarded$3 = var6.append(param0.substring(var7, var8));
                             var7 = var5;
-                            StringBuilder discarded$7 = var6.append(param1[var10]);
+                            StringBuilder discarded$4 = var6.append(param1[var10]);
                             continue L2;
                           } else {
                             continue L2;
@@ -193,7 +191,7 @@ final class bb extends ki implements pi, ka {
                       }
                     }
                   } else {
-                    StringBuilder discarded$8 = var6.append(param0.substring(var7));
+                    StringBuilder discarded$5 = var6.append(param0.substring(var7));
                     stackOut_25_0 = var6.toString();
                     stackIn_26_0 = stackOut_25_0;
                     break L0;
@@ -223,8 +221,7 @@ final class bb extends ki implements pi, ka {
                     } else {
                       if (param0.charAt(var5) == 62) {
                         var5++;
-                        int discarded$9 = 6054;
-                        var8 = il.a((CharSequence) (Object) var7_ref_String);
+                        var8 = il.a((CharSequence) (Object) var7_ref_String, 6054);
                         var4 = var4 + (-var5 + var6_int + param1[var8].length());
                         continue L1;
                       } else {
@@ -762,8 +759,7 @@ final class bb extends ki implements pi, ka {
             }
             L2: {
               if (param3 == ((bb) this).field_N) {
-                int discarded$451 = -1525;
-                this.k();
+                this.k(-1525);
                 break L2;
               } else {
                 if (param3 != ((bb) this).field_M) {
@@ -773,13 +769,11 @@ final class bb extends ki implements pi, ka {
                         ig.a((byte) -82);
                         break L2;
                       } else {
-                        int discarded$452 = -13;
-                        qd.a();
+                        qd.a((byte) -13);
                         break L2;
                       }
                     } else {
-                      int discarded$453 = 15;
-                      rf.h();
+                      rf.h(15);
                       break L2;
                     }
                   } else {
@@ -936,7 +930,7 @@ final class bb extends ki implements pi, ka {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_P = null;
         field_I = null;
     }
@@ -1013,7 +1007,7 @@ final class bb extends ki implements pi, ka {
         return ((bb) this).field_O.field_i;
     }
 
-    private final void k() {
+    private final void k(int param0) {
         L0: {
           L1: {
             if (ji.a(-19688)) {

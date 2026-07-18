@@ -30,14 +30,14 @@ class cf extends dk {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_r = null;
         field_q = null;
         field_t = null;
         field_u = null;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         int var1 = 0;
         if (uh.field_m == null) {
           var1 = 0;
@@ -52,8 +52,7 @@ class cf extends dk {
           te.field_J = qm.b(1, 8);
           if (nl.field_c == 0) {
             L0: {
-              int discarded$3 = 118;
-              sc.a();
+              sc.a((byte) 118);
               if (wb.field_S <= 0) {
                 ae.a(wd.field_a, 110, gb.field_a);
                 break L0;
@@ -74,8 +73,7 @@ class cf extends dk {
             return;
           }
         } else {
-          int discarded$4 = 35;
-          ib.a(uh.field_m);
+          ib.a(uh.field_m, (byte) 35);
           uh.field_m = null;
           ql.f(8036);
           var1 = 0;
@@ -100,8 +98,7 @@ class cf extends dk {
             return;
           } else {
             L3: {
-              int discarded$5 = 118;
-              sc.a();
+              sc.a((byte) 118);
               if (wb.field_S <= 0) {
                 ae.a(wd.field_a, 110, gb.field_a);
                 break L3;
@@ -117,22 +114,19 @@ class cf extends dk {
     cf() {
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         if (fa.field_c != 10) {
-          int discarded$8 = 0;
-          if (wa.b()) {
+          if (wa.b(0)) {
             tf.field_d = true;
             return;
           } else {
-            int discarded$9 = -64;
-            pf.b();
+            pf.b((byte) -64);
             fa.field_c = 11;
             tf.field_d = true;
             return;
           }
         } else {
-          int discarded$10 = -64;
-          pf.b();
+          pf.b((byte) -64);
           fa.field_c = 11;
           tf.field_d = true;
           return;

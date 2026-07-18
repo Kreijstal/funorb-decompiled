@@ -36,8 +36,7 @@ final class ala {
         try {
           L0: {
             L1: {
-              int discarded$3 = 73;
-              pka.a(param1, true);
+              pka.a(param1, true, (byte) 73);
               if (param0 == 26219) {
                 break L1;
               } else {

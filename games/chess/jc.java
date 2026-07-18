@@ -38,7 +38,7 @@ final class jc {
         return var2;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         String var2 = null;
         if (null != i.field_c) {
             var2 = i.field_c;
@@ -445,8 +445,7 @@ final class jc {
             tl.a((byte) -67, gf.field_f);
             nh.a();
             wb.b();
-            int discarded$2 = 9;
-            di.k();
+            di.k(9);
             if (var5 < 256) {
               wb.b(0, 0, wb.field_h, wb.field_c, 0, -var5 + 256);
               break L2;
@@ -455,8 +454,7 @@ final class jc {
             }
           }
           L3: {
-            int discarded$3 = 28773;
-            fd.a();
+            fd.a(28773);
             if (sl.field_a >= 150) {
               v.field_i.b(15 + var3, var4 + 10, var5);
               break L3;

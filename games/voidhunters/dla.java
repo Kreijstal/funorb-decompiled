@@ -106,7 +106,7 @@ final class dla {
         }
     }
 
-    final static String c() {
+    final static String c(int param0) {
         if (null == kca.field_a) {
             return "";
         }
@@ -156,8 +156,7 @@ final class dla {
           ((dla) this).field_b.field_e = ip.field_p.height / 2;
           ((dla) this).field_b.field_d = ip.field_p.width / 2;
           ((dla) this).field_b.a(ip.field_p.height, 0, -72, ip.field_p.width, 0);
-          int discarded$1 = -59;
-          hna.a(((dla) this).field_f, ((dla) this).field_b, false);
+          hna.a(((dla) this).field_f, ((dla) this).field_b, false, (byte) -59);
           ((dla) this).field_f.a(((dla) this).field_b, (byte) 85, ((dla) this).field_a, (sg) null);
           var5 = ((dla) this).field_b.a(true, pk.field_o);
           var6 = ((dla) this).field_b.a(0, noa.field_q);
@@ -382,7 +381,7 @@ final class dla {
         return param0 & param1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
     }
 

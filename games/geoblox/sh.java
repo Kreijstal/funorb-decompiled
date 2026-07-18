@@ -827,7 +827,7 @@ abstract class sh extends el implements ql {
         return var2;
     }
 
-    private final boolean a(el param0) {
+    private final boolean a(el param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
@@ -1244,8 +1244,7 @@ abstract class sh extends el implements ql {
                   stackIn_11_0 = stackOut_10_0;
                   break L3;
                 } else {
-                  int discarded$3 = -119;
-                  stackOut_9_0 = this.a(param3);
+                  stackOut_9_0 = this.a(param3, (byte) -119);
                   stackIn_11_0 = stackOut_9_0;
                   break L3;
                 }

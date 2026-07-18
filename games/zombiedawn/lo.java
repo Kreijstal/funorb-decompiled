@@ -15,7 +15,7 @@ final class lo extends le {
     static String field_r;
     static int[] field_q;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_i = null;
         field_r = null;
         field_n = null;
@@ -24,7 +24,7 @@ final class lo extends le {
         field_q = null;
     }
 
-    final static int a() {
+    final static int a(boolean param0) {
         return 1;
     }
 

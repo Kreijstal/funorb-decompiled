@@ -190,7 +190,7 @@ final class td implements ur {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_l = null;
         field_c = null;
@@ -236,7 +236,7 @@ final class td implements ur {
         return (er) var3;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0, boolean param1, byte param2) {
         if (param1) {
             bi.b(0, 0, bi.field_e, bi.field_j, 0, 192);
         } else {

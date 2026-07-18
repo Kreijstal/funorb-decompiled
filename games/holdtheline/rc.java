@@ -9,7 +9,7 @@ final class rc {
     static oa field_a;
     private static String field_z;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_a = null;
         field_b = null;

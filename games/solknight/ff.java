@@ -11,7 +11,7 @@ final class ff {
     static String field_f;
     static String field_d;
 
-    final static void b() {
+    final static void b(int param0) {
         ph.field_f = ec.b(false);
         u.field_b = new i();
         hl.a(true, 24574, true);
@@ -167,7 +167,7 @@ final class ff {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = -53;
         ga.field_E = new nc();
     }

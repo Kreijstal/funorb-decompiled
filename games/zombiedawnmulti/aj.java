@@ -18,7 +18,7 @@ final class aj extends ae {
         }
     }
 
-    final static void a(pd param0, int param1, int param2, int param3, int param4, int param5, int param6, fm param7, int param8, int param9, int param10, int param11, pd param12, int param13, pd param14, fm param15, int param16, int param17, int param18) {
+    final static void a(pd param0, int param1, int param2, int param3, int param4, int param5, int param6, fm param7, int param8, int param9, int param10, int param11, pd param12, int param13, pd param14, fm param15, int param16, int param17, int param18, byte param19) {
         RuntimeException var20 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -102,9 +102,7 @@ final class aj extends ae {
             e.field_c = param15;
             ne.c(param13, 20341, param3, param8, param11);
             cb.a(param17, param10, -8388, param0);
-            int discarded$2 = 0;
-            int discarded$3 = 15;
-            wq.a(5, param14, 10, param12);
+            wq.a(5, param14, 10, param12, 15, false);
             ei.a(240, 25938, 320);
             p.a(param18, param6, false, param16);
             break L0;
@@ -308,7 +306,7 @@ final class aj extends ae {
         ((aj) this).field_k = param1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_l = null;
     }

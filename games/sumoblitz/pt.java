@@ -8,7 +8,7 @@ abstract class pt {
     static volatile boolean field_a;
     static String field_b;
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0, boolean param1, int param2) {
         if (param0) {
             Sumoblitz.field_H = Sumoblitz.field_H - 1;
             if (0 == Sumoblitz.field_H) {

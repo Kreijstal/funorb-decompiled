@@ -4,7 +4,7 @@
 final class dc {
     static vn[] field_a;
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!df.field_h) {
             df.field_h = true;
             return;

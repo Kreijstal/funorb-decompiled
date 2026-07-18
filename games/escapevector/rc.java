@@ -6,7 +6,7 @@ final class rc {
     static oi field_b;
     static String field_c;
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, boolean param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -28,8 +28,7 @@ final class rc {
           L0: {
             oc.a((byte) -38, (java.awt.Component) (Object) param0);
             L1: {
-              int discarded$2 = 38;
-              rm.a((java.awt.Component) (Object) param0);
+              rm.a((java.awt.Component) (Object) param0, (byte) 38);
               if (ji.field_b == null) {
                 break L1;
               } else {
@@ -103,7 +102,7 @@ final class rc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;

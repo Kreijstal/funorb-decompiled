@@ -11,7 +11,7 @@ final class gk extends ii implements mg, vg {
     static boolean[] field_Q;
     static gn field_L;
 
-    private final boolean a(qn param0) {
+    private final boolean a(qn param0, int param1) {
         dp var3 = null;
         RuntimeException var3_ref = null;
         od var4 = null;
@@ -238,8 +238,7 @@ final class gk extends ii implements mg, vg {
                 break L1;
               } else {
                 if (!param1.equals((Object) (Object) im.field_b.c(-2085))) {
-                  int discarded$2 = -8;
-                  im.field_b = oh.a(param1);
+                  im.field_b = oh.a(param1, -8);
                   break L1;
                 } else {
                   break L1;
@@ -291,7 +290,7 @@ final class gk extends ii implements mg, vg {
         return stackIn_7_0;
     }
 
-    private final int a(String param0, int param1, lm param2, String param3) {
+    private final int a(String param0, int param1, lm param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -343,9 +342,7 @@ final class gk extends ii implements mg, vg {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$4 = 70;
-            int discarded$5 = 170;
-            stackOut_0_0 = this.a(param0, 35, 50, param3, param2);
+            stackOut_0_0 = this.a(param0, 35, 50, param3, param2, 170, 70);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -432,7 +429,7 @@ final class gk extends ii implements mg, vg {
         return stackIn_1_0;
     }
 
-    final static ai a(ec param0) {
+    final static ai a(ec param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         ai var3 = null;
@@ -540,7 +537,7 @@ final class gk extends ii implements mg, vg {
         }
     }
 
-    private final int a(String param0, int param1, int param2, String param3, lm param4) {
+    private final int a(String param0, int param1, int param2, String param3, lm param4, int param5, int param6) {
         RuntimeException var8 = null;
         tn var9 = null;
         dg var10 = null;
@@ -705,8 +702,7 @@ final class gk extends ii implements mg, vg {
         var2.b(0, 270, var3, 20, 50);
         ((gk) this).b((byte) -49, var2);
         var3 += 50;
-        int discarded$0 = 21287;
-        var3 = var3 + (5 + this.a(an.field_z, 170, (lm) (Object) ((gk) this).field_R, wf.field_B));
+        var3 = var3 + (5 + this.a(an.field_z, 170, (lm) (Object) ((gk) this).field_R, wf.field_B, 21287, var3));
         ((gk) this).field_M.b(0, var5, var3, 496 - var5 >> 1, 40);
         ((gk) this).field_N.b(0, 60, var3 + 15, 3 + var4, 40);
         ((gk) this).field_N.field_n = (pg) this;
@@ -719,7 +715,7 @@ final class gk extends ii implements mg, vg {
         ((gk) this).b(0, 496, 0, 0, 55 + (var3 - -var4));
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         if (!(this.i(126))) {
             return;
         }
@@ -805,8 +801,7 @@ final class gk extends ii implements mg, vg {
             return;
           } else {
             if (param0 == ((gk) this).field_M) {
-              int discarded$2 = -43;
-              this.f();
+              this.f((byte) -43);
               return;
             } else {
               return;
@@ -844,7 +839,7 @@ final class gk extends ii implements mg, vg {
         }
     }
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_4_0 = 0;
@@ -983,8 +978,7 @@ final class gk extends ii implements mg, vg {
     }
 
     private final boolean i(int param0) {
-        int discarded$0 = -70;
-        if (!this.a((qn) (Object) ((gk) this).field_R)) {
+        if (!this.a((qn) (Object) ((gk) this).field_R, -70)) {
             return false;
         }
         if (param0 <= 123) {

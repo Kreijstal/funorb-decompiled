@@ -17,7 +17,7 @@ final class up {
         ((up) this).field_g = param1 ? true : false;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
         int var1 = -1;
         field_e = null;

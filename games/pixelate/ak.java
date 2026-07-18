@@ -741,8 +741,8 @@ class ak extends tp {
               if (var23_ref == null) {
                 break L30;
               } else {
-                var23_ref.a(param0, var23_ref.field_tb - -var19, var23_ref.field_X, param3, var23_ref.field_K, param5, (byte) -50, var20 + var23_ref.field_gb, var23_ref.field_nb, param9, param10);
-                var23_ref = (ak) (Object) var23_ref.field_L.f(1504642273);
+                var23_ref.a(param0, ((ak) this).field_tb - -var19, ((ak) this).field_X, param3, ((ak) this).field_K, param5, (byte) -50, var20 + ((ak) this).field_gb, ((ak) this).field_nb, param9, param10);
+                var23_ref = (ak) (Object) ((ak) this).field_L.f(1504642273);
                 continue L31;
               }
             }
@@ -761,7 +761,7 @@ class ak extends tp {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        Object var14 = null;
+        ak var14 = null;
         int var15 = 0;
         Object stackIn_25_0 = null;
         Object stackIn_26_0 = null;
@@ -794,7 +794,6 @@ class ak extends tp {
         Object stackOut_38_0 = null;
         int stackOut_38_1 = 0;
         L0: {
-          var14 = null;
           var15 = Pixelate.field_H ? 1 : 0;
           if (((ak) this).field_G <= 0) {
             var7 = ((ak) this).field_G >> 2;
@@ -993,13 +992,13 @@ class ak extends tp {
         L12: {
           ((ak) this).field_W = stackIn_39_1 != 0;
           if (null != ((ak) this).field_L) {
-            var14 = (Object) (Object) (ak) (Object) ((ak) this).field_L.g(1504642273);
+            var14 = (ak) (Object) ((ak) this).field_L.g(1504642273);
             L13: while (true) {
               if (var14 == null) {
                 break L12;
               } else {
-                ((ak) var14).a(((ak) var14).field_K, ((ak) var14).field_tb, param2, ((ak) var14).field_nb, ((ak) var14).field_gb, -123);
-                var14 = (Object) (Object) (ak) (Object) ((ak) var14).field_L.j(0);
+                var14.a(((ak) this).field_K, ((ak) this).field_tb, param2, ((ak) this).field_nb, ((ak) this).field_gb, -123);
+                var14 = (ak) (Object) ((ak) this).field_L.j(0);
                 continue L13;
               }
             }
@@ -1008,7 +1007,7 @@ class ak extends tp {
           }
         }
         L14: {
-          if (!((ak) var14).field_R) {
+          if (!((ak) this).field_R) {
             break L14;
           } else {
             bm.field_q = true;
@@ -1025,16 +1024,16 @@ class ak extends tp {
         }
         L16: {
           t.f(var9, var10, var11, var12);
-          if (((ak) var14).field_J == 0) {
+          if (((ak) this).field_J == 0) {
             break L16;
           } else {
-            if (!((ak) var14).field_vb) {
+            if (!((ak) this).field_vb) {
               break L16;
             } else {
               L17: {
-                ((ak) this).field_D = -((ak) var14).field_ub + (uf.field_d - param1);
-                ((ak) this).field_S = bg.field_k - ((ak) var14).field_Ab + -param4;
-                if (((ak) var14).field_D >= 0) {
+                ((ak) this).field_D = -((ak) this).field_ub + (uf.field_d - param1);
+                ((ak) this).field_S = bg.field_k - ((ak) this).field_Ab + -param4;
+                if (((ak) this).field_D >= 0) {
                   break L17;
                 } else {
                   ((ak) this).field_D = 0;
@@ -1042,7 +1041,7 @@ class ak extends tp {
                 }
               }
               L18: {
-                if (0 > ((ak) var14).field_S) {
+                if (0 > ((ak) this).field_S) {
                   ((ak) this).field_S = 0;
                   break L18;
                 } else {
@@ -1050,8 +1049,8 @@ class ak extends tp {
                 }
               }
               L19: {
-                if (((ak) var14).field_D > param0 + -((ak) var14).field_K) {
-                  ((ak) this).field_D = -((ak) var14).field_K + param0;
+                if (((ak) this).field_D > param0 + -((ak) this).field_K) {
+                  ((ak) this).field_D = -((ak) this).field_K + param0;
                   break L19;
                 } else {
                   break L19;
@@ -1060,15 +1059,15 @@ class ak extends tp {
               L20: {
                 ((ak) this).field_G = 0;
                 ((ak) this).field_wb = 0;
-                ((ak) this).field_tb = param1 - -((ak) var14).field_D;
-                if (((ak) var14).field_S > -((ak) var14).field_nb + param3) {
-                  ((ak) this).field_S = param3 - ((ak) var14).field_nb;
+                ((ak) this).field_tb = param1 - -((ak) this).field_D;
+                if (((ak) this).field_S > -((ak) this).field_nb + param3) {
+                  ((ak) this).field_S = param3 - ((ak) this).field_nb;
                   break L20;
                 } else {
                   break L20;
                 }
               }
-              ((ak) this).field_gb = param4 + ((ak) var14).field_S;
+              ((ak) this).field_gb = param4 + ((ak) this).field_S;
               break L16;
             }
           }
@@ -1079,19 +1078,16 @@ class ak extends tp {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    final static void i() {
+    final static void i(int param0) {
         jp.a(-117);
-        int discarded$0 = 0;
-        uo.b();
+        uo.b(false);
         hc.field_M = null;
-        int discarded$1 = 0;
-        mj.a();
+        mj.a(false);
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         ce.field_d = 0;
-        int discarded$0 = 20558;
-        ib.b();
+        ib.b(20558);
     }
 
     final void a(int param0, ak param1) {
@@ -1461,8 +1457,7 @@ class ak extends tp {
               if (param0 == -27813) {
                 break L41;
               } else {
-                int discarded$1 = 1;
-                ak.c();
+                ak.c(true);
                 break L41;
               }
             }
@@ -1500,7 +1495,7 @@ class ak extends tp {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_E = null;
         field_db = null;
         field_T = null;
@@ -1514,7 +1509,7 @@ class ak extends tp {
             while (var4 != null) {
                 var4.field_fb = true;
                 var4.h(-257);
-                var4 = (ak) (Object) var4.field_L.j(0);
+                var4 = (ak) (Object) ((ak) this).field_L.j(0);
             }
         }
         if (param0 != -257) {

@@ -47,13 +47,13 @@ final class tsa extends ksa {
     final nc a(byte param0, rqa[] param1) throws gva, ojb {
         NumberFormatException var3 = null;
         RuntimeException var3_ref = null;
-        nc[] var3_array = null;
         int var3_int = 0;
         int var4 = 0;
-        Object var5 = null;
+        tsa var5 = null;
         int var6 = 0;
         nc[] var7 = null;
-        String var8 = null;
+        nc[] var8 = null;
+        String var9 = null;
         Object stackIn_3_0 = null;
         nc stackIn_10_0 = null;
         nc stackIn_16_0 = null;
@@ -88,73 +88,71 @@ final class tsa extends ksa {
         RuntimeException stackOut_44_0 = null;
         StringBuilder stackOut_44_1 = null;
         String stackOut_44_2 = null;
-        var5 = null;
         var6 = VoidHunters.field_G;
         try {
           if (param0 > 60) {
             if (((tsa) this).field_e == hpa.field_p) {
               var7 = new nc[((tsa) this).field_f.c(3)];
-              var3_array = var7;
+              var8 = var7;
               var4 = 0;
-              var5 = (Object) (Object) (tsa) (Object) ((tsa) this).field_f.d(0);
+              var5 = (tsa) (Object) ((tsa) this).field_f.d(0);
               L0: while (true) {
                 if (var5 == null) {
-                  int discarded$2 = -124;
-                  stackOut_9_0 = fjb.a(((tsa) var5).field_d, var3_array, param1);
+                  stackOut_9_0 = fjb.a(((tsa) this).field_d, var8, param1, (byte) -124);
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0;
                 } else {
-                  int incrementValue$3 = var4;
+                  int incrementValue$1 = var4;
                   var4++;
-                  var7[incrementValue$3] = ((tsa) var5).a((byte) 96, param1);
-                  var5 = (Object) (Object) (tsa) (Object) ((tsa) var5).field_f.a((byte) 69);
+                  var7[incrementValue$1] = var5.a((byte) 96, param1);
+                  var5 = (tsa) (Object) ((tsa) this).field_f.a((byte) 69);
                   continue L0;
                 }
               }
             } else {
-              if (((tsa) var5).field_e == fwa.field_h) {
-                var3_int = Character.toLowerCase(((tsa) var5).field_d.charAt(((tsa) var5).field_d.length() + -1));
+              if (((tsa) this).field_e == fwa.field_h) {
+                var3_int = Character.toLowerCase(((tsa) this).field_d.charAt(((tsa) this).field_d.length() + -1));
                 if (var3_int == 102) {
-                  stackOut_15_0 = new nc(Float.valueOf(((tsa) var5).field_d).floatValue());
+                  stackOut_15_0 = new nc(Float.valueOf(((tsa) this).field_d).floatValue());
                   stackIn_16_0 = stackOut_15_0;
                   return stackIn_16_0;
                 } else {
                   if (var3_int != 108) {
-                    if (-1 != ((tsa) var5).field_d.indexOf('.')) {
-                      stackOut_22_0 = new nc(Double.valueOf(((tsa) var5).field_d).doubleValue());
+                    if (-1 != ((tsa) this).field_d.indexOf('.')) {
+                      stackOut_22_0 = new nc(Double.valueOf(((tsa) this).field_d).doubleValue());
                       stackIn_23_0 = stackOut_22_0;
                       return stackIn_23_0;
                     } else {
-                      stackOut_24_0 = new nc(Integer.parseInt(((tsa) var5).field_d));
+                      stackOut_24_0 = new nc(Integer.parseInt(((tsa) this).field_d));
                       stackIn_25_0 = stackOut_24_0;
                       return stackIn_25_0;
                     }
                   } else {
-                    stackOut_18_0 = new nc(Long.parseLong(((tsa) var5).field_d.substring(0, -1 + ((tsa) var5).field_d.length())));
+                    stackOut_18_0 = new nc(Long.parseLong(((tsa) this).field_d.substring(0, -1 + ((tsa) this).field_d.length())));
                     stackIn_19_0 = stackOut_18_0;
                     return stackIn_19_0;
                   }
                 }
               } else {
-                if (io.field_p == ((tsa) var5).field_e) {
-                  stackOut_28_0 = new nc(((tsa) var5).field_d.equals((Object) (Object) "true"));
+                if (io.field_p == ((tsa) this).field_e) {
+                  stackOut_28_0 = new nc(((tsa) this).field_d.equals((Object) (Object) "true"));
                   stackIn_29_0 = stackOut_28_0;
                   return stackIn_29_0;
                 } else {
-                  if (((tsa) var5).field_e != ek.field_o) {
-                    if (dla.field_d == ((tsa) var5).field_e) {
-                      stackOut_38_0 = new nc((Object) (Object) ((tsa) var5).field_d.substring(1, ((tsa) var5).field_d.length() - 1));
+                  if (((tsa) this).field_e != ek.field_o) {
+                    if (dla.field_d == ((tsa) this).field_e) {
+                      stackOut_38_0 = new nc((Object) (Object) ((tsa) this).field_d.substring(1, ((tsa) this).field_d.length() - 1));
                       stackIn_39_0 = stackOut_38_0;
                       return stackIn_39_0;
                     } else {
                       throw new IllegalArgumentException();
                     }
                   } else {
-                    var8 = ((tsa) var5).field_d.substring(1, ((tsa) var5).field_d.length() + -1);
-                    if (var8.length() != 1) {
-                      throw new gva("Invalid char value: " + var8);
+                    var9 = ((tsa) this).field_d.substring(1, ((tsa) this).field_d.length() + -1);
+                    if (var9.length() != 1) {
+                      throw new gva("Invalid char value: " + var9);
                     } else {
-                      stackOut_34_0 = new nc(var8.charAt(0));
+                      stackOut_34_0 = new nc(var9.charAt(0));
                       stackIn_35_0 = stackOut_34_0;
                       return stackIn_35_0;
                     }
@@ -170,7 +168,7 @@ final class tsa extends ksa {
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (NumberFormatException) (Object) decompiledCaughtException;
-          throw new gva("NumberFormatException on: " + ((tsa) var5).field_d);
+          throw new gva("NumberFormatException on: " + ((tsa) this).field_d);
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           L1: {

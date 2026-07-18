@@ -154,9 +154,7 @@ final class qj extends t {
 
     final static aj l(int param0) {
         int var1 = -66 % ((param0 - 51) / 60);
-        int discarded$0 = -69;
-        int discarded$1 = -121;
-        return new aj(pl.a(), bb.a());
+        return new aj(pl.a((byte) -69), bb.a((byte) -121));
     }
 
     final int a(boolean param0) {
@@ -311,7 +309,7 @@ final class qj extends t {
         return stackIn_25_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_E = null;
         field_C = null;
     }

@@ -13,7 +13,7 @@ final class i extends ma {
     static int field_m;
     int field_n;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_l = null;
         field_o = null;
     }
@@ -658,8 +658,7 @@ final class i extends ma {
               }
             }
             L3: {
-              int discarded$3 = 1;
-              sh.a(stackIn_46_0 != 0, stackIn_46_1, stackIn_46_2, stackIn_46_3, stackIn_46_4, (byte) stackIn_46_5, stackIn_46_6, stackIn_46_7, stackIn_46_8 != 0, stackIn_46_9, stackIn_46_10 != 0);
+              sh.a(stackIn_46_0 != 0, stackIn_46_1, stackIn_46_2, stackIn_46_3, stackIn_46_4, (byte) stackIn_46_5, stackIn_46_6, stackIn_46_7, stackIn_46_8 != 0, stackIn_46_9, stackIn_46_10 != 0, true);
               if (em.field_N) {
                 ej.field_j.b(false, 64);
                 em.field_N = false;
@@ -882,8 +881,7 @@ final class i extends ma {
               }
             }
             L8: {
-              int discarded$4 = 1;
-              sh.a(stackIn_28_0 != 0, stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_28_4, (byte) stackIn_28_5, stackIn_28_6, stackIn_28_7, stackIn_28_8 != 0, stackIn_28_9, stackIn_28_10 != 0);
+              sh.a(stackIn_28_0 != 0, stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_28_4, (byte) stackIn_28_5, stackIn_28_6, stackIn_28_7, stackIn_28_8 != 0, stackIn_28_9, stackIn_28_10 != 0, true);
               if (em.field_N) {
                 ej.field_j.b(false, 64);
                 em.field_N = false;
@@ -1107,8 +1105,7 @@ final class i extends ma {
             }
           }
           L13: {
-            int discarded$5 = 1;
-            sh.a(stackIn_9_0 != 0, stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_9_4, (byte) stackIn_9_5, stackIn_9_6, stackIn_9_7, stackIn_9_8 != 0, stackIn_9_9, stackIn_9_10 != 0);
+            sh.a(stackIn_9_0 != 0, stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_9_4, (byte) stackIn_9_5, stackIn_9_6, stackIn_9_7, stackIn_9_8 != 0, stackIn_9_9, stackIn_9_10 != 0, true);
             if (em.field_N) {
               ej.field_j.b(false, 64);
               em.field_N = false;

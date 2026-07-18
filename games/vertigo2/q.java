@@ -12,7 +12,7 @@ final class q extends gp {
     static er[] field_z;
     private String[] field_t;
 
-    public static void i() {
+    public static void i(int param0) {
         field_z = null;
     }
 

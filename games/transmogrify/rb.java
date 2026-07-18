@@ -8,7 +8,7 @@ final class rb {
     static int field_a;
     static wb field_b;
 
-    final static void a() {
+    final static void a(byte param0) {
         try {
             if (!(ah.field_b == null)) {
                 try {
@@ -59,7 +59,7 @@ final class rb {
         }
     }
 
-    final static int a(int param0, CharSequence param1, byte[] param2, int param3) {
+    final static int a(int param0, CharSequence param1, byte[] param2, int param3, byte param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -347,50 +347,40 @@ final class rb {
                 break L0;
               } else {
                 L1: {
-                  L2: {
-                    if (param0 >= 0) {
-                      if (ll.field_Q != lj.field_z) {
-                        break L0;
-                      } else {
-                        if (ff.field_D.field_h != 0) {
-                          break L2;
-                        } else {
-                          if (~(10000L + td.field_b) <= ~lk.a(0)) {
-                            break L2;
-                          } else {
-                            ff.field_D.a(false, param0);
-                            if (param1 == -377) {
-                              break L1;
-                            } else {
-                              rb.a(81, (byte) 3);
-                              break L1;
-                            }
-                          }
-                        }
-                      }
+                  if (param0 >= 0) {
+                    if (ll.field_Q != lj.field_z) {
+                      break L0;
                     } else {
                       if (ff.field_D.field_h != 0) {
-                        break L2;
+                        break L1;
                       } else {
                         if (~(10000L + td.field_b) <= ~lk.a(0)) {
-                          break L2;
+                          break L1;
                         } else {
                           ff.field_D.a(false, param0);
-                          if (param1 == -377) {
-                            break L1;
-                          } else {
-                            rb.a(81, (byte) 3);
-                            break L1;
-                          }
+                          break L1;
                         }
                       }
                     }
+                  } else {
+                    if (ff.field_D.field_h != 0) {
+                      break L1;
+                    } else {
+                      if (~(10000L + td.field_b) <= ~lk.a(0)) {
+                        break L1;
+                      } else {
+                        ff.field_D.a(false, param0);
+                        break L1;
+                      }
+                    }
                   }
+                }
+                L2: {
                   if (param1 == -377) {
-                    break L1;
+                    break L2;
                   } else {
                     rb.a(81, (byte) 3);
-                    break L1;
+                    break L2;
                   }
                 }
                 L3: {
@@ -419,7 +409,7 @@ final class rb {
         }
     }
 
-    final static String a(byte param0, CharSequence param1) {
+    final static String a(byte param0, CharSequence param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;

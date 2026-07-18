@@ -154,8 +154,7 @@ final class pra extends rqa {
                             return;
                           } else {
                             L6: {
-                              int discarded$6 = 0;
-                              ai.a(false);
+                              ai.a(false, 0);
                               tba.field_p = tba.field_p + 1;
                               if (param1) {
                                 break L6;
@@ -190,8 +189,7 @@ final class pra extends rqa {
                           if (~nf.field_a > ~ldb.field_o) {
                             L7: {
                               if (nf.field_a == 0) {
-                                int discarded$7 = 0;
-                                ai.a(true);
+                                ai.a(true, 0);
                                 break L7;
                               } else {
                                 break L7;
@@ -212,8 +210,7 @@ final class pra extends rqa {
                       } else {
                         if (tba.field_p <= 0) {
                           if (~lia.field_b > ~ldb.field_o) {
-                            int discarded$8 = 8611;
-                            fma.l();
+                            fma.l(8611);
                             lia.field_b = lia.field_b + 1;
                             break L4;
                           } else {
@@ -289,8 +286,7 @@ final class pra extends rqa {
                         return;
                       }
                     } else {
-                      int discarded$9 = 0;
-                      ai.a(false);
+                      ai.a(false, 0);
                       tba.field_p = tba.field_p + 1;
                       if (param1) {
                         return;
@@ -323,8 +319,7 @@ final class pra extends rqa {
                     if (~nf.field_a > ~ldb.field_o) {
                       L9: {
                         if (nf.field_a == 0) {
-                          int discarded$10 = 0;
-                          ai.a(true);
+                          ai.a(true, 0);
                           break L9;
                         } else {
                           break L9;
@@ -345,8 +340,7 @@ final class pra extends rqa {
                 } else {
                   if (tba.field_p <= 0) {
                     if (~lia.field_b > ~ldb.field_o) {
-                      int discarded$11 = 8611;
-                      fma.l();
+                      fma.l(8611);
                       lia.field_b = lia.field_b + 1;
                       break L8;
                     } else {
@@ -374,7 +368,7 @@ final class pra extends rqa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_q = null;
         field_p = null;
     }

@@ -7,15 +7,14 @@ final class jj {
     static int field_c;
     static String field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_d = null;
         field_b = null;
     }
 
-    final static void b() {
-        int discarded$0 = 1;
-        eg.a(rl.field_h);
+    final static void b(byte param0) {
+        eg.a(rl.field_h, true);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {

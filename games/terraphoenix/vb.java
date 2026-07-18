@@ -46,7 +46,7 @@ final class vb {
         return null;
     }
 
-    final static String b() {
+    final static String b(byte param0) {
         if (!(uh.field_H >= 2)) {
             return c.field_i;
         }
@@ -181,7 +181,7 @@ final class vb {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_e = null;
         field_c = null;

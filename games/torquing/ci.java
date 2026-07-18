@@ -93,7 +93,7 @@ final class ci {
         return stackIn_1_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;

@@ -141,7 +141,7 @@ final class eb extends td {
         return (ii) (Object) stackIn_15_0;
     }
 
-    final static void a() {
+    final static void a(boolean param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         kr var2_ref = null;
@@ -264,12 +264,10 @@ final class eb extends td {
                 }
                 L6: {
                   jha.field_g.c(hka.field_g, 452, 306, 65793, -1);
-                  int discarded$3 = 1;
                   var4 = lga.a(true, new String[1], vla.field_u);
                   jha.field_g.b(var4, 600, 306, 16699649, -1);
                   hfa.field_z.b(var4, 600, 306, 65793, -1);
                   jha.field_g.c(jla.field_c, 452, 400, 65793, -1);
-                  int discarded$4 = 1;
                   var5 = lga.a(true, new String[1], vla.field_u);
                   jha.field_g.b(var5, 600, 400, 16699649, -1);
                   hfa.field_z.b(var5, 600, 400, 65793, -1);
@@ -278,8 +276,7 @@ final class eb extends td {
                   lma.field_y.a(598, 166);
                   gha.field_b.a(598, 271);
                   if (!um.a(true)) {
-                    int discarded$5 = 1;
-                    kla.b();
+                    kla.b(true);
                     break L6;
                   } else {
                     break L6;
@@ -316,7 +313,7 @@ final class eb extends td {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_s = null;
         field_q = null;
         field_r = null;

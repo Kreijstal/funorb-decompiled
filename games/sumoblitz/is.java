@@ -58,7 +58,7 @@ final class is {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         pu.field_e.a((byte) 123);
         pu.field_e.a((byte) 112, (pk) (Object) new dd(pu.field_e));
     }

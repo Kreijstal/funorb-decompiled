@@ -158,8 +158,7 @@ final class en {
                 jo.field_a.field_F = cs.a(16, 3, jo.field_a.field_mb, 11579568, 8421504, 1);
                 lp.field_v.a(jo.field_a.field_K + -10, -2 + jo.field_a.field_mb - 34, (byte) 115, 5, 5);
                 oo.field_c.a(80, 24, (byte) 108, -5 + jo.field_a.field_mb - 24, (jo.field_a.field_K + -80) / 2);
-                int discarded$1 = 18;
-                p.d();
+                p.d(18);
                 break L0;
               } else {
                 L8: {
@@ -347,7 +346,7 @@ final class en {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_e = null;
         field_b = null;

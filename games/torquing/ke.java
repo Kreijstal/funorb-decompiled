@@ -6,7 +6,7 @@ final class ke {
     static int field_c;
     static long field_b;
 
-    final static StringBuilder a(StringBuilder param0) {
+    final static StringBuilder a(StringBuilder param0, char param1, boolean param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -331,7 +331,7 @@ final class ke {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

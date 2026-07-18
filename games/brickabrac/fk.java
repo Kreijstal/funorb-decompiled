@@ -13,7 +13,7 @@ final class fk {
     static jp field_e;
     static String field_d;
 
-    final static boolean a(mf param0, mf param1, mf param2) {
+    final static boolean a(mf param0, mf param1, mf param2, int param3) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_10_0 = 0;
@@ -499,7 +499,7 @@ final class fk {
         return stackIn_25_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         pi var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -510,16 +510,14 @@ final class fk {
           L0: {
             var1 = k.field_h;
             L1: while (true) {
-              int discarded$17 = 104;
-              if (!ik.a()) {
+              if (!ik.a(104)) {
                 break L0;
               } else {
                 var1.e(-13413, 8);
-                int fieldTemp$18 = var1.field_l + 1;
+                int fieldTemp$6 = var1.field_l + 1;
                 var1.field_l = var1.field_l + 1;
-                var2 = fieldTemp$18;
-                int discarded$19 = 9;
-                ah.a(var1);
+                var2 = fieldTemp$6;
+                ah.a(var1, (byte) 9);
                 k.field_h.d((byte) 118, -var2 + var1.field_l);
                 continue L1;
               }

@@ -12,14 +12,14 @@ final class hc extends rk {
     static fh field_t;
     long field_r;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_s = null;
         field_t = null;
         field_u = null;
         field_p = null;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         if (48 > param0) {
             return false;
         }
@@ -51,8 +51,7 @@ final class hc extends rk {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_2_0 = tb.a(0, param1);
+            stackOut_2_0 = tb.a(0, param1, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

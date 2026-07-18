@@ -9,7 +9,7 @@ final class hr {
     static String field_f;
     static String field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_e = null;
         field_b = null;

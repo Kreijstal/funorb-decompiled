@@ -131,8 +131,7 @@ final class tk extends nc {
                   }
                 }
                 oo.e(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_16_4);
-                int discarded$1 = 51603;
-                if (h.i()) {
+                if (h.i(51603)) {
                   if (jk.a((byte) -70, var6)) {
                     el.field_E.a(var5 + 419, 345);
                     var4++;
@@ -951,8 +950,7 @@ final class tk extends nc {
                     }
                   }
                 }
-                int discarded$1 = 51603;
-                if (h.i()) {
+                if (h.i(51603)) {
                   L5: {
                     if (jk.a((byte) -51, var8)) {
                       break L5;
@@ -991,8 +989,7 @@ final class tk extends nc {
     }
 
     final void b(byte param0) {
-        int discarded$0 = -61;
-        th.b();
+        th.b((byte) -61);
         super.b(param0);
     }
 
@@ -1093,8 +1090,7 @@ final class tk extends nc {
                   break L2;
                 }
               }
-              int discarded$3 = 51603;
-              if (!h.i()) {
+              if (!h.i(51603)) {
                 break L0;
               } else {
                 if (jk.a((byte) -51, var7)) {
@@ -1199,7 +1195,7 @@ final class tk extends nc {
                       var16 = 0;
                       L12: while (true) {
                         if (var16 >= var14.length) {
-                          int discarded$4 = var11.a(var10, var24, var14);
+                          int discarded$2 = var11.a(var10, var24, var14);
                           var16 = 0;
                           var17 = 0;
                           L13: while (true) {
@@ -1231,7 +1227,7 @@ final class tk extends nc {
                               }
                               oo.b(var2 - 2, -2 + var3, var5 - -8, var4 + 8, 4, 0, var13 / 2);
                               oo.b(-4 + var2, var3 + -4, 8 + var5, var4 + 8, 4, 5005603, var13);
-                              int discarded$5 = var11.a(var10, var2, var3, var5, var4, 16777215, 0, var13, 1, 1, 0);
+                              int discarded$3 = var11.a(var10, var2, var3, var5, var4, 16777215, 0, var13, 1, 1, 0);
                               break L5;
                             } else {
                               L16: {
@@ -1499,7 +1495,7 @@ final class tk extends nc {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_o = null;
         field_l = null;
         field_q = null;

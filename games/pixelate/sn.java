@@ -22,7 +22,7 @@ final class sn extends fa {
         return oo.field_a;
     }
 
-    final static void e() {
+    final static void e(int param0) {
         int var2 = 0;
         int var1 = 63;
         if (ia.field_h > 32) {
@@ -36,7 +36,7 @@ final class sn extends fa {
         }
     }
 
-    final static void a(jn param0) {
+    final static void a(jn param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -98,8 +98,7 @@ final class sn extends fa {
         try {
           L0: {
             L1: {
-              int discarded$2 = 0;
-              var22 = uj.a(param0.field_o, param0.field_l);
+              var22 = uj.a(param0.field_o, param0.field_l, 0);
               var3 = 4;
               var4 = 14;
               if (param0.field_n != 0) {
@@ -169,8 +168,7 @@ final class sn extends fa {
               }
             }
             L4: {
-              int discarded$3 = 0;
-              var23 = uj.a(stackIn_18_0, stackIn_18_1);
+              var23 = uj.a(stackIn_18_0, stackIn_18_1, 0);
               var24 = var22.a(8, var23);
               var9 = 0;
               var10 = 2;
@@ -267,7 +265,7 @@ final class sn extends fa {
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -342,16 +340,14 @@ final class sn extends fa {
         ((sn) this).field_r = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ln.a(74);
         if (!(null == ec.field_u)) {
             pf.a(ec.field_u, 0);
         }
         vi.a((byte) -109);
-        int discarded$12 = -94;
-        db.a();
-        int discarded$18 = -26721;
-        ep.c();
+        db.a((byte) -94);
+        ep.c(-26721);
         if (se.b(true)) {
             aa.field_f.g(1, 15514);
             vg.b(0, 10000);

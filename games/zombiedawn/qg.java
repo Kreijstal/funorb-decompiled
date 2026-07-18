@@ -25,7 +25,7 @@ abstract class qg {
 
     abstract java.net.Socket a(boolean param0) throws IOException;
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_a = null;
         field_h = null;
@@ -103,8 +103,7 @@ abstract class qg {
                     break L3;
                   }
                 }
-                int discarded$2 = 1;
-                hl.a(param1);
+                hl.a(param1, 1);
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

@@ -89,7 +89,7 @@ final class hj {
         return var4;
     }
 
-    private final void f() {
+    private final void f(int param0) {
         ((hj) this).field_g = ((hj) this).field_g + (-4000 + pf.a((byte) 111, 8000));
         if (0 > ((hj) this).field_g) {
             ((hj) this).field_g = 65535 - ((hj) this).field_g;
@@ -166,13 +166,12 @@ final class hj {
                 if (((hj) this).field_O <= param4 + var8) {
                     var8 = ((hj) this).field_O - param4;
                 }
-                int discarded$0 = 5592405;
-                ge.d(-1 + param1, param4, var8);
+                ge.d(-1 + param1, param4, var8, 5592405);
             }
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         ie.a(aa.field_a, 112);
     }
 
@@ -211,7 +210,7 @@ final class hj {
         }
     }
 
-    private final void g() {
+    private final void g(int param0) {
         int var2 = 0;
         int var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         for (var2 = 0; var2 < 5; var2++) {
@@ -224,9 +223,7 @@ final class hj {
         if (((hj) this).field_A > 0) {
             if (!((hj) this).field_o) {
                 if (null == pg.field_b) {
-                    int discarded$0 = 100;
-                    int discarded$1 = 3;
-                    pg.field_b = di.a(rk.field_d, 65494, h.field_a, nj.field_b, new int[1], 41, cl.field_d);
+                    pg.field_b = di.a(rk.field_d, 65494, h.field_a, nj.field_b, new int[1], 41, cl.field_d, 3, (byte) 100);
                 }
             }
         }
@@ -318,7 +315,7 @@ final class hj {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_D = null;
     }
 
@@ -328,7 +325,7 @@ final class hj {
         return var2;
     }
 
-    private final void h() {
+    private final void h(int param0) {
         float var2 = 0.0f;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
@@ -390,7 +387,7 @@ final class hj {
         ((hj) this).field_i = (int)((float)j.field_f[0].field_m * var2);
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         int var3 = 0;
         L0: {
           var3 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -463,7 +460,7 @@ final class hj {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         float var2 = 0.0f;
         float var3 = 0.0f;
         int var4 = 0;
@@ -471,8 +468,7 @@ final class hj {
           var4 = MonkeyPuzzle2.field_F ? 1 : 0;
           if (Math.random() > 0.9) {
             ((hj) this).field_hb = pf.a((byte) 54, 2);
-            int discarded$10 = 120;
-            this.f();
+            this.f(120);
             break L0;
           } else {
             break L0;
@@ -495,8 +491,7 @@ final class hj {
           if (69.0f < ((hj) this).field_B) {
             ((hj) this).field_B = 69.0f;
             ((hj) this).field_V = false;
-            int discarded$11 = 120;
-            this.f();
+            this.f(120);
             break L2;
           } else {
             if (((hj) this).field_B >= 0.0f) {
@@ -504,8 +499,7 @@ final class hj {
             } else {
               ((hj) this).field_B = 0.0f;
               ((hj) this).field_V = false;
-              int discarded$12 = 120;
-              this.f();
+              this.f(120);
               break L2;
             }
           }
@@ -514,8 +508,7 @@ final class hj {
           if (((hj) this).field_Z < 0.0f) {
             ((hj) this).field_V = false;
             ((hj) this).field_Z = 0.0f;
-            int discarded$13 = 120;
-            this.f();
+            this.f(120);
             break L3;
           } else {
             if (480.0f >= ((hj) this).field_Z) {
@@ -523,8 +516,7 @@ final class hj {
             } else {
               ((hj) this).field_V = false;
               ((hj) this).field_Z = 480.0f;
-              int discarded$14 = 120;
-              this.f();
+              this.f(120);
               break L3;
             }
           }
@@ -582,8 +574,7 @@ final class hj {
             break L0;
           } else {
             if (13 == ((hj) this).field_jb) {
-              int discarded$29 = 0;
-              this.a();
+              this.a(false);
               pg.field_d[l.field_f].c((byte) -87);
               ej.field_b = 0;
               return;
@@ -651,8 +642,7 @@ final class hj {
         }
         var3 = 0;
         L8: while (true) {
-          int discarded$30 = -1;
-          if (!ba.a()) {
+          if (!ba.a(-1)) {
             L9: {
               if (ec.field_d < 2) {
                 break L9;
@@ -680,8 +670,7 @@ final class hj {
               }
             }
             L11: {
-              int discarded$31 = 126;
-              mk.f();
+              mk.f(126);
               ((hj) this).field_H = ((hj) this).field_H + 1;
               var7 = ((hj) this).field_jb;
               if (var7 != 0) {
@@ -699,9 +688,9 @@ final class hj {
                           if (((hj) this).field_d <= 200) {
                             break L12;
                           } else {
-                            int fieldTemp$32 = ((hj) this).field_Y + 1;
+                            int fieldTemp$10 = ((hj) this).field_Y + 1;
                             ((hj) this).field_Y = ((hj) this).field_Y + 1;
-                            if (~fieldTemp$32 != ~cm.field_F.length) {
+                            if (~fieldTemp$10 != ~cm.field_F.length) {
                               break L12;
                             } else {
                               ((hj) this).field_Y = 0;
@@ -787,9 +776,9 @@ final class hj {
                         if ((((hj) this).field_d & 15) == 0) {
                           var7 = ba.field_a[((hj) this).field_u].length;
                           this.a((byte) 115);
-                          int fieldTemp$33 = ((hj) this).field_Y + 1;
+                          int fieldTemp$11 = ((hj) this).field_Y + 1;
                           ((hj) this).field_Y = ((hj) this).field_Y + 1;
-                          if (~fieldTemp$33 != ~var7) {
+                          if (~fieldTemp$11 != ~var7) {
                             break L19;
                           } else {
                             ((hj) this).field_Y = 3;
@@ -841,17 +830,15 @@ final class hj {
                                   ((hj) this).field_M = 320;
                                   ((hj) this).field_I = -1;
                                   ((hj) this).field_O = -14 + ((hj) this).field_k;
-                                  int discarded$34 = 0;
-                                  uj.b();
+                                  uj.b(0);
                                   vi.a(true);
                                   dc.field_c = dc.field_c + 1;
                                   rb.a(dc.field_c, (byte) -58);
                                   ((hj) this).field_r = 1;
                                   ((hj) this).field_t = 0;
-                                  int discarded$35 = -2147483648;
-                                  int dupTemp$36 = jf.a();
-                                  ((hj) this).field_W = dupTemp$36;
-                                  ((hj) this).field_J = dupTemp$36;
+                                  int dupTemp$12 = jf.a(-2147483648);
+                                  ((hj) this).field_W = dupTemp$12;
+                                  ((hj) this).field_J = dupTemp$12;
                                   this.e(102);
                                   ((hj) this).field_u = 0;
                                   fl.b(124);
@@ -926,9 +913,9 @@ final class hj {
                                   break L26;
                                 } else {
                                   var7 = ba.field_a[((hj) this).field_u].length;
-                                  int fieldTemp$37 = ((hj) this).field_Y + 1;
+                                  int fieldTemp$13 = ((hj) this).field_Y + 1;
                                   ((hj) this).field_Y = ((hj) this).field_Y + 1;
-                                  if (~fieldTemp$37 != ~var7) {
+                                  if (~fieldTemp$13 != ~var7) {
                                     break L26;
                                   } else {
                                     ((hj) this).field_Y = 0;
@@ -984,9 +971,9 @@ final class hj {
                           } else {
                             var7 = ba.field_a[((hj) this).field_u].length;
                             this.a((byte) 75);
-                            int fieldTemp$38 = ((hj) this).field_Y + 1;
+                            int fieldTemp$14 = ((hj) this).field_Y + 1;
                             ((hj) this).field_Y = ((hj) this).field_Y + 1;
-                            if (fieldTemp$38 == var7) {
+                            if (fieldTemp$14 == var7) {
                               if (((hj) this).field_u == 2) {
                                 ((hj) this).field_Y = 2;
                                 break L30;
@@ -1000,12 +987,10 @@ final class hj {
                           }
                         }
                         L31: {
-                          int discarded$39 = 107;
-                          nh.b();
+                          nh.b((byte) 107);
                           ff.a(((hj) this).field_O, -6961);
                           hh.f(8500);
-                          int discarded$40 = 56;
-                          this.d();
+                          this.d((byte) 56);
                           if (((hj) this).field_u == 2) {
                             break L31;
                           } else {
@@ -1019,8 +1004,7 @@ final class hj {
                           }
                         }
                         L32: {
-                          int discarded$41 = -111;
-                          rc.a(((hj) this).field_mb, ((hj) this).field_s);
+                          rc.a(((hj) this).field_mb, ((hj) this).field_s, (byte) -111);
                           if (0 <= mh.field_D) {
                             break L32;
                           } else {
@@ -1054,8 +1038,7 @@ final class hj {
                             if (1.0f < ((hj) this).field_mb) {
                               ((hj) this).field_mb = 0.0f;
                               ((hj) this).field_s = ((hj) this).field_s - 1;
-                              int discarded$42 = -48;
-                              nf.n();
+                              nf.n(-48);
                               break L33;
                             } else {
                               break L33;
@@ -1070,9 +1053,9 @@ final class hj {
                 } else {
                   L34: {
                     if ((((hj) this).field_d & 15) == 0) {
-                      int fieldTemp$43 = ((hj) this).field_Y + 1;
+                      int fieldTemp$15 = ((hj) this).field_Y + 1;
                       ((hj) this).field_Y = ((hj) this).field_Y + 1;
-                      if (fieldTemp$43 == cm.field_F.length) {
+                      if (fieldTemp$15 == cm.field_F.length) {
                         ((hj) this).field_Y = 0;
                         break L34;
                       } else {
@@ -1095,14 +1078,12 @@ final class hj {
                 L35: {
                   this.i(0);
                   hh.f(8500);
-                  int discarded$44 = -93;
-                  eb.d();
+                  eb.d((byte) -93);
                   ff.a(((hj) this).field_O, -6961);
                   if (!ub.field_a) {
                     break L35;
                   } else {
-                    int discarded$45 = -2147483648;
-                    ((hj) this).field_J = jf.a();
+                    ((hj) this).field_J = jf.a(-2147483648);
                     break L35;
                   }
                 }
@@ -1142,17 +1123,16 @@ final class hj {
                   }
                 }
                 L38: {
-                  int discarded$46 = 56;
-                  this.d();
+                  this.d((byte) 56);
                   if (0 != (15 & ((hj) this).field_d)) {
                     break L38;
                   } else {
                     if (!((hj) this).field_V) {
                       break L38;
                     } else {
-                      int fieldTemp$47 = ((hj) this).field_ab + 1;
+                      int fieldTemp$16 = ((hj) this).field_ab + 1;
                       ((hj) this).field_ab = ((hj) this).field_ab + 1;
-                      if (fieldTemp$47 != 4) {
+                      if (fieldTemp$16 != 4) {
                         break L38;
                       } else {
                         ((hj) this).field_ab = 0;
@@ -1168,9 +1148,9 @@ final class hj {
                     if ((3 & ((hj) this).field_d) != 0) {
                       break L39;
                     } else {
-                      int fieldTemp$48 = ((hj) this).field_x + 1;
+                      int fieldTemp$17 = ((hj) this).field_x + 1;
                       ((hj) this).field_x = ((hj) this).field_x + 1;
-                      if (fieldTemp$48 != 4) {
+                      if (fieldTemp$17 != 4) {
                         break L39;
                       } else {
                         ((hj) this).field_x = 0;
@@ -1180,9 +1160,9 @@ final class hj {
                   }
                 }
                 L40: {
-                  int fieldTemp$49 = ((hj) this).field_G;
+                  int fieldTemp$18 = ((hj) this).field_G;
                   ((hj) this).field_G = ((hj) this).field_G - 1;
-                  if (fieldTemp$49 != 0) {
+                  if (fieldTemp$18 != 0) {
                     break L40;
                   } else {
                     L41: {
@@ -1239,9 +1219,9 @@ final class hj {
                   } else {
                     var7 = ba.field_a[((hj) this).field_u].length;
                     this.a((byte) 82);
-                    int fieldTemp$50 = ((hj) this).field_Y + 1;
+                    int fieldTemp$19 = ((hj) this).field_Y + 1;
                     ((hj) this).field_Y = ((hj) this).field_Y + 1;
-                    if (var7 == fieldTemp$50) {
+                    if (var7 == fieldTemp$19) {
                       L45: {
                         if (1 == ((hj) this).field_u) {
                           var8 = 0;
@@ -1273,12 +1253,10 @@ final class hj {
                             var9_double = (double)((hj) this).field_z * 6.283185307179586 / 65535.0;
                             var11 = (int)(10000.0 * Math.cos(var9_double));
                             var12 = (int)(Math.sin(var9_double) * 10000.0);
-                            int discarded$51 = -301;
-                            n.a(var12, var11, ((hj) this).field_M, ((hj) this).field_k);
+                            n.a(var12, var11, ((hj) this).field_M, ((hj) this).field_k, -301);
                             ((hj) this).field_T = -1;
                             ((hj) this).field_u = 0;
-                            int discarded$52 = 13816;
-                            this.g();
+                            this.g(13816);
                             break L45;
                           }
                         } else {
@@ -1519,8 +1497,7 @@ final class hj {
                     break L69;
                   }
                 }
-                int discarded$53 = 340;
-                this.h();
+                this.h(340);
                 break L67;
               } else {
                 if (aa.field_a != 3) {
@@ -1792,8 +1769,7 @@ final class hj {
                     }
                   }
                 }
-                int discarded$54 = 1;
-                if (!jj.b()) {
+                if (!jj.b(true)) {
                   break L86;
                 } else {
                   if (((hj) this).field_jb != 0) {
@@ -1830,8 +1806,7 @@ final class hj {
                         ((hj) this).field_M = 320;
                         ((hj) this).field_k = 480;
                         ((hj) this).field_O = -14 + ((hj) this).field_k;
-                        int discarded$55 = 0;
-                        uj.b();
+                        uj.b(0);
                         dc.field_c = dc.field_c - 1;
                         rb.a(dc.field_c, (byte) -58);
                         ((hj) this).field_o = true;
@@ -1876,8 +1851,7 @@ final class hj {
                       ((hj) this).field_M = 320;
                       ((hj) this).field_k = 480;
                       ((hj) this).field_O = -14 + ((hj) this).field_k;
-                      int discarded$56 = 0;
-                      uj.b();
+                      uj.b(0);
                       dc.field_c = dc.field_c + 1;
                       rb.a(dc.field_c, (byte) -58);
                       ((hj) this).field_o = true;
@@ -1957,8 +1931,7 @@ final class hj {
             } else {
               L101: {
                 if (13 == ((hj) this).field_jb) {
-                  int discarded$57 = 0;
-                  this.a();
+                  this.a(false);
                   break L101;
                 } else {
                   l.field_f = 1;
@@ -2023,9 +1996,9 @@ final class hj {
               if (~(m.field_i[0].field_n * 2 + ((hj) this).field_y) >= ~var2) {
                 break L0;
               } else {
-                int incrementValue$6 = var3;
+                int incrementValue$1 = var3;
                 var3++;
-                var4 = incrementValue$6 + ((hj) this).field_c;
+                var4 = incrementValue$1 + ((hj) this).field_c;
                 var4 = var4 % 4;
                 var5 = 0;
                 L2: while (true) {
@@ -2190,8 +2163,7 @@ final class hj {
                     break L16;
                   }
                 }
-                int discarded$7 = 0;
-                ma.a(((hj) this).field_m.field_s, 80, 0, ((hj) this).field_m.field_m, var7_int, var8);
+                ma.a(((hj) this).field_m.field_s, 80, 0, ((hj) this).field_m.field_m, var7_int, var8, 0);
                 ac.field_a.a((byte) 110);
                 break L14;
               } else {
@@ -2289,8 +2261,7 @@ final class hj {
                   L23: {
                     var22_ref.field_B = (float)((hj) this).field_M;
                     var22_ref.field_q = (float)(-48 + ((hj) this).field_k);
-                    int discarded$8 = 1;
-                    if (jj.b()) {
+                    if (jj.b(true)) {
                       var22_ref.a((byte) -74);
                       break L23;
                     } else {
@@ -2341,8 +2312,7 @@ final class hj {
                 }
               }
             }
-            int discarded$9 = 18180;
-            df.f();
+            df.f(18180);
             var2 = (int)(ia.a(true, (float)((hj) this).field_H * 0.00800000037997961f) * 50.0f);
             var3 = 727655;
             ge.c(80, ((hj) this).field_O, 480, 480, var3, 120);
@@ -2456,8 +2426,7 @@ final class hj {
                   ge.h(0, 0, 640, 480);
                   ge.c(70, var5, 10, -var5 + 480, var3, 120);
                   ge.c(560, var6, 10, -var6 + 480, var3, 120);
-                  int discarded$10 = 0;
-                  ka.b();
+                  ka.b(0);
                   var7 = qh.field_a[((hj) this).field_ab];
                   var7.b(var7.field_m << 3, var7.field_n << 3, (int)((hj) this).field_B << 4, (int)((hj) this).field_Z << 4, ((hj) this).field_g, 4096);
                   lb.field_E[0].c(0, 0);
@@ -2833,8 +2802,7 @@ final class hj {
                         if (!ok.field_e) {
                           break L63;
                         } else {
-                          int discarded$11 = -112;
-                          pe.a();
+                          pe.a(-112);
                           break L63;
                         }
                       }
@@ -2975,8 +2943,7 @@ final class hj {
         ((hj) this).field_k = 480;
         ((hj) this).field_nb = 0;
         ((hj) this).field_O = ((hj) this).field_k - 14;
-        int discarded$0 = 0;
-        uj.b();
+        uj.b(0);
         dc.field_c = 0;
         rb.a(dc.field_c, (byte) -58);
         if (aa.field_a == 0) {
@@ -3000,8 +2967,7 @@ final class hj {
         ((hj) this).field_I = 0;
         ((hj) this).field_j = new StringBuilder(7);
         ((hj) this).a(-19921);
-        int discarded$1 = -43;
-        this.b();
+        this.b((byte) -43);
         ((hj) this).field_z = 49150;
         h.a(0, true);
         ((hj) this).field_R = new le(340, 40);
@@ -3015,10 +2981,9 @@ final class hj {
         gl.a(ua.field_w, 0, ((hj) this).field_fb, 0, ((hj) this).field_fb.length);
         ch.b(-112);
         pg.field_b = null;
-        int discarded$2 = -2147483648;
-        int dupTemp$3 = jf.a();
-        ((hj) this).field_W = dupTemp$3;
-        ((hj) this).field_J = dupTemp$3;
+        int dupTemp$0 = jf.a(-2147483648);
+        ((hj) this).field_W = dupTemp$0;
+        ((hj) this).field_J = dupTemp$0;
         ((hj) this).field_cb = new int[5];
         ((hj) this).field_S = true;
         for (var1 = 0; ((hj) this).field_cb.length > var1; var1++) {

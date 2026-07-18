@@ -115,9 +115,8 @@ final class ic extends fd {
                 }
               }
               var8 = stackIn_19_0;
-              int discarded$2 = 0;
-              bk.a(param0 - -param1.field_u + (-((ic) this).field_y[0].field_u + param1.field_n >> 1), var7, param1.field_w + param2, param1.field_p, ((ic) this).field_y);
-              int discarded$3 = ((ic) this).field_j.a(param1.field_o, param2 - -param1.field_w, param1.field_u + (param0 + -2), param1.field_p, param1.field_n, var8, -1, 1, 1, ((ic) this).field_j.field_s);
+              bk.a(param0 - -param1.field_u + (-((ic) this).field_y[0].field_u + param1.field_n >> 1), var7, param1.field_w + param2, param1.field_p, ((ic) this).field_y, 0);
+              int discarded$1 = ((ic) this).field_j.a(param1.field_o, param2 - -param1.field_w, param1.field_u + (param0 + -2), param1.field_p, param1.field_n, var8, -1, 1, 1, ((ic) this).field_j.field_s);
               break L0;
             } else {
               return;
@@ -155,7 +154,7 @@ final class ic extends fd {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_s = null;
         field_x = null;
         field_t = null;

@@ -676,11 +676,10 @@ final class le implements Runnable {
         if (param1 >= -19) {
             vi discarded$0 = ((le) this).a((byte) -67);
         }
-        int discarded$1 = 127;
-        return this.a(param0, false, param2);
+        return this.a(param0, false, param2, (byte) 127);
     }
 
-    private final vi a(String param0, boolean param1, int param2) {
+    private final vi a(String param0, boolean param1, int param2, byte param3) {
         return this.a(1, 0, param2, 13003, (Object) (Object) param0);
     }
 

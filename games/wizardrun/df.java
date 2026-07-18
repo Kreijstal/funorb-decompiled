@@ -23,12 +23,11 @@ abstract class df {
 
     abstract void a(byte param0, int param1, java.awt.Component param2, int param3);
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, boolean param1) {
         if (Character.isISOControl(param0)) {
           return false;
         } else {
-          int discarded$8 = 1;
-          if (kl.a(param0)) {
+          if (kl.a(param0, true)) {
             return true;
           } else {
             if (45 != param0) {
@@ -62,7 +61,7 @@ abstract class df {
         field_i = null;
     }
 
-    final static void a(int param0, int param1, o param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, o param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;
@@ -238,8 +237,7 @@ abstract class df {
                       var11 = new o(4 + ra.field_p.field_z, ra.field_p.field_p + 4);
                       var11.b();
                       ra.field_p.e(2, 2, ug.field_H);
-                      int discarded$12 = 1;
-                      oh.a(var11.field_p, var11, 0, var11.field_z, 2, (byte) 45, 0);
+                      oh.a(var11.field_p, var11, 0, var11.field_z, 2, (byte) 45, 0, 1);
                       ra.field_p = var11;
                       pf.field_b = ra.field_p.c();
                       var12 = new o(195, 221);
@@ -251,8 +249,7 @@ abstract class df {
                       bk.field_a.b(di.a(new String[1], (byte) 58, nh.field_q), var6, 130, 16777215, -1);
                       v.field_b.b(jg.field_p, var6, 180, 16777215, -1);
                       bk.field_a.b(ra.field_i, var6, 200, 16777215, -1);
-                      int discarded$13 = 1;
-                      oh.a(var12.field_p, var12, 0, var12.field_z, 3, (byte) 82, 0);
+                      oh.a(var12.field_p, var12, 0, var12.field_z, 3, (byte) 82, 0, 1);
                       ta.field_b.b();
                       var12.e(18 + -ta.field_b.field_u, -ta.field_b.field_v + 241);
                       var7 = 0;
@@ -272,9 +269,8 @@ abstract class df {
                           break L0;
                         } else {
                           dc.field_s[var7].b();
-                          int discarded$14 = bk.field_a.a(nl.field_w[var7], 3, 3, dc.field_s[var7].field_z + -6, -6 + dc.field_s[var7].field_p, ug.field_H, -1, 1, 1, bk.field_a.field_B + bk.field_a.field_M);
-                          int discarded$15 = 1;
-                          oh.a(dc.field_s[var7].field_p, dc.field_s[var7], 0, dc.field_s[var7].field_z, 3, (byte) 37, 0);
+                          int discarded$4 = bk.field_a.a(nl.field_w[var7], 3, 3, dc.field_s[var7].field_z + -6, -6 + dc.field_s[var7].field_p, ug.field_H, -1, 1, 1, bk.field_a.field_B + bk.field_a.field_M);
+                          oh.a(dc.field_s[var7].field_p, dc.field_s[var7], 0, dc.field_s[var7].field_z, 3, (byte) 37, 0, 1);
                           var7++;
                           continue L1;
                         }
@@ -366,9 +362,8 @@ abstract class df {
                 uk.field_b.d();
                 var9 = new o(uk.field_b.field_x, uk.field_b.field_s);
                 var9.b();
-                int discarded$16 = v.field_b.a(var14, jg.field_m, cb.field_a, ta.field_a, r.field_a, 16777215, -1, 1, 1, v.field_b.field_M + v.field_b.field_B);
-                int discarded$17 = 1;
-                oh.a(var9.field_s, var9, 0, var9.field_x, 3, (byte) 98, 0);
+                int discarded$5 = v.field_b.a(var14, jg.field_m, cb.field_a, ta.field_a, r.field_a, 16777215, -1, 1, 1, v.field_b.field_M + v.field_b.field_B);
+                oh.a(var9.field_s, var9, 0, var9.field_x, 3, (byte) 98, 0, 1);
                 uk.field_b.b();
                 var9.e(0, 0);
                 ac.field_s = new o(640, 480);
@@ -395,9 +390,8 @@ abstract class df {
                 var5_ref_String = di.a(new String[1], (byte) 79, field_b);
                 pc.field_r = null;
                 var16.b();
-                int discarded$18 = bk.field_a.a(var5_ref_String, 3, 3, var16.field_z + -6, -6 + var16.field_p, 16777215, -1, 0, 1, bk.field_a.field_B + bk.field_a.field_M);
-                int discarded$19 = 1;
-                oh.a(var16.field_p, var16, 0, var16.field_z, 3, (byte) 60, 0);
+                int discarded$6 = bk.field_a.a(var5_ref_String, 3, 3, var16.field_z + -6, -6 + var16.field_p, 16777215, -1, 0, 1, bk.field_a.field_B + bk.field_a.field_M);
+                oh.a(var16.field_p, var16, 0, var16.field_z, 3, (byte) 60, 0, 1);
                 od.field_f.b();
                 var16.e(199 - od.field_f.field_u, 83 + -od.field_f.field_v);
                 ed.a(var29, var2, var3);
@@ -425,8 +419,7 @@ abstract class df {
                 var7 = 20 + var6 - -ag.field_v.field_x;
                 od.field_f.b();
                 bk.field_a.c(lg.field_b, var7 + -od.field_f.field_u, -od.field_f.field_v + (155 + (bk.field_a.field_M + bk.field_a.field_B)), 16777215, -1);
-                int discarded$20 = 1;
-                oh.a(50, od.field_f, var7 + -od.field_f.field_u + -4, var4, 3, (byte) 90, -od.field_f.field_v + 155);
+                oh.a(50, od.field_f, var7 + -od.field_f.field_u + -4, var4, 3, (byte) 90, -od.field_f.field_v + 155, 1);
                 var8 = -((-bk.field_a.field_B + -bk.field_a.field_M + -3 + ag.field_v.field_s) / 2) + 155 + -od.field_f.field_v;
                 ag.field_v.e(var6 - od.field_f.field_u, var8);
                 ed.a(var30, var2, var3);
@@ -459,7 +452,7 @@ abstract class df {
             if (param0 == 2) {
               break L11;
             } else {
-              Boolean discarded$21 = df.b((byte) -119);
+              Boolean discarded$7 = df.b((byte) -119);
               break L11;
             }
           }
@@ -514,8 +507,7 @@ abstract class df {
                   }
                 }
                 L16: {
-                  int discarded$22 = -89;
-                  var2 = (stackIn_50_0 * hg.b(stackIn_50_1 << stackIn_50_2) >> 16) + 40;
+                  var2 = (stackIn_50_0 * hg.b(stackIn_50_1 << stackIn_50_2, (byte) -89) >> 16) + 40;
                   if (var2 > 0) {
                     mj.field_b.a(230, 389, var2);
                     mj.field_b.a(232, 389, var2);
@@ -608,8 +600,7 @@ abstract class df {
                 if (var1_int - -ra.field_p.field_p <= fi.field_B) {
                   break L21;
                 } else {
-                  int discarded$23 = -89;
-                  var2 = 40 - -(40 * hg.b(hj.field_c << 4) >> 16);
+                  var2 = 40 - -(40 * hg.b(hj.field_c << 4, (byte) -89) >> 16);
                   if (var2 <= 0) {
                     break L21;
                   } else {

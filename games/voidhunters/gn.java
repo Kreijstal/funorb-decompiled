@@ -77,7 +77,7 @@ final class gn extends kva implements eb {
         return param0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_k = null;
     }
 

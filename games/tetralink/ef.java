@@ -15,7 +15,7 @@ final class ef extends uh {
     static oh field_k;
     static boolean field_n;
 
-    final static void a() {
+    final static void a(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -50,8 +50,7 @@ final class ef extends uh {
             sk.a((byte) 115, cl.field_d);
             vn.b();
             ra.a();
-            int discarded$1 = 71;
-            ni.a();
+            ni.a((byte) 71);
             if (var5 < 256) {
               ra.d(0, 0, ra.field_f, ra.field_e, 0, -var5 + 256);
               break L2;
@@ -556,7 +555,7 @@ final class ef extends uh {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_l = null;
         field_o = null;
         field_k = null;

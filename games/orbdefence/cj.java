@@ -35,8 +35,7 @@ final class cj {
                 if (param1.equals((Object) (Object) bd.field_u.a(-80))) {
                   break L1;
                 } else {
-                  int discarded$2 = 113;
-                  bd.field_u = hg.a(param1);
+                  bd.field_u = hg.a(param1, (byte) 113);
                   break L1;
                 }
               }
@@ -153,7 +152,7 @@ final class cj {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;

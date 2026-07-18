@@ -127,7 +127,7 @@ final class ka {
         return stackIn_16_0;
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, boolean param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -176,8 +176,7 @@ final class ka {
                     break L1;
                   } else {
                     L2: {
-                      int discarded$2 = -11133;
-                      var4 = r.a(param0);
+                      var4 = r.a(param0, -11133);
                       if (var4 == null) {
                         break L2;
                       } else {
@@ -280,7 +279,7 @@ final class ka {
         return stackIn_31_0 != 0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_e = null;
         field_b = null;

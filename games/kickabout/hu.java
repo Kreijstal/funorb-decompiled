@@ -31,8 +31,7 @@ abstract class hu extends am {
         int var5 = 0;
         if (param0 != 32) {
             param2 = param2 - ((hu) this).field_x;
-            int discarded$0 = -104;
-            var5 = mf.a(param0) & 255;
+            var5 = mf.a(param0, (byte) -104) & 255;
             ((hu) this).a(var5, param1 + ((hu) this).field_n[var5] - (((hu) this).field_I[var5] >> 1), param2 + ((hu) this).field_o[var5], ((hu) this).field_D[var5], ((hu) this).field_J[var5], param3, false);
         }
     }
@@ -211,8 +210,7 @@ abstract class hu extends am {
               }
               if (var4 == -1) {
                 L2: {
-                  int discarded$1 = -104;
-                  var8 = (char)(mf.a((char) var8) & 255);
+                  var8 = (char)(mf.a((char) var8, (byte) -104) & 255);
                   var9 = ((hu) this).field_D[var8];
                   var10 = ((hu) this).field_I[var8];
                   var11 = ((hu) this).field_J[var8];
@@ -709,8 +707,7 @@ abstract class hu extends am {
               }
               if (var4 == -1) {
                 L6: {
-                  int discarded$1 = -104;
-                  var8 = (char)(mf.a((char) var8) & 255);
+                  var8 = (char)(mf.a((char) var8, (byte) -104) & 255);
                   if (((hu) this).field_K == null) {
                     break L6;
                   } else {
@@ -847,8 +844,7 @@ abstract class hu extends am {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    int discarded$4 = 16;
-                                    field_u = im.a((byte) 120, var7);
+                                    field_u = im.a((byte) 120, var7, 16);
                                     break L1;
                                   }
                                 } else {
@@ -861,8 +857,7 @@ abstract class hu extends am {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              int discarded$5 = 16;
-                              field_w = im.a((byte) 116, var6);
+                              field_w = im.a((byte) 116, var6, 16);
                               break L1;
                             }
                           } else {
@@ -875,8 +870,7 @@ abstract class hu extends am {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        int discarded$6 = 16;
-                        field_z = im.a((byte) 123, var5);
+                        field_z = im.a((byte) 123, var5, 16);
                         break L1;
                       }
                     } else {
@@ -894,8 +888,7 @@ abstract class hu extends am {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                int discarded$7 = 16;
-                field_v = im.a((byte) 121, var3);
+                field_v = im.a((byte) 121, var3, 16);
                 break L1;
               }
             }
@@ -911,8 +904,7 @@ abstract class hu extends am {
     }
 
     final int a(char param0) {
-        int discarded$0 = -104;
-        return ((hu) this).field_I[mf.a(param0) & 255];
+        return ((hu) this).field_I[mf.a(param0, (byte) -104) & 255];
     }
 
     final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
@@ -1191,8 +1183,7 @@ abstract class hu extends am {
                 }
                 if (var2 == -1) {
                   L4: {
-                    int discarded$1 = -104;
-                    var7 = (char)(mf.a((char) var7) & 255);
+                    var7 = (char)(mf.a((char) var7, (byte) -104) & 255);
                     var4 = var4 + ((hu) this).field_I[var7];
                     if (((hu) this).field_K == null) {
                       break L4;
@@ -1259,7 +1250,7 @@ abstract class hu extends am {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$6 = dj.a(0, ' ', -11407, field_C);
+          StringBuilder discarded$5 = dj.a(0, ' ', -11407, field_C);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -1295,9 +1286,9 @@ abstract class hu extends am {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$7 = field_C.append('<');
-                        StringBuilder discarded$8 = field_C.append(var15);
-                        StringBuilder discarded$9 = field_C.append('>');
+                        StringBuilder discarded$6 = field_C.append('<');
+                        StringBuilder discarded$7 = field_C.append(var15);
+                        StringBuilder discarded$8 = field_C.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -1484,9 +1475,8 @@ abstract class hu extends am {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$10 = field_C.append((char) var14);
-                        int discarded$11 = -104;
-                        var14 = (char)(mf.a((char) var14) & 255);
+                        StringBuilder discarded$9 = field_C.append((char) var14);
+                        var14 = (char)(mf.a((char) var14, (byte) -104) & 255);
                         var4 = var4 + ((hu) this).field_I[var14];
                         if (((hu) this).field_K == null) {
                           break L15;

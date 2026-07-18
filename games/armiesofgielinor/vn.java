@@ -16,7 +16,7 @@ final class vn {
     static String field_e;
     private wk[] field_b;
 
-    private final void b() {
+    private final void b(byte param0) {
         ((vn) this).field_d = new ia(((vn) this).field_b, ((vn) this).field_m, ((vn) this).field_i, "Attacker", 0, 0);
         ((vn) this).field_h = new ia(((vn) this).field_b, ((vn) this).field_m, ((vn) this).field_i, "Defender", 0, 0);
         ((vn) this).field_a = new ia(((vn) this).field_b, ((vn) this).field_m, ((vn) this).field_i, "Run Attack", 0, 0);
@@ -130,7 +130,7 @@ final class vn {
         }
     }
 
-    private final void a(boolean param0, int param1, int param2, boolean param3, int param4) {
+    private final void a(boolean param0, int param1, int param2, boolean param3, int param4, boolean param5) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -499,10 +499,9 @@ final class vn {
         }
     }
 
-    final static void a(wk param0) {
+    final static void a(wk param0, int param1) {
         try {
-            int discarded$0 = -56;
-            rq.a();
+            rq.a((byte) -56);
             qn.a(param0.field_B, param0.field_A, param0.field_x);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "vn.F(" + (param0 != null ? "{...}" : "null") + ',' + 3 + ')');
@@ -576,8 +575,7 @@ final class vn {
             ((vn) this).field_m = param2;
             ((vn) this).field_i = param3;
             ((vn) this).field_f = param1;
-            int discarded$0 = -49;
-            this.b();
+            this.b((byte) -49);
             this.c((byte) -103);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "vn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
@@ -672,11 +670,10 @@ final class vn {
             }
             return;
         }
-        int discarded$0 = 0;
-        this.a(param3, param0, param4, param5, param2);
+        this.a(param3, param0, param4, param5, param2, false);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         field_e = null;
         field_g = null;

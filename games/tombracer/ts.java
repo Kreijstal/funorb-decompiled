@@ -179,9 +179,7 @@ final class ts {
                 if (!var4.f(6, 10915)) {
                   break L8;
                 } else {
-                  int discarded$2 = 5;
-                  int discarded$3 = 82;
-                  this.a();
+                  this.a((byte) 82, 5);
                   break L7;
                 }
               }
@@ -775,7 +773,7 @@ final class ts {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         csa var5 = null;

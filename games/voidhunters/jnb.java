@@ -24,8 +24,7 @@ final class jnb extends rqa {
         }
         L1: {
           L2: {
-            int discarded$7 = 0;
-            if (!rnb.a()) {
+            if (!rnb.a(0)) {
               break L2;
             } else {
               if ((kdb.field_o & 8) != 0) {
@@ -44,7 +43,7 @@ final class jnb extends rqa {
         return stackIn_6_0 != 0;
     }
 
-    final static void a(eab param0, int param1, ds param2) {
+    final static void a(eab param0, int param1, ds param2, boolean param3) {
         try {
             RuntimeException var4 = null;
             int var5 = 0;
@@ -54,7 +53,6 @@ final class jnb extends rqa {
             Exception var6_ref3 = null;
             Throwable var6_ref4 = null;
             int var6_int = 0;
-            String var7 = null;
             int var9 = 0;
             String[] var10 = null;
             int var11_int = 0;
@@ -69,9 +67,10 @@ final class jnb extends rqa {
             Object var18 = null;
             byte[][] var19 = null;
             String var20 = null;
-            byte[][] var21 = null;
+            String var21 = null;
             byte[][] var22 = null;
             byte[][] var23 = null;
+            byte[][] var24 = null;
             RuntimeException stackIn_35_0 = null;
             StringBuilder stackIn_35_1 = null;
             RuntimeException stackIn_36_0 = null;
@@ -137,18 +136,18 @@ final class jnb extends rqa {
                                   break L4;
                                 } else {
                                   if (var6_int == 3) {
-                                    var7 = param2.a(-1);
                                     var20 = param2.a(-1);
+                                    var21 = param2.a(-1);
                                     var9 = param2.e((byte) -92);
                                     var10 = new String[var9];
                                     var11_int = 0;
                                     L5: while (true) {
                                       if (var11_int >= var9) {
                                         L6: {
-                                          var23 = new byte[var9][];
+                                          var24 = new byte[var9][];
+                                          var23 = var24;
                                           var22 = var23;
-                                          var21 = var22;
-                                          var19 = var21;
+                                          var19 = var22;
                                           var11 = var19;
                                           if (var6_int != 3) {
                                             break L6;
@@ -160,7 +159,7 @@ final class jnb extends rqa {
                                               } else {
                                                 var13 = param2.h(62);
                                                 var11[var12_int] = new byte[var13];
-                                                param2.a(0, var23[var12_int], (byte) -59, var13);
+                                                param2.a(0, var24[var12_int], (byte) -59, var13);
                                                 var12_int++;
                                                 continue L7;
                                               }
@@ -173,13 +172,11 @@ final class jnb extends rqa {
                                         var13 = var17;
                                         L8: while (true) {
                                           if (var9 <= var17) {
-                                            int discarded$4 = 99;
-                                            ((mv) var18).field_e[var5] = param0.a(var12, (byte) 95, beb.a(var7), var20);
-                                            ((mv) var18).field_f[var5] = var23;
+                                            ((mv) var18).field_e[var5] = param0.a(var12, (byte) 95, beb.a(var20, (byte) 99), var21);
+                                            ((mv) var18).field_f[var5] = var24;
                                             break L3;
                                           } else {
-                                            int discarded$5 = 99;
-                                            var12[var17] = beb.a(var10[var17]);
+                                            var12[var17] = beb.a(var10[var17], (byte) 99);
                                             var17++;
                                             continue L8;
                                           }
@@ -207,9 +204,7 @@ final class jnb extends rqa {
                             }
                           }
                           L10: {
-                            String dupTemp$6 = param2.a(-1);
-                            var16 = dupTemp$6;
-                            var7 = dupTemp$6;
+                            var16 = param2.a(-1);
                             var15 = param2.a(-1);
                             var9 = 0;
                             if (var6_int == 1) {
@@ -221,8 +216,7 @@ final class jnb extends rqa {
                           }
                           ((mv) var18).field_h[var5] = var6_int;
                           ((mv) var18).field_j[var5] = var9;
-                          int discarded$7 = 99;
-                          ((mv) var18).field_g[var5] = param0.a(var15, beb.a(var16), -6576);
+                          ((mv) var18).field_g[var5] = param0.a(var15, beb.a(var16, (byte) 99), -6576);
                           break L3;
                         }
                         decompiledRegionSelector0 = 1;

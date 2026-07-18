@@ -8,11 +8,11 @@ final class qj {
     static String field_e;
     static String field_d;
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         return null != hd.field_u ? true : ac.field_e;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         try {
             if (null != sk.field_f) {
                 try {
@@ -384,7 +384,7 @@ final class qj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_b = null;
         field_a = null;

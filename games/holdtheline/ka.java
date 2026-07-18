@@ -182,13 +182,12 @@ final class ka {
         return stackIn_1_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         uk.b(-114);
         ci.field_o = true;
         fi.field_nb = true;
         field_b.a(false);
-        int discarded$0 = 22676;
-        da.a(false, we.field_t);
+        da.a(false, we.field_t, 22676);
     }
 
     final static int a(int param0, String param1) {
@@ -291,7 +290,7 @@ final class ka {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_f = null;
         field_b = null;

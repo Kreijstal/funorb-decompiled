@@ -207,8 +207,7 @@ final class bk extends td implements a, m {
                 if (param0 != ((bk) this).field_F) {
                   break L1;
                 } else {
-                  int discarded$2 = -62;
-                  this.m();
+                  this.m(-62);
                   break L1;
                 }
               } else {
@@ -434,12 +433,11 @@ final class bk extends td implements a, m {
         return stackIn_1_0;
     }
 
-    private final void m() {
+    private final void m(int param0) {
         if (!(this.l(47))) {
             return;
         }
-        int discarded$0 = 0;
-        qi.a(((bk) this).field_K.field_s);
+        qi.a(((bk) this).field_K.field_s, 0);
     }
 
     private final boolean a(wk param0, byte param1) {
@@ -539,11 +537,10 @@ final class bk extends td implements a, m {
         }
     }
 
-    final static void j() {
+    final static void j(int param0) {
         ue.field_a = ne.field_a.g(0);
         CharSequence var2 = (CharSequence) (Object) ue.field_a;
-        int discarded$0 = -11133;
-        dd.field_p = r.a(var2);
+        dd.field_p = r.a(var2, -11133);
     }
 
     final boolean a(byte param0, char param1, al param2, int param3) {
@@ -631,7 +628,7 @@ final class bk extends td implements a, m {
         return stackIn_11_0 != 0;
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_E = null;
         field_G = null;
         field_J = null;

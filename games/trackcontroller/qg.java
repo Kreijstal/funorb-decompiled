@@ -6,7 +6,7 @@ final class qg {
     static String field_c;
     static String field_a;
 
-    final static String b() {
+    final static String b(int param0) {
         if (cd.field_j) {
             return null;
         }
@@ -123,7 +123,7 @@ final class qg {
         }
     }
 
-    final static void a(q param0) {
+    final static void a(q param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         q var3 = null;
@@ -193,8 +193,7 @@ final class qg {
                   break L5;
                 }
               }
-              int discarded$2 = 94;
-              nj.a(param0);
+              nj.a(param0, (byte) 94);
               break L0;
             } else {
               return;

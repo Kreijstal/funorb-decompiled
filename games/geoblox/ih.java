@@ -58,7 +58,7 @@ final class ih {
         return stackIn_6_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -296,8 +296,7 @@ final class ih {
                                 }
                               }
                             }
-                            int discarded$1 = 0;
-                            if (ik.a(var24, param2)) {
+                            if (ik.a(var24, param2, false)) {
                               return;
                             } else {
                               break L9;

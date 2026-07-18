@@ -7,7 +7,7 @@ abstract class qs extends vg implements ni {
     vg field_z;
     static ub field_y;
 
-    private final boolean a(vg param0) {
+    private final boolean a(vg param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
@@ -385,7 +385,7 @@ abstract class qs extends vg implements ni {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_y = null;
     }
 
@@ -477,7 +477,7 @@ abstract class qs extends vg implements ni {
         return stackIn_7_0 != 0;
     }
 
-    final static void d() {
+    final static void d(boolean param0) {
         int var1 = 0;
         if (wm.field_b > 32) {
             var1 = wm.field_b % 32;
@@ -970,8 +970,7 @@ abstract class qs extends vg implements ni {
                     stackIn_14_0 = stackOut_13_0;
                     break L2;
                   } else {
-                    int discarded$3 = 125;
-                    stackOut_12_0 = this.a(param3);
+                    stackOut_12_0 = this.a(param3, 125);
                     stackIn_14_0 = stackOut_12_0;
                     break L2;
                   }

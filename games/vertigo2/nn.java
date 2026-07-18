@@ -96,7 +96,7 @@ final class nn extends li {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_s = null;
         field_t = null;
         field_y = null;

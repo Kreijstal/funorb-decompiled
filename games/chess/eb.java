@@ -50,7 +50,7 @@ final class eb extends pk {
         field_t = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         var5 = Chess.field_G;
         if (0 == param0) {
@@ -338,7 +338,7 @@ final class eb extends pk {
         }
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -360,9 +360,7 @@ final class eb extends pk {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            int discarded$5 = 5;
-            stackOut_2_0 = fh.a(param0);
+            stackOut_2_0 = fh.a(param0, 5, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

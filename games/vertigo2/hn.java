@@ -13,7 +13,7 @@ final class hn extends li {
     static int field_n;
     static boolean field_t;
 
-    final static void a(boolean param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7) {
+    final static void a(boolean param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         double var11_double = 0.0;
         RuntimeException var11 = null;
         double var13 = 0.0;
@@ -113,7 +113,7 @@ final class hn extends li {
         throw new Error();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_s = null;
         field_u = null;
         field_r = null;

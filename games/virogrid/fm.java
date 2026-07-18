@@ -134,7 +134,7 @@ final class fm {
         }
     }
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, boolean param1) {
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -260,8 +260,7 @@ final class fm {
                           ((fm) this).field_j = ((fm) this).field_j + (8 + -var7);
                           ((fm) this).field_h = ((fm) this).field_h + 1;
                           if (((fm) this).field_j == 512) {
-                            int discarded$2 = -91;
-                            this.b();
+                            this.b((byte) -91);
                             ((fm) this).field_h = 0;
                             ((fm) this).field_j = 0;
                             break L6;
@@ -287,8 +286,7 @@ final class fm {
                             ((fm) this).field_h = ((fm) this).field_h + 1;
                             ((fm) this).field_j = ((fm) this).field_j + (-var7 + 8);
                             if (((fm) this).field_j == 512) {
-                              int discarded$3 = -91;
-                              this.b();
+                              this.b((byte) -91);
                               ((fm) this).field_h = 0;
                               ((fm) this).field_j = 0;
                               break L8;
@@ -483,14 +481,13 @@ final class fm {
               } else {
                 L2: while (true) {
                   if (64 <= ((fm) this).field_h) {
-                    int discarded$4 = -91;
-                    this.b();
+                    this.b((byte) -91);
                     ((fm) this).field_h = 0;
                     break L1;
                   } else {
-                    int fieldTemp$5 = ((fm) this).field_h;
+                    int fieldTemp$2 = ((fm) this).field_h;
                     ((fm) this).field_h = ((fm) this).field_h + 1;
-                    ((fm) this).field_e[fieldTemp$5] = (byte) 0;
+                    ((fm) this).field_e[fieldTemp$2] = (byte) 0;
                     continue L2;
                   }
                 }
@@ -507,8 +504,7 @@ final class fm {
             L4: while (true) {
               if (((fm) this).field_h >= 32) {
                 ek.a(((fm) this).field_d, 0, ((fm) this).field_e, 32, 32);
-                int discarded$6 = -91;
-                this.b();
+                this.b((byte) -91);
                 var4_int = 0;
                 var5 = param0;
                 L5: while (true) {
@@ -530,9 +526,9 @@ final class fm {
                   }
                 }
               } else {
-                int fieldTemp$7 = ((fm) this).field_h;
+                int fieldTemp$3 = ((fm) this).field_h;
                 ((fm) this).field_h = ((fm) this).field_h + 1;
-                ((fm) this).field_e[fieldTemp$7] = (byte) 0;
+                ((fm) this).field_e[fieldTemp$3] = (byte) 0;
                 continue L4;
               }
             }
@@ -576,7 +572,7 @@ final class fm {
         field_c = null;
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

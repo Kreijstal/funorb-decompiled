@@ -62,14 +62,14 @@ final class ed {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_b = null;
         field_e = null;
         field_d = null;
     }
 
-    final static long b() {
+    final static long b(int param0) {
         return -of.field_L + ji.b(-96);
     }
 

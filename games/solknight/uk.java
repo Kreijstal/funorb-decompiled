@@ -65,7 +65,7 @@ final class uk extends a {
                       break L1;
                     } else {
                       var6 = null;
-                      String discarded$8 = ((uk) this).a((String) null, false);
+                      String discarded$2 = ((uk) this).a((String) null, false);
                       break L1;
                     }
                   }
@@ -90,8 +90,7 @@ final class uk extends a {
                             stackIn_27_0 = stackOut_26_0;
                             return stackIn_27_0;
                           } else {
-                            int discarded$9 = 0;
-                            if (l.a(var7, var5)) {
+                            if (l.a(var7, var5, 0)) {
                               stackOut_30_0 = la.field_m;
                               stackIn_31_0 = stackOut_30_0;
                               return stackIn_31_0;
@@ -455,7 +454,7 @@ final class uk extends a {
         return new int[8];
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_k = null;
     }
 

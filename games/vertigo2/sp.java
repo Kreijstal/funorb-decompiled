@@ -290,14 +290,14 @@ abstract class sp extends nm {
         return super.a(-1);
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_P = null;
         field_Q = null;
         field_U = null;
         field_K = null;
     }
 
-    final static ud e() {
+    final static ud e(byte param0) {
         int var1 = 0;
         int var2_int = 0;
         IllegalArgumentException var2 = null;

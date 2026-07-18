@@ -13,7 +13,7 @@ final class eb extends ia {
     static String field_r;
     static wk[] field_p;
 
-    final static boolean b(String param0) {
+    final static boolean b(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -93,7 +93,7 @@ final class eb extends ia {
         return stackIn_9_0 != 0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_u = null;
         field_t = null;
         field_r = null;
@@ -613,9 +613,7 @@ final class eb extends ia {
           }
           return new na(param1);
         } else {
-          int discarded$2 = -100;
-          int discarded$3 = 80;
-          bg.field_F = cd.a((gi) (Object) var8);
+          bg.field_F = cd.a((gi) (Object) var8, 80, (byte) -100);
           bc.field_ob = null;
           return new na(param1);
         }

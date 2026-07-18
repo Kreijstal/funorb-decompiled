@@ -13,7 +13,7 @@ final class rk extends ri {
     static int[] field_q;
     private int[][] field_l;
 
-    final static String a(Throwable param0) throws IOException {
+    final static String a(Throwable param0, boolean param1) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;

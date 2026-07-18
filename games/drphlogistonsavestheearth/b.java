@@ -10,12 +10,12 @@ final class b extends gi {
     int field_j;
     static int field_l;
 
-    public static void d() {
+    public static void d(int param0) {
         field_i = null;
         field_k = null;
     }
 
-    final static void e() {
+    final static void e(int param0) {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;

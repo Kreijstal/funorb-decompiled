@@ -142,7 +142,7 @@ final class ng extends am {
         }
     }
 
-    final static int c() {
+    final static int c(int param0) {
         return j.field_b;
     }
 
@@ -226,7 +226,7 @@ final class ng extends am {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_B = null;
         field_v = null;
         field_A = null;

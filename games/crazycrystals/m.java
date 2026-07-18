@@ -292,7 +292,7 @@ final class m extends ue {
         field_n = null;
     }
 
-    final static void c() {
+    final static void c(int param0) {
     }
 
     final boolean a(int param0) {
@@ -521,11 +521,7 @@ final class m extends ue {
             if (rc.a(-56)) {
               break L0;
             } else {
-              int discarded$4 = 1;
-              int discarded$5 = 10;
-              int discarded$6 = 3;
-              int discarded$7 = 125;
-              ((m) this).field_k = jp.a(((m) this).field_i);
+              ((m) this).field_k = jp.a(((m) this).field_i, 125, 3, 10, 1);
               break L0;
             }
           }

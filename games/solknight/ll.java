@@ -2,13 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ll {
-    final static void a(int param0) {
-        int discarded$0 = 0;
-        int discarded$1 = 0;
-        ll.a(param0, 256, 0);
+    final static void a(int param0, int param1, boolean param2, boolean param3) {
+        ll.a(param0, 256, 0, false, false);
     }
 
-    private final static void a(int param0, int param1, int param2) {
+    private final static void a(int param0, int param1, int param2, boolean param3, boolean param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;

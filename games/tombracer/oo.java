@@ -310,7 +310,7 @@ final class oo extends dg {
         return 0;
     }
 
-    private final void k() {
+    private final void k(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -563,12 +563,10 @@ final class oo extends dg {
     final void b(int param0, uw param1) {
         try {
             if (!(((oo) this).field_r != null)) {
-                int discarded$0 = -3440;
-                this.k();
+                this.k(-3440);
             }
             if (!(null != ((oo) this).field_s)) {
-                int discarded$1 = -20687;
-                this.i();
+                this.i(-20687);
             }
             super.b(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -684,7 +682,7 @@ final class oo extends dg {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_n = null;
         field_m = null;
         int var1 = 93;
@@ -809,7 +807,7 @@ final class oo extends dg {
         ((oo) this).field_u = 20;
     }
 
-    private final void i() {
+    private final void i(int param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (((oo) this).field_p == null) {

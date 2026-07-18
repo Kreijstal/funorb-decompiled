@@ -86,9 +86,7 @@ final class ja {
         String stackOut_15_2 = null;
         try {
           L0: {
-            int discarded$2 = 10;
-            int discarded$3 = 8;
-            pa.a(param6, 0, 2, param4, 240, 320, 480, new ta(param10), 2, 1, 0, param9, 0, new ta(param19), param2, 8, param11, new ta(param20), param16);
+            pa.a(param6, 0, 2, param4, 240, 320, 480, new ta(param10), 2, 1, 0, param9, 0, new ta(param19), param2, 8, param11, new ta(param20), param16, 8, 10);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -382,7 +380,7 @@ final class ja {
         }
     }
 
-    final static int a(int param0, oi param1, int param2) {
+    final static int a(int param0, oi param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -441,7 +439,7 @@ final class ja {
         return stackIn_3_0;
     }
 
-    final static dj a() {
+    final static dj a(byte param0) {
         return (dj) (Object) new cg();
     }
 

@@ -84,7 +84,7 @@ final class bf extends l {
         }
     }
 
-    final static java.awt.Container a() {
+    final static java.awt.Container a(int param0) {
         if (!(bj.field_m == null)) {
             return (java.awt.Container) (Object) bj.field_m;
         }
@@ -144,7 +144,7 @@ final class bf extends l {
         }
     }
 
-    final static void a(fa param0) {
+    final static void a(fa param0, int param1, int param2) {
         hg var5 = null;
         int var4 = 0;
         try {
@@ -171,11 +171,9 @@ final class bf extends l {
     final static km a(byte param0) {
         if (param0 >= -70) {
             km discarded$0 = bf.a((byte) -57);
-            int discarded$1 = 0;
-            return d.h();
+            return d.h(0);
         }
-        int discarded$2 = 0;
-        return d.h();
+        return d.h(0);
     }
 
     public static void c(int param0) {

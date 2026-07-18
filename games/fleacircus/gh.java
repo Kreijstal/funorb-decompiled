@@ -87,8 +87,7 @@ final class gh extends r {
             if (ql.field_l == cb.field_v) {
               var8 = new ua(nb.field_a, param4);
               nb.field_a.b((qa) (Object) var8, (byte) -35);
-              int discarded$16 = 10618;
-              if (!ti.b()) {
+              if (!ti.b(10618)) {
                 L1: {
                   cb.field_v = wi.field_f;
                   if (!param3) {
@@ -285,8 +284,7 @@ final class gh extends r {
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0;
                 } else {
-                  int discarded$13 = 1;
-                  if (!hg.a(var6)) {
+                  if (!hg.a(var6, 1)) {
                     if (this.b(0, param1)) {
                       stackOut_16_0 = id.field_j;
                       stackIn_17_0 = stackOut_16_0;
@@ -297,8 +295,7 @@ final class gh extends r {
                         stackIn_32_0 = stackOut_31_0;
                         break L0;
                       } else {
-                        int discarded$14 = 0;
-                        if (!hj.a(var6, var7)) {
+                        if (!hj.a(var6, var7, 0)) {
                           if (hf.a((byte) -67, var6, var7)) {
                             stackOut_24_0 = el.field_B;
                             stackIn_25_0 = stackOut_24_0;
@@ -375,7 +372,7 @@ final class gh extends r {
         }
     }
 
-    final static void e() {
+    final static void e(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -665,8 +662,7 @@ final class gh extends r {
                   break L1;
                 }
               }
-              int discarded$6 = -1;
-              if (lh.a(var4, var3)) {
+              if (lh.a(var4, var3, -1)) {
                 if (this.b(0, param1)) {
                   stackOut_10_0 = ml.field_K;
                   stackIn_11_0 = stackOut_10_0;

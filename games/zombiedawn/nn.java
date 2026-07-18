@@ -6,7 +6,7 @@ final class nn extends le {
     int field_i;
     static vn field_j;
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         if (jd.field_b == -1) {
             if (!ck.a((byte) -128, 1)) {
                 return false;
@@ -28,7 +28,7 @@ final class nn extends le {
         throw new Error();
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_j = null;
     }
 

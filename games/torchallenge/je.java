@@ -14,7 +14,7 @@ final class je {
     static ka field_b;
     static ka field_g;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_g = null;
         field_h = null;
@@ -33,8 +33,7 @@ final class je {
             ((je) this).field_j = ((je) this).field_j - 1;
             while (((je) this).field_j < 0) {
                 var6 = (lb) (Object) ((je) this).field_k.a(0);
-                int discarded$0 = -27615;
-                this.a(var6);
+                this.a(var6, -27615);
             }
             var6_ref = new re(param1, 1);
             ((je) this).field_d.a((byte) 31, (da) (Object) var6_ref, param3);
@@ -45,7 +44,7 @@ final class je {
         }
     }
 
-    final static String a(String param0) {
+    final static String a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -125,13 +124,11 @@ final class je {
         if (param0 != 50) {
           ((je) this).a((Object) null, (byte) -11, -42L);
           var4 = (lb) (Object) ((je) this).field_d.a(104, param1);
-          int discarded$4 = -27615;
-          this.a(var4);
+          this.a(var4, -27615);
           return;
         } else {
           var4 = (lb) (Object) ((je) this).field_d.a(104, param1);
-          int discarded$5 = -27615;
-          this.a(var4);
+          this.a(var4, -27615);
           return;
         }
     }
@@ -528,7 +525,7 @@ final class je {
         }
     }
 
-    private final void a(lb param0) {
+    private final void a(lb param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;

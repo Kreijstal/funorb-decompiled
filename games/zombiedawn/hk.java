@@ -490,14 +490,14 @@ final class hk extends fb {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_P = null;
         field_J = null;
         field_H = null;
         field_F = null;
     }
 
-    final static void i() {
+    final static void i(int param0) {
         uf var1 = (uf) (Object) ad.field_h.a(0);
         if (!(var1 != null)) {
             var1 = new uf();

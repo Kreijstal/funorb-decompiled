@@ -14,10 +14,8 @@ final class mn {
             ha stackOut_7_0 = null;
             try {
               L0: {
-                int discarded$15 = 1;
-                if (tq.c()) {
-                  int discarded$16 = -16;
-                  if (!ei.a("jagdx")) {
+                if (tq.c(true)) {
+                  if (!ei.a("jagdx", (byte) -16)) {
                     throw new RuntimeException("");
                   } else {
                     L1: {
@@ -26,7 +24,7 @@ final class mn {
                         break L1;
                       } else {
                         var7 = null;
-                        ha discarded$17 = mn.a((byte) 32, -121, (java.awt.Canvas) null, (gk) null, (d) null);
+                        ha discarded$2 = mn.a((byte) 32, -121, (java.awt.Canvas) null, (gk) null, (d) null);
                         break L1;
                       }
                     }

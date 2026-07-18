@@ -48,7 +48,7 @@ final class vm {
         }
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -274,9 +274,9 @@ final class vm {
             if (wla.field_ub <= 0) {
               ((vm) this).field_h = false;
               if (((vm) this).field_h) {
-                int fieldTemp$6 = ((vm) this).field_q - 1;
+                int fieldTemp$3 = ((vm) this).field_q - 1;
                 ((vm) this).field_q = ((vm) this).field_q - 1;
-                if (fieldTemp$6 > 0) {
+                if (fieldTemp$3 > 0) {
                   return;
                 } else {
                   ((vm) this).field_q = ((vm) this).field_k;
@@ -284,8 +284,7 @@ final class vm {
                     ((vm) this).field_h = false;
                     return;
                   } else {
-                    int discarded$7 = -102;
-                    this.c();
+                    this.c(-102);
                     return;
                   }
                 }
@@ -337,9 +336,9 @@ final class vm {
               }
             } else {
               if (((vm) this).field_h) {
-                int fieldTemp$8 = ((vm) this).field_q - 1;
+                int fieldTemp$4 = ((vm) this).field_q - 1;
                 ((vm) this).field_q = ((vm) this).field_q - 1;
-                if (fieldTemp$8 > 0) {
+                if (fieldTemp$4 > 0) {
                   return;
                 } else {
                   ((vm) this).field_q = ((vm) this).field_k;
@@ -347,8 +346,7 @@ final class vm {
                     ((vm) this).field_h = false;
                     return;
                   } else {
-                    int discarded$9 = -102;
-                    this.c();
+                    this.c(-102);
                     return;
                   }
                 }
@@ -419,9 +417,9 @@ final class vm {
               }
             }
             if (((vm) this).field_h) {
-              int fieldTemp$10 = ((vm) this).field_q - 1;
+              int fieldTemp$5 = ((vm) this).field_q - 1;
               ((vm) this).field_q = ((vm) this).field_q - 1;
-              if (fieldTemp$10 > 0) {
+              if (fieldTemp$5 > 0) {
                 return;
               } else {
                 ((vm) this).field_q = ((vm) this).field_k;
@@ -429,8 +427,7 @@ final class vm {
                   ((vm) this).field_h = false;
                   return;
                 } else {
-                  int discarded$11 = -102;
-                  this.c();
+                  this.c(-102);
                   return;
                 }
               }
@@ -512,8 +509,7 @@ final class vm {
           ((vm) this).field_c = mma.field_a;
           ((vm) this).field_l.a(((vm) this).field_s, -123, ((vm) this).field_p);
           wla.field_Cb = false;
-          int discarded$4 = 0;
-          var2 = r.a(((vm) this).field_p, 0, param0 + -7720, dsa.field_c, ((vm) this).field_s);
+          var2 = r.a(((vm) this).field_p, 0, param0 + -7720, dsa.field_c, ((vm) this).field_s, 0);
           if (var2 == null) {
             ((vm) this).a(53);
             return var2;
@@ -525,8 +521,7 @@ final class vm {
           ((vm) this).field_c = mma.field_a;
           ((vm) this).field_l.a(((vm) this).field_s, -123, ((vm) this).field_p);
           wla.field_Cb = false;
-          int discarded$5 = 0;
-          var2 = r.a(((vm) this).field_p, 0, param0 + -7720, dsa.field_c, ((vm) this).field_s);
+          var2 = r.a(((vm) this).field_p, 0, param0 + -7720, dsa.field_c, ((vm) this).field_s, 0);
           if (var2 != null) {
             return var2;
           } else {

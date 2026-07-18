@@ -554,7 +554,7 @@ final class ab extends IOException {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
     }
@@ -637,7 +637,7 @@ final class ab extends IOException {
             jd.field_s = (vm) (Object) th.a(param3, 25, "arezzo14", param1, "commonui");
             pe.field_eb = (vm) (Object) th.a(param3, 9, "arezzo14bold", param1, "commonui");
             var17 = new bd(param2.a("", "button.gif", 0), (java.awt.Component) (Object) se.field_h);
-            pg discarded$3 = qm.a("commonui", 0, "dropdown", param3);
+            pg discarded$1 = qm.a("commonui", 0, "dropdown", param3);
             var5 = sg.a(true, "commonui", param3, "screen_options");
             ak.field_h = new pg[4];
             nl.field_e = new pg[4];
@@ -673,8 +673,7 @@ final class ab extends IOException {
                     var12 = new bd(var17.field_z - var9 * 2, var9);
                     var12.a();
                     var17.c(-var9, 0);
-                    int discarded$4 = 0;
-                    eh.b();
+                    eh.b(false);
                     km.field_y = new bd[]{var15, var12, var11};
                     break L0;
                   } else {
@@ -686,8 +685,7 @@ final class ab extends IOException {
                         var9++;
                         continue L2;
                       } else {
-                        int discarded$5 = 115;
-                        var14[var11_int] = kb.a(var5[var9], var21[var11_int]);
+                        var14[var11_int] = kb.a(var5[var9], var21[var11_int], (byte) 115);
                         var11_int++;
                         continue L3;
                       }

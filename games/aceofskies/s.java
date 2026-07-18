@@ -87,7 +87,7 @@ final class s {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         int var1 = 0;
         field_h = null;

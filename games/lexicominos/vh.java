@@ -5,7 +5,7 @@ final class vh {
     static int field_b;
     static ng field_a;
 
-    final static void a() {
+    final static void a(boolean param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         vb var4 = null;
@@ -18,8 +18,7 @@ final class vh {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$2 = 1;
-                vi.a(4, var4);
+                vi.a(4, var4, 1);
                 var4 = (vb) (Object) jl.field_a.f(2);
                 continue L1;
               }

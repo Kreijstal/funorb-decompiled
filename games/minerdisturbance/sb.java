@@ -288,11 +288,10 @@ class sb extends pi {
             ((sb) this).field_o = ((sb) this).field_o + 1;
             ((sb) this).field_u[fieldTemp$0] = (byte) 0;
             var4 = (CharSequence) (Object) param1;
-            int discarded$1 = 8211;
-            ((sb) this).field_o = ((sb) this).field_o + r.a(var4, ((sb) this).field_u, ((sb) this).field_o, 0, param1.length());
-            int fieldTemp$2 = ((sb) this).field_o;
+            ((sb) this).field_o = ((sb) this).field_o + r.a(var4, ((sb) this).field_u, ((sb) this).field_o, 0, param1.length(), 8211);
+            int fieldTemp$1 = ((sb) this).field_o;
             ((sb) this).field_o = ((sb) this).field_o + 1;
-            ((sb) this).field_u[fieldTemp$2] = (byte) 0;
+            ((sb) this).field_u[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
             throw lj.a((Throwable) (Object) runtimeException, "sb.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -559,8 +558,7 @@ class sb extends pi {
         if (!si.field_a) {
             if (null != dm.field_f) {
                 if (!(!dm.field_f.field_q)) {
-                    int discarded$0 = 1;
-                    fn.a(dm.field_f.field_t);
+                    fn.a(dm.field_f.field_t, true);
                     si.field_a = true;
                     aa.field_j.a(35, pj.field_c);
                     ck.a(param0 + -30839);
@@ -649,7 +647,7 @@ class sb extends pi {
         ((sb) this).field_u[fieldTemp$2] = (byte)param1;
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_t = null;
         field_q = null;
         field_n = null;
@@ -715,7 +713,7 @@ class sb extends pi {
         ((sb) this).c(127 & param1, 25564);
     }
 
-    private final void a(long param0) {
+    private final void a(long param0, int param1) {
         int fieldTemp$0 = ((sb) this).field_o;
         ((sb) this).field_o = ((sb) this).field_o + 1;
         ((sb) this).field_u[fieldTemp$0] = (byte)(int)(param0 >> 48);
@@ -757,15 +755,14 @@ class sb extends pi {
             throw new IllegalArgumentException("");
         }
         CharSequence var4 = (CharSequence) (Object) param1;
-        int discarded$0 = 8211;
-        ((sb) this).field_o = ((sb) this).field_o + r.a(var4, ((sb) this).field_u, ((sb) this).field_o, 0, param1.length());
+        ((sb) this).field_o = ((sb) this).field_o + r.a(var4, ((sb) this).field_u, ((sb) this).field_o, 0, param1.length(), 8211);
         if (param0 != 23446) {
             return;
         }
         try {
-            int fieldTemp$1 = ((sb) this).field_o;
+            int fieldTemp$0 = ((sb) this).field_o;
             ((sb) this).field_o = ((sb) this).field_o + 1;
-            ((sb) this).field_u[fieldTemp$1] = (byte) 0;
+            ((sb) this).field_u[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
             throw lj.a((Throwable) (Object) runtimeException, "sb.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -823,10 +820,8 @@ class sb extends pi {
             L1: while (true) {
               if (var8 < 0) {
                 if (param0 == 97) {
-                  int discarded$2 = 63;
-                  this.a(var3_long);
-                  int discarded$3 = 63;
-                  this.a(var5);
+                  this.a(var3_long, 63);
+                  this.a(var5, 63);
                   break L0;
                 } else {
                   return;

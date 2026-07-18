@@ -5,7 +5,7 @@ final class je {
     static int field_a;
     private static String field_z;
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         if (null == ft.field_l) {
             return false;
         }

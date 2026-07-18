@@ -8,7 +8,7 @@ final class ki {
     static String field_a;
     static String field_e;
 
-    final static void a(vd param0) {
+    final static void a(vd param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -127,7 +127,7 @@ final class ki {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_c = null;
         field_a = null;

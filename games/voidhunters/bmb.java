@@ -304,7 +304,7 @@ final class bmb {
         return stackIn_9_0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, eab param4, long param5, String param6, boolean param7, int param8, int param9, boolean param10, int param11, int param12) {
+    final static void a(int param0, int param1, int param2, int param3, eab param4, long param5, String param6, boolean param7, int param8, int param9, boolean param10, int param11, int param12, int param13) {
         try {
             IOException var15 = null;
             RuntimeException var15_ref = null;
@@ -828,7 +828,7 @@ final class bmb {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -38;
         field_b = null;
     }

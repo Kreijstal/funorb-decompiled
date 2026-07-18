@@ -19,7 +19,7 @@ final class sw extends jea {
     static int[] field_zb;
     private boolean field_vb;
 
-    private final void a(String param0) {
+    private final void a(String param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -209,9 +209,9 @@ final class sw extends jea {
             }
             L4: {
               if (!((sw) this).field_L) {
-                int dupTemp$2 = ((sw) this).field_wb.length();
-                ((sw) this).field_Ab = dupTemp$2;
-                ((sw) this).field_ub = dupTemp$2;
+                int dupTemp$1 = ((sw) this).field_wb.length();
+                ((sw) this).field_Ab = dupTemp$1;
+                ((sw) this).field_ub = dupTemp$1;
                 break L4;
               } else {
                 break L4;
@@ -248,8 +248,7 @@ final class sw extends jea {
                   L7: {
                     var8 = (String) var7.getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                     this.i((byte) -126);
-                    int discarded$3 = 1;
-                    this.a(var8);
+                    this.a(var8, true);
                     break L7;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -303,8 +302,7 @@ final class sw extends jea {
         if (!(((sw) this).field_Bb != null)) {
             return;
         }
-        int discarded$0 = 82;
-        this.f();
+        this.f(82);
         int var2 = -100 / ((param0 - 14) / 52);
         this.i((byte) -125);
     }
@@ -485,7 +483,7 @@ final class sw extends jea {
         }
     }
 
-    final static void h() {
+    final static void h(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -493,13 +491,13 @@ final class sw extends jea {
         try {
           L0: {
             if (lca.a(false)) {
-              boolean discarded$14 = wu.field_a.a(sc.field_k, true, oqa.field_w, -111);
+              boolean discarded$12 = wu.field_a.a(sc.field_k, true, oqa.field_w, -111);
               wu.field_a.g((byte) -128);
               L1: while (true) {
                 if (!es.a(true)) {
                   break L0;
                 } else {
-                  boolean discarded$15 = wu.field_a.a((byte) -53, fna.field_h, kda.field_td);
+                  boolean discarded$13 = wu.field_a.a((byte) -53, fna.field_h, kda.field_td);
                   continue L1;
                 }
               }
@@ -511,8 +509,7 @@ final class sw extends jea {
                   if (!dq.field_f.field_b) {
                     break L2;
                   } else {
-                    int discarded$16 = 0;
-                    og.b();
+                    og.b(0);
                     wu.field_a.c((ae) (Object) new gga(wu.field_a, or.field_j), 122);
                     break L2;
                   }
@@ -537,8 +534,7 @@ final class sw extends jea {
           var2 = ((sw) this).field_ub + -1;
           L0: while (true) {
             if (var2 > 0) {
-              int discarded$11 = 1;
-              if (!up.a(((sw) this).field_wb.charAt(var2 - 1))) {
+              if (!up.a(((sw) this).field_wb.charAt(var2 - 1), true)) {
                 var2--;
                 continue L0;
               } else {
@@ -564,14 +560,14 @@ final class sw extends jea {
         }
     }
 
-    private final void g() {
+    private final void g(int param0) {
         if (((sw) this).field_Bb == null) {
             return;
         }
         ((sw) this).field_Db = ((sw) this).field_Bb.b(125);
     }
 
-    private final void f() {
+    private final void f(int param0) {
         try {
             String var2 = null;
             java.awt.datatransfer.StringSelection var3 = null;
@@ -675,7 +671,7 @@ final class sw extends jea {
         return ((sw) this).field_ub;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_Fb = null;
         field_zb = null;
     }
@@ -945,16 +941,16 @@ final class sw extends jea {
                     }
                     if (((sw) this).field_Ib == -1) {
                       if (((sw) this).field_ub == ((sw) this).field_wb.length()) {
-                        StringBuilder discarded$12 = ((sw) this).field_wb.append(param2);
+                        StringBuilder discarded$8 = ((sw) this).field_wb.append(param2);
                         ((sw) this).field_Cb.field_r = ((sw) this).field_wb.toString();
                         ((sw) this).field_ub = ((sw) this).field_ub + 1;
                         ((sw) this).field_Ab = ((sw) this).field_ub;
                         return true;
                       } else {
                         var7 = ((sw) this).field_wb.toString().substring(((sw) this).field_ub, ((sw) this).field_wb.length());
-                        StringBuilder discarded$13 = ana.a(((sw) this).field_ub, ' ', -11, ((sw) this).field_wb);
-                        StringBuilder discarded$14 = ((sw) this).field_wb.append(param2);
-                        StringBuilder discarded$15 = ((sw) this).field_wb.append(var7);
+                        StringBuilder discarded$9 = ana.a(((sw) this).field_ub, ' ', -11, ((sw) this).field_wb);
+                        StringBuilder discarded$10 = ((sw) this).field_wb.append(param2);
+                        StringBuilder discarded$11 = ((sw) this).field_wb.append(var7);
                         ((sw) this).field_Cb.field_r = ((sw) this).field_wb.toString();
                         ((sw) this).field_ub = ((sw) this).field_ub + 1;
                         ((sw) this).field_Ab = ((sw) this).field_ub;
@@ -966,13 +962,13 @@ final class sw extends jea {
                       } else {
                         L2: {
                           if (((sw) this).field_ub == ((sw) this).field_wb.length()) {
-                            StringBuilder discarded$16 = ((sw) this).field_wb.append(param2);
+                            StringBuilder discarded$12 = ((sw) this).field_wb.append(param2);
                             break L2;
                           } else {
                             var6 = ((sw) this).field_wb.toString().substring(((sw) this).field_ub, ((sw) this).field_wb.length());
-                            StringBuilder discarded$17 = ana.a(((sw) this).field_ub, ' ', -11, ((sw) this).field_wb);
-                            StringBuilder discarded$18 = ((sw) this).field_wb.append(param2);
-                            StringBuilder discarded$19 = ((sw) this).field_wb.append(var6);
+                            StringBuilder discarded$13 = ana.a(((sw) this).field_ub, ' ', -11, ((sw) this).field_wb);
+                            StringBuilder discarded$14 = ((sw) this).field_wb.append(param2);
+                            StringBuilder discarded$15 = ((sw) this).field_wb.append(var6);
                             break L2;
                           }
                         }
@@ -1021,8 +1017,7 @@ final class sw extends jea {
                                         break L5;
                                       } else {
                                         if (param0 == 66) {
-                                          int discarded$20 = 82;
-                                          this.f();
+                                          this.f(82);
                                           return true;
                                         } else {
                                           break L5;
@@ -1035,8 +1030,7 @@ final class sw extends jea {
                                       if (67 != param0) {
                                         break L3;
                                       } else {
-                                        int discarded$21 = 100;
-                                        this.g();
+                                        this.g(100);
                                         return true;
                                       }
                                     }
@@ -1149,8 +1143,7 @@ final class sw extends jea {
                                       break L10;
                                     } else {
                                       if (param0 == 66) {
-                                        int discarded$22 = 82;
-                                        this.f();
+                                        this.f(82);
                                         return true;
                                       } else {
                                         break L10;
@@ -1163,8 +1156,7 @@ final class sw extends jea {
                                     if (67 != param0) {
                                       break L8;
                                     } else {
-                                      int discarded$23 = 100;
-                                      this.g();
+                                      this.g(100);
                                       return true;
                                     }
                                   }
@@ -1305,7 +1297,7 @@ final class sw extends jea {
         }
     }
 
-    final static void k() {
+    final static void k(byte param0) {
         ta.field_ub = null;
         gca.field_g = null;
         mma.field_b = null;
@@ -1332,8 +1324,7 @@ final class sw extends jea {
             var3 = 1 + ((sw) this).field_ub;
             L0: while (true) {
               if (var2 > var3) {
-                int discarded$42 = 1;
-                if (!up.a(((sw) this).field_wb.charAt(var3 - 1))) {
+                if (!up.a(((sw) this).field_wb.charAt(var3 - 1), true)) {
                   var3++;
                   continue L0;
                 } else {
@@ -1353,8 +1344,7 @@ final class sw extends jea {
             var3 = 1 + ((sw) this).field_ub;
             L1: while (true) {
               if (var2 > var3) {
-                int discarded$43 = 1;
-                if (!up.a(((sw) this).field_wb.charAt(var3 - 1))) {
+                if (!up.a(((sw) this).field_wb.charAt(var3 - 1), true)) {
                   var3++;
                   continue L1;
                 } else {

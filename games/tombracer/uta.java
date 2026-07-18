@@ -148,15 +148,13 @@ abstract class uta implements sia {
                       if (var10 == null) {
                         break L2;
                       } else {
-                        int discarded$17 = 230;
-                        this.b(var10.field_h, param2);
+                        this.b(var10.field_h, param2, 230);
                         var10 = (gka) (Object) var9.e(122);
                         continue L3;
                       }
                     }
                   } else {
-                    int discarded$18 = 230;
-                    this.b(var8, param2);
+                    this.b(var8, param2, 230);
                     break L2;
                   }
                 }
@@ -540,7 +538,7 @@ abstract class uta implements sia {
         }
     }
 
-    private final jea a() {
+    private final jea a(byte param0, int param1) {
         jea var3 = new jea();
         var3.field_w = sva.a(65793, 0, 4);
         return var3;
@@ -625,8 +623,7 @@ abstract class uta implements sia {
         vg stackOut_15_1 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         if (96 == param1) {
-          int discarded$2 = 2;
-          this.d();
+          this.d(2);
           return true;
         } else {
           if (((uta) this).field_j) {
@@ -647,7 +644,7 @@ abstract class uta implements sia {
                     }
                   } else {
                     if (param2 != 80) {
-                      boolean discarded$3 = ((uta) this).field_o.a(param2, -19696, param1);
+                      boolean discarded$1 = ((uta) this).field_o.a(param2, -19696, param1);
                       break L0;
                     } else {
                       ((uta) this).e(21303);
@@ -745,7 +742,7 @@ abstract class uta implements sia {
 
     abstract boolean a(String param0, byte param1);
 
-    private final void d() {
+    private final void d(int param0) {
         Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
@@ -900,7 +897,7 @@ abstract class uta implements sia {
         return var5;
     }
 
-    private final void b(String param0, int param1) {
+    private final void b(String param0, int param1, int param2) {
         int var4_int = 0;
         jea var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
@@ -980,9 +977,7 @@ abstract class uta implements sia {
             ((uta) this).field_m = param0;
             ((uta) this).field_k = ((uta) this).field_m.field_w + ((uta) this).field_m.field_k;
             var3_int = 4 + ((uta) this).field_k;
-            int discarded$2 = 65793;
-            int discarded$3 = 104;
-            var4 = this.a();
+            var4 = this.a((byte) 104, 65793);
             var5 = var4;
             var6 = var4;
             var7 = var4;

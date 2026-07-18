@@ -23,7 +23,7 @@ abstract class bb {
     byte field_j;
     em field_i;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_q = null;
         field_b = null;
         field_k = null;
@@ -35,8 +35,7 @@ abstract class bb {
     }
 
     final static cn[] a(int param0, boolean param1, int param2, int param3) {
-        int discarded$0 = 1;
-        return pe.a(param3, param0, 25, param2);
+        return pe.a(param3, param0, 25, param2, 1);
     }
 
     abstract void a(int param0);

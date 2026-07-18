@@ -17,7 +17,7 @@ abstract class al extends df {
     private int field_T;
     static int field_Z;
 
-    final static void b() {
+    final static void b(boolean param0, int param1) {
         try {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
@@ -71,11 +71,11 @@ abstract class al extends df {
         return super.i(-27388);
     }
 
-    final static String k() {
+    final static String k(int param0) {
         return s.field_e.f((byte) -24);
     }
 
-    final static void j() {
+    final static void j(int param0) {
         ch.field_e = false;
         nj.field_f = false;
         fb.a(-1, 99);
@@ -83,7 +83,7 @@ abstract class al extends df {
         ta.field_hb = mp.field_b;
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_U = null;
         field_cb = null;
         int var1 = 0;

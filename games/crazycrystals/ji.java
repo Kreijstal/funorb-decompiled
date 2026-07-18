@@ -672,7 +672,7 @@ final class ji extends pn {
         }
     }
 
-    final static boolean f() {
+    final static boolean f(int param0) {
         return 250 < sn.field_c;
     }
 

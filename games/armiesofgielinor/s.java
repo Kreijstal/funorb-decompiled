@@ -144,7 +144,7 @@ final class s {
         return (String) (Object) stackIn_29_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_e = null;

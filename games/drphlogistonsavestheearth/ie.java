@@ -190,11 +190,11 @@ final class ie extends l {
         this(2188450, 2591221, 9543);
     }
 
-    final static int a() {
+    final static int a(boolean param0) {
         return -si.field_B + li.field_k;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_C = null;
         field_v = null;
         field_x = null;

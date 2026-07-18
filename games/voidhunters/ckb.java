@@ -48,14 +48,13 @@ final class ckb extends le {
         if (!(null != ((ckb) this).field_j)) {
             this.a(true, 1);
         }
-        int discarded$0 = 100;
-        this.e();
+        this.e((byte) 100);
         if (param0 >= -35) {
             ((ckb) this).field_j = null;
         }
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

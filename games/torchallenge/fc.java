@@ -22,7 +22,7 @@ final class fc extends gl {
         return ol.a(256) + -ac.field_e;
     }
 
-    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0, byte param1) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;
@@ -166,14 +166,12 @@ final class fc extends gl {
         return stackIn_20_0;
     }
 
-    final static lj a(boolean param0, int param1, int param2, int param3) {
+    final static lj a(boolean param0, int param1, int param2, int param3, boolean param4) {
         int var5 = 118 % ((-62 - param2) / 37);
-        int discarded$0 = 0;
-        int discarded$1 = 0;
-        return bb.a(param3, true, 1, (byte) 92);
+        return bb.a(param3, true, 1, (byte) 92, false, false);
     }
 
-    final static boolean d() {
+    final static boolean d(int param0) {
         return eh.field_p == qc.field_i;
     }
 
@@ -602,7 +600,7 @@ final class fc extends gl {
         L0: {
           var13 = TorChallenge.field_F ? 1 : 0;
           if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
-            String discarded$3 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           } else {
             break L0;
@@ -710,7 +708,7 @@ final class fc extends gl {
           return ((fc) this).b(1);
         }
         L5: {
-          boolean discarded$4 = var3.addAll((Collection) (Object) var4);
+          boolean discarded$3 = var3.addAll((Collection) (Object) var4);
           if (param0 > 85) {
             var6_array = var3.toArray();
             var7 = null;
@@ -739,8 +737,7 @@ final class fc extends gl {
             var11 = (java.net.Proxy) var10;
             try {
               L7: {
-                int discarded$5 = -115;
-                var12_ref2 = this.a(var11);
+                var12_ref2 = this.a(var11, (byte) -115);
                 if (var12_ref2 != null) {
                   stackOut_24_0 = (java.net.Socket) var12_ref2;
                   stackIn_25_0 = stackOut_24_0;
@@ -798,7 +795,7 @@ final class fc extends gl {
         ((fc) this).field_n = java.net.ProxySelector.getDefault();
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_q = null;
         field_m = null;
         int var1 = 103;

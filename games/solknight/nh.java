@@ -199,7 +199,7 @@ final class nh {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;

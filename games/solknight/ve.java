@@ -150,7 +150,7 @@ final class ve extends RuntimeException {
         return stackIn_1_0;
     }
 
-    final static String a(String param0, String param1, da param2) {
+    final static String a(String param0, String param1, da param2, byte param3) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;
@@ -297,7 +297,7 @@ final class ve extends RuntimeException {
         return stackIn_5_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

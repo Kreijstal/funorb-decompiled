@@ -15,7 +15,7 @@ final class uc {
     static String[][] field_h;
     static int[] field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_h = null;
         field_j = null;
         field_d = null;
@@ -40,7 +40,7 @@ final class uc {
               if (param0) {
                 break L1;
               } else {
-                boolean discarded$6 = uc.a(-115, 79);
+                boolean discarded$2 = uc.a(-115, 79);
                 break L1;
               }
             }
@@ -52,8 +52,7 @@ final class uc {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$7 = -2864;
-                    ma.a(param1, var5);
+                    ma.a(param1, var5, -2864);
                     var5 = (kf) (Object) je.field_w.a((byte) -40);
                     continue L3;
                   }

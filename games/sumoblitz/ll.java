@@ -6,20 +6,20 @@ final class ll {
     static long[][] field_a;
     static String field_c;
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         iv.field_i = 1;
         hc.field_f = 1;
         ki.field_f = 1;
         la.a(ql.field_A, 0, 25, -1);
     }
 
-    final static void a() {
+    final static void a(int param0) {
         ql.field_z = new int[25];
         hc.field_f = 1;
         ql.field_A = new int[25];

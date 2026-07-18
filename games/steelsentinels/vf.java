@@ -9,7 +9,7 @@ final class vf {
     static String field_f;
     static int field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_a = null;
         int var1 = 1;

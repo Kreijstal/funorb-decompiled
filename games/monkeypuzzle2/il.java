@@ -1075,7 +1075,7 @@ final class il extends ug {
         qh.a(4, true);
     }
 
-    final static fg a() {
+    final static fg a(int param0) {
         return (fg) (Object) new uf();
     }
 
@@ -1099,7 +1099,7 @@ final class il extends ug {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_g = null;
     }
 

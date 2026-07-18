@@ -217,7 +217,7 @@ final class fm extends kn implements sh {
         return stackIn_3_0;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         int var1 = -49;
         return am.c((byte) 111) == 35 ? true : false;
     }
@@ -227,7 +227,7 @@ final class fm extends kn implements sh {
         int discarded$0 = ((fm) this).field_Q.a(((fm) this).field_L, ((fm) this).field_u + param1 + 14, param2 - -((fm) this).field_t + 10, ((fm) this).field_v - 28, ((fm) this).field_q, 16777215, -1, 0, 0, ((fm) this).field_Q.field_I);
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         ui.field_L = -640;
         fl.field_d = false;
         el.field_c = false;
@@ -249,7 +249,7 @@ final class fm extends kn implements sh {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_K = null;
         field_I = null;
         field_S = null;
@@ -257,7 +257,7 @@ final class fm extends kn implements sh {
         field_O = null;
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

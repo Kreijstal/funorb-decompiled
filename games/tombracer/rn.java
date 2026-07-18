@@ -179,11 +179,11 @@ final class rn implements pma {
         dsa.field_a[27] = "Flame Shooter";
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
-    private final csa a(int param0, la param1) {
+    private final csa a(int param0, la param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -1422,8 +1422,7 @@ final class rn implements pma {
         try {
           L0: {
             if (param1 >= 109) {
-              int discarded$2 = 14;
-              stackOut_3_0 = this.a(-29748, param0);
+              stackOut_3_0 = this.a(-29748, param0, 14);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

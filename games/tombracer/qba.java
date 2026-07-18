@@ -11,7 +11,7 @@ final class qba {
         return (param2 & 50560) != 0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_b = null;
     }

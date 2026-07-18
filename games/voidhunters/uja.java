@@ -12,7 +12,7 @@ final class uja {
         }
     }
 
-    final static phb[] a() {
+    final static phb[] a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;

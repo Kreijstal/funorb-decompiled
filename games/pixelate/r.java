@@ -15,7 +15,7 @@ final class r {
         jp.a(-24 + qo.field_o, (byte) 116, 640, hd.field_q, 5, 0, v.field_c);
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void a(int param0, int param1, boolean param2, int param3) {
         int var4 = 0;
         jh.field_O.b(param1, param0);
         if (param2) {
@@ -30,18 +30,15 @@ final class r {
           }
           if (10 > var4) {
             var4 = 10;
-            int discarded$3 = -113;
-            uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0);
+            uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
             return;
           } else {
             if (-40 + jh.field_O.field_F < var4) {
               var4 = jh.field_O.field_F - 40;
-              int discarded$4 = -113;
-              uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0);
+              uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
               return;
             } else {
-              int discarded$5 = -113;
-              uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0);
+              uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
               return;
             }
           }

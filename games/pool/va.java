@@ -159,7 +159,7 @@ final class va extends fe {
         return stackIn_23_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_P = null;
         field_W = null;
         field_N = null;
@@ -226,8 +226,7 @@ final class va extends fe {
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0;
                 } else {
-                  int discarded$2 = -1;
-                  if (!lq.a(param0)) {
+                  if (!lq.a(param0, -1)) {
                     L1: {
                       if (nr.field_S < 100) {
                         break L1;
@@ -246,8 +245,7 @@ final class va extends fe {
                       stackIn_22_0 = stackOut_21_0;
                       return stackIn_22_0;
                     } else {
-                      int discarded$3 = 24552;
-                      if (ia.a(param0)) {
+                      if (ia.a(param0, 24552)) {
                         stackOut_25_0 = nr.a(new String[1], -1, jp.field_R);
                         stackIn_26_0 = stackOut_25_0;
                         return stackIn_26_0;
@@ -311,7 +309,7 @@ final class va extends fe {
         return (String) (Object) stackIn_28_0;
     }
 
-    final static boolean g() {
+    final static boolean g(byte param0) {
         ho var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

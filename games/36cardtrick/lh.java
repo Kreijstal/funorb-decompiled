@@ -540,8 +540,7 @@ final class lh {
             var4_int = param1.a(18659, param2);
             var5 = 1 % ((param3 - 43) / 62);
             var6 = param1.a(var4_int, param0, (byte) 7);
-            int discarded$2 = -8691;
-            stackOut_0_0 = oj.a(var4_int, param1, var6);
+            stackOut_0_0 = oj.a(var4_int, param1, var6, -8691);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

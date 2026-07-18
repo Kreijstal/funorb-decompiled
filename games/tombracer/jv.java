@@ -6,7 +6,7 @@ final class jv extends ci {
     private int field_o;
     private boolean field_n;
 
-    final static int d() {
+    final static int d(int param0) {
         int var1 = 50;
         return aqa.field_d - wt.field_a;
     }

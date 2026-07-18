@@ -56,8 +56,7 @@ final class vn extends vo {
               }
               L2: {
                 var6 = (CharSequence) (Object) param0;
-                int discarded$2 = 38;
-                var3_int = td.a(var6);
+                var3_int = td.a(var6, (byte) 38);
                 if (var3_int <= 0) {
                   break L2;
                 } else {
@@ -112,7 +111,7 @@ final class vn extends vo {
         super(param0);
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_g = null;
         field_e = null;
         field_f = null;

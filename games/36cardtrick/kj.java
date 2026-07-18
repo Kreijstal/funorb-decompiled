@@ -190,7 +190,7 @@ class kj extends cj {
         nl.field_c = lf.a(var2 * var4, var5 * var2, true);
     }
 
-    private final void a(kj param0) {
+    private final void a(kj param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_97_0 = null;
         StringBuilder stackIn_97_1 = null;
@@ -544,7 +544,7 @@ class kj extends cj {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_q = null;
         field_z = null;
     }
@@ -603,8 +603,7 @@ class kj extends cj {
           L0: {
             L1: {
               ((kj) this).field_e = param0;
-              int discarded$2 = 1;
-              this.a(param1);
+              this.a(param1, 1);
               if (param6 == null) {
                 break L1;
               } else {

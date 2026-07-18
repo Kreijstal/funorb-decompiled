@@ -14,8 +14,7 @@ final class jsa {
             try {
               L0: {
                 if (sab.e((byte) -118)) {
-                  int discarded$9 = 114;
-                  if (!gpb.a("jagdx")) {
+                  if (!gpb.a("jagdx", (byte) 114)) {
                     throw new RuntimeException("");
                   } else {
                     var5 = Class.forName("nla");

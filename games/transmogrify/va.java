@@ -103,7 +103,7 @@ final class va extends me {
         }
     }
 
-    final static int a(hg param0, hg param1) {
+    final static int a(hg param0, hg param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Object var4 = null;

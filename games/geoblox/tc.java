@@ -165,8 +165,7 @@ final class tc {
                     break L3;
                   }
                 }
-                int discarded$1 = 20000000;
-                oj.a(param2);
+                oj.a(param2, 20000000);
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

@@ -21,7 +21,7 @@ final class hi implements Runnable {
     private boolean field_o;
     static int field_j;
 
-    final static void a() {
+    final static void a(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -39,7 +39,7 @@ final class hi implements Runnable {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_h = null;
         field_m = null;
         field_i = null;

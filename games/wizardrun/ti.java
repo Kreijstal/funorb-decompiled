@@ -11,7 +11,7 @@ final class ti {
     private int field_g;
     static String field_h;
 
-    final static wd a() {
+    final static wd a(byte param0) {
         if (fi.field_y == ej.field_b) {
             throw new IllegalStateException();
         }
@@ -60,8 +60,7 @@ final class ti {
                 var2 = 0;
                 L3: while (true) {
                   if (var2 >= 256) {
-                    int discarded$1 = 121;
-                    this.d();
+                    this.d((byte) 121);
                     ((ti) this).field_g = 256;
                     return;
                   } else {
@@ -185,7 +184,7 @@ final class ti {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -232,22 +231,21 @@ final class ti {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_h = null;
     }
 
     final int b(byte param0) {
         if (!(0 != ((ti) this).field_g)) {
-            int discarded$0 = 121;
-            this.d();
+            this.d((byte) 121);
             ((ti) this).field_g = 256;
         }
         if (param0 <= 58) {
             this.b(13);
         }
-        int fieldTemp$1 = ((ti) this).field_g - 1;
+        int fieldTemp$0 = ((ti) this).field_g - 1;
         ((ti) this).field_g = ((ti) this).field_g - 1;
-        return ((ti) this).field_f[fieldTemp$1];
+        return ((ti) this).field_f[fieldTemp$0];
     }
 
     final static gb a(int param0, String param1, kl param2, String param3, kl param4) {
@@ -462,8 +460,7 @@ final class ti {
                   if (!ki.field_E.field_b) {
                     break L1;
                   } else {
-                    int discarded$19 = 60;
-                    di.a();
+                    di.a((byte) 60);
                     kj.field_b.b((ub) (Object) new vg(kj.field_b, cf.field_f), (byte) 96);
                     break L1;
                   }
@@ -472,13 +469,13 @@ final class ti {
               return;
             } else {
               if (param0 == 8) {
-                boolean discarded$20 = kj.field_b.a(param0 + 118, true, ne.field_g, sf.field_d);
+                boolean discarded$17 = kj.field_b.a(param0 + 118, true, ne.field_g, sf.field_d);
                 kj.field_b.g((byte) 118);
                 L2: while (true) {
                   if (!ae.a(-61)) {
                     break L0;
                   } else {
-                    boolean discarded$21 = kj.field_b.a(param0 ^ -125, vk.field_r, ae.field_a);
+                    boolean discarded$18 = kj.field_b.a(param0 ^ -125, vk.field_r, ae.field_a);
                     continue L2;
                   }
                 }

@@ -10,7 +10,7 @@ final class fr extends wj implements vh {
     static int field_G;
     static hd field_E;
 
-    final static int a(ea param0, int[][][] param1) {
+    final static int a(ea param0, int[][][] param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -333,7 +333,7 @@ final class fr extends wj implements vh {
         we.field_a.a((byte) -118, (fd) (Object) wm.field_u);
     }
 
-    final static qv h() {
+    final static qv h(byte param0) {
         if (!(null != n.field_e)) {
             n.field_e = new qv(qo.field_k, 20, 0, 0, 0, 11579568, -1, 0, 0, qo.field_k.field_G, -1, 2147483647, true);
         }

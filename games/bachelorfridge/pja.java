@@ -10,7 +10,7 @@ final class pja {
     static kv[] field_d;
     static String field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         int var1 = 126;
         field_e = null;

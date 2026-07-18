@@ -7,7 +7,7 @@ final class qb {
     static am field_a;
     static boolean field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_d = null;
@@ -141,7 +141,7 @@ final class qb {
         }
     }
 
-    final static char a(char param0) {
+    final static char a(char param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;

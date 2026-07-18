@@ -52,7 +52,7 @@ final class jd extends gb {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        int stackIn_10_0 = 0;
+        boolean stackIn_10_0 = false;
         int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_25_0 = 0;
@@ -70,7 +70,7 @@ final class jd extends gb {
         StringBuilder stackIn_63_1 = null;
         String stackIn_63_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
+        boolean stackOut_9_0 = false;
         int stackOut_21_0 = 0;
         int stackOut_24_0 = 0;
         int stackOut_24_1 = 0;
@@ -103,8 +103,7 @@ final class jd extends gb {
                 if (param3.field_k == null) {
                   break L1;
                 } else {
-                  int discarded$1 = 0;
-                  ja.a();
+                  ja.a(0);
                   break L1;
                 }
               }
@@ -120,15 +119,15 @@ final class jd extends gb {
                     var9 = param3.field_K[var8];
                     var10 = param3.field_o[var8];
                     var11 = param3.field_w[var8];
-                    stackOut_9_0 = 0;
-                    stackIn_45_0 = stackOut_9_0;
+                    stackOut_9_0 = param2;
+                    stackIn_45_0 = stackOut_9_0 ? 1 : 0;
                     stackIn_10_0 = stackOut_9_0;
                     if (var19 != 0) {
                       break L3;
                     } else {
                       L5: {
                         L6: {
-                          if (stackIn_10_0 != 0) {
+                          if (stackIn_10_0) {
                             var12 = qb.field_ab[var9];
                             var13 = a.field_d[var9];
                             var14 = -var12 + qb.field_ab[var10];
@@ -291,7 +290,12 @@ final class jd extends gb {
                     }
                   }
                 }
-                break L13;
+                if (!param1) {
+                  break L13;
+                } else {
+                  jd.n(71);
+                  break L13;
+                }
               }
               break L0;
             }
@@ -301,7 +305,7 @@ final class jd extends gb {
           L16: {
             var5 = decompiledCaughtException;
             stackOut_59_0 = (RuntimeException) var5;
-            stackOut_59_1 = new StringBuilder().append("jd.B(").append(param0).append(',').append(false).append(',').append(false).append(',');
+            stackOut_59_1 = new StringBuilder().append("jd.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_62_0 = stackOut_59_0;
             stackIn_62_1 = stackOut_59_1;
             stackIn_60_0 = stackOut_59_0;
@@ -762,17 +766,16 @@ final class jd extends gb {
         return stackIn_14_0;
     }
 
-    final static void n() {
+    final static void n(int param0) {
         try {
-            int var1_int = 0;
-            int discarded$0 = -35;
-            k.a();
+            int var1_int = 32 % ((param0 - 41) / 53);
+            k.a((byte) -35);
             k.field_b = true;
             ta.field_b = true;
             u.field_b.j(1);
             nf.a(false, kh.field_b, -96);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "jd.E(" + -110 + ')');
+            throw fc.a((Throwable) (Object) runtimeException, "jd.E(" + param0 + ')');
         }
     }
 

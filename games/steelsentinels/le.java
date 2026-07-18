@@ -169,7 +169,7 @@ final class le extends bg {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_L = null;
         field_B = null;
         field_J = null;

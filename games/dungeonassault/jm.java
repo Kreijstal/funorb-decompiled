@@ -152,8 +152,7 @@ final class jm {
                   break L6;
                 }
               }
-              int discarded$2 = -440;
-              ul.a(param0);
+              ul.a(param0, -440);
               break L0;
             } else {
               return;
@@ -287,7 +286,7 @@ final class jm {
         td.field_a = null;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_h = null;
         field_g = null;

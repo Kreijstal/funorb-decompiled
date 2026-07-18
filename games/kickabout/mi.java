@@ -7,11 +7,11 @@ final class mi {
     static String field_c;
     static int field_d;
 
-    final static int a() {
+    final static int a(boolean param0) {
         return 3;
     }
 
-    final static int a(int param0, lk[] param1) {
+    final static int a(int param0, lk[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

@@ -31,8 +31,7 @@ final class ph extends vd implements fca, lja {
     private final void k(int param0) {
         L0: {
           L1: {
-            int discarded$8 = 68;
-            if (ch.b()) {
+            if (ch.b(68)) {
               break L1;
             } else {
               if (((ph) this).field_Q.field_w.length() <= 0) {
@@ -46,8 +45,7 @@ final class ph extends vd implements fca, lja {
               }
             }
           }
-          int discarded$9 = 81;
-          g.a(((ph) this).field_H.field_w, ((ph) this).field_Q.field_w);
+          g.a(((ph) this).field_H.field_w, ((ph) this).field_Q.field_w, (byte) 81);
           break L0;
         }
         L2: {
@@ -209,16 +207,14 @@ final class ph extends vd implements fca, lja {
                   } else {
                     if (!((ph) this).field_J) {
                       if (!((ph) this).field_F) {
-                        int discarded$386 = 101;
-                        f.a();
+                        f.a((byte) 101);
                         break L1;
                       } else {
                         jja.d((byte) 70);
                         break L1;
                       }
                     } else {
-                      int discarded$387 = -67;
-                      ola.b();
+                      ola.b((byte) -67);
                       break L1;
                     }
                   }

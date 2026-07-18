@@ -203,7 +203,7 @@ abstract class ci extends vg {
         ((ci) this).field_g = param1 ? true : false;
     }
 
-    final static kg a(byte[] param0) {
+    final static kg a(byte[] param0, byte param1) {
         kg var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

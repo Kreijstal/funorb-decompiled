@@ -50,8 +50,7 @@ final class ia implements eb {
             try {
               L0: {
                 if (cb.field_p.startsWith("win")) {
-                  int discarded$6 = -31451;
-                  if (!la.a(param1)) {
+                  if (!la.a(param1, -31451)) {
                     break L0;
                   } else {
                     return;
@@ -137,7 +136,7 @@ final class ia implements eb {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         jd var1 = (jd) (Object) oj.field_P.b(-82);
         if (!(var1 != null)) {
             throw new IllegalStateException();

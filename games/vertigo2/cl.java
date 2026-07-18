@@ -10,7 +10,7 @@ final class cl {
     static int field_d;
     int field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
     }
 

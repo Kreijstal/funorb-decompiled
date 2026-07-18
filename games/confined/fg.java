@@ -21,7 +21,7 @@ final class fg extends eh {
         field_mb = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, byte param2) {
         int var3 = 0;
         L0: {
           L1: {

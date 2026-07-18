@@ -10,7 +10,7 @@ final class ll {
     static String field_e;
     private static int field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_g = null;
         field_d = null;

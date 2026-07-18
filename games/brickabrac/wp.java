@@ -18,8 +18,9 @@ final class wp {
         int var3 = 0;
         int var4 = 0;
         String var5 = null;
-        Object var6 = null;
-        CharSequence var7 = null;
+        String var6 = null;
+        Object var7 = null;
+        CharSequence var8 = null;
         L0: {
           var3 = 76;
           if (tn.field_m == null) {
@@ -38,17 +39,19 @@ final class wp {
                       L2: {
                         if (tn.field_m.field_Mb.charAt(0) == 91) {
                           var5 = tn.field_m.field_Mb;
+                          var6 = var5;
+                          var6 = var5;
                           break L2;
                         } else {
-                          var7 = (CharSequence) (Object) tn.field_m.field_Mb;
-                          var5 = gb.a(var7, 57);
+                          var8 = (CharSequence) (Object) tn.field_m.field_Mb;
+                          var5 = gb.a(var8, 57);
                           break L2;
                         }
                       }
                       L3: {
                         var6 = null;
                         if (ij.field_d == 0) {
-                          var6 = (Object) (Object) jl.a(24943, var5, param1);
+                          var6 = jl.a(24943, var5, param1);
                           break L3;
                         } else {
                           break L3;
@@ -58,13 +61,13 @@ final class wp {
                         if (ij.field_d != 1) {
                           break L4;
                         } else {
-                          var6 = (Object) (Object) op.a(param1, false, var5);
+                          var6 = op.a(param1, false, var5);
                           break L4;
                         }
                       }
                       L5: {
                         if (ij.field_d == 2) {
-                          var6 = (Object) (Object) me.a(var5, param1, 2);
+                          var6 = me.a(var5, param1, 2);
                           break L5;
                         } else {
                           break L5;
@@ -74,7 +77,7 @@ final class wp {
                         if (ij.field_d != 3) {
                           break L6;
                         } else {
-                          var6 = (Object) (Object) uf.a(var5, param1, var5, -45);
+                          var6 = uf.a(var5, param1, var5, -45);
                           break L6;
                         }
                       }
@@ -82,8 +85,8 @@ final class wp {
                         if (var6 == null) {
                           break L7;
                         } else {
-                          int discarded$1 = 2;
-                          wp.a((byte) 92, 0, (String) null, (String) var6, var5);
+                          var7 = null;
+                          wp.a((byte) 92, 0, (String) null, var6, var5, 2);
                           break L7;
                         }
                       }
@@ -271,7 +274,7 @@ final class wp {
         return stackIn_9_0;
     }
 
-    private final oe a(int param0, int param1, int[] param2) {
+    private final oe a(int param0, int param1, int[] param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -494,8 +497,7 @@ final class wp {
                         cg.field_s = he.a(sl.field_v, 20, false, param5, (String) null);
                         break L3;
                       } else {
-                        int discarded$9 = -109;
-                        cg.field_s = ih.a(param0, false, param5);
+                        cg.field_s = ih.a(param0, false, param5, (byte) -109);
                         break L3;
                       }
                     }
@@ -535,8 +537,7 @@ final class wp {
                     } else {
                       bj.field_ab = jl.field_e.g(-32768);
                       jl.field_e.field_l = 0;
-                      int discarded$10 = 0;
-                      mp.a(param4, cg.field_s, param1, param3);
+                      mp.a(param4, cg.field_s, param1, param3, false);
                       rf.field_b = rq.field_c;
                       break L5;
                     }
@@ -666,9 +667,9 @@ final class wp {
                       L15: {
                         ii.field_j = stackIn_53_0 != 0;
                         if (ec.field_O) {
-                          int discarded$11 = jl.field_e.l(255);
-                          int discarded$12 = jl.field_e.l(255);
-                          int discarded$13 = jl.field_e.e(255);
+                          int discarded$5 = jl.field_e.l(255);
+                          int discarded$6 = jl.field_e.l(255);
+                          int discarded$7 = jl.field_e.e(255);
                           ta.field_f = jl.field_e.i(65280);
                           gg.field_q = new byte[ta.field_f];
                           var8 = 0;
@@ -722,7 +723,7 @@ final class wp {
                             } else {
                               try {
                                 L21: {
-                                  Object discarded$14 = ne.a("unzap", -121, uc.e((byte) -100));
+                                  Object discarded$8 = ne.a("unzap", -121, uc.e((byte) -100));
                                   break L21;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -738,8 +739,7 @@ final class wp {
                         }
                         try {
                           L23: {
-                            int discarded$15 = 3;
-                            Object discarded$16 = ne.a(new Object[1], 116, uc.e((byte) -75), "zap");
+                            Object discarded$9 = ne.a(new Object[1], 116, uc.e((byte) -75), "zap");
                             break L23;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -818,8 +818,7 @@ final class wp {
                   if (eq.field_g == null) {
                     if (pf.field_d) {
                       L31: {
-                        int discarded$17 = -6792;
-                        if (30000L >= de.f()) {
+                        if (30000L >= de.f(-6792)) {
                           eo.field_e = gd.field_e;
                           break L31;
                         } else {
@@ -909,7 +908,7 @@ final class wp {
         }
     }
 
-    final static void a(byte param0, int param1, String param2, String param3, String param4) {
+    final static void a(byte param0, int param1, String param2, String param3, String param4, int param5) {
         gb var6 = null;
         try {
             var6 = new gb(2, param4, 0, param2, param3);
@@ -979,8 +978,7 @@ final class wp {
             if (var5_int >= 0) {
               var6 = ((wp) this).field_g.a(var5_int, -67, param2);
               if (var6 >= 0) {
-                int discarded$2 = 0;
-                stackOut_6_0 = this.a(var6, var5_int, param3);
+                stackOut_6_0 = this.a(var6, var5_int, param3, 0);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
@@ -1282,16 +1280,14 @@ final class wp {
               if (0 != var2_int) {
                 break L1;
               } else {
-                int discarded$4 = 0;
-                uf.a(3);
+                uf.a(3, 0);
                 break L1;
               }
             }
             var3 = (nj) (Object) ob.field_E.d(-31);
             L2: while (true) {
               if (var3 == null) {
-                int discarded$5 = 0;
-                uf.a(var2_int + -dl.field_f);
+                uf.a(var2_int + -dl.field_f, 0);
                 break L0;
               } else {
                 var3.c(0);
@@ -1331,8 +1327,7 @@ final class wp {
         String stackOut_11_2 = null;
         try {
           if (((wp) this).field_g.c(-124) == 1) {
-            int discarded$4 = 0;
-            stackOut_2_0 = this.a(param0, 0, param1);
+            stackOut_2_0 = this.a(param0, 0, param1, 0);
             stackIn_3_0 = stackOut_2_0;
             return stackIn_3_0;
           } else {
@@ -1347,8 +1342,7 @@ final class wp {
               }
               throw new RuntimeException();
             } else {
-              int discarded$5 = 0;
-              stackOut_5_0 = this.a(0, param0, param1);
+              stackOut_5_0 = this.a(0, param0, param1, 0);
               stackIn_6_0 = stackOut_5_0;
               return stackIn_6_0;
             }
@@ -1385,7 +1379,7 @@ final class wp {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_d = null;
         field_i = null;

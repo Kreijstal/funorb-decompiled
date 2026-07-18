@@ -15,7 +15,7 @@ class oha {
     static String[] field_d;
     int field_h;
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_d = null;
     }

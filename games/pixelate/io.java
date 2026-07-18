@@ -36,7 +36,7 @@ final class io {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         lc var3 = null;
@@ -234,11 +234,9 @@ final class io {
           h.a(-113, re.field_b);
           ja.a();
           t.d();
-          int discarded$3 = 106;
-          ma.d();
+          ma.d((byte) 106);
           if (256 <= var5) {
-            int discarded$4 = 92;
-            ia.a();
+            ia.a((byte) 92);
             if (ga.field_f >= 150) {
               th.field_b.a(var3 - -15, var4 - -10, var5);
               var6 = ga.field_f + -125;
@@ -467,8 +465,7 @@ final class io {
           } else {
             L20: {
               t.a(0, 0, t.field_j, t.field_d, 0, -var5 + 256);
-              int discarded$5 = 92;
-              ia.a();
+              ia.a((byte) 92);
               if (ga.field_f >= 150) {
                 th.field_b.a(var3 - -15, var4 - -10, var5);
                 break L20;
@@ -709,8 +706,7 @@ final class io {
             }
             L6: {
               aa.field_f.e(160, var6);
-              int discarded$2 = -85;
-              var7 = ln.a(ao.a(13867));
+              var7 = ln.a(ao.a(13867), (byte) -85);
               if (var7 != null) {
                 break L6;
               } else {
@@ -727,8 +723,7 @@ final class io {
                 break L7;
               }
             }
-            int discarded$3 = 12556;
-            wh.a(ag.field_m, (we) (Object) aa.field_f, tp.field_t, uk.field_v);
+            wh.a(ag.field_m, (we) (Object) aa.field_f, tp.field_t, uk.field_v, 12556);
             aa.field_f.c(7519, aa.field_f.field_m - var5_int);
             vg.b(-1, 10000);
             break L0;
@@ -765,7 +760,7 @@ final class io {
         }
     }
 
-    final static void a(tc param0) {
+    final static void a(tc param0, byte param1) {
         try {
             hk.field_d = param0;
             pe.field_c = hk.field_d.field_z + hk.field_d.field_w;
@@ -787,7 +782,7 @@ final class io {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_a = null;
         field_c = null;

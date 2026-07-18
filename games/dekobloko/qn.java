@@ -47,7 +47,7 @@ final class qn extends t {
         }
     }
 
-    public static void n() {
+    public static void n(byte param0) {
         field_pb = null;
         field_rb = null;
     }

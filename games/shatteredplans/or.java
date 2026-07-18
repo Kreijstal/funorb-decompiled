@@ -7,13 +7,13 @@ final class or {
     static int[] field_b;
     static String field_c;
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_b = null;
         field_c = null;
     }
 
-    final static int a(boolean param0, String param1) {
+    final static int a(boolean param0, String param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -80,7 +80,7 @@ final class or {
         return stackIn_4_0;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return 250 < js.field_j;
     }
 

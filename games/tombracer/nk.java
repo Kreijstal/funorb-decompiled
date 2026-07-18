@@ -10,7 +10,7 @@ final class nk extends vg {
     int field_l;
     int[][] field_f;
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         lqa var1 = null;
         int stackIn_7_0 = 0;
         int stackOut_5_0 = 0;
@@ -41,11 +41,11 @@ final class nk extends vg {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_k = null;
     }
 
-    final static vpa a() {
+    final static vpa a(int param0) {
         if (!(ur.field_a != null)) {
             ur.field_a = new vpa(eka.field_o, 20, 0, 0, 0, 11579568, -1, 0, 0, eka.field_o.field_w, -1, 2147483647, true);
         }

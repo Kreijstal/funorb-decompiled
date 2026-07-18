@@ -23,7 +23,7 @@ final class la {
         return n.field_c;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_f = null;
         field_e = null;
@@ -39,13 +39,12 @@ final class la {
         on.e(var3, var4, var5, var6, param1);
     }
 
-    final static void a(nu param0) {
+    final static void a(nu param0, int param1) {
         try {
             ja.field_O = true;
             et.field_d = param0;
             if (!(null != ss.field_b)) {
-                int discarded$0 = 0;
-                ss.field_b = gt.c();
+                ss.field_b = gt.c(0);
             }
             ld.field_f = (gm) (Object) et.field_d.field_P[0][3];
             fc.field_c = (gm) (Object) et.field_d.field_P[0][4];

@@ -510,7 +510,7 @@ final class cb {
         }
     }
 
-    final static void a(cd[] param0) {
+    final static void a(cd[] param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -874,7 +874,7 @@ final class cb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_a = null;
     }

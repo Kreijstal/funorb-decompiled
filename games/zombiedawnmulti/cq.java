@@ -15,7 +15,7 @@ final class cq {
         return a.field_b == 11 ? true : false;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
         field_d = null;
@@ -24,7 +24,7 @@ final class cq {
         int var1 = 0;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, boolean param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -140,8 +140,7 @@ final class cq {
                     break L2;
                   } else {
                     var3 = (CharSequence) (Object) param0;
-                    int discarded$2 = 0;
-                    if (ql.field_a.equals((Object) (Object) tg.a(var3))) {
+                    if (ql.field_a.equals((Object) (Object) tg.a(var3, false))) {
                       stackOut_11_0 = 1;
                       stackIn_12_0 = stackOut_11_0;
                       break L0;

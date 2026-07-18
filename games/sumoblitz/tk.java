@@ -46,7 +46,7 @@ final class tk {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
     }
 

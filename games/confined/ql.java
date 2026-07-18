@@ -31,7 +31,7 @@ final class ql {
     double field_B;
     private int[] field_a;
 
-    public static void b() {
+    public static void b(int param0) {
         field_A = null;
         field_t = null;
         field_k = null;
@@ -3041,8 +3041,7 @@ final class ql {
           L0: {
             var4_int = param3.a(-118, param0);
             var5 = param3.a(var4_int, param2, -107);
-            int discarded$2 = 0;
-            stackOut_2_0 = kj.a(param3, var4_int, var5);
+            stackOut_2_0 = kj.a(param3, var4_int, var5, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

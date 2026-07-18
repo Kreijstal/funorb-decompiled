@@ -40,8 +40,7 @@ final class sf extends ik implements df {
               }
               break L0;
             } else {
-              int discarded$2 = 170;
-              wl.a(true, false);
+              wl.a(true, false, 170);
               return;
             }
           }
@@ -350,7 +349,7 @@ final class sf extends ik implements df {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_kb = null;
     }
 

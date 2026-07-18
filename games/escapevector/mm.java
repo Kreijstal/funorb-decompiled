@@ -6,7 +6,7 @@ final class mm {
     static String field_c;
     static String field_a;
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -54,11 +54,8 @@ final class mm {
             }
             L5: while (true) {
               if (!pn.p(-126)) {
-                int discarded$48 = 8158;
-                int discarded$49 = 8158;
-                di.field_d.a(gb.a(sf.field_c, ng.field_ob), (byte) 126, gb.a(dh.field_d, bj.field_y));
-                int discarded$50 = 0;
-                if (fn.a(true)) {
+                di.field_d.a(gb.a(sf.field_c, ng.field_ob, 8158), (byte) 126, gb.a(dh.field_d, bj.field_y, 8158));
+                if (fn.a(true, 0)) {
                   var1_int = 1;
                   stackOut_18_0 = var1_int;
                   stackIn_19_0 = stackOut_18_0;
@@ -68,8 +65,7 @@ final class mm {
                 }
               } else {
                 di.field_d.c((byte) 6);
-                int discarded$51 = 0;
-                if (!fn.a(false)) {
+                if (!fn.a(false, 0)) {
                   continue L5;
                 } else {
                   var1_int = 1;
@@ -126,21 +122,17 @@ final class mm {
               if (!var4.a(0, da.field_d[param1])) {
                 return false;
               } else {
-                int discarded$4 = 1;
-                tk.field_a[param1] = fe.a(da.field_d[param1], var4, "texture");
-                int discarded$5 = 1;
-                dd.field_a[param1] = fe.a(da.field_d[param1], var4, "frosting");
+                tk.field_a[param1] = fe.a(da.field_d[param1], var4, "texture", true);
+                dd.field_a[param1] = fe.a(da.field_d[param1], var4, "frosting", true);
                 dd.field_a[param1].c();
-                int discarded$6 = 0;
-                dm.a(var4, param1);
+                dm.a(var4, param1, false);
                 fa.field_c[param1] = true;
                 fn.a((byte) 53);
                 return true;
               }
             }
           } else {
-            int discarded$7 = 5;
-            en.a(var4);
+            en.a(var4, 5);
             fn.a((byte) 53);
             return true;
           }
@@ -286,7 +278,7 @@ final class mm {
         return stackIn_22_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         int var1 = 0;
         field_c = null;
         field_b = null;

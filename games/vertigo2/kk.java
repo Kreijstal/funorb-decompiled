@@ -161,7 +161,7 @@ final class kk {
         return var2.field_t;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_e = null;
         field_h = null;
@@ -188,7 +188,7 @@ final class kk {
         return ((kk) this).field_l;
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -252,7 +252,7 @@ final class kk {
         return stackIn_1_0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         il.field_a = true;
         field_a = null;
         gk.field_c = null;

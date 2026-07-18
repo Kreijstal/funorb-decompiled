@@ -14,7 +14,7 @@ final class fl {
         field_b = null;
     }
 
-    final static void a(ka param0) {
+    final static void a(ka param0, int param1) {
         try {
             param0.field_M.field_w = (double)4;
         } catch (RuntimeException runtimeException) {

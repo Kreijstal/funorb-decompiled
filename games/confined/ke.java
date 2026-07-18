@@ -19,7 +19,7 @@ final class ke extends ga implements ge, el, pg {
     private wh field_V;
     private rg field_S;
 
-    private final int a(fj param0, String param1, int param2, int param3) {
+    private final int a(fj param0, String param1, int param2, int param3, int param4) {
         la var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;
@@ -121,9 +121,8 @@ final class ke extends ga implements ge, el, pg {
         return stackIn_1_0;
     }
 
-    private final boolean c() {
-        int discarded$0 = -66;
-        if (!(this.i())) {
+    private final boolean c(boolean param0) {
+        if (!(this.i((byte) -66))) {
             return false;
         }
         int var2 = -1;
@@ -218,14 +217,13 @@ final class ke extends ga implements ge, el, pg {
     final void a(fj param0, int param1, int param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = -66;
-            ((ke) this).field_S.field_L = this.i();
+            ((ke) this).field_S.field_L = this.i((byte) -66);
         } catch (RuntimeException runtimeException) {
             throw sd.a((Throwable) (Object) runtimeException, "ke.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final boolean i() {
+    private final boolean i(byte param0) {
         if (this.a((byte) -111, (j) (Object) ((ke) this).field_R)) {
           if (this.a((byte) -7, (j) (Object) ((ke) this).field_U)) {
             if (this.a((byte) 74, (j) (Object) ((ke) this).field_W)) {
@@ -253,7 +251,7 @@ final class ke extends ga implements ge, el, pg {
         }
     }
 
-    private final String b() {
+    private final String b(boolean param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -405,14 +403,11 @@ final class ke extends ga implements ge, el, pg {
         qm dupTemp$1 = new qm(10000536);
         ((ke) this).field_X.field_n = (fe) (Object) dupTemp$1;
         ((ke) this).field_H.field_n = (fe) (Object) dupTemp$1;
-        int discarded$2 = 0;
         String var2 = b.a(new String[2], ui.field_e, 1177);
         int var3 = 20;
-        int discarded$3 = 120;
-        var3 = var3 + this.a((fj) (Object) ((ke) this).field_U, oh.field_d, 170, var3);
+        var3 = var3 + this.a((fj) (Object) ((ke) this).field_U, oh.field_d, 170, var3, 120);
         var3 = var3 + (this.a((fj) (Object) ((ke) this).field_W, 170, var3, fj.field_A, "", 20, 20) - -5);
-        int discarded$4 = 120;
-        var3 = var3 + this.a((fj) (Object) ((ke) this).field_H, sc.field_b, 170, var3);
+        var3 = var3 + this.a((fj) (Object) ((ke) this).field_H, sc.field_b, 170, var3, 120);
         var3 = var3 + (5 + this.a(hb.field_t, jj.field_hb, 150, 170, var3, (fj) (Object) ((ke) this).field_X));
         var3 = var3 + (5 + this.a(rc.field_a, va.field_d, 150, 170, var3, (fj) (Object) ((ke) this).field_R));
         var3 = var3 + this.a(170, var3, qi.field_j, (byte) 59, (fj) (Object) ((ke) this).field_V);
@@ -950,7 +945,7 @@ final class ke extends ga implements ge, el, pg {
               if (param0 > 68) {
                 break L1;
               } else {
-                String discarded$6 = this.h((byte) 75);
+                String discarded$4 = this.h((byte) 75);
                 break L1;
               }
             }
@@ -961,8 +956,7 @@ final class ke extends ga implements ge, el, pg {
               if (((ke) this).field_S != param3) {
                 break L0;
               } else {
-                int discarded$7 = 1;
-                boolean discarded$8 = this.c();
+                boolean discarded$5 = this.c(true);
                 return;
               }
             }
@@ -1014,7 +1008,7 @@ final class ke extends ga implements ge, el, pg {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_ab = null;
         field_L = null;
         field_P = null;

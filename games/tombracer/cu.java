@@ -92,8 +92,7 @@ final class cu extends nv {
                           if (!this.b(-106).m((byte) -99)) {
                             ((cu) this).field_v = ((cu) this).field_v - param1.field_b;
                             if (0 >= ((cu) this).field_v) {
-                              int discarded$241 = 1;
-                              this.d();
+                              this.d(true);
                               break L2;
                             } else {
                               break L2;
@@ -283,7 +282,7 @@ final class cu extends nv {
         ((cu) this).field_t = param3;
     }
 
-    private final void d() {
+    private final void d(boolean param0) {
         ((cu) this).field_v = ((cu) this).field_r;
         this.b(110).n(((cu) this).field_t, -127);
     }
@@ -369,8 +368,7 @@ final class cu extends nv {
         String stackOut_5_2 = null;
         try {
           if (jna.a(false, param1, param3, param2)) {
-            int discarded$2 = 120;
-            return sba.d();
+            return sba.d((byte) 120);
           } else {
             return null;
           }
@@ -697,7 +695,7 @@ final class cu extends nv {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_x = null;
         field_o = null;
     }
@@ -715,8 +713,7 @@ final class cu extends nv {
         int stackOut_1_1 = 0;
         int stackOut_4_0 = 0;
         L0: {
-          int discarded$12 = 52;
-          stackOut_0_0 = er.c(param1, param2);
+          stackOut_0_0 = er.c(param1, param2, 52);
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
           if ((param1 & 458752) == 0) {

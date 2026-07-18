@@ -4,13 +4,12 @@
 final class ti {
     static byte[] field_a;
 
-    final static hh a() {
+    final static hh a(int param0) {
         int var1 = 0;
-        int discarded$0 = -65;
-        return new hh(tt.e(21240), aj.a());
+        return new hh(tt.e(21240), aj.a((byte) -65));
     }
 
-    final static String a(byte param0, int param1, long param2, int param3) {
+    final static String a(byte param0, int param1, long param2, int param3, boolean param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -90,7 +89,7 @@ final class ti {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
     }
 

@@ -14,7 +14,7 @@ final class f extends ji {
     static String field_J;
     static String field_D;
 
-    final static void a(long param0, int param1, int param2, jj param3, int param4, int param5, int param6, int param7, boolean param8, int param9, boolean param10, String param11) {
+    final static void a(long param0, int param1, int param2, jj param3, int param4, int param5, int param6, int param7, boolean param8, int param9, boolean param10, String param11, int param12, int param13) {
         try {
             IOException var15 = null;
             RuntimeException var15_ref = null;
@@ -175,7 +175,7 @@ final class f extends ji {
         ((f) this).field_G = 4096;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 0;
         field_D = null;
         field_J = null;
@@ -209,8 +209,7 @@ final class f extends ji {
                   break L1;
                 } else {
                   if (hj.field_b) {
-                    int discarded$4 = -10;
-                    g.a();
+                    g.a((byte) -10);
                     break L1;
                   } else {
                     il.field_a = true;
@@ -239,8 +238,7 @@ final class f extends ji {
                   if (oa.field_s.field_tb == 0) {
                     break L2;
                   } else {
-                    int discarded$5 = 0;
-                    fb.h();
+                    fb.h(0);
                     il.field_a = false;
                     break L2;
                   }
@@ -287,7 +285,7 @@ final class f extends ji {
         return sf.field_d;
     }
 
-    final static int g() {
+    final static int g(int param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -442,7 +440,7 @@ final class f extends ji {
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -465,14 +463,13 @@ final class f extends ji {
               }
               return;
             } else {
-              boolean discarded$31 = qb.field_d.a(qg.field_I, true, (byte) 115, oj.field_N);
+              boolean discarded$15 = qb.field_d.a(qg.field_I, true, (byte) 115, oj.field_N);
               qb.field_d.l(0);
               L2: while (true) {
-                int discarded$32 = 0;
-                if (!gf.a()) {
+                if (!gf.a(false)) {
                   break L0;
                 } else {
-                  boolean discarded$33 = qb.field_d.a(-122, de.field_f, ji.field_r);
+                  boolean discarded$16 = qb.field_d.a(-122, de.field_f, ji.field_r);
                   continue L2;
                 }
               }

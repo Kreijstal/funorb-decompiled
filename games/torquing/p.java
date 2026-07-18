@@ -11,7 +11,7 @@ final class p extends ta {
     static fn field_x;
     static int field_u;
 
-    public static void b() {
+    public static void b(int param0) {
         field_x = null;
         field_w = null;
         field_t = null;

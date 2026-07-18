@@ -301,8 +301,7 @@ final class uk implements Iterable {
         String stackOut_15_2 = null;
         try {
           L0: {
-            int discarded$1 = 4;
-            wk.a(480, 2, param13, 8, param20, param4, 13421772, new nm(param11), 240, 320, new nm(param19), 3, param0, param2, 8, param7, 255, param6, new nm(param18), param16);
+            wk.a(480, 2, param13, 8, param20, param4, 13421772, new nm(param11), 240, 320, new nm(param19), 3, param0, param2, 8, param7, 255, param6, new nm(param18), param16, 4);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -645,8 +644,7 @@ final class uk implements Iterable {
                       if (var8_ref_pn.field_g) {
                         break L9;
                       } else {
-                        int discarded$1 = 24552;
-                        if (!ia.a(var8_ref_pn.field_q)) {
+                        if (!ia.a(var8_ref_pn.field_q, 24552)) {
                           break L9;
                         } else {
                           break L8;

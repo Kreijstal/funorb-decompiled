@@ -270,7 +270,7 @@ abstract class a extends bi {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_T = null;
         field_S = null;
         field_R = null;

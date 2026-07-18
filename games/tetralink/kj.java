@@ -54,8 +54,7 @@ final class kj {
         try {
           L0: {
             var2_int = 2;
-            int discarded$2 = -2;
-            stackOut_0_0 = gh.a(param1, 0, param1.length);
+            stackOut_0_0 = gh.a(param1, 0, param1.length, -2);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -92,7 +91,7 @@ final class kj {
         return stackIn_1_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         pm.field_g = k.a(0);
         ib.field_b = 0;
     }

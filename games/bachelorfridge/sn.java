@@ -5,7 +5,7 @@ final class sn extends pu {
     static sna field_l;
     static sna field_m;
 
-    public static void b() {
+    public static void b(int param0) {
         field_l = null;
         field_m = null;
     }
@@ -15,8 +15,7 @@ final class sn extends pu {
           if (20 <= lk.field_r) {
             if (gw.a((byte) 110)) {
               if (rja.field_o > 0) {
-                int discarded$13 = 37;
-                if (uga.e()) {
+                if (uga.e(37)) {
                   return false;
                 } else {
                   return true;
@@ -31,12 +30,11 @@ final class sn extends pu {
             return true;
           }
         } else {
-          boolean discarded$14 = sn.c(-66);
+          boolean discarded$5 = sn.c(-66);
           if (20 <= lk.field_r) {
             if (gw.a((byte) 110)) {
               if (rja.field_o > 0) {
-                int discarded$15 = 37;
-                if (uga.e()) {
+                if (uga.e(37)) {
                   return false;
                 } else {
                   return true;

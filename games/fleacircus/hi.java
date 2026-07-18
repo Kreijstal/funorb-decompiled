@@ -12,21 +12,20 @@ final class hi extends lh {
     int field_i;
     int field_o;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return d.field_L;
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
         try {
             cb.a(-105, "", param1);
-            int discarded$0 = 10245;
-            df.a(param1);
+            df.a(param1, 10245);
         } catch (RuntimeException runtimeException) {
             throw pf.a((Throwable) (Object) runtimeException, "hi.D(" + -38 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(ce param0, java.awt.Frame param1) {
+    final static void a(ce param0, java.awt.Frame param1, byte param2) {
         od var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -140,7 +139,7 @@ final class hi extends lh {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_p = null;
         field_k = null;
     }

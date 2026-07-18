@@ -19,7 +19,7 @@ final class gs {
     int[] field_o;
     String field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_f = null;
         field_l = null;

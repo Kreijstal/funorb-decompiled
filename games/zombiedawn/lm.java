@@ -35,7 +35,7 @@ final class lm extends fb {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_D = null;
     }
 

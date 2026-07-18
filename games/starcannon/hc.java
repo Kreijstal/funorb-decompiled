@@ -12,7 +12,7 @@ final class hc {
     static int field_b;
     static boolean[] field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_e = null;
         field_d = null;
@@ -122,8 +122,7 @@ final class hc {
                             }
                             break L5;
                           } else {
-                            int discarded$2 = 9;
-                            int discarded$3 = nk.a(var6, var5_int, param1, var4);
+                            int discarded$1 = nk.a(var16, var5_int, param1, var4, 9);
                             break L5;
                           }
                         }
@@ -241,8 +240,7 @@ final class hc {
                   if (param0 == null) {
                     break L2;
                   } else {
-                    int discarded$2 = -17490;
-                    var3_ref = uf.a(param0);
+                    var3_ref = uf.a(param0, -17490);
                     break L2;
                   }
                 }
@@ -329,7 +327,7 @@ final class hc {
                           break L7;
                         } else {
                           var5 = (DataInputStream) var4.field_f;
-                          int discarded$3 = var5.read();
+                          int discarded$1 = var5.read();
                           var5.close();
                           break L7;
                         }
@@ -358,7 +356,7 @@ final class hc {
         }
     }
 
-    final static ig a(String[] args) {
+    final static ig a(String[] args, int param1) {
         ig var2 = null;
         RuntimeException var2_ref = null;
         ig stackIn_1_0 = null;
@@ -504,8 +502,7 @@ final class hc {
             le.a(-4797, param16, param19, param8, param15);
             fc.a(param0, (byte) -102, param20);
             jl.a(param12, param5, param2, -20, param18, param9);
-            int discarded$1 = 1;
-            el.a(param10, param11, param4);
+            el.a(param10, param11, param4, true);
             eg.a(param14, param6, (byte) -68, param7);
             break L0;
           }

@@ -6,7 +6,7 @@ final class cb {
     static md field_a;
     static String field_c;
 
-    final static void a(java.math.BigInteger param0, int param1, byte[] param2, ec param3, int param4, java.math.BigInteger param5) {
+    final static void a(java.math.BigInteger param0, int param1, byte[] param2, ec param3, int param4, java.math.BigInteger param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int[] var8 = null;
@@ -263,7 +263,7 @@ final class cb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
     }

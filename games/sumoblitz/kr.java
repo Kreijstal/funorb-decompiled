@@ -46,8 +46,7 @@ final class kr {
         try {
           L0: {
             if (k.a(param1, param2, param3, -23046)) {
-              int discarded$2 = -124;
-              stackOut_3_0 = bw.b();
+              stackOut_3_0 = bw.b(-124);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -94,13 +93,11 @@ final class kr {
           if (param1 > -16) {
             kr.a(28);
             jj.field_d = jj.field_d + 1;
-            int discarded$8 = -56;
-            o.a();
+            o.a((byte) -56);
             return;
           } else {
             jj.field_d = jj.field_d + 1;
-            int discarded$9 = -56;
-            o.a();
+            o.a((byte) -56);
             return;
           }
         } else {
@@ -108,14 +105,12 @@ final class kr {
           rb.a(-129);
           if (param1 <= -16) {
             jj.field_d = jj.field_d + 1;
-            int discarded$10 = -56;
-            o.a();
+            o.a((byte) -56);
             return;
           } else {
             kr.a(28);
             jj.field_d = jj.field_d + 1;
-            int discarded$11 = -56;
-            o.a();
+            o.a((byte) -56);
             return;
           }
         }

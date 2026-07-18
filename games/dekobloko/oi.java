@@ -239,7 +239,7 @@ final class oi {
         ((oi) this).field_c = new rf[param0];
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_b = null;

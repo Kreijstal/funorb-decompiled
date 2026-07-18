@@ -13,7 +13,7 @@ final class ob extends gb {
     static String field_x;
     private int[] field_p;
 
-    private final void a(be param0, int param1) {
+    private final void a(be param0, int param1, boolean param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -43,8 +43,7 @@ final class ob extends gb {
             L1: {
               if (param1 == 1) {
                 ((ob) this).field_s = te.a(param0.g(0), '<', (byte) -94);
-                int discarded$5 = -53;
-                ob.h();
+                ob.h(-53);
                 break L1;
               } else {
                 if (2 != param1) {
@@ -55,8 +54,7 @@ final class ob extends gb {
                     var5 = 0;
                     L2: while (true) {
                       if (var4_int <= var5) {
-                        int discarded$6 = -53;
-                        ob.h();
+                        ob.h(-53);
                         break L1;
                       } else {
                         L3: {
@@ -85,12 +83,10 @@ final class ob extends gb {
                     }
                   } else {
                     if (param1 != 4) {
-                      int discarded$7 = -53;
-                      ob.h();
+                      ob.h(-53);
                       break L1;
                     } else {
-                      int discarded$8 = -53;
-                      ob.h();
+                      ob.h(-53);
                       break L1;
                     }
                   }
@@ -100,8 +96,7 @@ final class ob extends gb {
                   var5 = 0;
                   L5: while (true) {
                     if (var5 >= var4_int) {
-                      int discarded$9 = -53;
-                      ob.h();
+                      ob.h(-53);
                       break L1;
                     } else {
                       ((ob) this).field_r[var5] = param0.d((byte) -66);
@@ -146,7 +141,7 @@ final class ob extends gb {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_x = null;
         field_w = null;
         field_u = null;
@@ -223,8 +218,7 @@ final class ob extends gb {
             L2: while (true) {
               var3_int = param1.h(16383);
               if (var3_int != 0) {
-                int discarded$6 = 0;
-                this.a(param1, var3_int);
+                this.a(param1, var3_int, false);
                 continue L2;
               } else {
                 break L0;
@@ -328,15 +322,13 @@ final class ob extends gb {
               if (param1.length() != 0) {
                 var2_int = -100 % ((-10 - param0) / 50);
                 var7 = (CharSequence) (Object) param1;
-                int discarded$4 = -11133;
-                var3 = r.a(var7);
+                var3 = r.a(var7, -11133);
                 if (var3 != null) {
                   var4 = (ve) (Object) ag.field_d.a(-1, (long)var3.hashCode());
                   L0: while (true) {
                     if (var4 != null) {
                       var8 = (CharSequence) (Object) var4.field_jb;
-                      int discarded$5 = -11133;
-                      var5 = r.a(var8);
+                      var5 = r.a(var8, -11133);
                       if (!var5.equals((Object) (Object) var3)) {
                         var4 = (ve) (Object) ag.field_d.a(-1);
                         continue L0;
@@ -397,13 +389,13 @@ final class ob extends gb {
         }
     }
 
-    final static boolean g() {
+    final static boolean g(int param0) {
         ka.field_a = true;
         rk.field_eb = qg.a(false) - -15000L;
         return rl.field_N == 11 ? true : false;
     }
 
-    final static void h() {
+    final static void h(int param0) {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

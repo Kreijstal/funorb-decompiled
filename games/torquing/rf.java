@@ -12,7 +12,7 @@ final class rf extends pc {
     static ei field_t;
     static int[] field_r;
 
-    final static sm[] a() {
+    final static sm[] a(byte param0) {
         int var2 = 0;
         int var3 = Torquing.field_u;
         sm[] var1 = new sm[ti.field_g];
@@ -159,7 +159,7 @@ final class rf extends pc {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_x = null;
         field_q = null;
         field_r = null;
@@ -237,7 +237,7 @@ final class rf extends pc {
                 break L1;
               } else {
                 if (-1 == param4.indexOf("<br>")) {
-                  args[0] = (String) (Object) args;
+                  args[0] = param4;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;

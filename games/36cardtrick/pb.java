@@ -229,8 +229,7 @@ class pb extends qb {
             return;
         }
         try {
-            int discarded$0 = 63;
-            wh.a(param0);
+            wh.a(param0, 63);
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) (Object) runtimeException, "pb.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -294,17 +293,16 @@ class pb extends qb {
             ((pb) this).field_i = ((pb) this).field_i + 1;
             ((pb) this).field_g[fieldTemp$1] = (byte) 0;
             var4 = (CharSequence) (Object) param1;
-            int discarded$2 = 0;
-            ((pb) this).field_i = ((pb) this).field_i + hi.a(param1.length(), 0, ((pb) this).field_g, var4, ((pb) this).field_i);
-            int fieldTemp$3 = ((pb) this).field_i;
+            ((pb) this).field_i = ((pb) this).field_i + hi.a(param1.length(), 0, ((pb) this).field_g, var4, ((pb) this).field_i, false);
+            int fieldTemp$2 = ((pb) this).field_i;
             ((pb) this).field_i = ((pb) this).field_i + 1;
-            ((pb) this).field_g[fieldTemp$3] = (byte) 0;
+            ((pb) this).field_g[fieldTemp$2] = (byte) 0;
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) (Object) runtimeException, "pb.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(li param0) {
+    final static void a(li param0, int param1) {
         try {
             bg.field_tb.a((je) (Object) param0);
         } catch (RuntimeException runtimeException) {
@@ -653,11 +651,10 @@ class pb extends qb {
                 throw new IllegalArgumentException("");
             }
             var4 = (CharSequence) (Object) param0;
-            int discarded$0 = 0;
-            ((pb) this).field_i = ((pb) this).field_i + hi.a(param0.length(), 0, ((pb) this).field_g, var4, ((pb) this).field_i);
-            int fieldTemp$1 = ((pb) this).field_i;
+            ((pb) this).field_i = ((pb) this).field_i + hi.a(param0.length(), 0, ((pb) this).field_g, var4, ((pb) this).field_i, false);
+            int fieldTemp$0 = ((pb) this).field_i;
             ((pb) this).field_i = ((pb) this).field_i + 1;
-            ((pb) this).field_g[fieldTemp$1] = (byte) 0;
+            ((pb) this).field_g[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) (Object) runtimeException, "pb.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -739,7 +736,7 @@ class pb extends qb {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_k = null;
     }
 
@@ -769,8 +766,7 @@ class pb extends qb {
                 try {
                   L1: {
                     var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
-                    int discarded$2 = -1;
-                    param1.getAppletContext().showDocument(fh.a(param1, var2), "_top");
+                    param1.getAppletContext().showDocument(fh.a(param1, var2, -1), "_top");
                     break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {

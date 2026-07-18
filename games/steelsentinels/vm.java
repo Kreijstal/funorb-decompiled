@@ -268,8 +268,7 @@ final class vm extends ia {
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0;
                 } else {
-                  int discarded$8 = 29974;
-                  if (eb.b(var5)) {
+                  if (eb.b(var5, 29974)) {
                     stackOut_13_0 = pc.field_s;
                     stackIn_14_0 = stackOut_13_0;
                     return stackIn_14_0;
@@ -363,7 +362,7 @@ final class vm extends ia {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         int var1 = 2;
         field_o = null;
         field_q = null;

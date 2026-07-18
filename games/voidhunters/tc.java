@@ -105,7 +105,7 @@ final class tc {
         rkb.a(0, (tv) (Object) var3, dpa.field_p, 70);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
     }

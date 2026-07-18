@@ -12,7 +12,7 @@ final class kg extends dg {
     private bd field_F;
     static int field_D;
 
-    final static void d() {
+    final static void d(boolean param0) {
         ma var1 = (ma) (Object) mb.field_b.c((byte) -111);
         if (!(var1 != null)) {
             var1 = new ma();
@@ -32,7 +32,7 @@ final class kg extends dg {
         int discarded$0 = ((kg) this).field_F.a(((kg) this).field_G, var5 - -var7 - -((kg) this).field_C, ((kg) this).field_C + var6, -((kg) this).field_C + ((kg) this).field_I, ((kg) this).field_t - ((kg) this).field_C * 2, ((kg) this).field_B, -1, !((kg) this).field_A ? 2 : 0, 1, ((kg) this).field_F.field_N);
     }
 
-    final static void a(int param0, af param1) {
+    final static void a(int param0, af param1, boolean param2) {
         ha var3 = null;
         try {
             var3 = pg.field_fb;
@@ -53,7 +53,7 @@ final class kg extends dg {
         return var3;
     }
 
-    final static boolean e() {
+    final static boolean e(boolean param0) {
         return qe.field_o;
     }
 

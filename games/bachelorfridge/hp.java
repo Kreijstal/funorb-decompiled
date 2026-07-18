@@ -78,7 +78,7 @@ final class hp {
         return stackIn_3_0 != 0;
     }
 
-    final static void a(java.applet.Applet param0, String param1) {
+    final static void a(java.applet.Applet param0, String param1, int param2) {
         try {
             String var6 = null;
             String var5 = null;
@@ -115,13 +115,13 @@ final class hp {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         int var1 = 1;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -143,8 +143,7 @@ final class hp {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_0_0 = mc.a(false, param0);
+            stackOut_0_0 = mc.a(false, param0, 0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

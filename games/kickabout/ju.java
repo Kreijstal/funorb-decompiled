@@ -214,8 +214,7 @@ final class ju extends lb {
     }
 
     ju(l param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (gj) (Object) fr.h());
-        int discarded$0 = 66;
+        super(param1, (gj) (Object) fr.h((byte) 66));
         try {
             ((ju) this).field_R = param0;
             ((ju) this).field_O = param1;
@@ -225,7 +224,7 @@ final class ju extends lb {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         int var1 = 118;
         field_V = null;
         field_W = null;
@@ -337,7 +336,7 @@ final class ju extends lb {
         }
     }
 
-    final static ut a(int param0, int param1, sj param2) {
+    final static ut a(int param0, int param1, sj param2, byte param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -357,8 +356,7 @@ final class ju extends lb {
         String stackOut_7_2 = null;
         try {
           if (cu.a(param1, param2, param0, 96)) {
-            int discarded$2 = 0;
-            return mo.b();
+            return mo.b(0);
           } else {
             return null;
           }

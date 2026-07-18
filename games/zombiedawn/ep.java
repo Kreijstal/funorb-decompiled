@@ -11,7 +11,7 @@ final class ep extends le {
     static int field_i;
     int field_k;
 
-    final static void c() {
+    final static void c(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -38,7 +38,7 @@ final class ep extends le {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         pk.field_N = param1;
         b.field_l = param0;
         if (null != wo.field_xb) {
@@ -46,7 +46,7 @@ final class ep extends le {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_l = null;
     }

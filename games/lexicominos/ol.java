@@ -45,8 +45,7 @@ final class ol extends tj {
         try {
           L0: {
             var4 = (CharSequence) (Object) param1;
-            int discarded$5 = 3;
-            if (bd.a(var4)) {
+            if (bd.a(var4, 3)) {
               L1: {
                 if (param1.equals((Object) (Object) ((ol) this).field_m)) {
                   break L1;
@@ -244,12 +243,11 @@ final class ol extends tj {
     final void e(int param0) {
         ((ol) this).field_m = null;
         if (param0 <= 79) {
-            int discarded$0 = 0;
-            ol.c();
+            ol.c(false);
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_l = null;
         field_p = null;
         field_n = null;

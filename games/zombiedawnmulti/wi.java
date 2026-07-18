@@ -14,7 +14,7 @@ final class wi extends br {
     int field_j;
     static String field_m;
 
-    final static String a(CharSequence[] param0) {
+    final static String a(CharSequence[] param0, int param1) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -73,7 +73,7 @@ final class wi extends br {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_m = null;
         field_h = null;

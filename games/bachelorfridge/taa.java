@@ -18,7 +18,7 @@ final class taa extends at {
     private gw field_q;
     int field_j;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         fo.field_a.a(param3, 31407, 640, 5, 0);
         if (param2 >= 87) {
           if (null != da.field_d) {
@@ -97,7 +97,7 @@ final class taa extends at {
         this(param0, param1.field_s.field_x, param1.field_s.field_J);
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         int var2 = 0;
         dha var3 = null;
         dha var4 = null;
@@ -129,7 +129,7 @@ final class taa extends at {
         ((taa) this).field_q = new gw(var3, var4, var5, var6, 0);
     }
 
-    private final void d() {
+    private final void d(int param0) {
     }
 
     final boolean c(byte param0) {
@@ -139,8 +139,7 @@ final class taa extends at {
         int var5 = 0;
         L0: {
           if (null == ((taa) this).field_q) {
-            int discarded$6 = 1;
-            this.b();
+            this.b(true);
             break L0;
           } else {
             break L0;
@@ -151,11 +150,10 @@ final class taa extends at {
         var4 = var2.field_a;
         var5 = 20 % ((71 - param0) / 47);
         ((taa) this).field_n.field_s.a(var3, var4, ((taa) this).field_p, (byte) -71);
-        int fieldTemp$7 = ((taa) this).field_s + 1;
+        int fieldTemp$2 = ((taa) this).field_s + 1;
         ((taa) this).field_s = ((taa) this).field_s + 1;
-        if ((double)fieldTemp$7 > 50.0) {
-          int discarded$8 = 1998707041;
-          this.d();
+        if ((double)fieldTemp$2 > 50.0) {
+          this.d(1998707041);
           return true;
         } else {
           return false;

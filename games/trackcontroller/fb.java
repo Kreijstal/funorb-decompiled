@@ -5,7 +5,7 @@ final class fb {
     static int field_a;
     static kk field_b;
 
-    final static void a(boolean param0, int param1, java.awt.Color param2, String param3) {
+    final static void a(boolean param0, int param1, java.awt.Color param2, String param3, byte param4) {
         java.awt.Graphics var5 = null;
         Exception var5_ref = null;
         RuntimeException var5_ref2 = null;

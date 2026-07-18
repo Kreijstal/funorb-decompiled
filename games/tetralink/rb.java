@@ -14,8 +14,7 @@ final class rb extends hl {
 
     final boolean a(int param0, int param1, int param2, boolean param3, boolean param4, int param5) {
         int var7 = 30 / ((-77 - param2) / 39);
-        int discarded$0 = 99;
-        return this.a(param3, param4, ((rb) this).field_Ob.field_R, param5, param0, param1);
+        return this.a(param3, param4, ((rb) this).field_Ob.field_R, param5, param0, param1, 99);
     }
 
     private final void a(boolean param0, int param1, boolean param2, int param3, int param4) {
@@ -227,7 +226,7 @@ final class rb extends hl {
         }
     }
 
-    private final boolean a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
+    private final boolean a(boolean param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
         int var8 = 0;
         if (!param1) {
           if (((rb) this).field_Y) {
@@ -270,7 +269,7 @@ final class rb extends hl {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_Nb = null;
         field_Mb = null;
         field_Lb = null;

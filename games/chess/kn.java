@@ -15,7 +15,7 @@ abstract class kn extends mf implements ra {
     static boolean field_L;
     static jc field_I;
 
-    public static void e() {
+    public static void e(byte param0) {
         field_I = null;
         field_F = null;
         field_D = null;
@@ -84,8 +84,7 @@ abstract class kn extends mf implements ra {
                   stackIn_10_0 = stackOut_9_0;
                   break L2;
                 } else {
-                  int discarded$3 = 2;
-                  stackOut_8_0 = this.a(param3);
+                  stackOut_8_0 = this.a(param3, (byte) 2);
                   stackIn_10_0 = stackOut_8_0;
                   break L2;
                 }
@@ -525,7 +524,7 @@ abstract class kn extends mf implements ra {
         return stackIn_7_0 != 0;
     }
 
-    private final boolean a(mf param0) {
+    private final boolean a(mf param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -1006,7 +1005,7 @@ abstract class kn extends mf implements ra {
         return stackIn_7_0 != 0;
     }
 
-    final static boolean a(String param0, long param1) {
+    final static boolean a(String param0, long param1, int param2) {
         ve var4 = null;
         RuntimeException var4_ref = null;
         int stackIn_6_0 = 0;

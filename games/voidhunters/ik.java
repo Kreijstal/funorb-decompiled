@@ -9,7 +9,7 @@ final class ik extends ksa {
     int field_g;
     int field_i;
 
-    final static int[] a() {
+    final static int[] a(int param0) {
         int[] var2 = new int[235];
         int[] var1 = var2;
         var2[85] = klb.field_p;

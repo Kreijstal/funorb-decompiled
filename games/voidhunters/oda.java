@@ -771,7 +771,7 @@ abstract class oda extends shb implements nea {
         return stackIn_25_0 != 0;
     }
 
-    private final shb g() {
+    private final shb g(byte param0) {
         shb[] var2 = null;
         int var3 = 0;
         shb var4 = null;
@@ -897,8 +897,7 @@ abstract class oda extends shb implements nea {
         if (param0 != -120) {
             return false;
         }
-        int discarded$0 = -127;
-        return this.g() != null ? true : false;
+        return this.g((byte) -127) != null ? true : false;
     }
 
     final void a(byte param0, int param1, int param2, int param3, shb param4, int param5) {

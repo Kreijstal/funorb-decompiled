@@ -12,7 +12,7 @@ final class d {
         field_d = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!lo.field_Nb) {
             throw new IllegalStateException();
         }

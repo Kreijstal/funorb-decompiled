@@ -42,8 +42,7 @@ final class ne {
                 return true;
             }
             if (param0 == 7) {
-                int discarded$0 = 10068666;
-                var4_ref = hf.a(((ne) this).field_h, ((ne) this).field_k, param2);
+                var4_ref = hf.a(((ne) this).field_h, ((ne) this).field_k, param2, 10068666);
                 var5 = 61;
                 if (!(var4_ref == null)) {
                     var6 = null;
@@ -72,20 +71,18 @@ final class ne {
             }
             boolean discarded$0 = this.b(param2, param4 ^ 32446, var6);
             boolean discarded$1 = this.a(var6, -68, param3);
-            int discarded$2 = 0;
-            boolean discarded$3 = this.a(var6, param3);
-            boolean discarded$4 = this.a(param1, (byte) -64, var6);
+            boolean discarded$2 = this.a(var6, param3, false);
+            boolean discarded$3 = this.a(param1, (byte) -64, var6);
             return true;
         }
         var6 = ((ne) this).field_l.a(-1, param0);
         if (!(var6 != -2)) {
             return false;
         }
-        boolean discarded$5 = this.b(param2, param4 ^ 32446, var6);
-        boolean discarded$6 = this.a(var6, -68, param3);
-        int discarded$7 = 0;
-        boolean discarded$8 = this.a(var6, param3);
-        boolean discarded$9 = this.a(param1, (byte) -64, var6);
+        boolean discarded$4 = this.b(param2, param4 ^ 32446, var6);
+        boolean discarded$5 = this.a(var6, -68, param3);
+        boolean discarded$6 = this.a(var6, param3, false);
+        boolean discarded$7 = this.a(param1, (byte) -64, var6);
         return true;
     }
 
@@ -106,8 +103,7 @@ final class ne {
             break L0;
           } else {
             if (((ne) this).field_d != qf.field_a) {
-              int discarded$2 = 32;
-              var3 = this.a();
+              var3 = this.a((byte) 32);
               var2 = var3;
               ((ne) this).field_l.a(17, tj.a(-38, new String[1], ad.field_b), (byte) -26);
               break L0;
@@ -129,7 +125,7 @@ final class ne {
         }
     }
 
-    private final String a() {
+    private final String a(byte param0) {
         String var2 = null;
         if (null == ((ne) this).field_k) {
             var2 = ((ne) this).field_h;
@@ -139,7 +135,7 @@ final class ne {
         return var2;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         if (ob.field_Y == null) {
             return false;
         }
@@ -200,10 +196,8 @@ final class ne {
                 } else {
                   if (qk.k((byte) 98)) {
                     var12 = fn.a(((ne) this).field_d, 110);
-                    int discarded$4 = 8192;
-                    var4 = vf.a(((ne) this).field_d);
-                    int discarded$5 = 32;
-                    var5 = this.a();
+                    var4 = vf.a(((ne) this).field_d, 8192);
+                    var5 = this.a((byte) 32);
                     if (var4 != null) {
                       if (!wi.field_f.field_Lb) {
                         ((ne) this).field_l.a(1, tj.a(-18, new String[1], gg.field_a), (byte) -26);
@@ -266,10 +260,8 @@ final class ne {
               if (null != wi.field_f) {
                 if (qk.k((byte) 98)) {
                   var11 = fn.a(((ne) this).field_d, 110);
-                  int discarded$6 = 8192;
-                  var4 = vf.a(((ne) this).field_d);
-                  int discarded$7 = 32;
-                  var5 = this.a();
+                  var4 = vf.a(((ne) this).field_d, 8192);
+                  var5 = this.a((byte) 32);
                   if (var4 != null) {
                     if (!wi.field_f.field_Lb) {
                       ((ne) this).field_l.a(1, tj.a(-18, new String[1], gg.field_a), (byte) -26);
@@ -535,8 +527,7 @@ final class ne {
                   break L1;
                 } else {
                   L3: {
-                    int discarded$2 = 32;
-                    var8 = this.a();
+                    var8 = this.a((byte) 32);
                     var4_ref = var8;
                     var5 = im.a(param2 ^ 13, ((ne) this).field_h);
                     var6 = sa.a(((ne) this).field_h, param2 ^ 333) ? 1 : 0;
@@ -571,8 +562,7 @@ final class ne {
                       break L4;
                     } else {
                       L5: {
-                        int discarded$3 = -31046;
-                        if (tc.a(((ne) this).field_h)) {
+                        if (tc.a(((ne) this).field_h, -31046)) {
                           break L5;
                         } else {
                           if (!wh.field_g) {
@@ -687,11 +677,10 @@ final class ne {
         return true;
     }
 
-    private final boolean a(int param0, int param1) {
+    private final boolean a(int param0, int param1, boolean param2) {
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (8 == param0) {
-            int discarded$0 = -26510;
-            nb.a(((ne) this).field_h, ((ne) this).field_d);
+            nb.a(((ne) this).field_h, ((ne) this).field_d, -26510);
             return true;
         }
         if (18 != param0) {
@@ -707,7 +696,7 @@ final class ne {
                             return true;
                         }
                         if (19 == param0) {
-                            boolean discarded$1 = va.a(((ne) this).field_d, 1, ((ne) this).field_m, ((ne) this).field_h, ((ne) this).field_i);
+                            boolean discarded$0 = va.a(((ne) this).field_d, 1, ((ne) this).field_m, ((ne) this).field_h, ((ne) this).field_i);
                             return true;
                         }
                         return false;
@@ -741,7 +730,7 @@ final class ne {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_f = null;
         field_a = null;
         field_j = null;

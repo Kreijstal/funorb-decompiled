@@ -11,7 +11,7 @@ final class ci extends qe {
     static String field_n;
     static mg field_s;
 
-    public static void h() {
+    public static void h(int param0) {
         field_s = null;
         field_n = null;
         field_o = null;
@@ -127,7 +127,7 @@ final class ci extends qe {
         return stackIn_15_0;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         oh.field_c = null;
         oj.field_Gb = null;
     }
@@ -313,8 +313,7 @@ final class ci extends qe {
         if (param0 >= -109) {
             return null;
         }
-        int discarded$0 = 1463;
-        return cg.b();
+        return cg.b(1463);
     }
 
     static {

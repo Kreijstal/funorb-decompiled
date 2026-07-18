@@ -92,13 +92,21 @@ final class el extends tm {
         String stackOut_22_2 = null;
         try {
           L0: {
+            L1: {
+              if (!param1) {
+                break L1;
+              } else {
+                int discarded$2 = el.a(65, -77, 21);
+                break L1;
+              }
+            }
             ig.field_f = param2;
             wi.field_v = new uv(param0, param6, param4, param7, param8, param3, param5);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var10 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var10;
             stackOut_5_1 = new StringBuilder().append("el.D(");
@@ -113,7 +121,7 @@ final class el extends tm {
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
-              break L1;
+              break L2;
             } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
@@ -121,12 +129,12 @@ final class el extends tm {
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
               stackIn_9_2 = stackOut_6_2;
-              break L1;
+              break L2;
             }
           }
-          L2: {
+          L3: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(false).append(',');
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param1).append(',');
             stackIn_12_0 = stackOut_9_0;
             stackIn_12_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -138,7 +146,7 @@ final class el extends tm {
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L2;
+              break L3;
             } else {
               stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
               stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
@@ -146,10 +154,10 @@ final class el extends tm {
               stackIn_13_0 = stackOut_10_0;
               stackIn_13_1 = stackOut_10_1;
               stackIn_13_2 = stackOut_10_2;
-              break L2;
+              break L3;
             }
           }
-          L3: {
+          L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
             stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param3).append(',');
             stackIn_16_0 = stackOut_13_0;
@@ -163,7 +171,7 @@ final class el extends tm {
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
-              break L3;
+              break L4;
             } else {
               stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
               stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
@@ -171,10 +179,10 @@ final class el extends tm {
               stackIn_17_0 = stackOut_14_0;
               stackIn_17_1 = stackOut_14_1;
               stackIn_17_2 = stackOut_14_2;
-              break L3;
+              break L4;
             }
           }
-          L4: {
+          L5: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
             stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
             stackIn_20_0 = stackOut_17_0;
@@ -188,7 +196,7 @@ final class el extends tm {
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
-              break L4;
+              break L5;
             } else {
               stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
               stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
@@ -196,10 +204,10 @@ final class el extends tm {
               stackIn_21_0 = stackOut_18_0;
               stackIn_21_1 = stackOut_18_1;
               stackIn_21_2 = stackOut_18_2;
-              break L4;
+              break L5;
             }
           }
-          L5: {
+          L6: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
             stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param6).append(',');
             stackIn_24_0 = stackOut_21_0;
@@ -213,7 +221,7 @@ final class el extends tm {
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
-              break L5;
+              break L6;
             } else {
               stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
               stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
@@ -221,7 +229,7 @@ final class el extends tm {
               stackIn_25_0 = stackOut_22_0;
               stackIn_25_1 = stackOut_22_1;
               stackIn_25_2 = stackOut_22_2;
-              break L5;
+              break L6;
             }
           }
           throw nb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param8 + ')');
@@ -400,7 +408,7 @@ final class el extends tm {
         var20 = Kickabout.field_G;
         try {
           L0: {
-            uk.field_d = true;
+            uk.field_d = param5;
             vv.field_o = param8;
             sg.field_c[4] = 16711935;
             sg.field_c[2] = 9474303;
@@ -419,7 +427,7 @@ final class el extends tm {
             var14 = var12_ref.field_y;
             var15 = var12_ref.field_y;
             var12_ref.field_y[15] = 7368816;
-            var14[5] = 7368816;
+            var14[param10] = 7368816;
             var15[8] = 7368816;
             var13[2] = 7368816;
             var16 = new ut[9];
@@ -690,7 +698,7 @@ final class el extends tm {
           }
           L17: {
             stackOut_58_0 = (RuntimeException) (Object) stackIn_58_0;
-            stackOut_58_1 = ((StringBuilder) (Object) stackIn_58_1).append(stackIn_58_2).append(',').append(true).append(',');
+            stackOut_58_1 = ((StringBuilder) (Object) stackIn_58_1).append(stackIn_58_2).append(',').append(param5).append(',');
             stackIn_61_0 = stackOut_58_0;
             stackIn_61_1 = stackOut_58_1;
             stackIn_59_0 = stackOut_58_0;
@@ -790,7 +798,7 @@ final class el extends tm {
           }
           L21: {
             stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
-            stackOut_74_1 = ((StringBuilder) (Object) stackIn_74_1).append(stackIn_74_2).append(',').append(5).append(',');
+            stackOut_74_1 = ((StringBuilder) (Object) stackIn_74_1).append(stackIn_74_2).append(',').append(param10).append(',');
             stackIn_77_0 = stackOut_74_0;
             stackIn_77_1 = stackOut_74_1;
             stackIn_75_0 = stackOut_74_0;
@@ -888,12 +896,20 @@ final class el extends tm {
         return stackIn_4_0;
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            field_G = null;
+            L1: {
+              field_G = null;
+              if (param0 == 52) {
+                break L1;
+              } else {
+                el.a((hu) null, (hd) null, (hd) null, (na) null, (hd) null, true, (hd) null, (hd) null, (hd) null, (hd) null, -39, (hd) null);
+                break L1;
+              }
+            }
             field_D = null;
             field_E = null;
             break L0;
@@ -901,7 +917,7 @@ final class el extends tm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "el.B(" + 52 + ')');
+          throw nb.a((Throwable) (Object) var1, "el.B(" + param0 + ')');
         }
     }
 
@@ -935,10 +951,10 @@ final class el extends tm {
     final static void g(int param0) {
         try {
             ja.field_O = false;
-            ks.field_e = 0;
+            ks.field_e = param0;
             et.field_d = null;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "el.E(" + 0 + ')');
+            throw nb.a((Throwable) (Object) runtimeException, "el.E(" + param0 + ')');
         }
     }
 

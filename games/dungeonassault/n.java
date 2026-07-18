@@ -10,7 +10,7 @@ final class n {
     static String field_a;
     static int[] field_g;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         int var1 = 6;
         return qc.field_t;
     }
@@ -24,7 +24,7 @@ final class n {
         field_g = null;
     }
 
-    final static byte[] a(CharSequence param0) {
+    final static byte[] a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;

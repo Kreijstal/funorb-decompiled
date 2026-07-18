@@ -8,7 +8,7 @@ final class oh {
     static boolean field_a;
     static int field_d;
 
-    final static void a() {
+    final static void a(byte param0) {
         sf.a(4, 11649);
     }
 

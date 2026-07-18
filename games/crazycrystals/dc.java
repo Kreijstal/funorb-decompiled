@@ -159,19 +159,13 @@ final class dc extends og implements im, vd, fd {
         aq dupTemp$1 = new aq(10000536);
         ((dc) this).field_I.field_i = (wo) (Object) dupTemp$1;
         ((dc) this).field_M.field_i = (wo) (Object) dupTemp$1;
-        int discarded$2 = -102;
-        int discarded$3 = 1;
         String var2 = ci.a(new String[2], el.field_h, 3);
         int var3 = 20;
-        int discarded$4 = 25406;
-        var3 = var3 + this.a(var3, 170, vm.field_h, (qm) (Object) ((dc) this).field_A);
+        var3 = var3 + this.a(var3, 170, vm.field_h, (qm) (Object) ((dc) this).field_A, 25406);
         var3 = var3 + (this.a(170, 20, var3, 0, sh.field_m, "", (qm) (Object) ((dc) this).field_K) + 5);
-        int discarded$5 = 25406;
-        var3 = var3 + this.a(var3, 170, fh.field_h, (qm) (Object) ((dc) this).field_M);
-        int discarded$6 = 170;
-        var3 = var3 + (this.a(pk.field_f, var3, (qm) (Object) ((dc) this).field_I, true, si.field_c) + 5);
-        int discarded$7 = 170;
-        var3 = var3 + (5 + this.a(fh.field_g, var3, (qm) (Object) ((dc) this).field_N, true, tb.field_c));
+        var3 = var3 + this.a(var3, 170, fh.field_h, (qm) (Object) ((dc) this).field_M, 25406);
+        var3 = var3 + (this.a(pk.field_f, var3, (qm) (Object) ((dc) this).field_I, true, si.field_c, 170) + 5);
+        var3 = var3 + (5 + this.a(fh.field_g, var3, (qm) (Object) ((dc) this).field_N, true, tb.field_c, 170));
         var3 = var3 + this.a(170, -81, ui.field_b, var3, (qm) (Object) ((dc) this).field_z);
         ei var4 = new ei(46, var3, -90 + ((dc) this).field_g, 25, (qm) (Object) ((dc) this).field_F, true, -120 + ((dc) this).field_g, 5, ba.field_i, 11579568, qn.field_j);
         ((dc) this).b((qm) (Object) var4, -123);
@@ -300,7 +294,7 @@ final class dc extends og implements im, vd, fd {
         d.a((byte) 90, param2);
     }
 
-    private final boolean i() {
+    private final boolean i(int param0) {
         if (!(this.k(-114))) {
             return false;
         }
@@ -312,24 +306,18 @@ final class dc extends og implements im, vd, fd {
         return mp.a(0, ((dc) this).field_N.field_o, (dc) this, ((dc) this).field_A.field_o, ((dc) this).field_M.field_o, ((dc) this).field_F.field_A, var2);
     }
 
-    private final String e() {
+    private final String e(byte param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
     private final boolean k(int param0) {
         if (param0 <= -95) {
-          int discarded$12 = 61;
-          if (this.a((lf) (Object) ((dc) this).field_N)) {
-            int discarded$13 = 61;
-            if (this.a((lf) (Object) ((dc) this).field_A)) {
-              int discarded$14 = 61;
-              if (this.a((lf) (Object) ((dc) this).field_K)) {
-                int discarded$15 = 61;
-                if (this.a((lf) (Object) ((dc) this).field_M)) {
-                  int discarded$16 = 61;
-                  if (this.a((lf) (Object) ((dc) this).field_I)) {
-                    int discarded$17 = 61;
-                    if (!this.a((lf) (Object) ((dc) this).field_z)) {
+          if (this.a((lf) (Object) ((dc) this).field_N, (byte) 61)) {
+            if (this.a((lf) (Object) ((dc) this).field_A, (byte) 61)) {
+              if (this.a((lf) (Object) ((dc) this).field_K, (byte) 61)) {
+                if (this.a((lf) (Object) ((dc) this).field_M, (byte) 61)) {
+                  if (this.a((lf) (Object) ((dc) this).field_I, (byte) 61)) {
+                    if (!this.a((lf) (Object) ((dc) this).field_z, (byte) 61)) {
                       return false;
                     } else {
                       return true;
@@ -760,7 +748,7 @@ final class dc extends og implements im, vd, fd {
         return stackIn_15_0;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_J = null;
         int var1 = 101;
         field_C = null;
@@ -788,13 +776,11 @@ final class dc extends og implements im, vd, fd {
         try {
           var6_int = -47 / ((param0 - 83) / 36);
           if (((dc) this).field_E == param4) {
-            int discarded$6 = 93;
-            ba.c();
+            ba.c((byte) 93);
             return;
           } else {
             if (((dc) this).field_G == param4) {
-              int discarded$7 = 100;
-              boolean discarded$8 = this.i();
+              boolean discarded$2 = this.i(100);
               return;
             } else {
               return;
@@ -847,7 +833,7 @@ final class dc extends og implements im, vd, fd {
         }
     }
 
-    private final int a(String param0, int param1, qm param2, boolean param3, String param4) {
+    private final int a(String param0, int param1, qm param2, boolean param3, String param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -986,7 +972,7 @@ final class dc extends og implements im, vd, fd {
         return stackIn_3_0;
     }
 
-    private final boolean a(lf param0) {
+    private final boolean a(lf param0, byte param1) {
         n var3 = null;
         RuntimeException var3_ref = null;
         oi var4 = null;
@@ -1081,7 +1067,7 @@ final class dc extends og implements im, vd, fd {
         return stackIn_18_0 != 0;
     }
 
-    private final String c() {
+    private final String c(boolean param0) {
         return "</col></u>";
     }
 
@@ -1092,7 +1078,7 @@ final class dc extends og implements im, vd, fd {
         }
     }
 
-    private final int a(int param0, int param1, String param2, qm param3) {
+    private final int a(int param0, int param1, String param2, qm param3, int param4) {
         ei var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;

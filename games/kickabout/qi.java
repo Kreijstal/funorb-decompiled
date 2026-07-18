@@ -155,13 +155,12 @@ final class qi extends sr {
         return 180;
     }
 
-    final static int a() {
-        int discarded$0 = 0;
-        wk.a(nj.a(-100));
+    final static int a(boolean param0) {
+        wk.a(nj.a(-100), 0);
         return oa.field_a.get(5);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_n = null;
         field_o = null;
     }

@@ -63,8 +63,7 @@ final class cd {
                   }
                 }
               } else {
-                int discarded$1 = 0;
-                af.a((Throwable) null, 76, "A1: " + cm.b());
+                af.a((Throwable) null, 76, "A1: " + cm.b(false));
                 dj.a((byte) -128);
                 return;
               }
@@ -110,12 +109,12 @@ final class cd {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         gp.field_e = null;
         lf.field_g = null;
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0, int param1, boolean param2) {
         if (rs.field_q != 13) {
           if (rs.field_q == 102) {
             qd.field_I.f((byte) -106);
@@ -132,13 +131,12 @@ final class cd {
             }
           }
         } else {
-          int discarded$2 = -3;
-          qu.e();
+          qu.e(-3);
           return true;
         }
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         if (ee.field_v == null) {
             return false;
         }
@@ -148,7 +146,7 @@ final class cd {
         return true;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1, int param2, int param3) {
         lf.field_h[uc.field_d[param0][2]].h(48 + param1, param2 + 12);
         km.field_h[0].h(param1 + 46, param2 + 10);
     }

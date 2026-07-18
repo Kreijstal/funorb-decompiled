@@ -20,7 +20,7 @@ final class ul {
     private int field_i;
     static wk field_g;
 
-    final static void a() {
+    final static void a(int param0) {
         bm.field_D = new rg(170, or.field_j, ck.field_d, new rg[3]);
     }
 

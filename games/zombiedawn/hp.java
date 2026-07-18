@@ -946,8 +946,7 @@ class hp extends ga implements jf {
     void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 38 / ((param0 - -23) / 48);
         super.a(85, param1, param2, param3, param4);
-        int discarded$0 = -115;
-        this.g();
+        this.g(-115);
     }
 
     public static void f(int param0) {
@@ -1215,7 +1214,7 @@ class hp extends ga implements jf {
         }
     }
 
-    private final void g() {
+    private final void g(int param0) {
         int var4 = ZombieDawn.field_J;
         cj var2 = new cj(((hp) this).field_x);
         ga var3 = (ga) (Object) var2.c((byte) -122);

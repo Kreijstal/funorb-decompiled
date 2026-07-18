@@ -5,7 +5,7 @@ abstract class ll {
     static char[] field_b;
     static fj field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_b = null;
         field_a = null;
@@ -211,7 +211,7 @@ abstract class ll {
 
     abstract byte[] a(byte param0);
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         return gi.a(param0, -77) != null;
     }
 

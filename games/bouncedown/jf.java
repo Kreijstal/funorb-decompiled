@@ -68,12 +68,12 @@ final class jf {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_g = null;
         field_h = null;
     }
 
-    final static int b() {
+    final static int b(boolean param0) {
         return 1;
     }
 
@@ -154,7 +154,7 @@ final class jf {
                 L3: while (true) {
                   var8 = param0.indexOf("<%", var5);
                   if (var8 < 0) {
-                    StringBuilder discarded$5 = var6.append(param0.substring(var7));
+                    StringBuilder discarded$3 = var6.append(param0.substring(var7));
                     stackOut_26_0 = var6.toString();
                     stackIn_27_0 = stackOut_26_0;
                     break L0;
@@ -174,8 +174,7 @@ final class jf {
                         }
                       }
                       var9 = param0.substring(2 + var8, var5);
-                      int discarded$6 = 10;
-                      if (!qi.a((CharSequence) (Object) var9)) {
+                      if (!qi.a((CharSequence) (Object) var9, 10)) {
                         continue L3;
                       } else {
                         if (var5 >= var3_int) {
@@ -184,8 +183,8 @@ final class jf {
                           if (62 == param0.charAt(var5)) {
                             var5++;
                             var10 = gf.a(10, (CharSequence) (Object) var9);
-                            StringBuilder discarded$7 = var6.append(param0.substring(var7, var8));
-                            StringBuilder discarded$8 = var6.append(param1[var10]);
+                            StringBuilder discarded$4 = var6.append(param0.substring(var7, var8));
+                            StringBuilder discarded$5 = var6.append(param1[var10]);
                             var7 = var5;
                             continue L3;
                           } else {
@@ -212,8 +211,7 @@ final class jf {
                     }
                   }
                   var7_ref_String = param0.substring(var6_int + 2, var5);
-                  int discarded$9 = 10;
-                  if (qi.a((CharSequence) (Object) var7_ref_String)) {
+                  if (qi.a((CharSequence) (Object) var7_ref_String, 10)) {
                     if (var3_int <= var5) {
                       continue L1;
                     } else {
@@ -454,8 +452,7 @@ final class jf {
                   if (param0 == 0) {
                     break L12;
                   } else {
-                    int discarded$2 = 0;
-                    int discarded$3 = jf.b();
+                    int discarded$1 = jf.b(false);
                     break L12;
                   }
                 }
@@ -944,7 +941,7 @@ final class jf {
         }
     }
 
-    final static rg a() {
+    final static rg a(boolean param0) {
         if (!(fh.field_B != wj.field_a)) {
             throw new IllegalStateException();
         }
@@ -961,8 +958,7 @@ final class jf {
         }
         ((jf) this).field_b = param1;
         if (param0 != 57) {
-            int discarded$0 = 1;
-            rg discarded$1 = jf.a();
+            rg discarded$0 = jf.a(true);
         }
     }
 

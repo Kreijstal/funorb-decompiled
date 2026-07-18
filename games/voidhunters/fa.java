@@ -7,7 +7,7 @@ final class fa extends ksa {
     static gd[] field_d;
     static String[] field_e;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_d = null;
         field_e = null;
         int var1 = -11;

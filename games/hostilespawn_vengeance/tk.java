@@ -70,7 +70,7 @@ final class tk {
         return stackIn_8_0;
     }
 
-    final static void a(int param0, jb[] param1, int param2) {
+    final static void a(int param0, jb[] param1, int param2, boolean param3) {
         try {
             jh.a(uh.field_i, (byte) 51, param2, param1, param0);
         } catch (RuntimeException runtimeException) {
@@ -78,7 +78,7 @@ final class tk {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;

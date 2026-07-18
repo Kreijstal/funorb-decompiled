@@ -9,11 +9,11 @@ final class rf {
     private kl field_c;
     static String field_a;
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         return !se.field_g.a((byte) 125);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_d = null;
         field_a = null;
@@ -23,7 +23,7 @@ final class rf {
         return nw.g(81) || df.field_M <= 0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         kw.field_M[46] = 72;
         kw.field_M[61] = 27;
         kw.field_M[192] = 28;

@@ -101,7 +101,7 @@ final class qp extends wj implements vh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_L = null;
         field_G = null;
         field_C = null;

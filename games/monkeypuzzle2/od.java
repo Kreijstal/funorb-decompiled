@@ -36,7 +36,7 @@ final class od extends f {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = -24;
         field_o = null;
         field_n = null;
@@ -55,7 +55,7 @@ final class od extends f {
         super(param0, param1);
     }
 
-    final static StringBuilder a(StringBuilder param0) {
+    final static StringBuilder a(StringBuilder param0, int param1, int param2, char param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

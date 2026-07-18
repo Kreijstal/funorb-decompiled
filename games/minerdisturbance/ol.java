@@ -7,7 +7,7 @@ final class ol {
     static ea field_c;
     static String field_d;
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         if (ee.field_J >= 224) {
             fc.a(256, (byte) 72);

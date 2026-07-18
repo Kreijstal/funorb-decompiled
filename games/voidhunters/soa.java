@@ -41,8 +41,7 @@ final class soa extends llb {
         if (param0 != 38) {
             ((soa) this).field_vb = null;
         }
-        int discarded$0 = -120;
-        return this.a(param3, param4, ((soa) this).field_xb.field_G, param2, param1, param5);
+        return this.a(param3, param4, ((soa) this).field_xb.field_G, param2, param1, param5, -120);
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3) {
@@ -659,7 +658,7 @@ final class soa extends llb {
         ((soa) this).field_vb.a(((soa) this).field_wb.field_G, -((soa) this).field_wb.field_K, (byte) -126, ((soa) this).field_xb.field_G);
     }
 
-    private final boolean a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
+    private final boolean a(boolean param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
         int var8 = 0;
         int stackIn_8_0 = 0;
         int stackOut_6_0 = 0;

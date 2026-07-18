@@ -5,7 +5,7 @@ final class fe {
     static boolean field_a;
     static tf field_b;
 
-    final static void a() {
+    final static void a(boolean param0) {
     }
 
     public static void a(int param0) {

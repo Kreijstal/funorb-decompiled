@@ -516,7 +516,7 @@ final class eo {
         }
     }
 
-    private final static void a(String param0, hu param1, int param2, int param3) {
+    private final static void a(String param0, hu param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         ut var8 = new ut(64, 60);
         iw.a(-79, var8);
         int discarded$0 = param1.a(param0, 0, 0, 64, 60, 16777215, -1, 1, 1, 0);
@@ -639,10 +639,8 @@ final class eo {
         int stackOut_10_0 = 0;
         L0: {
           var7 = (double)nj.a(120);
-          int discarded$2 = 0;
-          param1 = dn.a(param1);
-          int discarded$3 = 0;
-          param2 = dn.a(param2);
+          param1 = dn.a(param1, false);
+          param2 = dn.a(param2, false);
           var9 = param0.field_o;
           if (var9 >= 0) {
             break L0;
@@ -1045,7 +1043,7 @@ final class eo {
         return var0;
     }
 
-    final static void a(ut param0, int param1, int param2) {
+    final static void a(ut param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -1124,8 +1122,7 @@ final class eo {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        int discarded$2 = 255;
-        bv.a(true, param0.field_y);
+        bv.a(true, param0.field_y, 255);
         var1 = new kg(param0.field_q, param0.field_w, 256);
         var2 = var1.field_l;
         var3 = 0;
@@ -1805,9 +1802,7 @@ final class eo {
             var19 = 0;
             L10: while (true) {
               if (var19 >= var11) {
-                int discarded$2 = 8192;
-                int discarded$3 = 16777215;
-                eo.a(param2[var18], (hu) (Object) un.field_d, param0, param1 - (var12 >> 1));
+                eo.a(param2[var18], (hu) (Object) un.field_d, param0, param1 - (var12 >> 1), var11, var12, 16777215, 8192);
                 param0 = param0 + var17;
                 var18++;
                 continue L0;
@@ -2158,7 +2153,7 @@ final class eo {
         }
     }
 
-    final static byte[] a(int[] param0, int param1) {
+    final static byte[] a(int[] param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;

@@ -13,7 +13,7 @@ final class qk extends q {
     int field_k;
     static String[] field_l;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_l = null;
         field_r = null;
         field_q = null;
@@ -75,13 +75,12 @@ final class qk extends q {
         }
     }
 
-    final static void a(int param0, int param1, t[] param2) {
+    final static void a(int param0, int param1, t[] param2, byte param3) {
         try {
             p.field_x = new fn(param2);
             dn.field_h = 14;
             wp.field_y = 14;
-            int discarded$0 = 109;
-            w.c();
+            w.c((byte) 109);
         } catch (RuntimeException runtimeException) {
             throw rb.a((Throwable) (Object) runtimeException, "qk.B(" + 14 + ',' + 14 + ',' + (param2 != null ? "{...}" : "null") + ',' + -4 + ')');
         }

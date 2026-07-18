@@ -98,8 +98,7 @@ abstract class si extends vg implements ba {
                     stackIn_13_0 = stackOut_12_0;
                     break L2;
                   } else {
-                    int discarded$3 = 6;
-                    stackOut_11_0 = this.a(param2);
+                    stackOut_11_0 = this.a(param2, 6);
                     stackIn_13_0 = stackOut_11_0;
                     break L2;
                   }
@@ -355,7 +354,7 @@ abstract class si extends vg implements ba {
         }
     }
 
-    private final boolean a(vg param0) {
+    private final boolean a(vg param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;

@@ -5,7 +5,7 @@ final class ng {
     static String field_b;
     static int[] field_a;
 
-    final static boolean a(sl param0) {
+    final static boolean a(sl param0, byte param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -74,7 +74,7 @@ final class ng {
         return stackIn_5_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = -4;
         field_b = null;
         field_a = null;

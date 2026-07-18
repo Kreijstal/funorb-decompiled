@@ -22,7 +22,7 @@ final class hl {
         return var2;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -148,7 +148,7 @@ final class hl {
         }
     }
 
-    final static void a(je param0, int param1) {
+    final static void a(je param0, int param1, int param2) {
         lh var6 = null;
         int var4 = 0;
         try {
@@ -276,7 +276,7 @@ final class hl {
         ((hl) this).field_g.field_n = ((hl) this).field_g;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_c = null;
         field_e = null;
     }
@@ -295,8 +295,7 @@ final class hl {
     }
 
     final static int a(int param0, boolean param1, int param2, int param3) {
-        int discarded$0 = -1;
-        return wi.b();
+        return wi.b(-1);
     }
 
     static {

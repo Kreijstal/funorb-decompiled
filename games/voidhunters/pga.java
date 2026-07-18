@@ -4,23 +4,19 @@
 final class pga extends rqa {
     static String field_o;
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, boolean param1) {
         try {
             if (!(qmb.field_q != 11)) {
-                int discarded$0 = 111;
-                ana.c();
+                ana.c((byte) 111);
             }
             uob.a(dga.field_a, (byte) 106, mnb.field_g, dkb.field_b);
-            int discarded$1 = 0;
-            int discarded$2 = 0;
-            int discarded$3 = 0;
-            dh.a(param0);
+            dh.a(param0, 0, 0, 0);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "pga.B(" + (param0 != null ? "{...}" : "null") + ',' + true + ')');
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 

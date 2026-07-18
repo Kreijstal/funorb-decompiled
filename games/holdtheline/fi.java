@@ -14,10 +14,8 @@ final class fi extends hi {
     final static void a(int param0, gn param1, int param2, fg param3) {
         try {
             lf.field_l = param0 * nc.a(855) / 1000;
-            int discarded$0 = 0;
-            mf.a(param1);
-            int discarded$1 = -64;
-            jk.a(param1);
+            mf.a(param1, 0);
+            jk.a(param1, -64);
             aa.a(-18916, param1);
             dm.a(255);
             jd.j(param2);
@@ -27,7 +25,7 @@ final class fi extends hi {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_jb = null;
         field_kb = null;
         field_ib = null;

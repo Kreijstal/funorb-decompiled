@@ -24,7 +24,7 @@ final class eh {
     ub field_o;
     private boolean field_s;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_d = null;
         field_n = null;
@@ -174,7 +174,7 @@ final class eh {
         }
     }
 
-    final static void a(byte[] param0) {
+    final static void a(byte[] param0, boolean param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -529,8 +529,7 @@ final class eh {
         var2.e(-13413, param1);
         var2.a(-101, 2);
         var2.a(-103, 4);
-        int discarded$0 = 248;
-        var2.a(-109, qf.p());
+        var2.a(-109, qf.p(248));
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -724,7 +723,7 @@ final class eh {
         lb.d(param3, param0, param6, param4, param2, param1);
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, boolean param1) {
         if (!(sq.field_c == null)) {
             lb.b(lb.field_i, lb.field_b, lb.field_f + -lb.field_i, lb.field_j + -lb.field_b);
             sq.field_c.a(true, param0);

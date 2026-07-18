@@ -73,7 +73,7 @@ final class pl {
         return stackIn_1_0;
     }
 
-    final static void a(int param0, byte[] param1, int param2) {
+    final static void a(int param0, byte[] param1, int param2, boolean param3, int param4, byte param5) {
         pi var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -94,7 +94,7 @@ final class pl {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_c = null;
         field_a = null;
@@ -102,7 +102,7 @@ final class pl {
         field_b = null;
     }
 
-    final static void a(jp param0) {
+    final static void a(jp param0, int param1) {
         RuntimeException var2 = null;
         int[] var2_array = null;
         int var3 = 0;
@@ -257,7 +257,7 @@ final class pl {
         }
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         try {
             param0.addMouseListener((java.awt.event.MouseListener) (Object) lj.field_j);
             param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) lj.field_j);

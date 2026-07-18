@@ -9,8 +9,7 @@ final class ug {
     static int field_b;
 
     final static void a(int param0) {
-        int discarded$9 = -102;
-        ef.a(el.field_y[eh.a(28207, sk.field_n, el.field_y.length)]);
+        ef.a(el.field_y[eh.a(28207, sk.field_n, el.field_y.length)], -102);
         if (param0 < 81) {
             field_a = -35;
         }
@@ -20,7 +19,7 @@ final class ug {
         throw new IllegalStateException();
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
     }
 
     ug(int param0) {

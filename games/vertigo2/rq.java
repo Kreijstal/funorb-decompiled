@@ -70,15 +70,13 @@ final class rq extends sn {
               param2.field_d = 0;
               ni.field_d = new uo(var3_int, param2, param2);
               wm.field_k = new jn(var3_int, param2, param2, (jh) (Object) new qf());
-              int discarded$2 = -113;
-              var4 = sp.e();
+              var4 = sp.e((byte) -113);
               if (var4 == null) {
                 var11 = null;
                 ke.a((Throwable) null, "QC2", 0);
                 return;
               } else {
-                int discarded$3 = 97;
-                pe.a(var4);
+                pe.a(var4, 97);
                 mp.field_g = nq.a(5138823, 0, 1513239, 2245737, 4020342, 1513239, 1127256, (cc) null, 65793, 65793, param1 ^ 94, 65793, 8947848);
                 fo.field_c = nq.a(0, 16764006, 0, 0, 0, 0, 0, param0, 0, 0, 88, 0, 0);
                 va.field_h = nq.a(0, 16777215, 0, 0, 0, 0, 0, param0, 0, 0, 125, 0, 0);
@@ -160,7 +158,7 @@ final class rq extends sn {
         }
     }
 
-    final static er a(r param0, String param1, String param2) {
+    final static er a(r param0, String param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -489,7 +487,7 @@ final class rq extends sn {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_x = null;
         field_r = null;
         field_v = null;

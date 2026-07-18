@@ -59,7 +59,7 @@ final class mp extends gn {
         var2.a(103, 3);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_p = null;
         field_h = null;
         field_j = null;

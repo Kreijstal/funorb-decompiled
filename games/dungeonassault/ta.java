@@ -11,7 +11,7 @@ final class ta {
     static jk field_a;
     static md field_f;
 
-    final static String a(se param0, int param1, int param2, String param3) {
+    final static String a(se param0, int param1, int param2, String param3, int param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -48,8 +48,7 @@ final class ta {
         String stackOut_8_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_2_0 = ia.a(param2, param0, pj.a((byte) 66, param1, param3));
+            stackOut_2_0 = ia.a(param2, param0, pj.a((byte) 66, param1, param3), 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -111,7 +110,7 @@ final class ta {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_c = null;
@@ -135,7 +134,7 @@ final class ta {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         wj var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -146,14 +145,13 @@ final class ta {
           L0: {
             var1 = ac.field_B;
             L1: while (true) {
-              int discarded$9 = -101;
-              if (!mo.b()) {
+              if (!mo.b(-101)) {
                 break L0;
               } else {
                 var1.d((byte) -102, 8);
-                int fieldTemp$10 = var1.field_o + 1;
+                int fieldTemp$5 = var1.field_o + 1;
                 var1.field_o = var1.field_o + 1;
-                var2 = fieldTemp$10;
+                var2 = fieldTemp$5;
                 ed.a(false, var1);
                 ac.field_B.c(var1.field_o - var2, -1);
                 continue L1;

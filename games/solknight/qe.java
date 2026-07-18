@@ -184,10 +184,7 @@ final class qe extends ki implements re, ka {
             ((qe) this).field_D = param0;
             ((qe) this).field_H = new pj(dd.field_a, (dg) null);
             ((qe) this).field_H.field_w = (j) (Object) new gh();
-            int discarded$3 = 1;
-            int discarded$4 = -18655;
-            int discarded$5 = -63;
-            var7 = bb.a(rf.field_F, new String[2]);
+            var7 = bb.a(rf.field_F, new String[2], -63);
             var3 = 20;
             var4 = new af(ua.field_G, 0, 0, 0, 0, 16777215, -1, 3, 0, ua.field_G.field_F, -1, 2147483647, true);
             ((qe) this).field_E = new kj(var7, (j) (Object) var4);
@@ -326,8 +323,7 @@ final class qe extends ki implements re, ka {
 
     public static void i(int param0) {
         if (param0 != -28528) {
-            int discarded$0 = 127;
-            String discarded$1 = qe.a();
+            String discarded$0 = qe.a((byte) 127);
             field_G = null;
             field_F = null;
             return;
@@ -336,7 +332,7 @@ final class qe extends ki implements re, ka {
         field_F = null;
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         if (ne.field_g == null) {
             return "";
         }
@@ -344,11 +340,11 @@ final class qe extends ki implements re, ka {
         return ne.field_g;
     }
 
-    private final String h() {
+    private final String h(int param0) {
         return "</col></u>";
     }
 
-    private final String e() {
+    private final String e(boolean param0) {
         return "<u=2164A2><col=2164A2>";
     }
 

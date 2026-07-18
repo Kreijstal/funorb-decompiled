@@ -87,7 +87,7 @@ abstract class cm extends ub {
         ((cm) this).n(param0 ^ 8096);
     }
 
-    public static void o() {
+    public static void o(int param0) {
         field_M = null;
     }
 
@@ -125,7 +125,7 @@ abstract class cm extends ub {
         }
     }
 
-    final static void l() {
+    final static void l(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

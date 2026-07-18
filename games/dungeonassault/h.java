@@ -80,7 +80,7 @@ final class h {
         return false;
     }
 
-    final static int a() {
+    final static int a(int param0) {
         if (dk.field_c >= 2) {
           L0: {
             if (hc.field_d != 0) {
@@ -176,15 +176,13 @@ final class h {
 
     final static void a(int param0, nh param1, nh param2, boolean param3, nh param4) {
         try {
-            int discarded$0 = -8;
-            im.field_b = oh.a("");
+            im.field_b = oh.a("", -8);
             im.field_b.a(false, false);
             p.a(param2, 37, param4, param1);
             if (param0 != 8171) {
                 h.a((byte) 32);
             }
-            int discarded$1 = 102;
-            qj.a();
+            qj.a((byte) 102);
             wd.field_d = sp.field_e;
             ol.field_i = sp.field_e;
         } catch (RuntimeException runtimeException) {

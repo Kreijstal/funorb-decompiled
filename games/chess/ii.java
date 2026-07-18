@@ -122,7 +122,7 @@ final class ii extends ma implements mj {
         return stackIn_13_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_P = null;
         field_T = null;
         field_K = null;
@@ -188,8 +188,7 @@ final class ii extends ma implements mj {
                   if (param0 != ((ii) this).field_U) {
                     break L0;
                   } else {
-                    int discarded$2 = 1;
-                    jg.b();
+                    jg.b(true);
                     return;
                   }
                 }

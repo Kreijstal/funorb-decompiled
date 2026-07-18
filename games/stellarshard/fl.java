@@ -7,7 +7,7 @@ final class fl {
     static int[] field_d;
     static int field_a;
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -87,7 +87,7 @@ final class fl {
         return stackIn_11_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         int var1 = 1;

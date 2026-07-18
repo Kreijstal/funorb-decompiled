@@ -235,7 +235,7 @@ final class ph extends ge {
         super(e.a(-106) ? 5 : 6, 160, 392, 152, 32);
     }
 
-    final static void d() {
+    final static void d(int param0) {
         ei var1 = (ei) (Object) qa.field_q.c(8192);
         if (var1 == null) {
             var1 = new ei();
@@ -310,8 +310,7 @@ final class ph extends ge {
                         break L1;
                       } else {
                         if (ki.field_E != null) {
-                          int discarded$1 = 60;
-                          di.a();
+                          di.a((byte) 60);
                           break L1;
                         } else {
                           pd.a(false, false);
@@ -374,8 +373,7 @@ final class ph extends ge {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 1;
-            stackOut_0_0 = il.a(10, (byte) -83, param1);
+            stackOut_0_0 = il.a(10, (byte) -83, param1, true);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -539,7 +537,7 @@ final class ph extends ge {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_q = null;
         field_s = null;
     }

@@ -141,7 +141,7 @@ final class ge {
         return stackIn_19_0;
     }
 
-    final static jg b() {
+    final static jg b(byte param0) {
         String var1 = aa.a(-54);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
@@ -158,7 +158,7 @@ final class ge {
         field_g = null;
     }
 
-    final static ni a(byte param0, int param1, int param2, pi[] param3, byte[] param4) {
+    final static ni a(byte param0, int param1, int param2, pi[] param3, byte[] param4, int param5) {
         RuntimeException var6 = null;
         int[] var6_array = null;
         int[] var7 = null;
@@ -487,7 +487,7 @@ final class ge {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         pn.field_bb = new String[qb.field_u];
         pn.field_bb[18] = gg.field_E;
         pn.field_bb[17] = ue.field_d;

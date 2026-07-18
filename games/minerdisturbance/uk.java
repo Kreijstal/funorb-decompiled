@@ -12,8 +12,7 @@ final class uk extends rg implements sh {
         if (param0 == -4) {
           if (((uk) this).field_K) {
             if (!((uk) this).field_yb) {
-              int discarded$2 = -107;
-              var2 = pa.a();
+              var2 = pa.a((byte) -107);
               if (var2 != null) {
                 this.a(var2, 11, false);
                 return super.n(-4);
@@ -203,8 +202,7 @@ final class uk extends rg implements sh {
     }
 
     final void t(int param0) {
-        int discarded$0 = 1;
-        this.a(ij.a(248, gn.field_c), 11, true);
+        this.a(ij.a(248, gn.field_c, true), 11, true);
         if (param0 != 23101) {
             ((uk) this).field_yb = true;
         }

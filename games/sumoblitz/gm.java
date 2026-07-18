@@ -18,7 +18,7 @@ class gm implements mh, de {
     int field_h;
     int field_l;
 
-    private final int a(int param0, byte param1, pk param2) {
+    private final int a(int param0, byte param1, pk param2, int param3) {
         RuntimeException var5 = null;
         Object var6 = null;
         int stackIn_3_0 = 0;
@@ -486,8 +486,7 @@ class gm implements mh, de {
         try {
           L0: {
             if (param2 == 0) {
-              int discarded$2 = 0;
-              stackOut_3_0 = this.a(param0, (byte) -124, param1);
+              stackOut_3_0 = this.a(param0, (byte) -124, param1, 0);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -1269,9 +1268,7 @@ class gm implements mh, de {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            int discarded$5 = 104;
-            this.a(param0, param2, ((gm) this).field_d, param3, 0, ((gm) this).field_g);
+            this.a(param0, param2, ((gm) this).field_d, param3, 0, ((gm) this).field_g, (byte) 104, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1306,7 +1303,7 @@ class gm implements mh, de {
         }
     }
 
-    private final void a(pk param0, int param1, int param2, int param3, int param4, int param5) {
+    private final void a(pk param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -1373,26 +1370,22 @@ class gm implements mh, de {
                     } else {
                       if (var12 != 1) {
                         if (var12 == 2) {
-                          int discarded$5 = 0;
-                          ((gm) this).field_e.c(((gm) this).a(true, param0), this.a(-3, param0, 0, param1) + var9_int, var11 + this.a(param3, (byte) -123, param0), param2, param5);
+                          ((gm) this).field_e.c(((gm) this).a(true, param0), this.a(-3, param0, 0, param1) + var9_int, var11 + this.a(param3, (byte) -123, param0, 0), param2, param5);
                           break L1;
                         } else {
                           break L1;
                         }
                       } else {
-                        int discarded$6 = 0;
-                        ((gm) this).field_e.a(((gm) this).a(true, param0), (var9_int >> 1) + this.a(-3, param0, 0, param1), var11 + this.a(param3, (byte) -121, param0), param2, param5);
+                        ((gm) this).field_e.a(((gm) this).a(true, param0), (var9_int >> 1) + this.a(-3, param0, 0, param1), var11 + this.a(param3, (byte) -121, param0, 0), param2, param5);
                         break L1;
                       }
                     }
                   }
                 }
-                int discarded$7 = 0;
-                ((gm) this).field_e.b(((gm) this).a(true, param0), this.a(-3, param0, 0, param1), var11 + this.a(param3, (byte) -124, param0), param2, param5);
+                ((gm) this).field_e.b(((gm) this).a(true, param0), this.a(-3, param0, 0, param1), var11 + this.a(param3, (byte) -124, param0, 0), param2, param5);
                 break L1;
               } else {
-                int discarded$8 = 0;
-                int discarded$9 = ((gm) this).field_e.a(((gm) this).a(true, param0), this.a(-3, param0, 0, param1), this.a(param3, (byte) -122, param0), var9_int, var10, param2, param5, ((gm) this).field_f, ((gm) this).field_c, ((gm) this).field_j);
+                int discarded$1 = ((gm) this).field_e.a(((gm) this).a(true, param0), this.a(-3, param0, 0, param1), this.a(param3, (byte) -122, param0, 0), var9_int, var10, param2, param5, ((gm) this).field_f, ((gm) this).field_c, ((gm) this).field_j);
                 break L1;
               }
             }

@@ -116,9 +116,7 @@ final class dn extends rqa {
                               }
                             }
                           }
-                          int discarded$6 = -86;
-                          int discarded$7 = 1;
-                          if (!la.a(param0[var8], param3[var8])) {
+                          if (!la.a(param0[var8], param3[var8], 1, (byte) -86)) {
                             break L4;
                           } else {
                             return true;
@@ -266,7 +264,7 @@ final class dn extends rqa {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 1;
         field_r = null;
         field_o = null;

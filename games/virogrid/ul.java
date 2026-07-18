@@ -153,7 +153,7 @@ final class ul {
         return stackIn_7_0 != 0;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         int var1 = 0;
         if (ag.field_c >= 224) {
             qe.a((byte) 120, 256);
@@ -178,7 +178,7 @@ final class ul {
         ((ul) this).field_d = param0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_c = null;
         field_e = null;

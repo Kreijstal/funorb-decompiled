@@ -279,8 +279,7 @@ final class td {
                 L4: {
                   if (kk.field_r < 0) {
                     ig.field_a.field_h = 0;
-                    int discarded$2 = 10343;
-                    if (!a.b(1)) {
+                    if (!a.b(1, 10343)) {
                       stackOut_25_0 = 0;
                       stackIn_26_0 = stackOut_25_0;
                       return stackIn_26_0 != 0;
@@ -294,8 +293,7 @@ final class td {
                     break L4;
                   }
                 }
-                int discarded$3 = 2;
-                if (!dc.d()) {
+                if (!dc.d(2)) {
                   stackOut_30_0 = 0;
                   stackIn_31_0 = stackOut_30_0;
                   return stackIn_31_0 != 0;
@@ -703,7 +701,7 @@ final class td {
         throw new Error();
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_g = null;
     }

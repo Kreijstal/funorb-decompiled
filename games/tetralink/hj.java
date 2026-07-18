@@ -18,20 +18,13 @@ final class hj {
     }
 
     final static void b(byte param0) {
-        int discarded$12 = -13850;
-        jo.a(gk.field_d, 6);
-        int discarded$23 = -13850;
-        jo.a(il.field_T, 8);
-        int discarded$27 = 122;
-        if (!wk.a()) {
-            int discarded$44 = -13850;
-            jo.a(in.field_c, 2);
-            int discarded$60 = -13850;
-            jo.a(qj.field_b, 3);
-            int discarded$71 = -13850;
-            jo.a(wg.field_f, 4);
-            int discarded$77 = -13850;
-            jo.a(od.field_Y, 5);
+        jo.a(gk.field_d, 6, -13850);
+        jo.a(il.field_T, 8, -13850);
+        if (!wk.a((byte) 122)) {
+            jo.a(in.field_c, 2, -13850);
+            jo.a(qj.field_b, 3, -13850);
+            jo.a(wg.field_f, 4, -13850);
+            jo.a(od.field_Y, 5, -13850);
             if (param0 <= -45) {
                 hg.field_b[8] = hg.field_b[8] + 32;
                 return;
@@ -48,7 +41,7 @@ final class hj {
         hg.field_b[8] = hg.field_b[8] + 32;
     }
 
-    final static sj a(String param0, int param1) {
+    final static sj a(String param0, int param1, boolean param2) {
         sj var3 = null;
         RuntimeException var3_ref = null;
         sj stackIn_1_0 = null;
@@ -111,7 +104,7 @@ final class hj {
         return stackIn_1_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -285,7 +278,7 @@ final class hj {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1, int param2, boolean param3) {
         int var4 = 0;
         int var5 = 0;
         if (!hi.field_a) {
@@ -298,8 +291,7 @@ final class hj {
               break L0;
             } else {
               if (var4 == 0) {
-                int discarded$2 = -8;
-                fk.e();
+                fk.e((byte) -8);
                 param0 = false;
                 break L0;
               } else {

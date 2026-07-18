@@ -246,7 +246,7 @@ final class b extends sh implements ta {
         return stackIn_1_0;
     }
 
-    public static void j() {
+    public static void j(byte param0) {
         field_Cb = null;
         field_Eb = null;
     }
@@ -294,8 +294,7 @@ final class b extends sh implements ta {
                   if (param0.field_g == 248) {
                     L3: {
                       if (!param1) {
-                        int discarded$3 = 0;
-                        mj.f();
+                        mj.f(0);
                         break L3;
                       } else {
                         break L3;
@@ -323,7 +322,7 @@ final class b extends sh implements ta {
               if (!param0.field_a) {
                 L5: {
                   if (((b) this).field_Bb) {
-                    tg discarded$4 = var5.a((cd) this, 260, md.field_c);
+                    tg discarded$2 = var5.a((cd) this, 260, md.field_c);
                     break L5;
                   } else {
                     if (param0.field_g != 5) {
@@ -349,7 +348,7 @@ final class b extends sh implements ta {
                 }
               } else {
                 if (!param0.field_d) {
-                  tg discarded$5 = var5.a((cd) this, 260, md.field_c);
+                  tg discarded$3 = var5.a((cd) this, 260, md.field_c);
                   break L4;
                 } else {
                   ((b) this).b((fi) (Object) new ok((b) this), (byte) -53);
@@ -397,8 +396,7 @@ final class b extends sh implements ta {
         if (param0 == 3) {
           if (((b) this).field_G) {
             if (!((b) this).field_Fb) {
-              int discarded$4 = -113;
-              var2 = cf.a();
+              var2 = cf.a((byte) -113);
               if (var2 == null) {
                 return super.f(3);
               } else {
@@ -415,8 +413,7 @@ final class b extends sh implements ta {
           field_Gb = 49L;
           if (((b) this).field_G) {
             if (!((b) this).field_Fb) {
-              int discarded$5 = -113;
-              var2 = cf.a();
+              var2 = cf.a((byte) -113);
               if (var2 == null) {
                 return super.f(3);
               } else {

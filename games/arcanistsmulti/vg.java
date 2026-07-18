@@ -48,9 +48,8 @@ final class vg {
     int[] field_J;
     int field_N;
 
-    final static void a() {
-        int discarded$5 = 1;
-        if (!(td.e())) {
+    final static void a(byte param0) {
+        if (!(td.e(true))) {
             return;
         }
         if (vn.field_d == 71) {

@@ -864,9 +864,7 @@ final class tc extends qb {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$8 = 124;
-                int discarded$9 = 7;
-                ro.a(var4);
+                ro.a(var4, 7, 124);
                 var4 = (pm) (Object) li.field_a.a(4);
                 continue L1;
               }

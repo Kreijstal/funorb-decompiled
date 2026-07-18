@@ -190,7 +190,7 @@ final class cg extends qs {
         return stackIn_1_0;
     }
 
-    final static boolean a(String param0, boolean param1, String param2, int param3, String param4, aa param5) {
+    final static boolean a(String param0, boolean param1, String param2, int param3, String param4, aa param5, int param6) {
         RuntimeException var7 = null;
         oj var8 = null;
         int stackIn_5_0 = 0;
@@ -424,7 +424,7 @@ final class cg extends qs {
         }
     }
 
-    final static ib e() {
+    final static ib e(boolean param0) {
         try {
             Throwable var1 = null;
             ib stackIn_2_0 = null;
@@ -449,7 +449,7 @@ final class cg extends qs {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_B = null;
         field_E = null;
         field_F = null;

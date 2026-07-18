@@ -525,7 +525,7 @@ final class nn {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 
@@ -551,8 +551,7 @@ final class nn {
         try {
           L0: {
             L1: {
-              int discarded$5 = 97;
-              uh.a((java.awt.Component) (Object) param0);
+              uh.a((java.awt.Component) (Object) param0, (byte) 97);
               if (param1 < -40) {
                 break L1;
               } else {

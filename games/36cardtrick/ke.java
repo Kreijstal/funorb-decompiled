@@ -153,12 +153,12 @@ final class ke {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
     }
 
-    final static void a(dh param0) {
+    final static void a(dh param0, int param1, int param2) {
         w var5 = null;
         int var4 = 0;
         try {

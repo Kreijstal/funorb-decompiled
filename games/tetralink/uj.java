@@ -11,11 +11,10 @@ final class uj extends al {
     static int field_w;
 
     final static hl b(boolean param0) {
-        int discarded$0 = 1;
-        return bl.d();
+        return bl.d(true);
     }
 
-    final static void a(long param0) {
+    final static void a(long param0, int param1) {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
@@ -128,9 +127,8 @@ final class uj extends al {
               }
             }
             var8 = stackIn_19_0;
-            int discarded$2 = -119;
-            ci.a(var7, (-((uj) this).field_u[0].field_F + param0.field_u >> 1) + (param0.field_w + param2), param0.field_F, param0.field_t + param1, ((uj) this).field_u);
-            int discarded$3 = ((uj) this).field_b.a(param0.field_A, param0.field_t + param1, param0.field_w + (param2 + -2), param0.field_F, param0.field_u, var8, -1, 1, 1, ((uj) this).field_b.field_N);
+            ci.a(var7, (-((uj) this).field_u[0].field_F + param0.field_u >> 1) + (param0.field_w + param2), param0.field_F, param0.field_t + param1, ((uj) this).field_u, -119);
+            int discarded$1 = ((uj) this).field_b.a(param0.field_A, param0.field_t + param1, param0.field_w + (param2 + -2), param0.field_F, param0.field_u, var8, -1, 1, 1, ((uj) this).field_b.field_N);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -165,7 +163,7 @@ final class uj extends al {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 0;
         field_s = null;
         field_q = null;

@@ -8,7 +8,7 @@ final class bm extends pp {
     static String field_i;
     static String field_m;
 
-    public static void d() {
+    public static void d(byte param0) {
         field_m = null;
         field_i = null;
     }
@@ -51,7 +51,7 @@ final class bm extends pp {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         an.field_q = 0;
         ha.field_n = param0;
         eo.field_l = 0;

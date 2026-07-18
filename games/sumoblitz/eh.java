@@ -7,7 +7,7 @@ final class eh {
     static int field_a;
     private static String field_z;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 50;
         field_b = null;
     }

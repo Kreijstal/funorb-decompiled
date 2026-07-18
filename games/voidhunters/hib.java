@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hib extends rqa {
-    final static void a() {
+    final static void a(int param0) {
         int var1 = 0;
         ll.field_p = null;
     }

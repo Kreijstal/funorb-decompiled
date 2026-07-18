@@ -28,7 +28,7 @@ final class eg extends le {
         return param0 & param1;
     }
 
-    final static String a() {
+    final static String a(int param0) {
         if (qo.field_x) {
             return null;
         }

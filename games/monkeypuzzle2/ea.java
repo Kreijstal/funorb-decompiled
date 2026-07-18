@@ -7,7 +7,7 @@ final class ea {
     static int field_b;
     static int field_c;
 
-    final static String a(byte param0, gk param1) {
+    final static String a(byte param0, gk param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -89,7 +89,7 @@ final class ea {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
     }

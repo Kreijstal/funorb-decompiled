@@ -100,13 +100,13 @@ class hi extends fj {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = 0;
         field_N = null;
         field_W = null;
     }
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1, boolean param2, int param3) {
         java.awt.Graphics var4 = null;
         try {
             var4 = param0.getGraphics();
@@ -471,7 +471,7 @@ class hi extends fj {
         }
     }
 
-    private final void a(hi param0) {
+    private final void a(hi param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         RuntimeException stackIn_100_0 = null;
@@ -1026,8 +1026,7 @@ class hi extends fj {
                           break L7;
                         } else {
                           if (var16 <= var15 * var15) {
-                            int discarded$1 = 0;
-                            var17 = ha.a(var20_ref.field_U, param5);
+                            var17 = ha.a(var20_ref.field_U, param5, false);
                             var18 = var20_ref.a(var17, (byte) 72);
                             if (var18 < 0.0f) {
                               break L7;
@@ -1245,8 +1244,7 @@ class hi extends fj {
           L0: {
             L1: {
               ((hi) this).field_f = param0;
-              int discarded$2 = -114;
-              this.a(param1);
+              this.a(param1, -114);
               if (param6 == null) {
                 break L1;
               } else {

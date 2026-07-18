@@ -267,7 +267,7 @@ final class ol {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_i = null;
         field_k = null;

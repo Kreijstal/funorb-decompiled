@@ -11,7 +11,7 @@ final class uk implements cg {
     private int field_d;
     static he field_h;
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -38,8 +38,7 @@ final class uk implements cg {
               if (0 == var2) {
                 var4 = (h) (Object) eg.field_c.h(-11151);
                 if (var4 == null) {
-                  int discarded$3 = 126;
-                  eg.a();
+                  eg.a((byte) 126);
                   return;
                 } else {
                   L2: {
@@ -72,8 +71,7 @@ final class uk implements cg {
               } else {
                 if (var2 != 1) {
                   gb.a((Throwable) null, "LR1: " + al.a(-71), 10);
-                  int discarded$4 = 126;
-                  eg.a();
+                  eg.a((byte) 126);
                   break L1;
                 } else {
                   var4_int = var9.f(2350);
@@ -99,8 +97,7 @@ final class uk implements cg {
                       }
                     }
                     if (var5_ref_nl == null) {
-                      int discarded$5 = 126;
-                      eg.a();
+                      eg.a((byte) 126);
                       return;
                     } else {
                       var5_ref_nl.a(-16175);

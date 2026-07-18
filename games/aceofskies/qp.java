@@ -117,8 +117,7 @@ final class qp extends cq implements go {
                   if (6 <= var7) {
                     break L1;
                   } else {
-                    int discarded$1 = -29824;
-                    jaggl.OpenGL.glTexImage2Di(var7 + 34069, 0, ((qp) this).a(false), param1, param1, 0, gq.a(((qp) this).field_h), ((qp) this).field_g.field_Bc, param3[var7], 0);
+                    jaggl.OpenGL.glTexImage2Di(var7 + 34069, 0, ((qp) this).a(false), param1, param1, 0, gq.a(((qp) this).field_h, -29824), ((qp) this).field_g.field_Bc, param3[var7], 0);
                     var7++;
                     continue L2;
                   }

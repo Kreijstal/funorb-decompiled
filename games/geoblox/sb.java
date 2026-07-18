@@ -9,14 +9,14 @@ final class sb {
     static na[] field_e;
     static int field_d;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_e = null;
         field_c = null;
         field_b = null;
         field_f = null;
     }
 
-    final static int a() {
+    final static int a(boolean param0) {
         return (int)(1000000000L / oj.field_c);
     }
 

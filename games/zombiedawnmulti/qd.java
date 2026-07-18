@@ -819,8 +819,7 @@ final class qd {
                         if (!param1) {
                           break L4;
                         } else {
-                          int discarded$8 = 15;
-                          this.d();
+                          this.d(15);
                           this.e(107);
                           break L4;
                         }
@@ -837,8 +836,7 @@ final class qd {
                       }
                     }
                     L6: {
-                      int discarded$9 = -802;
-                      if (!er.a()) {
+                      if (!er.a(-802)) {
                         stackOut_32_0 = 0;
                         stackIn_33_0 = stackOut_32_0;
                         break L6;
@@ -1248,9 +1246,9 @@ final class qd {
                               var13++;
                               this.a((byte) 51);
                               ((qd) this).field_a = ((qd) this).field_a + 20L;
-                              int fieldTemp$10 = ((qd) this).field_gb - 1;
+                              int fieldTemp$4 = ((qd) this).field_gb - 1;
                               ((qd) this).field_gb = ((qd) this).field_gb - 1;
-                              if (fieldTemp$10 < 0) {
+                              if (fieldTemp$4 < 0) {
                                 continue L26;
                               } else {
                                 if (((qd) this).field_g >= var13) {
@@ -1268,9 +1266,9 @@ final class qd {
                             }
                           }
                         } else {
-                          int fieldTemp$11 = ((qd) this).field_U - 1;
+                          int fieldTemp$5 = ((qd) this).field_U - 1;
                           ((qd) this).field_U = ((qd) this).field_U - 1;
-                          if (fieldTemp$11 < 0) {
+                          if (fieldTemp$5 < 0) {
                             this.a((byte) -91);
                             ((qd) this).field_U = -var12 / 8 + 1;
                             ((qd) this).field_a = ((qd) this).field_a + 20L;
@@ -1315,18 +1313,16 @@ final class qd {
                             break L31;
                           }
                         } else {
-                          int discarded$12 = 1;
-                          this.b();
+                          this.b(true);
                           g.a(((qd) this).field_H);
-                          boolean discarded$13 = ((qd) this).a(param1, 15978);
+                          boolean discarded$6 = ((qd) this).a(param1, 15978);
                           break L30;
                         }
                       }
                     }
-                    int discarded$14 = 1;
-                    this.b();
+                    this.b(true);
                     g.a(((qd) this).field_H);
-                    boolean discarded$15 = ((qd) this).a(param1, 15978);
+                    boolean discarded$7 = ((qd) this).a(param1, 15978);
                     break L30;
                   }
                   return;
@@ -1397,10 +1393,8 @@ final class qd {
             param1 += 6;
             break L0;
           } else {
-            int discarded$8 = 12949;
-            param2 = po.d() + -(param2 % 24) + param2;
-            int discarded$9 = 12949;
-            param1 = po.d() + (-(param1 % 24) + param1);
+            param2 = po.d(12949) + -(param2 % 24) + param2;
+            param1 = po.d(12949) + (-(param1 % 24) + param1);
             break L0;
           }
         }
@@ -1453,17 +1447,17 @@ final class qd {
                               if (jk.a((byte) 123, var14, var28, var15_int - 1) != 0) {
                                 break L7;
                               } else {
-                                int incrementValue$10 = var9;
+                                int incrementValue$4 = var9;
                                 var9++;
-                                var21[var15_int - 1][var14] = incrementValue$10;
+                                var21[var15_int - 1][var14] = incrementValue$4;
                                 break L7;
                               }
                             }
                             L8: {
                               if (jk.a((byte) -82, var14 - -1, var28, var15_int) == 0) {
-                                int incrementValue$11 = var9;
+                                int incrementValue$5 = var9;
                                 var9++;
-                                var28[var15_int][var14 + 1] = incrementValue$11;
+                                var28[var15_int][var14 + 1] = incrementValue$5;
                                 break L8;
                               } else {
                                 break L8;
@@ -1473,9 +1467,9 @@ final class qd {
                               if (jk.a((byte) -97, var14, var28, 1 + var15_int) != 0) {
                                 break L9;
                               } else {
-                                int incrementValue$12 = var9;
+                                int incrementValue$6 = var9;
                                 var9++;
-                                var21[1 + var15_int][var14] = incrementValue$12;
+                                var21[1 + var15_int][var14] = incrementValue$6;
                                 break L9;
                               }
                             }
@@ -1483,9 +1477,9 @@ final class qd {
                               if (jk.a((byte) 25, var14 + -1, var28, var15_int) != 0) {
                                 break L10;
                               } else {
-                                int incrementValue$13 = var9;
+                                int incrementValue$7 = var9;
                                 var9++;
-                                var28[var15_int][var14 + -1] = incrementValue$13;
+                                var28[var15_int][var14 + -1] = incrementValue$7;
                                 break L10;
                               }
                             }
@@ -1560,10 +1554,8 @@ final class qd {
                                 }
                               }
                             }
-                            int discarded$14 = 12949;
-                            var18 = po.d() + 24 * var16;
-                            int discarded$15 = 12949;
-                            var19 = 24 * var17 + po.d();
+                            var18 = po.d(12949) + 24 * var16;
+                            var19 = 24 * var17 + po.d(12949);
                             var15.a((byte) 95, 100 + op.field_m.field_H, var18, var19);
                             wd.a(var15.field_y, op.field_m.field_H, ma.field_a, var18, 61, var19);
                             var15 = (wb) (Object) ((qd) this).field_Q.b((byte) 108);
@@ -1925,8 +1917,7 @@ final class qd {
         int var4 = 0;
         L0: {
           var4 = ZombieDawnMulti.field_E ? 1 : 0;
-          int discarded$3 = 0;
-          pq.b();
+          pq.b(false);
           if (param1 == 3) {
             break L0;
           } else {
@@ -1936,10 +1927,8 @@ final class qd {
         }
         L1: {
           if (param0 == 0) {
-            int discarded$4 = 3;
-            pj.a(0, 16, -16384, 22, 21, (byte) -27);
-            int discarded$5 = 3;
-            pj.a(0, 21, 16384, 23, 16, (byte) 122);
+            pj.a(0, 16, -16384, 22, 21, (byte) -27, 3);
+            pj.a(0, 21, 16384, 23, 16, (byte) 122, 3);
             ge.s(9);
             ck.a(59, -23838);
             ck.a(60, -23838);
@@ -3417,8 +3406,7 @@ final class qd {
                       var3 = (ae) (Object) ((qd) this).field_hb.c((byte) 97);
                       continue L2;
                     } else {
-                      int discarded$2 = 0;
-                      qc.a((br) (Object) param1, (br) (Object) var3);
+                      qc.a((br) (Object) param1, (br) (Object) var3, 0);
                       return;
                     }
                   }
@@ -3651,8 +3639,7 @@ final class qd {
               ((qd) this).field_Q.d(-1);
               ((qd) this).field_jb = 0;
               ((qd) this).field_A = 0;
-              int discarded$4 = 113;
-              on.j();
+              on.j((byte) 113);
               if (df.field_I) {
                 L2: {
                   if (pp.field_n) {
@@ -3760,8 +3747,7 @@ final class qd {
                     L9: while (true) {
                       if (var24 == null) {
                         na.a((byte) 127, ((qd) this).field_u);
-                        int discarded$5 = 256;
-                        ih.a();
+                        ih.a(256);
                         var25 = (ce) (Object) op.field_m.field_s.c(72);
                         L10: while (true) {
                           if (var25 == null) {
@@ -3780,7 +3766,7 @@ final class qd {
                                     if (var9 <= var10) {
                                       break L11;
                                     } else {
-                                      boolean discarded$6 = ((qd) this).field_I.a(87, tg.field_e.field_d[var10], tg.field_e.field_f[var10]);
+                                      boolean discarded$1 = ((qd) this).field_I.a(87, tg.field_e.field_d[var10], tg.field_e.field_f[var10]);
                                       var10++;
                                       continue L12;
                                     }
@@ -3837,8 +3823,7 @@ final class qd {
                             ((qd) this).field_W = op.field_m.field_H - 50;
                             ((qd) this).field_t = bl.a((byte) 43);
                             ((qd) this).field_G.a(((qd) this).field_Z, false);
-                            int discarded$7 = 21;
-                            this.a();
+                            this.a(21);
                             op.field_m.field_D = new int[4][2];
                             op.field_m.field_D[0][0] = 9089042;
                             op.field_m.field_D[0][1] = 2473480;
@@ -4068,7 +4053,7 @@ final class qd {
         }
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         if (!(df.field_I)) {
             lb.a(((qd) this).field_ib, false, ((qd) this).field_fb);
@@ -4180,7 +4165,7 @@ final class qd {
         }
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         wb var2 = null;
         int var3 = 0;
         wb var4 = null;
@@ -4638,7 +4623,7 @@ final class qd {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         ki.field_e = new no(wa.field_a, kc.field_c, jf.field_a, vo.field_m, (cj) (Object) jk.field_h, cm.field_b);
     }
 
@@ -5015,8 +5000,7 @@ final class qd {
         L1: {
           var3 = 0;
           var4 = 0;
-          int discarded$11 = 71;
-          var5 = oa.a();
+          var5 = oa.a((byte) 71);
           if (var5 > 0) {
             L2: {
               if (null != lp.field_k) {
@@ -5313,13 +5297,22 @@ final class qd {
                                                           if (var10 >= var11) {
                                                             break L32;
                                                           } else {
-                                                            int incrementValue$12 = var10;
+                                                            int incrementValue$9 = var10;
                                                             var10++;
-                                                            var9[incrementValue$12] = var7;
+                                                            var9[incrementValue$9] = var7;
                                                             continue L34;
                                                           }
                                                         }
                                                       } else {
+                                                        int incrementValue$10 = var10;
+                                                        var10++;
+                                                        var21[incrementValue$10] = var7;
+                                                        int incrementValue$11 = var10;
+                                                        var10++;
+                                                        var21[incrementValue$11] = var7;
+                                                        int incrementValue$12 = var10;
+                                                        var10++;
+                                                        var21[incrementValue$12] = var7;
                                                         int incrementValue$13 = var10;
                                                         var10++;
                                                         var21[incrementValue$13] = var7;
@@ -5335,15 +5328,6 @@ final class qd {
                                                         int incrementValue$17 = var10;
                                                         var10++;
                                                         var21[incrementValue$17] = var7;
-                                                        int incrementValue$18 = var10;
-                                                        var10++;
-                                                        var21[incrementValue$18] = var7;
-                                                        int incrementValue$19 = var10;
-                                                        var10++;
-                                                        var21[incrementValue$19] = var7;
-                                                        int incrementValue$20 = var10;
-                                                        var10++;
-                                                        var21[incrementValue$20] = var7;
                                                         continue L33;
                                                       }
                                                     }
@@ -5786,8 +5770,7 @@ final class qd {
                                                     ((qd) this).field_G.g(-27635);
                                                     if (!gf.field_h) {
                                                       ((qd) this).field_I.c(-118);
-                                                      int discarded$21 = 9;
-                                                      rq.a();
+                                                      rq.a(9);
                                                       break L63;
                                                     } else {
                                                       break L63;
@@ -5996,7 +5979,7 @@ final class qd {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var3 = 0;
         L0: {
           var3 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -6365,7 +6348,7 @@ final class qd {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_v = null;
         field_E = null;
         field_s = null;
@@ -6417,8 +6400,7 @@ final class qd {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L4: {
                         var5 = (Exception) (Object) decompiledCaughtException;
-                        int discarded$3 = 0;
-                        bd.a(op.field_m.field_H + ": error executing message of tick " + var4_ref.field_f + ": " + var5.getMessage(), (Throwable) (Object) var5);
+                        bd.a(op.field_m.field_H + ": error executing message of tick " + var4_ref.field_f + ": " + var5.getMessage(), (Throwable) (Object) var5, false);
                         break L4;
                       }
                     }
@@ -6432,7 +6414,7 @@ final class qd {
               L5: {
                 if (op.field_m.field_l != 0) {
                   L6: {
-                    boolean discarded$4 = ((qd) this).field_G.a(-21991);
+                    boolean discarded$2 = ((qd) this).field_G.a(-21991);
                     if (op.field_m.field_l != 3) {
                       ((qd) this).field_G.a(((qd) this).field_Z, false);
                       break L6;
@@ -6495,7 +6477,7 @@ final class qd {
                                           }
                                         } else {
                                           L16: {
-                                            boolean discarded$5 = var3_ref_lc.d((byte) 76);
+                                            boolean discarded$3 = var3_ref_lc.d((byte) 76);
                                             if (var3_ref_lc.field_q) {
                                               var3_ref_lc.a(true);
                                               ((qd) this).field_X.a((br) (Object) var3_ref_lc, false);

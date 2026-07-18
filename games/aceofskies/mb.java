@@ -8,7 +8,7 @@ final class mb extends he {
     static pa[] field_u;
     private java.lang.ref.SoftReference field_r;
 
-    public static void g() {
+    public static void g(int param0) {
         field_t = null;
         field_s = null;
         field_u = null;
@@ -47,7 +47,7 @@ final class mb extends he {
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -62,8 +62,7 @@ final class mb extends he {
                   if (!jf.field_a.field_b) {
                     break L1;
                   } else {
-                    int discarded$9 = -32546;
-                    tt.b();
+                    tt.b(-32546);
                     hr.field_e.a((ea) (Object) new oq(hr.field_e, ro.field_r), 0);
                     break L1;
                   }
@@ -71,13 +70,13 @@ final class mb extends he {
               }
               return;
             } else {
-              boolean discarded$10 = hr.field_e.a(ik.field_l, true, qo.field_d, true);
+              boolean discarded$7 = hr.field_e.a(ik.field_l, true, qo.field_d, true);
               hr.field_e.f((byte) 33);
               L2: while (true) {
                 if (!ek.a((byte) -127)) {
                   break L0;
                 } else {
-                  boolean discarded$11 = hr.field_e.a(108, fr.field_e, bk.field_f);
+                  boolean discarded$8 = hr.field_e.a(108, fr.field_e, bk.field_f);
                   continue L2;
                 }
               }

@@ -212,7 +212,7 @@ abstract class jk {
         field_a = null;
     }
 
-    final static el b() {
+    final static el b(int param0) {
         try {
             Throwable var1 = null;
             el stackIn_2_0 = null;

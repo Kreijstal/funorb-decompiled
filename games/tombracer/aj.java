@@ -13,7 +13,7 @@ final class aj extends vg {
     int field_n;
     private static String field_z;
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
     }
 

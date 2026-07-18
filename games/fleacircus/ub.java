@@ -77,7 +77,7 @@ final class ub {
         return stackIn_4_0;
     }
 
-    final static jh a(String param0, rh param1, String param2, rh param3) {
+    final static jh a(String param0, rh param1, String param2, rh param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -260,7 +260,7 @@ final class ub {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oa {
-    final static eg a() {
+    final static eg a(int param0) {
         if (null == kj.field_c) {
             kj.field_c = new eg(sl.field_q, 20, 0, 0, 0, 11579568, -1, 0, 0, sl.field_q.field_I, -1, 2147483647, true);
         }
@@ -73,7 +73,7 @@ final class oa {
                   L2: while (true) {
                     var8 = param1.indexOf("<%", var5);
                     if (var8 < 0) {
-                      StringBuilder discarded$7 = var6.append(param1.substring(var7));
+                      StringBuilder discarded$3 = var6.append(param1.substring(var7));
                       stackOut_27_0 = var6.toString();
                       stackIn_28_0 = stackOut_27_0;
                       break L0;
@@ -84,8 +84,7 @@ final class oa {
                           if (var5 >= var3_int) {
                             break L4;
                           } else {
-                            int discarded$8 = -68;
-                            if (!g.a(param1.charAt(var5))) {
+                            if (!g.a(param1.charAt(var5), (byte) -68)) {
                               break L4;
                             } else {
                               var5++;
@@ -102,11 +101,10 @@ final class oa {
                           } else {
                             if (param1.charAt(var5) == 62) {
                               var5++;
-                              int discarded$9 = 1;
-                              var10 = md.a((CharSequence) (Object) var9);
-                              StringBuilder discarded$10 = var6.append(param1.substring(var7, var8));
+                              var10 = md.a((CharSequence) (Object) var9, true);
+                              StringBuilder discarded$4 = var6.append(param1.substring(var7, var8));
                               var7 = var5;
-                              StringBuilder discarded$11 = var6.append(param2[var10]);
+                              StringBuilder discarded$5 = var6.append(param2[var10]);
                               continue L2;
                             } else {
                               continue L2;
@@ -128,8 +126,7 @@ final class oa {
                     if (var3_int <= var5) {
                       break L6;
                     } else {
-                      int discarded$12 = -68;
-                      if (!g.a(param1.charAt(var5))) {
+                      if (!g.a(param1.charAt(var5), (byte) -68)) {
                         break L6;
                       } else {
                         var5++;
@@ -144,8 +141,7 @@ final class oa {
                     } else {
                       if (param1.charAt(var5) == 62) {
                         var5++;
-                        int discarded$13 = 1;
-                        var8 = md.a((CharSequence) (Object) var7_ref_String);
+                        var8 = md.a((CharSequence) (Object) var7_ref_String, true);
                         var4 = var4 + (param2[var8].length() + -var5 + var6_int);
                         continue L1;
                       } else {

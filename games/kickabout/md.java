@@ -31,7 +31,7 @@ final class md implements hc {
         }
     }
 
-    final static boolean d() {
+    final static boolean d(int param0) {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -47,19 +47,16 @@ final class md implements hc {
         L0: {
           var3 = Kickabout.field_G;
           var1 = 0;
-          int discarded$25 = 0;
-          if (n.a()) {
+          if (n.a(false)) {
             var1 = 1;
-            int discarded$26 = -32053;
-            gg.a();
+            gg.a(-32053);
             break L0;
           } else {
             if (!ng.a(27304)) {
               if (vi.c(2915)) {
                 on.g(0, 0, on.field_g, on.field_f);
                 var1 = 1;
-                int discarded$27 = 1;
-                ph.b();
+                ph.b(true);
                 break L0;
               } else {
                 break L0;
@@ -72,8 +69,7 @@ final class md implements hc {
           }
         }
         L1: {
-          int discarded$28 = -3;
-          if (!up.a()) {
+          if (!up.a((byte) -3)) {
             break L1;
           } else {
             if (!ng.a(27304)) {
@@ -104,23 +100,19 @@ final class md implements hc {
           }
         }
         L3: {
-          int discarded$29 = 0;
-          if (nv.i()) {
+          if (nv.i(0)) {
             var2 = (-1 + vo.field_bb << 8) / 16;
             if (0 < var2) {
               var1 = 1;
               on.a(0, 0, on.field_g, on.field_f, 0, var2);
-              int discarded$30 = 14;
-              boolean discarded$31 = md.d();
+              boolean discarded$3 = md.d(14);
               break L3;
             } else {
-              int discarded$32 = 14;
-              boolean discarded$33 = md.d();
+              boolean discarded$4 = md.d(14);
               break L3;
             }
           } else {
-            int discarded$34 = 14;
-            boolean discarded$35 = md.d();
+            boolean discarded$5 = md.d(14);
             break L3;
           }
         }
@@ -155,8 +147,7 @@ final class md implements hc {
         }
         if (-1 != var4) {
             if (!((md) this).field_a) {
-                int discarded$0 = -98;
-                this.b();
+                this.b(-98);
             }
             if (var4 != ((md) this).field_c) {
                 this.a(-18, var4);
@@ -303,7 +294,7 @@ final class md implements hc {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         ((md) this).field_i = new gm[4];
         ((md) this).field_b = new ut(100, 200);
         int var2 = 13;

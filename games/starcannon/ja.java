@@ -45,8 +45,7 @@ final class ja {
                       var6 = fb.a(uh.field_h[var3_int], (byte) 26, true);
                       var4 = var4 + mc.field_h;
                       var7 = ee.field_b + -(var6 >> 1);
-                      int discarded$23 = -89;
-                      if (!rh.a(pk.field_c - -(kc.field_S << 1), param1, (rh.field_i << 1) + var6, -rh.field_i + var7, var4, param0)) {
+                      if (!rh.a(pk.field_c - -(kc.field_S << 1), param1, (rh.field_i << 1) + var6, -rh.field_i + var7, var4, param0, -89)) {
                         var4 = var4 + (pk.field_c + mc.field_h + (kc.field_S << 1));
                         break L2;
                       } else {
@@ -188,7 +187,7 @@ final class ja {
         return this.a(param1, (byte) 127, param0, (int[]) null);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_c = null;
         field_g = null;

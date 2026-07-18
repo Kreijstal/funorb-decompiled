@@ -87,8 +87,7 @@ final class hf extends ca {
         try {
           var16 = null;
           ok.a(6, 8, 240, param13, 320, 6, param3, -1, 0, lf.field_e, he.field_C, param7, param14, mf.field_c, 480, (hj[]) null, param12, 0, param1, param0, param8);
-          int discarded$2 = -128;
-          hb.a(param5);
+          hb.a(param5, (byte) -128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -197,25 +196,21 @@ final class hf extends ca {
         }
     }
 
-    final static void a(v param0, ki param1, int param2) {
+    final static void a(v param0, ki param1, int param2, int param3) {
         try {
-            int discarded$0 = 84;
-            ol.field_h = ok.a() * param2 / 1000;
+            ol.field_h = ok.a((byte) 84) * param2 / 1000;
             fb.a(-2, param1);
-            int discarded$1 = -237;
-            fh.a(param1);
-            int discarded$2 = -17763;
-            f.a(param1);
+            fh.a(param1, -237);
+            f.a(param1, -17763);
             OrbDefence.d(false);
-            int discarded$3 = 0;
-            ta.j();
+            ta.j(0);
             ji.field_b = -ol.field_h;
         } catch (RuntimeException runtimeException) {
             throw dd.a((Throwable) (Object) runtimeException, "hf.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + 1000 + ')');
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_g = null;
         field_l = null;
     }

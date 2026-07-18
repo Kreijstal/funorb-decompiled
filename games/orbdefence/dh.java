@@ -91,7 +91,7 @@ class dh extends hl implements ai {
         return stackIn_8_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_bb = null;
         field_X = null;
     }
@@ -134,7 +134,7 @@ class dh extends hl implements ai {
         }
     }
 
-    final static e a(String param0) {
+    final static e a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

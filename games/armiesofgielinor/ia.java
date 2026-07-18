@@ -18,12 +18,10 @@ final class ia {
         i.a(((ia) this).field_f, ((ia) this).field_c, ((ia) this).field_e, (byte) -47, ((ia) this).field_i, ((ia) this).field_j);
         if (param0 < 24) {
           ((ia) this).field_f = null;
-          int discarded$4 = -11727;
-          this.b();
+          this.b(-11727);
           return;
         } else {
-          int discarded$5 = -11727;
-          this.b();
+          this.b(-11727);
           return;
         }
     }
@@ -196,7 +194,7 @@ final class ia {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = ((ia) this).field_f[3].field_A;
         int var3 = ((ia) this).field_a.a(' ');
         int var4 = var3 + (var2 + ((ia) this).field_e);
@@ -249,8 +247,7 @@ final class ia {
                 break L1;
               }
             }
-            int discarded$2 = -94;
-            this.d();
+            this.d(-94);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -309,7 +306,7 @@ final class ia {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var2 = ((ia) this).field_f[5].field_A + ((ia) this).field_f[3].field_A;
         int var3 = ((ia) this).field_a.a(' ') << 1;
         int var4 = ((ia) this).field_a.a(((ia) this).field_d);

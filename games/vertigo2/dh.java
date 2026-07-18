@@ -9,13 +9,13 @@ abstract class dh {
     static String field_c;
     static String field_a;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return rm.a((byte) -125, ie.field_Nb, sm.field_Kb);
     }
 
     abstract byte[] b(int param0);
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, boolean param2) {
         fm.field_d = param1;
         cg.field_d = param0;
         ln.field_d.b(param0, -24066);
@@ -32,7 +32,7 @@ abstract class dh {
         field_b = null;
     }
 
-    final static void a(int param0, byte param1, java.awt.Canvas param2) {
+    final static void a(int param0, byte param1, java.awt.Canvas param2, int param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -118,8 +118,7 @@ abstract class dh {
                 field_a = null;
             }
             var6 = new tn(2, param5, 0, param3, param1);
-            int discarded$0 = 640;
-            in.a(var6);
+            in.a(var6, 640);
         } catch (RuntimeException runtimeException) {
             throw wn.a((Throwable) (Object) runtimeException, "dh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + 2 + ',' + (param3 != null ? "{...}" : "null") + ',' + 0 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

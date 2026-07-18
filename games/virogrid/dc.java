@@ -106,7 +106,7 @@ abstract class dc extends gg {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_R = null;
         int var1 = 0;
         field_V = null;

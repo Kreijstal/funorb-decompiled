@@ -36,7 +36,7 @@ final class ie extends kf {
         var6.e(((ie) this).field_s + param1, ((ie) this).field_j + param3, ((ie) this).field_w);
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_y = null;
         field_x = null;
         field_A = null;
@@ -105,14 +105,12 @@ final class ie extends kf {
                   } else {
                     var4 = param2;
                     dl.a((byte) -12, var4);
-                    int discarded$4 = 0;
-                    mf.field_a = hc.a(param2);
+                    mf.field_a = hc.a(param2, 0);
                     return;
                   }
                 }
               }
-              int discarded$5 = 0;
-              mf.field_a = fb.a(param1, param3);
+              mf.field_a = fb.a(param1, param3, 0);
               break L0;
             } else {
               L2: {
@@ -189,7 +187,7 @@ final class ie extends kf {
         }
     }
 
-    final static void g() {
+    final static void g(int param0) {
     }
 
     public ie() {

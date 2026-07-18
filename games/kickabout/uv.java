@@ -144,8 +144,7 @@ final class uv {
           if (((uv) this).field_b != dd.field_c) {
             if (field_i != null) {
               if (np.a(param1 + 123)) {
-                int discarded$1 = 0;
-                var7 = lo.a(((uv) this).field_b);
+                var7 = lo.a(((uv) this).field_b, false);
                 var4 = nk.a(param1 ^ 31253, ((uv) this).field_b);
                 var5 = this.a(-26719);
                 if (var4 == null) {
@@ -329,19 +328,17 @@ final class uv {
                     return true;
                 }
                 if (param0 == 14) {
-                    int discarded$0 = -122;
-                    uq.a();
+                    uq.a((byte) -122);
                     return true;
                 }
                 if (20 == param0) {
-                    int discarded$1 = 0;
-                    hp.b();
+                    hp.b(0);
                     return true;
                 }
                 if (param0 != 19) {
                     return false;
                 }
-                boolean discarded$2 = mi.a(((uv) this).field_b, ((uv) this).field_k, (byte) 127, ((uv) this).field_l, ((uv) this).field_h);
+                boolean discarded$0 = mi.a(((uv) this).field_b, ((uv) this).field_k, (byte) 127, ((uv) this).field_l, ((uv) this).field_h);
                 return true;
             }
             gd.a(11, 1, ((uv) this).field_l, param2);
@@ -513,7 +510,7 @@ final class uv {
         }
     }
 
-    private final boolean a(int param0, int param1) {
+    private final boolean a(int param0, int param1, byte param2) {
         String var5 = null;
         String var6 = null;
         String var7 = null;
@@ -528,8 +525,7 @@ final class uv {
                 return true;
             }
             if (param0 == 6) {
-                int discarded$0 = 126;
-                var6 = il.a(((uv) this).field_k, param1);
+                var6 = il.a(((uv) this).field_k, param1, (byte) 126);
                 if (!(var6 == null)) {
                     wi.a((String) null, ((uv) this).field_k, 0, 2, var6, -128);
                 }
@@ -551,17 +547,16 @@ final class uv {
         return true;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_d = null;
         field_m = null;
         field_i = null;
     }
 
-    private final boolean b(int param0, int param1) {
+    private final boolean b(int param0, int param1, int param2) {
         int var5 = Kickabout.field_G;
         if (0 == param0) {
-            int discarded$0 = 122;
-            uc.a(((uv) this).field_b, param1);
+            uc.a(((uv) this).field_b, param1, 122);
             return true;
         }
         if (1 == param0) {
@@ -743,7 +738,7 @@ final class uv {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         qd.b(38, 17);
     }
 
@@ -792,8 +787,7 @@ final class uv {
                 } else {
                   L3: {
                     var5 = this.a(-26719);
-                    int discarded$1 = 40;
-                    var6 = tr.a(((uv) this).field_k);
+                    var6 = tr.a(((uv) this).field_k, (byte) 40);
                     var7 = hi.a(0, ((uv) this).field_k) ? 1 : 0;
                     if (var6 != null) {
                       break L3;
@@ -1017,12 +1011,10 @@ final class uv {
         if (!(param1 != var6)) {
             return false;
         }
-        int discarded$0 = 2;
-        boolean discarded$1 = this.b(var6, param3);
-        int discarded$2 = -100;
-        boolean discarded$3 = this.a(var6, param4);
-        boolean discarded$4 = this.a(var6, param1 + 113, param4);
-        boolean discarded$5 = this.c(param1 + -8983, param2, var6);
+        boolean discarded$0 = this.b(var6, param3, 2);
+        boolean discarded$1 = this.a(var6, param4, (byte) -100);
+        boolean discarded$2 = this.a(var6, param1 + 113, param4);
+        boolean discarded$3 = this.c(param1 + -8983, param2, var6);
         return true;
     }
 

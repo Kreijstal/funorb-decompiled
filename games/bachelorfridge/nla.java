@@ -84,7 +84,7 @@ final class nla {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_e = null;
         field_b = null;

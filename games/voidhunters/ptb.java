@@ -40,16 +40,16 @@ final class ptb extends dmb implements ntb {
                 if (super.a((byte) 113, param1)) {
                   break L2;
                 } else {
-                  if (var4.field_h != var4.field_h) {
+                  if (((ptb) this).field_h != var4.field_h) {
                     break L2;
                   } else {
-                    if (var4.field_g != var4.field_g) {
+                    if (((ptb) this).field_g != var4.field_g) {
                       break L2;
                     } else {
-                      if (var4.field_e != var4.field_e) {
+                      if (((ptb) this).field_e != var4.field_e) {
                         break L2;
                       } else {
-                        if (var4.field_d == var4.field_d) {
+                        if (((ptb) this).field_d == var4.field_d) {
                           stackOut_7_0 = 0;
                           stackIn_8_0 = stackOut_7_0;
                           break L1;
@@ -194,7 +194,7 @@ final class ptb extends dmb implements ntb {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_f = null;
     }
 
@@ -220,10 +220,10 @@ final class ptb extends dmb implements ntb {
             if (param0 <= 54) {
                 field_f = null;
             }
-            var6.field_d = var5.field_d;
-            var6.field_h = var5.field_h;
-            var6.field_e = var5.field_e;
-            var6.field_g = var5.field_g;
+            var6.field_d = ((ptb) this).field_d;
+            var6.field_h = ((ptb) this).field_h;
+            var6.field_e = ((ptb) this).field_e;
+            var6.field_g = ((ptb) this).field_g;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "ptb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -258,35 +258,35 @@ final class ptb extends dmb implements ntb {
               super.a(param0, -57);
               var5 = (ptb) (Object) param0;
               var4 = 0;
-              if (var5.field_h == var5.field_h) {
+              if (((ptb) this).field_h == var5.field_h) {
                 break L1;
               } else {
                 var4 = 1;
-                System.out.println("int x has changed. before=" + var5.field_h + ", now=" + var5.field_h);
+                System.out.println("int x has changed. before=" + var5.field_h + ", now=" + ((ptb) this).field_h);
                 break L1;
               }
             }
             L2: {
-              if (var5.field_g == var5.field_g) {
+              if (((ptb) this).field_g == var5.field_g) {
                 break L2;
               } else {
                 var4 = 1;
-                System.out.println("int y has changed. before=" + var5.field_g + ", now=" + var5.field_g);
+                System.out.println("int y has changed. before=" + var5.field_g + ", now=" + ((ptb) this).field_g);
                 break L2;
               }
             }
             L3: {
-              if (var5.field_e == var5.field_e) {
+              if (((ptb) this).field_e == var5.field_e) {
                 break L3;
               } else {
-                System.out.println("int width has changed. before=" + var5.field_e + ", now=" + var5.field_e);
+                System.out.println("int width has changed. before=" + var5.field_e + ", now=" + ((ptb) this).field_e);
                 var4 = 1;
                 break L3;
               }
             }
             L4: {
-              if (var5.field_d != var5.field_d) {
-                System.out.println("int height has changed. before=" + var5.field_d + ", now=" + var5.field_d);
+              if (var5.field_d != ((ptb) this).field_d) {
+                System.out.println("int height has changed. before=" + var5.field_d + ", now=" + ((ptb) this).field_d);
                 var4 = 1;
                 break L4;
               } else {

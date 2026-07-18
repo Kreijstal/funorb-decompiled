@@ -7,7 +7,7 @@ final class ja {
     static int field_d;
     static String field_c;
 
-    final static String a() {
+    final static String a(int param0) {
         if (fk.field_F == vh.field_c) {
             return da.field_i;
         }
@@ -183,7 +183,7 @@ final class ja {
                 break L1;
               } else {
                 if (-1 == param2.indexOf("<br>")) {
-                  param1[0] = (String) (Object) param1;
+                  param1[0] = param2;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;

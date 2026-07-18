@@ -9,12 +9,12 @@ final class hg extends vk implements qk, ga {
     static String field_D;
     static tk field_y;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_D = null;
         field_y = null;
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         if (!this.g((byte) -126)) {
             return;
         }
@@ -231,7 +231,7 @@ final class hg extends vk implements qk, ga {
         return stackIn_1_0;
     }
 
-    final static vc b() {
+    final static vc b(int param0, int param1, int param2, int param3, int param4) {
         vc var5 = null;
         int var6 = 0;
         var6 = StarCannon.field_A;
@@ -243,8 +243,7 @@ final class hg extends vk implements qk, ga {
             var5.field_l = 1;
             var5.field_h = 10;
             ne.field_c.b(117, (rf) (Object) var5);
-            int discarded$2 = 3;
-            ea.a((byte) 70, var5);
+            ea.a((byte) 70, var5, 3);
             return var5;
           } else {
             if (var5.field_i == 1) {
@@ -766,8 +765,7 @@ final class hg extends vk implements qk, ga {
             }
             if (param0 != ((hg) this).field_C) {
               if (((hg) this).field_E == param0) {
-                int discarded$2 = 118;
-                this.h();
+                this.h((byte) 118);
                 break L0;
               } else {
                 return;

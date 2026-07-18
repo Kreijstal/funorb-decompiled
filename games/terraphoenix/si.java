@@ -362,7 +362,7 @@ class si extends al implements n {
         return stackIn_6_0;
     }
 
-    final static void m() {
+    final static void m(int param0) {
         bm.a(17, (byte) 1);
     }
 
@@ -423,7 +423,7 @@ class si extends al implements n {
         }
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -481,8 +481,7 @@ class si extends al implements n {
         } else {
           ((si) this).field_J = false;
           if (((si) this).field_qb) {
-            int discarded$4 = 25;
-            nd.a();
+            nd.a(25);
             if (param0 != -126) {
               ((si) this).field_jb = false;
               return;

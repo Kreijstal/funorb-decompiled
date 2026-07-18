@@ -90,8 +90,7 @@ final class jc {
                     ea.field_x = un.a(param1, param2, 127);
                     break L1;
                   } else {
-                    int discarded$46 = -3;
-                    ea.field_x = wi.a(args);
+                    ea.field_x = wi.a(args, -3);
                     break L1;
                   }
                 }
@@ -172,10 +171,10 @@ final class jc {
         field_c = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
     }
 
-    final static void a(ac param0) {
+    final static void a(ac param0, int param1) {
         try {
             param0.field_E = new int[]{-1};
             param0.field_y = new char[]{'?'};
@@ -188,7 +187,7 @@ final class jc {
         throw new IllegalStateException();
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         hm.field_b = null;
         bf.field_v = null;
         ve.field_vc = null;

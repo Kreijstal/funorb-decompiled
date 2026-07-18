@@ -11,15 +11,14 @@ final class mk {
         var2 = ZombieDawn.field_J;
         try {
           L0: {
-            int discarded$19 = -80;
-            if (we.o()) {
-              boolean discarded$20 = wo.field_xb.a(um.field_a, ah.field_eb, true, true);
+            if (we.o((byte) -80)) {
+              boolean discarded$15 = wo.field_xb.a(um.field_a, ah.field_eb, true, true);
               wo.field_xb.g(-128);
               L1: while (true) {
                 if (!on.b(102)) {
                   break L0;
                 } else {
-                  boolean discarded$21 = wo.field_xb.a(kg.field_i, (byte) 106, lc.field_c);
+                  boolean discarded$16 = wo.field_xb.a(kg.field_i, (byte) 106, lc.field_c);
                   continue L1;
                 }
               }
@@ -47,7 +46,7 @@ final class mk {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         og.b(-123, 4);
     }
 

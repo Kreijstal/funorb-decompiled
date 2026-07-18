@@ -6,7 +6,7 @@ final class n {
     static int field_a;
     static int[] field_c;
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -70,7 +70,7 @@ final class n {
         return stackIn_1_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(d.field_k)) {
             throw new IllegalStateException();
         }
@@ -79,7 +79,7 @@ final class n {
         hi.field_k = 0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_c = null;
     }
 

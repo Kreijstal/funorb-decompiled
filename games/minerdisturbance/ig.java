@@ -8,7 +8,7 @@ final class ig {
     static int field_b;
     static String field_a;
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         if (di.field_x == null) {
             return false;
         }
@@ -40,7 +40,7 @@ final class ig {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_d = null;
         field_a = null;

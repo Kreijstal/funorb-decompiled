@@ -28,7 +28,7 @@ final class wi implements ui {
         return (int)(1000000000L / fg.field_j);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_e = null;
         int var1 = 0;

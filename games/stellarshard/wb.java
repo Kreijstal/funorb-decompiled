@@ -12,7 +12,7 @@ final class wb {
     static java.security.SecureRandom field_a;
     static String field_h;
 
-    final static pb[] a(int param0, int param1, pf param2) {
+    final static pb[] a(int param0, int param1, pf param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         pb[] stackIn_6_0 = null;
@@ -83,7 +83,7 @@ final class wb {
         throw new IllegalStateException();
     }
 
-    final static va a(int param0, int param1, int param2, ej param3) {
+    final static va a(int param0, int param1, int param2, ej param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         va var7 = null;
@@ -109,14 +109,12 @@ final class wb {
         String stackOut_6_2 = null;
         try {
           L0: {
-            int discarded$6 = -1;
-            int discarded$7 = 0;
-            var9 = oe.a(param3, 640, 480, 0);
+            var9 = oe.a(param3, 640, 480, 0, 0, -1);
             var6 = var9;
             if (var9 != null) {
               var7 = new va();
               var7.field_d = var9;
-              java.awt.Component discarded$8 = var7.field_d.add((java.awt.Component) (Object) var7);
+              java.awt.Component discarded$2 = var7.field_d.add((java.awt.Component) (Object) var7);
               var7.setBounds(0, 0, 640, 480);
               var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
               var7.requestFocus();

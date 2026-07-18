@@ -8,7 +8,7 @@ class oq extends lh {
     static String field_w;
     static String field_v;
 
-    public static void h() {
+    public static void h(byte param0) {
         field_w = null;
         field_u = null;
         field_v = null;
@@ -54,8 +54,7 @@ class oq extends lh {
         pe.field_o.b((byte) -116);
         lb.b(0, 0, 640, 480);
         ((oq) this).g(102);
-        int discarded$15 = 0;
-        pg.d();
+        pg.d(0);
         if (param0 > -14) {
           field_v = null;
           ((oq) this).a(0);

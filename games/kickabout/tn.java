@@ -11,7 +11,7 @@ final class tn {
     static hd field_f;
     private static String field_z;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_c = null;
         field_d = null;

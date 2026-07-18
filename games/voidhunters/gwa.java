@@ -242,7 +242,7 @@ final class gwa extends rqa {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_p = null;
     }
 

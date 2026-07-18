@@ -21,8 +21,7 @@ final class jd extends pj implements ke {
         L0: {
           var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           fk.field_h = param1;
-          int discarded$1252 = 0;
-          var2 = wg.a("loginm3");
+          var2 = wg.a("loginm3", param0 + -7);
           if (var2 == null) {
             break L0;
           } else {
@@ -31,8 +30,7 @@ final class jd extends pj implements ke {
           }
         }
         L1: {
-          int discarded$1253 = 0;
-          var2 = wg.a("loginm2");
+          var2 = wg.a("loginm2", 0);
           if (null == var2) {
             break L1;
           } else {
@@ -41,18 +39,16 @@ final class jd extends pj implements ke {
           }
         }
         L2: {
-          int discarded$1254 = 0;
-          var2 = wg.a("loginm1");
+          var2 = wg.a("loginm1", 0);
           if (var2 != null) {
-            String discarded$1255 = mj.a((byte) 62, var2);
+            String discarded$508 = mj.a((byte) 62, var2);
             break L2;
           } else {
             break L2;
           }
         }
         L3: {
-          int discarded$1256 = 0;
-          var2 = wg.a("idlemessage20min");
+          var2 = wg.a("idlemessage20min", param0 + -7);
           if (null != var2) {
             ni.field_u = mj.a((byte) -13, var2);
             break L3;
@@ -61,8 +57,7 @@ final class jd extends pj implements ke {
           }
         }
         L4: {
-          int discarded$1257 = 0;
-          var2 = wg.a("error_js5crc");
+          var2 = wg.a("error_js5crc", param0 + -7);
           if (var2 != null) {
             vd.field_e = mj.a((byte) 23, var2);
             break L4;
@@ -71,8 +66,7 @@ final class jd extends pj implements ke {
           }
         }
         L5: {
-          int discarded$1258 = 0;
-          var2 = wg.a("error_js5io");
+          var2 = wg.a("error_js5io", 0);
           if (null != var2) {
             ug.field_p = mj.a((byte) -107, var2);
             break L5;
@@ -81,8 +75,7 @@ final class jd extends pj implements ke {
           }
         }
         L6: {
-          int discarded$1259 = 0;
-          var2 = wg.a("error_js5connect_full");
+          var2 = wg.a("error_js5connect_full", 0);
           if (null != var2) {
             ce.field_d = mj.a((byte) -105, var2);
             break L6;
@@ -91,8 +84,7 @@ final class jd extends pj implements ke {
           }
         }
         L7: {
-          int discarded$1260 = 0;
-          var2 = wg.a("error_js5connect");
+          var2 = wg.a("error_js5connect", param0 + -7);
           if (var2 != null) {
             db.field_f = mj.a((byte) 47, var2);
             break L7;
@@ -101,8 +93,7 @@ final class jd extends pj implements ke {
           }
         }
         L8: {
-          int discarded$1261 = 0;
-          var2 = wg.a("login_gameupdated");
+          var2 = wg.a("login_gameupdated", 0);
           if (var2 != null) {
             gm.field_K = mj.a((byte) -100, var2);
             break L8;
@@ -111,8 +102,7 @@ final class jd extends pj implements ke {
           }
         }
         L9: {
-          int discarded$1262 = 0;
-          var2 = wg.a("create_unable");
+          var2 = wg.a("create_unable", 0);
           if (var2 != null) {
             dd.field_n = mj.a((byte) 73, var2);
             break L9;
@@ -121,8 +111,7 @@ final class jd extends pj implements ke {
           }
         }
         L10: {
-          int discarded$1263 = 0;
-          var2 = wg.a("create_ineligible");
+          var2 = wg.a("create_ineligible", param0 ^ 7);
           if (var2 == null) {
             break L10;
           } else {
@@ -131,58 +120,52 @@ final class jd extends pj implements ke {
           }
         }
         L11: {
-          int discarded$1264 = 0;
-          var2 = wg.a("usernameprompt");
+          var2 = wg.a("usernameprompt", 0);
           if (var2 == null) {
             break L11;
           } else {
-            String discarded$1265 = mj.a((byte) -128, var2);
+            String discarded$509 = mj.a((byte) -128, var2);
             break L11;
           }
         }
         L12: {
-          int discarded$1266 = 0;
-          var2 = wg.a("passwordprompt");
+          var2 = wg.a("passwordprompt", 0);
           if (var2 == null) {
             break L12;
           } else {
-            String discarded$1267 = mj.a((byte) 7, var2);
+            String discarded$510 = mj.a((byte) 7, var2);
             break L12;
           }
         }
         L13: {
-          int discarded$1268 = 0;
-          var2 = wg.a("andagainprompt");
+          var2 = wg.a("andagainprompt", param0 ^ 7);
           if (var2 == null) {
             break L13;
           } else {
-            String discarded$1269 = mj.a((byte) -116, var2);
+            String discarded$511 = mj.a((byte) -116, var2);
             break L13;
           }
         }
         L14: {
-          int discarded$1270 = 0;
-          var2 = wg.a("ticketing_read");
+          var2 = wg.a("ticketing_read", 0);
           if (null != var2) {
-            String discarded$1271 = mj.a((byte) -127, var2);
+            String discarded$512 = mj.a((byte) -127, var2);
             break L14;
           } else {
             break L14;
           }
         }
         L15: {
-          int discarded$1272 = 0;
-          var2 = wg.a("ticketing_ignore");
+          var2 = wg.a("ticketing_ignore", 0);
           if (var2 != null) {
-            String discarded$1273 = mj.a((byte) -1, var2);
+            String discarded$513 = mj.a((byte) -1, var2);
             break L15;
           } else {
             break L15;
           }
         }
         L16: {
-          int discarded$1274 = 0;
-          var2 = wg.a("ticketing_oneunread");
+          var2 = wg.a("ticketing_oneunread", 0);
           if (null != var2) {
             sj.field_b = mj.a((byte) 16, var2);
             break L16;
@@ -191,8 +174,7 @@ final class jd extends pj implements ke {
           }
         }
         L17: {
-          int discarded$1275 = 0;
-          var2 = wg.a("ticketing_xunread");
+          var2 = wg.a("ticketing_xunread", 0);
           if (var2 != null) {
             hi.field_i = mj.a((byte) -100, var2);
             break L17;
@@ -201,8 +183,7 @@ final class jd extends pj implements ke {
           }
         }
         L18: {
-          int discarded$1276 = 0;
-          var2 = wg.a("ticketing_gotowebsite");
+          var2 = wg.a("ticketing_gotowebsite", 0);
           if (var2 == null) {
             break L18;
           } else {
@@ -211,1388 +192,1249 @@ final class jd extends pj implements ke {
           }
         }
         L19: {
-          int discarded$1277 = 0;
-          var2 = wg.a("ticketing_waitingformessages");
+          var2 = wg.a("ticketing_waitingformessages", 0);
           if (null != var2) {
-            String discarded$1278 = mj.a((byte) -98, var2);
+            String discarded$514 = mj.a((byte) -98, var2);
             break L19;
           } else {
             break L19;
           }
         }
         L20: {
-          int discarded$1279 = 0;
-          var2 = wg.a("mu_chat_on");
+          var2 = wg.a("mu_chat_on", 0);
           if (null == var2) {
             break L20;
           } else {
-            String discarded$1280 = mj.a((byte) -23, var2);
+            String discarded$515 = mj.a((byte) -23, var2);
             break L20;
           }
         }
         L21: {
-          int discarded$1281 = 0;
-          var2 = wg.a("mu_chat_friends");
+          var2 = wg.a("mu_chat_friends", param0 + -7);
           if (null != var2) {
-            String discarded$1282 = mj.a((byte) 110, var2);
+            String discarded$516 = mj.a((byte) 110, var2);
             break L21;
           } else {
             break L21;
           }
         }
         L22: {
-          int discarded$1283 = 0;
-          var2 = wg.a("mu_chat_off");
+          var2 = wg.a("mu_chat_off", param0 + -7);
           if (var2 == null) {
             break L22;
           } else {
-            String discarded$1284 = mj.a((byte) 49, var2);
+            String discarded$517 = mj.a((byte) 49, var2);
             break L22;
           }
         }
         L23: {
-          int discarded$1285 = 0;
-          var2 = wg.a("mu_chat_lobby");
+          var2 = wg.a("mu_chat_lobby", 0);
           if (var2 != null) {
-            String discarded$1286 = mj.a((byte) 3, var2);
+            String discarded$518 = mj.a((byte) 3, var2);
             break L23;
           } else {
             break L23;
           }
         }
         L24: {
-          int discarded$1287 = 0;
-          var2 = wg.a("mu_chat_public");
+          var2 = wg.a("mu_chat_public", 0);
           if (null == var2) {
             break L24;
           } else {
-            String discarded$1288 = mj.a((byte) 92, var2);
+            String discarded$519 = mj.a((byte) 92, var2);
             break L24;
           }
         }
         L25: {
-          int discarded$1289 = 0;
-          var2 = wg.a("mu_chat_ignore");
+          var2 = wg.a("mu_chat_ignore", 0);
           if (null == var2) {
             break L25;
           } else {
-            String discarded$1290 = mj.a((byte) 31, var2);
+            String discarded$520 = mj.a((byte) 31, var2);
             break L25;
           }
         }
         L26: {
-          int discarded$1291 = 0;
-          var2 = wg.a("mu_chat_tips");
+          var2 = wg.a("mu_chat_tips", 0);
           if (null == var2) {
             break L26;
           } else {
-            String discarded$1292 = mj.a((byte) -125, var2);
+            String discarded$521 = mj.a((byte) -125, var2);
             break L26;
           }
         }
         L27: {
-          int discarded$1293 = 0;
-          var2 = wg.a("mu_chat_game");
+          var2 = wg.a("mu_chat_game", 0);
           if (var2 == null) {
             break L27;
           } else {
-            String discarded$1294 = mj.a((byte) -105, var2);
+            String discarded$522 = mj.a((byte) -105, var2);
             break L27;
           }
         }
         L28: {
-          int discarded$1295 = 0;
-          var2 = wg.a("mu_chat_private");
+          var2 = wg.a("mu_chat_private", 0);
           if (var2 == null) {
             break L28;
           } else {
-            String discarded$1296 = mj.a((byte) -125, var2);
+            String discarded$523 = mj.a((byte) -125, var2);
             break L28;
           }
         }
         L29: {
-          int discarded$1297 = 0;
-          var2 = wg.a("mu_x_entered_game");
+          var2 = wg.a("mu_x_entered_game", 0);
           if (var2 != null) {
-            String discarded$1298 = mj.a((byte) 74, var2);
+            String discarded$524 = mj.a((byte) 74, var2);
             break L29;
           } else {
             break L29;
           }
         }
         L30: {
-          int discarded$1299 = 0;
-          var2 = wg.a("mu_x_joined_your_game");
+          var2 = wg.a("mu_x_joined_your_game", 0);
           if (null == var2) {
             break L30;
           } else {
-            String discarded$1300 = mj.a((byte) 58, var2);
+            String discarded$525 = mj.a((byte) 58, var2);
             break L30;
           }
         }
         L31: {
-          int discarded$1301 = 0;
-          var2 = wg.a("mu_x_entered_other_game");
+          var2 = wg.a("mu_x_entered_other_game", 0);
           if (var2 == null) {
             break L31;
           } else {
-            String discarded$1302 = mj.a((byte) -2, var2);
+            String discarded$526 = mj.a((byte) -2, var2);
             break L31;
           }
         }
         L32: {
-          int discarded$1303 = 0;
-          var2 = wg.a("mu_x_left_lobby");
+          var2 = wg.a("mu_x_left_lobby", 0);
           if (var2 == null) {
             break L32;
           } else {
-            String discarded$1304 = mj.a((byte) 90, var2);
+            String discarded$527 = mj.a((byte) 90, var2);
             break L32;
           }
         }
         L33: {
-          int discarded$1305 = 0;
-          var2 = wg.a("mu_x_lost_con");
+          var2 = wg.a("mu_x_lost_con", 0);
           if (null != var2) {
-            String discarded$1306 = mj.a((byte) 2, var2);
+            String discarded$528 = mj.a((byte) 2, var2);
             break L33;
           } else {
             break L33;
           }
         }
         L34: {
-          int discarded$1307 = 0;
-          var2 = wg.a("mu_x_cannot_join_full");
+          var2 = wg.a("mu_x_cannot_join_full", 0);
           if (null != var2) {
-            String discarded$1308 = mj.a((byte) -107, var2);
+            String discarded$529 = mj.a((byte) -107, var2);
             break L34;
           } else {
             break L34;
           }
         }
         L35: {
-          int discarded$1309 = 0;
-          var2 = wg.a("mu_x_cannot_join_inprogress");
+          var2 = wg.a("mu_x_cannot_join_inprogress", 0);
           if (null != var2) {
-            String discarded$1310 = mj.a((byte) -103, var2);
+            String discarded$530 = mj.a((byte) -103, var2);
             break L35;
           } else {
             break L35;
           }
         }
         L36: {
-          int discarded$1311 = 0;
-          var2 = wg.a("mu_x_declined_invite");
+          var2 = wg.a("mu_x_declined_invite", 0);
           if (var2 == null) {
             break L36;
           } else {
-            String discarded$1312 = mj.a((byte) 66, var2);
+            String discarded$531 = mj.a((byte) 66, var2);
             break L36;
           }
         }
         L37: {
-          int discarded$1313 = 0;
-          var2 = wg.a("mu_x_withdrew_request");
+          var2 = wg.a("mu_x_withdrew_request", 0);
           if (null == var2) {
             break L37;
           } else {
-            String discarded$1314 = mj.a((byte) -21, var2);
+            String discarded$532 = mj.a((byte) -21, var2);
             break L37;
           }
         }
         L38: {
-          int discarded$1315 = 0;
-          var2 = wg.a("mu_x_removed");
+          var2 = wg.a("mu_x_removed", 0);
           if (var2 == null) {
             break L38;
           } else {
-            String discarded$1316 = mj.a((byte) -110, var2);
+            String discarded$533 = mj.a((byte) -110, var2);
             break L38;
           }
         }
         L39: {
-          int discarded$1317 = 0;
-          var2 = wg.a("mu_x_dropped_out");
+          var2 = wg.a("mu_x_dropped_out", 0);
           if (var2 != null) {
-            String discarded$1318 = mj.a((byte) -111, var2);
+            String discarded$534 = mj.a((byte) -111, var2);
             break L39;
           } else {
             break L39;
           }
         }
         L40: {
-          int discarded$1319 = 0;
-          var2 = wg.a("mu_entered_other_game");
+          var2 = wg.a("mu_entered_other_game", 0);
           if (null != var2) {
-            String discarded$1320 = mj.a((byte) -121, var2);
+            String discarded$535 = mj.a((byte) -121, var2);
             break L40;
           } else {
             break L40;
           }
         }
         L41: {
-          int discarded$1321 = 0;
-          var2 = wg.a("mu_game_is_full");
+          var2 = wg.a("mu_game_is_full", param0 ^ 7);
           if (var2 != null) {
-            String discarded$1322 = mj.a((byte) 20, var2);
+            String discarded$536 = mj.a((byte) 20, var2);
             break L41;
           } else {
             break L41;
           }
         }
         L42: {
-          int discarded$1323 = 0;
-          var2 = wg.a("mu_game_has_started");
+          var2 = wg.a("mu_game_has_started", param0 + -7);
           if (null == var2) {
             break L42;
           } else {
-            String discarded$1324 = mj.a((byte) 99, var2);
+            String discarded$537 = mj.a((byte) 99, var2);
             break L42;
           }
         }
         L43: {
-          int discarded$1325 = 0;
-          var2 = wg.a("mu_you_declined_invite");
+          var2 = wg.a("mu_you_declined_invite", 0);
           if (var2 == null) {
             break L43;
           } else {
-            String discarded$1326 = mj.a((byte) -118, var2);
+            String discarded$538 = mj.a((byte) -118, var2);
             break L43;
           }
         }
         L44: {
-          int discarded$1327 = 0;
-          var2 = wg.a("mu_invite_withdrawn");
+          var2 = wg.a("mu_invite_withdrawn", 0);
           if (var2 != null) {
-            String discarded$1328 = mj.a((byte) 111, var2);
+            String discarded$539 = mj.a((byte) 111, var2);
             break L44;
           } else {
             break L44;
           }
         }
         L45: {
-          int discarded$1329 = 0;
-          var2 = wg.a("mu_request_declined");
+          var2 = wg.a("mu_request_declined", 0);
           if (var2 == null) {
             break L45;
           } else {
-            String discarded$1330 = mj.a((byte) -105, var2);
+            String discarded$540 = mj.a((byte) -105, var2);
             break L45;
           }
         }
         L46: {
-          int discarded$1331 = 0;
-          var2 = wg.a("mu_request_withdrawn");
+          var2 = wg.a("mu_request_withdrawn", param0 ^ 7);
           if (var2 == null) {
             break L46;
           } else {
-            String discarded$1332 = mj.a((byte) -99, var2);
+            String discarded$541 = mj.a((byte) -99, var2);
             break L46;
           }
         }
         L47: {
-          int discarded$1333 = 0;
-          var2 = wg.a("mu_all_players_have_left");
+          var2 = wg.a("mu_all_players_have_left", 0);
           if (null == var2) {
             break L47;
           } else {
-            String discarded$1334 = mj.a((byte) -113, var2);
+            String discarded$542 = mj.a((byte) -113, var2);
             break L47;
           }
         }
         L48: {
-          int discarded$1335 = 0;
-          var2 = wg.a("mu_lobby_name");
+          var2 = wg.a("mu_lobby_name", param0 ^ 7);
           if (var2 == null) {
             break L48;
           } else {
-            String discarded$1336 = mj.a((byte) 53, var2);
+            String discarded$543 = mj.a((byte) 53, var2);
             break L48;
           }
         }
         L49: {
-          int discarded$1337 = 0;
-          var2 = wg.a("mu_lobby_rating");
+          var2 = wg.a("mu_lobby_rating", param0 + -7);
           if (var2 == null) {
             break L49;
           } else {
-            String discarded$1338 = mj.a((byte) 65, var2);
+            String discarded$544 = mj.a((byte) 65, var2);
             break L49;
           }
         }
         L50: {
-          int discarded$1339 = 0;
-          var2 = wg.a("mu_lobby_friend_add");
+          var2 = wg.a("mu_lobby_friend_add", param0 + -7);
           if (null == var2) {
             break L50;
           } else {
-            String discarded$1340 = mj.a((byte) -100, var2);
+            String discarded$545 = mj.a((byte) -100, var2);
             break L50;
           }
         }
         L51: {
-          int discarded$1341 = 0;
-          var2 = wg.a("mu_lobby_friend_rm");
+          var2 = wg.a("mu_lobby_friend_rm", 0);
           if (null == var2) {
             break L51;
           } else {
-            String discarded$1342 = mj.a((byte) 80, var2);
+            String discarded$546 = mj.a((byte) 80, var2);
             break L51;
           }
         }
         L52: {
-          int discarded$1343 = 0;
-          var2 = wg.a("mu_lobby_name_add");
+          var2 = wg.a("mu_lobby_name_add", 0);
           if (var2 != null) {
-            String discarded$1344 = mj.a((byte) -127, var2);
+            String discarded$547 = mj.a((byte) -127, var2);
             break L52;
           } else {
             break L52;
           }
         }
         L53: {
-          int discarded$1345 = 0;
-          var2 = wg.a("mu_lobby_name_rm");
+          var2 = wg.a("mu_lobby_name_rm", 0);
           if (var2 != null) {
-            String discarded$1346 = mj.a((byte) -116, var2);
+            String discarded$548 = mj.a((byte) -116, var2);
             break L53;
           } else {
             break L53;
           }
         }
         L54: {
-          int discarded$1347 = 0;
-          var2 = wg.a("mu_lobby_location");
+          var2 = wg.a("mu_lobby_location", param0 + -7);
           if (var2 != null) {
-            String discarded$1348 = mj.a((byte) -106, var2);
+            String discarded$549 = mj.a((byte) -106, var2);
             break L54;
           } else {
             break L54;
           }
         }
         L55: {
-          int discarded$1349 = 0;
-          var2 = wg.a("mu_gamelist_all_games");
+          var2 = wg.a("mu_gamelist_all_games", 0);
           if (var2 == null) {
             break L55;
           } else {
-            String discarded$1350 = mj.a((byte) -2, var2);
+            String discarded$550 = mj.a((byte) -2, var2);
             break L55;
           }
         }
         L56: {
-          int discarded$1351 = 0;
-          var2 = wg.a("mu_gamelist_status");
+          var2 = wg.a("mu_gamelist_status", 0);
           if (var2 != null) {
-            String discarded$1352 = mj.a((byte) -102, var2);
+            String discarded$551 = mj.a((byte) -102, var2);
             break L56;
           } else {
             break L56;
           }
         }
         L57: {
-          int discarded$1353 = 0;
-          var2 = wg.a("mu_gamelist_owner");
+          var2 = wg.a("mu_gamelist_owner", 0);
           if (null != var2) {
-            String discarded$1354 = mj.a((byte) -112, var2);
+            String discarded$552 = mj.a((byte) -112, var2);
             break L57;
           } else {
             break L57;
           }
         }
         L58: {
-          int discarded$1355 = 0;
-          var2 = wg.a("mu_gamelist_players");
+          var2 = wg.a("mu_gamelist_players", 0);
           if (var2 == null) {
             break L58;
           } else {
-            String discarded$1356 = mj.a((byte) -119, var2);
+            String discarded$553 = mj.a((byte) -119, var2);
             break L58;
           }
         }
         L59: {
-          int discarded$1357 = 0;
-          var2 = wg.a("mu_gamelist_avg_rating");
+          var2 = wg.a("mu_gamelist_avg_rating", 0);
           if (null != var2) {
-            String discarded$1358 = mj.a((byte) -123, var2);
+            String discarded$554 = mj.a((byte) -123, var2);
             break L59;
           } else {
             break L59;
           }
         }
         L60: {
-          int discarded$1359 = 0;
-          var2 = wg.a("mu_gamelist_options");
+          var2 = wg.a("mu_gamelist_options", 0);
           if (var2 == null) {
             break L60;
           } else {
-            String discarded$1360 = mj.a((byte) -107, var2);
+            String discarded$555 = mj.a((byte) -107, var2);
             break L60;
           }
         }
         L61: {
-          int discarded$1361 = 0;
-          var2 = wg.a("mu_gamelist_elapsed_time");
+          var2 = wg.a("mu_gamelist_elapsed_time", 0);
           if (null == var2) {
             break L61;
           } else {
-            String discarded$1362 = mj.a((byte) 45, var2);
+            String discarded$556 = mj.a((byte) 45, var2);
             break L61;
           }
         }
         L62: {
-          int discarded$1363 = 0;
-          var2 = wg.a("mu_play_rated");
+          var2 = wg.a("mu_play_rated", 0);
           if (var2 != null) {
-            String discarded$1364 = mj.a((byte) -97, var2);
+            String discarded$557 = mj.a((byte) -97, var2);
             break L62;
           } else {
             break L62;
           }
         }
         L63: {
-          int discarded$1365 = 0;
-          var2 = wg.a("mu_create_unrated");
+          var2 = wg.a("mu_create_unrated", 0);
           if (var2 != null) {
-            String discarded$1366 = mj.a((byte) 92, var2);
+            String discarded$558 = mj.a((byte) 92, var2);
             break L63;
           } else {
             break L63;
           }
         }
         L64: {
-          int discarded$1367 = 0;
-          var2 = wg.a("mu_options");
+          var2 = wg.a("mu_options", 0);
           if (null != var2) {
-            String discarded$1368 = mj.a((byte) 2, var2);
+            String discarded$559 = mj.a((byte) 2, var2);
             break L64;
           } else {
             break L64;
           }
         }
         L65: {
-          int discarded$1369 = 0;
-          var2 = wg.a("mu_options_whocanjoin");
+          var2 = wg.a("mu_options_whocanjoin", 0);
           if (var2 == null) {
             break L65;
           } else {
-            String discarded$1370 = mj.a((byte) -18, var2);
+            String discarded$560 = mj.a((byte) -18, var2);
             break L65;
           }
         }
         L66: {
-          int discarded$1371 = 0;
-          var2 = wg.a("mu_options_players");
+          var2 = wg.a("mu_options_players", param0 + -7);
           if (var2 != null) {
-            String discarded$1372 = mj.a((byte) 10, var2);
+            String discarded$561 = mj.a((byte) 10, var2);
             break L66;
           } else {
             break L66;
           }
         }
         L67: {
-          int discarded$1373 = 0;
-          var2 = wg.a("mu_options_dontmind");
+          var2 = wg.a("mu_options_dontmind", 0);
           if (null == var2) {
             break L67;
           } else {
-            String discarded$1374 = mj.a((byte) 59, var2);
+            String discarded$562 = mj.a((byte) 59, var2);
             break L67;
           }
         }
         L68: {
-          int discarded$1375 = 0;
-          var2 = wg.a("mu_options_allow_spectate");
+          var2 = wg.a("mu_options_allow_spectate", param0 + -7);
           if (null == var2) {
             break L68;
           } else {
-            String discarded$1376 = mj.a((byte) 37, var2);
+            String discarded$563 = mj.a((byte) 37, var2);
             break L68;
           }
         }
         L69: {
-          int discarded$1377 = 0;
-          var2 = wg.a("mu_options_ratedgametype");
+          var2 = wg.a("mu_options_ratedgametype", 0);
           if (var2 != null) {
-            String discarded$1378 = mj.a((byte) 13, var2);
+            String discarded$564 = mj.a((byte) 13, var2);
             break L69;
           } else {
             break L69;
           }
         }
         L70: {
-          int discarded$1379 = 0;
-          var2 = wg.a("yes");
+          var2 = wg.a("yes", 0);
           if (var2 == null) {
             break L70;
           } else {
-            String discarded$1380 = mj.a((byte) -101, var2);
+            String discarded$565 = mj.a((byte) -101, var2);
             break L70;
           }
         }
         L71: {
-          int discarded$1381 = 0;
-          var2 = wg.a("no");
+          var2 = wg.a("no", 0);
           if (null != var2) {
-            String discarded$1382 = mj.a((byte) -128, var2);
+            String discarded$566 = mj.a((byte) -128, var2);
             break L71;
           } else {
             break L71;
           }
         }
         L72: {
-          int discarded$1383 = 0;
-          var2 = wg.a("mu_invite_players");
+          var2 = wg.a("mu_invite_players", 0);
           if (var2 != null) {
-            String discarded$1384 = mj.a((byte) 9, var2);
+            String discarded$567 = mj.a((byte) 9, var2);
             break L72;
           } else {
             break L72;
           }
         }
         L73: {
-          int discarded$1385 = 0;
-          var2 = wg.a("close");
+          var2 = wg.a("close", param0 + -7);
           if (var2 == null) {
             break L73;
           } else {
-            String discarded$1386 = mj.a((byte) -127, var2);
+            String discarded$568 = mj.a((byte) -127, var2);
             break L73;
           }
         }
         L74: {
-          int discarded$1387 = 0;
-          var2 = wg.a("add_x_to_friends");
+          var2 = wg.a("add_x_to_friends", param0 ^ 7);
           if (null == var2) {
             break L74;
           } else {
-            String discarded$1388 = mj.a((byte) -109, var2);
+            String discarded$569 = mj.a((byte) -109, var2);
             break L74;
           }
         }
         L75: {
-          int discarded$1389 = 0;
-          var2 = wg.a("add_x_to_ignore");
+          var2 = wg.a("add_x_to_ignore", 0);
           if (var2 == null) {
             break L75;
           } else {
-            String discarded$1390 = mj.a((byte) -94, var2);
+            String discarded$570 = mj.a((byte) -94, var2);
             break L75;
           }
         }
         L76: {
-          int discarded$1391 = 0;
-          var2 = wg.a("rm_x_from_friends");
+          var2 = wg.a("rm_x_from_friends", 0);
           if (null == var2) {
             break L76;
           } else {
-            String discarded$1392 = mj.a((byte) 27, var2);
+            String discarded$571 = mj.a((byte) 27, var2);
             break L76;
           }
         }
         L77: {
-          int discarded$1393 = 0;
-          var2 = wg.a("rm_x_from_ignore");
+          var2 = wg.a("rm_x_from_ignore", param0 ^ 7);
           if (var2 == null) {
             break L77;
           } else {
-            String discarded$1394 = mj.a((byte) 74, var2);
+            String discarded$572 = mj.a((byte) 74, var2);
             break L77;
           }
         }
         L78: {
-          int discarded$1395 = 0;
-          var2 = wg.a("send_pm_to_x");
+          var2 = wg.a("send_pm_to_x", 0);
           if (null == var2) {
             break L78;
           } else {
-            String discarded$1396 = mj.a((byte) 82, var2);
+            String discarded$573 = mj.a((byte) 82, var2);
             break L78;
           }
         }
         L79: {
-          int discarded$1397 = 0;
-          var2 = wg.a("send_qc_to_x");
+          var2 = wg.a("send_qc_to_x", param0 + -7);
           if (var2 == null) {
             break L79;
           } else {
-            String discarded$1398 = mj.a((byte) 31, var2);
+            String discarded$574 = mj.a((byte) 31, var2);
             break L79;
           }
         }
         L80: {
-          int discarded$1399 = 0;
-          var2 = wg.a("send_pm");
+          var2 = wg.a("send_pm", 0);
           if (var2 != null) {
-            String discarded$1400 = mj.a((byte) -11, var2);
+            String discarded$575 = mj.a((byte) -11, var2);
             break L80;
           } else {
             break L80;
           }
         }
         L81: {
-          int discarded$1401 = 0;
-          var2 = wg.a("invite_accept_xs_game");
+          var2 = wg.a("invite_accept_xs_game", 0);
           if (null == var2) {
             break L81;
           } else {
-            String discarded$1402 = mj.a((byte) 55, var2);
+            String discarded$576 = mj.a((byte) 55, var2);
             break L81;
           }
         }
         L82: {
-          int discarded$1403 = 0;
-          var2 = wg.a("invite_decline_xs_game");
+          var2 = wg.a("invite_decline_xs_game", 0);
           if (null == var2) {
             break L82;
           } else {
-            String discarded$1404 = mj.a((byte) -110, var2);
+            String discarded$577 = mj.a((byte) -110, var2);
             break L82;
           }
         }
         L83: {
-          int discarded$1405 = 0;
-          var2 = wg.a("join_xs_game");
+          var2 = wg.a("join_xs_game", 0);
           if (null != var2) {
-            String discarded$1406 = mj.a((byte) 56, var2);
+            String discarded$578 = mj.a((byte) 56, var2);
             break L83;
           } else {
             break L83;
           }
         }
         L84: {
-          int discarded$1407 = 0;
-          var2 = wg.a("join_request_xs_game");
+          var2 = wg.a("join_request_xs_game", param0 + -7);
           if (var2 != null) {
-            String discarded$1408 = mj.a((byte) 51, var2);
+            String discarded$579 = mj.a((byte) 51, var2);
             break L84;
           } else {
             break L84;
           }
         }
         L85: {
-          int discarded$1409 = 0;
-          var2 = wg.a("join_withdraw_request_xs_game");
+          var2 = wg.a("join_withdraw_request_xs_game", 0);
           if (null == var2) {
             break L85;
           } else {
-            String discarded$1410 = mj.a((byte) 41, var2);
+            String discarded$580 = mj.a((byte) 41, var2);
             break L85;
           }
         }
         L86: {
-          int discarded$1411 = 0;
-          var2 = wg.a("mu_gameopt_kick_x_from_this_game");
+          var2 = wg.a("mu_gameopt_kick_x_from_this_game", 0);
           if (null != var2) {
-            String discarded$1412 = mj.a((byte) -102, var2);
+            String discarded$581 = mj.a((byte) -102, var2);
             break L86;
           } else {
             break L86;
           }
         }
         L87: {
-          int discarded$1413 = 0;
-          var2 = wg.a("mu_gameopt_withdraw_invite_to_x");
+          var2 = wg.a("mu_gameopt_withdraw_invite_to_x", 0);
           if (var2 != null) {
-            String discarded$1414 = mj.a((byte) -119, var2);
+            String discarded$582 = mj.a((byte) -119, var2);
             break L87;
           } else {
             break L87;
           }
         }
         L88: {
-          int discarded$1415 = 0;
-          var2 = wg.a("mu_gameopt_accept_x_into_game");
+          var2 = wg.a("mu_gameopt_accept_x_into_game", param0 ^ 7);
           if (var2 == null) {
             break L88;
           } else {
-            String discarded$1416 = mj.a((byte) 91, var2);
+            String discarded$583 = mj.a((byte) 91, var2);
             break L88;
           }
         }
         L89: {
-          int discarded$1417 = 0;
-          var2 = wg.a("mu_gameopt_reject_x_from_game");
+          var2 = wg.a("mu_gameopt_reject_x_from_game", 0);
           if (var2 != null) {
-            String discarded$1418 = mj.a((byte) -121, var2);
+            String discarded$584 = mj.a((byte) -121, var2);
             break L89;
           } else {
             break L89;
           }
         }
         L90: {
-          int discarded$1419 = 0;
-          var2 = wg.a("mu_gameopt_invite_x_to_game");
+          var2 = wg.a("mu_gameopt_invite_x_to_game", param0 + -7);
           if (var2 == null) {
             break L90;
           } else {
-            String discarded$1420 = mj.a((byte) 47, var2);
+            String discarded$585 = mj.a((byte) 47, var2);
             break L90;
           }
         }
         L91: {
-          int discarded$1421 = 0;
-          var2 = wg.a("report_x_for_abuse");
+          var2 = wg.a("report_x_for_abuse", 0);
           if (var2 == null) {
             break L91;
           } else {
-            String discarded$1422 = mj.a((byte) 79, var2);
+            String discarded$586 = mj.a((byte) 79, var2);
             break L91;
           }
         }
         L92: {
-          int discarded$1423 = 0;
-          var2 = wg.a("unable_to_send_message_password_a");
+          var2 = wg.a("unable_to_send_message_password_a", param0 + -7);
           if (null != var2) {
-            String discarded$1424 = mj.a((byte) -101, var2);
+            String discarded$587 = mj.a((byte) -101, var2);
             break L92;
           } else {
             break L92;
           }
         }
         L93: {
-          int discarded$1425 = 0;
-          var2 = wg.a("unable_to_send_message_password_b");
+          var2 = wg.a("unable_to_send_message_password_b", 0);
           if (null != var2) {
-            String discarded$1426 = mj.a((byte) 9, var2);
+            String discarded$588 = mj.a((byte) 9, var2);
             break L93;
           } else {
             break L93;
           }
         }
         L94: {
-          int discarded$1427 = 0;
-          var2 = wg.a("mu_chat_lobby_show_all");
+          var2 = wg.a("mu_chat_lobby_show_all", 0);
           if (var2 != null) {
-            String discarded$1428 = mj.a((byte) 52, var2);
+            String discarded$589 = mj.a((byte) 52, var2);
             break L94;
           } else {
             break L94;
           }
         }
         L95: {
-          int discarded$1429 = 0;
-          var2 = wg.a("mu_chat_lobby_friends_only");
+          var2 = wg.a("mu_chat_lobby_friends_only", 0);
           if (null == var2) {
             break L95;
           } else {
-            String discarded$1430 = mj.a((byte) -128, var2);
+            String discarded$590 = mj.a((byte) -128, var2);
             break L95;
           }
         }
         L96: {
-          int discarded$1431 = 0;
-          var2 = wg.a("mu_chat_lobby_friends");
+          var2 = wg.a("mu_chat_lobby_friends", 0);
           if (var2 == null) {
             break L96;
           } else {
-            String discarded$1432 = mj.a((byte) 18, var2);
+            String discarded$591 = mj.a((byte) 18, var2);
             break L96;
           }
         }
         L97: {
-          int discarded$1433 = 0;
-          var2 = wg.a("mu_chat_lobby_hide");
+          var2 = wg.a("mu_chat_lobby_hide", param0 ^ 7);
           if (null == var2) {
             break L97;
           } else {
-            String discarded$1434 = mj.a((byte) -104, var2);
+            String discarded$592 = mj.a((byte) -104, var2);
             break L97;
           }
         }
         L98: {
-          int discarded$1435 = 0;
-          var2 = wg.a("mu_chat_game_show_all");
+          var2 = wg.a("mu_chat_game_show_all", 0);
           if (var2 != null) {
-            String discarded$1436 = mj.a((byte) 0, var2);
+            String discarded$593 = mj.a((byte) 0, var2);
             break L98;
           } else {
             break L98;
           }
         }
         L99: {
-          int discarded$1437 = 0;
-          var2 = wg.a("mu_chat_game_friends_only");
+          var2 = wg.a("mu_chat_game_friends_only", param0 ^ 7);
           if (var2 != null) {
-            String discarded$1438 = mj.a((byte) -115, var2);
+            String discarded$594 = mj.a((byte) -115, var2);
             break L99;
           } else {
             break L99;
           }
         }
         L100: {
-          int discarded$1439 = 0;
-          var2 = wg.a("mu_chat_game_friends");
+          var2 = wg.a("mu_chat_game_friends", 0);
           if (null == var2) {
             break L100;
           } else {
-            String discarded$1440 = mj.a((byte) -101, var2);
+            String discarded$595 = mj.a((byte) -101, var2);
             break L100;
           }
         }
         L101: {
-          int discarded$1441 = 0;
-          var2 = wg.a("mu_chat_game_hide");
+          var2 = wg.a("mu_chat_game_hide", param0 ^ 7);
           if (var2 != null) {
-            String discarded$1442 = mj.a((byte) 70, var2);
+            String discarded$596 = mj.a((byte) 70, var2);
             break L101;
           } else {
             break L101;
           }
         }
         L102: {
-          int discarded$1443 = 0;
-          var2 = wg.a("mu_chat_pm_show_all");
+          var2 = wg.a("mu_chat_pm_show_all", param0 ^ 7);
           if (null == var2) {
             break L102;
           } else {
-            String discarded$1444 = mj.a((byte) 47, var2);
+            String discarded$597 = mj.a((byte) 47, var2);
             break L102;
           }
         }
         L103: {
-          int discarded$1445 = 0;
-          var2 = wg.a("mu_chat_pm_friends_only");
+          var2 = wg.a("mu_chat_pm_friends_only", 0);
           if (var2 == null) {
             break L103;
           } else {
-            String discarded$1446 = mj.a((byte) -24, var2);
+            String discarded$598 = mj.a((byte) -24, var2);
             break L103;
           }
         }
         L104: {
-          int discarded$1447 = 0;
-          var2 = wg.a("mu_chat_pm_friends");
+          var2 = wg.a("mu_chat_pm_friends", 0);
           if (var2 != null) {
-            String discarded$1448 = mj.a((byte) 78, var2);
+            String discarded$599 = mj.a((byte) 78, var2);
             break L104;
           } else {
             break L104;
           }
         }
         L105: {
-          int discarded$1449 = 0;
-          var2 = wg.a("mu_chat_invisible_and_silent_mode");
+          var2 = wg.a("mu_chat_invisible_and_silent_mode", param0 + -7);
           if (null != var2) {
-            String discarded$1450 = mj.a((byte) -115, var2);
+            String discarded$600 = mj.a((byte) -115, var2);
             break L105;
           } else {
             break L105;
           }
         }
         L106: {
-          int discarded$1451 = 0;
-          var2 = wg.a("you_have_been_removed_from_xs_game");
+          var2 = wg.a("you_have_been_removed_from_xs_game", param0 ^ 7);
           if (null == var2) {
             break L106;
           } else {
-            String discarded$1452 = mj.a((byte) -20, var2);
+            String discarded$601 = mj.a((byte) -20, var2);
             break L106;
           }
         }
         L107: {
-          int discarded$1453 = 0;
-          var2 = wg.a("your_rating_is_x");
+          var2 = wg.a("your_rating_is_x", 0);
           if (var2 != null) {
-            String discarded$1454 = mj.a((byte) -5, var2);
+            String discarded$602 = mj.a((byte) -5, var2);
             break L107;
           } else {
             break L107;
           }
         }
         L108: {
-          int discarded$1455 = 0;
-          var2 = wg.a("you_are_on_x_server");
+          var2 = wg.a("you_are_on_x_server", 0);
           if (var2 == null) {
             break L108;
           } else {
-            String discarded$1456 = mj.a((byte) -116, var2);
+            String discarded$603 = mj.a((byte) -116, var2);
             break L108;
           }
         }
         L109: {
-          int discarded$1457 = 0;
-          var2 = wg.a("rated_game");
+          var2 = wg.a("rated_game", 0);
           if (var2 == null) {
             break L109;
           } else {
-            String discarded$1458 = mj.a((byte) -128, var2);
+            String discarded$604 = mj.a((byte) -128, var2);
             break L109;
           }
         }
         L110: {
-          int discarded$1459 = 0;
-          var2 = wg.a("unrated_game");
+          var2 = wg.a("unrated_game", 0);
           if (null == var2) {
             break L110;
           } else {
-            String discarded$1460 = mj.a((byte) -126, var2);
+            String discarded$605 = mj.a((byte) -126, var2);
             break L110;
           }
         }
         L111: {
-          int discarded$1461 = 0;
-          var2 = wg.a("rated_game_tips");
+          var2 = wg.a("rated_game_tips", 0);
           if (null != var2) {
-            String discarded$1462 = mj.a((byte) 54, var2);
+            String discarded$606 = mj.a((byte) 54, var2);
             break L111;
           } else {
             break L111;
           }
         }
         L112: {
-          int discarded$1463 = 0;
-          var2 = wg.a("searching_for_opponent_singular");
+          var2 = wg.a("searching_for_opponent_singular", 0);
           if (var2 != null) {
-            String discarded$1464 = mj.a((byte) -121, var2);
+            String discarded$607 = mj.a((byte) -121, var2);
             break L112;
           } else {
             break L112;
           }
         }
         L113: {
-          int discarded$1465 = 0;
-          var2 = wg.a("searching_for_opponents_plural");
+          var2 = wg.a("searching_for_opponents_plural", 0);
           if (null == var2) {
             break L113;
           } else {
-            String discarded$1466 = mj.a((byte) -5, var2);
+            String discarded$608 = mj.a((byte) -5, var2);
             break L113;
           }
         }
         L114: {
-          int discarded$1467 = 0;
-          var2 = wg.a("find_opponent_singular");
+          var2 = wg.a("find_opponent_singular", 0);
           if (var2 != null) {
-            String discarded$1468 = mj.a((byte) -119, var2);
+            String discarded$609 = mj.a((byte) -119, var2);
             break L114;
           } else {
             break L114;
           }
         }
         L115: {
-          int discarded$1469 = 0;
-          var2 = wg.a("find_opponents_plural");
+          var2 = wg.a("find_opponents_plural", param0 ^ 7);
           if (var2 == null) {
             break L115;
           } else {
-            String discarded$1470 = mj.a((byte) -107, var2);
+            String discarded$610 = mj.a((byte) -107, var2);
             break L115;
           }
         }
         L116: {
-          int discarded$1471 = 0;
-          var2 = wg.a("rated_game_tips_setup_singular");
+          var2 = wg.a("rated_game_tips_setup_singular", param0 ^ 7);
           if (null == var2) {
             break L116;
           } else {
-            String discarded$1472 = mj.a((byte) -100, var2);
+            String discarded$611 = mj.a((byte) -100, var2);
             break L116;
           }
         }
         L117: {
-          int discarded$1473 = 0;
-          var2 = wg.a("rated_game_tips_setup_plural");
+          var2 = wg.a("rated_game_tips_setup_plural", 0);
           if (var2 == null) {
             break L117;
           } else {
-            String discarded$1474 = mj.a((byte) 8, var2);
+            String discarded$612 = mj.a((byte) 8, var2);
             break L117;
           }
         }
         L118: {
-          int discarded$1475 = 0;
-          var2 = wg.a("waiting_to_start_hint");
+          var2 = wg.a("waiting_to_start_hint", param0 ^ 7);
           if (var2 == null) {
             break L118;
           } else {
-            String discarded$1476 = mj.a((byte) 46, var2);
+            String discarded$613 = mj.a((byte) 46, var2);
             break L118;
           }
         }
         L119: {
-          int discarded$1477 = 0;
-          var2 = wg.a("your_game");
+          var2 = wg.a("your_game", param0 + -7);
           if (var2 == null) {
             break L119;
           } else {
-            String discarded$1478 = mj.a((byte) -98, var2);
+            String discarded$614 = mj.a((byte) -98, var2);
             break L119;
           }
         }
         L120: {
-          int discarded$1479 = 0;
-          var2 = wg.a("game_full");
+          var2 = wg.a("game_full", param0 + -7);
           if (null != var2) {
-            String discarded$1480 = mj.a((byte) -118, var2);
+            String discarded$615 = mj.a((byte) -118, var2);
             break L120;
           } else {
             break L120;
           }
         }
         L121: {
-          int discarded$1481 = 0;
-          var2 = wg.a("join_requests_one");
+          var2 = wg.a("join_requests_one", 0);
           if (var2 == null) {
             break L121;
           } else {
-            String discarded$1482 = mj.a((byte) 88, var2);
+            String discarded$616 = mj.a((byte) 88, var2);
             break L121;
           }
         }
         L122: {
-          int discarded$1483 = 0;
-          var2 = wg.a("join_requests_many");
+          var2 = wg.a("join_requests_many", 0);
           if (var2 != null) {
-            String discarded$1484 = mj.a((byte) 67, var2);
+            String discarded$617 = mj.a((byte) 67, var2);
             break L122;
           } else {
             break L122;
           }
         }
         L123: {
-          int discarded$1485 = 0;
-          var2 = wg.a("xs_game");
+          var2 = wg.a("xs_game", 0);
           if (var2 == null) {
             break L123;
           } else {
-            String discarded$1486 = mj.a((byte) 124, var2);
+            String discarded$618 = mj.a((byte) 124, var2);
             break L123;
           }
         }
         L124: {
-          int discarded$1487 = 0;
-          var2 = wg.a("waiting_for_x_to_start_game");
+          var2 = wg.a("waiting_for_x_to_start_game", 0);
           if (null == var2) {
             break L124;
           } else {
-            String discarded$1488 = mj.a((byte) 37, var2);
+            String discarded$619 = mj.a((byte) 37, var2);
             break L124;
           }
         }
         L125: {
-          int discarded$1489 = 0;
-          var2 = wg.a("game_options_changed");
+          var2 = wg.a("game_options_changed", 0);
           if (var2 != null) {
-            String discarded$1490 = mj.a((byte) 67, var2);
+            String discarded$620 = mj.a((byte) 67, var2);
             break L125;
           } else {
             break L125;
           }
         }
         L126: {
-          int discarded$1491 = 0;
-          var2 = wg.a("players_x_of_y");
+          var2 = wg.a("players_x_of_y", param0 + -7);
           if (null != var2) {
-            String discarded$1492 = mj.a((byte) -117, var2);
+            String discarded$621 = mj.a((byte) -117, var2);
             break L126;
           } else {
             break L126;
           }
         }
         L127: {
-          int discarded$1493 = 0;
-          var2 = wg.a("message_lobby");
+          var2 = wg.a("message_lobby", param0 + -7);
           if (null != var2) {
-            String discarded$1494 = mj.a((byte) 39, var2);
+            String discarded$622 = mj.a((byte) 39, var2);
             break L127;
           } else {
             break L127;
           }
         }
         L128: {
-          int discarded$1495 = 0;
-          var2 = wg.a("quickchat_lobby");
+          var2 = wg.a("quickchat_lobby", 0);
           if (null == var2) {
             break L128;
           } else {
-            String discarded$1496 = mj.a((byte) 21, var2);
+            String discarded$623 = mj.a((byte) 21, var2);
             break L128;
           }
         }
         L129: {
-          int discarded$1497 = 0;
-          var2 = wg.a("message_game");
+          var2 = wg.a("message_game", param0 + -7);
           if (null != var2) {
-            String discarded$1498 = mj.a((byte) -104, var2);
+            String discarded$624 = mj.a((byte) -104, var2);
             break L129;
           } else {
             break L129;
           }
         }
         L130: {
-          int discarded$1499 = 0;
-          var2 = wg.a("message_team");
+          var2 = wg.a("message_team", param0 ^ 7);
           if (null != var2) {
-            String discarded$1500 = mj.a((byte) -113, var2);
+            String discarded$625 = mj.a((byte) -113, var2);
             break L130;
           } else {
             break L130;
           }
         }
         L131: {
-          int discarded$1501 = 0;
-          var2 = wg.a("quickchat_game");
+          var2 = wg.a("quickchat_game", param0 ^ 7);
           if (null != var2) {
-            String discarded$1502 = mj.a((byte) -96, var2);
+            String discarded$626 = mj.a((byte) -96, var2);
             break L131;
           } else {
             break L131;
           }
         }
         L132: {
-          int discarded$1503 = 0;
-          var2 = wg.a("kick");
+          var2 = wg.a("kick", param0 ^ 7);
           if (null != var2) {
-            String discarded$1504 = mj.a((byte) 87, var2);
+            String discarded$627 = mj.a((byte) 87, var2);
             break L132;
           } else {
             break L132;
           }
         }
         L133: {
-          int discarded$1505 = 0;
-          var2 = wg.a("inviting_x");
+          var2 = wg.a("inviting_x", param0 ^ 7);
           if (null == var2) {
             break L133;
           } else {
-            String discarded$1506 = mj.a((byte) -126, var2);
+            String discarded$628 = mj.a((byte) -126, var2);
             break L133;
           }
         }
         L134: {
-          int discarded$1507 = 0;
-          var2 = wg.a("x_wants_to_join");
+          var2 = wg.a("x_wants_to_join", param0 ^ 7);
           if (null != var2) {
-            String discarded$1508 = mj.a((byte) 31, var2);
+            String discarded$629 = mj.a((byte) 31, var2);
             break L134;
           } else {
             break L134;
           }
         }
         L135: {
-          int discarded$1509 = 0;
-          var2 = wg.a("accept");
+          var2 = wg.a("accept", 0);
           if (var2 != null) {
-            String discarded$1510 = mj.a((byte) 12, var2);
+            String discarded$630 = mj.a((byte) 12, var2);
             break L135;
           } else {
             break L135;
           }
         }
         L136: {
-          int discarded$1511 = 0;
-          var2 = wg.a("reject");
+          var2 = wg.a("reject", param0 ^ 7);
           if (var2 != null) {
-            String discarded$1512 = mj.a((byte) -103, var2);
+            String discarded$631 = mj.a((byte) -103, var2);
             break L136;
           } else {
             break L136;
           }
         }
         L137: {
-          int discarded$1513 = 0;
-          var2 = wg.a("invite");
+          var2 = wg.a("invite", param0 + -7);
           if (null != var2) {
-            String discarded$1514 = mj.a((byte) -97, var2);
+            String discarded$632 = mj.a((byte) -97, var2);
             break L137;
           } else {
             break L137;
           }
         }
         L138: {
-          int discarded$1515 = 0;
-          var2 = wg.a("status_concluded");
+          var2 = wg.a("status_concluded", param0 + -7);
           if (var2 == null) {
             break L138;
           } else {
-            String discarded$1516 = mj.a((byte) -100, var2);
+            String discarded$633 = mj.a((byte) -100, var2);
             break L138;
           }
         }
         L139: {
-          int discarded$1517 = 0;
-          var2 = wg.a("status_spectate");
+          var2 = wg.a("status_spectate", param0 + -7);
           if (null != var2) {
-            String discarded$1518 = mj.a((byte) -97, var2);
+            String discarded$634 = mj.a((byte) -97, var2);
             break L139;
           } else {
             break L139;
           }
         }
         L140: {
-          int discarded$1519 = 0;
-          var2 = wg.a("status_playing");
+          var2 = wg.a("status_playing", 0);
           if (var2 == null) {
             break L140;
           } else {
-            String discarded$1520 = mj.a((byte) 28, var2);
+            String discarded$635 = mj.a((byte) 28, var2);
             break L140;
           }
         }
         L141: {
-          int discarded$1521 = 0;
-          var2 = wg.a("status_join");
+          var2 = wg.a("status_join", 0);
           if (var2 != null) {
-            String discarded$1522 = mj.a((byte) -13, var2);
+            String discarded$636 = mj.a((byte) -13, var2);
             break L141;
           } else {
             break L141;
           }
         }
         L142: {
-          int discarded$1523 = 0;
-          var2 = wg.a("status_private");
+          var2 = wg.a("status_private", 0);
           if (var2 != null) {
-            String discarded$1524 = mj.a((byte) 85, var2);
+            String discarded$637 = mj.a((byte) 85, var2);
             break L142;
           } else {
             break L142;
           }
         }
         L143: {
-          int discarded$1525 = 0;
-          var2 = wg.a("status_full");
+          var2 = wg.a("status_full", 0);
           if (var2 != null) {
-            String discarded$1526 = mj.a((byte) -20, var2);
+            String discarded$638 = mj.a((byte) -20, var2);
             break L143;
           } else {
             break L143;
           }
         }
         L144: {
-          int discarded$1527 = 0;
-          var2 = wg.a("players_in_game");
+          var2 = wg.a("players_in_game", param0 ^ param0);
           if (null != var2) {
-            String discarded$1528 = mj.a((byte) -13, var2);
+            String discarded$639 = mj.a((byte) -13, var2);
             break L144;
           } else {
             break L144;
           }
         }
         L145: {
-          int discarded$1529 = 0;
-          var2 = wg.a("you_are_invited_to_xs_game");
+          var2 = wg.a("you_are_invited_to_xs_game", 0);
           if (var2 != null) {
-            String discarded$1530 = mj.a((byte) 12, var2);
+            String discarded$640 = mj.a((byte) 12, var2);
             break L145;
           } else {
             break L145;
           }
         }
         L146: {
-          int discarded$1531 = 0;
-          var2 = wg.a("asking_to_join_xs_game");
+          var2 = wg.a("asking_to_join_xs_game", 0);
           if (null != var2) {
-            String discarded$1532 = mj.a((byte) -103, var2);
+            String discarded$641 = mj.a((byte) -103, var2);
             break L146;
           } else {
             break L146;
           }
         }
         L147: {
-          int discarded$1533 = 0;
-          var2 = wg.a("who_can_join");
+          var2 = wg.a("who_can_join", 0);
           if (var2 != null) {
-            String discarded$1534 = mj.a((byte) 25, var2);
+            String discarded$642 = mj.a((byte) 25, var2);
             break L147;
           } else {
             break L147;
           }
         }
         L148: {
-          int discarded$1535 = 0;
-          var2 = wg.a("you_can_join");
+          var2 = wg.a("you_can_join", param0 + -7);
           if (null != var2) {
-            String discarded$1536 = mj.a((byte) 93, var2);
+            String discarded$643 = mj.a((byte) 93, var2);
             break L148;
           } else {
             break L148;
           }
         }
         L149: {
-          int discarded$1537 = 0;
-          var2 = wg.a("you_can_ask_to_join");
+          var2 = wg.a("you_can_ask_to_join", param0 ^ 7);
           if (null != var2) {
-            String discarded$1538 = mj.a((byte) -104, var2);
+            String discarded$644 = mj.a((byte) -104, var2);
             break L149;
           } else {
             break L149;
           }
         }
         L150: {
-          int discarded$1539 = 0;
-          var2 = wg.a("you_cannot_join_in_progress");
+          var2 = wg.a("you_cannot_join_in_progress", 0);
           if (null == var2) {
             break L150;
           } else {
-            String discarded$1540 = mj.a((byte) -98, var2);
+            String discarded$645 = mj.a((byte) -98, var2);
             break L150;
           }
         }
         L151: {
-          int discarded$1541 = 0;
-          var2 = wg.a("you_can_spectate");
+          var2 = wg.a("you_can_spectate", 0);
           if (null == var2) {
             break L151;
           } else {
-            String discarded$1542 = mj.a((byte) 61, var2);
+            String discarded$646 = mj.a((byte) 61, var2);
             break L151;
           }
         }
         L152: {
-          int discarded$1543 = 0;
-          var2 = wg.a("you_can_not_spectate");
+          var2 = wg.a("you_can_not_spectate", 0);
           if (null != var2) {
-            String discarded$1544 = mj.a((byte) -119, var2);
+            String discarded$647 = mj.a((byte) -119, var2);
             break L152;
           } else {
             break L152;
           }
         }
         L153: {
-          int discarded$1545 = 0;
-          var2 = wg.a("spectate_xs_game");
+          var2 = wg.a("spectate_xs_game", 0);
           if (var2 == null) {
             break L153;
           } else {
-            String discarded$1546 = mj.a((byte) -126, var2);
+            String discarded$648 = mj.a((byte) -126, var2);
             break L153;
           }
         }
         L154: {
-          int discarded$1547 = 0;
-          var2 = wg.a("hide_players_in_xs_game");
+          var2 = wg.a("hide_players_in_xs_game", 0);
           if (var2 != null) {
-            String discarded$1548 = mj.a((byte) 105, var2);
+            String discarded$649 = mj.a((byte) 105, var2);
             break L154;
           } else {
             break L154;
           }
         }
         L155: {
-          int discarded$1549 = 0;
-          var2 = wg.a("show_players_in_xs_game");
+          var2 = wg.a("show_players_in_xs_game", 0);
           if (var2 == null) {
             break L155;
           } else {
-            String discarded$1550 = mj.a((byte) -6, var2);
+            String discarded$650 = mj.a((byte) -6, var2);
             break L155;
           }
         }
         L156: {
-          int discarded$1551 = 0;
-          var2 = wg.a("connecting_to_friend_server_twoline");
+          var2 = wg.a("connecting_to_friend_server_twoline", 0);
           if (null != var2) {
-            String discarded$1552 = mj.a((byte) -118, var2);
+            String discarded$651 = mj.a((byte) -118, var2);
             break L156;
           } else {
             break L156;
           }
         }
         L157: {
-          int discarded$1553 = 0;
-          var2 = wg.a("loading");
+          var2 = wg.a("loading", 0);
           if (var2 != null) {
             ha.field_e = mj.a((byte) -109, var2);
             break L157;
@@ -1601,838 +1443,754 @@ final class jd extends pj implements ke {
           }
         }
         L158: {
-          int discarded$1554 = 0;
-          var2 = wg.a("offline");
+          var2 = wg.a("offline", 0);
           if (null != var2) {
-            String discarded$1555 = mj.a((byte) -127, var2);
+            String discarded$652 = mj.a((byte) -127, var2);
             break L158;
           } else {
             break L158;
           }
         }
         L159: {
-          int discarded$1556 = 0;
-          var2 = wg.a("multiconst_invite_only");
+          var2 = wg.a("multiconst_invite_only", 0);
           if (null == var2) {
             break L159;
           } else {
-            String discarded$1557 = mj.a((byte) 90, var2);
+            String discarded$653 = mj.a((byte) 90, var2);
             break L159;
           }
         }
         L160: {
-          int discarded$1558 = 0;
-          var2 = wg.a("multiconst_clan");
+          var2 = wg.a("multiconst_clan", param0 + -7);
           if (null != var2) {
-            String discarded$1559 = mj.a((byte) 59, var2);
+            String discarded$654 = mj.a((byte) 59, var2);
             break L160;
           } else {
             break L160;
           }
         }
         L161: {
-          int discarded$1560 = 0;
-          var2 = wg.a("multiconst_friends");
+          var2 = wg.a("multiconst_friends", param0 + -7);
           if (null == var2) {
             break L161;
           } else {
-            String discarded$1561 = mj.a((byte) 23, var2);
+            String discarded$655 = mj.a((byte) 23, var2);
             break L161;
           }
         }
         L162: {
-          int discarded$1562 = 0;
-          var2 = wg.a("multiconst_similar_rating");
+          var2 = wg.a("multiconst_similar_rating", param0 ^ 7);
           if (null != var2) {
-            String discarded$1563 = mj.a((byte) 36, var2);
+            String discarded$656 = mj.a((byte) 36, var2);
             break L162;
           } else {
             break L162;
           }
         }
         L163: {
-          int discarded$1564 = 0;
-          var2 = wg.a("multiconst_open");
+          var2 = wg.a("multiconst_open", 0);
           if (null == var2) {
             break L163;
           } else {
-            String discarded$1565 = mj.a((byte) -127, var2);
+            String discarded$657 = mj.a((byte) -127, var2);
             break L163;
           }
         }
         L164: {
-          int discarded$1566 = 0;
-          var2 = wg.a("no_options_available");
+          var2 = wg.a("no_options_available", 0);
           if (var2 == null) {
             break L164;
           } else {
-            String discarded$1567 = mj.a((byte) -1, var2);
+            String discarded$658 = mj.a((byte) -1, var2);
             break L164;
           }
         }
         L165: {
-          int discarded$1568 = 0;
-          var2 = wg.a("reportabuse");
+          var2 = wg.a("reportabuse", 0);
           if (null != var2) {
-            String discarded$1569 = mj.a((byte) -126, var2);
+            String discarded$659 = mj.a((byte) -126, var2);
             break L165;
           } else {
             break L165;
           }
         }
         L166: {
-          int discarded$1570 = 0;
-          var2 = wg.a("presstabtochat");
+          var2 = wg.a("presstabtochat", param0 + -7);
           if (null != var2) {
-            String discarded$1571 = mj.a((byte) 26, var2);
+            String discarded$660 = mj.a((byte) 26, var2);
             break L166;
           } else {
             break L166;
           }
         }
         L167: {
-          int discarded$1572 = 0;
-          var2 = wg.a("pressf10toquickchat");
+          var2 = wg.a("pressf10toquickchat", param0 + -7);
           if (var2 == null) {
             break L167;
           } else {
-            String discarded$1573 = mj.a((byte) -105, var2);
+            String discarded$661 = mj.a((byte) -105, var2);
             break L167;
           }
         }
         L168: {
-          int discarded$1574 = 0;
-          var2 = wg.a("dob_chatdisabled");
+          var2 = wg.a("dob_chatdisabled", 0);
           if (null == var2) {
             break L168;
           } else {
-            String discarded$1575 = mj.a((byte) 109, var2);
+            String discarded$662 = mj.a((byte) 109, var2);
             break L168;
           }
         }
         L169: {
-          int discarded$1576 = 0;
-          var2 = wg.a("dob_enterforchat");
+          var2 = wg.a("dob_enterforchat", 0);
           if (null == var2) {
             break L169;
           } else {
-            String discarded$1577 = mj.a((byte) -108, var2);
+            String discarded$663 = mj.a((byte) -108, var2);
             break L169;
           }
         }
         L170: {
-          int discarded$1578 = 0;
-          var2 = wg.a("tab_hidechattemporarily");
+          var2 = wg.a("tab_hidechattemporarily", 0);
           if (null == var2) {
             break L170;
           } else {
-            String discarded$1579 = mj.a((byte) 99, var2);
+            String discarded$664 = mj.a((byte) 99, var2);
             break L170;
           }
         }
         L171: {
-          int discarded$1580 = 0;
-          var2 = wg.a("esc_cancelprivatemessage");
+          var2 = wg.a("esc_cancelprivatemessage", 0);
           if (null == var2) {
             break L171;
           } else {
-            String discarded$1581 = mj.a((byte) -95, var2);
+            String discarded$665 = mj.a((byte) -95, var2);
             break L171;
           }
         }
         L172: {
-          int discarded$1582 = 0;
-          var2 = wg.a("esc_cancelthisline");
+          var2 = wg.a("esc_cancelthisline", 0);
           if (null != var2) {
-            String discarded$1583 = mj.a((byte) -116, var2);
+            String discarded$666 = mj.a((byte) -116, var2);
             break L172;
           } else {
             break L172;
           }
         }
         L173: {
-          int discarded$1584 = 0;
-          var2 = wg.a("privatequickchat_from_x");
+          var2 = wg.a("privatequickchat_from_x", param0 + -7);
           if (null == var2) {
             break L173;
           } else {
-            String discarded$1585 = mj.a((byte) -118, var2);
+            String discarded$667 = mj.a((byte) -118, var2);
             break L173;
           }
         }
         L174: {
-          int discarded$1586 = 0;
-          var2 = wg.a("privatequickchat_to_x");
+          var2 = wg.a("privatequickchat_to_x", 0);
           if (var2 != null) {
-            String discarded$1587 = mj.a((byte) -127, var2);
+            String discarded$668 = mj.a((byte) -127, var2);
             break L174;
           } else {
             break L174;
           }
         }
         L175: {
-          int discarded$1588 = 0;
-          var2 = wg.a("privatechat_blankarea_explanation");
+          var2 = wg.a("privatechat_blankarea_explanation", 0);
           if (null == var2) {
             break L175;
           } else {
-            String discarded$1589 = mj.a((byte) -96, var2);
+            String discarded$669 = mj.a((byte) -96, var2);
             break L175;
           }
         }
         L176: {
-          int discarded$1590 = 0;
-          var2 = wg.a("publicchat_unavailable_ratedgame");
+          var2 = wg.a("publicchat_unavailable_ratedgame", param0 ^ 7);
           if (null != var2) {
-            String discarded$1591 = mj.a((byte) -94, var2);
+            String discarded$670 = mj.a((byte) -94, var2);
             break L176;
           } else {
             break L176;
           }
         }
         L177: {
-          int discarded$1592 = 0;
-          var2 = wg.a("privatechat_friend_offline");
+          var2 = wg.a("privatechat_friend_offline", 0);
           if (var2 != null) {
-            String discarded$1593 = mj.a((byte) -112, var2);
+            String discarded$671 = mj.a((byte) -112, var2);
             break L177;
           } else {
             break L177;
           }
         }
         L178: {
-          int discarded$1594 = 0;
-          var2 = wg.a("privatechat_friend_notlisted");
+          var2 = wg.a("privatechat_friend_notlisted", 0);
           if (null != var2) {
-            String discarded$1595 = mj.a((byte) -117, var2);
+            String discarded$672 = mj.a((byte) -117, var2);
             break L178;
           } else {
             break L178;
           }
         }
         L179: {
-          int discarded$1596 = 0;
-          var2 = wg.a("chatviewscrolledup");
+          var2 = wg.a("chatviewscrolledup", 0);
           if (var2 != null) {
-            String discarded$1597 = mj.a((byte) -106, var2);
+            String discarded$673 = mj.a((byte) -106, var2);
             break L179;
           } else {
             break L179;
           }
         }
         L180: {
-          int discarded$1598 = 0;
-          var2 = wg.a("thisisrunescapeclan");
+          var2 = wg.a("thisisrunescapeclan", 0);
           if (null == var2) {
             break L180;
           } else {
-            String discarded$1599 = mj.a((byte) 81, var2);
+            String discarded$674 = mj.a((byte) 81, var2);
             break L180;
           }
         }
         L181: {
-          int discarded$1600 = 0;
-          var2 = wg.a("thisisrunescapeclan_notowner");
+          var2 = wg.a("thisisrunescapeclan_notowner", 0);
           if (null == var2) {
             break L181;
           } else {
-            String discarded$1601 = mj.a((byte) -18, var2);
+            String discarded$675 = mj.a((byte) -18, var2);
             break L181;
           }
         }
         L182: {
-          int discarded$1602 = 0;
-          var2 = wg.a("runescapeclan");
+          var2 = wg.a("runescapeclan", 0);
           if (var2 != null) {
-            String discarded$1603 = mj.a((byte) -106, var2);
+            String discarded$676 = mj.a((byte) -106, var2);
             break L182;
           } else {
             break L182;
           }
         }
         L183: {
-          int discarded$1604 = 0;
-          var2 = wg.a("rated_membersonly");
+          var2 = wg.a("rated_membersonly", 0);
           if (null != var2) {
-            String discarded$1605 = mj.a((byte) -4, var2);
+            String discarded$677 = mj.a((byte) -4, var2);
             break L183;
           } else {
             break L183;
           }
         }
         L184: {
-          int discarded$1606 = 0;
-          var2 = wg.a("gameopt_membersonly");
+          var2 = wg.a("gameopt_membersonly", 0);
           if (var2 != null) {
-            String discarded$1607 = mj.a((byte) 24, var2);
+            String discarded$678 = mj.a((byte) 24, var2);
             break L184;
           } else {
             break L184;
           }
         }
         L185: {
-          int discarded$1608 = 0;
-          var2 = wg.a("gameopt_1moreratedgame");
+          var2 = wg.a("gameopt_1moreratedgame", param0 ^ 7);
           if (var2 == null) {
             break L185;
           } else {
-            String discarded$1609 = mj.a((byte) -116, var2);
+            String discarded$679 = mj.a((byte) -116, var2);
             break L185;
           }
         }
         L186: {
-          int discarded$1610 = 0;
-          var2 = wg.a("gameopt_moreratedgames");
+          var2 = wg.a("gameopt_moreratedgames", 0);
           if (var2 == null) {
             break L186;
           } else {
-            String discarded$1611 = mj.a((byte) 110, var2);
+            String discarded$680 = mj.a((byte) 110, var2);
             break L186;
           }
         }
         L187: {
-          int discarded$1612 = 0;
-          var2 = wg.a("gameopt_needrating");
+          var2 = wg.a("gameopt_needrating", param0 + -7);
           if (null != var2) {
-            String discarded$1613 = mj.a((byte) -111, var2);
+            String discarded$681 = mj.a((byte) -111, var2);
             break L187;
           } else {
             break L187;
           }
         }
         L188: {
-          int discarded$1614 = 0;
-          var2 = wg.a("gameopt_unratedonly");
+          var2 = wg.a("gameopt_unratedonly", param0 ^ 7);
           if (var2 != null) {
-            String discarded$1615 = mj.a((byte) 67, var2);
+            String discarded$682 = mj.a((byte) 67, var2);
             break L188;
           } else {
             break L188;
           }
         }
         L189: {
-          int discarded$1616 = 0;
-          var2 = wg.a("gameopt_notunlocked");
+          var2 = wg.a("gameopt_notunlocked", 0);
           if (null != var2) {
-            String discarded$1617 = mj.a((byte) 24, var2);
+            String discarded$683 = mj.a((byte) 24, var2);
             break L189;
           } else {
             break L189;
           }
         }
         L190: {
-          int discarded$1618 = 0;
-          var2 = wg.a("gameopt_cannotbecombined1");
+          var2 = wg.a("gameopt_cannotbecombined1", 0);
           if (null == var2) {
             break L190;
           } else {
-            String discarded$1619 = mj.a((byte) -110, var2);
+            String discarded$684 = mj.a((byte) -110, var2);
             break L190;
           }
         }
         L191: {
-          int discarded$1620 = 0;
-          var2 = wg.a("gameopt_cannotbecombined2");
+          var2 = wg.a("gameopt_cannotbecombined2", param0 + -7);
           if (null == var2) {
             break L191;
           } else {
-            String discarded$1621 = mj.a((byte) -116, var2);
+            String discarded$685 = mj.a((byte) -116, var2);
             break L191;
           }
         }
         L192: {
-          int discarded$1622 = 0;
-          var2 = wg.a("gameopt_playernotmember");
+          var2 = wg.a("gameopt_playernotmember", 0);
           if (var2 == null) {
             break L192;
           } else {
-            String discarded$1623 = mj.a((byte) 43, var2);
+            String discarded$686 = mj.a((byte) 43, var2);
             break L192;
           }
         }
         L193: {
-          int discarded$1624 = 0;
-          var2 = wg.a("gameopt_younotmember");
+          var2 = wg.a("gameopt_younotmember", 0);
           if (var2 == null) {
             break L193;
           } else {
-            String discarded$1625 = mj.a((byte) 32, var2);
+            String discarded$687 = mj.a((byte) 32, var2);
             break L193;
           }
         }
         L194: {
-          int discarded$1626 = 0;
-          var2 = wg.a("gameopt_playerneedsrating");
+          var2 = wg.a("gameopt_playerneedsrating", param0 + -7);
           if (var2 != null) {
-            String discarded$1627 = mj.a((byte) -12, var2);
+            String discarded$688 = mj.a((byte) -12, var2);
             break L194;
           } else {
             break L194;
           }
         }
         L195: {
-          int discarded$1628 = 0;
-          var2 = wg.a("gameopt_youneedrating");
+          var2 = wg.a("gameopt_youneedrating", 0);
           if (null == var2) {
             break L195;
           } else {
-            String discarded$1629 = mj.a((byte) -4, var2);
+            String discarded$689 = mj.a((byte) -4, var2);
             break L195;
           }
         }
         L196: {
-          int discarded$1630 = 0;
-          var2 = wg.a("gameopt_playerneedsratedgames");
+          var2 = wg.a("gameopt_playerneedsratedgames", 0);
           if (null == var2) {
             break L196;
           } else {
-            String discarded$1631 = mj.a((byte) -128, var2);
+            String discarded$690 = mj.a((byte) -128, var2);
             break L196;
           }
         }
         L197: {
-          int discarded$1632 = 0;
-          var2 = wg.a("gameopt_youneedratedgames");
+          var2 = wg.a("gameopt_youneedratedgames", 0);
           if (var2 == null) {
             break L197;
           } else {
-            String discarded$1633 = mj.a((byte) -108, var2);
+            String discarded$691 = mj.a((byte) -108, var2);
             break L197;
           }
         }
         L198: {
-          int discarded$1634 = 0;
-          var2 = wg.a("gameopt_playerneeds1ratedgame");
+          var2 = wg.a("gameopt_playerneeds1ratedgame", 0);
           if (null == var2) {
             break L198;
           } else {
-            String discarded$1635 = mj.a((byte) -102, var2);
+            String discarded$692 = mj.a((byte) -102, var2);
             break L198;
           }
         }
         L199: {
-          int discarded$1636 = 0;
-          var2 = wg.a("gameopt_youneed1ratedgame");
+          var2 = wg.a("gameopt_youneed1ratedgame", 0);
           if (null != var2) {
-            String discarded$1637 = mj.a((byte) -117, var2);
+            String discarded$693 = mj.a((byte) -117, var2);
             break L199;
           } else {
             break L199;
           }
         }
         L200: {
-          int discarded$1638 = 0;
-          var2 = wg.a("gameopt_playerhasntunlocked");
+          var2 = wg.a("gameopt_playerhasntunlocked", 0);
           if (null == var2) {
             break L200;
           } else {
-            String discarded$1639 = mj.a((byte) 127, var2);
+            String discarded$694 = mj.a((byte) 127, var2);
             break L200;
           }
         }
         L201: {
-          int discarded$1640 = 0;
-          var2 = wg.a("gameopt_youhaventunlocked");
+          var2 = wg.a("gameopt_youhaventunlocked", 0);
           if (null == var2) {
             break L201;
           } else {
-            String discarded$1641 = mj.a((byte) 73, var2);
+            String discarded$695 = mj.a((byte) 73, var2);
             break L201;
           }
         }
         L202: {
-          int discarded$1642 = 0;
-          var2 = wg.a("gameopt_trychanging1");
+          var2 = wg.a("gameopt_trychanging1", 0);
           if (null == var2) {
             break L202;
           } else {
-            String discarded$1643 = mj.a((byte) 47, var2);
+            String discarded$696 = mj.a((byte) 47, var2);
             break L202;
           }
         }
         L203: {
-          int discarded$1644 = 0;
-          var2 = wg.a("gameopt_trychanging2");
+          var2 = wg.a("gameopt_trychanging2", 0);
           if (var2 != null) {
-            String discarded$1645 = mj.a((byte) 15, var2);
+            String discarded$697 = mj.a((byte) 15, var2);
             break L203;
           } else {
             break L203;
           }
         }
         L204: {
-          int discarded$1646 = 0;
-          var2 = wg.a("gameopt_needchanging1");
+          var2 = wg.a("gameopt_needchanging1", param0 + -7);
           if (var2 == null) {
             break L204;
           } else {
-            String discarded$1647 = mj.a((byte) -110, var2);
+            String discarded$698 = mj.a((byte) -110, var2);
             break L204;
           }
         }
         L205: {
-          int discarded$1648 = 0;
-          var2 = wg.a("gameopt_needchanging2");
+          var2 = wg.a("gameopt_needchanging2", param0 + -7);
           if (null != var2) {
-            String discarded$1649 = mj.a((byte) 54, var2);
+            String discarded$699 = mj.a((byte) 54, var2);
             break L205;
           } else {
             break L205;
           }
         }
         L206: {
-          int discarded$1650 = 0;
-          var2 = wg.a("gameopt_mightchange");
+          var2 = wg.a("gameopt_mightchange", 0);
           if (var2 != null) {
-            String discarded$1651 = mj.a((byte) -118, var2);
+            String discarded$700 = mj.a((byte) -118, var2);
             break L206;
           } else {
             break L206;
           }
         }
         L207: {
-          int discarded$1652 = 0;
-          var2 = wg.a("gameopt_playersdontqualify");
+          var2 = wg.a("gameopt_playersdontqualify", param0 + -7);
           if (null != var2) {
-            String discarded$1653 = mj.a((byte) -98, var2);
+            String discarded$701 = mj.a((byte) -98, var2);
             break L207;
           } else {
             break L207;
           }
         }
         L208: {
-          int discarded$1654 = 0;
-          var2 = wg.a("gameopt_playersdontqualify_selectgametab");
+          var2 = wg.a("gameopt_playersdontqualify_selectgametab", param0 ^ 7);
           if (null != var2) {
-            String discarded$1655 = mj.a((byte) -121, var2);
+            String discarded$702 = mj.a((byte) -121, var2);
             break L208;
           } else {
             break L208;
           }
         }
         L209: {
-          int discarded$1656 = 0;
-          var2 = wg.a("gameopt_unselectedoptions");
+          var2 = wg.a("gameopt_unselectedoptions", 0);
           if (null != var2) {
-            String discarded$1657 = mj.a((byte) -95, var2);
+            String discarded$703 = mj.a((byte) -95, var2);
             break L209;
           } else {
             break L209;
           }
         }
         L210: {
-          int discarded$1658 = 0;
-          var2 = wg.a("gameopt_pleaseselectoption1");
+          var2 = wg.a("gameopt_pleaseselectoption1", 0);
           if (var2 != null) {
-            String discarded$1659 = mj.a((byte) -127, var2);
+            String discarded$704 = mj.a((byte) -127, var2);
             break L210;
           } else {
             break L210;
           }
         }
         L211: {
-          int discarded$1660 = 0;
-          var2 = wg.a("gameopt_pleaseselectoption2");
+          var2 = wg.a("gameopt_pleaseselectoption2", 0);
           if (null == var2) {
             break L211;
           } else {
-            String discarded$1661 = mj.a((byte) 32, var2);
+            String discarded$705 = mj.a((byte) 32, var2);
             break L211;
           }
         }
         L212: {
-          int discarded$1662 = 0;
-          var2 = wg.a("gameopt_badnumplayers");
+          var2 = wg.a("gameopt_badnumplayers", 0);
           if (var2 == null) {
             break L212;
           } else {
-            String discarded$1663 = mj.a((byte) 35, var2);
+            String discarded$706 = mj.a((byte) 35, var2);
             break L212;
           }
         }
         L213: {
-          int discarded$1664 = 0;
-          var2 = wg.a("gameopt_inviteplayers_or_trychanging1");
+          var2 = wg.a("gameopt_inviteplayers_or_trychanging1", 0);
           if (null == var2) {
             break L213;
           } else {
-            String discarded$1665 = mj.a((byte) 11, var2);
+            String discarded$707 = mj.a((byte) 11, var2);
             break L213;
           }
         }
         L214: {
-          int discarded$1666 = 0;
-          var2 = wg.a("gameopt_inviteplayers_or_trychanging2");
+          var2 = wg.a("gameopt_inviteplayers_or_trychanging2", 0);
           if (null != var2) {
-            String discarded$1667 = mj.a((byte) -24, var2);
+            String discarded$708 = mj.a((byte) -24, var2);
             break L214;
           } else {
             break L214;
           }
         }
         L215: {
-          int discarded$1668 = 0;
-          var2 = wg.a("gameopt_novalidcombos");
+          var2 = wg.a("gameopt_novalidcombos", param0 + -7);
           if (null != var2) {
-            String discarded$1669 = mj.a((byte) 15, var2);
+            String discarded$709 = mj.a((byte) 15, var2);
             break L215;
           } else {
             break L215;
           }
         }
         L216: {
-          int discarded$1670 = 0;
-          var2 = wg.a("gameopt_pleasetrychanging");
+          var2 = wg.a("gameopt_pleasetrychanging", 0);
           if (var2 != null) {
-            String discarded$1671 = mj.a((byte) -121, var2);
+            String discarded$710 = mj.a((byte) -121, var2);
             break L216;
           } else {
             break L216;
           }
         }
         L217: {
-          int discarded$1672 = 0;
-          var2 = wg.a("ra_title");
+          var2 = wg.a("ra_title", 0);
           if (var2 != null) {
-            String discarded$1673 = mj.a((byte) -94, var2);
+            String discarded$711 = mj.a((byte) -94, var2);
             break L217;
           } else {
             break L217;
           }
         }
         L218: {
-          int discarded$1674 = 0;
-          var2 = wg.a("ra_mutethisplayer");
+          var2 = wg.a("ra_mutethisplayer", 0);
           if (null != var2) {
-            String discarded$1675 = mj.a((byte) 66, var2);
+            String discarded$712 = mj.a((byte) 66, var2);
             break L218;
           } else {
             break L218;
           }
         }
         L219: {
-          int discarded$1676 = 0;
-          var2 = wg.a("ra_suggestmute");
+          var2 = wg.a("ra_suggestmute", 0);
           if (null != var2) {
-            String discarded$1677 = mj.a((byte) -96, var2);
+            String discarded$713 = mj.a((byte) -96, var2);
             break L219;
           } else {
             break L219;
           }
         }
         L220: {
-          int discarded$1678 = 0;
-          var2 = wg.a("ra_intro");
+          var2 = wg.a("ra_intro", 0);
           if (var2 != null) {
-            String discarded$1679 = mj.a((byte) 80, var2);
+            String discarded$714 = mj.a((byte) 80, var2);
             break L220;
           } else {
             break L220;
           }
         }
         L221: {
-          int discarded$1680 = 0;
-          var2 = wg.a("ra_intro_no_name");
+          var2 = wg.a("ra_intro_no_name", 0);
           if (var2 != null) {
-            String discarded$1681 = mj.a((byte) -112, var2);
+            String discarded$715 = mj.a((byte) -112, var2);
             break L221;
           } else {
             break L221;
           }
         }
         L222: {
-          int discarded$1682 = 0;
-          var2 = wg.a("ra_explanation");
+          var2 = wg.a("ra_explanation", param0 ^ 7);
           if (null == var2) {
             break L222;
           } else {
-            String discarded$1683 = mj.a((byte) -105, var2);
+            String discarded$716 = mj.a((byte) -105, var2);
             break L222;
           }
         }
         L223: {
-          int discarded$1684 = 0;
-          var2 = wg.a("rule_pillar_0");
+          var2 = wg.a("rule_pillar_0", 0);
           if (var2 == null) {
             break L223;
           } else {
-            String discarded$1685 = mj.a((byte) 8, var2);
+            String discarded$717 = mj.a((byte) 8, var2);
             break L223;
           }
         }
         L224: {
-          int discarded$1686 = 0;
-          var2 = wg.a("rule_0_0");
+          var2 = wg.a("rule_0_0", 0);
           if (null == var2) {
             break L224;
           } else {
-            String discarded$1687 = mj.a((byte) -116, var2);
+            String discarded$718 = mj.a((byte) -116, var2);
             break L224;
           }
         }
         L225: {
-          int discarded$1688 = 0;
-          var2 = wg.a("rule_0_1");
+          var2 = wg.a("rule_0_1", param0 + -7);
           if (var2 != null) {
-            String discarded$1689 = mj.a((byte) -117, var2);
+            String discarded$719 = mj.a((byte) -117, var2);
             break L225;
           } else {
             break L225;
           }
         }
         L226: {
-          int discarded$1690 = 0;
-          var2 = wg.a("rule_0_2");
+          var2 = wg.a("rule_0_2", 0);
           if (null != var2) {
-            String discarded$1691 = mj.a((byte) -107, var2);
+            String discarded$720 = mj.a((byte) -107, var2);
             break L226;
           } else {
             break L226;
           }
         }
         L227: {
-          int discarded$1692 = 0;
-          var2 = wg.a("rule_0_3");
+          var2 = wg.a("rule_0_3", param0 + -7);
           if (var2 == null) {
             break L227;
           } else {
-            String discarded$1693 = mj.a((byte) -9, var2);
+            String discarded$721 = mj.a((byte) -9, var2);
             break L227;
           }
         }
         L228: {
-          int discarded$1694 = 0;
-          var2 = wg.a("rule_0_4");
+          var2 = wg.a("rule_0_4", 0);
           if (null == var2) {
             break L228;
           } else {
-            String discarded$1695 = mj.a((byte) 76, var2);
+            String discarded$722 = mj.a((byte) 76, var2);
             break L228;
           }
         }
         L229: {
-          int discarded$1696 = 0;
-          var2 = wg.a("rule_0_5");
+          var2 = wg.a("rule_0_5", 0);
           if (null == var2) {
             break L229;
           } else {
-            String discarded$1697 = mj.a((byte) 106, var2);
+            String discarded$723 = mj.a((byte) 106, var2);
             break L229;
           }
         }
         L230: {
-          int discarded$1698 = 0;
-          var2 = wg.a("rule_pillar_1");
+          var2 = wg.a("rule_pillar_1", 0);
           if (var2 != null) {
-            String discarded$1699 = mj.a((byte) 82, var2);
+            String discarded$724 = mj.a((byte) 82, var2);
             break L230;
           } else {
             break L230;
           }
         }
         L231: {
-          int discarded$1700 = 0;
-          var2 = wg.a("rule_1_0");
+          var2 = wg.a("rule_1_0", param0 ^ 7);
           if (var2 == null) {
             break L231;
           } else {
-            String discarded$1701 = mj.a((byte) -101, var2);
+            String discarded$725 = mj.a((byte) -101, var2);
             break L231;
           }
         }
         L232: {
-          int discarded$1702 = 0;
-          var2 = wg.a("rule_1_1");
+          var2 = wg.a("rule_1_1", param0 ^ 7);
           if (null == var2) {
             break L232;
           } else {
-            String discarded$1703 = mj.a((byte) -8, var2);
+            String discarded$726 = mj.a((byte) -8, var2);
             break L232;
           }
         }
         L233: {
-          int discarded$1704 = 0;
-          var2 = wg.a("rule_1_2");
+          var2 = wg.a("rule_1_2", 0);
           if (null == var2) {
             break L233;
           } else {
-            String discarded$1705 = mj.a((byte) 34, var2);
+            String discarded$727 = mj.a((byte) 34, var2);
             break L233;
           }
         }
         L234: {
-          int discarded$1706 = 0;
-          var2 = wg.a("rule_1_3");
+          var2 = wg.a("rule_1_3", 0);
           if (null == var2) {
             break L234;
           } else {
-            String discarded$1707 = mj.a((byte) 11, var2);
+            String discarded$728 = mj.a((byte) 11, var2);
             break L234;
           }
         }
         L235: {
-          int discarded$1708 = 0;
-          var2 = wg.a("rule_1_4");
+          var2 = wg.a("rule_1_4", 0);
           if (var2 == null) {
             break L235;
           } else {
-            String discarded$1709 = mj.a((byte) -21, var2);
+            String discarded$729 = mj.a((byte) -21, var2);
             break L235;
           }
         }
         L236: {
-          int discarded$1710 = 0;
-          var2 = wg.a("rule_pillar_2");
+          var2 = wg.a("rule_pillar_2", 0);
           if (var2 != null) {
-            String discarded$1711 = mj.a((byte) -6, var2);
+            String discarded$730 = mj.a((byte) -6, var2);
             break L236;
           } else {
             break L236;
           }
         }
         L237: {
-          int discarded$1712 = 0;
-          var2 = wg.a("rule_2_0");
+          var2 = wg.a("rule_2_0", 0);
           if (null != var2) {
-            String discarded$1713 = mj.a((byte) -115, var2);
+            String discarded$731 = mj.a((byte) -115, var2);
             break L237;
           } else {
             break L237;
           }
         }
         L238: {
-          int discarded$1714 = 0;
-          var2 = wg.a("rule_2_1");
+          var2 = wg.a("rule_2_1", 0);
           if (var2 != null) {
-            String discarded$1715 = mj.a((byte) 30, var2);
+            String discarded$732 = mj.a((byte) 30, var2);
             break L238;
           } else {
             break L238;
           }
         }
         L239: {
-          int discarded$1716 = 0;
-          var2 = wg.a("rule_2_2");
+          var2 = wg.a("rule_2_2", 0);
           if (var2 != null) {
-            String discarded$1717 = mj.a((byte) -15, var2);
+            String discarded$733 = mj.a((byte) -15, var2);
             break L239;
           } else {
             break L239;
           }
         }
         L240: {
-          int discarded$1718 = 0;
-          var2 = wg.a("createafreeaccount");
+          var2 = wg.a("createafreeaccount", 0);
           if (null == var2) {
             break L240;
           } else {
-            String discarded$1719 = mj.a((byte) -3, var2);
+            String discarded$734 = mj.a((byte) -3, var2);
             break L240;
           }
         }
         L241: {
-          int discarded$1720 = 0;
-          var2 = wg.a("cancel");
+          var2 = wg.a("cancel", 0);
           if (var2 == null) {
             break L241;
           } else {
@@ -2441,38 +2199,34 @@ final class jd extends pj implements ke {
           }
         }
         L242: {
-          int discarded$1721 = 0;
-          var2 = wg.a("pleaselogintoplay");
+          var2 = wg.a("pleaselogintoplay", param0 ^ 7);
           if (var2 == null) {
             break L242;
           } else {
-            String discarded$1722 = mj.a((byte) 63, var2);
+            String discarded$735 = mj.a((byte) 63, var2);
             break L242;
           }
         }
         L243: {
-          int discarded$1723 = 0;
-          var2 = wg.a("pleaselogin");
+          var2 = wg.a("pleaselogin", 0);
           if (var2 == null) {
             break L243;
           } else {
-            String discarded$1724 = mj.a((byte) -124, var2);
+            String discarded$736 = mj.a((byte) -124, var2);
             break L243;
           }
         }
         L244: {
-          int discarded$1725 = 0;
-          var2 = wg.a("pleaselogin_member");
+          var2 = wg.a("pleaselogin_member", param0 + -7);
           if (null != var2) {
-            String discarded$1726 = mj.a((byte) -119, var2);
+            String discarded$737 = mj.a((byte) -119, var2);
             break L244;
           } else {
             break L244;
           }
         }
         L245: {
-          int discarded$1727 = 0;
-          var2 = wg.a("invaliduserorpass");
+          var2 = wg.a("invaliduserorpass", 0);
           if (null == var2) {
             break L245;
           } else {
@@ -2481,8 +2235,7 @@ final class jd extends pj implements ke {
           }
         }
         L246: {
-          int discarded$1728 = 0;
-          var2 = wg.a("pleasetryagain");
+          var2 = wg.a("pleasetryagain", 0);
           if (null == var2) {
             break L246;
           } else {
@@ -2491,18 +2244,16 @@ final class jd extends pj implements ke {
           }
         }
         L247: {
-          int discarded$1729 = 0;
-          var2 = wg.a("pleasereenterpass");
+          var2 = wg.a("pleasereenterpass", 0);
           if (null == var2) {
             break L247;
           } else {
-            String discarded$1730 = mj.a((byte) -108, var2);
+            String discarded$738 = mj.a((byte) -108, var2);
             break L247;
           }
         }
         L248: {
-          int discarded$1731 = 0;
-          var2 = wg.a("playfreeversion");
+          var2 = wg.a("playfreeversion", 0);
           if (var2 != null) {
             ge.field_g = mj.a((byte) -115, var2);
             break L248;
@@ -2511,8 +2262,7 @@ final class jd extends pj implements ke {
           }
         }
         L249: {
-          int discarded$1732 = 0;
-          var2 = wg.a("reloadgame");
+          var2 = wg.a("reloadgame", param0 ^ 7);
           if (var2 == null) {
             break L249;
           } else {
@@ -2521,8 +2271,7 @@ final class jd extends pj implements ke {
           }
         }
         L250: {
-          int discarded$1733 = 0;
-          var2 = wg.a("toserverlist");
+          var2 = wg.a("toserverlist", 0);
           if (null == var2) {
             break L250;
           } else {
@@ -2531,8 +2280,7 @@ final class jd extends pj implements ke {
           }
         }
         L251: {
-          int discarded$1734 = 0;
-          var2 = wg.a("tocustomersupport");
+          var2 = wg.a("tocustomersupport", param0 + -7);
           if (null == var2) {
             break L251;
           } else {
@@ -2541,8 +2289,7 @@ final class jd extends pj implements ke {
           }
         }
         L252: {
-          int discarded$1735 = 0;
-          var2 = wg.a("changedisplayname");
+          var2 = wg.a("changedisplayname", 0);
           if (var2 == null) {
             break L252;
           } else {
@@ -2551,18 +2298,16 @@ final class jd extends pj implements ke {
           }
         }
         L253: {
-          int discarded$1736 = 0;
-          var2 = wg.a("returntohomepage");
+          var2 = wg.a("returntohomepage", param0 ^ 7);
           if (null == var2) {
             break L253;
           } else {
-            String discarded$1737 = mj.a((byte) -124, var2);
+            String discarded$739 = mj.a((byte) -124, var2);
             break L253;
           }
         }
         L254: {
-          int discarded$1738 = 0;
-          var2 = wg.a("justplay");
+          var2 = wg.a("justplay", 0);
           if (null == var2) {
             break L254;
           } else {
@@ -2571,18 +2316,16 @@ final class jd extends pj implements ke {
           }
         }
         L255: {
-          int discarded$1739 = 0;
-          var2 = wg.a("justplay_excl");
+          var2 = wg.a("justplay_excl", 0);
           if (null == var2) {
             break L255;
           } else {
-            String discarded$1740 = mj.a((byte) -111, var2);
+            String discarded$740 = mj.a((byte) -111, var2);
             break L255;
           }
         }
         L256: {
-          int discarded$1741 = 0;
-          var2 = wg.a("login");
+          var2 = wg.a("login", 0);
           if (null == var2) {
             break L256;
           } else {
@@ -2591,8 +2334,7 @@ final class jd extends pj implements ke {
           }
         }
         L257: {
-          int discarded$1742 = 0;
-          var2 = wg.a("goback");
+          var2 = wg.a("goback", param0 + -7);
           if (var2 == null) {
             break L257;
           } else {
@@ -2601,38 +2343,34 @@ final class jd extends pj implements ke {
           }
         }
         L258: {
-          int discarded$1743 = 0;
-          var2 = wg.a("otheroptions");
+          var2 = wg.a("otheroptions", 0);
           if (null != var2) {
-            String discarded$1744 = mj.a((byte) -103, var2);
+            String discarded$741 = mj.a((byte) -103, var2);
             break L258;
           } else {
             break L258;
           }
         }
         L259: {
-          int discarded$1745 = 0;
-          var2 = wg.a("proceed");
+          var2 = wg.a("proceed", 0);
           if (var2 == null) {
             break L259;
           } else {
-            String discarded$1746 = mj.a((byte) -97, var2);
+            String discarded$742 = mj.a((byte) -97, var2);
             break L259;
           }
         }
         L260: {
-          int discarded$1747 = 0;
-          var2 = wg.a("connectingtoserver");
+          var2 = wg.a("connectingtoserver", 0);
           if (var2 != null) {
-            String discarded$1748 = mj.a((byte) 58, var2);
+            String discarded$743 = mj.a((byte) 58, var2);
             break L260;
           } else {
             break L260;
           }
         }
         L261: {
-          int discarded$1749 = 0;
-          var2 = wg.a("pleasewait");
+          var2 = wg.a("pleasewait", param0 + -7);
           if (var2 == null) {
             break L261;
           } else {
@@ -2641,8 +2379,7 @@ final class jd extends pj implements ke {
           }
         }
         L262: {
-          int discarded$1750 = 0;
-          var2 = wg.a("logging_in");
+          var2 = wg.a("logging_in", 0);
           if (var2 != null) {
             j.field_Y = mj.a((byte) 93, var2);
             break L262;
@@ -2651,48 +2388,43 @@ final class jd extends pj implements ke {
           }
         }
         L263: {
-          int discarded$1751 = 0;
-          var2 = wg.a("reconnect");
+          var2 = wg.a("reconnect", 0);
           if (var2 != null) {
-            String discarded$1752 = mj.a((byte) 29, var2);
+            String discarded$744 = mj.a((byte) 29, var2);
             break L263;
           } else {
             break L263;
           }
         }
         L264: {
-          int discarded$1753 = 0;
-          var2 = wg.a("backtoerror");
+          var2 = wg.a("backtoerror", param0 ^ 7);
           if (var2 != null) {
-            String discarded$1754 = mj.a((byte) -116, var2);
+            String discarded$745 = mj.a((byte) -116, var2);
             break L264;
           } else {
             break L264;
           }
         }
         L265: {
-          int discarded$1755 = 0;
-          var2 = wg.a("pleasecheckinternet");
+          var2 = wg.a("pleasecheckinternet", 0);
           if (null != var2) {
-            String discarded$1756 = mj.a((byte) 78, var2);
+            String discarded$746 = mj.a((byte) 78, var2);
             break L265;
           } else {
             break L265;
           }
         }
         L266: {
-          int discarded$1757 = 0;
-          var2 = wg.a("attemptingtoreconnect");
+          var2 = wg.a("attemptingtoreconnect", 0);
           if (var2 != null) {
-            String discarded$1758 = mj.a((byte) -122, var2);
+            String discarded$747 = mj.a((byte) -122, var2);
             break L266;
           } else {
             break L266;
           }
         }
         L267: {
-          int discarded$1759 = 0;
-          var2 = wg.a("connectionlost_reconnecting");
+          var2 = wg.a("connectionlost_reconnecting", param0 ^ 7);
           if (var2 != null) {
             re.field_c = mj.a((byte) -97, var2);
             break L267;
@@ -2701,8 +2433,7 @@ final class jd extends pj implements ke {
           }
         }
         L268: {
-          int discarded$1760 = 0;
-          var2 = wg.a("connectionlost_withreason");
+          var2 = wg.a("connectionlost_withreason", 0);
           if (null != var2) {
             dl.field_J = mj.a((byte) -110, var2);
             break L268;
@@ -2711,18 +2442,16 @@ final class jd extends pj implements ke {
           }
         }
         L269: {
-          int discarded$1761 = 0;
-          var2 = wg.a("passwordverificationrequired");
+          var2 = wg.a("passwordverificationrequired", param0 + -7);
           if (null == var2) {
             break L269;
           } else {
-            String discarded$1762 = mj.a((byte) -99, var2);
+            String discarded$748 = mj.a((byte) -99, var2);
             break L269;
           }
         }
         L270: {
-          int discarded$1763 = 0;
-          var2 = wg.a("invalidpass");
+          var2 = wg.a("invalidpass", 0);
           if (null != var2) {
             tf.field_ib = mj.a((byte) -14, var2);
             break L270;
@@ -2731,8 +2460,7 @@ final class jd extends pj implements ke {
           }
         }
         L271: {
-          int discarded$1764 = 0;
-          var2 = wg.a("retry");
+          var2 = wg.a("retry", param0 ^ 7);
           if (null == var2) {
             break L271;
           } else {
@@ -2741,8 +2469,7 @@ final class jd extends pj implements ke {
           }
         }
         L272: {
-          int discarded$1765 = 0;
-          var2 = wg.a("back");
+          var2 = wg.a("back", param0 + -7);
           if (var2 == null) {
             break L272;
           } else {
@@ -2751,18 +2478,16 @@ final class jd extends pj implements ke {
           }
         }
         L273: {
-          int discarded$1766 = 0;
-          var2 = wg.a("exitfullscreenmode");
+          var2 = wg.a("exitfullscreenmode", 0);
           if (null == var2) {
             break L273;
           } else {
-            String discarded$1767 = mj.a((byte) -118, var2);
+            String discarded$749 = mj.a((byte) -118, var2);
             break L273;
           }
         }
         L274: {
-          int discarded$1768 = 0;
-          var2 = wg.a("quittowebsite");
+          var2 = wg.a("quittowebsite", 0);
           if (null == var2) {
             break L274;
           } else {
@@ -2771,8 +2496,7 @@ final class jd extends pj implements ke {
           }
         }
         L275: {
-          int discarded$1769 = 0;
-          var2 = wg.a("connectionrestored");
+          var2 = wg.a("connectionrestored", 0);
           if (var2 == null) {
             break L275;
           } else {
@@ -2781,8 +2505,7 @@ final class jd extends pj implements ke {
           }
         }
         L276: {
-          int discarded$1770 = 0;
-          var2 = wg.a("warning_ifyouquit");
+          var2 = wg.a("warning_ifyouquit", 0);
           if (null != var2) {
             ka.field_l = mj.a((byte) 113, var2);
             break L276;
@@ -2791,218 +2514,196 @@ final class jd extends pj implements ke {
           }
         }
         L277: {
-          int discarded$1771 = 0;
-          var2 = wg.a("warning_ifyouquitorleavepage");
+          var2 = wg.a("warning_ifyouquitorleavepage", param0 ^ 7);
           if (var2 == null) {
             break L277;
           } else {
-            String discarded$1772 = mj.a((byte) 49, var2);
+            String discarded$750 = mj.a((byte) 49, var2);
             break L277;
           }
         }
         L278: {
-          int discarded$1773 = 0;
-          var2 = wg.a("resubscribe_withoutlosing_fs");
+          var2 = wg.a("resubscribe_withoutlosing_fs", param0 ^ 7);
           if (var2 == null) {
             break L278;
           } else {
-            String discarded$1774 = mj.a((byte) 100, var2);
+            String discarded$751 = mj.a((byte) 100, var2);
             break L278;
           }
         }
         L279: {
-          int discarded$1775 = 0;
-          var2 = wg.a("resubscribe_withoutlosing");
+          var2 = wg.a("resubscribe_withoutlosing", 0);
           if (var2 != null) {
-            String discarded$1776 = mj.a((byte) -120, var2);
+            String discarded$752 = mj.a((byte) -120, var2);
             break L279;
           } else {
             break L279;
           }
         }
         L280: {
-          int discarded$1777 = 0;
-          var2 = wg.a("customersupport_withoutlosing_fs");
+          var2 = wg.a("customersupport_withoutlosing_fs", param0 ^ 7);
           if (null == var2) {
             break L280;
           } else {
-            String discarded$1778 = mj.a((byte) 84, var2);
+            String discarded$753 = mj.a((byte) 84, var2);
             break L280;
           }
         }
         L281: {
-          int discarded$1779 = 0;
-          var2 = wg.a("customersupport_withoutlosing");
+          var2 = wg.a("customersupport_withoutlosing", 0);
           if (var2 == null) {
             break L281;
           } else {
-            String discarded$1780 = mj.a((byte) 5, var2);
+            String discarded$754 = mj.a((byte) 5, var2);
             break L281;
           }
         }
         L282: {
-          int discarded$1781 = 0;
-          var2 = wg.a("js5help_withoutlosing_fs");
+          var2 = wg.a("js5help_withoutlosing_fs", 0);
           if (null == var2) {
             break L282;
           } else {
-            String discarded$1782 = mj.a((byte) 14, var2);
+            String discarded$755 = mj.a((byte) 14, var2);
             break L282;
           }
         }
         L283: {
-          int discarded$1783 = 0;
-          var2 = wg.a("js5help_withoutlosing");
+          var2 = wg.a("js5help_withoutlosing", 0);
           if (var2 == null) {
             break L283;
           } else {
-            String discarded$1784 = mj.a((byte) 7, var2);
+            String discarded$756 = mj.a((byte) 7, var2);
             break L283;
           }
         }
         L284: {
-          int discarded$1785 = 0;
-          var2 = wg.a("checkinternet_withoutlosing_fs");
+          var2 = wg.a("checkinternet_withoutlosing_fs", param0 ^ 7);
           if (var2 != null) {
-            String discarded$1786 = mj.a((byte) -114, var2);
+            String discarded$757 = mj.a((byte) -114, var2);
             break L284;
           } else {
             break L284;
           }
         }
         L285: {
-          int discarded$1787 = 0;
-          var2 = wg.a("checkinternet_withoutlosing");
+          var2 = wg.a("checkinternet_withoutlosing", 0);
           if (null != var2) {
-            String discarded$1788 = mj.a((byte) -99, var2);
+            String discarded$758 = mj.a((byte) -99, var2);
             break L285;
           } else {
             break L285;
           }
         }
         L286: {
-          int discarded$1789 = 0;
-          var2 = wg.a("create_intro");
+          var2 = wg.a("create_intro", param0 ^ 7);
           if (var2 == null) {
             break L286;
           } else {
-            String discarded$1790 = mj.a((byte) 84, var2);
+            String discarded$759 = mj.a((byte) 84, var2);
             break L286;
           }
         }
         L287: {
-          int discarded$1791 = 0;
-          var2 = wg.a("create_sameaccounttip_unnamed");
+          var2 = wg.a("create_sameaccounttip_unnamed", 0);
           if (null == var2) {
             break L287;
           } else {
-            String discarded$1792 = mj.a((byte) -101, var2);
+            String discarded$760 = mj.a((byte) -101, var2);
             break L287;
           }
         }
         L288: {
-          int discarded$1793 = 0;
-          var2 = wg.a("dateofbirthprompt");
+          var2 = wg.a("dateofbirthprompt", param0 ^ 7);
           if (var2 != null) {
-            String discarded$1794 = mj.a((byte) 67, var2);
+            String discarded$761 = mj.a((byte) 67, var2);
             break L288;
           } else {
             break L288;
           }
         }
         L289: {
-          int discarded$1795 = 0;
-          var2 = wg.a("fetchingcountrylist");
+          var2 = wg.a("fetchingcountrylist", param0 + -7);
           if (var2 == null) {
             break L289;
           } else {
-            String discarded$1796 = mj.a((byte) -116, var2);
+            String discarded$762 = mj.a((byte) -116, var2);
             break L289;
           }
         }
         L290: {
-          int discarded$1797 = 0;
-          var2 = wg.a("countryprompt");
+          var2 = wg.a("countryprompt", param0 + -7);
           if (var2 == null) {
             break L290;
           } else {
-            String discarded$1798 = mj.a((byte) -109, var2);
+            String discarded$763 = mj.a((byte) -109, var2);
             break L290;
           }
         }
         L291: {
-          int discarded$1799 = 0;
-          var2 = wg.a("countrylisterror");
+          var2 = wg.a("countrylisterror", 0);
           if (var2 == null) {
             break L291;
           } else {
-            String discarded$1800 = mj.a((byte) -17, var2);
+            String discarded$764 = mj.a((byte) -17, var2);
             break L291;
           }
         }
         L292: {
-          int discarded$1801 = 0;
-          var2 = wg.a("theonlypersonalquestions");
+          var2 = wg.a("theonlypersonalquestions", 0);
           if (var2 == null) {
             break L292;
           } else {
-            String discarded$1802 = mj.a((byte) 25, var2);
+            String discarded$765 = mj.a((byte) 25, var2);
             break L292;
           }
         }
         L293: {
-          int discarded$1803 = 0;
-          var2 = wg.a("create_submittingdata");
+          var2 = wg.a("create_submittingdata", 0);
           if (var2 != null) {
-            String discarded$1804 = mj.a((byte) -100, var2);
+            String discarded$766 = mj.a((byte) -100, var2);
             break L293;
           } else {
             break L293;
           }
         }
         L294: {
-          int discarded$1805 = 0;
-          var2 = wg.a("check");
+          var2 = wg.a("check", 0);
           if (null == var2) {
             break L294;
           } else {
-            String discarded$1806 = mj.a((byte) 46, var2);
+            String discarded$767 = mj.a((byte) 46, var2);
             break L294;
           }
         }
         L295: {
-          int discarded$1807 = 0;
-          var2 = wg.a("create_pleasechooseausername");
+          var2 = wg.a("create_pleasechooseausername", 0);
           if (var2 == null) {
             break L295;
           } else {
-            String discarded$1808 = mj.a((byte) 114, var2);
+            String discarded$768 = mj.a((byte) 114, var2);
             break L295;
           }
         }
         L296: {
-          int discarded$1809 = 0;
-          var2 = wg.a("create_usernameblurb");
+          var2 = wg.a("create_usernameblurb", 0);
           if (var2 == null) {
             break L296;
           } else {
-            String discarded$1810 = mj.a((byte) -116, var2);
+            String discarded$769 = mj.a((byte) -116, var2);
             break L296;
           }
         }
         L297: {
-          int discarded$1811 = 0;
-          var2 = wg.a("checkingavailability");
+          var2 = wg.a("checkingavailability", 0);
           if (null == var2) {
             break L297;
           } else {
-            String discarded$1812 = mj.a((byte) -110, var2);
+            String discarded$770 = mj.a((byte) -110, var2);
             break L297;
           }
         }
         L298: {
-          int discarded$1813 = 0;
-          var2 = wg.a("checking");
+          var2 = wg.a("checking", param0 + -7);
           if (var2 != null) {
             ug.field_T = mj.a((byte) -128, var2);
             break L298;
@@ -3011,128 +2712,115 @@ final class jd extends pj implements ke {
           }
         }
         L299: {
-          int discarded$1814 = 0;
-          var2 = wg.a("create_namealreadytaken");
+          var2 = wg.a("create_namealreadytaken", 0);
           if (var2 != null) {
-            String discarded$1815 = mj.a((byte) -122, var2);
+            String discarded$771 = mj.a((byte) -122, var2);
             break L299;
           } else {
             break L299;
           }
         }
         L300: {
-          int discarded$1816 = 0;
-          var2 = wg.a("create_sameaccounttip_named");
+          var2 = wg.a("create_sameaccounttip_named", param0 ^ 7);
           if (null == var2) {
             break L300;
           } else {
-            String discarded$1817 = mj.a((byte) -9, var2);
+            String discarded$772 = mj.a((byte) -9, var2);
             break L300;
           }
         }
         L301: {
-          int discarded$1818 = 0;
-          var2 = wg.a("create_nosuggestions");
+          var2 = wg.a("create_nosuggestions", 0);
           if (var2 != null) {
-            String discarded$1819 = mj.a((byte) -111, var2);
+            String discarded$773 = mj.a((byte) -111, var2);
             break L301;
           } else {
             break L301;
           }
         }
         L302: {
-          int discarded$1820 = 0;
-          var2 = wg.a("create_alternativelygoback");
+          var2 = wg.a("create_alternativelygoback", 0);
           if (null != var2) {
-            String discarded$1821 = mj.a((byte) -4, var2);
+            String discarded$774 = mj.a((byte) -4, var2);
             break L302;
           } else {
             break L302;
           }
         }
         L303: {
-          int discarded$1822 = 0;
-          var2 = wg.a("create_available");
+          var2 = wg.a("create_available", 0);
           if (null == var2) {
             break L303;
           } else {
-            String discarded$1823 = mj.a((byte) -96, var2);
+            String discarded$775 = mj.a((byte) -96, var2);
             break L303;
           }
         }
         L304: {
-          int discarded$1824 = 0;
-          var2 = wg.a("create_willnowshowtermsandconditions");
+          var2 = wg.a("create_willnowshowtermsandconditions", param0 ^ 7);
           if (null == var2) {
             break L304;
           } else {
-            String discarded$1825 = mj.a((byte) -118, var2);
+            String discarded$776 = mj.a((byte) -118, var2);
             break L304;
           }
         }
         L305: {
-          int discarded$1826 = 0;
-          var2 = wg.a("fetchingterms");
+          var2 = wg.a("fetchingterms", 0);
           if (var2 == null) {
             break L305;
           } else {
-            String discarded$1827 = mj.a((byte) -121, var2);
+            String discarded$777 = mj.a((byte) -121, var2);
             break L305;
           }
         }
         L306: {
-          int discarded$1828 = 0;
-          var2 = wg.a("termserror");
+          var2 = wg.a("termserror", 0);
           if (var2 == null) {
             break L306;
           } else {
-            String discarded$1829 = mj.a((byte) -102, var2);
+            String discarded$778 = mj.a((byte) -102, var2);
             break L306;
           }
         }
         L307: {
-          int discarded$1830 = 0;
-          var2 = wg.a("create_iagree");
+          var2 = wg.a("create_iagree", 0);
           if (var2 != null) {
-            String discarded$1831 = mj.a((byte) 32, var2);
+            String discarded$779 = mj.a((byte) 32, var2);
             break L307;
           } else {
             break L307;
           }
         }
         L308: {
-          int discarded$1832 = 0;
-          var2 = wg.a("create_idisagree");
+          var2 = wg.a("create_idisagree", 0);
           if (var2 != null) {
-            String discarded$1833 = mj.a((byte) -107, var2);
+            String discarded$780 = mj.a((byte) -107, var2);
             break L308;
           } else {
             break L308;
           }
         }
         L309: {
-          int discarded$1834 = 0;
-          var2 = wg.a("create_pleasescrolldowntoaccept");
+          var2 = wg.a("create_pleasescrolldowntoaccept", param0 ^ 7);
           if (var2 != null) {
-            String discarded$1835 = mj.a((byte) -3, var2);
+            String discarded$781 = mj.a((byte) -3, var2);
             break L309;
           } else {
             break L309;
           }
         }
         L310: {
-          int discarded$1836 = 0;
-          var2 = wg.a("create_linkaddress");
+          var2 = wg.a("create_linkaddress", param0 + -7);
           if (var2 == null) {
             break L310;
           } else {
-            String discarded$1837 = mj.a((byte) -98, var2);
+            String discarded$782 = mj.a((byte) -98, var2);
             break L310;
           }
         }
         L311: {
-          int discarded$1838 = 0;
-          var2 = wg.a("openinpopupwindow");
+          var2 = wg.a("openinpopupwindow", 0);
           if (null != var2) {
             we.field_d = mj.a((byte) -113, var2);
             break L311;
@@ -3141,8 +2829,7 @@ final class jd extends pj implements ke {
           }
         }
         L312: {
-          int discarded$1839 = 0;
-          var2 = wg.a("create");
+          var2 = wg.a("create", param0 + -7);
           if (null == var2) {
             break L312;
           } else {
@@ -3151,38 +2838,34 @@ final class jd extends pj implements ke {
           }
         }
         L313: {
-          int discarded$1840 = 0;
-          var2 = wg.a("create_pleasechooseapassword");
+          var2 = wg.a("create_pleasechooseapassword", 0);
           if (var2 != null) {
-            String discarded$1841 = mj.a((byte) -108, var2);
+            String discarded$783 = mj.a((byte) -108, var2);
             break L313;
           } else {
             break L313;
           }
         }
         L314: {
-          int discarded$1842 = 0;
-          var2 = wg.a("create_passwordblurb");
+          var2 = wg.a("create_passwordblurb", 0);
           if (null == var2) {
             break L314;
           } else {
-            String discarded$1843 = mj.a((byte) -101, var2);
+            String discarded$784 = mj.a((byte) -101, var2);
             break L314;
           }
         }
         L315: {
-          int discarded$1844 = 0;
-          var2 = wg.a("create_nevergivepassword");
+          var2 = wg.a("create_nevergivepassword", 0);
           if (null != var2) {
-            String discarded$1845 = mj.a((byte) -6, var2);
+            String discarded$785 = mj.a((byte) -6, var2);
             break L315;
           } else {
             break L315;
           }
         }
         L316: {
-          int discarded$1846 = 0;
-          var2 = wg.a("creatingyouraccount");
+          var2 = wg.a("creatingyouraccount", 0);
           if (null == var2) {
             break L316;
           } else {
@@ -3191,68 +2874,61 @@ final class jd extends pj implements ke {
           }
         }
         L317: {
-          int discarded$1847 = 0;
-          var2 = wg.a("create_youmustaccept");
+          var2 = wg.a("create_youmustaccept", param0 ^ 7);
           if (null == var2) {
             break L317;
           } else {
-            String discarded$1848 = mj.a((byte) -115, var2);
+            String discarded$786 = mj.a((byte) -115, var2);
             break L317;
           }
         }
         L318: {
-          int discarded$1849 = 0;
-          var2 = wg.a("create_passwordsdifferent");
+          var2 = wg.a("create_passwordsdifferent", 0);
           if (null == var2) {
             break L318;
           } else {
-            String discarded$1850 = mj.a((byte) 5, var2);
+            String discarded$787 = mj.a((byte) 5, var2);
             break L318;
           }
         }
         L319: {
-          int discarded$1851 = 0;
-          var2 = wg.a("create_success");
+          var2 = wg.a("create_success", 0);
           if (null == var2) {
             break L319;
           } else {
-            String discarded$1852 = mj.a((byte) 73, var2);
+            String discarded$788 = mj.a((byte) 73, var2);
             break L319;
           }
         }
         L320: {
-          int discarded$1853 = 0;
-          var2 = wg.a("day");
+          var2 = wg.a("day", 0);
           if (null != var2) {
-            String discarded$1854 = mj.a((byte) 104, var2);
+            String discarded$789 = mj.a((byte) 104, var2);
             break L320;
           } else {
             break L320;
           }
         }
         L321: {
-          int discarded$1855 = 0;
-          var2 = wg.a("month");
+          var2 = wg.a("month", 0);
           if (var2 != null) {
-            String discarded$1856 = mj.a((byte) 2, var2);
+            String discarded$790 = mj.a((byte) 2, var2);
             break L321;
           } else {
             break L321;
           }
         }
         L322: {
-          int discarded$1857 = 0;
-          var2 = wg.a("year");
+          var2 = wg.a("year", 0);
           if (var2 == null) {
             break L322;
           } else {
-            String discarded$1858 = mj.a((byte) -124, var2);
+            String discarded$791 = mj.a((byte) -124, var2);
             break L322;
           }
         }
         L323: {
-          int discarded$1859 = 0;
-          var2 = wg.a("monthnames,0");
+          var2 = wg.a("monthnames,0", param0 + -7);
           if (null == var2) {
             break L323;
           } else {
@@ -3261,8 +2937,7 @@ final class jd extends pj implements ke {
           }
         }
         L324: {
-          int discarded$1860 = 0;
-          var2 = wg.a("monthnames,1");
+          var2 = wg.a("monthnames,1", 0);
           if (var2 != null) {
             a.field_a[1] = mj.a((byte) 14, var2);
             break L324;
@@ -3271,8 +2946,7 @@ final class jd extends pj implements ke {
           }
         }
         L325: {
-          int discarded$1861 = 0;
-          var2 = wg.a("monthnames,2");
+          var2 = wg.a("monthnames,2", param0 + -7);
           if (var2 != null) {
             a.field_a[2] = mj.a((byte) 31, var2);
             break L325;
@@ -3281,8 +2955,7 @@ final class jd extends pj implements ke {
           }
         }
         L326: {
-          int discarded$1862 = 0;
-          var2 = wg.a("monthnames,3");
+          var2 = wg.a("monthnames,3", param0 ^ 7);
           if (var2 != null) {
             a.field_a[3] = mj.a((byte) -113, var2);
             break L326;
@@ -3291,8 +2964,7 @@ final class jd extends pj implements ke {
           }
         }
         L327: {
-          int discarded$1863 = 0;
-          var2 = wg.a("monthnames,4");
+          var2 = wg.a("monthnames,4", 0);
           if (var2 != null) {
             a.field_a[4] = mj.a((byte) 62, var2);
             break L327;
@@ -3301,8 +2973,7 @@ final class jd extends pj implements ke {
           }
         }
         L328: {
-          int discarded$1864 = 0;
-          var2 = wg.a("monthnames,5");
+          var2 = wg.a("monthnames,5", 0);
           if (null == var2) {
             break L328;
           } else {
@@ -3311,8 +2982,7 @@ final class jd extends pj implements ke {
           }
         }
         L329: {
-          int discarded$1865 = 0;
-          var2 = wg.a("monthnames,6");
+          var2 = wg.a("monthnames,6", 0);
           if (null == var2) {
             break L329;
           } else {
@@ -3321,8 +2991,7 @@ final class jd extends pj implements ke {
           }
         }
         L330: {
-          int discarded$1866 = 0;
-          var2 = wg.a("monthnames,7");
+          var2 = wg.a("monthnames,7", 0);
           if (null == var2) {
             break L330;
           } else {
@@ -3331,8 +3000,7 @@ final class jd extends pj implements ke {
           }
         }
         L331: {
-          int discarded$1867 = 0;
-          var2 = wg.a("monthnames,8");
+          var2 = wg.a("monthnames,8", 0);
           if (null != var2) {
             a.field_a[8] = mj.a((byte) 60, var2);
             break L331;
@@ -3341,8 +3009,7 @@ final class jd extends pj implements ke {
           }
         }
         L332: {
-          int discarded$1868 = 0;
-          var2 = wg.a("monthnames,9");
+          var2 = wg.a("monthnames,9", 0);
           if (null == var2) {
             break L332;
           } else {
@@ -3351,8 +3018,7 @@ final class jd extends pj implements ke {
           }
         }
         L333: {
-          int discarded$1869 = 0;
-          var2 = wg.a("monthnames,10");
+          var2 = wg.a("monthnames,10", 0);
           if (var2 != null) {
             a.field_a[10] = mj.a((byte) -94, var2);
             break L333;
@@ -3361,8 +3027,7 @@ final class jd extends pj implements ke {
           }
         }
         L334: {
-          int discarded$1870 = 0;
-          var2 = wg.a("monthnames,11");
+          var2 = wg.a("monthnames,11", 0);
           if (var2 != null) {
             a.field_a[11] = mj.a((byte) -14, var2);
             break L334;
@@ -3371,8 +3036,7 @@ final class jd extends pj implements ke {
           }
         }
         L335: {
-          int discarded$1871 = 0;
-          var2 = wg.a("create_welcome");
+          var2 = wg.a("create_welcome", 0);
           if (var2 == null) {
             break L335;
           } else {
@@ -3381,18 +3045,16 @@ final class jd extends pj implements ke {
           }
         }
         L336: {
-          int discarded$1872 = 0;
-          var2 = wg.a("create_u13_welcome");
+          var2 = wg.a("create_u13_welcome", 0);
           if (var2 != null) {
-            String discarded$1873 = mj.a((byte) -97, var2);
+            String discarded$792 = mj.a((byte) -97, var2);
             break L336;
           } else {
             break L336;
           }
         }
         L337: {
-          int discarded$1874 = 0;
-          var2 = wg.a("create_createanaccount");
+          var2 = wg.a("create_createanaccount", 0);
           if (null == var2) {
             break L337;
           } else {
@@ -3401,18 +3063,16 @@ final class jd extends pj implements ke {
           }
         }
         L338: {
-          int discarded$1875 = 0;
-          var2 = wg.a("create_username");
+          var2 = wg.a("create_username", 0);
           if (null == var2) {
             break L338;
           } else {
-            String discarded$1876 = mj.a((byte) -103, var2);
+            String discarded$793 = mj.a((byte) -103, var2);
             break L338;
           }
         }
         L339: {
-          int discarded$1877 = 0;
-          var2 = wg.a("create_displayname");
+          var2 = wg.a("create_displayname", 0);
           if (null != var2) {
             hj.field_h = mj.a((byte) -102, var2);
             break L339;
@@ -3421,8 +3081,7 @@ final class jd extends pj implements ke {
           }
         }
         L340: {
-          int discarded$1878 = 0;
-          var2 = wg.a("create_password");
+          var2 = wg.a("create_password", 0);
           if (var2 == null) {
             break L340;
           } else {
@@ -3431,8 +3090,7 @@ final class jd extends pj implements ke {
           }
         }
         L341: {
-          int discarded$1879 = 0;
-          var2 = wg.a("create_password_confirm");
+          var2 = wg.a("create_password_confirm", 0);
           if (null != var2) {
             cf.field_a = mj.a((byte) -111, var2);
             break L341;
@@ -3441,8 +3099,7 @@ final class jd extends pj implements ke {
           }
         }
         L342: {
-          int discarded$1880 = 0;
-          var2 = wg.a("create_email");
+          var2 = wg.a("create_email", 0);
           if (var2 == null) {
             break L342;
           } else {
@@ -3451,8 +3108,7 @@ final class jd extends pj implements ke {
           }
         }
         L343: {
-          int discarded$1881 = 0;
-          var2 = wg.a("create_email_confirm");
+          var2 = wg.a("create_email_confirm", 0);
           if (null == var2) {
             break L343;
           } else {
@@ -3461,8 +3117,7 @@ final class jd extends pj implements ke {
           }
         }
         L344: {
-          int discarded$1882 = 0;
-          var2 = wg.a("create_age");
+          var2 = wg.a("create_age", 0);
           if (null == var2) {
             break L344;
           } else {
@@ -3471,68 +3126,61 @@ final class jd extends pj implements ke {
           }
         }
         L345: {
-          int discarded$1883 = 0;
-          var2 = wg.a("create_u13_email");
+          var2 = wg.a("create_u13_email", param0 + -7);
           if (var2 != null) {
-            String discarded$1884 = mj.a((byte) 122, var2);
+            String discarded$794 = mj.a((byte) 122, var2);
             break L345;
           } else {
             break L345;
           }
         }
         L346: {
-          int discarded$1885 = 0;
-          var2 = wg.a("create_u13_email_confirm");
+          var2 = wg.a("create_u13_email_confirm", 0);
           if (null == var2) {
             break L346;
           } else {
-            String discarded$1886 = mj.a((byte) -121, var2);
+            String discarded$795 = mj.a((byte) -121, var2);
             break L346;
           }
         }
         L347: {
-          int discarded$1887 = 0;
-          var2 = wg.a("create_dob");
+          var2 = wg.a("create_dob", 0);
           if (null != var2) {
-            String discarded$1888 = mj.a((byte) -99, var2);
+            String discarded$796 = mj.a((byte) -99, var2);
             break L347;
           } else {
             break L347;
           }
         }
         L348: {
-          int discarded$1889 = 0;
-          var2 = wg.a("create_country");
+          var2 = wg.a("create_country", 0);
           if (var2 == null) {
             break L348;
           } else {
-            String discarded$1890 = mj.a((byte) -117, var2);
+            String discarded$797 = mj.a((byte) -117, var2);
             break L348;
           }
         }
         L349: {
-          int discarded$1891 = 0;
-          var2 = wg.a("create_alternatives_header");
+          var2 = wg.a("create_alternatives_header", 0);
           if (null == var2) {
             break L349;
           } else {
-            String discarded$1892 = mj.a((byte) 63, var2);
+            String discarded$798 = mj.a((byte) 63, var2);
             break L349;
           }
         }
         L350: {
-          int discarded$1893 = 0;
-          var2 = wg.a("create_alternatives_select");
+          var2 = wg.a("create_alternatives_select", 0);
           if (null == var2) {
             break L350;
           } else {
-            String discarded$1894 = mj.a((byte) -6, var2);
+            String discarded$799 = mj.a((byte) -6, var2);
             break L350;
           }
         }
         L351: {
-          int discarded$1895 = 0;
-          var2 = wg.a("create_suggestions");
+          var2 = wg.a("create_suggestions", param0 + -7);
           if (null == var2) {
             break L351;
           } else {
@@ -3541,8 +3189,7 @@ final class jd extends pj implements ke {
           }
         }
         L352: {
-          int discarded$1896 = 0;
-          var2 = wg.a("create_more_suggestions");
+          var2 = wg.a("create_more_suggestions", 0);
           if (null != var2) {
             mh.field_e = mj.a((byte) -96, var2);
             break L352;
@@ -3551,8 +3198,7 @@ final class jd extends pj implements ke {
           }
         }
         L353: {
-          int discarded$1897 = 0;
-          var2 = wg.a("create_select_alternative");
+          var2 = wg.a("create_select_alternative", param0 ^ 7);
           if (var2 != null) {
             lk.field_l = mj.a((byte) 104, var2);
             break L353;
@@ -3561,8 +3207,7 @@ final class jd extends pj implements ke {
           }
         }
         L354: {
-          int discarded$1898 = 0;
-          var2 = wg.a("create_optin_news");
+          var2 = wg.a("create_optin_news", 0);
           if (null != var2) {
             li.field_d = mj.a((byte) -99, var2);
             break L354;
@@ -3571,8 +3216,7 @@ final class jd extends pj implements ke {
           }
         }
         L355: {
-          int discarded$1899 = 0;
-          var2 = wg.a("create_agreeterms");
+          var2 = wg.a("create_agreeterms", param0 ^ 7);
           if (var2 != null) {
             fk.field_p = mj.a((byte) 0, var2);
             break L355;
@@ -3581,8 +3225,7 @@ final class jd extends pj implements ke {
           }
         }
         L356: {
-          int discarded$1900 = 0;
-          var2 = wg.a("create_u13terms");
+          var2 = wg.a("create_u13terms", param0 + -7);
           if (null != var2) {
             wk.field_l = mj.a((byte) -23, var2);
             break L356;
@@ -3591,8 +3234,7 @@ final class jd extends pj implements ke {
           }
         }
         L357: {
-          int discarded$1901 = 0;
-          var2 = wg.a("login_username_email");
+          var2 = wg.a("login_username_email", 0);
           if (var2 == null) {
             break L357;
           } else {
@@ -3601,8 +3243,7 @@ final class jd extends pj implements ke {
           }
         }
         L358: {
-          int discarded$1902 = 0;
-          var2 = wg.a("login_username");
+          var2 = wg.a("login_username", param0 ^ 7);
           if (null == var2) {
             break L358;
           } else {
@@ -3611,8 +3252,7 @@ final class jd extends pj implements ke {
           }
         }
         L359: {
-          int discarded$1903 = 0;
-          var2 = wg.a("login_email");
+          var2 = wg.a("login_email", param0 ^ 7);
           if (null != var2) {
             rc.field_c = mj.a((byte) -22, var2);
             break L359;
@@ -3621,8 +3261,7 @@ final class jd extends pj implements ke {
           }
         }
         L360: {
-          int discarded$1904 = 0;
-          var2 = wg.a("login_username_tooltip");
+          var2 = wg.a("login_username_tooltip", param0 + -7);
           if (var2 == null) {
             break L360;
           } else {
@@ -3631,28 +3270,25 @@ final class jd extends pj implements ke {
           }
         }
         L361: {
-          int discarded$1905 = 0;
-          var2 = wg.a("login_password_tooltip");
+          var2 = wg.a("login_password_tooltip", param0 + -7);
           if (var2 != null) {
-            String discarded$1906 = mj.a((byte) -122, var2);
+            String discarded$800 = mj.a((byte) -122, var2);
             break L361;
           } else {
             break L361;
           }
         }
         L362: {
-          int discarded$1907 = 0;
-          var2 = wg.a("login_login_tooltip");
+          var2 = wg.a("login_login_tooltip", 0);
           if (null == var2) {
             break L362;
           } else {
-            String discarded$1908 = mj.a((byte) -100, var2);
+            String discarded$801 = mj.a((byte) -100, var2);
             break L362;
           }
         }
         L363: {
-          int discarded$1909 = 0;
-          var2 = wg.a("login_create_tooltip");
+          var2 = wg.a("login_create_tooltip", 0);
           if (var2 == null) {
             break L363;
           } else {
@@ -3661,8 +3297,7 @@ final class jd extends pj implements ke {
           }
         }
         L364: {
-          int discarded$1910 = 0;
-          var2 = wg.a("login_justplay_tooltip");
+          var2 = wg.a("login_justplay_tooltip", 0);
           if (var2 == null) {
             break L364;
           } else {
@@ -3671,18 +3306,16 @@ final class jd extends pj implements ke {
           }
         }
         L365: {
-          int discarded$1911 = 0;
-          var2 = wg.a("login_back_tooltip");
+          var2 = wg.a("login_back_tooltip", param0 ^ 7);
           if (null == var2) {
             break L365;
           } else {
-            String discarded$1912 = mj.a((byte) -120, var2);
+            String discarded$802 = mj.a((byte) -120, var2);
             break L365;
           }
         }
         L366: {
-          int discarded$1913 = 0;
-          var2 = wg.a("login_no_displayname");
+          var2 = wg.a("login_no_displayname", 0);
           if (null != var2) {
             ue.field_c = mj.a((byte) -5, var2);
             break L366;
@@ -3691,28 +3324,25 @@ final class jd extends pj implements ke {
           }
         }
         L367: {
-          int discarded$1914 = 0;
-          var2 = wg.a("create_username_tooltip");
+          var2 = wg.a("create_username_tooltip", 0);
           if (var2 == null) {
             break L367;
           } else {
-            String discarded$1915 = mj.a((byte) -99, var2);
+            String discarded$803 = mj.a((byte) -99, var2);
             break L367;
           }
         }
         L368: {
-          int discarded$1916 = 0;
-          var2 = wg.a("create_username_hint");
+          var2 = wg.a("create_username_hint", param0 ^ 7);
           if (var2 == null) {
             break L368;
           } else {
-            String discarded$1917 = mj.a((byte) -109, var2);
+            String discarded$804 = mj.a((byte) -109, var2);
             break L368;
           }
         }
         L369: {
-          int discarded$1918 = 0;
-          var2 = wg.a("create_displayname_tooltip");
+          var2 = wg.a("create_displayname_tooltip", 0);
           if (var2 != null) {
             bj.field_c = mj.a((byte) -97, var2);
             break L369;
@@ -3721,8 +3351,7 @@ final class jd extends pj implements ke {
           }
         }
         L370: {
-          int discarded$1919 = 0;
-          var2 = wg.a("create_displayname_hint");
+          var2 = wg.a("create_displayname_hint", 0);
           if (var2 != null) {
             vh.field_b = mj.a((byte) 62, var2);
             break L370;
@@ -3731,8 +3360,7 @@ final class jd extends pj implements ke {
           }
         }
         L371: {
-          int discarded$1920 = 0;
-          var2 = wg.a("create_password_tooltip");
+          var2 = wg.a("create_password_tooltip", 0);
           if (null == var2) {
             break L371;
           } else {
@@ -3741,8 +3369,7 @@ final class jd extends pj implements ke {
           }
         }
         L372: {
-          int discarded$1921 = 0;
-          var2 = wg.a("create_password_hint");
+          var2 = wg.a("create_password_hint", 0);
           if (var2 == null) {
             break L372;
           } else {
@@ -3751,8 +3378,7 @@ final class jd extends pj implements ke {
           }
         }
         L373: {
-          int discarded$1922 = 0;
-          var2 = wg.a("create_password_confirm_tooltip");
+          var2 = wg.a("create_password_confirm_tooltip", 0);
           if (null != var2) {
             ch.field_u = mj.a((byte) -128, var2);
             break L373;
@@ -3761,8 +3387,7 @@ final class jd extends pj implements ke {
           }
         }
         L374: {
-          int discarded$1923 = 0;
-          var2 = wg.a("create_email_tooltip");
+          var2 = wg.a("create_email_tooltip", 0);
           if (var2 == null) {
             break L374;
           } else {
@@ -3771,8 +3396,7 @@ final class jd extends pj implements ke {
           }
         }
         L375: {
-          int discarded$1924 = 0;
-          var2 = wg.a("create_email_confirm_tooltip");
+          var2 = wg.a("create_email_confirm_tooltip", 0);
           if (null == var2) {
             break L375;
           } else {
@@ -3781,8 +3405,7 @@ final class jd extends pj implements ke {
           }
         }
         L376: {
-          int discarded$1925 = 0;
-          var2 = wg.a("create_age_tooltip");
+          var2 = wg.a("create_age_tooltip", param0 ^ 7);
           if (var2 == null) {
             break L376;
           } else {
@@ -3791,8 +3414,7 @@ final class jd extends pj implements ke {
           }
         }
         L377: {
-          int discarded$1926 = 0;
-          var2 = wg.a("create_optin_news_tooltip");
+          var2 = wg.a("create_optin_news_tooltip", param0 ^ 7);
           if (null != var2) {
             dc.field_g = mj.a((byte) -123, var2);
             break L377;
@@ -3801,68 +3423,61 @@ final class jd extends pj implements ke {
           }
         }
         L378: {
-          int discarded$1927 = 0;
-          var2 = wg.a("create_u13_email_tooltip");
+          var2 = wg.a("create_u13_email_tooltip", 0);
           if (var2 != null) {
-            String discarded$1928 = mj.a((byte) 34, var2);
+            String discarded$805 = mj.a((byte) 34, var2);
             break L378;
           } else {
             break L378;
           }
         }
         L379: {
-          int discarded$1929 = 0;
-          var2 = wg.a("create_u13_email_confirm_tooltip");
+          var2 = wg.a("create_u13_email_confirm_tooltip", param0 + -7);
           if (null == var2) {
             break L379;
           } else {
-            String discarded$1930 = mj.a((byte) -96, var2);
+            String discarded$806 = mj.a((byte) -96, var2);
             break L379;
           }
         }
         L380: {
-          int discarded$1931 = 0;
-          var2 = wg.a("create_dob_tooltip");
+          var2 = wg.a("create_dob_tooltip", 0);
           if (null != var2) {
-            String discarded$1932 = mj.a((byte) 122, var2);
+            String discarded$807 = mj.a((byte) 122, var2);
             break L380;
           } else {
             break L380;
           }
         }
         L381: {
-          int discarded$1933 = 0;
-          var2 = wg.a("create_country_tooltip");
+          var2 = wg.a("create_country_tooltip", param0 ^ 7);
           if (null == var2) {
             break L381;
           } else {
-            String discarded$1934 = mj.a((byte) 10, var2);
+            String discarded$808 = mj.a((byte) 10, var2);
             break L381;
           }
         }
         L382: {
-          int discarded$1935 = 0;
-          var2 = wg.a("create_optin_tooltip");
+          var2 = wg.a("create_optin_tooltip", 0);
           if (var2 == null) {
             break L382;
           } else {
-            String discarded$1936 = mj.a((byte) -109, var2);
+            String discarded$809 = mj.a((byte) -109, var2);
             break L382;
           }
         }
         L383: {
-          int discarded$1937 = 0;
-          var2 = wg.a("create_continue");
+          var2 = wg.a("create_continue", 0);
           if (var2 == null) {
             break L383;
           } else {
-            String discarded$1938 = mj.a((byte) 72, var2);
+            String discarded$810 = mj.a((byte) 72, var2);
             break L383;
           }
         }
         L384: {
-          int discarded$1939 = 0;
-          var2 = wg.a("create_username_unavailable");
+          var2 = wg.a("create_username_unavailable", 0);
           if (var2 != null) {
             q.field_g = mj.a((byte) -110, var2);
             break L384;
@@ -3871,8 +3486,7 @@ final class jd extends pj implements ke {
           }
         }
         L385: {
-          int discarded$1940 = 0;
-          var2 = wg.a("create_username_available");
+          var2 = wg.a("create_username_available", param0 ^ 7);
           if (var2 != null) {
             fk.field_r = mj.a((byte) 113, var2);
             break L385;
@@ -3881,8 +3495,7 @@ final class jd extends pj implements ke {
           }
         }
         L386: {
-          int discarded$1941 = 0;
-          var2 = wg.a("create_alert_namelength");
+          var2 = wg.a("create_alert_namelength", 0);
           if (var2 != null) {
             p.field_b = mj.a((byte) 74, var2);
             break L386;
@@ -3891,8 +3504,7 @@ final class jd extends pj implements ke {
           }
         }
         L387: {
-          int discarded$1942 = 0;
-          var2 = wg.a("create_alert_namechars");
+          var2 = wg.a("create_alert_namechars", 0);
           if (var2 == null) {
             break L387;
           } else {
@@ -3901,8 +3513,7 @@ final class jd extends pj implements ke {
           }
         }
         L388: {
-          int discarded$1943 = 0;
-          var2 = wg.a("create_alert_nameleadingspace");
+          var2 = wg.a("create_alert_nameleadingspace", 0);
           if (null != var2) {
             vd.field_a = mj.a((byte) 90, var2);
             break L388;
@@ -3911,8 +3522,7 @@ final class jd extends pj implements ke {
           }
         }
         L389: {
-          int discarded$1944 = 0;
-          var2 = wg.a("create_alert_doublespace");
+          var2 = wg.a("create_alert_doublespace", 0);
           if (var2 == null) {
             break L389;
           } else {
@@ -3921,8 +3531,7 @@ final class jd extends pj implements ke {
           }
         }
         L390: {
-          int discarded$1945 = 0;
-          var2 = wg.a("create_alert_passchars");
+          var2 = wg.a("create_alert_passchars", 0);
           if (null != var2) {
             ad.field_p = mj.a((byte) -120, var2);
             break L390;
@@ -3931,8 +3540,7 @@ final class jd extends pj implements ke {
           }
         }
         L391: {
-          int discarded$1946 = 0;
-          var2 = wg.a("create_alert_passrepeated");
+          var2 = wg.a("create_alert_passrepeated", 0);
           if (var2 != null) {
             rg.field_b = mj.a((byte) 15, var2);
             break L391;
@@ -3941,8 +3549,7 @@ final class jd extends pj implements ke {
           }
         }
         L392: {
-          int discarded$1947 = 0;
-          var2 = wg.a("create_alert_passlength");
+          var2 = wg.a("create_alert_passlength", 0);
           if (var2 != null) {
             nj.field_e = mj.a((byte) -96, var2);
             break L392;
@@ -3951,8 +3558,7 @@ final class jd extends pj implements ke {
           }
         }
         L393: {
-          int discarded$1948 = 0;
-          var2 = wg.a("create_alert_passcontainsname");
+          var2 = wg.a("create_alert_passcontainsname", param0 ^ 7);
           if (var2 != null) {
             nj.field_c = mj.a((byte) 68, var2);
             break L393;
@@ -3961,8 +3567,7 @@ final class jd extends pj implements ke {
           }
         }
         L394: {
-          int discarded$1949 = 0;
-          var2 = wg.a("create_alert_passcontainsemail");
+          var2 = wg.a("create_alert_passcontainsemail", 0);
           if (null != var2) {
             rd.field_E = mj.a((byte) -127, var2);
             break L394;
@@ -3971,8 +3576,7 @@ final class jd extends pj implements ke {
           }
         }
         L395: {
-          int discarded$1950 = 0;
-          var2 = wg.a("create_alert_passcontainsname_partial");
+          var2 = wg.a("create_alert_passcontainsname_partial", 0);
           if (null == var2) {
             break L395;
           } else {
@@ -3981,18 +3585,16 @@ final class jd extends pj implements ke {
           }
         }
         L396: {
-          int discarded$1951 = 0;
-          var2 = wg.a("create_alert_checkname");
+          var2 = wg.a("create_alert_checkname", 0);
           if (null != var2) {
-            String discarded$1952 = mj.a((byte) 72, var2);
+            String discarded$811 = mj.a((byte) 72, var2);
             break L396;
           } else {
             break L396;
           }
         }
         L397: {
-          int discarded$1953 = 0;
-          var2 = wg.a("create_alert_invalidemail");
+          var2 = wg.a("create_alert_invalidemail", 0);
           if (null != var2) {
             lf.field_d = mj.a((byte) 115, var2);
             break L397;
@@ -4001,8 +3603,7 @@ final class jd extends pj implements ke {
           }
         }
         L398: {
-          int discarded$1954 = 0;
-          var2 = wg.a("create_alert_email_unavailable");
+          var2 = wg.a("create_alert_email_unavailable", param0 ^ 7);
           if (var2 != null) {
             ce.field_c = mj.a((byte) 78, var2);
             break L398;
@@ -4011,18 +3612,16 @@ final class jd extends pj implements ke {
           }
         }
         L399: {
-          int discarded$1955 = 0;
-          var2 = wg.a("create_alert_invaliddate");
+          var2 = wg.a("create_alert_invaliddate", 0);
           if (null == var2) {
             break L399;
           } else {
-            String discarded$1956 = mj.a((byte) -7, var2);
+            String discarded$812 = mj.a((byte) -7, var2);
             break L399;
           }
         }
         L400: {
-          int discarded$1957 = 0;
-          var2 = wg.a("create_alert_invalidage");
+          var2 = wg.a("create_alert_invalidage", 0);
           if (var2 == null) {
             break L400;
           } else {
@@ -4031,18 +3630,16 @@ final class jd extends pj implements ke {
           }
         }
         L401: {
-          int discarded$1958 = 0;
-          var2 = wg.a("create_alert_yearrange");
+          var2 = wg.a("create_alert_yearrange", 0);
           if (null == var2) {
             break L401;
           } else {
-            String discarded$1959 = mj.a((byte) 41, var2);
+            String discarded$813 = mj.a((byte) 41, var2);
             break L401;
           }
         }
         L402: {
-          int discarded$1960 = 0;
-          var2 = wg.a("create_alert_mismatch");
+          var2 = wg.a("create_alert_mismatch", 0);
           if (var2 == null) {
             break L402;
           } else {
@@ -4051,8 +3648,7 @@ final class jd extends pj implements ke {
           }
         }
         L403: {
-          int discarded$1961 = 0;
-          var2 = wg.a("create_passwordvalid");
+          var2 = wg.a("create_passwordvalid", 0);
           if (null != var2) {
             ae.field_jb = mj.a((byte) 32, var2);
             break L403;
@@ -4061,8 +3657,7 @@ final class jd extends pj implements ke {
           }
         }
         L404: {
-          int discarded$1962 = 0;
-          var2 = wg.a("create_emailvalid");
+          var2 = wg.a("create_emailvalid", 0);
           if (null != var2) {
             fl.field_e = mj.a((byte) -121, var2);
             break L404;
@@ -4071,8 +3666,7 @@ final class jd extends pj implements ke {
           }
         }
         L405: {
-          int discarded$1963 = 0;
-          var2 = wg.a("create_account_success");
+          var2 = wg.a("create_account_success", 0);
           if (var2 == null) {
             break L405;
           } else {
@@ -4081,238 +3675,214 @@ final class jd extends pj implements ke {
           }
         }
         L406: {
-          int discarded$1964 = 0;
-          var2 = wg.a("invalid_name");
+          var2 = wg.a("invalid_name", 0);
           if (null == var2) {
             break L406;
           } else {
-            String discarded$1965 = mj.a((byte) 57, var2);
+            String discarded$814 = mj.a((byte) 57, var2);
             break L406;
           }
         }
         L407: {
-          int discarded$1966 = 0;
-          var2 = wg.a("cannot_add_yourself");
+          var2 = wg.a("cannot_add_yourself", 0);
           if (null != var2) {
-            String discarded$1967 = mj.a((byte) 125, var2);
+            String discarded$815 = mj.a((byte) 125, var2);
             break L407;
           } else {
             break L407;
           }
         }
         L408: {
-          int discarded$1968 = 0;
-          var2 = wg.a("unable_to_add_friend");
+          var2 = wg.a("unable_to_add_friend", 0);
           if (var2 == null) {
             break L408;
           } else {
-            String discarded$1969 = mj.a((byte) -118, var2);
+            String discarded$816 = mj.a((byte) -118, var2);
             break L408;
           }
         }
         L409: {
-          int discarded$1970 = 0;
-          var2 = wg.a("unable_to_add_ignore");
+          var2 = wg.a("unable_to_add_ignore", 0);
           if (null == var2) {
             break L409;
           } else {
-            String discarded$1971 = mj.a((byte) 110, var2);
+            String discarded$817 = mj.a((byte) 110, var2);
             break L409;
           }
         }
         L410: {
-          int discarded$1972 = 0;
-          var2 = wg.a("unable_to_delete_friend");
+          var2 = wg.a("unable_to_delete_friend", param0 + -7);
           if (var2 == null) {
             break L410;
           } else {
-            String discarded$1973 = mj.a((byte) 118, var2);
+            String discarded$818 = mj.a((byte) 118, var2);
             break L410;
           }
         }
         L411: {
-          int discarded$1974 = 0;
-          var2 = wg.a("unable_to_delete_ignore");
+          var2 = wg.a("unable_to_delete_ignore", 0);
           if (var2 == null) {
             break L411;
           } else {
-            String discarded$1975 = mj.a((byte) -98, var2);
+            String discarded$819 = mj.a((byte) -98, var2);
             break L411;
           }
         }
         L412: {
-          int discarded$1976 = 0;
-          var2 = wg.a("friendlistfull");
+          var2 = wg.a("friendlistfull", 0);
           if (null == var2) {
             break L412;
           } else {
-            String discarded$1977 = mj.a((byte) 104, var2);
+            String discarded$820 = mj.a((byte) 104, var2);
             break L412;
           }
         }
         L413: {
-          int discarded$1978 = 0;
-          var2 = wg.a("friendlistdupe");
+          var2 = wg.a("friendlistdupe", 0);
           if (var2 == null) {
             break L413;
           } else {
-            String discarded$1979 = mj.a((byte) 110, var2);
+            String discarded$821 = mj.a((byte) 110, var2);
             break L413;
           }
         }
         L414: {
-          int discarded$1980 = 0;
-          var2 = wg.a("friendnotfound");
+          var2 = wg.a("friendnotfound", param0 ^ 7);
           if (var2 != null) {
-            String discarded$1981 = mj.a((byte) -117, var2);
+            String discarded$822 = mj.a((byte) -117, var2);
             break L414;
           } else {
             break L414;
           }
         }
         L415: {
-          int discarded$1982 = 0;
-          var2 = wg.a("ignorelistfull");
+          var2 = wg.a("ignorelistfull", 0);
           if (null == var2) {
             break L415;
           } else {
-            String discarded$1983 = mj.a((byte) -127, var2);
+            String discarded$823 = mj.a((byte) -127, var2);
             break L415;
           }
         }
         L416: {
-          int discarded$1984 = 0;
-          var2 = wg.a("ignorelistdupe");
+          var2 = wg.a("ignorelistdupe", 0);
           if (var2 != null) {
-            String discarded$1985 = mj.a((byte) -13, var2);
+            String discarded$824 = mj.a((byte) -13, var2);
             break L416;
           } else {
             break L416;
           }
         }
         L417: {
-          int discarded$1986 = 0;
-          var2 = wg.a("ignorenotfound");
+          var2 = wg.a("ignorenotfound", 0);
           if (var2 == null) {
             break L417;
           } else {
-            String discarded$1987 = mj.a((byte) -14, var2);
+            String discarded$825 = mj.a((byte) -14, var2);
             break L417;
           }
         }
         L418: {
-          int discarded$1988 = 0;
-          var2 = wg.a("removeignorefirst");
+          var2 = wg.a("removeignorefirst", 0);
           if (null == var2) {
             break L418;
           } else {
-            String discarded$1989 = mj.a((byte) -22, var2);
+            String discarded$826 = mj.a((byte) -22, var2);
             break L418;
           }
         }
         L419: {
-          int discarded$1990 = 0;
-          var2 = wg.a("removefriendfirst");
+          var2 = wg.a("removefriendfirst", 0);
           if (var2 == null) {
             break L419;
           } else {
-            String discarded$1991 = mj.a((byte) 95, var2);
+            String discarded$827 = mj.a((byte) 95, var2);
             break L419;
           }
         }
         L420: {
-          int discarded$1992 = 0;
-          var2 = wg.a("enterfriend_add");
+          var2 = wg.a("enterfriend_add", 0);
           if (null == var2) {
             break L420;
           } else {
-            String discarded$1993 = mj.a((byte) -96, var2);
+            String discarded$828 = mj.a((byte) -96, var2);
             break L420;
           }
         }
         L421: {
-          int discarded$1994 = 0;
-          var2 = wg.a("enterfriend_del");
+          var2 = wg.a("enterfriend_del", 0);
           if (null != var2) {
-            String discarded$1995 = mj.a((byte) 103, var2);
+            String discarded$829 = mj.a((byte) 103, var2);
             break L421;
           } else {
             break L421;
           }
         }
         L422: {
-          int discarded$1996 = 0;
-          var2 = wg.a("enterignore_add");
+          var2 = wg.a("enterignore_add", 0);
           if (var2 == null) {
             break L422;
           } else {
-            String discarded$1997 = mj.a((byte) -105, var2);
+            String discarded$830 = mj.a((byte) -105, var2);
             break L422;
           }
         }
         L423: {
-          int discarded$1998 = 0;
-          var2 = wg.a("enterignore_del");
+          var2 = wg.a("enterignore_del", param0 + -7);
           if (var2 == null) {
             break L423;
           } else {
-            String discarded$1999 = mj.a((byte) -124, var2);
+            String discarded$831 = mj.a((byte) -124, var2);
             break L423;
           }
         }
         L424: {
-          int discarded$2000 = 0;
-          var2 = wg.a("text_removed_from_game");
+          var2 = wg.a("text_removed_from_game", param0 + -7);
           if (null != var2) {
-            String discarded$2001 = mj.a((byte) -95, var2);
+            String discarded$832 = mj.a((byte) -95, var2);
             break L424;
           } else {
             break L424;
           }
         }
         L425: {
-          int discarded$2002 = 0;
-          var2 = wg.a("text_lobby_pleaselogin_free");
+          var2 = wg.a("text_lobby_pleaselogin_free", 0);
           if (var2 != null) {
-            String discarded$2003 = mj.a((byte) -105, var2);
+            String discarded$833 = mj.a((byte) -105, var2);
             break L425;
           } else {
             break L425;
           }
         }
         L426: {
-          int discarded$2004 = 0;
-          var2 = wg.a("opengl");
+          var2 = wg.a("opengl", param0 ^ 7);
           if (null != var2) {
-            String discarded$2005 = mj.a((byte) -95, var2);
+            String discarded$834 = mj.a((byte) -95, var2);
             break L426;
           } else {
             break L426;
           }
         }
         L427: {
-          int discarded$2006 = 0;
-          var2 = wg.a("sse");
+          var2 = wg.a("sse", 0);
           if (var2 != null) {
-            String discarded$2007 = mj.a((byte) 111, var2);
+            String discarded$835 = mj.a((byte) 111, var2);
             break L427;
           } else {
             break L427;
           }
         }
         L428: {
-          int discarded$2008 = 0;
-          var2 = wg.a("purejava");
+          var2 = wg.a("purejava", 0);
           if (null != var2) {
-            String discarded$2009 = mj.a((byte) 70, var2);
+            String discarded$836 = mj.a((byte) 70, var2);
             break L428;
           } else {
             break L428;
           }
         }
         L429: {
-          int discarded$2010 = 0;
-          var2 = wg.a("waitingfor_graphics");
+          var2 = wg.a("waitingfor_graphics", 0);
           if (null == var2) {
             break L429;
           } else {
@@ -4321,18 +3891,16 @@ final class jd extends pj implements ke {
           }
         }
         L430: {
-          int discarded$2011 = 0;
-          var2 = wg.a("waitingfor_models");
+          var2 = wg.a("waitingfor_models", 0);
           if (var2 == null) {
             break L430;
           } else {
-            String discarded$2012 = mj.a((byte) -110, var2);
+            String discarded$837 = mj.a((byte) -110, var2);
             break L430;
           }
         }
         L431: {
-          int discarded$2013 = 0;
-          var2 = wg.a("waitingfor_fonts");
+          var2 = wg.a("waitingfor_fonts", 0);
           if (null != var2) {
             bh.field_d = mj.a((byte) -94, var2);
             break L431;
@@ -4341,8 +3909,7 @@ final class jd extends pj implements ke {
           }
         }
         L432: {
-          int discarded$2014 = 0;
-          var2 = wg.a("waitingfor_soundeffects");
+          var2 = wg.a("waitingfor_soundeffects", 0);
           if (var2 == null) {
             break L432;
           } else {
@@ -4351,8 +3918,7 @@ final class jd extends pj implements ke {
           }
         }
         L433: {
-          int discarded$2015 = 0;
-          var2 = wg.a("waitingfor_music");
+          var2 = wg.a("waitingfor_music", 0);
           if (var2 != null) {
             qd.field_Fb = mj.a((byte) 119, var2);
             break L433;
@@ -4361,18 +3927,16 @@ final class jd extends pj implements ke {
           }
         }
         L434: {
-          int discarded$2016 = 0;
-          var2 = wg.a("waitingfor_instruments");
+          var2 = wg.a("waitingfor_instruments", 0);
           if (var2 == null) {
             break L434;
           } else {
-            String discarded$2017 = mj.a((byte) -96, var2);
+            String discarded$838 = mj.a((byte) -96, var2);
             break L434;
           }
         }
         L435: {
-          int discarded$2018 = 0;
-          var2 = wg.a("waitingfor_levels");
+          var2 = wg.a("waitingfor_levels", param0 ^ 7);
           if (var2 == null) {
             break L435;
           } else {
@@ -4381,8 +3945,7 @@ final class jd extends pj implements ke {
           }
         }
         L436: {
-          int discarded$2019 = 0;
-          var2 = wg.a("waitingfor_extradata");
+          var2 = wg.a("waitingfor_extradata", 0);
           if (null == var2) {
             break L436;
           } else {
@@ -4391,38 +3954,34 @@ final class jd extends pj implements ke {
           }
         }
         L437: {
-          int discarded$2020 = 0;
-          var2 = wg.a("waitingfor_languages");
+          var2 = wg.a("waitingfor_languages", 0);
           if (var2 == null) {
             break L437;
           } else {
-            String discarded$2021 = mj.a((byte) 26, var2);
+            String discarded$839 = mj.a((byte) 26, var2);
             break L437;
           }
         }
         L438: {
-          int discarded$2022 = 0;
-          var2 = wg.a("waitingfor_textures");
+          var2 = wg.a("waitingfor_textures", 0);
           if (var2 == null) {
             break L438;
           } else {
-            String discarded$2023 = mj.a((byte) 1, var2);
+            String discarded$840 = mj.a((byte) 1, var2);
             break L438;
           }
         }
         L439: {
-          int discarded$2024 = 0;
-          var2 = wg.a("waitingfor_animations");
+          var2 = wg.a("waitingfor_animations", 0);
           if (var2 == null) {
             break L439;
           } else {
-            String discarded$2025 = mj.a((byte) -115, var2);
+            String discarded$841 = mj.a((byte) -115, var2);
             break L439;
           }
         }
         L440: {
-          int discarded$2026 = 0;
-          var2 = wg.a("loading_graphics");
+          var2 = wg.a("loading_graphics", 0);
           if (var2 != null) {
             sa.field_b = mj.a((byte) -105, var2);
             break L440;
@@ -4431,18 +3990,16 @@ final class jd extends pj implements ke {
           }
         }
         L441: {
-          int discarded$2027 = 0;
-          var2 = wg.a("loading_models");
+          var2 = wg.a("loading_models", 0);
           if (null == var2) {
             break L441;
           } else {
-            String discarded$2028 = mj.a((byte) -122, var2);
+            String discarded$842 = mj.a((byte) -122, var2);
             break L441;
           }
         }
         L442: {
-          int discarded$2029 = 0;
-          var2 = wg.a("loading_fonts");
+          var2 = wg.a("loading_fonts", 0);
           if (var2 == null) {
             break L442;
           } else {
@@ -4451,8 +4008,7 @@ final class jd extends pj implements ke {
           }
         }
         L443: {
-          int discarded$2030 = 0;
-          var2 = wg.a("loading_soundeffects");
+          var2 = wg.a("loading_soundeffects", 0);
           if (var2 != null) {
             ig.field_o = mj.a((byte) 1, var2);
             break L443;
@@ -4461,8 +4017,7 @@ final class jd extends pj implements ke {
           }
         }
         L444: {
-          int discarded$2031 = 0;
-          var2 = wg.a("loading_music");
+          var2 = wg.a("loading_music", 0);
           if (var2 != null) {
             r.field_a = mj.a((byte) 109, var2);
             break L444;
@@ -4471,18 +4026,16 @@ final class jd extends pj implements ke {
           }
         }
         L445: {
-          int discarded$2032 = 0;
-          var2 = wg.a("loading_instruments");
+          var2 = wg.a("loading_instruments", 0);
           if (null != var2) {
-            String discarded$2033 = mj.a((byte) -112, var2);
+            String discarded$843 = mj.a((byte) -112, var2);
             break L445;
           } else {
             break L445;
           }
         }
         L446: {
-          int discarded$2034 = 0;
-          var2 = wg.a("loading_levels");
+          var2 = wg.a("loading_levels", 0);
           if (null != var2) {
             hl.field_e = mj.a((byte) 111, var2);
             break L446;
@@ -4491,8 +4044,7 @@ final class jd extends pj implements ke {
           }
         }
         L447: {
-          int discarded$2035 = 0;
-          var2 = wg.a("loading_extradata");
+          var2 = wg.a("loading_extradata", param0 + -7);
           if (null == var2) {
             break L447;
           } else {
@@ -4501,38 +4053,34 @@ final class jd extends pj implements ke {
           }
         }
         L448: {
-          int discarded$2036 = 0;
-          var2 = wg.a("loading_languages");
+          var2 = wg.a("loading_languages", param0 ^ 7);
           if (null == var2) {
             break L448;
           } else {
-            String discarded$2037 = mj.a((byte) 11, var2);
+            String discarded$844 = mj.a((byte) 11, var2);
             break L448;
           }
         }
         L449: {
-          int discarded$2038 = 0;
-          var2 = wg.a("loading_textures");
+          var2 = wg.a("loading_textures", 0);
           if (var2 != null) {
-            String discarded$2039 = mj.a((byte) -127, var2);
+            String discarded$845 = mj.a((byte) -127, var2);
             break L449;
           } else {
             break L449;
           }
         }
         L450: {
-          int discarded$2040 = 0;
-          var2 = wg.a("loading_animations");
+          var2 = wg.a("loading_animations", 0);
           if (var2 == null) {
             break L450;
           } else {
-            String discarded$2041 = mj.a((byte) -101, var2);
+            String discarded$846 = mj.a((byte) -101, var2);
             break L450;
           }
         }
         L451: {
-          int discarded$2042 = 0;
-          var2 = wg.a("unpacking_graphics");
+          var2 = wg.a("unpacking_graphics", 0);
           if (null == var2) {
             break L451;
           } else {
@@ -4541,18 +4089,16 @@ final class jd extends pj implements ke {
           }
         }
         L452: {
-          int discarded$2043 = 0;
-          var2 = wg.a("unpacking_models");
+          var2 = wg.a("unpacking_models", 0);
           if (var2 != null) {
-            String discarded$2044 = mj.a((byte) -124, var2);
+            String discarded$847 = mj.a((byte) -124, var2);
             break L452;
           } else {
             break L452;
           }
         }
         L453: {
-          int discarded$2045 = 0;
-          var2 = wg.a("unpacking_soundeffects");
+          var2 = wg.a("unpacking_soundeffects", 0);
           if (var2 != null) {
             sl.field_s = mj.a((byte) 62, var2);
             break L453;
@@ -4561,8 +4107,7 @@ final class jd extends pj implements ke {
           }
         }
         L454: {
-          int discarded$2046 = 0;
-          var2 = wg.a("unpacking_music");
+          var2 = wg.a("unpacking_music", 0);
           if (var2 != null) {
             ai.field_x = mj.a((byte) -106, var2);
             break L454;
@@ -4571,48 +4116,43 @@ final class jd extends pj implements ke {
           }
         }
         L455: {
-          int discarded$2047 = 0;
-          var2 = wg.a("unpacking_levels");
+          var2 = wg.a("unpacking_levels", param0 + -7);
           if (var2 == null) {
             break L455;
           } else {
-            String discarded$2048 = mj.a((byte) -121, var2);
+            String discarded$848 = mj.a((byte) -121, var2);
             break L455;
           }
         }
         L456: {
-          int discarded$2049 = 0;
-          var2 = wg.a("unpacking_languages");
+          var2 = wg.a("unpacking_languages", 0);
           if (var2 != null) {
-            String discarded$2050 = mj.a((byte) -109, var2);
+            String discarded$849 = mj.a((byte) -109, var2);
             break L456;
           } else {
             break L456;
           }
         }
         L457: {
-          int discarded$2051 = 0;
-          var2 = wg.a("unpacking_animations");
+          var2 = wg.a("unpacking_animations", 0);
           if (null == var2) {
             break L457;
           } else {
-            String discarded$2052 = mj.a((byte) -123, var2);
+            String discarded$850 = mj.a((byte) -123, var2);
             break L457;
           }
         }
         L458: {
-          int discarded$2053 = 0;
-          var2 = wg.a("unpacking_toolkit");
+          var2 = wg.a("unpacking_toolkit", param0 + -7);
           if (null == var2) {
             break L458;
           } else {
-            String discarded$2054 = mj.a((byte) 92, var2);
+            String discarded$851 = mj.a((byte) 92, var2);
             break L458;
           }
         }
         L459: {
-          int discarded$2055 = 0;
-          var2 = wg.a("instructions");
+          var2 = wg.a("instructions", 0);
           if (var2 != null) {
             q.field_d = mj.a((byte) -106, var2);
             break L459;
@@ -4621,68 +4161,61 @@ final class jd extends pj implements ke {
           }
         }
         L460: {
-          int discarded$2056 = 0;
-          var2 = wg.a("tutorial");
+          var2 = wg.a("tutorial", 0);
           if (var2 == null) {
             break L460;
           } else {
-            String discarded$2057 = mj.a((byte) 32, var2);
+            String discarded$852 = mj.a((byte) 32, var2);
             break L460;
           }
         }
         L461: {
-          int discarded$2058 = 0;
-          var2 = wg.a("playtutorial");
+          var2 = wg.a("playtutorial", 0);
           if (null == var2) {
             break L461;
           } else {
-            String discarded$2059 = mj.a((byte) 116, var2);
+            String discarded$853 = mj.a((byte) 116, var2);
             break L461;
           }
         }
         L462: {
-          int discarded$2060 = 0;
-          var2 = wg.a("sound_colon");
+          var2 = wg.a("sound_colon", 0);
           if (null == var2) {
             break L462;
           } else {
-            String discarded$2061 = mj.a((byte) -95, var2);
+            String discarded$854 = mj.a((byte) -95, var2);
             break L462;
           }
         }
         L463: {
-          int discarded$2062 = 0;
-          var2 = wg.a("music_colon");
+          var2 = wg.a("music_colon", param0 + -7);
           if (null != var2) {
-            String discarded$2063 = mj.a((byte) -110, var2);
+            String discarded$855 = mj.a((byte) -110, var2);
             break L463;
           } else {
             break L463;
           }
         }
         L464: {
-          int discarded$2064 = 0;
-          var2 = wg.a("fullscreen");
+          var2 = wg.a("fullscreen", param0 + -7);
           if (var2 != null) {
-            String discarded$2065 = mj.a((byte) -101, var2);
+            String discarded$856 = mj.a((byte) -101, var2);
             break L464;
           } else {
             break L464;
           }
         }
         L465: {
-          int discarded$2066 = 0;
-          var2 = wg.a("screensize");
+          var2 = wg.a("screensize", 0);
           if (null != var2) {
-            String discarded$2067 = mj.a((byte) -122, var2);
+            String discarded$857 = mj.a((byte) -122, var2);
             break L465;
           } else {
             break L465;
           }
         }
         L466: {
-          int discarded$2068 = 0;
-          var2 = wg.a("highscores");
+          var2 = wg.a("highscores", param0 + -7);
           if (var2 == null) {
             break L466;
           } else {
@@ -4691,18 +4224,16 @@ final class jd extends pj implements ke {
           }
         }
         L467: {
-          int discarded$2069 = 0;
-          var2 = wg.a("rankings");
+          var2 = wg.a("rankings", 0);
           if (null != var2) {
-            String discarded$2070 = mj.a((byte) -96, var2);
+            String discarded$858 = mj.a((byte) -96, var2);
             break L467;
           } else {
             break L467;
           }
         }
         L468: {
-          int discarded$2071 = 0;
-          var2 = wg.a("achievements");
+          var2 = wg.a("achievements", param0 ^ 7);
           if (null != var2) {
             pi.field_W = mj.a((byte) -23, var2);
             break L468;
@@ -4711,38 +4242,34 @@ final class jd extends pj implements ke {
           }
         }
         L469: {
-          int discarded$2072 = 0;
-          var2 = wg.a("achievementsthisgame");
+          var2 = wg.a("achievementsthisgame", param0 ^ 7);
           if (var2 == null) {
             break L469;
           } else {
-            String discarded$2073 = mj.a((byte) -128, var2);
+            String discarded$859 = mj.a((byte) -128, var2);
             break L469;
           }
         }
         L470: {
-          int discarded$2074 = 0;
-          var2 = wg.a("achievementsthissession");
+          var2 = wg.a("achievementsthissession", 0);
           if (var2 == null) {
             break L470;
           } else {
-            String discarded$2075 = mj.a((byte) -116, var2);
+            String discarded$860 = mj.a((byte) -116, var2);
             break L470;
           }
         }
         L471: {
-          int discarded$2076 = 0;
-          var2 = wg.a("watchintroduction");
+          var2 = wg.a("watchintroduction", 0);
           if (var2 != null) {
-            String discarded$2077 = mj.a((byte) -105, var2);
+            String discarded$861 = mj.a((byte) -105, var2);
             break L471;
           } else {
             break L471;
           }
         }
         L472: {
-          int discarded$2078 = 0;
-          var2 = wg.a("quit");
+          var2 = wg.a("quit", 0);
           if (var2 == null) {
             break L472;
           } else {
@@ -4751,8 +4278,7 @@ final class jd extends pj implements ke {
           }
         }
         L473: {
-          int discarded$2079 = 0;
-          var2 = wg.a("login_createaccount");
+          var2 = wg.a("login_createaccount", param0 + -7);
           if (var2 == null) {
             break L473;
           } else {
@@ -4761,78 +4287,70 @@ final class jd extends pj implements ke {
           }
         }
         L474: {
-          int discarded$2080 = 0;
-          var2 = wg.a("tohighscores");
+          var2 = wg.a("tohighscores", 0);
           if (var2 == null) {
             break L474;
           } else {
-            String discarded$2081 = mj.a((byte) 109, var2);
+            String discarded$862 = mj.a((byte) 109, var2);
             break L474;
           }
         }
         L475: {
-          int discarded$2082 = 0;
-          var2 = wg.a("returntomainmenu");
+          var2 = wg.a("returntomainmenu", 0);
           if (var2 == null) {
             break L475;
           } else {
-            String discarded$2083 = mj.a((byte) -103, var2);
+            String discarded$863 = mj.a((byte) -103, var2);
             break L475;
           }
         }
         L476: {
-          int discarded$2084 = 0;
-          var2 = wg.a("returntopausemenu");
+          var2 = wg.a("returntopausemenu", param0 + -7);
           if (null != var2) {
-            String discarded$2085 = mj.a((byte) 34, var2);
+            String discarded$864 = mj.a((byte) 34, var2);
             break L476;
           } else {
             break L476;
           }
         }
         L477: {
-          int discarded$2086 = 0;
-          var2 = wg.a("returntooptionsmenu_notpaused");
+          var2 = wg.a("returntooptionsmenu_notpaused", 0);
           if (var2 == null) {
             break L477;
           } else {
-            String discarded$2087 = mj.a((byte) 19, var2);
+            String discarded$865 = mj.a((byte) 19, var2);
             break L477;
           }
         }
         L478: {
-          int discarded$2088 = 0;
-          var2 = wg.a("mainmenu");
+          var2 = wg.a("mainmenu", 0);
           if (null != var2) {
-            String discarded$2089 = mj.a((byte) -96, var2);
+            String discarded$866 = mj.a((byte) -96, var2);
             break L478;
           } else {
             break L478;
           }
         }
         L479: {
-          int discarded$2090 = 0;
-          var2 = wg.a("pausemenu");
+          var2 = wg.a("pausemenu", 0);
           if (var2 == null) {
             break L479;
           } else {
-            String discarded$2091 = mj.a((byte) -119, var2);
+            String discarded$867 = mj.a((byte) -119, var2);
             break L479;
           }
         }
         L480: {
-          int discarded$2092 = 0;
-          var2 = wg.a("optionsmenu_notpaused");
+          var2 = wg.a("optionsmenu_notpaused", param0 ^ 7);
           if (var2 == null) {
             break L480;
           } else {
-            String discarded$2093 = mj.a((byte) -105, var2);
+            String discarded$868 = mj.a((byte) -105, var2);
             break L480;
           }
         }
         L481: {
-          int discarded$2094 = 0;
-          var2 = wg.a("menu");
+          var2 = wg.a("menu", 0);
           if (var2 != null) {
             rk.field_c = mj.a((byte) 6, var2);
             break L481;
@@ -4841,48 +4359,43 @@ final class jd extends pj implements ke {
           }
         }
         L482: {
-          int discarded$2095 = 0;
-          var2 = wg.a("selectlevel");
+          var2 = wg.a("selectlevel", 0);
           if (var2 != null) {
-            String discarded$2096 = mj.a((byte) 1, var2);
+            String discarded$869 = mj.a((byte) 1, var2);
             break L482;
           } else {
             break L482;
           }
         }
         L483: {
-          int discarded$2097 = 0;
-          var2 = wg.a("nextlevel");
+          var2 = wg.a("nextlevel", 0);
           if (var2 != null) {
-            String discarded$2098 = mj.a((byte) 26, var2);
+            String discarded$870 = mj.a((byte) 26, var2);
             break L483;
           } else {
             break L483;
           }
         }
         L484: {
-          int discarded$2099 = 0;
-          var2 = wg.a("startgame");
+          var2 = wg.a("startgame", 0);
           if (var2 != null) {
-            String discarded$2100 = mj.a((byte) -103, var2);
+            String discarded$871 = mj.a((byte) -103, var2);
             break L484;
           } else {
             break L484;
           }
         }
         L485: {
-          int discarded$2101 = 0;
-          var2 = wg.a("newgame");
+          var2 = wg.a("newgame", param0 + -7);
           if (null != var2) {
-            String discarded$2102 = mj.a((byte) 47, var2);
+            String discarded$872 = mj.a((byte) 47, var2);
             break L485;
           } else {
             break L485;
           }
         }
         L486: {
-          int discarded$2103 = 0;
-          var2 = wg.a("resumegame");
+          var2 = wg.a("resumegame", 0);
           if (var2 == null) {
             break L486;
           } else {
@@ -4891,18 +4404,16 @@ final class jd extends pj implements ke {
           }
         }
         L487: {
-          int discarded$2104 = 0;
-          var2 = wg.a("resumetutorial");
+          var2 = wg.a("resumetutorial", 0);
           if (null == var2) {
             break L487;
           } else {
-            String discarded$2105 = mj.a((byte) 105, var2);
+            String discarded$873 = mj.a((byte) 105, var2);
             break L487;
           }
         }
         L488: {
-          int discarded$2106 = 0;
-          var2 = wg.a("skip");
+          var2 = wg.a("skip", 0);
           if (var2 != null) {
             uh.field_q = mj.a((byte) 111, var2);
             break L488;
@@ -4911,48 +4422,43 @@ final class jd extends pj implements ke {
           }
         }
         L489: {
-          int discarded$2107 = 0;
-          var2 = wg.a("skiptutorial");
+          var2 = wg.a("skiptutorial", 0);
           if (null == var2) {
             break L489;
           } else {
-            String discarded$2108 = mj.a((byte) 114, var2);
+            String discarded$874 = mj.a((byte) 114, var2);
             break L489;
           }
         }
         L490: {
-          int discarded$2109 = 0;
-          var2 = wg.a("skipending");
+          var2 = wg.a("skipending", 0);
           if (null == var2) {
             break L490;
           } else {
-            String discarded$2110 = mj.a((byte) 86, var2);
+            String discarded$875 = mj.a((byte) 86, var2);
             break L490;
           }
         }
         L491: {
-          int discarded$2111 = 0;
-          var2 = wg.a("restartlevel");
+          var2 = wg.a("restartlevel", param0 + -7);
           if (var2 == null) {
             break L491;
           } else {
-            String discarded$2112 = mj.a((byte) -118, var2);
+            String discarded$876 = mj.a((byte) -118, var2);
             break L491;
           }
         }
         L492: {
-          int discarded$2113 = 0;
-          var2 = wg.a("endtest");
+          var2 = wg.a("endtest", param0 + -7);
           if (var2 != null) {
-            String discarded$2114 = mj.a((byte) 17, var2);
+            String discarded$877 = mj.a((byte) 17, var2);
             break L492;
           } else {
             break L492;
           }
         }
         L493: {
-          int discarded$2115 = 0;
-          var2 = wg.a("endgame");
+          var2 = wg.a("endgame", 0);
           if (var2 == null) {
             break L493;
           } else {
@@ -4961,18 +4467,16 @@ final class jd extends pj implements ke {
           }
         }
         L494: {
-          int discarded$2116 = 0;
-          var2 = wg.a("endtutorial");
+          var2 = wg.a("endtutorial", 0);
           if (null == var2) {
             break L494;
           } else {
-            String discarded$2117 = mj.a((byte) 12, var2);
+            String discarded$878 = mj.a((byte) 12, var2);
             break L494;
           }
         }
         L495: {
-          int discarded$2118 = 0;
-          var2 = wg.a("ok");
+          var2 = wg.a("ok", 0);
           if (var2 == null) {
             break L495;
           } else {
@@ -4981,28 +4485,25 @@ final class jd extends pj implements ke {
           }
         }
         L496: {
-          int discarded$2119 = 0;
-          var2 = wg.a("on");
+          var2 = wg.a("on", 0);
           if (null != var2) {
-            String discarded$2120 = mj.a((byte) -117, var2);
+            String discarded$879 = mj.a((byte) -117, var2);
             break L496;
           } else {
             break L496;
           }
         }
         L497: {
-          int discarded$2121 = 0;
-          var2 = wg.a("off");
+          var2 = wg.a("off", 0);
           if (var2 == null) {
             break L497;
           } else {
-            String discarded$2122 = mj.a((byte) -108, var2);
+            String discarded$880 = mj.a((byte) -108, var2);
             break L497;
           }
         }
         L498: {
-          int discarded$2123 = 0;
-          var2 = wg.a("previous");
+          var2 = wg.a("previous", 0);
           if (var2 == null) {
             break L498;
           } else {
@@ -5011,18 +4512,16 @@ final class jd extends pj implements ke {
           }
         }
         L499: {
-          int discarded$2124 = 0;
-          var2 = wg.a("prev");
+          var2 = wg.a("prev", param0 + -7);
           if (null == var2) {
             break L499;
           } else {
-            String discarded$2125 = mj.a((byte) 40, var2);
+            String discarded$881 = mj.a((byte) 40, var2);
             break L499;
           }
         }
         L500: {
-          int discarded$2126 = 0;
-          var2 = wg.a("next");
+          var2 = wg.a("next", 0);
           if (var2 != null) {
             db.field_g = mj.a((byte) 84, var2);
             break L500;
@@ -5031,8 +4530,7 @@ final class jd extends pj implements ke {
           }
         }
         L501: {
-          int discarded$2127 = 0;
-          var2 = wg.a("graphics_colon");
+          var2 = wg.a("graphics_colon", 0);
           if (var2 == null) {
             break L501;
           } else {
@@ -5041,38 +4539,34 @@ final class jd extends pj implements ke {
           }
         }
         L502: {
-          int discarded$2128 = 0;
-          var2 = wg.a("hotseatmultiplayer");
+          var2 = wg.a("hotseatmultiplayer", 0);
           if (null == var2) {
             break L502;
           } else {
-            String discarded$2129 = mj.a((byte) -112, var2);
+            String discarded$882 = mj.a((byte) -112, var2);
             break L502;
           }
         }
         L503: {
-          int discarded$2130 = 0;
-          var2 = wg.a("entermultiplayerlobby");
+          var2 = wg.a("entermultiplayerlobby", 0);
           if (null == var2) {
             break L503;
           } else {
-            String discarded$2131 = mj.a((byte) 51, var2);
+            String discarded$883 = mj.a((byte) 51, var2);
             break L503;
           }
         }
         L504: {
-          int discarded$2132 = 0;
-          var2 = wg.a("singleplayergame");
+          var2 = wg.a("singleplayergame", 0);
           if (null != var2) {
-            String discarded$2133 = mj.a((byte) 49, var2);
+            String discarded$884 = mj.a((byte) 49, var2);
             break L504;
           } else {
             break L504;
           }
         }
         L505: {
-          int discarded$2134 = 0;
-          var2 = wg.a("returntogame");
+          var2 = wg.a("returntogame", 0);
           if (var2 != null) {
             fe.field_b = mj.a((byte) -122, var2);
             break L505;
@@ -5081,68 +4575,61 @@ final class jd extends pj implements ke {
           }
         }
         L506: {
-          int discarded$2135 = 0;
-          var2 = wg.a("endgameresign");
+          var2 = wg.a("endgameresign", param0 + -7);
           if (var2 == null) {
             break L506;
           } else {
-            String discarded$2136 = mj.a((byte) -96, var2);
+            String discarded$885 = mj.a((byte) -96, var2);
             break L506;
           }
         }
         L507: {
-          int discarded$2137 = 0;
-          var2 = wg.a("offerdraw");
+          var2 = wg.a("offerdraw", param0 ^ 7);
           if (null == var2) {
             break L507;
           } else {
-            String discarded$2138 = mj.a((byte) 102, var2);
+            String discarded$886 = mj.a((byte) 102, var2);
             break L507;
           }
         }
         L508: {
-          int discarded$2139 = 0;
-          var2 = wg.a("canceldraw");
+          var2 = wg.a("canceldraw", param0 ^ 7);
           if (null != var2) {
-            String discarded$2140 = mj.a((byte) 91, var2);
+            String discarded$887 = mj.a((byte) 91, var2);
             break L508;
           } else {
             break L508;
           }
         }
         L509: {
-          int discarded$2141 = 0;
-          var2 = wg.a("acceptdraw");
+          var2 = wg.a("acceptdraw", param0 ^ 7);
           if (var2 != null) {
-            String discarded$2142 = mj.a((byte) 90, var2);
+            String discarded$888 = mj.a((byte) 90, var2);
             break L509;
           } else {
             break L509;
           }
         }
         L510: {
-          int discarded$2143 = 0;
-          var2 = wg.a("resign");
+          var2 = wg.a("resign", 0);
           if (null == var2) {
             break L510;
           } else {
-            String discarded$2144 = mj.a((byte) -101, var2);
+            String discarded$889 = mj.a((byte) -101, var2);
             break L510;
           }
         }
         L511: {
-          int discarded$2145 = 0;
-          var2 = wg.a("returntolobby");
+          var2 = wg.a("returntolobby", param0 + -7);
           if (var2 == null) {
             break L511;
           } else {
-            String discarded$2146 = mj.a((byte) 40, var2);
+            String discarded$890 = mj.a((byte) 40, var2);
             break L511;
           }
         }
         L512: {
-          int discarded$2147 = 0;
-          var2 = wg.a("cont");
+          var2 = wg.a("cont", param0 ^ 7);
           if (null != var2) {
             cd.field_a = mj.a((byte) 39, var2);
             break L512;
@@ -5151,408 +4638,367 @@ final class jd extends pj implements ke {
           }
         }
         L513: {
-          int discarded$2148 = 0;
-          var2 = wg.a("continue_spectating");
+          var2 = wg.a("continue_spectating", 0);
           if (var2 == null) {
             break L513;
           } else {
-            String discarded$2149 = mj.a((byte) 126, var2);
+            String discarded$891 = mj.a((byte) 126, var2);
             break L513;
           }
         }
         L514: {
-          int discarded$2150 = 0;
-          var2 = wg.a("messages");
+          var2 = wg.a("messages", 0);
           if (var2 != null) {
-            String discarded$2151 = mj.a((byte) 38, var2);
+            String discarded$892 = mj.a((byte) 38, var2);
             break L514;
           } else {
             break L514;
           }
         }
         L515: {
-          int discarded$2152 = 0;
-          var2 = wg.a("graphics_fastest");
+          var2 = wg.a("graphics_fastest", 0);
           if (var2 == null) {
             break L515;
           } else {
-            String discarded$2153 = mj.a((byte) 24, var2);
+            String discarded$893 = mj.a((byte) 24, var2);
             break L515;
           }
         }
         L516: {
-          int discarded$2154 = 0;
-          var2 = wg.a("graphics_medium");
+          var2 = wg.a("graphics_medium", 0);
           if (var2 != null) {
-            String discarded$2155 = mj.a((byte) 118, var2);
+            String discarded$894 = mj.a((byte) 118, var2);
             break L516;
           } else {
             break L516;
           }
         }
         L517: {
-          int discarded$2156 = 0;
-          var2 = wg.a("graphics_best");
+          var2 = wg.a("graphics_best", param0 + -7);
           if (null == var2) {
             break L517;
           } else {
-            String discarded$2157 = mj.a((byte) 113, var2);
+            String discarded$895 = mj.a((byte) 113, var2);
             break L517;
           }
         }
         L518: {
-          int discarded$2158 = 0;
-          var2 = wg.a("graphics_directx");
+          var2 = wg.a("graphics_directx", 0);
           if (var2 != null) {
-            String discarded$2159 = mj.a((byte) 59, var2);
+            String discarded$896 = mj.a((byte) 59, var2);
             break L518;
           } else {
             break L518;
           }
         }
         L519: {
-          int discarded$2160 = 0;
-          var2 = wg.a("graphics_opengl");
+          var2 = wg.a("graphics_opengl", 0);
           if (var2 == null) {
             break L519;
           } else {
-            String discarded$2161 = mj.a((byte) -14, var2);
+            String discarded$897 = mj.a((byte) -14, var2);
             break L519;
           }
         }
         L520: {
-          int discarded$2162 = 0;
-          var2 = wg.a("graphics_java");
+          var2 = wg.a("graphics_java", param0 + -7);
           if (var2 != null) {
-            String discarded$2163 = mj.a((byte) 97, var2);
+            String discarded$898 = mj.a((byte) 97, var2);
             break L520;
           } else {
             break L520;
           }
         }
         L521: {
-          int discarded$2164 = 0;
-          var2 = wg.a("graphics_quality_high");
+          var2 = wg.a("graphics_quality_high", 0);
           if (var2 == null) {
             break L521;
           } else {
-            String discarded$2165 = mj.a((byte) -101, var2);
+            String discarded$899 = mj.a((byte) -101, var2);
             break L521;
           }
         }
         L522: {
-          int discarded$2166 = 0;
-          var2 = wg.a("graphics_quality_low");
+          var2 = wg.a("graphics_quality_low", 0);
           if (null != var2) {
-            String discarded$2167 = mj.a((byte) 70, var2);
+            String discarded$900 = mj.a((byte) 70, var2);
             break L522;
           } else {
             break L522;
           }
         }
         L523: {
-          int discarded$2168 = 0;
-          var2 = wg.a("graphics_mode");
+          var2 = wg.a("graphics_mode", 0);
           if (var2 != null) {
-            String discarded$2169 = mj.a((byte) -10, var2);
+            String discarded$901 = mj.a((byte) -10, var2);
             break L523;
           } else {
             break L523;
           }
         }
         L524: {
-          int discarded$2170 = 0;
-          var2 = wg.a("graphics_quality");
+          var2 = wg.a("graphics_quality", param0 + -7);
           if (var2 == null) {
             break L524;
           } else {
-            String discarded$2171 = mj.a((byte) 2, var2);
+            String discarded$902 = mj.a((byte) 2, var2);
             break L524;
           }
         }
         L525: {
-          int discarded$2172 = 0;
-          var2 = wg.a("mode");
+          var2 = wg.a("mode", 0);
           if (null != var2) {
-            String discarded$2173 = mj.a((byte) -125, var2);
+            String discarded$903 = mj.a((byte) -125, var2);
             break L525;
           } else {
             break L525;
           }
         }
         L526: {
-          int discarded$2174 = 0;
-          var2 = wg.a("quality");
+          var2 = wg.a("quality", 0);
           if (null != var2) {
-            String discarded$2175 = mj.a((byte) 102, var2);
+            String discarded$904 = mj.a((byte) 102, var2);
             break L526;
           } else {
             break L526;
           }
         }
         L527: {
-          int discarded$2176 = 0;
-          var2 = wg.a("keys");
+          var2 = wg.a("keys", 0);
           if (null != var2) {
-            String discarded$2177 = mj.a((byte) -122, var2);
+            String discarded$905 = mj.a((byte) -122, var2);
             break L527;
           } else {
             break L527;
           }
         }
         L528: {
-          int discarded$2178 = 0;
-          var2 = wg.a("objective");
+          var2 = wg.a("objective", 0);
           if (var2 != null) {
-            String discarded$2179 = mj.a((byte) 50, var2);
+            String discarded$906 = mj.a((byte) 50, var2);
             break L528;
           } else {
             break L528;
           }
         }
         L529: {
-          int discarded$2180 = 0;
-          var2 = wg.a("currentobjective");
+          var2 = wg.a("currentobjective", 0);
           if (var2 != null) {
-            String discarded$2181 = mj.a((byte) 40, var2);
+            String discarded$907 = mj.a((byte) 40, var2);
             break L529;
           } else {
             break L529;
           }
         }
         L530: {
-          int discarded$2182 = 0;
-          var2 = wg.a("pressescforpausemenu");
+          var2 = wg.a("pressescforpausemenu", 0);
           if (null != var2) {
-            String discarded$2183 = mj.a((byte) 117, var2);
+            String discarded$908 = mj.a((byte) 117, var2);
             break L530;
           } else {
             break L530;
           }
         }
         L531: {
-          int discarded$2184 = 0;
-          var2 = wg.a("pressescforpausemenuortoskiptutorial");
+          var2 = wg.a("pressescforpausemenuortoskiptutorial", 0);
           if (null == var2) {
             break L531;
           } else {
-            String discarded$2185 = mj.a((byte) 55, var2);
+            String discarded$909 = mj.a((byte) 55, var2);
             break L531;
           }
         }
         L532: {
-          int discarded$2186 = 0;
-          var2 = wg.a("pressescforoptionsmenu_doesntpause");
+          var2 = wg.a("pressescforoptionsmenu_doesntpause", 0);
           if (var2 != null) {
-            String discarded$2187 = mj.a((byte) 34, var2);
+            String discarded$910 = mj.a((byte) 34, var2);
             break L532;
           } else {
             break L532;
           }
         }
         L533: {
-          int discarded$2188 = 0;
-          var2 = wg.a("pressescforoptionsmenu_doesntpause_short");
+          var2 = wg.a("pressescforoptionsmenu_doesntpause_short", 0);
           if (null != var2) {
-            String discarded$2189 = mj.a((byte) -12, var2);
+            String discarded$911 = mj.a((byte) -12, var2);
             break L533;
           } else {
             break L533;
           }
         }
         L534: {
-          int discarded$2190 = 0;
-          var2 = wg.a("powerups");
+          var2 = wg.a("powerups", param0 + -7);
           if (null == var2) {
             break L534;
           } else {
-            String discarded$2191 = mj.a((byte) -125, var2);
+            String discarded$912 = mj.a((byte) -125, var2);
             break L534;
           }
         }
         L535: {
-          int discarded$2192 = 0;
-          var2 = wg.a("latestlevel_suffix");
+          var2 = wg.a("latestlevel_suffix", 0);
           if (var2 == null) {
             break L535;
           } else {
-            String discarded$2193 = mj.a((byte) 56, var2);
+            String discarded$913 = mj.a((byte) 56, var2);
             break L535;
           }
         }
         L536: {
-          int discarded$2194 = 0;
-          var2 = wg.a("unreachedlevel_name");
+          var2 = wg.a("unreachedlevel_name", param0 + -7);
           if (var2 == null) {
             break L536;
           } else {
-            String discarded$2195 = mj.a((byte) -123, var2);
+            String discarded$914 = mj.a((byte) -123, var2);
             break L536;
           }
         }
         L537: {
-          int discarded$2196 = 0;
-          var2 = wg.a("unreachedlevel_cannotplayreason");
+          var2 = wg.a("unreachedlevel_cannotplayreason", param0 + -7);
           if (null != var2) {
-            String discarded$2197 = mj.a((byte) -98, var2);
+            String discarded$915 = mj.a((byte) -98, var2);
             break L537;
           } else {
             break L537;
           }
         }
         L538: {
-          int discarded$2198 = 0;
-          var2 = wg.a("unreachedlevel_cannotplayreason_shorter");
+          var2 = wg.a("unreachedlevel_cannotplayreason_shorter", param0 ^ 7);
           if (null != var2) {
-            String discarded$2199 = mj.a((byte) -119, var2);
+            String discarded$916 = mj.a((byte) -119, var2);
             break L538;
           } else {
             break L538;
           }
         }
         L539: {
-          int discarded$2200 = 0;
-          var2 = wg.a("unreachedworld_cannotplayreason");
+          var2 = wg.a("unreachedworld_cannotplayreason", 0);
           if (var2 == null) {
             break L539;
           } else {
-            String discarded$2201 = mj.a((byte) 14, var2);
+            String discarded$917 = mj.a((byte) 14, var2);
             break L539;
           }
         }
         L540: {
-          int discarded$2202 = 0;
-          var2 = wg.a("memberslevel_name");
+          var2 = wg.a("memberslevel_name", 0);
           if (null == var2) {
             break L540;
           } else {
-            String discarded$2203 = mj.a((byte) 51, var2);
+            String discarded$918 = mj.a((byte) 51, var2);
             break L540;
           }
         }
         L541: {
-          int discarded$2204 = 0;
-          var2 = wg.a("memberslevel_cannotplayreason");
+          var2 = wg.a("memberslevel_cannotplayreason", param0 ^ 7);
           if (null == var2) {
             break L541;
           } else {
-            String discarded$2205 = mj.a((byte) -15, var2);
+            String discarded$919 = mj.a((byte) -15, var2);
             break L541;
           }
         }
         L542: {
-          int discarded$2206 = 0;
-          var2 = wg.a("membersworld_cannotplayreason");
+          var2 = wg.a("membersworld_cannotplayreason", 0);
           if (null == var2) {
             break L542;
           } else {
-            String discarded$2207 = mj.a((byte) -109, var2);
+            String discarded$920 = mj.a((byte) -109, var2);
             break L542;
           }
         }
         L543: {
-          int discarded$2208 = 0;
-          var2 = wg.a("unreachedlevel_createtip");
+          var2 = wg.a("unreachedlevel_createtip", param0 + -7);
           if (null != var2) {
-            String discarded$2209 = mj.a((byte) 30, var2);
+            String discarded$921 = mj.a((byte) 30, var2);
             break L543;
           } else {
             break L543;
           }
         }
         L544: {
-          int discarded$2210 = 0;
-          var2 = wg.a("unreachedlevel_createtip_line1");
+          var2 = wg.a("unreachedlevel_createtip_line1", 0);
           if (var2 != null) {
-            String discarded$2211 = mj.a((byte) 27, var2);
+            String discarded$922 = mj.a((byte) 27, var2);
             break L544;
           } else {
             break L544;
           }
         }
         L545: {
-          int discarded$2212 = 0;
-          var2 = wg.a("unreachedlevel_createtip_line2");
+          var2 = wg.a("unreachedlevel_createtip_line2", 0);
           if (null == var2) {
             break L545;
           } else {
-            String discarded$2213 = mj.a((byte) 35, var2);
+            String discarded$923 = mj.a((byte) 35, var2);
             break L545;
           }
         }
         L546: {
-          int discarded$2214 = 0;
-          var2 = wg.a("unreachedlevel_logintip");
+          var2 = wg.a("unreachedlevel_logintip", 0);
           if (var2 != null) {
-            String discarded$2215 = mj.a((byte) 83, var2);
+            String discarded$924 = mj.a((byte) 83, var2);
             break L546;
           } else {
             break L546;
           }
         }
         L547: {
-          int discarded$2216 = 0;
-          var2 = wg.a("memberslevel_logintip");
+          var2 = wg.a("memberslevel_logintip", param0 ^ 7);
           if (null == var2) {
             break L547;
           } else {
-            String discarded$2217 = mj.a((byte) 33, var2);
+            String discarded$925 = mj.a((byte) 33, var2);
             break L547;
           }
         }
         L548: {
-          int discarded$2218 = 0;
-          var2 = wg.a("displayname_none");
+          var2 = wg.a("displayname_none", param0 + -7);
           if (null != var2) {
-            String discarded$2219 = mj.a((byte) 56, var2);
+            String discarded$926 = mj.a((byte) 56, var2);
             break L548;
           } else {
             break L548;
           }
         }
         L549: {
-          int discarded$2220 = 0;
-          var2 = wg.a("levelxofy1");
+          var2 = wg.a("levelxofy1", 0);
           if (var2 != null) {
-            String discarded$2221 = mj.a((byte) -123, var2);
+            String discarded$927 = mj.a((byte) -123, var2);
             break L549;
           } else {
             break L549;
           }
         }
         L550: {
-          int discarded$2222 = 0;
-          var2 = wg.a("levelxofy2");
+          var2 = wg.a("levelxofy2", 0);
           if (var2 == null) {
             break L550;
           } else {
-            String discarded$2223 = mj.a((byte) 124, var2);
+            String discarded$928 = mj.a((byte) 124, var2);
             break L550;
           }
         }
         L551: {
-          int discarded$2224 = 0;
-          var2 = wg.a("levelxofy");
+          var2 = wg.a("levelxofy", 0);
           if (null == var2) {
             break L551;
           } else {
-            String discarded$2225 = mj.a((byte) -104, var2);
+            String discarded$929 = mj.a((byte) -104, var2);
             break L551;
           }
         }
         L552: {
-          int discarded$2226 = 0;
-          var2 = wg.a("ingame_level");
+          var2 = wg.a("ingame_level", param0 ^ 7);
           if (var2 == null) {
             break L552;
           } else {
-            String discarded$2227 = mj.a((byte) -15, var2);
+            String discarded$930 = mj.a((byte) -15, var2);
             break L552;
           }
         }
         L553: {
-          int discarded$2228 = 0;
-          var2 = wg.a("mouseoveranicon");
+          var2 = wg.a("mouseoveranicon", 0);
           if (var2 != null) {
             re.field_j = mj.a((byte) -12, var2);
             break L553;
@@ -5561,8 +5007,7 @@ final class jd extends pj implements ke {
           }
         }
         L554: {
-          int discarded$2229 = 0;
-          var2 = wg.a("notyetachieved");
+          var2 = wg.a("notyetachieved", 0);
           if (var2 == null) {
             break L554;
           } else {
@@ -5571,8 +5016,7 @@ final class jd extends pj implements ke {
           }
         }
         L555: {
-          int discarded$2230 = 0;
-          var2 = wg.a("achieved");
+          var2 = wg.a("achieved", 0);
           if (var2 == null) {
             break L555;
           } else {
@@ -5581,8 +5025,7 @@ final class jd extends pj implements ke {
           }
         }
         L556: {
-          int discarded$2231 = 0;
-          var2 = wg.a("orbpoints");
+          var2 = wg.a("orbpoints", param0 ^ 7);
           if (null == var2) {
             break L556;
           } else {
@@ -5591,8 +5034,7 @@ final class jd extends pj implements ke {
           }
         }
         L557: {
-          int discarded$2232 = 0;
-          var2 = wg.a("orbcoins");
+          var2 = wg.a("orbcoins", 0);
           if (var2 != null) {
             bj.field_d = mj.a((byte) -17, var2);
             break L557;
@@ -5601,48 +5043,43 @@ final class jd extends pj implements ke {
           }
         }
         L558: {
-          int discarded$2233 = 0;
-          var2 = wg.a("orbpoints_colon");
+          var2 = wg.a("orbpoints_colon", 0);
           if (null != var2) {
-            String discarded$2234 = mj.a((byte) 88, var2);
+            String discarded$931 = mj.a((byte) 88, var2);
             break L558;
           } else {
             break L558;
           }
         }
         L559: {
-          int discarded$2235 = 0;
-          var2 = wg.a("orbcoins_colon");
+          var2 = wg.a("orbcoins_colon", 0);
           if (var2 != null) {
-            String discarded$2236 = mj.a((byte) 39, var2);
+            String discarded$932 = mj.a((byte) 39, var2);
             break L559;
           } else {
             break L559;
           }
         }
         L560: {
-          int discarded$2237 = 0;
-          var2 = wg.a("achieved_colon_description");
+          var2 = wg.a("achieved_colon_description", 0);
           if (var2 == null) {
             break L560;
           } else {
-            String discarded$2238 = mj.a((byte) 67, var2);
+            String discarded$933 = mj.a((byte) 67, var2);
             break L560;
           }
         }
         L561: {
-          int discarded$2239 = 0;
-          var2 = wg.a("secretachievement");
+          var2 = wg.a("secretachievement", 0);
           if (null != var2) {
-            String discarded$2240 = mj.a((byte) -100, var2);
+            String discarded$934 = mj.a((byte) -100, var2);
             break L561;
           } else {
             break L561;
           }
         }
         L562: {
-          int discarded$2241 = 0;
-          var2 = wg.a("no_highscores");
+          var2 = wg.a("no_highscores", 0);
           if (null != var2) {
             bc.field_g = mj.a((byte) 31, var2);
             break L562;
@@ -5651,48 +5088,43 @@ final class jd extends pj implements ke {
           }
         }
         L563: {
-          int discarded$2242 = 0;
-          var2 = wg.a("hs_name");
+          var2 = wg.a("hs_name", 0);
           if (var2 == null) {
             break L563;
           } else {
-            String discarded$2243 = mj.a((byte) -109, var2);
+            String discarded$935 = mj.a((byte) -109, var2);
             break L563;
           }
         }
         L564: {
-          int discarded$2244 = 0;
-          var2 = wg.a("hs_level");
+          var2 = wg.a("hs_level", 0);
           if (var2 == null) {
             break L564;
           } else {
-            String discarded$2245 = mj.a((byte) -99, var2);
+            String discarded$936 = mj.a((byte) -99, var2);
             break L564;
           }
         }
         L565: {
-          int discarded$2246 = 0;
-          var2 = wg.a("hs_fromlevel");
+          var2 = wg.a("hs_fromlevel", 0);
           if (var2 == null) {
             break L565;
           } else {
-            String discarded$2247 = mj.a((byte) 1, var2);
+            String discarded$937 = mj.a((byte) 1, var2);
             break L565;
           }
         }
         L566: {
-          int discarded$2248 = 0;
-          var2 = wg.a("hs_tolevel");
+          var2 = wg.a("hs_tolevel", 0);
           if (var2 != null) {
-            String discarded$2249 = mj.a((byte) -95, var2);
+            String discarded$938 = mj.a((byte) -95, var2);
             break L566;
           } else {
             break L566;
           }
         }
         L567: {
-          int discarded$2250 = 0;
-          var2 = wg.a("hs_score");
+          var2 = wg.a("hs_score", 0);
           if (var2 != null) {
             ge.field_i = mj.a((byte) 91, var2);
             break L567;
@@ -5701,398 +5133,358 @@ final class jd extends pj implements ke {
           }
         }
         L568: {
-          int discarded$2251 = 0;
-          var2 = wg.a("hs_end");
+          var2 = wg.a("hs_end", 0);
           if (null == var2) {
             break L568;
           } else {
-            String discarded$2252 = mj.a((byte) 10, var2);
+            String discarded$939 = mj.a((byte) 10, var2);
             break L568;
           }
         }
         L569: {
-          int discarded$2253 = 0;
-          var2 = wg.a("ingame_score");
+          var2 = wg.a("ingame_score", 0);
           if (var2 != null) {
-            String discarded$2254 = mj.a((byte) 45, var2);
+            String discarded$940 = mj.a((byte) 45, var2);
             break L569;
           } else {
             break L569;
           }
         }
         L570: {
-          int discarded$2255 = 0;
-          var2 = wg.a("score_colon");
+          var2 = wg.a("score_colon", 0);
           if (null != var2) {
-            String discarded$2256 = mj.a((byte) -127, var2);
+            String discarded$941 = mj.a((byte) -127, var2);
             break L570;
           } else {
             break L570;
           }
         }
         L571: {
-          int discarded$2257 = 0;
-          var2 = wg.a("mp_leavegame");
+          var2 = wg.a("mp_leavegame", 0);
           if (var2 == null) {
             break L571;
           } else {
-            String discarded$2258 = mj.a((byte) -103, var2);
+            String discarded$942 = mj.a((byte) -103, var2);
             break L571;
           }
         }
         L572: {
-          int discarded$2259 = 0;
-          var2 = wg.a("mp_offerrematch");
+          var2 = wg.a("mp_offerrematch", param0 + -7);
           if (null != var2) {
-            String discarded$2260 = mj.a((byte) 38, var2);
+            String discarded$943 = mj.a((byte) 38, var2);
             break L572;
           } else {
             break L572;
           }
         }
         L573: {
-          int discarded$2261 = 0;
-          var2 = wg.a("mp_offerrematch_unrated");
+          var2 = wg.a("mp_offerrematch_unrated", 0);
           if (null == var2) {
             break L573;
           } else {
-            String discarded$2262 = mj.a((byte) -4, var2);
+            String discarded$944 = mj.a((byte) -4, var2);
             break L573;
           }
         }
         L574: {
-          int discarded$2263 = 0;
-          var2 = wg.a("mp_acceptrematch");
+          var2 = wg.a("mp_acceptrematch", 0);
           if (null != var2) {
-            String discarded$2264 = mj.a((byte) 122, var2);
+            String discarded$945 = mj.a((byte) 122, var2);
             break L574;
           } else {
             break L574;
           }
         }
         L575: {
-          int discarded$2265 = 0;
-          var2 = wg.a("mp_acceptrematch_unrated");
+          var2 = wg.a("mp_acceptrematch_unrated", 0);
           if (null == var2) {
             break L575;
           } else {
-            String discarded$2266 = mj.a((byte) 30, var2);
+            String discarded$946 = mj.a((byte) 30, var2);
             break L575;
           }
         }
         L576: {
-          int discarded$2267 = 0;
-          var2 = wg.a("mp_cancelrematch");
+          var2 = wg.a("mp_cancelrematch", 0);
           if (null != var2) {
-            String discarded$2268 = mj.a((byte) -108, var2);
+            String discarded$947 = mj.a((byte) -108, var2);
             break L576;
           } else {
             break L576;
           }
         }
         L577: {
-          int discarded$2269 = 0;
-          var2 = wg.a("mp_cancelrematch_unrated");
+          var2 = wg.a("mp_cancelrematch_unrated", 0);
           if (null == var2) {
             break L577;
           } else {
-            String discarded$2270 = mj.a((byte) -101, var2);
+            String discarded$948 = mj.a((byte) -101, var2);
             break L577;
           }
         }
         L578: {
-          int discarded$2271 = 0;
-          var2 = wg.a("mp_rematchnewgame");
+          var2 = wg.a("mp_rematchnewgame", 0);
           if (var2 != null) {
-            String discarded$2272 = mj.a((byte) 24, var2);
+            String discarded$949 = mj.a((byte) 24, var2);
             break L578;
           } else {
             break L578;
           }
         }
         L579: {
-          int discarded$2273 = 0;
-          var2 = wg.a("mp_rematchnewgame_unrated");
+          var2 = wg.a("mp_rematchnewgame_unrated", 0);
           if (var2 == null) {
             break L579;
           } else {
-            String discarded$2274 = mj.a((byte) 119, var2);
+            String discarded$950 = mj.a((byte) 119, var2);
             break L579;
           }
         }
         L580: {
-          int discarded$2275 = 0;
-          var2 = wg.a("mp_x_wantstodraw");
+          var2 = wg.a("mp_x_wantstodraw", param0 + -7);
           if (null == var2) {
             break L580;
           } else {
-            String discarded$2276 = mj.a((byte) -124, var2);
+            String discarded$951 = mj.a((byte) -124, var2);
             break L580;
           }
         }
         L581: {
-          int discarded$2277 = 0;
-          var2 = wg.a("mp_x_offersrematch");
+          var2 = wg.a("mp_x_offersrematch", 0);
           if (var2 == null) {
             break L581;
           } else {
-            String discarded$2278 = mj.a((byte) -98, var2);
+            String discarded$952 = mj.a((byte) -98, var2);
             break L581;
           }
         }
         L582: {
-          int discarded$2279 = 0;
-          var2 = wg.a("mp_x_offersrematch_unrated");
+          var2 = wg.a("mp_x_offersrematch_unrated", 0);
           if (null == var2) {
             break L582;
           } else {
-            String discarded$2280 = mj.a((byte) -22, var2);
+            String discarded$953 = mj.a((byte) -22, var2);
             break L582;
           }
         }
         L583: {
-          int discarded$2281 = 0;
-          var2 = wg.a("mp_youofferrematch");
+          var2 = wg.a("mp_youofferrematch", 0);
           if (null != var2) {
-            String discarded$2282 = mj.a((byte) -110, var2);
+            String discarded$954 = mj.a((byte) -110, var2);
             break L583;
           } else {
             break L583;
           }
         }
         L584: {
-          int discarded$2283 = 0;
-          var2 = wg.a("mp_youofferrematch_unrated");
+          var2 = wg.a("mp_youofferrematch_unrated", param0 + -7);
           if (var2 != null) {
-            String discarded$2284 = mj.a((byte) -116, var2);
+            String discarded$955 = mj.a((byte) -116, var2);
             break L584;
           } else {
             break L584;
           }
         }
         L585: {
-          int discarded$2285 = 0;
-          var2 = wg.a("mp_youofferdraw");
+          var2 = wg.a("mp_youofferdraw", 0);
           if (null != var2) {
-            String discarded$2286 = mj.a((byte) -123, var2);
+            String discarded$956 = mj.a((byte) -123, var2);
             break L585;
           } else {
             break L585;
           }
         }
         L586: {
-          int discarded$2287 = 0;
-          var2 = wg.a("mp_youresigned");
+          var2 = wg.a("mp_youresigned", 0);
           if (null != var2) {
-            String discarded$2288 = mj.a((byte) -125, var2);
+            String discarded$957 = mj.a((byte) -125, var2);
             break L586;
           } else {
             break L586;
           }
         }
         L587: {
-          int discarded$2289 = 0;
-          var2 = wg.a("mp_youresigned_rematch");
+          var2 = wg.a("mp_youresigned_rematch", 0);
           if (null != var2) {
-            String discarded$2290 = mj.a((byte) 115, var2);
+            String discarded$958 = mj.a((byte) 115, var2);
             break L587;
           } else {
             break L587;
           }
         }
         L588: {
-          int discarded$2291 = 0;
-          var2 = wg.a("mp_x_hasresignedandleft");
+          var2 = wg.a("mp_x_hasresignedandleft", 0);
           if (null == var2) {
             break L588;
           } else {
-            String discarded$2292 = mj.a((byte) 98, var2);
+            String discarded$959 = mj.a((byte) 98, var2);
             break L588;
           }
         }
         L589: {
-          int discarded$2293 = 0;
-          var2 = wg.a("mp_x_hasresigned_rematch");
+          var2 = wg.a("mp_x_hasresigned_rematch", 0);
           if (var2 == null) {
             break L589;
           } else {
-            String discarded$2294 = mj.a((byte) 87, var2);
+            String discarded$960 = mj.a((byte) 87, var2);
             break L589;
           }
         }
         L590: {
-          int discarded$2295 = 0;
-          var2 = wg.a("mp_x_hasresigned");
+          var2 = wg.a("mp_x_hasresigned", 0);
           if (null == var2) {
             break L590;
           } else {
-            String discarded$2296 = mj.a((byte) -113, var2);
+            String discarded$961 = mj.a((byte) -113, var2);
             break L590;
           }
         }
         L591: {
-          int discarded$2297 = 0;
-          var2 = wg.a("mp_x_hasleft");
+          var2 = wg.a("mp_x_hasleft", 0);
           if (var2 != null) {
-            String discarded$2298 = mj.a((byte) 104, var2);
+            String discarded$962 = mj.a((byte) 104, var2);
             break L591;
           } else {
             break L591;
           }
         }
         L592: {
-          int discarded$2299 = 0;
-          var2 = wg.a("mp_x_haswon");
+          var2 = wg.a("mp_x_haswon", 0);
           if (var2 != null) {
-            String discarded$2300 = mj.a((byte) -97, var2);
+            String discarded$963 = mj.a((byte) -97, var2);
             break L592;
           } else {
             break L592;
           }
         }
         L593: {
-          int discarded$2301 = 0;
-          var2 = wg.a("mp_youhavewon");
+          var2 = wg.a("mp_youhavewon", 0);
           if (var2 != null) {
-            String discarded$2302 = mj.a((byte) -96, var2);
+            String discarded$964 = mj.a((byte) -96, var2);
             break L593;
           } else {
             break L593;
           }
         }
         L594: {
-          int discarded$2303 = 0;
-          var2 = wg.a("mp_gamedrawn");
+          var2 = wg.a("mp_gamedrawn", 0);
           if (var2 != null) {
-            String discarded$2304 = mj.a((byte) 54, var2);
+            String discarded$965 = mj.a((byte) 54, var2);
             break L594;
           } else {
             break L594;
           }
         }
         L595: {
-          int discarded$2305 = 0;
-          var2 = wg.a("mp_timeremaining");
+          var2 = wg.a("mp_timeremaining", 0);
           if (null == var2) {
             break L595;
           } else {
-            String discarded$2306 = mj.a((byte) 51, var2);
+            String discarded$966 = mj.a((byte) 51, var2);
             break L595;
           }
         }
         L596: {
-          int discarded$2307 = 0;
-          var2 = wg.a("mp_x_turn");
+          var2 = wg.a("mp_x_turn", 0);
           if (null != var2) {
-            String discarded$2308 = mj.a((byte) 64, var2);
+            String discarded$967 = mj.a((byte) 64, var2);
             break L596;
           } else {
             break L596;
           }
         }
         L597: {
-          int discarded$2309 = 0;
-          var2 = wg.a("mp_yourturn");
+          var2 = wg.a("mp_yourturn", param0 ^ 7);
           if (null != var2) {
-            String discarded$2310 = mj.a((byte) -119, var2);
+            String discarded$968 = mj.a((byte) -119, var2);
             break L597;
           } else {
             break L597;
           }
         }
         L598: {
-          int discarded$2311 = 0;
-          var2 = wg.a("gameover");
+          var2 = wg.a("gameover", 0);
           if (null != var2) {
-            String discarded$2312 = mj.a((byte) -102, var2);
+            String discarded$969 = mj.a((byte) -102, var2);
             break L598;
           } else {
             break L598;
           }
         }
         L599: {
-          int discarded$2313 = 0;
-          var2 = wg.a("mp_hidechat");
+          var2 = wg.a("mp_hidechat", 0);
           if (var2 == null) {
             break L599;
           } else {
-            String discarded$2314 = mj.a((byte) -98, var2);
+            String discarded$970 = mj.a((byte) -98, var2);
             break L599;
           }
         }
         L600: {
-          int discarded$2315 = 0;
-          var2 = wg.a("mp_showchat_nounread");
+          var2 = wg.a("mp_showchat_nounread", 0);
           if (null != var2) {
-            String discarded$2316 = mj.a((byte) 64, var2);
+            String discarded$971 = mj.a((byte) 64, var2);
             break L600;
           } else {
             break L600;
           }
         }
         L601: {
-          int discarded$2317 = 0;
-          var2 = wg.a("mp_showchat_unread1");
+          var2 = wg.a("mp_showchat_unread1", 0);
           if (var2 == null) {
             break L601;
           } else {
-            String discarded$2318 = mj.a((byte) -121, var2);
+            String discarded$972 = mj.a((byte) -121, var2);
             break L601;
           }
         }
         L602: {
-          int discarded$2319 = 0;
-          var2 = wg.a("mp_showchat_unread2");
+          var2 = wg.a("mp_showchat_unread2", 0);
           if (var2 == null) {
             break L602;
           } else {
-            String discarded$2320 = mj.a((byte) 19, var2);
+            String discarded$973 = mj.a((byte) 19, var2);
             break L602;
           }
         }
         L603: {
-          int discarded$2321 = 0;
-          var2 = wg.a("click_to_quickchat");
+          var2 = wg.a("click_to_quickchat", 0);
           if (var2 == null) {
             break L603;
           } else {
-            String discarded$2322 = mj.a((byte) -96, var2);
+            String discarded$974 = mj.a((byte) -96, var2);
             break L603;
           }
         }
         L604: {
-          int discarded$2323 = 0;
-          var2 = wg.a("autorespond");
+          var2 = wg.a("autorespond", 0);
           if (null == var2) {
             break L604;
           } else {
-            String discarded$2324 = mj.a((byte) -110, var2);
+            String discarded$975 = mj.a((byte) -110, var2);
             break L604;
           }
         }
         L605: {
-          int discarded$2325 = 0;
-          var2 = wg.a("quickchat_help");
+          var2 = wg.a("quickchat_help", 0);
           if (var2 == null) {
             break L605;
           } else {
-            String discarded$2326 = mj.a((byte) 125, var2);
+            String discarded$976 = mj.a((byte) 125, var2);
             break L605;
           }
         }
         L606: {
-          int discarded$2327 = 0;
-          var2 = wg.a("quickchat_help_title");
+          var2 = wg.a("quickchat_help_title", 0);
           if (null == var2) {
             break L606;
           } else {
-            String discarded$2328 = mj.a((byte) 6, var2);
+            String discarded$977 = mj.a((byte) 6, var2);
             break L606;
           }
         }
         L607: {
-          int discarded$2329 = 0;
-          var2 = wg.a("quickchat_shortcut_help,0");
+          var2 = wg.a("quickchat_shortcut_help,0", 0);
           if (null != var2) {
             l.field_e[0] = mj.a((byte) -123, var2);
             break L607;
@@ -6101,8 +5493,7 @@ final class jd extends pj implements ke {
           }
         }
         L608: {
-          int discarded$2330 = 0;
-          var2 = wg.a("quickchat_shortcut_help,1");
+          var2 = wg.a("quickchat_shortcut_help,1", 0);
           if (null != var2) {
             l.field_e[1] = mj.a((byte) 107, var2);
             break L608;
@@ -6111,8 +5502,7 @@ final class jd extends pj implements ke {
           }
         }
         L609: {
-          int discarded$2331 = 0;
-          var2 = wg.a("quickchat_shortcut_help,2");
+          var2 = wg.a("quickchat_shortcut_help,2", 0);
           if (var2 != null) {
             l.field_e[2] = mj.a((byte) -122, var2);
             break L609;
@@ -6121,8 +5511,7 @@ final class jd extends pj implements ke {
           }
         }
         L610: {
-          int discarded$2332 = 0;
-          var2 = wg.a("quickchat_shortcut_help,3");
+          var2 = wg.a("quickchat_shortcut_help,3", 0);
           if (null != var2) {
             l.field_e[3] = mj.a((byte) -7, var2);
             break L610;
@@ -6131,8 +5520,7 @@ final class jd extends pj implements ke {
           }
         }
         L611: {
-          int discarded$2333 = 0;
-          var2 = wg.a("quickchat_shortcut_help,4");
+          var2 = wg.a("quickchat_shortcut_help,4", 0);
           if (var2 == null) {
             break L611;
           } else {
@@ -6141,8 +5529,7 @@ final class jd extends pj implements ke {
           }
         }
         L612: {
-          int discarded$2334 = 0;
-          var2 = wg.a("quickchat_shortcut_help,5");
+          var2 = wg.a("quickchat_shortcut_help,5", 0);
           if (null == var2) {
             break L612;
           } else {
@@ -6151,8 +5538,7 @@ final class jd extends pj implements ke {
           }
         }
         L613: {
-          int discarded$2335 = 0;
-          var2 = wg.a("quickchat_shortcut_keys,0");
+          var2 = wg.a("quickchat_shortcut_keys,0", 0);
           if (null != var2) {
             wg.field_r[0] = mj.a((byte) 127, var2);
             break L613;
@@ -6161,8 +5547,7 @@ final class jd extends pj implements ke {
           }
         }
         L614: {
-          int discarded$2336 = 0;
-          var2 = wg.a("quickchat_shortcut_keys,1");
+          var2 = wg.a("quickchat_shortcut_keys,1", 0);
           if (null != var2) {
             wg.field_r[1] = mj.a((byte) -108, var2);
             break L614;
@@ -6171,8 +5556,7 @@ final class jd extends pj implements ke {
           }
         }
         L615: {
-          int discarded$2337 = 0;
-          var2 = wg.a("quickchat_shortcut_keys,2");
+          var2 = wg.a("quickchat_shortcut_keys,2", 0);
           if (var2 != null) {
             wg.field_r[2] = mj.a((byte) 62, var2);
             break L615;
@@ -6181,8 +5565,7 @@ final class jd extends pj implements ke {
           }
         }
         L616: {
-          int discarded$2338 = 0;
-          var2 = wg.a("quickchat_shortcut_keys,3");
+          var2 = wg.a("quickchat_shortcut_keys,3", 0);
           if (null == var2) {
             break L616;
           } else {
@@ -6191,8 +5574,7 @@ final class jd extends pj implements ke {
           }
         }
         L617: {
-          int discarded$2339 = 0;
-          var2 = wg.a("quickchat_shortcut_keys,4");
+          var2 = wg.a("quickchat_shortcut_keys,4", 0);
           if (var2 != null) {
             wg.field_r[4] = mj.a((byte) 85, var2);
             break L617;
@@ -6201,8 +5583,7 @@ final class jd extends pj implements ke {
           }
         }
         L618: {
-          int discarded$2340 = 0;
-          var2 = wg.a("quickchat_shortcut_keys,5");
+          var2 = wg.a("quickchat_shortcut_keys,5", 0);
           if (null != var2) {
             wg.field_r[5] = mj.a((byte) -122, var2);
             break L618;
@@ -6211,98 +5592,88 @@ final class jd extends pj implements ke {
           }
         }
         L619: {
-          int discarded$2341 = 0;
-          var2 = wg.a("keychar_the_character_under_questionmark");
+          var2 = wg.a("keychar_the_character_under_questionmark", 0);
           if (null == var2) {
             break L619;
           } else {
-            char discarded$2342 = le.a(63, var2[0]);
+            char discarded$978 = le.a(63, var2[0]);
             break L619;
           }
         }
         L620: {
-          int discarded$2343 = 0;
-          var2 = wg.a("rating_noratings");
+          var2 = wg.a("rating_noratings", param0 + -7);
           if (null != var2) {
-            String discarded$2344 = mj.a((byte) -19, var2);
+            String discarded$979 = mj.a((byte) -19, var2);
             break L620;
           } else {
             break L620;
           }
         }
         L621: {
-          int discarded$2345 = 0;
-          var2 = wg.a("rating_rating");
+          var2 = wg.a("rating_rating", 0);
           if (var2 == null) {
             break L621;
           } else {
-            String discarded$2346 = mj.a((byte) -119, var2);
+            String discarded$980 = mj.a((byte) -119, var2);
             break L621;
           }
         }
         L622: {
-          int discarded$2347 = 0;
-          var2 = wg.a("rating_played");
+          var2 = wg.a("rating_played", param0 + -7);
           if (var2 != null) {
-            String discarded$2348 = mj.a((byte) -114, var2);
+            String discarded$981 = mj.a((byte) -114, var2);
             break L622;
           } else {
             break L622;
           }
         }
         L623: {
-          int discarded$2349 = 0;
-          var2 = wg.a("rating_won");
+          var2 = wg.a("rating_won", 0);
           if (var2 == null) {
             break L623;
           } else {
-            String discarded$2350 = mj.a((byte) -114, var2);
+            String discarded$982 = mj.a((byte) -114, var2);
             break L623;
           }
         }
         L624: {
-          int discarded$2351 = 0;
-          var2 = wg.a("rating_lost");
+          var2 = wg.a("rating_lost", 0);
           if (var2 != null) {
-            String discarded$2352 = mj.a((byte) 11, var2);
+            String discarded$983 = mj.a((byte) 11, var2);
             break L624;
           } else {
             break L624;
           }
         }
         L625: {
-          int discarded$2353 = 0;
-          var2 = wg.a("rating_drawn");
+          var2 = wg.a("rating_drawn", 0);
           if (var2 != null) {
-            String discarded$2354 = mj.a((byte) -103, var2);
+            String discarded$984 = mj.a((byte) -103, var2);
             break L625;
           } else {
             break L625;
           }
         }
         L626: {
-          int discarded$2355 = 0;
-          var2 = wg.a("benefits_fullscreen");
+          var2 = wg.a("benefits_fullscreen", 0);
           if (var2 != null) {
-            String discarded$2356 = mj.a((byte) 67, var2);
+            String discarded$985 = mj.a((byte) 67, var2);
             break L626;
           } else {
             break L626;
           }
         }
         L627: {
-          int discarded$2357 = 0;
-          var2 = wg.a("benefits_noadverts");
+          var2 = wg.a("benefits_noadverts", 0);
           if (null == var2) {
             break L627;
           } else {
-            String discarded$2358 = mj.a((byte) 91, var2);
+            String discarded$986 = mj.a((byte) 91, var2);
             break L627;
           }
         }
         L628: {
-          int discarded$2359 = 0;
-          var2 = wg.a("benefits_price");
+          var2 = wg.a("benefits_price", 0);
           if (null != var2) {
             rg.field_d = mj.a((byte) -109, var2);
             break L628;
@@ -6311,8 +5682,7 @@ final class jd extends pj implements ke {
           }
         }
         L629: {
-          int discarded$2360 = 0;
-          var2 = wg.a("members_expansion_benefits,0");
+          var2 = wg.a("members_expansion_benefits,0", 0);
           if (var2 != null) {
             kf.field_b[0] = mj.a((byte) -116, var2);
             break L629;
@@ -6321,8 +5691,7 @@ final class jd extends pj implements ke {
           }
         }
         L630: {
-          int discarded$2361 = 0;
-          var2 = wg.a("members_expansion_benefits,1");
+          var2 = wg.a("members_expansion_benefits,1", 0);
           if (null != var2) {
             kf.field_b[1] = mj.a((byte) -107, var2);
             break L630;
@@ -6331,8 +5700,7 @@ final class jd extends pj implements ke {
           }
         }
         L631: {
-          int discarded$2362 = 0;
-          var2 = wg.a("members_expansion_benefits,2");
+          var2 = wg.a("members_expansion_benefits,2", 0);
           if (null == var2) {
             break L631;
           } else {
@@ -6341,28 +5709,25 @@ final class jd extends pj implements ke {
           }
         }
         L632: {
-          int discarded$2363 = 0;
-          var2 = wg.a("members_expansion_price_top");
+          var2 = wg.a("members_expansion_price_top", param0 ^ 7);
           if (null == var2) {
             break L632;
           } else {
-            String discarded$2364 = mj.a((byte) 84, var2);
+            String discarded$987 = mj.a((byte) 84, var2);
             break L632;
           }
         }
         L633: {
-          int discarded$2365 = 0;
-          var2 = wg.a("members_expansion_price_bottom");
+          var2 = wg.a("members_expansion_price_bottom", 0);
           if (null == var2) {
             break L633;
           } else {
-            String discarded$2366 = mj.a((byte) -97, var2);
+            String discarded$988 = mj.a((byte) -97, var2);
             break L633;
           }
         }
         L634: {
-          int discarded$2367 = 0;
-          var2 = wg.a("reconnect_lost_seq,0");
+          var2 = wg.a("reconnect_lost_seq,0", param0 ^ 7);
           if (null == var2) {
             break L634;
           } else {
@@ -6371,8 +5736,7 @@ final class jd extends pj implements ke {
           }
         }
         L635: {
-          int discarded$2368 = 0;
-          var2 = wg.a("reconnect_lost_seq,1");
+          var2 = wg.a("reconnect_lost_seq,1", param0 + -7);
           if (null != var2) {
             ob.field_e[1] = mj.a((byte) -119, var2);
             break L635;
@@ -6381,8 +5745,7 @@ final class jd extends pj implements ke {
           }
         }
         L636: {
-          int discarded$2369 = 0;
-          var2 = wg.a("reconnect_lost_seq,2");
+          var2 = wg.a("reconnect_lost_seq,2", param0 ^ 7);
           if (var2 == null) {
             break L636;
           } else {
@@ -6391,8 +5754,7 @@ final class jd extends pj implements ke {
           }
         }
         L637: {
-          int discarded$2370 = 0;
-          var2 = wg.a("reconnect_lost_seq,3");
+          var2 = wg.a("reconnect_lost_seq,3", 0);
           if (var2 != null) {
             ob.field_e[3] = mj.a((byte) 78, var2);
             break L637;
@@ -6401,128 +5763,115 @@ final class jd extends pj implements ke {
           }
         }
         L638: {
-          int discarded$2371 = 0;
-          var2 = wg.a("reconnect_lost");
+          var2 = wg.a("reconnect_lost", 0);
           if (var2 == null) {
             break L638;
           } else {
-            String discarded$2372 = mj.a((byte) -105, var2);
+            String discarded$989 = mj.a((byte) -105, var2);
             break L638;
           }
         }
         L639: {
-          int discarded$2373 = 0;
-          var2 = wg.a("reconnect_restored");
+          var2 = wg.a("reconnect_restored", 0);
           if (null == var2) {
             break L639;
           } else {
-            String discarded$2374 = mj.a((byte) 86, var2);
+            String discarded$990 = mj.a((byte) 86, var2);
             break L639;
           }
         }
         L640: {
-          int discarded$2375 = 0;
-          var2 = wg.a("reconnect_please_check");
+          var2 = wg.a("reconnect_please_check", 0);
           if (var2 == null) {
             break L640;
           } else {
-            String discarded$2376 = mj.a((byte) 49, var2);
+            String discarded$991 = mj.a((byte) 49, var2);
             break L640;
           }
         }
         L641: {
-          int discarded$2377 = 0;
-          var2 = wg.a("reconnect_wait");
+          var2 = wg.a("reconnect_wait", 0);
           if (var2 != null) {
-            String discarded$2378 = mj.a((byte) -100, var2);
+            String discarded$992 = mj.a((byte) -100, var2);
             break L641;
           } else {
             break L641;
           }
         }
         L642: {
-          int discarded$2379 = 0;
-          var2 = wg.a("reconnect_retry");
+          var2 = wg.a("reconnect_retry", 0);
           if (null != var2) {
-            String discarded$2380 = mj.a((byte) -128, var2);
+            String discarded$993 = mj.a((byte) -128, var2);
             break L642;
           } else {
             break L642;
           }
         }
         L643: {
-          int discarded$2381 = 0;
-          var2 = wg.a("reconnect_resume");
+          var2 = wg.a("reconnect_resume", 0);
           if (var2 == null) {
             break L643;
           } else {
-            String discarded$2382 = mj.a((byte) -103, var2);
+            String discarded$994 = mj.a((byte) -103, var2);
             break L643;
           }
         }
         L644: {
-          int discarded$2383 = 0;
-          var2 = wg.a("reconnect_or");
+          var2 = wg.a("reconnect_or", 0);
           if (var2 != null) {
-            String discarded$2384 = mj.a((byte) 5, var2);
+            String discarded$995 = mj.a((byte) 5, var2);
             break L644;
           } else {
             break L644;
           }
         }
         L645: {
-          int discarded$2385 = 0;
-          var2 = wg.a("reconnect_exitfs");
+          var2 = wg.a("reconnect_exitfs", 0);
           if (null != var2) {
-            String discarded$2386 = mj.a((byte) 27, var2);
+            String discarded$996 = mj.a((byte) 27, var2);
             break L645;
           } else {
             break L645;
           }
         }
         L646: {
-          int discarded$2387 = 0;
-          var2 = wg.a("reconnect_exitfs_quit");
+          var2 = wg.a("reconnect_exitfs_quit", param0 + -7);
           if (var2 != null) {
-            String discarded$2388 = mj.a((byte) 18, var2);
+            String discarded$997 = mj.a((byte) 18, var2);
             break L646;
           } else {
             break L646;
           }
         }
         L647: {
-          int discarded$2389 = 0;
-          var2 = wg.a("reconnect_quit");
+          var2 = wg.a("reconnect_quit", 0);
           if (null == var2) {
             break L647;
           } else {
-            String discarded$2390 = mj.a((byte) 85, var2);
+            String discarded$998 = mj.a((byte) 85, var2);
             break L647;
           }
         }
         L648: {
-          int discarded$2391 = 0;
-          var2 = wg.a("reconnect_check_fs");
+          var2 = wg.a("reconnect_check_fs", 0);
           if (var2 != null) {
-            String discarded$2392 = mj.a((byte) 1, var2);
+            String discarded$999 = mj.a((byte) 1, var2);
             break L648;
           } else {
             break L648;
           }
         }
         L649: {
-          int discarded$2393 = 0;
-          var2 = wg.a("reconnect_check_nonfs");
+          var2 = wg.a("reconnect_check_nonfs", 0);
           if (null != var2) {
-            String discarded$2394 = mj.a((byte) -19, var2);
+            String discarded$1000 = mj.a((byte) -19, var2);
             break L649;
           } else {
             break L649;
           }
         }
         L650: {
-          int discarded$2395 = 0;
-          var2 = wg.a("fs_accept_beforeaccept");
+          var2 = wg.a("fs_accept_beforeaccept", 0);
           if (var2 != null) {
             na.field_d = mj.a((byte) -116, var2);
             break L650;
@@ -6531,8 +5880,7 @@ final class jd extends pj implements ke {
           }
         }
         L651: {
-          int discarded$2396 = 0;
-          var2 = wg.a("fs_button_accept");
+          var2 = wg.a("fs_button_accept", 0);
           if (null == var2) {
             break L651;
           } else {
@@ -6541,8 +5889,7 @@ final class jd extends pj implements ke {
           }
         }
         L652: {
-          int discarded$2397 = 0;
-          var2 = wg.a("fs_accept_afteraccept");
+          var2 = wg.a("fs_accept_afteraccept", 0);
           if (var2 == null) {
             break L652;
           } else {
@@ -6551,8 +5898,7 @@ final class jd extends pj implements ke {
           }
         }
         L653: {
-          int discarded$2398 = 0;
-          var2 = wg.a("fs_button_cancel");
+          var2 = wg.a("fs_button_cancel", 0);
           if (null != var2) {
             ff.field_K = mj.a((byte) 25, var2);
             break L653;
@@ -6561,8 +5907,7 @@ final class jd extends pj implements ke {
           }
         }
         L654: {
-          int discarded$2399 = 0;
-          var2 = wg.a("fs_accept_aftercancel");
+          var2 = wg.a("fs_accept_aftercancel", 0);
           if (var2 != null) {
             sl.field_B = mj.a((byte) -111, var2);
             break L654;
@@ -6571,8 +5916,7 @@ final class jd extends pj implements ke {
           }
         }
         L655: {
-          int discarded$2400 = 0;
-          var2 = wg.a("fs_accept_countdown_sing");
+          var2 = wg.a("fs_accept_countdown_sing", 0);
           if (null != var2) {
             mk.field_b = mj.a((byte) 86, var2);
             break L655;
@@ -6581,8 +5925,7 @@ final class jd extends pj implements ke {
           }
         }
         L656: {
-          int discarded$2401 = 0;
-          var2 = wg.a("fs_accept_countdown_pl");
+          var2 = wg.a("fs_accept_countdown_pl", param0 + -7);
           if (var2 != null) {
             dl.field_I = mj.a((byte) -102, var2);
             break L656;
@@ -6591,8 +5934,7 @@ final class jd extends pj implements ke {
           }
         }
         L657: {
-          int discarded$2402 = 0;
-          var2 = wg.a("fs_nonmember");
+          var2 = wg.a("fs_nonmember", 0);
           if (var2 != null) {
             kc.field_j = mj.a((byte) -125, var2);
             break L657;
@@ -6601,8 +5943,7 @@ final class jd extends pj implements ke {
           }
         }
         L658: {
-          int discarded$2403 = 0;
-          var2 = wg.a("fs_button_close");
+          var2 = wg.a("fs_button_close", 0);
           if (var2 == null) {
             break L658;
           } else {
@@ -6611,8 +5952,7 @@ final class jd extends pj implements ke {
           }
         }
         L659: {
-          int discarded$2404 = 0;
-          var2 = wg.a("fs_button_members");
+          var2 = wg.a("fs_button_members", 0);
           if (var2 == null) {
             break L659;
           } else {
@@ -6621,8 +5961,7 @@ final class jd extends pj implements ke {
           }
         }
         L660: {
-          int discarded$2405 = 0;
-          var2 = wg.a("fs_unavailable");
+          var2 = wg.a("fs_unavailable", 0);
           if (var2 != null) {
             rc.field_h = mj.a((byte) -122, var2);
             break L660;
@@ -6631,8 +5970,7 @@ final class jd extends pj implements ke {
           }
         }
         L661: {
-          int discarded$2406 = 0;
-          var2 = wg.a("fs_unavailable_try_signed_applet");
+          var2 = wg.a("fs_unavailable_try_signed_applet", 0);
           if (var2 != null) {
             of.field_u = mj.a((byte) 66, var2);
             break L661;
@@ -6641,8 +5979,7 @@ final class jd extends pj implements ke {
           }
         }
         L662: {
-          int discarded$2407 = 0;
-          var2 = wg.a("fs_focus");
+          var2 = wg.a("fs_focus", 0);
           if (null == var2) {
             break L662;
           } else {
@@ -6651,8 +5988,7 @@ final class jd extends pj implements ke {
           }
         }
         L663: {
-          int discarded$2408 = 0;
-          var2 = wg.a("fs_focus_or_resolution");
+          var2 = wg.a("fs_focus_or_resolution", 0);
           if (null == var2) {
             break L663;
           } else {
@@ -6661,8 +5997,7 @@ final class jd extends pj implements ke {
           }
         }
         L664: {
-          int discarded$2409 = 0;
-          var2 = wg.a("fs_timeout");
+          var2 = wg.a("fs_timeout", 0);
           if (null == var2) {
             break L664;
           } else {
@@ -6671,8 +6006,7 @@ final class jd extends pj implements ke {
           }
         }
         L665: {
-          int discarded$2410 = 0;
-          var2 = wg.a("fs_button_tryagain");
+          var2 = wg.a("fs_button_tryagain", 0);
           if (var2 == null) {
             break L665;
           } else {
@@ -6681,18 +6015,16 @@ final class jd extends pj implements ke {
           }
         }
         L666: {
-          int discarded$2411 = 0;
-          var2 = wg.a("graphics_ui_fs_countdown");
+          var2 = wg.a("graphics_ui_fs_countdown", param0 + -7);
           if (var2 != null) {
-            String discarded$2412 = mj.a((byte) 123, var2);
+            String discarded$1001 = mj.a((byte) 123, var2);
             break L666;
           } else {
             break L666;
           }
         }
         L667: {
-          int discarded$2413 = 0;
-          var2 = wg.a("mb_caption_title");
+          var2 = wg.a("mb_caption_title", 0);
           if (null == var2) {
             break L667;
           } else {
@@ -6701,8 +6033,7 @@ final class jd extends pj implements ke {
           }
         }
         L668: {
-          int discarded$2414 = 0;
-          var2 = wg.a("mb_including_gamename");
+          var2 = wg.a("mb_including_gamename", param0 ^ 7);
           if (null == var2) {
             break L668;
           } else {
@@ -6711,8 +6042,7 @@ final class jd extends pj implements ke {
           }
         }
         L669: {
-          int discarded$2415 = 0;
-          var2 = wg.a("mb_full_access_1");
+          var2 = wg.a("mb_full_access_1", param0 + -7);
           if (null == var2) {
             break L669;
           } else {
@@ -6721,8 +6051,7 @@ final class jd extends pj implements ke {
           }
         }
         L670: {
-          int discarded$2416 = 0;
-          var2 = wg.a("mb_full_access_2");
+          var2 = wg.a("mb_full_access_2", 0);
           if (var2 != null) {
             ek.field_p = mj.a((byte) -113, var2);
             break L670;
@@ -6731,8 +6060,7 @@ final class jd extends pj implements ke {
           }
         }
         L671: {
-          int discarded$2417 = 0;
-          var2 = wg.a("mb_achievement_count_1");
+          var2 = wg.a("mb_achievement_count_1", 0);
           if (var2 == null) {
             break L671;
           } else {
@@ -6741,8 +6069,7 @@ final class jd extends pj implements ke {
           }
         }
         L672: {
-          int discarded$2418 = 0;
-          var2 = wg.a("mb_achievement_count_2");
+          var2 = wg.a("mb_achievement_count_2", 0);
           if (var2 == null) {
             break L672;
           } else {
@@ -6751,8 +6078,7 @@ final class jd extends pj implements ke {
           }
         }
         L673: {
-          int discarded$2419 = 0;
-          var2 = wg.a("mb_exclusive_1");
+          var2 = wg.a("mb_exclusive_1", 0);
           if (null != var2) {
             lc.field_k = mj.a((byte) -124, var2);
             break L673;
@@ -6761,8 +6087,7 @@ final class jd extends pj implements ke {
           }
         }
         L674: {
-          int discarded$2420 = 0;
-          var2 = wg.a("mb_exclusive_2");
+          var2 = wg.a("mb_exclusive_2", 0);
           if (var2 != null) {
             nb.field_c = mj.a((byte) -12, var2);
             break L674;
@@ -6771,18 +6096,16 @@ final class jd extends pj implements ke {
           }
         }
         L675: {
-          int discarded$2421 = 0;
-          var2 = wg.a("me_extra_benefits");
+          var2 = wg.a("me_extra_benefits", 0);
           if (null != var2) {
-            String discarded$2422 = mj.a((byte) -105, var2);
+            String discarded$1002 = mj.a((byte) -105, var2);
             break L675;
           } else {
             break L675;
           }
         }
         L676: {
-          int discarded$2423 = 0;
-          var2 = wg.a("hs_friend_tip");
+          var2 = wg.a("hs_friend_tip", param0 + -7);
           if (var2 == null) {
             break L676;
           } else {
@@ -6791,18 +6114,16 @@ final class jd extends pj implements ke {
           }
         }
         L677: {
-          int discarded$2424 = 0;
-          var2 = wg.a("hs_friend_tip_multi");
+          var2 = wg.a("hs_friend_tip_multi", 0);
           if (var2 != null) {
-            String discarded$2425 = mj.a((byte) -97, var2);
+            String discarded$1003 = mj.a((byte) -97, var2);
             break L677;
           } else {
             break L677;
           }
         }
         L678: {
-          int discarded$2426 = 0;
-          var2 = wg.a("hs_mode_name,0");
+          var2 = wg.a("hs_mode_name,0", 0);
           if (null == var2) {
             break L678;
           } else {
@@ -6811,8 +6132,7 @@ final class jd extends pj implements ke {
           }
         }
         L679: {
-          int discarded$2427 = 0;
-          var2 = wg.a("hs_mode_name,1");
+          var2 = wg.a("hs_mode_name,1", 0);
           if (var2 == null) {
             break L679;
           } else {
@@ -6821,8 +6141,7 @@ final class jd extends pj implements ke {
           }
         }
         L680: {
-          int discarded$2428 = 0;
-          var2 = wg.a("hs_mode_name,2");
+          var2 = wg.a("hs_mode_name,2", param0 + -7);
           if (var2 != null) {
             ni.field_r[2] = mj.a((byte) 18, var2);
             break L680;
@@ -6831,8 +6150,7 @@ final class jd extends pj implements ke {
           }
         }
         L681: {
-          int discarded$2429 = 0;
-          var2 = wg.a("rating_mode_name,0");
+          var2 = wg.a("rating_mode_name,0", 0);
           if (var2 == null) {
             break L681;
           } else {
@@ -6841,8 +6159,7 @@ final class jd extends pj implements ke {
           }
         }
         L682: {
-          int discarded$2430 = 0;
-          var2 = wg.a("rating_mode_name,1");
+          var2 = wg.a("rating_mode_name,1", 0);
           if (var2 == null) {
             break L682;
           } else {
@@ -6851,8 +6168,7 @@ final class jd extends pj implements ke {
           }
         }
         L683: {
-          int discarded$2431 = 0;
-          var2 = wg.a("rating_mode_long_name,0");
+          var2 = wg.a("rating_mode_long_name,0", 0);
           if (var2 == null) {
             break L683;
           } else {
@@ -6861,8 +6177,7 @@ final class jd extends pj implements ke {
           }
         }
         L684: {
-          int discarded$2432 = 0;
-          var2 = wg.a("rating_mode_long_name,1");
+          var2 = wg.a("rating_mode_long_name,1", 0);
           if (var2 == null) {
             break L684;
           } else {
@@ -6871,88 +6186,79 @@ final class jd extends pj implements ke {
           }
         }
         L685: {
-          int discarded$2433 = 0;
-          var2 = wg.a("graphics_config_fixed_size");
+          var2 = wg.a("graphics_config_fixed_size", param0 ^ 7);
           if (var2 != null) {
-            String discarded$2434 = mj.a((byte) 96, var2);
+            String discarded$1004 = mj.a((byte) 96, var2);
             break L685;
           } else {
             break L685;
           }
         }
         L686: {
-          int discarded$2435 = 0;
-          var2 = wg.a("graphics_config_resizable");
+          var2 = wg.a("graphics_config_resizable", param0 ^ 7);
           if (null == var2) {
             break L686;
           } else {
-            String discarded$2436 = mj.a((byte) -127, var2);
+            String discarded$1005 = mj.a((byte) -127, var2);
             break L686;
           }
         }
         L687: {
-          int discarded$2437 = 0;
-          var2 = wg.a("graphics_config_fullscreen");
+          var2 = wg.a("graphics_config_fullscreen", 0);
           if (var2 != null) {
-            String discarded$2438 = mj.a((byte) -108, var2);
+            String discarded$1006 = mj.a((byte) -108, var2);
             break L687;
           } else {
             break L687;
           }
         }
         L688: {
-          int discarded$2439 = 0;
-          var2 = wg.a("graphics_config_done");
+          var2 = wg.a("graphics_config_done", 0);
           if (null == var2) {
             break L688;
           } else {
-            String discarded$2440 = mj.a((byte) 10, var2);
+            String discarded$1007 = mj.a((byte) 10, var2);
             break L688;
           }
         }
         L689: {
-          int discarded$2441 = 0;
-          var2 = wg.a("graphics_config_apply");
+          var2 = wg.a("graphics_config_apply", param0 + -7);
           if (null == var2) {
             break L689;
           } else {
-            String discarded$2442 = mj.a((byte) -115, var2);
+            String discarded$1008 = mj.a((byte) -115, var2);
             break L689;
           }
         }
         L690: {
-          int discarded$2443 = 0;
-          var2 = wg.a("graphics_config_title");
+          var2 = wg.a("graphics_config_title", 0);
           if (null != var2) {
-            String discarded$2444 = mj.a((byte) -126, var2);
+            String discarded$1009 = mj.a((byte) -126, var2);
             break L690;
           } else {
             break L690;
           }
         }
         L691: {
-          int discarded$2445 = 0;
-          var2 = wg.a("graphics_config_instruction");
+          var2 = wg.a("graphics_config_instruction", 0);
           if (null != var2) {
-            String discarded$2446 = mj.a((byte) -125, var2);
+            String discarded$1010 = mj.a((byte) -125, var2);
             break L691;
           } else {
             break L691;
           }
         }
         L692: {
-          int discarded$2447 = 0;
-          var2 = wg.a("graphics_config_need_memory");
+          var2 = wg.a("graphics_config_need_memory", 0);
           if (null != var2) {
-            String discarded$2448 = mj.a((byte) 99, var2);
+            String discarded$1011 = mj.a((byte) 99, var2);
             break L692;
           } else {
             break L692;
           }
         }
         L693: {
-          int discarded$2449 = 0;
-          var2 = wg.a("pleasewait_dotdotdot");
+          var2 = wg.a("pleasewait_dotdotdot", 0);
           if (var2 != null) {
             tl.field_J = mj.a((byte) -3, var2);
             break L693;
@@ -6961,8 +6267,7 @@ final class jd extends pj implements ke {
           }
         }
         L694: {
-          int discarded$2450 = 0;
-          var2 = wg.a("serviceunavailable");
+          var2 = wg.a("serviceunavailable", 0);
           if (null == var2) {
             break L694;
           } else {
@@ -6971,8 +6276,7 @@ final class jd extends pj implements ke {
           }
         }
         L695: {
-          int discarded$2451 = 0;
-          var2 = wg.a("createtouse");
+          var2 = wg.a("createtouse", 0);
           if (var2 == null) {
             break L695;
           } else {
@@ -6981,28 +6285,25 @@ final class jd extends pj implements ke {
           }
         }
         L696: {
-          int discarded$2452 = 0;
-          var2 = wg.a("achievementsoffline");
+          var2 = wg.a("achievementsoffline", 0);
           if (var2 == null) {
             break L696;
           } else {
-            String discarded$2453 = mj.a((byte) 110, var2);
+            String discarded$1012 = mj.a((byte) 110, var2);
             break L696;
           }
         }
         L697: {
-          int discarded$2454 = 0;
-          var2 = wg.a("warning");
+          var2 = wg.a("warning", param0 + -7);
           if (null != var2) {
-            String discarded$2455 = mj.a((byte) 123, var2);
+            String discarded$1013 = mj.a((byte) 123, var2);
             break L697;
           } else {
             break L697;
           }
         }
         L698: {
-          int discarded$2456 = 0;
-          var2 = wg.a("DEFAULT_PLAYER_NAME");
+          var2 = wg.a("DEFAULT_PLAYER_NAME", 0);
           if (null != var2) {
             u.field_e = mj.a((byte) 76, var2);
             break L698;
@@ -7011,8 +6312,7 @@ final class jd extends pj implements ke {
           }
         }
         L699: {
-          int discarded$2457 = 0;
-          var2 = wg.a("mustlogin1");
+          var2 = wg.a("mustlogin1", 0);
           if (null == var2) {
             break L699;
           } else {
@@ -7021,8 +6321,7 @@ final class jd extends pj implements ke {
           }
         }
         L700: {
-          int discarded$2458 = 0;
-          var2 = wg.a("mustlogin2,1");
+          var2 = wg.a("mustlogin2,1", 0);
           if (null != var2) {
             tf.field_nb[1] = mj.a((byte) -101, var2);
             break L700;
@@ -7031,8 +6330,7 @@ final class jd extends pj implements ke {
           }
         }
         L701: {
-          int discarded$2459 = 0;
-          var2 = wg.a("mustlogin2,2");
+          var2 = wg.a("mustlogin2,2", param0 + -7);
           if (null != var2) {
             tf.field_nb[2] = mj.a((byte) 2, var2);
             break L701;
@@ -7041,8 +6339,7 @@ final class jd extends pj implements ke {
           }
         }
         L702: {
-          int discarded$2460 = 0;
-          var2 = wg.a("mustlogin2,3");
+          var2 = wg.a("mustlogin2,3", 0);
           if (null == var2) {
             break L702;
           } else {
@@ -7051,8 +6348,7 @@ final class jd extends pj implements ke {
           }
         }
         L703: {
-          int discarded$2461 = 0;
-          var2 = wg.a("mustlogin2,4");
+          var2 = wg.a("mustlogin2,4", 0);
           if (var2 != null) {
             tf.field_nb[4] = mj.a((byte) 49, var2);
             break L703;
@@ -7061,8 +6357,7 @@ final class jd extends pj implements ke {
           }
         }
         L704: {
-          int discarded$2462 = 0;
-          var2 = wg.a("mustlogin2,5");
+          var2 = wg.a("mustlogin2,5", 0);
           if (null == var2) {
             break L704;
           } else {
@@ -7071,8 +6366,7 @@ final class jd extends pj implements ke {
           }
         }
         L705: {
-          int discarded$2463 = 0;
-          var2 = wg.a("mustlogin2,6");
+          var2 = wg.a("mustlogin2,6", 0);
           if (null == var2) {
             break L705;
           } else {
@@ -7081,8 +6375,7 @@ final class jd extends pj implements ke {
           }
         }
         L706: {
-          int discarded$2464 = 0;
-          var2 = wg.a("mustlogin2,7");
+          var2 = wg.a("mustlogin2,7", param0 + -7);
           if (var2 != null) {
             tf.field_nb[7] = mj.a((byte) -102, var2);
             break L706;
@@ -7091,8 +6384,7 @@ final class jd extends pj implements ke {
           }
         }
         L707: {
-          int discarded$2465 = 0;
-          var2 = wg.a("mustlogin3,1");
+          var2 = wg.a("mustlogin3,1", param0 ^ 7);
           if (null == var2) {
             break L707;
           } else {
@@ -7101,8 +6393,7 @@ final class jd extends pj implements ke {
           }
         }
         L708: {
-          int discarded$2466 = 0;
-          var2 = wg.a("mustlogin3,2");
+          var2 = wg.a("mustlogin3,2", param0 ^ 7);
           if (null == var2) {
             break L708;
           } else {
@@ -7111,8 +6402,7 @@ final class jd extends pj implements ke {
           }
         }
         L709: {
-          int discarded$2467 = 0;
-          var2 = wg.a("mustlogin3,3");
+          var2 = wg.a("mustlogin3,3", 0);
           if (null == var2) {
             break L709;
           } else {
@@ -7121,8 +6411,7 @@ final class jd extends pj implements ke {
           }
         }
         L710: {
-          int discarded$2468 = 0;
-          var2 = wg.a("mustlogin3,4");
+          var2 = wg.a("mustlogin3,4", 0);
           if (var2 == null) {
             break L710;
           } else {
@@ -7131,8 +6420,7 @@ final class jd extends pj implements ke {
           }
         }
         L711: {
-          int discarded$2469 = 0;
-          var2 = wg.a("mustlogin3,5");
+          var2 = wg.a("mustlogin3,5", param0 + -7);
           if (var2 == null) {
             break L711;
           } else {
@@ -7141,8 +6429,7 @@ final class jd extends pj implements ke {
           }
         }
         L712: {
-          int discarded$2470 = 0;
-          var2 = wg.a("mustlogin3,6");
+          var2 = wg.a("mustlogin3,6", param0 + -7);
           if (null == var2) {
             break L712;
           } else {
@@ -7151,8 +6438,7 @@ final class jd extends pj implements ke {
           }
         }
         L713: {
-          int discarded$2471 = 0;
-          var2 = wg.a("mustlogin3,7");
+          var2 = wg.a("mustlogin3,7", 0);
           if (var2 != null) {
             aa.field_a[7] = mj.a((byte) 124, var2);
             break L713;
@@ -7161,8 +6447,7 @@ final class jd extends pj implements ke {
           }
         }
         L714: {
-          int discarded$2472 = 0;
-          var2 = wg.a("discard");
+          var2 = wg.a("discard", 0);
           if (var2 != null) {
             ih.field_P = mj.a((byte) 28, var2);
             break L714;
@@ -7171,8 +6456,7 @@ final class jd extends pj implements ke {
           }
         }
         L715: {
-          int discarded$2473 = 0;
-          var2 = wg.a("mustlogin4,1");
+          var2 = wg.a("mustlogin4,1", 0);
           if (null != var2) {
             kk.field_d[1] = mj.a((byte) -113, var2);
             break L715;
@@ -7181,8 +6465,7 @@ final class jd extends pj implements ke {
           }
         }
         L716: {
-          int discarded$2474 = 0;
-          var2 = wg.a("mustlogin4,2");
+          var2 = wg.a("mustlogin4,2", 0);
           if (null == var2) {
             break L716;
           } else {
@@ -7191,8 +6474,7 @@ final class jd extends pj implements ke {
           }
         }
         L717: {
-          int discarded$2475 = 0;
-          var2 = wg.a("mustlogin4,3");
+          var2 = wg.a("mustlogin4,3", 0);
           if (null != var2) {
             kk.field_d[3] = mj.a((byte) 35, var2);
             break L717;
@@ -7201,8 +6483,7 @@ final class jd extends pj implements ke {
           }
         }
         L718: {
-          int discarded$2476 = 0;
-          var2 = wg.a("mustlogin4,4");
+          var2 = wg.a("mustlogin4,4", 0);
           if (var2 != null) {
             kk.field_d[4] = mj.a((byte) 77, var2);
             break L718;
@@ -7211,8 +6492,7 @@ final class jd extends pj implements ke {
           }
         }
         L719: {
-          int discarded$2477 = 0;
-          var2 = wg.a("mustlogin4,5");
+          var2 = wg.a("mustlogin4,5", 0);
           if (null != var2) {
             kk.field_d[5] = mj.a((byte) -118, var2);
             break L719;
@@ -7221,8 +6501,7 @@ final class jd extends pj implements ke {
           }
         }
         L720: {
-          int discarded$2478 = 0;
-          var2 = wg.a("mustlogin4,6");
+          var2 = wg.a("mustlogin4,6", 0);
           if (var2 != null) {
             kk.field_d[6] = mj.a((byte) -112, var2);
             break L720;
@@ -7231,8 +6510,7 @@ final class jd extends pj implements ke {
           }
         }
         L721: {
-          int discarded$2479 = 0;
-          var2 = wg.a("mustlogin4,7");
+          var2 = wg.a("mustlogin4,7", 0);
           if (null != var2) {
             kk.field_d[7] = mj.a((byte) 118, var2);
             break L721;
@@ -7241,18 +6519,16 @@ final class jd extends pj implements ke {
           }
         }
         L722: {
-          int discarded$2480 = 0;
-          var2 = wg.a("mustlogin_notloggedin");
+          var2 = wg.a("mustlogin_notloggedin", 0);
           if (null == var2) {
             break L722;
           } else {
-            String discarded$2481 = mj.a((byte) 8, var2);
+            String discarded$1014 = mj.a((byte) 8, var2);
             break L722;
           }
         }
         L723: {
-          int discarded$2482 = 0;
-          var2 = wg.a("mustlogin_alternate,1");
+          var2 = wg.a("mustlogin_alternate,1", 0);
           if (null == var2) {
             break L723;
           } else {
@@ -7261,8 +6537,7 @@ final class jd extends pj implements ke {
           }
         }
         L724: {
-          int discarded$2483 = 0;
-          var2 = wg.a("mustlogin_alternate,2");
+          var2 = wg.a("mustlogin_alternate,2", 0);
           if (null == var2) {
             break L724;
           } else {
@@ -7271,8 +6546,7 @@ final class jd extends pj implements ke {
           }
         }
         L725: {
-          int discarded$2484 = 0;
-          var2 = wg.a("mustlogin_alternate,3");
+          var2 = wg.a("mustlogin_alternate,3", 0);
           if (var2 == null) {
             break L725;
           } else {
@@ -7281,8 +6555,7 @@ final class jd extends pj implements ke {
           }
         }
         L726: {
-          int discarded$2485 = 0;
-          var2 = wg.a("mustlogin_alternate,4");
+          var2 = wg.a("mustlogin_alternate,4", 0);
           if (var2 != null) {
             sg.field_c[4] = mj.a((byte) -120, var2);
             break L726;
@@ -7291,8 +6564,7 @@ final class jd extends pj implements ke {
           }
         }
         L727: {
-          int discarded$2486 = 0;
-          var2 = wg.a("mustlogin_alternate,5");
+          var2 = wg.a("mustlogin_alternate,5", 0);
           if (null == var2) {
             break L727;
           } else {
@@ -7301,8 +6573,7 @@ final class jd extends pj implements ke {
           }
         }
         L728: {
-          int discarded$2487 = 0;
-          var2 = wg.a("mustlogin_alternate,6");
+          var2 = wg.a("mustlogin_alternate,6", 0);
           if (var2 != null) {
             sg.field_c[6] = mj.a((byte) -119, var2);
             break L728;
@@ -7311,8 +6582,7 @@ final class jd extends pj implements ke {
           }
         }
         L729: {
-          int discarded$2488 = 0;
-          var2 = wg.a("mustlogin_alternate,7");
+          var2 = wg.a("mustlogin_alternate,7", 0);
           if (var2 != null) {
             sg.field_c[7] = mj.a((byte) -110, var2);
             break L729;
@@ -7321,8 +6591,7 @@ final class jd extends pj implements ke {
           }
         }
         L730: {
-          int discarded$2489 = 0;
-          var2 = wg.a("subscription_cost_monthly,0");
+          var2 = wg.a("subscription_cost_monthly,0", 0);
           if (null == var2) {
             break L730;
           } else {
@@ -7331,8 +6600,7 @@ final class jd extends pj implements ke {
           }
         }
         L731: {
-          int discarded$2490 = 0;
-          var2 = wg.a("subscription_cost_monthly,1");
+          var2 = wg.a("subscription_cost_monthly,1", 0);
           if (null == var2) {
             break L731;
           } else {
@@ -7341,8 +6609,7 @@ final class jd extends pj implements ke {
           }
         }
         L732: {
-          int discarded$2491 = 0;
-          var2 = wg.a("subscription_cost_monthly,2");
+          var2 = wg.a("subscription_cost_monthly,2", 0);
           if (var2 == null) {
             break L732;
           } else {
@@ -7351,8 +6618,7 @@ final class jd extends pj implements ke {
           }
         }
         L733: {
-          int discarded$2492 = 0;
-          var2 = wg.a("subscription_cost_monthly,3");
+          var2 = wg.a("subscription_cost_monthly,3", 0);
           if (null == var2) {
             break L733;
           } else {
@@ -7361,8 +6627,7 @@ final class jd extends pj implements ke {
           }
         }
         L734: {
-          int discarded$2493 = 0;
-          var2 = wg.a("subscription_cost_monthly,4");
+          var2 = wg.a("subscription_cost_monthly,4", param0 ^ 7);
           if (var2 != null) {
             ka.field_p[4] = mj.a((byte) -114, var2);
             break L734;
@@ -7371,8 +6636,7 @@ final class jd extends pj implements ke {
           }
         }
         L735: {
-          int discarded$2494 = 0;
-          var2 = wg.a("subscription_cost_monthly,5");
+          var2 = wg.a("subscription_cost_monthly,5", 0);
           if (null != var2) {
             ka.field_p[5] = mj.a((byte) 111, var2);
             break L735;
@@ -7381,8 +6645,7 @@ final class jd extends pj implements ke {
           }
         }
         L736: {
-          int discarded$2495 = 0;
-          var2 = wg.a("subscription_cost_monthly,6");
+          var2 = wg.a("subscription_cost_monthly,6", 0);
           if (var2 != null) {
             ka.field_p[6] = mj.a((byte) -103, var2);
             break L736;
@@ -7391,8 +6654,7 @@ final class jd extends pj implements ke {
           }
         }
         L737: {
-          int discarded$2496 = 0;
-          var2 = wg.a("subscription_cost_monthly,7");
+          var2 = wg.a("subscription_cost_monthly,7", 0);
           if (var2 == null) {
             break L737;
           } else {
@@ -7401,8 +6663,7 @@ final class jd extends pj implements ke {
           }
         }
         L738: {
-          int discarded$2497 = 0;
-          var2 = wg.a("subscription_cost_monthly,8");
+          var2 = wg.a("subscription_cost_monthly,8", param0 + -7);
           if (var2 != null) {
             ka.field_p[8] = mj.a((byte) -19, var2);
             break L738;
@@ -7411,8 +6672,7 @@ final class jd extends pj implements ke {
           }
         }
         L739: {
-          int discarded$2498 = 0;
-          var2 = wg.a("subscription_cost_monthly,9");
+          var2 = wg.a("subscription_cost_monthly,9", param0 + -7);
           if (null == var2) {
             break L739;
           } else {
@@ -7421,8 +6681,7 @@ final class jd extends pj implements ke {
           }
         }
         L740: {
-          int discarded$2499 = 0;
-          var2 = wg.a("subscription_cost_monthly,10");
+          var2 = wg.a("subscription_cost_monthly,10", 0);
           if (var2 != null) {
             ka.field_p[10] = mj.a((byte) 74, var2);
             break L740;
@@ -7431,8 +6690,7 @@ final class jd extends pj implements ke {
           }
         }
         L741: {
-          int discarded$2500 = 0;
-          var2 = wg.a("subscription_cost_monthly,11");
+          var2 = wg.a("subscription_cost_monthly,11", param0 ^ 7);
           if (var2 == null) {
             break L741;
           } else {
@@ -7441,8 +6699,7 @@ final class jd extends pj implements ke {
           }
         }
         L742: {
-          int discarded$2501 = 0;
-          var2 = wg.a("subscription_cost_monthly,12");
+          var2 = wg.a("subscription_cost_monthly,12", 0);
           if (var2 != null) {
             ka.field_p[12] = mj.a((byte) 63, var2);
             break L742;
@@ -7451,10 +6708,9 @@ final class jd extends pj implements ke {
           }
         }
         L743: {
-          int discarded$2502 = 0;
-          var2 = wg.a("sentence_separator");
+          var2 = wg.a("sentence_separator", 0);
           if (var2 != null) {
-            String discarded$2503 = mj.a((byte) -118, var2);
+            String discarded$1015 = mj.a((byte) -118, var2);
             break L743;
           } else {
             break L743;
@@ -7529,11 +6785,19 @@ final class jd extends pj implements ke {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
+            L1: {
+              if (param0 == 108) {
+                break L1;
+              } else {
+                field_P = 48;
+                break L1;
+              }
+            }
             field_L = null;
             field_M = null;
             field_Q = null;
@@ -7542,48 +6806,52 @@ final class jd extends pj implements ke {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var1, "jd.F(" + 108 + ')');
+          throw ie.a((Throwable) (Object) var1, "jd.F(" + param0 + ')');
         }
     }
 
     final static void a(byte param0, int param1) {
         try {
             a.field_c = eb.field_d[param1];
-            int var2_int = 0;
+            int var2_int = 55 % ((param0 - 57) / 55);
             mi.field_d = ph.field_f[param1];
             dh.field_J = tg.field_c[param1];
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "jd.E(" + 119 + ',' + param1 + ')');
+            throw ie.a((Throwable) (Object) runtimeException, "jd.E(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final static void g() {
+    final static void g(byte param0) {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              L2: {
-                if (oa.field_b > 10) {
-                  break L2;
-                } else {
-                  wk.a(80, 0);
-                  if (!DrPhlogistonSavesTheEarth.field_D) {
-                    break L1;
-                  } else {
+            if (param0 < -88) {
+              L1: {
+                L2: {
+                  if (oa.field_b > 10) {
                     break L2;
+                  } else {
+                    wk.a(80, 0);
+                    if (!DrPhlogistonSavesTheEarth.field_D) {
+                      break L1;
+                    } else {
+                      break L2;
+                    }
                   }
                 }
+                wk.a(80, oa.field_b - 10);
+                break L1;
               }
-              wk.a(80, oa.field_b - 10);
-              break L1;
+              break L0;
+            } else {
+              return;
             }
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var1, "jd.B(" + -104 + ')');
+          throw ie.a((Throwable) (Object) var1, "jd.B(" + param0 + ')');
         }
     }
 
@@ -8007,8 +7275,7 @@ final class jd extends pj implements ke {
                     }
                     case 29: {
                         try {
-                            int discarded$2 = 126;
-                            eg.a();
+                            eg.a((byte) 126);
                             statePc = 30;
                             continue stateLoop;
                         } catch (Throwable stateCaught_29) {
@@ -8030,8 +7297,7 @@ final class jd extends pj implements ke {
                     case 31: {
                         try {
                             var2_ref = (IOException) (Object) caughtException;
-                            int discarded$3 = 126;
-                            eg.a();
+                            eg.a((byte) 126);
                             statePc = 32;
                             continue stateLoop;
                         } catch (Throwable stateCaught_31) {

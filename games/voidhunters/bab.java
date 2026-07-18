@@ -10,7 +10,7 @@ final class bab implements dja {
         return (tv) (Object) new dv();
     }
 
-    final static String a(String param0) {
+    final static String a(String param0, int param1) {
         RuntimeException var2 = null;
         tsa[] var2_array = null;
         StringBuilder var3 = null;
@@ -145,7 +145,7 @@ final class bab implements dja {
         field_b = null;
     }
 
-    final static void a(String param0, long param1) {
+    final static void a(String param0, long param1, int param2) {
         CharSequence var5 = null;
         try {
             waa.field_x = param0;

@@ -8,7 +8,7 @@ final class hf {
     static boolean field_b;
     static String field_c;
 
-    final static fb a(String param0) {
+    final static fb a(String param0, boolean param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         fb var3 = null;
@@ -42,15 +42,13 @@ final class hf {
             if (param0 != null) {
               if (param0.length() != 0) {
                 var6 = (CharSequence) (Object) param0;
-                int discarded$4 = 0;
-                var2 = ce.a(var6);
+                var2 = ce.a(var6, 0);
                 if (var2 != null) {
                   var3 = (fb) (Object) lf.field_q.a((long)var2.hashCode(), 0);
                   L0: while (true) {
                     if (var3 != null) {
                       var7 = (CharSequence) (Object) var3.field_ob;
-                      int discarded$5 = 0;
-                      var4 = ce.a(var7);
+                      var4 = ce.a(var7, 0);
                       if (var4.equals((Object) (Object) var2)) {
                         stackOut_16_0 = (fb) var3;
                         stackIn_17_0 = stackOut_16_0;
@@ -109,7 +107,7 @@ final class hf {
         }
     }
 
-    final static int b() {
+    final static int b(boolean param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -245,11 +243,10 @@ final class hf {
         var2 = Bounce.field_N;
         try {
           L0: {
-            boolean discarded$28 = q.field_N.a(dk.field_c, true, true, ee.field_b);
+            boolean discarded$12 = q.field_N.a(dk.field_c, true, true, ee.field_b);
             q.field_N.d((byte) 111);
             L1: while (true) {
-              int discarded$29 = -15;
-              if (!q.g()) {
+              if (!q.g((byte) -15)) {
                 if (m.field_g == -1) {
                   stackOut_7_0 = 81;
                   stackIn_8_0 = stackOut_7_0;
@@ -262,7 +259,7 @@ final class hf {
                   return stackIn_6_0;
                 }
               } else {
-                boolean discarded$30 = q.field_N.a((byte) -109, lh.field_f, gk.field_d);
+                boolean discarded$13 = q.field_N.a((byte) -109, lh.field_f, gk.field_d);
                 continue L1;
               }
             }
@@ -275,7 +272,7 @@ final class hf {
         return stackIn_8_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
         int var1 = 1;

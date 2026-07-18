@@ -13,7 +13,7 @@ final class gn {
     private ff field_i;
     private int field_e;
 
-    final static void a(boolean param0, vi param1) {
+    final static void a(boolean param0, vi param1, byte param2, int param3) {
         RuntimeException var4 = null;
         tf stackIn_1_0 = null;
         int stackIn_1_1 = 0;
@@ -285,8 +285,7 @@ final class gn {
         Object var9 = null;
         int var9_int = 0;
         byte[] var9_array = null;
-        int var10_int = 0;
-        byte[] var10 = null;
+        int var10 = 0;
         RuntimeException var11_ref_RuntimeException = null;
         int var11 = 0;
         int var12 = 0;
@@ -306,7 +305,6 @@ final class gn {
         byte[] var25 = null;
         th var26 = null;
         byte[] var27 = null;
-        byte[] var28 = null;
         th var29 = null;
         th var31 = null;
         int[] var32 = null;
@@ -314,13 +312,11 @@ final class gn {
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
-        byte[] var37 = null;
         int[] var39 = null;
         byte[][] var40 = null;
         int[] var41 = null;
         byte[] var42 = null;
         byte[] var43 = null;
-        byte[] var44 = null;
         int[] var46 = null;
         byte[][] var47 = null;
         int[] var48 = null;
@@ -404,14 +400,14 @@ final class gn {
                     } else {
                       L4: {
                         if (var6 == null) {
-                          var10_int = var9_int;
+                          var10 = var9_int;
                           break L4;
                         } else {
-                          var10_int = var48[var9_int];
+                          var10 = var48[var9_int];
                           break L4;
                         }
                       }
-                      if (null != var7[var10_int]) {
+                      if (null != var7[var10]) {
                         var9_int++;
                         continue L2;
                       } else {
@@ -470,10 +466,6 @@ final class gn {
                         var27 = var36;
                         var23 = var27;
                         var51 = var23;
-                        var44 = var51;
-                        var37 = var44;
-                        var28 = var37;
-                        var10 = var28;
                         break L8;
                       }
                     } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -526,8 +518,7 @@ final class gn {
                           }
                         }
                         if (((gn) this).field_e == 0) {
-                          int discarded$2 = 0;
-                          var7[var11] = mg.a((byte) 95, var10);
+                          var7[var11] = mg.a((byte) 95, var51, false);
                           break L11;
                         } else {
                           var7[var11] = (Object) (Object) var50;
@@ -581,8 +572,7 @@ final class gn {
                                               var7[var18] = (Object) (Object) var54[var17];
                                               break L18;
                                             } else {
-                                              int discarded$3 = 0;
-                                              var7[var18] = mg.a((byte) 112, var54[var17]);
+                                              var7[var18] = mg.a((byte) 112, var54[var17], false);
                                               break L18;
                                             }
                                           }
@@ -987,8 +977,7 @@ final class gn {
               if (this.c(-1, var5_int)) {
                 var8 = (CharSequence) (Object) param0;
                 var6 = ((gn) this).field_a.field_c[var5_int].a(an.a(var8, param1), (byte) 24);
-                int discarded$2 = -4599;
-                stackOut_6_0 = this.a(param2, var6, var5_int);
+                stackOut_6_0 = this.a(param2, var6, var5_int, -4599);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
@@ -1292,8 +1281,7 @@ final class gn {
             ((gn) this).field_d = ((boolean[]) ((gn) this).field_c[2])[3];
         }
         if (!((gn) this).field_d) {
-            int discarded$1 = 0;
-            ((gn) this).field_c[param0] = mg.a((byte) 106, ((gn) this).field_i.a((byte) -83, param0));
+            ((gn) this).field_c[param0] = mg.a((byte) 106, ((gn) this).field_i.a((byte) -83, param0), false);
         } else {
             ((gn) this).field_c[param0] = (Object) (Object) ((gn) this).field_i.a((byte) -95, param0);
         }
@@ -1457,7 +1445,7 @@ final class gn {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_h = null;
         field_f = null;
         field_j = null;
@@ -1583,8 +1571,7 @@ final class gn {
         if (!param1) {
             ((long[]) ((gn) this).field_c[2])[0] = 92L;
         }
-        int discarded$0 = -4599;
-        return this.a((int[]) null, param2, param0);
+        return this.a((int[]) null, param2, param0, -4599);
     }
 
     final synchronized byte[] a(String param0, boolean param1, String param2) {
@@ -1805,7 +1792,7 @@ final class gn {
         return stackIn_4_0;
     }
 
-    private final synchronized byte[] a(int[] param0, int param1, int param2) {
+    private final synchronized byte[] a(int[] param0, int param1, int param2, int param3) {
         Object var5 = null;
         byte[] var7 = null;
         Object stackIn_2_0 = null;

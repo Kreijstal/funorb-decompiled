@@ -8,7 +8,7 @@ final class cm {
     static ee[] field_b;
     static String field_a;
 
-    final static void a() {
+    final static void a(byte param0) {
         if (nb.field_b != null) {
           nb.field_b.h((byte) -126);
           rd.field_s = new ae();

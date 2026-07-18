@@ -24,7 +24,7 @@ final class jg extends ck implements oi {
         }
     }
 
-    final static void a(pf param0, pf param1) {
+    final static void a(pf param0, pf param1, byte param2) {
         try {
             vf.field_E = param0;
             nh.field_g = param1;
@@ -81,8 +81,7 @@ final class jg extends ck implements oi {
                   if (248 == param0.field_g) {
                     L2: {
                       if (!param2) {
-                        int discarded$3 = 1;
-                        di.a();
+                        di.a(1);
                         break L2;
                       } else {
                         break L2;
@@ -122,7 +121,7 @@ final class jg extends ck implements oi {
                       break L4;
                     }
                   } else {
-                    ig discarded$4 = var5.a((lf) this, tc.field_q, (byte) 118);
+                    ig discarded$2 = var5.a((lf) this, tc.field_q, (byte) 118);
                     break L4;
                   }
                 }
@@ -139,7 +138,7 @@ final class jg extends ck implements oi {
                 }
               } else {
                 if (!param0.field_a) {
-                  ig discarded$5 = var5.a((lf) this, tc.field_q, (byte) -125);
+                  ig discarded$3 = var5.a((lf) this, tc.field_q, (byte) -125);
                   break L3;
                 } else {
                   ((jg) this).b((rj) (Object) new sj((jg) this), 23143);
@@ -186,11 +185,10 @@ final class jg extends ck implements oi {
         ml var2 = null;
         if (((jg) this).field_G) {
           if (!((jg) this).field_mb) {
-            int discarded$5 = 0;
-            var2 = mj.i();
+            var2 = mj.i(0);
             if (var2 == null) {
               if (!param0) {
-                int discarded$6 = jg.i((byte) -113);
+                int discarded$4 = jg.i((byte) -113);
                 return super.d(true);
               } else {
                 return super.d(true);
@@ -198,7 +196,7 @@ final class jg extends ck implements oi {
             } else {
               this.a(var2, -8895, false);
               if (!param0) {
-                int discarded$7 = jg.i((byte) -113);
+                int discarded$5 = jg.i((byte) -113);
                 return super.d(true);
               } else {
                 return super.d(true);
@@ -206,7 +204,7 @@ final class jg extends ck implements oi {
             }
           } else {
             if (!param0) {
-              int discarded$8 = jg.i((byte) -113);
+              int discarded$6 = jg.i((byte) -113);
               return super.d(true);
             } else {
               return super.d(true);
@@ -214,7 +212,7 @@ final class jg extends ck implements oi {
           }
         } else {
           if (!param0) {
-            int discarded$9 = jg.i((byte) -113);
+            int discarded$7 = jg.i((byte) -113);
             return super.d(true);
           } else {
             return super.d(true);
@@ -222,14 +220,13 @@ final class jg extends ck implements oi {
         }
     }
 
-    public static void e() {
+    public static void e(boolean param0) {
         field_ob = null;
     }
 
     final static int i(byte param0) {
         if (param0 != 113) {
-            int discarded$0 = 1;
-            jg.e();
+            jg.e(true);
             return u.field_k;
         }
         return u.field_k;

@@ -10,7 +10,7 @@ final class ku implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     static String field_a;
     static hd field_d;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         on.a(param2 - 8, param4 - 11, du.field_n, 20, 6, 0, param1);
         String var6 = vo.a((byte) -18, !bt.field_e ? ag.field_l : h.field_a, new String[1]);
         q.field_d.a(var6, param2, param4, 16777215, -1);

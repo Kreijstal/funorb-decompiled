@@ -9,7 +9,7 @@ final class og implements java.awt.event.KeyListener, java.awt.event.FocusListen
     static int field_f;
     static String field_d;
 
-    final static int a(boolean param0, String param1) {
+    final static int a(boolean param0, String param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
@@ -115,7 +115,7 @@ final class og implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static void a(int param0, byte param1, int param2, q param3, int param4) {
+    final static void a(int param0, byte param1, int param2, q param3, int param4, byte param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -422,7 +422,7 @@ final class og implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 if (param4.indexOf("<br>") != -1) {
                   break L1;
                 } else {
-                  param2[0] = (String) (Object) param2;
+                  param2[0] = param4;
                   stackOut_3_0 = 1;
                   stackIn_4_0 = stackOut_3_0;
                   return stackIn_4_0;
@@ -572,7 +572,7 @@ final class og implements java.awt.event.KeyListener, java.awt.event.FocusListen
         return stackIn_20_0;
     }
 
-    final static int b() {
+    final static int b(int param0) {
         return jn.field_d;
     }
 
@@ -714,7 +714,7 @@ final class og implements java.awt.event.KeyListener, java.awt.event.FocusListen
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         field_c = null;

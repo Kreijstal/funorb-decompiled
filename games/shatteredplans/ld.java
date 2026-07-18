@@ -13,7 +13,7 @@ final class ld extends oh {
     static bc field_m;
     static int field_j;
 
-    public static void a() {
+    public static void a(int param0) {
         field_q = null;
         field_m = null;
         field_n = null;
@@ -115,7 +115,7 @@ final class ld extends oh {
     ld() {
     }
 
-    final static void d() {
+    final static void d(int param0) {
         if (!(di.field_m != 0)) {
             sg.a(true, false, 0, aa.field_P, tk.field_C);
             sg.a(true, false, 700, qf.field_c, tk.field_C);

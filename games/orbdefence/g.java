@@ -17,7 +17,7 @@ final class g extends aa {
         ((g) this).field_k = (long)param0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_g = null;
         int var1 = 31;
     }
@@ -70,8 +70,7 @@ final class g extends aa {
 
     final long a(int param0) {
         L0: {
-          int discarded$2 = 0;
-          ((g) this).field_i = ((g) this).field_i + this.a();
+          ((g) this).field_i = ((g) this).field_i + this.a(false);
           if (param0 == 17990) {
             break L0;
           } else {
@@ -85,7 +84,7 @@ final class g extends aa {
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_4_0 = null;
@@ -187,8 +186,7 @@ final class g extends aa {
         try {
           L0: {
             var11 = (CharSequence) (Object) param2;
-            int discarded$3 = 126;
-            var3_int = bi.a(var11, param1);
+            var3_int = bi.a(var11, param1, 126);
             var4 = new String[1 + var3_int];
             var5 = 0;
             var7 = 85 % ((param0 - -27) / 51);
@@ -204,9 +202,9 @@ final class g extends aa {
                 var9 = var6;
                 L2: while (true) {
                   if (param1 == param2.charAt(var9)) {
-                    int incrementValue$4 = var5;
+                    int incrementValue$1 = var5;
                     var5++;
-                    var4[incrementValue$4] = param2.substring(var6, var9);
+                    var4[incrementValue$1] = param2.substring(var6, var9);
                     var6 = var9 + 1;
                     var8++;
                     continue L1;
@@ -251,7 +249,7 @@ final class g extends aa {
         return stackIn_9_0;
     }
 
-    private final long a() {
+    private final long a(boolean param0) {
         long var2 = 0L;
         long var4 = 0L;
         int var9 = 0;

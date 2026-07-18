@@ -10,7 +10,7 @@ final class oj {
     private float field_b;
     static String field_g;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_g = null;
         field_f = null;
@@ -91,7 +91,7 @@ final class oj {
         ((oj) this).field_a = 0.0f;
     }
 
-    final static lp a(int param0, dj param1, int param2, dj param3) {
+    final static lp a(int param0, dj param1, int param2, dj param3, int param4) {
         RuntimeException var5 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

@@ -12,7 +12,7 @@ final class th {
     static String field_b;
     private rk field_f;
 
-    final static void b() {
+    final static void b(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -97,7 +97,7 @@ final class th {
         }
     }
 
-    final static StringBuilder a(StringBuilder param0) {
+    final static StringBuilder a(StringBuilder param0, char param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -171,7 +171,7 @@ final class th {
         return stackIn_6_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_e = null;
         field_g = null;

@@ -156,7 +156,7 @@ final class ak {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_d = null;

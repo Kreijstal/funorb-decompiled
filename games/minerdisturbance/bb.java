@@ -5,7 +5,7 @@ final class bb {
     static String field_b;
     static ta field_a;
 
-    final static void a(String param0, int param1, we param2) {
+    final static void a(String param0, int param1, we param2, int param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -126,7 +126,7 @@ final class bb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }

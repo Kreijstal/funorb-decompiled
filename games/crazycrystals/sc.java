@@ -9,15 +9,14 @@ final class sc extends jb {
     int field_f;
     static am[] field_i;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_i = null;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         ch.field_d.a(true);
         if (!oi.field_d.b((byte) 94)) {
-            int discarded$0 = 1;
-            return co.i();
+            return co.i(1);
         }
         return 0;
     }

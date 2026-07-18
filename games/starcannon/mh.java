@@ -181,7 +181,7 @@ final class mh extends qf {
         super(param0);
     }
 
-    final static StringBuilder a(int param0, char param1, StringBuilder param2) {
+    final static StringBuilder a(int param0, char param1, StringBuilder param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

@@ -14,7 +14,7 @@ abstract class vk {
 
     abstract int a(boolean param0);
 
-    final static byte[] a(byte[] param0, pk param1) {
+    final static byte[] a(byte[] param0, pk param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -170,7 +170,7 @@ abstract class vk {
         return stackIn_16_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_e = null;
         field_b = null;

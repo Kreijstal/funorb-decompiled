@@ -4,7 +4,7 @@
 final class ma {
     static String field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
@@ -81,8 +81,7 @@ final class ma {
                     case 4: {
                         try {
                             var2 = "tuhstatbut";
-                            int discarded$2 = -250;
-                            var3 = (String) eb.a("getcookies", param1);
+                            var3 = (String) eb.a("getcookies", param1, -250);
                             var4 = m.a(';', 119, var3);
                             var5 = 0;
                             statePc = 5;

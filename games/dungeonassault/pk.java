@@ -16,7 +16,7 @@ final class pk extends kl {
         this(param0, param1, mp.field_e.toUpperCase(), um.field_d.toUpperCase(), param2);
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_o = null;
         field_q = null;
     }
@@ -40,8 +40,7 @@ final class pk extends kl {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          int discarded$2 = 14;
-          ai.a(param1);
+          ai.a(param1, 14);
           gh.a(23321, sl.field_a, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -76,7 +75,7 @@ final class pk extends kl {
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

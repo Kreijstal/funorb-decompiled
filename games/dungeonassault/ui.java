@@ -80,7 +80,7 @@ final class ui {
         return var2;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

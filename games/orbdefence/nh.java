@@ -124,7 +124,7 @@ final class nh {
         return var3;
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, int param1) {
         d var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

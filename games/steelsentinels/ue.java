@@ -10,7 +10,7 @@ final class ue {
     static String field_d;
     static gh field_f;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1, int param2, boolean param3) {
         ne.field_y.field_p = 0;
         ne.field_y.a((byte) 122, 12);
         ne.field_y.b(true, rb.field_g.nextInt());
@@ -27,7 +27,7 @@ final class ue {
         mm.field_g.b((byte) 89, -var4 + mm.field_g.field_p);
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return ej.field_B;
     }
 
@@ -130,7 +130,7 @@ final class ue {
         return stackIn_4_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
         field_f = null;
         field_c = null;

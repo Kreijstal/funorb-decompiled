@@ -8,7 +8,7 @@ final class pf {
     static long field_c;
     static String[] field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_b = null;
         field_d = null;

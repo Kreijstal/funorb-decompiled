@@ -16,7 +16,7 @@ abstract class ag extends oc implements sd {
     static String field_C;
     static int[] field_K;
 
-    final static void f() {
+    final static void f(byte param0) {
         int var1 = 0;
         if (ul.field_p > 32) {
             var1 = ul.field_p % 32;

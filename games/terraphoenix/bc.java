@@ -9,12 +9,12 @@ final class bc {
     static int field_a;
     private int[] field_d;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_c = null;
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, int param1) {
         try {
             Throwable decompiledCaughtException = null;
             L0: {
@@ -67,7 +67,7 @@ final class bc {
         }
     }
 
-    final static byte[] a(String param0) {
+    final static byte[] a(String param0, boolean param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;

@@ -534,8 +534,7 @@ final class fe {
               }
             }
             L2: {
-              int discarded$8 = 1;
-              if (hf.a(param0) == null) {
+              if (hf.a(param0, true) == null) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;

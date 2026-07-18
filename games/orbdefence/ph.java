@@ -29,15 +29,13 @@ abstract class ph extends tf {
         vk.field_w[17] = true;
     }
 
-    private final void i() {
-        int discarded$0 = -128;
-        String var2 = fb.c();
-        int discarded$1 = 0;
-        lh.a(uj.b((byte) -120), var2);
+    private final void i(int param0) {
+        String var2 = fb.c(-128);
+        lh.a(uj.b((byte) -120), var2, false);
         int var3 = -120;
     }
 
-    private final void k() {
+    private final void k(int param0) {
         vk.field_w[2] = true;
     }
 
@@ -52,26 +50,21 @@ abstract class ph extends tf {
         }
         wj.field_m = ((ph) this).field_A;
         wg.a(wj.field_m, (byte) -108);
-        int discarded$0 = 49;
-        ec.a(((ph) this).field_n, 5000, ((ph) this).field_t, ((ph) this).field_s, param0, param7, ((ph) this).field_q, 5000, ((ph) this).field_p, ((ph) this).field_w, wj.field_m, wc.field_c, ((ph) this).field_y);
+        ec.a(((ph) this).field_n, 5000, ((ph) this).field_t, ((ph) this).field_s, param0, param7, ((ph) this).field_q, 5000, ((ph) this).field_p, ((ph) this).field_w, wj.field_m, wc.field_c, ((ph) this).field_y, 49);
         nc.a(wj.field_m, ((ph) this).field_y, param7, ((ph) this).field_n, (byte) 93, ((ph) this).field_q, ((ph) this).field_s, wc.field_c, ((ph) this).field_p);
-        int discarded$1 = 0;
-        k.a();
-        int discarded$2 = -112;
-        mj.field_i = de.a();
+        k.a(0);
+        mj.field_i = de.a((byte) -112);
         l.a(tf.field_f, 59);
         pj.field_p = param3;
         cb.field_e = param5;
         ve.field_Q = param6;
         oc.field_V = param4;
         nl.field_b = param2;
-        int discarded$3 = 56;
-        this.f();
-        int discarded$4 = 103;
-        tl.b();
+        this.f((byte) 56);
+        tl.b(103);
     }
 
-    private final void l() {
+    private final void l(int param0) {
         int var2 = cd.field_t.b((byte) 90);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = tf.field_c + -1;
@@ -102,8 +95,7 @@ abstract class ph extends tf {
             mg var12 = null;
             Throwable decompiledCaughtException = null;
             var8 = OrbDefence.field_D ? 1 : 0;
-            int discarded$8 = -67;
-            var4 = tl.a(of.field_K, wj.field_m, param2);
+            var4 = tl.a(of.field_K, wj.field_m, param2, (byte) -67);
             if (var4 == 0) {
               throw new IllegalStateException();
             } else {
@@ -112,9 +104,7 @@ abstract class ph extends tf {
                   break L0;
                 } else {
                   L1: {
-                    int discarded$9 = 32018;
-                    int discarded$10 = -128;
-                    var5_int = ik.a(lm.c(), fb.b(), ~param1);
+                    var5_int = ik.a(lm.c(32018), fb.b((byte) -128), ~param1);
                     if (var5_int == -1) {
                       break L1;
                     } else {
@@ -124,11 +114,9 @@ abstract class ph extends tf {
                       break L1;
                     }
                   }
-                  int discarded$11 = 126;
-                  var11 = k.b();
+                  var11 = k.b((byte) 126);
                   if (var11 != null) {
-                    int discarded$12 = 63;
-                    sd.a(var11.booleanValue());
+                    sd.a(var11.booleanValue(), 63);
                     break L0;
                   } else {
                     break L0;
@@ -139,9 +127,7 @@ abstract class ph extends tf {
                 if (var4 != 2) {
                   break L2;
                 } else {
-                  int discarded$13 = -105;
-                  int discarded$14 = 989270945;
-                  var5_int = kg.a(am.b(-28), uh.b(param1 ^ -5), ((ph) this).field_o, na.a(), qh.a(-42), 200, jf.j());
+                  var5_int = kg.a(am.b(-28), uh.b(param1 ^ -5), ((ph) this).field_o, na.a((byte) -105), qh.a(-42), 200, jf.j(989270945));
                   if (-1 == var5_int) {
                     break L2;
                   } else {
@@ -254,8 +240,7 @@ abstract class ph extends tf {
                 if (var4 != 9) {
                   break L11;
                 } else {
-                  int discarded$15 = 1;
-                  ka.a(uj.b((byte) -120));
+                  ka.a(uj.b((byte) -120), 1);
                   break L11;
                 }
               }
@@ -358,11 +343,11 @@ abstract class ph extends tf {
         }
     }
 
-    private final void n() {
+    private final void n(int param0) {
         vk.field_w[4] = true;
     }
 
-    private final void m() {
+    private final void m(int param0) {
         vk.field_w[1] = true;
     }
 
@@ -397,7 +382,7 @@ abstract class ph extends tf {
                 if (param0 <= -108) {
                   break L1;
                 } else {
-                  int discarded$10 = this.a(false, 60, true);
+                  int discarded$1 = this.a(false, 60, true);
                   break L1;
                 }
               }
@@ -407,13 +392,11 @@ abstract class ph extends tf {
                 L2: {
                   if (1 != var2) {
                     if (2 == var2) {
-                      int discarded$11 = 68;
-                      uk.a();
+                      uk.a((byte) 68);
                       break L2;
                     } else {
                       if (var2 == 3) {
-                        int discarded$12 = 122;
-                        lb.c();
+                        lb.c(122);
                         break L2;
                       } else {
                         if (var2 != 4) {
@@ -437,8 +420,7 @@ abstract class ph extends tf {
                                             break L2;
                                           } else {
                                             if (var2 == 17) {
-                                              int discarded$13 = -119;
-                                              this.l();
+                                              this.l(-119);
                                               break L2;
                                             } else {
                                               if (var2 != 18) {
@@ -446,8 +428,7 @@ abstract class ph extends tf {
                                                 th.a(104);
                                                 break L2;
                                               } else {
-                                                int discarded$14 = 117;
-                                                ek.c();
+                                                ek.c(117);
                                                 break L2;
                                               }
                                             }
@@ -467,8 +448,7 @@ abstract class ph extends tf {
                                       }
                                     }
                                     var3 = oe.a(stackIn_34_0 != 0, (byte) -53);
-                                    int discarded$15 = 126;
-                                    fm.a(var3);
+                                    fm.a(var3, (byte) 126);
                                     break L2;
                                   } else {
                                     gb.b(-122);
@@ -479,26 +459,22 @@ abstract class ph extends tf {
                                   break L2;
                                 }
                               } else {
-                                int discarded$16 = -22;
-                                this.i();
+                                this.i(-22);
                                 break L2;
                               }
                             }
                           } else {
-                            int discarded$17 = 0;
-                            pc.f();
+                            pc.f(false);
                             break L2;
                           }
                         } else {
-                          int discarded$18 = 554553416;
-                          hb.b();
+                          hb.b(554553416);
                           break L2;
                         }
                       }
                     }
                   } else {
-                    int discarded$19 = -51;
-                    tc.a();
+                    tc.a(-51);
                     break L2;
                   }
                 }
@@ -683,8 +659,7 @@ abstract class ph extends tf {
         if (param0 == 7) {
           L0: {
             L1: {
-              int discarded$6 = -10125;
-              var2 = this.h();
+              var2 = this.h(-10125);
               if (var2 == 0) {
                 break L1;
               } else {
@@ -737,8 +712,7 @@ abstract class ph extends tf {
             }
             L7: {
               if (vk.field_w[6]) {
-                int discarded$7 = 7;
-                nh.a(param0 + 15961);
+                nh.a(param0 + 15961, 7);
                 break L7;
               } else {
                 break L7;
@@ -747,8 +721,7 @@ abstract class ph extends tf {
             if (!vk.field_w[8]) {
               break L0;
             } else {
-              int discarded$8 = 0;
-              vk.a();
+              vk.a(0);
               break L0;
             }
           }
@@ -813,8 +786,7 @@ abstract class ph extends tf {
               if (mg.field_k != null) {
                 break L1;
               } else {
-                int discarded$21 = 4;
-                var6 = ob.l();
+                var6 = ob.l(4);
                 var4_ref_java_awt_Dimension = var6.getSize();
                 ne.field_b.a(14592, var4_ref_java_awt_Dimension.height, var4_ref_java_awt_Dimension.width);
                 break L1;
@@ -827,19 +799,15 @@ abstract class ph extends tf {
           }
         }
         L2: {
-          int discarded$22 = -128;
-          ab.a();
-          int discarded$23 = -107;
-          mg.d();
-          int discarded$24 = -126;
-          if (eg.c()) {
+          ab.a(-128);
+          mg.d((byte) -107);
+          if (eg.c((byte) -126)) {
             break L2;
           } else {
             if (11 == hi.field_k) {
               break L2;
             } else {
-              int discarded$25 = 109;
-              cf.a();
+              cf.a((byte) 109);
               break L2;
             }
           }
@@ -857,17 +825,14 @@ abstract class ph extends tf {
             break L4;
           } else {
             L5: {
-              int discarded$26 = 84;
-              var3 = 1200 * ok.a();
+              var3 = 1200 * ok.a((byte) 84);
               if (((ph) this).field_r) {
                 break L5;
               } else {
-                int discarded$27 = 8;
-                if (~var3 <= ~f.c()) {
+                if (~var3 <= ~f.c((byte) 8)) {
                   break L4;
                 } else {
-                  int discarded$28 = -16733;
-                  if (var3 >= pb.a()) {
+                  if (var3 >= pb.a(-16733)) {
                     break L4;
                   } else {
                     break L5;
@@ -910,8 +875,7 @@ abstract class ph extends tf {
           }
           L9: {
             var3 = stackIn_23_0;
-            int discarded$29 = 117;
-            o.field_j = bh.a();
+            o.field_j = bh.a((byte) 117);
             if (var3 == 0) {
               break L9;
             } else {
@@ -921,8 +885,7 @@ abstract class ph extends tf {
                 if (hi.field_k != 11) {
                   break L9;
                 } else {
-                  int discarded$30 = 1;
-                  if (!sg.c()) {
+                  if (!sg.c(true)) {
                     id.a(false);
                     break L9;
                   } else {
@@ -1022,8 +985,7 @@ abstract class ph extends tf {
                 }
               }
             }
-            int discarded$31 = 1;
-            if (sg.c()) {
+            if (sg.c(true)) {
               break L13;
             } else {
               break L12;
@@ -1050,8 +1012,7 @@ abstract class ph extends tf {
           if (0 != o.field_j) {
             break L15;
           } else {
-            int discarded$32 = 1;
-            if (!sg.c()) {
+            if (!sg.c(true)) {
               mf.field_d = false;
               break L15;
             } else {
@@ -1061,8 +1022,7 @@ abstract class ph extends tf {
         }
         L16: {
           if (vh.field_n == 0) {
-            int discarded$33 = -2;
-            if (!lg.a()) {
+            if (!lg.a((byte) -2)) {
               break L16;
             } else {
               vh.field_n = 1;
@@ -1076,8 +1036,7 @@ abstract class ph extends tf {
           if (vh.field_n == 1) {
             L18: {
               if (wj.field_m != 0) {
-                int discarded$34 = -32585;
-                lf.field_a = qk.a(cb.field_e);
+                lf.field_a = qk.a(cb.field_e, -32585);
                 break L18;
               } else {
                 break L18;
@@ -1136,13 +1095,11 @@ abstract class ph extends tf {
             if (!dk.a(1, og.field_g, wb.field_b, am.field_b)) {
               break L21;
             } else {
-              int discarded$35 = 26810;
-              if (tk.a(wb.field_b)) {
+              if (tk.a(wb.field_b, 26810)) {
                 L22: {
                   L23: {
                     ak.b(22176);
-                    int discarded$36 = -96;
-                    ek.a();
+                    ek.a(-96);
                     tl.field_e = cj.field_c;
                     pa.field_b = false;
                     gj.a(am.field_b, (byte) 33, wb.field_b, jc.field_b, og.field_g);
@@ -1218,8 +1175,7 @@ abstract class ph extends tf {
                 }
                 L26: {
                   if (field_v) {
-                    int discarded$37 = 4;
-                    kj.j();
+                    kj.j(4);
                     break L26;
                   } else {
                     break L26;
@@ -1228,15 +1184,13 @@ abstract class ph extends tf {
                 L27: {
                   if (null == de.field_a) {
                     de.field_a = fb.c(false);
-                    int discarded$38 = 2;
-                    cf.field_d = te.j();
+                    cf.field_d = te.j(2);
                     break L27;
                   } else {
                     break L27;
                   }
                 }
-                int discarded$39 = 1000;
-                hf.a(de.field_a, wb.field_b, cf.field_d);
+                hf.a(de.field_a, wb.field_b, cf.field_d, 1000);
                 og.field_g = null;
                 wb.field_b = null;
                 am.field_b = null;
@@ -1258,8 +1212,7 @@ abstract class ph extends tf {
               if (wj.field_m == 0) {
                 break L29;
               } else {
-                int discarded$40 = -32585;
-                eg.field_x = qk.a(pj.field_p);
+                eg.field_x = qk.a(pj.field_p, -32585);
                 break L29;
               }
             }
@@ -1286,8 +1239,7 @@ abstract class ph extends tf {
                     }
                   }
                 }
-                int discarded$41 = 32;
-                j.a(0.0f, ql.a(eg.field_x, mi.field_e, de.field_b), (byte) 105);
+                j.a(0.0f, ql.a(eg.field_x, mi.field_e, de.field_b, (byte) 32), (byte) 105);
                 break L30;
               }
             }
@@ -1373,23 +1325,20 @@ abstract class ph extends tf {
     final void a(boolean param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         this.c(18, param3);
         if (param1) {
-            int discarded$0 = -109;
-            this.m();
+            this.m(-109);
         }
         if (param2) {
-            int discarded$1 = 3;
-            this.k();
+            this.k(3);
         }
         if (!(!param4)) {
-            int discarded$2 = 18495;
-            this.n();
+            this.n(18495);
         }
         if (!(!param0)) {
             this.f(-2);
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         tg.field_b[13] = -1;
         tg.field_b[10] = -1;
         tg.field_b[8] = -2;
@@ -1481,7 +1430,7 @@ abstract class ph extends tf {
                 break L2;
               }
             }
-            int discarded$103 = this.a(stackIn_12_1 != 0, stackIn_12_2, stackIn_12_3 != 0);
+            int discarded$62 = this.a(stackIn_12_1 != 0, stackIn_12_2, stackIn_12_3 != 0);
             break L1;
           } else {
             if (10 > vh.field_n) {
@@ -1492,12 +1441,11 @@ abstract class ph extends tf {
                   vi.a(false, of.field_K);
                   break L1;
                 } else {
-                  int discarded$104 = this.a(false, -1, false);
+                  int discarded$63 = this.a(false, -1, false);
                   break L1;
                 }
               } else {
-                int discarded$105 = 0;
-                id.b();
+                id.b(false);
                 break L1;
               }
             }
@@ -1505,13 +1453,12 @@ abstract class ph extends tf {
         }
     }
 
-    private final int h() {
+    private final int h(int param0) {
         int var2 = 0;
         if (((ph) this).field_h) {
           return -1;
         } else {
-          int discarded$4 = 1;
-          if (sg.c()) {
+          if (sg.c(true)) {
             if (!fa.field_a) {
               var2 = vc.a(((ph) this).field_z, ((ph) this).field_o, -114, am.b(-70), true, uh.b(4));
               if (var2 != -1) {

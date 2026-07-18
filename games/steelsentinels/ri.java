@@ -14,14 +14,14 @@ final class ri {
         return nc.field_q;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_d = null;
         field_b = null;
         field_c = null;
         field_a = null;
     }
 
-    final static dm a(String param0) {
+    final static dm a(String param0, int param1) {
         RuntimeException var2 = null;
         dm stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -50,8 +50,7 @@ final class ri {
                 if (param0.equals((Object) (Object) gf.field_a.a(true))) {
                   break L1;
                 } else {
-                  int discarded$2 = 16;
-                  gf.field_a = sf.a(param0);
+                  gf.field_a = sf.a(param0, 16);
                   break L1;
                 }
               }
@@ -191,8 +190,7 @@ final class ri {
                       var5 = var8;
                       var5 = var8;
                       if (0 != param0.length()) {
-                        int discarded$1 = 0;
-                        var5 = var8 + "; Expires=" + mj.b(94608000000L + mm.a(-102)) + "; Max-Age=" + 94608000L;
+                        var5 = var8 + "; Expires=" + mj.b(94608000000L + mm.a(-102), 0) + "; Max-Age=" + 94608000L;
                         break L3;
                       } else {
                         var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
@@ -393,7 +391,7 @@ final class ri {
         }
     }
 
-    final static cc a(long param0) {
+    final static cc a(long param0, boolean param1) {
         return (cc) (Object) t.field_c.a(param0, (byte) 96);
     }
 

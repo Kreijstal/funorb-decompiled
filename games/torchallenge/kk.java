@@ -51,7 +51,7 @@ final class kk extends t {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_c = null;
         field_e = null;
         field_h = null;
@@ -151,7 +151,7 @@ final class kk extends t {
         }
     }
 
-    final static String a(uf param0) {
+    final static String a(uf param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -233,7 +233,7 @@ final class kk extends t {
         }
     }
 
-    final static void a(qe param0) {
+    final static void a(qe param0, int param1) {
         if (!(g.a(105, 0))) {
             return;
         }
@@ -259,7 +259,7 @@ final class kk extends t {
         }
     }
 
-    final static eb b() {
+    final static eb b(int param0, int param1) {
         eb var2 = new eb();
         ga.field_w.a((da) (Object) var2, -125);
         kk.a(6, -122);

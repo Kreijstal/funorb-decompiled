@@ -20,7 +20,7 @@ final class hk extends ib implements hf, en {
     private boolean field_S;
     private vb field_T;
 
-    final static void a() {
+    final static void a(byte param0) {
         if (ld.field_t != -rn.field_i) {
             if (-rn.field_i + 250 != ld.field_t) {
             }
@@ -171,8 +171,7 @@ final class hk extends ib implements hf, en {
               param2.field_b = false;
               pj.field_c = new so(var3_int, param2, param2);
               nh.field_c = new rg(var3_int, param2, param2, (bp) (Object) new rm());
-              int discarded$1 = 0;
-              var4 = gj.b();
+              var4 = gj.b(0);
               if (var4 == null) {
                 var11 = null;
                 rk.a("QC2", (Throwable) null, 76);
@@ -565,21 +564,18 @@ final class hk extends ib implements hf, en {
                         ln.a(-107);
                         break L2;
                       } else {
-                        int discarded$9 = 29;
-                        hb.g();
+                        hb.g(29);
                         break L2;
                       }
                     } else {
-                      int discarded$10 = 1;
-                      dg.a();
+                      dg.a(true);
                       break L2;
                     }
                   } else {
                     break L2;
                   }
                 } else {
-                  int discarded$11 = -1;
-                  fr.d();
+                  fr.d(-1);
                   break L2;
                 }
               } else {
@@ -621,7 +617,7 @@ final class hk extends ib implements hf, en {
         }
     }
 
-    final static void h() {
+    final static void h(byte param0) {
         int var1 = nn.field_g.c(ag.field_D[20]);
         int var2 = nn.field_g.c(ag.field_D[21]);
         dg.field_d = (var2 >= var1 ? var2 : var1) + 4;
@@ -901,8 +897,7 @@ final class hk extends ib implements hf, en {
             }
             L13: {
               var8 = p.field_p;
-              int discarded$3 = -28432;
-              var9 = qi.a(uc.e((byte) -115));
+              var9 = qi.a(uc.e((byte) -115), -28432);
               if (uc.field_k == var9) {
                 var8 = sq.field_a;
                 break L13;
@@ -916,13 +911,13 @@ final class hk extends ib implements hf, en {
               }
             }
             L14: {
-              ma dupTemp$4 = new ma(10, ((hk) this).field_w, ((hk) this).field_t + -20, 25, (oc) (Object) ((hk) this).field_P, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$4;
-              ((hk) this).a((oc) (Object) dupTemp$4, true);
+              ma dupTemp$2 = new ma(10, ((hk) this).field_w, ((hk) this).field_t + -20, 25, (oc) (Object) ((hk) this).field_P, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$2;
+              ((hk) this).a((oc) (Object) dupTemp$2, true);
               ((hk) this).field_w = ((hk) this).field_w + (5 + ((oc) (Object) var12).field_s);
-              ma dupTemp$5 = new ma(10, ((hk) this).field_w, ((hk) this).field_t + -20, 25, (oc) (Object) ((hk) this).field_T, false, 80, 3, var7, 16777215, wc.field_c);
-              var13 = dupTemp$5;
-              ((hk) this).a((oc) (Object) dupTemp$5, true);
+              ma dupTemp$3 = new ma(10, ((hk) this).field_w, ((hk) this).field_t + -20, 25, (oc) (Object) ((hk) this).field_T, false, 80, 3, var7, 16777215, wc.field_c);
+              var13 = dupTemp$3;
+              ((hk) this).a((oc) (Object) dupTemp$3, true);
               ((hk) this).field_U.field_i = (uh) this;
               ((hk) this).field_w = ((hk) this).field_w + (5 + ((oc) (Object) var13).field_s);
               if (null == ((hk) this).field_O) {
@@ -1059,7 +1054,7 @@ final class hk extends ib implements hf, en {
         }
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_J = null;
         field_I = null;
         field_Q = null;
@@ -1069,8 +1064,7 @@ final class hk extends ib implements hf, en {
     private final void a(int param0) {
         L0: {
           L1: {
-            int discarded$6 = 114;
-            if (fr.a()) {
+            if (fr.a((byte) 114)) {
               break L1;
             } else {
               if (((hk) this).field_P.field_A.length() <= 0) {

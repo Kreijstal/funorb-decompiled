@@ -17,7 +17,7 @@ final class wn {
     static int field_i;
     static int[] field_d;
 
-    final static void a(oq param0) {
+    final static void a(oq param0, int param1) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -314,7 +314,7 @@ final class wn {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
         field_f = null;
         field_e = null;

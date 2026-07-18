@@ -30,8 +30,7 @@ final class kn extends pn {
         try {
           L0: {
             if (g.a(param3, param2, -30744, param1)) {
-              int discarded$2 = 200;
-              stackOut_3_0 = hca.b();
+              stackOut_3_0 = hca.b(200);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -226,7 +225,7 @@ final class kn extends pn {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         ((kn) this).field_a = new kv[4];
         kv var6 = new kv(384, 192);
         kv var2 = var6;
@@ -277,8 +276,7 @@ final class kn extends pn {
     kn(vr param0) {
         try {
             ((kn) this).field_b = bla.a(29611, "basic", "tiles_curry", param0);
-            int discarded$0 = -5;
-            this.b();
+            this.b((byte) -5);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "kn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

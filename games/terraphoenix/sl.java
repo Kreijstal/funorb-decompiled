@@ -9,7 +9,7 @@ final class sl {
     static String field_f;
     static String field_a;
 
-    final static void a(java.awt.Canvas param0, boolean param1) {
+    final static void a(java.awt.Canvas param0, boolean param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -42,9 +42,7 @@ final class sl {
                 break L0;
               }
             }
-            int discarded$4 = -27;
-            int discarded$5 = -1;
-            sa.a(-26, vb.b(), fc.a(), oi.field_H, var3_int != 0);
+            sa.a(-26, vb.b((byte) -27), fc.a(-1), oi.field_H, var3_int != 0);
             return;
           } else {
             if (!sl.a((byte) -40)) {
@@ -99,7 +97,7 @@ final class sl {
         return param0 ^ param1;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
         field_b = null;
         field_f = null;

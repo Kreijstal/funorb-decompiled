@@ -146,8 +146,7 @@ final class pk extends we {
             if (param1 == -1) {
                 var8 = "";
             }
-            int discarded$0 = 0;
-            var10 = f.a(2843, true, bg.field_t, (long)param2);
+            var10 = f.a(2843, true, bg.field_t, (long)param2, 0);
             var11.a(-1, -1, ab.field_t[0], param3 | -16777216, param0, var8);
             var11.a(param0, false, param5, ab.field_t[1], param3 | -16777216, -1);
             var12.a(12199, param0, var10, -1, param3 | -16777216, ab.field_t[2]);

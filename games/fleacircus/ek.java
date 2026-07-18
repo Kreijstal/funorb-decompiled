@@ -7,7 +7,7 @@ final class ek {
     static int[] field_d;
     static int[] field_b;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
         field_d = null;
         field_a = null;
@@ -192,8 +192,7 @@ final class ek {
         String var1 = null;
         if (jg.field_d) {
           if (ok.field_x == null) {
-            int discarded$2 = 1;
-            var1 = ni.d();
+            var1 = ni.d(true);
             lg.field_b = new ul(var1, (String) null, true, false, false);
             nb.field_a.b((qa) (Object) ak.field_a, (byte) -35);
             if (param0 != -6) {
@@ -208,8 +207,7 @@ final class ek {
             }
           } else {
             ok.field_x.n(param0 ^ 22641);
-            int discarded$3 = 1;
-            var1 = ni.d();
+            var1 = ni.d(true);
             lg.field_b = new ul(var1, (String) null, true, false, false);
             nb.field_a.b((qa) (Object) ak.field_a, (byte) -35);
             if (param0 == -6) {

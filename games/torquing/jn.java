@@ -135,7 +135,7 @@ final class jn {
         vg.field_o = 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         int var1 = 0;
         field_b = null;
@@ -173,15 +173,14 @@ final class jn {
         var4 = Torquing.field_u;
         try {
           L0: {
-            int discarded$8 = 67;
-            if (mn.a(param0, param2)) {
+            if (mn.a(param0, param2, (byte) 67)) {
               L1: {
                 var3_int = 0;
                 if (param1 >= 97) {
                   break L1;
                 } else {
                   var5 = null;
-                  boolean discarded$9 = jn.a((CharSequence) null, (byte) 7, true);
+                  boolean discarded$2 = jn.a((CharSequence) null, (byte) 7, true);
                   break L1;
                 }
               }
@@ -240,7 +239,7 @@ final class jn {
         return stackIn_12_0 != 0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

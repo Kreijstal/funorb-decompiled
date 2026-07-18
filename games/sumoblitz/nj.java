@@ -10,7 +10,7 @@ final class nj {
     int field_g;
     static int field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -2;
         field_a = null;
         field_e = null;

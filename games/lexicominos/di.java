@@ -9,7 +9,7 @@ final class di extends id {
         this(ql.field_Q, param0);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_y = null;
         field_x = null;
     }
@@ -40,13 +40,11 @@ final class di extends id {
               if (param0 == 349) {
                 break L1;
               } else {
-                int discarded$4 = 0;
-                di.a();
+                di.a(false);
                 break L1;
               }
             }
-            int discarded$5 = 67;
-            stackOut_2_0 = nh.a('*', param1.field_u.length());
+            stackOut_2_0 = nh.a('*', param1.field_u.length(), (byte) 67);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

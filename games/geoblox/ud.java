@@ -5,7 +5,7 @@ final class ud {
     static String field_b;
     static String field_a;
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         hf var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -28,8 +28,7 @@ final class ud {
                   }
                 }
               } else {
-                int discarded$2 = 30175;
-                ol.a(4, var4);
+                ol.a(4, var4, 30175);
                 var4 = (p) (Object) rh.field_a.d(1);
                 continue L1;
               }
@@ -43,7 +42,8 @@ final class ud {
     }
 
     final static j a(int param0, String param1) {
-        Object var2 = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
         j var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -51,21 +51,21 @@ final class ud {
         CharSequence var7 = null;
         CharSequence var8 = null;
         j stackIn_16_0 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        Object stackIn_21_0 = null;
+        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        Object stackIn_22_0 = null;
+        RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         j stackOut_15_0 = null;
-        Object stackOut_19_0 = null;
+        RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
-        Object stackOut_21_0 = null;
+        RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
         String stackOut_21_2 = null;
-        Object stackOut_20_0 = null;
+        RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         String stackOut_20_2 = null;
         var5 = Geoblox.field_C;
@@ -73,16 +73,16 @@ final class ud {
           if (null != ug.field_a) {
             L0: {
               var7 = (CharSequence) (Object) param1;
-              var2 = (Object) (Object) oe.a(var7, 12);
+              var2 = oe.a(var7, 12);
               if (var2 == null) {
-                var2 = (Object) (Object) var7;
+                var2 = param1;
                 break L0;
               } else {
                 break L0;
               }
             }
             L1: {
-              var3 = (j) (Object) ug.field_a.a((long)((String) var2).hashCode(), -1);
+              var3 = (j) (Object) ug.field_a.a((long)var2.hashCode(), -1);
               if (param0 == 0) {
                 break L1;
               } else {
@@ -103,7 +103,7 @@ final class ud {
                     break L3;
                   }
                 }
-                if (var4.equals(var2)) {
+                if (var4.equals((Object) (Object) var2)) {
                   stackOut_15_0 = (j) var3;
                   stackIn_16_0 = stackOut_15_0;
                   return stackIn_16_0;
@@ -121,15 +121,15 @@ final class ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_19_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var2_ref;
             stackOut_19_1 = new StringBuilder().append("ud.C(").append(param0).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param1 == null) {
-              stackOut_21_0 = stackIn_21_0;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
@@ -137,7 +137,7 @@ final class ud {
               stackIn_22_2 = stackOut_21_2;
               break L4;
             } else {
-              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
               stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
@@ -155,7 +155,7 @@ final class ud {
         field_b = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -205,8 +205,7 @@ final class ud {
                       break L1;
                     }
                   } else {
-                    int discarded$1 = 125;
-                    gi.a((Throwable) null, "A1: " + og.e(55));
+                    gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
                     jl.a((byte) -116);
                     break L1;
                   }

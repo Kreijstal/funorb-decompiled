@@ -76,7 +76,7 @@ final class pi {
         field_c = null;
     }
 
-    final static ic a(int param0, int param1, int param2, int param3) {
+    final static ic a(int param0, int param1, int param2, int param3, int param4) {
         ic var5 = null;
         int var6 = 0;
         var6 = HostileSpawn.field_I ? 1 : 0;
@@ -88,8 +88,7 @@ final class pi {
             var5.field_j = param3;
             var5.field_h = 1;
             ch.field_p.a((am) (Object) var5, 112);
-            int discarded$1 = 746037954;
-            rl.a(3, var5);
+            rl.a(3, var5, 746037954);
             return var5;
           } else {
             if (param3 == var5.field_j) {

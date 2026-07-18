@@ -35,7 +35,7 @@ final class gtb implements ntb {
             L1: {
               var4 = 1 / ((param0 - 22) / 59);
               var3 = (gtb) (Object) param1;
-              if (var3.field_b == var3.field_b) {
+              if (((gtb) this).field_b == var3.field_b) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -80,7 +80,7 @@ final class gtb implements ntb {
         return stackIn_3_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_d = null;
     }
@@ -94,7 +94,7 @@ final class gtb implements ntb {
         try {
             var5 = (gtb) (Object) param1;
             var6 = var5;
-            var6.field_b = var5.field_b;
+            var6.field_b = ((gtb) this).field_b;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "gtb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -126,10 +126,10 @@ final class gtb implements ntb {
             if (param1 < -19) {
               L1: {
                 var4 = 0;
-                if (var3.field_b == var3.field_b) {
+                if (var3.field_b == ((gtb) this).field_b) {
                   break L1;
                 } else {
-                  iva.a(-6940, "int playerid has changed. before=" + var3.field_b + ", now=" + var3.field_b);
+                  iva.a(-6940, "int playerid has changed. before=" + var3.field_b + ", now=" + ((gtb) this).field_b);
                   var4 = 1;
                   break L1;
                 }

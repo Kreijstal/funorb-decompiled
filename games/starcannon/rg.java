@@ -18,7 +18,7 @@ final class rg extends vk implements si, ga {
     private dk field_y;
     private boolean field_z;
 
-    final static hl[] i() {
+    final static hl[] i(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -60,7 +60,7 @@ final class rg extends vk implements si, ga {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_K = null;
         field_E = null;
     }
@@ -670,7 +670,7 @@ final class rg extends vk implements si, ga {
           L0: {
             L1: {
               if (param1 == ((rg) this).field_I) {
-                boolean discarded$4 = ((rg) this).field_G.a(0, (uj) this);
+                boolean discarded$2 = ((rg) this).field_G.a(0, (uj) this);
                 break L1;
               } else {
                 break L1;
@@ -678,8 +678,7 @@ final class rg extends vk implements si, ga {
             }
             L2: {
               if (((rg) this).field_G == param1) {
-                int discarded$5 = -100;
-                this.a();
+                this.a(-100);
                 break L2;
               } else {
                 break L2;
@@ -728,11 +727,10 @@ final class rg extends vk implements si, ga {
         }
     }
 
-    private final void a() {
+    private final void a(int param0) {
         L0: {
           L1: {
-            int discarded$6 = 125;
-            if (se.d()) {
+            if (se.d((byte) 125)) {
               break L1;
             } else {
               if (-1 <= ((rg) this).field_I.field_k.length()) {
@@ -746,8 +744,7 @@ final class rg extends vk implements si, ga {
               }
             }
           }
-          int discarded$7 = 0;
-          ia.a(((rg) this).field_I.field_k, ((rg) this).field_G.field_k);
+          ia.a(((rg) this).field_I.field_k, ((rg) this).field_G.field_k, 0);
           break L0;
         }
     }
@@ -854,16 +851,14 @@ final class rg extends vk implements si, ga {
                   } else {
                     if (!((rg) this).field_z) {
                       if (((rg) this).field_A) {
-                        int discarded$8 = 11;
-                        ob.b();
+                        ob.b(11);
                         break L2;
                       } else {
                         vk.e(-59);
                         break L2;
                       }
                     } else {
-                      int discarded$9 = 17;
-                      ik.g();
+                      ik.g(17);
                       break L2;
                     }
                   }
@@ -872,8 +867,7 @@ final class rg extends vk implements si, ga {
                   break L2;
                 }
               } else {
-                int discarded$10 = -100;
-                this.a();
+                this.a(-100);
                 break L2;
               }
             }

@@ -106,7 +106,7 @@ final class mg extends di {
         return stackIn_13_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_m = null;
         field_p = null;
     }
@@ -225,9 +225,7 @@ final class mg extends di {
             var15_int = param12.field_p + param12.field_u;
             var16 = param12.field_u;
             int var17 = -9;
-            int discarded$0 = 12;
-            int discarded$1 = 12;
-            mb.a(12, param12, 240, 480, param9, 6, param2, (byte) 77, 320, 12, var16, var15_int, var15_int, param14, 16744576, 16711680, param12, 16777215, var16);
+            mb.a(12, param12, 240, 480, param9, 6, param2, (byte) 77, 320, 12, var16, var15_int, var15_int, param14, 16744576, 16711680, param12, 16777215, var16, 12, 12);
         } catch (RuntimeException runtimeException) {
             throw qk.a((Throwable) (Object) runtimeException, "mg.D(" + 12 + ',' + 12 + ',' + (param2 != null ? "{...}" : "null") + ',' + 12 + ',' + 240 + ',' + 88 + ',' + 16777215 + ',' + 12 + ',' + 16711680 + ',' + (param9 != null ? "{...}" : "null") + ',' + 16744576 + ',' + 6 + ',' + (param12 != null ? "{...}" : "null") + ',' + 320 + ',' + (param14 != null ? "{...}" : "null") + ')');
         }

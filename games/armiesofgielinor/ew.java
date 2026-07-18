@@ -183,7 +183,7 @@ abstract class ew {
         field_d = null;
     }
 
-    final static rn a(String param0) {
+    final static rn a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -240,8 +240,7 @@ abstract class ew {
                   var6 = 0;
                   L1: while (true) {
                     if (var5.length <= var6) {
-                      int discarded$2 = -19;
-                      stackOut_19_0 = mb.a(var4[-1 + var4.length]);
+                      stackOut_19_0 = mb.a(var4[-1 + var4.length], -19);
                       stackIn_20_0 = stackOut_19_0;
                       break L0;
                     } else {

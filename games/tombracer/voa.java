@@ -341,7 +341,7 @@ final class voa extends ci {
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -408,16 +408,16 @@ final class voa extends ci {
                         var8_int = 1;
                         L5: while (true) {
                           if (var5 <= var8_int) {
-                            String[][] dupTemp$9 = new String[3][var6];
-                            var4.field_k = dupTemp$9;
-                            var8 = dupTemp$9;
+                            String[][] dupTemp$6 = new String[3][var6];
+                            var4.field_k = dupTemp$6;
+                            var8 = dupTemp$6;
                             var9 = new String[3][var6];
-                            long[][] dupTemp$10 = new long[3][var6];
-                            var4.field_o = dupTemp$10;
-                            var10 = dupTemp$10;
-                            int[][] dupTemp$11 = new int[3][var6 * var7];
-                            var4.field_p = dupTemp$11;
-                            var11 = dupTemp$11;
+                            long[][] dupTemp$7 = new long[3][var6];
+                            var4.field_o = dupTemp$7;
+                            var10 = dupTemp$7;
+                            int[][] dupTemp$8 = new int[3][var6 * var7];
+                            var4.field_p = dupTemp$8;
+                            var11 = dupTemp$8;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -450,9 +450,9 @@ final class voa extends ci {
                                           var12++;
                                           break L7;
                                         } else {
-                                          int incrementValue$12 = var15;
+                                          int incrementValue$9 = var15;
                                           var15++;
-                                          var11[0][incrementValue$12] = var28.e(-41);
+                                          var11[0][incrementValue$9] = var28.e(-41);
                                           var25++;
                                           continue L8;
                                         }
@@ -476,9 +476,9 @@ final class voa extends ci {
                                           if (var7 <= var25) {
                                             break L9;
                                           } else {
-                                            int incrementValue$13 = var16;
+                                            int incrementValue$10 = var16;
                                             var16++;
-                                            var11[1][incrementValue$13] = var28.e(121);
+                                            var11[1][incrementValue$10] = var28.e(121);
                                             var25++;
                                             continue L10;
                                           }
@@ -504,9 +504,9 @@ final class voa extends ci {
                                           if (var25 >= var7) {
                                             break L11;
                                           } else {
-                                            int incrementValue$14 = var17;
+                                            int incrementValue$11 = var17;
                                             var17++;
-                                            var11[2][incrementValue$14] = var28.e(-105);
+                                            var11[2][incrementValue$11] = var28.e(-105);
                                             var25++;
                                             continue L12;
                                           }
@@ -541,8 +541,7 @@ final class voa extends ci {
                     var4.p(125);
                     break L1;
                   } else {
-                    int discarded$15 = 60;
-                    dea.a();
+                    dea.a(60);
                     return;
                   }
                 }
@@ -569,15 +568,13 @@ final class voa extends ci {
                       var6_ref_kb.p(39);
                       break L1;
                     } else {
-                      int discarded$16 = 60;
-                      dea.a();
+                      dea.a(60);
                       return;
                     }
                   }
                 } else {
                   ssa.a("HS1: " + kk.a(32), (byte) 121, (Throwable) null);
-                  int discarded$17 = 60;
-                  dea.a();
+                  dea.a(60);
                   break L1;
                 }
               }
@@ -591,7 +588,7 @@ final class voa extends ci {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_q = null;
         field_s = null;
     }
@@ -696,14 +693,12 @@ final class voa extends ci {
           }
           rra.field_e.field_X = true;
           bsa.field_j.field_vb.field_r = null;
-          int discarded$2 = 2;
-          ava.a(bsa.field_j, param6, param0, param9);
+          ava.a(bsa.field_j, param6, param0, param9, 2);
           break L6;
         }
         bh.a(param7, 0, param3, param0, param4, param6, param9);
         if (param2 == 4096) {
-          int discarded$3 = 2;
-          ava.a(tn.field_n, param6, param0, param9);
+          ava.a(tn.field_n, param6, param0, param9, 2);
           lh.field_a = lh.field_a + 1;
           return;
         } else {

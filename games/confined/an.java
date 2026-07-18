@@ -20,7 +20,7 @@ final class an extends rk {
         return param1 & ~var2;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_o = null;
         field_m = null;
         field_p = null;

@@ -302,14 +302,14 @@ final class jpa extends rna implements ntb {
             return;
         }
         try {
-            var4.field_d = var4.field_d;
-            var4.field_b = var4.field_b;
+            var4.field_d = ((jpa) this).field_d;
+            var4.field_b = ((jpa) this).field_b;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "jpa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
     }
 
@@ -338,8 +338,7 @@ final class jpa extends rna implements ntb {
             return var9 + " custom variable " + ((jpa) this).field_b;
           }
         } else {
-          int discarded$1 = 1;
-          jpa.a();
+          jpa.a(true);
           var5 = "Unknown mode";
           var3 = ((jpa) this).field_d;
           if (var3 != 0) {

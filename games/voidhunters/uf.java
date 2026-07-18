@@ -32,7 +32,7 @@ class uf extends htb {
         }
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -217,7 +217,7 @@ class uf extends htb {
         }
     }
 
-    private final int i() {
+    private final int i(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -453,9 +453,9 @@ class uf extends htb {
                               break L7;
                             } else {
                               ((uf) this).field_j = ((uf) this).field_j + param3;
-                              int dupTemp$4 = ((uf) this).field_j.length();
-                              ((uf) this).field_K = dupTemp$4;
-                              ((uf) this).field_H = dupTemp$4;
+                              int dupTemp$1 = ((uf) this).field_j.length();
+                              ((uf) this).field_K = dupTemp$1;
+                              ((uf) this).field_H = dupTemp$1;
                               break L7;
                             }
                           }
@@ -547,8 +547,7 @@ class uf extends htb {
                                         break L11;
                                       } else {
                                         if (param1 == 66) {
-                                          int discarded$5 = 24;
-                                          this.l();
+                                          this.l((byte) 24);
                                           stackOut_48_0 = 1;
                                           stackIn_49_0 = stackOut_48_0;
                                           return stackIn_49_0 != 0;
@@ -561,8 +560,7 @@ class uf extends htb {
                                       break L8;
                                     } else {
                                       if (param1 == 67) {
-                                        int discarded$6 = 7328;
-                                        this.f();
+                                        this.f(7328);
                                         stackOut_46_0 = 1;
                                         stackIn_47_0 = stackOut_46_0;
                                         return stackIn_47_0 != 0;
@@ -598,9 +596,8 @@ class uf extends htb {
                                     stackIn_27_1 = stackOut_26_1;
                                     break L12;
                                   } else {
-                                    int discarded$7 = 62;
                                     stackOut_25_0 = this;
-                                    stackOut_25_1 = this.i();
+                                    stackOut_25_1 = this.i(62);
                                     stackIn_27_0 = stackOut_25_0;
                                     stackIn_27_1 = stackOut_25_1;
                                     break L12;
@@ -1027,8 +1024,7 @@ class uf extends htb {
                     if (((uf) this).field_I) {
                       L5: {
                         ((uf) this).field_H = this.g(0);
-                        int discarded$1 = 62;
-                        ((uf) this).field_K = this.i();
+                        ((uf) this).field_K = this.i(62);
                         if (((uf) this).field_K <= 0) {
                           break L5;
                         } else {
@@ -1227,7 +1223,7 @@ class uf extends htb {
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -1253,20 +1249,18 @@ class uf extends htb {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_F = null;
         int var1 = 0;
         field_E = null;
     }
 
-    private final void l() {
+    private final void l(byte param0) {
         try {
             String var2 = null;
-            int discarded$4 = -96;
-            var2 = this.j();
+            var2 = this.j((byte) -96);
             if (var2.length() > 0) {
-              int discarded$5 = -96;
-              java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.j()), (java.awt.datatransfer.ClipboardOwner) null);
+              java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.j((byte) -96)), (java.awt.datatransfer.ClipboardOwner) null);
               return;
             } else {
               return;
@@ -1322,7 +1316,7 @@ class uf extends htb {
         }
     }
 
-    private final String j() {
+    private final String j(byte param0) {
         int var2 = ((uf) this).field_H < ((uf) this).field_K ? ((uf) this).field_H : ((uf) this).field_K;
         int var3 = ((uf) this).field_H < ((uf) this).field_K ? ((uf) this).field_K : ((uf) this).field_H;
         return ((uf) this).field_j.substring(var2, var3);
@@ -1346,8 +1340,7 @@ class uf extends htb {
     }
 
     private final void b(boolean param0) {
-        int discarded$0 = 24;
-        this.l();
+        this.l((byte) 24);
         this.g((byte) 116);
         if (!param0) {
             field_F = null;

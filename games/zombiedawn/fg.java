@@ -64,8 +64,7 @@ final class fg extends al {
         L0: {
           var22 = ZombieDawn.field_J;
           super.a((byte) -75);
-          int discarded$6 = 0;
-          li.a();
+          li.a(false);
           var2 = 3 + bj.field_q.field_x + bj.field_q.field_I;
           var3 = 600;
           var6 = vh.field_b + 200;
@@ -97,7 +96,7 @@ final class fg extends al {
             break L2;
           } else {
             var23 = null;
-            String discarded$7 = fg.a((String) null, 98, (String) null, (String) null);
+            String discarded$3 = fg.a((String) null, 98, (String) null, (String) null);
             break L2;
           }
         }
@@ -357,7 +356,7 @@ final class fg extends al {
               }
             }
             sg.field_jb.c(gj.field_k[0][1], var10, var5 + (var9 + 75), 0, 0);
-            int discarded$8 = bj.field_q.a(gj.field_g[0][1], var10, var5 + var9 - -95, var3, 440, 16777215, 0, 0, 0, var2);
+            int discarded$4 = bj.field_q.a(gj.field_g[0][1], var10, var5 + var9 - -95, var3, 440, 16777215, 0, 0, 0, var2);
             if (var7 != 0) {
               break L3;
             } else {
@@ -367,8 +366,7 @@ final class fg extends al {
             }
           }
         }
-        int discarded$9 = 1;
-        bj.field_q.b(uk.a(1 + ((fg) this).field_n, (byte) 58, 1 + this.a()), 634 + vh.field_b, id.field_M + 410, 16777215, 0);
+        bj.field_q.b(uk.a(1 + ((fg) this).field_n, (byte) 58, 1 + this.a(true)), 634 + vh.field_b, id.field_M + 410, 16777215, 0);
     }
 
     final int a(boolean param0, int param1) {
@@ -383,7 +381,7 @@ final class fg extends al {
         ((fg) this).field_n = 0;
     }
 
-    final static vn d() {
+    final static vn d(int param0) {
         int[] var20 = null;
         int[] var16 = null;
         int[] var13 = null;
@@ -446,8 +444,7 @@ final class fg extends al {
           }
           L1: {
             var2 = stackIn_5_0;
-            int discarded$2 = 1;
-            if (((fg) this).field_n != this.a()) {
+            if (((fg) this).field_n != this.a(true)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L1;
@@ -612,7 +609,7 @@ final class fg extends al {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_m = null;
     }
 
@@ -638,8 +635,7 @@ final class fg extends al {
                 if (2 != param0) {
                   break L3;
                 } else {
-                  int discarded$2 = 1;
-                  if (((fg) this).field_n == this.a()) {
+                  if (((fg) this).field_n == this.a(true)) {
                     break L1;
                   } else {
                     break L3;
@@ -660,7 +656,7 @@ final class fg extends al {
         }
     }
 
-    final static jc a(int param0, int param1, int param2, int param3) {
+    final static jc a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = ZombieDawn.field_J;
         jc var5 = (jc) (Object) on.field_g.b((byte) 26);
         while (var5 != null) {
@@ -694,7 +690,7 @@ final class fg extends al {
         }
     }
 
-    private final int a() {
+    private final int a(boolean param0) {
         return be.field_j <= 0 ? 7 : gj.field_g.length + -1;
     }
 
@@ -706,8 +702,7 @@ final class fg extends al {
         }
         ((fg) this).field_n = ((fg) this).field_n + 1;
         if (!param0) {
-            int discarded$0 = 1;
-            if (!(((fg) this).field_n != this.a())) {
+            if (!(((fg) this).field_n != this.a(true))) {
                 var3 = kg.field_i;
                 kg.field_i = 96;
                 ((fg) this).field_b.a(1, -1);

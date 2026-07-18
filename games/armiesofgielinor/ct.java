@@ -11,7 +11,7 @@ final class ct extends tc {
     ct field_k;
     int field_p;
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         field_o = null;
     }

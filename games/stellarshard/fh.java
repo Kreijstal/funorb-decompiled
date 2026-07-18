@@ -20,7 +20,7 @@ final class fh implements Runnable {
     private OutputStream field_o;
     static int field_m;
 
-    final static void a(pf param0, pf param1, pf param2) {
+    final static void a(pf param0, pf param1, pf param2, byte param3) {
         RuntimeException var4 = null;
         ek[] var5 = null;
         ek[][] var6 = null;
@@ -94,14 +94,11 @@ final class fh implements Runnable {
             ul.field_B = qd.a(param2, "jagex_logo_grey", "commonui", (byte) 55);
             mh.field_i = ml.a("commonui", (byte) 85, param2, "button");
             ah.field_p = pf.a("commonui", (byte) -98, "validation", param2);
-            int discarded$5 = 63;
-            de.field_c = (bd) (Object) eh.a("arezzo12", "commonui", param1, param2);
-            int discarded$6 = 63;
-            si.field_V = (bd) (Object) eh.a("arezzo14", "commonui", param1, param2);
-            int discarded$7 = 63;
-            s.field_c = (bd) (Object) eh.a("arezzo14bold", "commonui", param1, param2);
+            de.field_c = (bd) (Object) eh.a("arezzo12", "commonui", param1, param2, (byte) 63);
+            si.field_V = (bd) (Object) eh.a("arezzo14", "commonui", param1, param2, (byte) 63);
+            s.field_c = (bd) (Object) eh.a("arezzo14bold", "commonui", param1, param2, (byte) 63);
             var17 = new pb(param0.a("button.gif", "", (byte) -12), (java.awt.Component) (Object) qd.field_j);
-            ek discarded$8 = el.a("dropdown", param2, (byte) -89, "commonui");
+            ek discarded$1 = el.a("dropdown", param2, (byte) -89, "commonui");
             var5 = bf.a("screen_options", (byte) 37, "commonui", param2);
             nc.field_F = new ek[4];
             ua.field_c = new ek[4];
@@ -124,8 +121,7 @@ final class fh implements Runnable {
                 L2: while (true) {
                   if (var9 >= 3) {
                     var9 = var17.field_y;
-                    int discarded$9 = 0;
-                    kg.d();
+                    kg.d(false);
                     var17.e();
                     ti.c(0, 0, ti.field_i, ti.field_b);
                     var15 = new pb(var9, var9);

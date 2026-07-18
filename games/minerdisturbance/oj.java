@@ -7,7 +7,7 @@ final class oj extends jc {
     static int field_K;
     static String[][] field_M;
 
-    final static void o() {
+    final static void o(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
@@ -147,7 +147,7 @@ final class oj extends jc {
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
     }
 
     oj(fe param0) {
@@ -161,7 +161,7 @@ final class oj extends jc {
         }
     }
 
-    final static void a(pi param0, pi param1) {
+    final static void a(pi param0, pi param1, byte param2) {
         try {
             if (param0.field_c != null) {
                 param0.b(34);
@@ -184,7 +184,7 @@ final class oj extends jc {
         ((oj) this).field_L = 256;
     }
 
-    public static void n() {
+    public static void n(int param0) {
         field_M = null;
     }
 

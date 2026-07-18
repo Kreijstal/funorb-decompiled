@@ -18,7 +18,7 @@ final class rg extends IOException {
         return var3 + (param1 - -(param1 >>> 31)) % param2;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         ql.field_L.a(88, 640, param3, 0, 5);
         if (param4 != -4803) {
           return;
@@ -42,8 +42,7 @@ final class rg extends IOException {
     final static void a(byte param0, boolean param1) {
         L0: {
           if (ko.field_S != null) {
-            int discarded$2 = 0;
-            oh.a(ko.field_S);
+            oh.a(ko.field_S, false);
             break L0;
           } else {
             break L0;
@@ -73,7 +72,7 @@ final class rg extends IOException {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_g = null;
         field_h = null;

@@ -111,7 +111,7 @@ abstract class ro {
         return stackIn_6_0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_d = null;
         field_f = null;
         field_h = null;
@@ -184,7 +184,7 @@ abstract class ro {
         return -1;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (sl.field_q == null) {
           sl.field_q = new String[37];
           sl.field_q[8] = null;
@@ -221,8 +221,7 @@ abstract class ro {
           sl.field_q[15] = bq.field_G[1];
           sl.field_q[18] = df.field_n[1];
           sl.field_q[28] = gm.field_a;
-          int discarded$1 = -44;
-          sl.field_q[36] = ja.a(ek.field_C);
+          sl.field_q[36] = ja.a(ek.field_C, (byte) -44);
           mb.field_q = new String[23];
           mb.field_q[7] = oe.field_vb.toLowerCase();
           mb.field_q[17] = sl.field_q[29].toLowerCase();

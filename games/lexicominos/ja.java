@@ -365,7 +365,7 @@ final class ja {
         return stackIn_8_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 

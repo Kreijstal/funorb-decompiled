@@ -184,7 +184,7 @@ final class waa extends dqa implements jpb, oo {
                 break L1;
               } else {
                 var7 = null;
-                boolean discarded$4 = this.a((lca) null, (byte) 100);
+                boolean discarded$2 = this.a((lca) null, (byte) 100);
                 break L1;
               }
             }
@@ -195,8 +195,7 @@ final class waa extends dqa implements jpb, oo {
               if (((waa) this).field_z != param3) {
                 break L0;
               } else {
-                int discarded$5 = 25;
-                this.e();
+                this.e(25);
                 return;
               }
             }
@@ -355,14 +354,13 @@ final class waa extends dqa implements jpb, oo {
     final void a(int param0, int param1, int param2, shb param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = -31927;
-            ((waa) this).field_z.field_x = this.d();
+            ((waa) this).field_z.field_x = this.d(-31927);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "waa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final boolean d() {
+    private final boolean d(int param0) {
         if (this.a((lca) (Object) ((waa) this).field_A, (byte) -92)) {
             return true;
         }
@@ -675,7 +673,7 @@ final class waa extends dqa implements jpb, oo {
         return stackIn_4_0;
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_D = null;
         int var1 = 0;
         field_x = null;
@@ -683,7 +681,7 @@ final class waa extends dqa implements jpb, oo {
         field_y = null;
     }
 
-    final static void a(ml param0) {
+    final static void a(ml param0, int param1) {
         RuntimeException var2 = null;
         ml var3 = null;
         ml var4 = null;
@@ -763,14 +761,12 @@ final class waa extends dqa implements jpb, oo {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         int var2 = 71;
-        int discarded$0 = -31927;
-        if (!this.d()) {
+        if (!this.d(-31927)) {
             return;
         }
-        int discarded$1 = -127;
-        lr.a(((waa) this).field_A.field_j);
+        lr.a(((waa) this).field_A.field_j, -127);
     }
 
     public final void a(byte param0, String param1) {

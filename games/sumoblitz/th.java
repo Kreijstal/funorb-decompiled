@@ -129,10 +129,7 @@ final class th extends sp implements ca, ai {
             ((th) this).field_G = param0;
             ((th) this).field_D = new wp(wd.field_h, (qm) null);
             ((th) this).field_D.field_w = (mh) (Object) new ue();
-            int discarded$3 = 43;
-            int discarded$4 = 116;
-            int discarded$5 = -128;
-            var7 = ic.a(qv.field_l, new String[2]);
+            var7 = ic.a(qv.field_l, new String[2], (byte) -128);
             var3 = 20;
             var4 = new gm(kw.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.field_s, -1, 2147483647, true);
             ((th) this).field_F = new ar(var7, (mh) (Object) var4);
@@ -746,7 +743,7 @@ final class th extends sp implements ca, ai {
         }
     }
 
-    private final String g() {
+    private final String g(int param0) {
         return "</col></u>";
     }
 
@@ -757,7 +754,7 @@ final class th extends sp implements ca, ai {
         }
     }
 
-    private final String a() {
+    private final String a(byte param0) {
         int var2 = -37;
         return "<u=2164A2><col=2164A2>";
     }

@@ -41,8 +41,8 @@ final class td implements Runnable {
     }
 
     final static void b(int param0) {
-        ql var1 = null;
         int var2 = 0;
+        ql var3 = null;
         L0: {
           L1: {
             L2: {
@@ -137,18 +137,16 @@ final class td implements Runnable {
             } else {
               L8: {
                 hj.field_a[fleas.field_E] = Math.max(tj.field_a, hj.field_a[fleas.field_E]);
-                var1 = new ql(fleas.field_E, -1 + hj.field_a[fleas.field_E], 0, 0, 0, 0);
+                var3 = new ql(fleas.field_E, -1 + hj.field_a[fleas.field_E], 0, 0, 0, 0);
                 if (!qh.c((byte) 38)) {
-                  int discarded$2 = 5;
-                  rd.a(var1, 79);
+                  rd.a(var3, 79, 5);
                   break L8;
                 } else {
-                  mi.field_r.a(false, (lh) (Object) var1);
+                  mi.field_r.a(false, (lh) (Object) var3);
                   break L8;
                 }
               }
-              int discarded$3 = -39;
-              ej.a();
+              ej.a((byte) -39);
               break L0;
             }
           }
@@ -163,7 +161,7 @@ final class td implements Runnable {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_j = null;
         field_g = null;

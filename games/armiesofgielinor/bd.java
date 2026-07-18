@@ -11,7 +11,7 @@ abstract class bd extends tc {
     int field_m;
     static wk field_p;
 
-    final static void a(String[][] param0, String[] param1, int param2) {
+    final static void a(String[][] param0, String[] param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -122,7 +122,7 @@ abstract class bd extends tc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_p = null;
         field_o = null;

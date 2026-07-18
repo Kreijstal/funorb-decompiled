@@ -15,7 +15,7 @@ final class ut extends tia {
     static n field_m;
     private int field_p;
 
-    final static void d() {
+    final static void d(int param0) {
         int var1 = -117;
     }
 
@@ -152,7 +152,7 @@ final class ut extends tia {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_q = null;
         field_r = null;
         field_m = null;
@@ -238,7 +238,7 @@ final class ut extends tia {
                 break L1;
               } else {
                 if (param2.indexOf("<br>") == -1) {
-                  args[0] = (String) (Object) args;
+                  args[0] = param2;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;
@@ -459,7 +459,7 @@ final class ut extends tia {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

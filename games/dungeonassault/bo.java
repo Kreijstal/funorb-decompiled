@@ -107,24 +107,15 @@ final class bo extends ok {
         super(0L, (ok) null);
     }
 
-    final static void h() {
+    final static void h(int param0) {
         int var1 = 0;
         if (ec.field_k == null) {
           id.field_i = mk.a(3, (byte) 34);
           mi.field_e = mk.a(4, (byte) 34);
-          int discarded$19 = 1;
-          int discarded$20 = 0;
-          int discarded$21 = 0;
-          hj.field_Z = bg.a(true, 9);
+          hj.field_Z = bg.a(true, 9, false, false, true);
           np.field_A = mk.a(10, (byte) 34);
-          int discarded$22 = 1;
-          int discarded$23 = 0;
-          int discarded$24 = 0;
-          kf.field_p = bg.a(true, 11);
-          int discarded$25 = 1;
-          int discarded$26 = 0;
-          int discarded$27 = 0;
-          sb.field_a = bg.a(true, 12);
+          kf.field_p = bg.a(true, 11, false, false, true);
+          sb.field_a = bg.a(true, 12, false, false, true);
           ia.field_W = mk.a(13, (byte) 34);
           ll.field_r = mk.a(14, (byte) 34);
           tl.field_k = mk.a(15, (byte) 34);
@@ -150,25 +141,15 @@ final class bo extends ok {
           be.field_s.a(fg.field_m, 237, kj.field_m, mi.field_e);
           return;
         } else {
-          int discarded$28 = 0;
-          ec.a(ec.field_k);
+          ec.a(ec.field_k, false);
           ec.field_k = null;
           nf.d(0);
           id.field_i = mk.a(3, (byte) 34);
           mi.field_e = mk.a(4, (byte) 34);
-          int discarded$29 = 1;
-          int discarded$30 = 0;
-          int discarded$31 = 0;
-          hj.field_Z = bg.a(true, 9);
+          hj.field_Z = bg.a(true, 9, false, false, true);
           np.field_A = mk.a(10, (byte) 34);
-          int discarded$32 = 1;
-          int discarded$33 = 0;
-          int discarded$34 = 0;
-          kf.field_p = bg.a(true, 11);
-          int discarded$35 = 1;
-          int discarded$36 = 0;
-          int discarded$37 = 0;
-          sb.field_a = bg.a(true, 12);
+          kf.field_p = bg.a(true, 11, false, false, true);
+          sb.field_a = bg.a(true, 12, false, false, true);
           ia.field_W = mk.a(13, (byte) 34);
           ll.field_r = mk.a(14, (byte) 34);
           tl.field_k = mk.a(15, (byte) 34);
@@ -196,7 +177,7 @@ final class bo extends ok {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_Lb = null;
         field_Mb = null;
         field_Kb = null;
@@ -204,10 +185,9 @@ final class bo extends ok {
         field_Jb = null;
     }
 
-    final static void g() {
+    final static void g(int param0) {
         mc.a((byte) 86, 8, gb.field_e);
-        int discarded$6 = 0;
-        if (!ve.a()) {
+        if (!ve.a(false)) {
             mc.a((byte) 37, 1, in.field_B);
             return;
         }

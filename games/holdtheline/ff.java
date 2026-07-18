@@ -6,7 +6,7 @@ abstract class ff {
     static boolean field_b;
     static int[] field_c;
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -28,9 +28,7 @@ abstract class ff {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            int discarded$5 = 0;
-            stackOut_2_0 = ne.a(param0);
+            stackOut_2_0 = ne.a(param0, 0, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

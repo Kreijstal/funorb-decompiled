@@ -953,7 +953,7 @@ final class ak {
         hb.a((byte) -77, ((ak) this).field_d, param0, param4, param2, param3);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_a = null;
         field_b = null;
@@ -1045,7 +1045,7 @@ final class ak {
         }
     }
 
-    final static me a(String param0, String param1) {
+    final static me a(String param0, String param1, int param2, boolean param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;

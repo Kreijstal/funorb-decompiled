@@ -6,7 +6,7 @@ final class bi {
     static boolean field_b;
     static int[] field_c;
 
-    final static void a() {
+    final static void a(int param0) {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var1_int = 0;
@@ -67,7 +67,7 @@ final class bi {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_a = null;
     }

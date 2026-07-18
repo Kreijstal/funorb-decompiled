@@ -11,7 +11,7 @@ final class ka {
     static boolean[] field_h;
     private dl field_d;
 
-    private final gi a(int param0, int param1, int[] param2) {
+    private final gi a(int param0, int param1, int[] param2, boolean param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -139,8 +139,7 @@ final class ka {
         String stackOut_11_2 = null;
         try {
           if (1 == ((ka) this).field_g.d(-1)) {
-            int discarded$6 = 1;
-            stackOut_2_0 = this.a(0, param0, param2);
+            stackOut_2_0 = this.a(0, param0, param2, true);
             stackIn_3_0 = stackOut_2_0;
             return stackIn_3_0;
           } else {
@@ -149,15 +148,14 @@ final class ka {
                 break L0;
               } else {
                 var5 = null;
-                gi discarded$7 = ((ka) this).a(-25, (int[]) null, -10);
+                gi discarded$2 = ((ka) this).a(-25, (int[]) null, -10);
                 break L0;
               }
             }
             if (((ka) this).field_g.a((byte) 105, param0) != 1) {
               throw new RuntimeException();
             } else {
-              int discarded$8 = 1;
-              stackOut_7_0 = this.a(param0, 0, param2);
+              stackOut_7_0 = this.a(param0, 0, param2, true);
               stackIn_8_0 = stackOut_7_0;
               return stackIn_8_0;
             }
@@ -194,7 +192,7 @@ final class ka {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_a = null;
         field_h = null;

@@ -10,7 +10,7 @@ final class ce {
     static String field_d;
     static int field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_a = null;
     }
@@ -120,8 +120,7 @@ final class ce {
         String stackOut_14_2 = null;
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
-          int discarded$2 = 0;
-          var3 = dp.a(param2, false);
+          var3 = dp.a(param2, false, false);
           if (var3 == null) {
             var4 = 0;
             L0: while (true) {
@@ -218,8 +217,7 @@ final class ce {
                   nr.field_p.a((li) (Object) param1, false);
                   break L3;
                 } else {
-                  int discarded$3 = 18724;
-                  jn.a((li) (Object) param1, (li) (Object) var2);
+                  jn.a((li) (Object) param1, (li) (Object) var2, 18724);
                   break L3;
                 }
               }

@@ -139,8 +139,7 @@ final class pg {
             if (!(((pg) this).field_d >= 1)) {
                 throw new IllegalStateException();
             }
-            int discarded$0 = 124;
-            this.a(param0);
+            this.a(param0, (byte) 124);
             ((pg) this).field_e = ((pg) this).field_e - 1;
             while (((pg) this).field_e < 0) {
                 var6 = (pd) (Object) ((pg) this).field_g.a(false);
@@ -238,8 +237,7 @@ final class pg {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 1;
-            stackOut_2_0 = te.a(10, 117, param1);
+            stackOut_2_0 = te.a(10, 117, param1, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -312,7 +310,7 @@ final class pg {
         throw new Error();
     }
 
-    private final void a(long param0) {
+    private final void a(long param0, byte param1) {
         pd var4 = (pd) (Object) ((pg) this).field_c.a((byte) 83, param0);
         this.a((byte) 107, var4);
     }

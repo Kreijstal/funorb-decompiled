@@ -6,7 +6,7 @@ final class ii {
     static ta field_b;
     static int field_a;
 
-    final static sa a(ji param0) {
+    final static sa a(ji param0, boolean param1) {
         RuntimeException var2 = null;
         sa stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -73,7 +73,7 @@ final class ii {
         return ch.field_g;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
     }
@@ -86,8 +86,7 @@ final class ii {
         dj.a();
         eh.d();
         mn.field_x = 0;
-        int discarded$0 = -1236579128;
-        oj.o();
+        oj.o(-1236579128);
         ea var2 = var1.c();
         try {
             for (var3 = 0; var3 < 15; var3++) {

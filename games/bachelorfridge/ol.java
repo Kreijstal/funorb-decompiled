@@ -4,7 +4,7 @@
 final class ol extends pu {
     static String[] field_l;
 
-    final static rga a(String param0) {
+    final static rga a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -117,11 +117,11 @@ final class ol extends pu {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_l = null;
     }
 
-    final static cq a(be param0) {
+    final static cq a(be param0, boolean param1) {
         RuntimeException var2 = null;
         cq stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -143,8 +143,7 @@ final class ol extends pu {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = -36;
-            stackOut_2_0 = tw.a(je.b(param0, 100, 96));
+            stackOut_2_0 = tw.a(je.b(param0, 100, 96), (byte) -36);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

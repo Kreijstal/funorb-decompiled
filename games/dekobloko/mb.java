@@ -325,7 +325,7 @@ final class mb {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_d = null;
     }

@@ -6,7 +6,7 @@ final class kg {
     static String field_c;
     static int field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
     }
 
@@ -174,15 +174,14 @@ final class kg {
           L0: {
             ip.field_c = qg.a((byte) 3, param1, "commonui", "frame_top");
             uc.field_k = qg.a((byte) 3, param1, "commonui", "frame_bottom");
-            int discarded$4 = 1;
-            eo.field_b = ij.a(param1, "jagex_logo_grey", "commonui");
+            eo.field_b = ij.a(param1, "jagex_logo_grey", "commonui", 1);
             u.field_i = qg.a((byte) 3, param1, "commonui", "button");
             gu.field_c = tj.a("validation", "commonui", 1, param1);
             oi.field_c = (hc) (Object) as.a(param3, -119, param1, "arezzo12", "commonui");
             qo.field_b = (hc) (Object) as.a(param3, -104, param1, "arezzo14", "commonui");
             b.field_c = (hc) (Object) as.a(param3, -108, param1, "arezzo14bold", "commonui");
             var17 = new ll(param2.a("button.gif", (byte) -71, ""), (java.awt.Component) (Object) ci.field_f);
-            wp discarded$5 = cd.a(param1, "commonui", "dropdown", -112);
+            wp discarded$1 = cd.a(param1, "commonui", "dropdown", -112);
             var5 = iu.a(param1, "commonui", (byte) -86, "screen_options");
             gr.field_i = new wp[4];
             dk.field_e = new wp[4];
@@ -205,8 +204,7 @@ final class kg {
                 L2: while (true) {
                   if (var9 >= 3) {
                     var9 = var17.field_n;
-                    int discarded$6 = -92;
-                    qk.a();
+                    qk.a((byte) -92);
                     var17.b();
                     vp.c(0, 0, vp.field_i, vp.field_c);
                     var15 = new ll(var9, var9);
@@ -219,8 +217,7 @@ final class kg {
                     var12 = new ll(-(var9 * 2) + var17.field_r, var9);
                     var12.b();
                     var17.c(-var9, 0);
-                    int discarded$7 = 2765;
-                    sl.c();
+                    sl.c(2765);
                     u.field_i = new ll[]{var15, var12, var11};
                     break L0;
                   } else {
@@ -604,7 +601,7 @@ final class kg {
         return stackIn_12_0;
     }
 
-    final static cl a(String param0) {
+    final static cl a(String param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         cl var3 = null;

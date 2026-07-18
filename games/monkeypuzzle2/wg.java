@@ -12,7 +12,7 @@ final class wg extends ug {
     static le field_g;
     static kj field_j;
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -100,7 +100,7 @@ final class wg extends ug {
         }
     }
 
-    final static boolean a(int param0, int param1, ad param2) {
+    final static boolean a(int param0, int param1, ad param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -129,8 +129,7 @@ final class wg extends ug {
             var5 = param2.b(255, param1, param0);
             var4 = var5;
             if (var5 != null) {
-              int discarded$2 = -83;
-              ol.a(var5);
+              ol.a(var5, -83);
               stackOut_3_0 = 1;
               stackIn_4_0 = stackOut_3_0;
               break L0;

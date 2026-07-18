@@ -9,7 +9,7 @@ final class af extends di {
     private boolean field_p;
     private String field_m;
 
-    public static void d() {
+    public static void d(byte param0) {
         int var1 = -40;
         field_n = null;
         field_o = null;
@@ -133,7 +133,7 @@ final class af extends di {
         return stackIn_18_0;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -159,8 +159,7 @@ final class af extends di {
                 try {
                   L1: {
                     var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-                    int discarded$2 = 0;
-                    param0.getAppletContext().showDocument(of.a(param0, var2), "_top");
+                    param0.getAppletContext().showDocument(of.a(param0, var2, false), "_top");
                     break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -261,8 +260,7 @@ final class af extends di {
                   }
                   L4: {
                     if (param1 == 10) {
-                      int discarded$2 = 0;
-                      pl.a();
+                      pl.a(0);
                       var3_int = 0;
                       break L4;
                     } else {

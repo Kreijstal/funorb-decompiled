@@ -222,8 +222,7 @@ final class el implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter0;
               L9: {
                 var6 = (Exception) (Object) decompiledCaughtException;
-                int discarded$1 = 1;
-                en.a("CC1", (Throwable) (Object) var6);
+                en.a("CC1", (Throwable) (Object) var6, 1);
                 ne.field_e = null;
                 aa.field_f = null;
                 break L9;
@@ -323,7 +322,7 @@ final class el implements Runnable {
         }
     }
 
-    final static void e() {
+    final static void e(int param0) {
         la var1 = (la) (Object) vi.field_h.a((byte) -34);
         if (var1 == null) {
             tn.a(false);
@@ -454,7 +453,7 @@ final class el implements Runnable {
         ((el) this).b(4155);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_a = null;
         field_f = null;
         field_g = null;
@@ -563,22 +562,24 @@ final class el implements Runnable {
 
     public final void run() {
         try {
-            IOException iOException = null;
-            int var1_int = 0;
             IOException var1 = null;
             Exception var1_ref = null;
+            int var1_int = 0;
             int var2 = 0;
-            Object var3 = null;
+            IOException var3 = null;
+            Object var3_ref = null;
+            InterruptedException var4 = null;
             Throwable var5 = null;
             int var6 = 0;
+            Object var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var6 = Virogrid.field_F ? 1 : 0;
             try {
               L0: {
                 L1: while (true) {
-                  var3 = this;
-                  synchronized (var3) {
+                  var3_ref = this;
+                  synchronized (var3_ref) {
                     L2: {
                       L3: {
                         if (((el) this).field_u != ((el) this).field_c) {
@@ -662,7 +663,7 @@ final class el implements Runnable {
                       } catch (java.lang.Exception decompiledCaughtParameter2) {
                         decompiledCaughtException = decompiledCaughtParameter2;
                         L13: {
-                          iOException = (IOException) (Object) decompiledCaughtException;
+                          var3 = (IOException) (Object) decompiledCaughtException;
                           ((el) this).field_p = true;
                           break L13;
                         }
@@ -683,7 +684,7 @@ final class el implements Runnable {
                       } catch (java.lang.Exception decompiledCaughtParameter3) {
                         decompiledCaughtException = decompiledCaughtParameter3;
                         L16: {
-                          iOException = (IOException) (Object) decompiledCaughtException;
+                          var3 = (IOException) (Object) decompiledCaughtException;
                           ((el) this).field_p = true;
                           break L16;
                         }
@@ -697,8 +698,8 @@ final class el implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter4;
               L17: {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
-                int discarded$1 = 1;
-                en.a((String) null, (Throwable) (Object) var1_ref);
+                var7 = null;
+                en.a((String) null, (Throwable) (Object) var1_ref, 1);
                 break L17;
               }
             }

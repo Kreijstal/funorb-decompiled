@@ -8,7 +8,7 @@ final class lr extends RuntimeException {
     static String field_e;
     static int field_c;
 
-    final static int a(una param0) {
+    final static int a(una param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -138,7 +138,7 @@ final class lr extends RuntimeException {
         ((lr) this).field_d = param1;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_b = null;
     }

@@ -9,7 +9,7 @@ final class aa {
     static String field_d;
     static ck field_e;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_a = null;
         field_c = null;

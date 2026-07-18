@@ -140,7 +140,7 @@ final class de extends wj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_K = null;
         field_F = null;
         field_A = null;
@@ -221,7 +221,7 @@ final class de extends wj {
         }
     }
 
-    private final kv g() {
+    private final kv g(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -328,10 +328,9 @@ final class de extends wj {
 
     private final void h(int param0) {
         ((de) this).field_D = new kv[]{this.b(((de) this).field_y, ((de) this).field_O, -47), this.b(((de) this).field_L, ((de) this).field_G, -126)};
-        int discarded$0 = 5;
-        ((de) this).field_N = this.g();
+        ((de) this).field_N = this.g(5);
         if (param0 <= 92) {
-            int discarded$1 = de.d(84, 78, 72);
+            int discarded$0 = de.d(84, 78, 72);
         }
         ((de) this).field_z = ((de) this).field_N.h();
         ((de) this).field_H = new kv(((de) this).field_q >> 1, ((de) this).field_q);

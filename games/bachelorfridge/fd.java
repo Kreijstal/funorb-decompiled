@@ -52,8 +52,7 @@ final class fd extends ana {
         try {
           L0: {
             if (g.a(param2, param1, -30744, param4)) {
-              int discarded$2 = 28450;
-              stackOut_5_0 = cea.a(param3.b(-56, param2, param1));
+              stackOut_5_0 = cea.a(param3.b(-56, param2, param1), 28450);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
@@ -264,7 +263,7 @@ final class fd extends ana {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         if (((fd) this).field_G != null) {
             id.a(-95, ((fd) this).field_G);
         }
@@ -274,6 +273,7 @@ final class fd extends ana {
 
     final static void a(int[] param0, vr param1, int param2, int param3, byte[] param4, vr param5, boolean param6, vr param7, int[] param8, int param9, ee[] param10, kv[][] param11, kv[][] param12, byte[] param13, String[][] param14, String[][] param15, String[] param16) {
         RuntimeException var17 = null;
+        Object var18 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
@@ -472,8 +472,8 @@ final class fd extends ana {
         String stackOut_39_2 = null;
         try {
           L0: {
-            int discarded$1 = 22914;
-            vh.a(param4, param8, param13, param10, 1, param0, true, param5, param12, param14, 4, param16, 5, param1, (String[]) null, param11, param7, param15);
+            var18 = null;
+            vh.a(param4, param8, param13, param10, 1, param0, true, param5, param12, param14, 4, param16, 5, param1, (String[]) null, param11, param7, param15, 22914);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -842,8 +842,9 @@ final class fd extends ana {
     final static void a(boolean param0, int param1, boolean param2) {
         int var3 = 0;
         String var4 = null;
-        Object var5 = null;
-        CharSequence var6 = null;
+        String var5 = null;
+        Object var6 = null;
+        CharSequence var7 = null;
         L0: {
           if (wh.field_p != null) {
             var3 = wh.field_p.b(param2, 93);
@@ -861,8 +862,10 @@ final class fd extends ana {
                   if (!wh.field_p.field_Z.equals((Object) (Object) "")) {
                     L1: {
                       if (wh.field_p.field_Z.charAt(0) != 91) {
-                        var6 = (CharSequence) (Object) wh.field_p.field_Z;
-                        var4 = fq.a(0, var6);
+                        var7 = (CharSequence) (Object) wh.field_p.field_Z;
+                        var4 = fq.a(0, var7);
+                        var5 = var4;
+                        var5 = var4;
                         break L1;
                       } else {
                         var4 = wh.field_p.field_Z;
@@ -872,7 +875,7 @@ final class fd extends ana {
                     L2: {
                       var5 = null;
                       if (vaa.field_f == 0) {
-                        var5 = (Object) (Object) lda.a(-26181, param1, var4);
+                        var5 = lda.a(-26181, param1, var4);
                         break L2;
                       } else {
                         break L2;
@@ -882,7 +885,7 @@ final class fd extends ana {
                       if (vaa.field_f != 1) {
                         break L3;
                       } else {
-                        var5 = (Object) (Object) via.a(param1, var4, -75);
+                        var5 = via.a(param1, var4, -75);
                         break L3;
                       }
                     }
@@ -890,7 +893,7 @@ final class fd extends ana {
                       if (vaa.field_f != 2) {
                         break L4;
                       } else {
-                        var5 = (Object) (Object) ip.a(var4, (byte) -80, param1);
+                        var5 = ip.a(var4, (byte) -80, param1);
                         break L4;
                       }
                     }
@@ -898,13 +901,13 @@ final class fd extends ana {
                       if (vaa.field_f != 3) {
                         break L5;
                       } else {
-                        var5 = (Object) (Object) tha.a(2, var4, var4, param1);
+                        var5 = tha.a(2, var4, var4, param1);
                         break L5;
                       }
                     }
                     if (var5 != null) {
-                      int discarded$1 = 2;
-                      vf.a(var4, 0, -101, (String) null, (String) var5);
+                      var6 = null;
+                      vf.a(var4, 0, -101, (String) null, var5, 2);
                       wh.field_p = null;
                       vaa.field_f = -1;
                       break L0;
@@ -989,8 +992,7 @@ final class fd extends ana {
             } else {
               if (((fd) this).field_G == null) {
                 gka.a(107, 0);
-                int discarded$2 = -36;
-                ((fd) this).field_G = tw.a(je.a(rt.field_a[68], 384, 256));
+                ((fd) this).field_G = tw.a(je.a(rt.field_a[68], 384, 256), (byte) -36);
                 break L4;
               } else {
                 break L4;
@@ -1020,8 +1022,7 @@ final class fd extends ana {
               if (var3 == 0) {
                 return false;
               } else {
-                int discarded$3 = -86;
-                this.e();
+                this.e(-86);
                 return true;
               }
             } else {

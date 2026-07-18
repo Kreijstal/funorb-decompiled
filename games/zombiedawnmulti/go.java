@@ -645,8 +645,7 @@ final class go implements Runnable {
         if (param2 != -120) {
             ((go) this).field_p = null;
         }
-        int discarded$0 = 0;
-        return this.a((byte) -121, param0, param1);
+        return this.a((byte) -121, param0, param1, false);
     }
 
     final boolean a(int param0) {
@@ -677,7 +676,7 @@ final class go implements Runnable {
         return this.a(7, (Object) (Object) param0, true, 0, 0);
     }
 
-    private final di a(byte param0, String param1, int param2) {
+    private final di a(byte param0, String param1, int param2, boolean param3) {
         int var5 = 62;
         return this.a(1, (Object) (Object) param1, true, param2, 0);
     }

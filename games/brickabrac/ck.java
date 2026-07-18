@@ -19,7 +19,7 @@ final class ck extends nm {
         }
     }
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1, int param2, int param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -101,7 +101,7 @@ final class ck extends nm {
         ((ck) this).field_l = new StringBuilder(param0);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         wc.field_b = false;
         ga.field_i = 13;
         ab.field_E = 0;

@@ -205,7 +205,7 @@ final class pc {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_d = null;
         field_a = null;

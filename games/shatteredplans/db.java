@@ -254,7 +254,7 @@ final class db {
                 break L2;
               } else {
                 if (-1 == param2.indexOf("<br>")) {
-                  param3[0] = (String) (Object) param3;
+                  param3[0] = param2;
                   stackOut_6_0 = 1;
                   stackIn_7_0 = stackOut_6_0;
                   return stackIn_7_0;

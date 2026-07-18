@@ -264,8 +264,7 @@ final class th {
             wn.field_z = nj.a("", 93);
             wn.field_z.a(false, (byte) -59);
             aa.a(95, param2, param1, param0);
-            int discarded$2 = 50;
-            ci.a();
+            ci.a((byte) 50);
             hb.field_Gb = uj.field_h;
             in.field_Gb = uj.field_h;
             break L0;
@@ -369,7 +368,7 @@ final class th {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_k = null;
         field_a = null;

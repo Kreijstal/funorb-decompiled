@@ -37,7 +37,7 @@ final class kk {
         return stackIn_5_0;
     }
 
-    final static ef a(wb[] param0, byte[] param1) {
+    final static ef a(wb[] param0, byte[] param1, int param2, int param3, int param4) {
         RuntimeException var5 = null;
         int[] var5_array = null;
         int[] var6 = null;
@@ -290,7 +290,7 @@ final class kk {
         return stackIn_24_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 

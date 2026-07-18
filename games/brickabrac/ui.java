@@ -271,7 +271,7 @@ final class ui {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         oj.field_r = null;
         eo.field_g = null;
     }
@@ -339,8 +339,7 @@ final class ui {
                         break L2;
                       }
                     }
-                    int discarded$1 = 5797;
-                    ne.a(param1, "document.cookie=\"" + var5 + "\"");
+                    ne.a(param1, "document.cookie=\"" + var5 + "\"", 5797);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -445,7 +444,7 @@ final class ui {
         return stackIn_5_0 != 0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
     }

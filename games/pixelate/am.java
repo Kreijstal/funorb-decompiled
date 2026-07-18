@@ -14,7 +14,7 @@ final class am {
     private rj field_g;
     static int field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_b = null;
     }
@@ -239,11 +239,10 @@ final class am {
           break L6;
         }
         var2 = 127;
-        int discarded$2 = 92;
-        ia.a();
+        ia.a((byte) 92);
     }
 
-    final static void b() {
+    final static void b(int param0) {
     }
 
     final gg a(boolean param0, int param1, int param2, rn param3, rn param4) {
@@ -718,8 +717,7 @@ final class am {
             if (param0 != io.field_e) {
               io.field_e = param0;
               si.field_P = true;
-              int discarded$3 = 1;
-              ro.a(param3);
+              ro.a(param3, true);
               break L0;
             } else {
               break L0;
@@ -736,8 +734,7 @@ final class am {
               } else {
                 si.field_P = true;
                 ib.field_e = param0;
-                int discarded$4 = 1;
-                ro.a(param3);
+                ro.a(param3, true);
                 break L1;
               }
             }
@@ -750,8 +747,7 @@ final class am {
               } else {
                 si.field_P = true;
                 ib.field_e = param0;
-                int discarded$5 = 1;
-                ro.a(param3);
+                ro.a(param3, true);
                 break L1;
               }
             }
@@ -764,8 +760,7 @@ final class am {
     }
 
     private static void $cfr$clinit() {
-        int discarded$0 = 2071;
-        ol.e();
+        ol.e(2071);
         field_c = 50;
     }
 }

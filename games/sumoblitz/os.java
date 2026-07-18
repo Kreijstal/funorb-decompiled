@@ -292,7 +292,7 @@ final class os implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }
@@ -572,7 +572,7 @@ final class os implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static se a(boolean param0, String param1, String param2) {
+    final static se a(boolean param0, String param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         long var5 = 0L;
@@ -626,8 +626,7 @@ final class os implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 break L1;
               }
             }
-            int discarded$2 = 0;
-            stackOut_3_0 = ds.a(var5, false, (String) var7, param2);
+            stackOut_3_0 = ds.a(var5, false, (String) var7, param2, false);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }

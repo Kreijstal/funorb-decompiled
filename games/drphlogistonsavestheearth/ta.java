@@ -18,7 +18,7 @@ final class ta {
     static int[] field_i;
     static int field_c;
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -39,8 +39,7 @@ final class ta {
               if (var2 == 0) {
                 var8 = (uj) (Object) md.field_e.h(-11151);
                 if (var8 == null) {
-                  int discarded$4 = 126;
-                  eg.a();
+                  eg.a((byte) 126);
                   return;
                 } else {
                   L2: {
@@ -56,8 +55,7 @@ final class ta {
                   }
                   var9.field_j = var9.field_j + 4;
                   if (!var9.m(0)) {
-                    int discarded$5 = 126;
-                    eg.a();
+                    eg.a((byte) 126);
                     return;
                   } else {
                     var8.a(-16175);
@@ -85,15 +83,13 @@ final class ta {
                       var4_ref_jl.a(-16175);
                       break L1;
                     } else {
-                      int discarded$6 = 126;
-                      eg.a();
+                      eg.a((byte) 126);
                       return;
                     }
                   }
                 } else {
                   gb.a((Throwable) null, "A1: " + al.a(-46), 10);
-                  int discarded$7 = 126;
-                  eg.a();
+                  eg.a((byte) 126);
                   break L1;
                 }
               }
@@ -120,8 +116,7 @@ final class ta {
             var3[var4_int] = aj.field_a[rk.a((int) var2[var4_int], 255)];
         }
         nh var4 = new nh(oe.field_b, ih.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], qa.field_J[0], var3);
-        int discarded$0 = -21;
-        oc.a();
+        oc.a((byte) -21);
         return var4;
     }
 
@@ -183,7 +178,7 @@ final class ta {
         return ((ta) this).field_m[fieldTemp$0];
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -336,7 +331,7 @@ final class ta {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_i = null;
         field_j = null;
@@ -422,8 +417,7 @@ final class ta {
             for (var2_int = 0; var2_int < param0.length; var2_int++) {
                 ((ta) this).field_m[var2_int] = param0[var2_int];
             }
-            int discarded$0 = -105;
-            this.a();
+            this.a((byte) -105);
         } catch (RuntimeException runtimeException) {
             throw ie.a((Throwable) (Object) runtimeException, "ta.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

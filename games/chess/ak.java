@@ -23,7 +23,7 @@ final class ak extends o {
         return param0 | param1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_q = null;
         field_m = null;
         field_k = null;
@@ -195,8 +195,7 @@ final class ak extends o {
               try {
                 L0: {
                   var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-                  int discarded$2 = -87;
-                  param1.getAppletContext().showDocument(rh.a(var2, param1), "_top");
+                  param1.getAppletContext().showDocument(rh.a(var2, param1, (byte) -87), "_top");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -780,7 +779,7 @@ final class ak extends o {
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         a.field_a = hm.a(-64);
         jh.field_e = new fm();
         in.a((byte) 112, true, true);
@@ -834,29 +833,17 @@ final class ak extends o {
         field_r = new int[12];
         field_k = new int[12];
         field_m = new int[12];
-        int discarded$0 = 27690;
-        sa.a(new int[10], 455, 27, 170, 0, 185);
-        int discarded$1 = 27690;
-        sa.a(new int[6], 455, 27, 190, 1, 185);
-        int discarded$2 = 27690;
-        sa.a(new int[8], 455, 27, 190, 2, 185);
-        int discarded$3 = 27690;
-        sa.a(new int[3], 208, 25, 133, 3, 31);
-        int discarded$4 = 27690;
-        sa.a(new int[2], 440, 27, 410, 4, 200);
-        int discarded$5 = 27690;
-        sa.a(new int[10], 620, 27, 155, 5, 485);
-        int discarded$6 = 27690;
-        sa.a(new int[2], 420, 27, 410, 6, 220);
-        int discarded$7 = 27690;
-        sa.a(new int[2], 540, 27, 170, 7, 50);
-        int discarded$8 = 27690;
-        sa.a(new int[1], 590, 27, 400, 8, 500);
-        int discarded$9 = 27690;
-        sa.a(new int[5], 480, 27, 200, 9, 160);
-        int discarded$10 = 27690;
-        sa.a(new int[3], 208, 25, 133, 10, 31);
-        int discarded$11 = 27690;
-        sa.a(new int[6], 540, 27, 190, 11, 50);
+        sa.a(new int[10], 455, 27, 170, 0, 185, 27690);
+        sa.a(new int[6], 455, 27, 190, 1, 185, 27690);
+        sa.a(new int[8], 455, 27, 190, 2, 185, 27690);
+        sa.a(new int[3], 208, 25, 133, 3, 31, 27690);
+        sa.a(new int[2], 440, 27, 410, 4, 200, 27690);
+        sa.a(new int[10], 620, 27, 155, 5, 485, 27690);
+        sa.a(new int[2], 420, 27, 410, 6, 220, 27690);
+        sa.a(new int[2], 540, 27, 170, 7, 50, 27690);
+        sa.a(new int[1], 590, 27, 400, 8, 500, 27690);
+        sa.a(new int[5], 480, 27, 200, 9, 160, 27690);
+        sa.a(new int[3], 208, 25, 133, 10, 31, 27690);
+        sa.a(new int[6], 540, 27, 190, 11, 50, 27690);
     }
 }

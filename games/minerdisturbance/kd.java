@@ -23,7 +23,7 @@ final class kd {
     static String[] field_k;
     private int field_t;
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, boolean param1) {
         try {
             param0.setFocusTraversalKeysEnabled(false);
             param0.addKeyListener((java.awt.event.KeyListener) (Object) di.field_O);
@@ -67,13 +67,9 @@ final class kd {
         ea var5 = null;
         String var6 = null;
         String var7 = null;
-        int[] var8 = null;
         int[] var9 = null;
-        int[] var10 = null;
         int[] var11 = null;
-        int[] var12 = null;
         int[] var13 = null;
-        int[] var14 = null;
         int[] var15 = null;
         int[] var16 = null;
         int[] var17 = null;
@@ -94,19 +90,12 @@ final class kd {
             }
             var2 = 16448250;
             var3 = 10068666;
-            int discarded$3 = 105;
-            var16 = vk.a(var3, var2);
-            var14 = var16;
-            var12 = var14;
-            var10 = var12;
-            var8 = var10;
-            int discarded$4 = 0;
-            this.a(622, ((kd) this).field_h, (we) (Object) al.field_r, (byte) 120, var8, 0, 47);
+            var16 = vk.a(var3, var2, (byte) 105);
+            this.a(622, ((kd) this).field_h, (we) (Object) al.field_r, (byte) 120, var16, 0, 47, 0);
             tk.b(true);
             ((kd) this).field_a = new ea(475, 24);
             this.a((byte) 99, 0.75f, ((kd) this).field_a, var16, (we) (Object) al.field_r, -4, 475, on.field_z, 24, 0);
-            int discarded$5 = 105;
-            var17 = vk.a(526344, 526344);
+            var17 = vk.a(526344, 526344, (byte) 105);
             var15 = var17;
             var13 = var15;
             var11 = var13;
@@ -132,7 +121,7 @@ final class kd {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         ln var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -285,8 +274,7 @@ final class kd {
                   if (!oi.a(-19804, (CharSequence) (Object) var7)) {
                     break L2;
                   } else {
-                    int discarded$2 = 1;
-                    ((kd) this).field_m = md.a((CharSequence) (Object) var7);
+                    ((kd) this).field_m = md.a((CharSequence) (Object) var7, true);
                     break L1;
                   }
                 }
@@ -436,8 +424,7 @@ final class kd {
             L1: while (true) {
               if (var2 >= 2) {
                 L2: {
-                  int discarded$6 = 72;
-                  this.b();
+                  this.b((byte) 72);
                   if (wk.field_c == null) {
                     break L2;
                   } else {
@@ -465,8 +452,7 @@ final class kd {
                                   if (!uk.field_xb.a(false, "pump32")) {
                                     break L2;
                                   } else {
-                                    int discarded$7 = -77;
-                                    ba.field_K = pb.a("members_expansion_screen", wk.field_c, "frame");
+                                    ba.field_K = pb.a("members_expansion_screen", wk.field_c, "frame", (byte) -77);
                                     ah.field_d = jn.a("arrow", -29553, "members_expansion_screen", wk.field_c);
                                     ql.field_m = rd.a("arialish12", -102, uk.field_xb, wk.field_c, "");
                                     al.field_r = oc.a(uk.field_xb, (byte) 125, "pump32", "", wk.field_c);
@@ -546,11 +532,11 @@ final class kd {
                   }
                   L5: {
                     ((kd) this).field_a.f(16, 302);
-                    int discarded$8 = ql.field_m.a(((kd) this).field_j[((kd) this).field_s], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+                    int discarded$4 = ql.field_m.a(((kd) this).field_j[((kd) this).field_s], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
                     pk.field_c.f(30, 330);
-                    int discarded$9 = ql.field_m.a(af.field_o[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-                    int discarded$10 = ql.field_m.a(af.field_o[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-                    int discarded$11 = ql.field_m.a(af.field_o[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$5 = ql.field_m.a(af.field_o[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$6 = ql.field_m.a(af.field_o[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$7 = ql.field_m.a(af.field_o[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
                     db.field_f.f(508 - -((127 - db.field_f.field_x) / 2), 315);
                     if (0 == ((kd) this).field_c.field_e) {
                       wm.field_g[0].f(508, 299);
@@ -616,12 +602,13 @@ final class kd {
         return -1;
     }
 
-    private final void a(int param0, String param1, we param2, byte param3, int[] param4, int param5, int param6) {
+    private final void a(int param0, String param1, we param2, byte param3, int[] param4, int param5, int param6, int param7) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
+        Object var13 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -680,8 +667,8 @@ final class kd {
                   if (param3 > 113) {
                     break L2;
                   } else {
-                    int discarded$4 = 1;
-                    kd.a((java.awt.Component) null);
+                    var13 = null;
+                    kd.a((java.awt.Component) null, true);
                     break L2;
                   }
                 }
@@ -690,7 +677,7 @@ final class kd {
                 eh.a(0, var9_int, param0, 1 + var9_int);
                 var10 = param4.length * var9_int / param6;
                 var11 = param4[-1 + param4.length - var10];
-                int discarded$5 = param2.a(param1, 0, 0, param0, param6, var11, -1, 1, 1, 0);
+                int discarded$2 = param2.a(param1, 0, 0, param0, param6, var11, -1, 1, 1, 0);
                 var9_int++;
                 continue L1;
               }
@@ -860,8 +847,7 @@ final class kd {
             var13 = new ea(var11_int, var12);
             vb.a(var13, 126);
             param2.c((int)((float)(-param9) / param1), (int)((float)(-param5) / param1), (int)((float)param2.field_y / param1), (int)((float)param2.field_C / param1));
-            int discarded$1 = 0;
-            this.a(var11_int, param7, param4, (byte) 116, param3, 0, var12);
+            this.a(var11_int, param7, param4, (byte) 116, param3, 0, var12, 0);
             tk.b(true);
             vb.a(param2, 127);
             var13.b(param9, param5, param6, param8);
@@ -975,7 +961,7 @@ final class kd {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_p = null;
         field_b = null;
         field_k = null;

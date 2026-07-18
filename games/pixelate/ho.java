@@ -10,7 +10,7 @@ final class ho {
     static String field_b;
     static String field_d;
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -86,12 +86,12 @@ final class ho {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         kk.a((byte) -61, param0);
         cl.a((byte) 95, param0);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_b = null;
         field_a = null;

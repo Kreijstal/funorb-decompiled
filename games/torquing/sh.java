@@ -4,7 +4,7 @@
 final class sh {
     static uk field_a;
 
-    final static int b() {
+    final static int b(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -22,11 +22,10 @@ final class sh {
         var2 = Torquing.field_u;
         try {
           L0: {
-            boolean discarded$28 = dc.field_a.a(true, ld.field_l, bf.field_d, false);
+            boolean discarded$12 = dc.field_a.a(true, ld.field_l, bf.field_d, false);
             dc.field_a.g((byte) -125);
             L1: while (true) {
-              int discarded$29 = -13;
-              if (!np.a()) {
+              if (!np.a((byte) -13)) {
                 if (om.field_h != -1) {
                   var1_int = om.field_h;
                   od.b(128, -1);
@@ -61,7 +60,7 @@ final class sh {
                   }
                 }
               } else {
-                boolean discarded$30 = dc.field_a.a(e.field_f, 24454, m.field_t);
+                boolean discarded$13 = dc.field_a.a(e.field_f, 24454, m.field_t);
                 continue L1;
               }
             }
@@ -74,7 +73,7 @@ final class sh {
         return stackIn_22_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         int var1 = 0;
     }

@@ -226,7 +226,7 @@ final class we {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = 93;
         field_g = null;
         field_h = null;

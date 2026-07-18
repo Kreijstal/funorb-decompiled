@@ -7,14 +7,12 @@ final class oa {
     static Calendar field_a;
     static hd field_b;
 
-    final static void b() {
-        int discarded$0 = -25;
-        ee.b();
-        int discarded$1 = -125;
-        aq.c();
+    final static void b(int param0) {
+        ee.b((byte) -25);
+        aq.c((byte) -125);
     }
 
-    final static ut a(boolean param0) {
+    final static ut a(boolean param0, int param1, byte param2) {
         int var8 = 0;
         int var9 = Kickabout.field_G;
         kg[] var10 = ph.field_e[!param0 ? 3 : 1];
@@ -32,8 +30,7 @@ final class oa {
         }
         var11[2].a(var7, 0);
         ta.e(122);
-        int discarded$0 = 20684;
-        pd.a(var6);
+        pd.a(var6, 20684);
         return var6;
     }
 

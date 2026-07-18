@@ -548,7 +548,7 @@ final class la {
         }
     }
 
-    final static int a(qe param0) {
+    final static int a(qe param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -890,8 +890,7 @@ final class la {
                       ob.b(-107);
                       return;
                     } else {
-                      int discarded$2 = -24;
-                      var16_ref.field_o = jj.b();
+                      var16_ref.field_o = jj.b((byte) -24);
                       var16_ref.field_i = true;
                       var16_ref.field_m = var16_ref.field_o[0];
                       var16_ref.a(true);
@@ -909,8 +908,7 @@ final class la {
                   }
                 }
               } else {
-                int discarded$3 = -24;
-                var11 = jj.b();
+                var11 = jj.b((byte) -24);
                 var19 = var11;
                 var18 = var19;
                 var17 = var18;
@@ -955,7 +953,7 @@ final class la {
         return "" + ((la) this).field_b;
     }
 
-    final static String a(byte param0, int param1) {
+    final static String a(byte param0, int param1, char param2) {
         int var4 = 0;
         int var5 = TorChallenge.field_F ? 1 : 0;
         char[] var6 = new char[param1];

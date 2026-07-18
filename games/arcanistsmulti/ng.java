@@ -49,11 +49,11 @@ final class ng extends df implements pj, vb {
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final String g() {
+    private final String g(byte param0) {
         return "</col></u>";
     }
 
-    final static void a(boolean param0, int param1, boolean param2) {
+    final static void a(boolean param0, int param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         kc var5 = null;
         kc var6 = null;
@@ -561,8 +561,7 @@ final class ng extends df implements pj, vb {
                     }
                   }
                 }
-                int discarded$1 = 0;
-                lm.a(true, param1, om.field_x);
+                lm.a(true, param1, om.field_x, 0);
                 break L27;
               }
             }
@@ -599,14 +598,13 @@ final class ng extends df implements pj, vb {
               if (param0) {
                 break L1;
               } else {
-                String discarded$5 = this.g(-67);
+                String discarded$3 = this.g(-67);
                 break L1;
               }
             }
             L2: {
               if (((ng) this).field_F == param4) {
-                int discarded$6 = -1;
-                mo.g();
+                mo.g(-1);
                 ((ng) this).field_E.h(77);
                 break L2;
               } else {
@@ -816,7 +814,7 @@ final class ng extends df implements pj, vb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_I = null;
         field_H = null;
@@ -869,7 +867,6 @@ final class ng extends df implements pj, vb {
             ((ng) this).field_E = param0;
             ((ng) this).field_F = new ag(qn.field_lb, (wc) null);
             ((ng) this).field_F.field_r = (pf) (Object) new mm();
-            int discarded$1 = 94;
             var7 = tj.a(125, new String[2], ud.field_r);
             var3 = 20;
             var4 = new jm(ia.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_c.field_C, -1, 2147483647, true);

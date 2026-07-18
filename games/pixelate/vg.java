@@ -80,7 +80,7 @@ final class vg {
         }
     }
 
-    final static void a(long param0) {
+    final static void a(long param0, byte param1) {
         if (!(param0 > 0L)) {
             return;
         }
@@ -466,8 +466,7 @@ final class vg {
               if (param1 == 10000) {
                 return;
               } else {
-                int discarded$1 = 1;
-                vg.a();
+                vg.a(true);
                 return;
               }
             }
@@ -500,7 +499,7 @@ final class vg {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_f = null;
     }

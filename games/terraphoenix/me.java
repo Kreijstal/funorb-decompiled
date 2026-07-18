@@ -11,7 +11,7 @@ final class me extends uf {
     int field_j;
     static String field_n;
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -129,7 +129,7 @@ final class me extends uf {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_l = null;
         field_h = null;
         field_m = null;

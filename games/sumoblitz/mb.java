@@ -32,7 +32,7 @@ final class mb {
         }
     }
 
-    final static byte[] a(CharSequence param0) {
+    final static byte[] a(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;

@@ -12,7 +12,7 @@ final class mp {
     static String field_g;
     static int field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_g = null;
         int var1 = 20;

@@ -47,8 +47,7 @@ final class gk {
                 try {
                   L1: {
                     var3 = new java.net.URL(param1.getCodeBase(), param0);
-                    int discarded$2 = 0;
-                    var3 = of.a(param1, var3);
+                    var3 = of.a(param1, var3, false);
                     ib.a(true, var3.toString(), param1, (byte) -25);
                     break L1;
                   }
@@ -142,7 +141,7 @@ final class gk {
         field_b = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         jf var3 = null;
@@ -259,12 +258,10 @@ final class gk {
                             L10: {
                               mf.a(14, (be) (Object) var15);
                               if (var6_int == 0) {
-                                int discarded$2 = -733;
-                                sg.a(kf.field_c, var6_int, ai.field_d, fe.field_Q, nh.field_a);
+                                sg.a(kf.field_c, var6_int, ai.field_d, fe.field_Q, nh.field_a, -733);
                                 break L10;
                               } else {
-                                int discarded$3 = -733;
-                                sg.a(kf.field_c, var6_int, ai.field_d, fe.field_Q, nh.field_a);
+                                sg.a(kf.field_c, var6_int, ai.field_d, fe.field_Q, nh.field_a, -733);
                                 break L10;
                               }
                             }

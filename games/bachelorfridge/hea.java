@@ -224,7 +224,7 @@ final class hea extends td {
         return (ii) (Object) stackIn_43_0;
     }
 
-    final static ee a(ee param0, int[] param1) {
+    final static ee a(ee param0, int[] param1, byte param2) {
         ee var3 = null;
         RuntimeException var3_ref = null;
         ee stackIn_1_0 = null;
@@ -403,14 +403,14 @@ final class hea extends td {
         return (pp) (Object) stackIn_1_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (!vs.a(23864)) {
             return;
         }
         tfa.a(4, 1, false);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_p = null;
         field_q = null;
         field_s = null;

@@ -417,8 +417,8 @@ class kc extends to {
               if (var24_ref == null) {
                 break L30;
               } else {
-                var24_ref.a(param0, param1, param2, var24_ref.field_I, param4, var24_ref.field_x, var24_ref.field_V + var19, (byte) 84, param8, var24_ref.field_Q, var24_ref.field_nb - -var20);
-                var24_ref = (kc) (Object) var24_ref.field_G.a(0);
+                var24_ref.a(param0, param1, param2, ((kc) this).field_I, param4, ((kc) this).field_x, ((kc) this).field_V + var19, (byte) 84, param8, ((kc) this).field_Q, ((kc) this).field_nb - -var20);
+                var24_ref = (kc) (Object) ((kc) this).field_G.a(0);
                 continue L31;
               }
             }
@@ -1018,7 +1018,7 @@ class kc extends to {
             while (var4 != null) {
                 var4.field_E = true;
                 var4.e((byte) 20);
-                var4 = (kc) (Object) var4.field_G.b((byte) 120);
+                var4 = (kc) (Object) ((kc) this).field_G.b((byte) 120);
             }
         }
     }
@@ -1188,7 +1188,7 @@ class kc extends to {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        Object var13 = null;
+        kc var13 = null;
         int var14 = 0;
         Object stackIn_24_0 = null;
         Object stackIn_25_0 = null;
@@ -1221,7 +1221,6 @@ class kc extends to {
         Object stackOut_37_0 = null;
         int stackOut_37_1 = 0;
         L0: {
-          var13 = null;
           var14 = ArcanistsMulti.field_G ? 1 : 0;
           if (0 < ((kc) this).field_fb) {
             var7 = -(-((kc) this).field_fb >> 2);
@@ -1421,20 +1420,20 @@ class kc extends to {
           if (((kc) this).field_G == null) {
             break L12;
           } else {
-            var13 = (Object) (Object) (kc) (Object) ((kc) this).field_G.a(true);
+            var13 = (kc) (Object) ((kc) this).field_G.a(true);
             L13: while (true) {
               if (var13 == null) {
                 break L12;
               } else {
-                ((kc) var13).a(((kc) var13).field_x, ((kc) var13).field_nb, param2, -1, ((kc) var13).field_I, ((kc) var13).field_V);
-                var13 = (Object) (Object) (kc) (Object) ((kc) var13).field_G.b((byte) 31);
+                var13.a(((kc) this).field_x, ((kc) this).field_nb, param2, -1, ((kc) this).field_I, ((kc) this).field_V);
+                var13 = (kc) (Object) ((kc) this).field_G.b((byte) 31);
                 continue L13;
               }
             }
           }
         }
         L14: {
-          if (((kc) var13).field_A) {
+          if (((kc) this).field_A) {
             ui.field_v = true;
             break L14;
           } else {
@@ -1451,14 +1450,14 @@ class kc extends to {
         }
         L16: {
           de.h(var8, var9, var10, var11);
-          if (((kc) var13).field_P == 0) {
+          if (((kc) this).field_P == 0) {
             break L16;
           } else {
-            if (((kc) var13).field_H) {
+            if (((kc) this).field_H) {
               L17: {
-                ((kc) this).field_db = me.field_I + (-((kc) var13).field_y - param1);
-                ((kc) this).field_T = -param5 + (-((kc) var13).field_cb + an.field_g);
-                if (((kc) var13).field_T >= 0) {
+                ((kc) this).field_db = me.field_I + (-((kc) this).field_y - param1);
+                ((kc) this).field_T = -param5 + (-((kc) this).field_cb + an.field_g);
+                if (((kc) this).field_T >= 0) {
                   break L17;
                 } else {
                   ((kc) this).field_T = 0;
@@ -1466,15 +1465,15 @@ class kc extends to {
                 }
               }
               L18: {
-                if (((kc) var13).field_T > param0 - ((kc) var13).field_x) {
-                  ((kc) this).field_T = param0 - ((kc) var13).field_x;
+                if (((kc) this).field_T > param0 - ((kc) this).field_x) {
+                  ((kc) this).field_T = param0 - ((kc) this).field_x;
                   break L18;
                 } else {
                   break L18;
                 }
               }
               L19: {
-                if (((kc) var13).field_db < 0) {
+                if (((kc) this).field_db < 0) {
                   ((kc) this).field_db = 0;
                   break L19;
                 } else {
@@ -1482,17 +1481,17 @@ class kc extends to {
                 }
               }
               L20: {
-                ((kc) this).field_V = ((kc) var13).field_T + param5;
+                ((kc) this).field_V = ((kc) this).field_T + param5;
                 ((kc) this).field_fb = 0;
-                if (param4 + -((kc) var13).field_I >= ((kc) var13).field_db) {
+                if (param4 + -((kc) this).field_I >= ((kc) this).field_db) {
                   break L20;
                 } else {
-                  ((kc) this).field_db = param4 + -((kc) var13).field_I;
+                  ((kc) this).field_db = param4 + -((kc) this).field_I;
                   break L20;
                 }
               }
               ((kc) this).field_bb = 0;
-              ((kc) this).field_nb = param1 + ((kc) var13).field_db;
+              ((kc) this).field_nb = param1 + ((kc) this).field_db;
               break L16;
             } else {
               break L16;

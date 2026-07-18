@@ -15,7 +15,7 @@ final class cf extends qf {
     static boolean field_r;
     static String field_s;
 
-    public static void f() {
+    public static void f(int param0) {
         field_p = null;
         field_k = null;
         field_j = null;
@@ -75,7 +75,7 @@ final class cf extends qf {
                 break L1;
               } else {
                 var4 = null;
-                p discarded$4 = ((cf) this).a((String) null, 74);
+                p discarded$2 = ((cf) this).a((String) null, 74);
                 break L1;
               }
             }
@@ -88,8 +88,7 @@ final class cf extends qf {
                 if (param0.equals((Object) (Object) ((cf) this).field_n)) {
                   break L2;
                 } else {
-                  int discarded$5 = -51;
-                  var3 = ij.a(param0);
+                  var3 = ij.a(param0, (byte) -51);
                   if (var3.b(false)) {
                     ((cf) this).field_n = param0;
                     ((cf) this).field_l = var3.b((byte) -72);
@@ -148,16 +147,14 @@ final class cf extends qf {
         return stackIn_14_0;
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         jh.field_c[4] = new int[1];
         fg.field_a[4] = new jl(4);
-        int discarded$2 = 1;
-        ad.a(2, new int[4]);
+        ad.a(2, new int[4], true);
         fg.field_a[2] = new jl(2);
         if (0 < u.field_d) {
           if (ha.a(100, nb.field_e)) {
-            int discarded$3 = 1;
-            ad.a(1, new int[7]);
+            ad.a(1, new int[7], true);
             fg.field_a[1] = new jl(1);
             if (u.field_d > 0) {
               if (7 != lf.field_cb) {

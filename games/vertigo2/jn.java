@@ -70,7 +70,7 @@ final class jn {
         }
     }
 
-    final static void a(li param0, li param1) {
+    final static void a(li param0, li param1, int param2) {
         try {
             if (param0.field_a != null) {
                 param0.c(2);
@@ -84,7 +84,7 @@ final class jn {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         ga.a(nl.field_e, 5, 87);
         ga.a(nq.field_G, 6, 86);
         ga.a(ir.field_e, 8, 123);
@@ -94,7 +94,7 @@ final class jn {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_b = null;
         field_d = null;

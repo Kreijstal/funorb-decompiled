@@ -70,13 +70,11 @@ final class gj {
         if (param0 != 2) {
             String discarded$0 = this.a(-16, -82);
         }
-        int discarded$1 = -111;
-        this.e();
-        int discarded$2 = -85;
-        this.d();
+        this.e(-111);
+        this.d((byte) -85);
     }
 
-    private final int[] b() {
+    private final int[] b(byte param0) {
         int var6 = 0;
         int var7 = 0;
         int var8 = EscapeVector.field_A;
@@ -201,14 +199,13 @@ final class gj {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         int var2 = 640;
         int var3 = var2 / 2;
         int var4 = ((gj) this).field_f - -((gj) this).field_c + -2;
         ih var5 = fh.field_g;
         int var7 = 0;
-        int discarded$0 = 31512;
-        int var6 = un.a(var5);
+        int var6 = un.a(var5, 31512);
         var4 = var4 - var6;
         int var8 = uc.a(-1, var5);
         var4 = var4 + var8;
@@ -282,7 +279,7 @@ final class gj {
         }
     }
 
-    private final void b(String[] param0) {
+    private final void b(String[] param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;
@@ -366,7 +363,7 @@ final class gj {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         me var4 = null;
         int var5 = EscapeVector.field_A;
         int var2 = 64;
@@ -394,8 +391,7 @@ final class gj {
         if (param0 > -33) {
             int discarded$0 = this.a(-73);
         }
-        int discarded$1 = 31512;
-        int var4 = un.a(var3);
+        int var4 = un.a(var3, 31512);
         var2 = var2 + (2 + var4);
         return var2;
     }
@@ -575,7 +571,7 @@ final class gj {
         }
     }
 
-    private final String[] a(int[] param0) {
+    private final String[] a(int[] param0, boolean param1) {
         String[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -661,7 +657,7 @@ final class gj {
         return stackIn_8_0;
     }
 
-    private final String[] a(String[] param0) {
+    private final String[] a(String[] param0, int param1) {
         String[] var3 = null;
         RuntimeException var3_ref = null;
         String[] var4 = null;
@@ -1042,18 +1038,15 @@ final class gj {
               var8_int = ((gj) this).field_y.field_m[((gj) this).field_p].length;
               ((gj) this).field_x = new me(var8_int);
               ((gj) this).field_n.a(-12328, (hg) (Object) ((gj) this).field_x);
-              int discarded$4 = -1;
-              var9 = this.a(((gj) this).field_y.field_m[((gj) this).field_p]);
-              int discarded$5 = -117;
-              this.b(var9);
+              var9 = this.a(((gj) this).field_y.field_m[((gj) this).field_p], -1);
+              this.b(var9, -117);
               ((gj) this).field_k = new me(fi.field_b, var9, 1);
               ((gj) this).field_n.a(-12328, (hg) (Object) ((gj) this).field_k);
               var10 = new String[((gj) this).field_h];
               if (5 != ((gj) this).field_w) {
                 break L6;
               } else {
-                int discarded$6 = 1;
-                var10 = this.a(param1);
+                var10 = this.a(param1, true);
                 break L6;
               }
             }
@@ -1062,8 +1055,7 @@ final class gj {
             var24 = this.c((byte) 39);
             ((gj) this).field_s = new me(bo.field_D, var24);
             ((gj) this).field_n.a(-12328, (hg) (Object) ((gj) this).field_s);
-            int discarded$7 = 127;
-            var25 = this.b();
+            var25 = this.b((byte) 127);
             ((gj) this).field_i = new me(jd.field_c, var25);
             ((gj) this).field_n.a(-12328, (hg) (Object) ((gj) this).field_i);
             var26 = this.a(true, ((gj) this).field_y.field_o[((gj) this).field_p], jb.a(90, ((gj) this).field_y.field_n));

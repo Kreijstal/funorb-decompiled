@@ -15,7 +15,7 @@ final class ha extends um {
     static lc field_k;
     static String[] field_l;
 
-    final static void d() {
+    final static void d(int param0) {
         vf.field_w = 620;
         qc.field_w = 240;
         kn.field_g = true;
@@ -636,7 +636,7 @@ final class ha extends um {
         return (java.net.Socket) (Object) stackIn_22_0;
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         int stackIn_4_0 = 0;
@@ -664,11 +664,11 @@ final class ha extends um {
         return stackIn_6_0 != 0;
     }
 
-    final static double a() {
+    final static double a(byte param0) {
         return ld.field_f.nextDouble();
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_o = null;
         field_k = null;
         field_j = null;

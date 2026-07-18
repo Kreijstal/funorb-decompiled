@@ -7,7 +7,7 @@ final class tt extends rna implements ntb {
     static dja field_c;
     private int field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_c = null;
         field_a = null;
@@ -343,8 +343,8 @@ final class tt extends rna implements ntb {
               var5 = (tt) (Object) param1;
               var6 = var5;
               super.b((byte) 55, param1);
-              var6.field_b = var5.field_b;
-              var6.field_d = var5.field_d;
+              var6.field_b = ((tt) this).field_b;
+              var6.field_d = ((tt) this).field_d;
               if (param0 > 54) {
                 break L1;
               } else {
@@ -643,8 +643,8 @@ final class tt extends rna implements ntb {
             L2: {
               var5 = (tt) (Object) param0;
               var4 = 0;
-              if (var5.field_d != var5.field_d) {
-                System.out.println("int index has changed. before=" + var5.field_d + ", now=" + var5.field_d);
+              if (var5.field_d != ((tt) this).field_d) {
+                System.out.println("int index has changed. before=" + var5.field_d + ", now=" + ((tt) this).field_d);
                 var4 = 1;
                 break L2;
               } else {
@@ -652,8 +652,8 @@ final class tt extends rna implements ntb {
               }
             }
             L3: {
-              if (var5.field_b != var5.field_b) {
-                System.out.println("int mode has changed. before=" + var5.field_b + ", now=" + var5.field_b);
+              if (((tt) this).field_b != var5.field_b) {
+                System.out.println("int mode has changed. before=" + var5.field_b + ", now=" + ((tt) this).field_b);
                 var4 = 1;
                 break L3;
               } else {

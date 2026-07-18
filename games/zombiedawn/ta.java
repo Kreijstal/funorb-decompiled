@@ -4,7 +4,7 @@
 final class ta {
     static String field_a;
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;

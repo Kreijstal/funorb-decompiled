@@ -9,7 +9,7 @@ final class mj extends fqa {
     static String field_K;
     static String field_M;
 
-    public static void s() {
+    public static void s(byte param0) {
         field_J = null;
         field_K = null;
         field_L = null;
@@ -130,7 +130,7 @@ final class mj extends fqa {
         return 3;
     }
 
-    final static void a(String param0, File param1) {
+    final static void a(String param0, File param1, int param2) {
         try {
             Object discarded$0 = gj.field_d.put((Object) (Object) param0, (Object) (Object) param1);
         } catch (RuntimeException runtimeException) {

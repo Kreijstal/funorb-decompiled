@@ -114,7 +114,7 @@ final class gn {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = -9;
     }
 
@@ -128,10 +128,10 @@ final class gn {
         field_b = null;
     }
 
-    private final void d() {
+    private final void d(int param0) {
     }
 
-    final static void a(dk[] param0, boolean param1) {
+    final static void a(dk[] param0, boolean param1, byte param2) {
         RuntimeException var3 = null;
         int[] var4 = null;
         int[] var5 = null;
@@ -337,8 +337,7 @@ final class gn {
                 break L1;
               }
             }
-            int discarded$2 = 97;
-            stackOut_2_0 = wk.a(true, 10, param1);
+            stackOut_2_0 = wk.a(true, 10, param1, 97);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -444,8 +443,7 @@ final class gn {
                           }
                           var5_ref = new cc(((gn) this).field_j, param1, param2[0], param2[1], param2[2], param2[3]);
                           ((gn) this).field_h.a(-12328, (hg) (Object) var5_ref);
-                          int discarded$2 = 87;
-                          this.d();
+                          this.d(87);
                           break L4;
                         }
                       }
@@ -462,7 +460,7 @@ final class gn {
                         if (param0 == -15) {
                           break L7;
                         } else {
-                          boolean discarded$3 = ((gn) this).a(-9, -123);
+                          boolean discarded$1 = ((gn) this).a(-9, -123);
                           break L7;
                         }
                       }
@@ -565,8 +563,7 @@ final class gn {
     }
 
     final static void a(int param0) {
-        int discarded$0 = 0;
-        uk.b();
+        uk.b(0);
     }
 
     private final boolean a(boolean param0, int param1) {
@@ -662,20 +659,17 @@ final class gn {
                   if (((gn) this).field_a) {
                     ((gn) this).field_n = var2;
                     ((gn) this).field_m = null;
-                    int discarded$13 = -7;
-                    this.a();
+                    this.a((byte) -7);
                     return;
                   } else {
                     if (var2 > ((gn) this).field_n) {
                       ((gn) this).field_n = var2;
                       ((gn) this).field_m = null;
-                      int discarded$14 = -7;
-                      this.a();
+                      this.a((byte) -7);
                       return;
                     } else {
                       ((gn) this).field_m = null;
-                      int discarded$15 = -7;
-                      this.a();
+                      this.a((byte) -7);
                       return;
                     }
                   }
@@ -708,20 +702,17 @@ final class gn {
                     if (((gn) this).field_a) {
                       ((gn) this).field_n = var2;
                       ((gn) this).field_m = null;
-                      int discarded$16 = -7;
-                      this.a();
+                      this.a((byte) -7);
                       return;
                     } else {
                       if (var2 > ((gn) this).field_n) {
                         ((gn) this).field_n = var2;
                         ((gn) this).field_m = null;
-                        int discarded$17 = -7;
-                        this.a();
+                        this.a((byte) -7);
                         return;
                       } else {
                         ((gn) this).field_m = null;
-                        int discarded$18 = -7;
-                        this.a();
+                        this.a((byte) -7);
                         return;
                       }
                     }
@@ -746,7 +737,7 @@ final class gn {
             return;
           }
         } else {
-          boolean discarded$19 = ((gn) this).a(true);
+          boolean discarded$1 = ((gn) this).a(true);
           if (!((gn) this).field_i) {
             if (((gn) this).field_a) {
               if (!bj.e((byte) 101)) {
@@ -769,20 +760,17 @@ final class gn {
                       if (((gn) this).field_a) {
                         ((gn) this).field_n = var2;
                         ((gn) this).field_m = null;
-                        int discarded$20 = -7;
-                        this.a();
+                        this.a((byte) -7);
                         return;
                       } else {
                         if (var2 > ((gn) this).field_n) {
                           ((gn) this).field_n = var2;
                           ((gn) this).field_m = null;
-                          int discarded$21 = -7;
-                          this.a();
+                          this.a((byte) -7);
                           return;
                         } else {
                           ((gn) this).field_m = null;
-                          int discarded$22 = -7;
-                          this.a();
+                          this.a((byte) -7);
                           break L3;
                         }
                       }
@@ -818,20 +806,17 @@ final class gn {
                     if (((gn) this).field_a) {
                       ((gn) this).field_n = var2;
                       ((gn) this).field_m = null;
-                      int discarded$23 = -7;
-                      this.a();
+                      this.a((byte) -7);
                       break L5;
                     } else {
                       if (var2 > ((gn) this).field_n) {
                         ((gn) this).field_n = var2;
                         ((gn) this).field_m = null;
-                        int discarded$24 = -7;
-                        this.a();
+                        this.a((byte) -7);
                         break L5;
                       } else {
                         ((gn) this).field_m = null;
-                        int discarded$25 = -7;
-                        this.a();
+                        this.a((byte) -7);
                         break L5;
                       }
                     }

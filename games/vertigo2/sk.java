@@ -163,7 +163,7 @@ final class sk {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_f = null;
         field_d = null;

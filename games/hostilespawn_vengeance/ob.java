@@ -254,7 +254,7 @@ final class ob extends ql {
         super.d(param0);
     }
 
-    final static int c() {
+    final static int c(byte param0) {
         return 1;
     }
 
@@ -513,7 +513,7 @@ final class ob extends ql {
         ((ob) this).field_d.e(-125);
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_s = null;
         field_C = null;
         field_e = null;

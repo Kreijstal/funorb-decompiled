@@ -112,7 +112,7 @@ final class gf {
         ((gf) this).field_j = param1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_o = null;
         field_a = null;
     }

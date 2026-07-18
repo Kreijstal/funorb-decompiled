@@ -90,7 +90,7 @@ final class rj {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_a = null;
         field_c = null;
         field_d = null;

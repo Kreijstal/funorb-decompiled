@@ -19,7 +19,7 @@ final class lc extends qj {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_fb = null;
         field_ib = null;
         field_hb = null;
@@ -33,8 +33,7 @@ final class lc extends qj {
             var2 = new hl(param1.a("final_frame.jpg", (byte) -76, ""), (java.awt.Component) (Object) kj.field_E);
             var3 = var2.field_u;
             var4 = var2.field_v;
-            int discarded$0 = 1;
-            wj.b();
+            wj.b(true);
             m.field_a = new hl(var3, var4 * 3 / 4);
             m.field_a.e();
             var2.d(0, 0);

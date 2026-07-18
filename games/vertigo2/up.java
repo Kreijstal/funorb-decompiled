@@ -90,7 +90,7 @@ final class up extends ji {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_B = null;
         field_z = null;
         field_y = null;

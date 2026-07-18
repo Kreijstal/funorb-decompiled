@@ -27,10 +27,9 @@ final class pq extends pk {
         field_F = null;
     }
 
-    private final void g() {
+    private final void g(int param0) {
         ((pq) this).field_z = new wb[]{this.a(((pq) this).field_K, (byte) -110, ((pq) this).field_x), this.a(((pq) this).field_D, (byte) -5, ((pq) this).field_B)};
-        int discarded$0 = -53;
-        ((pq) this).field_M = this.f();
+        ((pq) this).field_M = this.f(-53);
         ((pq) this).field_G = ((pq) this).field_M.a();
         ((pq) this).field_E = new wb(((pq) this).field_p >> 1, ((pq) this).field_p);
     }
@@ -43,8 +42,7 @@ final class pq extends pk {
             return;
         }
         ((pq) this).field_x = param0;
-        int discarded$0 = 880072001;
-        this.g();
+        this.g(880072001);
     }
 
     final void a(int param0, int param1, pk param2, int param3) {
@@ -116,7 +114,7 @@ final class pq extends pk {
         }
     }
 
-    private final wb f() {
+    private final wb f(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -329,8 +327,7 @@ final class pq extends pk {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(-57, param1, param2, param3, param4);
-        int discarded$0 = 880072001;
-        this.g();
+        this.g(880072001);
         int var6 = 85 % ((28 - param0) / 63);
     }
 

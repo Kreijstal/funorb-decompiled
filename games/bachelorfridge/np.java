@@ -40,7 +40,7 @@ final class np implements Iterator {
         }
     }
 
-    private final void a() {
+    private final void a(int param0) {
         ((np) this).field_b = ((np) this).field_a.field_c[0].field_b;
         ((np) this).field_c = 1;
         ((np) this).field_d = null;
@@ -83,8 +83,7 @@ final class np implements Iterator {
         ((np) this).field_d = null;
         try {
             ((np) this).field_a = param0;
-            int discarded$0 = -87;
-            this.a();
+            this.a(-87);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "np.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

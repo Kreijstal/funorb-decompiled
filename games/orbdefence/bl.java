@@ -503,7 +503,7 @@ final class bl {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (null != jg.field_n) {
           return;
         } else {

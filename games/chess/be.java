@@ -14,7 +14,7 @@ final class be {
         return jc.a(3, 1, 0, 0, 1, 0, 1, 65793, 0);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_b = null;
         field_c = null;

@@ -34,7 +34,7 @@ class qk extends vd {
         }
     }
 
-    final static String[] a(byte[] param0) {
+    final static String[] a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -227,16 +227,15 @@ class qk extends vd {
         }
     }
 
-    final static void g() {
-        int discarded$0 = -1;
-        fe.f();
+    final static void g(int param0) {
+        fe.f(-1);
         oe.field_f = true;
         el.field_b = true;
         le.field_e.k(99);
         fk.a(we.field_b, -78, false);
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_y = null;
         field_z = null;
         field_v = null;

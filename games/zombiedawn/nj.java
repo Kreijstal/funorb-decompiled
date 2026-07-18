@@ -376,7 +376,7 @@ final class nj extends pn implements hh {
         return stackIn_1_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_X = null;
     }
 

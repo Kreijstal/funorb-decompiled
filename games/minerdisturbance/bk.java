@@ -211,8 +211,7 @@ final class bk {
               throw new RuntimeException();
             } else {
               L3: {
-                int discarded$1 = 18738;
-                var17 = wb.a(-5 + -var16.length + var10.field_o, 5, var10.field_u);
+                var17 = wb.a(-5 + -var16.length + var10.field_o, 5, var10.field_u, 18738);
                 if (param0 == 16) {
                   break L3;
                 } else {
@@ -244,7 +243,7 @@ final class bk {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 111;
         field_b = null;
     }

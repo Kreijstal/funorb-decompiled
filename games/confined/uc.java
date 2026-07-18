@@ -39,8 +39,7 @@ final class uc extends sa {
                 if (param1.equals((Object) (Object) fb.field_a.a(55))) {
                   break L1;
                 } else {
-                  int discarded$2 = -6728;
-                  fb.field_a = a.a(param1);
+                  fb.field_a = a.a(param1, -6728);
                   break L1;
                 }
               }

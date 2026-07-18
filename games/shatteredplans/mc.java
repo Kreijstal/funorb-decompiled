@@ -12,7 +12,7 @@ abstract class mc extends df {
 
     abstract boolean e(boolean param0);
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_t = null;
         field_r = null;
         field_u = null;
@@ -27,7 +27,7 @@ abstract class mc extends df {
 
     abstract Object e(byte param0);
 
-    final static void a(int param0, int param1, java.awt.Canvas param2) {
+    final static void a(int param0, int param1, java.awt.Canvas param2, int param3) {
         java.awt.Graphics var4 = null;
         RuntimeException var4_ref = null;
         Exception var4_ref2 = null;

@@ -81,12 +81,12 @@ final class cl extends nt {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_z = null;
         field_v = null;
     }
 
-    final static void e() {
+    final static void e(int param0) {
         int var1 = 0;
         if (null != fn.field_u) {
           return;

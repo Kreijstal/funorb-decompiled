@@ -10,7 +10,7 @@ final class vh extends lh {
     static int field_l;
     static int[] field_i;
 
-    public static void d() {
+    public static void d(int param0) {
         field_j = null;
         field_k = null;
         field_i = null;
@@ -20,7 +20,7 @@ final class vh extends lh {
         throw new Error();
     }
 
-    final static void a() {
+    final static void a(int param0) {
         td.field_k.field_c = 0;
         td.field_k.field_b = 0;
     }

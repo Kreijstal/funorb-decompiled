@@ -31,7 +31,7 @@ final class tj {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         String var1 = null;
         if (cf.field_i) {
           if (Geoblox.field_y != null) {
@@ -64,13 +64,13 @@ final class tj {
         field_a = null;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         ff.field_a = null;
         int var1 = 1;
         hh.field_a = null;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         if (mi.field_C < 2) {
           return 0;
         } else {

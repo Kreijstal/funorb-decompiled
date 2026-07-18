@@ -279,7 +279,7 @@ final class se {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

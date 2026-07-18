@@ -9,7 +9,7 @@ abstract class rg {
     static long[] field_c;
     static boolean field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_d = null;
         field_e = null;
@@ -26,8 +26,7 @@ abstract class rg {
           }
         }
         ji.a((byte) 123, param1);
-        int discarded$7 = 1;
-        ma.k();
+        ma.k(1);
         if (param0 >= -115) {
           rg.a((byte) 9, true);
           return;

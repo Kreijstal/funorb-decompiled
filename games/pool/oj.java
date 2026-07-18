@@ -20,7 +20,7 @@ final class oj extends ma {
     static String field_y;
     static int[] field_r;
 
-    public static void a() {
+    public static void a(int param0) {
         field_u = null;
         field_y = null;
         field_t = null;
@@ -28,7 +28,7 @@ final class oj extends ma {
         field_r = null;
     }
 
-    final static void a(di param0) {
+    final static void a(di param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -132,15 +132,13 @@ final class oj extends ma {
             if (null != vl.field_m) {
               break L1;
             } else {
-              int discarded$7 = 86;
-              if (sh.h()) {
+              if (sh.h((byte) 86)) {
                 break L1;
               } else {
                 if (fc.field_b != null) {
                   break L1;
                 } else {
-                  int discarded$8 = -1;
-                  if (!wj.i()) {
+                  if (!wj.i(-1)) {
                     stackOut_6_0 = 0;
                     stackIn_7_0 = stackOut_6_0;
                     break L0;
@@ -158,7 +156,7 @@ final class oj extends ma {
         return stackIn_7_0 != 0;
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0, int param1, int param2) {
         int var3 = tp.field_e != null ? 1 : 0;
         if (qi.field_a == 9) {
             if (fj.a(ro.field_s, rn.field_g, 17, hg.field_a, hp.field_a)) {
@@ -167,8 +165,7 @@ final class oj extends ma {
                         return false;
                     }
                 }
-                int discarded$0 = 76;
-                return hj.a(hg.field_a, rn.field_g, hp.field_a, ro.field_s);
+                return hj.a(hg.field_a, rn.field_g, hp.field_a, ro.field_s, (byte) 76);
             }
         }
         if (!(qi.field_a != 10)) {
@@ -192,8 +189,7 @@ final class oj extends ma {
                     return false;
                 }
             }
-            int discarded$4 = 12000;
-            if (vl.j()) {
+            if (vl.j(12000)) {
                 Object var4 = null;
                 ub.a((byte) -127, (String) null, param1, ie.field_e, tq.field_t, uh.field_x);
             }

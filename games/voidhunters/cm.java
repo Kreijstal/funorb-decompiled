@@ -559,7 +559,7 @@ final class cm extends le {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_j = null;
     }
 

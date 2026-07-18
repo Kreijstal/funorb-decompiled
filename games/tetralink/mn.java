@@ -9,14 +9,14 @@ final class mn {
     static String field_b;
     static int field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_d = null;
         int var1 = 10;
         field_b = null;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         if (!(mm.field_y == null)) {
@@ -27,13 +27,12 @@ final class mn {
                     mk.a(-117, mm.field_y.e((byte) 26), var3, var4 != 0, mm.field_y.field_Ob, 14);
                 }
                 mm.field_y = null;
-                int discarded$0 = 43;
-                gg.c();
+                gg.c((byte) 43);
             }
         }
     }
 
-    final static nl[] a(ie param0) {
+    final static nl[] a(ie param0, int param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
         nl[] var4 = null;
@@ -147,7 +146,7 @@ final class mn {
         return stackIn_15_0;
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, boolean param1) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) vi.field_a);
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) vi.field_a);

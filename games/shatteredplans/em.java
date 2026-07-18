@@ -71,7 +71,7 @@ final class em implements jk {
         }
     }
 
-    final static void a(va param0) {
+    final static void a(va param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

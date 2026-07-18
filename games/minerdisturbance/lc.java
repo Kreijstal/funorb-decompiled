@@ -12,7 +12,7 @@ final class lc extends pi {
     int field_v;
     String[][] field_p;
 
-    final static ea[] a(int param0, int param1, int param2, int param3) {
+    final static ea[] a(int param0, int param1, int param2, int param3, byte param4) {
         ea[] var7 = new ea[9];
         ea[] var5 = var7;
         ea dupTemp$0 = hb.a(1, 32768, param2);

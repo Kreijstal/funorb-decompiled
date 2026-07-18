@@ -1430,7 +1430,7 @@ final class uj {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_h = null;
         field_j = null;
         field_k = null;

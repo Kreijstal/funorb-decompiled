@@ -8,7 +8,7 @@ class qe extends oh {
     static fg field_k;
     static bi field_j;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_l = null;
         field_j = null;
         field_k = null;

@@ -247,7 +247,7 @@ final class ja extends gg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_m = null;
         int var1 = 0;
         field_k = null;
@@ -342,8 +342,7 @@ final class ja extends gg {
                         var18 = 0;
                         L5: while (true) {
                           if (var18 >= 3) {
-                            int discarded$1 = 0;
-                            vi.a(var17, (byte) -116, pd.field_u, true, false, sl.field_a);
+                            vi.a(var17, (byte) -116, pd.field_u, true, false, sl.field_a, false);
                             kf.a(-62, var8, var13, var7, var12, var14, var17, var9);
                             var15++;
                             continue L3;

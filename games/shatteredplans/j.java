@@ -321,7 +321,7 @@ class j extends ka {
         return stackIn_3_0;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_r = null;
         field_q = null;
         field_p = null;

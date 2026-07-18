@@ -1183,7 +1183,7 @@ final class jga extends eta {
           }
         }
         L130: {
-          var2 = dn.a((byte) -45, "message_team");
+          var2 = dn.a(param0, "message_team");
           if (var2 == null) {
             break L130;
           } else {
@@ -6730,27 +6730,23 @@ final class jga extends eta {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         try {
             jsa.a(false, 4);
-            int var1_int = 37;
+            int var1_int = 74 / ((param0 - -31) / 39);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "jga.C(" + 50 + ')');
+            throw tba.a((Throwable) (Object) runtimeException, "jga.C(" + param0 + ')');
         }
     }
 
-    public static void a() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void a(byte param0) {
+        if (param0 != -3) {
+            return;
+        }
         try {
-          L0: {
             field_b = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "jga.B(" + -3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "jga.B(" + param0 + ')');
         }
     }
 

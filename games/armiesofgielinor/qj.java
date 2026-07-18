@@ -9,8 +9,7 @@ final class qj extends oj {
     static StringBuilder field_C;
 
     final static void h(int param0) {
-        int discarded$0 = -127;
-        er.a();
+        er.a((byte) -127);
         int var1 = 2 % ((1 - param0) / 51);
     }
 

@@ -8,12 +8,12 @@ final class ul {
     static int field_b;
     static dm field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -465,7 +465,7 @@ final class ul {
         }
     }
 
-    final static boolean a(j param0, j param1) {
+    final static boolean a(j param0, j param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -620,8 +620,7 @@ final class ul {
             cl.field_b.e();
             var2.c(0, -bk.field_b.field_m);
             cl.field_b.field_p = bk.field_b.field_m;
-            int discarded$0 = 1;
-            id.a();
+            id.a(true);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "ul.A(" + -21541 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

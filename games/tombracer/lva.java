@@ -17,7 +17,7 @@ final class lva extends ci {
     int field_u;
     private short[] field_q;
 
-    private final void c() {
+    private final void c(int param0) {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -490,8 +490,7 @@ final class lva extends ci {
             break L0;
           }
         }
-        int discarded$2 = 0;
-        this.c();
+        this.c(0);
         var2 = ((lva) this).field_n - 1;
         L1: while (true) {
           L2: {

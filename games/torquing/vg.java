@@ -9,7 +9,7 @@ final class vg extends eh {
     private double[] field_n;
     static volatile int field_l;
 
-    final static byte[] a(CharSequence param0) {
+    final static byte[] a(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;
@@ -602,8 +602,7 @@ final class vg extends eh {
                     L6: while (true) {
                       if (var9.length <= var6) {
                         L7: {
-                          int discarded$1 = 18910;
-                          this.a(param1.f(50));
+                          this.a(param1.f(50), 18910);
                           ((vg) this).b(1);
                           if (var5 != 0) {
                             param1.field_k = ((vg) this).field_h.a(0);
@@ -670,7 +669,7 @@ final class vg extends eh {
         return stackIn_24_0;
     }
 
-    final static boolean d() {
+    final static boolean d(int param0) {
         return ff.field_a;
     }
 
@@ -953,13 +952,10 @@ final class vg extends eh {
     }
 
     final static la a(int param0, int param1) {
-        int discarded$0 = 1;
-        int discarded$1 = 0;
-        int discarded$2 = 8505;
-        return hc.a(false, true, param1);
+        return hc.a(false, true, param1, 8505, false, 1);
     }
 
-    private final void a(double[] param0) {
+    private final void a(double[] param0, int param1) {
         double[] var5 = null;
         double[] var4 = null;
         try {

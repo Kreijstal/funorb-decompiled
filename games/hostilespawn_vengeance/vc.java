@@ -310,8 +310,7 @@ final class vc extends java.awt.Canvas {
                                                   break L17;
                                                 } else {
                                                   if (var8.field_I > 0) {
-                                                    int discarded$1 = 1;
-                                                    tk.a(8, jc.field_c, 1);
+                                                    tk.a(8, jc.field_c, 1, true);
                                                     break L17;
                                                   } else {
                                                     break L17;
@@ -497,7 +496,7 @@ final class vc extends java.awt.Canvas {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         g.a((byte) -119, 4);
     }
 

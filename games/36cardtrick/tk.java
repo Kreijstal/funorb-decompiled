@@ -629,7 +629,7 @@ final class tk {
         var2 = -69 / ((param0 - 38) / 54);
     }
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -650,10 +650,8 @@ final class tk {
         try {
           L0: {
             L1: {
-              int discarded$4 = 6;
-              oc.a((java.awt.Component) (Object) param0);
-              int discarded$5 = 119;
-              qa.a((java.awt.Component) (Object) param0);
+              oc.a((java.awt.Component) (Object) param0, (byte) 6);
+              qa.a((java.awt.Component) (Object) param0, (byte) 119);
               if (Main.field_V == null) {
                 break L1;
               } else {

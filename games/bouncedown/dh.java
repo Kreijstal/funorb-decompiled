@@ -21,7 +21,7 @@ final class dh implements Iterator {
         ((dh) this).field_g = null;
     }
 
-    private final void a() {
+    private final void a(int param0) {
         ((dh) this).field_h = ((dh) this).field_c.field_b[0].field_c;
         ((dh) this).field_f = 1;
         ((dh) this).field_g = null;
@@ -126,7 +126,7 @@ final class dh implements Iterator {
         return false;
     }
 
-    final static void a(boolean param0, String param1, float param2) {
+    final static void a(boolean param0, String param1, float param2, int param3) {
         try {
             if (!(q.field_A != null)) {
                 q.field_A = new db(q.field_N, ej.field_c);
@@ -134,14 +134,13 @@ final class dh implements Iterator {
             }
             q.field_A.a(param0, param2, param1, 65536);
             na.a();
-            int discarded$0 = 1;
-            pj.a(true);
+            pj.a(true, 1);
         } catch (RuntimeException runtimeException) {
             throw ii.a((Throwable) (Object) runtimeException, "dh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + -608757616 + ')');
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_b = null;
         field_e = null;
@@ -152,8 +151,7 @@ final class dh implements Iterator {
         ((dh) this).field_g = null;
         try {
             ((dh) this).field_c = param0;
-            int discarded$0 = -1;
-            this.a();
+            this.a(-1);
         } catch (RuntimeException runtimeException) {
             throw ii.a((Throwable) (Object) runtimeException, "dh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

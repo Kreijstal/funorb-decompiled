@@ -16,7 +16,8 @@ final class ri {
             int var8 = 0;
             int var9 = 0;
             Object var10 = null;
-            CharSequence var11 = null;
+            Object var11 = null;
+            CharSequence var12 = null;
             int stackIn_5_0 = 0;
             int stackIn_33_0 = 0;
             int stackIn_45_0 = 0;
@@ -75,8 +76,7 @@ final class ri {
                   if (null != oc.field_e) {
                     break L1;
                   } else {
-                    int discarded$12 = 52;
-                    if (!w.a(param0)) {
+                    if (!w.a(param0, 52)) {
                       stackOut_4_0 = -1;
                       stackIn_5_0 = stackOut_4_0;
                       return stackIn_5_0;
@@ -89,12 +89,11 @@ final class ri {
                   if (pk.field_l == gi.field_d) {
                     L3: {
                       if (!param0) {
-                        int discarded$13 = 0;
-                        ih.field_a = vf.a(false, param1, param4);
+                        ih.field_a = vf.a(false, param1, param4, false);
                         break L3;
                       } else {
-                        int discarded$14 = 0;
-                        ih.field_a = wd.a(true, oa.field_c, (String) null, param1);
+                        var11 = null;
+                        ih.field_a = wd.a(true, oa.field_c, (String) null, param1, false);
                         break L3;
                       }
                     }
@@ -149,7 +148,7 @@ final class ri {
                     break L6;
                   } else {
                     var10 = null;
-                    int discarded$15 = ri.a(false, (String) null, 95, false, (String) null, 13);
+                    int discarded$7 = ri.a(false, (String) null, 95, false, (String) null, 13);
                     break L6;
                   }
                 }
@@ -199,15 +198,14 @@ final class ri {
                       L10: {
                         oa.field_c = eh.field_d.b(2901);
                         oc.field_f = eh.field_d.c((byte) 34);
-                        int discarded$16 = eh.field_d.c((byte) 34);
+                        int discarded$8 = eh.field_d.c((byte) 34);
                         og.field_n = eh.field_d.b(true);
                         var6_ref = eh.field_d.i((byte) 53);
                         var7 = eh.field_d.c((byte) 34);
                         if ((1 & var7) == 0) {
                           break L10;
                         } else {
-                          int discarded$17 = 65;
-                          ic.a();
+                          ic.a((byte) 65);
                           break L10;
                         }
                       }
@@ -248,9 +246,9 @@ final class ri {
                       }
                       L14: {
                         if (ll.field_e) {
-                          int discarded$18 = eh.field_d.c((byte) 34);
-                          int discarded$19 = eh.field_d.c((byte) 34);
-                          int discarded$20 = eh.field_d.a((byte) -48);
+                          int discarded$9 = eh.field_d.c((byte) 34);
+                          int discarded$10 = eh.field_d.c((byte) 34);
+                          int discarded$11 = eh.field_d.a((byte) -48);
                           pk.field_n = eh.field_d.b(true);
                           hc.field_K = new byte[pk.field_n];
                           var8 = 0;
@@ -269,8 +267,8 @@ final class ri {
                       }
                       L16: {
                         wd.field_f = eh.field_d.e((byte) 105);
-                        var11 = (CharSequence) (Object) wd.field_f;
-                        vg.field_b = oe.a(var11, 12);
+                        var12 = (CharSequence) (Object) wd.field_f;
+                        vg.field_b = oe.a(var12, 12);
                         ik.field_a = eh.field_d.c((byte) 34);
                         pk.field_l = eh.field_b;
                         if (ih.field_a.a((byte) -32) != ej.field_b) {
@@ -302,7 +300,7 @@ final class ri {
                             if (!fe.field_b) {
                               try {
                                 L20: {
-                                  Object discarded$21 = wk.a((byte) -6, k.c(107), "unzap");
+                                  Object discarded$12 = wk.a((byte) -6, k.c(107), "unzap");
                                   break L20;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -320,7 +318,7 @@ final class ri {
                         }
                         try {
                           L22: {
-                            Object discarded$22 = wk.a(-14882, new Object[1], k.c(param5 + 119), "zap");
+                            Object discarded$13 = wk.a(-14882, new Object[1], k.c(param5 + 119), "zap");
                             break L22;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -407,8 +405,7 @@ final class ri {
                       break L29;
                     } else {
                       L30: {
-                        int discarded$23 = 12;
-                        if (30000L >= ll.a()) {
+                        if (30000L >= ll.a((byte) 12)) {
                           kh.field_a = uj.field_e;
                           break L30;
                         } else {
@@ -499,7 +496,7 @@ final class ri {
         vh.field_H[nd.field_a].b(-var3 + 70, -var4 + 180, rj.field_c);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
     }

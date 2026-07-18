@@ -7,7 +7,7 @@ final class fm {
     static int[] field_d;
     static int field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         field_c = null;
@@ -80,7 +80,7 @@ final class fm {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, int param2) {
         int var3 = param0 >>> 24 & 255;
         int var4 = (-16777216 & param1) >>> 24;
         int var5 = var3 + var4;

@@ -29,7 +29,7 @@ final class ui extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 

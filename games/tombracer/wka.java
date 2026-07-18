@@ -9,7 +9,7 @@ class wka extends eta {
     wka() {
     }
 
-    final static void b() {
+    final static void b(int param0) {
         bba.field_c[59] = 57;
         bba.field_c[45] = 26;
         bba.field_c[61] = 27;
@@ -24,7 +24,7 @@ class wka extends eta {
         bba.field_c[520] = 59;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
     }
 

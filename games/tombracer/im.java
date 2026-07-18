@@ -328,7 +328,7 @@ final class im extends nv {
         return param0;
     }
 
-    public static void j() {
+    public static void j(byte param0) {
         field_o = null;
     }
 

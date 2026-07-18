@@ -6,7 +6,7 @@ final class sb extends pu {
     static sna field_n;
     static String[] field_m;
 
-    public static void b() {
+    public static void b(int param0) {
         field_l = null;
         field_n = null;
         field_m = null;

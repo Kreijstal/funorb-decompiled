@@ -14,7 +14,7 @@ final class gi extends br {
     static dk field_i;
     static String field_p;
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_p = null;
         field_n = null;

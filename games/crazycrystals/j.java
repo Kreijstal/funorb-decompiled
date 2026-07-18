@@ -130,7 +130,7 @@ final class j implements Runnable {
         }
     }
 
-    final static void a(ak param0) {
+    final static void a(ak param0, int param1, boolean param2) {
         md var3 = tp.field_f;
         try {
             var3.d(8, 3);
@@ -250,6 +250,7 @@ final class j implements Runnable {
             InterruptedException var4 = null;
             Throwable var5 = null;
             int var6 = 0;
+            Object var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var6 = CrazyCrystals.field_B;
@@ -376,8 +377,8 @@ final class j implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter4;
               L17: {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
-                int discarded$1 = 21862;
-                wp.a((Throwable) (Object) var1_ref, (String) null);
+                var7 = null;
+                wp.a((Throwable) (Object) var1_ref, (String) null, 21862);
                 break L17;
               }
             }
@@ -471,7 +472,7 @@ final class j implements Runnable {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_h = null;
     }

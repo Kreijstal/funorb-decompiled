@@ -11,7 +11,7 @@ final class f extends gb {
     pc[] field_u;
     private byte[][] field_v;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_A = null;
         field_w = null;
         field_x = null;

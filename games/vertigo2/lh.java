@@ -8,7 +8,7 @@ final class lh {
     static String field_a;
     static String[] field_c;
 
-    final static void a(int param0, hn param1) {
+    final static void a(int param0, hn param1, byte param2) {
         int var4 = 0;
         mi var5 = uh.field_Wb;
         mi var3 = var5;
@@ -32,7 +32,7 @@ final class lh {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         gp var1 = null;
         int var2 = Vertigo2.field_L ? 1 : 0;
         try {

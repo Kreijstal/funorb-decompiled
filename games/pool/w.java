@@ -16,7 +16,7 @@ final class w {
     static int[][] field_j;
     static dd field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_g = null;
         field_m = null;
@@ -46,7 +46,7 @@ final class w {
         int var3 = 0;
     }
 
-    final static boolean a(boolean param0, CharSequence param1) {
+    final static boolean a(boolean param0, CharSequence param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -83,8 +83,7 @@ final class w {
                   stackIn_13_0 = stackOut_12_0;
                   break L0;
                 } else {
-                  int discarded$15 = -51;
-                  if (!uc.a(param1.charAt(var3_int))) {
+                  if (!uc.a(param1.charAt(var3_int), (byte) -51)) {
                     stackOut_9_0 = 0;
                     stackIn_10_0 = stackOut_9_0;
                     return stackIn_10_0 != 0;

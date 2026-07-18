@@ -15,11 +15,11 @@ final class kja {
         vla.a(5, param1, param0, param3);
     }
 
-    final static sna a() {
+    final static sna a(byte param0) {
         return ak.field_q.field_vb;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
     }
 

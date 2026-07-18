@@ -29,7 +29,7 @@ final class oe {
         }
     }
 
-    final static void a(m param0) {
+    final static void a(m param0, int param1, byte param2) {
         hb var3 = null;
         try {
             var3 = gf.field_c;
@@ -89,16 +89,15 @@ final class oe {
             return;
           } else {
             if (param0 < -40) {
-              int fieldTemp$2 = ((oe) this).field_k - 1;
+              int fieldTemp$1 = ((oe) this).field_k - 1;
               ((oe) this).field_k = ((oe) this).field_k - 1;
-              if (fieldTemp$2 <= 0) {
+              if (fieldTemp$1 <= 0) {
                 ((oe) this).field_k = ((oe) this).field_c;
                 if (((oe) this).field_h > gb.field_i) {
                   ((oe) this).field_n = false;
                   return;
                 } else {
-                  int discarded$3 = 363;
-                  this.a();
+                  this.a(363);
                   return;
                 }
               } else {
@@ -170,7 +169,7 @@ final class oe {
         field_l = null;
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

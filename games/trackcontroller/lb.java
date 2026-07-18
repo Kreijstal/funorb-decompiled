@@ -116,8 +116,7 @@ class lb extends rh {
                           if (~((lb) this).field_N == ~((lb) this).field_Q) {
                             break L3;
                           } else {
-                            int discarded$9 = 29388;
-                            this.j();
+                            this.j(29388);
                             break L3;
                           }
                         }
@@ -141,9 +140,9 @@ class lb extends rh {
                               break L6;
                             } else {
                               ((lb) this).field_s = ((lb) this).field_s + param1;
-                              int dupTemp$10 = ((lb) this).field_s.length();
-                              ((lb) this).field_Q = dupTemp$10;
-                              ((lb) this).field_N = dupTemp$10;
+                              int dupTemp$1 = ((lb) this).field_s.length();
+                              ((lb) this).field_Q = dupTemp$1;
+                              ((lb) this).field_N = dupTemp$1;
                               break L6;
                             }
                           }
@@ -162,8 +161,7 @@ class lb extends rh {
                     if (param3 != 85) {
                       if (param3 == 101) {
                         if (~((lb) this).field_Q != ~((lb) this).field_N) {
-                          int discarded$11 = 29388;
-                          this.j();
+                          this.j(29388);
                           stackOut_60_0 = 1;
                           stackIn_61_0 = stackOut_60_0;
                           return stackIn_61_0 != 0;
@@ -172,8 +170,7 @@ class lb extends rh {
                             break L7;
                           } else {
                             ((lb) this).field_N = 1 + ((lb) this).field_Q;
-                            int discarded$12 = 29388;
-                            this.j();
+                            this.j(29388);
                             stackOut_58_0 = 1;
                             stackIn_59_0 = stackOut_58_0;
                             return stackIn_59_0 != 0;
@@ -233,8 +230,7 @@ class lb extends rh {
                                       break L7;
                                     } else {
                                       if (param3 == 67) {
-                                        int discarded$13 = 82;
-                                        this.e();
+                                        this.e((byte) 82);
                                         stackOut_46_0 = 1;
                                         stackIn_47_0 = stackOut_46_0;
                                         return stackIn_47_0 != 0;
@@ -243,8 +239,7 @@ class lb extends rh {
                                       }
                                     }
                                   } else {
-                                    int discarded$14 = 0;
-                                    this.c();
+                                    this.c(false);
                                     stackOut_34_0 = 1;
                                     stackIn_35_0 = stackOut_34_0;
                                     return stackIn_35_0 != 0;
@@ -271,10 +266,9 @@ class lb extends rh {
                                     stackIn_29_2 = stackOut_28_2;
                                     break L10;
                                   } else {
-                                    int discarded$15 = 0;
                                     stackOut_27_0 = this;
                                     stackOut_27_1 = stackIn_27_1;
-                                    stackOut_27_2 = this.r();
+                                    stackOut_27_2 = this.r(0);
                                     stackIn_29_0 = stackOut_27_0;
                                     stackIn_29_1 = stackOut_27_1;
                                     stackIn_29_2 = stackOut_27_2;
@@ -330,15 +324,13 @@ class lb extends rh {
                           break L7;
                         } else {
                           ((lb) this).field_N = -1 + ((lb) this).field_Q;
-                          int discarded$16 = 29388;
-                          this.j();
+                          this.j(29388);
                           stackOut_13_0 = 1;
                           stackIn_14_0 = stackOut_13_0;
                           return stackIn_14_0 != 0;
                         }
                       } else {
-                        int discarded$17 = 29388;
-                        this.j();
+                        this.j(29388);
                         stackOut_10_0 = 1;
                         stackIn_11_0 = stackOut_10_0;
                         return stackIn_11_0 != 0;
@@ -395,7 +387,7 @@ class lb extends rh {
         field_O = null;
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -405,8 +397,7 @@ class lb extends rh {
               L0: {
                 var3 = 0;
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                int discarded$1 = 29388;
-                this.j();
+                this.j(29388);
                 this.a(0, var2);
                 break L0;
               }
@@ -424,7 +415,7 @@ class lb extends rh {
         }
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         if (!(!(((lb) this).field_l instanceof se))) {
             ((se) (Object) ((lb) this).field_l).b(-28, (lb) this);
         }
@@ -535,8 +526,7 @@ class lb extends rh {
                   } else {
                     L4: {
                       ((lb) this).field_N = this.k(param4 + -1);
-                      int discarded$1 = 0;
-                      ((lb) this).field_Q = this.r();
+                      ((lb) this).field_Q = this.r(0);
                       if (0 >= ((lb) this).field_Q) {
                         break L4;
                       } else {
@@ -735,8 +725,7 @@ class lb extends rh {
         if (param0 != 13) {
             return;
         }
-        int discarded$0 = 29388;
-        this.j();
+        this.j(29388);
     }
 
     private final int k(int param0) {
@@ -765,7 +754,7 @@ class lb extends rh {
         }
     }
 
-    private final int r() {
+    private final int r(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -998,8 +987,7 @@ class lb extends rh {
                     break L1;
                   } else {
                     L2: {
-                      int discarded$2 = -11133;
-                      var4 = r.a(param0);
+                      var4 = r.a(param0, -11133);
                       if (var4 == null) {
                         break L2;
                       } else {
@@ -1248,7 +1236,7 @@ class lb extends rh {
         }
     }
 
-    private final void j() {
+    private final void j(int param0) {
         int var2 = 0;
         int var3 = 0;
         if (((lb) this).field_N != ((lb) this).field_Q) {

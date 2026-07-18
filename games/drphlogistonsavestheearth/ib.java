@@ -43,7 +43,7 @@ final class ib {
         }
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         if (((ib) this).field_g == 7) {
           if (6 > sd.field_a.field_L) {
             ((ib) this).field_n = c.field_a[sd.field_a.field_L - 1];
@@ -137,8 +137,7 @@ final class ib {
         int stackOut_11_0 = 0;
         if (param0 <= -22) {
           L0: {
-            int discarded$1 = 65;
-            this.c();
+            this.c((byte) 65);
             if (((ib) this).field_q) {
               break L0;
             } else {
@@ -631,7 +630,7 @@ final class ib {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_u = null;
         field_j = null;
         field_f = null;
@@ -735,8 +734,7 @@ final class ib {
                   if (((ib) this).field_g != 7) {
                     break L5;
                   } else {
-                    int discarded$15 = 65;
-                    this.c();
+                    this.c((byte) 65);
                     break L5;
                   }
                 }
@@ -753,8 +751,7 @@ final class ib {
                       if (((ib) this).field_g != 7) {
                         break L6;
                       } else {
-                        int discarded$16 = 65;
-                        this.c();
+                        this.c((byte) 65);
                         break L6;
                       }
                     }
@@ -770,8 +767,7 @@ final class ib {
                         if (((ib) this).field_g != 7) {
                           break L7;
                         } else {
-                          int discarded$17 = 65;
-                          this.c();
+                          this.c((byte) 65);
                           break L7;
                         }
                       }
@@ -787,8 +783,7 @@ final class ib {
                           if (((ib) this).field_g != 7) {
                             break L8;
                           } else {
-                            int discarded$18 = 65;
-                            this.c();
+                            this.c((byte) 65);
                             break L8;
                           }
                         }
@@ -804,8 +799,7 @@ final class ib {
                             if (((ib) this).field_g != 7) {
                               break L9;
                             } else {
-                              int discarded$19 = 65;
-                              this.c();
+                              this.c((byte) 65);
                               break L9;
                             }
                           }
@@ -821,8 +815,7 @@ final class ib {
                               if (((ib) this).field_g != 7) {
                                 break L10;
                               } else {
-                                int discarded$20 = 65;
-                                this.c();
+                                this.c((byte) 65);
                                 break L10;
                               }
                             }
@@ -838,8 +831,7 @@ final class ib {
                                 if (((ib) this).field_g != 7) {
                                   break L11;
                                 } else {
-                                  int discarded$21 = 65;
-                                  this.c();
+                                  this.c((byte) 65);
                                   break L11;
                                 }
                               }
@@ -854,8 +846,7 @@ final class ib {
                                 if (((ib) this).field_g != 7) {
                                   break L12;
                                 } else {
-                                  int discarded$22 = 65;
-                                  this.c();
+                                  this.c((byte) 65);
                                   break L12;
                                 }
                               }
@@ -877,8 +868,7 @@ final class ib {
                       if (((ib) this).field_g != 7) {
                         break L13;
                       } else {
-                        int discarded$23 = 65;
-                        this.c();
+                        this.c((byte) 65);
                         break L13;
                       }
                     }
@@ -894,8 +884,7 @@ final class ib {
                         if (((ib) this).field_g != 7) {
                           break L14;
                         } else {
-                          int discarded$24 = 65;
-                          this.c();
+                          this.c((byte) 65);
                           break L14;
                         }
                       }
@@ -911,8 +900,7 @@ final class ib {
                           if (((ib) this).field_g != 7) {
                             break L15;
                           } else {
-                            int discarded$25 = 65;
-                            this.c();
+                            this.c((byte) 65);
                             break L15;
                           }
                         }
@@ -928,8 +916,7 @@ final class ib {
                             if (((ib) this).field_g != 7) {
                               break L16;
                             } else {
-                              int discarded$26 = 65;
-                              this.c();
+                              this.c((byte) 65);
                               break L16;
                             }
                           }
@@ -945,8 +932,7 @@ final class ib {
                               if (((ib) this).field_g != 7) {
                                 break L17;
                               } else {
-                                int discarded$27 = 65;
-                                this.c();
+                                this.c((byte) 65);
                                 break L17;
                               }
                             }
@@ -961,8 +947,7 @@ final class ib {
                               if (((ib) this).field_g != 7) {
                                 break L18;
                               } else {
-                                int discarded$28 = 65;
-                                this.c();
+                                this.c((byte) 65);
                                 break L18;
                               }
                             }
@@ -1020,8 +1005,7 @@ final class ib {
             if (((ib) this).field_g != 7) {
               break L20;
             } else {
-              int discarded$29 = 65;
-              this.c();
+              this.c((byte) 65);
               break L20;
             }
           }

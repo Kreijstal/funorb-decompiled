@@ -30,7 +30,7 @@ final class ef implements Iterator {
         ((ef) this).field_b = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         float var1_float = 0.0f;
         RuntimeException var1 = null;
         ja var2 = null;
@@ -85,7 +85,7 @@ final class ef implements Iterator {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
     }
 

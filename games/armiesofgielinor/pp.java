@@ -108,7 +108,7 @@ final class pp extends kq {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_S = null;
         field_X = null;
         field_Y = null;

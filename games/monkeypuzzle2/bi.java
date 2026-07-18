@@ -39,36 +39,36 @@ abstract class bi extends fc {
         ok.field_c[18] = 1;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_B = null;
         int var1 = -73;
         field_s = null;
     }
 
-    final static am a(String param0) {
+    final static am a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        am stackIn_15_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
+        am stackIn_12_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        am stackOut_14_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        am stackOut_11_0 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
@@ -76,8 +76,8 @@ abstract class bi extends fc {
             var3 = 0;
             L1: while (true) {
               if (var2_int <= var3) {
-                stackOut_14_0 = lh.field_c;
-                stackIn_15_0 = stackOut_14_0;
+                stackOut_11_0 = lh.field_c;
+                stackIn_12_0 = stackOut_11_0;
                 break L0;
               } else {
                 var4 = param0.charAt(var3);
@@ -86,8 +86,7 @@ abstract class bi extends fc {
                     var3++;
                     continue L1;
                   } else {
-                    var3++;
-                    continue L1;
+                    return null;
                   }
                 } else {
                   return null;
@@ -99,33 +98,33 @@ abstract class bi extends fc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var2;
-            stackOut_16_1 = new StringBuilder().append("bi.R(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackOut_13_0 = (RuntimeException) var2;
+            stackOut_13_1 = new StringBuilder().append("bi.R(");
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
               break L2;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + 5000 + ')');
+          throw la.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + 5000 + ')');
         }
-        return stackIn_15_0;
+        return stackIn_12_0;
     }
 
     final int f(int param0) {
@@ -139,98 +138,71 @@ abstract class bi extends fc {
               if (1 == var2) {
                 break L1;
               } else {
-                if (param0 == 3) {
-                  break L0;
-                } else {
-                  ((bi) this).field_w = -33L;
-                  break L0;
-                }
+                break L0;
               }
             }
           }
           L2: {
             if (eg.field_k[1]) {
               wi.a(2, param0 ^ 1198);
-              if (!eg.field_k[2]) {
-                break L2;
-              } else {
-                db.a(3, 126);
-                break L2;
-              }
+              break L2;
             } else {
-              if (!eg.field_k[2]) {
-                break L2;
-              } else {
-                db.a(3, 126);
-                break L2;
-              }
+              break L2;
             }
           }
           L3: {
-            if (eg.field_k[3]) {
-              d.a(4, param0 + 2);
-              if (!eg.field_k[4]) {
-                break L3;
-              } else {
-                int discarded$4 = 5;
-                int discarded$5 = 0;
-                qi.a();
-                break L3;
-              }
+            if (!eg.field_k[2]) {
+              break L3;
             } else {
-              if (!eg.field_k[4]) {
-                break L3;
-              } else {
-                int discarded$6 = 5;
-                int discarded$7 = 0;
-                qi.a();
-                break L3;
-              }
+              db.a(3, 126);
+              break L3;
             }
           }
           L4: {
-            if (eg.field_k[5]) {
-              wd.a(6, true);
-              if (eg.field_k[6]) {
-                sl.a(7, (byte) 63);
-                if (!eg.field_k[8]) {
-                  break L4;
-                } else {
-                  df.f((byte) -98);
-                  if (param0 == 3) {
-                    break L0;
-                  } else {
-                    ((bi) this).field_w = -33L;
-                    break L0;
-                  }
-                }
-              } else {
-                if (param0 == 3) {
-                  break L0;
-                } else {
-                  ((bi) this).field_w = -33L;
-                  break L0;
-                }
-              }
+            if (eg.field_k[3]) {
+              d.a(4, param0 + 2);
+              break L4;
             } else {
-              if (!eg.field_k[8]) {
-                break L4;
-              } else {
-                df.f((byte) -98);
-                if (param0 == 3) {
-                  break L0;
-                } else {
-                  ((bi) this).field_w = -33L;
-                  break L0;
-                }
-              }
+              break L4;
             }
           }
-          if (param0 == 3) {
+          L5: {
+            if (!eg.field_k[4]) {
+              break L5;
+            } else {
+              qi.a(false, 5);
+              break L5;
+            }
+          }
+          L6: {
+            if (eg.field_k[5]) {
+              wd.a(6, true);
+              break L6;
+            } else {
+              break L6;
+            }
+          }
+          L7: {
+            if (eg.field_k[6]) {
+              sl.a(7, (byte) 63);
+              break L7;
+            } else {
+              break L7;
+            }
+          }
+          if (!eg.field_k[8]) {
             break L0;
           } else {
-            ((bi) this).field_w = -33L;
+            df.f((byte) -98);
             break L0;
+          }
+        }
+        L8: {
+          if (param0 == 3) {
+            break L8;
+          } else {
+            ((bi) this).field_w = -33L;
+            break L8;
           }
         }
         return var2;
@@ -247,11 +219,11 @@ abstract class bi extends fc {
         eg.field_k[4] = true;
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         eg.field_k[2] = true;
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -418,85 +390,28 @@ abstract class bi extends fc {
     }
 
     final void a(boolean param0, int param1, boolean param2, boolean param3, boolean param4) {
-        if (param1 == 4472) {
-          L0: {
-            L1: {
-              L2: {
-                this.a(-2, false);
-                if (param0) {
-                  this.e(19887);
-                  if (!param2) {
-                    break L2;
-                  } else {
-                    int discarded$13 = -121;
-                    this.e();
-                    if (!param3) {
-                      break L1;
-                    } else {
-                      this.d(false);
-                      if (!param4) {
-                        break L0;
-                      } else {
-                        int discarded$14 = 9;
-                        this.h();
-                        break L0;
-                      }
-                    }
-                  }
-                } else {
-                  if (!param2) {
-                    break L2;
-                  } else {
-                    int discarded$15 = -121;
-                    this.e();
-                    if (!param3) {
-                      break L1;
-                    } else {
-                      this.d(false);
-                      if (!param4) {
-                        break L0;
-                      } else {
-                        int discarded$16 = 9;
-                        this.h();
-                        break L0;
-                      }
-                    }
-                  }
-                }
-              }
-              if (!param3) {
-                break L1;
-              } else {
-                this.d(false);
-                if (!param4) {
-                  break L0;
-                } else {
-                  int discarded$17 = 9;
-                  this.h();
-                  break L0;
-                }
-              }
-            }
-            if (!param4) {
-              break L0;
-            } else {
-              int discarded$18 = 9;
-              this.h();
-              break L0;
-            }
-          }
-          return;
-        } else {
-          return;
+        if (param1 != 4472) {
+            return;
+        }
+        this.a(-2, false);
+        if (!(!param0)) {
+            this.e(19887);
+        }
+        if (param2) {
+            this.e((byte) -121);
+        }
+        if (param3) {
+            this.d(false);
+        }
+        if (param4) {
+            this.h(9);
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         int var3 = 83;
-        int discarded$0 = -110;
-        String var2 = lh.a();
-        int discarded$1 = 0;
-        mk.a(var2, (byte) -5, ii.a());
+        String var2 = lh.a((byte) -110);
+        mk.a(var2, (byte) -5, ii.a(false));
     }
 
     final void i(int param0) {
@@ -509,12 +424,11 @@ abstract class bi extends fc {
         } else {
             if (mc.field_a < 10) {
             } else {
-                int discarded$6 = 1;
-                if (!ub.b()) {
+                if (!ub.b(true)) {
                     ak.a((byte) 99);
                 } else {
                     if (k.field_g == 0) {
-                        int discarded$8 = this.a(false, true, false);
+                        int discarded$3 = this.a(false, true, false);
                     } else {
                         b.a(-21342, ab.field_d);
                     }
@@ -735,15 +649,13 @@ abstract class bi extends fc {
           }
         }
         L2: {
-          int discarded$9 = 93;
-          kc.a();
+          kc.a((byte) 93);
           db.a(param0 + -99);
           if (wj.d(-106)) {
             break L2;
           } else {
             if (k.field_g != 11) {
-              int discarded$10 = 110;
-              cd.b();
+              cd.b(110);
               break L2;
             } else {
               break L2;
@@ -775,12 +687,10 @@ abstract class bi extends fc {
               if (((bi) this).field_q) {
                 break L6;
               } else {
-                int discarded$11 = 125;
-                if (var3 >= qa.b()) {
+                if (var3 >= qa.b(125)) {
                   break L5;
                 } else {
-                  int discarded$12 = 1;
-                  if (var3 < rh.a()) {
+                  if (var3 < rh.a(1)) {
                     break L6;
                   } else {
                     break L5;
@@ -823,8 +733,7 @@ abstract class bi extends fc {
           }
           L10: {
             var3 = stackIn_27_0;
-            int discarded$13 = -93;
-            bl.field_m = kh.a();
+            bl.field_m = kh.a((byte) -93);
             if (var3 == 0) {
               break L10;
             } else {
@@ -1039,12 +948,10 @@ abstract class bi extends fc {
         }
         L22: {
           if (mc.field_a == 3) {
-            int discarded$14 = 104;
-            if (!di.a(fj.field_B, hf.field_a, ii.field_m)) {
+            if (!di.a(fj.field_B, hf.field_a, ii.field_m, (byte) 104)) {
               break L22;
             } else {
-              int discarded$15 = 39;
-              if (al.a(ii.field_m)) {
+              if (al.a(ii.field_m, (byte) 39)) {
                 L23: {
                   L24: {
                     pb.a(false);
@@ -1122,8 +1029,7 @@ abstract class bi extends fc {
                 ii.field_m = null;
                 fj.field_B = null;
                 hf.field_a = null;
-                int discarded$16 = 0;
-                uc.a((java.applet.Applet) this);
+                uc.a((java.applet.Applet) this, 0);
                 oe.a((byte) 112);
                 mc.field_a = 10;
                 break L22;
@@ -1168,8 +1074,7 @@ abstract class bi extends fc {
                     }
                   }
                 }
-                int discarded$17 = 0;
-                ad.a(ec.a(ch.field_j, ug.field_b, tk.field_a), param0 ^ -24150, 0.0f);
+                ad.a(ec.a(ch.field_j, ug.field_b, tk.field_a, 0), param0 ^ -24150, 0.0f);
                 break L31;
               }
             }
@@ -1312,7 +1217,7 @@ abstract class bi extends fc {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         eg.field_k[5] = true;
     }
 
@@ -1406,8 +1311,7 @@ abstract class bi extends fc {
         fe.field_h = ((bi) this).field_o;
         jg.a(3860, fe.field_h);
         kj.a(fe.field_h, ((bi) this).field_x, ((bi) this).field_t, 5000, param0, ((bi) this).field_p, ((bi) this).field_u, ((bi) this).field_w, param5, 5000, ((bi) this).field_v, (byte) -111, ((bi) this).field_r, rc.field_k);
-        int discarded$0 = -2045;
-        ii.a(rc.field_k, ((bi) this).field_u, ((bi) this).field_x, fe.field_h, ((bi) this).field_r, param0, ((bi) this).field_p, ((bi) this).field_v);
+        ii.a(rc.field_k, ((bi) this).field_u, ((bi) this).field_x, fe.field_h, ((bi) this).field_r, param0, ((bi) this).field_p, ((bi) this).field_v, -2045);
         sj.a(92);
         eb.field_A = cf.a(param4 + 25427);
         af.a(20, ie.field_e);
@@ -1417,8 +1321,7 @@ abstract class bi extends fc {
         uk.field_q = param6;
         ph.field_c = param2;
         this.g(param4 ^ 25184);
-        int discarded$1 = 75;
-        re.b();
+        re.b(75);
     }
 
     final void k(int param0) {
@@ -1451,18 +1354,15 @@ abstract class bi extends fc {
                 L2: {
                   if (var2 != 1) {
                     if (var2 == 2) {
-                      int discarded$10 = -79;
-                      p.b();
+                      p.b(-79);
                       break L2;
                     } else {
                       if (var2 == 3) {
-                        int discarded$11 = 1;
-                        hh.c();
+                        hh.c(true);
                         break L2;
                       } else {
                         if (4 == var2) {
-                          int discarded$12 = 8;
-                          gd.a();
+                          gd.a((byte) 8);
                           break L2;
                         } else {
                           if (var2 == 5) {
@@ -1471,8 +1371,7 @@ abstract class bi extends fc {
                           } else {
                             if (var2 != 6) {
                               if (var2 == 7) {
-                                int discarded$13 = 115;
-                                this.f();
+                                this.f((byte) 115);
                                 break L2;
                               } else {
                                 if (8 != var2) {
@@ -1485,13 +1384,11 @@ abstract class bi extends fc {
                                           break L3;
                                         } else {
                                           if (var2 == 13) {
-                                            int discarded$14 = 78;
-                                            rh.l();
+                                            rh.l(78);
                                             break L2;
                                           } else {
                                             if (var2 == 17) {
-                                              int discarded$15 = 15;
-                                              this.l();
+                                              this.l(15);
                                               break L2;
                                             } else {
                                               if (var2 != 18) {
@@ -1499,8 +1396,7 @@ abstract class bi extends fc {
                                                 gk.a(-1);
                                                 break L2;
                                               } else {
-                                                int discarded$16 = 62;
-                                                uc.a();
+                                                uc.a(62);
                                                 break L2;
                                               }
                                             }
@@ -1520,8 +1416,7 @@ abstract class bi extends fc {
                                       }
                                     }
                                     var3 = si.a(stackIn_32_0 != 0, 0);
-                                    int discarded$17 = 20;
-                                    cd.a(var3);
+                                    cd.a(var3, (byte) 20);
                                     break L2;
                                   } else {
                                     lg.a((byte) 122);
@@ -1533,8 +1428,7 @@ abstract class bi extends fc {
                                 }
                               }
                             } else {
-                              int discarded$18 = -106;
-                              m.a();
+                              m.a((byte) -106);
                               break L2;
                             }
                           }
@@ -1542,8 +1436,7 @@ abstract class bi extends fc {
                       }
                     }
                   } else {
-                    int discarded$19 = -118;
-                    t.i();
+                    t.i(-118);
                     break L2;
                   }
                 }
@@ -1575,9 +1468,7 @@ abstract class bi extends fc {
                   break L0;
                 }
               }
-              int discarded$4 = 0;
-              int discarded$5 = -56;
-              var2 = ad.a(((bi) this).field_n, 650, ((bi) this).field_y, true, mk.e(), lb.d());
+              var2 = ad.a(((bi) this).field_n, 650, ((bi) this).field_y, true, mk.e(0), lb.d((byte) -56));
               if (var2 != -1) {
                 L1: {
                   if (0 == var2) {
@@ -1623,14 +1514,13 @@ abstract class bi extends fc {
         }
     }
 
-    private final void l() {
+    private final void l(int param0) {
         int var2 = MonkeyPuzzle2.field_D.a((byte) 114);
         int var3 = 0 != (1 & var2) ? 1 : 0;
         int var4 = rc.field_f + -1;
         byte[] var5 = new byte[var4];
         MonkeyPuzzle2.field_D.a((byte) 118, 0, var4, var5);
-        int discarded$0 = 0;
-        pl.a(var3 != 0, 12430, ii.a(), be.a(var5, (byte) -49));
+        pl.a(var3 != 0, 12430, ii.a(false), be.a(var5, (byte) -49));
     }
 
     private final int a(boolean param0, boolean param1, boolean param2) {
@@ -1653,8 +1543,7 @@ abstract class bi extends fc {
               L0: {
                 if (var4 == 1) {
                   L1: {
-                    int discarded$18 = 112;
-                    var5_int = hb.a(-7468, qj.l(111), wc.a());
+                    var5_int = hb.a(-7468, qj.l(111), wc.a((byte) 112));
                     if (var5_int == -1) {
                       break L1;
                     } else {
@@ -1664,8 +1553,7 @@ abstract class bi extends fc {
                       break L1;
                     }
                   }
-                  int discarded$19 = 55;
-                  var11 = na.a();
+                  var11 = na.a(55);
                   if (var11 != null) {
                     ti.a(0, var11.booleanValue());
                     break L0;
@@ -1678,11 +1566,7 @@ abstract class bi extends fc {
               }
               L2: {
                 if (var4 == 2) {
-                  int discarded$20 = 78;
-                  int discarded$21 = 0;
-                  int discarded$22 = -56;
-                  int discarded$23 = -69;
-                  var5_int = nj.a(ci.a(), gh.a(12035), mk.e(), lb.d(), true, ((bi) this).field_n, pl.a());
+                  var5_int = nj.a(ci.a((byte) 78), gh.a(12035), mk.e(0), lb.d((byte) -56), true, ((bi) this).field_n, pl.a((byte) -69));
                   if (var5_int == -1) {
                     break L2;
                   } else {
@@ -1713,9 +1597,7 @@ abstract class bi extends fc {
                     }
                   }
                   if (!param0) {
-                    int discarded$24 = 0;
-                    int discarded$25 = -56;
-                    var5_int = ad.a(((bi) this).field_n, 650, ((bi) this).field_y, false, mk.e(), lb.d());
+                    var5_int = ad.a(((bi) this).field_n, 650, ((bi) this).field_y, false, mk.e(0), lb.d((byte) -56));
                     if (var5_int != -1) {
                       if (var5_int != 0) {
                         pc.a((byte) -46, var5_int, sl.field_n);
@@ -1742,9 +1624,7 @@ abstract class bi extends fc {
                   break L5;
                 } else {
                   if (mb.field_c) {
-                    int discarded$26 = 1;
-                    int discarded$27 = 1;
-                    ad.a(ii.a());
+                    ad.a(ii.a(true), true);
                     break L5;
                   } else {
                     ha.field_db = true;
@@ -1757,8 +1637,7 @@ abstract class bi extends fc {
                 if (var4 != 5) {
                   break L6;
                 } else {
-                  int discarded$28 = 0;
-                  hd.a(true, ii.a());
+                  hd.a(true, ii.a(false));
                   break L6;
                 }
               }
@@ -1776,8 +1655,7 @@ abstract class bi extends fc {
               }
               L8: {
                 if (7 == var4) {
-                  int discarded$29 = 0;
-                  aa.a(-126, ii.a());
+                  aa.a(-126, ii.a(false));
                   break L8;
                 } else {
                   break L8;
@@ -1787,16 +1665,13 @@ abstract class bi extends fc {
                 if (var4 != 8) {
                   break L9;
                 } else {
-                  int discarded$30 = 0;
-                  int discarded$31 = 1;
-                  ad.a(ii.a());
+                  ad.a(ii.a(false), true);
                   break L9;
                 }
               }
               L10: {
                 if (var4 == 9) {
-                  int discarded$32 = 0;
-                  m.a((byte) -79, ii.a());
+                  m.a((byte) -79, ii.a(false));
                   break L10;
                 } else {
                   break L10;
@@ -1814,8 +1689,7 @@ abstract class bi extends fc {
                 if (var4 != 11) {
                   break L12;
                 } else {
-                  int discarded$33 = 0;
-                  l.a(ii.a(), -120);
+                  l.a(ii.a(false), -120);
                   break L12;
                 }
               }
@@ -1823,9 +1697,7 @@ abstract class bi extends fc {
                 if (12 != var4) {
                   break L13;
                 } else {
-                  int discarded$34 = 0;
-                  int discarded$35 = 1;
-                  k.a(ii.a(), (byte) 91, pj.b());
+                  k.a(ii.a(false), (byte) 91, pj.b(true));
                   break L13;
                 }
               }

@@ -17,7 +17,7 @@ final class qf {
         km.a(param1, (byte) 112);
     }
 
-    final static void a() {
+    final static void a(int param0) {
         tn.field_j[59] = 57;
         tn.field_j[92] = 74;
         tn.field_j[61] = 27;

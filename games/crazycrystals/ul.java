@@ -196,7 +196,7 @@ final class ul extends um {
         ((ul) this).field_h = 0;
     }
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         Vector[] stackIn_1_0 = null;
         Vector[] stackIn_2_0 = null;
         Vector[] stackIn_3_0 = null;

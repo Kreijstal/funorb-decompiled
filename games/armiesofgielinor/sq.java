@@ -73,16 +73,14 @@ final class sq extends tc {
                     }
                   }
                   if (param0 != 500) {
-                    int discarded$7 = 0;
-                    sq.a();
+                    sq.a(false);
                     return;
                   } else {
                     return;
                   }
                 } else {
                   if (param0 != 500) {
-                    int discarded$8 = 0;
-                    sq.a();
+                    sq.a(false);
                     return;
                   } else {
                     return;
@@ -90,8 +88,7 @@ final class sq extends tc {
                 }
               } else {
                 if (param0 != 500) {
-                  int discarded$9 = 0;
-                  sq.a();
+                  sq.a(false);
                   return;
                 } else {
                   return;
@@ -105,16 +102,14 @@ final class sq extends tc {
             if (((sq) (Object) ((sq) this).field_b).field_m > 0) {
               ((sq) (Object) ((sq) this).field_b).b(500, param1);
               if (param0 != 500) {
-                int discarded$10 = 0;
-                sq.a();
+                sq.a(false);
                 return;
               } else {
                 return;
               }
             } else {
               if (param0 != 500) {
-                int discarded$11 = 0;
-                sq.a();
+                sq.a(false);
                 return;
               } else {
                 return;
@@ -122,8 +117,7 @@ final class sq extends tc {
             }
           } else {
             if (param0 != 500) {
-              int discarded$12 = 0;
-              sq.a();
+              sq.a(false);
               return;
             } else {
               return;
@@ -131,8 +125,7 @@ final class sq extends tc {
           }
         } else {
           if (param0 != 500) {
-            int discarded$13 = 0;
-            sq.a();
+            sq.a(false);
             return;
           } else {
             return;
@@ -140,7 +133,7 @@ final class sq extends tc {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_o = null;
         field_n = null;
         field_s = null;

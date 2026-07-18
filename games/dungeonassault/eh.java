@@ -18,7 +18,7 @@ final class eh {
     static int field_h;
     int field_c;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return il.field_c != null && il.field_c.b(-108);
     }
 
@@ -92,7 +92,7 @@ final class eh {
         ((eh) this).field_l = null;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_a = null;
         field_o = null;

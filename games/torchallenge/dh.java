@@ -122,7 +122,7 @@ final class dh extends df {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_Y = null;
         field_cb = null;
         field_ab = null;
@@ -218,16 +218,14 @@ final class dh extends df {
                   ad.a(122, ((dh) this).field_Z);
                   qg.b();
                   var40.b(112, 144, var40.field_q << 4, var40.field_v << 4, -((dh) this).field_X << 10, 4096);
-                  int discarded$10 = -9;
-                  ie.b();
+                  ie.b((byte) -9);
                   ((dh) this).field_Z.b(-(var40.field_q >> 1) + var9, var10 + -var40.field_v, 256);
                   return;
                 } else {
                   ((dh) this).field_Z = new ka(var11, var12);
                   ad.a(-114, ((dh) this).field_Z);
                   var40.b(112, 144, var40.field_q << 4, var40.field_v << 4, -((dh) this).field_X << 10, 4096);
-                  int discarded$11 = -9;
-                  ie.b();
+                  ie.b((byte) -9);
                   ((dh) this).field_Z.b(-(var40.field_q >> 1) + var9, var10 + -var40.field_v, 256);
                   return;
                 }
@@ -235,8 +233,7 @@ final class dh extends df {
                 ((dh) this).field_Z = new ka(var11, var12);
                 ad.a(-114, ((dh) this).field_Z);
                 var40.b(112, 144, var40.field_q << 4, var40.field_v << 4, -((dh) this).field_X << 10, 4096);
-                int discarded$12 = -9;
-                ie.b();
+                ie.b((byte) -9);
                 ((dh) this).field_Z.b(-(var40.field_q >> 1) + var9, var10 + -var40.field_v, 256);
                 return;
               }
@@ -244,8 +241,7 @@ final class dh extends df {
               ((dh) this).field_Z = new ka(var11, var12);
               ad.a(-114, ((dh) this).field_Z);
               var40.b(112, 144, var40.field_q << 4, var40.field_v << 4, -((dh) this).field_X << 10, 4096);
-              int discarded$13 = -9;
-              ie.b();
+              ie.b((byte) -9);
               ((dh) this).field_Z.b(-(var40.field_q >> 1) + var9, var10 + -var40.field_v, 256);
               return;
             }
@@ -277,16 +273,14 @@ final class dh extends df {
                       ad.a(122, ((dh) this).field_Z);
                       qg.b();
                       var32.b(112, 144, var32.field_q << 4, var32.field_v << 4, -((dh) this).field_X << 10, 4096);
-                      int discarded$14 = -9;
-                      ie.b();
+                      ie.b((byte) -9);
                       ((dh) this).field_Z.b(-(var32.field_q >> 1) + var9, var10 + -var32.field_v, 256);
                       return;
                     } else {
                       ((dh) this).field_Z = new ka(var11, var12);
                       ad.a(-114, ((dh) this).field_Z);
                       var32.b(112, 144, var32.field_q << 4, var32.field_v << 4, -((dh) this).field_X << 10, 4096);
-                      int discarded$15 = -9;
-                      ie.b();
+                      ie.b((byte) -9);
                       ((dh) this).field_Z.b(-(var32.field_q >> 1) + var9, var10 + -var32.field_v, 256);
                       return;
                     }
@@ -294,8 +288,7 @@ final class dh extends df {
                     ((dh) this).field_Z = new ka(var11, var12);
                     ad.a(-114, ((dh) this).field_Z);
                     var32.b(112, 144, var32.field_q << 4, var32.field_v << 4, -((dh) this).field_X << 10, 4096);
-                    int discarded$16 = -9;
-                    ie.b();
+                    ie.b((byte) -9);
                     ((dh) this).field_Z.b(-(var32.field_q >> 1) + var9, var10 + -var32.field_v, 256);
                     return;
                   }
@@ -303,8 +296,7 @@ final class dh extends df {
                   ((dh) this).field_Z = new ka(var11, var12);
                   ad.a(-114, ((dh) this).field_Z);
                   var32.b(112, 144, var32.field_q << 4, var32.field_v << 4, -((dh) this).field_X << 10, 4096);
-                  int discarded$17 = -9;
-                  ie.b();
+                  ie.b((byte) -9);
                   ((dh) this).field_Z.b(-(var32.field_q >> 1) + var9, var10 + -var32.field_v, 256);
                   return;
                 }
@@ -351,8 +343,7 @@ final class dh extends df {
                 break L4;
               }
               var25.b(112, 144, var25.field_q << 4, var25.field_v << 4, -((dh) this).field_X << 10, 4096);
-              int discarded$18 = -9;
-              ie.b();
+              ie.b((byte) -9);
               ((dh) this).field_Z.b(-(var25.field_q >> 1) + var9, var10 + -var25.field_v, 256);
               return;
             }
@@ -424,8 +415,7 @@ final class dh extends df {
               break L9;
             }
             var21.b(112, 144, var21.field_q << 4, var21.field_v << 4, -((dh) this).field_X << 10, 4096);
-            int discarded$19 = -9;
-            ie.b();
+            ie.b((byte) -9);
             ((dh) this).field_Z.b(-(var21.field_q >> 1) + var9, var10 + -var21.field_v, 256);
             break L7;
           }

@@ -370,7 +370,7 @@ final class o {
         field_c = null;
     }
 
-    private final void a() throws IOException {
+    private final void a(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = Torquing.field_u;
@@ -479,8 +479,7 @@ final class o {
                     break L4;
                   } else {
                     L5: {
-                      int discarded$2 = -70;
-                      this.a();
+                      this.a(-70);
                       var10_int = param2;
                       if (var10_int > ((o) this).field_j) {
                         var10_int = ((o) this).field_j;
@@ -537,9 +536,9 @@ final class o {
                             break L8;
                           } else {
                             param2--;
-                            int incrementValue$3 = param0;
+                            int incrementValue$1 = param0;
                             param0++;
-                            param1[incrementValue$3] = (byte) 0;
+                            param1[incrementValue$1] = (byte) 0;
                             ((o) this).field_i = ((o) this).field_i + 1L;
                             continue L10;
                           }

@@ -9,7 +9,7 @@ final class lb {
     static int field_b;
     static String[] field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_e = null;
@@ -99,7 +99,7 @@ final class lb {
         return stackIn_8_0;
     }
 
-    final static void a(String param0, java.applet.Applet param1) {
+    final static void a(String param0, java.applet.Applet param1, int param2) {
         try {
             String var3 = null;
             String var4 = null;
@@ -116,8 +116,7 @@ final class lb {
                     cd.a(param1, 13162, "document.cookie=\"" + var5 + "\"");
                 } catch (Throwable throwable) {
                 }
-                int discarded$0 = 1;
-                dh.a(param1);
+                dh.a(param1, true);
             } catch (RuntimeException runtimeException) {
                 throw qk.a((Throwable) (Object) runtimeException, "lb.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + -1 + ')');
             }

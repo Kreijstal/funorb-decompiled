@@ -6,7 +6,7 @@ final class hd {
     static int field_a;
     static int field_b;
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, byte param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -43,8 +43,7 @@ final class hd {
                   stackIn_12_0 = stackOut_11_0;
                   break L0;
                 } else {
-                  int discarded$15 = 45;
-                  if (!pm.a(param0.charAt(var3_int))) {
+                  if (!pm.a(param0.charAt(var3_int), 45)) {
                     stackOut_8_0 = 0;
                     stackIn_9_0 = stackOut_8_0;
                     return stackIn_9_0 != 0;
@@ -93,7 +92,7 @@ final class hd {
         return stackIn_12_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
     }
 

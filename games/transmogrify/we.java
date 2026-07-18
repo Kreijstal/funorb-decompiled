@@ -33,8 +33,7 @@ final class we {
         if (param0 > -24) {
             return;
         }
-        int discarded$0 = 0;
-        this.a();
+        this.a(false);
         ((we) this).field_k.a(false);
     }
 
@@ -198,7 +197,7 @@ final class we {
         return ((we) this).field_n;
     }
 
-    private final void b() throws IOException {
+    private final void b(boolean param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = Transmogrify.field_A ? 1 : 0;
@@ -237,9 +236,7 @@ final class we {
         if (param1 <= 110) {
             we.a(49);
         }
-        int discarded$0 = 1;
-        int discarded$1 = 127;
-        return ad.a(param0, param3, param2);
+        return ad.a(param0, param3, param2, 127, 1);
     }
 
     final void a(byte[] param0, int param1, byte param2, int param3) throws IOException {
@@ -292,8 +289,7 @@ final class we {
                     }
                   }
                 }
-                int discarded$2 = 0;
-                this.a();
+                this.a(false);
                 break L2;
               }
             }
@@ -316,8 +312,7 @@ final class we {
                   ((we) this).field_f = ((we) this).field_f + (long)var5_int;
                   param3 = param3 + var5_int;
                   ((we) this).field_m = ((we) this).field_d.length;
-                  int discarded$3 = 0;
-                  this.a();
+                  this.a(false);
                   break L5;
                 } else {
                   break L5;
@@ -472,7 +467,7 @@ final class we {
         }
     }
 
-    private final void a() throws IOException {
+    private final void a(boolean param0) throws IOException {
         long var2 = 0L;
         long var4 = 0L;
         int var6 = 0;
@@ -687,8 +682,7 @@ final class we {
                       break L4;
                     } else {
                       L6: {
-                        int discarded$2 = 0;
-                        this.b();
+                        this.b(false);
                         var9_int = param1;
                         if (var9_int > ((we) this).field_a) {
                           var9_int = ((we) this).field_a;
@@ -730,9 +724,9 @@ final class we {
                               break L8;
                             } else {
                               param1--;
-                              int incrementValue$3 = param0;
+                              int incrementValue$1 = param0;
                               param0++;
-                              param2[incrementValue$3] = (byte) 0;
+                              param2[incrementValue$1] = (byte) 0;
                               ((we) this).field_f = ((we) this).field_f + 1L;
                               continue L10;
                             }

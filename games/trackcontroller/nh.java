@@ -7,7 +7,7 @@ final class nh {
     static int field_a;
     static String field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
     }
@@ -17,8 +17,7 @@ final class nh {
     }
 
     final static void a(byte param0) {
-        int discarded$0 = -105;
-        nf.a(true, bf.field_f, fi.field_l);
+        nf.a(true, bf.field_f, fi.field_l, (byte) -105);
         pc.field_h = true;
         int var1 = -113 % ((param0 - 15) / 60);
     }

@@ -8,7 +8,7 @@ final class vk extends bb {
     static String field_M;
     static java.security.SecureRandom field_N;
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_K = null;
         field_M = null;
         field_N = null;

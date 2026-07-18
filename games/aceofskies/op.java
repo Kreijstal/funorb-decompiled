@@ -5,11 +5,12 @@ final class op {
     static ej field_b;
     static int field_a;
 
-    final static fn a(String param0, boolean param1, String param2) {
+    final static fn a(String param0, boolean param1, String param2, boolean param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
-        CharSequence var7 = null;
+        Object var7 = null;
+        CharSequence var8 = null;
         fn stackIn_6_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -49,8 +50,8 @@ final class op {
               if (!param1) {
                 break L1;
               } else {
-                int discarded$6 = 0;
-                fn discarded$7 = op.a((String) null, true, (String) null);
+                var7 = null;
+                fn discarded$2 = op.a((String) null, true, (String) null, false);
                 break L1;
               }
             }
@@ -61,13 +62,12 @@ final class op {
                 var6 = (Object) (Object) param2;
                 break L2;
               } else {
-                var7 = (CharSequence) (Object) param2;
-                var4_long = AceOfSkies.a(var7, -47);
+                var8 = (CharSequence) (Object) param2;
+                var4_long = AceOfSkies.a(var8, -47);
                 break L2;
               }
             }
-            int discarded$8 = 1;
-            stackOut_5_0 = wb.a(false, (String) var6, param0, var4_long);
+            stackOut_5_0 = wb.a(false, (String) var6, param0, var4_long, true);
             stackIn_6_0 = stackOut_5_0;
             break L0;
           }
@@ -129,7 +129,7 @@ final class op {
         return stackIn_6_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

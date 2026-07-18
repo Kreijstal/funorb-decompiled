@@ -66,9 +66,9 @@ final class wg {
           }
           if (((wg) this).field_q) {
             if (param0 >= 120) {
-              int fieldTemp$2 = ((wg) this).field_m - 1;
+              int fieldTemp$1 = ((wg) this).field_m - 1;
               ((wg) this).field_m = ((wg) this).field_m - 1;
-              if (fieldTemp$2 > 0) {
+              if (fieldTemp$1 > 0) {
                 return;
               } else {
                 ((wg) this).field_m = ((wg) this).field_l;
@@ -76,8 +76,7 @@ final class wg {
                   ((wg) this).field_q = false;
                   return;
                 } else {
-                  int discarded$3 = 0;
-                  this.a();
+                  this.a(false);
                   return;
                 }
               }
@@ -162,7 +161,7 @@ final class wg {
         }
     }
 
-    final static byte[] a(String param0) {
+    final static byte[] a(String param0, int param1) {
         RuntimeException var2 = null;
         byte[] stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -221,7 +220,7 @@ final class wg {
         return stackIn_1_0;
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

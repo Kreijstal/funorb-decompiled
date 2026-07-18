@@ -14,10 +14,10 @@ final class ocb extends eca {
     static int field_l;
 
     final String b(String param0, int param1) {
-        RuntimeException var3 = null;
+        String var3 = null;
+        RuntimeException var3_ref = null;
         String var4 = null;
         String var5 = null;
-        String var6 = null;
         Object stackIn_2_0 = null;
         String stackIn_5_0 = null;
         String stackIn_8_0 = null;
@@ -56,29 +56,26 @@ final class ocb extends eca {
         String stackOut_32_2 = null;
         try {
           L0: {
-            var6 = ((ocb) this).field_f.field_j.toLowerCase();
+            var3 = ((ocb) this).field_f.field_j.toLowerCase();
             var4 = param0.toLowerCase();
             if (var4.length() != 0) {
               var5 = var4;
-              int discarded$15 = 15;
-              if (!hcb.a(var5)) {
+              if (!hcb.a(var5, 15)) {
                 if (!ws.a((byte) 109, var5)) {
                   if (!mea.a(126, var5)) {
-                    int discarded$16 = 0;
-                    if (this.a(param0)) {
+                    if (this.a(param0, false)) {
                       stackOut_14_0 = gnb.field_f;
                       stackIn_15_0 = stackOut_14_0;
                       return stackIn_15_0;
                     } else {
-                      if (~var6.length() < param1) {
-                        if (!qnb.a(var5, -1, var6)) {
-                          if (njb.a(var6, 95, var5)) {
+                      if (~var3.length() < param1) {
+                        if (!qnb.a(var5, -1, var3)) {
+                          if (njb.a(var3, 95, var5)) {
                             stackOut_24_0 = lna.field_p;
                             stackIn_25_0 = stackOut_24_0;
                             return stackIn_25_0;
                           } else {
-                            int discarded$17 = 1;
-                            if (!wg.a(var5, var6)) {
+                            if (!wg.a(var5, var3, true)) {
                               stackOut_29_0 = ema.field_r;
                               stackIn_30_0 = stackOut_29_0;
                               break L0;
@@ -123,8 +120,8 @@ final class ocb extends eca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
-            var3 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) var3;
+            var3_ref = decompiledCaughtException;
+            stackOut_31_0 = (RuntimeException) var3_ref;
             stackOut_31_1 = new StringBuilder().append("ocb.C(");
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
@@ -221,25 +218,22 @@ final class ocb extends eca {
         return stackIn_1_0;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, byte param1, boolean param2) {
         if (!(!param0)) {
             oqa.field_o = oqa.field_o + 1;
-            int discarded$0 = 127;
-            psa.e();
+            psa.e(127);
         }
         emb.field_p = emb.field_p + 1;
-        int discarded$1 = -10693;
-        vkb.a();
+        vkb.a(-10693);
     }
 
-    final static void f() {
+    final static void f(int param0) {
         ulb.a(100);
         uda.b(-2283);
-        int discarded$0 = -17;
-        ah.e();
+        ah.e(-17);
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_m = null;
         field_g = null;
         field_h = null;
@@ -300,14 +294,12 @@ final class ocb extends eca {
             if (param1 == 16384) {
               var4 = param0.toLowerCase();
               if (var4.length() != 0) {
-                int discarded$13 = -101;
-                if (!seb.a(var3, var4)) {
+                if (!seb.a(var3, var4, -101)) {
                   stackOut_8_0 = cca.field_o;
                   stackIn_9_0 = stackOut_8_0;
                   return stackIn_9_0;
                 } else {
-                  int discarded$14 = 0;
-                  if (!this.a(param0)) {
+                  if (!this.a(param0, false)) {
                     stackOut_13_0 = lea.field_o;
                     stackIn_14_0 = stackOut_13_0;
                     break L0;
@@ -361,7 +353,7 @@ final class ocb extends eca {
         return stackIn_14_0;
     }
 
-    private final boolean a(String param0) {
+    private final boolean a(String param0, boolean param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;

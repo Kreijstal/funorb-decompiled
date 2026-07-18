@@ -92,7 +92,7 @@ final class fi implements td {
         }
     }
 
-    final static String a(int param0, CharSequence param1) {
+    final static String a(int param0, CharSequence param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -119,16 +119,14 @@ final class fi implements td {
         String stackOut_15_2 = null;
         var5 = OrbDefence.field_D ? 1 : 0;
         try {
-          int discarded$17 = 0;
-          var3 = rg.a(false, param1);
+          var3 = rg.a(false, param1, 0);
           if (var3 == null) {
             var4 = 0;
             L0: while (true) {
               if (param1.length() <= var4) {
                 return null;
               } else {
-                int discarded$18 = -22118;
-                if (!vg.a(param1.charAt(var4))) {
+                if (!vg.a(param1.charAt(var4), -22118)) {
                   stackOut_8_0 = pl.field_i;
                   stackIn_9_0 = stackOut_8_0;
                   return stackIn_9_0;

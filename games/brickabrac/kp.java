@@ -33,7 +33,7 @@ final class kp {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_c = null;
         field_e = null;

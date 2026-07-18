@@ -174,7 +174,7 @@ final class ug extends hi {
         return (String) (Object) stackIn_16_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_o = null;
         int var1 = -49;
         field_r = null;

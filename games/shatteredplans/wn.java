@@ -18,8 +18,7 @@ final class wn {
         field_e = param3 - param1;
         wn.a();
         if (field_h.length < field_e) {
-            int discarded$0 = 122;
-            field_h = new int[js.a(field_e)];
+            field_h = new int[js.a(field_e, (byte) 122)];
         }
         int var4 = param1 * gf.field_b + param0;
         for (var5 = 0; var5 < field_e; var5++) {

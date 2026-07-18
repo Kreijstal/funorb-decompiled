@@ -249,7 +249,7 @@ final class bi {
         }
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -271,8 +271,7 @@ final class bi {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 112;
-            stackOut_0_0 = nc.a(false, param0);
+            stackOut_0_0 = nc.a(false, param0, (byte) 112);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

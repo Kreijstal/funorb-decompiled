@@ -17,12 +17,12 @@ final class bca {
         return (ip) (Object) new es();
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         ((bca) this).field_b = new kpa(3);
         ((bca) this).field_b.a(true, 106);
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         rn.field_b = 0;
     }
 
@@ -89,7 +89,7 @@ final class bca {
         }
     }
 
-    final static void a(vb param0) {
+    final static void a(vb param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -153,8 +153,7 @@ final class bca {
     }
 
     public bca() {
-        int discarded$0 = -101;
-        this.a();
+        this.a((byte) -101);
     }
 
     bca(int param0, kh param1) {
@@ -177,8 +176,7 @@ final class bca {
         String stackOut_6_2 = null;
         try {
           if (param0 <= 8) {
-            int discarded$2 = -101;
-            this.a();
+            this.a((byte) -101);
             return;
           } else {
             ((bca) this).field_b = new kpa(3, param0, param1);

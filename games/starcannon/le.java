@@ -10,7 +10,7 @@ final class le extends IOException {
     static boolean[] field_d;
     static rk field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_b = null;
         field_c = null;
@@ -167,7 +167,7 @@ final class le extends IOException {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (!gh.f(-23093)) {
             return;
         }
@@ -180,8 +180,7 @@ final class le extends IOException {
           if (rk.field_d >= 20) {
             if (ai.a((byte) -76)) {
               if (jj.field_F > 0) {
-                int discarded$8 = -72;
-                if (rb.e()) {
+                if (rb.e((byte) -72)) {
                   return false;
                 } else {
                   return true;
@@ -200,8 +199,7 @@ final class le extends IOException {
           if (rk.field_d >= 20) {
             if (ai.a((byte) -76)) {
               if (jj.field_F > 0) {
-                int discarded$9 = -72;
-                if (rb.e()) {
+                if (rb.e((byte) -72)) {
                   return false;
                 } else {
                   return true;
@@ -254,8 +252,7 @@ final class le extends IOException {
           L0: {
             if (qb.a((byte) 116, param1, param0, param3)) {
               var4_int = 20;
-              int discarded$2 = 104;
-              stackOut_3_0 = rg.i();
+              stackOut_3_0 = rg.i(104);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

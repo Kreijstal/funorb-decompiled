@@ -8,7 +8,7 @@ final class tl extends r {
     static int field_o;
     static fa field_p;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_p = null;
     }
 

@@ -924,8 +924,7 @@ class hbb extends f {
                   break L20;
                 }
               }
-              int discarded$1 = 0;
-              param3.field_j.a(param3.field_k, this.b(param3), this.b(9259, param3));
+              param3.field_j.a(param3.field_k, this.b(param3, 0), this.b(9259, param3));
               stackOut_65_0 = 0;
               stackIn_66_0 = stackOut_65_0;
               break L0;
@@ -1078,7 +1077,7 @@ class hbb extends f {
         return (f) (Object) ((hbb) this).field_k;
     }
 
-    private final int b(fkb param0) {
+    private final int b(fkb param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -2113,8 +2112,7 @@ class hbb extends f {
                 ((hbb) this).a(stackIn_18_1, stackIn_18_2 != 0, true);
                 break L3;
               } else {
-                int discarded$1 = 0;
-                var7.field_j = fga.b(var6, this.a(73, var7), this.b(var7), this.b(9259, var7));
+                var7.field_j = fga.b(var6, this.a(73, var7), this.b(var7, 0), this.b(9259, var7));
                 break L3;
               }
             }

@@ -9,7 +9,7 @@ final class jha extends kj {
     private int field_f;
     static eaa field_i;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_g = null;
         field_j = null;
         field_i = null;
@@ -57,8 +57,7 @@ final class jha extends kj {
         String stackOut_5_2 = null;
         try {
           if (g.a(param2, param3, -30744, param0)) {
-            int discarded$2 = 98;
-            return ws.a();
+            return ws.a((byte) 98);
           } else {
             return null;
           }
@@ -95,8 +94,7 @@ final class jha extends kj {
     }
 
     final static sna c(int param0) {
-        int discarded$0 = 0;
-        return mt.c();
+        return mt.c(0);
     }
 
     final void a(int param0, boolean param1, int param2) {

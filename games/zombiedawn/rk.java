@@ -38,8 +38,7 @@ final class rk {
               dh.field_e.h(30, vj.field_t[1]);
               dh.field_e.h(85, vj.field_t[2]);
               dh.field_e.h(80, vj.field_t[3]);
-              int discarded$1 = 10;
-              cc.a(dh.field_e);
+              cc.a(dh.field_e, 10);
               dh.field_e.a(param4, (byte) 105);
               param1.a(false, dh.field_e);
               dp.field_e.field_j = 0;
@@ -144,7 +143,7 @@ final class rk {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

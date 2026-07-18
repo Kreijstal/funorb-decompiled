@@ -9,7 +9,7 @@ final class fi extends jm {
     static byte[] field_p;
     private int field_r;
 
-    public static void d() {
+    public static void d(byte param0) {
         field_n = null;
         field_m = null;
         field_p = null;
@@ -1159,8 +1159,7 @@ final class fi extends jm {
                     }
                     case 1: {
                         try {
-                            int discarded$2 = 64;
-                            var3 = (String) ac.a(param2, "getcookies");
+                            var3 = (String) ac.a(param2, "getcookies", (byte) 64);
                             var4 = fda.a(-1, ';', var3);
                             var5 = 0;
                             statePc = 2;

@@ -11,7 +11,7 @@ final class bp {
     private int field_g;
     static String field_c;
 
-    private final int c(int param0) {
+    private final int c(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         var4 = DungeonAssault.field_K;
@@ -47,8 +47,7 @@ final class bp {
     }
 
     private final void d(int param0, int param1) {
-        int discarded$0 = -13676;
-        int[] var5 = new int[this.c(param1)];
+        int[] var5 = new int[this.c(param1, -13676)];
         int[] var3 = var5;
         int var4 = 41;
         cj.a(((bp) this).field_f, 0, var5, 0, ((bp) this).field_f.length);
@@ -120,7 +119,7 @@ final class bp {
         return (um) (Object) stackIn_1_0;
     }
 
-    final static void a(int param0, cn param1, int param2) {
+    final static void a(int param0, cn param1, int param2, byte param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -386,7 +385,7 @@ final class bp {
         return ((bp) this).field_f[param1];
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_h = null;
         field_e = null;
@@ -407,7 +406,7 @@ final class bp {
         this.a(1 + ((bp) this).field_b, 0, param0);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

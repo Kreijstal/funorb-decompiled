@@ -16,8 +16,7 @@ final class ia {
     }
 
     final static void a(int param0, int param1) {
-        int discarded$0 = -1993;
-        int discarded$1 = le.h();
+        int discarded$0 = le.h(-1993);
     }
 
     static {

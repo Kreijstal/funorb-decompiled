@@ -91,8 +91,7 @@ final class of {
                     var5 = 0;
                     L1: while (true) {
                       if (var4.length <= var5) {
-                        int discarded$2 = 0;
-                        stackOut_20_0 = wh.a(var3[-1 + var3.length]);
+                        stackOut_20_0 = wh.a(var3[-1 + var3.length], false);
                         stackIn_21_0 = stackOut_20_0;
                         break L0;
                       } else {
@@ -245,12 +244,10 @@ final class of {
             if (param3 < -100) {
               L1: {
                 if (((of) this).field_l) {
-                  int discarded$5 = 0;
-                  this.a(param1, param2, param0);
+                  this.a(param1, param2, param0, 0);
                   break L1;
                 } else {
-                  int discarded$6 = 53;
-                  this.a(param2, param1, param0);
+                  this.a(param2, param1, param0, (byte) 53);
                   break L1;
                 }
               }
@@ -291,7 +288,7 @@ final class of {
         }
     }
 
-    private final void a(String param0, int param1, int param2) {
+    private final void a(String param0, int param1, int param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -526,7 +523,7 @@ final class of {
         pa.a(-21189);
     }
 
-    private final void a(int param0, String param1, int param2) {
+    private final void a(int param0, String param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;

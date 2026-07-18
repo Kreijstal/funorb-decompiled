@@ -16,7 +16,7 @@ final class bm extends dl implements ae {
     static long[] field_T;
     private mi field_ab;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_Z = null;
         field_Y = null;
         field_S = null;

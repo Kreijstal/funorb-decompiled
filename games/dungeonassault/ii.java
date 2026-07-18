@@ -116,7 +116,7 @@ class ii extends lm implements aa {
         return stackIn_13_0 != 0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_I = null;
         field_D = null;
         field_H = null;
@@ -365,7 +365,7 @@ class ii extends lm implements aa {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         int var4 = DungeonAssault.field_K;
         dj var2 = new dj(((ii) this).field_B);
         lm var3 = (lm) (Object) var2.a(-479592473);
@@ -906,8 +906,7 @@ class ii extends lm implements aa {
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
         super.b(param0 ^ param0, param1, param2, param3, param4);
-        int discarded$0 = 0;
-        this.h();
+        this.h(0);
     }
 
     lm g(int param0) {

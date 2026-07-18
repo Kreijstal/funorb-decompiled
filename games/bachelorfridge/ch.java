@@ -278,12 +278,12 @@ final class ch extends td {
         return ((ji) (Object) i.field_h.a(true, (long)var2.hashCode())).field_h;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_p = null;
         field_q = null;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return gfa.field_i;
     }
 

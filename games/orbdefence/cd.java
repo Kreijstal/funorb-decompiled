@@ -11,7 +11,7 @@ final class cd extends wj {
     int field_v;
     mg field_u;
 
-    public static void d() {
+    public static void d(byte param0) {
         field_x = null;
         field_r = null;
         field_q = null;
@@ -155,7 +155,7 @@ final class cd extends wj {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, boolean param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -188,8 +188,7 @@ final class cd extends wj {
           ul.d();
           bj.j(97);
           if (var5 >= 256) {
-            int discarded$2 = -105;
-            oc.g();
+            oc.g((byte) -105);
             if (150 <= ji.field_b) {
               L2: {
                 t.field_j.a(15 + var3, var4 - -10, var5);
@@ -391,8 +390,7 @@ final class cd extends wj {
           } else {
             L19: {
               ul.d(0, 0, ul.field_f, ul.field_l, 0, 256 + -var5);
-              int discarded$3 = -105;
-              oc.g();
+              oc.g((byte) -105);
               if (150 <= ji.field_b) {
                 t.field_j.a(15 + var3, var4 - -10, var5);
                 break L19;

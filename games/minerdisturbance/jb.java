@@ -9,7 +9,6 @@ final class jb extends pi {
     static int field_p;
 
     final static boolean a(boolean param0, byte param1, boolean param2, int param3, boolean param4) {
-        int[] var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -34,9 +33,10 @@ final class jb extends pi {
         int var26 = 0;
         int[] var27 = null;
         int[] var28 = null;
-        int[] var29 = null;
         int[] var30 = null;
-        int[] var31 = null;
+        int[] var32 = null;
+        int[] var34 = null;
+        int[] var35 = null;
         int[] stackIn_3_0 = null;
         int stackIn_23_0 = 0;
         int stackIn_147_0 = 0;
@@ -61,12 +61,12 @@ final class jb extends pi {
             break L0;
           }
         }
-        var31 = stackIn_3_0;
-        var30 = var31;
-        var29 = var30;
-        var28 = var29;
+        var34 = stackIn_3_0;
+        var32 = var34;
+        var30 = var32;
+        var28 = var30;
         var27 = var28;
-        var5 = var27;
+        var35 = var27;
         var7 = 420;
         if (var27 != null) {
           var8 = 0;
@@ -93,7 +93,7 @@ final class jb extends pi {
                 if (!param0) {
                   break L3;
                 } else {
-                  if (mh.a(var31, -1)) {
+                  if (mh.a(var34, -1)) {
                     break L3;
                   } else {
                     pk.field_b.a(cn.field_K, 110 + param3 - -60, 166, 16610816, -1);
@@ -133,8 +133,7 @@ final class jb extends pi {
                         ce.field_d.b(ld.field_A[var15], param3 + 320, var18, 0, -1);
                         var20 = ce.field_d.field_G + 3;
                         var21 = 30 + (278 - var11);
-                        int discarded$8 = -827843803;
-                        var22 = nm.a(var15, var5) ? 1 : 0;
+                        var22 = nm.a(var15, var35, -827843803) ? 1 : 0;
                         if (var22 == 0) {
                           ha.field_c.f(30 + var19, var21 + 7);
                           var21 += 30;
@@ -158,7 +157,7 @@ final class jb extends pi {
                             if (var22 != 0) {
                               break L10;
                             } else {
-                              int discarded$9 = ce.field_d.a(ge.field_b, 290 - -param3, var21 + -var20, 215, 480, 1, -1, 0, 0, var20);
+                              int discarded$2 = ce.field_d.a(ge.field_b, 290 - -param3, var21 + -var20, 215, 480, 1, -1, 0, 0, var20);
                               break L9;
                             }
                           }
@@ -193,7 +192,6 @@ final class jb extends pi {
                                     }
                                   }
                                 }
-                                int discarded$10 = 1;
                                 var25_ref = (Object) (Object) oa.a((byte) -118, en.field_a[var15], new String[1]);
                                 break L11;
                               }
@@ -225,7 +223,6 @@ final class jb extends pi {
                                     }
                                   }
                                 }
-                                int discarded$11 = 1;
                                 var25_ref = (Object) (Object) oa.a((byte) -119, en.field_a[var15], new String[1]);
                                 break L13;
                               }
@@ -401,13 +398,12 @@ final class jb extends pi {
                               if (33 != var15) {
                                 break L32;
                               } else {
-                                int discarded$12 = 115;
                                 var25_ref = (Object) (Object) oa.a((byte) -121, en.field_a[var15], new String[1]);
                                 break L32;
                               }
                             }
                             if (var25_ref != null) {
-                              int discarded$13 = ce.field_d.a((String) var25_ref, 290 - -param3, -var20 + var24, 215, 480, 8947848, -1, 0, 0, var20);
+                              int discarded$3 = ce.field_d.a((String) var25_ref, 290 - -param3, -var20 + var24, 215, 480, 8947848, -1, 0, 0, var20);
                               break L9;
                             } else {
                               break L9;
@@ -449,8 +445,7 @@ final class jb extends pi {
                 } else {
                   L35: {
                     L36: {
-                      int discarded$14 = -827843803;
-                      if (nm.a(var18, var5)) {
+                      if (nm.a(var18, var35, -827843803)) {
                         nj.field_c[var18].c(var12, var13);
                         break L36;
                       } else {
@@ -557,8 +552,7 @@ final class jb extends pi {
             } else {
               L42: {
                 L43: {
-                  int discarded$15 = -827843803;
-                  if (nm.a(var9, var27)) {
+                  if (nm.a(var9, var34, -827843803)) {
                     break L43;
                   } else {
                     if (param0) {
@@ -597,7 +591,7 @@ final class jb extends pi {
         throw new Error();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 

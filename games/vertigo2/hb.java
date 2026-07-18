@@ -61,7 +61,7 @@ final class hb extends bg {
         }
     }
 
-    final static void e() {
+    final static void e(int param0) {
         fh.field_t = null;
         ug.field_c = null;
     }

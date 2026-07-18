@@ -180,7 +180,7 @@ final class cj extends qf implements Cloneable {
         }
     }
 
-    private final f g(int param0, int param1, f[][] param2) {
+    private final f g(int param0, int param1, f[][] param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         f var5_ref = null;
@@ -1216,8 +1216,7 @@ final class cj extends qf implements Cloneable {
               we.field_h = we.field_h + -6;
               je.field_j = je.field_j + -3;
               fp.field_a = fp.field_a + -6;
-              int discarded$2 = -1;
-              stackOut_1_0 = this.g(param0, param1, param2);
+              stackOut_1_0 = this.g(param0, param1, param2, -1);
               stackIn_2_0 = stackOut_1_0;
               return stackIn_2_0;
             }

@@ -36,7 +36,7 @@ final class gf {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_g = null;
         field_e = null;
         field_b = null;

@@ -6,7 +6,7 @@ final class og {
     static long field_b;
     static String field_c;
 
-    final static void b() {
+    final static void b(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -24,7 +24,7 @@ final class og {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
     }

@@ -8,13 +8,12 @@ final class of extends pc {
     static int field_D;
     static String field_G;
 
-    final static void e() {
+    final static void e(byte param0) {
         if (!(gl.field_c)) {
             throw new IllegalStateException();
         }
         jd.field_z = true;
-        int discarded$0 = 1;
-        fl.a(false);
+        fl.a(false, 1);
         hp.field_s = 0;
     }
 
@@ -204,7 +203,7 @@ final class of extends pc {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_F = null;
         field_C = null;
         field_G = null;

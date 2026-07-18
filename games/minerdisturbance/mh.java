@@ -105,7 +105,7 @@ final class mh implements uj {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -170,7 +170,7 @@ final class mh implements uj {
         return "Make Ore Silver";
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_e = null;
         field_d = null;

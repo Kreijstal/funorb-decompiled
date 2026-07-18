@@ -86,10 +86,8 @@ final class jf {
             bn.field_d = (we) (Object) oc.a(param3, (byte) 125, "commonui", "arezzo14", param0);
             cn.field_g = (we) (Object) oc.a(param3, (byte) 125, "commonui", "arezzo14bold", param0);
             var17 = new ea(param1.a("", 0, "button.gif"), (java.awt.Component) (Object) ef.field_c);
-            int discarded$3 = -77;
-            ln discarded$4 = pb.a("commonui", param0, "dropdown");
-            int discarded$5 = 1;
-            var5 = tb.a("screen_options", "commonui", param0);
+            ln discarded$1 = pb.a("commonui", param0, "dropdown", (byte) -77);
+            var5 = tb.a("screen_options", "commonui", param0, 1);
             kn.field_F = new ln[4];
             kc.field_f = new ln[4];
             qe.field_c = new ln[4];
@@ -232,7 +230,7 @@ final class jf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
     }
 

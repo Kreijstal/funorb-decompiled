@@ -10,7 +10,7 @@ final class gl extends RuntimeException {
     static int field_c;
     Throwable field_a;
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, nh param5) {
+    final static void a(int param0, int param1, byte param2, int param3, int param4, nh param5, int param6, int param7, int param8) {
         try {
             ph.field_e = -2;
             af.field_d = param0;
@@ -25,7 +25,7 @@ final class gl extends RuntimeException {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_e = null;
         field_g = null;

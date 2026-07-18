@@ -14,8 +14,7 @@ final class m {
     static int[] field_g;
 
     private final void a(int param0, int param1) {
-        int discarded$0 = 1;
-        int[] var4 = new int[this.b(param0)];
+        int[] var4 = new int[this.b(param0, 1)];
         int[] var3 = var4;
         he.a(((m) this).field_b, 0, var4, 0, ((m) this).field_b.length);
         ((m) this).field_b = var4;
@@ -313,7 +312,7 @@ final class m {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var3 = 0;
@@ -374,7 +373,7 @@ final class m {
         return stackIn_12_0 != 0;
     }
 
-    private final int b(int param0) {
+    private final int b(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         var4 = TorChallenge.field_F ? 1 : 0;

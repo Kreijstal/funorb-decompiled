@@ -187,8 +187,7 @@ abstract class na extends dw implements pw {
           L0: {
             if (k.a(param2, param0, param3, param1 ^ 30429)) {
               if (param1 == -11481) {
-                int discarded$2 = -8;
-                stackOut_6_0 = tj.c();
+                stackOut_6_0 = tj.c((byte) -8);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
@@ -242,7 +241,7 @@ abstract class na extends dw implements pw {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
     }
 

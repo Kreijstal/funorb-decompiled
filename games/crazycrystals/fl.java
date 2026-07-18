@@ -140,7 +140,7 @@ final class fl implements wo {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         vk.a(-40, false, param0);
     }
 
@@ -301,7 +301,7 @@ final class fl implements wo {
         return stackIn_7_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_l = null;
         field_f = null;
         field_i = null;

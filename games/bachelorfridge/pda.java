@@ -145,7 +145,7 @@ final class pda extends eo {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_q = null;
     }
 

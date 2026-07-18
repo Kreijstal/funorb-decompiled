@@ -200,16 +200,15 @@ final class mn extends kca {
         }
     }
 
-    final static void h() {
-        int discarded$0 = 124;
-        oq.a().c(76);
+    final static void h(int param0) {
+        oq.a((byte) 124).c(76);
     }
 
-    final static String g() {
+    final static String g(int param0) {
         return ofa.field_D;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_n = null;
     }
 

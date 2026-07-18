@@ -135,11 +135,11 @@ final class cc extends ml {
     final static void a(int param0, int param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
-        nf var4_ref = null;
         qr var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
+        nf var9 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -171,7 +171,7 @@ final class cc extends ml {
                   break L3;
                 } else {
                   if (bg.field_g) {
-                    boolean discarded$3 = wi.field_c.a(tg.field_c.field_B, param3, tg.field_c.field_N, (byte) 0);
+                    boolean discarded$1 = wi.field_c.a(tg.field_c.field_B, param3, tg.field_c.field_N, (byte) 0);
                     break L3;
                   } else {
                     wi.field_c = null;
@@ -191,12 +191,11 @@ final class cc extends ml {
                     }
                   }
                   L6: {
-                    var4_ref = sh.a(false, param2, tg.field_a, cr.field_c);
-                    if (var4_ref == null) {
+                    var9 = sh.a(false, param2, tg.field_a, cr.field_c);
+                    if (var9 == null) {
                       break L6;
                     } else {
-                      int discarded$4 = 0;
-                      ks.a(var4_ref);
+                      ks.a(var9, 0);
                       break L6;
                     }
                   }
@@ -208,8 +207,7 @@ final class cc extends ml {
                       break L7;
                     }
                   }
-                  int discarded$5 = -127;
-                  var8 = bk.b();
+                  var8 = bk.b(-127);
                   if (var8 != null) {
                     dn.field_k = var8;
                     break L0;
@@ -430,7 +428,7 @@ final class cc extends ml {
         }
     }
 
-    final static boolean e() {
+    final static boolean e(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         int stackIn_4_0 = 0;
@@ -451,7 +449,7 @@ final class cc extends ml {
         }
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         int var1 = 0;
         if (224 <= tf.field_p) {
             js.a(256, 197126152);
@@ -524,8 +522,7 @@ final class cc extends ml {
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0;
                 } else {
-                  int discarded$6 = 24;
-                  if (!pf.a(var5)) {
+                  if (!pf.a(var5, (byte) 24)) {
                     L1: {
                       if (!param0) {
                         break L1;

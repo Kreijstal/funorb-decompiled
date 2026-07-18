@@ -7,7 +7,7 @@ final class cd extends jm {
     static String field_q;
     static String field_s;
 
-    final static void d() {
+    final static void d(int param0) {
         mn.e(98);
     }
 
@@ -173,7 +173,7 @@ final class cd extends jm {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_q = null;
         field_p = null;
         field_s = null;

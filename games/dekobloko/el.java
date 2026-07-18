@@ -23,7 +23,7 @@ final class el extends sf {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_L = null;
         field_I = null;
     }

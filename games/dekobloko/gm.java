@@ -21,7 +21,7 @@ final class gm extends di {
         this(hh.field_e, param0);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         int var1 = -85;
         field_J = null;
     }
@@ -50,8 +50,7 @@ final class gm extends di {
         try {
           L0: {
             var3_int = 61 / ((param1 - 59) / 53);
-            int discarded$2 = -12681;
-            stackOut_0_0 = vb.a('*', param0.field_E.length());
+            stackOut_0_0 = vb.a('*', param0.field_E.length(), -12681);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

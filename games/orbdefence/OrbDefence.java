@@ -80,26 +80,23 @@ public final class OrbDefence extends ph {
           if (!gi.field_b) {
             break L2;
           } else {
-            int discarded$14 = -123;
-            this.g();
+            this.g((byte) -123);
             gi.field_b = false;
             break L2;
           }
         }
         L3: {
-          int discarded$15 = -126;
-          if (!eg.c()) {
+          if (!eg.c((byte) -126)) {
             break L3;
           } else {
             ((OrbDefence) this).c(false);
-            int discarded$16 = -126;
-            if (!eg.c()) {
+            if (!eg.c((byte) -126)) {
               break L3;
             } else {
               if (!fe.c((byte) -117)) {
                 return;
               } else {
-                boolean discarded$17 = this.a(false, (byte) 97);
+                boolean discarded$1 = this.a(false, (byte) 97);
                 return;
               }
             }
@@ -115,12 +112,9 @@ public final class OrbDefence extends ph {
               break L4;
             }
           } else {
-            int discarded$18 = -72;
-            if (!ad.a()) {
-              int discarded$19 = 118;
-              em.b();
-              int discarded$20 = -72;
-              if (ad.a()) {
+            if (!ad.a((byte) -72)) {
+              em.b((byte) 118);
+              if (ad.a((byte) -72)) {
                 L5: {
                   bg.a(-2027485778);
                   ij.b(0);
@@ -193,27 +187,23 @@ public final class OrbDefence extends ph {
                     break L4;
                   }
                 } else {
-                  int discarded$21 = 0;
-                  this.e();
+                  this.e(false);
                   break L4;
                 }
               } else {
                 if (lc.field_r != 0) {
-                  int discarded$22 = 0;
-                  this.e();
+                  this.e(false);
                   break L4;
                 } else {
                   L9: {
-                    int discarded$23 = 0;
-                    var2 = hi.i();
+                    var2 = hi.i(0);
                     if (var2 == 2) {
                       lb.a(true);
                       break L9;
                     } else {
                       if (var2 != 3) {
                         if (var2 == 4) {
-                          int discarded$24 = -110;
-                          n.a();
+                          n.a((byte) -110);
                           break L9;
                         } else {
                           break L9;
@@ -241,8 +231,7 @@ public final class OrbDefence extends ph {
             L11: while (true) {
               var3_ref_ha = (ha) (Object) pe.field_b.e(0);
               if (var3_ref_ha != null) {
-                int discarded$25 = -4;
-                f.a(4, var3_ref_ha);
+                f.a(4, var3_ref_ha, (byte) -4);
                 continue L11;
               } else {
                 break L10;
@@ -253,12 +242,10 @@ public final class OrbDefence extends ph {
           }
         }
         L12: while (true) {
-          int discarded$26 = -16;
-          if (!uj.a(tg.field_b)) {
+          if (!uj.a(tg.field_b, -16)) {
             L13: {
               bh.a(0, -1);
-              int discarded$27 = 1;
-              if (sg.c()) {
+              if (sg.c(true)) {
                 var3 = ((OrbDefence) this).j(7);
                 if (2 == var3) {
                   md.b((byte) -121);
@@ -328,26 +315,19 @@ public final class OrbDefence extends ph {
         }
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         if (!(eg.field_x == null)) {
-            int discarded$0 = 63;
-            va.a(eg.field_x);
+            va.a(eg.field_x, (byte) 63);
             eg.field_x = null;
             vd.a(113);
         }
-        int discarded$1 = -32585;
-        bh.field_d = qk.a(4);
-        int discarded$2 = -32585;
-        pd.field_r = qk.a(5);
-        int discarded$3 = -32585;
-        kd.field_q = qk.a(6);
-        int discarded$4 = -32585;
-        ig.field_hb = qk.a(7);
+        bh.field_d = qk.a(4, -32585);
+        pd.field_r = qk.a(5, -32585);
+        kd.field_q = qk.a(6, -32585);
+        ig.field_hb = qk.a(7, -32585);
         int var2 = 13;
-        int discarded$5 = -32585;
-        hl.field_N = qk.a(8);
-        int discarded$6 = -32585;
-        lg.field_c = qk.a(9);
+        hl.field_N = qk.a(8, -32585);
+        lg.field_c = qk.a(9, -32585);
         mc.a(j.field_b, -29608, tf.field_d);
     }
 
@@ -666,8 +646,7 @@ public final class OrbDefence extends ph {
         if (!(mg.field_k == null)) {
             lb.a(true);
         }
-        int discarded$0 = 63;
-        uj.c();
+        uj.c((byte) 63);
     }
 
     final void a(boolean param0) {
@@ -682,115 +661,77 @@ public final class OrbDefence extends ph {
         int stackOut_7_0 = 0;
         L0: {
           OrbDefence.h((byte) -119);
-          int discarded$153 = 96;
-          kg.c();
-          int discarded$154 = 9;
-          im.a();
+          kg.c(96);
+          im.a(9);
           wf.a(71);
-          int discarded$155 = -1178583839;
-          jm.a();
-          int discarded$156 = 118;
-          qh.c();
-          int discarded$157 = -126;
-          rl.b();
+          jm.a(-1178583839);
+          qh.c(118);
+          rl.b((byte) -126);
           uk.a(param0);
           ph.g(-97);
-          int discarded$158 = -10013;
-          ui.a();
+          ui.a(-10013);
           tf.b(13695);
           uj.c(0);
-          int discarded$159 = 8;
-          gk.a();
+          gk.a(8);
           pe.b(121);
           ul.b();
-          int discarded$160 = 0;
-          ki.a();
+          ki.a(false);
           kc.a();
           tc.a(true);
-          int discarded$161 = -87;
-          n.c();
+          n.c((byte) -87);
           mg.c(10);
           ji.a(-5046);
-          int discarded$162 = -77;
-          nl.a();
-          int discarded$163 = 1;
-          ce.a();
-          int discarded$164 = 23;
-          bi.a();
+          nl.a((byte) -77);
+          ce.a(true);
+          bi.a((byte) 23);
           ld.a(false);
           bm.a(63);
-          int discarded$165 = -64;
-          fm.a();
-          int discarded$166 = 24;
-          vj.a();
-          int discarded$167 = 117;
-          lf.a();
+          fm.a((byte) -64);
+          vj.a((byte) 24);
+          lf.a(117);
           og.a((byte) -123);
-          int discarded$168 = -122;
-          wh.a();
+          wh.a(-122);
           na.a(-20008);
           aa.a((byte) -14);
-          int discarded$169 = -27;
-          fh.a();
-          int discarded$170 = 124;
-          l.b();
-          int discarded$171 = 29967;
-          ea.a();
-          int discarded$172 = 65;
-          jk.a();
-          int discarded$173 = 13461;
-          vd.b();
+          fh.a((byte) -27);
+          l.b(124);
+          ea.a(29967);
+          jk.a((byte) 65);
+          vd.b(13461);
           ja.c(-92);
-          int discarded$174 = 15;
-          nk.c();
-          int discarded$175 = 50;
-          ql.a();
+          nk.c((byte) 15);
+          ql.a((byte) 50);
           ge.a(1);
           vl.b(-122);
           pi.a(param0);
-          int discarded$176 = 78;
-          dj.c();
+          dj.c((byte) 78);
           cb.a((byte) -95);
           ca.a(40);
           lj.d(116);
-          int discarded$177 = 1;
-          mh.a();
+          mh.a(1);
           he.c(22);
           qi.a();
           jg.d(79);
           la.e();
           t.c(true);
-          int discarded$178 = 29;
-          am.a();
+          am.a((byte) 29);
           ml.a(true);
           pf.a(param0);
-          int discarded$179 = 5;
-          lm.b();
+          lm.b(5);
           aj.a((byte) -94);
-          int discarded$180 = -32311;
-          fd.a();
-          int discarded$181 = -115;
-          id.a();
+          fd.a(-32311);
+          id.a((byte) -115);
           hd.a(100);
-          int discarded$182 = 1000000;
-          le.a();
-          int discarded$183 = 9;
-          jl.b();
-          int discarded$184 = 1280;
-          cj.b();
-          int discarded$185 = -107;
-          bg.a();
-          int discarded$186 = -80;
-          ke.a();
-          int discarded$187 = -79;
-          sk.m();
+          le.a(1000000);
+          jl.b((byte) 9);
+          cj.b(1280);
+          bg.a((byte) -107);
+          ke.a((byte) -80);
+          sk.m(-79);
           ig.r(11285);
-          int discarded$188 = 0;
-          ve.f();
-          int discarded$189 = -1;
-          pc.q();
-          int discarded$190 = -94;
-          dh.e();
+          ve.f(false);
+          pc.q(-1);
+          dh.e((byte) -94);
           if (param0) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -803,8 +744,7 @@ public final class OrbDefence extends ph {
         }
         L1: {
           rf.c(stackIn_3_0 != 0);
-          int discarded$191 = -100;
-          pk.l();
+          pk.l(-100);
           if (param0) {
             stackOut_5_0 = 0;
             stackIn_6_0 = stackOut_5_0;
@@ -817,237 +757,146 @@ public final class OrbDefence extends ph {
         }
         L2: {
           el.c(stackIn_6_0 != 0);
-          int discarded$192 = 107;
-          ee.a();
+          ee.a((byte) 107);
           bl.b(13756);
-          int discarded$193 = -1459;
-          ne.a();
+          ne.a(-1459);
           kh.a();
           nj.c();
           qa.b();
-          int discarded$194 = -30;
-          sd.a();
+          sd.a((byte) -30);
           o.a((byte) -128);
-          int discarded$195 = 125;
-          ia.a();
-          int discarded$196 = 126;
-          fe.a();
-          int discarded$197 = -69;
-          f.a();
-          int discarded$198 = 125;
-          km.e();
+          ia.a((byte) 125);
+          fe.a((byte) 126);
+          f.a((byte) -69);
+          km.e(125);
           pd.a((byte) -19);
-          int discarded$199 = -98;
-          lb.a();
-          int discarded$200 = 119;
-          kd.b();
+          lb.a((byte) -98);
+          kd.b((byte) 119);
           tk.e(-31028);
-          int discarded$201 = 1;
-          th.a();
+          th.a(true);
           oj.c(384);
-          int discarded$202 = 0;
-          se.e();
+          se.e(false);
           wc.a((byte) -69);
-          int discarded$203 = -25829;
-          wl.b();
+          wl.b(-25829);
           de.a(-2079);
-          int discarded$204 = -21248;
-          lh.a();
-          int discarded$205 = 127;
-          mf.a();
+          lh.a(-21248);
+          mf.a(127);
           fk.a((byte) -102);
           ub.a();
-          int discarded$206 = -77;
-          re.c();
+          re.c((byte) -77);
           nd.b(-16996);
-          int discarded$207 = 90;
-          oa.a();
-          int discarded$208 = 29;
-          a.a();
-          int discarded$209 = 0;
-          il.a();
-          int discarded$210 = 61;
-          cd.d();
-          int discarded$211 = -99;
-          uc.d();
-          int discarded$212 = -102;
-          ak.c();
+          oa.a((byte) 90);
+          a.a((byte) 29);
+          il.a(0);
+          cd.d((byte) 61);
+          uc.d((byte) -99);
+          ak.c((byte) -102);
           gl.c(128);
-          int discarded$213 = -128;
-          fl.a();
-          int discarded$214 = -90;
-          wj.c();
-          int discarded$215 = 0;
-          jd.a();
-          int discarded$216 = 1;
-          gg.f();
+          fl.a(-128);
+          wj.c((byte) -90);
+          jd.a(0);
+          gg.f(true);
           jc.a(true);
           wi.b();
-          int discarded$217 = 73;
-          p.a();
-          int discarded$218 = 0;
-          fa.a();
-          int discarded$219 = 100;
-          wd.b();
-          int discarded$220 = 98;
-          m.a();
+          p.a((byte) 73);
+          fa.a(false);
+          wd.b(100);
+          m.a((byte) 98);
           lg.a(104);
           oh.a(-17303);
-          int discarded$221 = 2;
-          tg.a();
-          int discarded$222 = 17;
-          pa.a();
-          int discarded$223 = -415277564;
-          ua.a();
+          tg.a(2);
+          pa.a(17);
+          ua.a(-415277564);
           tb.a(-9698);
-          int discarded$224 = 7;
-          sf.b();
+          sf.b((byte) 7);
           k.a((byte) -112);
-          int discarded$225 = 3;
-          al.a();
+          al.a((byte) 3);
           bh.a(-21000);
-          int discarded$226 = 14;
-          ll.a();
+          ll.a(14);
           ac.a();
-          int discarded$227 = 16;
-          da.b();
-          int discarded$228 = 1;
-          ud.c();
-          int discarded$229 = 109;
-          q.a();
-          int discarded$230 = -122;
-          qk.a();
-          int discarded$231 = 1;
-          ci.a();
-          int discarded$232 = 64;
-          sj.b();
+          da.b(16);
+          ud.c(true);
+          q.a(109);
+          qk.a((byte) -122);
+          ci.a(1);
+          sj.b((byte) 64);
           ab.a(false);
-          int discarded$233 = 22499;
-          ck.a();
+          ck.a(22499);
           dm.a(0);
           pj.e(-75);
-          int discarded$234 = 99;
-          s.i();
-          int discarded$235 = 81;
-          kj.a();
-          int discarded$236 = -15640;
-          ej.o();
-          int discarded$237 = 87;
-          sg.a();
+          s.i(99);
+          kj.a((byte) 81);
+          ej.o(-15640);
+          sg.a((byte) 87);
           ta.c((byte) -95);
-          int discarded$238 = 24;
-          gd.b();
-          int discarded$239 = -17218;
-          kf.a();
-          int discarded$240 = -12563;
-          oe.f();
+          gd.b(24);
+          kf.a(-17218);
+          oe.f(-12563);
           rh.a((byte) 126);
           nh.a((byte) -59);
-          int discarded$241 = 2867;
-          gb.a();
-          int discarded$242 = 0;
-          dk.b();
+          gb.a(2867);
+          dk.b(0);
           cf.a(0);
-          int discarded$243 = 114;
-          mb.a();
-          int discarded$244 = -12150;
-          pg.a();
-          int discarded$245 = 48;
-          bk.a();
-          int discarded$246 = -22;
-          g.b();
-          int discarded$247 = 68;
-          ij.b();
-          int discarded$248 = -101;
-          db.a();
-          int discarded$249 = 12;
-          mc.c();
+          mb.a(114);
+          pg.a(-12150);
+          bk.a(48);
+          g.b((byte) -22);
+          ij.b((byte) 68);
+          db.a(-101);
+          mc.c(12);
           od.b((byte) -87);
-          int discarded$250 = 104;
-          ok.b();
+          ok.b((byte) 104);
           cg.d(0);
-          int discarded$251 = -5;
-          uh.a();
-          int discarded$252 = 126;
-          sl.c();
-          int discarded$253 = 5;
-          me.c();
-          int discarded$254 = 116;
-          vc.a();
-          int discarded$255 = -127;
-          rc.a();
+          uh.a(-5);
+          sl.c((byte) 126);
+          me.c(5);
+          vc.a((byte) 116);
+          rc.a(-127);
           h.l(-115);
-          int discarded$256 = 119;
-          oc.q();
-          int discarded$257 = 1;
-          vi.n();
-          int discarded$258 = 0;
-          hl.p();
+          oc.q(119);
+          vi.n(1);
+          hl.p(0);
           dg.a((byte) 120);
-          int discarded$259 = 29858;
-          we.k();
+          we.k(29858);
           te.k(-3213);
-          int discarded$260 = 79;
-          kk.l();
-          int discarded$261 = -83;
-          of.a();
-          int discarded$262 = -104;
-          hi.g();
+          kk.l(79);
+          of.a((byte) -83);
+          hi.g(-104);
           qb.a((byte) -83);
-          int discarded$263 = -19;
-          ob.a();
-          int discarded$264 = -13;
-          ue.c();
+          ob.a((byte) -19);
+          ue.c((byte) -13);
           lk.a();
-          int discarded$265 = -99;
-          j.a();
+          j.a(-99);
           gi.a(param0);
-          int discarded$266 = 8864;
-          nc.e();
-          int discarded$267 = 139;
-          ei.b();
-          int discarded$268 = 0;
-          hg.c();
+          nc.e(8864);
+          ei.b(139);
+          hg.c(false);
           vf.a(1);
           bd.c(0);
-          int discarded$269 = -58;
-          tj.a();
+          tj.a((byte) -58);
           dd.c((byte) -119);
-          int discarded$270 = 21006;
-          mm.k();
-          int discarded$271 = 50;
-          ba.b();
-          int discarded$272 = -1;
-          ek.b();
+          mm.k(21006);
+          ba.b(50);
+          ek.b(-1);
           qe.a(param0);
-          int discarded$273 = 127;
-          nf.h();
-          int discarded$274 = 96;
-          lc.i();
+          nf.h(127);
+          lc.i(96);
           md.d(-77);
           ih.a(-127);
           pl.a(-1);
-          int discarded$275 = 0;
-          ol.a();
+          ol.a(false);
           gj.c(false);
           vg.c(false);
-          int discarded$276 = 119;
-          hb.a();
-          int discarded$277 = 1;
-          hf.c();
-          int discarded$278 = 86;
-          mj.a();
+          hb.a(119);
+          hf.c(true);
+          mj.a((byte) 86);
           vk.b((byte) -108);
           qc.a(4784);
-          int discarded$279 = -123;
-          eg.a();
+          eg.a(-123);
           fi.a(-8601);
-          int discarded$280 = 37;
-          jj.k();
-          int discarded$281 = 67;
-          ti.e();
-          int discarded$282 = -128;
-          d.a();
+          jj.k(37);
+          ti.e(67);
+          d.a((byte) -128);
           ad.a(true);
           if (param0) {
             stackOut_8_0 = 0;
@@ -1060,58 +909,35 @@ public final class OrbDefence extends ph {
           }
         }
         dc.c(stackIn_9_0 != 0);
-        int discarded$283 = 99;
-        ha.a();
-        int discarded$284 = 8;
-        va.a();
-        int discarded$285 = -28342;
-        qj.a();
-        int discarded$286 = -67;
-        mi.a();
-        int discarded$287 = -127;
-        tl.a();
-        int discarded$288 = 31;
-        hc.c();
-        int discarded$289 = 122;
-        ec.a();
-        int discarded$290 = 76;
-        df.a();
+        ha.a((byte) 99);
+        va.a(8);
+        qj.a(-28342);
+        mi.a((byte) -67);
+        tl.a(-127);
+        hc.c(31);
+        ec.a((byte) 122);
+        df.a(76);
         ii.b(-26268);
-        int discarded$291 = -93;
-        hh.b();
+        hh.b(-93);
         i.a(100);
-        int discarded$292 = 95;
-        vh.c();
-        int discarded$293 = 125;
-        fb.a();
+        vh.c(95);
+        fb.a((byte) 125);
         qf.c(32);
         vb.c(-26818);
         ef.c(param0);
-        int discarded$294 = -105;
-        sa.a();
-        int discarded$295 = -1;
-        ed.a();
-        int discarded$296 = -97;
-        bc.c();
-        int discarded$297 = -15;
-        em.d();
-        int discarded$298 = -24392;
-        wg.j();
-        int discarded$299 = -1;
-        b.j();
-        int discarded$300 = -1;
-        nb.j();
-        int discarded$301 = -41;
-        ug.b();
+        sa.a((byte) -105);
+        ed.a(-1);
+        bc.c((byte) -97);
+        em.d((byte) -15);
+        wg.j(-24392);
+        b.j(-1);
+        nb.j(-1);
+        ug.b((byte) -41);
         li.a(false);
-        int discarded$302 = 83;
-        cc.a();
-        int discarded$303 = -96;
-        qd.a();
-        int discarded$304 = 7312;
-        wb.f();
-        int discarded$305 = -14;
-        e.a();
+        cc.a((byte) 83);
+        qd.a(-96);
+        wb.f(7312);
+        e.a((byte) -14);
         ((OrbDefence) this).field_n = null;
     }
 
@@ -1132,13 +958,10 @@ public final class OrbDefence extends ph {
         int stackOut_38_0 = 0;
         int stackOut_38_1 = 0;
         var6 = field_D ? 1 : 0;
-        int discarded$3 = 114;
-        var7 = tb.a();
-        int discarded$4 = -126;
-        if (!eg.c()) {
+        var7 = tb.a((byte) 114);
+        if (!eg.c((byte) -126)) {
           if (f.field_j) {
-            int discarded$5 = -72;
-            if (ad.a()) {
+            if (ad.a((byte) -72)) {
               L0: {
                 ul.d();
                 if (~kk.field_S != ~kf.field_c) {
@@ -1351,17 +1174,16 @@ public final class OrbDefence extends ph {
         hj[] var6_ref_hj__ = null;
         int var7_int = 0;
         hj var7 = null;
-        hj var8 = null;
         int var9 = 0;
         int[] var10 = null;
         int[] var11 = null;
         hj var12 = null;
-        int[] var13 = null;
+        hj var13 = null;
         int[] var14 = null;
         int[] var15 = null;
+        int[] var16 = null;
         var9 = field_D ? 1 : 0;
-        int discarded$37 = 117;
-        bl.a();
+        bl.a(117);
         if (null == kd.field_q) {
           if (null == ig.field_hb) {
             if (lg.field_c == null) {
@@ -1375,8 +1197,7 @@ public final class OrbDefence extends ph {
                           kf.field_c = 0;
                           cc.a(false, 50);
                           km.a((byte) -62, 50);
-                          int discarded$38 = 2;
-                          hi.a(ee.field_b[12], 2, false, 1, true);
+                          hi.a(ee.field_b[12], 2, false, 1, true, 2);
                           bl.field_p = 0;
                           return true;
                         } else {
@@ -1389,20 +1210,20 @@ public final class OrbDefence extends ph {
                       return true;
                     }
                   } else {
-                    hj discarded$39 = fk.a(bh.field_d, "background", -117, "");
+                    hj discarded$12 = fk.a(bh.field_d, "background", -117, "");
                     cc.field_t = sf.a("", pd.field_r, -1, "aafont", bh.field_d);
-                    var15 = cc.field_t.field_J[0];
+                    var16 = cc.field_t.field_J[0];
+                    var15 = var16;
                     var14 = var15;
-                    var13 = var14;
-                    var11 = var13;
+                    var11 = var14;
                     var10 = var11;
                     var3_ref_int__ = var10;
                     cc.field_t.field_J = new int[2][];
-                    cc.field_t.field_J[0] = var15;
-                    cc.field_t.field_J[1] = new int[var15.length];
+                    cc.field_t.field_J[0] = var16;
+                    cc.field_t.field_J[1] = new int[var16.length];
                     var4_int = 0;
                     L1: while (true) {
-                      if (~var15.length >= ~var4_int) {
+                      if (~var16.length >= ~var4_int) {
                         var4 = fl.a(-9945, bh.field_d, "", "keys");
                         var5 = new int[]{14, 14, 14, 15, 15};
                         var6 = 0;
@@ -1427,13 +1248,13 @@ public final class OrbDefence extends ph {
                                 hf.field_g = p.a(13863, "", bh.field_d, "turrettest");
                                 cj.a(105);
                                 fk.field_b = fk.a(bh.field_d, "titleimage", 46, "");
-                                hj discarded$40 = fk.a(bh.field_d, "orbpilon", 120, "");
-                                hj[] discarded$41 = p.a(13863, "", bh.field_d, "wall");
+                                hj discarded$13 = fk.a(bh.field_d, "orbpilon", 120, "");
+                                hj[] discarded$14 = p.a(13863, "", bh.field_d, "wall");
                                 bc.field_q = p.a(13863, "", bh.field_d, "edging");
                                 mf.field_b = p.a(13863, "", bh.field_d, "floors_1");
-                                hj[] discarded$42 = p.a(13863, "", bh.field_d, "turrets");
+                                hj[] discarded$15 = p.a(13863, "", bh.field_d, "turrets");
                                 gd.field_b = p.a(13863, "", bh.field_d, "explosion");
-                                hj[] discarded$43 = p.a(13863, "", bh.field_d, "bosses");
+                                hj[] discarded$16 = p.a(13863, "", bh.field_d, "bosses");
                                 gk.field_a = fk.a(bh.field_d, "in_game_shine", -79, "");
                                 ad.field_e = fk.a(bh.field_d, "in_game_swarm_bar", -103, "");
                                 dh.field_X = fk.a(bh.field_d, "in_game_topbar_center", 38, "");
@@ -1447,7 +1268,7 @@ public final class OrbDefence extends ph {
                                 f.field_w = p.a(13863, "", bh.field_d, "frame");
                                 bk.field_d = p.a(13863, "", bh.field_d, "button_frame");
                                 qc.field_f = p.a(13863, "", bh.field_d, "button_raised");
-                                hj[] discarded$44 = p.a(13863, "", bh.field_d, "button_depressed");
+                                hj[] discarded$17 = p.a(13863, "", bh.field_d, "button_depressed");
                                 bd.field_o = new hj[24];
                                 bd.field_o[0] = fk.a(bh.field_d, "achievements_icon_1", -99, "");
                                 bd.field_o[1] = fk.a(bh.field_d, "achievements_icon_2", -71, "");
@@ -1473,8 +1294,7 @@ public final class OrbDefence extends ph {
                                 bd.field_o[21] = fk.a(bh.field_d, "achievements_icon_22", -125, "");
                                 bd.field_o[22] = fk.a(bh.field_d, "achievements_icon_23", 120, "");
                                 bd.field_o[23] = fk.a(bh.field_d, "achievements_icon_24", -98, "");
-                                int discarded$45 = -27;
-                                ba.a();
+                                ba.a((byte) -27);
                                 var6_ref_hj__ = bd.field_o;
                                 var7_int = 0;
                                 L4: while (true) {
@@ -1490,16 +1310,8 @@ public final class OrbDefence extends ph {
                                     ij.a(-63, ui.field_e, var7);
                                     pj.a(0, fk.a(bh.field_d, "mb_logo", 40, ""));
                                     bk.a(90, p.a(13863, "", bh.field_d, "mb_sshots"));
-                                    var8 = fk.a(bh.field_d, "mb_pricing_bg", 60, "");
-                                    int discarded$46 = 10;
-                                    int discarded$47 = 1500;
-                                    int discarded$48 = 140;
-                                    int discarded$49 = 10;
-                                    int discarded$50 = 10;
-                                    int discarded$51 = 10;
-                                    int discarded$52 = 45;
-                                    int discarded$53 = 80;
-                                    kj.a(var8);
+                                    var13 = fk.a(bh.field_d, "mb_pricing_bg", 60, "");
+                                    kj.a(var13, 80, (byte) 45, 10, 10, 10, 140, 1500, 10);
                                     bh.field_d = null;
                                     pd.field_r = null;
                                     vd.a(70);
@@ -1525,7 +1337,7 @@ public final class OrbDefence extends ph {
                           }
                         }
                       } else {
-                        cc.field_t.field_J[1][var4_int] = vi.a(var15[var4_int], 16711935);
+                        cc.field_t.field_J[1][var4_int] = vi.a(var16[var4_int], 16711935);
                         var4_int++;
                         continue L1;
                       }
@@ -1797,7 +1609,7 @@ public final class OrbDefence extends ph {
         ((OrbDefence) this).a(11, "orbdefence", (byte) 20);
     }
 
-    private final void e() {
+    private final void e(boolean param0) {
         int var3 = field_D ? 1 : 0;
         if (va.field_d >= 2) {
             if (!(!ek.field_a[41])) {

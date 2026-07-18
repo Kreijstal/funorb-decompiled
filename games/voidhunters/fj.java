@@ -20,8 +20,7 @@ final class fj {
             return;
         }
         if (uga.field_d) {
-            int discarded$0 = -1;
-            fea.a();
+            fea.a(-1);
         }
     }
 

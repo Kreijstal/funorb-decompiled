@@ -173,19 +173,15 @@ final class ri {
         return stackIn_10_0;
     }
 
-    public static void b() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void b(int param0) {
+        field_e = null;
+        if (param0 != 2) {
+            return;
+        }
         try {
-          L0: {
-            field_e = null;
             field_a = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "ri.C(" + 2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "ri.C(" + param0 + ')');
         }
     }
 
@@ -235,9 +231,7 @@ final class ri {
                       return;
                     } else {
                       L2: {
-                        int discarded$4 = 1;
-                        int discarded$5 = 1;
-                        en.a("F1: " + rg.a(), (Throwable) null);
+                        en.a("F1: " + rg.a(true), (Throwable) null, 1);
                         if (param0 > 44) {
                           break L2;
                         } else {
@@ -301,9 +295,9 @@ final class ri {
                   } else {
                     var6 = new gh();
                     oa.field_h.a((long)c.a((CharSequence) (Object) var4_ref_String, true).hashCode(), (wb) (Object) var6, 30804);
-                    int fieldTemp$6 = sg.field_j;
+                    int fieldTemp$2 = sg.field_j;
                     sg.field_j = sg.field_j + 1;
-                    var6.field_Nb = fieldTemp$6;
+                    var6.field_Nb = fieldTemp$2;
                     co.field_f.a((l) (Object) var6, (byte) -96);
                     break L7;
                   }
@@ -426,9 +420,9 @@ final class ri {
                 } else {
                   var6 = new gh();
                   ie.field_a.a((long)var8.hashCode(), (wb) (Object) var6, 30804);
-                  int fieldTemp$7 = mj.field_z;
+                  int fieldTemp$3 = mj.field_z;
                   mj.field_z = mj.field_z + 1;
-                  var6.field_Nb = fieldTemp$7;
+                  var6.field_Nb = fieldTemp$3;
                   bd.field_c.a((l) (Object) var6, (byte) -58);
                   break L19;
                 }

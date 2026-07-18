@@ -23,7 +23,7 @@ final class ud {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -33;
         field_a = null;
     }

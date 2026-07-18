@@ -52,7 +52,7 @@ final class dq {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -116,8 +116,7 @@ final class dq {
           L0: {
             var4_int = param3.a(117, param2);
             var5 = param3.a((byte) -125, param1, var4_int);
-            int discarded$2 = 119;
-            stackOut_2_0 = lh.a(var4_int, param3, var5);
+            stackOut_2_0 = lh.a(var4_int, param3, var5, 119);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

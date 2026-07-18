@@ -212,7 +212,7 @@ final class qd {
         ti.field_b = param3;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         mc.field_a = -1;
         ei.field_a = false;
         wa.field_F = 0;
@@ -223,14 +223,10 @@ final class qd {
 
     final static eh a(boolean param0, int param1, boolean param2, int param3, byte param4) {
         if (param4 < 40) {
-          he discarded$10 = qd.a((byte) -115, -62);
-          int discarded$11 = 0;
-          int discarded$12 = 1;
-          return va.a(1, false, param3, -116);
+          he discarded$2 = qd.a((byte) -115, -62);
+          return va.a(1, false, param3, -116, true, false);
         } else {
-          int discarded$13 = 0;
-          int discarded$14 = 1;
-          return va.a(1, false, param3, -116);
+          return va.a(1, false, param3, -116, true, false);
         }
     }
 

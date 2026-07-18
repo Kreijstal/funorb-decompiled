@@ -321,8 +321,7 @@ final class ada extends k {
         int stackOut_21_1 = 0;
         int stackOut_21_2 = 0;
         L0: {
-          int discarded$1 = 199;
-          pm.f();
+          pm.f(199);
           if (wk.field_a >= 0) {
             dea.field_m.field_Z = lga.a(true, new String[1], bla.field_q);
             break L0;
@@ -901,7 +900,7 @@ final class ada extends k {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_m = null;
         field_p = null;
         field_l = null;

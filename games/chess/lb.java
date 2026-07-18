@@ -161,14 +161,12 @@ final class lb extends nm {
               param0 = param0.field_h;
               continue L0;
             } else {
-              int discarded$4 = 1;
-              he.a((o) (Object) param1, param0);
+              he.a((o) (Object) param1, param0, true);
               ((lb) this).field_p = ((pl) (Object) ((lb) this).field_q.field_a.field_h).field_j;
               return;
             }
           } else {
-            int discarded$5 = 1;
-            he.a((o) (Object) param1, param0);
+            he.a((o) (Object) param1, param0, true);
             ((lb) this).field_p = ((pl) (Object) ((lb) this).field_q.field_a.field_h).field_j;
             return;
           }

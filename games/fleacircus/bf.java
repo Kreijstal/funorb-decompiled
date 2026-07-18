@@ -42,7 +42,7 @@ final class bf {
         return var2;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_e = null;
         field_a = null;
@@ -186,7 +186,7 @@ final class bf {
         return var2;
     }
 
-    final static byte[] a(ih param0, int param1, byte[] param2) {
+    final static byte[] a(ih param0, int param1, byte[] param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

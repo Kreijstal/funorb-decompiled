@@ -49,7 +49,7 @@ final class ie extends ne {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_j = null;
         field_i = null;
         field_n = null;

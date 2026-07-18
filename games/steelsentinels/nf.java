@@ -95,8 +95,7 @@ final class nf {
               }
             }
             L4: {
-              int discarded$1 = 78;
-              var4 = nn.a(param0);
+              var4 = nn.a(param0, (byte) 78);
               if (param2 == 44) {
                 break L4;
               } else {

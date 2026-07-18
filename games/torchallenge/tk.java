@@ -9,7 +9,7 @@ final class tk extends ng {
     static int[] field_Q;
     private wd field_O;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_T = null;
         field_Q = null;
         field_R = null;
@@ -227,7 +227,7 @@ final class tk extends ng {
         return stackIn_3_0 != 0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         byte[] var1_array = null;
         ge[] var2 = null;
@@ -236,29 +236,34 @@ final class tk extends ng {
         int var5 = 0;
         int var6 = 0;
         byte[] var7 = null;
-        int[] var8 = null;
+        byte[] var8 = null;
         int[] var9 = null;
-        int[] var10 = null;
+        byte[] var10 = null;
         int[] var11 = null;
+        byte[] var12 = null;
+        int[] var13 = null;
+        byte[] var14 = null;
+        int[] var15 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
             L1: {
-              var7 = bh.field_q.a(-2, "font", "");
+              var14 = bh.field_q.a(-2, "font", "");
+              var12 = var14;
+              var10 = var12;
+              var8 = var10;
+              var7 = var8;
               var1_array = var7;
               var2 = mh.a(122, ic.field_C, "font", "");
-              int discarded$3 = 256;
-              fc.field_p = id.a(var7, var2);
-              int discarded$4 = 8015912;
-              int discarded$5 = 16301089;
-              var3 = vh.a(var2, 2, 33, var7);
+              fc.field_p = id.a(var14, var2, 256);
+              var3 = vh.a(var2, 2, 33, var14, 16301089, 8015912);
               tf.field_x = (eg) (Object) var3;
-              var11 = var3.field_O[0];
-              var10 = var11;
-              var9 = var10;
-              var8 = var9;
-              var4 = var8;
+              var15 = var3.field_O[0];
+              var13 = var15;
+              var11 = var13;
+              var9 = var11;
+              var4 = var9;
               if (var3.field_O.length >= 1) {
                 break L1;
               } else {
@@ -266,7 +271,7 @@ final class tk extends ng {
                 break L1;
               }
             }
-            var3.field_O[0] = var11;
+            var3.field_O[0] = var15;
             var5 = 1;
             L2: while (true) {
               if (var5 >= 2) {
@@ -278,8 +283,8 @@ final class tk extends ng {
                 var3.field_K = 5;
                 break L0;
               } else {
-                var3.field_O[var5] = new int[var11.length];
-                he.a(var4, 0, var3.field_O[var5], 0, var11.length);
+                var3.field_O[var5] = new int[var15.length];
+                he.a(var4, 0, var3.field_O[var5], 0, var15.length);
                 var5++;
                 continue L2;
               }
@@ -314,7 +319,7 @@ final class tk extends ng {
         return ((tk) this).field_O.a((byte) -10);
     }
 
-    final static String a(String param0, lj param1, String param2) {
+    final static String a(String param0, lj param1, String param2, int param3) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;
@@ -535,8 +540,7 @@ final class tk extends ng {
               break L3;
             }
             var12.b(112, 144, var12.field_q << 4, var12.field_v << 4, -((tk) this).field_S << 10, 4096);
-            int discarded$1 = -9;
-            ie.b();
+            ie.b((byte) -9);
             lh.field_v.b(var5 + -var12.field_q, var6 - var12.field_v, 256);
             break L1;
           }

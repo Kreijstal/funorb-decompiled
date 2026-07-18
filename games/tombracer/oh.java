@@ -68,7 +68,7 @@ final class oh extends nv {
         return param0;
     }
 
-    final static jea b() {
+    final static jea b(int param0) {
         return bsa.field_j.field_tb;
     }
 

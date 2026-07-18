@@ -45,23 +45,19 @@ abstract class m extends wb implements ib {
     final void c(byte param0) {
         int var3 = 0;
         int var5 = ZombieDawn.field_J;
-        int discarded$0 = -122;
-        java.awt.Canvas var6 = uh.e();
-        int discarded$4 = -44;
-        if (uk.a()) {
-            int discarded$5 = -6376;
-            dg.a(var6, 0, ck.c());
+        java.awt.Canvas var2 = uh.e(-122);
+        if (uk.a((byte) -44)) {
+            dg.a(var2, 0, ck.c(-6376));
             return;
         }
         if (!(qi.field_F)) {
-            am.a(var6, (byte) -125);
+            am.a(var2, (byte) -125);
             return;
         }
         if (!dg.field_b) {
             if (!(po.w(13296))) {
-                int discarded$6 = -1;
-                eh.a(lo.field_p, 100.0f);
-                am.a(var6, (byte) -86);
+                eh.a(lo.field_p, 100.0f, -1);
+                am.a(var2, (byte) -86);
                 return;
             }
         }
@@ -71,11 +67,10 @@ abstract class m extends wb implements ib {
         }
         int var4 = 35 / ((param0 - -27) / 44);
         if (wn.field_b) {
-            boolean discarded$8 = rm.a(false);
-            uh.a(-126, 0, 0, var6);
+            boolean discarded$1 = rm.a(false);
+            uh.a(-126, 0, 0, var2);
         } else {
-            int discarded$9 = 29268;
-            this.l();
+            this.l(29268);
         }
     }
 
@@ -116,11 +111,9 @@ abstract class m extends wb implements ib {
         L0: {
           var5 = ZombieDawn.field_J;
           var2 = 0;
-          int discarded$6 = -80;
-          if (!we.o()) {
+          if (!we.o((byte) -80)) {
             if (dl.a(false)) {
-              int discarded$7 = 2;
-              if (bg.a()) {
+              if (bg.a(2)) {
                 dh.c(256);
                 break L0;
               } else {
@@ -128,8 +121,7 @@ abstract class m extends wb implements ib {
                   var3 = va.a(true);
                   if (var3 != 2) {
                     if (3 == var3) {
-                      int discarded$8 = 0;
-                      cn.a(true);
+                      cn.a(true, false);
                       break L1;
                     } else {
                       if (var3 != 4) {
@@ -149,8 +141,7 @@ abstract class m extends wb implements ib {
                 break L0;
               }
             } else {
-              int discarded$9 = 15000;
-              if (nk.b()) {
+              if (nk.b(15000)) {
                 L2: {
                   stackOut_26_0 = this;
                   stackOut_26_1 = -27698;
@@ -208,8 +199,7 @@ abstract class m extends wb implements ib {
                 break L0;
               } else {
                 if (ac.d(param0 ^ 1813)) {
-                  int discarded$10 = 2;
-                  if (!bg.a()) {
+                  if (!bg.a(2)) {
                     L6: {
                       var3 = cg.a(param0 + -1831);
                       if (var3 == 1) {
@@ -226,8 +216,7 @@ abstract class m extends wb implements ib {
                     break L0;
                   }
                 } else {
-                  int discarded$11 = 2;
-                  if (bg.a()) {
+                  if (bg.a(2)) {
                     dh.c(param0 + -1575);
                     break L0;
                   } else {
@@ -322,12 +311,11 @@ abstract class m extends wb implements ib {
         }
     }
 
-    private final void m() {
+    private final void m(int param0) {
         int var3 = 0;
         var3 = ZombieDawn.field_J;
         L0: while (true) {
-          int discarded$4 = 44;
-          if (!gf.a(wh.field_d)) {
+          if (!gf.a(wh.field_d, (byte) 44)) {
             return;
           } else {
             if (((m) this).a(fj.field_g, l.field_d, 2)) {
@@ -342,16 +330,16 @@ abstract class m extends wb implements ib {
 
     abstract boolean a(am param0, int param1, int param2);
 
-    private final void l() {
+    private final void l(int param0) {
     }
 
     public abstract boolean a(char param0, int param1, int param2);
 
     final void e(byte param0) {
-        bo var2_ref_bo = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
+        bo var5 = null;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
@@ -366,7 +354,7 @@ abstract class m extends wb implements ib {
           if (param0 == 15) {
             break L0;
           } else {
-            lo discarded$7 = m.a((byte) 91, 77, -4, -72);
+            lo discarded$1 = m.a((byte) 91, 77, -4, -72);
             break L0;
           }
         }
@@ -412,11 +400,9 @@ abstract class m extends wb implements ib {
           }
         }
         L4: {
-          int discarded$8 = -44;
-          if (uk.a()) {
+          if (uk.a((byte) -44)) {
             ((m) this).i((byte) 20);
-            int discarded$9 = -44;
-            if (uk.a()) {
+            if (uk.a((byte) -44)) {
               return;
             } else {
               break L4;
@@ -426,8 +412,7 @@ abstract class m extends wb implements ib {
           }
         }
         L5: {
-          int discarded$10 = 81;
-          this.m();
+          this.m(81);
           if (qi.field_F) {
             L6: {
               if (dg.field_b) {
@@ -465,21 +450,18 @@ abstract class m extends wb implements ib {
             break L7;
           } else {
             L8: while (true) {
-              var2_ref_bo = (bo) (Object) kk.field_j.f(117);
-              if (var2_ref_bo == null) {
+              var5 = (bo) (Object) kk.field_j.f(117);
+              if (var5 == null) {
                 break L7;
               } else {
-                int discarded$11 = 4;
-                int discarded$12 = 7;
-                i.a(var2_ref_bo);
+                i.a(var5, (byte) 7, 4);
                 continue L8;
               }
             }
           }
         }
         L9: {
-          int discarded$13 = -48;
-          da.d();
+          da.d((byte) -48);
           b.a(0, param0 ^ -90);
           if (!dn.i(-19301)) {
             break L9;

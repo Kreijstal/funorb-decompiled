@@ -28,7 +28,7 @@ final class bg extends nm {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_n = null;
         field_o = null;
         field_u = null;

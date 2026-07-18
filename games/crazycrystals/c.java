@@ -175,8 +175,7 @@ final class c extends bo implements Cloneable {
                   break L5;
                 }
               }
-              int discarded$2 = 36;
-              kj.a(param1);
+              kj.a(param1, (byte) 36);
               break L0;
             } else {
               return;
@@ -214,14 +213,14 @@ final class c extends bo implements Cloneable {
         }
     }
 
-    final static lb b() {
+    final static lb b(boolean param0) {
         if (sa.field_lb == null) {
             sa.field_lb = new lb(ba.field_i, 20, 0, 0, 0, 11579568, -1, 0, 0, ba.field_i.field_o, -1, 2147483647, true);
         }
         return sa.field_lb;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_q = null;
     }
 

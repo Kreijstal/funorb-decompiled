@@ -27,7 +27,7 @@ final class am extends mh {
         return true;
     }
 
-    private final int a(int param0, mh param1, int param2, String param3, mh param4) {
+    private final int a(int param0, mh param1, int param2, String param3, mh param4, byte param5) {
         mh var7 = null;
         RuntimeException var7_ref = null;
         int stackIn_1_0 = 0;
@@ -531,7 +531,7 @@ final class am extends mh {
                   if (param11 == null) {
                     break L6;
                   } else {
-                    StringBuilder discarded$4 = ((am) this).field_Tb.append(param11);
+                    StringBuilder discarded$1 = ((am) this).field_Tb.append(param11);
                     break L6;
                   }
                 }
@@ -578,8 +578,7 @@ final class am extends mh {
                       var17 = 0;
                       var18 = 0;
                       var18 = 0;
-                      int discarded$5 = -53;
-                      var18 = this.a(var18, param6, var16, tk.field_o, var28[0]);
+                      var18 = this.a(var18, param6, var16, tk.field_o, var28[0], (byte) -53);
                       var18 = this.a(var28[0], (byte) -128, var18, ((am) this).field_Sb[6], var16);
                       var18 = this.a(var28[0], (byte) -21, var18, ((am) this).field_Sb[9], var16);
                       var18 = this.a(var28[0], (byte) -119, var18, ((am) this).field_Sb[5], var16);
@@ -595,8 +594,7 @@ final class am extends mh {
                     }
                     L13: {
                       var18 = 0;
-                      int discarded$6 = -53;
-                      var18 = this.a(var18, param6, var16, hq.field_r, var28[1]);
+                      var18 = this.a(var18, param6, var16, hq.field_r, var28[1], (byte) -53);
                       var18 = this.a(var28[1], (byte) 117, var18, ((am) this).field_Sb[16], var16);
                       var18 = this.a(var28[1], (byte) 36, var18, ((am) this).field_Sb[17], var16);
                       var18 = this.a(var28[1], (byte) -2, var18, ((am) this).field_Sb[18], var16);
@@ -611,8 +609,7 @@ final class am extends mh {
                     }
                     L14: {
                       var18 = 0;
-                      int discarded$7 = -53;
-                      var18 = this.a(var18, param6, var16, nh.field_d, var28[2]);
+                      var18 = this.a(var18, param6, var16, nh.field_d, var28[2], (byte) -53);
                       var18 = this.a(var28[2], (byte) -127, var18, ((am) this).field_Sb[13], var16);
                       var18 = this.a(var28[2], (byte) -119, var18, ((am) this).field_Sb[21], var16);
                       var18 = this.a(var28[2], (byte) -121, var18, ((am) this).field_Sb[11], var16);
@@ -751,7 +748,7 @@ final class am extends mh {
         }
     }
 
-    final static void a(int[] param0) {
+    final static void a(int[] param0, int param1) {
         try {
             param0[75] = 2;
             param0[79] = -2;

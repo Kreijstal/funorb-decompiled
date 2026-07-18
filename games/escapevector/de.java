@@ -7,7 +7,7 @@ final class de extends hg {
     int field_g;
     static boolean field_j;
 
-    final static void a(String param0, String param1) {
+    final static void a(String param0, String param1, int param2) {
         try {
             if (be.field_b != null) {
                 be.field_b.o(-18861);
@@ -102,7 +102,7 @@ final class de extends hg {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_h = null;
         field_i = null;
     }

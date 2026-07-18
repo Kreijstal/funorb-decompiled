@@ -22,11 +22,10 @@ final class sa extends wda {
         if (param4 > -75) {
             return null;
         }
-        int discarded$0 = 1;
-        return nt.a(param1, param3, 5200, param2, false);
+        return nt.a(param1, param3, 5200, param2, false, true);
     }
 
-    final static eua a(jea param0, jea param1, jea param2, int[] param3) {
+    final static eua a(jea param0, jea param1, jea param2, int[] param3, boolean param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         String[] var6 = null;
@@ -392,7 +391,7 @@ final class sa extends wda {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_r = null;
     }
 

@@ -29,8 +29,7 @@ final class vj extends nc {
         var3.field_p[0] = ((vj) this).field_n;
         var3.field_c[1] = ((vj) this).field_l;
         var3.field_p[1] = ((vj) this).field_s;
-        int discarded$0 = -61;
-        th.b();
+        th.b((byte) -61);
         super.b(param0);
     }
 

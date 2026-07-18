@@ -10,55 +10,74 @@ final class tj {
 
     final static void a(boolean param0, int param1, int param2, int param3) {
         int var4 = 0;
-        L0: {
-          ub.field_e.g(param3, param2);
-          if (param1 == 5106) {
-            break L0;
-          } else {
-            tj.a(false, 10, 113, 16);
-            break L0;
-          }
-        }
-        if (param0) {
-          L1: {
-            var4 = 2 * (ub.field_h % ub.field_e.field_u);
-            if (var4 < ub.field_e.field_u) {
-              break L1;
-            } else {
-              var4 = ub.field_e.field_u + -var4 + ub.field_e.field_u;
-              break L1;
-            }
-          }
-          if (var4 < 10) {
-            var4 = 10;
-            int discarded$8 = 65;
-            int discarded$9 = 0;
-            int discarded$10 = 30;
-            int discarded$11 = 0;
-            vg.a(80, var4, ub.field_e, param3, param2);
-            return;
-          } else {
-            L2: {
-              if (-40 + ub.field_e.field_u >= var4) {
-                break L2;
-              } else {
-                var4 = ub.field_e.field_u + -40;
-                break L2;
+        ub.field_e.g(param3, param2);
+        if (param1 == 5106) {
+          L0: {
+            if (param0) {
+              L1: {
+                var4 = 2 * (ub.field_h % ub.field_e.field_u);
+                if (var4 < ub.field_e.field_u) {
+                  break L1;
+                } else {
+                  var4 = ub.field_e.field_u + -var4 + ub.field_e.field_u;
+                  break L1;
+                }
               }
+              if (var4 >= 10) {
+                if (-40 + ub.field_e.field_u < var4) {
+                  var4 = ub.field_e.field_u + -40;
+                  vg.a(80, var4, ub.field_e, param3, param2, 0, 30, 0, 65);
+                  break L0;
+                } else {
+                  vg.a(80, var4, ub.field_e, param3, param2, 0, 30, 0, 65);
+                  return;
+                }
+              } else {
+                var4 = 10;
+                vg.a(80, var4, ub.field_e, param3, param2, 0, 30, 0, 65);
+                return;
+              }
+            } else {
+              break L0;
             }
-            int discarded$12 = 65;
-            int discarded$13 = 0;
-            int discarded$14 = 30;
-            int discarded$15 = 0;
-            vg.a(80, var4, ub.field_e, param3, param2);
-            return;
           }
+          return;
         } else {
+          L2: {
+            tj.a(false, 10, 113, 16);
+            if (param0) {
+              L3: {
+                var4 = 2 * (ub.field_h % ub.field_e.field_u);
+                if (var4 < ub.field_e.field_u) {
+                  break L3;
+                } else {
+                  var4 = ub.field_e.field_u + -var4 + ub.field_e.field_u;
+                  break L3;
+                }
+              }
+              if (var4 >= 10) {
+                if (-40 + ub.field_e.field_u < var4) {
+                  var4 = ub.field_e.field_u + -40;
+                  vg.a(80, var4, ub.field_e, param3, param2, 0, 30, 0, 65);
+                  break L2;
+                } else {
+                  vg.a(80, var4, ub.field_e, param3, param2, 0, 30, 0, 65);
+                  return;
+                }
+              } else {
+                var4 = 10;
+                vg.a(80, var4, ub.field_e, param3, param2, 0, 30, 0, 65);
+                return;
+              }
+            } else {
+              break L2;
+            }
+          }
           return;
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_e = null;
         field_c = null;

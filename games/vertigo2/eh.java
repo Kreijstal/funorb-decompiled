@@ -12,7 +12,7 @@ final class eh {
     static int[] field_b;
     static int field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_b = null;
         field_d = null;
@@ -20,7 +20,7 @@ final class eh {
         field_a = null;
     }
 
-    final static int a(int param0) {
+    final static int a(int param0, byte param1) {
         param0 = (param0 & 1431655765) - -(-715827883 & param0 >>> 1);
         param0 = ((-858993460 & param0) >>> 2) + (858993459 & param0);
         param0 = (param0 >>> 4) + param0 & 252645135;

@@ -85,7 +85,7 @@ final class sh implements Iterator {
         return 0 == (1 + param1) % 4 ? true : false;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         ((sh) this).field_b = 1;
         ((sh) this).field_d = null;
         ((sh) this).field_a = ((sh) this).field_g.field_e[0].field_a;
@@ -95,8 +95,7 @@ final class sh implements Iterator {
         ((sh) this).field_d = null;
         try {
             ((sh) this).field_g = param0;
-            int discarded$0 = -39;
-            this.a();
+            this.a((byte) -39);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "sh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

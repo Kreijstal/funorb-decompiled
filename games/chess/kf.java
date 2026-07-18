@@ -96,7 +96,7 @@ final class kf extends o {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_j = null;
         field_m = null;
         field_t = null;
@@ -1220,7 +1220,7 @@ final class kf extends o {
         }
     }
 
-    final static boolean d() {
+    final static boolean d(int param0) {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
@@ -1251,8 +1251,7 @@ final class kf extends o {
 
     final static void a(int param0) {
         if (an.field_c) {
-            int discarded$0 = 0;
-            rc.b();
+            rc.b(0);
         }
         if (param0 > -70) {
             kf.a(89);

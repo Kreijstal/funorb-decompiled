@@ -7,7 +7,7 @@ final class os extends vd {
     jk field_v;
     static bi[] field_u;
 
-    final static char a(char param0) {
+    final static char a(char param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -310,8 +310,7 @@ final class os extends vd {
                 if (param1.equals((Object) (Object) wh.field_a.a(-103))) {
                   break L1;
                 } else {
-                  int discarded$2 = -12179;
-                  wh.field_a = tf.a(param1);
+                  wh.field_a = tf.a(param1, -12179);
                   break L1;
                 }
               }
@@ -585,7 +584,7 @@ final class os extends vd {
         return super.b((byte) 69, param1, param2);
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_u = null;
     }
 

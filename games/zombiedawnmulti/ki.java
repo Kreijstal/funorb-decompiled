@@ -39,7 +39,7 @@ final class ki {
         }
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         int var1 = -112;
         if (null == ta.field_lb) {
             return "";

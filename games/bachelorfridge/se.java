@@ -22,7 +22,7 @@ final class se extends cga {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_s = null;
         field_u = null;
         int var1 = 13;

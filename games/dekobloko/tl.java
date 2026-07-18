@@ -14,7 +14,7 @@ final class tl extends wm {
     private String field_t;
     private re field_v;
 
-    final static boolean b() {
+    final static boolean b(int param0, int param1, int param2) {
         if (13 != wh.field_c) {
           if (wh.field_c != 102) {
             if (null != mg.field_bc) {
@@ -132,7 +132,7 @@ final class tl extends wm {
         return stackIn_12_0;
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_w = null;
         field_r = null;
         field_s = null;

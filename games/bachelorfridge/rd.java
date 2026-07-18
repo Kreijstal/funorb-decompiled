@@ -65,6 +65,7 @@ final class rd extends td {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
+        Object stackIn_3_0 = null;
         int[] stackIn_6_0 = null;
         int[] stackIn_10_0 = null;
         RuntimeException stackIn_12_0 = null;
@@ -77,6 +78,7 @@ final class rd extends td {
         RuntimeException decompiledCaughtException = null;
         int[] stackOut_5_0 = null;
         int[] stackOut_9_0 = null;
+        Object stackOut_2_0 = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
         RuntimeException stackOut_14_0 = null;
@@ -91,33 +93,39 @@ final class rd extends td {
             var2 = new int[50];
             var3 = param1.b(16711935);
             var4 = 0;
-            L1: while (true) {
-              L2: {
-                L3: {
-                  if (~var3 >= ~var4) {
-                    break L3;
-                  } else {
-                    stackOut_5_0 = (int[]) var2;
-                    stackIn_10_0 = stackOut_5_0;
-                    stackIn_6_0 = stackOut_5_0;
-                    if (var5 != 0) {
-                      break L2;
+            if (param0) {
+              L1: while (true) {
+                L2: {
+                  L3: {
+                    if (~var3 >= ~var4) {
+                      break L3;
                     } else {
-                      stackIn_6_0[param1.b(16711935)] = param1.b(16711935);
-                      var4++;
-                      if (var5 == 0) {
-                        continue L1;
+                      stackOut_5_0 = (int[]) var2;
+                      stackIn_10_0 = stackOut_5_0;
+                      stackIn_6_0 = stackOut_5_0;
+                      if (var5 != 0) {
+                        break L2;
                       } else {
-                        break L3;
+                        stackIn_6_0[param1.b(16711935)] = param1.b(16711935);
+                        var4++;
+                        if (var5 == 0) {
+                          continue L1;
+                        } else {
+                          break L3;
+                        }
                       }
                     }
                   }
+                  stackOut_9_0 = (int[]) var2;
+                  stackIn_10_0 = stackOut_9_0;
+                  break L2;
                 }
-                stackOut_9_0 = (int[]) var2;
-                stackIn_10_0 = stackOut_9_0;
-                break L2;
+                break L0;
               }
-              break L0;
+            } else {
+              stackOut_2_0 = null;
+              stackIn_3_0 = stackOut_2_0;
+              return (int[]) (Object) stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -125,7 +133,7 @@ final class rd extends td {
           L4: {
             var2_ref = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var2_ref;
-            stackOut_11_1 = new StringBuilder().append("rd.B(").append(true).append(',');
+            stackOut_11_1 = new StringBuilder().append("rd.B(").append(param0).append(',');
             stackIn_14_0 = stackOut_11_0;
             stackIn_14_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;

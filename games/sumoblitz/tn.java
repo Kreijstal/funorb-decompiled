@@ -960,8 +960,7 @@ final class tn extends jb {
     final static void b(byte param0) {
         ks.field_x = fw.c(false);
         pu.field_e = new dg();
-        int discarded$0 = 40;
-        is.a();
+        is.a(40);
     }
 
     final nb a(byte param0) {

@@ -8,7 +8,7 @@ final class ik {
     private boolean field_b;
     private bk field_c;
 
-    private final void a(nj[] param0) {
+    private final void a(nj[] param0, int param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -102,15 +102,14 @@ final class ik {
         if (param0) {
             ((ik) this).field_e = null;
         }
-        int discarded$0 = 89;
-        return this.a(hk.b(-45));
+        return this.a(hk.b(-45), 89);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
     }
 
-    private final boolean a(java.awt.Canvas param0) {
+    private final boolean a(java.awt.Canvas param0, int param1) {
         bk var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -443,8 +442,7 @@ final class ik {
                 }
                 case 16: {
                     try {
-                        int discarded$10 = 1;
-                        var7_int = ig.a("hw3d");
+                        var7_int = ig.a("hw3d", true);
                         if (var7_int != -1) {
                             statePc = 18;
                         } else {
@@ -497,8 +495,7 @@ final class ik {
                 }
                 case 21: {
                     try {
-                        int discarded$11 = 1;
-                        var8_int = ig.a("jaclib");
+                        var8_int = ig.a("jaclib", true);
                         if (var8_int != -1) {
                             statePc = 23;
                         } else {
@@ -551,8 +548,7 @@ final class ik {
                 }
                 case 26: {
                     try {
-                        int discarded$12 = 1;
-                        var9 = ig.a("jaggl");
+                        var9 = ig.a("jaggl", true);
                         if (var9 != -1) {
                             statePc = 28;
                         } else {
@@ -632,8 +628,7 @@ final class ik {
                 }
                 case 34: {
                     try {
-                        int discarded$13 = 1;
-                        var7_int = ig.a("jaclib");
+                        var7_int = ig.a("jaclib", true);
                         if (-1 != var7_int) {
                             statePc = 36;
                         } else {
@@ -686,8 +681,7 @@ final class ik {
                 }
                 case 39: {
                     try {
-                        int discarded$14 = 1;
-                        var8_int = ig.a("jaggl");
+                        var8_int = ig.a("jaggl", true);
                         if (var8_int == -1) {
                             statePc = 41;
                         } else {
@@ -767,8 +761,7 @@ final class ik {
                 }
                 case 47: {
                     try {
-                        int discarded$15 = 1;
-                        var7_int = ig.a("jaclib");
+                        var7_int = ig.a("jaclib", true);
                         if (var7_int == -1) {
                             statePc = 49;
                         } else {
@@ -831,8 +824,7 @@ final class ik {
                 }
                 case 53: {
                     try {
-                        int discarded$16 = 1;
-                        var8_int = ig.a("jagdx");
+                        var8_int = ig.a("jagdx", true);
                         if (var8_int != -1) {
                             statePc = 55;
                         } else {
@@ -885,8 +877,7 @@ final class ik {
                 }
                 case 58: {
                     try {
-                        int discarded$17 = 1;
-                        var9 = ig.a("hw3d");
+                        var9 = ig.a("hw3d", true);
                         if (var9 == -1) {
                             statePc = 60;
                         } else {
@@ -966,8 +957,7 @@ final class ik {
                 }
                 case 66: {
                     try {
-                        int discarded$18 = 1;
-                        var7_int = ig.a("jaclib");
+                        var7_int = ig.a("jaclib", true);
                         if (var7_int != -1) {
                             statePc = 68;
                         } else {
@@ -1020,8 +1010,7 @@ final class ik {
                 }
                 case 71: {
                     try {
-                        int discarded$19 = 1;
-                        var8_int = ig.a("sw3d");
+                        var8_int = ig.a("sw3d", true);
                         if (var8_int != -1) {
                             statePc = 73;
                         } else {
@@ -1522,8 +1511,7 @@ final class ik {
             ((ik) this).field_e = param2;
             sn.field_d = param0;
             ow.a(-18527, param0, param3);
-            int discarded$0 = 97;
-            this.a(param4);
+            this.a(param4, 97);
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

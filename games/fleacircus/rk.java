@@ -13,11 +13,11 @@ final class rk extends wi {
     static int[] field_u;
     fa field_x;
 
-    final static int e() {
+    final static int e(int param0) {
         return ng.field_c;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_w = null;
         field_u = null;
     }

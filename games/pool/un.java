@@ -11,7 +11,7 @@ final class un {
     static String field_d;
     static int[] field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_f = null;
         field_a = null;
@@ -75,7 +75,7 @@ final class un {
         return stackIn_14_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1 = 0;
         var1 = 1;
         if (im.field_fc != 0 - cl.field_h) {
@@ -96,7 +96,7 @@ final class un {
         ne.field_r.d((byte) 47);
     }
 
-    final static void a(int param0, bj param1) {
+    final static void a(int param0, bj param1, byte param2) {
         oq var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_3_0 = null;

@@ -9,7 +9,7 @@ final class na {
     private int field_d;
     private kd field_e;
 
-    final static void a() {
+    final static void a(int param0, boolean param1) {
         cc var2 = null;
         var2 = th.field_o[2];
         if (!var2.a(false)) {
@@ -251,7 +251,7 @@ final class na {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         try {
             int var1_int = 0;
             Exception var1 = null;
@@ -325,7 +325,7 @@ final class na {
         }
     }
 
-    final static void a(byte param0, wa param1) {
+    final static void a(byte param0, wa param1, int param2) {
         int var4 = 0;
         th var5 = ed.field_q;
         var5.h(5, 0);

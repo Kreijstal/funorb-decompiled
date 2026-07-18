@@ -132,13 +132,10 @@ final class qla extends kj {
         }
     }
 
-    final static void d() {
-        int discarded$0 = 31883;
-        eaa.f();
-        int discarded$1 = -21522;
-        nm.f();
-        int discarded$2 = -103;
-        uc.b();
+    final static void d(int param0) {
+        eaa.f(31883);
+        nm.f(-21522);
+        uc.b(-103);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -147,7 +144,7 @@ final class qla extends kj {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_g = null;
     }
 

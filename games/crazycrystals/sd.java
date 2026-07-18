@@ -19,7 +19,7 @@ final class sd extends ga implements lf {
         super(param0, param1, param2);
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_R = null;
         field_T = null;
     }

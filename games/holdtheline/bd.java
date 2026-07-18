@@ -320,7 +320,7 @@ final class bd extends cj {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_V = null;
         field_Q = null;
         field_R = null;
@@ -400,16 +400,14 @@ final class bd extends cj {
                 ((bd) this).field_T = new hj(var11, var12);
                 hf.a(((bd) this).field_T, -1);
                 var18.b(112, 144, var18.field_o << 4, var18.field_v << 4, -((bd) this).field_N << 10, 4096);
-                int discarded$8 = -10;
-                dm.b();
+                dm.b((byte) -10);
                 ((bd) this).field_T.b(-(var18.field_o >> 1) + var9, -var18.field_v + var10, 256);
                 return;
               } else {
                 hf.a(((bd) this).field_T, -1);
                 tc.c();
                 var18.b(112, 144, var18.field_o << 4, var18.field_v << 4, -((bd) this).field_N << 10, 4096);
-                int discarded$9 = -10;
-                dm.b();
+                dm.b((byte) -10);
                 ((bd) this).field_T.b(-(var18.field_o >> 1) + var9, -var18.field_v + var10, 256);
                 return;
               }
@@ -417,8 +415,7 @@ final class bd extends cj {
               ((bd) this).field_T = new hj(var11, var12);
               hf.a(((bd) this).field_T, -1);
               var18.b(112, 144, var18.field_o << 4, var18.field_v << 4, -((bd) this).field_N << 10, 4096);
-              int discarded$10 = -10;
-              dm.b();
+              dm.b((byte) -10);
               ((bd) this).field_T.b(-(var18.field_o >> 1) + var9, -var18.field_v + var10, 256);
               return;
             }
@@ -426,8 +423,7 @@ final class bd extends cj {
             ((bd) this).field_T = new hj(var11, var12);
             hf.a(((bd) this).field_T, -1);
             var18.b(112, 144, var18.field_o << 4, var18.field_v << 4, -((bd) this).field_N << 10, 4096);
-            int discarded$11 = -10;
-            dm.b();
+            dm.b((byte) -10);
             ((bd) this).field_T.b(-(var18.field_o >> 1) + var9, -var18.field_v + var10, 256);
             return;
           }
@@ -459,16 +455,14 @@ final class bd extends cj {
                   ((bd) this).field_T = new hj(var11, var12);
                   hf.a(((bd) this).field_T, -1);
                   var17.b(112, 144, var17.field_o << 4, var17.field_v << 4, -((bd) this).field_N << 10, 4096);
-                  int discarded$12 = -10;
-                  dm.b();
+                  dm.b((byte) -10);
                   ((bd) this).field_T.b(-(var17.field_o >> 1) + var9, -var17.field_v + var10, 256);
                   return;
                 } else {
                   hf.a(((bd) this).field_T, -1);
                   tc.c();
                   var17.b(112, 144, var17.field_o << 4, var17.field_v << 4, -((bd) this).field_N << 10, 4096);
-                  int discarded$13 = -10;
-                  dm.b();
+                  dm.b((byte) -10);
                   ((bd) this).field_T.b(-(var17.field_o >> 1) + var9, -var17.field_v + var10, 256);
                   return;
                 }
@@ -476,8 +470,7 @@ final class bd extends cj {
                 ((bd) this).field_T = new hj(var11, var12);
                 hf.a(((bd) this).field_T, -1);
                 var17.b(112, 144, var17.field_o << 4, var17.field_v << 4, -((bd) this).field_N << 10, 4096);
-                int discarded$14 = -10;
-                dm.b();
+                dm.b((byte) -10);
                 ((bd) this).field_T.b(-(var17.field_o >> 1) + var9, -var17.field_v + var10, 256);
                 return;
               }
@@ -485,8 +478,7 @@ final class bd extends cj {
               ((bd) this).field_T = new hj(var11, var12);
               hf.a(((bd) this).field_T, -1);
               var17.b(112, 144, var17.field_o << 4, var17.field_v << 4, -((bd) this).field_N << 10, 4096);
-              int discarded$15 = -10;
-              dm.b();
+              dm.b((byte) -10);
               ((bd) this).field_T.b(-(var17.field_o >> 1) + var9, -var17.field_v + var10, 256);
               return;
             }
@@ -495,8 +487,7 @@ final class bd extends cj {
     }
 
     bd(ia param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (dh) (Object) cj.k());
-        int discarded$0 = 105;
+        super(param1, (dh) (Object) cj.k(105));
         try {
             ((bd) this).field_P = param1;
             ((bd) this).field_U = param0;

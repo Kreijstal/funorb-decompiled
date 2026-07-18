@@ -54,7 +54,7 @@ final class pk {
         }
     }
 
-    final static void a(String param0, String[] param1, int param2) {
+    final static void a(String param0, String[] param1, int param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -187,22 +187,20 @@ final class pk {
             b.field_v = true;
             return;
           } else {
-            int discarded$4 = 107;
-            ki.f();
+            ki.f(107);
             eg.field_d = 11;
             b.field_v = true;
             return;
           }
         } else {
-          int discarded$5 = 107;
-          ki.f();
+          ki.f(107);
           eg.field_d = 11;
           b.field_v = true;
           return;
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_j = null;
         field_b = null;

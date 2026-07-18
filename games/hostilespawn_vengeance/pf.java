@@ -176,7 +176,7 @@ final class pf {
         }
     }
 
-    final static void a(int[] param0) {
+    final static void a(int[] param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -243,16 +243,15 @@ final class pf {
         }
     }
 
-    final static void b() {
-        int discarded$0 = -1;
-        de.c();
+    final static void b(byte param0) {
+        de.c(-1);
         rj.field_K = true;
         li.field_o = true;
         im.field_e.f((byte) 32);
         qa.a(false, (byte) -37, uj.field_h);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_j = null;
         field_I = null;
         field_N = null;
@@ -297,8 +296,7 @@ final class pf {
                   stackIn_12_0 = stackOut_11_0;
                   break L0;
                 } else {
-                  int discarded$15 = 108;
-                  if (!aa.a(param0.charAt(var4))) {
+                  if (!aa.a(param0.charAt(var4), (byte) 108)) {
                     stackOut_8_0 = 0;
                     stackIn_9_0 = stackOut_8_0;
                     return stackIn_9_0 != 0;

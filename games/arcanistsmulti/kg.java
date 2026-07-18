@@ -12,7 +12,7 @@ final class kg {
     private eg field_i;
     static boolean field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_d = null;
         field_c = null;
@@ -218,8 +218,7 @@ final class kg {
                 if (wi.field_f == null) {
                   break L3;
                 } else {
-                  int discarded$3 = 8192;
-                  if (vf.a(param0) == null) {
+                  if (vf.a(param0, 8192) == null) {
                     break L3;
                   } else {
                     stackOut_7_0 = 1;

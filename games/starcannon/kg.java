@@ -23,7 +23,7 @@ final class kg {
         }
     }
 
-    final static long b() {
+    final static long b(byte param0) {
         return dd.b(79) - ik.field_p;
     }
 
@@ -39,13 +39,10 @@ final class kg {
         try {
             mh.field_k = wc.a(-43) * param2 / 1000;
             dh.a((byte) 115, param3);
-            int discarded$0 = 124;
-            nb.a(param3);
+            nb.a(param3, (byte) 124);
             lc.a(false, param3);
-            int discarded$1 = -68;
-            p.a();
-            int discarded$2 = -96;
-            fi.c();
+            p.a((byte) -68);
+            fi.c((byte) -96);
             qb.field_h = -mh.field_k + param1;
         } catch (RuntimeException runtimeException) {
             throw sd.a((Throwable) (Object) runtimeException, "kg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

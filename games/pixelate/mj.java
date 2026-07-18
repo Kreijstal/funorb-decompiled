@@ -150,8 +150,7 @@ final class mj {
                       stackIn_17_0 = stackOut_16_0;
                       return stackIn_17_0;
                     } else {
-                      int discarded$1 = 37;
-                      if (!ha.a(param1)) {
+                      if (!ha.a(param1, (byte) 37)) {
                         var6 = aa.field_f;
                         var6.g(param2, 15514);
                         var6.field_m = var6.field_m + 1;
@@ -231,7 +230,7 @@ final class mj {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         un.field_l = false;
         if (null != bo.field_h) {
           L0: {

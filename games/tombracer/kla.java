@@ -144,7 +144,7 @@ final class kla {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(jf.field_r)) {
             throw new IllegalStateException();
         }
@@ -158,7 +158,7 @@ final class kla {
         um.field_l.c(true);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (wba.field_o != null) {
             wba.field_o.field_h = false;
             uu.b(12475, 0);

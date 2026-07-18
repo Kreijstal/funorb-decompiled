@@ -10,7 +10,7 @@ final class ul {
     int field_c;
     int field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         int var1 = -2;
     }

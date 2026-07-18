@@ -7,7 +7,7 @@ final class mma {
     static hra field_d;
     static ka[] field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         field_d = null;

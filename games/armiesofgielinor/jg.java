@@ -10,7 +10,7 @@ final class jg extends tc {
     static String field_n;
     static int field_k;
 
-    public static void a() {
+    public static void a(int param0) {
         field_n = null;
         int var1 = 0;
         field_m = null;
@@ -99,8 +99,7 @@ final class jg extends tc {
                   }
                 }
                 param0 = (stackIn_13_0 >> 2) - -120;
-                int discarded$2 = 87;
-                te discarded$3 = jv.a(td.field_d[var5][var6], param1, param0);
+                te discarded$1 = jv.a(td.field_d[var5][var6], param1, param0, (byte) 87);
                 break L1;
               }
             }
@@ -1145,7 +1144,7 @@ final class jg extends tc {
         }
     }
 
-    final static void e() {
+    final static void e(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -1216,8 +1215,7 @@ final class jg extends tc {
                       return;
                     }
                   } else {
-                    int discarded$1 = 0;
-                    af.a((Throwable) null, 78, "A1: " + cm.b());
+                    af.a((Throwable) null, 78, "A1: " + cm.b(false));
                     dj.a((byte) -127);
                     break L1;
                   }

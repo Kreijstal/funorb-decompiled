@@ -10,7 +10,7 @@ final class w extends ji {
     static int field_z;
     static cr[] field_C;
 
-    final static ge a(byte[] param0) {
+    final static ge a(byte[] param0, boolean param1) {
         ge var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -170,14 +170,13 @@ final class w extends ji {
                 break L1;
               } else {
                 var7 = null;
-                co discarded$4 = w.a((r) null, (r) null, (String) null, (String) null, 73);
+                co discarded$2 = w.a((r) null, (r) null, (String) null, (String) null, 73);
                 break L1;
               }
             }
             var5_int = param1.a((byte) 118, param3);
             var6 = param1.a(var5_int, param2, 113);
-            int discarded$5 = 70;
-            stackOut_2_0 = fi.a(var5_int, param1, param0, var6);
+            stackOut_2_0 = fi.a(var5_int, param1, param0, var6, (byte) 70);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -313,8 +312,7 @@ final class w extends ji {
         try {
           L0: {
             var3_int = 127 % ((param2 - -57) / 50);
-            int discarded$2 = 255;
-            stackOut_0_0 = om.a(param0, 0, param1);
+            stackOut_0_0 = om.a(param0, 0, param1, 255);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -351,7 +349,7 @@ final class w extends ji {
         return stackIn_1_0;
     }
 
-    final static void a(r param0, r param1, r param2) {
+    final static void a(r param0, r param1, r param2, byte param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -406,8 +404,7 @@ final class w extends ji {
         try {
           L0: {
             tj.field_c = false;
-            int discarded$1 = 121;
-            uk.a(param2, param1);
+            uk.a(param2, param1, 121);
             var7 = new ei(0);
             L1: while (true) {
               if (var7.a((byte) 70)) {
@@ -543,7 +540,7 @@ final class w extends ji {
         }
     }
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
@@ -772,7 +769,7 @@ final class w extends ji {
         return stackIn_5_0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_C = null;
         field_B = null;
         field_D = null;

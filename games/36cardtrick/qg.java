@@ -508,7 +508,7 @@ abstract class qg extends lk implements u {
         return stackIn_6_0 != 0;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -678,7 +678,7 @@ abstract class qg extends lk implements u {
         return stackIn_5_0 != 0;
     }
 
-    private final boolean a(lk param0) {
+    private final boolean a(lk param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -908,8 +908,7 @@ abstract class qg extends lk implements u {
                   stackIn_10_0 = stackOut_9_0;
                   break L2;
                 } else {
-                  int discarded$3 = -23;
-                  stackOut_8_0 = this.a(param3);
+                  stackOut_8_0 = this.a(param3, (byte) -23);
                   stackIn_10_0 = stackOut_8_0;
                   break L2;
                 }
@@ -960,7 +959,7 @@ abstract class qg extends lk implements u {
         return stackIn_15_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_z = null;
     }
 

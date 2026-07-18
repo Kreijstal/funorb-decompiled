@@ -76,7 +76,7 @@ final class st extends rqa {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 

@@ -123,8 +123,7 @@ class fc {
 
     void a(byte param0) {
         ((fc) this).a(((fc) this).field_g, 9);
-        int discarded$0 = -10;
-        this.b(((fc) this).field_g);
+        this.b(((fc) this).field_g, -10);
         ((fc) this).field_d = ((fc) this).field_g[0].length;
         if (param0 < 120) {
             return;
@@ -145,7 +144,7 @@ class fc {
         }
     }
 
-    private final void b(int[][] param0) {
+    private final void b(int[][] param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -1129,7 +1128,7 @@ class fc {
         return stackIn_4_0 != 0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         if (f.field_a != -vm.field_hb) {
             if (-vm.field_hb + 250 != f.field_a) {
             }

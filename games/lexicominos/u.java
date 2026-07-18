@@ -673,8 +673,7 @@ final class u extends uc implements jk {
         mb var2 = null;
         if (((u) this).field_D) {
           if (!((u) this).field_ub) {
-            int discarded$1 = 0;
-            var2 = jg.c();
+            var2 = jg.c(false);
             if (var2 == null) {
               if (param0 > -21) {
                 u.l((byte) -108);
@@ -709,7 +708,7 @@ final class u extends uc implements jk {
         }
     }
 
-    public static void j() {
+    public static void j(byte param0) {
         field_pb = null;
     }
 
@@ -1087,8 +1086,7 @@ final class u extends uc implements jk {
               }
               break L0;
             } else {
-              int discarded$2 = 37;
-              jd.a(false, true);
+              jd.a(false, true, 37);
               return;
             }
           }

@@ -8,7 +8,7 @@ final class pe extends l {
     static int field_k;
     int field_i;
 
-    final static void a(java.awt.Component param0, i param1, pd param2, boolean param3) {
+    final static void a(java.awt.Component param0, i param1, pd param2, boolean param3, byte param4, int param5) {
         try {
             wl.a(param2, param1, 1024, 106, param3, param0, 22050, 22050);
         } catch (RuntimeException runtimeException) {
@@ -40,12 +40,12 @@ final class pe extends l {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         int var1 = -99;
     }
 
-    final static String a(String param0, String param1, eh param2) {
+    final static String a(String param0, String param1, eh param2, int param3, int param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;
@@ -358,7 +358,7 @@ final class pe extends l {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         db.field_k = null;
         k.field_c = null;
         gb.field_F = null;

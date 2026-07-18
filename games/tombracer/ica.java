@@ -412,7 +412,7 @@ final class ica {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         iu var1 = null;
         iu var2 = null;
         int var3 = 0;
@@ -423,8 +423,7 @@ final class ica {
             uoa.b();
             bea.a();
             tl.field_r = 0;
-            int discarded$0 = 0;
-            uw.a();
+            uw.a(false);
             var2 = var1.a();
             for (var3 = 0; 15 > var3; var3++) {
                 var2.b(-2, -2, 16777215);

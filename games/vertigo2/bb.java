@@ -256,7 +256,7 @@ final class bb extends ji {
         ((bb) this).field_z = new int[3];
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_G = null;
         field_F = null;
         field_y = null;
@@ -336,8 +336,7 @@ final class bb extends ji {
                   break L5;
                 }
               }
-              int discarded$2 = 640;
-              in.a(param1);
+              in.a(param1, 640);
               break L0;
             } else {
               return;

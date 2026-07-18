@@ -17,7 +17,7 @@ final class hn {
         field_c = null;
     }
 
-    final static String a(long param0) {
+    final static String a(long param0, boolean param1) {
         aq.field_b.setTime(new Date(param0));
         int var3 = aq.field_b.get(7);
         int var4 = aq.field_b.get(5);

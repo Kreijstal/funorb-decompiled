@@ -5,7 +5,7 @@ final class nsa extends rqa {
     static int field_o;
     static ha field_p;
 
-    public static void e() {
+    public static void e(byte param0) {
         int var1 = -23;
         field_p = null;
     }

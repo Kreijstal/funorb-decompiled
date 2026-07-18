@@ -103,7 +103,7 @@ final class bg extends qn implements ee {
         }
     }
 
-    public static void n() {
+    public static void n(int param0) {
         field_cb = null;
         field_Z = null;
     }

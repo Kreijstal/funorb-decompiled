@@ -8,7 +8,7 @@ abstract class ie extends ng implements j {
     static String field_F;
     ng field_H;
 
-    public static void a() {
+    public static void a(int param0) {
         field_F = null;
         field_G = null;
     }

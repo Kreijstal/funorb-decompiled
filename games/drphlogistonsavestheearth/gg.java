@@ -23,11 +23,11 @@ final class gg {
     private double field_p;
     private int field_a;
 
-    private final double a() {
+    private final double a(int param0) {
         return (double)hi.a(1000, 4, ((gg) this).field_r) / 1000.0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_i = null;
         field_f = null;
         field_d = null;
@@ -144,8 +144,7 @@ final class gg {
                 if (var15 >= var13) {
                   return;
                 } else {
-                  int discarded$1 = 1769212228;
-                  this.a(param0, var11, param2, param3, (byte) 47, 1 + param5, var12, (int)(((gg) this).field_g * (double)param7), param8 + (-0.5 + this.a()) * ((gg) this).field_m);
+                  this.a(param0, var11, param2, param3, (byte) 47, 1 + param5, var12, (int)(((gg) this).field_g * (double)param7), param8 + (-0.5 + this.a(1769212228)) * ((gg) this).field_m);
                   var15++;
                   continue L3;
                 }
@@ -200,8 +199,7 @@ final class gg {
                       break L4;
                     }
                   }
-                  int discarded$1 = 1769212228;
-                  this.a(param3, ((gg) this).field_a, param2, param1, (byte) 31, 0, ((gg) this).field_j, ((gg) this).field_c, ((gg) this).field_h + (this.a() - 0.5) * ((gg) this).field_p);
+                  this.a(param3, ((gg) this).field_a, param2, param1, (byte) 31, 0, ((gg) this).field_j, ((gg) this).field_c, ((gg) this).field_h + (this.a(1769212228) - 0.5) * ((gg) this).field_p);
                   var8++;
                   continue L2;
                 }

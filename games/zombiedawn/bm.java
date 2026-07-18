@@ -7,7 +7,7 @@ final class bm {
     static cf field_d;
     private int[] field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
     }

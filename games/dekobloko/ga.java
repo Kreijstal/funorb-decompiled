@@ -148,7 +148,7 @@ final class ga implements lh {
         return stackIn_8_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
         field_c = null;
@@ -156,7 +156,7 @@ final class ga implements lh {
         field_a = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         aa.field_f = new vj();
     }
 

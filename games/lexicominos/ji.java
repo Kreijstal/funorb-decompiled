@@ -32,7 +32,7 @@ final class ji implements Iterable {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         int var1 = 0;
         field_b = null;

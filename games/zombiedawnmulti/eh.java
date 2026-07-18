@@ -49,8 +49,7 @@ final class eh {
               break L2;
             }
           }
-          int discarded$1 = 1;
-          ql.a();
+          ql.a(true);
           if (f.field_a >= 150) {
             qp.field_v.c(15 + var3_int, var4 - -10, var5);
             return;
@@ -394,8 +393,7 @@ final class eh {
               if (var3 >= 15) {
                 kk.field_r.a();
                 var1.f(0, 0);
-                int discarded$1 = 1;
-                ql.a();
+                ql.a(true);
                 break L0;
               } else {
                 var2.f(-2, -2, 16777215);
@@ -412,7 +410,7 @@ final class eh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_g = null;
         field_f = null;

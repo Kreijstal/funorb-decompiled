@@ -147,8 +147,7 @@ final class rp extends hfa {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = -2490;
-            qc.a(param1);
+            qc.a(param1, -2490);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

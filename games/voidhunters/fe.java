@@ -18,7 +18,7 @@ final class fe extends rqa {
         field_o = null;
     }
 
-    final static oib a(String param0, String param1) {
+    final static oib a(String param0, String param1, boolean param2, byte param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;

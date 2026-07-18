@@ -9,7 +9,7 @@ final class bh implements dja {
         return (tv[]) (Object) new rgb[param1];
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, boolean param1) {
         faa var2 = dpa.field_p;
         var2.h(24335, param0);
         var2.field_e = var2.field_e + 1;
@@ -22,7 +22,7 @@ final class bh implements dja {
         var2.e(-var3 + var2.field_e, -129);
     }
 
-    final static apb[] a(faa param0) {
+    final static apb[] a(faa param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

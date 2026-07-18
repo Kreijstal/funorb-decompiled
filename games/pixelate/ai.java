@@ -136,7 +136,7 @@ final class ai {
         return stackIn_14_0 != 0;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = Pixelate.field_H ? 1 : 0;
@@ -174,8 +174,7 @@ final class ai {
           }
         } else {
           if (vh.field_c == null) {
-            int discarded$3 = 0;
-            ib.field_f = wo.a(mc.field_k, 150, 480, 0, 640);
+            ib.field_f = wo.a(mc.field_k, 150, 480, 0, 640, 0);
             if (ib.field_f != null) {
               var2 = 2;
               he.a(0, (java.awt.Canvas) (Object) ib.field_f);
@@ -210,9 +209,7 @@ final class ai {
             }
           } else {
             ib.field_f = vh.field_c.b(false);
-            int discarded$4 = 114;
-            int discarded$5 = 2;
-            ah.a();
+            ah.a(2, (byte) 114);
             if (ib.field_f != null) {
               var2 = 2;
               he.a(0, (java.awt.Canvas) (Object) ib.field_f);

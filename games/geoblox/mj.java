@@ -6,7 +6,7 @@ final class mj {
     static int field_b;
     static String field_c;
 
-    final static String a(int param0, int param1, CharSequence[] param2) {
+    final static String a(int param0, int param1, CharSequence[] param2, byte param3) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -141,7 +141,7 @@ final class mj {
         return stackIn_25_0;
     }
 
-    final static nd a(String param0) {
+    final static nd a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

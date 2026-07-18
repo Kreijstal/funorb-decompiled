@@ -6,7 +6,7 @@ final class mb extends ds {
     static boolean field_i;
     static int field_j;
 
-    public static void f() {
+    public static void f(byte param0) {
         field_k = null;
     }
 

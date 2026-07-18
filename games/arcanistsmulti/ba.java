@@ -32,7 +32,7 @@ final class ba {
         field_b = null;
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String a(boolean param0, CharSequence param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -191,7 +191,7 @@ final class ba {
         g.field_e.a((byte) -92, (qm) (Object) new td());
     }
 
-    final static void c() {
+    final static void c(int param0) {
         p.field_b.f(-120);
         if (null == ci.field_c) {
             ci.field_c = new gd(p.field_b, fg.field_o);
@@ -199,7 +199,7 @@ final class ba {
         p.field_b.b((qm) (Object) ci.field_c, 15637);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -279,7 +279,7 @@ final class ba {
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
         int var1 = 96;
         if (null != p.field_b) {
             p.field_b.h((byte) 83);
@@ -287,8 +287,7 @@ final class ba {
         if (ci.field_c != null) {
             ci.field_c.k((byte) 61);
         }
-        int discarded$0 = -102;
-        hb.f();
+        hb.f((byte) -102);
     }
 
     final static String a(int param0, int param1, byte param2, byte[] param3) {

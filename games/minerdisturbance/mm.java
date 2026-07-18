@@ -56,7 +56,7 @@ final class mm implements uj {
         }
     }
 
-    final static void a(boolean param0, wh param1, int param2, int param3) {
+    final static void a(boolean param0, wh param1, int param2, int param3, boolean param4, int param5) {
         Object var6 = null;
         Object var6_ref = null;
         RuntimeException var6_ref2 = null;

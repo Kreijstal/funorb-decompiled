@@ -10,7 +10,7 @@ final class fl {
     static fm field_b;
     private boolean field_a;
 
-    final static qe c() {
+    final static qe c(int param0) {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         qe var2 = null;
@@ -150,7 +150,7 @@ final class fl {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_c = null;
         field_f = null;

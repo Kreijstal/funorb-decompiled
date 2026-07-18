@@ -84,6 +84,7 @@ final class e {
         String var5_ref = null;
         int var6 = 0;
         Object var7 = null;
+        Object var8 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -165,8 +166,8 @@ final class e {
                 }
               }
               L2: {
-                int discarded$1 = 0;
-                ir.a((String) null, lj.field_p, var5_ref, 0);
+                var8 = null;
+                ir.a((String) null, lj.field_p, var5_ref, 0, 0);
                 ha.field_a = dj.field_d;
                 gj.field_z = ui.field_b;
                 dj.field_d.field_B = ((np.field_Ib.field_B & 16711422) >> 1) + lj.field_p + -(8355711 & lj.field_p >> 1);
@@ -713,7 +714,7 @@ final class e {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_b = null;
         field_j = null;
@@ -729,7 +730,7 @@ final class e {
         return (e) this;
     }
 
-    final static gg a(ae param0) {
+    final static gg a(ae param0, boolean param1) {
         RuntimeException var2 = null;
         gg stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -788,11 +789,11 @@ final class e {
         return stackIn_1_0;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, byte param1) {
         gk.field_c.b(param0, 0);
     }
 
-    final static void a(jj param0, Object param1) {
+    final static void a(jj param0, Object param1, int param2) {
         Exception var3 = null;
         RuntimeException var3_ref = null;
         int var3_int = 0;

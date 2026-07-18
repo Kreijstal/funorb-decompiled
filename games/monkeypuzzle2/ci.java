@@ -39,14 +39,14 @@ final class ci {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
         int var1 = 0;
         field_a = null;
         field_c = null;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return v.field_c;
     }
 

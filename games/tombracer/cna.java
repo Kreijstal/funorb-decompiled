@@ -7,7 +7,7 @@ final class cna {
     static int[] field_c;
     static String[] field_b;
 
-    final static bna a() {
+    final static bna a(int param0, int param1) {
         bna var2 = new bna();
         tca.field_N.b((byte) -109, (vg) (Object) var2);
         rh.b(4, -100);

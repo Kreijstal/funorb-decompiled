@@ -149,15 +149,13 @@ final class qm extends cj implements ij {
             L1: {
               if (((qm) this).field_E != param1) {
                 if (param1 == ((qm) this).field_F) {
-                  int discarded$4 = -104;
-                  ff.b();
+                  ff.b((byte) -104);
                   break L1;
                 } else {
                   if (param1 != ((qm) this).field_H) {
                     break L1;
                   } else {
-                    int discarded$5 = 0;
-                    wq.i();
+                    wq.i(0);
                     break L1;
                   }
                 }
@@ -344,7 +342,7 @@ final class qm extends cj implements ij {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_G = null;
     }
 

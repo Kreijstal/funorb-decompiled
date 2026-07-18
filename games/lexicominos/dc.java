@@ -25,36 +25,33 @@ final class dc extends si {
         throw new RuntimeException();
     }
 
-    final static void c() {
+    final static void c(int param0) {
         Object var2 = null;
         cl.a((byte) 41, (String) null, "");
     }
 
-    final static boolean d() {
+    final static boolean d(int param0) {
         if (a.field_c == -1) {
-            int discarded$7 = 10343;
-            if (!(a.b(1))) {
+            if (!(a.b(1, 10343))) {
                 return false;
             }
             a.field_c = ig.field_a.d(true);
             ig.field_a.field_h = 0;
         }
         if (a.field_c == -2) {
-            int discarded$15 = 10343;
-            if (!(a.b(2))) {
+            if (!(a.b(2, 10343))) {
                 return false;
             }
             a.field_c = ig.field_a.b(-1698573656);
             ig.field_a.field_h = 0;
         }
-        int discarded$16 = 10343;
-        return a.b(a.field_c);
+        return a.b(a.field_c, 10343);
     }
 
     dc() {
     }
 
-    final static String[] a(String param0, char param1) {
+    final static String[] a(String param0, char param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;
@@ -148,7 +145,7 @@ final class dc extends si {
         return stackIn_8_0;
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_y = null;
         int var1 = 0;
         field_z = null;

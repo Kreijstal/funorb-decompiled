@@ -4,11 +4,11 @@
 final class vk extends rqa {
     static String field_o;
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
     }
 
-    final static void a(java.applet.Applet param0, int param1, String[] param2) {
+    final static void a(java.applet.Applet param0, int param1, String[] param2, int param3, int param4, int param5) {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;

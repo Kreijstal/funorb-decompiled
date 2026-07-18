@@ -7,7 +7,7 @@ final class df extends lea {
     static ka[] field_J;
     static String field_I;
 
-    public static void s() {
+    public static void s(byte param0) {
         field_H = null;
         field_J = null;
         field_I = null;

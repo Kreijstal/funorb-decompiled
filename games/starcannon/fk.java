@@ -38,7 +38,7 @@ final class fk {
     int field_A;
     int field_h;
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, byte param2) {
         int var3 = param0 >> 16;
         int var4 = param0 & 65535;
         int var5 = param1 >> 16;
@@ -46,7 +46,7 @@ final class fk {
         return (var4 * var6 >> 16) + (var4 * var5 + param1 * var3);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_v = null;
     }

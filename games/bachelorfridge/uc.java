@@ -7,7 +7,7 @@ final class uc extends pv {
     static int[] field_k;
     static nn field_m;
 
-    private final void d() {
+    private final void d(byte param0) {
         ((uc) this).field_f.field_y = -1;
     }
 
@@ -36,10 +36,9 @@ final class uc extends pv {
 
     final boolean b(boolean param0) {
         if (param0) {
-          int fieldTemp$6 = ((uc) this).field_g + 1;
+          int fieldTemp$2 = ((uc) this).field_g + 1;
           ((uc) this).field_g = ((uc) this).field_g + 1;
-          int discarded$7 = -31460;
-          if (fieldTemp$6 <= this.c()) {
+          if (fieldTemp$2 <= this.c(-31460)) {
             if (((uc) this).field_g == 1) {
               ((uc) this).field_f.field_v.a((byte) 107, ((uc) this).field_f.field_g.field_o.field_b, 2);
               c.a(1220394217, ((uc) this).field_f.field_g.field_o.field_e);
@@ -48,8 +47,7 @@ final class uc extends pv {
               return false;
             }
           } else {
-            int discarded$8 = 100;
-            this.d();
+            this.d((byte) 100);
             return true;
           }
         } else {
@@ -57,7 +55,7 @@ final class uc extends pv {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
     }
 
     public static void c(byte param0) {
@@ -76,7 +74,7 @@ final class uc extends pv {
         }
     }
 
-    private final int c() {
+    private final int c(int param0) {
         return 240;
     }
 

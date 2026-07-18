@@ -25,7 +25,7 @@ final class lw extends ksa {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_i = null;
     }

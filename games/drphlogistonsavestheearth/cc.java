@@ -28,7 +28,7 @@ final class cc extends gi {
     static he[] field_y;
     int field_r;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_w = null;
         field_y = null;
         field_p = null;
@@ -53,8 +53,7 @@ final class cc extends gi {
         StringBuilder stackOut_7_1 = null;
         String stackOut_7_2 = null;
         try {
-          int discarded$7 = -98;
-          if (fl.a(param3, param2, param0)) {
+          if (fl.a(param3, param2, param0, (byte) -98)) {
             return uh.e(7786);
           } else {
             return null;

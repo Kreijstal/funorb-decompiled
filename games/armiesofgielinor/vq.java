@@ -575,7 +575,7 @@ final class vq {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
         field_e = null;
@@ -584,7 +584,7 @@ final class vq {
         field_f = null;
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, boolean param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -606,9 +606,7 @@ final class vq {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            int discarded$5 = 65;
-            stackOut_2_0 = wt.a(param0);
+            stackOut_2_0 = wt.a(param0, (byte) 65, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -645,7 +643,7 @@ final class vq {
         return stackIn_3_0;
     }
 
-    final static boolean a(bv param0) {
+    final static boolean a(bv param0, int param1) {
         return param0.g(-108, 1) == 1;
     }
 

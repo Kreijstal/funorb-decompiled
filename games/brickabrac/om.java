@@ -600,7 +600,7 @@ final class om extends mh {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_rc = null;
         field_Xb = null;
         field_fc = null;

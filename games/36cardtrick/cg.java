@@ -85,7 +85,7 @@ abstract class cg extends k implements pi {
         return stackIn_19_0 != 0;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_e = null;
         field_i = null;
     }
@@ -140,7 +140,7 @@ abstract class cg extends k implements pi {
 
     abstract sg a(String param0, int param1);
 
-    final static aj b() {
+    final static aj b(boolean param0) {
         if (!(aj.field_a != null)) {
             aj.field_a = new aj();
             aj.field_a.a(-1, j.field_C);

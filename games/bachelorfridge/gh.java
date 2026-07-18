@@ -6,7 +6,7 @@ final class gh extends td {
         super(param0, param1);
     }
 
-    final static hk[] c() {
+    final static hk[] c(byte param0) {
         return new hk[]{se.field_u, er.field_x, uka.field_k};
     }
 

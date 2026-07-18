@@ -86,7 +86,7 @@ final class gk {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_g = null;
         field_a = null;
@@ -155,13 +155,12 @@ final class gk {
                 break L1;
               } else {
                 var6 = null;
-                ii discarded$4 = gk.a((String) null, 10, (ci) null, (String) null);
+                ii discarded$2 = gk.a((String) null, 10, (ci) null, (String) null);
                 break L1;
               }
             }
             var5 = param2.a(-1, param3, var4_int);
-            int discarded$5 = 1;
-            stackOut_2_0 = ae.a(var4_int, param2, var5);
+            stackOut_2_0 = ae.a(var4_int, param2, var5, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

@@ -55,7 +55,7 @@ final class dp implements io {
         }
     }
 
-    final static int a() {
+    final static int a(int param0) {
         int var1 = 0;
         var1 = 1;
         if (ld.field_j >= 2) {
@@ -325,8 +325,7 @@ final class dp implements io {
           ki.a((byte) -102, ti.field_g);
           en.c();
           bi.d();
-          int discarded$1 = 30549;
-          gk.j();
+          gk.j(30549);
           if (var5 >= 256) {
             pa.a(param1 ^ 32173);
             if (param1 == -12138) {

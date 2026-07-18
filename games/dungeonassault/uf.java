@@ -7,7 +7,7 @@ final class uf {
     static int field_a;
     static String field_b;
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_b = null;
         field_c = null;
@@ -28,7 +28,7 @@ final class uf {
         fl.field_m[61] = 27;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

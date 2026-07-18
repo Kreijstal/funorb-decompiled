@@ -158,8 +158,7 @@ final class ana extends nv {
     final void a(boolean param0, fsa param1) {
         try {
             super.a(param0, param1);
-            int discarded$0 = 0;
-            this.b();
+            this.b(0);
             param1.a(26492, true, 1);
             param1.a(param0, 35);
             param1.b((byte) 112, 8);
@@ -474,7 +473,7 @@ final class ana extends nv {
         return stackIn_7_0;
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_o = null;
     }
 
@@ -818,7 +817,7 @@ final class ana extends nv {
         this.a((byte) -125, 0);
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         Object stackIn_9_0 = null;

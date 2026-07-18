@@ -477,7 +477,7 @@ final class la implements ew, fo, noa {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0, int param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
         fsa var5 = (fsa) (Object) ((la) this).field_i.f(-80);
         while (var5 != null) {
@@ -492,8 +492,7 @@ final class la implements ew, fo, noa {
         db var6 = (db) (Object) ((la) this).field_d.f(-80);
         while (var6 != null) {
             if (!(var6.b(1, 1569))) {
-                int discarded$0 = -26755;
-                this.a(var6);
+                this.a(var6, -26755);
                 var6.m(0);
             }
             var6 = (db) (Object) ((la) this).field_d.e(108);
@@ -649,7 +648,7 @@ final class la implements ew, fo, noa {
         return ((la) this).field_H;
     }
 
-    private final void k() {
+    private final void k(int param0) {
         ((la) this).field_Q = ((la) this).field_v / 2;
         ((la) this).field_L = ((la) this).field_w - 6291456;
     }
@@ -834,7 +833,7 @@ final class la implements ew, fo, noa {
         return stackIn_5_0 != 0;
     }
 
-    private final void m() {
+    private final void m(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         ((la) this).field_y.a((byte) 97);
         fsa var2 = (fsa) (Object) ((la) this).field_i.f(-80);
@@ -1218,8 +1217,7 @@ final class la implements ew, fo, noa {
           var5 = TombRacer.field_G ? 1 : 0;
           if (param1) {
             L1: {
-              int discarded$5 = 8;
-              this.t();
+              this.t(8);
               if (null == ((la) this).field_U) {
                 this.b(6, -20);
                 var8 = ((la) this).field_S;
@@ -1232,9 +1230,7 @@ final class la implements ew, fo, noa {
                     L3: while (true) {
                       if (var4 == null) {
                         ((la) this).field_z.d(8);
-                        int discarded$6 = 1;
-                        int discarded$7 = -12;
-                        this.b();
+                        this.b((byte) -12, 1);
                         ((la) this).field_S = var8;
                         break L1;
                       } else {
@@ -1272,7 +1268,7 @@ final class la implements ew, fo, noa {
             break L4;
           } else {
             var6 = null;
-            int discarded$8 = ((la) this).a(94, 108, 82, 71, 28, 102, (gma) null);
+            int discarded$1 = ((la) this).a(94, 108, 82, 71, 28, 102, (gma) null);
             break L4;
           }
         }
@@ -1281,14 +1277,13 @@ final class la implements ew, fo, noa {
           if (((la) this).field_S == null) {
             break L5;
           } else {
-            int discarded$9 = -106;
-            this.h();
+            this.h(-106);
             break L5;
           }
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         int var3 = 0;
         int var4 = 0;
         fsa var5 = null;
@@ -1508,7 +1503,7 @@ final class la implements ew, fo, noa {
         return ((la) this).field_r;
     }
 
-    private final void a(db param0) {
+    private final void a(db param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -1736,7 +1731,7 @@ final class la implements ew, fo, noa {
         ((la) this).field_B.a(param1, param5, param4, param2, param0, param3, true);
     }
 
-    private final void t() {
+    private final void t(int param0) {
         uw var2 = null;
         kh var3 = null;
         int var4 = 0;
@@ -1759,8 +1754,7 @@ final class la implements ew, fo, noa {
             var2 = ((la) this).field_S;
             ((la) this).field_S = null;
             ((la) this).field_y.a((byte) -69);
-            int discarded$7 = 55;
-            bca.b();
+            bca.b((byte) 55);
             var3 = ((la) this).field_K;
             var3.field_h = 0;
             var3.h((byte) -64);
@@ -1785,8 +1779,7 @@ final class la implements ew, fo, noa {
           L1: {
             ((la) this).field_B.a(2097152, (la) this, 4);
             if (11 > ((la) this).field_E) {
-              int discarded$8 = 109;
-              this.k();
+              this.k(109);
               break L1;
             } else {
               ((la) this).field_Q = var3.b((byte) 44, 12) << 16;
@@ -1816,8 +1809,7 @@ final class la implements ew, fo, noa {
                           L6: {
                             var8 = vha.field_c.a(var3, 55, (la) this);
                             if (var8 != null) {
-                              int discarded$9 = 33554432;
-                              this.a(var8);
+                              this.a(var8, 33554432);
                               break L6;
                             } else {
                               break L6;
@@ -1840,7 +1832,7 @@ final class la implements ew, fo, noa {
                             if (var6 >= 3) {
                               break L7;
                             } else {
-                              int discarded$10 = var3.b((byte) 44, 8);
+                              int discarded$2 = var3.b((byte) 44, 8);
                               var6++;
                               continue L8;
                             }
@@ -1855,7 +1847,7 @@ final class la implements ew, fo, noa {
                         if (3 <= var6) {
                           break L7;
                         } else {
-                          int discarded$11 = var3.b((byte) 44, 10);
+                          int discarded$3 = var3.b((byte) 44, 10);
                           var6++;
                           continue L9;
                         }
@@ -1879,8 +1871,7 @@ final class la implements ew, fo, noa {
                     }
                   }
                   var3.i((byte) 98);
-                  int discarded$12 = 9;
-                  this.m();
+                  this.m(9);
                   var10 = (fsa) (Object) ((la) this).field_i.f(-80);
                   L12: while (true) {
                     if (var10 == null) {
@@ -1900,8 +1891,7 @@ final class la implements ew, fo, noa {
                               }
                               ((la) this).field_E = 26;
                               var13 = new kh(30000);
-                              int discarded$13 = -28426;
-                              this.a(var13);
+                              this.a(var13, -28426);
                               ((la) this).field_K = var13;
                               var13.field_h = 0;
                               break L14;
@@ -2399,7 +2389,7 @@ final class la implements ew, fo, noa {
         }
     }
 
-    private final void a(csa param0) {
+    private final void a(csa param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -3025,7 +3015,7 @@ final class la implements ew, fo, noa {
         return ((la) this).field_I;
     }
 
-    private final void a(kh param0) {
+    private final void a(kh param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         db var5 = null;
@@ -3050,8 +3040,7 @@ final class la implements ew, fo, noa {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            int discarded$1 = 9;
-            this.m();
+            this.m(9);
             param0.i(8);
             param0.a((byte) -127, 26, 8);
             ((la) this).field_P.a(param0, 23);

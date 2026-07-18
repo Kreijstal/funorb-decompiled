@@ -37,7 +37,7 @@ final class rm {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_d = null;
         field_e = null;
@@ -49,7 +49,7 @@ final class rm {
         int var1 = 58;
     }
 
-    final static void a(int param0, hl param1) {
+    final static void a(int param0, hl param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;

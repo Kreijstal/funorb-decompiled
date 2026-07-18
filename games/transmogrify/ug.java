@@ -44,7 +44,7 @@ final class ug {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -94,18 +94,17 @@ final class ug {
     final int a(int param0) {
         int var2 = 0;
         if (((ug) this).field_a == 0) {
-          int discarded$6 = 0;
-          this.b();
+          this.b(0);
           ((ug) this).field_a = 256;
           var2 = -39 / ((11 - param0) / 54);
-          int fieldTemp$7 = ((ug) this).field_a - 1;
+          int fieldTemp$4 = ((ug) this).field_a - 1;
           ((ug) this).field_a = ((ug) this).field_a - 1;
-          return ((ug) this).field_e[fieldTemp$7];
+          return ((ug) this).field_e[fieldTemp$4];
         } else {
           var2 = -39 / ((11 - param0) / 54);
-          int fieldTemp$8 = ((ug) this).field_a - 1;
+          int fieldTemp$5 = ((ug) this).field_a - 1;
           ((ug) this).field_a = ((ug) this).field_a - 1;
-          return ((ug) this).field_e[fieldTemp$8];
+          return ((ug) this).field_e[fieldTemp$5];
         }
     }
 
@@ -123,7 +122,7 @@ final class ug {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_f = null;
     }
@@ -157,8 +156,7 @@ final class ug {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= 256) {
-                    int discarded$1 = 0;
-                    this.b();
+                    this.b(0);
                     ((ug) this).field_a = 256;
                     return;
                   } else {

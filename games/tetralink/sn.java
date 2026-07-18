@@ -13,7 +13,7 @@ final class sn {
         System.out.println("Error: " + n.a(true, "%0a", "\n", param1));
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_d = null;
         field_c = null;
@@ -21,7 +21,7 @@ final class sn {
         field_e = null;
     }
 
-    final static String b() {
+    final static String b(int param0) {
         return rb.field_Nb;
     }
 

@@ -9,7 +9,7 @@ final class k extends si {
     private vd field_K;
     static int[] field_I;
 
-    public static void g() {
+    public static void g(byte param0) {
         field_M = null;
         field_J = null;
         field_H = null;

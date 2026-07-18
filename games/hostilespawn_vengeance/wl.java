@@ -16,7 +16,7 @@ final class wl {
         }
     }
 
-    final static int b() {
+    final static int b(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -49,7 +49,7 @@ final class wl {
         return stackIn_5_0;
     }
 
-    final static na c() {
+    final static na c(int param0) {
         if (!(q.field_j != null)) {
             q.field_j = new na();
             q.field_j.a(jd.field_s, (byte) 99);

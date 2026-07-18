@@ -210,7 +210,7 @@ class eb extends gl {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_B = null;
         field_E = null;
         field_G = null;
@@ -448,7 +448,7 @@ class eb extends gl {
         return stackIn_12_0 != 0;
     }
 
-    final static void a(ja param0) {
+    final static void a(ja param0, int param1, int param2) {
         uc var3 = di.field_l;
         try {
             var3.k(-17410, 7);

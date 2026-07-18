@@ -11,7 +11,7 @@ final class acb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_q = null;
         field_o = null;
         field_r = null;

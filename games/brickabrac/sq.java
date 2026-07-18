@@ -294,23 +294,21 @@ final class sq {
     }
 
     final static m a(int param0) {
-        int discarded$0 = 30794;
-        return new m(fc.a(57), ga.c());
+        return new m(fc.a(57), ga.c(30794));
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
         field_b = null;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0, int param1, int param2) {
         nn var4_ref_nn = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        int discarded$0 = -16;
-        mp var3 = wn.a(param0, param1);
+        mp var3 = wn.a(param0, param1, -16);
         if (var3 != null) {
             bm.field_d.a(true, false);
             var4_ref_nn = bm.field_d;

@@ -162,8 +162,7 @@ final class ai {
                   }
                 }
               }
-              int discarded$1 = 126;
-              hm.a();
+              hm.a((byte) 126);
               break L1;
             }
             var66 = new int[param4.field_o];
@@ -414,7 +413,7 @@ final class ai {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_a = null;

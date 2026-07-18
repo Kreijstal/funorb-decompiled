@@ -191,7 +191,7 @@ final class pp extends rj {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_F = null;
         field_E = null;
         field_K = null;

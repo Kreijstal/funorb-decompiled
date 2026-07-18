@@ -34,7 +34,7 @@ final class gl extends fi {
         }
     }
 
-    final static void a(byte param0, java.math.BigInteger param1, java.math.BigInteger param2, byte[] param3, oa param4, int param5) {
+    final static void a(byte param0, java.math.BigInteger param1, java.math.BigInteger param2, byte[] param3, oa param4, int param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int[] var8 = null;
@@ -307,8 +307,7 @@ final class gl extends fi {
         }
         int var6 = -59 / ((77 - param3) / 34);
         ti var7 = new ti(((gl) this).field_v.field_l, ((gl) this).field_v.field_h);
-        int discarded$0 = 256;
-        oj.a(var7);
+        oj.a(var7, 256);
         ((gl) this).field_v.a(0, 0, param2, (byte) -117);
         fi.c(true);
         var7.e(((gl) this).field_p + param0, ((gl) this).field_n + param1, ((gl) this).field_A);

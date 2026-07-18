@@ -91,7 +91,7 @@ final class ub {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         kd var1 = null;
         int var2 = SteelSentinels.field_G;
         try {
@@ -323,8 +323,7 @@ final class ub {
 
     final static void c(int param0) {
         if (wb.field_c != null) {
-          int discarded$5 = 9174;
-          pa.a((java.awt.Canvas) (Object) wb.field_c);
+          pa.a((java.awt.Canvas) (Object) wb.field_c, 9174);
           if (param0 != 0) {
             L0: {
               field_k = null;
@@ -927,8 +926,7 @@ final class ub {
     final static void a(boolean param0, int param1) {
         L0: {
           if (g.field_c != null) {
-            int discarded$6 = -128;
-            l.a(g.field_c);
+            l.a(g.field_c, (byte) -128);
             ef.a(1, ll.field_q * 2);
             break L0;
           } else {
@@ -942,8 +940,7 @@ final class ub {
             if (qj.field_q[param1] != null) {
               g.field_c = em.a(qj.field_q[param1], 100, ll.field_q);
               ef.a(1, ll.field_q / 2);
-              int discarded$7 = -48;
-              pc discarded$8 = on.a(g.field_c);
+              pc discarded$2 = on.a(g.field_c, -48);
               break L1;
             } else {
               break L1;

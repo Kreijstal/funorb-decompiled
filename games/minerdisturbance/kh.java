@@ -307,7 +307,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -392,8 +392,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$4 = -102;
-                tk.a(var4, param1);
+                tk.a(var4, param1, (byte) -102);
                 var4 = (bi) (Object) bb.field_a.b((byte) 56);
                 continue L2;
               }
@@ -471,7 +470,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void a(id param0) {
+    final static void a(id param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -809,7 +808,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

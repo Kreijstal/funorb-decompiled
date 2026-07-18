@@ -35,8 +35,7 @@ final class kk {
         int var2_int = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
         w.field_v = param1;
-        int discarded$0 = -108;
-        io.a(qj.field_e);
+        io.a(qj.field_e, (byte) -108);
         jb.field_b = new bi[dn.field_a.length];
         try {
             for (var2_int = 0; var2_int < dn.field_a.length; var2_int++) {
@@ -80,9 +79,9 @@ final class kk {
                   if (((kk) this).field_z <= 0) {
                     break L3;
                   } else {
-                    int fieldTemp$6 = ((kk) this).field_z;
+                    int fieldTemp$5 = ((kk) this).field_z;
                     ((kk) this).field_z = ((kk) this).field_z + 1;
-                    if (fieldTemp$6 <= 30) {
+                    if (fieldTemp$5 <= 30) {
                       break L3;
                     } else {
                       ((kk) this).field_z = 0;
@@ -92,9 +91,9 @@ final class kk {
                 }
                 L4: {
                   if (0 < ((kk) this).field_i) {
-                    int fieldTemp$7 = ((kk) this).field_i;
+                    int fieldTemp$6 = ((kk) this).field_i;
                     ((kk) this).field_i = ((kk) this).field_i + 1;
-                    if (((kk) this).field_n <= fieldTemp$7) {
+                    if (((kk) this).field_n <= fieldTemp$6) {
                       ((kk) this).field_i = 0;
                       break L4;
                     } else {
@@ -114,20 +113,19 @@ final class kk {
                       if (((kk) this).field_r == 0) {
                         L6: {
                           if (((kk) this).field_v == 2) {
-                            pp discarded$8 = mc.a(131, -125);
+                            pp discarded$7 = mc.a(131, -125);
                             break L6;
                           } else {
                             break L6;
                           }
                         }
-                        int fieldTemp$9 = ((kk) this).field_v;
+                        int fieldTemp$8 = ((kk) this).field_v;
                         ((kk) this).field_v = ((kk) this).field_v + 1;
-                        if (fieldTemp$9 >= ((kk) this).field_w) {
+                        if (fieldTemp$8 >= ((kk) this).field_w) {
                           ((kk) this).field_v = 0;
                           break L5;
                         } else {
-                          int discarded$10 = 2;
-                          this.e();
+                          this.e(2);
                           break L5;
                         }
                       } else {
@@ -141,9 +139,9 @@ final class kk {
                     break L7;
                   } else {
                     if (0 < ((kk) this).field_r) {
-                      int fieldTemp$11 = ((kk) this).field_r;
+                      int fieldTemp$9 = ((kk) this).field_r;
                       ((kk) this).field_r = ((kk) this).field_r + 1;
-                      if (-31 < fieldTemp$11) {
+                      if (-31 < fieldTemp$9) {
                         ((kk) this).field_r = 0;
                         break L7;
                       } else {
@@ -682,7 +680,7 @@ final class kk {
         return stackIn_9_0 != 0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_l = null;
         field_b = null;
     }
@@ -883,9 +881,7 @@ final class kk {
                               if (var10 == 0) {
                                 break L13;
                               } else {
-                                int discarded$6 = 40;
-                                int discarded$7 = 16777215;
-                                fi.a(var11, var12, var13, var13);
+                                fi.a(var11, var12, var13, var13, 16777215, 40);
                                 break L13;
                               }
                             } else {
@@ -919,17 +915,13 @@ final class kk {
                   }
                 }
               } else {
-                int discarded$8 = 100;
-                int discarded$9 = 0;
-                t.h(var2 + 32 * var6, ((kk) this).field_p * 32 + -16 + var3, var2 - -(var6 * 32), 32 * var5 + var3 - -16);
+                t.h(var2 + 32 * var6, ((kk) this).field_p * 32 + -16 + var3, var2 - -(var6 * 32), 32 * var5 + var3 - -16, 0, 100);
                 var6++;
                 continue L2;
               }
             }
           } else {
-            int discarded$10 = 100;
-            int discarded$11 = 0;
-            t.h(32 * ((kk) this).field_g + var2 - 16, var3 + 32 * var6, 16 + (var4 * 32 + var2), var3 + var6 * 32);
+            t.h(32 * ((kk) this).field_g + var2 - 16, var3 + 32 * var6, 16 + (var4 * 32 + var2), var3 + var6 * 32, 0, 100);
             var6++;
             continue L1;
           }
@@ -938,8 +930,7 @@ final class kk {
 
     final static void a(byte param0, boolean param1) {
         l.b(19854, param1);
-        int discarded$0 = 83;
-        jk.a(param1);
+        jk.a(param1, (byte) 83);
     }
 
     final void a(byte param0) {
@@ -950,12 +941,12 @@ final class kk {
         ((kk) this).field_r = 1;
     }
 
-    private final void e() {
+    private final void e(int param0) {
         ((kk) this).field_A = -4 - -(((kk) this).field_d * ((kk) this).field_v / ((kk) this).field_w);
         ((kk) this).field_x = ((kk) this).field_o * ((kk) this).field_v / ((kk) this).field_w + -4;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

@@ -252,7 +252,7 @@ abstract class ac extends bb {
         return super.j(-55);
     }
 
-    public static void k() {
+    public static void k(byte param0) {
         field_Z = null;
         field_ab = null;
         field_gb = null;
@@ -302,7 +302,7 @@ abstract class ac extends bb {
         }
     }
 
-    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;

@@ -9,7 +9,7 @@ abstract class jl {
     static String field_f;
     static String field_e;
 
-    final static ba[] a() {
+    final static ba[] a(byte param0) {
         return new ba[]{rc.field_m, fb.field_i, ia.field_a, cj.field_a, aj.field_a, tl.field_c, hd.field_q, gl.field_j, id.field_a, jd.field_d, ol.field_f, ue.field_G, nd.field_e, bd.field_q};
     }
 
@@ -19,7 +19,7 @@ abstract class jl {
 
     abstract byte[] a(int param0, int param1);
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9) {
         RuntimeException var10 = null;
         int[] var10_array = null;
         int[] var11 = null;
@@ -555,7 +555,7 @@ abstract class jl {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_e = null;
         field_c = null;

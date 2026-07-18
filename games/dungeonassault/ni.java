@@ -1750,7 +1750,7 @@ final class ni extends qb {
         }
     }
 
-    final static ni a(va param0) {
+    final static ni a(va param0, int param1, int param2) {
         if (param0.field_k != null) {
           if (param0.field_k.length == 0) {
             return null;

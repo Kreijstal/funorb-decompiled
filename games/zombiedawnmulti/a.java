@@ -22,7 +22,7 @@ final class a {
           h.field_L.c(false);
           if (param0 != -1) {
             var3 = null;
-            boolean discarded$6 = a.a((String) null, (String) null, (byte) 24);
+            boolean discarded$4 = a.a((String) null, (String) null, (byte) 24);
             return;
           } else {
             return;
@@ -34,7 +34,7 @@ final class a {
             sp.c(param0 + 1);
             if (param0 != -1) {
               var3 = null;
-              boolean discarded$7 = a.a((String) null, (String) null, (byte) 24);
+              boolean discarded$5 = a.a((String) null, (String) null, (byte) 24);
               return;
             } else {
               return;
@@ -42,28 +42,26 @@ final class a {
           } else {
             if (1 == var1) {
               pm.field_P = rp.field_e;
-              int discarded$8 = 77;
-              pm.field_P = wi.a(new CharSequence[3]);
+              pm.field_P = wi.a(new CharSequence[3], 77);
               h.field_L.m(-7435);
               sp.c(param0 + 1);
               if (param0 == -1) {
                 return;
               } else {
                 var3 = null;
-                boolean discarded$9 = a.a((String) null, (String) null, (byte) 24);
+                boolean discarded$6 = a.a((String) null, (String) null, (byte) 24);
                 return;
               }
             } else {
               pm.field_P = vl.a(al.field_cb, new String[1], 2);
-              int discarded$10 = 77;
-              pm.field_P = wi.a(new CharSequence[3]);
+              pm.field_P = wi.a(new CharSequence[3], 77);
               h.field_L.m(-7435);
               sp.c(param0 + 1);
               if (param0 == -1) {
                 return;
               } else {
                 var3 = null;
-                boolean discarded$11 = a.a((String) null, (String) null, (byte) 24);
+                boolean discarded$7 = a.a((String) null, (String) null, (byte) 24);
                 return;
               }
             }
@@ -71,7 +69,7 @@ final class a {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return rn.field_f == null ? ro.field_L : true;
     }
 
@@ -98,8 +96,7 @@ final class a {
         String stackOut_6_2 = null;
         try {
           L0: {
-            int discarded$7 = -42;
-            if (ud.a(param3, param2, param0)) {
+            if (ud.a(param3, param2, param0, (byte) -42)) {
               var4_int = 18;
               stackOut_3_0 = tg.a(0);
               stackIn_4_0 = stackOut_3_0;

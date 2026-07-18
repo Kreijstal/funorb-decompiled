@@ -49,8 +49,7 @@ final class ag extends mg {
               if (param1) {
                 L1: {
                   var5 = (CharSequence) (Object) param0;
-                  int discarded$2 = -33;
-                  var3_int = na.a(var5);
+                  var3_int = na.a(var5, (byte) -33);
                   if (var3_int <= 0) {
                     break L1;
                   } else {
@@ -181,13 +180,13 @@ final class ag extends mg {
         return stackIn_6_0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_n = null;
         field_m = null;
         field_o = null;
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         lc var4 = null;

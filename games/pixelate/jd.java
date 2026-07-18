@@ -96,7 +96,7 @@ final class jd extends fa {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         ql.field_m = -1;
         sd.field_N = false;
     }

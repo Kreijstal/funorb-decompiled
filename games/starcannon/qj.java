@@ -308,7 +308,7 @@ abstract class qj extends kc {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_V = null;
         field_eb = null;
     }

@@ -22,7 +22,7 @@ final class oe implements so {
         }
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, byte param1) {
         if (0 > param0) {
             param0 = 0;
         } else {
@@ -210,7 +210,7 @@ final class oe implements so {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_b = null;
         field_a = null;

@@ -13,7 +13,7 @@ abstract class cda extends dg {
     static volatile int field_p;
     private int field_n;
 
-    public static void n() {
+    public static void n(byte param0) {
         field_u = null;
     }
 

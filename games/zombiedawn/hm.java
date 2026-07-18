@@ -496,7 +496,7 @@ class hm extends an {
         }
     }
 
-    final static int a(int param0, int param1, int[][] param2) {
+    final static int a(int param0, int param1, int[][] param2, int param3) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;

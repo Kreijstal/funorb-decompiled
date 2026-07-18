@@ -8,7 +8,7 @@ final class jj {
     static int field_c;
     static ka[] field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_e = null;
         field_a = null;
@@ -148,7 +148,7 @@ final class jj {
         }
     }
 
-    final static int[] b() {
+    final static int[] b(byte param0) {
         return new int[8];
     }
 

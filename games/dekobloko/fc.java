@@ -48,10 +48,8 @@ final class fc {
         if (ea.d((byte) 80)) {
             param1 = false;
         }
-        int discarded$0 = 1;
-        cg.b(param1);
-        int discarded$1 = 54;
-        ub.a();
+        cg.b(param1, 1);
+        ub.a((byte) 54);
     }
 
     public static void a(int param0) {
@@ -62,7 +60,7 @@ final class fc {
         field_b = null;
     }
 
-    final static ck[] a(int param0, ck param1) {
+    final static ck[] a(int param0, ck param1, int param2) {
         RuntimeException var3 = null;
         ck[] var3_array = null;
         int[] var4 = null;
@@ -290,7 +288,7 @@ final class fc {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;

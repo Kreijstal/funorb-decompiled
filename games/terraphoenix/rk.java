@@ -9,10 +9,9 @@ final class rk {
     int[] field_d;
     static ci[] field_f;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, boolean param1) {
         try {
-            int discarded$0 = -1;
-            lb.a("", param0);
+            lb.a("", param0, -1);
             dl.a(param0, -6242);
         } catch (RuntimeException runtimeException) {
             throw qk.a((Throwable) (Object) runtimeException, "rk.A(" + (param0 != null ? "{...}" : "null") + ',' + true + ')');

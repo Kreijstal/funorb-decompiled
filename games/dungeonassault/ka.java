@@ -19,7 +19,7 @@ final class ka {
         var2.field_w = true;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_d = null;
         field_b = null;

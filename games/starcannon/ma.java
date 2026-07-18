@@ -82,7 +82,7 @@ final class ma {
         return stackIn_16_0 != 0;
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         ba.a(false, param0, 2);
     }
 
@@ -271,7 +271,7 @@ final class ma {
         return (byte) var2;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         int var1 = 110;
         field_c = null;

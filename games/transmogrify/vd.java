@@ -129,8 +129,7 @@ final class vd {
                   }
                 }
               }
-              int discarded$1 = 1702;
-              qa.c();
+              qa.c(1702);
               break L1;
             }
             var66 = new int[param6.field_l];
@@ -452,7 +451,7 @@ final class vd {
                 break L1;
               } else {
                 if (-1 == param2.indexOf("<br>")) {
-                  args[0] = (String) (Object) args;
+                  args[0] = param2;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;
@@ -671,16 +670,16 @@ final class vd {
                         var8_int = 1;
                         L5: while (true) {
                           if (var5 <= var8_int) {
-                            String[][] dupTemp$10 = new String[3][var6];
-                            var4.field_m = dupTemp$10;
-                            var8 = dupTemp$10;
+                            String[][] dupTemp$6 = new String[3][var6];
+                            var4.field_m = dupTemp$6;
+                            var8 = dupTemp$6;
                             var9 = new String[3][var6];
-                            long[][] dupTemp$11 = new long[3][var6];
-                            var4.field_g = dupTemp$11;
-                            var10 = dupTemp$11;
-                            int[][] dupTemp$12 = new int[3][var6 * var7];
-                            var4.field_l = dupTemp$12;
-                            var11 = dupTemp$12;
+                            long[][] dupTemp$7 = new long[3][var6];
+                            var4.field_g = dupTemp$7;
+                            var10 = dupTemp$7;
+                            int[][] dupTemp$8 = new int[3][var6 * var7];
+                            var4.field_l = dupTemp$8;
+                            var11 = dupTemp$8;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -711,9 +710,9 @@ final class vd {
                                         if (var7 <= var25) {
                                           break L7;
                                         } else {
-                                          int incrementValue$13 = var15;
+                                          int incrementValue$9 = var15;
                                           var15++;
-                                          var11[0][incrementValue$13] = var28.c((byte) -126);
+                                          var11[0][incrementValue$9] = var28.c((byte) -126);
                                           var25++;
                                           continue L8;
                                         }
@@ -739,9 +738,9 @@ final class vd {
                                           if (var25 >= var7) {
                                             break L9;
                                           } else {
-                                            int incrementValue$14 = var16;
+                                            int incrementValue$10 = var16;
                                             var16++;
-                                            var11[1][incrementValue$14] = var28.c((byte) -115);
+                                            var11[1][incrementValue$10] = var28.c((byte) -115);
                                             var25++;
                                             continue L10;
                                           }
@@ -767,9 +766,9 @@ final class vd {
                                           if (var25 >= var7) {
                                             break L11;
                                           } else {
-                                            int incrementValue$15 = var17;
+                                            int incrementValue$11 = var17;
                                             var17++;
-                                            var11[2][incrementValue$15] = var28.c((byte) -110);
+                                            var11[2][incrementValue$11] = var28.c((byte) -110);
                                             var25++;
                                             continue L12;
                                           }
@@ -804,8 +803,7 @@ final class vd {
                     var4.c(5);
                     break L1;
                   } else {
-                    int discarded$16 = 1;
-                    pc.a();
+                    pc.a(1);
                     return;
                   }
                 }
@@ -832,16 +830,13 @@ final class vd {
                       var6_ref_am.c(5);
                       break L1;
                     } else {
-                      int discarded$17 = 1;
-                      pc.a();
+                      pc.a(1);
                       return;
                     }
                   }
                 } else {
-                  int discarded$18 = 48;
-                  d.a((Throwable) null, 94, "HS1: " + ik.q());
-                  int discarded$19 = 1;
-                  pc.a();
+                  d.a((Throwable) null, 94, "HS1: " + ik.q(48));
+                  pc.a(1);
                   break L1;
                 }
               }
@@ -855,7 +850,7 @@ final class vd {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
     }
 

@@ -10,7 +10,7 @@ class pc extends hn {
     static int field_k;
     private String field_h;
 
-    public static void d() {
+    public static void d(int param0) {
         field_f = null;
         field_g = null;
         field_i = null;

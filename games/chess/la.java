@@ -6,17 +6,16 @@ final class la {
     static ci field_c;
     static String field_a;
 
-    final static int a() {
+    final static int a(byte param0) {
         int var1 = 0;
         ge.field_fb.a(32130);
         if (qh.field_c.b(-31259)) {
             return 0;
         }
-        int discarded$0 = 32288;
-        return sh.b();
+        return sh.b(32288);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         mh.field_d.b();
         kn.field_F.b();
     }

@@ -9,7 +9,7 @@ final class hh {
     static int[] field_b;
     static String field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_a = null;
         field_e = null;

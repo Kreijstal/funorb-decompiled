@@ -10,7 +10,7 @@ final class mk {
         throw new IllegalStateException();
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_c = null;
         field_a = null;

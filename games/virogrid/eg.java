@@ -29,8 +29,7 @@ final class eg extends in {
         if (param0 != 1048576) {
             return null;
         }
-        int discarded$0 = 112;
-        return hj.c();
+        return hj.c(112);
     }
 
     final static void a(int param0, int param1, boolean param2) {
@@ -49,8 +48,7 @@ final class eg extends in {
             var6 = a.field_y;
             var4.field_a.a(0, 0, 0, var5, var6);
         }
-        int discarded$0 = 115;
-        qm.a(param0, param2);
+        qm.a(param0, param2, (byte) 115);
     }
 
     private final void a(int param0, byte param1, int param2, i param3) {
@@ -464,7 +462,7 @@ final class eg extends in {
         return 2;
     }
 
-    final static wf a(java.awt.Component param0, int param1, int param2) {
+    final static wf a(java.awt.Component param0, int param1, int param2, int param3) {
         try {
             int var4_int = 0;
             RuntimeException var4 = null;

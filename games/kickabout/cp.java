@@ -99,7 +99,7 @@ final class cp implements Runnable {
         return stackIn_9_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_h = null;
         field_g = null;
@@ -151,8 +151,7 @@ final class cp implements Runnable {
         if (gt.field_t.a((byte) -46)) {
             return 0;
         }
-        int discarded$0 = 66;
-        return fw.h();
+        return fw.h((byte) 66);
     }
 
     cp() {

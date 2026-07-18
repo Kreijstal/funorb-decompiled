@@ -30,7 +30,7 @@ final class uq extends oh {
         throw new Error();
     }
 
-    final static boolean a(bc param0) {
+    final static boolean a(bc param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;

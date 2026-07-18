@@ -112,7 +112,7 @@ final class pg {
         field_i = null;
     }
 
-    final static String a() {
+    final static String a(int param0) {
         return rf.field_a;
     }
 

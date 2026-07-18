@@ -20,7 +20,7 @@ final class rn {
         return param0 & param1;
     }
 
-    final static String b() {
+    final static String b(boolean param0) {
         if (null == mv.field_d) {
             return "";
         }
@@ -33,8 +33,7 @@ final class rn {
 
     final static void a(int param0, String param1, boolean param2, boolean param3) {
         try {
-            int discarded$0 = 1;
-            ou.a();
+            ou.a(true);
             rl.field_C.j(-121);
             np.field_Qb = new df(ga.field_d, (String) null, fh.field_i, param2, param3);
             lt.field_g = new lw(rl.field_C, (kb) (Object) np.field_Qb);
@@ -44,7 +43,7 @@ final class rn {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_b = null;
         field_a = null;

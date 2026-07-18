@@ -6,7 +6,7 @@ final class bdb extends rqa {
         return (param2 & 2048) != 0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8, boolean param9) {
         int[] var10 = null;
         RuntimeException var10_ref = null;
         int var11 = 0;

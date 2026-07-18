@@ -4,7 +4,7 @@
 final class gb {
     static int field_a;
 
-    final static void a() {
+    final static void a(int param0) {
         bd var1 = (bd) (Object) vt.field_a.c((byte) 22);
         if (var1 == null) {
             var1 = new bd();

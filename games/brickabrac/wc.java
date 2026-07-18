@@ -8,7 +8,7 @@ final class wc {
     static String field_a;
     static String field_c;
 
-    final static void a(int[] param0, int param1, int param2, int param3) {
+    final static void a(int[] param0, int param1, int param2, int param3, int param4) {
         int[] var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -81,11 +81,11 @@ final class wc {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         mf.field_f.a(0, 0, 0);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
     }

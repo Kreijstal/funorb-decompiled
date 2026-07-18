@@ -21,7 +21,7 @@ final class fl extends ma {
         field_n = null;
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         el.field_H[44] = 71;
         el.field_H[47] = 73;
         el.field_H[222] = 58;

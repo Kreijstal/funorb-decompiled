@@ -11,7 +11,7 @@ final class jl {
     static e field_d;
     static tg field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_f = null;
         field_h = null;
@@ -72,8 +72,7 @@ final class jl {
                 break L1;
               }
             }
-            int discarded$2 = 0;
-            stackOut_5_0 = ck.a(param0, (String) var6, var4_long, 112);
+            stackOut_5_0 = ck.a(param0, (String) var6, var4_long, 112, false);
             stackIn_6_0 = stackOut_5_0;
             break L0;
           }

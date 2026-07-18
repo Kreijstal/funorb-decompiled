@@ -5,7 +5,7 @@ final class fm {
     static bh field_b;
     static String field_a;
 
-    final static ud a(byte[] param0) {
+    final static ud a(byte[] param0, int param1) {
         ud var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -79,15 +79,13 @@ final class fm {
         return new kf[]{te.field_g, gf.field_u, gm.field_j};
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_b = null;
     }
 
-    final static gd a() {
-        int discarded$0 = 3;
-        int discarded$1 = 0;
-        return new gd(vl.b(), kf.a());
+    final static gd a(int param0) {
+        return new gd(vl.b(3), kf.a(false));
     }
 
     static {

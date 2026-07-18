@@ -7,7 +7,7 @@ final class rf {
     static String field_a;
     static String field_c;
 
-    final static String a() {
+    final static String a(byte param0) {
         return tk.field_h.d(0);
     }
 
@@ -16,7 +16,7 @@ final class rf {
         fk.field_q.a(64 * param1 / 80, (byte) -100);
     }
 
-    final static km[] b() {
+    final static km[] b(byte param0) {
         km[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -42,8 +42,7 @@ final class rf {
         var2 = 0;
         L0: while (true) {
           if (var2 >= h.field_n) {
-            int discarded$1 = 4210752;
-            ch.k();
+            ch.k(4210752);
             return var1;
           } else {
             var3 = b.field_c[var2] * wm.field_b[var2];

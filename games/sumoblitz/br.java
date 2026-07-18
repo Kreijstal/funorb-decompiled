@@ -41,7 +41,7 @@ final class br {
         }
     }
 
-    final static int b() {
+    final static int b(int param0) {
         return 1;
     }
 
@@ -93,7 +93,7 @@ final class br {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
     }
 

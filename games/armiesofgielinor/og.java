@@ -97,8 +97,7 @@ final class og extends tc {
           qd.field_G = param2;
           rs.field_t = 2;
           var5 = (CharSequence) (Object) param2;
-          int discarded$2 = 0;
-          wm.field_b = k.a(var5);
+          wm.field_b = k.a(var5, false);
           dj.field_e = param0;
           hh.a((byte) 118);
           return;
@@ -139,7 +138,7 @@ final class og extends tc {
         RuntimeException var3_ref = null;
         int var3_int = 0;
         int var4 = 0;
-        Object var5 = null;
+        og var5 = null;
         int var6 = 0;
         nd[] var7 = null;
         nd[] var8 = null;
@@ -176,7 +175,6 @@ final class og extends tc {
         RuntimeException stackOut_41_0 = null;
         StringBuilder stackOut_41_1 = null;
         String stackOut_41_2 = null;
-        var5 = null;
         var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
@@ -191,52 +189,52 @@ final class og extends tc {
             var7 = new nd[((og) this).field_k.b(false)];
             var8 = var7;
             var4 = 0;
-            var5 = (Object) (Object) (og) (Object) ((og) this).field_k.e((byte) 106);
+            var5 = (og) (Object) ((og) this).field_k.e((byte) 106);
             L1: while (true) {
               if (var5 == null) {
-                stackOut_8_0 = na.a(param1, (byte) 2, var8, ((og) var5).field_o);
+                stackOut_8_0 = na.a(param1, (byte) 2, var8, ((og) this).field_o);
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
                 int incrementValue$1 = var4;
                 var4++;
-                var7[incrementValue$1] = ((og) var5).a(1, param1);
-                var5 = (Object) (Object) (og) (Object) ((og) var5).field_k.a((byte) 123);
+                var7[incrementValue$1] = var5.a(1, param1);
+                var5 = (og) (Object) ((og) this).field_k.a((byte) 123);
                 continue L1;
               }
             }
           } else {
-            if (((og) var5).field_q == gg.field_G) {
-              var3_int = Character.toLowerCase(((og) var5).field_o.charAt(-1 + ((og) var5).field_o.length()));
+            if (((og) this).field_q == gg.field_G) {
+              var3_int = Character.toLowerCase(((og) this).field_o.charAt(-1 + ((og) this).field_o.length()));
               if (102 != var3_int) {
                 if (var3_int != 108) {
-                  if (((og) var5).field_o.indexOf('.') != -1) {
-                    stackOut_20_0 = new nd(Double.valueOf(((og) var5).field_o).doubleValue());
+                  if (((og) this).field_o.indexOf('.') != -1) {
+                    stackOut_20_0 = new nd(Double.valueOf(((og) this).field_o).doubleValue());
                     stackIn_21_0 = stackOut_20_0;
                     return stackIn_21_0;
                   } else {
-                    stackOut_22_0 = new nd(Integer.parseInt(((og) var5).field_o));
+                    stackOut_22_0 = new nd(Integer.parseInt(((og) this).field_o));
                     stackIn_23_0 = stackOut_22_0;
                     return stackIn_23_0;
                   }
                 } else {
-                  stackOut_16_0 = new nd(Long.parseLong(((og) var5).field_o.substring(0, ((og) var5).field_o.length() + -1)));
+                  stackOut_16_0 = new nd(Long.parseLong(((og) this).field_o.substring(0, ((og) this).field_o.length() + -1)));
                   stackIn_17_0 = stackOut_16_0;
                   return stackIn_17_0;
                 }
               } else {
-                stackOut_13_0 = new nd(Float.valueOf(((og) var5).field_o).floatValue());
+                stackOut_13_0 = new nd(Float.valueOf(((og) this).field_o).floatValue());
                 stackIn_14_0 = stackOut_13_0;
                 return stackIn_14_0;
               }
             } else {
-              if (gb.field_z == ((og) var5).field_q) {
-                stackOut_26_0 = new nd(((og) var5).field_o.equals((Object) (Object) "true"));
+              if (gb.field_z == ((og) this).field_q) {
+                stackOut_26_0 = new nd(((og) this).field_o.equals((Object) (Object) "true"));
                 stackIn_27_0 = stackOut_26_0;
                 return stackIn_27_0;
               } else {
-                if (hf.field_h == ((og) var5).field_q) {
-                  var9 = ((og) var5).field_o.substring(1, -1 + ((og) var5).field_o.length());
+                if (hf.field_h == ((og) this).field_q) {
+                  var9 = ((og) this).field_o.substring(1, -1 + ((og) this).field_o.length());
                   if (var9.length() == 1) {
                     stackOut_32_0 = new nd(var9.charAt(0));
                     stackIn_33_0 = stackOut_32_0;
@@ -245,10 +243,10 @@ final class og extends tc {
                     throw new cb("Invalid char value: " + var9);
                   }
                 } else {
-                  if (iu.field_x != ((og) var5).field_q) {
+                  if (iu.field_x != ((og) this).field_q) {
                     throw new IllegalArgumentException();
                   } else {
-                    stackOut_35_0 = new nd((Object) (Object) ((og) var5).field_o.substring(1, ((og) var5).field_o.length() - 1));
+                    stackOut_35_0 = new nd((Object) (Object) ((og) this).field_o.substring(1, ((og) this).field_o.length() - 1));
                     stackIn_36_0 = stackOut_35_0;
                     return stackIn_36_0;
                   }
@@ -259,7 +257,7 @@ final class og extends tc {
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (NumberFormatException) (Object) decompiledCaughtException;
-          throw new cb("NumberFormatException on: " + ((og) var5).field_o);
+          throw new cb("NumberFormatException on: " + ((og) this).field_o);
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           L2: {
@@ -292,7 +290,7 @@ final class og extends tc {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_n = null;
         field_p = null;
         field_l = null;

@@ -10,7 +10,7 @@ final class cj {
     private long field_f;
     private int field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_c = null;
     }

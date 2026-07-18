@@ -13,24 +13,20 @@ final class fm {
     static er field_g;
     static String field_f;
 
-    public static void a() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void a(byte param0) {
+        field_h = null;
+        if (param0 != 72) {
+            return;
+        }
         try {
-          L0: {
-            field_h = null;
             field_b = null;
             field_g = null;
             field_a = null;
             field_c = null;
             field_e = null;
             field_f = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "fm.A(" + 72 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "fm.A(" + param0 + ')');
         }
     }
 

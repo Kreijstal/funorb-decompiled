@@ -111,7 +111,7 @@ final class gb {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_c = null;
         int var1 = -51;
     }

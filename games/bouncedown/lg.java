@@ -10,7 +10,7 @@ final class lg {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = -25;
         field_c = null;
         field_b = null;
@@ -61,8 +61,7 @@ final class lg {
                     }
                   }
                   var5 = new java.net.URL(param1.getCodeBase(), var4);
-                  int discarded$2 = 0;
-                  param1.getAppletContext().showDocument(ag.a(param1, var5), "_self");
+                  param1.getAppletContext().showDocument(ag.a(param1, var5, false), "_self");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {

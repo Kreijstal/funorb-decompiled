@@ -152,7 +152,7 @@ final class mf {
         return var7;
     }
 
-    final static int b() {
+    final static int b(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -169,8 +169,7 @@ final class mf {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              int discarded$4 = 47;
-              if (!ha.b()) {
+              if (!ha.b((byte) 47)) {
                 L2: {
                   d.field_g.a(-7734, ab.a(-776726687, lc.field_c, hm.field_k), ab.a(-776726687, hj.field_S, eh.field_h));
                   if (!d.field_g.c(77)) {
@@ -201,8 +200,7 @@ final class mf {
                             }
                           }
                         }
-                        int discarded$5 = 61270;
-                        jb.q();
+                        jb.q(61270);
                         break L3;
                       }
                     }
@@ -211,8 +209,7 @@ final class mf {
                     break L3;
                   } else {
                     if (kh.field_t != 2) {
-                      int discarded$6 = 61270;
-                      jb.q();
+                      jb.q(61270);
                       break L3;
                     } else {
                       break L3;
@@ -232,8 +229,7 @@ final class mf {
                         break L6;
                       } else {
                         var3 = 2;
-                        int discarded$7 = -1;
-                        ae.a(true, 5);
+                        ae.a(true, 5, -1);
                         break L6;
                       }
                     }
@@ -269,7 +265,7 @@ final class mf {
         return stackIn_28_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
         field_b = null;
@@ -304,8 +300,7 @@ final class mf {
                 if (l.a(true)) {
                   if (kh.field_n == 0) {
                     mj.a(false, param1, false);
-                    int discarded$8 = 0;
-                    ob.a(0, -84, param2);
+                    ob.a(0, -84, param2, 0);
                     break L1;
                   } else {
                     g.a(param2, 18131);
@@ -314,8 +309,7 @@ final class mf {
                 } else {
                   gf.a();
                   ah.a(false, 320, 240);
-                  int discarded$9 = 0;
-                  ob.a(0, -97, param2);
+                  ob.a(0, -97, param2, 0);
                   break L1;
                 }
               } else {
@@ -329,9 +323,7 @@ final class mf {
                     break L2;
                   }
                 }
-                int discarded$10 = -3;
-                int discarded$11 = -3;
-                hd.a(tl.b(), jc.field_d, var3_int != 0, (byte) 105, h.a());
+                hd.a(tl.b(-3), jc.field_d, var3_int != 0, (byte) 105, h.a(-3));
                 break L1;
               }
             }

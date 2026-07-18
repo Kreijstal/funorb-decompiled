@@ -10,7 +10,7 @@ final class mg extends id {
     static double field_J;
     private int field_I;
 
-    final static int a(boolean param0, hf param1, int param2, hf param3, String param4, int param5) {
+    final static int a(boolean param0, hf param1, int param2, hf param3, String param4, int param5, byte param6) {
         RuntimeException var7 = null;
         String var8 = null;
         int var9 = 0;
@@ -123,8 +123,7 @@ final class mg extends id {
               if (ki.field_h != null) {
                 break L1;
               } else {
-                int discarded$3 = 0;
-                if (!ee.a(false)) {
+                if (!ee.a(false, false)) {
                   stackOut_4_0 = -1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;
@@ -277,7 +276,7 @@ final class mg extends id {
                     return stackIn_31_0;
                   } else {
                     if (var9 == 99) {
-                      boolean discarded$4 = fa.b(10, wm.f(1));
+                      boolean discarded$1 = fa.b(10, wm.f(1));
                       dd.field_d = new Boolean(fq.a((k) (Object) s.field_e, (byte) -114));
                       s.field_e.field_j = 0;
                       break L8;
@@ -358,8 +357,7 @@ final class mg extends id {
               } else {
                 if (sk.field_j) {
                   L15: {
-                    int discarded$5 = -22;
-                    if (he.b() > 30000L) {
+                    if (he.b((byte) -22) > 30000L) {
                       ol.field_q = aj.field_l;
                       break L15;
                     } else {
@@ -585,7 +583,7 @@ final class mg extends id {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         sq.field_N = true;
         va.field_a = 0;
     }

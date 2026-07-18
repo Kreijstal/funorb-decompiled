@@ -5,7 +5,7 @@ final class gpa extends za {
     static String field_f;
     jaclib.memory.heap.NativeHeap field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
     }
 

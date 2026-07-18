@@ -198,8 +198,7 @@ abstract class ec extends fi implements ja {
                   stackIn_9_0 = stackOut_8_0;
                   break L2;
                 } else {
-                  int discarded$3 = 1;
-                  stackOut_7_0 = this.a(param0);
+                  stackOut_7_0 = this.a(param0, true);
                   stackIn_9_0 = stackOut_7_0;
                   break L2;
                 }
@@ -247,7 +246,7 @@ abstract class ec extends fi implements ja {
         return null != ((ec) this).g(!param0 ? true : false) ? true : false;
     }
 
-    private final boolean a(fi param0) {
+    private final boolean a(fi param0, boolean param1) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -635,6 +634,7 @@ abstract class ec extends fi implements ja {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
+        Object var7 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -668,7 +668,7 @@ abstract class ec extends fi implements ja {
         String stackOut_14_2 = null;
         var6 = Virogrid.field_F ? 1 : 0;
         try {
-          StringBuilder discarded$12 = param1.append('\n');
+          StringBuilder discarded$10 = param1.append('\n');
           var5_int = 0;
           L0: while (true) {
             if (param3 < var5_int) {
@@ -676,20 +676,20 @@ abstract class ec extends fi implements ja {
                 if (param2 == 8651) {
                   break L1;
                 } else {
-                  int discarded$13 = 1;
-                  boolean discarded$14 = this.a((fi) null);
+                  var7 = null;
+                  boolean discarded$11 = this.a((fi) null, true);
                   break L1;
                 }
               }
               if (((ec) this).field_x != null) {
-                StringBuilder discarded$15 = ((ec) this).field_x.a(param0, (byte) 122, param3 + 1, param1);
+                StringBuilder discarded$12 = ((ec) this).field_x.a(param0, (byte) 122, param3 + 1, param1);
                 return;
               } else {
-                StringBuilder discarded$16 = param1.append("null");
+                StringBuilder discarded$13 = param1.append("null");
                 return;
               }
             } else {
-              StringBuilder discarded$17 = param1.append(' ');
+              StringBuilder discarded$14 = param1.append(' ');
               var5_int++;
               continue L0;
             }
@@ -894,10 +894,11 @@ abstract class ec extends fi implements ja {
     }
 
     final void c(int param0) {
+        Object var3 = null;
         if (param0 != -1) {
           L0: {
-            int discarded$6 = 1;
-            boolean discarded$7 = this.a((fi) null);
+            var3 = null;
+            boolean discarded$4 = this.a((fi) null, true);
             if (((ec) this).field_x != null) {
               ((ec) this).field_x.c(-1);
               break L0;

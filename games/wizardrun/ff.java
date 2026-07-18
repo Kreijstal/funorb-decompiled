@@ -33,7 +33,7 @@ class ff extends pl {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         int var1 = 1;
         field_H = null;
     }
@@ -54,13 +54,12 @@ class ff extends pl {
         return ((ff) this).field_I[((ff) this).field_F.field_k];
     }
 
-    final static sc c() {
+    final static sc c(int param0, int param1, int param2, int param3) {
         sc var4 = new sc();
         var4.field_n = new int[1];
         var4.field_k = 0;
         tg.field_c.a((wl) (Object) var4, false);
-        int discarded$0 = 0;
-        ld.a(5, var4);
+        ld.a(5, var4, 0);
         return var4;
     }
 
@@ -180,10 +179,9 @@ class ff extends pl {
         var5.field_l = param1;
         var5.field_o = param4;
         pc.field_l.a((wl) (Object) var5, false);
-        int discarded$10 = 121;
-        ri.a(var5, param3);
+        ri.a(var5, param3, (byte) 121);
         if (param2 != 59) {
-            nj discarded$11 = ff.a(88, 105, (byte) -48, -68, 37);
+            nj discarded$0 = ff.a(88, 105, (byte) -48, -68, 37);
         }
         return var5;
     }

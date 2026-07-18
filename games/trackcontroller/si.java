@@ -11,7 +11,7 @@ final class si {
         li discarded$0 = da.a(va.field_d[param1], nd.field_G[param1], (byte) -110);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;

@@ -32,7 +32,7 @@ final class ge extends jd {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_o = null;
         field_m = null;
         field_n = null;
@@ -145,7 +145,7 @@ final class ge extends jd {
         return stackIn_14_0;
     }
 
-    final static void a(gv param0) {
+    final static void a(gv param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

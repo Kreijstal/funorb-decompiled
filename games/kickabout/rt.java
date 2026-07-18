@@ -315,7 +315,7 @@ final class rt extends i {
         return 280;
     }
 
-    final static java.net.URL a(java.net.URL param0, String param1, int param2, String param3) {
+    final static java.net.URL a(java.net.URL param0, String param1, int param2, String param3, boolean param4) {
         try {
             RuntimeException var5 = null;
             String var5_ref = null;

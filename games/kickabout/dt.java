@@ -35,8 +35,7 @@ final class dt {
                 break L0;
               } else {
                 if (470 >= param1) {
-                  int discarded$1 = 480;
-                  if (!lb.a(var5, var6)) {
+                  if (!lb.a(var5, var6, 480)) {
                     L1: {
                       ((dt) this).field_a = -uv.b(-param1 + var6, -param0 + var5, (byte) 2);
                       var7 = var5 + -param0;
@@ -162,14 +161,14 @@ final class dt {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         int var1 = 0;
         field_j = null;
         field_e = null;
     }
 
-    final static int b() {
+    final static int b(byte param0) {
         int var1 = 0;
         int var2 = 0;
         if (ks.field_e == 1) {

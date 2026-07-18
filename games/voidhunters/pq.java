@@ -26,7 +26,7 @@ final class pq {
         }
     }
 
-    final synchronized static void b() {
+    final synchronized static void b(byte param0) {
         field_b = field_b + 1;
     }
 
@@ -35,11 +35,10 @@ final class pq {
         if (0 != field_b) {
             return;
         }
-        int discarded$0 = -128;
-        pq.a();
+        pq.a((byte) -128);
     }
 
-    final synchronized static void a() {
+    final synchronized static void a(byte param0) {
         naa var1 = null;
         L0: while (true) {
           var1 = (naa) (Object) field_a.a(true);

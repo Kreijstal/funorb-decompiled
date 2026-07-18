@@ -171,7 +171,7 @@ final class q extends hc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_Q = null;
         field_H = null;
         field_L = null;

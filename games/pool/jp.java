@@ -38,8 +38,7 @@ final class jp extends ch implements jn, tb {
               return;
             } else {
               if (((jp) this).field_Q == param3) {
-                int discarded$2 = -123;
-                this.i();
+                this.i(-123);
                 return;
               } else {
                 return;
@@ -80,7 +79,7 @@ final class jp extends ch implements jn, tb {
         }
     }
 
-    private final int a(String param0, String param1, int param2, int param3, ei param4) {
+    private final int a(String param0, String param1, int param2, int param3, ei param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -132,9 +131,7 @@ final class jp extends ch implements jn, tb {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$4 = 170;
-            int discarded$5 = 101;
-            stackOut_0_0 = this.a(70, param1, param4, 35, param0);
+            stackOut_0_0 = this.a(70, param1, param4, 35, param0, 101, 170);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -236,7 +233,7 @@ final class jp extends ch implements jn, tb {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_N = null;
         field_T = null;
         field_R = null;
@@ -247,8 +244,7 @@ final class jp extends ch implements jn, tb {
     final void a(ei param0, int param1, int param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = -23086;
-            ((jp) this).field_Q.field_I = this.h();
+            ((jp) this).field_Q.field_I = this.h(-23086);
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) (Object) runtimeException, "jp.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -418,9 +414,8 @@ final class jp extends ch implements jn, tb {
         return stackIn_6_0 != 0;
     }
 
-    private final void i() {
-        int discarded$0 = -23086;
-        if (!this.h()) {
+    private final void i(int param0) {
+        if (!this.h(-23086)) {
             return;
         }
         qi.a(87, ((jp) this).field_O.field_m);
@@ -445,8 +440,7 @@ final class jp extends ch implements jn, tb {
         var2.a(270, 20, 50, false, var3);
         ((jp) this).a(true, var2);
         var3 += 50;
-        int discarded$0 = -17870;
-        var3 = var3 + (5 + this.a(ac.field_l, se.field_k, 170, var3, (ei) (Object) ((jp) this).field_O));
+        var3 = var3 + (5 + this.a(ac.field_l, se.field_k, 170, var3, (ei) (Object) ((jp) this).field_O, -17870));
         ((jp) this).field_Q.a(var5, -var5 + 496 >> 1, 40, false, var3);
         ((jp) this).field_U.a(60, 3 + var4, 40, false, var3 + 15);
         ((jp) this).field_U.field_t = (cc) this;
@@ -484,8 +478,7 @@ final class jp extends ch implements jn, tb {
         try {
           L0: {
             if (vj.a(param3, param2, param0, (byte) 121)) {
-              int discarded$2 = -104;
-              stackOut_3_0 = ok.j();
+              stackOut_3_0 = ok.j((byte) -104);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -540,14 +533,14 @@ final class jp extends ch implements jn, tb {
         }
     }
 
-    private final boolean h() {
+    private final boolean h(int param0) {
         if (this.a(60, (sc) (Object) ((jp) this).field_O)) {
             return true;
         }
         return false;
     }
 
-    private final int a(int param0, String param1, ei param2, int param3, String param4) {
+    private final int a(int param0, String param1, ei param2, int param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         ck var9 = null;
         n var10 = null;

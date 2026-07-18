@@ -137,13 +137,10 @@ abstract class ah extends sm implements rj {
     final static void a(java.awt.Canvas param0, int param1) {
         try {
             if (!(ff.field_e != 11)) {
-                int discarded$0 = 62;
-                bm.b();
+                bm.b((byte) 62);
             }
-            int discarded$1 = 14;
-            si.a(pl.field_t, hd.field_e, pb.field_d);
-            int discarded$2 = 0;
-            nn.a(param0, param1, param1 + -1);
+            si.a(pl.field_t, hd.field_e, pb.field_d, (byte) 14);
+            nn.a(param0, param1, param1 + -1, 0);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "ah.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -157,7 +154,7 @@ abstract class ah extends sm implements rj {
         }
     }
 
-    final static void e() {
+    final static void e(int param0) {
         tg.field_nb = null;
         qm.field_f = null;
         nn.field_i = null;

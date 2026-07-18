@@ -106,14 +106,12 @@ final class k extends wh {
               param0 = param0.field_h;
               continue L0;
             } else {
-              int discarded$4 = -126;
-              lj.a(param0, (fc) (Object) param1);
+              lj.a(param0, (fc) (Object) param1, -126);
               ((k) this).field_n = ((i) (Object) ((k) this).field_o.field_d.field_h).field_i;
               return;
             }
           } else {
-            int discarded$5 = -126;
-            lj.a(param0, (fc) (Object) param1);
+            lj.a(param0, (fc) (Object) param1, -126);
             ((k) this).field_n = ((i) (Object) ((k) this).field_o.field_d.field_h).field_i;
             return;
           }

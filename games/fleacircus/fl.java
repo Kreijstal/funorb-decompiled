@@ -9,7 +9,7 @@ final class fl {
     static dd field_b;
     static char[][] field_c;
 
-    final static void a(boolean param0, boolean param1, String param2) {
+    final static void a(boolean param0, boolean param1, String param2, int param3) {
         fh.a(-55);
         try {
             nb.field_a.i(-117);
@@ -36,7 +36,7 @@ final class fl {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_c = null;
         field_b = null;

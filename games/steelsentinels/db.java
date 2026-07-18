@@ -50,15 +50,13 @@ abstract class db {
         var6 = SteelSentinels.field_G;
         try {
           L0: {
-            int discarded$4 = -15645;
-            var2 = ha.a(param1, "jagex-last-login-method");
+            var2 = ha.a(param1, "jagex-last-login-method", -15645);
             if (var2 == null) {
               stackOut_3_0 = h.field_Y;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              int discarded$5 = -26;
-              var3 = sh.b();
+              var3 = sh.b(-26);
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -318,7 +316,7 @@ abstract class db {
         return stackIn_28_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_a = null;
         field_g = null;
@@ -332,7 +330,7 @@ abstract class db {
         return d.field_U;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

@@ -79,7 +79,7 @@ abstract class ana extends at {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_t = null;
         field_u = null;
         field_r = null;
@@ -279,8 +279,7 @@ abstract class ana extends at {
             ((ana) this).field_n = param1.field_l.a(-27449, ((ana) this).field_q);
             ((ana) this).field_m = new taa(((ana) this).field_q, ((ana) this).field_n);
             ((ana) this).a(27799, (at) (Object) ((ana) this).field_m);
-            int discarded$2 = 1;
-            ((ana) this).field_n.a(16776960, 119, pk.a(param1));
+            ((ana) this).field_n.a(16776960, 119, pk.a(param1, true));
             ((ana) this).field_l = 100;
             if (!param1.field_p) {
               break L0;

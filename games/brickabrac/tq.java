@@ -47,7 +47,7 @@ final class tq {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_g = null;
         field_b = null;
@@ -59,8 +59,7 @@ final class tq {
 
     final static void a(int param0, boolean param1, ie param2, tg param3, int param4, java.awt.Component param5) {
         try {
-            int discarded$0 = 1;
-            il.a(param2, param3, 22050, 1024, 22050, 1000, param5);
+            il.a(param2, param3, 22050, 1024, 22050, 1000, param5, true);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "tq.B(" + 22050 + ',' + true + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + 1024 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

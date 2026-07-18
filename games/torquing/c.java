@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class c {
-    final static void a(Torquing param0) {
+    final static void a(Torquing param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -271,7 +271,7 @@ final class c {
         return stackIn_8_0;
     }
 
-    final static int a() {
+    final static int a(int param0) {
         return pa.field_b;
     }
 

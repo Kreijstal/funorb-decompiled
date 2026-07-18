@@ -17,29 +17,37 @@ final class jb {
         try {
           L0: {
             L1: {
-              L2: {
+              if (param0 >= 28) {
+                break L1;
+              } else {
+                jb.a((double[]) null, true, (double[]) null, -1.3623750460198865, 0.7041108610855004, 54);
+                break L1;
+              }
+            }
+            L2: {
+              L3: {
                 if (vd.field_c == null) {
-                  break L2;
+                  break L3;
                 } else {
                   if (!vd.field_c.e(17)) {
-                    break L2;
+                    break L3;
                   } else {
                     stackOut_7_0 = 1;
                     stackIn_10_0 = stackOut_7_0;
-                    break L1;
+                    break L2;
                   }
                 }
               }
               stackOut_9_0 = 0;
               stackIn_10_0 = stackOut_9_0;
-              break L1;
+              break L2;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1, "jb.A(" + 110 + ')');
+          throw rb.a((Throwable) (Object) var1, "jb.A(" + param0 + ')');
         }
         return stackIn_10_0 != 0;
     }
@@ -410,12 +418,20 @@ final class jb {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            field_e = null;
+            L1: {
+              field_e = null;
+              if (param0 < -58) {
+                break L1;
+              } else {
+                field_d = 83;
+                break L1;
+              }
+            }
             field_b = null;
             field_c = null;
             break L0;
@@ -423,7 +439,7 @@ final class jb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1, "jb.B(" + -124 + ')');
+          throw rb.a((Throwable) (Object) var1, "jb.B(" + param0 + ')');
         }
     }
 

@@ -272,7 +272,7 @@ final class uk extends ic {
         }
     }
 
-    final static char a(char param0) {
+    final static char a(char param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = TorChallenge.field_F ? 1 : 0;
@@ -605,7 +605,7 @@ final class uk extends ic {
         return stackIn_12_0 != 0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_Q = null;
         field_I = null;
         field_U = null;

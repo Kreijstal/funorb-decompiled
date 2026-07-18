@@ -90,20 +90,20 @@ final class qdb implements ntb {
 
     public final void b(byte param0, tv param1) {
         qdb var3 = (qdb) (Object) param1;
-        var3.field_b = var3.field_b;
-        var3.field_d = var3.field_d;
-        var3.field_c = dob.a(var3.field_c, (byte) -38, var3.field_c);
+        var3.field_b = ((qdb) this).field_b;
+        var3.field_d = ((qdb) this).field_d;
+        var3.field_c = dob.a(var3.field_c, (byte) -38, ((qdb) this).field_c);
         if (param0 < 54) {
             return;
         }
         try {
-            var3.field_f = var3.field_f;
+            var3.field_f = ((qdb) this).field_f;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "qdb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_a = null;
     }
@@ -137,17 +137,16 @@ final class qdb implements ntb {
               L2: {
                 var4 = -60 % ((param0 - 22) / 59);
                 var3 = (qdb) (Object) param1;
-                if (var3.field_b != var3.field_b) {
+                if (((qdb) this).field_b != var3.field_b) {
                   break L2;
                 } else {
-                  if (var3.field_d != var3.field_d) {
+                  if (((qdb) this).field_d != var3.field_d) {
                     break L2;
                   } else {
-                    int discarded$9 = 28;
-                    if (wpb.a(var3.field_c, var3.field_c)) {
+                    if (wpb.a(var3.field_c, ((qdb) this).field_c, (byte) 28)) {
                       break L2;
                     } else {
-                      if (var3.field_f == var3.field_f) {
+                      if (var3.field_f == ((qdb) this).field_f) {
                         stackOut_6_0 = 0;
                         stackIn_7_0 = stackOut_6_0;
                         break L1;
@@ -215,12 +214,9 @@ final class qdb implements ntb {
         lob.field_a = null;
         tr.c(6939);
         param4 = oga.a(33, 11, 15, 0, 13, 14, param4);
-        int discarded$0 = 1;
-        rl.a(param4, -1, 16777215, 16777215, param7, 11, param5, param6, param13);
+        rl.a(param4, -1, 16777215, 16777215, param7, 11, param5, param6, param13, true);
         chb.a(0, param5, param7);
-        int discarded$1 = 97;
-        int discarded$2 = 0;
-        mn.a(param4, param5);
+        mn.a(param4, param5, 0, 97);
     }
 
     public final void a(tv param0, int param1) {
@@ -249,26 +245,25 @@ final class qdb implements ntb {
             L1: {
               var6 = (qdb) (Object) param0;
               var4 = 0;
-              if (var6.field_b != var6.field_b) {
+              if (((qdb) this).field_b != var6.field_b) {
                 var4 = 1;
-                System.out.println("int voted_objective has changed. before=" + var6.field_b + ", now=" + var6.field_b);
+                System.out.println("int voted_objective has changed. before=" + var6.field_b + ", now=" + ((qdb) this).field_b);
                 break L1;
               } else {
                 break L1;
               }
             }
             L2: {
-              if (var6.field_d == var6.field_d) {
+              if (var6.field_d == ((qdb) this).field_d) {
                 break L2;
               } else {
-                System.out.println("int mission_generation_seed has changed. before=" + var6.field_d + ", now=" + var6.field_d);
+                System.out.println("int mission_generation_seed has changed. before=" + var6.field_d + ", now=" + ((qdb) this).field_d);
                 var4 = 1;
                 break L2;
               }
             }
             L3: {
-              int discarded$1 = 0;
-              if (!ikb.a(var6.field_c, var6.field_c)) {
+              if (!ikb.a(((qdb) this).field_c, var6.field_c, false)) {
                 break L3;
               } else {
                 var4 = 1;
@@ -277,11 +272,11 @@ final class qdb implements ntb {
               }
             }
             L4: {
-              if (var6.field_f == var6.field_f) {
+              if (var6.field_f == ((qdb) this).field_f) {
                 break L4;
               } else {
                 var4 = 1;
-                System.out.println("int rounds_left has changed. before=" + var6.field_f + ", now=" + var6.field_f);
+                System.out.println("int rounds_left has changed. before=" + var6.field_f + ", now=" + ((qdb) this).field_f);
                 break L4;
               }
             }

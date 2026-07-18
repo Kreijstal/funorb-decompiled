@@ -12,11 +12,10 @@ final class kh {
         }
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         c.field_h.b(true);
         if (!lg.field_n.a((byte) -122)) {
-            int discarded$0 = 3;
-            return lf.a();
+            return lf.a(3);
         }
         return 0;
     }
@@ -98,8 +97,7 @@ final class kh {
               L1: {
                 var8 = new jg(wg.field_j, param5);
                 wg.field_j.b((byte) -33, (we) (Object) var8);
-                int discarded$16 = 0;
-                if (!ad.c()) {
+                if (!ad.c(false)) {
                   L2: {
                     cg.field_a = null;
                     ac.field_c = param0;

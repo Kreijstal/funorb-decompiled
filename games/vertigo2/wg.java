@@ -245,8 +245,7 @@ final class wg {
                       return false;
                     }
                   } else {
-                    int discarded$5 = 0;
-                    return this.a();
+                    return this.a(false);
                   }
                 } else {
                   return true;
@@ -263,8 +262,7 @@ final class wg {
                       return false;
                     }
                   } else {
-                    int discarded$6 = 0;
-                    return this.a();
+                    return this.a(false);
                   }
                 } else {
                   return true;
@@ -281,8 +279,7 @@ final class wg {
                     return false;
                   }
                 } else {
-                  int discarded$7 = 0;
-                  return this.a();
+                  return this.a(false);
                 }
               } else {
                 return true;
@@ -299,8 +296,7 @@ final class wg {
                   return false;
                 }
               } else {
-                int discarded$8 = 0;
-                return this.a();
+                return this.a(false);
               }
             } else {
               return true;
@@ -317,8 +313,7 @@ final class wg {
                 return false;
               }
             } else {
-              int discarded$9 = 0;
-              return this.a();
+              return this.a(false);
             }
           } else {
             return true;
@@ -326,7 +321,7 @@ final class wg {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         ((wg) this).field_c = 0;
         ((wg) this).field_e = 0;
         ((wg) this).field_d = false;
@@ -339,8 +334,7 @@ final class wg {
             return;
         }
         try {
-            int discarded$0 = 0;
-            this.b();
+            this.b(0);
             ((wg) this).field_j = param0;
             ((wg) this).field_e = ((wg) this).field_j.field_c[((wg) this).field_c];
             ((wg) this).field_k = ((wg) this).field_j.field_e[((wg) this).field_c];
@@ -350,7 +344,7 @@ final class wg {
         }
     }
 
-    private final boolean a() {
+    private final boolean a(boolean param0) {
         ((wg) this).field_d = true;
         ((wg) this).field_c = ((wg) this).field_c + 1;
         if (((wg) this).field_j.field_c.length <= ((wg) this).field_c) {

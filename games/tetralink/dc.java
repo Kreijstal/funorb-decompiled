@@ -15,7 +15,7 @@ final class dc implements kg {
     static String field_i;
     static hl field_l;
 
-    public static void b() {
+    public static void b(int param0) {
         field_i = null;
         int var1 = -95;
         field_e = null;
@@ -23,7 +23,7 @@ final class dc implements kg {
         field_k = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

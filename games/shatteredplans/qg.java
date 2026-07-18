@@ -75,7 +75,7 @@ final class qg extends me {
         }
     }
 
-    final static void a(ob param0) {
+    final static void a(ob param0, boolean param1) {
         int var2_int = 0;
         try {
             np.field_j = param0.f(-20976) << 5;

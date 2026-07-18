@@ -567,14 +567,13 @@ final class kl extends wf {
           if (param0 >= 95) {
             break L0;
           } else {
-            boolean discarded$6 = kl.d((byte) -4);
+            boolean discarded$2 = kl.d((byte) -4);
             break L0;
           }
         }
         L1: {
           L2: {
-            int discarded$7 = 1;
-            if (w.d()) {
+            if (w.d(true)) {
               break L2;
             } else {
               if (0 < es.field_m) {
@@ -593,13 +592,13 @@ final class kl extends wf {
         return stackIn_7_0 != 0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_s = null;
         field_q = null;
         field_r = null;
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;

@@ -95,7 +95,7 @@ final class sa {
         return stackIn_11_0 != 0;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         ja var4 = null;
@@ -108,9 +108,7 @@ final class sa {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$8 = 7;
-                int discarded$9 = 0;
-                eb.a(var4);
+                eb.a(var4, 0, 7);
                 var4 = (ja) (Object) vd.field_l.e((byte) -119);
                 continue L1;
               }

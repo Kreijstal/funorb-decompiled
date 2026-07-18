@@ -13,12 +13,12 @@ final class er extends br {
         ((er) this).field_g = param0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_j = null;
         field_f = null;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         int var1 = 0;
         int var2 = 0;
         int stackIn_7_0 = 0;
@@ -422,10 +422,8 @@ final class er extends br {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$11 = -42;
-            if (ud.a(param1, param4, param3)) {
-              int discarded$12 = 5;
-              boolean discarded$13 = er.a();
+            if (ud.a(param1, param4, param3, (byte) -42)) {
+              boolean discarded$2 = er.a(5);
               stackOut_3_0 = rb.a(103, param0.a(param1, true, param3));
               stackIn_4_0 = stackOut_3_0;
               break L0;

@@ -189,7 +189,7 @@ final class ap extends js {
             if (param0 == 29) {
               break L0;
             } else {
-              boolean discarded$4 = ((ap) this).f((byte) -25);
+              boolean discarded$2 = ((ap) this).f((byte) -25);
               break L0;
             }
           }
@@ -217,8 +217,7 @@ final class ap extends js {
                             if (((va) (Object) ((ap) this).field_r).b((byte) -82)) {
                               break L3;
                             } else {
-                              int discarded$5 = 640;
-                              if (kl.b()) {
+                              if (kl.b(640)) {
                                 break L2;
                               } else {
                                 break L3;
@@ -243,17 +242,16 @@ final class ap extends js {
         }
     }
 
-    private final boolean b() {
+    private final boolean b(byte param0) {
         return ((ap) this).e(-2) && ((ap) this).field_A;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             try {
                 var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-                int discarded$1 = 3;
-                param0.getAppletContext().showDocument(qr.a(param0, var2), "_top");
+                param0.getAppletContext().showDocument(qr.a(param0, var2, 3), "_top");
             } catch (Exception exception) {
                 exception.printStackTrace();
             }
@@ -309,8 +307,7 @@ final class ap extends js {
               }
             }
             L3: {
-              int discarded$3 = -128;
-              ie.g();
+              ie.g(-128);
               re.b(101);
               ((ap) this).field_r.a(true);
               ((ap) this).field_r.a(-117, param1);
@@ -326,8 +323,7 @@ final class ap extends js {
                       stackIn_18_0 = stackOut_17_0;
                       break L4;
                     } else {
-                      int discarded$4 = 64;
-                      stackOut_16_0 = this.g();
+                      stackOut_16_0 = this.g(64);
                       stackIn_18_0 = stackOut_16_0;
                       break L4;
                     }
@@ -348,8 +344,7 @@ final class ap extends js {
               }
             }
             L6: {
-              int discarded$5 = -28033;
-              ve.q();
+              ve.q(-28033);
               if (((ap) this).field_E > 0) {
                 ((ap) this).field_E = ((ap) this).field_E - 16;
                 break L6;
@@ -665,8 +660,7 @@ final class ap extends js {
                     break L8;
                   }
                 }
-                int discarded$1 = -448;
-                hv.a((hu) (Object) rq.field_E);
+                hv.a((hu) (Object) rq.field_E, -448);
                 nc.a(((ap) this).field_o, (byte) -85, ((ap) this).field_h, ((ap) this).field_t);
                 ((ap) this).field_u = false;
                 break L0;
@@ -759,11 +753,10 @@ final class ap extends js {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         if (!(null == ((ap) this).field_r)) {
             iw.a(-44, rk.field_h);
-            int discarded$0 = -48;
-            hr.a();
+            hr.a((byte) -48);
             ((ap) this).a(-5, false);
             ta.e(122);
             ((ap) this).field_E = 256;
@@ -970,8 +963,7 @@ final class ap extends js {
         }
         L1: {
           L2: {
-            int discarded$2 = -73;
-            if (!this.b()) {
+            if (!this.b((byte) -73)) {
               break L2;
             } else {
               if (!((ap) this).field_v) {
@@ -1243,7 +1235,7 @@ final class ap extends js {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_l = null;
         field_j = null;
         field_x = null;
@@ -1335,10 +1327,8 @@ final class ap extends js {
           if (param0 == ~((ap) this).field_o.field_u) {
             break L0;
           } else {
-            int discarded$4 = -114;
-            ru.a(true);
-            int discarded$5 = -114;
-            ru.a(false);
+            ru.a(true, (byte) -114);
+            ru.a(false, (byte) -114);
             break L0;
           }
         }
@@ -1389,8 +1379,7 @@ final class ap extends js {
             }
           }
           L5: {
-            int discarded$6 = -121;
-            us.g();
+            us.g((byte) -121);
             if (0 < ((ap) this).field_E) {
               rk.field_h.b(0, 0, ((ap) this).field_E);
               break L5;
@@ -1424,13 +1413,12 @@ final class ap extends js {
               break L6;
             }
           }
-          int discarded$7 = -109;
-          mf.b();
+          mf.b(-109);
           return;
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         if (!(0 != ((ap) this).field_o.field_u)) {
             ((ap) this).field_r = (hs) (Object) new wb(((ap) this).field_o, ((ap) this).field_h, ((ap) this).field_t);
         }
@@ -1535,11 +1523,9 @@ final class ap extends js {
             ((ap) this).a(false, -22);
         }
         ((ap) this).field_u = true;
-        int discarded$0 = 9;
-        this.h();
+        this.h(9);
         ((ap) this).field_o.a(param1, (byte) -81);
-        int discarded$1 = -2;
-        this.d();
+        this.d(-2);
         ((ap) this).field_o.field_v = -1;
         if (!(2 != ((ap) this).field_o.field_u)) {
             ((ap) this).field_o.a(mf.a(2, 1, (byte) 0), -127);
@@ -1601,7 +1587,7 @@ final class ap extends js {
         int var2 = 109 / ((param0 - 6) / 37);
     }
 
-    private final int g() {
+    private final int g(int param0) {
         return 5 + ((ap) this).field_z[((ap) this).field_h] / 20;
     }
 
@@ -1643,8 +1629,7 @@ final class ap extends js {
           L0: {
             L1: {
               ((ap) this).field_u = true;
-              int discarded$2 = 9;
-              this.h();
+              this.h(9);
               ((ap) this).field_i.a(param1, ((ap) this).field_h, param0 ^ -18);
               ((ap) this).field_m.a(((ap) this).field_i, (byte) 77);
               if (((ap) this).field_i.field_u <= 0) {
@@ -1675,8 +1660,7 @@ final class ap extends js {
             }
             L3: {
               ((ap) this).field_o.a(((ap) this).field_i, (byte) 122);
-              int discarded$3 = -2;
-              this.d();
+              this.d(-2);
               if (param0 == -17) {
                 break L3;
               } else {

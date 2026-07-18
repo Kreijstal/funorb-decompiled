@@ -24,13 +24,13 @@ final class kb extends mc {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1, int param2, byte param3) {
         bm.field_n = param0;
         uj.field_w = param2;
         wa.field_d = param1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_q = null;
         field_p = null;
     }
@@ -42,7 +42,7 @@ final class kb extends mc {
         ((kb) this).field_o = param0;
     }
 
-    final static char a(char param0) {
+    final static char a(char param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

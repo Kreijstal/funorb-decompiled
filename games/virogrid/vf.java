@@ -9,7 +9,7 @@ final class vf {
     static km field_e;
     static int field_c;
 
-    final static void a() {
+    final static void a(int param0) {
         gk.field_g.g(62, 8);
         gk.field_g.a(123, 117);
     }
@@ -22,7 +22,7 @@ final class vf {
         field_a = null;
     }
 
-    final static hh a(String param0) {
+    final static hh a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

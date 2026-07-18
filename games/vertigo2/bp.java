@@ -45,29 +45,21 @@ final class bp extends ji {
                     break L2;
                   }
                 }
-                int discarded$103 = 2;
-                tq.a(bh.field_M, var3_int != 0, db.h(), (byte) -128, od.a((byte) -18));
+                tq.a(bh.field_M, var3_int != 0, db.h(2), (byte) -128, od.a((byte) -18));
                 break L1;
               } else {
-                int discarded$104 = 107;
-                if (!nl.a()) {
+                if (!nl.a((byte) 107)) {
                   bi.c();
-                  int discarded$105 = 320;
-                  int discarded$106 = 240;
-                  int discarded$107 = 115;
-                  lm.a();
-                  int discarded$108 = 0;
-                  dh.a(0, (byte) -97, param2);
+                  lm.a((byte) 115, 240, 320);
+                  dh.a(0, (byte) -97, param2, 0);
                   break L1;
                 } else {
                   if (hn.field_w != 0) {
                     an.a(-1243, param2);
                     break L1;
                   } else {
-                    int discarded$109 = -77;
-                    td.a(param1, false);
-                    int discarded$110 = 0;
-                    dh.a(0, (byte) -11, param2);
+                    td.a(param1, false, (byte) -77);
+                    dh.a(0, (byte) -11, param2, 0);
                     break L1;
                   }
                 }
@@ -286,7 +278,7 @@ final class bp extends ji {
         ((bp) this).field_D = 32768;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_y = null;
         field_A = null;
         field_E = null;

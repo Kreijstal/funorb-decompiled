@@ -86,7 +86,7 @@ final class sb extends oa {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         nn.a(false);
         fg.a(10, db.field_b, dh.field_y[0].field_z, da.field_g, ua.field_G, te.field_b);
     }

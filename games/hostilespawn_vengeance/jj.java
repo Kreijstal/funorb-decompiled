@@ -207,7 +207,7 @@ final class jj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_j = null;
         field_h = null;

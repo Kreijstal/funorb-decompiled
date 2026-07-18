@@ -137,15 +137,14 @@ final class qf extends wb {
         return stackIn_26_0;
     }
 
-    final static void f() {
+    final static void f(int param0) {
         if (!(ug.field_A == null)) {
             ug.field_A.g(false);
         }
         if (qj.field_fb != null) {
             qj.field_fb.h(4210752);
         }
-        int discarded$0 = -52;
-        cb.a();
+        cb.a((byte) -52);
     }
 
     private final void a(int param0, boolean param1) {
@@ -597,7 +596,7 @@ final class qf extends wb {
         field_s = null;
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -766,8 +765,7 @@ final class qf extends wb {
                   }
                 }
                 ((qf) this).field_r = (ge) param2;
-                int discarded$1 = -108;
-                this.d();
+                this.d((byte) -108);
                 this.a(-82, param0);
                 ((qf) this).field_o = null;
                 ((qf) this).field_h.field_h = 0;

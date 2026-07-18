@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ls extends tm {
-    final static String g() {
+    final static String g(int param0) {
         if (!(nr.field_f != wk.field_f)) {
             return qr.field_f;
         }

@@ -38,7 +38,7 @@ final class kn {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_f = null;
         field_c = null;
         field_h = null;
@@ -79,9 +79,8 @@ final class kn {
         ((kn) this).field_a = var4;
     }
 
-    final static void a() {
-        int discarded$0 = 0;
-        mb.field_g = hi.c();
+    final static void a(byte param0) {
+        mb.field_g = hi.c(false);
         bo.field_F = new tb();
         ve.a(-43, true, true);
     }
@@ -132,9 +131,7 @@ final class kn {
         if (!param0) {
             return null;
         }
-        int discarded$0 = 31069;
-        int discarded$1 = -89;
-        return new sn(ce.c(), jc.c());
+        return new sn(ce.c(31069), jc.c(-89));
     }
 
     final int a(boolean param0) {

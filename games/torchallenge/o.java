@@ -1020,7 +1020,7 @@ final class o extends da {
         eh.field_k = 33;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_j = null;
         field_k = null;
         field_n = null;
@@ -1035,16 +1035,14 @@ final class o extends da {
           nd.field_e = s.field_k[1 + rj.field_g];
           bc.field_o = 13;
           bb.field_h = 13;
-          int discarded$4 = 0;
-          ch.b();
+          ch.b(false);
           return;
         } else {
           rf.field_ib = 0;
           nd.field_e = s.field_k[1 + rj.field_g];
           bc.field_o = 13;
           bb.field_h = 13;
-          int discarded$5 = 0;
-          ch.b();
+          ch.b(false);
           return;
         }
     }
@@ -1053,7 +1051,7 @@ final class o extends da {
         throw new Error();
     }
 
-    final static int a() {
+    final static int a(int param0) {
         return fh.field_c;
     }
 

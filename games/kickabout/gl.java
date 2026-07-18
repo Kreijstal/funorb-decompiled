@@ -17,7 +17,7 @@ final class gl {
     static String field_i;
     int field_n;
 
-    final static int a(int param0, byte param1, int param2, int param3, ml param4) {
+    final static int a(int param0, byte param1, int param2, int param3, ml param4, int param5, int param6, int param7, int param8, int param9) {
         int var10_int = 0;
         RuntimeException var10 = null;
         int stackIn_3_0 = 0;
@@ -267,19 +267,10 @@ final class gl {
 
     final static ut[] a(int param0, byte param1, int param2, int param3, int param4) {
         int var5 = 0;
-        int discarded$0 = 0;
-        int discarded$1 = 65793;
-        int discarded$2 = 0;
-        int discarded$3 = -1481;
-        int discarded$4 = 3;
-        int discarded$5 = 1;
-        int discarded$6 = 0;
-        int discarded$7 = 1;
-        int discarded$8 = 1;
-        return q.a();
+        return q.a(1, 1, 0, 1, 3, -1481, 0, 65793, 0);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_d = null;

@@ -35,8 +35,7 @@ final class nb {
         try {
           L0: {
             var3_int = -15 % ((param2 - -31) / 40);
-            int discarded$2 = -33;
-            stackOut_0_0 = ib.a(param1, param0, 0);
+            stackOut_0_0 = ib.a(param1, param0, 0, (byte) -33);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -73,7 +72,7 @@ final class nb {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         int var1 = 8;
         field_h = null;

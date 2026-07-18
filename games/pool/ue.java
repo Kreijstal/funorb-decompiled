@@ -206,13 +206,13 @@ final class ue {
         ja.a(true);
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         bi.field_f = true;
         ia.field_k = rl.a((byte) -110) - -15000L;
         return 11 == fk.field_ab ? true : false;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_c = null;
         field_d = null;
         field_b = null;

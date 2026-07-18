@@ -133,7 +133,7 @@ final class pk extends v implements pi {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_N = null;
         field_H = null;
         field_O = null;

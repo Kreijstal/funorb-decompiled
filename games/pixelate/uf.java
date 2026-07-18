@@ -16,14 +16,14 @@ final class uf extends IOException {
         super(param0);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_e = null;
         field_f = null;
     }
 
-    final static void a(int param0, int param1, int param2, tf param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, tf param3, int param4, int param5, int param6, int param7, byte param8) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;

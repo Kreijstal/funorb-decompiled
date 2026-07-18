@@ -9,7 +9,7 @@ final class fs extends ci {
     private short[] field_m;
     private int[][] field_n;
 
-    public static void c() {
+    public static void c(int param0) {
         field_p = null;
     }
 
@@ -38,14 +38,13 @@ final class fs extends ci {
             var5 = (CharSequence) (Object) param2;
             mn.field_n = jd.a(1, var5);
             ica.field_b = param1;
-            int discarded$0 = -21844;
-            bb.a();
+            bb.a(-21844);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "fs.G(" + 123 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -279,12 +278,10 @@ final class fs extends ci {
             throw new RuntimeException("Curve operation requires at least two markers");
         }
         if (((fs) this).field_r == 2) {
-            int discarded$0 = 0;
-            this.a();
+            this.a(false);
         }
         tka.b((byte) 59);
-        int discarded$1 = 119;
-        this.d();
+        this.d((byte) 119);
     }
 
     final void a(byte param0, uia param1, int param2) {
@@ -457,7 +454,7 @@ final class fs extends ci {
         return stackIn_12_0 != 0;
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         int[] var13 = ((fs) this).field_n[0];
         int[] var11 = var13;
         int[] var9 = var11;

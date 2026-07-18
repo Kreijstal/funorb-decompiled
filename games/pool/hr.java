@@ -29,7 +29,7 @@ final class hr {
     static int field_t;
     private bd field_o;
 
-    final static void a(di param0) {
+    final static void a(di param0, int param1) {
         Object var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -145,13 +145,12 @@ final class hr {
           }
           if (param0) {
             if (((hr) this).field_e) {
-              int fieldTemp$2 = ((hr) this).field_r - 1;
+              int fieldTemp$1 = ((hr) this).field_r - 1;
               ((hr) this).field_r = ((hr) this).field_r - 1;
-              if (fieldTemp$2 <= 0) {
+              if (fieldTemp$1 <= 0) {
                 ((hr) this).field_r = ((hr) this).field_l;
                 if (((hr) this).field_v <= rf.field_d) {
-                  int discarded$3 = 2;
-                  this.a();
+                  this.a(2);
                   return;
                 } else {
                   ((hr) this).field_e = false;
@@ -195,7 +194,7 @@ final class hr {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_n = null;
         field_s = null;
@@ -208,8 +207,7 @@ final class hr {
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        int discarded$0 = 100;
-        eo var3 = wp.a(param0, param2);
+        eo var3 = wp.a(param0, param2, 100);
         if (!(var3 == null)) {
             vl.field_m.a((byte) 124, false);
             var4 = vl.field_m;
@@ -336,7 +334,7 @@ final class hr {
         }
     }
 
-    final static void a(int param0, int[] param1, int[] param2, int param3, int param4) {
+    final static void a(int param0, int[] param1, int[] param2, int param3, int param4, byte param5) {
         long var6_long = 0L;
         RuntimeException var6 = null;
         long var8 = 0L;
@@ -456,9 +454,7 @@ final class hr {
         ((hr) this).field_o.a(((hr) this).field_p, ((hr) this).field_a, 117);
         int var2 = 35 % ((58 - param0) / 41);
         wd.field_Sb = false;
-        int discarded$0 = 0;
-        int discarded$1 = 0;
-        od var3 = wp.a(((hr) this).field_a, lg.field_s, (byte) 0, ((hr) this).field_p);
+        od var3 = wp.a(((hr) this).field_a, lg.field_s, (byte) 0, ((hr) this).field_p, 0, 0);
         if (!(var3 != null)) {
             ((hr) this).d(22472);
         }
@@ -476,7 +472,7 @@ final class hr {
         mq.a(0, param0);
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

@@ -35,8 +35,7 @@ final class lh {
         ed var31 = null;
         ed var32 = null;
         var4 = EscapeVector.field_A;
-        int discarded$1 = -49;
-        var1 = qa.f();
+        var1 = qa.f((byte) -49);
         if (null != ma.field_a) {
           am.field_k = 0;
           return;
@@ -744,7 +743,7 @@ final class lh {
         return var1 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
         field_c = null;

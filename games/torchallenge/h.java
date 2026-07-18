@@ -14,7 +14,7 @@ final class h {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int[] param2, int param3) {
+    final static void a(int param0, int param1, int[] param2, int param3, int param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;

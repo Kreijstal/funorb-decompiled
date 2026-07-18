@@ -330,9 +330,7 @@ abstract class rf extends uh {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          int discarded$7 = 0;
-          int discarded$8 = 0;
-          StringBuilder discarded$9 = vd.a(' ', field_Q);
+          StringBuilder discarded$5 = vd.a(' ', field_Q, 0, false);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -368,9 +366,9 @@ abstract class rf extends uh {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$10 = field_Q.append('<');
-                        StringBuilder discarded$11 = field_Q.append(var15);
-                        StringBuilder discarded$12 = field_Q.append('>');
+                        StringBuilder discarded$6 = field_Q.append('<');
+                        StringBuilder discarded$7 = field_Q.append(var15);
+                        StringBuilder discarded$8 = field_Q.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -557,7 +555,7 @@ abstract class rf extends uh {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$13 = field_Q.append((char) var14);
+                        StringBuilder discarded$9 = field_Q.append((char) var14);
                         var14 = (char)(oj.a((byte) 127, (char) var14) & 255);
                         var4 = var4 + ((rf) this).field_u[var14];
                         if (((rf) this).field_A == null) {

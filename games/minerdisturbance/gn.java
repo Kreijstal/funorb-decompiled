@@ -6,7 +6,7 @@ final class gn {
     static String field_c;
     static String field_a;
 
-    final static int a(int param0, byte[] param1) {
+    final static int a(int param0, byte[] param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -65,9 +65,8 @@ final class gn {
         return stackIn_1_0;
     }
 
-    final static ea[] a(int param0, int param1, int param2) {
-        int discarded$0 = 127;
-        return lc.a(param2, 1, param1, param0);
+    final static ea[] a(int param0, int param1, int param2, boolean param3) {
+        return lc.a(param2, 1, param1, param0, (byte) 127);
     }
 
     final static vk[] a(int param0, vf param1) {
@@ -145,8 +144,7 @@ final class gn {
                     }
                   }
                 } else {
-                  int discarded$1 = -10309;
-                  gf.a(10L);
+                  gf.a(10L, -10309);
                   continue L1;
                 }
               }

@@ -173,12 +173,10 @@ final class nf extends gj implements pe, da {
         } else {
           if (param0 != 3) {
             nf.f((byte) 10);
-            int discarded$4 = 126;
-            el.a(((nf) this).field_I.field_i);
+            el.a(((nf) this).field_I.field_i, (byte) 126);
             return;
           } else {
-            int discarded$5 = 126;
-            el.a(((nf) this).field_I.field_i);
+            el.a(((nf) this).field_I.field_i, (byte) 126);
             return;
           }
         }

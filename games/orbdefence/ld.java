@@ -104,11 +104,11 @@ final class ld {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return true;
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

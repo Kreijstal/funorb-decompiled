@@ -4,7 +4,7 @@
 final class fba {
     static float field_a;
 
-    final static int[] a(int param0, float param1) {
+    final static int[] a(int param0, float param1, int param2, boolean param3, int param4, int param5, int param6, int param7) {
         int[] var10 = new int[2048];
         int[] var8 = var10;
         lva var9 = new lva();
@@ -94,7 +94,7 @@ final class fba {
         return stackIn_3_0;
     }
 
-    final synchronized static byte[] a(int param0) {
+    final synchronized static byte[] a(int param0, int param1) {
         byte[] var2 = null;
         if (param0 == 100) {
           if (ika.field_b <= 0) {

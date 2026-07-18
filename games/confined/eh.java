@@ -44,7 +44,7 @@ class eh extends ue {
     private int field_D;
     private ok field_I;
 
-    final static int e() {
+    final static int e(int param0) {
         return cg.field_d;
     }
 
@@ -56,14 +56,14 @@ class eh extends ue {
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
     }
 
     eh(long param0, eh param1) {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    private final void a(eh param0) {
+    private final void a(eh param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_96_0 = null;
@@ -472,8 +472,7 @@ class eh extends ue {
           L0: {
             L1: {
               ((eh) this).field_i = param0;
-              int discarded$2 = -121;
-              this.a(param1);
+              this.a(param1, (byte) -121);
               if (param6 == null) {
                 break L1;
               } else {

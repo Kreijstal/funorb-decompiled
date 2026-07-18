@@ -19,8 +19,7 @@ final class fd extends qb {
         if (Character.isISOControl(param1)) {
           return false;
         } else {
-          int discarded$6 = 0;
-          if (!ph.a(param1)) {
+          if (!ph.a(param1, false)) {
             if (param1 != 45) {
               if (160 != param1) {
                 if (32 != param1) {
@@ -44,16 +43,16 @@ final class fd extends qb {
         }
     }
 
-    final static int a() {
+    final static int a(int param0) {
         return kl.field_E;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_q = null;
         field_g = null;
     }
 
-    final static void a(int param0, ib param1) {
+    final static void a(int param0, ib param1, boolean param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

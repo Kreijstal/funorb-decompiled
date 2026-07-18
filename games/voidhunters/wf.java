@@ -8,7 +8,7 @@ final class wf {
     static phb field_a;
     private ae field_b;
 
-    private final void b() {
+    private final void b(int param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -190,7 +190,7 @@ final class wf {
         field_a = null;
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -525,8 +525,7 @@ final class wf {
           }
         }
         L13: {
-          int discarded$1 = 13879;
-          var10 = tea.a(var5, var8);
+          var10 = tea.a(var5, var8, 13879);
           var12 = this.b(31488, param0);
           var13 = this.a((byte) -60, param0);
           var14 = 0;
@@ -750,7 +749,7 @@ final class wf {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -958,8 +957,7 @@ final class wf {
                                       }
                                     }
                                     if (var8 != 0) {
-                                      int discarded$5 = 0;
-                                      aw.a();
+                                      aw.a(false);
                                       if (!ef.field_E) {
                                         break L0;
                                       } else {
@@ -1200,7 +1198,7 @@ final class wf {
                                                                         }
                                                                         var20 = "http://" + var13 + "/g=voidhunters/autochoose.ws?dest=" + msa.a((CharSequence) (Object) var12, 32);
                                                                         var13_ref = new java.awt.datatransfer.StringSelection(var20);
-                                                                        mob discarded$6 = bm.field_o.a((byte) -45, (java.awt.datatransfer.Transferable) (Object) var13_ref);
+                                                                        mob discarded$3 = bm.field_o.a((byte) -45, (java.awt.datatransfer.Transferable) (Object) var13_ref);
                                                                         wh.field_n = 100;
                                                                         var4 = 1;
                                                                         qp.a(true, 0, vpa.b((byte) -92), var20);
@@ -1433,8 +1431,7 @@ final class wf {
                                 } else {
                                   if (kt.field_l > 0) {
                                     var6 = 1;
-                                    int discarded$7 = 64;
-                                    spa.b();
+                                    spa.b((byte) 64);
                                     break L26;
                                   } else {
                                     break L26;
@@ -1469,7 +1466,7 @@ final class wf {
                                       }
                                     }
                                   }
-                                  ana discarded$8 = lha.a(-124, fa.field_d[1]);
+                                  ana discarded$4 = lha.a(-124, fa.field_d[1]);
                                   mba.field_b = 20 + kdb.field_o;
                                   break L28;
                                 }
@@ -1560,7 +1557,7 @@ final class wf {
             break L32;
           } else {
             if (((wf) this).field_b.e((byte) -102)) {
-              ana discarded$9 = lha.a(-114, fa.field_d[7]);
+              ana discarded$5 = lha.a(-114, fa.field_d[7]);
               break L32;
             } else {
               break L32;
@@ -1594,16 +1591,13 @@ final class wf {
         int stackOut_11_1 = 0;
         int stackOut_11_2 = 0;
         var7 = VoidHunters.field_G;
-        int discarded$7 = -61;
-        int discarded$8 = 150;
-        this.b();
+        this.b(150, (byte) -61);
         if (((wf) this).field_c != 7) {
           L0: {
             if (((wf) this).field_c != 8) {
               break L0;
             } else {
-              int discarded$9 = 102;
-              nb.e();
+              nb.e((byte) 102);
               break L0;
             }
           }
@@ -1612,7 +1606,7 @@ final class wf {
               break L1;
             } else {
               var8 = null;
-              String discarded$10 = this.a((String) null, (byte) -83, (String) null, -38);
+              String discarded$2 = this.a((String) null, (byte) -83, (String) null, -38);
               break L1;
             }
           }
@@ -1621,8 +1615,7 @@ final class wf {
             if (var2 >= ((wf) this).field_b.field_c) {
               L3: {
                 if (5 == ((wf) this).field_c) {
-                  int discarded$11 = -48;
-                  this.d();
+                  this.d((byte) -48);
                   break L3;
                 } else {
                   if (((wf) this).field_c == 6) {
@@ -1633,7 +1626,7 @@ final class wf {
                     var6 = (-dma.field_j + ip.field_p.height) / 2;
                     var3 = var3 + var4 * 2;
                     af.a((byte) -115, 255, var3, var5_int + (80 + -var4), -var4 + (var6 + 160), var4 * 2 + 480);
-                    int discarded$12 = nua.a(-1, 1000, 80 + var5_int, pqa.a(false, var2), 0, iia.field_c, 8555923, 480, -32, 160 + var6, 0, var2);
+                    int discarded$3 = nua.a(-1, 1000, 80 + var5_int, pqa.a(false, var2), 0, iia.field_c, 8555923, 480, -32, 160 + var6, 0, var2);
                     break L3;
                   } else {
                     break L3;
@@ -1666,8 +1659,7 @@ final class wf {
                     } else {
                       var5 = ocb.field_m[((wf) this).field_c];
                       var6 = 1;
-                      int discarded$13 = 13879;
-                      pm.a(ip.field_p.width / 2 - (tea.a(var6, var5) / 2 + -var3), 1, var4 + 110, var5, 1, 16777215, (byte) -120);
+                      pm.a(ip.field_p.width / 2 - (tea.a(var6, var5, 13879) / 2 + -var3), 1, var4 + 110, var5, 1, 16777215, (byte) -120);
                       break L5;
                     }
                   }
@@ -1754,7 +1746,7 @@ final class wf {
         return true;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1786,8 +1778,7 @@ final class wf {
               ((wf) this).field_b.a((byte) -63);
               break L0;
             } else {
-              int discarded$24 = 132;
-              this.c();
+              this.c(132);
               break L0;
             }
           }
@@ -1844,8 +1835,7 @@ final class wf {
               } else {
                 if (!dua.field_o) {
                   L3: while (true) {
-                    int discarded$6 = 127;
-                    if (!ata.e()) {
+                    if (!ata.e(127)) {
                       L4: {
                         var2 = ((wf) this).field_b.field_j;
                         ((wf) this).field_b.a(((wf) this).a(qs.field_a, oq.field_H, 6868), 5620, ((wf) this).a(uia.field_b, kc.field_b, param0 ^ 6868));
@@ -1855,7 +1845,7 @@ final class wf {
                           if (~var2 == ~((wf) this).field_b.field_j) {
                             break L4;
                           } else {
-                            ana discarded$7 = lha.a(-124, fa.field_d[0]);
+                            ana discarded$2 = lha.a(-124, fa.field_d[0]);
                             break L4;
                           }
                         }
@@ -1867,8 +1857,7 @@ final class wf {
                         break L2;
                       }
                     } else {
-                      int discarded$8 = -22029;
-                      if (!qmb.a()) {
+                      if (!qmb.a(-22029)) {
                         if (pma.field_o == 13) {
                           L5: {
                             if (1 == ((wf) this).field_c) {
@@ -1905,15 +1894,14 @@ final class wf {
                         } else {
                           L7: {
                             var2 = ((wf) this).field_b.field_j;
-                            int discarded$9 = -51;
-                            this.a();
+                            this.a((byte) -51);
                             if (0 > ((wf) this).field_b.field_j) {
                               break L7;
                             } else {
                               if (~var2 == ~((wf) this).field_b.field_j) {
                                 break L7;
                               } else {
-                                ana discarded$10 = lha.a(-110, fa.field_d[0]);
+                                ana discarded$3 = lha.a(-110, fa.field_d[0]);
                                 break L7;
                               }
                             }
@@ -1938,8 +1926,7 @@ final class wf {
             return;
           } else {
             L8: {
-              int discarded$11 = -75;
-              if (ee.a()) {
+              if (ee.a(-75)) {
                 stackOut_9_0 = 0;
                 stackIn_10_0 = stackOut_9_0;
                 break L8;

@@ -235,14 +235,14 @@ final class vp extends hn implements ng {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_C = null;
         field_D = null;
         field_F = null;
         field_G = null;
     }
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         try {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;

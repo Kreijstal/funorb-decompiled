@@ -20,18 +20,22 @@ final class hi extends um {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        String var12 = null;
-        String var13 = null;
-        String var14 = null;
-        String var15 = null;
+        Object var12 = null;
+        Object var13 = null;
+        Object var14 = null;
+        Object var15 = null;
         String var16 = null;
-        Object var17 = null;
-        Object var18 = null;
-        CharSequence var19 = null;
-        CharSequence var20 = null;
+        String var17 = null;
+        String var18 = null;
+        String var19 = null;
+        String var20 = null;
+        Object var21 = null;
+        Object var22 = null;
+        CharSequence var23 = null;
+        CharSequence var24 = null;
         L0: {
-          var17 = null;
-          var18 = null;
+          var21 = null;
+          var22 = null;
           var11 = BrickABrac.field_J ? 1 : 0;
           var3 = 1;
           if (nd.field_b) {
@@ -74,7 +78,7 @@ final class hi extends um {
                       if (fp.field_A.length() <= 0) {
                         break L3;
                       } else {
-                        StringBuilder discarded$28 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+                        StringBuilder discarded$14 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
                         return true;
                       }
                     }
@@ -88,17 +92,17 @@ final class hi extends um {
                     if (var3 != 0) {
                       if (fp.field_A.length() < 80) {
                         L4: {
-                          StringBuilder discarded$29 = fp.field_A.append((char) var4);
+                          StringBuilder discarded$15 = fp.field_A.append((char) var4);
                           var5 = 485;
-                          var13 = tb.field_cb;
-                          var7 = var13;
-                          var7 = var13;
-                          var12 = r.a((byte) 104, var13);
-                          var7 = var12;
-                          var7 = var12;
-                          var15 = var12;
-                          var7 = var15;
-                          var7 = var15;
+                          var17 = tb.field_cb;
+                          var7 = var17;
+                          var7 = var17;
+                          var16 = r.a((byte) 104, var17);
+                          var7 = var16;
+                          var7 = var16;
+                          var19 = var16;
+                          var7 = var19;
+                          var7 = var19;
                           if (ng.field_b != 2) {
                             var7 = "";
                             if (ng.field_b == 0) {
@@ -118,10 +122,10 @@ final class hi extends um {
                                 if (!ge.field_v) {
                                   L6: {
                                     var7 = "[" + rd.a(fm.field_a, new String[1], (byte) 103) + "] ";
-                                    var16 = var7 + var15 + ": ";
-                                    var5 = var5 - jq.field_y.c(var16);
+                                    var20 = var7 + var19 + ": ";
+                                    var5 = var5 - jq.field_y.c(var20);
                                     if (var5 < jq.field_y.c(fp.field_A.toString())) {
-                                      StringBuilder discarded$30 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+                                      StringBuilder discarded$16 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
                                       break L6;
                                     } else {
                                       break L6;
@@ -131,16 +135,16 @@ final class hi extends um {
                                 } else {
                                   if (null != jd.field_b) {
                                     var7 = "[" + jd.field_b + "] ";
-                                    var16 = var7 + var15 + ": ";
-                                    var5 = var5 - jq.field_y.c(var16);
+                                    var20 = var7 + var19 + ": ";
+                                    var5 = var5 - jq.field_y.c(var20);
                                     break L4;
                                   } else {
                                     L7: {
                                       var7 = "[" + rd.a(fm.field_a, new String[1], (byte) 103) + "] ";
-                                      var16 = var7 + var15 + ": ";
-                                      var5 = var5 - jq.field_y.c(var16);
+                                      var20 = var7 + var19 + ": ";
+                                      var5 = var5 - jq.field_y.c(var20);
                                       if (var5 < jq.field_y.c(fp.field_A.toString())) {
-                                        StringBuilder discarded$31 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+                                        StringBuilder discarded$17 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
                                         break L7;
                                       } else {
                                         break L7;
@@ -151,10 +155,10 @@ final class hi extends um {
                                 }
                               } else {
                                 L8: {
-                                  var16 = var7 + var15 + ": ";
-                                  var5 = var5 - jq.field_y.c(var16);
+                                  var20 = var7 + var19 + ": ";
+                                  var5 = var5 - jq.field_y.c(var20);
                                   if (var5 < jq.field_y.c(fp.field_A.toString())) {
-                                    StringBuilder discarded$32 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+                                    StringBuilder discarded$18 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
                                     break L8;
                                   } else {
                                     break L8;
@@ -163,26 +167,26 @@ final class hi extends um {
                                 return true;
                               }
                             } else {
-                              var16 = var7 + var15 + ": ";
-                              var7 = var16;
-                              var7 = var16;
-                              var5 = var5 - jq.field_y.c(var16);
+                              var20 = var7 + var19 + ": ";
+                              var7 = var20;
+                              var7 = var20;
+                              var5 = var5 - jq.field_y.c(var20);
                               if (var5 < jq.field_y.c(fp.field_A.toString())) {
-                                StringBuilder discarded$33 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+                                StringBuilder discarded$19 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
                                 return true;
                               } else {
                                 return true;
                               }
                             }
                           } else {
-                            var19 = (CharSequence) (Object) tk.field_p;
-                            var14 = rd.a(hq.field_x, new String[1], (byte) 103);
-                            var7 = var14;
-                            var7 = var14;
+                            var23 = (CharSequence) (Object) tk.field_p;
+                            var18 = rd.a(hq.field_x, new String[1], (byte) 103);
+                            var7 = var18;
+                            var7 = var18;
                             var8 = rd.a(ek.field_fb, new String[1], (byte) 103);
                             var7 = var8;
                             var7 = var8;
-                            var9 = jq.field_y.c(var14);
+                            var9 = jq.field_y.c(var18);
                             var10 = jq.field_y.c(var8);
                             if (var9 > var10) {
                               var5 = var5 - var9;
@@ -194,7 +198,7 @@ final class hi extends um {
                           }
                         }
                         if (var5 < jq.field_y.c(fp.field_A.toString())) {
-                          StringBuilder discarded$34 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+                          StringBuilder discarded$20 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
                           return true;
                         } else {
                           return true;
@@ -213,21 +217,20 @@ final class hi extends um {
                     if (ng.field_b == 0) {
                       break L9;
                     } else {
-                      int discarded$35 = 1;
-                      fl.b();
+                      fl.b(true);
                       break L9;
                     }
                   } else {
                     if (fp.field_A.length() > 0) {
                       var4_ref_String = fp.field_A.toString();
-                      int discarded$36 = -128;
-                      if (mm.a(var4_ref_String)) {
-                        int discarded$37 = 2;
-                        wp.a((byte) 92, 0, (String) null, ck.field_j, (String) null);
-                        int discarded$38 = 2;
-                        wp.a((byte) 92, 0, (String) null, w.field_m, (String) null);
-                        int discarded$39 = 1;
-                        fl.b();
+                      if (mm.a(var4_ref_String, (byte) -128)) {
+                        var13 = null;
+                        var12 = null;
+                        wp.a((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
+                        var15 = null;
+                        var14 = null;
+                        wp.a((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
+                        fl.b(true);
                         break L9;
                       } else {
                         L10: {
@@ -252,13 +255,11 @@ final class hi extends um {
                           }
                         }
                         c.a(-1, tk.field_p, (byte) -106, ng.field_b, param1, var4_ref_String);
-                        int discarded$40 = 1;
-                        fl.b();
+                        fl.b(true);
                         break L9;
                       }
                     } else {
-                      int discarded$41 = 1;
-                      fl.b();
+                      fl.b(true);
                       break L9;
                     }
                   }
@@ -289,7 +290,7 @@ final class hi extends um {
                 if (fp.field_A.length() <= 0) {
                   break L13;
                 } else {
-                  StringBuilder discarded$42 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+                  StringBuilder discarded$21 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
                   return true;
                 }
               }
@@ -303,17 +304,17 @@ final class hi extends um {
               if (var3 != 0) {
                 if (fp.field_A.length() < 80) {
                   L14: {
-                    StringBuilder discarded$43 = fp.field_A.append((char) var4);
+                    StringBuilder discarded$22 = fp.field_A.append((char) var4);
                     var5 = 485;
-                    var13 = tb.field_cb;
-                    var7 = var13;
-                    var7 = var13;
-                    var12 = r.a((byte) 104, var13);
-                    var7 = var12;
-                    var7 = var12;
-                    var15 = var12;
-                    var7 = var15;
-                    var7 = var15;
+                    var17 = tb.field_cb;
+                    var7 = var17;
+                    var7 = var17;
+                    var16 = r.a((byte) 104, var17);
+                    var7 = var16;
+                    var7 = var16;
+                    var19 = var16;
+                    var7 = var19;
+                    var7 = var19;
                     if (ng.field_b != 2) {
                       var7 = "";
                       if (ng.field_b == 0) {
@@ -333,10 +334,10 @@ final class hi extends um {
                           if (!ge.field_v) {
                             L16: {
                               var7 = "[" + rd.a(fm.field_a, new String[1], (byte) 103) + "] ";
-                              var16 = var7 + var15 + ": ";
-                              var5 = var5 - jq.field_y.c(var16);
+                              var20 = var7 + var19 + ": ";
+                              var5 = var5 - jq.field_y.c(var20);
                               if (var5 < jq.field_y.c(fp.field_A.toString())) {
-                                StringBuilder discarded$44 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+                                StringBuilder discarded$23 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
                                 break L16;
                               } else {
                                 break L16;
@@ -346,16 +347,16 @@ final class hi extends um {
                           } else {
                             if (null != jd.field_b) {
                               var7 = "[" + jd.field_b + "] ";
-                              var16 = var7 + var15 + ": ";
-                              var5 = var5 - jq.field_y.c(var16);
+                              var20 = var7 + var19 + ": ";
+                              var5 = var5 - jq.field_y.c(var20);
                               break L14;
                             } else {
                               L17: {
                                 var7 = "[" + rd.a(fm.field_a, new String[1], (byte) 103) + "] ";
-                                var16 = var7 + var15 + ": ";
-                                var5 = var5 - jq.field_y.c(var16);
+                                var20 = var7 + var19 + ": ";
+                                var5 = var5 - jq.field_y.c(var20);
                                 if (var5 < jq.field_y.c(fp.field_A.toString())) {
-                                  StringBuilder discarded$45 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+                                  StringBuilder discarded$24 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
                                   break L17;
                                 } else {
                                   break L17;
@@ -366,10 +367,10 @@ final class hi extends um {
                           }
                         } else {
                           L18: {
-                            var16 = var7 + var15 + ": ";
-                            var5 = var5 - jq.field_y.c(var16);
+                            var20 = var7 + var19 + ": ";
+                            var5 = var5 - jq.field_y.c(var20);
                             if (var5 < jq.field_y.c(fp.field_A.toString())) {
-                              StringBuilder discarded$46 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+                              StringBuilder discarded$25 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
                               break L18;
                             } else {
                               break L18;
@@ -379,12 +380,12 @@ final class hi extends um {
                         }
                       } else {
                         L19: {
-                          var16 = var7 + var15 + ": ";
-                          var7 = var16;
-                          var7 = var16;
-                          var5 = var5 - jq.field_y.c(var16);
+                          var20 = var7 + var19 + ": ";
+                          var7 = var20;
+                          var7 = var20;
+                          var5 = var5 - jq.field_y.c(var20);
                           if (var5 < jq.field_y.c(fp.field_A.toString())) {
-                            StringBuilder discarded$47 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+                            StringBuilder discarded$26 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
                             break L19;
                           } else {
                             break L19;
@@ -393,14 +394,14 @@ final class hi extends um {
                         return true;
                       }
                     } else {
-                      var20 = (CharSequence) (Object) tk.field_p;
-                      var14 = rd.a(hq.field_x, new String[1], (byte) 103);
-                      var7 = var14;
-                      var7 = var14;
+                      var24 = (CharSequence) (Object) tk.field_p;
+                      var18 = rd.a(hq.field_x, new String[1], (byte) 103);
+                      var7 = var18;
+                      var7 = var18;
                       var8 = rd.a(ek.field_fb, new String[1], (byte) 103);
                       var7 = var8;
                       var7 = var8;
-                      var9 = jq.field_y.c(var14);
+                      var9 = jq.field_y.c(var18);
                       var10 = jq.field_y.c(var8);
                       if (var9 > var10) {
                         var5 = var5 - var9;
@@ -412,7 +413,7 @@ final class hi extends um {
                     }
                   }
                   if (var5 < jq.field_y.c(fp.field_A.toString())) {
-                    StringBuilder discarded$48 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+                    StringBuilder discarded$27 = uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
                     return true;
                   } else {
                     return true;
@@ -431,8 +432,7 @@ final class hi extends um {
               if (ng.field_b == 0) {
                 break L20;
               } else {
-                int discarded$49 = 1;
-                fl.b();
+                fl.b(true);
                 break L20;
               }
             }
@@ -442,14 +442,14 @@ final class hi extends um {
               var4_ref_String = fp.field_A.toString();
               var7 = var4_ref_String;
               var7 = var4_ref_String;
-              int discarded$50 = -128;
-              if (mm.a(var4_ref_String)) {
-                int discarded$51 = 2;
-                wp.a((byte) 92, 0, (String) null, ck.field_j, (String) null);
-                int discarded$52 = 2;
-                wp.a((byte) 92, 0, (String) null, w.field_m, (String) null);
-                int discarded$53 = 1;
-                fl.b();
+              if (mm.a(var4_ref_String, (byte) -128)) {
+                var13 = null;
+                var12 = null;
+                wp.a((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
+                var15 = null;
+                var14 = null;
+                wp.a((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
+                fl.b(true);
                 return true;
               } else {
                 L21: {
@@ -474,13 +474,11 @@ final class hi extends um {
                   }
                 }
                 c.a(-1, tk.field_p, (byte) -106, ng.field_b, param1, var4_ref_String);
-                int discarded$54 = 1;
-                fl.b();
+                fl.b(true);
                 return true;
               }
             } else {
-              int discarded$55 = 1;
-              fl.b();
+              fl.b(true);
               return true;
             }
           }
@@ -566,8 +564,7 @@ final class hi extends um {
             }
             L4: {
               var7 = stackIn_14_0;
-              int discarded$2 = 122;
-              ac.a(((hi) this).field_B, param3.field_w + param4 + (param3.field_s - ((hi) this).field_B[0].field_z >> 1), param3.field_o + param2, param3.field_t, var7);
+              ac.a(((hi) this).field_B, param3.field_w + param4 + (param3.field_s - ((hi) this).field_B[0].field_z >> 1), param3.field_o + param2, param3.field_t, var7, (byte) 122);
               if (!param0) {
                 stackOut_16_0 = 7105644;
                 stackIn_17_0 = stackOut_16_0;
@@ -587,7 +584,7 @@ final class hi extends um {
                 break L5;
               }
             }
-            int discarded$3 = ((hi) this).field_k.a(param3.field_A, param3.field_o + param2, param4 - -param3.field_w + -2, param3.field_t, param3.field_s, var8, -1, 1, 1, ((hi) this).field_k.field_F);
+            int discarded$1 = ((hi) this).field_k.a(param3.field_A, param3.field_o + param2, param4 - -param3.field_w + -2, param3.field_t, param3.field_s, var8, -1, 1, 1, ((hi) this).field_k.field_F);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -680,7 +677,7 @@ final class hi extends um {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_v = null;
         field_w = null;
         field_A = null;

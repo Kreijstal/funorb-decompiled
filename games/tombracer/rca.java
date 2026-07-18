@@ -257,14 +257,13 @@ final class rca extends me {
             oka.a(var8.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
             ura.a(-10985);
             hp.a(1024, 0, 0, ((rca) this).field_o.b((byte) 74), -1918106173, 300, 320);
-            int discarded$3 = -6;
-            se.f();
+            se.f((byte) -6);
             kq.field_a.a(var2, var3 + 85);
             oka.a(var9.toUpperCase(), 65793, eda.field_f, -1, (koa.b(0) >> 1) - -92, aaa.a(false) >> 1, -1);
             return;
           }
         } else {
-          boolean discarded$4 = ((rca) this).d((byte) 83);
+          boolean discarded$1 = ((rca) this).d((byte) 83);
           var2 = aaa.a(false) - kq.field_a.a() >> 1;
           var3 = koa.b(0) - kq.field_a.c() >> 1;
           if (((rca) this).field_m.c(16) != 0) {
@@ -284,8 +283,7 @@ final class rca extends me {
             oka.a(var6.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
             ura.a(-10985);
             hp.a(1024, 0, 0, ((rca) this).field_o.b((byte) 74), -1918106173, 300, 320);
-            int discarded$5 = -6;
-            se.f();
+            se.f((byte) -6);
             kq.field_a.a(var2, var3 + 85);
             oka.a(var7.toUpperCase(), 65793, eda.field_f, -1, (koa.b(0) >> 1) - -92, aaa.a(false) >> 1, -1);
             return;

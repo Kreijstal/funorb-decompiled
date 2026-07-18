@@ -115,7 +115,7 @@ final class lg {
         this(640, 480, 1280, 1024, 640, 480, 122, 16, param0);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_v = null;
         field_j = null;
     }
@@ -753,8 +753,7 @@ final class lg {
             }
           }
           L1: {
-            int discarded$2 = 0;
-            var2 = nf.a(stackIn_4_0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4 != 0);
+            var2 = nf.a(stackIn_4_0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4 != 0, 0);
             if (var2 == null) {
               ((lg) this).b(true);
               break L1;

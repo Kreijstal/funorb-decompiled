@@ -16,7 +16,7 @@ final class mk extends ag {
     static int field_Q;
     static String field_L;
 
-    public static void g() {
+    public static void g(byte param0) {
         field_K = null;
         field_O = null;
         field_N = null;

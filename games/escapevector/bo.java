@@ -60,7 +60,7 @@ final class bo extends hc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_H = null;
         field_F = null;
         field_D = null;
@@ -281,8 +281,7 @@ final class bo extends hc {
                         nm.a(16);
                         return false;
                       } else {
-                        int discarded$3 = 64655;
-                        if (un.e() <= 30000L) {
+                        if (un.e(64655) <= 30000L) {
                           break L0;
                         } else {
                           nm.a(16);

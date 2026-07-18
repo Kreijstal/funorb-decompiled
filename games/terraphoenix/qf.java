@@ -10,11 +10,9 @@ final class qf {
     final static boolean a(boolean param0) {
         if (!param0) {
             qf.a(94);
-            int discarded$0 = 0;
-            return rl.b();
+            return rl.b(0);
         }
-        int discarded$1 = 0;
-        return rl.b();
+        return rl.b(0);
     }
 
     public final String toString() {

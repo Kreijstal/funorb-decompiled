@@ -16,7 +16,7 @@ final class ig {
     static int field_d;
     static String field_j;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_k = null;
         field_i = null;
@@ -27,7 +27,7 @@ final class ig {
         field_h = null;
     }
 
-    final static void b(int param0) {
+    final static void b(int param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

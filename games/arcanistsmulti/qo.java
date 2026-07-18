@@ -122,14 +122,12 @@ final class qo {
         try {
           L0: {
             L1: {
-              int discarded$6 = 0;
-              int discarded$7 = 29424;
-              var2 = rl.a(be.a(param1));
+              var2 = rl.a(be.a(param1, false), 29424);
               if (param0 >= 67) {
                 break L1;
               } else {
                 var3 = null;
-                String discarded$8 = qo.a((byte) -47, (CharSequence) null);
+                String discarded$2 = qo.a((byte) -47, (CharSequence) null);
                 break L1;
               }
             }
@@ -178,7 +176,7 @@ final class qo {
         return stackIn_6_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_d = null;
         field_c = null;

@@ -14,8 +14,7 @@ class vd extends ag implements ai {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         try {
             super.a(param0, param1, param2, param3, param4);
-            int discarded$0 = 93;
-            this.h();
+            this.h(93);
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "vd.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -126,6 +125,14 @@ class vd extends ag implements ai {
                           stackIn_59_0 = stackOut_58_0;
                           return stackIn_59_0;
                         } else {
+                          L4: {
+                            if (param0 == 18475) {
+                              break L4;
+                            } else {
+                              vd.a((byte) 105);
+                              break L4;
+                            }
+                          }
                           stackOut_63_0 = -1;
                           stackIn_64_0 = stackOut_63_0;
                           break L0;
@@ -140,50 +147,54 @@ class vd extends ag implements ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "vd.LB(" + 18475 + ',' + param1 + ')');
+          throw wg.a((Throwable) (Object) var2, "vd.LB(" + param0 + ',' + param1 + ')');
         }
         return stackIn_64_0;
     }
 
-    private final void h() {
-        RuntimeException var2 = null;
-        fl var2_ref = null;
+    private final void h(int param0) {
+        RuntimeException runtimeException = null;
+        fl var2 = null;
         ag var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
-            var2_ref = new fl(((vd) this).field_z);
-            var3 = (ag) (Object) var2_ref.b(1);
-            L1: while (true) {
-              L2: {
-                L3: {
-                  if (var3 == null) {
-                    break L3;
-                  } else {
-                    var3.c(0);
-                    var3 = (ag) (Object) var2_ref.c(0);
-                    if (var4 != 0) {
-                      break L2;
+            if (param0 > 52) {
+              var2 = new fl(((vd) this).field_z);
+              var3 = (ag) (Object) var2.b(1);
+              L1: while (true) {
+                L2: {
+                  L3: {
+                    if (var3 == null) {
+                      break L3;
                     } else {
-                      if (var4 == 0) {
-                        continue L1;
+                      var3.c(0);
+                      var3 = (ag) (Object) var2.c(0);
+                      if (var4 != 0) {
+                        break L2;
                       } else {
-                        break L3;
+                        if (var4 == 0) {
+                          continue L1;
+                        } else {
+                          break L3;
+                        }
                       }
                     }
                   }
+                  break L2;
                 }
-                break L2;
+                break L0;
               }
-              break L0;
+            } else {
+              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "vd.KB(" + 93 + ')');
+          runtimeException = decompiledCaughtException;
+          throw wg.a((Throwable) (Object) runtimeException, "vd.KB(" + param0 + ')');
         }
     }
 
@@ -251,8 +262,8 @@ class vd extends ag implements ai {
     }
 
     private final void b(int param0, Hashtable param1, int param2, StringBuilder param3) {
+        RuntimeException runtimeException = null;
         fl var5 = null;
-        RuntimeException var5_ref = null;
         ag var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -290,62 +301,70 @@ class vd extends ag implements ai {
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
-            var5 = new fl(((vd) this).field_z);
+            L1: {
+              var5 = new fl(((vd) this).field_z);
+              if (param0 == 30726) {
+                break L1;
+              } else {
+                ((vd) this).a(-109, 91, (byte) -124, 115);
+                break L1;
+              }
+            }
             var6 = (ag) (Object) var5.b(1);
-            L1: while (true) {
-              L2: {
-                L3: {
+            L2: while (true) {
+              L3: {
+                L4: {
                   if (var6 == null) {
-                    break L3;
+                    break L4;
                   } else {
-                    StringBuilder discarded$3 = param3.append('\n');
+                    StringBuilder discarded$9 = param3.append('\n');
                     if (var8 != 0) {
-                      break L2;
+                      break L3;
                     } else {
                       var7 = 0;
-                      L4: while (true) {
-                        L5: {
-                          L6: {
+                      L5: while (true) {
+                        L6: {
+                          L7: {
                             if (~param2 > ~var7) {
-                              break L6;
+                              break L7;
                             } else {
-                              StringBuilder discarded$4 = param3.append(' ');
+                              StringBuilder discarded$10 = param3.append(' ');
                               var7++;
                               if (var8 != 0) {
-                                break L5;
+                                break L6;
                               } else {
                                 if (var8 == 0) {
-                                  continue L4;
+                                  continue L5;
                                 } else {
-                                  break L6;
+                                  break L7;
                                 }
                               }
                             }
                           }
-                          StringBuilder discarded$5 = var6.a(118, param1, param2 - -1, param3);
+                          StringBuilder discarded$11 = var6.a(118, param1, param2 - -1, param3);
                           var6 = (ag) (Object) var5.c(0);
-                          break L5;
+                          break L6;
                         }
                         if (var8 == 0) {
-                          continue L1;
+                          continue L2;
                         } else {
-                          break L3;
+                          break L4;
                         }
                       }
                     }
                   }
                 }
-                break L2;
+                break L3;
               }
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var5_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var5_ref;
-            stackOut_16_1 = new StringBuilder().append("vd.MB(").append(30726).append(',');
+          L8: {
+            runtimeException = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) runtimeException;
+            stackOut_16_1 = new StringBuilder().append("vd.MB(").append(param0).append(',');
             stackIn_19_0 = stackOut_16_0;
             stackIn_19_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -357,7 +376,7 @@ class vd extends ag implements ai {
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
-              break L7;
+              break L8;
             } else {
               stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
               stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
@@ -365,10 +384,10 @@ class vd extends ag implements ai {
               stackIn_20_0 = stackOut_17_0;
               stackIn_20_1 = stackOut_17_1;
               stackIn_20_2 = stackOut_17_2;
-              break L7;
+              break L8;
             }
           }
-          L8: {
+          L9: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
             stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param2).append(',');
             stackIn_23_0 = stackOut_20_0;
@@ -382,7 +401,7 @@ class vd extends ag implements ai {
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
-              break L8;
+              break L9;
             } else {
               stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
@@ -390,7 +409,7 @@ class vd extends ag implements ai {
               stackIn_24_0 = stackOut_21_0;
               stackIn_24_1 = stackOut_21_1;
               stackIn_24_2 = stackOut_21_2;
-              break L8;
+              break L9;
             }
           }
           throw wg.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');

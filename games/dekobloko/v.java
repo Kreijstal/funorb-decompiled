@@ -10,7 +10,7 @@ final class v {
     static String field_e;
     static byte[] field_a;
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         if (param0 < 65) {
           if (param0 >= 97) {
             if (122 >= param0) {
@@ -47,7 +47,7 @@ final class v {
         be.a((byte) 123, vk.field_a);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;
@@ -56,7 +56,7 @@ final class v {
         field_e = null;
     }
 
-    final static short[] a(uf param0, boolean param1, short[] param2) {
+    final static short[] a(uf param0, boolean param1, short[] param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

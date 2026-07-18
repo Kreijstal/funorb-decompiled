@@ -36,13 +36,12 @@ final class vi {
           return;
         } else {
           ag.field_I.a(120, -20500, 640, var3, va.field_u);
-          int discarded$2 = 640;
-          hm.a(-1, mi.field_l, 0, io.field_n, 5, gb.field_y + -24);
+          hm.a(-1, mi.field_l, 0, io.field_n, 5, gb.field_y + -24, 640);
           return;
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_a = null;
         field_c = null;

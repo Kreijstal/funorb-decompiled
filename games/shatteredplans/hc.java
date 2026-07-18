@@ -60,7 +60,7 @@ final class hc {
         return var9;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
     }

@@ -27,18 +27,17 @@ final class bma extends ci {
     final static void d(byte param0) {
         aca var1 = (aca) (Object) io.field_d.f(-80);
         if (var1 == null) {
-            int discarded$0 = 60;
-            dea.a();
+            dea.a(60);
             return;
         }
         kh var2 = vc.field_q;
         if (param0 < 23) {
             field_t = null;
         }
-        int discarded$1 = var2.e(-16);
-        int discarded$2 = var2.e(-118);
-        int discarded$3 = var2.e(112);
-        int discarded$4 = var2.e(-29);
+        int discarded$0 = var2.e(-16);
+        int discarded$1 = var2.e(-118);
+        int discarded$2 = var2.e(112);
+        int discarded$3 = var2.e(-29);
         var1.p(71);
     }
 
@@ -161,7 +160,7 @@ final class bma extends ci {
         return 2;
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -277,8 +276,7 @@ final class bma extends ci {
             if (param1 == 0) {
               break L1;
             } else {
-              int discarded$6 = 64;
-              if (param1 == pl.a()) {
+              if (param1 == pl.a((byte) 64)) {
                 break L1;
               } else {
                 if (dta.field_g[param1]) {
@@ -302,7 +300,7 @@ final class bma extends ci {
         return stackIn_7_0 != 0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_p = null;
         field_w = null;
         field_v = null;
@@ -314,8 +312,7 @@ final class bma extends ci {
         if (param0 != 116) {
             return;
         }
-        int discarded$0 = 122;
-        this.c();
+        this.c(122);
     }
 
     public bma() {
@@ -330,7 +327,7 @@ final class bma extends ci {
         ((bma) this).field_x = 1024;
     }
 
-    final static int a(fp param0) {
+    final static int a(fp param0, boolean param1) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;

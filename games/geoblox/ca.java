@@ -7,7 +7,7 @@ final class ca extends hf {
     static int field_i;
     static na field_g;
 
-    final static nd a(String param0) {
+    final static nd a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -50,11 +50,9 @@ final class ca extends hf {
                   if (var2_int != -1) {
                     var3 = param0.substring(0, var2_int);
                     var4 = param0.substring(1 + var2_int);
-                    int discarded$4 = 1;
-                    var5 = r.a(var3);
+                    var5 = r.a(var3, true);
                     if (var5 == null) {
-                      int discarded$5 = 0;
-                      stackOut_11_0 = fe.a(var4);
+                      stackOut_11_0 = fe.a(var4, false);
                       stackIn_12_0 = stackOut_11_0;
                       break L0;
                     } else {
@@ -107,7 +105,7 @@ final class ca extends hf {
         return stackIn_12_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_h = null;
         field_f = null;
         field_g = null;

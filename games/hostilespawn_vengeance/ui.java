@@ -13,7 +13,7 @@ final class ui implements Iterable {
     static bd field_b;
     static String field_g;
 
-    final static void a(double param0, int[] param1, p param2, int param3, int param4, double param5) {
+    final static void a(double param0, int[] param1, p param2, int param3, int param4, double param5, boolean param6) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -217,8 +217,7 @@ final class ui implements Iterable {
                                               break L14;
                                             } else {
                                               if (var19.field_I > 0) {
-                                                int discarded$1 = 1;
-                                                tk.a(8, jc.field_c, 1);
+                                                tk.a(8, jc.field_c, 1, true);
                                                 break L14;
                                               } else {
                                                 break L14;
@@ -401,7 +400,7 @@ final class ui implements Iterable {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_d = null;
         field_f = null;
@@ -436,7 +435,7 @@ final class ui implements Iterable {
         return var3 * param1 - (-(var5 * var4) + -(var4 * var6 >> 16));
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, byte param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         float var5_float = 0.0f;
@@ -618,7 +617,7 @@ final class ui implements Iterable {
         return var2;
     }
 
-    final static void a(int param0, java.awt.Canvas param1, byte param2) {
+    final static void a(int param0, java.awt.Canvas param1, byte param2, int param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;

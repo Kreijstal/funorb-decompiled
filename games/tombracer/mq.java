@@ -198,7 +198,7 @@ final class mq {
         return stackIn_10_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_e = null;
         field_d = null;

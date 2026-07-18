@@ -189,7 +189,7 @@ final class mm {
         return (char)var2;
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -359,8 +359,7 @@ final class mm {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((mm) this).field_g[var2_int] = param0[var2_int];
             }
-            int discarded$0 = 83;
-            this.b();
+            this.b(83);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) (Object) runtimeException, "mm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

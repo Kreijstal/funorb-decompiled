@@ -10,7 +10,7 @@ final class tj extends vm {
     static boolean field_l;
     static long field_m;
 
-    public static void i() {
+    public static void i(int param0) {
         field_p = null;
         field_n = null;
     }
@@ -176,7 +176,7 @@ final class tj extends vm {
         return null == rm.field_R ? wc.field_x : true;
     }
 
-    final static boolean a(int param0, int param1, um param2) {
+    final static boolean a(int param0, int param1, um param2, byte param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;

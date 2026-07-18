@@ -18,7 +18,7 @@ abstract class wj {
     volatile int field_f;
     cc field_m;
 
-    final static void b() {
+    final static void b(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -85,16 +85,16 @@ abstract class wj {
                         var9_int = 1;
                         L5: while (true) {
                           if (var6 <= var9_int) {
-                            String[][] dupTemp$8 = new String[3][var7];
-                            var5.field_m = dupTemp$8;
-                            var9 = dupTemp$8;
+                            String[][] dupTemp$6 = new String[3][var7];
+                            var5.field_m = dupTemp$6;
+                            var9 = dupTemp$6;
                             var10 = new String[3][var7];
-                            long[][] dupTemp$9 = new long[3][var7];
-                            var5.field_k = dupTemp$9;
-                            var11 = dupTemp$9;
-                            int[][] dupTemp$10 = new int[3][var7 * var8];
-                            var5.field_p = dupTemp$10;
-                            var12 = dupTemp$10;
+                            long[][] dupTemp$7 = new long[3][var7];
+                            var5.field_k = dupTemp$7;
+                            var11 = dupTemp$7;
+                            int[][] dupTemp$8 = new int[3][var7 * var8];
+                            var5.field_p = dupTemp$8;
+                            var12 = dupTemp$8;
                             var13 = 0;
                             var14 = 0;
                             var15 = 0;
@@ -125,9 +125,9 @@ abstract class wj {
                                           var13++;
                                           break L7;
                                         } else {
-                                          int incrementValue$11 = var16;
+                                          int incrementValue$9 = var16;
                                           var16++;
-                                          var12[0][incrementValue$11] = var28.a(-107);
+                                          var12[0][incrementValue$9] = var28.a(-107);
                                           var26++;
                                           continue L8;
                                         }
@@ -138,8 +138,7 @@ abstract class wj {
                                     if (var22 == null) {
                                       break L9;
                                     } else {
-                                      int discarded$12 = 0;
-                                      if (ra.a(var22)) {
+                                      if (ra.a(var22, false)) {
                                         var9[1][var14] = ng.field_e;
                                         var10[1][var14] = null;
                                         var11[1][var14] = var23;
@@ -150,9 +149,9 @@ abstract class wj {
                                           if (var8 <= var26) {
                                             break L9;
                                           } else {
-                                            int incrementValue$13 = var17;
+                                            int incrementValue$10 = var17;
                                             var17++;
-                                            var12[1][incrementValue$13] = var28.a(98);
+                                            var12[1][incrementValue$10] = var28.a(98);
                                             var26++;
                                             continue L10;
                                           }
@@ -178,9 +177,9 @@ abstract class wj {
                                           if (var26 >= var8) {
                                             break L11;
                                           } else {
-                                            int incrementValue$14 = var18;
+                                            int incrementValue$11 = var18;
                                             var18++;
-                                            var12[2][incrementValue$14] = var28.a(111);
+                                            var12[2][incrementValue$11] = var28.a(111);
                                             var26++;
                                             continue L12;
                                           }
@@ -227,8 +226,7 @@ abstract class wj {
                 }
               } else {
                 if (var2 != 1) {
-                  int discarded$15 = 0;
-                  bl.a((Throwable) null, (byte) -120, "HS1: " + em.b());
+                  bl.a((Throwable) null, (byte) -120, "HS1: " + em.b(false));
                   r.a(-28036);
                   break L1;
                 } else {
@@ -317,7 +315,7 @@ abstract class wj {
         return var8;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, hj param7) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, hj param7, int param8) {
         try {
             cd.field_b = 20;
             wn.field_a = param7;
@@ -343,7 +341,7 @@ abstract class wj {
 
     abstract boolean a(byte param0);
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_n = null;
         field_a = null;

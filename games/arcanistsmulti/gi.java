@@ -16,7 +16,7 @@ final class gi {
     private di field_d;
     static String field_j;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_j = null;
         field_f = null;
@@ -169,7 +169,7 @@ final class gi {
         return stackIn_18_0;
     }
 
-    private final wf a(int param0, int param1, int[] param2) {
+    private final wf a(int param0, int param1, int[] param2, boolean param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -364,16 +364,14 @@ final class gi {
         String stackOut_9_2 = null;
         try {
           if (((gi) this).field_e.b((byte) -99) == -2) {
-            int discarded$4 = 1;
-            stackOut_2_0 = this.a(0, param0, param1);
+            stackOut_2_0 = this.a(0, param0, param1, true);
             stackIn_3_0 = stackOut_2_0;
             return stackIn_3_0;
           } else {
             if (param2 != ((gi) this).field_e.a(param0, (byte) -60)) {
               throw new RuntimeException();
             } else {
-              int discarded$5 = 1;
-              stackOut_5_0 = this.a(param0, 0, param1);
+              stackOut_5_0 = this.a(param0, 0, param1, true);
               stackIn_6_0 = stackOut_5_0;
               return stackIn_6_0;
             }

@@ -157,8 +157,7 @@ class af implements j, eg {
 
     private final void a(rc param0, int param1, int param2, int param3) {
         try {
-            int discarded$0 = 0;
-            this.a(param1, param2, -3, 0, ((af) this).field_o, ((af) this).field_k, param0);
+            this.a(param1, param2, -3, 0, ((af) this).field_o, ((af) this).field_k, param0, 0);
             int var5_int = 0;
         } catch (RuntimeException runtimeException) {
             throw fc.a((Throwable) (Object) runtimeException, "af.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + -117 + ')');
@@ -225,8 +224,7 @@ class af implements j, eg {
                     var7 = var14.a((byte) -94, param0);
                     var8 = var13.field_c[var7];
                     var9 = var14.a(0, param0);
-                    int discarded$1 = 78;
-                    var10 = this.a(param3, param4, var9);
+                    var10 = this.a(param3, param4, var9, (byte) 78);
                     var11 = ((af) this).a(param3, false, param1) + Math.max(0, var8.field_g);
                     stackOut_3_0 = ((af) this).a(param3, false, param1);
                     stackOut_3_1 = this.c(param2 ^ 2, param3);
@@ -362,7 +360,7 @@ class af implements j, eg {
         return stackIn_3_0;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return vg.field_J != null && vg.field_J.d((byte) 125) != null;
     }
 
@@ -370,7 +368,7 @@ class af implements j, eg {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, rc param6) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, rc param6, int param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -434,15 +432,13 @@ class af implements j, eg {
                       break L4;
                     } else {
                       if (1 == var12) {
-                        int discarded$5 = 78;
-                        ((af) this).field_l.a(((af) this).b(param6, 0), (var9_int >> 1) + this.a(param6, param0, 0), this.a(0, -5, param1, param6) - -var11, param4, param5);
+                        ((af) this).field_l.a(((af) this).b(param6, 0), (var9_int >> 1) + this.a(param6, param0, 0, (byte) 78), this.a(0, -5, param1, param6) - -var11, param4, param5);
                         break L1;
                       } else {
                         if (var12 != 2) {
                           break L1;
                         } else {
-                          int discarded$6 = 78;
-                          ((af) this).field_l.b(((af) this).b(param6, 0), var9_int + this.a(param6, param0, 0), this.a(0, -5, param1, param6) - -var11, param4, param5);
+                          ((af) this).field_l.b(((af) this).b(param6, 0), var9_int + this.a(param6, param0, 0, (byte) 78), this.a(0, -5, param1, param6) - -var11, param4, param5);
                           break L1;
                         }
                       }
@@ -451,12 +447,10 @@ class af implements j, eg {
                     break L4;
                   }
                 }
-                int discarded$7 = 78;
-                ((af) this).field_l.c(((af) this).b(param6, 0), this.a(param6, param0, 0), var11 + this.a(0, -5, param1, param6), param4, param5);
+                ((af) this).field_l.c(((af) this).b(param6, 0), this.a(param6, param0, 0, (byte) 78), var11 + this.a(0, -5, param1, param6), param4, param5);
                 break L1;
               } else {
-                int discarded$8 = 78;
-                int discarded$9 = ((af) this).field_l.a(((af) this).b(param6, 0), this.a(param6, param0, 0), this.a(0, -5, param1, param6), var9_int, var10, param4, param5, ((af) this).field_g, ((af) this).field_b, ((af) this).field_f);
+                int discarded$1 = ((af) this).field_l.a(((af) this).b(param6, 0), this.a(param6, param0, 0, (byte) 78), this.a(0, -5, param1, param6), var9_int, var10, param4, param5, ((af) this).field_g, ((af) this).field_b, ((af) this).field_f);
                 break L1;
               }
             }
@@ -591,8 +585,7 @@ class af implements j, eg {
                         }
                       }
                       var15 = stackIn_18_0;
-                      int discarded$1 = 78;
-                      ph.field_f.a(var13.field_g + (((af) this).field_d + param1.field_j + (param4 - -param1.field_q)), ((af) this).field_e >>> 24, var15 - var14, ((af) this).field_e, 1, var13.field_e, this.a(param1, param5, var14));
+                      ph.field_f.a(var13.field_g + (((af) this).field_d + param1.field_j + (param4 - -param1.field_q)), ((af) this).field_e >>> 24, var15 - var14, ((af) this).field_e, 1, var13.field_e, this.a(param1, param5, var14, (byte) 78));
                       var12++;
                       continue L3;
                     }
@@ -736,8 +729,7 @@ class af implements j, eg {
                 break L1;
               }
             }
-            int discarded$2 = 78;
-            stackOut_2_0 = this.a(param1, param0, 0);
+            stackOut_2_0 = this.a(param1, param0, 0, (byte) 78);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -1014,7 +1006,7 @@ class af implements j, eg {
                 break L2;
               } else {
                 var4 = null;
-                jf discarded$5 = ((af) this).a(-117, (rc) null);
+                jf discarded$2 = ((af) this).a(-117, (rc) null);
                 break L2;
               }
             }
@@ -1023,8 +1015,7 @@ class af implements j, eg {
                 ((vk) (Object) param1.field_h).a(((af) this).b(param1, 0), ((af) this).field_f, ((af) this).field_g, 127, ((af) this).field_l, ((af) this).b(265, param1), this.c(3, param1), ((af) this).field_b);
                 break L3;
               } else {
-                int discarded$6 = 93;
-                this.a(param1);
+                this.a(param1, (byte) 93);
                 break L3;
               }
             }
@@ -1065,7 +1056,7 @@ class af implements j, eg {
         return stackIn_8_0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_h = null;
     }
@@ -1093,7 +1084,7 @@ class af implements j, eg {
         }
     }
 
-    private final void a(rc param0) {
+    private final void a(rc param0, byte param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -1293,7 +1284,7 @@ class af implements j, eg {
         return stackIn_1_0;
     }
 
-    private final int a(rc param0, int param1, int param2) {
+    private final int a(rc param0, int param1, int param2, byte param3) {
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

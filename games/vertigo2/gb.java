@@ -9,7 +9,7 @@ final class gb {
     static cr field_c;
     static int field_d;
 
-    final static er[] a(int param0, int param1, int param2, int param3) {
+    final static er[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 != 28290) {
             field_d = -33;
         }
@@ -98,7 +98,7 @@ final class gb {
         return stackIn_9_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -115,7 +115,7 @@ final class gb {
         }
     }
 
-    final static String a(Throwable param0) throws IOException {
+    final static String a(Throwable param0, boolean param1) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;

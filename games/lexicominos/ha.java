@@ -12,7 +12,7 @@ final class ha {
     private boolean field_f;
     private fc field_e;
 
-    final static void a(String param0, String param1) {
+    final static void a(String param0, String param1, int param2) {
         try {
             uf.a(param0, -108, param1, false);
         } catch (RuntimeException runtimeException) {

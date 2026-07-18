@@ -26,29 +26,17 @@ final class j implements fp {
         var9 = param6 - param1;
         var11 = 92;
         var10 = -param8 + param0;
-        int discarded$12 = 0;
-        int discarded$13 = 0;
-        if (od.a((long)var9, (long)param2) - -od.a((long)var10, (long)param3) < 0L) {
-          int discarded$14 = 0;
-          int discarded$15 = 0;
-          var12 = bm.a(-112, od.a((long)var9, (long)var9) + od.a((long)var10, (long)var10));
-          int discarded$16 = 0;
-          int discarded$17 = 0;
-          var14 = bm.a(-99, od.a((long)param2, (long)param2) + od.a((long)param3, (long)param3));
+        if (od.a((long)var9, (long)param2, false) - -od.a((long)var10, (long)param3, false) < 0L) {
+          var12 = bm.a(-112, od.a((long)var9, (long)var9, false) + od.a((long)var10, (long)var10, false));
+          var14 = bm.a(-99, od.a((long)param2, (long)param2, false) + od.a((long)param3, (long)param3, false));
           if (0L >= -524288L + (var12 + -var14)) {
             var16 = aj.a(param2, false, param2) + aj.a(param3, false, param3);
             if (var16 == 0) {
               return -1;
             } else {
-              int discarded$18 = 0;
-              int discarded$19 = 0;
-              var17 = (od.a((long)var9, (long)param2) - -od.a((long)var10, (long)param3)) * 2L;
-              int discarded$20 = 0;
-              int discarded$21 = 0;
-              var19 = od.a((long)var9, (long)var9) + (od.a((long)var10, (long)var10) + -4194304L);
-              int discarded$22 = 0;
-              int discarded$23 = 0;
-              var21 = od.a(var17, var17) + -(4L * od.a((long)var16, var19));
+              var17 = (od.a((long)var9, (long)param2, false) - -od.a((long)var10, (long)param3, false)) * 2L;
+              var19 = od.a((long)var9, (long)var9, false) + (od.a((long)var10, (long)var10, false) + -4194304L);
+              var21 = od.a(var17, var17, false) + -(4L * od.a((long)var16, var19, false));
               if (var21 >= 0L) {
                 var23 = bm.a(-113, var21);
                 if (var23 <= 2147483647L) {
@@ -221,7 +209,7 @@ final class j implements fp {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
@@ -269,8 +257,7 @@ final class j implements fp {
             if (!param4.d(126)) {
               break L0;
             } else {
-              int discarded$1 = 2187;
-              bj.a(2 + var8, param4.field_y + -4, param4.field_l - 4, 2 + var6_int);
+              bj.a(2 + var8, param4.field_y + -4, param4.field_l - 4, 2 + var6_int, 2187);
               return;
             }
           }

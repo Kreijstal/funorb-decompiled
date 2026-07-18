@@ -8,7 +8,7 @@ final class hh {
     static gh field_c;
     static String field_b;
 
-    final static int a() {
+    final static int a(int param0) {
         if (!va.field_k) {
           if (HoldTheLine.field_A <= ol.field_f) {
             if (ol.field_f >= HoldTheLine.field_A - -lc.field_h) {

@@ -39,7 +39,7 @@ final class hk extends java.awt.Canvas {
         field_a = null;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return ib.field_e + ((gh.field_v << 2) + (io.field_e << 4));
     }
 

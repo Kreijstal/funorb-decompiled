@@ -172,8 +172,7 @@ final class mc extends vd implements qk {
                         }
                       }
                     } else {
-                      int discarded$1 = 18719;
-                      ((mc) this).field_H[var4_int] = uj.a((CharSequence) (Object) param0[var4_int]).replace(' ', ' ');
+                      ((mc) this).field_H[var4_int] = uj.a((CharSequence) (Object) param0[var4_int], 18719).replace(' ', ' ');
                       var4_int++;
                       continue L2;
                     }
@@ -216,7 +215,7 @@ final class mc extends vd implements qk {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_E = null;
         field_J = null;
         field_F = null;

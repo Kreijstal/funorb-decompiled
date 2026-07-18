@@ -11,7 +11,7 @@ final class jd {
     static boolean field_c;
     static bi field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_b = null;
         field_d = null;
@@ -20,7 +20,7 @@ final class jd {
         field_h = null;
     }
 
-    final static nf[] a(int param0, int param1, int param2) {
+    final static nf[] a(int param0, int param1, int param2, int param3, boolean param4) {
         nf[] var6 = new nf[9];
         nf[] var5 = var6;
         nf dupTemp$0 = wm.a(1, true, param2);

@@ -24,8 +24,7 @@ final class je {
             ((je) this).field_e = ((je) this).field_e - 1;
             while (((je) this).field_e < 0) {
                 var6 = (b) (Object) ((je) this).field_g.b((byte) -86);
-                int discarded$0 = 4821;
-                this.a(var6);
+                this.a(var6, 4821);
             }
             var6_ref = new la(param0, 1);
             ((je) this).field_b.a(param3, true, (ug) (Object) var6_ref);
@@ -42,7 +41,7 @@ final class je {
         int var1 = 58 / ((-18 - param0) / 61);
     }
 
-    private final void a(b param0) {
+    private final void a(b param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -148,11 +147,10 @@ final class je {
 
     private final void a(int param0, long param1) {
         b var4 = (b) (Object) ((je) this).field_b.a((byte) -85, param1);
-        int discarded$0 = 4821;
-        this.a(var4);
+        this.a(var4, 4821);
     }
 
-    final static k a() {
+    final static k a(int param0, int param1) {
         k var2 = new k();
         int var3 = 0;
         cj.field_a.a(-8212, (ug) (Object) var2);

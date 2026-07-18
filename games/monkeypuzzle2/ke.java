@@ -21,7 +21,7 @@ final class ke {
         field_h = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         he var3 = null;
         var3 = (he) (Object) mb.field_e.a((byte) -117);
         var3 = var3;
@@ -41,12 +41,12 @@ final class ke {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         int var1 = 1;
         return fk.field_a;
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         System.out.println("Error: " + eg.a("\n", 4, "%0a", param0));
     }
 

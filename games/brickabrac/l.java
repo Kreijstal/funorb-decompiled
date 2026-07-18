@@ -127,7 +127,7 @@ final class l extends nm {
         return ni.field_Rb;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_m = null;
         field_k = null;
     }

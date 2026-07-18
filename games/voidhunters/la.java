@@ -14,7 +14,7 @@ final class la extends qg {
     static int field_m;
     private boolean field_j;
 
-    final static boolean a(tv param0, tv param1) {
+    final static boolean a(tv param0, tv param1, int param2, byte param3) {
         RuntimeException var4 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_4_0 = null;

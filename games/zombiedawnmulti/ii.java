@@ -69,7 +69,7 @@ abstract class ii {
 
     abstract long a(byte param0);
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -79,7 +79,7 @@ abstract class ii {
 
     abstract void b(int param0);
 
-    final static void a() {
+    final static void a(int param0) {
         nc[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

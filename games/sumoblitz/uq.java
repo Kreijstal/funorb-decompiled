@@ -5,11 +5,10 @@ final class uq {
     static da field_a;
 
     final static void a(int param0, int param1) {
-        int discarded$0 = 1;
-        ut.a(8, (byte) -55, nt.field_m[7]);
+        ut.a(8, (byte) -55, nt.field_m[7], true);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         int var1 = 0;
     }

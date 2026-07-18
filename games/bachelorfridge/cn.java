@@ -314,17 +314,15 @@ final class cn extends pp {
         }
     }
 
-    final static kka a() {
+    final static kka a(byte param0, int param1) {
         kka var2 = new kka();
         gs.field_l.a((bw) (Object) var2, true);
-        int discarded$0 = 4;
-        int discarded$1 = 4;
-        ah.a();
+        ah.a(4, 4);
         int var3 = 1;
         return var2;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_i = null;
         field_j = null;
         field_k = null;

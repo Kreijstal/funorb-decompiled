@@ -15,7 +15,7 @@ final class jn extends se {
     private ga field_j;
     private ga field_r;
 
-    public static void d() {
+    public static void d(int param0) {
         field_n = null;
         field_l = null;
         field_o = null;
@@ -195,8 +195,7 @@ final class jn extends se {
               return stackIn_3_0 != 0;
             } else {
               if (!qc.a(param2, -122)) {
-                int discarded$8 = 0;
-                if (bf.a(param2)) {
+                if (bf.a(param2, false)) {
                   stackOut_9_0 = 0;
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0 != 0;
@@ -351,8 +350,7 @@ final class jn extends se {
             var4 = param0.toLowerCase();
             if (var4.length() != 0) {
               var5 = var4;
-              int discarded$6 = 0;
-              if (!bf.a(var5)) {
+              if (!bf.a(var5, false)) {
                 if (!lo.a(var5, 52)) {
                   var6 = -39 % ((41 - param1) / 49);
                   if (!qc.a(var5, -121)) {

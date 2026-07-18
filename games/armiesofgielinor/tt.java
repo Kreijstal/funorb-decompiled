@@ -68,7 +68,7 @@ final class tt {
         }
     }
 
-    final static int a(int param0, int param1, int[] param2) {
+    final static int a(int param0, int param1, int[] param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -209,7 +209,7 @@ final class tt {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_a = null;
     }

@@ -8,7 +8,7 @@ final class ta {
     static kb field_e;
     static String[] field_c;
 
-    final static int a() {
+    final static int a(byte param0) {
         int var1 = 124;
         return uh.field_d;
     }
@@ -65,7 +65,7 @@ final class ta {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
         field_c = null;
     }

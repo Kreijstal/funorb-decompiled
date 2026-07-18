@@ -10,7 +10,7 @@ final class tc extends da {
     boolean field_i;
     static boolean field_k;
 
-    final static void a(h param0, h param1) {
+    final static void a(h param0, h param1, byte param2, int param3, int param4, int param5) {
         try {
             kk.field_e = param1;
             ai.field_a = 8;
@@ -22,7 +22,7 @@ final class tc extends da {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;
@@ -45,7 +45,7 @@ final class tc extends da {
     tc() {
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         field_o = null;
     }

@@ -39,17 +39,17 @@ final class di {
         int var39 = 0;
         int var40 = 0;
         int[] var41 = null;
-        byte[] var43 = null;
         int var44 = 0;
         pf var45 = null;
-        int[] var49 = null;
-        int[] var53 = null;
-        int[] var57 = null;
-        int[] var59 = null;
+        int[] var50 = null;
+        int[] var55 = null;
         int[] var60 = null;
-        int[] var61 = null;
-        int[] var62 = null;
+        byte[] var62 = null;
         int[] var63 = null;
+        int[] var64 = null;
+        int[] var65 = null;
+        int[] var66 = null;
+        int[] var67 = null;
         int stackIn_14_0 = 0;
         int[] stackIn_15_0 = null;
         int[] stackIn_16_0 = null;
@@ -109,27 +109,25 @@ final class di {
                   if (var45.field_f <= 1) {
                     break L2;
                   } else {
-                    var43 = var45.field_x;
-                    int discarded$2 = 8965;
-                    jc.a(ke.field_z, 0, 0, var43);
+                    var62 = var45.field_x;
+                    jc.a(ke.field_z, 0, 0, var62, 8965);
                     break L1;
                   }
                 }
               }
-              int discarded$3 = -122;
-              jc.a();
+              jc.a(-122);
               break L1;
             }
-            var62 = new int[param2.field_L];
-            var57 = var62;
-            var53 = var57;
-            var49 = var53;
-            var41 = var49;
+            var66 = new int[param2.field_L];
+            var60 = var66;
+            var55 = var60;
+            var50 = var55;
+            var41 = var50;
             var8_array = var41;
-            var63 = new int[param2.field_L];
-            var60 = oa.field_c;
-            var59 = in.field_c;
-            var61 = dl.field_o;
+            var67 = new int[param2.field_L];
+            var64 = oa.field_c;
+            var63 = in.field_c;
+            var65 = dl.field_o;
             var13 = 0;
             L3: while (true) {
               if (~param2.field_L >= ~var13) {
@@ -223,8 +221,8 @@ final class di {
                         } else {
                           if (var20 == var19) {
                             L12: {
-                              var28 = var62[var18];
-                              var29 = var63[var18];
+                              var28 = var66[var18];
+                              var29 = var67[var18];
                               if (var21_ref != null) {
                                 stackOut_46_0 = var21_ref.field_i;
                                 stackIn_47_0 = stackOut_46_0;
@@ -248,12 +246,12 @@ final class di {
                         }
                       }
                       L13: {
-                        var28 = var62[var18];
-                        var29 = var62[var19];
-                        var30 = var62[var20];
-                        var31 = var63[var18];
-                        var32 = var63[var19];
-                        var33 = var63[var20];
+                        var28 = var66[var18];
+                        var29 = var66[var19];
+                        var30 = var66[var20];
+                        var31 = var67[var18];
+                        var32 = var67[var19];
+                        var33 = var67[var20];
                         if (var21_ref != null) {
                           stackOut_42_0 = var21_ref.field_i;
                           stackIn_43_0 = stackOut_42_0;
@@ -282,7 +280,7 @@ final class di {
                 }
               } else {
                 L14: {
-                  var14 = param1 * var59[var13] + var60[var13] * param5 + var61[var13] * param0 >> 8;
+                  var14 = param1 * var63[var13] + var64[var13] * param5 + var65[var13] * param0 >> 8;
                   if (var14 >= 0) {
                     break L14;
                   } else {
@@ -309,7 +307,7 @@ final class di {
                 }
                 L16: {
                   var14 = stackIn_14_0;
-                  var15 = param7 * var61[var13] + param3 * var60[var13] - -(param6 * var59[var13]) >> 8;
+                  var15 = param7 * var65[var13] + param3 * var64[var13] - -(param6 * var63[var13]) >> 8;
                   stackOut_14_0 = pk.field_i;
                   stackIn_16_0 = stackOut_14_0;
                   stackIn_15_0 = stackOut_14_0;
@@ -329,8 +327,8 @@ final class di {
                 }
                 var15 = stackIn_17_0[stackIn_17_1];
                 var14 = (-var15 + 256) * var14 >>> 8;
-                var62[var13] = var14;
-                var63[var13] = var15;
+                var66[var13] = var14;
+                var67[var13] = var15;
                 var13++;
                 continue L3;
               }
@@ -368,7 +366,7 @@ final class di {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         field_a = null;

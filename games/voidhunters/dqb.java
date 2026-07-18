@@ -438,7 +438,7 @@ final class dqb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
     }
 

@@ -81,7 +81,7 @@ final class sj {
         this.a((byte) -119);
     }
 
-    final static void a(ad param0, ad param1, ad param2, ad param3) {
+    final static void a(ad param0, ad param1, ad param2, ad param3, int param4) {
         int var6_int = 0;
         le[] var6 = null;
         int var7 = 0;
@@ -109,13 +109,11 @@ final class sj {
         pl.field_e = vd.a(true, "kartika13", param2, param1, "");
         ke.field_i = ma.a(param3, "background", 16711680, "");
         fi.field_a = lb.a(false, "", param3, "river_background");
-        int discarded$3 = 0;
-        var13 = uj.a("", "jungle_background", param3);
+        var13 = uj.a("", "jungle_background", param3, false);
         m.field_k = var13[0];
         m.field_k.b();
         ib.field_b = var13[1].a();
-        int discarded$4 = 0;
-        ne.field_a = uj.a("", "waterfall_background", param3);
+        ne.field_a = uj.a("", "waterfall_background", param3, false);
         var6_int = 0;
         L0: while (true) {
           if (var6_int >= ne.field_a.length) {
@@ -130,7 +128,7 @@ final class sj {
               if (var6_int >= eg.field_d.length) {
                 ka.field_b = ma.a(param1, "unachieved", 16711680, "basic");
                 aj.field_e = ma.a(param1, "orbcoin", 16711680, "basic");
-                le discarded$5 = ma.a(param1, "locked", 16711680, "basic");
+                le discarded$1 = ma.a(param1, "locked", 16711680, "basic");
                 lb.field_E = lb.a(false, "", param3, "totems");
                 dj.field_a = lb.a(false, "", param3, "vines");
                 j.field_f = lb.a(false, "", param3, "birds");
@@ -384,7 +382,7 @@ final class sj {
         cb.field_c[45] = 26;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_f = null;
     }

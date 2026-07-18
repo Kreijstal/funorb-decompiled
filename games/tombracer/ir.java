@@ -103,8 +103,7 @@ final class ir {
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;
               } else {
-                int discarded$2 = 6711;
-                stackOut_5_0 = lh.a(var3);
+                stackOut_5_0 = lh.a(var3, 6711);
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0;
               }

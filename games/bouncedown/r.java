@@ -80,7 +80,7 @@ final class r implements fc {
                 if (param2.indexOf("<br>") != -1) {
                   break L1;
                 } else {
-                  param1[0] = (String) (Object) param1;
+                  param1[0] = param2;
                   stackOut_3_0 = 1;
                   stackIn_4_0 = stackOut_3_0;
                   return stackIn_4_0;
@@ -245,7 +245,7 @@ final class r implements fc {
         return var2;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_d = null;
     }
@@ -302,7 +302,7 @@ final class r implements fc {
             }
             L3: {
               var7 = stackIn_5_0;
-              int discarded$2 = ((r) this).field_b.a("<u=" + Integer.toString(var7, 16) + ">" + param1.field_h + "</u>", param4 - -param1.field_r, param1.field_i + param0, param1.field_k, param1.field_m, var7, -1, ((r) this).field_a, ((r) this).field_e, ((r) this).field_b.field_s - -((r) this).field_b.field_x);
+              int discarded$1 = ((r) this).field_b.a("<u=" + Integer.toString(var7, 16) + ">" + param1.field_h + "</u>", param4 - -param1.field_r, param1.field_i + param0, param1.field_k, param1.field_m, var7, -1, ((r) this).field_a, ((r) this).field_e, ((r) this).field_b.field_s - -((r) this).field_b.field_x);
               if (!param1.e(1)) {
                 break L3;
               } else {
@@ -336,8 +336,7 @@ final class r implements fc {
                     }
                   }
                 }
-                int discarded$3 = 14677;
-                ck.a(-2 + var10, var9, var8 + 4, 2 + var11);
+                ck.a(-2 + var10, var9, var8 + 4, 2 + var11, 14677);
                 break L3;
               }
             }

@@ -33,8 +33,7 @@ final class ge extends k implements mj {
               if (((ge) this).field_gb != param0) {
                 break L1;
               } else {
-                int discarded$2 = 1;
-                this.c();
+                this.c(true);
                 break L1;
               }
             }
@@ -624,7 +623,7 @@ final class ge extends k implements mj {
         field_eb = null;
     }
 
-    final static pg a() {
+    final static pg a(boolean param0, int param1, int param2, int param3) {
         int var5 = Chess.field_G;
         pg var4 = (pg) (Object) nd.field_h.g(-18110);
         while (var4 != null) {
@@ -638,12 +637,11 @@ final class ge extends k implements mj {
         var6.field_u = 10;
         var4.field_q = 0;
         nd.field_h.a((o) (Object) var4, (byte) 102);
-        int discarded$0 = 7;
-        tm.a(false, var4);
+        tm.a(false, var4, 7);
         return var4;
     }
 
-    private final fb a(String param0, rg param1) {
+    private final fb a(String param0, rg param1, int param2) {
         fb var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -751,7 +749,7 @@ final class ge extends k implements mj {
         return stackIn_1_0;
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         if (!(((ge) this).field_P)) {
             return;
         }
@@ -804,8 +802,7 @@ final class ge extends k implements mj {
                 if (kh.field_k == param1) {
                   ((ge) this).field_C = ((ge) this).field_C + 10;
                   var3 = (Object) (Object) le.field_c;
-                  int discarded$26 = 124;
-                  if (!jj.d()) {
+                  if (!jj.d(124)) {
                     break L1;
                   } else {
                     var3 = (Object) (Object) le.field_d;
@@ -830,8 +827,7 @@ final class ge extends k implements mj {
             var4.field_u = 0;
             var4.field_n = (jm) (Object) new hl(rc.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((ge) this).b(var4, 95);
-            int discarded$27 = 30;
-            ((ge) this).field_gb = this.a(sj.field_m, (rg) this);
+            ((ge) this).field_gb = this.a(sj.field_m, (rg) this, 30);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

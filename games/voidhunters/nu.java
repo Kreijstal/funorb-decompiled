@@ -77,11 +77,11 @@ final class nu extends rqa {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 
-    final static boolean e() {
+    final static boolean e(byte param0) {
         if (null == ola.field_p) {
             return false;
         }

@@ -275,7 +275,7 @@ final class pj {
         return stackIn_68_0;
     }
 
-    final static void a(int param0, d param1) {
+    final static void a(int param0, d param1, boolean param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -539,7 +539,7 @@ final class pj {
         return stackIn_5_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
         field_b = null;
@@ -783,7 +783,7 @@ final class pj {
         }
     }
 
-    final static String b() {
+    final static String b(boolean param0) {
         return hf.field_b;
     }
 
@@ -811,8 +811,7 @@ final class pj {
         try {
           L0: {
             L1: {
-              int discarded$2 = 480;
-              var2 = mk.a(sd.a(37, param1));
+              var2 = mk.a(sd.a(37, param1), 480);
               if (var2 == null) {
                 var2 = "";
                 break L1;
@@ -1018,8 +1017,7 @@ final class pj {
                 if (var11 == null) {
                   break L0;
                 } else {
-                  int discarded$1 = 4;
-                  mh.a(var11, param1 + -31645);
+                  mh.a(var11, param1 + -31645, 4);
                   continue L13;
                 }
               }

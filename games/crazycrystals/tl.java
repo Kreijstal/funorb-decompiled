@@ -11,14 +11,14 @@ abstract class tl {
     static u field_e;
     static am field_a;
 
-    public static void b() {
+    public static void b(int param0) {
         try {
             field_e = null;
             field_a = null;
             field_b = null;
-            int var1_int = 0;
+            int var1_int = -108 % ((59 - param0) / 53);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "tl.D(" + 2 + ')');
+            throw dn.a((Throwable) (Object) runtimeException, "tl.D(" + param0 + ')');
         }
     }
 
@@ -28,8 +28,7 @@ abstract class tl {
         L0: {
           var3 = CrazyCrystals.field_B;
           ge.field_b = param1;
-          int discarded$285 = 1;
-          var2 = we.a("gamename");
+          var2 = we.a("gamename", 1);
           if (null != var2) {
             ei.field_G = fa.a((byte) -100, var2);
             break L0;
@@ -38,8 +37,7 @@ abstract class tl {
           }
         }
         L1: {
-          int discarded$286 = 1;
-          var2 = we.a("crystalplacement");
+          var2 = we.a("crystalplacement", 1);
           if (var2 == null) {
             break L1;
           } else {
@@ -48,8 +46,7 @@ abstract class tl {
           }
         }
         L2: {
-          int discarded$287 = 1;
-          var2 = we.a("keycode_map");
+          var2 = we.a("keycode_map", 1);
           if (var2 != null) {
             vf.field_c = var2[0] & 255;
             break L2;
@@ -58,8 +55,7 @@ abstract class tl {
           }
         }
         L3: {
-          int discarded$288 = 1;
-          var2 = we.a("keycode_p1left");
+          var2 = we.a("keycode_p1left", 1);
           if (var2 == null) {
             break L3;
           } else {
@@ -68,8 +64,7 @@ abstract class tl {
           }
         }
         L4: {
-          int discarded$289 = 1;
-          var2 = we.a("keycode_p1right");
+          var2 = we.a("keycode_p1right", 1);
           if (var2 != null) {
             vp.field_b = 255 & var2[0];
             break L4;
@@ -78,8 +73,7 @@ abstract class tl {
           }
         }
         L5: {
-          int discarded$290 = 1;
-          var2 = we.a("keycode_p1up");
+          var2 = we.a("keycode_p1up", 1);
           if (null != var2) {
             kp.field_j = 255 & var2[0];
             break L5;
@@ -88,8 +82,7 @@ abstract class tl {
           }
         }
         L6: {
-          int discarded$291 = 1;
-          var2 = we.a("keycode_p1down");
+          var2 = we.a("keycode_p1down", 1);
           if (var2 == null) {
             break L6;
           } else {
@@ -98,8 +91,7 @@ abstract class tl {
           }
         }
         L7: {
-          int discarded$292 = 1;
-          var2 = we.a("keycode_p2left");
+          var2 = we.a("keycode_p2left", 1);
           if (null == var2) {
             break L7;
           } else {
@@ -108,8 +100,7 @@ abstract class tl {
           }
         }
         L8: {
-          int discarded$293 = 1;
-          var2 = we.a("keycode_p2right");
+          var2 = we.a("keycode_p2right", 1);
           if (var2 != null) {
             pa.field_E = 255 & var2[0];
             break L8;
@@ -118,8 +109,7 @@ abstract class tl {
           }
         }
         L9: {
-          int discarded$294 = 1;
-          var2 = we.a("keycode_p2up");
+          var2 = we.a("keycode_p2up", 1);
           if (var2 == null) {
             break L9;
           } else {
@@ -128,8 +118,7 @@ abstract class tl {
           }
         }
         L10: {
-          int discarded$295 = 1;
-          var2 = we.a("keycode_p2down");
+          var2 = we.a("keycode_p2down", 1);
           if (null == var2) {
             break L10;
           } else {
@@ -138,8 +127,7 @@ abstract class tl {
           }
         }
         L11: {
-          int discarded$296 = 1;
-          var2 = we.a("esc");
+          var2 = we.a("esc", 1);
           if (var2 != null) {
             ji.field_u = fa.a((byte) -112, var2);
             break L11;
@@ -148,8 +136,7 @@ abstract class tl {
           }
         }
         L12: {
-          int discarded$297 = 1;
-          var2 = we.a("enter");
+          var2 = we.a("enter", 1);
           if (null == var2) {
             break L12;
           } else {
@@ -158,8 +145,7 @@ abstract class tl {
           }
         }
         L13: {
-          int discarded$298 = 1;
-          var2 = we.a("backspace");
+          var2 = we.a("backspace", 1);
           if (null == var2) {
             break L13;
           } else {
@@ -168,8 +154,7 @@ abstract class tl {
           }
         }
         L14: {
-          int discarded$299 = 1;
-          var2 = we.a("tilevariations");
+          var2 = we.a("tilevariations", 1);
           if (var2 == null) {
             break L14;
           } else {
@@ -178,8 +163,7 @@ abstract class tl {
           }
         }
         L15: {
-          int discarded$300 = 1;
-          var2 = we.a("tutorial_levelnames,0");
+          var2 = we.a("tutorial_levelnames,0", 1);
           if (var2 != null) {
             qp.field_g[0] = fa.a((byte) -127, var2);
             break L15;
@@ -188,8 +172,7 @@ abstract class tl {
           }
         }
         L16: {
-          int discarded$301 = 1;
-          var2 = we.a("tutorial_levelnames,1");
+          var2 = we.a("tutorial_levelnames,1", 1);
           if (null == var2) {
             break L16;
           } else {
@@ -198,8 +181,7 @@ abstract class tl {
           }
         }
         L17: {
-          int discarded$302 = 1;
-          var2 = we.a("tutorial_levelnames,2");
+          var2 = we.a("tutorial_levelnames,2", 1);
           if (var2 != null) {
             qp.field_g[2] = fa.a((byte) -94, var2);
             break L17;
@@ -208,8 +190,7 @@ abstract class tl {
           }
         }
         L18: {
-          int discarded$303 = 1;
-          var2 = we.a("tutorial_levelnames,3");
+          var2 = we.a("tutorial_levelnames,3", 1);
           if (var2 == null) {
             break L18;
           } else {
@@ -218,8 +199,7 @@ abstract class tl {
           }
         }
         L19: {
-          int discarded$304 = 1;
-          var2 = we.a("tutorial_levelnames,4");
+          var2 = we.a("tutorial_levelnames,4", 1);
           if (null == var2) {
             break L19;
           } else {
@@ -228,8 +208,7 @@ abstract class tl {
           }
         }
         L20: {
-          int discarded$305 = 1;
-          var2 = we.a("puzzle1p_levelnames,0");
+          var2 = we.a("puzzle1p_levelnames,0", 1);
           if (var2 == null) {
             break L20;
           } else {
@@ -238,8 +217,7 @@ abstract class tl {
           }
         }
         L21: {
-          int discarded$306 = 1;
-          var2 = we.a("puzzle1p_levelnames,1");
+          var2 = we.a("puzzle1p_levelnames,1", 1);
           if (null != var2) {
             ro.field_r[1] = fa.a((byte) -85, var2);
             break L21;
@@ -248,8 +226,7 @@ abstract class tl {
           }
         }
         L22: {
-          int discarded$307 = 1;
-          var2 = we.a("puzzle1p_levelnames,2");
+          var2 = we.a("puzzle1p_levelnames,2", 1);
           if (null != var2) {
             ro.field_r[2] = fa.a((byte) -105, var2);
             break L22;
@@ -258,8 +235,7 @@ abstract class tl {
           }
         }
         L23: {
-          int discarded$308 = 1;
-          var2 = we.a("puzzle1p_levelnames,3");
+          var2 = we.a("puzzle1p_levelnames,3", 1);
           if (null != var2) {
             ro.field_r[3] = fa.a((byte) -72, var2);
             break L23;
@@ -268,8 +244,7 @@ abstract class tl {
           }
         }
         L24: {
-          int discarded$309 = 1;
-          var2 = we.a("puzzle1p_levelnames,4");
+          var2 = we.a("puzzle1p_levelnames,4", 1);
           if (null == var2) {
             break L24;
           } else {
@@ -278,8 +253,7 @@ abstract class tl {
           }
         }
         L25: {
-          int discarded$310 = 1;
-          var2 = we.a("puzzle1p_levelnames,5");
+          var2 = we.a("puzzle1p_levelnames,5", 1);
           if (var2 != null) {
             ro.field_r[5] = fa.a((byte) -116, var2);
             break L25;
@@ -288,8 +262,7 @@ abstract class tl {
           }
         }
         L26: {
-          int discarded$311 = 1;
-          var2 = we.a("puzzle1p_levelnames,6");
+          var2 = we.a("puzzle1p_levelnames,6", 1);
           if (null != var2) {
             ro.field_r[6] = fa.a((byte) -93, var2);
             break L26;
@@ -298,8 +271,7 @@ abstract class tl {
           }
         }
         L27: {
-          int discarded$312 = 1;
-          var2 = we.a("puzzle1p_levelnames,7");
+          var2 = we.a("puzzle1p_levelnames,7", 1);
           if (null == var2) {
             break L27;
           } else {
@@ -308,8 +280,7 @@ abstract class tl {
           }
         }
         L28: {
-          int discarded$313 = 1;
-          var2 = we.a("puzzle1p_levelnames,8");
+          var2 = we.a("puzzle1p_levelnames,8", 1);
           if (null == var2) {
             break L28;
           } else {
@@ -318,8 +289,7 @@ abstract class tl {
           }
         }
         L29: {
-          int discarded$314 = 1;
-          var2 = we.a("puzzle1p_levelnames,9");
+          var2 = we.a("puzzle1p_levelnames,9", 1);
           if (var2 == null) {
             break L29;
           } else {
@@ -328,8 +298,7 @@ abstract class tl {
           }
         }
         L30: {
-          int discarded$315 = 1;
-          var2 = we.a("puzzle1p_levelnames,10");
+          var2 = we.a("puzzle1p_levelnames,10", 1);
           if (var2 != null) {
             ro.field_r[10] = fa.a((byte) -117, var2);
             break L30;
@@ -338,8 +307,7 @@ abstract class tl {
           }
         }
         L31: {
-          int discarded$316 = 1;
-          var2 = we.a("puzzle1p_levelnames,11");
+          var2 = we.a("puzzle1p_levelnames,11", 1);
           if (null != var2) {
             ro.field_r[11] = fa.a((byte) -96, var2);
             break L31;
@@ -348,8 +316,7 @@ abstract class tl {
           }
         }
         L32: {
-          int discarded$317 = 1;
-          var2 = we.a("puzzle1p_levelnames,12");
+          var2 = we.a("puzzle1p_levelnames,12", 1);
           if (var2 == null) {
             break L32;
           } else {
@@ -358,8 +325,7 @@ abstract class tl {
           }
         }
         L33: {
-          int discarded$318 = 1;
-          var2 = we.a("puzzle1p_levelnames,13");
+          var2 = we.a("puzzle1p_levelnames,13", 1);
           if (var2 != null) {
             ro.field_r[13] = fa.a((byte) -98, var2);
             break L33;
@@ -368,8 +334,7 @@ abstract class tl {
           }
         }
         L34: {
-          int discarded$319 = 1;
-          var2 = we.a("puzzle1p_levelnames,14");
+          var2 = we.a("puzzle1p_levelnames,14", 1);
           if (null == var2) {
             break L34;
           } else {
@@ -378,8 +343,7 @@ abstract class tl {
           }
         }
         L35: {
-          int discarded$320 = 1;
-          var2 = we.a("puzzle1p_levelnames,15");
+          var2 = we.a("puzzle1p_levelnames,15", 1);
           if (var2 == null) {
             break L35;
           } else {
@@ -388,8 +352,7 @@ abstract class tl {
           }
         }
         L36: {
-          int discarded$321 = 1;
-          var2 = we.a("puzzle1p_levelnames,16");
+          var2 = we.a("puzzle1p_levelnames,16", 1);
           if (var2 != null) {
             ro.field_r[16] = fa.a((byte) -93, var2);
             break L36;
@@ -398,8 +361,7 @@ abstract class tl {
           }
         }
         L37: {
-          int discarded$322 = 1;
-          var2 = we.a("puzzle1p_levelnames,17");
+          var2 = we.a("puzzle1p_levelnames,17", 1);
           if (null == var2) {
             break L37;
           } else {
@@ -408,8 +370,7 @@ abstract class tl {
           }
         }
         L38: {
-          int discarded$323 = 1;
-          var2 = we.a("puzzle1p_levelnames,18");
+          var2 = we.a("puzzle1p_levelnames,18", 1);
           if (var2 != null) {
             ro.field_r[18] = fa.a((byte) -97, var2);
             break L38;
@@ -418,8 +379,7 @@ abstract class tl {
           }
         }
         L39: {
-          int discarded$324 = 1;
-          var2 = we.a("puzzle1p_levelnames,19");
+          var2 = we.a("puzzle1p_levelnames,19", 1);
           if (null == var2) {
             break L39;
           } else {
@@ -428,8 +388,7 @@ abstract class tl {
           }
         }
         L40: {
-          int discarded$325 = 1;
-          var2 = we.a("puzzle1p_levelnames,20");
+          var2 = we.a("puzzle1p_levelnames,20", 1);
           if (var2 == null) {
             break L40;
           } else {
@@ -438,8 +397,7 @@ abstract class tl {
           }
         }
         L41: {
-          int discarded$326 = 1;
-          var2 = we.a("puzzle1p_levelnames,21");
+          var2 = we.a("puzzle1p_levelnames,21", 1);
           if (null != var2) {
             ro.field_r[21] = fa.a((byte) -118, var2);
             break L41;
@@ -448,8 +406,7 @@ abstract class tl {
           }
         }
         L42: {
-          int discarded$327 = 1;
-          var2 = we.a("puzzle1p_levelnames,22");
+          var2 = we.a("puzzle1p_levelnames,22", 1);
           if (var2 == null) {
             break L42;
           } else {
@@ -458,8 +415,7 @@ abstract class tl {
           }
         }
         L43: {
-          int discarded$328 = 1;
-          var2 = we.a("puzzle1p_levelnames,23");
+          var2 = we.a("puzzle1p_levelnames,23", 1);
           if (var2 != null) {
             ro.field_r[23] = fa.a((byte) -85, var2);
             break L43;
@@ -468,8 +424,7 @@ abstract class tl {
           }
         }
         L44: {
-          int discarded$329 = 1;
-          var2 = we.a("puzzle1p_levelnames,24");
+          var2 = we.a("puzzle1p_levelnames,24", 1);
           if (var2 != null) {
             ro.field_r[24] = fa.a((byte) -77, var2);
             break L44;
@@ -478,8 +433,7 @@ abstract class tl {
           }
         }
         L45: {
-          int discarded$330 = 1;
-          var2 = we.a("puzzle1p_levelnames,25");
+          var2 = we.a("puzzle1p_levelnames,25", 1);
           if (null != var2) {
             ro.field_r[25] = fa.a((byte) -64, var2);
             break L45;
@@ -488,8 +442,7 @@ abstract class tl {
           }
         }
         L46: {
-          int discarded$331 = 1;
-          var2 = we.a("puzzle1p_levelnames,26");
+          var2 = we.a("puzzle1p_levelnames,26", 1);
           if (var2 == null) {
             break L46;
           } else {
@@ -498,8 +451,7 @@ abstract class tl {
           }
         }
         L47: {
-          int discarded$332 = 1;
-          var2 = we.a("puzzle1p_levelnames,27");
+          var2 = we.a("puzzle1p_levelnames,27", 1);
           if (var2 != null) {
             ro.field_r[27] = fa.a((byte) -118, var2);
             break L47;
@@ -508,8 +460,7 @@ abstract class tl {
           }
         }
         L48: {
-          int discarded$333 = 1;
-          var2 = we.a("puzzle1p_levelnames,28");
+          var2 = we.a("puzzle1p_levelnames,28", 1);
           if (var2 == null) {
             break L48;
           } else {
@@ -518,8 +469,7 @@ abstract class tl {
           }
         }
         L49: {
-          int discarded$334 = 1;
-          var2 = we.a("puzzle1p_levelnames,29");
+          var2 = we.a("puzzle1p_levelnames,29", 1);
           if (var2 == null) {
             break L49;
           } else {
@@ -528,8 +478,7 @@ abstract class tl {
           }
         }
         L50: {
-          int discarded$335 = 1;
-          var2 = we.a("puzzle1p_levelnames,30");
+          var2 = we.a("puzzle1p_levelnames,30", 1);
           if (var2 == null) {
             break L50;
           } else {
@@ -538,8 +487,7 @@ abstract class tl {
           }
         }
         L51: {
-          int discarded$336 = 1;
-          var2 = we.a("puzzle1p_levelnames,31");
+          var2 = we.a("puzzle1p_levelnames,31", 1);
           if (null == var2) {
             break L51;
           } else {
@@ -548,8 +496,7 @@ abstract class tl {
           }
         }
         L52: {
-          int discarded$337 = 1;
-          var2 = we.a("puzzle1p_levelnames,32");
+          var2 = we.a("puzzle1p_levelnames,32", 1);
           if (var2 != null) {
             ro.field_r[32] = fa.a((byte) -81, var2);
             break L52;
@@ -558,8 +505,7 @@ abstract class tl {
           }
         }
         L53: {
-          int discarded$338 = 1;
-          var2 = we.a("puzzle1p_levelnames,33");
+          var2 = we.a("puzzle1p_levelnames,33", 1);
           if (var2 == null) {
             break L53;
           } else {
@@ -568,8 +514,7 @@ abstract class tl {
           }
         }
         L54: {
-          int discarded$339 = 1;
-          var2 = we.a("puzzle1p_levelnames,34");
+          var2 = we.a("puzzle1p_levelnames,34", 1);
           if (null != var2) {
             ro.field_r[34] = fa.a((byte) -105, var2);
             break L54;
@@ -578,8 +523,7 @@ abstract class tl {
           }
         }
         L55: {
-          int discarded$340 = 1;
-          var2 = we.a("puzzle1p_levelnames,35");
+          var2 = we.a("puzzle1p_levelnames,35", 1);
           if (var2 == null) {
             break L55;
           } else {
@@ -588,8 +532,7 @@ abstract class tl {
           }
         }
         L56: {
-          int discarded$341 = 1;
-          var2 = we.a("puzzle1p_levelnames,36");
+          var2 = we.a("puzzle1p_levelnames,36", 1);
           if (var2 == null) {
             break L56;
           } else {
@@ -598,8 +541,7 @@ abstract class tl {
           }
         }
         L57: {
-          int discarded$342 = 1;
-          var2 = we.a("puzzle1p_levelnames,37");
+          var2 = we.a("puzzle1p_levelnames,37", 1);
           if (var2 == null) {
             break L57;
           } else {
@@ -608,8 +550,7 @@ abstract class tl {
           }
         }
         L58: {
-          int discarded$343 = 1;
-          var2 = we.a("puzzle1p_levelnames,38");
+          var2 = we.a("puzzle1p_levelnames,38", 1);
           if (var2 != null) {
             ro.field_r[38] = fa.a((byte) -87, var2);
             break L58;
@@ -618,8 +559,7 @@ abstract class tl {
           }
         }
         L59: {
-          int discarded$344 = 1;
-          var2 = we.a("puzzle1p_levelnames,39");
+          var2 = we.a("puzzle1p_levelnames,39", 1);
           if (null != var2) {
             ro.field_r[39] = fa.a((byte) -77, var2);
             break L59;
@@ -628,8 +568,7 @@ abstract class tl {
           }
         }
         L60: {
-          int discarded$345 = 1;
-          var2 = we.a("puzzle1p_levelnames,40");
+          var2 = we.a("puzzle1p_levelnames,40", 1);
           if (null == var2) {
             break L60;
           } else {
@@ -638,8 +577,7 @@ abstract class tl {
           }
         }
         L61: {
-          int discarded$346 = 1;
-          var2 = we.a("puzzle1p_levelnames,41");
+          var2 = we.a("puzzle1p_levelnames,41", 1);
           if (var2 == null) {
             break L61;
           } else {
@@ -648,8 +586,7 @@ abstract class tl {
           }
         }
         L62: {
-          int discarded$347 = 1;
-          var2 = we.a("puzzle1p_levelnames,42");
+          var2 = we.a("puzzle1p_levelnames,42", 1);
           if (var2 != null) {
             ro.field_r[42] = fa.a((byte) -113, var2);
             break L62;
@@ -658,8 +595,7 @@ abstract class tl {
           }
         }
         L63: {
-          int discarded$348 = 1;
-          var2 = we.a("puzzle1p_levelnames,43");
+          var2 = we.a("puzzle1p_levelnames,43", 1);
           if (var2 != null) {
             ro.field_r[43] = fa.a((byte) -105, var2);
             break L63;
@@ -668,8 +604,7 @@ abstract class tl {
           }
         }
         L64: {
-          int discarded$349 = 1;
-          var2 = we.a("puzzle1p_levelnames,44");
+          var2 = we.a("puzzle1p_levelnames,44", 1);
           if (null != var2) {
             ro.field_r[44] = fa.a((byte) -98, var2);
             break L64;
@@ -678,8 +613,7 @@ abstract class tl {
           }
         }
         L65: {
-          int discarded$350 = 1;
-          var2 = we.a("puzzle1p_levelnames,45");
+          var2 = we.a("puzzle1p_levelnames,45", 1);
           if (null == var2) {
             break L65;
           } else {
@@ -688,8 +622,7 @@ abstract class tl {
           }
         }
         L66: {
-          int discarded$351 = 1;
-          var2 = we.a("puzzle1p_levelnames,46");
+          var2 = we.a("puzzle1p_levelnames,46", 1);
           if (null != var2) {
             ro.field_r[46] = fa.a((byte) -124, var2);
             break L66;
@@ -698,8 +631,7 @@ abstract class tl {
           }
         }
         L67: {
-          int discarded$352 = 1;
-          var2 = we.a("puzzle1p_levelnames,47");
+          var2 = we.a("puzzle1p_levelnames,47", 1);
           if (null != var2) {
             ro.field_r[47] = fa.a((byte) -104, var2);
             break L67;
@@ -708,8 +640,7 @@ abstract class tl {
           }
         }
         L68: {
-          int discarded$353 = 1;
-          var2 = we.a("puzzle1p_levelnames,48");
+          var2 = we.a("puzzle1p_levelnames,48", 1);
           if (null == var2) {
             break L68;
           } else {
@@ -718,8 +649,7 @@ abstract class tl {
           }
         }
         L69: {
-          int discarded$354 = 1;
-          var2 = we.a("puzzle1p_levelnames,49");
+          var2 = we.a("puzzle1p_levelnames,49", 1);
           if (null != var2) {
             ro.field_r[49] = fa.a((byte) -82, var2);
             break L69;
@@ -728,8 +658,7 @@ abstract class tl {
           }
         }
         L70: {
-          int discarded$355 = 1;
-          var2 = we.a("puzzle1p_levelnames,50");
+          var2 = we.a("puzzle1p_levelnames,50", 1);
           if (var2 != null) {
             ro.field_r[50] = fa.a((byte) -82, var2);
             break L70;
@@ -738,8 +667,7 @@ abstract class tl {
           }
         }
         L71: {
-          int discarded$356 = 1;
-          var2 = we.a("puzzle1p_levelnames,51");
+          var2 = we.a("puzzle1p_levelnames,51", 1);
           if (var2 == null) {
             break L71;
           } else {
@@ -748,8 +676,7 @@ abstract class tl {
           }
         }
         L72: {
-          int discarded$357 = 1;
-          var2 = we.a("puzzle1p_levelnames,52");
+          var2 = we.a("puzzle1p_levelnames,52", 1);
           if (null != var2) {
             ro.field_r[52] = fa.a((byte) -82, var2);
             break L72;
@@ -758,8 +685,7 @@ abstract class tl {
           }
         }
         L73: {
-          int discarded$358 = 1;
-          var2 = we.a("puzzle1p_levelnames,53");
+          var2 = we.a("puzzle1p_levelnames,53", 1);
           if (null == var2) {
             break L73;
           } else {
@@ -768,8 +694,7 @@ abstract class tl {
           }
         }
         L74: {
-          int discarded$359 = 1;
-          var2 = we.a("puzzle1p_levelnames,54");
+          var2 = we.a("puzzle1p_levelnames,54", 1);
           if (null == var2) {
             break L74;
           } else {
@@ -778,8 +703,7 @@ abstract class tl {
           }
         }
         L75: {
-          int discarded$360 = 1;
-          var2 = we.a("puzzle1p_levelnames,55");
+          var2 = we.a("puzzle1p_levelnames,55", 1);
           if (var2 != null) {
             ro.field_r[55] = fa.a((byte) -78, var2);
             break L75;
@@ -788,8 +712,7 @@ abstract class tl {
           }
         }
         L76: {
-          int discarded$361 = 1;
-          var2 = we.a("puzzle1p_levelnames,56");
+          var2 = we.a("puzzle1p_levelnames,56", 1);
           if (null == var2) {
             break L76;
           } else {
@@ -798,8 +721,7 @@ abstract class tl {
           }
         }
         L77: {
-          int discarded$362 = 1;
-          var2 = we.a("puzzle1p_levelnames,57");
+          var2 = we.a("puzzle1p_levelnames,57", 1);
           if (var2 == null) {
             break L77;
           } else {
@@ -808,8 +730,7 @@ abstract class tl {
           }
         }
         L78: {
-          int discarded$363 = 1;
-          var2 = we.a("puzzle1p_levelnames,58");
+          var2 = we.a("puzzle1p_levelnames,58", 1);
           if (null == var2) {
             break L78;
           } else {
@@ -818,8 +739,7 @@ abstract class tl {
           }
         }
         L79: {
-          int discarded$364 = 1;
-          var2 = we.a("puzzle1p_levelnames,59");
+          var2 = we.a("puzzle1p_levelnames,59", 1);
           if (null == var2) {
             break L79;
           } else {
@@ -828,8 +748,7 @@ abstract class tl {
           }
         }
         L80: {
-          int discarded$365 = 1;
-          var2 = we.a("puzzle1p_levelnames,60");
+          var2 = we.a("puzzle1p_levelnames,60", 1);
           if (var2 != null) {
             ro.field_r[60] = fa.a((byte) -102, var2);
             break L80;
@@ -838,8 +757,7 @@ abstract class tl {
           }
         }
         L81: {
-          int discarded$366 = 1;
-          var2 = we.a("puzzle1p_levelnames,61");
+          var2 = we.a("puzzle1p_levelnames,61", 1);
           if (var2 != null) {
             ro.field_r[61] = fa.a((byte) -69, var2);
             break L81;
@@ -848,8 +766,7 @@ abstract class tl {
           }
         }
         L82: {
-          int discarded$367 = 1;
-          var2 = we.a("puzzle1p_levelnames,62");
+          var2 = we.a("puzzle1p_levelnames,62", 1);
           if (null != var2) {
             ro.field_r[62] = fa.a((byte) -80, var2);
             break L82;
@@ -858,8 +775,7 @@ abstract class tl {
           }
         }
         L83: {
-          int discarded$368 = 1;
-          var2 = we.a("puzzle1p_levelnames,63");
+          var2 = we.a("puzzle1p_levelnames,63", 1);
           if (null != var2) {
             ro.field_r[63] = fa.a((byte) -90, var2);
             break L83;
@@ -868,8 +784,7 @@ abstract class tl {
           }
         }
         L84: {
-          int discarded$369 = 1;
-          var2 = we.a("puzzle1p_levelnames,64");
+          var2 = we.a("puzzle1p_levelnames,64", 1);
           if (null != var2) {
             ro.field_r[64] = fa.a((byte) -127, var2);
             break L84;
@@ -878,8 +793,7 @@ abstract class tl {
           }
         }
         L85: {
-          int discarded$370 = 1;
-          var2 = we.a("puzzle1p_levelnames,65");
+          var2 = we.a("puzzle1p_levelnames,65", 1);
           if (null != var2) {
             ro.field_r[65] = fa.a((byte) -84, var2);
             break L85;
@@ -888,8 +802,7 @@ abstract class tl {
           }
         }
         L86: {
-          int discarded$371 = 1;
-          var2 = we.a("puzzle1p_levelnames,66");
+          var2 = we.a("puzzle1p_levelnames,66", 1);
           if (null != var2) {
             ro.field_r[66] = fa.a((byte) -112, var2);
             break L86;
@@ -898,8 +811,7 @@ abstract class tl {
           }
         }
         L87: {
-          int discarded$372 = 1;
-          var2 = we.a("puzzle1p_levelnames,67");
+          var2 = we.a("puzzle1p_levelnames,67", 1);
           if (param0 >= 83) {
             break L87;
           } else {
@@ -916,8 +828,7 @@ abstract class tl {
           }
         }
         L89: {
-          int discarded$373 = 1;
-          var2 = we.a("puzzle1p_levelnames,68");
+          var2 = we.a("puzzle1p_levelnames,68", 1);
           if (null == var2) {
             break L89;
           } else {
@@ -926,8 +837,7 @@ abstract class tl {
           }
         }
         L90: {
-          int discarded$374 = 1;
-          var2 = we.a("puzzle1p_levelnames,69");
+          var2 = we.a("puzzle1p_levelnames,69", 1);
           if (null != var2) {
             ro.field_r[69] = fa.a((byte) -73, var2);
             break L90;
@@ -936,8 +846,7 @@ abstract class tl {
           }
         }
         L91: {
-          int discarded$375 = 1;
-          var2 = we.a("puzzle2p_levelnames,0");
+          var2 = we.a("puzzle2p_levelnames,0", 1);
           if (var2 != null) {
             pg.field_e[0] = fa.a((byte) -124, var2);
             break L91;
@@ -946,8 +855,7 @@ abstract class tl {
           }
         }
         L92: {
-          int discarded$376 = 1;
-          var2 = we.a("puzzle2p_levelnames,1");
+          var2 = we.a("puzzle2p_levelnames,1", 1);
           if (null != var2) {
             pg.field_e[1] = fa.a((byte) -79, var2);
             break L92;
@@ -956,8 +864,7 @@ abstract class tl {
           }
         }
         L93: {
-          int discarded$377 = 1;
-          var2 = we.a("puzzle2p_levelnames,2");
+          var2 = we.a("puzzle2p_levelnames,2", 1);
           if (null != var2) {
             pg.field_e[2] = fa.a((byte) -121, var2);
             break L93;
@@ -966,8 +873,7 @@ abstract class tl {
           }
         }
         L94: {
-          int discarded$378 = 1;
-          var2 = we.a("puzzle2p_levelnames,3");
+          var2 = we.a("puzzle2p_levelnames,3", 1);
           if (null == var2) {
             break L94;
           } else {
@@ -976,8 +882,7 @@ abstract class tl {
           }
         }
         L95: {
-          int discarded$379 = 1;
-          var2 = we.a("puzzle2p_levelnames,4");
+          var2 = we.a("puzzle2p_levelnames,4", 1);
           if (null == var2) {
             break L95;
           } else {
@@ -986,8 +891,7 @@ abstract class tl {
           }
         }
         L96: {
-          int discarded$380 = 1;
-          var2 = we.a("puzzle2p_levelnames,5");
+          var2 = we.a("puzzle2p_levelnames,5", 1);
           if (var2 == null) {
             break L96;
           } else {
@@ -996,8 +900,7 @@ abstract class tl {
           }
         }
         L97: {
-          int discarded$381 = 1;
-          var2 = we.a("puzzle2p_levelnames,6");
+          var2 = we.a("puzzle2p_levelnames,6", 1);
           if (var2 != null) {
             pg.field_e[6] = fa.a((byte) -95, var2);
             break L97;
@@ -1006,8 +909,7 @@ abstract class tl {
           }
         }
         L98: {
-          int discarded$382 = 1;
-          var2 = we.a("puzzle2p_levelnames,7");
+          var2 = we.a("puzzle2p_levelnames,7", 1);
           if (null == var2) {
             break L98;
           } else {
@@ -1016,8 +918,7 @@ abstract class tl {
           }
         }
         L99: {
-          int discarded$383 = 1;
-          var2 = we.a("puzzle2p_levelnames,8");
+          var2 = we.a("puzzle2p_levelnames,8", 1);
           if (var2 != null) {
             pg.field_e[8] = fa.a((byte) -93, var2);
             break L99;
@@ -1026,8 +927,7 @@ abstract class tl {
           }
         }
         L100: {
-          int discarded$384 = 1;
-          var2 = we.a("puzzle2p_levelnames,9");
+          var2 = we.a("puzzle2p_levelnames,9", 1);
           if (var2 != null) {
             pg.field_e[9] = fa.a((byte) -64, var2);
             break L100;
@@ -1036,8 +936,7 @@ abstract class tl {
           }
         }
         L101: {
-          int discarded$385 = 1;
-          var2 = we.a("puzzle2p_levelnames,10");
+          var2 = we.a("puzzle2p_levelnames,10", 1);
           if (null != var2) {
             pg.field_e[10] = fa.a((byte) -106, var2);
             break L101;
@@ -1046,8 +945,7 @@ abstract class tl {
           }
         }
         L102: {
-          int discarded$386 = 1;
-          var2 = we.a("puzzle2p_levelnames,11");
+          var2 = we.a("puzzle2p_levelnames,11", 1);
           if (var2 != null) {
             pg.field_e[11] = fa.a((byte) -66, var2);
             break L102;
@@ -1056,8 +954,7 @@ abstract class tl {
           }
         }
         L103: {
-          int discarded$387 = 1;
-          var2 = we.a("puzzle3p_levelnames,0");
+          var2 = we.a("puzzle3p_levelnames,0", 1);
           if (var2 == null) {
             break L103;
           } else {
@@ -1066,8 +963,7 @@ abstract class tl {
           }
         }
         L104: {
-          int discarded$388 = 1;
-          var2 = we.a("puzzle3p_levelnames,1");
+          var2 = we.a("puzzle3p_levelnames,1", 1);
           if (var2 == null) {
             break L104;
           } else {
@@ -1076,8 +972,7 @@ abstract class tl {
           }
         }
         L105: {
-          int discarded$389 = 1;
-          var2 = we.a("puzzle3p_levelnames,2");
+          var2 = we.a("puzzle3p_levelnames,2", 1);
           if (null != var2) {
             qg.field_c[2] = fa.a((byte) -117, var2);
             break L105;
@@ -1086,8 +981,7 @@ abstract class tl {
           }
         }
         L106: {
-          int discarded$390 = 1;
-          var2 = we.a("puzzle3p_levelnames,3");
+          var2 = we.a("puzzle3p_levelnames,3", 1);
           if (var2 != null) {
             qg.field_c[3] = fa.a((byte) -94, var2);
             break L106;
@@ -1096,8 +990,7 @@ abstract class tl {
           }
         }
         L107: {
-          int discarded$391 = 1;
-          var2 = we.a("puzzle3p_levelnames,4");
+          var2 = we.a("puzzle3p_levelnames,4", 1);
           if (null == var2) {
             break L107;
           } else {
@@ -1106,8 +999,7 @@ abstract class tl {
           }
         }
         L108: {
-          int discarded$392 = 1;
-          var2 = we.a("arcade1p_levelnames,0");
+          var2 = we.a("arcade1p_levelnames,0", 1);
           if (null != var2) {
             kk.field_k[0] = fa.a((byte) -119, var2);
             break L108;
@@ -1116,8 +1008,7 @@ abstract class tl {
           }
         }
         L109: {
-          int discarded$393 = 1;
-          var2 = we.a("arcade1p_levelnames,1");
+          var2 = we.a("arcade1p_levelnames,1", 1);
           if (var2 != null) {
             kk.field_k[1] = fa.a((byte) -124, var2);
             break L109;
@@ -1126,8 +1017,7 @@ abstract class tl {
           }
         }
         L110: {
-          int discarded$394 = 1;
-          var2 = we.a("arcade1p_levelnames,2");
+          var2 = we.a("arcade1p_levelnames,2", 1);
           if (var2 == null) {
             break L110;
           } else {
@@ -1136,8 +1026,7 @@ abstract class tl {
           }
         }
         L111: {
-          int discarded$395 = 1;
-          var2 = we.a("arcade1p_levelnames,3");
+          var2 = we.a("arcade1p_levelnames,3", 1);
           if (var2 == null) {
             break L111;
           } else {
@@ -1146,8 +1035,7 @@ abstract class tl {
           }
         }
         L112: {
-          int discarded$396 = 1;
-          var2 = we.a("arcade1p_levelnames,4");
+          var2 = we.a("arcade1p_levelnames,4", 1);
           if (null == var2) {
             break L112;
           } else {
@@ -1156,8 +1044,7 @@ abstract class tl {
           }
         }
         L113: {
-          int discarded$397 = 1;
-          var2 = we.a("arcade1p_levelnames,5");
+          var2 = we.a("arcade1p_levelnames,5", 1);
           if (var2 == null) {
             break L113;
           } else {
@@ -1166,8 +1053,7 @@ abstract class tl {
           }
         }
         L114: {
-          int discarded$398 = 1;
-          var2 = we.a("arcade1p_levelnames,6");
+          var2 = we.a("arcade1p_levelnames,6", 1);
           if (null != var2) {
             kk.field_k[6] = fa.a((byte) -88, var2);
             break L114;
@@ -1176,8 +1062,7 @@ abstract class tl {
           }
         }
         L115: {
-          int discarded$399 = 1;
-          var2 = we.a("arcade1p_levelnames,7");
+          var2 = we.a("arcade1p_levelnames,7", 1);
           if (var2 != null) {
             kk.field_k[7] = fa.a((byte) -127, var2);
             break L115;
@@ -1186,8 +1071,7 @@ abstract class tl {
           }
         }
         L116: {
-          int discarded$400 = 1;
-          var2 = we.a("arcade1p_levelnames,8");
+          var2 = we.a("arcade1p_levelnames,8", 1);
           if (var2 != null) {
             kk.field_k[8] = fa.a((byte) -123, var2);
             break L116;
@@ -1196,8 +1080,7 @@ abstract class tl {
           }
         }
         L117: {
-          int discarded$401 = 1;
-          var2 = we.a("arcade1p_levelnames,9");
+          var2 = we.a("arcade1p_levelnames,9", 1);
           if (var2 != null) {
             kk.field_k[9] = fa.a((byte) -91, var2);
             break L117;
@@ -1206,8 +1089,7 @@ abstract class tl {
           }
         }
         L118: {
-          int discarded$402 = 1;
-          var2 = we.a("arcade1p_levelnames,10");
+          var2 = we.a("arcade1p_levelnames,10", 1);
           if (null == var2) {
             break L118;
           } else {
@@ -1216,8 +1098,7 @@ abstract class tl {
           }
         }
         L119: {
-          int discarded$403 = 1;
-          var2 = we.a("arcade1p_levelnames,11");
+          var2 = we.a("arcade1p_levelnames,11", 1);
           if (null != var2) {
             kk.field_k[11] = fa.a((byte) -81, var2);
             break L119;
@@ -1226,8 +1107,7 @@ abstract class tl {
           }
         }
         L120: {
-          int discarded$404 = 1;
-          var2 = we.a("arcade1p_levelnames,12");
+          var2 = we.a("arcade1p_levelnames,12", 1);
           if (var2 == null) {
             break L120;
           } else {
@@ -1236,8 +1116,7 @@ abstract class tl {
           }
         }
         L121: {
-          int discarded$405 = 1;
-          var2 = we.a("arcade1p_levelnames,13");
+          var2 = we.a("arcade1p_levelnames,13", 1);
           if (null != var2) {
             kk.field_k[13] = fa.a((byte) -67, var2);
             break L121;
@@ -1246,8 +1125,7 @@ abstract class tl {
           }
         }
         L122: {
-          int discarded$406 = 1;
-          var2 = we.a("arcade1p_levelnames,14");
+          var2 = we.a("arcade1p_levelnames,14", 1);
           if (var2 != null) {
             kk.field_k[14] = fa.a((byte) -117, var2);
             break L122;
@@ -1256,8 +1134,7 @@ abstract class tl {
           }
         }
         L123: {
-          int discarded$407 = 1;
-          var2 = we.a("arcade1p_levelnames,15");
+          var2 = we.a("arcade1p_levelnames,15", 1);
           if (null == var2) {
             break L123;
           } else {
@@ -1266,8 +1143,7 @@ abstract class tl {
           }
         }
         L124: {
-          int discarded$408 = 1;
-          var2 = we.a("arcade1p_levelnames,16");
+          var2 = we.a("arcade1p_levelnames,16", 1);
           if (null == var2) {
             break L124;
           } else {
@@ -1276,8 +1152,7 @@ abstract class tl {
           }
         }
         L125: {
-          int discarded$409 = 1;
-          var2 = we.a("arcade1p_levelnames,17");
+          var2 = we.a("arcade1p_levelnames,17", 1);
           if (null == var2) {
             break L125;
           } else {
@@ -1286,8 +1161,7 @@ abstract class tl {
           }
         }
         L126: {
-          int discarded$410 = 1;
-          var2 = we.a("arcade1p_levelnames,18");
+          var2 = we.a("arcade1p_levelnames,18", 1);
           if (var2 == null) {
             break L126;
           } else {
@@ -1296,8 +1170,7 @@ abstract class tl {
           }
         }
         L127: {
-          int discarded$411 = 1;
-          var2 = we.a("arcade1p_levelnames,19");
+          var2 = we.a("arcade1p_levelnames,19", 1);
           if (null == var2) {
             break L127;
           } else {
@@ -1306,8 +1179,7 @@ abstract class tl {
           }
         }
         L128: {
-          int discarded$412 = 1;
-          var2 = we.a("arcade1p_levelnames,20");
+          var2 = we.a("arcade1p_levelnames,20", 1);
           if (null == var2) {
             break L128;
           } else {
@@ -1316,8 +1188,7 @@ abstract class tl {
           }
         }
         L129: {
-          int discarded$413 = 1;
-          var2 = we.a("arcade1p_levelnames,21");
+          var2 = we.a("arcade1p_levelnames,21", 1);
           if (var2 == null) {
             break L129;
           } else {
@@ -1326,8 +1197,7 @@ abstract class tl {
           }
         }
         L130: {
-          int discarded$414 = 1;
-          var2 = we.a("arcade1p_levelnames,22");
+          var2 = we.a("arcade1p_levelnames,22", 1);
           if (null != var2) {
             kk.field_k[22] = fa.a((byte) -68, var2);
             break L130;
@@ -1336,8 +1206,7 @@ abstract class tl {
           }
         }
         L131: {
-          int discarded$415 = 1;
-          var2 = we.a("arcade1p_levelnames,23");
+          var2 = we.a("arcade1p_levelnames,23", 1);
           if (var2 == null) {
             break L131;
           } else {
@@ -1346,8 +1215,7 @@ abstract class tl {
           }
         }
         L132: {
-          int discarded$416 = 1;
-          var2 = we.a("arcade1p_levelnames,24");
+          var2 = we.a("arcade1p_levelnames,24", 1);
           if (var2 != null) {
             kk.field_k[24] = fa.a((byte) -88, var2);
             break L132;
@@ -1356,8 +1224,7 @@ abstract class tl {
           }
         }
         L133: {
-          int discarded$417 = 1;
-          var2 = we.a("memberslevels_cannotplayreason");
+          var2 = we.a("memberslevels_cannotplayreason", 1);
           if (var2 == null) {
             break L133;
           } else {
@@ -1366,8 +1233,7 @@ abstract class tl {
           }
         }
         L134: {
-          int discarded$418 = 1;
-          var2 = we.a("unreachedlevels_cannotplayreason_shorter");
+          var2 = we.a("unreachedlevels_cannotplayreason_shorter", 1);
           if (var2 == null) {
             break L134;
           } else {
@@ -1376,8 +1242,7 @@ abstract class tl {
           }
         }
         L135: {
-          int discarded$419 = 1;
-          var2 = we.a("tasterlevel_suffix");
+          var2 = we.a("tasterlevel_suffix", 1);
           if (var2 != null) {
             pe.field_n = fa.a((byte) -128, var2);
             break L135;
@@ -1386,8 +1251,7 @@ abstract class tl {
           }
         }
         L136: {
-          int discarded$420 = 1;
-          var2 = we.a("tasterlevel_topmessage");
+          var2 = we.a("tasterlevel_topmessage", 1);
           if (null == var2) {
             break L136;
           } else {
@@ -1396,8 +1260,7 @@ abstract class tl {
           }
         }
         L137: {
-          int discarded$421 = 1;
-          var2 = we.a("tasterlevel_botmessage");
+          var2 = we.a("tasterlevel_botmessage", 1);
           if (null != var2) {
             cj.field_E = fa.a((byte) -71, var2);
             break L137;
@@ -1406,8 +1269,7 @@ abstract class tl {
           }
         }
         L138: {
-          int discarded$422 = 1;
-          var2 = we.a("loadloop_playingwizardrun");
+          var2 = we.a("loadloop_playingwizardrun", 1);
           if (var2 == null) {
             break L138;
           } else {
@@ -1416,8 +1278,7 @@ abstract class tl {
           }
         }
         L139: {
-          int discarded$423 = 1;
-          var2 = we.a("oneplayerpuzzles");
+          var2 = we.a("oneplayerpuzzles", 1);
           if (null != var2) {
             rh.field_d = fa.a((byte) -105, var2);
             break L139;
@@ -1426,8 +1287,7 @@ abstract class tl {
           }
         }
         L140: {
-          int discarded$424 = 1;
-          var2 = we.a("twoplayerpuzzles");
+          var2 = we.a("twoplayerpuzzles", 1);
           if (null == var2) {
             break L140;
           } else {
@@ -1436,8 +1296,7 @@ abstract class tl {
           }
         }
         L141: {
-          int discarded$425 = 1;
-          var2 = we.a("threeplayerpuzzles");
+          var2 = we.a("threeplayerpuzzles", 1);
           if (null == var2) {
             break L141;
           } else {
@@ -1446,8 +1305,7 @@ abstract class tl {
           }
         }
         L142: {
-          int discarded$426 = 1;
-          var2 = we.a("arcadelevels");
+          var2 = we.a("arcadelevels", 1);
           if (null != var2) {
             b.field_d = fa.a((byte) -85, var2);
             break L142;
@@ -1456,8 +1314,7 @@ abstract class tl {
           }
         }
         L143: {
-          int discarded$427 = 1;
-          var2 = we.a("puzzlehighscores");
+          var2 = we.a("puzzlehighscores", 1);
           if (null == var2) {
             break L143;
           } else {
@@ -1466,8 +1323,7 @@ abstract class tl {
           }
         }
         L144: {
-          int discarded$428 = 1;
-          var2 = we.a("arcadehighscores");
+          var2 = we.a("arcadehighscores", 1);
           if (var2 == null) {
             break L144;
           } else {
@@ -1476,8 +1332,7 @@ abstract class tl {
           }
         }
         L145: {
-          int discarded$429 = 1;
-          var2 = we.a("puzzle1p_subsections,0");
+          var2 = we.a("puzzle1p_subsections,0", 1);
           if (var2 == null) {
             break L145;
           } else {
@@ -1486,8 +1341,7 @@ abstract class tl {
           }
         }
         L146: {
-          int discarded$430 = 1;
-          var2 = we.a("puzzle1p_subsections,1");
+          var2 = we.a("puzzle1p_subsections,1", 1);
           if (null != var2) {
             md.field_t[1] = fa.a((byte) -103, var2);
             break L146;
@@ -1496,8 +1350,7 @@ abstract class tl {
           }
         }
         L147: {
-          int discarded$431 = 1;
-          var2 = we.a("puzzle1p_subsections,2");
+          var2 = we.a("puzzle1p_subsections,2", 1);
           if (var2 == null) {
             break L147;
           } else {
@@ -1506,8 +1359,7 @@ abstract class tl {
           }
         }
         L148: {
-          int discarded$432 = 1;
-          var2 = we.a("puzzle1p_subsections,3");
+          var2 = we.a("puzzle1p_subsections,3", 1);
           if (null != var2) {
             md.field_t[3] = fa.a((byte) -100, var2);
             break L148;
@@ -1516,8 +1368,7 @@ abstract class tl {
           }
         }
         L149: {
-          int discarded$433 = 1;
-          var2 = we.a("levelscomplete_proceeding");
+          var2 = we.a("levelscomplete_proceeding", 1);
           if (null != var2) {
             fb.field_e = fa.a((byte) -92, var2);
             break L149;
@@ -1526,8 +1377,7 @@ abstract class tl {
           }
         }
         L150: {
-          int discarded$434 = 1;
-          var2 = we.a("levelscomplete_proceeding_bonus");
+          var2 = we.a("levelscomplete_proceeding_bonus", 1);
           if (null == var2) {
             break L150;
           } else {
@@ -1536,8 +1386,7 @@ abstract class tl {
           }
         }
         L151: {
-          int discarded$435 = 1;
-          var2 = we.a("bonuslevelscomplete");
+          var2 = we.a("bonuslevelscomplete", 1);
           if (var2 == null) {
             break L151;
           } else {
@@ -1546,8 +1395,7 @@ abstract class tl {
           }
         }
         L152: {
-          int discarded$436 = 1;
-          var2 = we.a("achievementnames,0");
+          var2 = we.a("achievementnames,0", 1);
           if (null != var2) {
             jm.field_e[0] = fa.a((byte) -85, var2);
             break L152;
@@ -1556,8 +1404,7 @@ abstract class tl {
           }
         }
         L153: {
-          int discarded$437 = 1;
-          var2 = we.a("achievementnames,1");
+          var2 = we.a("achievementnames,1", 1);
           if (var2 != null) {
             jm.field_e[1] = fa.a((byte) -122, var2);
             break L153;
@@ -1566,8 +1413,7 @@ abstract class tl {
           }
         }
         L154: {
-          int discarded$438 = 1;
-          var2 = we.a("achievementnames,2");
+          var2 = we.a("achievementnames,2", 1);
           if (var2 == null) {
             break L154;
           } else {
@@ -1576,8 +1422,7 @@ abstract class tl {
           }
         }
         L155: {
-          int discarded$439 = 1;
-          var2 = we.a("achievementnames,3");
+          var2 = we.a("achievementnames,3", 1);
           if (var2 == null) {
             break L155;
           } else {
@@ -1586,8 +1431,7 @@ abstract class tl {
           }
         }
         L156: {
-          int discarded$440 = 1;
-          var2 = we.a("achievementnames,4");
+          var2 = we.a("achievementnames,4", 1);
           if (var2 != null) {
             jm.field_e[4] = fa.a((byte) -66, var2);
             break L156;
@@ -1596,8 +1440,7 @@ abstract class tl {
           }
         }
         L157: {
-          int discarded$441 = 1;
-          var2 = we.a("achievementnames,5");
+          var2 = we.a("achievementnames,5", 1);
           if (null == var2) {
             break L157;
           } else {
@@ -1606,8 +1449,7 @@ abstract class tl {
           }
         }
         L158: {
-          int discarded$442 = 1;
-          var2 = we.a("achievementnames,6");
+          var2 = we.a("achievementnames,6", 1);
           if (var2 == null) {
             break L158;
           } else {
@@ -1616,8 +1458,7 @@ abstract class tl {
           }
         }
         L159: {
-          int discarded$443 = 1;
-          var2 = we.a("achievementnames,7");
+          var2 = we.a("achievementnames,7", 1);
           if (var2 != null) {
             jm.field_e[7] = fa.a((byte) -124, var2);
             break L159;
@@ -1626,8 +1467,7 @@ abstract class tl {
           }
         }
         L160: {
-          int discarded$444 = 1;
-          var2 = we.a("achievementnames,8");
+          var2 = we.a("achievementnames,8", 1);
           if (null == var2) {
             break L160;
           } else {
@@ -1636,8 +1476,7 @@ abstract class tl {
           }
         }
         L161: {
-          int discarded$445 = 1;
-          var2 = we.a("achievementnames,9");
+          var2 = we.a("achievementnames,9", 1);
           if (null != var2) {
             jm.field_e[9] = fa.a((byte) -112, var2);
             break L161;
@@ -1646,8 +1485,7 @@ abstract class tl {
           }
         }
         L162: {
-          int discarded$446 = 1;
-          var2 = we.a("achievementnames,10");
+          var2 = we.a("achievementnames,10", 1);
           if (var2 != null) {
             jm.field_e[10] = fa.a((byte) -121, var2);
             break L162;
@@ -1656,8 +1494,7 @@ abstract class tl {
           }
         }
         L163: {
-          int discarded$447 = 1;
-          var2 = we.a("achievementnames,11");
+          var2 = we.a("achievementnames,11", 1);
           if (var2 == null) {
             break L163;
           } else {
@@ -1666,8 +1503,7 @@ abstract class tl {
           }
         }
         L164: {
-          int discarded$448 = 1;
-          var2 = we.a("achievementnames,12");
+          var2 = we.a("achievementnames,12", 1);
           if (null != var2) {
             jm.field_e[12] = fa.a((byte) -65, var2);
             break L164;
@@ -1676,8 +1512,7 @@ abstract class tl {
           }
         }
         L165: {
-          int discarded$449 = 1;
-          var2 = we.a("achievementnames,13");
+          var2 = we.a("achievementnames,13", 1);
           if (var2 != null) {
             jm.field_e[13] = fa.a((byte) -125, var2);
             break L165;
@@ -1686,8 +1521,7 @@ abstract class tl {
           }
         }
         L166: {
-          int discarded$450 = 1;
-          var2 = we.a("achievementnames,14");
+          var2 = we.a("achievementnames,14", 1);
           if (null != var2) {
             jm.field_e[14] = fa.a((byte) -71, var2);
             break L166;
@@ -1696,8 +1530,7 @@ abstract class tl {
           }
         }
         L167: {
-          int discarded$451 = 1;
-          var2 = we.a("achievementnames,15");
+          var2 = we.a("achievementnames,15", 1);
           if (null == var2) {
             break L167;
           } else {
@@ -1706,8 +1539,7 @@ abstract class tl {
           }
         }
         L168: {
-          int discarded$452 = 1;
-          var2 = we.a("achievementnames,16");
+          var2 = we.a("achievementnames,16", 1);
           if (var2 == null) {
             break L168;
           } else {
@@ -1716,8 +1548,7 @@ abstract class tl {
           }
         }
         L169: {
-          int discarded$453 = 1;
-          var2 = we.a("achievementdescriptions,0");
+          var2 = we.a("achievementdescriptions,0", 1);
           if (null != var2) {
             an.field_o[0] = fa.a((byte) -94, var2);
             break L169;
@@ -1726,8 +1557,7 @@ abstract class tl {
           }
         }
         L170: {
-          int discarded$454 = 1;
-          var2 = we.a("achievementdescriptions,1");
+          var2 = we.a("achievementdescriptions,1", 1);
           if (var2 == null) {
             break L170;
           } else {
@@ -1736,8 +1566,7 @@ abstract class tl {
           }
         }
         L171: {
-          int discarded$455 = 1;
-          var2 = we.a("achievementdescriptions,2");
+          var2 = we.a("achievementdescriptions,2", 1);
           if (null != var2) {
             an.field_o[2] = fa.a((byte) -96, var2);
             break L171;
@@ -1746,8 +1575,7 @@ abstract class tl {
           }
         }
         L172: {
-          int discarded$456 = 1;
-          var2 = we.a("achievementdescriptions,3");
+          var2 = we.a("achievementdescriptions,3", 1);
           if (var2 != null) {
             an.field_o[3] = fa.a((byte) -77, var2);
             break L172;
@@ -1756,8 +1584,7 @@ abstract class tl {
           }
         }
         L173: {
-          int discarded$457 = 1;
-          var2 = we.a("achievementdescriptions,4");
+          var2 = we.a("achievementdescriptions,4", 1);
           if (null == var2) {
             break L173;
           } else {
@@ -1766,8 +1593,7 @@ abstract class tl {
           }
         }
         L174: {
-          int discarded$458 = 1;
-          var2 = we.a("achievementdescriptions,5");
+          var2 = we.a("achievementdescriptions,5", 1);
           if (var2 == null) {
             break L174;
           } else {
@@ -1776,8 +1602,7 @@ abstract class tl {
           }
         }
         L175: {
-          int discarded$459 = 1;
-          var2 = we.a("achievementdescriptions,6");
+          var2 = we.a("achievementdescriptions,6", 1);
           if (var2 != null) {
             an.field_o[6] = fa.a((byte) -110, var2);
             break L175;
@@ -1786,8 +1611,7 @@ abstract class tl {
           }
         }
         L176: {
-          int discarded$460 = 1;
-          var2 = we.a("achievementdescriptions,7");
+          var2 = we.a("achievementdescriptions,7", 1);
           if (var2 == null) {
             break L176;
           } else {
@@ -1796,8 +1620,7 @@ abstract class tl {
           }
         }
         L177: {
-          int discarded$461 = 1;
-          var2 = we.a("achievementdescriptions,8");
+          var2 = we.a("achievementdescriptions,8", 1);
           if (var2 != null) {
             an.field_o[8] = fa.a((byte) -110, var2);
             break L177;
@@ -1806,8 +1629,7 @@ abstract class tl {
           }
         }
         L178: {
-          int discarded$462 = 1;
-          var2 = we.a("achievementdescriptions,9");
+          var2 = we.a("achievementdescriptions,9", 1);
           if (null != var2) {
             an.field_o[9] = fa.a((byte) -63, var2);
             break L178;
@@ -1816,8 +1638,7 @@ abstract class tl {
           }
         }
         L179: {
-          int discarded$463 = 1;
-          var2 = we.a("achievementdescriptions,10");
+          var2 = we.a("achievementdescriptions,10", 1);
           if (null != var2) {
             an.field_o[10] = fa.a((byte) -101, var2);
             break L179;
@@ -1826,8 +1647,7 @@ abstract class tl {
           }
         }
         L180: {
-          int discarded$464 = 1;
-          var2 = we.a("achievementdescriptions,11");
+          var2 = we.a("achievementdescriptions,11", 1);
           if (var2 == null) {
             break L180;
           } else {
@@ -1836,8 +1656,7 @@ abstract class tl {
           }
         }
         L181: {
-          int discarded$465 = 1;
-          var2 = we.a("achievementdescriptions,12");
+          var2 = we.a("achievementdescriptions,12", 1);
           if (var2 != null) {
             an.field_o[12] = fa.a((byte) -117, var2);
             break L181;
@@ -1846,8 +1665,7 @@ abstract class tl {
           }
         }
         L182: {
-          int discarded$466 = 1;
-          var2 = we.a("achievementdescriptions,13");
+          var2 = we.a("achievementdescriptions,13", 1);
           if (var2 != null) {
             an.field_o[13] = fa.a((byte) -63, var2);
             break L182;
@@ -1856,8 +1674,7 @@ abstract class tl {
           }
         }
         L183: {
-          int discarded$467 = 1;
-          var2 = we.a("achievementdescriptions,14");
+          var2 = we.a("achievementdescriptions,14", 1);
           if (var2 == null) {
             break L183;
           } else {
@@ -1866,8 +1683,7 @@ abstract class tl {
           }
         }
         L184: {
-          int discarded$468 = 1;
-          var2 = we.a("achievementdescriptions,15");
+          var2 = we.a("achievementdescriptions,15", 1);
           if (null == var2) {
             break L184;
           } else {
@@ -1876,8 +1692,7 @@ abstract class tl {
           }
         }
         L185: {
-          int discarded$469 = 1;
-          var2 = we.a("achievementdescriptions,16");
+          var2 = we.a("achievementdescriptions,16", 1);
           if (var2 == null) {
             break L185;
           } else {
@@ -1886,8 +1701,7 @@ abstract class tl {
           }
         }
         L186: {
-          int discarded$470 = 1;
-          var2 = we.a("clickonatile");
+          var2 = we.a("clickonatile", 1);
           if (null == var2) {
             break L186;
           } else {
@@ -1896,8 +1710,7 @@ abstract class tl {
           }
         }
         L187: {
-          int discarded$471 = 1;
-          var2 = we.a("pressmformap");
+          var2 = we.a("pressmformap", 1);
           if (var2 != null) {
             f.field_e = fa.a((byte) -121, var2);
             break L187;
@@ -1906,8 +1719,7 @@ abstract class tl {
           }
         }
         L188: {
-          int discarded$472 = 1;
-          var2 = we.a("bomb_name");
+          var2 = we.a("bomb_name", 1);
           if (null != var2) {
             kd.field_i = fa.a((byte) -109, var2);
             break L188;
@@ -1916,8 +1728,7 @@ abstract class tl {
           }
         }
         L189: {
-          int discarded$473 = 1;
-          var2 = we.a("bomb_information");
+          var2 = we.a("bomb_information", 1);
           if (var2 == null) {
             break L189;
           } else {
@@ -1926,8 +1737,7 @@ abstract class tl {
           }
         }
         L190: {
-          int discarded$474 = 1;
-          var2 = we.a("crystal_name");
+          var2 = we.a("crystal_name", 1);
           if (var2 != null) {
             cj.field_y = fa.a((byte) -74, var2);
             break L190;
@@ -1936,8 +1746,7 @@ abstract class tl {
           }
         }
         L191: {
-          int discarded$475 = 1;
-          var2 = we.a("crystal_information");
+          var2 = we.a("crystal_information", 1);
           if (var2 == null) {
             break L191;
           } else {
@@ -1946,8 +1755,7 @@ abstract class tl {
           }
         }
         L192: {
-          int discarded$476 = 1;
-          var2 = we.a("earth_name");
+          var2 = we.a("earth_name", 1);
           if (null != var2) {
             dq.field_H = fa.a((byte) -91, var2);
             break L192;
@@ -1956,8 +1764,7 @@ abstract class tl {
           }
         }
         L193: {
-          int discarded$477 = 1;
-          var2 = we.a("earth_information");
+          var2 = we.a("earth_information", 1);
           if (null != var2) {
             wi.field_b = fa.a((byte) -115, var2);
             break L193;
@@ -1966,8 +1773,7 @@ abstract class tl {
           }
         }
         L194: {
-          int discarded$478 = 1;
-          var2 = we.a("hole_name");
+          var2 = we.a("hole_name", 1);
           if (null != var2) {
             mg.field_h = fa.a((byte) -71, var2);
             break L194;
@@ -1976,8 +1782,7 @@ abstract class tl {
           }
         }
         L195: {
-          int discarded$479 = 1;
-          var2 = we.a("hole_information_unfilled");
+          var2 = we.a("hole_information_unfilled", 1);
           if (null == var2) {
             break L195;
           } else {
@@ -1986,8 +1791,7 @@ abstract class tl {
           }
         }
         L196: {
-          int discarded$480 = 1;
-          var2 = we.a("hole_information_filled");
+          var2 = we.a("hole_information_filled", 1);
           if (null == var2) {
             break L196;
           } else {
@@ -1996,8 +1800,7 @@ abstract class tl {
           }
         }
         L197: {
-          int discarded$481 = 1;
-          var2 = we.a("key_name");
+          var2 = we.a("key_name", 1);
           if (null != var2) {
             e.field_a = fa.a((byte) -127, var2);
             break L197;
@@ -2006,8 +1809,7 @@ abstract class tl {
           }
         }
         L198: {
-          int discarded$482 = 1;
-          var2 = we.a("key_information");
+          var2 = we.a("key_information", 1);
           if (var2 != null) {
             qd.field_p = fa.a((byte) -90, var2);
             break L198;
@@ -2016,8 +1818,7 @@ abstract class tl {
           }
         }
         L199: {
-          int discarded$483 = 1;
-          var2 = we.a("laserhub_name");
+          var2 = we.a("laserhub_name", 1);
           if (var2 != null) {
             eb.field_m = fa.a((byte) -95, var2);
             break L199;
@@ -2026,8 +1827,7 @@ abstract class tl {
           }
         }
         L200: {
-          int discarded$484 = 1;
-          var2 = we.a("laserhub_information");
+          var2 = we.a("laserhub_information", 1);
           if (var2 != null) {
             kd.field_m = fa.a((byte) -87, var2);
             break L200;
@@ -2036,8 +1836,7 @@ abstract class tl {
           }
         }
         L201: {
-          int discarded$485 = 1;
-          var2 = we.a("laserbeam_name");
+          var2 = we.a("laserbeam_name", 1);
           if (null == var2) {
             break L201;
           } else {
@@ -2046,8 +1845,7 @@ abstract class tl {
           }
         }
         L202: {
-          int discarded$486 = 1;
-          var2 = we.a("laserbeam_information");
+          var2 = we.a("laserbeam_information", 1);
           if (null != var2) {
             gg.field_e = fa.a((byte) -83, var2);
             break L202;
@@ -2056,8 +1854,7 @@ abstract class tl {
           }
         }
         L203: {
-          int discarded$487 = 1;
-          var2 = we.a("log_name");
+          var2 = we.a("log_name", 1);
           if (null == var2) {
             break L203;
           } else {
@@ -2066,8 +1863,7 @@ abstract class tl {
           }
         }
         L204: {
-          int discarded$488 = 1;
-          var2 = we.a("log_information");
+          var2 = we.a("log_information", 1);
           if (var2 != null) {
             nk.field_m = fa.a((byte) -90, var2);
             break L204;
@@ -2076,8 +1872,7 @@ abstract class tl {
           }
         }
         L205: {
-          int discarded$489 = 1;
-          var2 = we.a("mirror_name");
+          var2 = we.a("mirror_name", 1);
           if (var2 == null) {
             break L205;
           } else {
@@ -2086,8 +1881,7 @@ abstract class tl {
           }
         }
         L206: {
-          int discarded$490 = 1;
-          var2 = we.a("mirror_information");
+          var2 = we.a("mirror_information", 1);
           if (null != var2) {
             qk.field_z = fa.a((byte) -93, var2);
             break L206;
@@ -2096,8 +1890,7 @@ abstract class tl {
           }
         }
         L207: {
-          int discarded$491 = 1;
-          var2 = we.a("bouncyball_name");
+          var2 = we.a("bouncyball_name", 1);
           if (var2 != null) {
             rb.field_e = fa.a((byte) -127, var2);
             break L207;
@@ -2106,8 +1899,7 @@ abstract class tl {
           }
         }
         L208: {
-          int discarded$492 = 1;
-          var2 = we.a("bouncyball_information");
+          var2 = we.a("bouncyball_information", 1);
           if (var2 != null) {
             fl.field_f = fa.a((byte) -76, var2);
             break L208;
@@ -2116,8 +1908,7 @@ abstract class tl {
           }
         }
         L209: {
-          int discarded$493 = 1;
-          var2 = we.a("player_name_single");
+          var2 = we.a("player_name_single", 1);
           if (null == var2) {
             break L209;
           } else {
@@ -2126,8 +1917,7 @@ abstract class tl {
           }
         }
         L210: {
-          int discarded$494 = 1;
-          var2 = we.a("player_name_multi,0");
+          var2 = we.a("player_name_multi,0", 1);
           if (var2 == null) {
             break L210;
           } else {
@@ -2136,8 +1926,7 @@ abstract class tl {
           }
         }
         L211: {
-          int discarded$495 = 1;
-          var2 = we.a("player_name_multi,1");
+          var2 = we.a("player_name_multi,1", 1);
           if (var2 == null) {
             break L211;
           } else {
@@ -2146,8 +1935,7 @@ abstract class tl {
           }
         }
         L212: {
-          int discarded$496 = 1;
-          var2 = we.a("player_name_multi,2");
+          var2 = we.a("player_name_multi,2", 1);
           if (null == var2) {
             break L212;
           } else {
@@ -2156,8 +1944,7 @@ abstract class tl {
           }
         }
         L213: {
-          int discarded$497 = 1;
-          var2 = we.a("player_whomessage_single");
+          var2 = we.a("player_whomessage_single", 1);
           if (var2 == null) {
             break L213;
           } else {
@@ -2166,8 +1953,7 @@ abstract class tl {
           }
         }
         L214: {
-          int discarded$498 = 1;
-          var2 = we.a("player_whomessage_multi");
+          var2 = we.a("player_whomessage_multi", 1);
           if (null != var2) {
             fh.field_j = fa.a((byte) -79, var2);
             break L214;
@@ -2176,8 +1962,7 @@ abstract class tl {
           }
         }
         L215: {
-          int discarded$499 = 1;
-          var2 = we.a("player_whomessage_helper");
+          var2 = we.a("player_whomessage_helper", 1);
           if (null != var2) {
             pl.field_s = fa.a((byte) -91, var2);
             break L215;
@@ -2186,8 +1971,7 @@ abstract class tl {
           }
         }
         L216: {
-          int discarded$500 = 1;
-          var2 = we.a("player_movemessage_normal");
+          var2 = we.a("player_movemessage_normal", 1);
           if (var2 != null) {
             qa.field_h = fa.a((byte) -85, var2);
             break L216;
@@ -2196,8 +1980,7 @@ abstract class tl {
           }
         }
         L217: {
-          int discarded$501 = 1;
-          var2 = we.a("player_movemessage_tutorial");
+          var2 = we.a("player_movemessage_tutorial", 1);
           if (null != var2) {
             ol.field_E = fa.a((byte) -96, var2);
             break L217;
@@ -2206,8 +1989,7 @@ abstract class tl {
           }
         }
         L218: {
-          int discarded$502 = 1;
-          var2 = we.a("player_movemessage_helper");
+          var2 = we.a("player_movemessage_helper", 1);
           if (var2 == null) {
             break L218;
           } else {
@@ -2216,8 +1998,7 @@ abstract class tl {
           }
         }
         L219: {
-          int discarded$503 = 1;
-          var2 = we.a("rock_name");
+          var2 = we.a("rock_name", 1);
           if (null == var2) {
             break L219;
           } else {
@@ -2226,8 +2007,7 @@ abstract class tl {
           }
         }
         L220: {
-          int discarded$504 = 1;
-          var2 = we.a("rock_information");
+          var2 = we.a("rock_information", 1);
           if (null == var2) {
             break L220;
           } else {
@@ -2236,8 +2016,7 @@ abstract class tl {
           }
         }
         L221: {
-          int discarded$505 = 1;
-          var2 = we.a("safe_name");
+          var2 = we.a("safe_name", 1);
           if (null == var2) {
             break L221;
           } else {
@@ -2246,8 +2025,7 @@ abstract class tl {
           }
         }
         L222: {
-          int discarded$506 = 1;
-          var2 = we.a("safe_information");
+          var2 = we.a("safe_information", 1);
           if (null != var2) {
             rb.field_j = fa.a((byte) -107, var2);
             break L222;
@@ -2256,8 +2034,7 @@ abstract class tl {
           }
         }
         L223: {
-          int discarded$507 = 1;
-          var2 = we.a("spider_name");
+          var2 = we.a("spider_name", 1);
           if (null == var2) {
             break L223;
           } else {
@@ -2266,8 +2043,7 @@ abstract class tl {
           }
         }
         L224: {
-          int discarded$508 = 1;
-          var2 = we.a("spider_information");
+          var2 = we.a("spider_information", 1);
           if (var2 == null) {
             break L224;
           } else {
@@ -2276,8 +2052,7 @@ abstract class tl {
           }
         }
         L225: {
-          int discarded$509 = 1;
-          var2 = we.a("spiderweb_name");
+          var2 = we.a("spiderweb_name", 1);
           if (null == var2) {
             break L225;
           } else {
@@ -2286,8 +2061,7 @@ abstract class tl {
           }
         }
         L226: {
-          int discarded$510 = 1;
-          var2 = we.a("spiderweb_information");
+          var2 = we.a("spiderweb_information", 1);
           if (null != var2) {
             ae.field_C = fa.a((byte) -65, var2);
             break L226;
@@ -2296,8 +2070,7 @@ abstract class tl {
           }
         }
         L227: {
-          int discarded$511 = 1;
-          var2 = we.a("stickyball_name");
+          var2 = we.a("stickyball_name", 1);
           if (null == var2) {
             break L227;
           } else {
@@ -2306,8 +2079,7 @@ abstract class tl {
           }
         }
         L228: {
-          int discarded$512 = 1;
-          var2 = we.a("stickyball_information");
+          var2 = we.a("stickyball_information", 1);
           if (var2 != null) {
             wg.field_N = fa.a((byte) -91, var2);
             break L228;
@@ -2316,8 +2088,7 @@ abstract class tl {
           }
         }
         L229: {
-          int discarded$513 = 1;
-          var2 = we.a("teleport_name");
+          var2 = we.a("teleport_name", 1);
           if (var2 != null) {
             f.field_f = fa.a((byte) -98, var2);
             break L229;
@@ -2326,8 +2097,7 @@ abstract class tl {
           }
         }
         L230: {
-          int discarded$514 = 1;
-          var2 = we.a("teleport_information");
+          var2 = we.a("teleport_information", 1);
           if (null == var2) {
             break L230;
           } else {
@@ -2336,8 +2106,7 @@ abstract class tl {
           }
         }
         L231: {
-          int discarded$515 = 1;
-          var2 = we.a("gametileinfo_showall");
+          var2 = we.a("gametileinfo_showall", 1);
           if (null != var2) {
             uh.field_o = fa.a((byte) -112, var2);
             break L231;
@@ -2346,8 +2115,7 @@ abstract class tl {
           }
         }
         L232: {
-          int discarded$516 = 1;
-          var2 = we.a("gametileinfo_done");
+          var2 = we.a("gametileinfo_done", 1);
           if (null != var2) {
             se.field_g = fa.a((byte) -89, var2);
             break L232;
@@ -2356,8 +2124,7 @@ abstract class tl {
           }
         }
         L233: {
-          int discarded$517 = 1;
-          var2 = we.a("bonus_stillalive");
+          var2 = we.a("bonus_stillalive", 1);
           if (var2 == null) {
             break L233;
           } else {
@@ -2366,8 +2133,7 @@ abstract class tl {
           }
         }
         L234: {
-          int discarded$518 = 1;
-          var2 = we.a("bonus_mostcrystals");
+          var2 = we.a("bonus_mostcrystals", 1);
           if (var2 != null) {
             me.field_a = fa.a((byte) -71, var2);
             break L234;
@@ -2376,8 +2142,7 @@ abstract class tl {
           }
         }
         L235: {
-          int discarded$519 = 1;
-          var2 = we.a("bonus_lastcrystal");
+          var2 = we.a("bonus_lastcrystal", 1);
           if (null != var2) {
             re.field_p = fa.a((byte) -66, var2);
             break L235;
@@ -2386,8 +2151,7 @@ abstract class tl {
           }
         }
         L236: {
-          int discarded$520 = 1;
-          var2 = we.a("bonus_allbombs");
+          var2 = we.a("bonus_allbombs", 1);
           if (null != var2) {
             og.field_y = fa.a((byte) -99, var2);
             break L236;
@@ -2396,8 +2160,7 @@ abstract class tl {
           }
         }
         L237: {
-          int discarded$521 = 1;
-          var2 = we.a("bonus_lastbomb");
+          var2 = we.a("bonus_lastbomb", 1);
           if (var2 == null) {
             break L237;
           } else {
@@ -2406,8 +2169,7 @@ abstract class tl {
           }
         }
         L238: {
-          int discarded$522 = 1;
-          var2 = we.a("bonus_allballs");
+          var2 = we.a("bonus_allballs", 1);
           if (null != var2) {
             og.field_u = fa.a((byte) -92, var2);
             break L238;
@@ -2416,8 +2178,7 @@ abstract class tl {
           }
         }
         L239: {
-          int discarded$523 = 1;
-          var2 = we.a("bonus_lastball");
+          var2 = we.a("bonus_lastball", 1);
           if (var2 != null) {
             je.field_h = fa.a((byte) -85, var2);
             break L239;
@@ -2426,8 +2187,7 @@ abstract class tl {
           }
         }
         L240: {
-          int discarded$524 = 1;
-          var2 = we.a("bonus_allspiders");
+          var2 = we.a("bonus_allspiders", 1);
           if (var2 != null) {
             mn.field_m = fa.a((byte) -111, var2);
             break L240;
@@ -2436,8 +2196,7 @@ abstract class tl {
           }
         }
         L241: {
-          int discarded$525 = 1;
-          var2 = we.a("bonus_lastspider");
+          var2 = we.a("bonus_lastspider", 1);
           if (null == var2) {
             break L241;
           } else {
@@ -2446,8 +2205,7 @@ abstract class tl {
           }
         }
         L242: {
-          int discarded$526 = 1;
-          var2 = we.a("bonus_rightfirsttime");
+          var2 = we.a("bonus_rightfirsttime", 1);
           if (null == var2) {
             break L242;
           } else {
@@ -2456,8 +2214,7 @@ abstract class tl {
           }
         }
         L243: {
-          int discarded$527 = 1;
-          var2 = we.a("penalty_killedafriend");
+          var2 = we.a("penalty_killedafriend", 1);
           if (var2 != null) {
             kp.field_l = fa.a((byte) -119, var2);
             break L243;
@@ -2466,8 +2223,7 @@ abstract class tl {
           }
         }
         L244: {
-          int discarded$528 = 1;
-          var2 = we.a("tutorial_1_3");
+          var2 = we.a("tutorial_1_3", 1);
           if (var2 != null) {
             ao.field_d = fa.a((byte) -121, var2);
             break L244;
@@ -2476,8 +2232,7 @@ abstract class tl {
           }
         }
         L245: {
-          int discarded$529 = 1;
-          var2 = we.a("tutorial_1_6");
+          var2 = we.a("tutorial_1_6", 1);
           if (var2 != null) {
             m.field_m = fa.a((byte) -73, var2);
             break L245;
@@ -2486,8 +2241,7 @@ abstract class tl {
           }
         }
         L246: {
-          int discarded$530 = 1;
-          var2 = we.a("tutorial_1_9");
+          var2 = we.a("tutorial_1_9", 1);
           if (null != var2) {
             tb.field_f = fa.a((byte) -71, var2);
             break L246;
@@ -2496,8 +2250,7 @@ abstract class tl {
           }
         }
         L247: {
-          int discarded$531 = 1;
-          var2 = we.a("tutorial_1_14");
+          var2 = we.a("tutorial_1_14", 1);
           if (null == var2) {
             break L247;
           } else {
@@ -2506,8 +2259,7 @@ abstract class tl {
           }
         }
         L248: {
-          int discarded$532 = 1;
-          var2 = we.a("tutorial_2_1");
+          var2 = we.a("tutorial_2_1", 1);
           if (var2 == null) {
             break L248;
           } else {
@@ -2516,8 +2268,7 @@ abstract class tl {
           }
         }
         L249: {
-          int discarded$533 = 1;
-          var2 = we.a("tutorial_2_9");
+          var2 = we.a("tutorial_2_9", 1);
           if (var2 != null) {
             dn.field_b = fa.a((byte) -128, var2);
             break L249;
@@ -2526,8 +2277,7 @@ abstract class tl {
           }
         }
         L250: {
-          int discarded$534 = 1;
-          var2 = we.a("tutorial_2_12");
+          var2 = we.a("tutorial_2_12", 1);
           if (null == var2) {
             break L250;
           } else {
@@ -2536,8 +2286,7 @@ abstract class tl {
           }
         }
         L251: {
-          int discarded$535 = 1;
-          var2 = we.a("tutorial_2_14");
+          var2 = we.a("tutorial_2_14", 1);
           if (null != var2) {
             fn.field_g = fa.a((byte) -108, var2);
             break L251;
@@ -2546,8 +2295,7 @@ abstract class tl {
           }
         }
         L252: {
-          int discarded$536 = 1;
-          var2 = we.a("tutorial_3_1");
+          var2 = we.a("tutorial_3_1", 1);
           if (null != var2) {
             vp.field_g = fa.a((byte) -119, var2);
             break L252;
@@ -2556,8 +2304,7 @@ abstract class tl {
           }
         }
         L253: {
-          int discarded$537 = 1;
-          var2 = we.a("tutorial_3_5");
+          var2 = we.a("tutorial_3_5", 1);
           if (var2 != null) {
             rb.field_i = fa.a((byte) -64, var2);
             break L253;
@@ -2566,8 +2313,7 @@ abstract class tl {
           }
         }
         L254: {
-          int discarded$538 = 1;
-          var2 = we.a("tutorial_3_12");
+          var2 = we.a("tutorial_3_12", 1);
           if (var2 != null) {
             ke.field_c = fa.a((byte) -119, var2);
             break L254;
@@ -2576,8 +2322,7 @@ abstract class tl {
           }
         }
         L255: {
-          int discarded$539 = 1;
-          var2 = we.a("tutorial_3_19");
+          var2 = we.a("tutorial_3_19", 1);
           if (var2 != null) {
             fp.field_f = fa.a((byte) -72, var2);
             break L255;
@@ -2586,8 +2331,7 @@ abstract class tl {
           }
         }
         L256: {
-          int discarded$540 = 1;
-          var2 = we.a("tutorial_3_24");
+          var2 = we.a("tutorial_3_24", 1);
           if (var2 == null) {
             break L256;
           } else {
@@ -2596,8 +2340,7 @@ abstract class tl {
           }
         }
         L257: {
-          int discarded$541 = 1;
-          var2 = we.a("tutorial_3_30");
+          var2 = we.a("tutorial_3_30", 1);
           if (null != var2) {
             oj.field_C = fa.a((byte) -99, var2);
             break L257;
@@ -2606,8 +2349,7 @@ abstract class tl {
           }
         }
         L258: {
-          int discarded$542 = 1;
-          var2 = we.a("tutorial_4_5");
+          var2 = we.a("tutorial_4_5", 1);
           if (var2 == null) {
             break L258;
           } else {
@@ -2616,8 +2358,7 @@ abstract class tl {
           }
         }
         L259: {
-          int discarded$543 = 1;
-          var2 = we.a("tutorial_4_10");
+          var2 = we.a("tutorial_4_10", 1);
           if (null != var2) {
             cl.field_i = fa.a((byte) -93, var2);
             break L259;
@@ -2626,8 +2367,7 @@ abstract class tl {
           }
         }
         L260: {
-          int discarded$544 = 1;
-          var2 = we.a("tutorial_4_13");
+          var2 = we.a("tutorial_4_13", 1);
           if (var2 != null) {
             jp.field_b = fa.a((byte) -93, var2);
             break L260;
@@ -2636,8 +2376,7 @@ abstract class tl {
           }
         }
         L261: {
-          int discarded$545 = 1;
-          var2 = we.a("tutorial_4_19");
+          var2 = we.a("tutorial_4_19", 1);
           if (var2 != null) {
             hm.field_a = fa.a((byte) -128, var2);
             break L261;
@@ -2646,8 +2385,7 @@ abstract class tl {
           }
         }
         L262: {
-          int discarded$546 = 1;
-          var2 = we.a("tutorial_5_3");
+          var2 = we.a("tutorial_5_3", 1);
           if (null == var2) {
             break L262;
           } else {
@@ -2656,8 +2394,7 @@ abstract class tl {
           }
         }
         L263: {
-          int discarded$547 = 1;
-          var2 = we.a("tutorial_5_6");
+          var2 = we.a("tutorial_5_6", 1);
           if (var2 == null) {
             break L263;
           } else {
@@ -2666,8 +2403,7 @@ abstract class tl {
           }
         }
         L264: {
-          int discarded$548 = 1;
-          var2 = we.a("tutorial_5_9");
+          var2 = we.a("tutorial_5_9", 1);
           if (null == var2) {
             break L264;
           } else {
@@ -2676,8 +2412,7 @@ abstract class tl {
           }
         }
         L265: {
-          int discarded$549 = 1;
-          var2 = we.a("tutorial_5_13");
+          var2 = we.a("tutorial_5_13", 1);
           if (var2 == null) {
             break L265;
           } else {
@@ -2686,8 +2421,7 @@ abstract class tl {
           }
         }
         L266: {
-          int discarded$550 = 1;
-          var2 = we.a("tutorial_5_25");
+          var2 = we.a("tutorial_5_25", 1);
           if (var2 == null) {
             break L266;
           } else {
@@ -2696,8 +2430,7 @@ abstract class tl {
           }
         }
         L267: {
-          int discarded$551 = 1;
-          var2 = we.a("tutorial_5_28");
+          var2 = we.a("tutorial_5_28", 1);
           if (var2 == null) {
             break L267;
           } else {
@@ -2706,8 +2439,7 @@ abstract class tl {
           }
         }
         L268: {
-          int discarded$552 = 1;
-          var2 = we.a("developerquote");
+          var2 = we.a("developerquote", 1);
           if (null != var2) {
             pp.field_i = fa.a((byte) -106, var2);
             break L268;
@@ -2716,8 +2448,7 @@ abstract class tl {
           }
         }
         L269: {
-          int discarded$553 = 1;
-          var2 = we.a("mb_screenshot_captions,0");
+          var2 = we.a("mb_screenshot_captions,0", 1);
           if (var2 != null) {
             io.field_I[0] = fa.a((byte) -68, var2);
             break L269;
@@ -2726,8 +2457,7 @@ abstract class tl {
           }
         }
         L270: {
-          int discarded$554 = 1;
-          var2 = we.a("mb_screenshot_captions,1");
+          var2 = we.a("mb_screenshot_captions,1", 1);
           if (null == var2) {
             break L270;
           } else {
@@ -2736,8 +2466,7 @@ abstract class tl {
           }
         }
         L271: {
-          int discarded$555 = 1;
-          var2 = we.a("mb_screenshot_captions,2");
+          var2 = we.a("mb_screenshot_captions,2", 1);
           if (null == var2) {
             break L271;
           } else {
@@ -2746,8 +2475,7 @@ abstract class tl {
           }
         }
         L272: {
-          int discarded$556 = 1;
-          var2 = we.a("mb_screenshot_captions,3");
+          var2 = we.a("mb_screenshot_captions,3", 1);
           if (null != var2) {
             io.field_I[3] = fa.a((byte) -82, var2);
             break L272;
@@ -2756,8 +2484,7 @@ abstract class tl {
           }
         }
         L273: {
-          int discarded$557 = 1;
-          var2 = we.a("mb_screenshot_captions,4");
+          var2 = we.a("mb_screenshot_captions,4", 1);
           if (var2 != null) {
             io.field_I[4] = fa.a((byte) -92, var2);
             break L273;
@@ -2766,8 +2493,7 @@ abstract class tl {
           }
         }
         L274: {
-          int discarded$558 = 1;
-          var2 = we.a("mb_screenshot_captions,5");
+          var2 = we.a("mb_screenshot_captions,5", 1);
           if (null != var2) {
             io.field_I[5] = fa.a((byte) -106, var2);
             break L274;
@@ -2776,8 +2502,7 @@ abstract class tl {
           }
         }
         L275: {
-          int discarded$559 = 1;
-          var2 = we.a("mb_screenshot_captions,6");
+          var2 = we.a("mb_screenshot_captions,6", 1);
           if (null != var2) {
             io.field_I[6] = fa.a((byte) -120, var2);
             break L275;
@@ -2786,8 +2511,7 @@ abstract class tl {
           }
         }
         L276: {
-          int discarded$560 = 1;
-          var2 = we.a("mb_screenshot_captions,7");
+          var2 = we.a("mb_screenshot_captions,7", 1);
           if (null == var2) {
             break L276;
           } else {
@@ -2796,8 +2520,7 @@ abstract class tl {
           }
         }
         L277: {
-          int discarded$561 = 1;
-          var2 = we.a("mb_screenshot_captions,8");
+          var2 = we.a("mb_screenshot_captions,8", 1);
           if (null != var2) {
             io.field_I[8] = fa.a((byte) -68, var2);
             break L277;
@@ -2806,8 +2529,7 @@ abstract class tl {
           }
         }
         L278: {
-          int discarded$562 = 1;
-          var2 = we.a("mb_screenshot_captions,9");
+          var2 = we.a("mb_screenshot_captions,9", 1);
           if (null == var2) {
             break L278;
           } else {
@@ -2816,8 +2538,7 @@ abstract class tl {
           }
         }
         L279: {
-          int discarded$563 = 1;
-          var2 = we.a("mb_screenshot_captions,10");
+          var2 = we.a("mb_screenshot_captions,10", 1);
           if (null == var2) {
             break L279;
           } else {
@@ -2826,8 +2547,7 @@ abstract class tl {
           }
         }
         L280: {
-          int discarded$564 = 1;
-          var2 = we.a("mb_screenshot_captions,11");
+          var2 = we.a("mb_screenshot_captions,11", 1);
           if (null == var2) {
             break L280;
           } else {
@@ -2836,8 +2556,7 @@ abstract class tl {
           }
         }
         L281: {
-          int discarded$565 = 1;
-          var2 = we.a("mb_screenshot_captions,12");
+          var2 = we.a("mb_screenshot_captions,12", 1);
           if (var2 == null) {
             break L281;
           } else {
@@ -2846,8 +2565,7 @@ abstract class tl {
           }
         }
         L282: {
-          int discarded$566 = 1;
-          var2 = we.a("mb_screenshot_captions,13");
+          var2 = we.a("mb_screenshot_captions,13", 1);
           if (null == var2) {
             break L282;
           } else {
@@ -2856,8 +2574,7 @@ abstract class tl {
           }
         }
         L283: {
-          int discarded$567 = 1;
-          var2 = we.a("mb_screenshot_captions,14");
+          var2 = we.a("mb_screenshot_captions,14", 1);
           if (null == var2) {
             break L283;
           } else {
@@ -2866,8 +2583,7 @@ abstract class tl {
           }
         }
         L284: {
-          int discarded$568 = 1;
-          var2 = we.a("mb_screenshot_captions,15");
+          var2 = we.a("mb_screenshot_captions,15", 1);
           if (null == var2) {
             break L284;
           } else {
@@ -2876,8 +2592,7 @@ abstract class tl {
           }
         }
         L285: {
-          int discarded$569 = 1;
-          var2 = we.a("mb_screenshot_captions,18");
+          var2 = we.a("mb_screenshot_captions,18", 1);
           if (null != var2) {
             io.field_I[18] = fa.a((byte) -108, var2);
             break L285;

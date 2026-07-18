@@ -13,24 +13,22 @@ final class cg {
     static int field_h;
     private ug field_b;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_c = null;
         field_d = null;
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         if (ok.a(false)) {
             return;
         }
         if (!(null != fj.field_E)) {
-            int discarded$0 = -128;
-            int discarded$1 = 4;
-            fj.field_E = je.a();
+            fj.field_E = je.a(4, -128);
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;

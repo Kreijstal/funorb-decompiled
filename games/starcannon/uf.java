@@ -710,7 +710,7 @@ final class uf {
         }
     }
 
-    final static String a(Throwable param0) throws IOException {
+    final static String a(Throwable param0, int param1) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;

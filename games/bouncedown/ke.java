@@ -13,7 +13,7 @@ final class ke extends ai {
     static String field_n;
     int field_g;
 
-    final static void a(java.awt.Canvas param0, boolean param1) {
+    final static void a(java.awt.Canvas param0, boolean param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -47,16 +47,12 @@ final class ke extends ai {
                   break L1;
                 }
               }
-              int discarded$10 = -26;
-              ai.a(var3_int != 0, da.field_d, -24, mj.b(), jk.a((byte) -105));
+              ai.a(var3_int != 0, da.field_d, -24, mj.b((byte) -26), jk.a((byte) -105));
               break L0;
             } else {
               if (!tk.c(250)) {
                 na.a();
-                int discarded$11 = 320;
-                int discarded$12 = -66;
-                int discarded$13 = 240;
-                pc.a();
+                pc.a(240, (byte) -66, 320);
                 qi.a(param0, 0, 0, -25971);
                 return;
               } else {
@@ -65,8 +61,7 @@ final class ke extends ai {
                   qi.a(param0, 0, 0, -25971);
                   return;
                 } else {
-                  int discarded$14 = 0;
-                  i.a(param0);
+                  i.a(param0, 0);
                   return;
                 }
               }
@@ -114,7 +109,7 @@ final class ke extends ai {
         return param0 - -1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         field_l = null;
         field_n = null;

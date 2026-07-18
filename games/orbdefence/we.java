@@ -258,8 +258,7 @@ final class we extends ta implements ai {
                         }
                       }
                     } else {
-                      int discarded$1 = -119;
-                      ((we) this).field_D[var4_int] = g.a((CharSequence) (Object) param0[var4_int]).replace(' ', ' ');
+                      ((we) this).field_D[var4_int] = g.a((CharSequence) (Object) param0[var4_int], (byte) -119).replace(' ', ' ');
                       var4_int++;
                       continue L2;
                     }
@@ -302,7 +301,7 @@ final class we extends ta implements ai {
         }
     }
 
-    final static boolean a(int param0, int param1, CharSequence param2) {
+    final static boolean a(int param0, int param1, CharSequence param2, boolean param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -312,6 +311,7 @@ final class we extends ta implements ai {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        Object var12 = null;
         int stackIn_23_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_34_0 = 0;
@@ -343,8 +343,8 @@ final class we extends ta implements ai {
               if (param1 == 87) {
                 break L1;
               } else {
-                int discarded$2 = 1;
-                boolean discarded$3 = we.a(24, 92, (CharSequence) null);
+                var12 = null;
+                boolean discarded$1 = we.a(24, 92, (CharSequence) null, true);
                 break L1;
               }
             }
@@ -489,7 +489,7 @@ final class we extends ta implements ai {
         return stackIn_38_0 != 0;
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_A = null;
         field_F = null;
     }

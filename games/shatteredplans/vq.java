@@ -6,7 +6,7 @@ import java.lang.String;
 final class vq {
     static int field_a;
 
-    final static void a(ob param0, qb param1, int param2) {
+    final static void a(ob param0, qb param1, int param2, int param3) {
         try {
             RuntimeException var4 = null;
             int var5 = 0;
@@ -315,15 +315,13 @@ final class vq {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
             } else {
-              int discarded$14 = -105;
-              if (jp.a(param1)) {
+              if (jp.a(param1, (byte) -105)) {
                 stackOut_6_0 = wb.field_f;
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0;
               } else {
                 if (po.field_b == 2) {
-                  int discarded$15 = 1;
-                  if (!ti.a(param1)) {
+                  if (!ti.a(param1, true)) {
                     if (100 <= oi.field_e) {
                       stackOut_16_0 = mi.field_a;
                       stackIn_17_0 = stackOut_16_0;

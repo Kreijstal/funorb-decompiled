@@ -237,7 +237,7 @@ final class ffa extends kj {
         }
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         try {
             re.field_D = param0;
             ep.a(12, 8192);
@@ -257,7 +257,7 @@ final class ffa extends kj {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_j = null;
         field_h = null;
         field_i = null;

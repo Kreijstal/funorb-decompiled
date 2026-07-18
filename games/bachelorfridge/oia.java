@@ -177,8 +177,7 @@ final class oia extends kj {
     }
 
     final void a(int param0, int param1, int param2) {
-        int discarded$9 = 10;
-        baa.a(((oia) this).field_g, true, 65280, param2, param0);
+        baa.a(((oia) this).field_g, true, 65280, param2, param0, 10);
         if (param1 != 0) {
             oia.c(85);
         }

@@ -21,7 +21,7 @@ abstract class ih {
 
     abstract void a(byte param0);
 
-    final static ff a(String param0, boolean param1, String param2) {
+    final static ff a(String param0, boolean param1, String param2, byte param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -179,8 +179,7 @@ abstract class ih {
     final static void a(String param0, int param1) {
         try {
             g.field_m = param0;
-            int discarded$0 = 1;
-            bd.a(param1);
+            bd.a(param1, true);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "ih.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -191,7 +190,7 @@ abstract class ih {
         return ((ih) this).field_a.c(-25906) + ((ih) this).field_c.c(-25906);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_j = null;
         field_k = null;
         field_d = null;
@@ -416,7 +415,7 @@ abstract class ih {
         }
     }
 
-    final static void a(boolean param0, String param1, String param2) {
+    final static void a(boolean param0, String param1, String param2, int param3) {
         gf.field_d = param1;
         dl.field_e = param2;
         try {

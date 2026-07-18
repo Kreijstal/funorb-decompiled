@@ -84,7 +84,7 @@ final class vab {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 

@@ -4,7 +4,7 @@
 final class nda extends pu {
     static kv field_l;
 
-    final static void a(int param0, lda param1, int param2, int param3, int param4, po param5, po param6, lda param7, int param8, boolean param9, lda param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18) {
+    final static void a(int param0, lda param1, int param2, int param3, int param4, po param5, po param6, lda param7, int param8, boolean param9, lda param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19) {
         RuntimeException var20 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -87,12 +87,10 @@ final class nda extends pu {
             qm.field_a = param6;
             lha.field_b = param5;
             jk.a(param15, param17, param13, (byte) -64, param3);
-            int discarded$2 = 0;
-            jn.a(param2, param10, param14);
+            jn.a(param2, param10, param14, false);
             v.a(2, (byte) 124, 8, param1, param7, 8);
             fg.a(240, true, 320);
-            int discarded$3 = -123;
-            cm.a(param4, param11, param18);
+            cm.a(param4, param11, param18, -123);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -227,7 +225,7 @@ final class nda extends pu {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         int var1 = -36;
         field_l = null;
     }

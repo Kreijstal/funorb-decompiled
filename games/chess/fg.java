@@ -102,8 +102,7 @@ final class fg {
                     break L2;
                   }
                 }
-                int discarded$2 = 26613;
-                ol.a(var3_ref);
+                ol.a(var3_ref, 26613);
                 var7 = kb.a(var3_ref, 0, "%3a", ":");
                 var8 = kb.a(var7, 0, "%40", "@");
                 var9 = kb.a(var8, 0, "%26", "&");
@@ -172,7 +171,7 @@ final class fg {
                           break L6;
                         } else {
                           var5 = (DataInputStream) var4.field_b;
-                          int discarded$3 = var5.read();
+                          int discarded$1 = var5.read();
                           var5.close();
                           break L6;
                         }

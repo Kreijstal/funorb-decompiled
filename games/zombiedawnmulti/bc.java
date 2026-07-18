@@ -8,11 +8,11 @@ final class bc {
     static String field_d;
     static String field_c;
 
-    final static void b() {
+    final static void b(int param0) {
         gi.field_i = null;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_b = null;
         field_d = null;
         field_c = null;
@@ -55,8 +55,7 @@ final class bc {
     }
 
     final static void a(byte param0) {
-        int discarded$0 = -78;
-        iq.a();
+        iq.a((byte) -78);
         ok.field_l = ah.field_e.a(we.field_g[12]);
         int var1 = ah.field_e.a(we.field_g[13]);
         if (!(var1 <= ok.field_l)) {
@@ -68,7 +67,7 @@ final class bc {
         }
     }
 
-    final static ri[] a() {
+    final static ri[] a(int param0) {
         int var2 = 0;
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         ri[] var1 = new ri[qc.field_v];

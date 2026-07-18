@@ -174,8 +174,7 @@ final class fj extends t {
                 cg.field_a = lh.a(true, param1, param3);
                 return;
               } else {
-                int discarded$2 = 1;
-                cg.field_a = jj.a(args);
+                cg.field_a = jj.a(args, true);
                 return;
               }
             }
@@ -262,7 +261,7 @@ final class fj extends t {
         throw new Error();
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_E = null;
         field_B = null;
         field_F = null;

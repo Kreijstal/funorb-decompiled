@@ -50,8 +50,7 @@ final class i {
             }
             var3 = (Object) (Object) new od(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], var21);
         }
-        int discarded$0 = -18229;
-        dk.a();
+        dk.a(-18229);
         return (qb) var3;
     }
 
@@ -66,7 +65,7 @@ final class i {
         dd.field_c.a(2, 20, nn.field_p, false);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_i = null;
         field_e = null;
@@ -75,7 +74,7 @@ final class i {
         field_g = null;
     }
 
-    final static void a(ll param0, int param1, int param2, byte param3, nf param4, qb param5) {
+    final static void a(ll param0, int param1, int param2, byte param3, nf param4, qb param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -292,17 +291,15 @@ final class i {
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            int discarded$31 = 0;
-            if (bj.g()) {
-              int discarded$32 = -47;
-              i.a();
-              boolean discarded$33 = pm.field_e.a(df.field_y, vi.field_L, true, (byte) -88);
+            if (bj.g(false)) {
+              i.a((byte) -47);
+              boolean discarded$18 = pm.field_e.a(df.field_y, vi.field_L, true, (byte) -88);
               pm.field_e.i(4);
               L1: while (true) {
                 if (!ib.b(false)) {
                   break L0;
                 } else {
-                  boolean discarded$34 = pm.field_e.a(ed.field_Bb, (byte) 33, vn.field_d);
+                  boolean discarded$19 = pm.field_e.a(ed.field_Bb, (byte) 33, vn.field_d);
                   continue L1;
                 }
               }
@@ -314,8 +311,7 @@ final class i {
                   if (!ka.field_m.field_e) {
                     break L2;
                   } else {
-                    int discarded$35 = 6;
-                    u.b();
+                    u.b(6);
                     pm.field_e.b((qm) (Object) new qn(pm.field_e, vi.field_C), 15637);
                     break L2;
                   }
@@ -331,7 +327,7 @@ final class i {
         }
     }
 
-    final static void a(wk param0) {
+    final static void a(wk param0, int param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;

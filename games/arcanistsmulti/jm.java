@@ -800,9 +800,8 @@ class jm implements pf, ac {
                     var9 = var14.a(param3, 0);
                     var10 = this.a(param2, 9293, var9, param4);
                     var11 = ((jm) this).a(param1, -13372, param4) + Math.max(0, var8.field_g);
-                    int discarded$1 = 0;
                     stackOut_3_0 = ((jm) this).a(param1, -13372, param4);
-                    stackOut_3_1 = this.a(param4);
+                    stackOut_3_1 = this.a(param4, false);
                     stackOut_3_2 = var8.field_e;
                     stackIn_5_0 = stackOut_3_0;
                     stackIn_5_1 = stackOut_3_1;
@@ -1256,8 +1255,7 @@ class jm implements pf, ac {
               }
             }
             var3_int = ((jm) this).a(param1, (byte) 71);
-            int discarded$1 = 0;
-            var4 = this.a(param1);
+            var4 = this.a(param1, false);
             L2: {
               var6 = ((jm) this).field_a;
               if (var6 != 0) {
@@ -1388,10 +1386,9 @@ class jm implements pf, ac {
             L1: {
               da.a(param4.field_v + (param4.field_n + param6), param5 - (-param4.field_j + -param4.field_k), 121, param6 - -param4.field_n, param4.field_j + param5);
               var9_int = ((jm) this).a(param4, (byte) 56);
-              int discarded$2 = 0;
-              var10 = this.a(param4);
+              var10 = this.a(param4, false);
               if (((jm) this).field_n) {
-                int discarded$3 = ((jm) this).field_g.a(((jm) this).a(false, param4), this.a(param6, 9293, 0, param4), this.a(param5, 0, (byte) 120, param4), var9_int, var10, param2, param7, ((jm) this).field_i, ((jm) this).field_a, ((jm) this).field_h);
+                int discarded$1 = ((jm) this).field_g.a(((jm) this).a(false, param4), this.a(param6, 9293, 0, param4), this.a(param5, 0, (byte) 120, param4), var9_int, var10, param2, param7, ((jm) this).field_i, ((jm) this).field_a, ((jm) this).field_h);
                 break L1;
               } else {
                 L2: {
@@ -1515,8 +1512,7 @@ class jm implements pf, ac {
             }
             L2: {
               if (((jm) this).field_n) {
-                int discarded$2 = 0;
-                ((re) (Object) param0.field_s).a((byte) 119, ((jm) this).field_g, this.a(param0), ((jm) this).field_h, ((jm) this).field_i, ((jm) this).field_a, ((jm) this).a(false, param0), ((jm) this).a(param0, (byte) -62));
+                ((re) (Object) param0.field_s).a((byte) 119, ((jm) this).field_g, this.a(param0, false), ((jm) this).field_h, ((jm) this).field_i, ((jm) this).field_a, ((jm) this).a(false, param0), ((jm) this).a(param0, (byte) -62));
                 break L2;
               } else {
                 this.b((byte) -33, param0);
@@ -1631,22 +1627,20 @@ class jm implements pf, ac {
     final static void b(int param0) {
         int var1 = 0;
         if (ul.field_A <= 32) {
-            int discarded$1 = 0;
-            eb.a(0);
+            eb.a(0, false);
         } else {
             var1 = ul.field_A % 32;
             if (!(var1 != 0)) {
                 var1 = 32;
             }
-            int discarded$2 = 0;
-            eb.a(ul.field_A + -var1);
+            eb.a(ul.field_A + -var1, false);
         }
         if (param0 < 29) {
             jm.b(-66);
         }
     }
 
-    private final int a(qm param0) {
+    private final int a(qm param0, boolean param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -1854,7 +1848,7 @@ class jm implements pf, ac {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_b = null;
         int var1 = 0;
     }

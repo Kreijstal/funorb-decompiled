@@ -136,7 +136,7 @@ final class u extends hf implements ai {
         }
     }
 
-    final static td a(ki param0, int param1) {
+    final static td a(ki param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -207,7 +207,7 @@ final class u extends hf implements ai {
         return stackIn_4_0;
     }
 
-    private final void k() {
+    private final void k(int param0) {
         if (!(((u) this).field_D)) {
             return;
         }
@@ -348,8 +348,7 @@ final class u extends hf implements ai {
               if (((u) this).field_O != param2) {
                 break L1;
               } else {
-                int discarded$2 = 38;
-                this.k();
+                this.k(38);
                 break L1;
               }
             }

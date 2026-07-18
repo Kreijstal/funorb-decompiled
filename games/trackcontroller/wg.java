@@ -141,8 +141,7 @@ final class wg {
             }
             if (65 == var5.length) {
               L3: {
-                int discarded$1 = -6196;
-                var17 = cf.a(5, var10.field_j, -5 + var10.field_k - var16.length);
+                var17 = cf.a(5, var10.field_j, -5 + var10.field_k - var16.length, -6196);
                 if (param0 <= -62) {
                   break L3;
                 } else {

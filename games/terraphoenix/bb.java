@@ -154,17 +154,14 @@ final class bb {
 
     final static void a(fa param0, int param1, int param2, vg param3) {
         try {
-            int discarded$0 = -127;
-            uf.field_e = uc.j() * param2 / 1000;
+            uf.field_e = uc.j((byte) -127) * param2 / 1000;
             ee.a((byte) 51, param0);
             qe.a(-28664, param0);
             if (param1 >= -60) {
                 bb.a(2);
             }
-            int discarded$1 = 100;
-            ik.a(param0);
-            int discarded$2 = -75;
-            cg.f();
+            ik.a(param0, (byte) 100);
+            cg.f((byte) -75);
             vc.a(true);
             kf.field_f = -uf.field_e;
         } catch (RuntimeException runtimeException) {
@@ -237,6 +234,8 @@ final class bb {
                   break L2;
                 } else {
                   var3 = (Object) (Object) va.field_g;
+                  var4 = var3;
+                  var4 = var3;
                   break L2;
                 }
               }
@@ -253,9 +252,7 @@ final class bb {
                 }
               }
             }
-            int discarded$4 = -1;
-            int discarded$5 = 0;
-            stackOut_9_0 = wl.a(param1, (String) var4, (String) var3);
+            stackOut_9_0 = wl.a(param1, (String) var4, (String) var3, false, -1);
             stackIn_10_0 = stackOut_9_0;
             break L0;
           }

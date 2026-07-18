@@ -81,8 +81,7 @@ final class na extends tj implements mf, he {
               if (param4 != ((na) this).field_O) {
                 break L0;
               } else {
-                int discarded$2 = 0;
-                this.b();
+                this.b(false);
                 return;
               }
             }
@@ -133,8 +132,7 @@ final class na extends tj implements mf, he {
             if (param0 != 32722) {
                 ((na) this).field_O = null;
             }
-            int discarded$0 = -29967;
-            ((na) this).field_O.field_I = this.a();
+            ((na) this).field_O.field_I = this.a(-29967);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "na.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -221,16 +219,15 @@ final class na extends tj implements mf, he {
         return stackIn_9_0 != 0;
     }
 
-    private final boolean a() {
+    private final boolean a(int param0) {
         if (!this.a(true, (eg) (Object) ((na) this).field_P)) {
             return false;
         }
         return true;
     }
 
-    private final void b() {
-        int discarded$0 = -29967;
-        if (!this.a()) {
+    private final void b(boolean param0) {
+        if (!this.a(-29967)) {
             return;
         }
         q.a(false, ((na) this).field_P.field_v);
@@ -632,22 +629,21 @@ final class na extends tj implements mf, he {
               var5 = var7;
               L1: while (true) {
                 if (param2.length <= var7) {
-                  StringBuilder discarded$5 = var8.append(") is undefined.");
+                  StringBuilder discarded$4 = var8.append(") is undefined.");
                   throw new cb(var8.toString());
                 } else {
                   L2: {
                     if (!param2[var7].field_e) {
-                      StringBuilder discarded$6 = var8.append(hw.a(640, param2[var7].field_c.getClass()));
+                      StringBuilder discarded$5 = var8.append(hw.a(640, param2[var7].field_c.getClass()));
                       break L2;
                     } else {
-                      int discarded$7 = -75;
-                      StringBuilder discarded$8 = var8.append(cq.a(param2[var7].field_c).toString());
+                      StringBuilder discarded$6 = var8.append(cq.a(param2[var7].field_c, (byte) -75).toString());
                       break L2;
                     }
                   }
                   L3: {
                     if (var7 < param2.length + -1) {
-                      StringBuilder discarded$9 = var8.append(',');
+                      StringBuilder discarded$7 = var8.append(',');
                       var7++;
                       break L3;
                     } else {
@@ -752,7 +748,7 @@ final class na extends tj implements mf, he {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_J = null;
         field_K = null;
         field_N = null;
@@ -826,7 +822,7 @@ final class na extends tj implements mf, he {
         }
     }
 
-    final static om a(bv param0) {
+    final static om a(bv param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         om var3 = null;

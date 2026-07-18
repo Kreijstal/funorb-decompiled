@@ -89,7 +89,7 @@ final class qf {
         return stackIn_11_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
         field_e = null;
@@ -97,7 +97,7 @@ final class qf {
         field_b = null;
     }
 
-    final static String a(byte param0, boolean param1, boolean param2) {
+    final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 126 % ((40 - param0) / 33);
         int var5 = 0;
         if (param1) {

@@ -329,8 +329,7 @@ final class sfa extends ha {
         } else {
           L0: {
             var6.p(30);
-            int discarded$2 = 0;
-            var7 = tfa.a(param2, param1, param0);
+            var7 = tfa.a(param2, param1, param0, 0);
             ((sfa) this).field_G.a((long)((Object) (Object) param0).hashCode(), 116, (vg) (Object) var7);
             if (((sfa) this).field_t != param0) {
               break L0;
@@ -799,8 +798,7 @@ final class sfa extends ha {
 
     final void k() {
         if (((sfa) this).field_E) {
-            int discarded$0 = 1;
-            rpa.a(false, true);
+            rpa.a(false, true, true);
             ((sfa) this).field_E = false;
         }
         ((sfa) this).field_T = null;
@@ -1988,8 +1986,7 @@ final class sfa extends ha {
             this.b(param0, param1, param2);
             break L0;
           } else {
-            int discarded$3 = 0;
-            var4 = tfa.a(param2, param1, param0);
+            var4 = tfa.a(param2, param1, param0, 0);
             ((sfa) this).field_G.a((long)((Object) (Object) param0).hashCode(), 125, (vg) (Object) var4);
             break L0;
           }

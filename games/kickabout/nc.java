@@ -69,8 +69,7 @@ final class nc {
                     break L3;
                   }
                 }
-                int discarded$1 = 22;
-                hr.b();
+                hr.b(22);
                 break L0;
               } else {
                 L4: {
@@ -222,8 +221,7 @@ final class nc {
             }
             om.a(hn.field_h, (iw) (Object) or.field_d, (byte) -116, gl.field_a, bb.field_Nb);
             or.field_d.d(or.field_d.field_n - var5_int, 62);
-            int discarded$1 = 0;
-            c.a(-1);
+            c.a(-1, false);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -258,7 +256,7 @@ final class nc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
         int var1 = 0;

@@ -7,12 +7,12 @@ final class sh {
     static int field_d;
     static String field_c;
 
-    final static int c() {
+    final static int c(int param0) {
         int var1 = 0;
         return ce.field_r - ej.field_D;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         param3--;
         param2++;
         pb.a(0, param3, 640, param3 - -param2);
@@ -118,11 +118,11 @@ final class sh {
         }
     }
 
-    final static de[] b() {
+    final static de[] b(int param0) {
         return new de[]{qd.field_o, mj.field_Vb, h.field_Y};
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
     }

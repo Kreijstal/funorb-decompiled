@@ -44,7 +44,7 @@ final class qf extends lp implements en {
         }
     }
 
-    final static int p() {
+    final static int p(int param0) {
         return to.field_a + ((md.field_v << 2) + (md.field_r << 4));
     }
 
@@ -125,8 +125,7 @@ final class qf extends lp implements en {
                 } else {
                   L1: {
                     if (!param2) {
-                      int discarded$3 = -77;
-                      jq.e();
+                      jq.e(-77);
                       break L1;
                     } else {
                       break L1;
@@ -142,7 +141,7 @@ final class qf extends lp implements en {
           var5 = new ec((lp) this, wm.field_a, var4_ref);
           if (param1.field_c) {
             if (!param1.field_a) {
-              d discarded$4 = var5.a((byte) 126, ri.field_L, (uh) this);
+              d discarded$2 = var5.a((byte) 126, ri.field_L, (uh) this);
               ((qf) this).b((byte) 106, (oc) (Object) var5);
               return;
             } else {
@@ -152,7 +151,7 @@ final class qf extends lp implements en {
           } else {
             L2: {
               if (((qf) this).field_Fb) {
-                d discarded$5 = var5.a((byte) -37, ri.field_L, (uh) this);
+                d discarded$3 = var5.a((byte) -37, ri.field_L, (uh) this);
                 break L2;
               } else {
                 if (param1.field_d != 5) {

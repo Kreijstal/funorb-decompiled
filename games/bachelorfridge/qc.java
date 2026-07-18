@@ -77,7 +77,7 @@ final class qc {
         }
     }
 
-    final static void a(je param0) {
+    final static void a(je param0, int param1) {
         try {
             saa.field_a.b((tda) (Object) param0);
         } catch (RuntimeException runtimeException) {
@@ -91,7 +91,7 @@ final class qc {
         ((qc) this).field_a = new pd[((qc) this).field_d];
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_b = null;
     }

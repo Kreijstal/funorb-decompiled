@@ -191,7 +191,7 @@ final class pc {
         return stackIn_1_0;
     }
 
-    final static void a(mg param0) {
+    final static void a(mg param0, byte param1) {
         ij var2 = null;
         RuntimeException var2_ref = null;
         rm[] var3 = null;
@@ -299,7 +299,7 @@ final class pc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_e = null;
         field_c = null;

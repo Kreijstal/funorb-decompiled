@@ -131,15 +131,13 @@ abstract class hb {
             if (param1 != null) {
               if (param1.length() != 0) {
                 var6 = (CharSequence) (Object) param1;
-                int discarded$4 = 1;
-                var2 = ji.a(var6);
+                var2 = ji.a(var6, true);
                 if (var2 != null) {
                   var3 = (ve) (Object) eg.field_q.a(65280, (long)var2.hashCode());
                   L0: while (true) {
                     if (var3 != null) {
                       var7 = (CharSequence) (Object) var3.field_Ab;
-                      int discarded$5 = 1;
-                      var4 = ji.a(var7);
+                      var4 = ji.a(var7, true);
                       if (var4.equals((Object) (Object) var2)) {
                         stackOut_17_0 = (ve) var3;
                         stackIn_18_0 = stackOut_17_0;
@@ -200,7 +198,7 @@ abstract class hb {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_d = null;
         field_b = null;
         field_c = null;

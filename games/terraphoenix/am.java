@@ -19,21 +19,19 @@ final class am extends gb implements n {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_F = null;
         int var1 = 25;
         field_H = null;
         field_K = null;
     }
 
-    final static void a(fa param0, boolean param1, fa param2, fa param3) {
+    final static void a(fa param0, boolean param1, fa param2, fa param3, byte param4) {
         try {
             vc.field_a = gl.b("", 20);
             vc.field_a.a(false, 65);
-            int discarded$0 = -2040;
-            gi.a(param3, param2, param0);
-            int discarded$1 = -11;
-            nd.c();
+            gi.a(param3, param2, param0, -2040);
+            nd.c((byte) -11);
             qe.field_f = og.field_a;
             pe.field_a = og.field_a;
         } catch (RuntimeException runtimeException) {
@@ -59,7 +57,7 @@ final class am extends gb implements n {
         }
     }
 
-    final static void g() {
+    final static void g(byte param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -135,8 +133,7 @@ final class am extends gb implements n {
         try {
           L0: {
             L1: {
-              int discarded$3 = 93;
-              hk.a((java.awt.Component) (Object) param1);
+              hk.a((java.awt.Component) (Object) param1, (byte) 93);
               ei.a((java.awt.Component) (Object) param1, -24289);
               var2_int = -55 / ((param0 - -23) / 48);
               if (null != lk.field_d) {
@@ -393,7 +390,7 @@ final class am extends gb implements n {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -430,8 +427,7 @@ final class am extends gb implements n {
               } else {
                 L2: {
                   var3 = param0.charAt(var2_int);
-                  int discarded$5 = 127;
-                  if (nd.a((char) var3)) {
+                  if (nd.a((char) var3, 127)) {
                     break L2;
                   } else {
                     if (!gb.a((byte) 41, (char) var3)) {

@@ -20,7 +20,7 @@ abstract class dm {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 100;
         field_c = null;
         field_a = null;
@@ -212,7 +212,7 @@ abstract class dm {
 
     abstract void a(p param0, byte param1);
 
-    final static void a(lh param0, um param1) {
+    final static void a(lh param0, um param1, int param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         j var4 = null;

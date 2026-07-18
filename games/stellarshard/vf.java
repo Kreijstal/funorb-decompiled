@@ -43,8 +43,7 @@ final class vf extends g implements oi {
         String stackOut_8_2 = null;
         try {
           if (tl.a(param0, (byte) -5, param3, param2)) {
-            int discarded$2 = 116;
-            return dl.d();
+            return dl.d((byte) 116);
           } else {
             return null;
           }
@@ -151,8 +150,7 @@ final class vf extends g implements oi {
         try {
           L0: {
             cg.a(320, eh.field_a, 0, 240, param2, param11, sa.field_h, new qc(param4), param15, (byte) 45, param10, 8, param0, new qc(param8), kl.field_k, lg.field_b, ka.field_q, 480, ul.field_G, param6, 8);
-            int discarded$2 = 0;
-            qc.a(param3, true);
+            qc.a(param3, true, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -482,7 +480,7 @@ final class vf extends g implements oi {
         }
     }
 
-    final static id a() {
+    final static id a(int param0) {
         L0: {
           if (null != mk.field_l) {
             break L0;
@@ -509,7 +507,7 @@ final class vf extends g implements oi {
         }
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_L = null;
         field_E = null;
         field_D = null;

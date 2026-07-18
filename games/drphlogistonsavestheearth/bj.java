@@ -22,7 +22,7 @@ final class bj {
         return var4 * var5 + (var3 * param2 + (var6 * var4 >> 16));
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         if (af.field_b < 10) {
             return false;
         }

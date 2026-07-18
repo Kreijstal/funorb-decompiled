@@ -805,7 +805,7 @@ final class dma {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -1625,8 +1625,7 @@ final class dma {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int discarded$0 = 140;
-        dma.a(field_i, 0, 0 * field_g, 4, 0, 540, field_g - 540);
+        dma.a(field_i, 0, 0 * field_g, 4, 0, 540, field_g - 540, 140);
         dma.a(field_i, 0, 0 * field_g, 4, 0, 140, field_g - 540, 0, 540);
     }
 

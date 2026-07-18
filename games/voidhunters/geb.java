@@ -4,7 +4,7 @@
 final class geb extends rqa {
     static llb field_o;
 
-    public static void e() {
+    public static void e(byte param0) {
         int var1 = -13;
         field_o = null;
     }
@@ -136,7 +136,7 @@ final class geb extends rqa {
         return stackIn_3_0;
     }
 
-    final static int a() {
+    final static int a(int param0) {
         return ot.field_b;
     }
 

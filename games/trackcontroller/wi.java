@@ -11,7 +11,7 @@ abstract class wi {
 
     abstract int b(int param0, int param1);
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
     }
 

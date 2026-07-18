@@ -53,8 +53,7 @@ final class jk {
             }
           }
           var2 = 45;
-          int discarded$2 = -127;
-          var1 = fe.b();
+          var1 = fe.b((byte) -127);
           ig.field_ib = new pk(var1, (String) null, true, false, false);
           bm.field_d.b((byte) 74, (pj) (Object) kg.field_j);
           kg.field_j.a(false, (pj) (Object) ig.field_ib);
@@ -122,7 +121,7 @@ final class jk {
         return stackIn_1_0;
     }
 
-    final static void a(int param0, ef param1) {
+    final static void a(int param0, ef param1, boolean param2) {
         se var5 = null;
         int var4 = 0;
         try {
@@ -188,16 +187,15 @@ final class jk {
             }
             return;
           } else {
-            int fieldTemp$4 = ((jk) this).field_m - 1;
+            int fieldTemp$2 = ((jk) this).field_m - 1;
             ((jk) this).field_m = ((jk) this).field_m - 1;
-            if (fieldTemp$4 <= 0) {
+            if (fieldTemp$2 <= 0) {
               ((jk) this).field_m = ((jk) this).field_v;
               if (((jk) this).field_o > mg.field_f) {
                 ((jk) this).field_l = false;
                 return;
               } else {
-                int discarded$5 = 98;
-                this.b();
+                this.b((byte) 98);
                 var2 = -52 / ((22 - param0) / 52);
                 return;
               }
@@ -213,20 +211,20 @@ final class jk {
     final static void b(int param0, int param1, int param2) {
         fd.field_c = param1;
         if (param2 != 249) {
-            int discarded$0 = 0;
-            jk.a(-96, (ef) null);
+            Object var4 = null;
+            jk.a(-96, (ef) null, false);
         }
         sf.field_T = param0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_t = null;
         field_r = null;
         field_j = null;
     }
 
-    final static int a(int param0, int param1, ee param2, String param3, ee param4, boolean param5) {
+    final static int a(int param0, int param1, ee param2, String param3, ee param4, boolean param5, int param6) {
         RuntimeException var7 = null;
         String var8 = null;
         int var9 = 0;
@@ -432,8 +430,7 @@ final class jk {
                       pg.field_c.a(false, var14);
                       pg.field_c.a(false, var8);
                       var15 = (CharSequence) (Object) param3;
-                      int discarded$5 = 122;
-                      pg.field_c.a(false, wb.a(var15));
+                      pg.field_c.a(false, wb.a(var15, 122));
                       pg.field_c.b((byte) -60, param1);
                       pg.field_c.a(param0, -60);
                       pg.field_c.a(var9, -78);
@@ -498,10 +495,8 @@ final class jk {
                       ab.field_l = var9;
                       break L8;
                     } else {
-                      int discarded$6 = 123;
-                      boolean discarded$7 = va.a(true, ue.b());
-                      int discarded$8 = 1;
-                      ci.field_h = new Boolean(af.a((mg) (Object) cd.field_t));
+                      boolean discarded$1 = va.a(true, ue.b((byte) 123));
+                      ci.field_h = new Boolean(af.a((mg) (Object) cd.field_t, true));
                       cd.field_t.field_i = 0;
                       break L8;
                     }
@@ -580,8 +575,7 @@ final class jk {
                   break L14;
                 } else {
                   L15: {
-                    int discarded$9 = -1;
-                    if (30000L < ed.b()) {
+                    if (30000L < ed.b(-1)) {
                       kk.field_Y = ee.field_c;
                       break L15;
                     } else {
@@ -726,7 +720,7 @@ final class jk {
         return stackIn_6_0 != 0;
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

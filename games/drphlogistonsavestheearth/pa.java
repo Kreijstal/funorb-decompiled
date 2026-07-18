@@ -9,7 +9,7 @@ final class pa {
     static int field_b;
     static int field_c;
 
-    final static hg a(String param0) {
+    final static hg a(String param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         hg var3 = null;
@@ -108,7 +108,7 @@ final class pa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
     }
 
@@ -187,8 +187,7 @@ final class pa {
           if (Character.isISOControl(param1)) {
             return false;
           } else {
-            int discarded$3 = -17321;
-            if (!de.a(param1)) {
+            if (!de.a(param1, -17321)) {
               L0: {
                 if (param1 == 45) {
                   break L0;
@@ -215,12 +214,11 @@ final class pa {
           }
         } else {
           var3 = null;
-          boolean discarded$4 = pa.a((byte) -44, (vj) null);
+          boolean discarded$1 = pa.a((byte) -44, (vj) null);
           if (Character.isISOControl(param1)) {
             return false;
           } else {
-            int discarded$5 = -17321;
-            if (!de.a(param1)) {
+            if (!de.a(param1, -17321)) {
               if (param1 != 45) {
                 if (param1 != 160) {
                   L1: {
@@ -248,7 +246,7 @@ final class pa {
         }
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, boolean param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

@@ -9,7 +9,7 @@ final class eg {
     static int field_b;
     static int field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_a = null;
         field_c = null;

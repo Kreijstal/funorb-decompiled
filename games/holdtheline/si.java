@@ -13,7 +13,7 @@ final class si extends dc {
         super(param0, param1, 33, 20, 30);
     }
 
-    final static ga n() {
+    final static ga n(int param0) {
         int var1 = 0;
         var1 = 1;
         if (jb.field_X == null) {
@@ -33,7 +33,7 @@ final class si extends dc {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_nb = null;
         field_ob = null;
         field_lb = null;
@@ -98,8 +98,7 @@ final class si extends dc {
           L0: {
             var4_int = param0.c(param2, 3);
             var5 = param0.a(var4_int, param3, false);
-            int discarded$2 = 0;
-            stackOut_0_0 = tf.a(var5, param0, var4_int);
+            stackOut_0_0 = tf.a(var5, param0, var4_int, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

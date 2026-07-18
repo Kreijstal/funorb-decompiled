@@ -7,11 +7,10 @@ final class uu implements bo {
     private int field_b;
 
     final static boolean a(boolean param0, int param1, int param2) {
-        int discarded$0 = 52;
-        return (ir.a(param1, param2, (byte) -80) | cga.a(param1, -54, param2) | er.c(param1, param2)) & ss.a((byte) 61, param2, param1);
+        return (ir.a(param1, param2, (byte) -80) | cga.a(param1, -54, param2) | er.c(param1, param2, 52)) & ss.a((byte) 61, param2, param1);
     }
 
-    final static void a(int param0, byte param1, byte[] param2, java.math.BigInteger param3, uia param4, java.math.BigInteger param5) {
+    final static void a(int param0, byte param1, byte[] param2, java.math.BigInteger param3, uia param4, java.math.BigInteger param5, int param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int[] var8 = null;
@@ -87,8 +86,7 @@ final class uu implements bo {
         try {
           L0: {
             L1: {
-              int discarded$1 = 0;
-              var7_int = mt.a(param0);
+              var7_int = mt.a(param0, 0);
               if (pb.field_n != null) {
                 break L1;
               } else {
@@ -338,7 +336,7 @@ final class uu implements bo {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

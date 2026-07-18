@@ -35,14 +35,12 @@ final class qi extends ua implements vc, ql {
     final static void a(java.awt.Canvas param0, byte param1) {
         try {
             if (!(k.field_g != 11)) {
-                int discarded$0 = 250;
-                ub.a();
+                ub.a(250);
             }
             if (param1 >= -82) {
                 field_A = null;
             }
-            int discarded$1 = -9089;
-            kg.a(be.field_d, lh.field_e, pj.field_h);
+            kg.a(be.field_d, lh.field_e, pj.field_h, -9089);
             oh.a(0, (byte) 63, 0, param0);
         } catch (RuntimeException runtimeException) {
             throw la.a((Throwable) (Object) runtimeException, "qi.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -81,7 +79,7 @@ final class qi extends ua implements vc, ql {
               if (param1 != ((qi) this).field_L) {
                 break L2;
               } else {
-                boolean discarded$4 = ((qi) this).field_H.a((we) this, false);
+                boolean discarded$2 = ((qi) this).field_H.a((we) this, false);
                 break L2;
               }
             }
@@ -89,8 +87,7 @@ final class qi extends ua implements vc, ql {
               if (((qi) this).field_H != param1) {
                 break L3;
               } else {
-                int discarded$5 = 1;
-                this.b();
+                this.b(true);
                 break L3;
               }
             }
@@ -140,7 +137,7 @@ final class qi extends ua implements vc, ql {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_K = null;
         field_E = null;
         field_J = null;
@@ -594,9 +591,7 @@ final class qi extends ua implements vc, ql {
             }
             L13: {
               var8 = wf.field_i;
-              int discarded$4 = 0;
-              int discarded$5 = 125;
-              var9 = ei.a(ii.a());
+              var9 = ei.a(ii.a(false), (byte) 125);
               if (var9 != oe.field_l) {
                 if (dh.field_d != var9) {
                   break L13;
@@ -610,13 +605,13 @@ final class qi extends ua implements vc, ql {
               }
             }
             L14: {
-              mh dupTemp$6 = new mh(10, ((qi) this).field_e, ((qi) this).field_l - 20, 25, (we) (Object) ((qi) this).field_L, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$6;
-              ((qi) this).b((byte) -100, (we) (Object) dupTemp$6);
+              mh dupTemp$2 = new mh(10, ((qi) this).field_e, ((qi) this).field_l - 20, 25, (we) (Object) ((qi) this).field_L, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$2;
+              ((qi) this).b((byte) -100, (we) (Object) dupTemp$2);
               ((qi) this).field_e = ((qi) this).field_e + (5 + ((we) (Object) var12).field_p);
-              mh dupTemp$7 = new mh(10, ((qi) this).field_e, -20 + ((qi) this).field_l, 25, (we) (Object) ((qi) this).field_H, false, 80, 3, var7, 16777215, ec.field_c);
-              var13 = dupTemp$7;
-              ((qi) this).b((byte) -78, (we) (Object) dupTemp$7);
+              mh dupTemp$3 = new mh(10, ((qi) this).field_e, -20 + ((qi) this).field_l, 25, (we) (Object) ((qi) this).field_H, false, 80, 3, var7, 16777215, ec.field_c);
+              var13 = dupTemp$3;
+              ((qi) this).b((byte) -78, (we) (Object) dupTemp$3);
               ((qi) this).field_e = ((qi) this).field_e + (((we) (Object) var13).field_p - -5);
               ((qi) this).field_I.field_o = (of) this;
               if (null == ((qi) this).field_D) {
@@ -792,8 +787,7 @@ final class qi extends ua implements vc, ql {
                           break L1;
                         }
                       } else {
-                        int discarded$123 = 0;
-                        vf.a();
+                        vf.a(false);
                         break L1;
                       }
                     } else {
@@ -801,8 +795,7 @@ final class qi extends ua implements vc, ql {
                     }
                   }
                 } else {
-                  int discarded$124 = 1;
-                  this.b();
+                  this.b(true);
                   break L1;
                 }
               }
@@ -843,11 +836,10 @@ final class qi extends ua implements vc, ql {
         }
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         L0: {
           L1: {
-            int discarded$4 = 91;
-            if (ke.a()) {
+            if (ke.a(91)) {
               break L1;
             } else {
               if (((qi) this).field_L.field_s.length() <= 0) {
@@ -866,7 +858,7 @@ final class qi extends ua implements vc, ql {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         wf var4 = null;
@@ -883,15 +875,13 @@ final class qi extends ua implements vc, ql {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$6 = 1;
-                    vb.a(5, var5);
+                    vb.a(5, var5, true);
                     var5 = (bk) (Object) wg.field_k.d((byte) 63);
                     continue L2;
                   }
                 }
               } else {
-                int discarded$7 = 5;
-                wj.a(25533, var4);
+                wj.a(25533, var4, 5);
                 var4 = (wf) (Object) k.field_l.d((byte) 63);
                 continue L1;
               }

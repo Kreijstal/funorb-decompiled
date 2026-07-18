@@ -15,7 +15,7 @@ abstract class wl extends tj {
     static String field_I;
     boolean field_L;
 
-    final static io a(kl param0, int param1) {
+    final static io a(kl param0, int param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -93,7 +93,7 @@ abstract class wl extends tj {
         ((wl) this).a(te.field_l + -param0 >> 1, param0, ij.field_x + -param2 >> 1, 8192, param2);
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_I = null;
         field_M = null;
         field_N = null;
@@ -134,8 +134,7 @@ abstract class wl extends tj {
               break L0;
             }
             L2: {
-              int discarded$2 = 3;
-              vn.a(bo.field_b);
+              vn.a(bo.field_b, 3);
               qn.b();
               ((wl) this).b(0, 1851680193, 0);
               super.a(-param0 - ((wl) this).field_B, -param1 - ((wl) this).field_p, (byte) -106, param3);
@@ -284,6 +283,7 @@ abstract class wl extends tj {
     final static void a(int param0, boolean param1) {
         int var2 = 0;
         String var3 = null;
+        Object var4 = null;
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
         String stackIn_22_0 = null;
@@ -335,8 +335,8 @@ abstract class wl extends tj {
           if (param0 >= 9) {
             break L1;
           } else {
-            int discarded$9 = 1;
-            io discarded$10 = wl.a((kl) null, -105);
+            var4 = null;
+            io discarded$2 = wl.a((kl) null, -105, true);
             break L1;
           }
         }
@@ -363,8 +363,7 @@ abstract class wl extends tj {
           break L2;
         }
         L4: {
-          int discarded$11 = 0;
-          tq.a(stackIn_13_0 != 0);
+          tq.a(stackIn_13_0 != 0, false);
           if (null == rd.field_j) {
             break L4;
           } else {

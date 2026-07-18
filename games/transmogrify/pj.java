@@ -78,8 +78,7 @@ final class pj extends rh {
             var5.field_j = param0;
             var5.field_h = param3;
             mh.field_a.a((wf) (Object) var5, -84);
-            int discarded$2 = -31995;
-            nk.a(param2, var5);
+            nk.a(param2, var5, -31995);
             return var5;
           }
         }

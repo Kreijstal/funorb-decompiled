@@ -22,7 +22,7 @@ final class mh {
         }
     }
 
-    final static q a(String param0) {
+    final static q a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -253,7 +253,7 @@ final class mh {
         }
     }
 
-    final static String b() {
+    final static String b(int param0) {
         if (!(bi.field_L >= 2)) {
             return vj.field_a;
         }

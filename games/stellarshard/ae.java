@@ -203,7 +203,7 @@ class ae extends ig {
         return stackIn_3_0;
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
@@ -493,13 +493,12 @@ class ae extends ig {
         }
     }
 
-    private final void d() {
-        int discarded$0 = 0;
-        this.g();
+    private final void d(byte param0) {
+        this.g(0);
         this.i(0);
     }
 
-    private final void k() {
+    private final void k(int param0) {
         if (!(!(((ae) this).field_v instanceof ec))) {
             ((ec) (Object) ((ae) this).field_v).b((ae) this, 0);
         }
@@ -515,7 +514,7 @@ class ae extends ig {
         ((ae) this).l(0);
     }
 
-    private final void o() {
+    private final void o(int param0) {
         int var8 = stellarshard.field_B;
         if (!((ae) this).field_G) {
             ((ae) this).field_l = 0;
@@ -554,8 +553,8 @@ class ae extends ig {
 
     void a(int param0, boolean param1, int param2, rj param3) {
         RuntimeException runtimeException = null;
+        pj var5 = null;
         int var6 = 0;
-        pj var7 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -576,8 +575,7 @@ class ae extends ig {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              int discarded$2 = -9104;
-              this.o();
+              this.o(-9104);
               if (((ae) this).field_o != 1) {
                 break L1;
               } else {
@@ -585,8 +583,8 @@ class ae extends ig {
                   if (!(((ae) this).field_u instanceof pj)) {
                     break L2;
                   } else {
-                    var7 = (pj) (Object) ((ae) this).field_u;
-                    var6 = var7.a(73, (rj) this, param2, eb.field_a, param0, ni.field_e);
+                    var5 = (pj) (Object) ((ae) this).field_u;
+                    var6 = var5.a(73, (rj) this, param2, eb.field_a, param0, ni.field_e);
                     if (-1 != var6) {
                       L3: {
                         if (!((ae) this).field_L) {
@@ -649,7 +647,7 @@ class ae extends ig {
         }
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_N = null;
     }
 
@@ -686,8 +684,7 @@ class ae extends ig {
             var10 = var8;
             var3 = var10.f(4);
             var10.j(8);
-            int discarded$1 = -1;
-            e.field_d = uh.a(var10);
+            e.field_d = uh.a(var10, -1);
             sj.field_B = new n[var3];
             bi.field_s = new int[var3][];
             var4 = 0;
@@ -765,7 +762,7 @@ class ae extends ig {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         try {
             Exception var2 = null;
             String var2_ref = null;
@@ -774,8 +771,7 @@ class ae extends ig {
               L0: {
                 var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.i(0);
-                int discarded$1 = 97;
-                this.a(var2_ref);
+                this.a(var2_ref, (byte) 97);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -997,7 +993,7 @@ class ae extends ig {
               if (param0 == 29657) {
                 break L1;
               } else {
-                int discarded$6 = this.n(-114);
+                int discarded$2 = this.n(-114);
                 break L1;
               }
             }
@@ -1042,9 +1038,9 @@ class ae extends ig {
                               break L7;
                             } else {
                               ((ae) this).field_m = ((ae) this).field_m + param2;
-                              int dupTemp$7 = ((ae) this).field_m.length();
-                              ((ae) this).field_H = dupTemp$7;
-                              ((ae) this).field_I = dupTemp$7;
+                              int dupTemp$3 = ((ae) this).field_m.length();
+                              ((ae) this).field_H = dupTemp$3;
+                              ((ae) this).field_I = dupTemp$3;
                               break L7;
                             }
                           }
@@ -1112,8 +1108,7 @@ class ae extends ig {
                                   return stackIn_56_0 != 0;
                                 } else {
                                   if (param1 == 84) {
-                                    int discarded$8 = -1;
-                                    this.k();
+                                    this.k(-1);
                                     stackOut_53_0 = 1;
                                     stackIn_54_0 = stackOut_53_0;
                                     return stackIn_54_0 != 0;
@@ -1123,8 +1118,7 @@ class ae extends ig {
                                         break L10;
                                       } else {
                                         if (param1 == 65) {
-                                          int discarded$9 = -20;
-                                          this.d();
+                                          this.d((byte) -20);
                                           stackOut_51_0 = 1;
                                           stackIn_52_0 = stackOut_51_0;
                                           return stackIn_52_0 != 0;
@@ -1138,8 +1132,7 @@ class ae extends ig {
                                         break L11;
                                       } else {
                                         if (param1 == 66) {
-                                          int discarded$10 = 0;
-                                          this.g();
+                                          this.g(0);
                                           stackOut_49_0 = 1;
                                           stackIn_50_0 = stackOut_49_0;
                                           return stackIn_50_0 != 0;
@@ -1154,8 +1147,7 @@ class ae extends ig {
                                       if (67 != param1) {
                                         break L8;
                                       } else {
-                                        int discarded$11 = -78;
-                                        this.h();
+                                        this.h(-78);
                                         stackOut_47_0 = 1;
                                         stackIn_48_0 = stackOut_47_0;
                                         return stackIn_48_0 != 0;
@@ -1350,7 +1342,7 @@ class ae extends ig {
         }
     }
 
-    private final void g() {
+    private final void g(int param0) {
         String var2 = this.p(79);
         if (var2.length() > 0) {
             java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.p(44)), (java.awt.datatransfer.ClipboardOwner) null);

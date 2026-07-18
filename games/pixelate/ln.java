@@ -12,7 +12,7 @@ final class ln extends fa {
     static String field_k;
     pp field_o;
 
-    final static String a(java.applet.Applet param0) {
+    final static String a(java.applet.Applet param0, byte param1) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;
@@ -242,7 +242,7 @@ final class ln extends fa {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_m = null;
         field_l = null;
         field_k = null;

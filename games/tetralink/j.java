@@ -10,7 +10,7 @@ final class j extends gb {
     int[] field_v;
     private String[] field_w;
 
-    public static void f() {
+    public static void f(int param0) {
         field_x = null;
         field_t = null;
     }

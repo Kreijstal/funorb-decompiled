@@ -12,7 +12,7 @@ final class g extends w {
     public g() {
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_t = null;
     }
 

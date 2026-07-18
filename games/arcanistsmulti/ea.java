@@ -129,7 +129,7 @@ final class ea extends ve {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_v = null;
         field_B = null;
         field_u = null;

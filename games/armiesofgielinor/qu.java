@@ -12,7 +12,7 @@ final class qu extends tc {
     long field_l;
     static String[] field_s;
 
-    final static void e() {
+    final static void e(int param0) {
         if (iu.field_h) {
             e.a((byte) -93);
             return;

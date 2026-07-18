@@ -205,7 +205,7 @@ final class fk {
         ((fk) this).field_h = null;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_j = null;
         field_d = null;
     }

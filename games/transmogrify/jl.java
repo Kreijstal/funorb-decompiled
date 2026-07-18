@@ -65,7 +65,7 @@ final class jl extends wf {
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -91,10 +91,8 @@ final class jl extends wf {
               var3 = var9.d((byte) 106);
               if (var2 != 0) {
                 if (var2 != 1) {
-                  int discarded$4 = 48;
-                  d.a((Throwable) null, 46, "LR1: " + ik.q());
-                  int discarded$5 = 1;
-                  pc.a();
+                  d.a((Throwable) null, 46, "LR1: " + ik.q(48));
+                  pc.a(1);
                   break L1;
                 } else {
                   var4 = var9.k(128);
@@ -120,8 +118,7 @@ final class jl extends wf {
                       }
                     }
                     if (var5 == null) {
-                      int discarded$6 = 1;
-                      pc.a();
+                      pc.a(1);
                       return;
                     } else {
                       var5.c(5);
@@ -132,8 +129,7 @@ final class jl extends wf {
               } else {
                 var4_ref_oi = (oi) (Object) qd.field_d.a((byte) -95);
                 if (var4_ref_oi == null) {
-                  int discarded$7 = 1;
-                  pc.a();
+                  pc.a(1);
                   return;
                 } else {
                   L5: {
@@ -173,7 +169,7 @@ final class jl extends wf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_l = null;
     }
 
@@ -181,7 +177,7 @@ final class jl extends wf {
         throw new Error();
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

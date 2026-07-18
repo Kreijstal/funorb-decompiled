@@ -20,7 +20,7 @@ final class aj {
         this.a(param0 + -2, param1, ((aj) this).field_b + param0);
     }
 
-    private final int a(int param0) {
+    private final int a(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         var4 = Bounce.field_N;
@@ -68,8 +68,7 @@ final class aj {
           L1: {
             ((aj) this).field_b = -4;
             if (((aj) this).field_d.length <= param2) {
-              int discarded$4 = 1;
-              this.b(param2);
+              this.b(param2, true);
               break L1;
             } else {
               break L1;
@@ -80,8 +79,7 @@ final class aj {
         } else {
           L2: {
             if (((aj) this).field_d.length <= param2) {
-              int discarded$5 = 1;
-              this.b(param2);
+              this.b(param2, true);
               break L2;
             } else {
               break L2;
@@ -101,9 +99,8 @@ final class aj {
         field_e = null;
     }
 
-    private final void b(int param0) {
-        int discarded$0 = 88;
-        int[] var4 = new int[this.a(param0)];
+    private final void b(int param0, boolean param1) {
+        int[] var4 = new int[this.a(param0, 88)];
         int[] var3 = var4;
         cb.a(((aj) this).field_d, 0, var4, 0, ((aj) this).field_d.length);
         ((aj) this).field_d = var4;

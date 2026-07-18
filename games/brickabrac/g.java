@@ -12,7 +12,7 @@ final class g extends k {
     static String field_q;
     static int[] field_o;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_o = null;
         field_l = null;
         field_q = null;
@@ -20,7 +20,7 @@ final class g extends k {
         field_m = null;
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         um.field_e = false;
         qo.field_I = jl.field_e.l(255) == 0 ? true : false;
     }
@@ -129,7 +129,7 @@ final class g extends k {
         return stackIn_12_0 != 0;
     }
 
-    final static void a(pn param0) {
+    final static void a(pn param0, int param1, byte param2) {
         try {
             qa.field_t.a((nm) (Object) param0, (byte) 3);
             kp.a(5, (byte) -99, param0);
@@ -184,8 +184,7 @@ final class g extends k {
             var5 = -62 % ((-16 - param0) / 50);
             if (var4.length() != 0) {
               var6 = var4;
-              int discarded$8 = 1;
-              if (pp.a(var6)) {
+              if (pp.a(var6, true)) {
                 stackOut_5_0 = sc.field_a;
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0;

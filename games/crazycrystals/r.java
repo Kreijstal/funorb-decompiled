@@ -66,8 +66,7 @@ final class r extends ff {
                   break L1;
                 }
               }
-              int discarded$4 = 119;
-              qc.field_i = oe.a(stackIn_10_0 != 0);
+              qc.field_i = oe.a(stackIn_10_0 != 0, (byte) 119);
               break L0;
             } else {
               L2: {
@@ -75,8 +74,7 @@ final class r extends ff {
                   break L2;
                 } else {
                   if (param2 <= 105) {
-                    int discarded$5 = 169;
-                    qc.field_i = en.a(param1);
+                    qc.field_i = en.a(param1, 169);
                     return;
                   } else {
                     break L2;
@@ -155,7 +153,7 @@ final class r extends ff {
         return new String(var6);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_i = null;
     }
 

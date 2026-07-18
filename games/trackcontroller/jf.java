@@ -8,7 +8,7 @@ final class jf extends fc {
     static int field_j;
     static mk field_l;
 
-    final static void e() {
+    final static void e(int param0) {
         gh.field_k = false;
         vg.field_o = false;
         qc.b(-1, (byte) -42);

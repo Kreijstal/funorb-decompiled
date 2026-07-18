@@ -8,7 +8,7 @@ class ao extends kda {
     ao() {
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         int var1 = 0;
         field_d = null;

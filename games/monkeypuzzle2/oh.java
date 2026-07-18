@@ -6,11 +6,11 @@ final class oh {
     static int field_c;
     static volatile boolean field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         gk.field_e = param1;
         oi.field_f = param0;
     }

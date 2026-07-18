@@ -800,7 +800,7 @@ final class ji extends hd {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_Db = null;
         field_Eb = null;
     }
@@ -1360,8 +1360,7 @@ final class ji extends hd {
     }
 
     final static void k(int param0) {
-        int discarded$3 = -99;
-        th.a();
+        th.a((byte) -99);
         if (param0 != 0) {
             field_Eb = null;
             pn.field_z.b(22997);

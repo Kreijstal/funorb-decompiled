@@ -15,14 +15,14 @@ final class vc {
     static int[] field_f;
     pf field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_b = null;
         field_g = null;
         field_f = null;
     }
 
-    final static pb a(pf param0, int param1, int param2) {
+    final static pb a(pf param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -42,8 +42,7 @@ final class vc {
         String stackOut_5_2 = null;
         try {
           if (tl.a(param0, (byte) -5, param2, param1)) {
-            int discarded$2 = -118;
-            return vg.c();
+            return vg.c((byte) -118);
           } else {
             return null;
           }

@@ -154,8 +154,7 @@ class wv extends af {
                     if (param2 != 10) {
                       break L5;
                     } else {
-                      int discarded$2 = -99;
-                      ek.a();
+                      ek.a((byte) -99);
                       var3_int = 0;
                       break L5;
                     }

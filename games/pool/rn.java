@@ -44,8 +44,7 @@ final class rn implements Runnable {
               var4.field_N = 3;
               var4.field_m = (long)param2;
               var4.field_R = param1;
-              int discarded$2 = -19789;
-              this.a(var4);
+              this.a(var4, -19789);
               if (param0 == 58) {
                 break L1;
               } else {
@@ -197,7 +196,7 @@ final class rn implements Runnable {
         return stackIn_16_0;
     }
 
-    private final void a(dg param0) {
+    private final void a(dg param0, int param1) {
         Object var3 = null;
         RuntimeException var3_ref = null;
         Throwable var4 = null;
@@ -348,20 +347,14 @@ final class rn implements Runnable {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, boolean param4, boolean param5, boolean param6, boolean param7) {
+    final static void a(int param0, int param1, boolean param2, int param3, boolean param4, boolean param5, boolean param6, boolean param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         kk.field_B = null;
-        int discarded$0 = 4;
-        or.c();
-        int discarded$1 = 15;
-        int discarded$2 = 33;
-        param6 = wi.a(14, 11, 0, 13, param6);
-        int discarded$3 = 11;
-        mp.a(param1, param6, 16777215, 16777215, param5, 13375, true, param4, param7);
+        or.c((byte) 4);
+        param6 = wi.a(14, 11, 0, 13, param6, (byte) 33, 15);
+        mp.a(param1, param6, 16777215, 16777215, param5, 13375, true, param4, param7, 11);
         int var14 = -36;
         hr.a(param4, -108, param1);
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        lq.a(param1, param6);
+        lq.a(param1, param6, 0, 0);
     }
 
     final static void a(String[][] param0, String[] param1, String[] param2, int param3, byte param4, byte[] param5, dd[][] param6, dd[][] param7, int param8, int param9, String[] param10, int[] param11, String[][] param12, byte[] param13, di param14) {
@@ -847,8 +840,7 @@ final class rn implements Runnable {
             var5.field_x = false;
             var5.field_m = (long)param3;
             var6 = -13 / ((-21 - param2) / 57);
-            int discarded$2 = -19789;
-            this.a(var5);
+            this.a(var5, -19789);
             stackOut_0_0 = (dg) var5;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -911,7 +903,7 @@ final class rn implements Runnable {
         return stackIn_1_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_g = null;
         field_h = null;

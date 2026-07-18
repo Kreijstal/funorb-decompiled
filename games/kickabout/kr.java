@@ -180,7 +180,7 @@ final class kr {
         }
     }
 
-    final static String a(String param0, int param1) {
+    final static String a(String param0, int param1, byte param2) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -323,7 +323,7 @@ final class kr {
         return stackIn_40_0;
     }
 
-    final static String a(CharSequence[] param0) {
+    final static String a(CharSequence[] param0, boolean param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -345,9 +345,7 @@ final class kr {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            int discarded$5 = 99;
-            stackOut_2_0 = mf.a(param0.length, param0);
+            stackOut_2_0 = mf.a(param0.length, param0, 99, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

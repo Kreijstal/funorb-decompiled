@@ -52,7 +52,7 @@ abstract class t extends bl {
         ((t) this).field_eb = 0;
     }
 
-    final static void k() {
+    final static void k(byte param0) {
         de.field_W.c((ce) (Object) new lg(), (byte) 121);
     }
 

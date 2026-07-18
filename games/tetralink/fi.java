@@ -11,7 +11,7 @@ final class fi extends lk implements dm {
     static String field_xb;
     static boolean field_Cb;
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_26_0 = null;
@@ -64,8 +64,7 @@ final class fi extends lk implements dm {
                     L5: {
                       if (10 == param1) {
                         var3_int = 0;
-                        int discarded$18 = -89;
-                        hk.a();
+                        hk.a((byte) -89);
                         break L5;
                       } else {
                         break L5;
@@ -173,7 +172,7 @@ final class fi extends lk implements dm {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_zb = null;
         int var1 = 45;
         field_Ab = null;
@@ -347,7 +346,7 @@ final class fi extends lk implements dm {
         }
     }
 
-    final static byte[] a(int param0, byte[] param1, bc param2) {
+    final static byte[] a(int param0, byte[] param1, bc param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -503,7 +502,7 @@ final class fi extends lk implements dm {
         return stackIn_16_0;
     }
 
-    final static void t() {
+    final static void t(int param0) {
         Object var2 = null;
         ve.a(-1, (String) null, "");
     }
@@ -512,8 +511,7 @@ final class fi extends lk implements dm {
         if (param0 <= 1) {
             field_Cb = false;
         }
-        int discarded$0 = 0;
-        this.a(hj.a(wc.field_K, 248), 22811, true);
+        this.a(hj.a(wc.field_K, 248, false), 22811, true);
     }
 
     final static void a(int param0, int param1, String param2, int param3, String param4, String param5) {
@@ -796,8 +794,7 @@ final class fi extends lk implements dm {
         }
         if (((fi) this).field_K) {
             if (!((fi) this).field_Eb) {
-                int discarded$0 = 127;
-                var2 = ik.a();
+                var2 = ik.a(127);
                 if (var2 != null) {
                     this.a(var2, 22811, false);
                 }

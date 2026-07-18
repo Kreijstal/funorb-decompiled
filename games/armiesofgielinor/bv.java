@@ -334,12 +334,9 @@ final class bv extends vh {
                       }
                       L7: {
                         if (jt.field_a == 16) {
-                          int discarded$57 = 111;
-                          fg.a();
-                          int discarded$58 = -41;
-                          ts.a();
-                          int discarded$59 = 18;
-                          vr.a(iw.field_l);
+                          fg.a((byte) 111);
+                          ts.a((byte) -41);
+                          vr.a(iw.field_l, 18);
                           break L7;
                         } else {
                           break L7;
@@ -364,12 +361,9 @@ final class bv extends vh {
                       }
                       L9: {
                         if (jt.field_a == 16) {
-                          int discarded$60 = 111;
-                          fg.a();
-                          int discarded$61 = -41;
-                          ts.a();
-                          int discarded$62 = 18;
-                          vr.a(iw.field_l);
+                          fg.a((byte) 111);
+                          ts.a((byte) -41);
+                          vr.a(iw.field_l, 18);
                           break L9;
                         } else {
                           break L9;
@@ -386,12 +380,9 @@ final class bv extends vh {
                   } else {
                     L10: {
                       if (jt.field_a == 16) {
-                        int discarded$63 = 111;
-                        fg.a();
-                        int discarded$64 = -41;
-                        ts.a();
-                        int discarded$65 = 18;
-                        vr.a(iw.field_l);
+                        fg.a((byte) 111);
+                        ts.a((byte) -41);
+                        vr.a(iw.field_l, 18);
                         break L10;
                       } else {
                         break L10;
@@ -469,12 +460,9 @@ final class bv extends vh {
                       }
                       L18: {
                         if (jt.field_a == 16) {
-                          int discarded$66 = 111;
-                          fg.a();
-                          int discarded$67 = -41;
-                          ts.a();
-                          int discarded$68 = 18;
-                          vr.a(iw.field_l);
+                          fg.a((byte) 111);
+                          ts.a((byte) -41);
+                          vr.a(iw.field_l, 18);
                           break L18;
                         } else {
                           break L18;
@@ -499,12 +487,9 @@ final class bv extends vh {
                       }
                       L20: {
                         if (jt.field_a == 16) {
-                          int discarded$69 = 111;
-                          fg.a();
-                          int discarded$70 = -41;
-                          ts.a();
-                          int discarded$71 = 18;
-                          vr.a(iw.field_l);
+                          fg.a((byte) 111);
+                          ts.a((byte) -41);
+                          vr.a(iw.field_l, 18);
                           break L20;
                         } else {
                           break L20;
@@ -521,12 +506,9 @@ final class bv extends vh {
                   } else {
                     L21: {
                       if (jt.field_a == 16) {
-                        int discarded$72 = 111;
-                        fg.a();
-                        int discarded$73 = -41;
-                        ts.a();
-                        int discarded$74 = 18;
-                        vr.a(iw.field_l);
+                        fg.a((byte) 111);
+                        ts.a((byte) -41);
+                        vr.a(iw.field_l, 18);
                         break L21;
                       } else {
                         break L21;
@@ -615,12 +597,9 @@ final class bv extends vh {
                       }
                       L31: {
                         if (jt.field_a == 16) {
-                          int discarded$75 = 111;
-                          fg.a();
-                          int discarded$76 = -41;
-                          ts.a();
-                          int discarded$77 = 18;
-                          vr.a(iw.field_l);
+                          fg.a((byte) 111);
+                          ts.a((byte) -41);
+                          vr.a(iw.field_l, 18);
                           break L31;
                         } else {
                           break L31;
@@ -641,12 +620,9 @@ final class bv extends vh {
                       } else {
                         L32: {
                           if (jt.field_a == 16) {
-                            int discarded$78 = 111;
-                            fg.a();
-                            int discarded$79 = -41;
-                            ts.a();
-                            int discarded$80 = 18;
-                            vr.a(iw.field_l);
+                            fg.a((byte) 111);
+                            ts.a((byte) -41);
+                            vr.a(iw.field_l, 18);
                             break L32;
                           } else {
                             break L32;
@@ -667,12 +643,9 @@ final class bv extends vh {
                 }
                 L33: {
                   if (jt.field_a == 16) {
-                    int discarded$81 = 111;
-                    fg.a();
-                    int discarded$82 = -41;
-                    ts.a();
-                    int discarded$83 = 18;
-                    vr.a(iw.field_l);
+                    fg.a((byte) 111);
+                    ts.a((byte) -41);
+                    vr.a(iw.field_l, 18);
                     break L33;
                   } else {
                     break L33;
@@ -752,12 +725,9 @@ final class bv extends vh {
                       }
                       L41: {
                         if (jt.field_a == 16) {
-                          int discarded$84 = 111;
-                          fg.a();
-                          int discarded$85 = -41;
-                          ts.a();
-                          int discarded$86 = 18;
-                          vr.a(iw.field_l);
+                          fg.a((byte) 111);
+                          ts.a((byte) -41);
+                          vr.a(iw.field_l, 18);
                           break L41;
                         } else {
                           break L41;
@@ -782,12 +752,9 @@ final class bv extends vh {
                       }
                       L43: {
                         if (jt.field_a == 16) {
-                          int discarded$87 = 111;
-                          fg.a();
-                          int discarded$88 = -41;
-                          ts.a();
-                          int discarded$89 = 18;
-                          vr.a(iw.field_l);
+                          fg.a((byte) 111);
+                          ts.a((byte) -41);
+                          vr.a(iw.field_l, 18);
                           break L43;
                         } else {
                           break L43;
@@ -804,12 +771,9 @@ final class bv extends vh {
                   } else {
                     L44: {
                       if (jt.field_a == 16) {
-                        int discarded$90 = 111;
-                        fg.a();
-                        int discarded$91 = -41;
-                        ts.a();
-                        int discarded$92 = 18;
-                        vr.a(iw.field_l);
+                        fg.a((byte) 111);
+                        ts.a((byte) -41);
+                        vr.a(iw.field_l, 18);
                         break L44;
                       } else {
                         break L44;
@@ -897,12 +861,9 @@ final class bv extends vh {
                   }
                   L53: {
                     if (jt.field_a == 16) {
-                      int discarded$93 = 111;
-                      fg.a();
-                      int discarded$94 = -41;
-                      ts.a();
-                      int discarded$95 = 18;
-                      vr.a(iw.field_l);
+                      fg.a((byte) 111);
+                      ts.a((byte) -41);
+                      vr.a(iw.field_l, 18);
                       break L53;
                     } else {
                       break L53;
@@ -999,12 +960,9 @@ final class bv extends vh {
                 }
                 L63: {
                   if (jt.field_a == 16) {
-                    int discarded$96 = 111;
-                    fg.a();
-                    int discarded$97 = -41;
-                    ts.a();
-                    int discarded$98 = 18;
-                    vr.a(iw.field_l);
+                    fg.a((byte) 111);
+                    ts.a((byte) -41);
+                    vr.a(iw.field_l, 18);
                     break L63;
                   } else {
                     break L63;
@@ -1093,12 +1051,9 @@ final class bv extends vh {
                     }
                     L72: {
                       if (jt.field_a == 16) {
-                        int discarded$99 = 111;
-                        fg.a();
-                        int discarded$100 = -41;
-                        ts.a();
-                        int discarded$101 = 18;
-                        vr.a(iw.field_l);
+                        fg.a((byte) 111);
+                        ts.a((byte) -41);
+                        vr.a(iw.field_l, 18);
                         break L72;
                       } else {
                         break L72;
@@ -1123,12 +1078,9 @@ final class bv extends vh {
                     }
                     L74: {
                       if (jt.field_a == 16) {
-                        int discarded$102 = 111;
-                        fg.a();
-                        int discarded$103 = -41;
-                        ts.a();
-                        int discarded$104 = 18;
-                        vr.a(iw.field_l);
+                        fg.a((byte) 111);
+                        ts.a((byte) -41);
+                        vr.a(iw.field_l, 18);
                         break L74;
                       } else {
                         break L74;
@@ -1145,12 +1097,9 @@ final class bv extends vh {
                 } else {
                   L75: {
                     if (jt.field_a == 16) {
-                      int discarded$105 = 111;
-                      fg.a();
-                      int discarded$106 = -41;
-                      ts.a();
-                      int discarded$107 = 18;
-                      vr.a(iw.field_l);
+                      fg.a((byte) 111);
+                      ts.a((byte) -41);
+                      vr.a(iw.field_l, 18);
                       break L75;
                     } else {
                       break L75;
@@ -1238,12 +1187,9 @@ final class bv extends vh {
                 }
                 L84: {
                   if (jt.field_a == 16) {
-                    int discarded$108 = 111;
-                    fg.a();
-                    int discarded$109 = -41;
-                    ts.a();
-                    int discarded$110 = 18;
-                    vr.a(iw.field_l);
+                    fg.a((byte) 111);
+                    ts.a((byte) -41);
+                    vr.a(iw.field_l, 18);
                     break L84;
                   } else {
                     break L84;
@@ -1340,12 +1286,9 @@ final class bv extends vh {
               }
               L94: {
                 if (jt.field_a == 16) {
-                  int discarded$111 = 111;
-                  fg.a();
-                  int discarded$112 = -41;
-                  ts.a();
-                  int discarded$113 = 18;
-                  vr.a(iw.field_l);
+                  fg.a((byte) 111);
+                  ts.a((byte) -41);
+                  vr.a(iw.field_l, 18);
                   break L94;
                 } else {
                   break L94;

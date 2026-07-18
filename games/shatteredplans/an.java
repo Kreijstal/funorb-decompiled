@@ -7,7 +7,7 @@ final class an {
     static qr field_d;
     static String field_a;
 
-    final static void a() {
+    final static void a(boolean param0) {
         df var1 = null;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         jo.field_d = null;
@@ -32,7 +32,7 @@ final class an {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_a = null;
         field_d = null;
         field_b = null;

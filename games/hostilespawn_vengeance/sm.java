@@ -21,7 +21,7 @@ abstract class sm {
         int var2 = -15 % ((param0 - 49) / 57);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_h = null;
         field_i = null;

@@ -10,7 +10,7 @@ final class rf extends a {
         super(param0, param1, 33, 20, 30);
     }
 
-    final static int[] c() {
+    final static int[] c(boolean param0) {
         return new int[8];
     }
 

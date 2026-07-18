@@ -14,7 +14,7 @@ final class ui {
     static String field_d;
     static int field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_f = null;
         field_d = null;
@@ -23,7 +23,7 @@ final class ui {
         field_i = null;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1, int param2, byte param3) {
         if (t.field_j < param2 + param1) {
           if (-param2 + (param1 + param0) >= 0) {
             return param1 - -param0 - param2;

@@ -224,7 +224,7 @@ final class ooa extends llb {
         int var8 = -32 % ((param4 - 15) / 35);
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_zb = null;
     }
 

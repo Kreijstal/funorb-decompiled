@@ -544,7 +544,7 @@ abstract class eh extends ga implements jf {
 
     abstract void e(byte param0);
 
-    private final ga d() {
+    private final ga d(byte param0) {
         ga[] var2 = null;
         int var3 = 0;
         ga var4 = null;
@@ -893,7 +893,7 @@ abstract class eh extends ga implements jf {
         ((eh) this).e((byte) 99);
     }
 
-    final static void a(String param0, float param1) {
+    final static void a(String param0, float param1, int param2) {
         try {
             ka.field_a = param0;
             mm.field_k = param1;
@@ -1599,8 +1599,7 @@ abstract class eh extends ga implements jf {
         if (param0 != -17741) {
             field_A = 103;
         }
-        int discarded$0 = 100;
-        return null != this.d() ? true : false;
+        return null != this.d((byte) 100) ? true : false;
     }
 
     boolean a(int param0, int param1, ga param2, char param3) {

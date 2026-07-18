@@ -48,7 +48,7 @@ final class md {
         return stackIn_7_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         int var1 = 0;
         field_f = null;

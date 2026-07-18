@@ -111,7 +111,7 @@ class ga extends pc {
         }
     }
 
-    private final int i() {
+    private final int i(int param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = CrazyCrystals.field_B;
@@ -151,8 +151,7 @@ class ga extends pc {
                 }
                 var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.l(0);
-                int discarded$1 = -1;
-                this.b(var2_ref);
+                this.b(var2_ref, -1);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -234,7 +233,7 @@ class ga extends pc {
         }
     }
 
-    public static void o() {
+    public static void o(int param0) {
         field_L = null;
         field_F = null;
         field_E = null;
@@ -244,7 +243,7 @@ class ga extends pc {
         field_B = null;
     }
 
-    private final int j() {
+    private final int j(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -269,7 +268,7 @@ class ga extends pc {
         }
     }
 
-    private final void b(String param0) {
+    private final void b(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
@@ -442,10 +441,8 @@ class ga extends pc {
                   ((ga) this).field_M = stackIn_9_1 != 0;
                   if (((ga) this).field_M) {
                     L4: {
-                      int discarded$2 = -26622;
-                      ((ga) this).field_D = this.i();
-                      int discarded$3 = 612;
-                      ((ga) this).field_N = this.j();
+                      ((ga) this).field_D = this.i(-26622);
+                      ((ga) this).field_N = this.j(612);
                       if (((ga) this).field_N <= 0) {
                         break L4;
                       } else {
@@ -615,9 +612,9 @@ class ga extends pc {
                             break L5;
                           } else {
                             ((ga) this).field_o = ((ga) this).field_o + param3;
-                            int dupTemp$5 = ((ga) this).field_o.length();
-                            ((ga) this).field_N = dupTemp$5;
-                            ((ga) this).field_D = dupTemp$5;
+                            int dupTemp$1 = ((ga) this).field_o.length();
+                            ((ga) this).field_N = dupTemp$1;
+                            ((ga) this).field_D = dupTemp$1;
                             break L5;
                           }
                         }
@@ -647,9 +644,8 @@ class ga extends pc {
                                   stackIn_61_1 = stackOut_60_1;
                                   break L7;
                                 } else {
-                                  int discarded$6 = -26622;
                                   stackOut_59_0 = this;
-                                  stackOut_59_1 = this.i();
+                                  stackOut_59_1 = this.i(-26622);
                                   stackIn_61_0 = stackOut_59_0;
                                   stackIn_61_1 = stackOut_59_1;
                                   break L7;
@@ -684,8 +680,7 @@ class ga extends pc {
                                         if (param0 != 65) {
                                           break L8;
                                         } else {
-                                          int discarded$7 = -75;
-                                          this.g();
+                                          this.g((byte) -75);
                                           stackOut_41_0 = 1;
                                           stackIn_42_0 = stackOut_41_0;
                                           return stackIn_42_0 != 0;
@@ -719,8 +714,7 @@ class ga extends pc {
                                       }
                                     }
                                   } else {
-                                    int discarded$8 = 23;
-                                    this.f();
+                                    this.f((byte) 23);
                                     stackOut_37_0 = 1;
                                     stackIn_38_0 = stackOut_37_0;
                                     return stackIn_38_0 != 0;
@@ -742,9 +736,8 @@ class ga extends pc {
                                     stackIn_32_1 = stackOut_31_1;
                                     break L10;
                                   } else {
-                                    int discarded$9 = 612;
                                     stackOut_30_0 = this;
-                                    stackOut_30_1 = this.j();
+                                    stackOut_30_1 = this.j(612);
                                     stackIn_32_0 = stackOut_30_0;
                                     stackIn_32_1 = stackOut_30_1;
                                     break L10;
@@ -851,7 +844,7 @@ class ga extends pc {
         return stackIn_76_0 != 0;
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         if (!(!(((ga) this).field_l instanceof ho))) {
             ((ho) (Object) ((ga) this).field_l).a(97, (ga) this);
         }
@@ -883,13 +876,13 @@ class ga extends pc {
         }
     }
 
-    private final String b() {
+    private final String b(boolean param0) {
         int var2 = ((ga) this).field_D >= ((ga) this).field_N ? ((ga) this).field_N : ((ga) this).field_D;
         int var3 = ((ga) this).field_N > ((ga) this).field_D ? ((ga) this).field_N : ((ga) this).field_D;
         return ((ga) this).field_o.substring(var2, var3);
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         this.e((byte) 95);
         this.l(0);
     }
@@ -901,11 +894,9 @@ class ga extends pc {
               return;
             } else {
               L0: {
-                int discarded$4 = 1;
-                var2 = this.b();
+                var2 = this.b(true);
                 if (var2.length() > 0) {
-                  int discarded$5 = 1;
-                  java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.b()), (java.awt.datatransfer.ClipboardOwner) null);
+                  java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.b(true)), (java.awt.datatransfer.ClipboardOwner) null);
                   break L0;
                 } else {
                   break L0;
@@ -925,8 +916,7 @@ class ga extends pc {
         int var6 = 0;
         try {
             super.a(param0, -121, param2, param3);
-            int discarded$0 = 0;
-            this.m();
+            this.m(0);
             if (!(((ga) this).field_s != 1)) {
                 if (((ga) this).field_i instanceof fi) {
                     var7 = (fi) (Object) ((ga) this).field_i;
@@ -1045,7 +1035,7 @@ class ga extends pc {
         }
     }
 
-    private final void m() {
+    private final void m(int param0) {
         tb var3 = null;
         int var4 = 0;
         int var5 = 0;

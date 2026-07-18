@@ -41,8 +41,7 @@ final class nq extends i {
         String stackOut_12_2 = null;
         try {
           L0: {
-            int discarded$2 = 40;
-            var4 = tr.a(param1);
+            var4 = tr.a(param1, (byte) 40);
             L1: {
               if (var4 == null) {
                 break L1;
@@ -543,13 +542,13 @@ final class nq extends i {
         ji.field_Hb = param2;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_H = null;
         field_G = null;
         field_F = null;
     }
 
-    final static int g() {
+    final static int g(int param0) {
         return tl.a(-127);
     }
 

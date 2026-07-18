@@ -84,7 +84,7 @@ final class psb {
         return stackIn_8_0;
     }
 
-    final static int a(byte[] param0, int param1) {
+    final static int a(byte[] param0, int param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -143,7 +143,7 @@ final class psb {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
     }
 

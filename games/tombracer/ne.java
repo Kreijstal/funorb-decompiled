@@ -16,7 +16,7 @@ final class ne {
         return gj.a((byte) 41, this.a(param1, -1));
     }
 
-    final static void a(cn param0) {
+    final static void a(cn param0, int param1) {
         fg var2 = null;
         try {
             fg.b(param0.a("headers.packvorbis", (byte) 124, ""));
@@ -71,13 +71,12 @@ final class ne {
         try {
           L0: {
             L1: {
-              int discarded$4 = 0;
-              var3 = hua.a(param2);
+              var3 = hua.a(param2, 0);
               if (param0) {
                 break L1;
               } else {
                 var4 = null;
-                boolean discarded$5 = ne.a(false, (String) null, (String) null);
+                boolean discarded$2 = ne.a(false, (String) null, (String) null);
                 break L1;
               }
             }
@@ -188,7 +187,7 @@ final class ne {
         field_f = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

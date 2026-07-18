@@ -580,7 +580,7 @@ final class ta {
         }
     }
 
-    final static int a() {
+    final static int a(int param0) {
         float var1 = 0.0f;
         float var2 = 0.0f;
         float var3 = 0.0f;

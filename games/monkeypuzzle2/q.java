@@ -6,12 +6,12 @@ final class q {
     static String field_b;
     static int field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -170,8 +170,7 @@ final class q {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 20;
-            stackOut_0_0 = rj.a(false, param0);
+            stackOut_0_0 = rj.a(false, param0, (byte) 20);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

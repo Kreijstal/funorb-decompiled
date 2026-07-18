@@ -268,7 +268,7 @@ final class on extends me {
         }
     }
 
-    final static pc a(em param0) {
+    final static pc a(em param0, int param1) {
         pc var2 = null;
         RuntimeException var2_ref = null;
         pc stackIn_3_0 = null;
@@ -339,7 +339,7 @@ final class on extends me {
         return nk.field_F;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_k = null;
     }
 

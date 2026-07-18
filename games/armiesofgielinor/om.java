@@ -72,7 +72,7 @@ final class om extends tc implements uo {
               if (param3 == 37) {
                 break L1;
               } else {
-                fu discarded$6 = ((om) this).g(-112);
+                fu discarded$2 = ((om) this).g(-112);
                 break L1;
               }
             }
@@ -108,8 +108,7 @@ final class om extends tc implements uo {
                               if (!param2.equals((Object) (Object) "mid")) {
                                 if (param2.equals((Object) (Object) "ngb")) {
                                   if (param0 > 0) {
-                                    int discarded$7 = 1;
-                                    var5_int = ai.a(param1);
+                                    var5_int = ai.a(param1, true);
                                     ((om) this).field_y = new int[var5_int];
                                     var6 = 0;
                                     L4: while (true) {
@@ -176,8 +175,7 @@ final class om extends tc implements uo {
                                                             if (param0 <= 0) {
                                                               break L3;
                                                             } else {
-                                                              int discarded$8 = 1;
-                                                              var5_int = ai.a(param1);
+                                                              var5_int = ai.a(param1, true);
                                                               ((om) this).field_x = new int[var5_int];
                                                               var6 = 0;
                                                               L5: while (true) {
@@ -232,8 +230,7 @@ final class om extends tc implements uo {
                                           if (param0 <= 0) {
                                             break L3;
                                           } else {
-                                            int discarded$9 = 1;
-                                            var5_int = ai.a(param1);
+                                            var5_int = ai.a(param1, true);
                                             ((om) this).field_D = new int[var5_int];
                                             var6 = 0;
                                             L6: while (true) {
@@ -249,8 +246,7 @@ final class om extends tc implements uo {
                                         }
                                       } else {
                                         if (param0 > 0) {
-                                          int discarded$10 = 1;
-                                          var5_int = ai.a(param1);
+                                          var5_int = ai.a(param1, true);
                                           ((om) this).field_B = new int[var5_int];
                                           var6 = 0;
                                           L7: while (true) {
@@ -298,7 +294,7 @@ final class om extends tc implements uo {
                         if (param0 <= 0) {
                           break L3;
                         } else {
-                          String discarded$11 = up.a(param1, param0, (byte) -82);
+                          String discarded$3 = up.a(param1, param0, (byte) -82);
                           break L2;
                         }
                       }
@@ -383,8 +379,7 @@ final class om extends tc implements uo {
 
     final lo a(int param0) {
         if (null == ((om) this).field_C) {
-            int discarded$0 = 92;
-            ((om) this).field_C = this.d();
+            ((om) this).field_C = this.d((byte) 92);
         }
         if (param0 > -88) {
             ((om) this).field_q = 10;
@@ -392,14 +387,14 @@ final class om extends tc implements uo {
         return ((om) this).field_C;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_r = null;
         field_I = null;
         field_s = null;
         field_p = null;
     }
 
-    private final lo d() {
+    private final lo d(byte param0) {
         byte[] var3 = ((om) this).field_H.a((byte) 76, ((om) this).field_t, ((om) this).field_H.a(gk.field_O[((om) this).field_G.field_r], 102));
         byte[] var2 = var3;
         return new lo(((om) this).field_v, var3);
@@ -634,10 +629,8 @@ final class om extends tc implements uo {
         }
     }
 
-    final static gl c() {
-        int discarded$0 = 488997228;
-        int discarded$1 = -104;
-        return new gl(cn.e(), rf.c());
+    final static gl c(byte param0) {
+        return new gl(cn.e(488997228), rf.c(-104));
     }
 
     om() {

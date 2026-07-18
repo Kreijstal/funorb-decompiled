@@ -526,14 +526,12 @@ final class aa extends cr {
               this.c(0, 0);
               ((aa) this).field_Ub = param0;
               ((aa) this).field_Ib = ((aa) this).field_Wb[((aa) this).field_Ub];
-              int discarded$2 = -1;
-              bq.a(((aa) this).field_Ib);
+              bq.a(((aa) this).field_Ib, -1);
               ((aa) this).field_Ib.c(0, 12);
               break L0;
             } else {
               if (((aa) this).field_Ob[param0] == -1) {
-                int discarded$3 = 110;
-                or.b();
+                or.b((byte) 110);
                 bm.g(0);
                 break L0;
               } else {

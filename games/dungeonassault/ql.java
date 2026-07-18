@@ -23,7 +23,7 @@ final class ql extends java.awt.Canvas {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_g = null;
         field_a = null;
         field_k = null;
@@ -213,7 +213,7 @@ final class ql extends java.awt.Canvas {
         return stackIn_14_0 != 0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
     }
 
     ql(java.awt.Component param0) {

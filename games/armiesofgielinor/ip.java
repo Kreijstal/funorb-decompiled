@@ -891,12 +891,10 @@ final class ip {
                 }
               }
             }
-            int discarded$2 = -8991;
-            jp.a(-(var9_int >> 1) + param6, param8, var9_int, param5, param3);
+            jp.a(-(var9_int >> 1) + param6, param8, var9_int, param5, param3, -8991);
             param4.c(param7, param6, 2 + (param4.field_v + param8), 6684672, -1);
             if (param2) {
-              int discarded$3 = 128;
-              re.a(param8, -(var9_int >> 1) + param6, -122, var9_int, param5);
+              re.a(param8, -(var9_int >> 1) + param6, -122, var9_int, param5, 128);
               break L0;
             } else {
               return;

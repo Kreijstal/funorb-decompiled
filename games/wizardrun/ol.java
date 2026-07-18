@@ -14,7 +14,7 @@ final class ol {
         ((ol) this).field_a = 0;
     }
 
-    final static String a(CharSequence[] param0) {
+    final static String a(CharSequence[] param0, int param1) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -36,9 +36,7 @@ final class ol {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$4 = -124;
-            int discarded$5 = 0;
-            stackOut_0_0 = s.a(param0.length, param0);
+            stackOut_0_0 = s.a(param0.length, param0, 0, -124);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -87,7 +85,7 @@ final class ol {
         }
     }
 
-    final static String a(int param0, va param1) {
+    final static String a(int param0, va param1, byte param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -251,7 +249,7 @@ final class ol {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_d = null;
     }

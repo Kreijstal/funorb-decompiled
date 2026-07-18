@@ -68,7 +68,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
         return stackIn_1_0;
     }
 
-    private final synchronized void a() {
+    private final synchronized void a(boolean param0) {
         if (null == ((bf) this).field_h) {
           return;
         } else {
@@ -87,9 +87,8 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
                 Object var6 = null;
                 boolean discarded$0 = ((bf) this).imageUpdate((java.awt.Image) null, 94, -33, 114, 59, 88);
             }
-            int discarded$1 = 1;
-            this.a();
-            boolean discarded$2 = param1.drawImage(((bf) this).field_e, param2, param0, (java.awt.image.ImageObserver) this);
+            this.a(true);
+            boolean discarded$1 = param1.drawImage(((bf) this).field_e, param2, param0, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "bf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -204,15 +203,12 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               ((bf) this).field_d = new int[param0 * param2 - -1];
               ((bf) this).field_j = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
               ((bf) this).field_e = param1.createImage((java.awt.image.ImageProducer) this);
-              int discarded$12 = 1;
-              this.a();
-              boolean discarded$13 = param1.prepareImage(((bf) this).field_e, (java.awt.image.ImageObserver) this);
-              int discarded$14 = 1;
-              this.a();
-              boolean discarded$15 = param1.prepareImage(((bf) this).field_e, (java.awt.image.ImageObserver) this);
-              int discarded$16 = 1;
-              this.a();
-              boolean discarded$17 = param1.prepareImage(((bf) this).field_e, (java.awt.image.ImageObserver) this);
+              this.a(true);
+              boolean discarded$6 = param1.prepareImage(((bf) this).field_e, (java.awt.image.ImageObserver) this);
+              this.a(true);
+              boolean discarded$7 = param1.prepareImage(((bf) this).field_e, (java.awt.image.ImageObserver) this);
+              this.a(true);
+              boolean discarded$8 = param1.prepareImage(((bf) this).field_e, (java.awt.image.ImageObserver) this);
               ((bf) this).a(255);
               if (param3 > 116) {
                 break L1;
@@ -494,7 +490,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
     bf() {
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_i = null;
         field_g = null;
     }

@@ -6,7 +6,7 @@ final class ki {
     static he field_b;
     static he[] field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -45,8 +45,7 @@ final class ki {
           L0: {
             L1: {
               var10 = (CharSequence) (Object) param2;
-              int discarded$4 = 16752;
-              var3_int = tf.a(var10, param1);
+              var3_int = tf.a(var10, param1, 16752);
               if (param0 <= -79) {
                 break L1;
               } else {
@@ -68,9 +67,9 @@ final class ki {
                 var8 = var6;
                 L3: while (true) {
                   if (param2.charAt(var8) == param1) {
-                    int incrementValue$5 = var5;
+                    int incrementValue$2 = var5;
                     var5++;
-                    var4[incrementValue$5] = param2.substring(var6, var8);
+                    var4[incrementValue$2] = param2.substring(var6, var8);
                     var6 = 1 + var8;
                     var7++;
                     continue L2;

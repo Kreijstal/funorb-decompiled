@@ -427,7 +427,7 @@ final class rk {
         return null;
     }
 
-    private final ed a(ed param0) {
+    private final ed a(ed param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         ed var4 = null;
@@ -734,8 +734,7 @@ final class rk {
           L0: {
             if (param0 != null) {
               var4_int = 4096;
-              int discarded$2 = 2;
-              var5 = this.a(param0);
+              var5 = this.a(param0, 2);
               if (param1 <= -37) {
                 var6 = var5.field_A;
                 var7 = var5.field_z;

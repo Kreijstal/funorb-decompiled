@@ -10,7 +10,7 @@ abstract class mb {
     static String field_g;
     static int[] field_c;
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_d = null;
         field_g = null;

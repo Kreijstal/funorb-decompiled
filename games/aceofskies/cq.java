@@ -12,8 +12,7 @@ abstract class cq implements jj {
     private ke field_a;
 
     protected final void finalize() throws Throwable {
-        int discarded$0 = -1;
-        this.b();
+        this.b(-1);
         super.finalize();
     }
 
@@ -25,7 +24,7 @@ abstract class cq implements jj {
         return ((cq) this).field_f ? 4 * var2 / 3 : var2;
     }
 
-    private final void a() {
+    private final void a(int param0, int param1) {
         ((cq) this).field_g.field_jc = ((cq) this).field_g.field_jc;
         ((cq) this).field_g.field_jc = ((cq) this).field_g.field_jc + this.c(-19);
     }
@@ -130,8 +129,7 @@ abstract class cq implements jj {
               var11 = param0;
               var12 = new float[var6_int * var9 * var10];
               L4: while (true) {
-                int discarded$1 = -29824;
-                jaggl.OpenGL.glTexImage2Df(param4, var7, ((cq) this).a(false), param2, param3, 0, gq.a(((cq) this).field_h), 5126, var11, 0);
+                jaggl.OpenGL.glTexImage2Df(param4, var7, ((cq) this).a(false), param2, param3, 0, gq.a(((cq) this).field_h, -29824), 5126, var11, 0);
                 if (1 >= var8) {
                   break L0;
                 } else {
@@ -223,7 +221,7 @@ abstract class cq implements jj {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         ((cq) this).field_g.a((jj) this, -9135);
         int var2 = 122;
         if (fg.field_A == ((cq) this).field_a) {
@@ -235,7 +233,7 @@ abstract class cq implements jj {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         if (!(((cq) this).field_d <= 0)) {
             ((cq) this).field_g.b(3, this.c(-88), ((cq) this).field_d);
             ((cq) this).field_d = 0;
@@ -325,8 +323,7 @@ abstract class cq implements jj {
               var11 = param2;
               var12 = new byte[var10 * (var9 * var6_int)];
               L4: while (true) {
-                int discarded$1 = -29824;
-                jaggl.OpenGL.glTexImage2Dub(param0, var7, ((cq) this).a(false), param3, param1, 0, gq.a(((cq) this).field_h), 5121, var11, 0);
+                jaggl.OpenGL.glTexImage2Dub(param0, var7, ((cq) this).a(false), param3, param1, 0, gq.a(((cq) this).field_h, -29824), 5121, var11, 0);
                 if (var8 > 1) {
                   var15 = param3 * var6_int;
                   var16 = 0;
@@ -722,11 +719,8 @@ abstract class cq implements jj {
             ((cq) this).field_c = param3;
             jaggl.OpenGL.glGenTextures(1, tn.field_w, 0);
             ((cq) this).field_d = tn.field_w[0];
-            int discarded$0 = 127;
-            this.d();
-            int discarded$1 = 4;
-            int discarded$2 = 0;
-            this.a();
+            this.d((byte) 127);
+            this.a(0, 4);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "cq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
@@ -758,8 +752,7 @@ abstract class cq implements jj {
                 break L1;
               } else {
                 ((cq) this).field_a = param0;
-                int discarded$2 = 127;
-                this.d();
+                this.d((byte) 127);
                 break L1;
               }
             }

@@ -11,7 +11,7 @@ final class rr {
     static String field_c;
     static ji field_b;
 
-    final static io[] a(int[] param0, io[] param1) {
+    final static io[] a(int[] param0, io[] param1, int param2) {
         io[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

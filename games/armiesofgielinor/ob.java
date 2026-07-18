@@ -21,7 +21,7 @@ final class ob extends hs {
         super.a(param0, param1, param2, param3, param4);
     }
 
-    private final void c(int param0, int param1) {
+    private final void c(int param0, int param1, int param2) {
         int var4 = null != ((ob) this).field_K ? ((ob) this).field_K.length : 0;
         int[] var5 = new int[param0 * var4];
         if (((ob) this).field_L != null) {
@@ -329,7 +329,7 @@ final class ob extends hs {
         return stackIn_4_0;
     }
 
-    final static int a(int param0, boolean param1, CharSequence param2) {
+    final static int a(int param0, boolean param1, CharSequence param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -630,7 +630,7 @@ final class ob extends hs {
         return stackIn_22_0 != 0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_P = null;
         field_M = null;
         field_O = null;
@@ -769,8 +769,7 @@ final class ob extends hs {
                 var6++;
             }
             this.a((byte) 65, var3_int, var4);
-            int discarded$0 = 0;
-            this.c(var4, var3_int);
+            this.c(var4, var3_int, 0);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "ob.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -811,7 +810,7 @@ final class ob extends hs {
         }
     }
 
-    final static String j() {
+    final static String j(int param0) {
         return mk.field_f;
     }
 

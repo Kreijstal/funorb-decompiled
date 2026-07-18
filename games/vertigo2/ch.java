@@ -14,7 +14,7 @@ final class ch {
     static String field_f;
     static sd field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_e = null;
         field_f = null;
@@ -134,8 +134,7 @@ final class ch {
                 }
                 L3: {
                   if (de.field_f == 13) {
-                    int discarded$4 = 0;
-                    fb.h();
+                    fb.h(0);
                     var4 = 1;
                     il.field_a = false;
                     break L3;
@@ -202,8 +201,7 @@ final class ch {
                   il.field_a = false;
                   var4 = 1;
                   if (de.field_f == 13) {
-                    int discarded$5 = 0;
-                    fb.h();
+                    fb.h(0);
                     var4 = 1;
                     il.field_a = false;
                     break L7;
@@ -218,8 +216,7 @@ final class ch {
                     il.field_a = false;
                     var4 = 1;
                     if (de.field_f == 13) {
-                      int discarded$6 = 0;
-                      fb.h();
+                      fb.h(0);
                       var4 = 1;
                       il.field_a = false;
                       break L8;
@@ -231,8 +228,7 @@ final class ch {
                 } else {
                   L9: {
                     if (de.field_f == 13) {
-                      int discarded$7 = 0;
-                      fb.h();
+                      fb.h(0);
                       var4 = 1;
                       il.field_a = false;
                       break L9;

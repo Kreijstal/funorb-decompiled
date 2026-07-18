@@ -513,7 +513,7 @@ final class dg extends IOException {
         }
     }
 
-    final static boolean a(am param0) {
+    final static boolean a(am param0, boolean param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -617,9 +617,7 @@ final class dg extends IOException {
                     break L2;
                   }
                 }
-                int discarded$2 = -58;
-                int discarded$3 = -103;
-                ja.a(jb.a(), ud.field_c, var3_int != 0, dp.a(), (byte) -90);
+                ja.a(jb.a((byte) -58), ud.field_c, var3_int != 0, dp.a(-103), (byte) -90);
                 break L1;
               } else {
                 if (!kk.a(-251)) {
@@ -673,7 +671,7 @@ final class dg extends IOException {
         }
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return nl.field_s;
     }
 

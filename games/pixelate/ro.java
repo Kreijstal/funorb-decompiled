@@ -9,16 +9,15 @@ final class ro {
     static int field_c;
     static String field_f;
 
-    final static void a(int param0) {
+    final static void a(int param0, boolean param1) {
         pc var2 = aa.field_f;
         var2.g(param0, 15514);
         var2.e(160, 2);
         var2.e(160, 4);
-        int discarded$0 = -102;
-        var2.e(160, hk.a());
+        var2.e(160, hk.a((byte) -102));
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_e = null;
         field_b = null;

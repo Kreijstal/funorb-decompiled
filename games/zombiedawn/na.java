@@ -573,7 +573,7 @@ final class na {
         return "" + ((na) this).field_d;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
     }
 

@@ -287,7 +287,7 @@ final class qm extends km {
         return false;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_Gb = null;
         field_Hb = null;
         field_Ob = null;
@@ -312,7 +312,7 @@ final class qm extends km {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0, boolean param1, byte param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         p var4 = null;

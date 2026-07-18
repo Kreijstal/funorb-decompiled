@@ -272,16 +272,14 @@ abstract class vi extends nm {
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
-            boolean discarded$30 = mf.field_f.a(v.field_e, tk.field_r, -114, true);
+            boolean discarded$12 = mf.field_f.a(v.field_e, tk.field_r, -114, true);
             mf.field_f.i(79);
             L1: while (true) {
-              int discarded$31 = 5;
-              if (!jl.a()) {
+              if (!jl.a((byte) 5)) {
                 var1_int = -30 % ((55 - param0) / 43);
                 if (ch.field_b != -1) {
                   var2 = ch.field_b;
-                  int discarded$32 = 1;
-                  bd.a(-1);
+                  bd.a(-1, true);
                   stackOut_6_0 = var2;
                   stackIn_7_0 = stackOut_6_0;
                   return stackIn_7_0;
@@ -315,7 +313,7 @@ abstract class vi extends nm {
                   }
                 }
               } else {
-                boolean discarded$33 = mf.field_f.a(go.field_b, dc.field_b, true);
+                boolean discarded$13 = mf.field_f.a(go.field_b, dc.field_b, true);
                 continue L1;
               }
             }
@@ -805,13 +803,12 @@ abstract class vi extends nm {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_n = null;
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
-        int discarded$2 = -99;
-        jf.d();
+        jf.d(-99);
         lb.d(param2, param3, param1, param4);
         if (param0 < 68) {
             field_n = null;

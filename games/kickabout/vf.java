@@ -11,7 +11,7 @@ final class vf extends i {
     static int[] field_M;
     static volatile int field_G;
 
-    public static void g() {
+    public static void g(byte param0) {
         field_M = null;
         field_I = null;
         field_F = null;

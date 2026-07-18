@@ -155,14 +155,14 @@ abstract class bi {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_d = null;
         field_c = null;
         field_f = null;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
         int stackOut_26_0 = 0;

@@ -58,8 +58,7 @@ final class npa {
                   } else {
                     var5.p(100);
                     var5.c(-7975);
-                    int discarded$4 = -201;
-                    ft.a(var5);
+                    ft.a(var5, -201);
                     break L3;
                   }
                 }
@@ -174,7 +173,7 @@ final class npa {
         return stackIn_4_0;
     }
 
-    private final ffa[] a(int param0, int param1, int param2, int param3) {
+    private final ffa[] a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         q var8 = null;
@@ -187,8 +186,7 @@ final class npa {
         ((npa) this).field_d = 0;
         L0: while (true) {
           if (((npa) this).field_b.field_d) {
-            int discarded$3 = 0;
-            return this.b();
+            return this.b(0);
           } else {
             var6 = ((npa) this).field_b.b((byte) 75);
             var7 = ((npa) this).field_b.b(2);
@@ -220,14 +218,13 @@ final class npa {
                         }
                       }
                       if (var9 != 0) {
-                        int fieldTemp$4 = ((npa) this).field_d;
+                        int fieldTemp$1 = ((npa) this).field_d;
                         ((npa) this).field_d = ((npa) this).field_d + 1;
-                        ((npa) this).field_a[fieldTemp$4] = var8.a((byte) -96);
+                        ((npa) this).field_a[fieldTemp$1] = var8.a((byte) -96);
                         if (((npa) this).field_a.length > ((npa) this).field_d) {
                           break L2;
                         } else {
-                          int discarded$5 = 0;
-                          return this.b();
+                          return this.b(0);
                         }
                       } else {
                         break L2;
@@ -274,8 +271,7 @@ final class npa {
         var10 = var6;
         L0: while (true) {
           if (var8 < var10) {
-            int discarded$3 = 0;
-            return this.b();
+            return this.b(0);
           } else {
             var11 = var7;
             L1: while (true) {
@@ -306,14 +302,13 @@ final class npa {
                             }
                           }
                           if (var13 != 0) {
-                            int fieldTemp$4 = ((npa) this).field_d;
+                            int fieldTemp$1 = ((npa) this).field_d;
                             ((npa) this).field_d = ((npa) this).field_d + 1;
-                            ((npa) this).field_a[fieldTemp$4] = var12.a((byte) -71);
+                            ((npa) this).field_a[fieldTemp$1] = var12.a((byte) -71);
                             if (((npa) this).field_d < ((npa) this).field_a.length) {
                               break L3;
                             } else {
-                              int discarded$5 = 0;
-                              return this.b();
+                              return this.b(0);
                             }
                           } else {
                             break L3;
@@ -336,11 +331,11 @@ final class npa {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_f = null;
     }
 
-    private final ffa[] b() {
+    private final ffa[] b(int param0) {
         ffa[] var2 = new ffa[((npa) this).field_d];
         lua.a((Object[]) (Object) ((npa) this).field_a, 0, (Object[]) (Object) var2, 0, ((npa) this).field_d);
         return var2;
@@ -395,8 +390,7 @@ final class npa {
                       if (!((npa) this).field_g) {
                         var9 = (q) (Object) ((npa) this).field_e.a(-121, (long)param0.a(true));
                         if (var9 == null) {
-                          int discarded$1 = 1;
-                          var10 = vw.a(var7, param0, var8);
+                          var10 = vw.a(var7, param0, var8, true);
                           ((npa) this).field_e.a(param1 ^ -7074, (od) (Object) var10, (long)param0.a(true));
                           ((npa) this).field_h.a((long)var10.hashCode(), 115, (vg) (Object) var10);
                           var8++;
@@ -493,8 +487,7 @@ final class npa {
                 break L1;
               }
             }
-            int discarded$2 = 0;
-            stackOut_2_0 = this.a(param0.field_e, param0.field_d, param0.field_k, param0.field_a);
+            stackOut_2_0 = this.a(param0.field_e, param0.field_d, param0.field_k, param0.field_a, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -576,8 +569,7 @@ final class npa {
                     if (!var8.a(var7, var6, var4, var3_int, -98)) {
                       var8.p(104);
                       var8.c(-7975);
-                      int discarded$1 = -201;
-                      ft.a(var8);
+                      ft.a(var8, -201);
                       break L2;
                     } else {
                       break L2;
@@ -621,7 +613,7 @@ final class npa {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return wt.field_d == gsa.field_y;
     }
 

@@ -10,7 +10,7 @@ final class dc {
     static String field_d;
     static boolean field_g;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_d = null;
         field_e = null;
@@ -46,8 +46,7 @@ final class dc {
         try {
           L0: {
             if (param1 < -35) {
-              int discarded$2 = 10;
-              stackOut_3_0 = sh.a(true, 104, param0);
+              stackOut_3_0 = sh.a(true, 104, param0, 10);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

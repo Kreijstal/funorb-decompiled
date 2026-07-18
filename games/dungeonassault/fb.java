@@ -10,11 +10,11 @@ final class fb {
     static String field_g;
     static String field_a;
 
-    final static mb b() {
+    final static mb b(byte param0) {
         return wa.field_j;
     }
 
-    final static Boolean a() {
+    final static Boolean a(byte param0) {
         Boolean var1 = fj.field_e;
         fj.field_e = null;
         return var1;

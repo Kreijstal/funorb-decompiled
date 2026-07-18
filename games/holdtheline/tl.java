@@ -7,7 +7,7 @@ final class tl extends kl {
     static int field_x;
     static af field_y;
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_w = null;
         field_y = null;
         field_z = null;
@@ -17,7 +17,7 @@ final class tl extends kl {
         super(param0, param1);
     }
 
-    final static boolean a(int[] param0) {
+    final static boolean a(int[] param0, int param1) {
         RuntimeException var2 = null;
         long var2_long = 0L;
         aa var4_ref_aa = null;
@@ -278,7 +278,7 @@ final class tl extends kl {
                   break L1;
                 } else {
                   var5 = null;
-                  cg discarded$2 = tl.a((String) null, (byte) -55);
+                  cg discarded$1 = tl.a((String) null, (byte) -55);
                   break L1;
                 }
               }
@@ -308,8 +308,7 @@ final class tl extends kl {
                               break L2;
                             } else {
                               if (2 >= var7.length) {
-                                int discarded$3 = 1;
-                                if (!ik.a((CharSequence) (Object) var7[1])) {
+                                if (!ik.a((CharSequence) (Object) var7[1], true)) {
                                   L3: {
                                     if (var7[1].equalsIgnoreCase("off")) {
                                       break L3;

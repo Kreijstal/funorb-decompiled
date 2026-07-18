@@ -13,7 +13,7 @@ final class ue extends gm {
         this(2188450, 2591221, 9543);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_p = null;
     }
 
@@ -151,7 +151,7 @@ final class ue extends gm {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -251,16 +251,16 @@ final class ue extends gm {
                         var8_int = 1;
                         L7: while (true) {
                           if (var8_int >= var5) {
-                            String[][] dupTemp$7 = new String[3][var6_int];
-                            var4_ref_of.field_o = dupTemp$7;
-                            var8 = dupTemp$7;
+                            String[][] dupTemp$6 = new String[3][var6_int];
+                            var4_ref_of.field_o = dupTemp$6;
+                            var8 = dupTemp$6;
                             var9 = new String[3][var6_int];
-                            long[][] dupTemp$8 = new long[3][var6_int];
-                            var4_ref_of.field_r = dupTemp$8;
-                            var10 = dupTemp$8;
-                            int[][] dupTemp$9 = new int[3][var6_int * var7];
-                            var4_ref_of.field_m = dupTemp$9;
-                            var11 = dupTemp$9;
+                            long[][] dupTemp$7 = new long[3][var6_int];
+                            var4_ref_of.field_r = dupTemp$7;
+                            var10 = dupTemp$7;
+                            int[][] dupTemp$8 = new int[3][var6_int * var7];
+                            var4_ref_of.field_m = dupTemp$8;
+                            var11 = dupTemp$8;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -289,9 +289,9 @@ final class ue extends gm {
                                           var12++;
                                           break L9;
                                         } else {
-                                          int incrementValue$10 = var15;
+                                          int incrementValue$9 = var15;
                                           var15++;
-                                          var11[0][incrementValue$10] = var28.c(true);
+                                          var11[0][incrementValue$9] = var28.c(true);
                                           var25++;
                                           continue L10;
                                         }
@@ -304,8 +304,7 @@ final class ue extends gm {
                                     if (var21 == null) {
                                       break L11;
                                     } else {
-                                      int discarded$11 = -25;
-                                      if (!ea.a(var21)) {
+                                      if (!ea.a(var21, (byte) -25)) {
                                         break L11;
                                       } else {
                                         var8[1][var13] = qv.field_o;
@@ -318,9 +317,9 @@ final class ue extends gm {
                                           if (var25 >= var7) {
                                             break L11;
                                           } else {
-                                            int incrementValue$12 = var16;
+                                            int incrementValue$10 = var16;
                                             var16++;
-                                            var11[1][incrementValue$12] = var28.c(true);
+                                            var11[1][incrementValue$10] = var28.c(true);
                                             var25++;
                                             continue L12;
                                           }
@@ -344,9 +343,9 @@ final class ue extends gm {
                                           if (var7 <= var25) {
                                             break L13;
                                           } else {
-                                            int incrementValue$13 = var17;
+                                            int incrementValue$11 = var17;
                                             var17++;
-                                            var11[2][incrementValue$13] = var28.c(true);
+                                            var11[2][incrementValue$11] = var28.c(true);
                                             var25++;
                                             continue L14;
                                           }

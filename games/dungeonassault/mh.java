@@ -376,7 +376,7 @@ final class mh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         of.field_k = false;
         nf.field_y = -1;
         eh.field_o.field_N = true;
@@ -509,7 +509,7 @@ final class mh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_b = null;
         field_d = null;

@@ -253,8 +253,7 @@ final class co {
           if (!param1) {
             L1: {
               L2: {
-                int discarded$2 = 1000;
-                if (!k.b()) {
+                if (!k.b(1000)) {
                   break L2;
                 } else {
                   if (param3.field_kc) {
@@ -299,8 +298,7 @@ final class co {
                 if (!oe.field_b[0][2].field_G) {
                   break L4;
                 } else {
-                  int discarded$3 = 1000;
-                  if (!k.b()) {
+                  if (!k.b(1000)) {
                     wc.field_g = oi.a(new String[1], rf.field_d, 2);
                     break L4;
                   } else {
@@ -1566,7 +1564,7 @@ final class co {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_a = null;
         field_b = null;
@@ -1664,8 +1662,7 @@ final class co {
         try {
           L0: {
             L1: {
-              int discarded$2 = -2;
-              sb.a("jagex-last-login-method", ((co) this).field_c, param0, 31536000L);
+              sb.a("jagex-last-login-method", ((co) this).field_c, param0, 31536000L, (byte) -2);
               if (param1 > 72) {
                 break L1;
               } else {
@@ -1719,7 +1716,7 @@ final class co {
         }
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String a(boolean param0, CharSequence param1, byte param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -1823,8 +1820,7 @@ final class co {
         }
         L1: {
           if (0 < kh.field_d) {
-            int discarded$1 = -17491;
-            je.f();
+            je.f(-17491);
             break L1;
           } else {
             break L1;

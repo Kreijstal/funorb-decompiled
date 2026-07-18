@@ -195,8 +195,7 @@ class kj extends pj {
               }
             }
             var3 = (CharSequence) (Object) param0;
-            int discarded$2 = -2;
-            stackOut_2_0 = kf.field_D.equals((Object) (Object) jg.a(var3));
+            stackOut_2_0 = kf.field_D.equals((Object) (Object) jg.a(var3, -2));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -538,7 +537,7 @@ class kj extends pj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_N = null;
         field_K = null;
         field_J = null;

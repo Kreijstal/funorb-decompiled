@@ -8,7 +8,7 @@ final class hh extends sh {
     static i field_d;
     static String field_e;
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_e = null;
     }

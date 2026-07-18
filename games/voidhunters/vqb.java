@@ -8,7 +8,7 @@ final class vqb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
     }
 
@@ -79,7 +79,7 @@ final class vqb extends rqa {
         return stackIn_4_0;
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         egb.field_o = new String[fva.field_o];
         egb.field_o[5] = lr.field_q;
         egb.field_o[21] = bda.field_a;

@@ -707,7 +707,7 @@ final class wg extends pk {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_p = null;
         field_r = null;
         field_q = null;

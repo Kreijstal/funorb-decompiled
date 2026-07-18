@@ -148,7 +148,7 @@ final class fp extends lh {
         ((fp) this).a(0);
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_B = null;
         field_u = null;
         field_y = null;

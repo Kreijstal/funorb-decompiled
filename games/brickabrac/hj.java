@@ -280,14 +280,14 @@ final class hj extends mh {
         ((hj) this).a(param6, -779, param5, param1);
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_Ub = null;
         field_Sb = null;
         field_Vb = null;
         field_Rb = null;
     }
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         nm var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -304,9 +304,7 @@ final class hj extends mh {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    int discarded$8 = 92;
-                    int discarded$9 = 6;
-                    bd.a();
+                    bd.a(6, 92);
                     var2 = uc.field_q.a((byte) 116);
                     continue L2;
                   }
@@ -325,7 +323,7 @@ final class hj extends mh {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, String param4) {
+    final static void a(int param0, int param1, int param2, int param3, String param4, int param5) {
         try {
             lb.a(param0, -param2 + param1, param3, param2, 3, 0, 196);
             lb.c(param0, -param2 + param1, param3, param2, 3, 16777215);
@@ -335,7 +333,7 @@ final class hj extends mh {
         }
     }
 
-    final static int a(int param0, byte[] param1, byte param2, int param3, CharSequence param4) {
+    final static int a(int param0, byte[] param1, byte param2, int param3, CharSequence param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;

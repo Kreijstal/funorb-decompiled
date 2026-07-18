@@ -673,8 +673,7 @@ abstract class dc extends jl {
                 ((dc) this).field_I = var17;
                 ((dc) this).field_F = var15;
                 ((dc) this).field_A = var29;
-                int discarded$1 = 0;
-                if (!this.c()) {
+                if (!this.c(false)) {
                   break L4;
                 } else {
                   if (!((dc) this).g(-10603)) {
@@ -1237,7 +1236,7 @@ abstract class dc extends jl {
         }
     }
 
-    private final boolean c() {
+    private final boolean c(boolean param0) {
         double var2 = 0.0;
         double var4 = 0.0;
         double var6 = 0.0;
@@ -1489,7 +1488,7 @@ abstract class dc extends jl {
         int var8 = -81 % ((-49 - param0) / 58);
     }
 
-    final static void e() {
+    final static void e(byte param0) {
     }
 
     int a(int param0, byte param1) {

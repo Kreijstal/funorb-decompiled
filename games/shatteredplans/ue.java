@@ -8,7 +8,7 @@ final class ue {
     static String field_d;
     static int[] field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_e = null;
@@ -57,8 +57,7 @@ final class ue {
                   if (!qb.field_b.startsWith("win")) {
                     break L0;
                   } else {
-                    int discarded$8 = -1495;
-                    if (af.b(param2)) {
+                    if (af.b(param2, -1495)) {
                       return;
                     } else {
                       break L0;

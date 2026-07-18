@@ -28,7 +28,7 @@ class tk extends nm {
         ((tk) this).field_s = null;
     }
 
-    final static void a(int param0, ak param1, bi param2, j param3) {
+    final static void a(int param0, ak param1, bi param2, j param3, byte param4, int param5, int param6, int param7) {
         RuntimeException var8 = null;
         int var8_int = 0;
         int var9 = 0;
@@ -458,7 +458,7 @@ class tk extends nm {
         }
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

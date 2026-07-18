@@ -11,6 +11,7 @@ final class kb {
         String[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
+        Object var6 = null;
         int stackIn_10_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_12_0 = 0;
@@ -75,23 +76,20 @@ final class kb {
                 }
               }
               me.field_g = hh.a(stackIn_12_0, stackIn_12_1 != 0);
-              int discarded$8 = 416577356;
-              ci.a((String[]) null);
+              var6 = null;
+              ci.a((String[]) null, 416577356);
               break L0;
             } else {
               if (param0 < 100) {
-                int discarded$9 = 0;
-                me.field_g = ig.a(param3, param0);
+                me.field_g = ig.a(param3, param0, false);
                 return;
               } else {
                 if (param0 > 105) {
-                  int discarded$10 = 0;
-                  me.field_g = ig.a(param3, param0);
+                  me.field_g = ig.a(param3, param0, false);
                   return;
                 } else {
                   var4 = param2;
-                  int discarded$11 = 416577356;
-                  ci.a(var4);
+                  ci.a(var4, 416577356);
                   me.field_g = ac.a(28, param2);
                   return;
                 }
@@ -155,7 +153,7 @@ final class kb {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!hl.field_G) {
             throw new IllegalStateException();
         }
@@ -164,44 +162,39 @@ final class kb {
         hj.field_a = 0;
     }
 
-    final static void a(boolean param0) {
-        int discarded$0 = -102;
-        ue.a(param0, true);
+    final static void a(boolean param0, boolean param1) {
+        ue.a(param0, true, (byte) -102);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1 = 0;
         if (null == kd.field_e) {
           if (vg.field_i != null) {
             vg.field_i.m(23181);
-            int discarded$8 = -2;
-            eh.a();
+            eh.a((byte) -2);
             var1 = 0;
             return;
           } else {
-            int discarded$9 = -2;
-            eh.a();
+            eh.a((byte) -2);
             var1 = 0;
             return;
           }
         } else {
           kd.field_e.l(0);
           if (vg.field_i == null) {
-            int discarded$10 = -2;
-            eh.a();
+            eh.a((byte) -2);
             var1 = 0;
             return;
           } else {
             vg.field_i.m(23181);
-            int discarded$11 = -2;
-            eh.a();
+            eh.a((byte) -2);
             var1 = 0;
             return;
           }
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
     }
 

@@ -203,7 +203,7 @@ final class ak extends ela {
         return stackIn_10_0;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_o = null;
         field_p = null;
     }
@@ -212,7 +212,7 @@ final class ak extends ela {
         super(param0, param1, param2);
     }
 
-    final static void g() {
+    final static void g(int param0) {
         int var1 = 0;
         int var2 = 0;
         var2 = TombRacer.field_G ? 1 : 0;

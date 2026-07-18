@@ -330,8 +330,7 @@ final class tk extends tf {
                         if (vd.field_h != 3) {
                           break L6;
                         } else {
-                          int discarded$1 = 10068666;
-                          var5 = (Object) (Object) hf.a(var4, var4, param2);
+                          var5 = (Object) (Object) hf.a(var4, var4, param2, 10068666);
                           break L6;
                         }
                       }
@@ -361,7 +360,7 @@ final class tk extends tf {
         }
     }
 
-    final static int a(boolean param0, int param1, String param2, String param3, int param4, String param5) {
+    final static int a(boolean param0, int param1, String param2, String param3, int param4, String param5, byte param6) {
         hc var7 = null;
         RuntimeException var7_ref = null;
         hc var8 = null;
@@ -504,7 +503,7 @@ final class tk extends tf {
         return stackIn_3_0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_p = null;
         field_s = null;
         field_w = null;

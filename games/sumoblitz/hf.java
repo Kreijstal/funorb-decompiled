@@ -21,7 +21,7 @@ abstract class hf extends rg {
         return super.h(0);
     }
 
-    final static hr a(ha param0, ri param1) {
+    final static hr a(ha param0, ri param1, byte param2) {
         RuntimeException var3 = null;
         hr stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -120,7 +120,7 @@ abstract class hf extends rg {
         return stackIn_1_0;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_H = null;
         field_F = null;
         field_L = null;

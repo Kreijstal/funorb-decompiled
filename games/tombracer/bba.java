@@ -15,7 +15,7 @@ final class bba {
         return ((bba) this).field_b;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_d = null;
         field_c = null;
@@ -256,14 +256,11 @@ final class bba {
         try {
           L0: {
             qr.a(false, param16, param18, param11, param14);
-            int discarded$3 = 1;
-            gj.a(param14);
+            gj.a(param14, true);
             ck.a(param3, param19, 1, param8, param1, args, param4, param5, param10, param7, param14, 25447, param12, param15, param9);
             iea.a(true, param14, 2, param13);
-            int discarded$4 = 12;
-            wta.A();
-            int discarded$5 = 0;
-            csa.a();
+            wta.A(12);
+            csa.a(false);
             gpa.a(83);
             break L0;
           }

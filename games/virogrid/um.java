@@ -190,8 +190,7 @@ final class um extends km {
         for (var3 = 0; var3 < rj.field_h; var3++) {
             var1[var3] = new rm(oj.field_Kb, se.field_d, el.field_w[var3], mb.field_bb[var3], db.field_k[var3], gb.field_F[var3], lj.field_j[var3], k.field_c);
         }
-        int discarded$0 = -28;
-        pe.b();
+        pe.b((byte) -28);
         return var1;
     }
 
@@ -202,7 +201,7 @@ final class um extends km {
         return this.a(param4, 110, param5, param0, param1, ((um) this).field_Eb.field_ub, param3);
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_Ib = null;
         field_Kb = null;
     }

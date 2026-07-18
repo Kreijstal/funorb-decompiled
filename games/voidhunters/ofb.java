@@ -76,7 +76,7 @@ final class ofb extends rqa {
         super(param0, param1, param2);
     }
 
-    final static phb a(int param0, int param1, asb param2) {
+    final static phb a(int param0, int param1, asb param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         phb stackIn_4_0 = null;
@@ -101,8 +101,7 @@ final class ofb extends rqa {
         try {
           L0: {
             if (pa.a(param0, 2, param2, param1)) {
-              int discarded$2 = -91;
-              stackOut_3_0 = jgb.a();
+              stackOut_3_0 = jgb.a(-91);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

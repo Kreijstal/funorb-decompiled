@@ -8,7 +8,7 @@ final class me {
     static hg field_b;
     static rk[] field_c;
 
-    final static void a(String param0, int param1, fj param2, lh param3) {
+    final static void a(String param0, int param1, fj param2, lh param3, byte param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -191,7 +191,7 @@ final class me {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_b = null;

@@ -290,8 +290,7 @@ final class si extends ic {
                 break L2;
               } else {
                 if (!param0.equals((Object) (Object) ji.field_k.a(0))) {
-                  int discarded$2 = 1;
-                  ji.field_k = og.a(param0);
+                  ji.field_k = og.a(param0, true);
                   break L2;
                 } else {
                   break L2;
@@ -340,8 +339,7 @@ final class si extends ic {
             gb.field_f = new h(param1);
             i.field_m = param3;
             mg.field_d = param2;
-            int discarded$0 = 62;
-            rf.m();
+            rf.m(62);
         } catch (RuntimeException runtimeException) {
             throw oj.a((Throwable) (Object) runtimeException, "si.B(" + true + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -376,7 +374,7 @@ final class si extends ic {
         }
     }
 
-    final static void a(int param0, int[][] param1, int param2, int[][][] param3, int param4) {
+    final static void a(int param0, int[][] param1, int param2, int[][][] param3, int param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -571,7 +569,7 @@ final class si extends ic {
         return ii.field_g[var4];
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_K = null;
         int var1 = 0;
         field_H = null;

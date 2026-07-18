@@ -25,12 +25,12 @@ final class pe extends nm {
         field_k = null;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         int var1 = -95;
         ta.a(true, false);
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         int var1 = 0;
         return ci.field_u - np.field_b;
     }

@@ -791,8 +791,7 @@ final class oc extends je {
             ((oc) this).field_Mb.a(jn.field_d, -20500, var9_int, 3 + jn.field_d, 5);
             var10 = var9_int + 10;
             var11 = 3 + (2 * jn.field_d + 3);
-            int discarded$1 = -1;
-            var12 = jp.a(param0, param2, var10);
+            var12 = jp.a(param0, param2, var10, -1);
             var13 = pd.a(var11, 0, param1, param3);
             ((oc) this).a(var11, -20500, var10, var13, var12);
             break L0;

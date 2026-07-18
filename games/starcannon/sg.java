@@ -273,7 +273,7 @@ final class sg {
         ki.a(param1, param2, param4, param3, param0);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_o = null;
         field_n = null;
         field_i = null;
@@ -414,9 +414,9 @@ final class sg {
             ((sg) this).field_l = param1;
             ((sg) this).field_b = -1;
             ((sg) this).field_r = 3;
-            il discarded$15 = var4.a(0, (byte) -76).c(15658734, 2).a(el.b(10066329, 22396, 7829367, 8947848), (byte) -74);
-            il discarded$16 = var4.a(1, (byte) -76).a(el.b(10066329, 22396, 13421772, 11184810), (byte) -74);
-            il discarded$17 = var4.a(3, (byte) -76).a(el.b(7829367, 22396, 10066329, 8947848), (byte) -74).b(1, -86).a(256, 1);
+            il discarded$10 = var4.a(0, (byte) -76).c(15658734, 2).a(el.b(10066329, 22396, 7829367, 8947848), (byte) -74);
+            il discarded$11 = var4.a(1, (byte) -76).a(el.b(10066329, 22396, 13421772, 11184810), (byte) -74);
+            il discarded$12 = var4.a(3, (byte) -76).a(el.b(7829367, 22396, 10066329, 8947848), (byte) -74).b(1, -86).a(256, 1);
             var5 = new hl[9];
             var17 = new pj(32, 32);
             var19 = var17;
@@ -424,27 +424,22 @@ final class sg {
             L2: while (true) {
               if (var7_int >= var19.field_B.length) {
                 var5[4] = (hl) (Object) var19;
-                il discarded$18 = var4.a(4, (byte) -76).a(-38, true).a(var5, (byte) -74);
-                int discarded$19 = 65793;
-                int discarded$20 = 0;
-                int discarded$21 = 0;
-                int discarded$22 = -25343;
-                int discarded$23 = 0;
-                il discarded$24 = var4.a(5, (byte) -76).a(ab.b(), (byte) -74).a(-52, true).c(-1, 2);
+                il discarded$13 = var4.a(4, (byte) -76).a(-38, true).a(var5, (byte) -74);
+                il discarded$14 = var4.a(5, (byte) -76).a(ab.b(0, -25343, 0, 0, 65793), (byte) -74).a(-52, true).c(-1, 2);
                 ((sg) this).field_d = (de) (Object) var4;
                 var6 = new w(var4, true);
                 var6.field_h = 0;
                 var7 = new w(var4, true);
                 var7.field_h = 0;
                 var7.a((byte) 68, gi.a(4477, 8947848));
-                il discarded$25 = var7.a(1, (byte) -76).a(gi.a(4477, 11184810), (byte) -74).c(2236962, 2);
+                il discarded$15 = var7.a(1, (byte) -76).a(gi.a(4477, 11184810), (byte) -74).c(2236962, 2);
                 ((sg) this).field_p = (de) (Object) new ni(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                eg discarded$26 = new eg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                ci discarded$27 = new ci(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                eg discarded$16 = new eg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                ci discarded$17 = new ci(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
                 var8 = new w();
                 var18.a(-121, (hd) (Object) var8);
-                il discarded$28 = var8.a(0, (byte) -76).a(el.b(7829367, 22396, 10066329, 15658734), (byte) -74).c(1118481, 2).a((byte) -104, -1);
-                il discarded$29 = var8.a(4, (byte) -76).a(-120, true).a(var5, (byte) -74);
+                il discarded$18 = var8.a(0, (byte) -76).a(el.b(7829367, 22396, 10066329, 15658734), (byte) -74).c(1118481, 2).a((byte) -104, -1);
+                il discarded$19 = var8.a(4, (byte) -76).a(-120, true).a(var5, (byte) -74);
                 ((sg) this).field_c = (de) (Object) var8;
                 var9 = new hl[9];
                 var10 = new hl[9];

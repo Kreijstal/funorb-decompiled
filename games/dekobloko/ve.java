@@ -51,7 +51,7 @@ final class ve extends w {
     w field_sc;
     static int field_nc;
 
-    public static void h() {
+    public static void h(byte param0) {
         field_uc = null;
         field_cc = null;
         field_Gc = null;

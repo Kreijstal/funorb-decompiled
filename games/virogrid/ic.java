@@ -727,7 +727,7 @@ final class ic {
         return wg.a(ba.field_a, 0);
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void a(int param0, int param1, int param2, int param3, byte param4) {
         gk.field_g.g(58, 8);
         gk.field_g.a(((ic) this).field_C.field_u, -70);
         gk.field_g.a(param3, 66);
@@ -769,8 +769,7 @@ final class ic {
             if (!((ic) this).field_g) {
                 this.a(-13020, var6, var5, var7, var4);
             } else {
-                int discarded$0 = 85;
-                this.a(var6, var7, var5, var4);
+                this.a(var6, var7, var5, var4, (byte) 85);
             }
         }
         if (param1 != -11272) {
@@ -1458,8 +1457,7 @@ final class ic {
                     }
                     var6 = stackIn_8_0;
                     var8_int = 0;
-                    int discarded$1 = 6121;
-                    var9 = this.b(var4_int, var5, -2096, this.e(), var8_int);
+                    var9 = this.b(var4_int, var5, -2096, this.e(6121), var8_int);
                     df.c(var6, var7, ((ic) this).field_o, var9);
                     var5++;
                     continue L6;
@@ -2235,7 +2233,7 @@ final class ic {
         oj.b(-9, ((ic) this).field_r);
     }
 
-    private final void a(mg param0, boolean param1) {
+    private final void a(mg param0, boolean param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -2328,8 +2326,7 @@ final class ic {
             df.b(100, 0, 10, 400, 0);
             df.b(530, 0, 10, 400, 0);
             df.b(110, 0, 420, 400, 263172);
-            int discarded$4 = 6121;
-            var4_int = this.e();
+            var4_int = this.e(6121);
             L1: {
               if (var4_int <= 0) {
                 stackOut_5_0 = -var4_int;
@@ -2459,8 +2456,7 @@ final class ic {
                             }
                             var8 = this.a(param1, 4347, ((ic) this).field_x);
                             var9 = this.a(((ic) this).field_h, 5975);
-                            int discarded$5 = 16776964;
-                            df.f(var8, var9, ((ic) this).field_d);
+                            df.f(var8, var9, ((ic) this).field_d, 16776964);
                             break L11;
                           }
                         }
@@ -2485,8 +2481,7 @@ final class ic {
                               if (!ke.field_p.field_k) {
                                 break L16;
                               } else {
-                                int discarded$6 = 8;
-                                wd.b();
+                                wd.b(8);
                                 break L16;
                               }
                             }
@@ -2741,8 +2736,7 @@ final class ic {
                                   if (~((ic) this).field_w <= ~(-150 + sh.field_yb[((ic) this).field_C.field_y])) {
                                     break L29;
                                   } else {
-                                    int discarded$7 = 16776964;
-                                    df.f(var8, var9, ((ic) this).field_d - -1);
+                                    df.f(var8, var9, ((ic) this).field_d - -1, 16776964);
                                     break L29;
                                   }
                                 }
@@ -3593,8 +3587,7 @@ final class ic {
                         }
                         var7 = stackIn_41_0;
                         var8 = -(((ic) this).field_r * ((ic) this).field_h) + (-((ic) this).field_p + 370);
-                        int discarded$3 = 16776964;
-                        df.f(var7, var8, ((ic) this).field_o);
+                        df.f(var7, var8, ((ic) this).field_o, 16776964);
                         break L4;
                       }
                     }
@@ -3618,10 +3611,8 @@ final class ic {
                           }
                           var7 = stackIn_47_0;
                           var8 = -((ic) this).field_p + (370 + -(((ic) this).field_A.field_k * ((ic) this).field_r));
-                          int discarded$4 = 16776964;
-                          df.f(var7, var8, ((ic) this).field_o);
-                          int discarded$5 = 16776964;
-                          df.f(var7, var8, 1 + ((ic) this).field_o);
+                          df.f(var7, var8, ((ic) this).field_o, 16776964);
+                          df.f(var7, var8, 1 + ((ic) this).field_o, 16776964);
                           break L8;
                         }
                       }
@@ -3766,8 +3757,7 @@ final class ic {
         try {
           L0: {
             L1: {
-              int discarded$2 = 9;
-              this.a(param2, param0);
+              this.a(param2, param0, 9);
               if (param1 > 60) {
                 break L1;
               } else {
@@ -4060,8 +4050,7 @@ final class ic {
                                             if (~((ic) this).field_C.field_A != ~((ic) this).field_e) {
                                               break L14;
                                             } else {
-                                              int discarded$3 = 85;
-                                              this.a(((ic) this).field_A.field_c, ((ic) this).field_A.field_k, var13, var12);
+                                              this.a(((ic) this).field_A.field_c, ((ic) this).field_A.field_k, var13, var12, (byte) 85);
                                               ((ic) this).field_A.field_c = -1;
                                               ((ic) this).field_A.field_k = -1;
                                               ((ic) this).field_D = false;
@@ -4077,7 +4066,7 @@ final class ic {
                                         } else {
                                           L15: {
                                             if (!((ic) this).field_C.a((byte) 127, var13, var12, (byte)((ic) this).field_C.field_A)) {
-                                              pe discarded$4 = vm.a((byte) 30, of.field_b);
+                                              pe discarded$2 = vm.a((byte) 30, of.field_b);
                                               break L15;
                                             } else {
                                               break L15;
@@ -4126,7 +4115,7 @@ final class ic {
                                 } else {
                                   if (param5 == 2) {
                                     if (((ic) this).field_A.field_c != -1) {
-                                      pe discarded$5 = vm.a((byte) 30, of.field_b);
+                                      pe discarded$3 = vm.a((byte) 30, of.field_b);
                                       ((ic) this).field_A.field_c = -1;
                                       ((ic) this).field_A.field_k = -1;
                                       break L9;
@@ -4178,7 +4167,7 @@ final class ic {
         return -((ic) this).field_p + 370 - ((ic) this).field_r * param0;
     }
 
-    private final int e() {
+    private final int e(int param0) {
         int var2 = 31 & id.field_r >> 1;
         if (!(var2 < 16)) {
             var2 = 32 + -var2;

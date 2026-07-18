@@ -21,7 +21,7 @@ abstract class md extends gb {
     static oh[] field_B;
     static String field_w;
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
+    final static void a(int param0, int param1, boolean param2, int param3, byte param4, int param5, boolean param6) {
         int var7_int = 0;
         je var8 = null;
         long var9 = 0L;
@@ -1063,7 +1063,7 @@ abstract class md extends gb {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_B = null;
         field_z = null;
         field_y = null;

@@ -224,7 +224,7 @@ final class me implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_5_0 = 0;
@@ -629,8 +629,8 @@ final class me implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     final static boolean b(int param0) {
         if (param0 <= 8) {
-            int discarded$12 = 1;
-            boolean discarded$15 = me.a((String) null, (String) null);
+            Object var2 = null;
+            boolean discarded$3 = me.a((String) null, (String) null, true);
             if (j.field_l < 10) {
                 return false;
             }

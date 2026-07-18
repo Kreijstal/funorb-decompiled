@@ -398,7 +398,7 @@ final class hr extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void a(ml param0) {
+    final static void a(ml param0, int param1) {
         try {
             param0.a(1, 0, new ml(13));
             param0.a(1, 8, new ml(13));

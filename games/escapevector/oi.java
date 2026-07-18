@@ -12,14 +12,14 @@ final class oi extends bj implements qn, qb {
     static int[] field_L;
     static String field_N;
 
-    private final void j() {
+    private final void j(int param0) {
         if (!(this.l(84))) {
             return;
         }
         ej.a((byte) -116, ((oi) this).field_I.field_l);
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_N = null;
         field_O = null;
         field_J = null;
@@ -29,13 +29,12 @@ final class oi extends bj implements qn, qb {
 
     private final boolean l(int param0) {
         Object var3 = null;
-        int discarded$4 = -95;
-        if (!this.a((og) (Object) ((oi) this).field_I)) {
+        if (!this.a((og) (Object) ((oi) this).field_I, -95)) {
           return false;
         } else {
           if (param0 <= 47) {
             var3 = null;
-            int discarded$5 = this.a(-69, (String) null, (hm) null, -35, (byte) 72, (String) null);
+            int discarded$2 = this.a(-69, (String) null, (hm) null, -35, (byte) 72, (String) null);
             return true;
           } else {
             return true;
@@ -396,7 +395,7 @@ final class oi extends bj implements qn, qb {
         }
     }
 
-    private final boolean a(og param0) {
+    private final boolean a(og param0, int param1) {
         el var3 = null;
         RuntimeException var3_ref = null;
         rf var4 = null;
@@ -664,8 +663,7 @@ final class oi extends bj implements qn, qb {
                 if (param0 != ((oi) this).field_G) {
                   break L0;
                 } else {
-                  int discarded$2 = -125;
-                  this.j();
+                  this.j(-125);
                   return;
                 }
               } else {
@@ -795,7 +793,7 @@ final class oi extends bj implements qn, qb {
         return stackIn_12_0;
     }
 
-    final static int k() {
+    final static int k(int param0) {
         return gf.field_a;
     }
 

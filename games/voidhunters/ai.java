@@ -4,7 +4,7 @@
 final class ai {
     private static String field_z;
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         hra.field_o = !param0 ? new bs(bd.field_a, rsa.field_o) : new bs(tnb.field_p, wo.field_p);
         rga.field_g = new llb(0L, (llb) null);
         rga.field_g.b(-561, (llb) (Object) hra.field_o.field_a);

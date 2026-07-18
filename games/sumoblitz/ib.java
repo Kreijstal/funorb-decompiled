@@ -50,7 +50,7 @@ final class ib extends rq {
         return ((ib) this).field_f.c(51);
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_g = null;
     }
 

@@ -139,7 +139,7 @@ final class hb implements cg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 13;
         field_m = null;
         field_b = null;
@@ -424,8 +424,7 @@ final class hb implements cg {
         try {
           L0: {
             tb.a(-1, (java.awt.Component) (Object) param1);
-            int discarded$2 = 1;
-            pi.a((java.awt.Component) (Object) param1);
+            pi.a((java.awt.Component) (Object) param1, 1);
             L1: {
               if (sc.field_e == null) {
                 break L1;

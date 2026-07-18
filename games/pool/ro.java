@@ -127,7 +127,7 @@ final class ro {
         return stackIn_10_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int[] var1_array = null;
         int var3 = 0;
@@ -204,8 +204,7 @@ final class ro {
               }
               L5: {
                 if (em.field_K) {
-                  int discarded$1 = 47;
-                  kk.g();
+                  kk.g(47);
                   if (ne.field_w == 18) {
                     if (oe.a(false, hp.field_c)) {
                       s.field_c[18].a(0, 0, false);
@@ -472,7 +471,7 @@ final class ro {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_g = null;
         field_v = null;

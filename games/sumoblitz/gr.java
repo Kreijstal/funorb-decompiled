@@ -115,7 +115,7 @@ final class gr extends bq {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_g = null;
         field_h = null;
     }
@@ -386,7 +386,7 @@ final class gr extends bq {
         }
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;

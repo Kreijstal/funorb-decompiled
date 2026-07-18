@@ -287,13 +287,12 @@ final class vc {
                 if (var4_int == 0) {
                   break L3;
                 } else {
-                  String discarded$5 = var1_ref.g(2);
+                  String discarded$3 = var1_ref.g(2);
                   break L3;
                 }
               }
               L4: {
-                int discarded$6 = 256;
-                var6 = tg.a(var5_ref_String);
+                var6 = tg.a(var5_ref_String, 256);
                 var7 = var1_ref.g(2);
                 var8 = ua.a(-74, (CharSequence) (Object) var5_ref_String);
                 if (var8 != null) {
@@ -307,8 +306,7 @@ final class vc {
                 if (var6 != null) {
                   break L5;
                 } else {
-                  int discarded$7 = 256;
-                  var6 = tg.a(var7);
+                  var6 = tg.a(var7, 256);
                   if (null == var6) {
                     break L5;
                   } else {
@@ -321,9 +319,9 @@ final class vc {
                 if (var6 == null) {
                   var6 = new ti();
                   qb.field_a.a(-1, (o) (Object) var6, (long)var8.hashCode());
-                  int fieldTemp$8 = rl.field_e;
+                  int fieldTemp$4 = rl.field_e;
                   rl.field_e = rl.field_e + 1;
-                  var6.field_ab = fieldTemp$8;
+                  var6.field_ab = fieldTemp$4;
                   ii.field_c.a(-109, (ca) (Object) var6);
                   break L6;
                 } else {
@@ -372,9 +370,9 @@ final class vc {
                   if (null == var7_ref) {
                     var7_ref = new ti();
                     ge.field_c.a(-1, (o) (Object) var7_ref, (long)ua.a(-94, (CharSequence) (Object) var5_ref_String).hashCode());
-                    int fieldTemp$9 = tl.field_a;
+                    int fieldTemp$5 = tl.field_a;
                     tl.field_a = tl.field_a + 1;
-                    var7_ref.field_ab = fieldTemp$9;
+                    var7_ref.field_ab = fieldTemp$5;
                     lf.field_b.a(-107, (ca) (Object) var7_ref);
                     break L10;
                   } else {
@@ -558,13 +556,21 @@ final class vc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            field_i = null;
-            field_g = null;
+            L1: {
+              field_i = null;
+              field_g = null;
+              if (param0 > 68) {
+                break L1;
+              } else {
+                field_b = null;
+                break L1;
+              }
+            }
             field_b = null;
             field_n = null;
             break L0;
@@ -572,7 +578,7 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var1, "vc.D(" + 116 + ')');
+          throw dd.a((Throwable) (Object) var1, "vc.D(" + param0 + ')');
         }
     }
 
@@ -623,7 +629,12 @@ final class vc {
                     }
                   }
                 }
-                break L2;
+                if (!param0) {
+                  break L2;
+                } else {
+                  vc.a((byte) -46);
+                  break L2;
+                }
               }
               var2_int = 0;
               L4: while (true) {
@@ -860,7 +871,7 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var2, "vc.B(" + false + ')');
+          throw dd.a((Throwable) (Object) var2, "vc.B(" + param0 + ')');
         }
     }
 
@@ -1079,13 +1090,12 @@ final class vc {
                         L14: {
                           p.field_c = cd.field_t.c((byte) -89);
                           va.field_d = cd.field_t.b((byte) 90);
-                          int discarded$8 = cd.field_t.b((byte) 90);
+                          int discarded$6 = cd.field_t.b((byte) 90);
                           tc.field_b = cd.field_t.j(98203176);
                           var6_ref = cd.field_t.i(-1);
                           var7 = cd.field_t.b((byte) 90);
                           if ((var7 & 1) != 0) {
-                            int discarded$9 = 124;
-                            gd.a();
+                            gd.a((byte) 124);
                             break L14;
                           } else {
                             break L14;
@@ -1129,9 +1139,9 @@ final class vc {
                         L18: {
                           L19: {
                             if (mg.field_g) {
-                              int discarded$10 = cd.field_t.b((byte) 90);
-                              int discarded$11 = cd.field_t.b((byte) 90);
-                              int discarded$12 = cd.field_t.l(0);
+                              int discarded$7 = cd.field_t.b((byte) 90);
+                              int discarded$8 = cd.field_t.b((byte) 90);
+                              int discarded$9 = cd.field_t.l(0);
                               cf.field_c = cd.field_t.j(98203176);
                               ij.field_h = new byte[cf.field_c];
                               var8 = 0;
@@ -1201,7 +1211,7 @@ final class vc {
                               } else {
                                 try {
                                   L26: {
-                                    Object discarded$13 = gm.a(-31183, "unzap", uj.b((byte) -120));
+                                    Object discarded$10 = gm.a(-31183, "unzap", uj.b((byte) -120));
                                     decompiledRegionSelector0 = 0;
                                     break L26;
                                   }
@@ -1228,7 +1238,7 @@ final class vc {
                           }
                           try {
                             L28: {
-                              Object discarded$14 = gm.a(true, "zap", new Object[1], uj.b((byte) -120));
+                              Object discarded$11 = gm.a(true, "zap", new Object[1], uj.b((byte) -120));
                               break L28;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -1330,8 +1340,7 @@ final class vc {
                       } else {
                         L38: {
                           L39: {
-                            int discarded$15 = -1;
-                            if (30000L >= ed.b()) {
+                            if (30000L >= ed.b(-1)) {
                               break L39;
                             } else {
                               kk.field_Y = ee.field_c;

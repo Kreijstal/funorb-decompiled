@@ -189,8 +189,7 @@ final class gj {
             }
             ea.a(ga.field_o, nc.field_c, 0, dj.field_c, (dh) (Object) di.field_l);
             di.field_l.g(-var5_int + di.field_l.field_k, -20125);
-            int discarded$1 = 0;
-            bc.a(-1);
+            bc.a(-1, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -343,7 +342,7 @@ final class gj {
         return stackIn_17_0 != 0;
     }
 
-    final static void a(bm param0, bm param1, int param2, int param3, pk param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, bm param14, int param15, int param16, pk param17) {
+    final static void a(bm param0, bm param1, int param2, int param3, pk param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, bm param14, int param15, int param16, pk param17, int param18, int param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -427,9 +426,7 @@ final class gj {
             aj.a(param7, -19605, param5, param15, param12);
             tb.a(320, 21361, 240);
             uh.a(param0, param1, 6, 12, -128, 12);
-            int discarded$2 = -1;
-            int discarded$3 = 12;
-            ph.a(12, param14);
+            ph.a(12, param14, 12, -1);
             kb.a(16777215, 16711680, 16744576, (byte) -83);
             break L0;
           }

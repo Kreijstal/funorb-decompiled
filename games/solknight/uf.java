@@ -175,7 +175,7 @@ class uf extends af {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_s = null;
         field_r = null;
     }
@@ -247,7 +247,7 @@ class uf extends af {
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
         try {
             Exception var1 = null;
             Throwable decompiledCaughtException = null;

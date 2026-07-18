@@ -76,15 +76,14 @@ final class mr extends iw implements oo {
         }
     }
 
-    final static String m() {
+    final static String m(byte param0) {
         String var1 = "";
         if (!(null == jt.field_o)) {
             var1 = jt.field_o.a(30);
         }
         int var2 = 80;
         if (0 == var1.length()) {
-            int discarded$0 = 120;
-            var1 = dla.c();
+            var1 = dla.c(120);
         }
         if (!(0 != var1.length())) {
             var1 = job.field_o;
@@ -92,7 +91,7 @@ final class mr extends iw implements oo {
         return var1;
     }
 
-    public static void l() {
+    public static void l(byte param0) {
         field_L = null;
         field_M = null;
         field_J = null;

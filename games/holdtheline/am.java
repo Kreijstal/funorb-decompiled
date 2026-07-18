@@ -22,7 +22,7 @@ final class am implements dh {
         }
     }
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -42,10 +42,8 @@ final class am implements dh {
         String stackOut_4_2 = null;
         try {
           L0: {
-            int discarded$16 = -116;
-            vd.a((java.awt.Component) (Object) param0);
-            int discarded$17 = 31;
-            gk.a((java.awt.Component) (Object) param0);
+            vd.a((java.awt.Component) (Object) param0, -116);
+            gk.a((java.awt.Component) (Object) param0, 31);
             if (null == lb.field_u) {
               break L0;
             } else {
@@ -143,7 +141,7 @@ final class am implements dh {
             }
             L4: {
               var6_int = stackIn_8_0;
-              int discarded$2 = ((am) this).field_a.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_q + "</u>", param3.field_k + param1, param3.field_o + param4, param3.field_x, param3.field_u, var6_int, -1, ((am) this).field_e, ((am) this).field_g, ((am) this).field_a.field_G - -((am) this).field_a.field_I);
+              int discarded$1 = ((am) this).field_a.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_q + "</u>", param3.field_k + param1, param3.field_o + param4, param3.field_x, param3.field_u, var6_int, -1, ((am) this).field_e, ((am) this).field_g, ((am) this).field_a.field_G - -((am) this).field_a.field_I);
               if (!param3.c((byte) -20)) {
                 break L4;
               } else {
@@ -177,8 +175,7 @@ final class am implements dh {
                     }
                   }
                 }
-                int discarded$3 = 19;
-                ei.a(var8, 4 + var7, -2 + var9, var10 - -2);
+                ei.a(var8, 4 + var7, -2 + var9, var10 - -2, (byte) 19);
                 break L4;
               }
             }

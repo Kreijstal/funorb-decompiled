@@ -145,8 +145,7 @@ final class lp {
                       }
                     }
                   }
-                  int discarded$1 = 0;
-                  var2.b((byte) -81, (vg) (Object) hb.a(var3));
+                  var2.b((byte) -81, (vg) (Object) hb.a(var3, false));
                   continue L1;
                 }
               }
@@ -280,7 +279,7 @@ final class lp {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
     }
 

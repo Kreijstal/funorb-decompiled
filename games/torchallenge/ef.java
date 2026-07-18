@@ -17,7 +17,7 @@ final class ef {
     static int field_k;
     static ka[][] field_h;
 
-    final static void a(int param0, h param1) {
+    final static void a(int param0, h param1, byte param2, int param3) {
         try {
             mg.field_d = 0;
             i.field_m = 0;
@@ -204,7 +204,7 @@ final class ef {
         return stackIn_7_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
         field_i = null;
         field_f = null;
@@ -214,7 +214,7 @@ final class ef {
         field_d = null;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -353,14 +353,12 @@ final class ef {
                       if (qc.field_a.length <= var17_int) {
                         var23[var16] = -2147483648;
                         var17 = qc.field_a[var16];
-                        int discarded$3 = 0;
-                        ue.a(var16);
+                        ue.a(var16, false);
                         var18 = 0;
                         L5: while (true) {
                           if (var18 >= 3) {
                             rj.a((byte) -77, false, uf.field_n, var17, true, false, sf.field_b);
-                            int discarded$4 = -16711780;
-                            ul.a(var7, var8, var13, var14, var12, var17, var9);
+                            ul.a(var7, var8, var13, var14, var12, var17, var9, -16711780);
                             var15++;
                             continue L3;
                           } else {
@@ -386,8 +384,7 @@ final class ef {
               } else {
                 var4_ref_vg = qc.field_a[var3];
                 var4_ref_vg.b(-105);
-                int discarded$5 = 0;
-                ue.a(var3);
+                ue.a(var3, false);
                 var5 = var4_ref_vg.field_p - -var4_ref_vg.field_e >> 1;
                 var6 = var4_ref_vg.field_K + var4_ref_vg.field_N >> 1;
                 var7 = var4_ref_vg.field_B + var4_ref_vg.field_h >> 1;
@@ -410,7 +407,7 @@ final class ef {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;

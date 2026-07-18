@@ -12,7 +12,7 @@ abstract class ab {
 
     abstract void a(float param0, int param1, float param2, float param3, int param4, int param5, int param6, float[] param7, int param8, float param9, int param10);
 
-    final static void a(int param0, jn param1, ah param2, int param3, int param4, int param5) {
+    final static void a(int param0, jn param1, ah param2, int param3, int param4, int param5, byte param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -109,19 +109,17 @@ abstract class ab {
                   if (~stackIn_14_0 >= ~var8) {
                     break L0;
                   } else {
-                    int discarded$3 = -96;
-                    var9 = new float[]{0.0f, (float)(-(1 + fi.a(40, he.field_o)))};
-                    float[] dupTemp$4 = kt.a((byte) -52, var9, (float)(0.0 + (double)(2048.0f / (float)var8) * 0.017453292519943295));
-                    var12 = dupTemp$4;
-                    var9 = dupTemp$4;
+                    var9 = new float[]{0.0f, (float)(-(1 + fi.a(40, he.field_o, (byte) -96)))};
+                    float[] dupTemp$1 = kt.a((byte) -52, var9, (float)(0.0 + (double)(2048.0f / (float)var8) * 0.017453292519943295));
+                    var12 = dupTemp$1;
+                    var9 = dupTemp$1;
                     param1.a((ms) (Object) new cl(64, (int)var12[0] << 11, (int)var12[1] << 11, param0, -(int)var12[0] << 8, -(int)var12[1] << 8, 1, param2), (byte) 39);
                     var8++;
                     continue L4;
                   }
                 }
               } else {
-                int discarded$5 = -96;
-                var9 = new float[]{0.0f, (float)(-(fi.a(40, he.field_o) + 1))};
+                var9 = new float[]{0.0f, (float)(-(fi.a(40, he.field_o, (byte) -96) + 1))};
                 var16 = kt.a((byte) -33, var9, (float)((double)(2048.0f / (float)var8) * 0.017453292519943295 + 0.0));
                 var15 = var16;
                 var14 = var15;
@@ -191,7 +189,7 @@ abstract class ab {
         }
     }
 
-    final static byte[] a(boolean param0, Object param1) {
+    final static byte[] a(boolean param0, Object param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         nn var4 = null;
@@ -222,8 +220,7 @@ abstract class ab {
         try {
           if (param1 != null) {
             if (!(param1 instanceof byte[])) {
-              int discarded$5 = -28;
-              ab.a();
+              ab.a(-28);
               if (!(param1 instanceof nn)) {
                 throw new IllegalArgumentException();
               } else {
@@ -281,7 +278,7 @@ abstract class ab {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_e = null;

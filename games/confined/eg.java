@@ -17,7 +17,7 @@ final class eg {
     private int[][] field_b;
     static boolean field_l;
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 1 + ((eg) this).field_h;
         if (15 == var2) {
             var2 = 0;
@@ -115,9 +115,7 @@ final class eg {
                                         if (param1 != 100) {
                                           if (101 == param1) {
                                             var18 = ij.a(0, '#', qh.field_z);
-                                            int discarded$6 = 0;
-                                            int discarded$7 = 320;
-                                            this.a(50, var18[0], (String) null, 4, var18[1], 0, (String) null, 0, (String) null, false, (String) null, 0, 0);
+                                            this.a(50, var18[0], (String) null, 4, var18[1], 0, (String) null, 0, (String) null, false, (String) null, 0, 0, 320, 0);
                                             this.a(0, 500, (nf) null, 0, 0);
                                             break L1;
                                           } else {
@@ -148,9 +146,7 @@ final class eg {
                                         }
                                       } else {
                                         var14 = ij.a(0, '#', rb.field_i);
-                                        int discarded$8 = 0;
-                                        int discarded$9 = 320;
-                                        this.a(25, var14[0], (String) null, 4, var14[1], 0, (String) null, 0, (String) null, false, (String) null, 0, 0);
+                                        this.a(25, var14[0], (String) null, 4, var14[1], 0, (String) null, 0, (String) null, false, (String) null, 0, 0, 320, 0);
                                         this.a(0, 1500, (nf) null, 0, 0);
                                         break L1;
                                       }
@@ -201,9 +197,7 @@ final class eg {
                     }
                   } else {
                     var7 = ij.a(0, '#', sa.field_W);
-                    int discarded$10 = 0;
-                    int discarded$11 = 320;
-                    this.a(0, var7[2], var7[4], 4, (String) null, 0, var7[0] + " . . . ", 0, var7[3] + " . . . . . . . . . ", true, var7[1], 80, 50);
+                    this.a(0, var7[2], var7[4], 4, (String) null, 0, var7[0] + " . . . ", 0, var7[3] + " . . . . . . . . . ", true, var7[1], 80, 50, 320, 0);
                     this.a(376, 600, new nf(104, 104), 0, 536);
                     break L1;
                   }
@@ -613,8 +607,7 @@ final class eg {
         String var22 = null;
         L0: {
           var17 = Confined.field_J ? 1 : 0;
-          int discarded$1 = 983;
-          this.d();
+          this.d(983);
           var2 = fn.field_b;
           fn.field_b = 376;
           if (param0 >= 118) {
@@ -950,7 +943,7 @@ final class eg {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int[] var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -1396,7 +1389,7 @@ final class eg {
         }
     }
 
-    private final void a(int param0, String param1, String param2, int param3, String param4, int param5, String param6, int param7, String param8, boolean param9, String param10, int param11, int param12) {
+    private final void a(int param0, String param1, String param2, int param3, String param4, int param5, String param6, int param7, String param8, boolean param9, String param10, int param11, int param12, int param13, int param14) {
         RuntimeException var16 = null;
         int var16_int = 0;
         String var17 = null;
@@ -1902,8 +1895,7 @@ final class eg {
                 if (((eg) this).field_e != ((eg) this).field_a) {
                   break L2;
                 } else {
-                  int discarded$1 = 170;
-                  this.a();
+                  this.a(170);
                   break L2;
                 }
               }

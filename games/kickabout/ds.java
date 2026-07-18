@@ -11,7 +11,7 @@ final class ds {
     static boolean field_g;
     static String field_f;
 
-    final static gf[] a(ml param0) {
+    final static gf[] a(ml param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -53,16 +53,15 @@ final class ds {
                   break L0;
                 } else {
                   L2: {
-                    int discarded$83 = -39;
-                    if (mu.a(param0)) {
+                    if (mu.a(param0, (byte) -39)) {
                       var6 = new gf();
-                      int discarded$84 = param0.l(24, 59);
-                      int discarded$85 = param0.l(24, 59);
+                      int discarded$102 = param0.l(24, 59);
+                      int discarded$103 = param0.l(24, 59);
                       var6.field_g = param0.l(24, 59);
-                      int discarded$86 = param0.l(9, 59);
-                      int discarded$87 = param0.l(12, 59);
-                      int discarded$88 = param0.l(12, 59);
-                      int discarded$89 = param0.l(12, 59);
+                      int discarded$104 = param0.l(9, 59);
+                      int discarded$105 = param0.l(12, 59);
+                      int discarded$106 = param0.l(12, 59);
+                      int discarded$107 = param0.l(12, 59);
                       var4[var5] = var6;
                       var5++;
                       break L2;
@@ -167,7 +166,7 @@ final class ds {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_f = null;
         field_a = null;

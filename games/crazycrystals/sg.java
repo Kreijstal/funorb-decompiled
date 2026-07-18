@@ -5,7 +5,7 @@ final class sg {
     static boolean field_a;
     static u field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
     }
 
@@ -13,8 +13,7 @@ final class sg {
         fg.field_i = null;
         ba.field_h = null;
         if (param0 <= 79) {
-            int discarded$0 = 1;
-            sg.a();
+            sg.a(true);
         }
     }
 

@@ -26,7 +26,7 @@ final class gl {
         }
     }
 
-    final static bd[] a(bd param0) {
+    final static bd[] a(bd param0, int param1, int param2) {
         int var10 = 0;
         bd[] var3 = new bd[160];
         int[][] var4 = new int[160][];
@@ -44,8 +44,7 @@ final class gl {
                 var7 = 0;
                 var8 = var8 + var6;
             }
-            int discarded$0 = 0;
-            eh.b();
+            eh.b(false);
         }
         return var3;
     }

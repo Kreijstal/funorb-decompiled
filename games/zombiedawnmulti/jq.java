@@ -12,7 +12,7 @@ final class jq {
     static uj field_d;
     static ri field_e;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_e = null;
         field_c = null;
@@ -70,7 +70,7 @@ final class jq {
         }
     }
 
-    final static void a(k param0) {
+    final static void a(k param0, int param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;

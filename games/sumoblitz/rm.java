@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rm {
-    final static void a() {
+    final static void a(byte param0) {
         if (~-gi.field_i == ~td.field_u) {
             return;
         }

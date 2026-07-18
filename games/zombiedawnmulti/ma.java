@@ -16,7 +16,7 @@ final class ma {
         }
     }
 
-    final static void a(cj param0, cj param1) {
+    final static void a(cj param0, cj param1, boolean param2) {
         if (!(param0.field_Cb != null)) {
             param0.field_Cb = new th();
         }
@@ -32,8 +32,7 @@ final class ma {
         try {
             jf.field_d = param1.field_Cb;
             ro.field_M = param0.field_Cb;
-            int discarded$0 = -8328;
-            cf.d();
+            cf.d(-8328);
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) (Object) runtimeException, "ma.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + true + ')');
         }

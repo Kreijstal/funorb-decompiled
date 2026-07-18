@@ -37,7 +37,7 @@ final class av {
         }
     }
 
-    final static String a(byte param0, boolean param1, boolean param2) {
+    final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
         if (param1) {
             var4 += 4;
@@ -54,7 +54,7 @@ final class av {
         return mi.b(param1, param2, 22547) & ta.a(param2, param1, (byte) 82);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_a = null;

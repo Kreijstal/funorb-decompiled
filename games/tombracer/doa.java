@@ -4,7 +4,7 @@
 final class doa {
     private va field_a;
 
-    final static jua a(String param0, int param1) {
+    final static jua a(String param0, int param1, byte param2) {
         jua var3 = null;
         RuntimeException var3_ref = null;
         jua stackIn_1_0 = null;

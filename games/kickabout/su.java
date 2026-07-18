@@ -354,7 +354,7 @@ final class su {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -387,8 +387,7 @@ final class su {
           L0: {
             L1: {
               var2_int = 0;
-              int discarded$2 = -576054046;
-              var3 = (gp.a(param1) << 1) / 3;
+              var3 = (gp.a(param1, -576054046) << 1) / 3;
               if (var3 < 10) {
                 var3 = 10;
                 break L1;

@@ -7,7 +7,7 @@ final class om extends o {
     int field_k;
     static boolean field_l;
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(ga.a(true))) {
             return;
         }
@@ -39,8 +39,7 @@ final class om extends o {
         String stackOut_6_2 = null;
         try {
           L0: {
-            int discarded$7 = 83;
-            if (tj.a(param1, param3, param0)) {
+            if (tj.a(param1, param3, param0, (byte) 83)) {
               stackOut_3_0 = dl.a(-15326);
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -83,19 +82,17 @@ final class om extends o {
         return stackIn_4_0;
     }
 
-    final static km[] a(int param0, int param1, int param2) {
+    final static km[] a(int param0, int param1, int param2, byte param3) {
         int var5 = 0;
         int var7 = Chess.field_G;
         km[] var8 = new km[9];
         km[] var4 = var8;
-        int discarded$0 = 14727;
-        var8[0] = rd.a(1, param2);
+        var8[0] = rd.a(1, param2, 14727);
         int var6 = 2;
         for (var5 = 1; var5 < 9; var5++) {
             var8[var5] = var8[0];
         }
-        int discarded$1 = 14727;
-        var4[4] = rd.a(64, param1);
+        var4[4] = rd.a(64, param1, 14727);
         return var4;
     }
 

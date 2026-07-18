@@ -88,7 +88,7 @@ final class vk {
         }
     }
 
-    final static int[] a(int param0, int param1) {
+    final static int[] a(int param0, int param1, byte param2) {
         int var10 = 0;
         int var11 = 0;
         int var12 = MinerDisturbance.field_ab;

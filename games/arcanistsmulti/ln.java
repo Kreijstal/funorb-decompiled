@@ -121,7 +121,7 @@ final class ln extends df implements pj, vb, ro {
         return stackIn_16_0 != 0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_I = null;
         int var1 = -76;
         field_U = null;
@@ -132,7 +132,7 @@ final class ln extends df implements pj, vb, ro {
         field_M = null;
     }
 
-    private final boolean h() {
+    private final boolean h(int param0) {
         if (this.a(118, (el) (Object) ((ln) this).field_K)) {
           if (this.a(91, (el) (Object) ((ln) this).field_N)) {
             if (this.a(99, (el) (Object) ((ln) this).field_D)) {
@@ -360,7 +360,6 @@ final class ln extends df implements pj, vb, ro {
         tc dupTemp$1 = new tc(10000536);
         ((ln) this).field_E.field_r = (pf) (Object) dupTemp$1;
         ((ln) this).field_P.field_r = (pf) (Object) dupTemp$1;
-        int discarded$2 = 0;
         String var2 = tj.a(-23, new String[2], fn.field_d);
         int var3 = 20;
         var3 = var3 + this.a((qm) (Object) ((ln) this).field_N, bk.field_K, var3, 170, 109);
@@ -425,8 +424,7 @@ final class ln extends df implements pj, vb, ro {
             }
             if (((ln) this).field_O != param4) {
               if (((ln) this).field_C == param4) {
-                int discarded$4 = -48;
-                boolean discarded$5 = this.a();
+                boolean discarded$2 = this.a(-48);
                 break L0;
               } else {
                 return;
@@ -468,9 +466,8 @@ final class ln extends df implements pj, vb, ro {
         }
     }
 
-    private final boolean a() {
-        int discarded$0 = 0;
-        if (!(this.h())) {
+    private final boolean a(int param0) {
+        if (!(this.h(0))) {
             return false;
         }
         int var2 = -24;
@@ -576,8 +573,7 @@ final class ln extends df implements pj, vb, ro {
     final void a(qm param0, int param1, int param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = 0;
-            ((ln) this).field_C.field_B = this.h();
+            ((ln) this).field_C.field_B = this.h(0);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "ln.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -662,7 +658,7 @@ final class ln extends df implements pj, vb, ro {
         }
     }
 
-    private final String e() {
+    private final String e(boolean param0) {
         return "</col></u>";
     }
 

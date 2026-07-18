@@ -13,9 +13,9 @@ final class eb extends hc {
     static long field_J;
     static int field_K;
 
-    final static void k() {
-        int discarded$0 = 63;
-        de.a(kl.field_o, (String) null);
+    final static void k(int param0) {
+        Object var2 = null;
+        de.a(kl.field_o, (String) null, 63);
     }
 
     final static void a(byte[] param0, boolean param1) {
@@ -437,7 +437,7 @@ final class eb extends hc {
         return stackIn_17_0 != 0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_L = null;
     }
 

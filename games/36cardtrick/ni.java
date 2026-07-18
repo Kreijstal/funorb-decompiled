@@ -9,7 +9,7 @@ final class ni {
     static Boolean field_f;
     static tk field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_e = null;
         field_c = null;

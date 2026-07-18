@@ -192,7 +192,7 @@ final class fl {
         }
     }
 
-    final synchronized static byte[] a(int param0) {
+    final synchronized static byte[] a(int param0, int param1) {
         byte[] var2_ref_byte__ = null;
         int var2 = 0;
         byte[] var3 = null;
@@ -238,7 +238,7 @@ final class fl {
         return new byte[param0];
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         al var1 = (al) (Object) uc.field_a.e((byte) 86);
         if (var1 == null) {
             var1 = new al();
@@ -247,7 +247,7 @@ final class fl {
         cj.field_a.a((gg) (Object) var1, -7044);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }

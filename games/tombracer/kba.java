@@ -14,7 +14,7 @@ final class kba extends od implements wia {
     private int field_r;
     int field_n;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_u = null;
         field_k = null;
     }

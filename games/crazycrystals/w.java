@@ -101,7 +101,7 @@ final class w extends jb {
         throw new Error();
     }
 
-    final static void a() {
+    final static void a(int param0) {
     }
 
     final static jp a(byte param0, String param1) {

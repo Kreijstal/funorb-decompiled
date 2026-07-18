@@ -1334,7 +1334,7 @@ final class bh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_F = null;
         field_a = null;
         field_y = null;
@@ -2039,8 +2039,7 @@ final class bh {
                               if (!wo.a(var11, param2 + -29401)) {
                                 break L35;
                               } else {
-                                int discarded$5 = 5;
-                                if (this.e()) {
+                                if (this.e(5)) {
                                   this.j(0);
                                   break L35;
                                 } else {
@@ -2050,12 +2049,11 @@ final class bh {
                               }
                             }
                             L36: {
-                              int discarded$6 = 5;
-                              if (this.e()) {
-                                boolean discarded$7 = var10_ref_wo.a((byte) 68, 0);
+                              if (this.e(5)) {
+                                boolean discarded$2 = var10_ref_wo.a((byte) 68, 0);
                                 break L36;
                               } else {
-                                boolean discarded$8 = var10_ref_wo.a((byte) 86, qm.a(var11, (byte) -115));
+                                boolean discarded$3 = var10_ref_wo.a((byte) 86, qm.a(var11, (byte) -115));
                                 if (!he.a((byte) -100, var11)) {
                                   break L36;
                                 } else {
@@ -2116,8 +2114,7 @@ final class bh {
                             }
                             L40: {
                               ((wo) (Object) stackIn_189_0).a((byte) stackIn_189_1, stackIn_189_2 != 0);
-                              int discarded$9 = -91;
-                              this.a(var9, var10_ref_wo, param4);
+                              this.a(var9, var10_ref_wo, param4, (byte) -91);
                               if (var10_ref_wo.field_d == -1) {
                                 break L40;
                               } else {
@@ -2403,7 +2400,7 @@ final class bh {
         return 1 == ((bh) this).field_e ? true : false;
     }
 
-    private final boolean e() {
+    private final boolean e(int param0) {
         return ((bh) this).field_s;
     }
 
@@ -3478,7 +3475,7 @@ final class bh {
         return ((bh) this).field_b;
     }
 
-    private final void a(int param0, wo param1, boolean param2) {
+    private final void a(int param0, wo param1, boolean param2, byte param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -4703,8 +4700,7 @@ final class bh {
                                     L15: {
                                       if (!((bh) this).field_C) {
                                         qg.a(1, 250, 28, 0);
-                                        int discarded$1 = 12;
-                                        db.a(false, 12, (byte) 56, kc.field_b, false);
+                                        db.a(false, 12, (byte) 56, kc.field_b, false, 12);
                                         break L15;
                                       } else {
                                         break L15;

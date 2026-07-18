@@ -89,7 +89,7 @@ final class tc {
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         mj var1 = (mj) (Object) nd.field_b.b((byte) -58);
         if (!(var1 != null)) {
             th.a(109);

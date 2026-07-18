@@ -17,12 +17,12 @@ final class go {
         field_d = null;
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         int var1 = 0;
         return jl.field_e.d(-1);
     }
 
-    final static mf a(boolean param0, int param1, boolean param2, int param3, boolean param4) {
+    final static mf a(boolean param0, int param1, boolean param2, int param3, boolean param4, boolean param5) {
         try {
             Object var6 = null;
             Object var7 = null;

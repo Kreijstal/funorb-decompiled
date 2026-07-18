@@ -626,8 +626,7 @@ final class ja {
                       L7: {
                         param4[var6].field_b = param1 + var6;
                         fb.field_d[var6] = param4[var6];
-                        int discarded$1 = -105;
-                        if (le.a(ip.field_j, fb.field_d[var6].field_i)) {
+                        if (le.a(ip.field_j, fb.field_d[var6].field_i, -105)) {
                           qc.field_y = var6 + vd.field_a;
                           var5_int = 1;
                           break L7;

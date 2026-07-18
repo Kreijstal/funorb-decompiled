@@ -11,7 +11,7 @@ final class sa {
     static String[] field_b;
     static long field_e;
 
-    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
             ak.field_q[param4] = param0;
             ak.field_k[param4] = param5;
@@ -23,7 +23,7 @@ final class sa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_c = null;
@@ -31,7 +31,7 @@ final class sa {
         field_b = null;
     }
 
-    final static void a(p param0) {
+    final static void a(p param0, int param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;

@@ -9,7 +9,7 @@ final class bva extends vmb {
     static String field_g;
     static boolean field_d;
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_g = null;
         field_e = null;

@@ -196,15 +196,14 @@ final class jj {
                       L9: {
                         go.field_h = kd.field_n.d(true);
                         rb.field_h = kd.field_n.h(255);
-                        int discarded$13 = kd.field_n.h(255);
+                        int discarded$6 = kd.field_n.h(255);
                         mo.field_l = kd.field_n.c((byte) -7);
                         var6_ref = kd.field_n.a(0);
                         var7 = kd.field_n.h(255);
                         if ((var7 & 1) == 0) {
                           break L9;
                         } else {
-                          int discarded$14 = 65;
-                          jl.b();
+                          jl.b(65);
                           break L9;
                         }
                       }
@@ -247,9 +246,9 @@ final class jj {
                         if (!ag.field_b) {
                           break L13;
                         } else {
-                          int discarded$15 = kd.field_n.h(255);
-                          int discarded$16 = kd.field_n.h(255);
-                          int discarded$17 = kd.field_n.b((byte) -29);
+                          int discarded$7 = kd.field_n.h(255);
+                          int discarded$8 = kd.field_n.h(255);
+                          int discarded$9 = kd.field_n.b((byte) -29);
                           um.field_f = kd.field_n.c((byte) -7);
                           km.field_f = new byte[um.field_f];
                           var8 = 0;
@@ -271,15 +270,13 @@ final class jj {
                         kl.field_V = kd.field_n.h(255);
                         gj.field_k = ek.field_h;
                         if (mk.field_c.a(0) == of.field_C) {
-                          int discarded$18 = -20;
-                          gg.field_d.a(1, le.b());
+                          gg.field_d.a(1, le.b((byte) -20));
                           break L15;
                         } else {
                           if (mk.field_c.a(0) != uo.field_n) {
                             break L15;
                           } else {
-                            int discarded$19 = -20;
-                            wp.field_c.a(1, le.b());
+                            wp.field_c.a(1, le.b((byte) -20));
                             break L15;
                           }
                         }
@@ -289,8 +286,7 @@ final class jj {
                         if (var6_ref == null) {
                           break L16;
                         } else {
-                          int discarded$20 = -20;
-                          ah.a(-77, var6_ref, le.b());
+                          ah.a(-77, var6_ref, le.b((byte) -20));
                           break L16;
                         }
                       }
@@ -302,8 +298,7 @@ final class jj {
                             if (!qa.field_j) {
                               try {
                                 L19: {
-                                  int discarded$21 = -20;
-                                  Object discarded$22 = hi.a(le.b(), "unzap", -115);
+                                  Object discarded$10 = hi.a(le.b((byte) -20), "unzap", -115);
                                   break L19;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -321,8 +316,7 @@ final class jj {
                         }
                         try {
                           L21: {
-                            int discarded$23 = -20;
-                            Object discarded$24 = hi.a(-3729, "zap", le.b(), new Object[1]);
+                            Object discarded$11 = hi.a(-3729, "zap", le.b((byte) -20), new Object[1]);
                             break L21;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -411,8 +405,7 @@ final class jj {
                       break L28;
                     } else {
                       L29: {
-                        int discarded$25 = -1322;
-                        if (30000L < wd.d()) {
+                        if (30000L < wd.d(-1322)) {
                           re.field_j = jm.field_f;
                           break L29;
                         } else {
@@ -494,7 +487,7 @@ final class jj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_c = null;
         field_a = null;

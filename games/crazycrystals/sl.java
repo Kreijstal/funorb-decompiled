@@ -168,8 +168,7 @@ final class sl extends pn {
             int var4_int = 37 / ((param2 - 58) / 47);
             gh.field_F = param1;
             mh.a(kh.field_l / 2, -20, kh.field_d / 2);
-            int discarded$0 = -16;
-            mo.a(param0.field_u + param0.field_A, param1.field_A, param0.field_A, param1.field_A - -param1.field_u);
+            mo.a(param0.field_u + param0.field_A, param1.field_A, param0.field_A, param1.field_A - -param1.field_u, (byte) -16);
         } catch (RuntimeException runtimeException) {
             throw dn.a((Throwable) (Object) runtimeException, "sl.BA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -769,7 +768,7 @@ final class sl extends pn {
         return (f) (Object) stackIn_10_0;
     }
 
-    final static boolean a(boolean param0, CharSequence param1) {
+    final static boolean a(boolean param0, CharSequence param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -1474,7 +1473,7 @@ final class sl extends pn {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_m = null;
         field_s = null;
         field_n = null;
@@ -1509,10 +1508,10 @@ final class sl extends pn {
               if (((sl) this).field_l instanceof sl) {
                 L2: {
                   var5 = (sl) (Object) ((sl) this).field_l;
-                  if (var5.field_o.field_s > 0) {
+                  if (((sl) this).field_o.field_s > 0) {
                     break L2;
                   } else {
-                    if (0 != var5.field_o.field_s) {
+                    if (0 != ((sl) this).field_o.field_s) {
                       break L1;
                     } else {
                       if (var5.field_o.field_s <= 0) {

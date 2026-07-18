@@ -122,8 +122,7 @@ final class ff {
                   }
                 }
               }
-              int discarded$1 = 0;
-              mb.a();
+              mb.a(0);
               break L1;
             }
             var66 = new int[param7.field_A];

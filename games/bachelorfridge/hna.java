@@ -22,7 +22,7 @@ final class hna extends aba {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_h = null;
     }
 

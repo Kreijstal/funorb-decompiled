@@ -17,7 +17,7 @@ final class oj {
     String field_k;
     static int[] field_j;
 
-    final static void a() {
+    final static void a(byte param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -193,7 +193,11 @@ final class oj {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int[] var17 = null;
+        int[] var14 = null;
+        int[] var16 = null;
+        int[] var18 = null;
+        int[] var20 = null;
+        int[] var21 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
@@ -233,20 +237,23 @@ final class oj {
             L1: while (true) {
               if (var5_int >= var4_int) {
                 if (!param1) {
-                  var5 = new int[var4_int];
+                  var20 = new int[var4_int];
+                  var18 = var20;
+                  var16 = var18;
+                  var14 = var16;
+                  var5 = var14;
                   var6 = 0;
                   L2: while (true) {
                     if (var4_int <= var6) {
-                      int discarded$1 = -23588;
-                      dd.a(var5);
-                      var17 = var5;
+                      dd.a(var20, -23588);
+                      var21 = var5;
                       var7 = 0;
                       L3: while (true) {
-                        if (var7 >= var17.length) {
+                        if (var7 >= var21.length) {
                           break L0;
                         } else {
                           L4: {
-                            var8 = var17[var7];
+                            var8 = var21[var7];
                             var9 = (short)var8;
                             if (param0[var9] <= 0) {
                               break L4;
@@ -358,7 +365,7 @@ final class oj {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
         field_d = null;
         field_l = null;

@@ -94,8 +94,7 @@ final class rh {
               var5_int = ug.a((param4 - param3) * 3, 4);
               var6 = 3 * param3;
               var7 = -10 + var5_int;
-              int discarded$1 = 0;
-              al.b();
+              al.b(false);
               if (0 >= param1.field_N) {
                 break L2;
               } else {
@@ -352,13 +351,21 @@ final class rh {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
+            L1: {
+              if (param1 == -72) {
+                break L1;
+              } else {
+                field_b = null;
+                break L1;
+              }
+            }
             ee.field_a = param0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2, "rh.A(" + param0 + ',' + -72 + ')');
+          throw ma.a((Throwable) (Object) var2, "rh.A(" + param0 + ',' + param1 + ')');
         }
     }
 

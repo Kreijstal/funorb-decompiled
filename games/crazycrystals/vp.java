@@ -76,7 +76,7 @@ final class vp {
         return null;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_i = null;
         field_a = null;

@@ -8,7 +8,7 @@ final class af {
     static int field_c;
     static pj field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_e = null;
         field_b = null;
@@ -37,8 +37,7 @@ final class af {
           L0: {
             L1: {
               mh.a(-104, (java.awt.Component) (Object) param1);
-              int discarded$8 = 1;
-              o.a((java.awt.Component) (Object) param1);
+              o.a((java.awt.Component) (Object) param1, true);
               if (eb.field_A == null) {
                 break L1;
               } else {
@@ -86,14 +85,13 @@ final class af {
         }
     }
 
-    final static void a(int param0, le[] param1) {
+    final static void a(int param0, le[] param1, int param2, int param3) {
         try {
             hh.field_u = new gg(param1);
             wg.field_h = -67;
             rb.field_cb = -37;
             int var4_int = -69;
-            int discarded$0 = -123;
-            vj.a();
+            vj.a((byte) -123);
         } catch (RuntimeException runtimeException) {
             throw la.a((Throwable) (Object) runtimeException, "af.C(" + -67 + ',' + (param1 != null ? "{...}" : "null") + ',' + -37 + ',' + -110 + ')');
         }

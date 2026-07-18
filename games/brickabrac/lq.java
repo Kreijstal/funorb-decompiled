@@ -109,7 +109,7 @@ final class lq {
         }
     }
 
-    final static th[] b() {
+    final static th[] b(int param0) {
         return new th[]{un.field_b, nm.field_c, ro.field_r, an.field_i, o.field_h, c.field_m, wi.field_i, ba.field_B, pa.field_k, hj.field_Sb, sl.field_B, si.field_o, kq.field_i, lk.field_o};
     }
 
@@ -339,8 +339,7 @@ final class lq {
                   break L1;
                 }
               }
-              int discarded$2 = 0;
-              stackOut_5_0 = ud.c();
+              stackOut_5_0 = ud.c(false);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

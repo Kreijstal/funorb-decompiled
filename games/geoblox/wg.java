@@ -56,7 +56,7 @@ final class wg implements Runnable {
         ((wg) this).field_g = null;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = 26;
         field_i = null;
         field_d = null;
@@ -145,8 +145,7 @@ final class wg implements Runnable {
                       var3 = var4.getOutputStream();
                       var3.write(17);
                       var5 = (CharSequence) (Object) ("JAGGRAB " + ((wg) this).field_h.getFile() + "\n\n");
-                      int discarded$1 = 127;
-                      var3.write(jf.a(var5));
+                      var3.write(jf.a(var5, (byte) 127));
                       ((wg) this).field_c = new DataInputStream(var4.getInputStream());
                       break L7;
                     }

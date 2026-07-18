@@ -8,7 +8,7 @@ final class vk extends uh {
         super(param0, param1);
     }
 
-    final static void c() {
+    final static void c(int param0) {
         en var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -23,11 +23,10 @@ final class vk extends uh {
                 break L0;
               } else {
                 var1.i(19319, 8);
-                int fieldTemp$10 = var1.field_i + 1;
+                int fieldTemp$5 = var1.field_i + 1;
                 var1.field_i = var1.field_i + 1;
-                var2 = fieldTemp$10;
-                int discarded$11 = -111;
-                ln.a(var1);
+                var2 = fieldTemp$5;
+                ln.a(var1, (byte) -111);
                 s.field_b.a(-var2 + var1.field_i, -19720);
                 continue L1;
               }
@@ -48,7 +47,7 @@ final class vk extends uh {
         return re.field_i;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_p = null;
         int var1 = -117;
     }

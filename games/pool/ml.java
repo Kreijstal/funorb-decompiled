@@ -15,7 +15,7 @@ final class ml {
     static String field_a;
     static int[][] field_h;
 
-    final static int b() {
+    final static int b(int param0) {
         return -kk.field_z + gp.field_c;
     }
 
@@ -97,7 +97,7 @@ final class ml {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_k = null;
@@ -313,7 +313,7 @@ final class ml {
         }
     }
 
-    final static void a(int param0, oj param1) {
+    final static void a(int param0, oj param1, int param2) {
         ta.field_i.b((byte) -31, (ma) (Object) param1);
         try {
             ch.a(false, param1, 3);

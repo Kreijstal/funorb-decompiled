@@ -74,7 +74,7 @@ final class lt extends ev {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_g = null;
         field_i = null;

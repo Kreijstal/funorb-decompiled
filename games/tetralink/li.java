@@ -43,17 +43,14 @@ final class li {
             } else {
               if (pk.field_O.field_h == ra.field_f) {
                 if (null != qb.field_N) {
-                  int discarded$13 = 1;
-                  cc.a(false);
+                  cc.a(false, true);
                   break L0;
                 } else {
                   if (null == qe.field_a) {
-                    int discarded$14 = 5;
-                    db.a();
+                    db.a(5);
                     break L0;
                   } else {
-                    int discarded$15 = 1;
-                    cc.a(true);
+                    cc.a(true, true);
                     break L0;
                   }
                 }
@@ -85,8 +82,7 @@ final class li {
           tn.field_a.field_V = tn.field_b.field_V;
           tn.field_a.field_xb = 1;
           if (0 < ng.field_t) {
-            int discarded$16 = 11;
-            dg.a(param9, false, param6);
+            dg.a(param9, false, param6, 11);
             break L4;
           } else {
             break L4;
@@ -94,8 +90,7 @@ final class li {
         }
         L5: {
           if (0 < am.field_f) {
-            int discarded$17 = -87;
-            mh.a(param5, param6, 11, param9);
+            mh.a(param5, param6, 11, param9, -87);
             break L5;
           } else {
             break L5;
@@ -109,8 +104,7 @@ final class li {
               if (qb.field_N.field_jc >= qb.field_N.field_rc) {
                 hn.field_Q.field_Ob.field_jb = cb.field_s;
                 hh.field_c.field_S = false;
-                int discarded$18 = -104;
-                hd.a(hn.field_Q.field_Pb);
+                hd.a(hn.field_Q.field_Pb, (byte) -104);
                 break L6;
               } else {
                 break L7;
@@ -119,18 +113,11 @@ final class li {
           }
           hn.field_Q.field_Ob.field_jb = null;
           hh.field_c.field_S = true;
-          int discarded$19 = 11;
-          int discarded$20 = -1;
-          ci.a(param3, hn.field_Q, param7);
+          ci.a(param3, hn.field_Q, param7, -1, 11);
           break L6;
         }
-        int discarded$21 = 0;
-        int discarded$22 = 16777215;
-        int discarded$23 = -73;
-        md.a(11, 16777215, param7, param3);
-        int discarded$24 = 11;
-        int discarded$25 = -1;
-        ci.a(param3, v.field_x, param7);
+        md.a(11, 16777215, param7, param3, (byte) -73, 16777215, false);
+        ci.a(param3, v.field_x, param7, -1, 11);
         cb.field_u = cb.field_u + 1;
     }
 
@@ -201,8 +188,7 @@ final class li {
                           ((li) this).field_j = ((li) this).field_j + (-var7 + 8);
                           ((li) this).field_e = ((li) this).field_e + 1;
                           if (((li) this).field_j == 512) {
-                            int discarded$2 = 31;
-                            this.b();
+                            this.b(31);
                             ((li) this).field_e = 0;
                             ((li) this).field_j = 0;
                             break L6;
@@ -230,8 +216,7 @@ final class li {
                             if (((li) this).field_j != 512) {
                               break L8;
                             } else {
-                              int discarded$3 = 31;
-                              this.b();
+                              this.b(31);
                               ((li) this).field_e = 0;
                               ((li) this).field_j = 0;
                               break L8;
@@ -292,7 +277,7 @@ final class li {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var6 = 0;
@@ -331,7 +316,7 @@ final class li {
         field_l = null;
     }
 
-    final static String a(int param0, String param1) {
+    final static String a(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         bc var5 = null;
@@ -468,6 +453,7 @@ final class li {
 
     final static void a(int param0, oh[] param1, int param2, boolean param3, int param4, int param5, int param6, oh[] param7, int param8, int param9, jb param10, int param11, jb param12, int param13, int param14) {
         RuntimeException var15 = null;
+        Object var16 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
@@ -531,8 +517,8 @@ final class li {
         String stackOut_12_2 = null;
         try {
           L0: {
-            int discarded$2 = 480;
-            ll.a(param13, (oh[]) null, param10, lk.field_wb, mc.field_b, -11319, param5, 0, param2, param14, 0, param8, param9, param7, ve.field_b, param6, param12, param0, param11, param1);
+            var16 = null;
+            ll.a(param13, (oh[]) null, param10, lk.field_wb, mc.field_b, -11319, param5, 0, param2, param14, 0, param8, param9, param7, ve.field_b, param6, param12, param0, param11, param1, 480);
             gb.a((byte) -75, param3);
             break L0;
           }
@@ -817,14 +803,13 @@ final class li {
               } else {
                 L2: while (true) {
                   if (-65 <= ((li) this).field_e) {
-                    int discarded$4 = 31;
-                    this.b();
+                    this.b(31);
                     ((li) this).field_e = 0;
                     break L1;
                   } else {
-                    int fieldTemp$5 = ((li) this).field_e;
+                    int fieldTemp$2 = ((li) this).field_e;
                     ((li) this).field_e = ((li) this).field_e + 1;
-                    ((li) this).field_n[fieldTemp$5] = (byte) 0;
+                    ((li) this).field_n[fieldTemp$2] = (byte) 0;
                     continue L2;
                   }
                 }
@@ -834,8 +819,7 @@ final class li {
               if (((li) this).field_e >= 32) {
                 L4: {
                   rd.a(((li) this).field_f, 0, ((li) this).field_n, 32, 32);
-                  int discarded$6 = 31;
-                  this.b();
+                  this.b(31);
                   var4_int = 0;
                   var5 = param1;
                   if (param2 < -39) {
@@ -864,9 +848,9 @@ final class li {
                   }
                 }
               } else {
-                int fieldTemp$7 = ((li) this).field_e;
+                int fieldTemp$3 = ((li) this).field_e;
                 ((li) this).field_e = ((li) this).field_e + 1;
-                ((li) this).field_n[fieldTemp$7] = (byte) 0;
+                ((li) this).field_n[fieldTemp$3] = (byte) 0;
                 continue L3;
               }
             }

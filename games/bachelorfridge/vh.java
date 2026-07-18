@@ -25,8 +25,9 @@ final class vh extends ana {
         }
     }
 
-    final static void a(byte[] param0, int[] param1, byte[] param2, ee[] param3, int param4, int[] param5, boolean param6, vr param7, kv[][] param8, String[][] param9, int param10, String[] param11, int param12, vr param13, String[] param14, kv[][] param15, vr param16, String[][] param17) {
+    final static void a(byte[] param0, int[] param1, byte[] param2, ee[] param3, int param4, int[] param5, boolean param6, vr param7, kv[][] param8, String[][] param9, int param10, String[] param11, int param12, vr param13, String[] param14, kv[][] param15, vr param16, String[][] param17, int param18) {
         RuntimeException var19 = null;
+        Object var20 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
@@ -240,8 +241,8 @@ final class vh extends ana {
         String stackOut_44_2 = null;
         try {
           L0: {
-            int discarded$1 = 4;
-            ei.a(param3, 1, param7, param9, (String[]) null, param17, true, param15, param14, false, param13, param5, 5, param0, param1, param11, param16, param8, param2);
+            var20 = null;
+            ei.a(param3, 1, param7, param9, (String[]) null, param17, true, param15, param14, false, param13, param5, 5, param0, param1, param11, param16, param8, param2, 4);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -601,7 +602,7 @@ final class vh extends ana {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         iv var3 = null;
         ad var4 = null;
         ad var5 = null;
@@ -633,15 +634,14 @@ final class vh extends ana {
 
     final boolean c(byte param0) {
         int var2 = 0;
-        int fieldTemp$4 = ((vh) this).field_l - 1;
+        int fieldTemp$2 = ((vh) this).field_l - 1;
         ((vh) this).field_l = ((vh) this).field_l - 1;
-        if (fieldTemp$4 >= 0) {
+        if (fieldTemp$2 >= 0) {
           if (25 != ((vh) this).field_l) {
             return false;
           } else {
             jja.a(192, -1, 5);
-            int discarded$5 = 0;
-            this.e();
+            this.e(0);
             return false;
           }
         } else {

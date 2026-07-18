@@ -14,7 +14,7 @@ abstract class mu extends pj {
     static int field_s;
     static hr[] field_B;
 
-    final static void e() {
+    final static void e(int param0) {
         Object var2 = null;
         wv.a((byte) 77, "", (String) null);
     }

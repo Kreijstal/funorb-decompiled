@@ -14,11 +14,11 @@ final class we {
     private long[] field_i;
     private long[] field_j;
 
-    final static void a() {
+    final static void a(byte param0) {
         oc.field_c = new oj();
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
     }
 
@@ -432,7 +432,7 @@ final class we {
         }
     }
 
-    final static ub a(byte[] param0) {
+    final static ub a(byte[] param0, int param1) {
         ub var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;

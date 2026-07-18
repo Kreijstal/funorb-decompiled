@@ -16,7 +16,7 @@ final class lk extends ma {
     static boolean field_o;
     int field_p;
 
-    public static void a() {
+    public static void a(int param0) {
         field_r = null;
         field_w = null;
         field_t = null;

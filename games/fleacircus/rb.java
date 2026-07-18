@@ -49,8 +49,7 @@ final class rb extends gj implements da {
             L2: {
               if (param4 != ((rb) this).field_F) {
                 if (param4 == ((rb) this).field_J) {
-                  int discarded$2 = 0;
-                  oh.d();
+                  oh.d(false);
                   break L2;
                 } else {
                   if (((rb) this).field_I != param4) {
@@ -286,13 +285,12 @@ final class rb extends gj implements da {
                       L10: {
                         aj.field_w = ae.field_a.f(-109);
                         qe.field_k = ae.field_a.e(false);
-                        int discarded$8 = ae.field_a.e(false);
+                        int discarded$6 = ae.field_a.e(false);
                         wc.field_q = ae.field_a.d((byte) -116);
                         var11 = ae.field_a.a((byte) -115);
                         var7 = ae.field_a.e(false);
                         if ((var7 & 1) != 0) {
-                          int discarded$9 = -37;
-                          f.d();
+                          f.d((byte) -37);
                           break L10;
                         } else {
                           break L10;
@@ -337,9 +335,9 @@ final class rb extends gj implements da {
                         if (!bk.field_e) {
                           break L14;
                         } else {
-                          int discarded$10 = ae.field_a.e(false);
-                          int discarded$11 = ae.field_a.e(false);
-                          int discarded$12 = ae.field_a.c((byte) 123);
+                          int discarded$7 = ae.field_a.e(false);
+                          int discarded$8 = ae.field_a.e(false);
+                          int discarded$9 = ae.field_a.c((byte) 123);
                           ge.field_g = ae.field_a.d((byte) -117);
                           gi.field_c = new byte[ge.field_g];
                           var8 = 0;
@@ -391,8 +389,7 @@ final class rb extends gj implements da {
                             } else {
                               try {
                                 L20: {
-                                  int discarded$13 = -250;
-                                  Object discarded$14 = eb.a("unzap", rl.a((byte) -65));
+                                  Object discarded$10 = eb.a("unzap", rl.a((byte) -65), -250);
                                   break L20;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -408,7 +405,7 @@ final class rb extends gj implements da {
                         }
                         try {
                           L22: {
-                            Object discarded$15 = eb.a("zap", new Object[1], -11745, rl.a((byte) -126));
+                            Object discarded$11 = eb.a("zap", new Object[1], -11745, rl.a((byte) -126));
                             break L22;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {

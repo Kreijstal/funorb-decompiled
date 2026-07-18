@@ -10,7 +10,7 @@ final class rl {
     static oh[][] field_b;
     static fg field_f;
 
-    final static void b() {
+    final static void b(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -28,7 +28,7 @@ final class rl {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_b = null;
         field_g = null;

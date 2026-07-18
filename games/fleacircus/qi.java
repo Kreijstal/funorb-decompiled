@@ -9,7 +9,7 @@ final class qi {
     static int field_f;
     static String field_a;
 
-    final static void a(java.math.BigInteger param0, int param1, int param2, byte[] param3, ni param4, java.math.BigInteger param5) {
+    final static void a(java.math.BigInteger param0, int param1, int param2, byte[] param3, ni param4, java.math.BigInteger param5, byte param6) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int[] var8 = null;
@@ -266,7 +266,7 @@ final class qi {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_e = null;
         field_a = null;
@@ -320,7 +320,7 @@ final class qi {
                 break L1;
               } else {
                 var9 = null;
-                byte[] discarded$3 = qi.a((byte[]) null, -34);
+                byte[] discarded$2 = qi.a((byte[]) null, -34);
                 break L1;
               }
             }
@@ -376,8 +376,7 @@ final class qi {
                         var11 = var13;
                         var6 = var11;
                         if (var3 == 1) {
-                          int discarded$4 = 9;
-                          int discarded$5 = fe.a(var6, var5_int, param0, var4);
+                          int discarded$3 = fe.a(var17, var5_int, param0, var4, 9);
                           break L6;
                         } else {
                           var7 = (Object) (Object) se.field_c;

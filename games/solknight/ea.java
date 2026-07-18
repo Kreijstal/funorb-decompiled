@@ -143,15 +143,14 @@ final class ea extends va {
         }
     }
 
-    final static od e() {
+    final static od e(byte param0) {
         int var1 = -72;
         od var2 = new od(kl.field_a, we.field_e, ph.field_h[0], qf.field_d[0], sa.field_l[0], uj.field_b[0], jc.field_c[0], ig.field_H);
-        int discarded$0 = -97;
-        og.a();
+        og.a((byte) -97);
         return var2;
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_p = null;
         field_q = null;
     }
@@ -336,8 +335,7 @@ final class ea extends va {
                         if (param0 == 0) {
                           break L7;
                         } else {
-                          int discarded$1 = 0;
-                          ea.d();
+                          ea.d(false);
                           break L7;
                         }
                       }

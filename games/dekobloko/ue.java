@@ -94,7 +94,7 @@ final class ue {
         return stackIn_8_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_d = null;

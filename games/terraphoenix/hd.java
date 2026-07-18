@@ -13,7 +13,7 @@ final class hd extends uf {
     static jj field_p;
     static ci field_o;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_p = null;
         field_j = null;
         field_l = null;

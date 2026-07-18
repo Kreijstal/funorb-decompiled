@@ -79,7 +79,7 @@ final class lm extends js {
         }
     }
 
-    final static vl a(java.applet.Applet param0) {
+    final static vl a(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         vl[] var3 = null;
@@ -113,8 +113,7 @@ final class lm extends js {
           L0: {
             var2 = nj.a(0, "jagex-last-login-method", param0);
             if (var2 != null) {
-              int discarded$2 = 1;
-              var3 = pb.a();
+              var3 = pb.a(true);
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -404,8 +403,7 @@ final class lm extends js {
           return;
         } else {
           L0: {
-            int discarded$1 = 17475;
-            var14 = h.a();
+            var14 = h.a(17475);
             var4 = -84 / ((param0 - 38) / 60);
             if (((lm) this).field_g != var14) {
               L1: {
@@ -1171,8 +1169,7 @@ final class lm extends js {
           L0: {
             L1: {
               bt.field_e = false;
-              int discarded$1 = 22;
-              hr.b();
+              hr.b(22);
               op.a(-363021503);
               var5 = new int[]{54, 53, 52, 12};
               var2_array = var5;
@@ -1654,7 +1651,7 @@ final class lm extends js {
         return -20 + g.field_a.field_J;
     }
 
-    private final void e() {
+    private final void e(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1840,7 +1837,7 @@ final class lm extends js {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -2827,13 +2824,11 @@ final class lm extends js {
                 break L0;
               }
             } else {
-              int discarded$2 = 111;
-              this.b();
+              this.b((byte) 111);
               break L0;
             }
           } else {
-            int discarded$3 = -21109;
-            this.e();
+            this.e(-21109);
             break L0;
           }
         }
@@ -2868,7 +2863,7 @@ final class lm extends js {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_F = null;
         field_N = null;
         field_j = null;
@@ -3001,7 +2996,7 @@ final class lm extends js {
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
     }
 
     static {

@@ -27,7 +27,7 @@ final class kj extends lk {
         }
     }
 
-    private final void a(int param0, cb param1) {
+    private final void a(int param0, cb param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -403,13 +403,11 @@ final class kj extends lk {
                 var2 = param0;
                 L2: while (true) {
                   if (var2 <= var3.field_m) {
-                    int discarded$20 = 0;
-                    this.a(var2, var3);
+                    this.a(var2, var3, 0);
                     var3.field_m = var3.field_m - var2;
                     break L1;
                   } else {
-                    int discarded$21 = 0;
-                    this.a(var3.field_m, var3);
+                    this.a(var3.field_m, var3, 0);
                     var2 = var2 - var3.field_m;
                     if (!((kj) this).field_l.a((int[]) null, 0, var3, var2, 120)) {
                       continue L2;
@@ -533,8 +531,7 @@ final class kj extends lk {
         if (!param0) {
             return;
         }
-        int discarded$0 = -28390;
-        qf.f();
+        qf.f(-28390);
     }
 
     final static void a(byte param0) {

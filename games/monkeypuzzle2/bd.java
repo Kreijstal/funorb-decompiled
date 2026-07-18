@@ -35,7 +35,7 @@ final class bd {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         if (null == ol.field_g) {
             return false;
         }

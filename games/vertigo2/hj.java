@@ -475,8 +475,7 @@ final class hj {
         int stackOut_7_9 = 0;
         int stackOut_7_10 = 0;
         int stackOut_7_11 = 0;
-        int discarded$1 = -59;
-        vc.a();
+        vc.a((byte) -59);
         if (gd.field_j != null) {
           if (kh.a(-3, gd.field_j.field_Qb)) {
             L0: {
@@ -1127,7 +1126,7 @@ final class hj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_e = null;
         field_f = null;

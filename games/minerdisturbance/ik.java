@@ -229,7 +229,7 @@ final class ik extends kn implements be, sh, f {
         }
     }
 
-    private final String q() {
+    private final String q(int param0) {
         return "</col></u>";
     }
 
@@ -269,8 +269,7 @@ final class ik extends kn implements be, sh, f {
                 if (((ik) this).field_K != param2) {
                   break L2;
                 } else {
-                  int discarded$4 = -1;
-                  boolean discarded$5 = this.o();
+                  boolean discarded$2 = this.o(-1);
                   break L2;
                 }
               }
@@ -309,7 +308,7 @@ final class ik extends kn implements be, sh, f {
         }
     }
 
-    private final int a(String param0, fe param1, int param2, int param3) {
+    private final int a(String param0, fe param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         qn var7 = null;
         int var8 = 0;
@@ -417,12 +416,12 @@ final class ik extends kn implements be, sh, f {
         return stackIn_1_0;
     }
 
-    private final String e() {
+    private final String e(byte param0) {
         int var2 = 90;
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final int a(int param0, String param1, String param2, fe param3, int param4, byte param5) {
+    private final int a(int param0, String param1, String param2, fe param3, int param4, byte param5, int param6) {
         RuntimeException var8 = null;
         w var9 = null;
         Object var10 = null;
@@ -584,19 +583,18 @@ final class ik extends kn implements be, sh, f {
         }
         try {
             super.a(param0, param1, (byte) 123, param3);
-            int discarded$0 = 1;
-            ((ik) this).field_K.field_E = this.a();
+            ((ik) this).field_K.field_E = this.a(true);
         } catch (RuntimeException runtimeException) {
             throw lj.a((Throwable) (Object) runtimeException, "ik.V(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void p() {
+    public static void p(int param0) {
         field_S = null;
         field_N = null;
     }
 
-    final static ek f() {
+    final static ek f(byte param0) {
         return (ek) (Object) new ca();
     }
 
@@ -816,18 +814,14 @@ final class ik extends kn implements be, sh, f {
         mn dupTemp$1 = new mn(10000536);
         ((ik) this).field_O.field_A = (ad) (Object) dupTemp$1;
         ((ik) this).field_J.field_A = (ad) (Object) dupTemp$1;
-        int discarded$2 = 88;
-        int discarded$3 = 4979;
         String var2 = oa.a((byte) -120, eb.field_g, new String[2]);
         int var3 = 20;
         var3 = var3 + this.a(170, var3, id.field_i, (fe) (Object) ((ik) this).field_P, -2791);
-        int discarded$4 = 170;
-        var3 = var3 + (5 + this.a(20, di.field_cb, "", (fe) (Object) ((ik) this).field_M, var3, (byte) -116));
+        var3 = var3 + (5 + this.a(20, di.field_cb, "", (fe) (Object) ((ik) this).field_M, var3, (byte) -116, 170));
         var3 = var3 + this.a(170, var3, tk.field_c, (fe) (Object) ((ik) this).field_J, -2791);
         var3 = var3 + (5 + this.a(170, di.field_E, var3, (fe) (Object) ((ik) this).field_O, -100, t.field_d));
         var3 = var3 + (5 + this.a(170, hi.field_w, var3, (fe) (Object) ((ik) this).field_I, -100, wm.field_c));
-        int discarded$5 = 105;
-        var3 = var3 + this.a(oc.field_j, (fe) (Object) ((ik) this).field_Q, 170, var3);
+        var3 = var3 + this.a(oc.field_j, (fe) (Object) ((ik) this).field_Q, 170, var3, 105);
         am var4 = new am(46, var3, ((ik) this).field_v + -90, 25, (fe) (Object) ((ik) this).field_V, true, -120 + ((ik) this).field_v, 5, sl.field_q, 11579568, mc.field_x);
         ((ik) this).a(-1, (fe) (Object) var4);
         var3 = var3 + var4.field_q;
@@ -854,7 +848,7 @@ final class ik extends kn implements be, sh, f {
         ((ik) this).a(55 + (var3 - -var6), -45, 0, 496, 0);
     }
 
-    private final boolean a() {
+    private final boolean a(boolean param0) {
         L0: {
           if (!this.a(0, (sg) (Object) ((ik) this).field_I)) {
             break L0;
@@ -885,9 +879,8 @@ final class ik extends kn implements be, sh, f {
         return false;
     }
 
-    private final boolean o() {
-        int discarded$0 = 1;
-        if (!this.a()) {
+    private final boolean o(int param0) {
+        if (!this.a(true)) {
             return false;
         }
         int var2 = -1;
@@ -898,7 +891,7 @@ final class ik extends kn implements be, sh, f {
         return qi.a(((ik) this).field_I.field_s, var2, (ik) this, ((ik) this).field_V.field_H, -83, ((ik) this).field_J.field_s, ((ik) this).field_P.field_s);
     }
 
-    final static void n() {
+    final static void n(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -1081,8 +1074,7 @@ final class ik extends kn implements be, sh, f {
                   }
                 }
                 L12: {
-                  int discarded$1 = -15388;
-                  var7 = hl.a(stackIn_39_0, stackIn_39_1 != 0);
+                  var7 = hl.a(stackIn_39_0, stackIn_39_1 != 0, -15388);
                   var8 = -(var7 >> 1) + rj.field_e;
                   if (0 > var4) {
                     break L12;
@@ -1187,8 +1179,7 @@ final class ik extends kn implements be, sh, f {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$2 = 170;
-            stackOut_0_0 = this.a(35, param5, param1, param3, param2, (byte) -108);
+            stackOut_0_0 = this.a(35, param5, param1, param3, param2, (byte) -108, 170);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

@@ -6,7 +6,7 @@ final class mf {
     static int field_b;
     static String field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
     }
@@ -78,7 +78,7 @@ final class mf {
         return stackIn_5_0;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         int var6 = Vertigo2.field_L ? 1 : 0;
         long var1 = gk.a(123);
         long var3 = -id.field_a + var1;

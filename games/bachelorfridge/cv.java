@@ -289,15 +289,14 @@ final class cv extends bca {
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = BachelorFridge.field_y;
         try {
           L0: {
-            int discarded$14 = 1;
-            if (!rs.b()) {
+            if (!rs.b(true)) {
               L1: {
                 if (kga.field_c == null) {
                   break L1;
@@ -313,13 +312,13 @@ final class cv extends bca {
               }
               return;
             } else {
-              boolean discarded$15 = pja.field_e.a(true, kh.field_q, ef.field_k, 6381);
+              boolean discarded$7 = pja.field_e.a(true, kh.field_q, ef.field_k, 6381);
               pja.field_e.i(0);
               L2: while (true) {
                 if (!kaa.b(127)) {
                   break L0;
                 } else {
-                  boolean discarded$16 = pja.field_e.a(dla.field_j, (byte) 7, gf.field_k);
+                  boolean discarded$8 = pja.field_e.a(dla.field_j, (byte) 7, gf.field_k);
                   continue L2;
                 }
               }

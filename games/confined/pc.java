@@ -93,7 +93,7 @@ final class pc implements Runnable {
         }
     }
 
-    final static byte[] a(byte[] param0, byte param1, hb param2) {
+    final static byte[] a(byte[] param0, byte param1, hb param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -351,7 +351,7 @@ final class pc implements Runnable {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_j = null;
         field_k = null;
         field_e = null;
@@ -709,30 +709,8 @@ final class pc implements Runnable {
         return stackIn_24_0;
     }
 
-    final static boolean a() {
-        int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        L0: {
-          L1: {
-            if (tl.field_g) {
-              break L1;
-            } else {
-              int discarded$4 = 1;
-              if (!tj.a()) {
-                stackOut_3_0 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                break L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          stackOut_2_0 = 1;
-          stackIn_4_0 = stackOut_2_0;
-          break L0;
-        }
-        return stackIn_4_0 != 0;
+    final static boolean a(boolean param0) {
+        return tl.field_g || tj.a(true);
     }
 
     final sm a(ae param0, int param1, byte[] param2, int param3) {

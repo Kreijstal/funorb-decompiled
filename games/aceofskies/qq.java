@@ -16,12 +16,12 @@ final class qq {
         return bs.a(-1, ci.field_i, param1);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_g = null;
         field_e = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (null != du.field_p) {
           return;
         } else {

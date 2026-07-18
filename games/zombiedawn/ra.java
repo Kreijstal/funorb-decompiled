@@ -114,7 +114,7 @@ final class ra {
         return stackIn_1_0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -135,8 +135,7 @@ final class ra {
             var3 = var9.d((byte) -118);
             if (0 != var3) {
               if (1 != var3) {
-                int discarded$1 = 3;
-                ae.a((Throwable) null, 10331, "A1: " + cb.f());
+                ae.a((Throwable) null, 10331, "A1: " + cb.f(3));
                 p.a(1);
                 break L0;
               } else {
@@ -231,7 +230,7 @@ final class ra {
         }
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         int var1 = -59;
         mg.a(false);
     }
@@ -307,8 +306,7 @@ final class ra {
           L0: {
             var5_int = param4.a(param1, (byte) 8);
             var6 = param4.a(var5_int, param2, true);
-            int discarded$2 = 0;
-            stackOut_2_0 = oj.a(var6, param0, var5_int, param4);
+            stackOut_2_0 = oj.a(var6, param0, var5_int, param4, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

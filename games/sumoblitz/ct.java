@@ -157,15 +157,14 @@ final class ct extends ml {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_z = null;
         field_A = null;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         aa.field_a = new ah[100];
-        int discarded$0 = 72;
-        sm.a();
+        sm.a(72);
         bj.field_b = new jn();
         is.field_c = new jn();
         he.field_o = new Random();
@@ -174,8 +173,7 @@ final class ct extends ml {
         nd.field_F = 1;
         iw.field_b = 0;
         td.field_m = false;
-        int discarded$1 = 0;
-        ke.a();
+        ke.a(false);
         oc.field_e = 1000;
         ag.a(0, 8);
     }

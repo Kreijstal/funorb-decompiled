@@ -8,7 +8,7 @@ final class gh extends af {
     private o[] field_t;
     private int field_p;
 
-    public static void d() {
+    public static void d(int param0) {
         field_r = null;
     }
 
@@ -123,9 +123,8 @@ final class gh extends af {
             }
             var8 = stackIn_17_0;
             if (param0 >= 113) {
-              int discarded$2 = 104;
-              fg.a(param1 + (param4.field_j + (-((gh) this).field_t[0].field_r + param4.field_x >> 1)), param4.field_m + param3, param4.field_t, var7, ((gh) this).field_t);
-              int discarded$3 = ((gh) this).field_l.a(param4.field_i, param3 - -param4.field_m, param4.field_j + param1 + -2, param4.field_t, param4.field_x, var8, -1, 1, 1, ((gh) this).field_l.field_F);
+              fg.a(param1 + (param4.field_j + (-((gh) this).field_t[0].field_r + param4.field_x >> 1)), param4.field_m + param3, param4.field_t, var7, ((gh) this).field_t, (byte) 104);
+              int discarded$1 = ((gh) this).field_l.a(param4.field_i, param3 - -param4.field_m, param4.field_j + param1 + -2, param4.field_t, param4.field_x, var8, -1, 1, 1, ((gh) this).field_l.field_F);
               break L0;
             } else {
               return;
@@ -163,7 +162,7 @@ final class gh extends af {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         m var4 = null;
@@ -213,8 +212,7 @@ final class gh extends af {
         try {
           L0: {
             L1: {
-              int discarded$2 = 44;
-              var2 = ub.a(-88, ti.a(param1));
+              var2 = ub.a(-88, ti.a(param1, (byte) 44));
               if (var2 == null) {
                 var2 = "";
                 break L1;

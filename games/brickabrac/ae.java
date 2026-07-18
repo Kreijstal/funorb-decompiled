@@ -80,8 +80,7 @@ final class ae implements Iterator {
         try {
           L0: {
             if (ln.a(-107, param0, param3, param2)) {
-              int discarded$2 = 117;
-              stackOut_3_0 = rd.c();
+              stackOut_3_0 = rd.c(117);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

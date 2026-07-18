@@ -10,7 +10,7 @@ final class rn {
     static String field_e;
     static volatile boolean field_b;
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_d = null;
         field_c = null;
@@ -108,7 +108,7 @@ final class rn {
         return stackIn_7_0;
     }
 
-    final static int a() {
+    final static int a(int param0) {
         return wk.field_g;
     }
 

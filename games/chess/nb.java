@@ -82,7 +82,7 @@ final class nb extends ci {
         }
     }
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         String var2 = null;
         Object var3 = null;
         qe var4 = null;
@@ -232,8 +232,7 @@ final class nb extends ci {
             if (param0) {
               L1: {
                 if (var2 == 0) {
-                  int discarded$2 = 20;
-                  var10 = in.a();
+                  var10 = in.a((byte) 20);
                   var18 = var10;
                   var17 = var18;
                   var16 = var17;
@@ -268,8 +267,7 @@ final class nb extends ci {
                     if (var2 == 2) {
                       var13 = (bk) (Object) bh.field_D.g(-18110);
                       if (var13 != null) {
-                        int discarded$3 = 20;
-                        var13.field_o = in.a();
+                        var13.field_o = in.a((byte) 20);
                         var13.field_j = var13.field_o[0];
                         var13.field_m = true;
                         var13.c(-2193);

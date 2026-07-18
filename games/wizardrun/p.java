@@ -146,7 +146,7 @@ final class p extends og implements wa {
         }
     }
 
-    final static uf[] l() {
+    final static uf[] l(byte param0) {
         return new uf[]{hd.field_C, jf.field_e, ra.field_j};
     }
 

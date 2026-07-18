@@ -10,8 +10,7 @@ final class wh implements wa {
 
     public final void a(int param0, int param1, int param2) {
         int var4 = -126 / ((param1 - -83) / 35);
-        int discarded$0 = 2;
-        lf.a(param2, param0);
+        lf.a(param2, param0, 2);
     }
 
     final static void a(byte param0) {
@@ -33,7 +32,7 @@ final class wh implements wa {
         }
     }
 
-    final static vk a(String param0) {
+    final static vk a(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -115,7 +114,7 @@ final class wh implements wa {
         return stackIn_12_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_e = null;

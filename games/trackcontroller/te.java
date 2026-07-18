@@ -18,7 +18,7 @@ final class te extends java.awt.Canvas {
         int var1 = 70 / ((param0 - 34) / 33);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (!(ge.field_D)) {
             throw new IllegalStateException();
         }
@@ -165,8 +165,7 @@ final class te extends java.awt.Canvas {
         try {
           L0: {
             var10 = (CharSequence) (Object) param0;
-            int discarded$4 = 11109;
-            var3_int = sf.a(var10, param1);
+            var3_int = sf.a(var10, param1, 11109);
             var4 = new String[1 + var3_int];
             var5 = 0;
             var6 = 0;
@@ -187,9 +186,9 @@ final class te extends java.awt.Canvas {
                 var8 = var6;
                 L2: while (true) {
                   if (param1 == param0.charAt(var8)) {
-                    int incrementValue$5 = var5;
+                    int incrementValue$2 = var5;
                     var5++;
-                    var4[incrementValue$5] = param0.substring(var6, var8);
+                    var4[incrementValue$2] = param0.substring(var6, var8);
                     var6 = var8 - -1;
                     var7++;
                     continue L1;

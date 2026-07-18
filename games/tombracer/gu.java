@@ -54,8 +54,7 @@ final class gu extends me {
                 var12 = ((gu) this).field_g.field_H[var10].e(false);
                 var13 = ((gu) this).field_g.field_H[var10].j(false);
                 var14 = var13 + var12;
-                int discarded$1 = 114;
-                oka.a(rka.a(1 + var9) + "  " + ((gu) this).field_i.a(var10, false) + "  " + rja.field_c + ": " + var14 + " (" + var12 + "+" + var13 + ")", var11, kn.field_p, -1, var8 + var9 * var5, ((gu) this).field_m, 0);
+                oka.a(rka.a(1 + var9, 114) + "  " + ((gu) this).field_i.a(var10, false) + "  " + rja.field_c + ": " + var14 + " (" + var12 + "+" + var13 + ")", var11, kn.field_p, -1, var8 + var9 * var5, ((gu) this).field_m, 0);
                 var9++;
                 continue L0;
               } else {
@@ -69,7 +68,7 @@ final class gu extends me {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_k = null;
         field_l = null;
     }
@@ -242,7 +241,7 @@ final class gu extends me {
         }
     }
 
-    final static void a(int param0, boolean param1, String param2, String param3, String param4) {
+    final static void a(int param0, boolean param1, String param2, String param3, String param4, int param5) {
         gqa var6 = null;
         try {
             var6 = new gqa(2, param2, 0, param4, param3);

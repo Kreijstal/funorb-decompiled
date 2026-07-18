@@ -46,8 +46,7 @@ final class tb extends ela {
                 break L1;
               }
             }
-            int discarded$2 = -32;
-            stackOut_2_0 = new bfa((Object) (Object) ata.b());
+            stackOut_2_0 = new bfa((Object) (Object) ata.b(-32));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

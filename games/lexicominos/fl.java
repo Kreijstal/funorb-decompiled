@@ -7,7 +7,7 @@ final class fl {
     static String field_d;
     static String[] field_a;
 
-    final static mj a(byte[] param0) {
+    final static mj a(byte[] param0, byte param1) {
         mj var2 = null;
         RuntimeException var2_ref = null;
         mj stackIn_4_0 = null;
@@ -73,7 +73,7 @@ final class fl {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_a = null;
         field_d = null;

@@ -117,7 +117,7 @@ class jo extends ob {
         }
     }
 
-    final static wc a(String[] args) {
+    final static wc a(String[] args, int param1) {
         wc var2 = null;
         RuntimeException var2_ref = null;
         wc stackIn_1_0 = null;
@@ -179,7 +179,7 @@ class jo extends ob {
         return stackIn_1_0;
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         ob var1 = s.field_c[0];
         var1.field_s = 26;
         var1.field_x = 153;
@@ -273,12 +273,10 @@ class jo extends ob {
     final static void a(float param0, float param1, float param2, float param3, int param4) {
         if (param4 != -31792) {
           jo.a(0.2009153664112091f, 0.45015275478363037f, 2.6406524181365967f, -0.13969022035598755f, 60);
-          int discarded$4 = -1;
-          pq.a(param3, param0, 1.0f, 1.0f, param2, param1);
+          pq.a(param3, param0, 1.0f, 1.0f, param2, param1, -1);
           return;
         } else {
-          int discarded$5 = -1;
-          pq.a(param3, param0, 1.0f, 1.0f, param2, param1);
+          pq.a(param3, param0, 1.0f, 1.0f, param2, param1, -1);
           return;
         }
     }

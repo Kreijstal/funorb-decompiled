@@ -8,7 +8,7 @@ final class qe {
     static int[] field_c;
     static int field_a;
 
-    final static java.awt.Frame a(int param0, int param1, int param2, int param3, d param4) {
+    final static java.awt.Frame a(int param0, int param1, int param2, int param3, d param4, int param5) {
         RuntimeException var6 = null;
         rj[] var6_array = null;
         int var7_int = 0;
@@ -145,7 +145,7 @@ final class qe {
         field_c = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -182,7 +182,7 @@ final class qe {
         }
     }
 
-    final static void a(rh param0, rh param1) {
+    final static void a(rh param0, rh param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

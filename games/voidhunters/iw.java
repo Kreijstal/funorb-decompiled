@@ -274,8 +274,7 @@ abstract class iw extends bl {
                     var6_int = 1;
                     L5: while (true) {
                       if (var4 <= var6_int) {
-                        int discarded$2 = 0;
-                        eja.a(var5, var4);
+                        eja.a(var5, var4, 0);
                         var6_int = 0;
                         L6: while (true) {
                           if (var4 <= var6_int) {
@@ -341,8 +340,7 @@ abstract class iw extends bl {
                             }
                           } else {
                             L11: {
-                              int discarded$3 = 1;
-                              bb.a((ds) (Object) var15);
+                              bb.a((ds) (Object) var15, true);
                               if (var6_int != 0) {
                                 ujb.a(wl.field_q, qfb.field_o, vga.field_d, 13336, var6_int, jv.field_b);
                                 break L11;

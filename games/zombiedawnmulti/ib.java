@@ -5,7 +5,7 @@ final class ib implements nl {
     static int field_b;
     static int field_a;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         if (ki.field_h == null) {
             return false;
         }
@@ -109,8 +109,7 @@ final class ib implements nl {
 
     final static void a(int param0) {
         if (a.field_b == 10) {
-          int discarded$4 = 117;
-          ji.b();
+          ji.b(117);
           a.field_b = 11;
           if (param0 <= -37) {
             eb.field_p = true;
@@ -122,8 +121,7 @@ final class ib implements nl {
           }
         } else {
           if (!re.b(-113)) {
-            int discarded$5 = 117;
-            ji.b();
+            ji.b(117);
             a.field_b = 11;
             if (param0 > -37) {
               ib.a(74);

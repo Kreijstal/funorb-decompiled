@@ -53,6 +53,9 @@ class ms {
             DataInputStream var5 = null;
             int var6 = 0;
             String var7 = null;
+            String var8 = null;
+            String var9 = null;
+            String var10 = null;
             wi stackIn_13_0 = null;
             int stackIn_13_1 = 0;
             java.net.URL stackIn_13_2 = null;
@@ -122,14 +125,10 @@ class ms {
                   }
                 }
                 il.a((byte) 96, var3_ref);
-                int discarded$5 = 1;
-                var3_ref = aw.a(":", var3_ref, "%3a");
-                int discarded$6 = 1;
-                var3_ref = aw.a("@", var3_ref, "%40");
-                int discarded$7 = 1;
-                var3_ref = aw.a("&", var3_ref, "%26");
-                int discarded$8 = 1;
-                var7 = aw.a("#", var3_ref, "%23");
+                var7 = aw.a(":", var3_ref, "%3a", true);
+                var8 = aw.a("@", var7, "%40", true);
+                var9 = aw.a("&", var8, "%26", true);
+                var10 = aw.a("#", var9, "%23", true);
                 if (ct.field_z != null) {
                   L4: {
                     if (param2 == 0) {
@@ -192,7 +191,7 @@ class ms {
                       break L5;
                     }
                   }
-                  var4 = ((wi) (Object) stackIn_15_0).a((byte) stackIn_15_1, new java.net.URL(stackIn_15_4, stackIn_15_6 + "&v1=" + wi.field_u + "&v2=" + wi.field_q + "&e=" + var7));
+                  var4 = ((wi) (Object) stackIn_15_0).a((byte) stackIn_15_1, new java.net.URL(stackIn_15_4, stackIn_15_6 + "&v1=" + wi.field_u + "&v2=" + wi.field_q + "&e=" + var10));
                   L6: while (true) {
                     if (var4.field_c != 0) {
                       L7: {
@@ -200,7 +199,7 @@ class ms {
                           break L7;
                         } else {
                           var5 = (DataInputStream) var4.field_d;
-                          int discarded$9 = var5.read();
+                          int discarded$1 = var5.read();
                           var5.close();
                           break L7;
                         }

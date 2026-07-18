@@ -128,7 +128,7 @@ final class hi extends bg {
         }
     }
 
-    final static void a(r param0) {
+    final static void a(r param0, int param1) {
         vh var2 = null;
         vh.a(param0.a("headers.packvorbis", "", 0));
         try {
@@ -243,19 +243,19 @@ final class hi extends bg {
         return stackIn_11_0 != 0;
     }
 
-    final static cr b() {
+    final static cr b(int param0) {
         int var1 = -5;
         return ao.field_O.field_Mb;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_p = null;
         field_n = null;
         field_i = null;
         field_o = null;
     }
 
-    final static boolean c() {
+    final static boolean c(byte param0) {
         return tk.field_e;
     }
 

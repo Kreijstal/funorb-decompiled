@@ -6,7 +6,7 @@ final class km {
     static String field_b;
     static di field_a;
 
-    final static void b() {
+    final static void b(byte param0) {
         d.field_d[93] = 43;
         d.field_d[91] = 42;
         d.field_d[44] = 71;
@@ -21,7 +21,7 @@ final class km {
         d.field_d[61] = 27;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_c = null;
         field_b = null;

@@ -27,7 +27,7 @@ final class n extends qg {
         }
     }
 
-    final static nc b(String param0) {
+    final static nc b(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -89,8 +89,7 @@ final class n extends qg {
                       break L0;
                     } else {
                       var7 = var5[var6];
-                      int discarded$2 = 8;
-                      var8 = sj.a(var7);
+                      var8 = sj.a(var7, (byte) 8);
                       if (var8 != null) {
                         stackOut_16_0 = (nc) var8;
                         stackIn_17_0 = stackOut_16_0;

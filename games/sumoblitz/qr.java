@@ -8,7 +8,7 @@ final class qr {
     static int[] field_d;
     static ud field_b;
 
-    final static an a(String[] args) {
+    final static an a(String[] args, int param1) {
         an var2 = null;
         RuntimeException var2_ref = null;
         an stackIn_1_0 = null;
@@ -143,7 +143,7 @@ final class qr {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_c = null;
         field_a = null;

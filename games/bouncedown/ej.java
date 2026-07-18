@@ -15,7 +15,7 @@ final class ej {
         }
     }
 
-    final static void a(int param0, String[] param1, String param2) {
+    final static void a(int param0, String[] param1, String param2, int param3) {
         String[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -161,7 +161,7 @@ final class ej {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_b = null;
         field_a = null;

@@ -27,7 +27,7 @@ final class hs implements Iterable {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
@@ -51,7 +51,7 @@ final class hs implements Iterable {
         }
     }
 
-    private final wt a(wt param0) {
+    private final wt a(wt param0, int param1) {
         wt var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_6_0 = null;
@@ -132,8 +132,7 @@ final class hs implements Iterable {
 
     final wt a(int param0) {
         int var2 = -23 / ((param0 - -5) / 45);
-        int discarded$0 = 128;
-        return this.a((wt) null);
+        return this.a((wt) null, 128);
     }
 
     final wt b(boolean param0) {

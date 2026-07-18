@@ -26,15 +26,14 @@ final class bn {
         return ((bn) this).field_f;
     }
 
-    final static String b() {
+    final static String b(int param0) {
         int var1 = -1;
         String var2 = "";
         if (null != ib.field_e) {
             var2 = ib.field_e.k(80);
         }
         if (!(var2.length() != 0)) {
-            int discarded$0 = -30519;
-            var2 = aj.b();
+            var2 = aj.b(-30519);
         }
         if (0 == var2.length()) {
             var2 = vg.field_g;
@@ -93,8 +92,7 @@ final class bn {
                       }
                     }
                   }
-                  int discarded$2 = -1;
-                  this.e();
+                  this.e(-1);
                   break L2;
                 }
               }
@@ -111,8 +109,7 @@ final class bn {
                     ((bn) this).field_h = ((bn) this).field_h + (long)var5_int;
                     param0 = param0 - var5_int;
                     ((bn) this).field_m = ((bn) this).field_e.length;
-                    int discarded$3 = -1;
-                    this.e();
+                    this.e(-1);
                     break L4;
                   }
                 }
@@ -269,15 +266,14 @@ final class bn {
     }
 
     final void f(int param0) throws IOException {
-        int discarded$0 = -1;
-        this.e();
+        this.e(-1);
         ((bn) this).field_j.c(-1);
         if (param0 != 0) {
             bn.a(true);
         }
     }
 
-    private final void e() throws IOException {
+    private final void e(int param0) throws IOException {
         long var2 = 0L;
         long var4 = 0L;
         int var6 = 0;
@@ -387,7 +383,7 @@ final class bn {
         }
     }
 
-    private final void a() throws IOException {
+    private final void a(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = HostileSpawn.field_I ? 1 : 0;
@@ -497,11 +493,9 @@ final class bn {
             L2: while (true) {
               if (var27 >= 255) {
                 km.a((byte) var10, var26 + var7, var5 + var26, ni.field_c, var9, var25 + var6, (byte) var11, 85, var4_int - -var25, var16, var8);
-                int discarded$2 = 9233;
-                bh.a((byte) var10, cn.field_e, (byte) var11, var17, var4_int - -var25, var5 - -var26, var7 - -var26, var18, var16, var6 - -var25);
+                bh.a((byte) var10, cn.field_e, (byte) var11, var17, var4_int - -var25, var5 - -var26, var7 - -var26, var18, var16, var6 - -var25, 9233);
                 km.a((byte) var10, -var26 + var7, var5 + -var26, ni.field_c, var9, var6 - var25, (byte) var11, 117, -var25 + var4_int, var16, var8);
-                int discarded$3 = 9233;
-                bh.a((byte) var10, cn.field_e, (byte) var11, var17, var4_int + -var25, -var26 + var5, -var26 + var7, var18, var16, -var25 + var6);
+                bh.a((byte) var10, cn.field_e, (byte) var11, var17, var4_int + -var25, -var26 + var5, -var26 + var7, var18, var16, -var25 + var6, 9233);
                 break L0;
               } else {
                 L3: {
@@ -571,8 +565,7 @@ final class bn {
 
     final static void a(int param0, oj param1) {
         try {
-            int discarded$0 = 0;
-            ue.a(param1.field_M);
+            ue.a(param1.field_M, false);
             param1.field_M = 0;
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "bn.M(" + 3 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -673,8 +666,7 @@ final class bn {
                     break L4;
                   } else {
                     L5: {
-                      int discarded$2 = 13740;
-                      this.a();
+                      this.a(13740);
                       var9_int = param3;
                       if (((bn) this).field_a >= var9_int) {
                         break L5;
@@ -732,9 +724,9 @@ final class bn {
                           if (param2 >= var9_int) {
                             break L8;
                           } else {
-                            int incrementValue$3 = param2;
+                            int incrementValue$1 = param2;
                             param2++;
-                            param0[incrementValue$3] = (byte) 0;
+                            param0[incrementValue$1] = (byte) 0;
                             param3--;
                             ((bn) this).field_h = ((bn) this).field_h + 1L;
                             continue L10;

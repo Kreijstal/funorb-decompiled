@@ -219,7 +219,7 @@ final class df extends kf implements vn {
         field_S = null;
     }
 
-    final static w i() {
+    final static w i(int param0) {
         int var1 = 96;
         return ec.field_k.field_Ob;
     }
@@ -267,7 +267,7 @@ final class df extends kf implements vn {
                     if (param0 == 32) {
                       break L2;
                     } else {
-                      ck[] discarded$2 = df.a(-125, -89, -29);
+                      ck[] discarded$1 = df.a(-125, -89, -29);
                       break L2;
                     }
                   }
@@ -297,8 +297,7 @@ final class df extends kf implements vn {
                         }
                       }
                     } else {
-                      int discarded$3 = 1;
-                      ((df) this).field_V[var4_int] = ua.a((CharSequence) (Object) param1[var4_int]).replace(' ', ' ');
+                      ((df) this).field_V[var4_int] = ua.a((CharSequence) (Object) param1[var4_int], true).replace(' ', ' ');
                       var4_int++;
                       continue L3;
                     }

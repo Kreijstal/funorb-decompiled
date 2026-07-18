@@ -5,7 +5,7 @@ final class eh {
     static he[] field_b;
     static volatile boolean field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_b = null;
     }

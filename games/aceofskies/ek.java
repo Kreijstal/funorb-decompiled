@@ -17,7 +17,7 @@ final class ek extends ab implements dn {
         }
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_u = null;
         field_x = null;
     }

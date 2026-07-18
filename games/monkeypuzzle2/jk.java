@@ -651,7 +651,7 @@ abstract class jk extends we implements ga {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_y = null;
         field_z = null;
         field_x = null;

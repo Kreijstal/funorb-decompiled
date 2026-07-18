@@ -124,7 +124,7 @@ final class an {
         }
     }
 
-    final static hf a() {
+    final static hf a(int param0) {
         return new hf(gg.a(91), po.c(128));
     }
 

@@ -31,7 +31,7 @@ class kl extends dk {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_G, -1, 2147483647, false);
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_t = null;
         field_s = null;
         field_q = null;

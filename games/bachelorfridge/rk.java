@@ -558,8 +558,7 @@ class rk extends bw {
                             break L7;
                           }
                         }
-                        int discarded$2 = 0;
-                        int discarded$3 = this.a();
+                        int discarded$1 = this.a(0);
                         break L0;
                       } else {
                         ((rk) this).field_m[var5] = param0.field_m[var5];
@@ -980,7 +979,7 @@ class rk extends bw {
         }
     }
 
-    private final int a() {
+    private final int a(int param0) {
         ((rk) this).field_l = 0;
         return ((rk) this).field_l;
     }
@@ -1032,13 +1031,13 @@ class rk extends bw {
                   return stackIn_10_0 != 0;
                 } else {
                   var2 = (rk) param0;
-                  if (var2.field_q != var2.field_q) {
+                  if (var2.field_q != ((rk) this).field_q) {
                     stackOut_13_0 = 0;
                     stackIn_14_0 = stackOut_13_0;
                     return stackIn_14_0 != 0;
                   } else {
                     L1: {
-                      if (var2.field_o == null) {
+                      if (((rk) this).field_o == null) {
                         if (var2.field_o == null) {
                           break L1;
                         } else {
@@ -1047,7 +1046,7 @@ class rk extends bw {
                           return stackIn_21_0 != 0;
                         }
                       } else {
-                        if (var2.field_o.equals((Object) (Object) var2.field_o)) {
+                        if (((rk) this).field_o.equals((Object) (Object) var2.field_o)) {
                           break L1;
                         } else {
                           stackOut_17_0 = 0;
@@ -1138,8 +1137,7 @@ class rk extends bw {
               bl.a(((rk) this).field_m, 0, ((rk) this).field_m.length, -1);
               ((rk) this).field_m[0] = 0;
               ((rk) this).field_m[1] = 1;
-              int discarded$2 = 0;
-              int discarded$3 = this.a();
+              int discarded$1 = this.a(0);
               ((rk) this).field_c = (long)kla.a(2147483647, ((rk) this).field_p, -2147483648);
               break L0;
             } else {

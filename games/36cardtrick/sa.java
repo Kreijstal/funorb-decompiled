@@ -11,7 +11,7 @@ final class sa {
         jc.field_O.a(param7, param5, 0, 0, param3, param1, param2);
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

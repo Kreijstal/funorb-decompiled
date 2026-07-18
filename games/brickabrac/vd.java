@@ -30,8 +30,7 @@ final class vd {
                         hn.a((byte) 123);
                         return false;
                       } else {
-                        int discarded$3 = -6792;
-                        if (de.f() <= 30000L) {
+                        if (de.f(-6792) <= 30000L) {
                           break L0;
                         } else {
                           hn.a((byte) 123);
@@ -82,9 +81,8 @@ final class vd {
         }
     }
 
-    final static void a() {
-        int discarded$0 = -29448;
-        mm.h();
+    final static void a(int param0) {
+        mm.h(-29448);
     }
 
     public static void a(boolean param0) {

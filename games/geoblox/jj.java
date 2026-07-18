@@ -10,7 +10,7 @@ final class jj {
     static int field_g;
     private int field_b;
 
-    private final void a(long param0) {
+    private final void a(long param0, int param1) {
         fj var4 = (fj) (Object) ((jj) this).field_f.a(param0, (byte) -72);
         this.a(-117, var4);
     }
@@ -23,8 +23,7 @@ final class jj {
             if (!(((jj) this).field_b >= 1)) {
                 throw new IllegalStateException();
             }
-            int discarded$0 = 0;
-            this.a(param0);
+            this.a(param0, 0);
             ((jj) this).field_d = ((jj) this).field_d - 1;
             while (0 > ((jj) this).field_d) {
                 var6 = (fj) (Object) ((jj) this).field_e.a((byte) -41);
@@ -84,7 +83,7 @@ final class jj {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         jk.field_d = 0;
     }
 
@@ -151,7 +150,7 @@ final class jj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         int var1 = 3;
         field_c = null;

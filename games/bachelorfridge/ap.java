@@ -46,7 +46,7 @@ final class ap {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 110;
         field_c = null;
     }

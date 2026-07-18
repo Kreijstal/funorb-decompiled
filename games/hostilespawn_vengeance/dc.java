@@ -38,7 +38,7 @@ final class dc {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -72,8 +72,7 @@ final class dc {
           uc.b(-45);
           if (var5 < 256) {
             si.a(0, 0, si.field_e, si.field_k, 0, -var5 + 256);
-            int discarded$2 = 0;
-            eh.b();
+            eh.b(false);
             if (150 > tk.field_e) {
               il.field_f.f(var3, var4);
               var6 = tk.field_e - 125;
@@ -126,8 +125,7 @@ final class dc {
               }
             }
           } else {
-            int discarded$3 = 0;
-            eh.b();
+            eh.b(false);
             if (150 > tk.field_e) {
               il.field_f.f(var3, var4);
               var6 = tk.field_e - 125;

@@ -95,7 +95,7 @@ final class uc {
         uc.a(78, param1, 3, param5, 0, 0, var10, ge.field_i, var13 * ge.field_h + var12, param6, var8, var9, var13 - var15, var12 - var14, ge.field_h - (var14 - var12));
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_f = null;
         field_a = null;
@@ -199,7 +199,7 @@ final class uc {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -276,7 +276,7 @@ final class uc {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, boolean param1) {
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
@@ -315,7 +315,7 @@ final class uc {
         return stackIn_8_0 != 0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         rh.field_B = false;
         int discarded$0 = MonkeyPuzzle2.field_D.a((byte) 114);
     }

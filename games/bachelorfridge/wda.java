@@ -10,7 +10,7 @@ final class wda {
     static String field_g;
     it field_f;
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         ne var3 = null;
@@ -66,12 +66,12 @@ final class wda {
                         L5: while (true) {
                           if (var6_int >= var4) {
                             it.a(8766, var5);
-                            String[][] dupTemp$3 = new String[2][var5];
-                            var3.field_k = dupTemp$3;
-                            var6 = dupTemp$3;
-                            int[][] dupTemp$4 = new int[2][var5 * 4];
-                            var3.field_g = dupTemp$4;
-                            var7 = dupTemp$4;
+                            String[][] dupTemp$2 = new String[2][var5];
+                            var3.field_k = dupTemp$2;
+                            var6 = dupTemp$2;
+                            int[][] dupTemp$3 = new int[2][var5 * 4];
+                            var3.field_g = dupTemp$3;
+                            var7 = dupTemp$3;
                             var8 = ut.field_l;
                             var9 = 0;
                             var10 = 0;
@@ -136,8 +136,7 @@ final class wda {
                             }
                           } else {
                             L10: {
-                              int discarded$5 = 2064384;
-                              ml.a((lu) (Object) var15);
+                              ml.a((lu) (Object) var15, 2064384);
                               if (var6_int == 0) {
                                 var3.field_h = al.field_a;
                                 var3.field_f = gk.field_b;

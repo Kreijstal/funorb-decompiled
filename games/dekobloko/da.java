@@ -8,7 +8,7 @@ final class da {
     static boolean[] field_d;
     static tf field_e;
 
-    final static jc a(String param0) {
+    final static jc a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -120,7 +120,7 @@ final class da {
         return stackIn_20_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_e = null;
         field_b = null;
@@ -128,7 +128,7 @@ final class da {
         field_d = null;
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, boolean param1) {
         fl.a(130, 256, 16694016, kc.field_s, 82 - -param0, (mm) (Object) w.field_kb);
         int var2 = 145;
         fb.field_c[0][0].c(82 + param0, var2, 18, 18);

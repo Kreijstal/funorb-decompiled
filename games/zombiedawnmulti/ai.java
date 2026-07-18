@@ -90,8 +90,7 @@ final class ai implements Runnable {
 
     final static void a(String param0, byte param1) {
         try {
-            int discarded$0 = 48;
-            wk.a(param0);
+            wk.a(param0, (byte) 48);
             qj.a(jl.field_v, false, 102);
             int var2_int = -102 % ((52 - param1) / 40);
         } catch (RuntimeException runtimeException) {
@@ -105,7 +104,8 @@ final class ai implements Runnable {
             Exception var2_ref = null;
             Throwable var4 = null;
             int var5 = 0;
-            li var6 = null;
+            Object var6 = null;
+            li var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var5 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -114,8 +114,8 @@ final class ai implements Runnable {
                 var2 = (Object) (Object) ((ai) this).field_e;
                 synchronized (var2) {
                   L1: {
-                    var6 = (li) (Object) ((ai) this).field_e.a(11356);
-                    if (var6 != null) {
+                    var7 = (li) (Object) ((ai) this).field_e.a(11356);
+                    if (var7 != null) {
                       ((ai) this).field_h = ((ai) this).field_h - 1;
                       decompiledRegionSelector0 = 1;
                       break L1;
@@ -137,14 +137,14 @@ final class ai implements Runnable {
                   try {
                     L4: {
                       L5: {
-                        if (var6.field_y == 2) {
-                          boolean discarded$2 = var6.field_B.a((byte) 118, var6.field_D, var6.field_D.length, (int)var6.field_l);
+                        if (var7.field_y == 2) {
+                          boolean discarded$1 = var7.field_B.a((byte) 118, var7.field_D, var7.field_D.length, (int)var7.field_l);
                           break L5;
                         } else {
-                          if (var6.field_y != 3) {
+                          if (var7.field_y != 3) {
                             break L5;
                           } else {
-                            var6.field_D = var6.field_B.a(1, (int)var6.field_l);
+                            var7.field_D = var7.field_B.a(1, (int)var7.field_l);
                             break L5;
                           }
                         }
@@ -155,12 +155,12 @@ final class ai implements Runnable {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     L6: {
                       var2_ref = (Exception) (Object) decompiledCaughtException;
-                      int discarded$3 = 0;
-                      bd.a((String) null, (Throwable) (Object) var2_ref);
+                      var6 = null;
+                      bd.a((String) null, (Throwable) (Object) var2_ref, false);
                       break L6;
                     }
                   }
-                  var6.field_t = false;
+                  var7.field_t = false;
                   continue L0;
                 }
               } else {
@@ -289,7 +289,7 @@ final class ai implements Runnable {
         return stackIn_4_0;
     }
 
-    final static int a(boolean param0) {
+    final static int a(boolean param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -571,7 +571,7 @@ final class ai implements Runnable {
         return stackIn_81_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
         field_g = null;
@@ -816,8 +816,7 @@ final class ai implements Runnable {
             mj.field_Ib.c((byte) 113);
             return true;
           } else {
-            int discarded$14 = 112;
-            int discarded$15 = ai.a(true);
+            int discarded$6 = ai.a(true, (byte) 112);
             if (null != mj.field_Ib) {
               if (!mj.field_Ib.a(96, 15, 13)) {
                 return false;
@@ -829,8 +828,7 @@ final class ai implements Runnable {
             }
           }
         } else {
-          int discarded$16 = 33423425;
-          ub.n();
+          ub.n(33423425);
           return true;
         }
     }

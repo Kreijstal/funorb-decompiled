@@ -8,7 +8,7 @@ final class wh {
     static String field_d;
     static pb field_a;
 
-    final static byte[] a(int param0, ha param1, byte[] param2) {
+    final static byte[] a(int param0, ha param1, byte[] param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -176,7 +176,7 @@ final class wh {
         return wb.field_c;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_d = null;
         field_e = null;
@@ -186,8 +186,7 @@ final class wh {
         if (param0 > -31) {
             return;
         }
-        int discarded$0 = 1;
-        gg.field_f = ee.a(5, 0, (byte) -119);
+        gg.field_f = ee.a(5, 0, (byte) -119, 1);
     }
 
     static {

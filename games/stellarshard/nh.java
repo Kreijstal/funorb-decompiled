@@ -59,13 +59,13 @@ class nh extends sk {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_d = null;
         field_g = null;
     }
 
-    final static void a(le param0) {
+    final static void a(le param0, byte param1, int param2) {
         int var4 = 0;
         ha var5 = pg.field_fb;
         var5.f(6, 950);
@@ -88,7 +88,7 @@ class nh extends sk {
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

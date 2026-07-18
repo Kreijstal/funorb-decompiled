@@ -43,7 +43,7 @@ final class nh {
     static fh field_d;
     static String[] field_o;
 
-    public static void a() {
+    public static void a(int param0) {
         field_u = null;
         field_n = null;
         field_d = null;
@@ -240,8 +240,7 @@ final class nh {
                 field_o = null;
             }
             am.field_c = param2.field_M;
-            int discarded$0 = 1;
-            ub.a();
+            ub.a(true);
         } catch (RuntimeException runtimeException) {
             throw ci.a((Throwable) (Object) runtimeException, "nh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

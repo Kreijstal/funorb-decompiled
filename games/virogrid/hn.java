@@ -466,7 +466,7 @@ final class hn extends l {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_v = null;
         field_x = null;
         field_p = null;
@@ -476,11 +476,11 @@ final class hn extends l {
         field_s = null;
     }
 
-    final static int c() {
+    final static int c(boolean param0) {
         return 1900 + new Date().getYear();
     }
 
-    final static boolean a(eh param0, int param1, int param2) {
+    final static boolean a(eh param0, int param1, int param2, byte param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;

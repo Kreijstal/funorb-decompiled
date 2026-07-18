@@ -8,7 +8,7 @@ final class hh {
     static li field_e;
     static int[] field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_b = null;
         field_d = null;
@@ -45,8 +45,7 @@ final class hh {
                 break L1;
               }
             }
-            int discarded$2 = 1;
-            stackOut_2_0 = fj.a(10, param1, 124);
+            stackOut_2_0 = fj.a(10, param1, 124, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

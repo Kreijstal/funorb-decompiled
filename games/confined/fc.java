@@ -430,7 +430,7 @@ final class fc {
         return stackIn_23_0;
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -583,7 +583,7 @@ final class fc {
         }
     }
 
-    final static void a(mn param0) {
+    final static void a(mn param0, byte param1) {
         RuntimeException var2 = null;
         oi var2_ref = null;
         oi var3 = null;
@@ -696,7 +696,7 @@ final class fc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
     }
@@ -792,8 +792,7 @@ final class fc {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((fc) this).field_b[var2_int] = param0[var2_int];
             }
-            int discarded$0 = -4;
-            this.b();
+            this.b(-4);
         } catch (RuntimeException runtimeException) {
             throw sd.a((Throwable) (Object) runtimeException, "fc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -20,8 +20,7 @@ final class nfa extends ci {
         var10 = TombRacer.field_G ? 1 : 0;
         var11 = (sra) (Object) dma.field_l;
         var11.a(param3, (byte) 47, param1);
-        int discarded$8 = 0;
-        woa.a(-122, param4, param0);
+        woa.a(-122, param4, param0, 0);
         bb.field_f = new ena(0);
         L0: while (true) {
           if (bb.field_f.a((byte) 107)) {
@@ -66,9 +65,9 @@ final class nfa extends ci {
             wl.field_f[0][35] = wl.field_f[0][22];
             wl.field_f[0][36] = m.a("henryj_large_pull", -125, param5, var12);
             wl.field_f[0][37] = m.a("henryj_cheer", -124, param5, var12);
-            int incrementValue$9 = param3;
+            int incrementValue$7 = param3;
             param3++;
-            var11.a(incrementValue$9, (byte) 47, param1);
+            var11.a(incrementValue$7, (byte) 47, param1);
             var8 = 0;
             L1: while (true) {
               if (13 <= var8) {
@@ -88,9 +87,9 @@ final class nfa extends ci {
                 wl.field_f[1][14] = m.a("ace_key_idle", -126, param5, var12);
                 wl.field_f[1][17] = m.a("ace_gun_idle", -125, param5, var12);
                 wl.field_f[1][34] = m.a("ace_cut_in_half", -127, param5, var12);
-                int incrementValue$10 = param3;
+                int incrementValue$8 = param3;
                 param3++;
-                var11.a(incrementValue$10, (byte) 47, param1);
+                var11.a(incrementValue$8, (byte) 47, param1);
                 wl.field_f[3][5] = m.a("baroness_trait", -124, param5, var12);
                 wl.field_f[3][15] = m.a("baroness_key_run", -125, param5, var12);
                 wl.field_f[3][14] = m.a("baroness_key_idle", -128, param5, var12);
@@ -108,9 +107,9 @@ final class nfa extends ci {
                 wl.field_f[4][5] = wl.field_f[11][5];
                 wl.field_f[4][34] = m.a("borees_cut_in_half", -128, param5, var12);
                 wl.field_f[4][37] = m.a("borees_cheer", -124, param5, var12);
-                int incrementValue$11 = param3;
+                int incrementValue$9 = param3;
                 param3++;
-                var11.a(incrementValue$11, (byte) 47, param1);
+                var11.a(incrementValue$9, (byte) 47, param1);
                 wl.field_f[5][1] = m.a("bruce_run", -128, param5, var12);
                 wl.field_f[5][0] = m.a("bruce_idle", -125, param5, var12);
                 wl.field_f[5][5] = m.a("bruce_trait", -128, param5, var12);
@@ -132,9 +131,9 @@ final class nfa extends ci {
                 wl.field_f[5][36] = m.a("bruce_large_pull", -127, param5, var12);
                 wl.field_f[5][37] = m.a("bruce_cheer", -124, param5, var12);
                 wl.field_f[5][2] = m.a("bruce_pull_small", -127, param5, var12);
-                int incrementValue$12 = param3;
+                int incrementValue$10 = param3;
                 param3++;
-                var11.a(incrementValue$12, (byte) 47, param1);
+                var11.a(incrementValue$10, (byte) 47, param1);
                 wl.field_f[7][1] = m.a("hans_run", -125, param5, var12);
                 wl.field_f[7][14] = m.a("hans_key_idle", -124, param5, var12);
                 wl.field_f[7][15] = m.a("hans_key_run", -126, param5, var12);
@@ -162,9 +161,9 @@ final class nfa extends ci {
                 wl.field_f[6][34] = m.a("feng_cut_in_half", -128, param5, var12);
                 wl.field_f[6][37] = m.a("feng_cheer", -124, param5, var12);
                 wl.field_f[6][36] = m.a("feng_large_pull", -124, param5, var12);
-                int incrementValue$13 = param3;
+                int incrementValue$11 = param3;
                 param3++;
-                var11.a(incrementValue$13, (byte) 47, param1);
+                var11.a(incrementValue$11, (byte) 47, param1);
                 wl.field_f[8][5] = wl.field_f[1][5];
                 wl.field_f[8][15] = m.a("jamille_key_run", -128, param5, var12);
                 wl.field_f[8][14] = m.a("jamille_key_idle", -125, param5, var12);
@@ -190,9 +189,9 @@ final class nfa extends ci {
                 wl.field_f[10][21] = m.a("piles_death_two", -125, param5, var12);
                 wl.field_f[10][22] = m.a("piles_death_three", -128, param5, var12);
                 wl.field_f[10][36] = m.a("piles_large_pull", -124, param5, var12);
-                int incrementValue$14 = param3;
+                int incrementValue$12 = param3;
                 param3++;
-                var11.a(incrementValue$14, (byte) 47, param1);
+                var11.a(incrementValue$12, (byte) 47, param1);
                 wl.field_f[10][18] = m.a("piles_fall_two", -124, param5, var12);
                 wl.field_f[10][17] = m.a("piles_gun_idle", -125, param5, var12);
                 wl.field_f[10][19] = m.a("piles_idle_to_run", -128, param5, var12);
@@ -228,9 +227,9 @@ final class nfa extends ci {
                 qja.field_f[7] = m.a("snake_walk", -124, param5, var14);
                 qja.field_f[8] = m.a("snake_idle_to_walk", -126, param5, var14);
                 qja.field_f[9] = m.a("snake_walk_to_idle", -125, param5, var14);
-                int incrementValue$15 = param3;
+                int incrementValue$13 = param3;
                 param3++;
-                var11.a(incrementValue$15, (byte) 47, param1);
+                var11.a(incrementValue$13, (byte) 47, param1);
                 var15 = "rope_bridge";
                 cva.field_c = new dk[4];
                 cva.field_c[0] = m.a("start", -127, param5, var15);

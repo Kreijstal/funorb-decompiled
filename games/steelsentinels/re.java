@@ -86,7 +86,7 @@ final class re extends ha {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_W = null;
         field_ab = null;
         field_hb = null;
@@ -176,7 +176,7 @@ final class re extends ha {
         return stackIn_3_0;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

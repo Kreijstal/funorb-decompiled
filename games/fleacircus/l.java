@@ -6,7 +6,7 @@ final class l {
     static int[] field_c;
     static String field_a;
 
-    final static void a(byte[] param0) {
+    final static void a(byte[] param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -308,13 +308,13 @@ final class l {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         bd.field_kb = null;
         ic.field_bb = null;
         int var1 = 0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;

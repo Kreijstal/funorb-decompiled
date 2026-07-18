@@ -5,11 +5,11 @@ final class qd {
     static int field_b;
     static int[] field_a;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_a = null;
     }
 
-    final static gb a() {
+    final static gb a(boolean param0) {
         String var1 = dg.a(false);
         if (var1 != null) {
             if (0 <= var1.indexOf('@')) {
@@ -22,8 +22,7 @@ final class qd {
     final static vb a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         vb var8 = new vb(param5, param4, param7, param3, param2, param0);
         jl.field_a.b(123, (kd) (Object) var8);
-        int discarded$0 = 1;
-        vi.a(4, var8);
+        vi.a(4, var8, 1);
         return var8;
     }
 

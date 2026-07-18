@@ -174,7 +174,7 @@ class ij extends lc implements tsa {
         }
     }
 
-    final static void j() {
+    final static void j(byte param0) {
         if (ej.field_a != null) {
           L0: {
             ej.field_a.h(-1);
@@ -201,7 +201,7 @@ class ij extends lc implements tsa {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_db = null;
         field_Z = null;
         field_X = null;
@@ -414,13 +414,11 @@ class ij extends lc implements tsa {
             if (!((ij) this).field_bb) {
               return;
             } else {
-              int discarded$4 = 30497;
-              vg.q();
+              vg.q(30497);
               return;
             }
           } else {
-            int discarded$5 = -72;
-            kla.a();
+            kla.a((byte) -72);
             return;
           }
         } else {

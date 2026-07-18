@@ -501,7 +501,7 @@ final class vd extends nv {
         ((vd) this).field_v = param1;
     }
 
-    private final void c() {
+    private final void c(int param0) {
         qea var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -822,13 +822,11 @@ final class vd extends nv {
         ((vd) this).field_t = 2097152;
         try {
             ((vd) this).field_r = new fsa(param0, false);
-            int discarded$0 = 0;
-            wd.a((byte) -98, 1, true, param0, ((vd) this).field_r);
+            wd.a((byte) -98, 1, true, param0, ((vd) this).field_r, false);
             ((vd) this).field_r.b(false, 11468);
             ((vd) this).field_A = new fsa(param0, false);
             ((vd) this).field_o = new fsa(param0, false);
-            int discarded$1 = 1;
-            this.d();
+            this.d(true);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "vd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -1118,8 +1116,7 @@ final class vd extends nv {
               ((vd) this).field_o = null;
               if (((vd) this).field_u) {
                 ((vd) this).field_r = new fsa(param0, false);
-                int discarded$3 = 0;
-                wd.a((byte) -120, 1, true, param0, ((vd) this).field_r);
+                wd.a((byte) -120, 1, true, param0, ((vd) this).field_r, false);
                 ((vd) this).field_A = new fsa(param0, false);
                 break L4;
               } else {
@@ -1138,17 +1135,16 @@ final class vd extends nv {
               }
             }
             L5: {
-              if (((vd) this).field_o != null) {
+              if (((vd) this).field_o == null) {
+                ((vd) this).field_o = new fsa(param0, false);
+                wd.a((byte) -93, 7, true, param0, ((vd) this).field_o, false);
+                this.d(true);
                 break L5;
               } else {
-                ((vd) this).field_o = new fsa(param0, false);
-                int discarded$4 = 0;
-                wd.a((byte) -93, 7, true, param0, ((vd) this).field_o);
+                this.d(true);
                 break L5;
               }
             }
-            int discarded$5 = 1;
-            this.d();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1208,7 +1204,7 @@ final class vd extends nv {
         }
     }
 
-    private final void d() {
+    private final void d(boolean param0) {
         if (1048576 > ((vd) this).field_t) {
             ((vd) this).field_t = 1048576;
         }
@@ -1362,7 +1358,7 @@ final class vd extends nv {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (!una.a((byte) 105)) {
             return;
         }
@@ -1385,8 +1381,7 @@ final class vd extends nv {
 
     final void n(byte param0) {
         super.n((byte) 105);
-        int discarded$0 = 127;
-        this.c();
+        this.c(127);
         if (param0 <= 68) {
             ((vd) this).field_r = null;
         }

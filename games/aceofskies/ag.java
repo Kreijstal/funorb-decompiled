@@ -33,7 +33,7 @@ abstract class ag extends wt {
         ((ag) this).field_p = true;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_n = null;
         field_o = null;
     }

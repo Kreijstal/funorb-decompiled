@@ -575,7 +575,7 @@ final class oi extends da {
         }
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         oh.field_s = 10;
         jn.field_c = false;
         ke.field_b = vd.field_a;
@@ -632,7 +632,7 @@ final class oi extends da {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_M = null;
         field_F = null;
         field_J = null;

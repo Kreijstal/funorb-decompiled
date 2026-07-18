@@ -209,7 +209,7 @@ final class mb {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -240,7 +240,7 @@ final class mb {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         int var1 = -72;
     }

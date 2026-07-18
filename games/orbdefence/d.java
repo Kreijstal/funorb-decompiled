@@ -11,18 +11,17 @@ final class d extends ca {
     static int field_j;
     int field_f;
 
-    final static void b() {
+    final static void b(byte param0) {
         if (!(bm.field_d == null)) {
             bm.field_d.l(-113);
         }
         if (!(na.field_c == null)) {
             na.field_c.p(1);
         }
-        int discarded$0 = 104;
-        pf.a();
+        pf.a(104);
     }
 
-    final static int d() {
+    final static int d(byte param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -146,7 +145,7 @@ final class d extends ca {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
     }
 

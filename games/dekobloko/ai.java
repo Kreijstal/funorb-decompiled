@@ -118,7 +118,7 @@ final class ai extends ek {
         return stackIn_15_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_M = null;
         field_N = null;
         field_L = null;
@@ -139,7 +139,7 @@ final class ai extends ek {
         }
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         ck var1 = null;
         ck var2 = null;
         int var3 = 0;
@@ -229,7 +229,7 @@ final class ai extends ek {
         return fj.field_e;
     }
 
-    final static void h() {
+    final static void h(int param0) {
         Object var2 = null;
         qf.a(te.field_q, -128, (String) null);
     }
@@ -249,8 +249,7 @@ final class ai extends ek {
             var4.field_z = 10;
             var4.field_q = 0;
             oe.field_I.a((bh) (Object) var4, 2777);
-            int discarded$1 = 7;
-            fh.a((byte) 8, var4);
+            fh.a((byte) 8, var4, 7);
             return var4;
           } else {
             if (0 == var4.field_q) {

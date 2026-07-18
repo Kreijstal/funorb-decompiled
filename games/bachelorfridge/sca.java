@@ -9,7 +9,7 @@ abstract class sca {
     static String field_b;
     static kv field_a;
 
-    final static int a() {
+    final static int a(int param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -139,7 +139,7 @@ abstract class sca {
 
     abstract void a(java.awt.Component param0, byte param1);
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         field_c = null;
         field_b = null;

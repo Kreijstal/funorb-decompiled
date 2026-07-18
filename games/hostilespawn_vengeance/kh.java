@@ -312,7 +312,7 @@ final class kh extends w {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         int var2 = 0;
         int var3 = HostileSpawn.field_I ? 1 : 0;
         for (var2 = 0; var2 < 16; var2++) {
@@ -339,8 +339,7 @@ final class kh extends w {
         ((kh) this).field_db = new int[16];
         ((kh) this).field_Y = new int[16];
         ((kh) this).field_W = 256;
-        int discarded$0 = 381;
-        this.h();
+        this.h(381);
     }
 
     private final synchronized void a(int param0, int param1, mn param2) {
@@ -416,8 +415,7 @@ final class kh extends w {
         ((kh) this).field_Y = new int[16];
         ((kh) this).field_W = 256;
         try {
-            int discarded$0 = 381;
-            this.h();
+            this.h(381);
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "kh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -429,8 +427,7 @@ final class kh extends w {
                 Object var6 = null;
                 kh.a((ji) null, -112, (byte) 83, true);
             }
-            int discarded$0 = 381;
-            this.h();
+            this.h(381);
             super.a(param0, (byte) 125, param2, param3);
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "kh.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

@@ -22,7 +22,7 @@ abstract class qda {
     byte field_d;
     qqa field_g;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_b = null;
         field_l = null;
         field_f = null;
@@ -65,8 +65,7 @@ abstract class qda {
                   }
                 }
               } else {
-                int discarded$2 = 93;
-                uca.a(5, var4);
+                uca.a(5, var4, (byte) 93);
                 var4 = (toa) (Object) vsa.field_m.e(113);
                 continue L1;
               }
@@ -222,7 +221,7 @@ abstract class qda {
         return ((qda) this).a((byte) 78) >= 20 ? true : false;
     }
 
-    final static int a(BitSet param0) {
+    final static int a(BitSet param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

@@ -16,9 +16,9 @@ final class nk {
         int var2 = 0;
         var2 = BrickABrac.field_J ? 1 : 0;
         if (oh.field_b == sm.field_b) {
-          int fieldTemp$4 = jq.field_p;
+          int fieldTemp$2 = jq.field_p;
           jq.field_p = jq.field_p + 1;
-          if (fieldTemp$4 < 16) {
+          if (fieldTemp$2 < 16) {
             if (param0 >= 20) {
               return;
             } else {
@@ -27,8 +27,7 @@ final class nk {
             }
           } else {
             if (ln.field_k) {
-              int discarded$5 = 0;
-              vb.k();
+              vb.k(0);
               sm.field_b = ii.field_q;
               if (param0 >= 20) {
                 return;
@@ -37,8 +36,7 @@ final class nk {
                 return;
               }
             } else {
-              int discarded$6 = 0;
-              ok.a();
+              ok.a(0);
               sm.field_b = ii.field_q;
               if (param0 >= 20) {
                 return;
@@ -106,9 +104,9 @@ final class nk {
             }
           } else {
             if (vl.field_d == sm.field_b) {
-              int fieldTemp$7 = jq.field_p;
+              int fieldTemp$3 = jq.field_p;
               jq.field_p = jq.field_p - 1;
-              if (fieldTemp$7 <= 0) {
+              if (fieldTemp$3 <= 0) {
                 sm.field_b = sm.field_a;
                 if (param0 < 20) {
                   field_c = null;
@@ -153,16 +151,14 @@ final class nk {
     }
 
     final static void a(byte param0, boolean param1) {
-        int discarded$3 = -4858;
-        if (gp.a()) {
+        if (gp.a(-4858)) {
             param1 = false;
         }
         ga.a(param1, -124);
-        int discarded$4 = 21862;
-        wh.a();
+        wh.a(21862);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_f = null;
         field_a = null;
@@ -174,7 +170,7 @@ final class nk {
         field_d = null;
     }
 
-    final static boolean a(char param0, CharSequence param1) {
+    final static boolean a(char param0, CharSequence param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
@@ -297,8 +293,7 @@ final class nk {
               try {
                 L0: {
                   var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
-                  int discarded$2 = -1;
-                  param1.getAppletContext().showDocument(hg.a(param1, var2), "_top");
+                  param1.getAppletContext().showDocument(hg.a(param1, var2, -1), "_top");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {

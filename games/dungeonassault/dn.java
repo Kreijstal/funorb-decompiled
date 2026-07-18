@@ -71,8 +71,7 @@ final class dn extends ii implements jo, vg {
                   if (((dn) this).field_V != param0) {
                     if (((dn) this).field_K == param0) {
                       if (((dn) this).field_X) {
-                        int discarded$48 = -1;
-                        wk.a();
+                        wk.a(-1);
                         break L1;
                       } else {
                         if (!((dn) this).field_M) {
@@ -87,13 +86,11 @@ final class dn extends ii implements jo, vg {
                       break L1;
                     }
                   } else {
-                    int discarded$49 = 1;
-                    nh.c();
+                    nh.c(true);
                     break L1;
                   }
                 } else {
-                  int discarded$50 = -24327;
-                  this.j();
+                  this.j(-24327);
                   break L1;
                 }
               }
@@ -257,7 +254,7 @@ final class dn extends ii implements jo, vg {
           L0: {
             L1: {
               if (param0 == ((dn) this).field_O) {
-                boolean discarded$4 = ((dn) this).field_R.a(34, (lm) this);
+                boolean discarded$2 = ((dn) this).field_R.a(34, (lm) this);
                 break L1;
               } else {
                 break L1;
@@ -267,8 +264,7 @@ final class dn extends ii implements jo, vg {
               if (((dn) this).field_R != param0) {
                 break L2;
               } else {
-                int discarded$5 = -24327;
-                this.j();
+                this.j(-24327);
                 break L2;
               }
             }
@@ -421,11 +417,10 @@ final class dn extends ii implements jo, vg {
         }
     }
 
-    private final void j() {
+    private final void j(int param0) {
         L0: {
           L1: {
-            int discarded$6 = 118;
-            if (n.a()) {
+            if (n.a((byte) 118)) {
               break L1;
             } else {
               if (((dn) this).field_O.field_w.length() <= 0) {
@@ -444,7 +439,7 @@ final class dn extends ii implements jo, vg {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_L = null;
         int var1 = 0;
         field_W = null;

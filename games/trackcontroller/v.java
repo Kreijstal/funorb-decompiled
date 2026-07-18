@@ -10,7 +10,7 @@ abstract class v implements eh {
     static int[] field_g;
     static String field_c;
 
-    final static void e() {
+    final static void e(int param0) {
         if (!ge.field_D) {
             throw new IllegalStateException();
         }

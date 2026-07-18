@@ -26,7 +26,7 @@ final class hm {
         return wn.field_b;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_c = null;
         field_a = null;

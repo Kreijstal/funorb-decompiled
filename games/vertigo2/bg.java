@@ -84,7 +84,7 @@ abstract class bg {
 
     abstract int a(int param0);
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
         field_e = null;
@@ -170,8 +170,7 @@ abstract class bg {
               var9 = new oe(ch.field_e, param6);
               var7 = var9;
               ch.field_e.b((iq) (Object) var9, 0);
-              int discarded$8 = -94;
-              if (ko.e()) {
+              if (ko.e((byte) -94)) {
                 var9.o(16614);
                 stackOut_8_0 = 1;
                 stackIn_9_0 = stackOut_8_0;

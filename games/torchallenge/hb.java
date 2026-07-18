@@ -80,7 +80,7 @@ final class hb {
         return stackIn_3_0;
     }
 
-    final static StringBuilder a(int param0, byte param1, StringBuilder param2) {
+    final static StringBuilder a(int param0, byte param1, StringBuilder param2, char param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -154,7 +154,7 @@ final class hb {
         return stackIn_5_0;
     }
 
-    final static void a(pa param0) {
+    final static void a(pa param0, int param1) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -474,8 +474,7 @@ final class hb {
         try {
           L0: {
             L1: {
-              int discarded$3 = 0;
-              oh.a(31536000L, ((hb) this).field_e, param0, "jagex-last-login-method");
+              oh.a(31536000L, ((hb) this).field_e, param0, "jagex-last-login-method", 0);
               if (!param1) {
                 break L1;
               } else {
@@ -517,7 +516,7 @@ final class hb {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_h = null;
         field_c = null;

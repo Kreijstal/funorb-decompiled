@@ -750,7 +750,7 @@ final class ka extends q {
         }
     }
 
-    final static bp a(String param0) {
+    final static bp a(String param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -1053,11 +1053,11 @@ final class ka extends q {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         od.b(128, 4);
     }
 
-    final static String a(long param0) {
+    final static String a(long param0, int param1) {
         ne.field_b.setTime(new Date(param0));
         int var3 = ne.field_b.get(7);
         int var4 = ne.field_b.get(5);

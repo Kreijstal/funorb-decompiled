@@ -11,7 +11,7 @@ abstract class bl extends al {
     static int[] field_z;
     static ud[] field_v;
 
-    final static void a() {
+    final static void a(boolean param0) {
         try {
             IOException var1 = null;
             RuntimeException var1_ref = null;
@@ -97,7 +97,7 @@ abstract class bl extends al {
 
     abstract Object f(int param0);
 
-    final static boolean g() {
+    final static boolean g(int param0) {
         if (mf.field_i >= 0) {
           if (bd.field_k >= 0) {
             if (mh.field_e[ca.field_k][hf.field_t + 1].g()) {
@@ -426,8 +426,7 @@ abstract class bl extends al {
           L0: {
             var4_int = -121;
             if (cn.a(param0, 258, param3, param1)) {
-              int discarded$2 = 255;
-              stackOut_3_0 = qc.c();
+              stackOut_3_0 = qc.c(255);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -469,7 +468,7 @@ abstract class bl extends al {
         return stackIn_4_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 0;
         field_w = null;
         field_z = null;

@@ -145,7 +145,7 @@ final class eh implements bf {
         }
     }
 
-    final static long a() {
+    final static long a(int param0) {
         return d.a((byte) 75) + -eg.field_C;
     }
 

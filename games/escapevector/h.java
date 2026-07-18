@@ -43,8 +43,7 @@ final class h extends bj implements rj, qb {
                 break L1;
               } else {
                 if (((h) this).field_N == param0) {
-                  int discarded$115 = -83;
-                  fe.a();
+                  fe.a((byte) -83);
                   break L1;
                 } else {
                   if (((h) this).field_I == param0) {
@@ -53,13 +52,11 @@ final class h extends bj implements rj, qb {
                         qe.a(true);
                         break L1;
                       } else {
-                        int discarded$116 = 2;
-                        ta.m();
+                        ta.m(2);
                         break L1;
                       }
                     } else {
-                      int discarded$117 = -54;
-                      fh.b();
+                      fh.b(-54);
                       break L1;
                     }
                   } else {
@@ -294,7 +291,7 @@ final class h extends bj implements rj, qb {
         }
     }
 
-    final static void a(mf param0) {
+    final static void a(mf param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -327,8 +324,7 @@ final class h extends bj implements rj, qb {
             var10 = var8;
             var3 = var10.e(0);
             var10.l(-17928);
-            int discarded$1 = 22178;
-            tj.field_y = hg.a(var10);
+            tj.field_y = hg.a(var10, 22178);
             fh.field_e = new ia[var3];
             jg.field_c = new int[var3][];
             var4 = 0;
@@ -504,8 +500,7 @@ final class h extends bj implements rj, qb {
         }
         L1: {
           L2: {
-            int discarded$4 = 8192;
-            if (gm.b()) {
+            if (gm.b(8192)) {
               break L2;
             } else {
               if (((h) this).field_L.field_l.length() >= -1) {
@@ -954,7 +949,7 @@ final class h extends bj implements rj, qb {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_O = null;
     }
 

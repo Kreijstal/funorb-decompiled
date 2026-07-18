@@ -430,7 +430,7 @@ final class fm extends qt {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         int var1 = 1;
         field_A = null;
         field_C = null;
@@ -457,8 +457,7 @@ final class fm extends qt {
           L0: while (true) {
             if (var5 == null) {
               L1: {
-                int discarded$9 = -1;
-                this.e();
+                this.e(-1);
                 if (vu.field_Ib.field_Db.field_J <= var4) {
                   break L1;
                 } else {
@@ -466,13 +465,13 @@ final class fm extends qt {
                     break L1;
                   } else {
                     L2: {
-                      wh discarded$10 = sp.c(59, 66);
+                      wh discarded$7 = sp.c(59, 66);
                       ((fm) this).field_B = 8;
                       if (var4 <= vu.field_Ib.field_Db.field_J) {
                         break L2;
                       } else {
                         if (-1 == ((fm) this).field_B) {
-                          wh discarded$11 = sp.c(60, -100);
+                          wh discarded$8 = sp.c(60, -100);
                           ((fm) this).field_B = 8;
                           break L2;
                         } else {
@@ -489,7 +488,7 @@ final class fm extends qt {
                   break L3;
                 } else {
                   if (((fm) this).field_B == 0) {
-                    wh discarded$12 = sp.c(60, -100);
+                    wh discarded$9 = sp.c(60, -100);
                     ((fm) this).field_B = 8;
                     break L3;
                   } else {
@@ -521,18 +520,17 @@ final class fm extends qt {
           var5 = (hd) (Object) vu.field_Ib.field_Db.field_jb.g(24009);
           L5: while (true) {
             if (var5 == null) {
-              int discarded$13 = -1;
-              this.e();
+              this.e(-1);
               if (vu.field_Ib.field_Db.field_J > var4) {
                 if (-1 == ((fm) this).field_B) {
                   L6: {
-                    wh discarded$14 = sp.c(59, 66);
+                    wh discarded$10 = sp.c(59, 66);
                     ((fm) this).field_B = 8;
                     if (var4 <= vu.field_Ib.field_Db.field_J) {
                       break L6;
                     } else {
                       if (((fm) this).field_B == 0) {
-                        wh discarded$15 = sp.c(60, -100);
+                        wh discarded$11 = sp.c(60, -100);
                         ((fm) this).field_B = 8;
                         break L6;
                       } else {
@@ -547,7 +545,7 @@ final class fm extends qt {
                       break L7;
                     } else {
                       if (((fm) this).field_B == 0) {
-                        wh discarded$16 = sp.c(60, -100);
+                        wh discarded$12 = sp.c(60, -100);
                         ((fm) this).field_B = 8;
                         break L7;
                       } else {
@@ -562,7 +560,7 @@ final class fm extends qt {
                   if (((fm) this).field_B != 0) {
                     return;
                   } else {
-                    wh discarded$17 = sp.c(60, -100);
+                    wh discarded$13 = sp.c(60, -100);
                     ((fm) this).field_B = 8;
                     return;
                   }
@@ -586,7 +584,7 @@ final class fm extends qt {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -729,29 +727,30 @@ final class fm extends qt {
         return 88080384 - -(100 * param1 + 500 << 16);
     }
 
-    final static gg a(String param0) {
-        Object var2 = null;
+    final static gg a(String param0, int param1) {
+        String var2 = null;
+        RuntimeException var2_ref = null;
         gg var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
         gg stackIn_16_0 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        Object stackIn_21_0 = null;
+        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        Object stackIn_22_0 = null;
+        RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         gg stackOut_15_0 = null;
-        Object stackOut_19_0 = null;
+        RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
-        Object stackOut_21_0 = null;
+        RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
         String stackOut_21_2 = null;
-        Object stackOut_20_0 = null;
+        RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         String stackOut_20_2 = null;
         var5 = Kickabout.field_G;
@@ -759,15 +758,15 @@ final class fm extends qt {
           if (ni.field_m != null) {
             L0: {
               var6 = (CharSequence) (Object) param0;
-              var2 = (Object) (Object) mo.a(0, var6);
+              var2 = mo.a(0, var6);
               if (var2 == null) {
-                var2 = (Object) (Object) var6;
+                var2 = param0;
                 break L0;
               } else {
                 break L0;
               }
             }
-            var3 = (gg) (Object) ni.field_m.a(-3611, (long)((String) var2).hashCode());
+            var3 = (gg) (Object) ni.field_m.a(-3611, (long)var2.hashCode());
             L1: while (true) {
               if (var3 != null) {
                 L2: {
@@ -780,7 +779,7 @@ final class fm extends qt {
                     break L2;
                   }
                 }
-                if (var4.equals(var2)) {
+                if (var4.equals((Object) (Object) var2)) {
                   stackOut_15_0 = (gg) var3;
                   stackIn_16_0 = stackOut_15_0;
                   return stackIn_16_0;
@@ -798,15 +797,15 @@ final class fm extends qt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_19_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var2_ref;
             stackOut_19_1 = new StringBuilder().append("fm.I(");
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_21_0 = stackIn_21_0;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
@@ -814,7 +813,7 @@ final class fm extends qt {
               stackIn_22_2 = stackOut_21_2;
               break L3;
             } else {
-              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
               stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;

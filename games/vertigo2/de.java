@@ -140,7 +140,7 @@ abstract class de implements of {
         return ((de) this).f(param0 ^ 27232);
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_c = null;
         field_b = null;
         field_g = null;
@@ -148,7 +148,7 @@ abstract class de implements of {
         field_d = null;
     }
 
-    final static void a(int param0, nf param1) {
+    final static void a(int param0, nf param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

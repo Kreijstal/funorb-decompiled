@@ -42,8 +42,7 @@ final class hl {
                 if (2 != jj.field_b) {
                   break L2;
                 } else {
-                  int discarded$10 = 3;
-                  if (qe.a(((hl) this).field_o)) {
+                  if (qe.a(((hl) this).field_o, 3)) {
                     return 1;
                   } else {
                     break L2;
@@ -64,7 +63,7 @@ final class hl {
         return 2;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return sg.a(cf.field_c, 113, fm.field_d);
     }
 
@@ -90,8 +89,7 @@ final class hl {
         try {
           L0: {
             L1: {
-              int discarded$9 = 0;
-              db.a((java.awt.Component) (Object) param0);
+              db.a((java.awt.Component) (Object) param0, false);
               if (param1 < -29) {
                 break L1;
               } else {

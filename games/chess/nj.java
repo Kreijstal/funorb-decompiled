@@ -221,8 +221,7 @@ final class nj extends hl {
                 }
               }
               ((nj) this).field_s.a(param1, (nj) this, -79, param4, param2);
-              int discarded$1 = 28773;
-              fd.a();
+              fd.a(28773);
               break L0;
             } else {
               return;
@@ -260,7 +259,7 @@ final class nj extends hl {
         }
     }
 
-    final static int b() {
+    final static int b(int param0) {
         return bd.field_d;
     }
 
@@ -348,7 +347,7 @@ final class nj extends hl {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_z = null;
         field_v = null;
         field_w = null;

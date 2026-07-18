@@ -33,7 +33,7 @@ final class jk extends vg {
         return var1;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_h = null;
         field_i = null;
         field_g = null;
@@ -136,7 +136,7 @@ final class jk extends vg {
         return stackIn_12_0;
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, int param1) {
         int var2 = param0;
         lu.a(var2, al.field_h, -1, var2, sua.field_J);
     }

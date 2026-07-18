@@ -348,7 +348,7 @@ class td extends al implements je {
         return stackIn_17_0 != 0;
     }
 
-    private final void i() {
+    private final void i(int param0) {
         int var4 = TrackController.field_F ? 1 : 0;
         ue var2 = new ue(((td) this).field_B);
         al var3 = (al) (Object) var2.d(120);
@@ -360,8 +360,7 @@ class td extends al implements je {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
-        int discarded$0 = 0;
-        this.i();
+        this.i(0);
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, al param5, byte param6) {

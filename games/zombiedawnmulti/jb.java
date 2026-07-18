@@ -25,7 +25,7 @@ final class jb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         field_a = null;
         field_c = null;
@@ -52,8 +52,7 @@ final class jb {
                             }
                             return false;
                         }
-                        int discarded$1 = 0;
-                        mg.b();
+                        mg.b(false);
                         return true;
                     }
                     kp.a(((jb) this).field_h, param2, 2, true);
@@ -65,8 +64,7 @@ final class jb {
             fg.a(-16745, ((jb) this).field_i, ((jb) this).field_f);
             return true;
         }
-        int discarded$2 = -1;
-        gm.a(((jb) this).field_i, ((jb) this).field_f);
+        gm.a(((jb) this).field_i, ((jb) this).field_f, -1);
         return true;
     }
 
@@ -427,18 +425,16 @@ final class jb {
         if (-2 != var6) {
           if (param2 != -8) {
             ((jb) this).field_b = -116;
-            boolean discarded$10 = this.b(param0, 19, var6);
-            int discarded$11 = 57;
-            boolean discarded$12 = this.a(param4, var6);
-            boolean discarded$13 = this.a((byte) 98, var6, param4);
-            boolean discarded$14 = this.a(17, var6, param1);
+            boolean discarded$8 = this.b(param0, 19, var6);
+            boolean discarded$9 = this.a(param4, var6, (byte) 57);
+            boolean discarded$10 = this.a((byte) 98, var6, param4);
+            boolean discarded$11 = this.a(17, var6, param1);
             return true;
           } else {
-            boolean discarded$15 = this.b(param0, 19, var6);
-            int discarded$16 = 57;
-            boolean discarded$17 = this.a(param4, var6);
-            boolean discarded$18 = this.a((byte) 98, var6, param4);
-            boolean discarded$19 = this.a(17, var6, param1);
+            boolean discarded$12 = this.b(param0, 19, var6);
+            boolean discarded$13 = this.a(param4, var6, (byte) 57);
+            boolean discarded$14 = this.a((byte) 98, var6, param4);
+            boolean discarded$15 = this.a(17, var6, param1);
             return true;
           }
         } else {
@@ -558,7 +554,7 @@ final class jb {
         }
     }
 
-    private final boolean a(int param0, int param1) {
+    private final boolean a(int param0, int param1, byte param2) {
         Object var4 = null;
         int var5 = 0;
         Object var6 = null;
@@ -749,8 +745,7 @@ final class jb {
                   L3: {
                     var7 = this.b(-20516);
                     var4_ref = var7;
-                    int discarded$1 = 0;
-                    var5 = dn.a(((jb) this).field_f);
+                    var5 = dn.a(((jb) this).field_f, false);
                     var6 = hp.a(((jb) this).field_f, param2 ^ 1009) ? 1 : 0;
                     if (var5 != null) {
                       break L3;

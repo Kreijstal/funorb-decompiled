@@ -660,15 +660,13 @@ final class nv extends hs implements he {
                                   }
                                 }
                               } else {
-                                int discarded$2 = 1;
-                                this.d(((nv) this).field_W - -this.b(), 0);
+                                this.d(((nv) this).field_W - -this.b(true), 0);
                                 stackOut_18_0 = 1;
                                 stackIn_19_0 = stackOut_18_0;
                                 return stackIn_19_0 != 0;
                               }
                             } else {
-                              int discarded$3 = 1;
-                              this.d(((nv) this).field_W - this.b(), 0);
+                              this.d(((nv) this).field_W - this.b(true), 0);
                               stackOut_15_0 = 1;
                               stackIn_16_0 = stackOut_15_0;
                               return stackIn_16_0 != 0;
@@ -951,7 +949,7 @@ final class nv extends hs implements he {
         }
     }
 
-    private final void n() {
+    private final void n(int param0) {
         int var2 = ((nv) this).field_Z == null ? ((nv) this).field_P.field_p : ((nv) this).field_Z.field_p - -((nv) this).field_Z.field_w;
         int var3 = ((nv) this).field_ab != null ? -((nv) this).field_O.field_w + ((nv) this).field_ab.field_p : -((nv) this).field_O.field_w + ((nv) this).field_P.field_p + ((nv) this).field_P.field_w;
         ((nv) this).field_O.field_p = var2 - -((-var2 + var3) * ((nv) this).field_W >> 16);
@@ -1049,37 +1047,31 @@ final class nv extends hs implements he {
             ((nv) this).field_W = param1;
             if (param0 != -123) {
               ((nv) this).field_R = -68;
-              int discarded$6 = 16695;
-              this.n();
+              this.n(16695);
               return;
             } else {
-              int discarded$7 = 16695;
-              this.n();
+              this.n(16695);
               return;
             }
           } else {
             ((nv) this).field_W = 65536;
             if (param0 == -123) {
-              int discarded$8 = 16695;
-              this.n();
+              this.n(16695);
               return;
             } else {
               ((nv) this).field_R = -68;
-              int discarded$9 = 16695;
-              this.n();
+              this.n(16695);
               return;
             }
           }
         } else {
           ((nv) this).field_W = 0;
           if (param0 == -123) {
-            int discarded$10 = 16695;
-            this.n();
+            this.n(16695);
             return;
           } else {
             ((nv) this).field_R = -68;
-            int discarded$11 = 16695;
-            this.n();
+            this.n(16695);
             return;
           }
         }
@@ -1100,19 +1092,16 @@ final class nv extends hs implements he {
         if (param1 >= 0) {
           if (param1 <= 65536) {
             ((nv) this).field_T = param1;
-            int discarded$6 = 1681504464;
-            this.m();
+            this.m(1681504464);
             return;
           } else {
             ((nv) this).field_T = 65536;
-            int discarded$7 = 1681504464;
-            this.m();
+            this.m(1681504464);
             return;
           }
         } else {
           ((nv) this).field_T = 0;
-          int discarded$8 = 1681504464;
-          this.m();
+          this.m(1681504464);
           return;
         }
     }
@@ -1158,8 +1147,7 @@ final class nv extends hs implements he {
                 L3: {
                   if (((nv) this).field_V) {
                     var5_int = ((nv) this).field_T;
-                    int discarded$4 = 115;
-                    this.k();
+                    this.k(115);
                     if (((nv) this).field_T == var5_int) {
                       break L3;
                     } else {
@@ -1171,15 +1159,13 @@ final class nv extends hs implements he {
                       }
                     }
                   } else {
-                    int discarded$5 = 1681504464;
-                    this.m();
+                    this.m(1681504464);
                     break L3;
                   }
                 }
                 if (((nv) this).field_M) {
                   var5_int = ((nv) this).field_W;
-                  int discarded$6 = 0;
-                  this.j();
+                  this.j(0);
                   if (((nv) this).field_W == var5_int) {
                     break L1;
                   } else {
@@ -1191,8 +1177,7 @@ final class nv extends hs implements he {
                     }
                   }
                 } else {
-                  int discarded$7 = 16695;
-                  this.n();
+                  this.n(16695);
                   break L1;
                 }
               } else {
@@ -1957,7 +1942,7 @@ final class nv extends hs implements he {
         }
     }
 
-    private final int b() {
+    private final int b(boolean param0) {
         return (((nv) this).field_O.field_w << 16) / ((nv) this).field_P.field_w;
     }
 
@@ -1986,13 +1971,12 @@ final class nv extends hs implements he {
         if (param1 != 124) {
           return;
         } else {
-          int discarded$2 = 1681504464;
-          this.m();
+          this.m(1681504464);
           return;
         }
     }
 
-    private final void k() {
+    private final void k(int param0) {
         int var2 = null == ((nv) this).field_U ? ((nv) this).field_P.field_B : ((nv) this).field_U.field_l + ((nv) this).field_U.field_B;
         int var3 = null == ((nv) this).field_Y ? -((nv) this).field_O.field_l + (((nv) this).field_P.field_l + ((nv) this).field_P.field_B) : -((nv) this).field_O.field_l + ((nv) this).field_Y.field_B;
         this.e(116, var3 > var2 ? (-var2 + ((nv) this).field_O.field_B << 16) / (-var2 + var3) : 0);
@@ -2023,13 +2007,12 @@ final class nv extends hs implements he {
         if (param1 != -13127) {
           return;
         } else {
-          int discarded$2 = 16695;
-          this.n();
+          this.n(16695);
           return;
         }
     }
 
-    private final void j() {
+    private final void j(int param0) {
         int var2 = null != ((nv) this).field_Z ? ((nv) this).field_Z.field_p - -((nv) this).field_Z.field_w : ((nv) this).field_P.field_p;
         int var3 = ((nv) this).field_ab != null ? -((nv) this).field_O.field_w + ((nv) this).field_ab.field_p : ((nv) this).field_P.field_p - (-((nv) this).field_P.field_w - -((nv) this).field_O.field_w);
         ((nv) this).a((byte) -123, var2 >= var3 ? 0 : (-var2 + ((nv) this).field_O.field_p << 16) / (-var2 + var3));
@@ -2054,8 +2037,7 @@ final class nv extends hs implements he {
             ((nv) this).field_Y.field_B = -((nv) this).field_Y.field_l + ((nv) this).field_l;
             ((nv) this).field_Y.field_p = -((nv) this).field_Y.field_w + ((nv) this).field_w >> 1;
             ((nv) this).field_P.field_l = -((nv) this).field_P.field_B + (((nv) this).field_l - ((nv) this).field_Y.field_l);
-            int discarded$5 = 1681504464;
-            this.m();
+            this.m(1681504464);
             if (null == ((nv) this).field_Z) {
               L1: {
                 ((nv) this).field_P.field_p = 0;
@@ -2070,8 +2052,7 @@ final class nv extends hs implements he {
                 }
               }
               L2: {
-                int discarded$6 = 16695;
-                this.n();
+                this.n(16695);
                 if (!((nv) this).field_M) {
                   ((nv) this).field_O.field_w = ((nv) this).field_P.field_w;
                   ((nv) this).field_O.field_p = 0;
@@ -2107,8 +2088,7 @@ final class nv extends hs implements he {
                 }
               }
               L5: {
-                int discarded$7 = 16695;
-                this.n();
+                this.n(16695);
                 if (!((nv) this).field_M) {
                   ((nv) this).field_O.field_w = ((nv) this).field_P.field_w;
                   ((nv) this).field_O.field_p = 0;
@@ -2132,8 +2112,7 @@ final class nv extends hs implements he {
           } else {
             L7: {
               ((nv) this).field_P.field_l = -((nv) this).field_P.field_B + ((nv) this).field_l;
-              int discarded$8 = 1681504464;
-              this.m();
+              this.m(1681504464);
               if (null != ((nv) this).field_Z) {
                 ((nv) this).field_Z.field_p = 0;
                 ((nv) this).field_Z.field_B = ((nv) this).field_l - ((nv) this).field_Z.field_l >> 1;
@@ -2156,8 +2135,7 @@ final class nv extends hs implements he {
               }
             }
             L9: {
-              int discarded$9 = 16695;
-              this.n();
+              this.n(16695);
               if (!((nv) this).field_M) {
                 ((nv) this).field_O.field_w = ((nv) this).field_P.field_w;
                 ((nv) this).field_O.field_p = 0;
@@ -2183,7 +2161,7 @@ final class nv extends hs implements he {
         }
     }
 
-    private final void m() {
+    private final void m(int param0) {
         int var2 = null == ((nv) this).field_U ? ((nv) this).field_P.field_B : ((nv) this).field_U.field_B - -((nv) this).field_U.field_l;
         int var3 = null != ((nv) this).field_Y ? -((nv) this).field_O.field_l + ((nv) this).field_Y.field_B : ((nv) this).field_P.field_l + ((nv) this).field_P.field_B + -((nv) this).field_O.field_l;
         ((nv) this).field_O.field_B = var2 + ((-var2 + var3) * ((nv) this).field_T >> 16);

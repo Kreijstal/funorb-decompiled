@@ -71,7 +71,7 @@ abstract class oi {
         return param0 + var2;
     }
 
-    final static int a(a param0, a param1) {
+    final static int a(a param0, a param1, byte param2) {
         RuntimeException var3 = null;
         Object var4 = null;
         int stackIn_1_0 = 0;
@@ -176,7 +176,7 @@ abstract class oi {
 
     abstract int a(int param0);
 
-    final static void b() {
+    final static void b(byte param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -252,7 +252,7 @@ abstract class oi {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_f = null;
         field_h = null;
@@ -304,8 +304,7 @@ abstract class oi {
                   if (ug.a(-1, (char) var3)) {
                     break L2;
                   } else {
-                    int discarded$9 = 1;
-                    if (!lb.a((char) var3)) {
+                    if (!lb.a((char) var3, true)) {
                       stackOut_6_0 = 1;
                       stackIn_7_0 = stackOut_6_0;
                       return stackIn_7_0 != 0;

@@ -15,7 +15,7 @@ final class dn {
         sh.a(-65);
     }
 
-    final static di a(ci param0, int[] param1, ci param2, ci param3) {
+    final static di a(ci param0, int[] param1, ci param2, ci param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         String[] var6 = null;
@@ -257,7 +257,7 @@ final class dn {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_h = null;
         field_g = null;
@@ -304,10 +304,8 @@ final class dn {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$9 = 83;
-            if (tj.a(param1, param0, param3)) {
-              int discarded$10 = 127;
-              stackOut_3_0 = g.a(param4.a(param1, param0, 5847));
+            if (tj.a(param1, param0, param3, (byte) 83)) {
+              stackOut_3_0 = g.a(param4.a(param1, param0, 5847), 127);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

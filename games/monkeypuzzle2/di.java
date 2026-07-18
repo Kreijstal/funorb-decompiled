@@ -9,7 +9,7 @@ final class di {
     static String field_d;
     static lk field_a;
 
-    final static boolean a(ad param0, ad param1, ad param2) {
+    final static boolean a(ad param0, ad param1, ad param2, byte param3) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
@@ -186,7 +186,7 @@ final class di {
         return stackIn_15_0 != 0;
     }
 
-    final static d a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
+    final static d a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, byte param8) {
         d var9 = null;
         RuntimeException var9_ref = null;
         int var10 = 0;
@@ -213,8 +213,7 @@ final class di {
             var10 = 0;
             var9 = new d(41, 65494, param6, param3, param0, param2, param4);
             wk.field_b.a(-8212, (ug) (Object) var9);
-            int discarded$2 = 1;
-            pj.a(3, var9);
+            pj.a(3, var9, true);
             stackOut_0_0 = (d) var9;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -252,7 +251,7 @@ final class di {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_a = null;
         field_b = null;

@@ -13,13 +13,13 @@ final class ata extends htb {
     static int field_H;
     static String field_G;
 
-    public static void a() {
+    public static void a(int param0) {
         field_G = null;
         field_L = null;
         field_K = null;
     }
 
-    final static boolean e() {
+    final static boolean e(int param0) {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;

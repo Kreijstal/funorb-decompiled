@@ -15,7 +15,7 @@ final class pd extends dl implements ae {
     static int field_X;
     static wk[] field_Z;
 
-    public static void i() {
+    public static void i(int param0) {
         field_S = null;
         field_ab = null;
         field_Z = null;
@@ -72,8 +72,7 @@ final class pd extends dl implements ae {
                     break L1;
                   }
                 } else {
-                  int discarded$30 = 45;
-                  nj.h();
+                  nj.h((byte) 45);
                   break L1;
                 }
               }

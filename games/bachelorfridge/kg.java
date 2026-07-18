@@ -19,7 +19,7 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -56,7 +56,7 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
     kg() {
     }
 
-    final static void a(vr param0) {
+    final static void a(vr param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;

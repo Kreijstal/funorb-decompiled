@@ -183,8 +183,7 @@ final class cb {
               jg.field_d.e((640 + -jg.field_d.field_z) / 2, -4 + (-jg.field_d.field_A + 480));
               var2_int = (640 + -gj.field_d.field_z) / 2;
               var3 = -gj.field_d.field_A + 478;
-              int discarded$1 = -86;
-              var4 = (gj.field_d.field_z - 4) * ij.k() >> 9;
+              var4 = (gj.field_d.field_z - 4) * ij.k(-86) >> 9;
               si.c(var2_int - -2, var3 - -3, var4, 2, 16772608);
               gj.field_d.e(var2_int, var3);
               al.field_Z.c(hk.field_k.toUpperCase(), 8, 472, 16776960, -1);
@@ -380,7 +379,7 @@ final class cb {
         return null;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_g = null;
         field_b = null;

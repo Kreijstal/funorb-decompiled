@@ -15,7 +15,7 @@ final class gh {
         field_c = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         kj.field_d = new oi();
     }
 

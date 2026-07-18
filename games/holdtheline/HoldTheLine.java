@@ -28,113 +28,81 @@ public final class HoldTheLine extends oh {
           L0: {
             HoldTheLine.p(-20);
             sg.d(-26919);
-            int discarded$155 = -20;
-            dm.a();
-            int discarded$156 = -123;
-            rh.a();
-            int discarded$157 = 108;
-            jo.a();
+            dm.a((byte) -20);
+            rh.a(-123);
+            jo.a((byte) 108);
             md.g(-1);
-            int discarded$158 = -126;
-            kd.a();
-            int discarded$159 = 1;
-            ah.a();
-            int discarded$160 = 39;
-            o.b();
-            int discarded$161 = -55;
-            da.m();
+            kd.a((byte) -126);
+            ah.a(true);
+            o.b((byte) 39);
+            da.m(-55);
             eg.a(32395);
             lj.a(param0 ^ -29336);
             en.b(param0 ^ -129);
-            int discarded$162 = -112;
-            co.b();
+            co.b(-112);
             sl.a(18668);
             pe.a(param0 + -128);
             ti.g(param0 + -21134);
             l.a(param0 ^ 17182);
             oh.m(8);
             ii.a(8388479);
-            int discarded$163 = -55;
-            dl.a();
-            int discarded$164 = 106;
-            jf.b();
+            dl.a(-55);
+            jf.b((byte) 106);
             tc.b();
-            int discarded$165 = 0;
-            gn.a();
-            int discarded$166 = -21989;
-            ml.a();
-            int discarded$167 = 115;
-            ko.b();
+            gn.a(false);
+            ml.a(-21989);
+            ko.b(115);
             th.a((byte) -37);
             bb.a(-45);
             ak.a(0);
-            int discarded$168 = -110;
-            ai.a();
+            ai.a((byte) -110);
             q.a((byte) 86);
             ri.a(param0 + 1003075144);
             oc.a(-1);
-            int discarded$169 = 28135;
-            wi.a();
+            wi.a(28135);
             ij.b(-90);
-            int discarded$170 = 30;
-            qh.b();
-            int discarded$171 = -58;
-            ad.b();
-            int discarded$172 = 0;
-            ao.a();
-            int discarded$173 = 72;
-            sm.a();
+            qh.b(30);
+            ad.b((byte) -58);
+            ao.a(0);
+            sm.a((byte) 72);
             w.a((byte) 118);
-            int discarded$174 = 0;
-            mm.b();
+            mm.b(false);
             ac.b(-3646);
             ef.b(0);
             gh.a(121);
             pc.c(param0 ^ -129);
-            int discarded$175 = 16831;
-            wj.a();
+            wj.a(16831);
             qb.b(-3);
             ci.a((byte) 100);
-            int discarded$176 = 121;
-            ud.a();
+            ud.a((byte) 121);
             nn.b(param0 ^ 15153);
             vb.a(-1);
-            int discarded$177 = -103;
-            mn.a();
-            int discarded$178 = 119;
-            tf.f();
+            mn.a(-103);
+            tf.f(119);
             ec.e((byte) -122);
             ee.e(0);
-            int discarded$179 = 1;
-            m.a();
-            int discarded$180 = 1;
-            tn.b();
+            m.a(true);
+            tn.b(1);
             hl.c(-2);
             ua.a(param0 + 23881);
             ld.a(122);
-            int discarded$181 = 1;
-            ei.b();
+            ei.b(true);
             uh.a((byte) -13);
             gf.b();
             r.b(param0 ^ -13950);
             qi.a();
             ni.a(0);
-            int discarded$182 = 16;
-            ta.b();
+            ta.b((byte) 16);
             vn.a(-1);
-            int discarded$183 = 96;
-            fj.b();
+            fj.b((byte) 96);
             nm.a(param0 ^ -240);
             ln.e(0);
             p.a(true);
             aj.a(76);
             hh.b(param0 + -118);
-            int discarded$184 = 10;
-            io.a();
-            int discarded$185 = 62;
-            wl.a();
-            int discarded$186 = -89;
-            b.b();
+            io.a(10);
+            wl.a(62);
+            b.b(-89);
             kb.a(127);
             sd.a((byte) -123);
             jh.a(param0 ^ -202);
@@ -142,171 +110,109 @@ public final class HoldTheLine extends oh {
             dg.a(param0 + 32009);
             qj.b(true);
             vm.p(param0 + -135);
-            int discarded$187 = -125;
-            ra.h();
-            int discarded$188 = 79;
-            si.h();
-            int discarded$189 = -16;
-            a.i();
-            int discarded$190 = -25335;
-            pk.h();
+            ra.h((byte) -125);
+            si.h((byte) 79);
+            a.i((byte) -16);
+            pk.h(-25335);
             vg.i(param0 + -100);
             de.j(-1);
-            int discarded$191 = 1;
-            ga.a();
+            ga.a(1);
             mj.a(126);
             gk.a((byte) 115);
             kn.a((byte) 118);
-            int discarded$192 = 40;
-            an.a();
+            an.a((byte) 40);
             ff.a(8192);
             wg.a(true);
-            int discarded$193 = 119;
-            d.a();
+            d.a(119);
             ja.i(param0 ^ -129);
-            int discarded$194 = -20668;
-            wm.f();
+            wm.f(-20668);
             vf.f(127);
             na.a(param0 ^ -200);
-            int discarded$195 = 1;
-            kc.a();
-            int discarded$196 = 114;
-            oi.b();
-            int discarded$197 = 28820;
-            wn.b();
-            int discarded$198 = -92;
-            nl.a();
+            kc.a(true);
+            oi.b((byte) 114);
+            wn.b(28820);
+            nl.a((byte) -92);
             di.f(-13503);
-            int discarded$199 = 1288;
-            jk.e();
+            jk.e(1288);
             lo.f();
             kf.a((byte) -104);
-            int discarded$200 = -67;
-            hk.b();
+            hk.b(-67);
             id.d();
-            int discarded$201 = 0;
-            bl.e();
+            bl.e(0);
             bg.a(param0 ^ 128);
             mi.a(param0 ^ -248);
-            int discarded$202 = 0;
-            pb.a();
-            int discarded$203 = 1;
-            ag.c();
+            pb.a(0);
+            ag.c(true);
             ol.b(6985);
-            int discarded$204 = 106;
-            cc.j();
+            cc.j(106);
             sk.a(-84);
-            int discarded$205 = -123;
-            rb.d();
-            int discarded$206 = 24816;
-            hc.a();
-            int discarded$207 = -1010;
-            ca.f();
-            int discarded$208 = 5;
-            ka.b();
-            int discarded$209 = -56;
-            rf.m();
-            int discarded$210 = -754077296;
-            fe.a();
-            int discarded$211 = 1;
-            dk.b();
+            rb.d(-123);
+            hc.a(24816);
+            ca.f(-1010);
+            ka.b(5);
+            rf.m(-56);
+            fe.a(-754077296);
+            dk.b(true);
             li.a();
             sn.a();
             uj.a((byte) -122);
             qk.a(-32768);
             hm.a(0);
-            int discarded$212 = -4;
-            te.a();
-            int discarded$213 = 84;
-            il.a();
+            te.a(-4);
+            il.a(84);
             lh.a((byte) -33);
-            int discarded$214 = 111;
-            qg.a();
+            qg.a(111);
             fm.a(param0 + -24);
-            int discarded$215 = 104;
-            hi.c();
-            int discarded$216 = -97;
-            rg.a();
-            int discarded$217 = 124;
-            gl.a();
-            int discarded$218 = -20;
-            ej.a();
+            hi.c((byte) 104);
+            rg.a((byte) -97);
+            gl.a((byte) 124);
+            ej.a((byte) -20);
             bh.a();
-            int discarded$219 = -125;
-            gb.a();
-            int discarded$220 = 1;
-            ki.b();
-            int discarded$221 = -71;
-            al.a();
-            int discarded$222 = 117;
-            ne.a();
-            int discarded$223 = 1;
-            ek.a();
+            gb.a((byte) -125);
+            ki.b(true);
+            al.a((byte) -71);
+            ne.a(117);
+            ek.a(true);
             ig.a((byte) 72);
-            int discarded$224 = 1;
-            vh.a();
+            vh.a(true);
             ug.a(param0 + -129);
             lm.b(-11521);
-            int discarded$225 = 25;
-            n.b();
+            n.b((byte) 25);
             rm.i(param0 ^ -5403);
-            int discarded$226 = 92;
-            ub.e();
-            int discarded$227 = 6;
-            u.l();
-            int discarded$228 = -1349126303;
-            rl.i();
-            int discarded$229 = 70;
-            v.e();
-            int discarded$230 = 127;
-            tm.b();
-            int discarded$231 = 114;
-            fk.a();
+            ub.e((byte) 92);
+            u.l(6);
+            rl.i(-1349126303);
+            v.e((byte) 70);
+            tm.b((byte) 127);
+            fk.a(114);
             nb.a();
-            int discarded$232 = 1;
-            cd.a();
-            int discarded$233 = 116;
-            on.b();
-            int discarded$234 = 96;
-            ae.a();
-            int discarded$235 = -78;
-            ng.a();
-            int discarded$236 = 0;
-            bi.a();
-            int discarded$237 = 119;
-            um.a();
+            cd.a(1);
+            on.b((byte) 116);
+            ae.a((byte) 96);
+            ng.a((byte) -78);
+            bi.a(false);
+            um.a(119);
             j.a(0);
-            int discarded$238 = 1;
-            rc.a();
-            int discarded$239 = 12031;
-            ba.a();
-            int discarded$240 = -48;
-            bf.a();
-            int discarded$241 = -42;
-            qe.a();
-            int discarded$242 = -116;
-            uk.a();
-            int discarded$243 = 1;
-            mk.a();
+            rc.a(true);
+            ba.a(12031);
+            bf.a((byte) -48);
+            qe.a((byte) -42);
+            uk.a((byte) -116);
+            mk.a(true);
             sf.c(-1);
             pa.a(true);
-            int discarded$244 = 5751;
-            be.e();
+            be.e(5751);
             ke.a();
-            int discarded$245 = -127;
-            fc.a();
+            fc.a(-127);
             dj.h(18701);
             jb.p(param0 ^ 8078);
             nk.n(param0 + 3747);
-            int discarded$246 = 0;
-            dc.c();
+            dc.c(false);
             gi.h(param0 ^ -27025);
             cj.a(-1);
             gg.a((byte) 51);
-            int discarded$247 = 1;
-            bd.a();
-            int discarded$248 = 103;
-            sj.a();
+            bd.a(true);
+            sj.a((byte) 103);
             gd.e(-1);
             bo.a(false);
             bj.h(param0 ^ -9379);
@@ -316,162 +222,101 @@ public final class HoldTheLine extends oh {
             lg.a(false);
             la.b(param0 ^ -211);
             jd.i(param0 + -32);
-            int discarded$249 = 6;
-            pg.h();
-            int discarded$250 = -36;
-            e.a();
+            pg.h(6);
+            e.a(-36);
             im.a(-90);
-            int discarded$251 = 80;
-            lk.a();
-            int discarded$252 = -15;
-            jj.f();
+            lk.a((byte) 80);
+            jj.f(-15);
             cf.c((byte) 109);
-            int discarded$253 = -124;
-            hf.b();
+            hf.b((byte) -124);
             je.a();
-            int discarded$254 = -90;
-            cm.a();
-            int discarded$255 = 86;
-            nc.b();
-            int discarded$256 = 68;
-            vl.a();
-            int discarded$257 = -3;
-            i.a();
-            int discarded$258 = 3;
-            vk.a();
+            cm.a((byte) -90);
+            nc.b((byte) 86);
+            vl.a((byte) 68);
+            i.a((byte) -3);
+            vk.a(3);
             sb.a(74);
             ue.a(param0 + 19729);
             rd.a(0);
             vd.b(param0 ^ -204);
             kj.a((byte) 110);
-            int discarded$259 = 82;
-            qd.a();
-            int discarded$260 = 1;
-            le.a();
-            int discarded$261 = -10162;
-            ce.c();
+            qd.a((byte) 82);
+            le.a(true);
+            ce.c(-10162);
             pf.b((byte) 38);
-            int discarded$262 = -28;
-            mg.a();
-            int discarded$263 = -99;
-            uf.a();
+            mg.a((byte) -28);
+            uf.a((byte) -99);
             va.b((byte) -120);
-            int discarded$264 = -103;
-            go.a();
-            int discarded$265 = 21;
-            kg.a();
-            int discarded$266 = 43;
-            oa.a();
-            int discarded$267 = 1491624464;
-            td.a();
-            int discarded$268 = -7689;
-            tk.a();
-            int discarded$269 = 0;
-            kk.a();
+            go.a((byte) -103);
+            kg.a((byte) 21);
+            oa.a((byte) 43);
+            td.a(1491624464);
+            tk.a(-7689);
+            kk.a(0);
             jg.a(param0 + -220);
-            int discarded$270 = 1;
-            fb.a();
+            fb.a(true);
             jc.a((byte) 5);
-            int discarded$271 = 0;
-            fo.a();
-            int discarded$272 = -22525;
-            qm.a();
-            int discarded$273 = 110;
-            wb.a();
+            fo.a(false);
+            qm.a(-22525);
+            wb.a((byte) 110);
             in.b(param0 + -129);
-            int discarded$274 = 1;
-            wc.b();
+            wc.b(true);
             vj.h(param0 + -244);
-            int discarded$275 = -3369;
-            wd.i();
-            int discarded$276 = 0;
-            lb.d();
-            int discarded$277 = -87;
-            dd.c();
-            int discarded$278 = 0;
-            gj.d();
-            int discarded$279 = -127;
-            hn.p();
-            int discarded$280 = 69;
-            ha.a();
+            wd.i(-3369);
+            lb.d(false);
+            dd.c((byte) -87);
+            gj.d(false);
+            hn.p(-127);
+            ha.a(69);
             mo.b(-1351579448);
             am.a(1);
-            int discarded$281 = 1;
-            kl.c();
-            int discarded$282 = 1;
-            tl.d();
+            kl.c(true);
+            tl.d(true);
             gm.a(4);
-            int discarded$283 = 1000;
-            he.h();
-            int discarded$284 = 1;
-            fi.a();
+            he.h(1000);
+            fi.a(true);
             qn.a(param0 + -179);
             ui.a(param0);
-            int discarded$285 = 114;
-            ic.a();
-            int discarded$286 = -85;
-            ma.a();
-            int discarded$287 = 119;
-            ih.a();
-            int discarded$288 = 89;
-            ie.a();
-            int discarded$289 = 381;
-            fl.a();
-            int discarded$290 = 112;
-            ul.a();
-            int discarded$291 = 1;
-            hb.b();
+            ic.a((byte) 114);
+            ma.a((byte) -85);
+            ih.a((byte) 119);
+            ie.a((byte) 89);
+            fl.a(381);
+            ul.a((byte) 112);
+            hb.b((byte) 1);
             ok.a(false);
-            int discarded$292 = -116;
-            cg.b();
-            int discarded$293 = 1;
-            ji.a();
+            cg.b(-116);
+            ji.a(true);
             lc.b(-69);
-            int discarded$294 = 124;
-            ll.a();
+            ll.a((byte) 124);
             aa.a(param0 + -33);
             mf.a(-69);
             pd.a(param0 ^ -237);
             bn.c((byte) -93);
-            int discarded$295 = 61;
-            fh.b();
-            int discarded$296 = -125;
-            sa.a();
-            int discarded$297 = -4496;
-            nd.a();
+            fh.b((byte) 61);
+            sa.a((byte) -125);
+            nd.a(-4496);
             nh.a((byte) 25);
             eb.c(param0 + -120);
-            int discarded$298 = -16;
-            tg.a();
-            int discarded$299 = -52;
-            g.b();
+            tg.a((byte) -16);
+            g.b((byte) -52);
             oe.a(param0 + -128);
-            int discarded$300 = -6;
-            om.a();
-            int discarded$301 = 99;
-            h.a();
-            int discarded$302 = 61;
-            we.a();
+            om.a((byte) -6);
+            h.a((byte) 99);
+            we.a((byte) 61);
             t.a(param0 ^ 128);
-            int discarded$303 = 1;
-            se.a();
+            se.a(true);
             nj.a(param0 + -33);
             lf.b((byte) 5);
             ho.f((byte) -76);
-            int discarded$304 = 0;
-            kh.g();
-            int discarded$305 = -127;
-            em.g();
-            int discarded$306 = -14;
-            qf.g();
-            int discarded$307 = -31819;
-            ge.a();
+            kh.g(0);
+            em.g(-127);
+            qf.g(-14);
+            ge.a(-31819);
             od.a(76);
-            int discarded$308 = 115;
-            fd.a();
+            fd.a(115);
             ob.c(param0 + -24709);
-            int discarded$309 = 11;
-            sh.a();
+            sh.a(11);
             ((HoldTheLine) this).field_n = null;
             break L0;
           }
@@ -482,36 +327,44 @@ public final class HoldTheLine extends oh {
         }
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
             L1: {
+              if (param0 == -35) {
+                break L1;
+              } else {
+                field_F = null;
+                break L1;
+              }
+            }
+            L2: {
               if (md.field_i != null) {
                 rk.a((byte) 125, md.field_i);
                 md.field_i = null;
                 qd.d(56);
-                break L1;
+                break L2;
               } else {
-                break L1;
+                break L2;
               }
             }
             pg.field_J = bi.a(122, 3);
-            ta.field_a = bi.a(127, 4);
+            ta.field_a = bi.a(param0 + 162, 4);
             b.field_d = bi.a(-67, 5);
             th.field_m = bi.a(-15, 6);
             ld.field_c = bi.a(121, 7);
             kk.field_i = bi.a(-17, 8);
             oe.field_j = bi.a(-16, 9);
-            cc.field_y = bi.a(122, 10);
+            cc.field_y = bi.a(param0 ^ -89, 10);
             ef.a(g.field_p, (byte) -126, si.field_lb);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var2, "HoldTheLine.NA(" + -35 + ')');
+          throw kk.a((Throwable) (Object) var2, "HoldTheLine.NA(" + param0 + ')');
         }
     }
 
@@ -521,8 +374,7 @@ public final class HoldTheLine extends oh {
         try {
           L0: {
             L1: {
-              int discarded$7 = -66;
-              sb.a();
+              sb.a((byte) -66);
               if (kf.field_U == null) {
                 break L1;
               } else {
@@ -531,8 +383,7 @@ public final class HoldTheLine extends oh {
               }
             }
             L2: {
-              int discarded$8 = 0;
-              pf.a();
+              pf.a(false);
               if (param0 == 30) {
                 break L2;
               } else {
@@ -611,9 +462,7 @@ public final class HoldTheLine extends oh {
             }
             lh.a(wi.field_b, -81, (java.awt.Component) (Object) kd.field_b);
             ec.field_y = null;
-            int discarded$4 = 0;
-            int discarded$5 = 0;
-            go.a(0, 16777215, co.field_a, (java.applet.Applet) this);
+            go.a(0, 16777215, co.field_a, (java.applet.Applet) this, 0, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -680,12 +529,9 @@ public final class HoldTheLine extends oh {
         try {
           L0: {
             L1: {
-              int discarded$28 = -11875;
-              ca.h();
-              int discarded$29 = -1542826527;
-              vg.h();
-              int discarded$30 = -76;
-              ad.a();
+              ca.h(-11875);
+              vg.h(-1542826527);
+              ad.a((byte) -76);
               stackOut_1_0 = this;
               stackOut_1_1 = 1051;
               stackIn_4_0 = stackOut_1_0;
@@ -715,8 +561,7 @@ public final class HoldTheLine extends oh {
               if (!nk.field_R) {
                 break L2;
               } else {
-                int discarded$31 = -35;
-                this.g();
+                this.g((byte) -35);
                 nk.field_R = false;
                 break L2;
               }
@@ -724,8 +569,7 @@ public final class HoldTheLine extends oh {
             L3: while (true) {
               L4: {
                 L5: {
-                  int discarded$32 = 31881;
-                  if (!tl.a(ae.field_e)) {
+                  if (!tl.a(ae.field_e, 31881)) {
                     break L5;
                   } else {
                     ((HoldTheLine) this).j(-6);
@@ -752,10 +596,8 @@ public final class HoldTheLine extends oh {
                     break L6;
                   } else {
                     L7: {
-                      int discarded$33 = -30;
-                      if (jn.a()) {
-                        int discarded$34 = 0;
-                        this.b(false);
+                      if (jn.a((byte) -30)) {
+                        this.b(false, false);
                         break L7;
                       } else {
                         break L7;
@@ -798,8 +640,7 @@ public final class HoldTheLine extends oh {
                   }
                 }
                 L11: {
-                  int discarded$35 = 103;
-                  if (!oa.b()) {
+                  if (!oa.b((byte) 103)) {
                     break L11;
                   } else {
                     L12: {
@@ -817,12 +658,8 @@ public final class HoldTheLine extends oh {
                       }
                       dd.a(2, (byte) 86);
                       la.a(3, 0);
-                      int discarded$36 = 4;
-                      int discarded$37 = 1;
-                      b.a();
-                      int discarded$38 = 51;
-                      int discarded$39 = 6;
-                      ec.b();
+                      b.a(true, 4);
+                      ec.b(6, (byte) 51);
                       break L12;
                     }
                     L14: {
@@ -836,8 +673,7 @@ public final class HoldTheLine extends oh {
                         }
                       }
                     }
-                    int discarded$40 = 0;
-                    kh.b();
+                    kh.b(false);
                     break L11;
                   }
                 }
@@ -858,8 +694,7 @@ public final class HoldTheLine extends oh {
                   if (vg.field_G == 2) {
                     L17: {
                       if (!pj.b((byte) 123)) {
-                        int discarded$41 = -118;
-                        dg.a();
+                        dg.a((byte) -118);
                         break L17;
                       } else {
                         break L17;
@@ -901,8 +736,7 @@ public final class HoldTheLine extends oh {
                           } else {
                             L22: {
                               L23: {
-                                int discarded$42 = 18;
-                                var4 = sk.a();
+                                var4 = sk.a((byte) 18);
                                 if (var4 == 2) {
                                   break L23;
                                 } else {
@@ -924,8 +758,7 @@ public final class HoldTheLine extends oh {
                                   }
                                   bo.field_c = true;
                                   i.a((byte) 62, false);
-                                  int discarded$43 = 0;
-                                  ah.b();
+                                  ah.b(false);
                                   if (var5 == 0) {
                                     break L22;
                                   } else {
@@ -944,8 +777,7 @@ public final class HoldTheLine extends oh {
                           }
                         }
                         L25: {
-                          int discarded$44 = 0;
-                          if (ki.a()) {
+                          if (ki.a(false)) {
                             break L25;
                           } else {
                             L26: {
@@ -988,9 +820,9 @@ public final class HoldTheLine extends oh {
                                               }
                                             }
                                           }
-                                          int fieldTemp$45 = pc.field_h - 2;
+                                          int fieldTemp$5 = pc.field_h - 2;
                                           pc.field_h = pc.field_h - 2;
-                                          if (0 <= fieldTemp$45) {
+                                          if (0 <= fieldTemp$5) {
                                             break L29;
                                           } else {
                                             pc.field_h = 0;
@@ -1002,9 +834,9 @@ public final class HoldTheLine extends oh {
                                           }
                                         }
                                         ra.m(126);
-                                        int fieldTemp$46 = pc.field_h + 2;
+                                        int fieldTemp$6 = pc.field_h + 2;
                                         pc.field_h = pc.field_h + 2;
-                                        if (fieldTemp$46 > 255) {
+                                        if (fieldTemp$6 > 255) {
                                           pc.field_h = 255;
                                           break L29;
                                         } else {
@@ -1108,9 +940,9 @@ public final class HoldTheLine extends oh {
                                           }
                                         }
                                       }
-                                      int fieldTemp$47 = pc.field_h - 2;
+                                      int fieldTemp$7 = pc.field_h - 2;
                                       pc.field_h = pc.field_h - 2;
-                                      if (fieldTemp$47 >= 0) {
+                                      if (fieldTemp$7 >= 0) {
                                         break L38;
                                       } else {
                                         pc.field_h = 0;
@@ -1122,9 +954,9 @@ public final class HoldTheLine extends oh {
                                       }
                                     }
                                     L41: {
-                                      int fieldTemp$48 = pc.field_h + 2;
+                                      int fieldTemp$8 = pc.field_h + 2;
                                       pc.field_h = pc.field_h + 2;
-                                      if (255 < fieldTemp$48) {
+                                      if (255 < fieldTemp$8) {
                                         pc.field_h = 255;
                                         break L41;
                                       } else {
@@ -1165,8 +997,7 @@ public final class HoldTheLine extends oh {
                                               if (!gg.field_L) {
                                                 break L47;
                                               } else {
-                                                int discarded$49 = 114;
-                                                ef.a();
+                                                ef.a(114);
                                                 if (var5 == 0) {
                                                   break L46;
                                                 } else {
@@ -1174,8 +1005,7 @@ public final class HoldTheLine extends oh {
                                                 }
                                               }
                                             }
-                                            int discarded$50 = -54;
-                                            kd.b();
+                                            kd.b((byte) -54);
                                             break L46;
                                           }
                                           vg.field_G = 2;
@@ -1405,17 +1235,16 @@ public final class HoldTheLine extends oh {
                     if (~ma.field_k == ~ud.field_d) {
                       break L63;
                     } else {
-                      int fieldTemp$51 = kd.field_c + 1;
+                      int fieldTemp$9 = kd.field_c + 1;
                       kd.field_c = kd.field_c + 1;
-                      if (fieldTemp$51 < 80) {
+                      if (fieldTemp$9 < 80) {
                         break L63;
                       } else {
                         L64: {
                           if (ma.field_k == 1) {
                             break L64;
                           } else {
-                            int discarded$52 = 2;
-                            if (o.a(ma.field_k) == null) {
+                            if (o.a(ma.field_k, 2) == null) {
                               break L63;
                             } else {
                               break L64;
@@ -1432,8 +1261,7 @@ public final class HoldTheLine extends oh {
                     if (ca.field_r == -1) {
                       break L65;
                     } else {
-                      int discarded$53 = 1;
-                      if (!pd.a(nm.field_b)) {
+                      if (!pd.a(nm.field_b, true)) {
                         break L65;
                       } else {
                         bl.field_r = new sg(nm.field_b, ca.field_r, fl.field_j, qn.field_k, on.field_r, sk.field_i);
@@ -1444,13 +1272,11 @@ public final class HoldTheLine extends oh {
                   }
                   break L0;
                 } else {
-                  int discarded$54 = 0;
-                  kb.a();
+                  kb.a((byte) 0);
                   return;
                 }
               } else {
-                int discarded$55 = 0;
-                this.b(true);
+                this.b(true, false);
                 return;
               }
             }
@@ -1462,7 +1288,7 @@ public final class HoldTheLine extends oh {
         }
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         i var3 = null;
@@ -1473,9 +1299,7 @@ public final class HoldTheLine extends oh {
         try {
           L0: {
             L1: {
-              int discarded$11 = 50;
-              int discarded$12 = -105;
-              en.a();
+              en.a((byte) -105, 50);
               if (pj.b((byte) 107)) {
                 break L1;
               } else {
@@ -1490,7 +1314,7 @@ public final class HoldTheLine extends oh {
               mi.field_d = 7;
               ((HoldTheLine) this).field_C = 125;
               t.field_l = -1;
-              var2_int = -84;
+              var2_int = 84 / ((42 - param0) / 51);
               cf.field_w = 0;
               ah.field_b = -1;
               fb.field_n = new ah();
@@ -1520,7 +1344,7 @@ public final class HoldTheLine extends oh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var2, "HoldTheLine.PA(" + 107 + ')');
+          throw kk.a((Throwable) (Object) var2, "HoldTheLine.PA(" + param0 + ')');
         }
     }
 
@@ -1656,8 +1480,7 @@ public final class HoldTheLine extends oh {
                 return;
               } else {
                 if (go.a(param0 ^ 318)) {
-                  int discarded$13 = 120;
-                  oj.a();
+                  oj.a((byte) 120);
                   if (((HoldTheLine) this).field_C <= 0) {
                     if (param0 == 256) {
                       L4: {
@@ -1677,8 +1500,7 @@ public final class HoldTheLine extends oh {
                                 }
                               }
                             }
-                            int discarded$14 = 0;
-                            eg.a();
+                            eg.a(false);
                             l.field_a[dg.field_c].a(-55);
                             if (var10 == 0) {
                               break L4;
@@ -1708,8 +1530,7 @@ public final class HoldTheLine extends oh {
                                     }
                                   }
                                 }
-                                int discarded$15 = 0;
-                                eg.a();
+                                eg.a(false);
                                 l.field_a[ej.field_b].a(param0 ^ -311);
                                 tc.c(0, 0, 640, 480, 12566463, -(512 * ie.field_n / 80) + 512);
                                 if (var10 == 0) {
@@ -1760,8 +1581,7 @@ public final class HoldTheLine extends oh {
                                 }
                               }
                             }
-                            int discarded$16 = 0;
-                            eg.a();
+                            eg.a(false);
                             l.field_a[dg.field_c].a(param0 ^ -311);
                             tc.c(0, 0, 640, 480, 12566463, (ie.field_n << 9) / 80);
                             if (var10 == 0) {
@@ -1771,8 +1591,7 @@ public final class HoldTheLine extends oh {
                             }
                           }
                         }
-                        int discarded$17 = 0;
-                        eg.a();
+                        eg.a(false);
                         l.field_a[dg.field_c].a(-55);
                         break L4;
                       }
@@ -1781,8 +1600,7 @@ public final class HoldTheLine extends oh {
                           if (!kb.b(108)) {
                             break L14;
                           } else {
-                            int discarded$18 = 128;
-                            mj.a(640, 480, 0, param0 ^ 256, 0);
+                            mj.a(640, 480, 0, param0 ^ 256, 0, 128);
                             d.a(false);
                             if (var10 == 0) {
                               break L13;
@@ -1791,8 +1609,7 @@ public final class HoldTheLine extends oh {
                             }
                           }
                         }
-                        int discarded$19 = 0;
-                        if (ki.a()) {
+                        if (ki.a(false)) {
                           L15: {
                             L16: {
                               if (kf.field_U != null) {
@@ -1830,10 +1647,7 @@ public final class HoldTheLine extends oh {
                           break L17;
                         }
                       }
-                      int discarded$20 = 0;
-                      int discarded$21 = 1;
-                      int discarded$22 = 0;
-                      hi.a((java.awt.Canvas) var2_ref);
+                      hi.a((java.awt.Canvas) var2_ref, 0, true, 0);
                       break L0;
                     } else {
                       return;
@@ -1859,10 +1673,7 @@ public final class HoldTheLine extends oh {
                         break L18;
                       }
                     }
-                    int discarded$23 = 0;
-                    int discarded$24 = 1;
-                    int discarded$25 = 0;
-                    hi.a((java.awt.Canvas) var2_ref);
+                    hi.a((java.awt.Canvas) var2_ref, 0, true, 0);
                     return;
                   }
                 } else {
@@ -1880,7 +1691,7 @@ public final class HoldTheLine extends oh {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void b(boolean param0, boolean param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -1945,8 +1756,7 @@ public final class HoldTheLine extends oh {
                   jj.a(125, oh.field_r, 3.0f);
                   return;
                 } else {
-                  int discarded$4 = 10302;
-                  if (co.a(th.field_m, b.field_d)) {
+                  if (co.a(th.field_m, b.field_d, 10302)) {
                     break L5;
                   } else {
                     jj.a(85, um.field_f, 4.0f);
@@ -2028,7 +1838,7 @@ public final class HoldTheLine extends oh {
                     }
                   }
                 }
-                jj.a(114, ej.a(rm.field_E, rd.field_a, "", false, oe.field_j), 30.0f);
+                jj.a(114, ej.a(rm.field_E, rd.field_a, "", param1, oe.field_j), 30.0f);
                 return;
               }
             }
@@ -2075,10 +1885,8 @@ public final class HoldTheLine extends oh {
                   if (null != oe.field_j) {
                     jj.a(110, fj.field_r, 90.0f);
                     ((HoldTheLine) this).c(256);
-                    int discarded$5 = -121;
-                    pg.a(oe.field_j);
-                    int discarded$6 = 121;
-                    cd.b();
+                    pg.a(oe.field_j, -121);
+                    cd.b(121);
                     oe.field_j = null;
                     qd.d(94);
                     return;
@@ -2135,31 +1943,38 @@ public final class HoldTheLine extends oh {
                           }
                         }
                       }
+                      L18: {
+                        if (!param1) {
+                          break L18;
+                        } else {
+                          ((HoldTheLine) this).b((byte) 4);
+                          break L18;
+                        }
+                      }
                       var3_int = 0;
-                      L18: while (true) {
-                        L19: {
-                          L20: {
+                      L19: while (true) {
+                        L20: {
+                          L21: {
                             if (var3_int >= 13) {
-                              break L20;
+                              break L21;
                             } else {
                               l.field_a[var3_int] = (pc) (Object) new ti(var3_int);
                               var3_int++;
                               if (var4 != 0) {
-                                break L19;
+                                break L20;
                               } else {
                                 if (var4 == 0) {
-                                  continue L18;
+                                  continue L19;
                                 } else {
-                                  break L20;
+                                  break L21;
                                 }
                               }
                             }
                           }
                           l.field_a[13] = (pc) (Object) new ec(13, new int[4], new hj[4], gh.field_t, new String[6], vb.field_c, 8355711);
                           dg.field_c = 0;
-                          int discarded$7 = 107;
-                          this.h();
-                          break L19;
+                          this.h((byte) 107);
+                          break L20;
                         }
                         break L0;
                       }
@@ -2180,7 +1995,7 @@ public final class HoldTheLine extends oh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var3, "HoldTheLine.OA(" + param0 + ',' + false + ')');
+          throw kk.a((Throwable) (Object) var3, "HoldTheLine.OA(" + param0 + ',' + param1 + ')');
         }
     }
 

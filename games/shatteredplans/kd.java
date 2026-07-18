@@ -6,7 +6,7 @@ final class kd {
     static String field_c;
     static int field_a;
 
-    final static void a(vr param0, boolean param1, ln param2) {
+    final static void a(vr param0, boolean param1, ln param2, byte param3) {
         ln[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -420,7 +420,7 @@ final class kd {
         return stackIn_69_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

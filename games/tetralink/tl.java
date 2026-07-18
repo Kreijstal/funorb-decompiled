@@ -24,7 +24,7 @@ final class tl extends gn implements ih, dm {
     private boolean field_R;
     private ae field_W;
 
-    public static void i() {
+    public static void i(int param0) {
         field_bb = null;
         field_Z = null;
         field_P = null;
@@ -131,7 +131,7 @@ final class tl extends gn implements ih, dm {
         }
     }
 
-    final static String h() {
+    final static String h(int param0) {
         if (fl.field_s) {
             return null;
         }
@@ -169,8 +169,7 @@ final class tl extends gn implements ih, dm {
             if (param0 <= 0) {
               L1: {
                 if (((tl) this).field_U == param1) {
-                  int discarded$115 = 0;
-                  this.a();
+                  this.a(false);
                   break L1;
                 } else {
                   if (((tl) this).field_W == param1) {
@@ -183,13 +182,11 @@ final class tl extends gn implements ih, dm {
                           gj.a((byte) -122);
                           break L1;
                         } else {
-                          int discarded$116 = 31212;
-                          in.a();
+                          in.a(31212);
                           break L1;
                         }
                       } else {
-                        int discarded$117 = -63;
-                        bb.a();
+                        bb.a((byte) -63);
                         break L1;
                       }
                     } else {
@@ -257,7 +254,7 @@ final class tl extends gn implements ih, dm {
           L0: {
             L1: {
               if (param0 == ((tl) this).field_ab) {
-                boolean discarded$4 = ((tl) this).field_S.a((na) this, -384169950);
+                boolean discarded$2 = ((tl) this).field_S.a((na) this, -384169950);
                 break L1;
               } else {
                 break L1;
@@ -265,8 +262,7 @@ final class tl extends gn implements ih, dm {
             }
             L2: {
               if (param0 == ((tl) this).field_S) {
-                int discarded$5 = 0;
-                this.a();
+                this.a(false);
                 break L2;
               } else {
                 break L2;
@@ -338,12 +334,11 @@ final class tl extends gn implements ih, dm {
         ((tl) this).field_S.k(0);
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         Object var3 = null;
         L0: {
           L1: {
-            int discarded$4 = -101;
-            if (wd.b()) {
+            if (wd.b((byte) -101)) {
               break L1;
             } else {
               if (0 >= ((tl) this).field_ab.field_A.length()) {

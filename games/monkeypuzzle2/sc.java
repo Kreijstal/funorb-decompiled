@@ -13,7 +13,7 @@ final class sc {
     static int field_g;
     static eb field_f;
 
-    final static void b() {
+    final static void b(int param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -185,7 +185,7 @@ final class sc {
         return new int[]{0, 0, 0, var7, 0, var6, var8, var4, -var9, -var10, var3, var11};
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_f = null;
         field_h = null;

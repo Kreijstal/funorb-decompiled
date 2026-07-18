@@ -158,7 +158,7 @@ final class hg extends jc {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_o = null;
         field_p = null;
         field_q = null;

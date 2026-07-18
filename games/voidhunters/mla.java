@@ -102,7 +102,7 @@ final class mla extends rqa {
         }
     }
 
-    final static int a(String param0, ds param1) {
+    final static int a(String param0, ds param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;

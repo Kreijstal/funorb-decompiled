@@ -179,7 +179,7 @@ final class fe {
         }
     }
 
-    final static void b(String param0, int param1, int param2, int[] param3) {
+    final static void b(String param0, int param1, int param2, int[] param3, boolean param4) {
         param1 = param1 - (field_i.a(param0) >> 1);
         fe.a(param0, param1, param2, param3, true);
     }
@@ -214,7 +214,7 @@ final class fe {
         return false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wk[] param4) {
+    final static void a(int param0, int param1, int param2, int param3, wk[] param4, int param5) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -615,7 +615,7 @@ final class fe {
         }
     }
 
-    final static void d(String param0, int param1, int param2, int param3) {
+    final static void d(String param0, int param1, int param2, int param3, boolean param4) {
         param1 = param1 - (field_i.a(param0) >> 1);
         fe.a(param0, param1, param2, param3, true);
     }
@@ -1144,7 +1144,7 @@ final class fe {
         }
     }
 
-    final static void c(String param0, int param1, int param2, int param3) {
+    final static void c(String param0, int param1, int param2, int param3, boolean param4) {
         param1 = param1 - (field_i.a(param0) >> 2);
         fe.a(param0, param1, param2, param3, true);
     }
@@ -1259,7 +1259,7 @@ final class fe {
         }
     }
 
-    final static void b(String param0, int param1, int param2, int param3) {
+    final static void b(String param0, int param1, int param2, int param3, boolean param4) {
         int var7 = 0;
         field_d[0] = param3 << 1;
         int var5 = field_i.a(param0, field_d, field_k);
@@ -1269,7 +1269,7 @@ final class fe {
         }
     }
 
-    final static int b(int param0) {
+    final static int b(int param0, int param1) {
         int var2 = (param0 & 16711935) * 128 >>> 8;
         int var3 = (param0 & 65280) * 128 >>> 8;
         return var2 & 16711935 | var3 & 65280;
@@ -1519,14 +1519,13 @@ final class fe {
         fe.c(param0, param1, param2, param3, param5);
     }
 
-    final static void a(String param0, int param1, int param2, int param3) {
+    final static void a(String param0, int param1, int param2, int param3, int param4, boolean param5) {
         int var8 = 0;
         field_d[0] = param3 << 1;
         int var6 = field_i.a(param0, field_d, field_k);
         int var7 = field_i.field_v >> 1;
         for (var8 = 0; var8 < var6; var8++) {
-            int discarded$0 = 1;
-            fe.c(field_k[var8], param1, param2 + var7 * var8, 16777215);
+            fe.c(field_k[var8], param1, param2 + var7 * var8, 16777215, true);
         }
     }
 
@@ -1719,7 +1718,7 @@ final class fe {
         fe.a(param8, var11, var12, param10, 1, true);
     }
 
-    final static void a(String param0, int param1, int param2, int param3, int[] param4) {
+    final static void a(String param0, int param1, int param2, int param3, int[] param4, boolean param5) {
         fe.a(param0, param1, param2, param3, param4, true, 0, 0);
     }
 

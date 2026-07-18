@@ -43,8 +43,7 @@ final class jd {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            int discarded$6 = -4;
-            if (gq.a(param2, false)) {
+            if (gq.a(param2, false, -4)) {
               var3_int = 0;
               L1: while (true) {
                 if (param2.length() <= var3_int) {
@@ -102,7 +101,7 @@ final class jd {
         return stackIn_11_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_j = null;
         field_a = null;

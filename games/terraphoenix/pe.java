@@ -27,7 +27,7 @@ final class pe {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_f = null;
         field_b = null;

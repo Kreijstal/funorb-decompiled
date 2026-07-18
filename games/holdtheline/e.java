@@ -9,7 +9,7 @@ final class e {
     static float[] field_e;
     static String field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_a = null;
         field_b = null;
@@ -69,8 +69,7 @@ final class e {
         var6 = HoldTheLine.field_D;
         try {
           L0: {
-            int discarded$2 = 72;
-            var7 = ta.a();
+            var7 = ta.a((byte) 72);
             var4 = 0;
             var5 = fk.a(25, '[') + param2 + ']';
             L1: while (true) {

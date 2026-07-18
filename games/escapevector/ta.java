@@ -59,12 +59,11 @@ final class ta {
         int var7 = 8 / ((18 - param0) / 59);
         int var6 = this.e(-108);
         var6 = this.a(var5, 117, var3, var4, ((ta) this).field_q, var6);
-        var6 = this.a(-1, var5, var6, var3, ((ta) this).field_q);
-        var6 = this.a(440, var5, (byte) 57, var6);
+        var6 = this.a(-1, var5, var6, var3, ((ta) this).field_q, var4);
+        var6 = this.a(440, var5, (byte) 57, var6, var4, var3);
         this.a(true);
         int discarded$0 = this.b(var6, 8);
-        int discarded$1 = 98;
-        this.b();
+        this.b((byte) 98);
         int var8 = ((ta) this).d((byte) -71);
         this.g(var8, 0);
     }
@@ -93,7 +92,7 @@ final class ta {
         this.a(var7, 1, 2, var6, var5);
     }
 
-    private final boolean c() {
+    private final boolean c(byte param0) {
         int var2 = 0;
         wc var3 = null;
         int var4 = 0;
@@ -175,13 +174,11 @@ final class ta {
     private final boolean a(byte param0, boolean param1, boolean param2) {
         int var6 = 0;
         int var4 = 0;
-        int discarded$0 = -16;
-        if (this.c()) {
+        if (this.c((byte) -16)) {
             return var4 != 0;
         }
         if (param2) {
-            int discarded$1 = -8477;
-            var6 = this.l();
+            var6 = this.l(-8477);
             if (0 > var6) {
                 return var4 != 0;
             }
@@ -208,7 +205,7 @@ final class ta {
         return var4 != 0;
     }
 
-    final static void m() {
+    final static void m(int param0) {
         lj.a(4, 43);
     }
 
@@ -348,7 +345,7 @@ final class ta {
         return stackIn_11_0;
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         int[] var2 = new int[]{3170352, 8421504, 8421504};
         int[] var3 = new int[]{6340704, 16777215, 16777215};
         int var5 = -4;
@@ -374,7 +371,6 @@ final class ta {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int[] var12 = null;
         ed[] var15 = null;
         int var16 = 0;
         int var17 = 0;
@@ -385,9 +381,10 @@ final class ta {
         int var22 = 0;
         dk var23 = null;
         int var24 = 0;
-        int[] var34 = null;
-        int[] var35 = null;
-        int[] var36 = null;
+        int[] var37 = null;
+        int[] var38 = null;
+        int[] var39 = null;
+        int[] var40 = null;
         var24 = EscapeVector.field_A;
         if (((ta) this).field_p != null) {
           return ((ta) this).field_u[((ta) this).field_h];
@@ -397,8 +394,7 @@ final class ta {
           var4 = 40;
           var5 = 40;
           var6 = new int[]{36, 40};
-          int discarded$2 = -105;
-          this.a();
+          this.a((byte) -105);
           var7 = new int[]{36, 40};
           ((ta) this).field_p = new dk[((ta) this).field_y][];
           var8 = 0;
@@ -408,11 +404,10 @@ final class ta {
             } else {
               var9 = ((ta) this).field_u[var8];
               var10 = this.a((byte) 89, var9);
-              var34 = this.b(22387, var10, var9);
-              var12 = this.a(var34, (byte) 100, var4);
-              int discarded$3 = -115;
-              var35 = this.a(var12);
-              var36 = this.a((byte) -99, var3, var5, var10);
+              var37 = this.b(22387, var10, var9);
+              var38 = this.a(var37, (byte) 100, var4);
+              var39 = this.a(var38, (byte) -115);
+              var40 = this.a((byte) -99, var3, var5, var10);
               var15 = this.a(var8, (byte) -116);
               ((ta) this).field_p[var8] = new dk[var9];
               var16 = 0;
@@ -421,17 +416,17 @@ final class ta {
                   var8++;
                   continue L0;
                 } else {
-                  var17 = var34[var16];
+                  var17 = var37[var16];
                   var18 = 0;
                   L2: while (true) {
                     if (var18 >= var17) {
                       var16++;
                       continue L1;
                     } else {
-                      var19 = this.a(var18, var34, 6340704, var16);
+                      var19 = this.a(var18, var37, 6340704, var16);
                       var20 = var15[var19];
-                      var21 = var18 * var4 + var35[var16];
-                      var22 = var36[var16];
+                      var21 = var18 * var4 + var39[var16];
+                      var22 = var40[var16];
                       var23 = new dk(var2, var19, var20, var6, var7);
                       var23.a(var5, 0, var4);
                       var23.b((byte) 22, var21, var22);
@@ -447,7 +442,7 @@ final class ta {
         }
     }
 
-    private final void g() {
+    private final void g(int param0) {
         ((ta) this).field_o.c(117);
         int var2 = di.field_d.field_h;
         if (!((ta) this).field_s.e((byte) -7)) {
@@ -507,12 +502,11 @@ final class ta {
         return var4;
     }
 
-    private final boolean k() {
+    private final boolean k(int param0) {
         int var2 = 0;
         if (pn.p(-98)) {
             di.field_d.a(118);
-            int discarded$16 = 0;
-            qk.a(((ta) this).field_t);
+            qk.a(((ta) this).field_t, 0);
             if (!(nk.field_n != 13)) {
                 di.field_d.a(false, ((ta) this).field_d);
             }
@@ -523,7 +517,7 @@ final class ta {
         return var2 != 0;
     }
 
-    private final int[] a(int[] param0) {
+    private final int[] a(int[] param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int[] var4 = null;
@@ -783,16 +777,14 @@ final class ta {
         }
         this.f(true);
         int var2 = 0;
-        int discarded$0 = -70;
-        var2 = this.k() ? 1 : 0;
+        var2 = this.k(-70) ? 1 : 0;
         if (param0 >= -111) {
             return true;
         }
         if (!(var2 == 0)) {
             return var2 != 0;
         }
-        int discarded$1 = -30;
-        var2 = this.h() ? 1 : 0;
+        var2 = this.h((byte) -30) ? 1 : 0;
         if (var2 != 0) {
             return var2 != 0;
         }
@@ -911,7 +903,7 @@ final class ta {
         return stackIn_7_0;
     }
 
-    private final boolean h() {
+    private final boolean h(byte param0) {
         int var2 = 0;
         di.field_d.a(((ta) this).a(-3, sf.field_c, ng.field_ob), (byte) 119, ((ta) this).a(-3, dh.field_d, bj.field_y));
         this.a(20364);
@@ -956,8 +948,7 @@ final class ta {
         if (var2 < 0) {
             return null;
         }
-        int discarded$0 = 0;
-        dk var3 = m.a(((ta) this).field_p[((ta) this).field_h], var2);
+        dk var3 = m.a(((ta) this).field_p[((ta) this).field_h], var2, 0);
         if (!(var3 == null)) {
             return var3;
         }
@@ -1072,7 +1063,7 @@ final class ta {
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         int var4 = 0;
         int var5 = 0;
         int var6 = EscapeVector.field_A;
@@ -1114,10 +1105,8 @@ final class ta {
           em.b(var20);
           var5.f();
           var8 = qm.a(var7, (byte) 26);
-          int discarded$4 = -49;
-          var9 = on.a(var7);
-          int discarded$5 = -122;
-          var10 = vg.a(var7);
+          var9 = on.a(var7, -49);
+          var10 = vg.a(var7, (byte) -122);
           var11 = pb.a((byte) 2, var7);
           var5.field_z = var11 + -var10;
           var5.field_q = var5.field_q - var8;
@@ -1143,7 +1132,7 @@ final class ta {
         ((ta) this).field_s = new ea(var15, var16, var5, var12);
     }
 
-    private final int a(int param0, ih param1, int param2, int param3, int param4) {
+    private final int a(int param0, ih param1, int param2, int param3, int param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         String var8 = null;
@@ -1269,7 +1258,7 @@ final class ta {
         return var3;
     }
 
-    private final int a(int param0, ih param1, byte param2, int param3) {
+    private final int a(int param0, ih param1, byte param2, int param3, int param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         String var8 = null;
@@ -1363,7 +1352,7 @@ final class ta {
         return var2;
     }
 
-    private final void d() {
+    private final void d(int param0) {
         ed var4 = null;
         int var2 = -32;
         ((ta) this).field_n.c(50);
@@ -1371,8 +1360,7 @@ final class ta {
         if (var3 >= 0) {
             var4 = this.b(true);
             this.b(2, var4);
-            int discarded$0 = -33;
-            this.a(var4);
+            this.a(var4, (byte) -33);
             this.a(2, var4);
         } else {
             this.c(true);
@@ -1380,7 +1368,7 @@ final class ta {
         this.e(true);
     }
 
-    private final void a(ed param0) {
+    private final void a(ed param0, byte param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         ih var4 = null;
@@ -1481,7 +1469,7 @@ final class ta {
         }
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         en var2 = ce.field_f;
         if (var2.b(-106)) {
             ((ta) this).field_b = 0;
@@ -1610,10 +1598,8 @@ final class ta {
         if (param0 != 3) {
             ((ta) this).field_i = null;
         }
-        int discarded$0 = 16317;
-        this.g();
-        int discarded$1 = -3;
-        this.d();
+        this.g(16317);
+        this.d(-3);
         this.h(param0 + -4);
     }
 
@@ -1633,7 +1619,7 @@ final class ta {
         return var8;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -1686,7 +1672,7 @@ final class ta {
         }
     }
 
-    private final int l() {
+    private final int l(int param0) {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -1847,11 +1833,9 @@ final class ta {
         ((ta) this).field_z = -1;
         ((ta) this).field_h = 0;
         ((ta) this).field_m = -1;
-        int discarded$0 = 111;
-        this.e();
+        this.e((byte) 111);
         ((ta) this).field_l = ce.field_f.a(((ta) this).field_b, (byte) -32);
-        int discarded$1 = -128;
-        this.f();
+        this.f((byte) -128);
         this.g((byte) 102);
         this.d(4551, pf.field_i);
     }

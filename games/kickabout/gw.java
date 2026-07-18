@@ -20,8 +20,7 @@ final class gw {
           L0: {
             var1 = or.field_d;
             L1: while (true) {
-              int discarded$8 = -16000;
-              if (!tm.b()) {
+              if (!tm.b(-16000)) {
                 if (param0 == 5) {
                   break L0;
                 } else {
@@ -30,11 +29,10 @@ final class gw {
                 }
               } else {
                 var1.b(8, (byte) 94);
-                int fieldTemp$9 = var1.field_n + 1;
+                int fieldTemp$2 = var1.field_n + 1;
                 var1.field_n = var1.field_n + 1;
-                var2 = fieldTemp$9;
-                int discarded$10 = 0;
-                mo.a(var1);
+                var2 = fieldTemp$2;
+                mo.a(var1, 0);
                 or.field_d.c(param0 ^ 59, -var2 + var1.field_n);
                 continue L1;
               }
@@ -138,7 +136,7 @@ final class gw {
         field_b = null;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         np.field_Jb.a((gn) (Object) new no(), 3);
     }
 
@@ -233,7 +231,7 @@ final class gw {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         fb.field_J = new bo(tv.field_e, ai.field_H, hl.field_f, dw.field_e, (hd) (Object) hs.field_d, ul.field_c);
     }
 

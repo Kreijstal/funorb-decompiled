@@ -54,7 +54,7 @@ final class fq extends jh {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_G = null;
         field_F = null;
     }
@@ -87,8 +87,7 @@ final class fq extends jh {
         String stackOut_5_2 = null;
         try {
           if (nd.a(param3, param0, -1, param2)) {
-            int discarded$2 = 66;
-            return rf.a();
+            return rf.a((byte) 66);
           } else {
             return null;
           }
@@ -124,7 +123,7 @@ final class fq extends jh {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;

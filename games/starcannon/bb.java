@@ -350,7 +350,7 @@ final class bb {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_j = null;
     }
 

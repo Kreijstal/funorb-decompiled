@@ -146,7 +146,7 @@ final class ri extends e {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_s = null;
         field_r = null;
         field_q = null;
@@ -243,9 +243,7 @@ final class ri extends e {
         String stackOut_15_2 = null;
         try {
           L0: {
-            int discarded$2 = 255;
-            int discarded$3 = 2;
-            d.a(param10, 0, new qc(param17), new qc(param0), 240, 8, 320, param2, param8, new qc(param16), 0, 8, param12, param20, param7, 480, param19, param14, param11);
+            d.a(param10, 0, new qc(param17), new qc(param0), 240, 8, 320, param2, param8, new qc(param16), 0, 8, param12, param20, param7, 480, param19, param14, param11, 2, 255);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

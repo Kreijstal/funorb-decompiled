@@ -7,7 +7,7 @@ final class hla extends bca {
     nq field_q;
     static String field_r;
 
-    public static void d() {
+    public static void d(int param0) {
         field_s = null;
         field_r = null;
         field_t = null;

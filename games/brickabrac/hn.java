@@ -5,12 +5,12 @@ final class hn {
     static int field_a;
     static jp field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_b = null;
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         return o.field_e.field_xc == oc.field_p;
     }
 

@@ -11,8 +11,7 @@ class aj extends qg implements pb {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 9 / ((-29 - param0) / 53);
         super.a(-93, param1, param2, param3, param4);
-        int discarded$0 = -110;
-        this.j();
+        this.j(-110);
     }
 
     final void a(int param0, int param1, qg param2, int param3, int param4, int param5) {
@@ -587,12 +586,12 @@ class aj extends qg implements pb {
         }
     }
 
-    final static void k() {
+    final static void k(int param0) {
         oh.field_h.field_p = 0;
         oh.field_h.field_k = 0;
     }
 
-    final static void a(java.awt.Component param0, int param1, int param2, lc param3, boolean param4, int param5, fe param6) {
+    final static void a(java.awt.Component param0, int param1, int param2, lc param3, boolean param4, int param5, fe param6, int param7) {
         RuntimeException var8 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -642,8 +641,7 @@ class aj extends qg implements pb {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$2 = 10;
-            qh.a(param5, param4);
+            qh.a(param5, param4, 10);
             re.field_h = qh.a(param6, param0, 0, param1);
             u.field_a = qh.a(param6, param0, 1, 1024);
             of.field_a = new jc();
@@ -767,12 +765,12 @@ class aj extends qg implements pb {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_v = null;
         field_t = null;
     }
 
-    final static void a(ci param0, ci param1, ci param2) {
+    final static void a(ci param0, ci param1, ci param2, int param3) {
         RuntimeException var4 = null;
         ii[] var5 = null;
         ii[][] var6 = null;
@@ -1127,7 +1125,7 @@ class aj extends qg implements pb {
         return stackIn_15_0 != 0;
     }
 
-    private final void j() {
+    private final void j(int param0) {
         int var4 = Transmogrify.field_A ? 1 : 0;
         tl var2 = new tl(((aj) this).field_u);
         qg var3 = (qg) (Object) var2.c(-125);

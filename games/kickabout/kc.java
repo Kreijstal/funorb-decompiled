@@ -86,7 +86,7 @@ final class kc {
         ((kc) this).field_e = null;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_g = null;
     }

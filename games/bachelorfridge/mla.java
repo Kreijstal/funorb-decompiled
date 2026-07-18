@@ -74,7 +74,7 @@ final class mla {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         RuntimeException var1 = null;
         ema var1_ref = null;
         uha var1_ref2 = null;

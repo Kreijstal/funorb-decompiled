@@ -306,8 +306,7 @@ final class rc {
                       if (ni.b(111)) {
                         break L15;
                       } else {
-                        int discarded$1 = 3;
-                        um.f();
+                        um.f((byte) 3);
                         break L15;
                       }
                     }
@@ -329,33 +328,29 @@ final class rc {
         }
     }
 
-    public static void a() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void a(int param0) {
+        field_o = null;
+        field_f = null;
+        field_b = null;
+        field_i = null;
+        field_m = null;
+        field_k = null;
+        if (param0 != 15598) {
+            return;
+        }
         try {
-          L0: {
-            field_o = null;
-            field_f = null;
-            field_b = null;
-            field_i = null;
-            field_m = null;
-            field_k = null;
             field_d = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var1, "rc.D(" + 15598 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "rc.D(" + param0 + ')');
         }
     }
 
     final static void a(int param0, cm param1) {
         byte[] var2 = null;
         int var3 = 0;
-        int stackIn_3347_0 = 0;
+        int stackIn_3348_0 = 0;
+        int stackOut_3347_0 = 0;
         int stackOut_3346_0 = 0;
-        int stackOut_3345_0 = 0;
         L0: {
           var3 = SteelSentinels.field_G;
           sj.field_y = param1;
@@ -377,11 +372,11 @@ final class rc {
           }
         }
         L2: {
-          var2 = ji.a(107, "text_benefits,1");
+          var2 = ji.a(param0 ^ 107, "text_benefits,1");
           if (var2 == null) {
             break L2;
           } else {
-            rn.field_r[1] = jk.a(13, var2);
+            rn.field_r[1] = jk.a(param0 + 13, var2);
             break L2;
           }
         }
@@ -462,12 +457,12 @@ final class rc {
           if (var2 == null) {
             break L11;
           } else {
-            rh.field_t[0] = jk.a(bi.a(0, 13), var2);
+            rh.field_t[0] = jk.a(bi.a(param0, 13), var2);
             break L11;
           }
         }
         L12: {
-          var2 = ji.a(80, "baal_invocation,1");
+          var2 = ji.a(param0 + 80, "baal_invocation,1");
           if (null == var2) {
             break L12;
           } else {
@@ -496,14 +491,14 @@ final class rc {
         L15: {
           var2 = ji.a(87, "baal_gloating,1");
           if (var2 != null) {
-            si.field_H[1] = jk.a(bi.a(0, 13), var2);
+            si.field_H[1] = jk.a(bi.a(param0, 13), var2);
             break L15;
           } else {
             break L15;
           }
         }
         L16: {
-          var2 = ji.a(73, "baal_gloating,2");
+          var2 = ji.a(param0 + 73, "baal_gloating,2");
           if (null == var2) {
             break L16;
           } else {
@@ -532,16 +527,16 @@ final class rc {
         L19: {
           var2 = ji.a(80, "baal_vanquished,1");
           if (null != var2) {
-            jd.field_mb[1] = jk.a(13, var2);
+            jd.field_mb[1] = jk.a(param0 + 13, var2);
             break L19;
           } else {
             break L19;
           }
         }
         L20: {
-          var2 = ji.a(82, "baal_vanquished,2");
+          var2 = ji.a(param0 ^ 82, "baal_vanquished,2");
           if (var2 != null) {
-            jd.field_mb[2] = jk.a(bi.a(0, 13), var2);
+            jd.field_mb[2] = jk.a(bi.a(param0, 13), var2);
             break L20;
           } else {
             break L20;
@@ -557,9 +552,9 @@ final class rc {
           }
         }
         L22: {
-          var2 = ji.a(53, "baal_vanquished,4");
+          var2 = ji.a(param0 ^ 53, "baal_vanquished,4");
           if (null != var2) {
-            jd.field_mb[4] = jk.a(bi.a(0, 13), var2);
+            jd.field_mb[4] = jk.a(bi.a(param0, 13), var2);
             break L22;
           } else {
             break L22;
@@ -570,7 +565,7 @@ final class rc {
           if (null == var2) {
             break L23;
           } else {
-            jd.field_mb[5] = jk.a(bi.a(0, 13), var2);
+            jd.field_mb[5] = jk.a(bi.a(param0, 13), var2);
             break L23;
           }
         }
@@ -584,7 +579,7 @@ final class rc {
           }
         }
         L25: {
-          var2 = ji.a(112, "trainingdrone");
+          var2 = ji.a(param0 ^ 112, "trainingdrone");
           if (var2 == null) {
             break L25;
           } else {
@@ -615,7 +610,7 @@ final class rc {
           if (null == var2) {
             break L28;
           } else {
-            dg.field_e = jk.a(13, var2);
+            dg.field_e = jk.a(param0 ^ 13, var2);
             break L28;
           }
         }
@@ -647,11 +642,11 @@ final class rc {
           }
         }
         L32: {
-          var2 = ji.a(72, "spectatingtxt");
+          var2 = ji.a(param0 + 72, "spectatingtxt");
           if (null == var2) {
             break L32;
           } else {
-            ri.field_d = jk.a(13, var2);
+            ri.field_d = jk.a(param0 + 13, var2);
             break L32;
           }
         }
@@ -674,7 +669,7 @@ final class rc {
           }
         }
         L35: {
-          var2 = ji.a(76, "gameopt_restriction_text,0,2");
+          var2 = ji.a(param0 + 76, "gameopt_restriction_text,0,2");
           if (null == var2) {
             break L35;
           } else {
@@ -703,7 +698,7 @@ final class rc {
         L38: {
           var2 = ji.a(125, "gameopt_restriction_text,1,2");
           if (null != var2) {
-            uc.field_h[1][2] = jk.a(13, var2);
+            uc.field_h[1][2] = jk.a(param0 + 13, var2);
             break L38;
           } else {
             break L38;
@@ -732,7 +727,7 @@ final class rc {
           if (null == var2) {
             break L41;
           } else {
-            el.field_Vb[0] = jk.a(bi.a(0, 13), var2);
+            el.field_Vb[0] = jk.a(bi.a(param0, 13), var2);
             break L41;
           }
         }
@@ -764,7 +759,7 @@ final class rc {
           }
         }
         L45: {
-          var2 = ji.a(97, "achievement_names,2");
+          var2 = ji.a(param0 + 97, "achievement_names,2");
           if (null != var2) {
             jg.field_t[2] = jk.a(13, var2);
             break L45;
@@ -793,7 +788,7 @@ final class rc {
         L48: {
           var2 = ji.a(55, "achievement_names,5");
           if (var2 != null) {
-            jg.field_t[5] = jk.a(bi.a(0, 13), var2);
+            jg.field_t[5] = jk.a(bi.a(param0, 13), var2);
             break L48;
           } else {
             break L48;
@@ -804,12 +799,12 @@ final class rc {
           if (null == var2) {
             break L49;
           } else {
-            jg.field_t[6] = jk.a(13, var2);
+            jg.field_t[6] = jk.a(param0 + 13, var2);
             break L49;
           }
         }
         L50: {
-          var2 = ji.a(78, "achievement_names,7");
+          var2 = ji.a(param0 ^ 78, "achievement_names,7");
           if (null != var2) {
             jg.field_t[7] = jk.a(13, var2);
             break L50;
@@ -831,7 +826,7 @@ final class rc {
           if (var2 == null) {
             break L52;
           } else {
-            jg.field_t[9] = jk.a(13, var2);
+            jg.field_t[9] = jk.a(param0 + 13, var2);
             break L52;
           }
         }
@@ -854,7 +849,7 @@ final class rc {
           }
         }
         L55: {
-          var2 = ji.a(86, "achievement_names,12");
+          var2 = ji.a(param0 + 86, "achievement_names,12");
           if (null != var2) {
             jg.field_t[12] = jk.a(13, var2);
             break L55;
@@ -874,7 +869,7 @@ final class rc {
         L57: {
           var2 = ji.a(75, "achievement_names,14");
           if (var2 != null) {
-            jg.field_t[14] = jk.a(bi.a(0, 13), var2);
+            jg.field_t[14] = jk.a(bi.a(param0, 13), var2);
             break L57;
           } else {
             break L57;
@@ -883,7 +878,7 @@ final class rc {
         L58: {
           var2 = ji.a(60, "achievement_names,15");
           if (var2 != null) {
-            jg.field_t[15] = jk.a(bi.a(0, 13), var2);
+            jg.field_t[15] = jk.a(bi.a(param0, 13), var2);
             break L58;
           } else {
             break L58;
@@ -894,7 +889,7 @@ final class rc {
           if (var2 == null) {
             break L59;
           } else {
-            jg.field_t[16] = jk.a(13, var2);
+            jg.field_t[16] = jk.a(param0 + 13, var2);
             break L59;
           }
         }
@@ -908,9 +903,9 @@ final class rc {
           }
         }
         L61: {
-          var2 = ji.a(94, "achievement_names,18");
+          var2 = ji.a(param0 ^ 94, "achievement_names,18");
           if (var2 != null) {
-            jg.field_t[18] = jk.a(bi.a(0, 13), var2);
+            jg.field_t[18] = jk.a(bi.a(param0, 13), var2);
             break L61;
           } else {
             break L61;
@@ -928,7 +923,7 @@ final class rc {
         L63: {
           var2 = ji.a(68, "achievement_names,20");
           if (null != var2) {
-            jg.field_t[20] = jk.a(13, var2);
+            jg.field_t[20] = jk.a(param0 + 13, var2);
             break L63;
           } else {
             break L63;
@@ -957,14 +952,14 @@ final class rc {
           if (null == var2) {
             break L66;
           } else {
-            jg.field_t[23] = jk.a(13, var2);
+            jg.field_t[23] = jk.a(param0 + 13, var2);
             break L66;
           }
         }
         L67: {
           var2 = ji.a(117, "achievement_names,24");
           if (null != var2) {
-            jg.field_t[24] = jk.a(bi.a(0, 13), var2);
+            jg.field_t[24] = jk.a(bi.a(param0, 13), var2);
             break L67;
           } else {
             break L67;
@@ -980,7 +975,7 @@ final class rc {
           }
         }
         L69: {
-          var2 = ji.a(56, "achievement_names,26");
+          var2 = ji.a(param0 ^ 56, "achievement_names,26");
           if (var2 == null) {
             break L69;
           } else {
@@ -989,7 +984,7 @@ final class rc {
           }
         }
         L70: {
-          var2 = ji.a(117, "achievement_names,27");
+          var2 = ji.a(param0 ^ 117, "achievement_names,27");
           if (var2 != null) {
             jg.field_t[27] = jk.a(13, var2);
             break L70;
@@ -1009,18 +1004,18 @@ final class rc {
         L72: {
           var2 = ji.a(56, "achievement_names,29");
           if (null != var2) {
-            jg.field_t[29] = jk.a(bi.a(0, 13), var2);
+            jg.field_t[29] = jk.a(bi.a(param0, 13), var2);
             break L72;
           } else {
             break L72;
           }
         }
         L73: {
-          var2 = ji.a(122, "achievement_names,30");
+          var2 = ji.a(param0 + 122, "achievement_names,30");
           if (var2 == null) {
             break L73;
           } else {
-            jg.field_t[30] = jk.a(13, var2);
+            jg.field_t[30] = jk.a(param0 + 13, var2);
             break L73;
           }
         }
@@ -1029,12 +1024,12 @@ final class rc {
           if (var2 == null) {
             break L74;
           } else {
-            jg.field_t[31] = jk.a(13, var2);
+            jg.field_t[31] = jk.a(param0 + 13, var2);
             break L74;
           }
         }
         L75: {
-          var2 = ji.a(104, "achievement_names,32");
+          var2 = ji.a(param0 + 104, "achievement_names,32");
           if (null != var2) {
             jg.field_t[32] = jk.a(13, var2);
             break L75;
@@ -1043,18 +1038,18 @@ final class rc {
           }
         }
         L76: {
-          var2 = ji.a(104, "achievement_names,33");
+          var2 = ji.a(param0 + 104, "achievement_names,33");
           if (var2 == null) {
             break L76;
           } else {
-            jg.field_t[33] = jk.a(bi.a(0, 13), var2);
+            jg.field_t[33] = jk.a(bi.a(param0, 13), var2);
             break L76;
           }
         }
         L77: {
           var2 = ji.a(67, "achievement_names,34");
           if (var2 != null) {
-            jg.field_t[34] = jk.a(bi.a(0, 13), var2);
+            jg.field_t[34] = jk.a(bi.a(param0, 13), var2);
             break L77;
           } else {
             break L77;
@@ -1070,7 +1065,7 @@ final class rc {
           }
         }
         L79: {
-          var2 = ji.a(72, "achievement_names,36");
+          var2 = ji.a(param0 + 72, "achievement_names,36");
           if (null == var2) {
             break L79;
           } else {
@@ -1079,7 +1074,7 @@ final class rc {
           }
         }
         L80: {
-          var2 = ji.a(91, "achievement_names,37");
+          var2 = ji.a(param0 ^ 91, "achievement_names,37");
           if (null == var2) {
             break L80;
           } else {
@@ -1090,7 +1085,7 @@ final class rc {
         L81: {
           var2 = ji.a(103, "achievement_names,38");
           if (null != var2) {
-            jg.field_t[38] = jk.a(13, var2);
+            jg.field_t[38] = jk.a(param0 + 13, var2);
             break L81;
           } else {
             break L81;
@@ -1106,7 +1101,7 @@ final class rc {
           }
         }
         L83: {
-          var2 = ji.a(94, "MissionBriefings,1");
+          var2 = ji.a(param0 + 94, "MissionBriefings,1");
           if (null != var2) {
             c.field_s[1] = jk.a(13, var2);
             break L83;
@@ -1137,7 +1132,7 @@ final class rc {
           if (var2 == null) {
             break L86;
           } else {
-            c.field_s[4] = jk.a(bi.a(0, 13), var2);
+            c.field_s[4] = jk.a(bi.a(param0, 13), var2);
             break L86;
           }
         }
@@ -1169,7 +1164,7 @@ final class rc {
           }
         }
         L90: {
-          var2 = ji.a(59, "MissionBriefings,8");
+          var2 = ji.a(param0 ^ 59, "MissionBriefings,8");
           if (null != var2) {
             c.field_s[8] = jk.a(13, var2);
             break L90;
@@ -1182,7 +1177,7 @@ final class rc {
           if (null == var2) {
             break L91;
           } else {
-            c.field_s[9] = jk.a(bi.a(0, 13), var2);
+            c.field_s[9] = jk.a(bi.a(param0, 13), var2);
             break L91;
           }
         }
@@ -1205,7 +1200,7 @@ final class rc {
           }
         }
         L94: {
-          var2 = ji.a(51, "MissionBriefings,12");
+          var2 = ji.a(param0 ^ 51, "MissionBriefings,12");
           if (null != var2) {
             c.field_s[12] = jk.a(13, var2);
             break L94;
@@ -1223,7 +1218,7 @@ final class rc {
           }
         }
         L96: {
-          var2 = ji.a(63, "MissionBriefings,14");
+          var2 = ji.a(param0 ^ 63, "MissionBriefings,14");
           if (null == var2) {
             break L96;
           } else {
@@ -1232,7 +1227,7 @@ final class rc {
           }
         }
         L97: {
-          var2 = ji.a(105, "MissionBriefings,15");
+          var2 = ji.a(param0 ^ 105, "MissionBriefings,15");
           if (var2 == null) {
             break L97;
           } else {
@@ -1250,7 +1245,7 @@ final class rc {
           }
         }
         L99: {
-          var2 = ji.a(110, "MissionBriefings,17");
+          var2 = ji.a(param0 ^ 110, "MissionBriefings,17");
           if (var2 == null) {
             break L99;
           } else {
@@ -1261,7 +1256,7 @@ final class rc {
         L100: {
           var2 = ji.a(86, "MissionBriefings,18");
           if (null != var2) {
-            c.field_s[18] = jk.a(13, var2);
+            c.field_s[18] = jk.a(param0 + 13, var2);
             break L100;
           } else {
             break L100;
@@ -1277,7 +1272,7 @@ final class rc {
           }
         }
         L102: {
-          var2 = ji.a(123, "MissionBriefings,20");
+          var2 = ji.a(param0 ^ 123, "MissionBriefings,20");
           if (null != var2) {
             c.field_s[20] = jk.a(13, var2);
             break L102;
@@ -1353,12 +1348,12 @@ final class rc {
           if (null == var2) {
             break L110;
           } else {
-            c.field_s[28] = jk.a(13, var2);
+            c.field_s[28] = jk.a(param0 + 13, var2);
             break L110;
           }
         }
         L111: {
-          var2 = ji.a(97, "MissionBriefings,29");
+          var2 = ji.a(param0 ^ 97, "MissionBriefings,29");
           if (null != var2) {
             c.field_s[29] = jk.a(13, var2);
             break L111;
@@ -1403,9 +1398,9 @@ final class rc {
           }
         }
         L116: {
-          var2 = ji.a(103, "achievement_criteria,4");
+          var2 = ji.a(param0 ^ 103, "achievement_criteria,4");
           if (var2 != null) {
-            oe.field_a[4] = jk.a(13, var2);
+            oe.field_a[4] = jk.a(param0 + 13, var2);
             break L116;
           } else {
             break L116;
@@ -1434,7 +1429,7 @@ final class rc {
           if (null == var2) {
             break L119;
           } else {
-            oe.field_a[7] = jk.a(bi.a(0, 13), var2);
+            oe.field_a[7] = jk.a(bi.a(param0, 13), var2);
             break L119;
           }
         }
@@ -1457,16 +1452,16 @@ final class rc {
           }
         }
         L122: {
-          var2 = ji.a(117, "achievement_criteria,10");
+          var2 = ji.a(param0 ^ 117, "achievement_criteria,10");
           if (var2 != null) {
-            oe.field_a[10] = jk.a(13, var2);
+            oe.field_a[10] = jk.a(param0 + 13, var2);
             break L122;
           } else {
             break L122;
           }
         }
         L123: {
-          var2 = ji.a(79, "achievement_criteria,11");
+          var2 = ji.a(param0 + 79, "achievement_criteria,11");
           if (null != var2) {
             oe.field_a[11] = jk.a(13, var2);
             break L123;
@@ -1506,7 +1501,7 @@ final class rc {
           if (var2 == null) {
             break L127;
           } else {
-            oe.field_a[15] = jk.a(bi.a(0, 13), var2);
+            oe.field_a[15] = jk.a(bi.a(param0, 13), var2);
             break L127;
           }
         }
@@ -1538,11 +1533,11 @@ final class rc {
           }
         }
         L131: {
-          var2 = ji.a(56, "achievement_criteria,19");
+          var2 = ji.a(param0 + 56, "achievement_criteria,19");
           if (var2 == null) {
             break L131;
           } else {
-            oe.field_a[19] = jk.a(bi.a(0, 13), var2);
+            oe.field_a[19] = jk.a(bi.a(param0, 13), var2);
             break L131;
           }
         }
@@ -1560,12 +1555,12 @@ final class rc {
           if (null == var2) {
             break L133;
           } else {
-            oe.field_a[21] = jk.a(13, var2);
+            oe.field_a[21] = jk.a(param0 + 13, var2);
             break L133;
           }
         }
         L134: {
-          var2 = ji.a(104, "achievement_criteria,22");
+          var2 = ji.a(param0 ^ 104, "achievement_criteria,22");
           if (var2 == null) {
             break L134;
           } else {
@@ -1594,7 +1589,7 @@ final class rc {
         L137: {
           var2 = ji.a(102, "achievement_criteria,25");
           if (var2 != null) {
-            oe.field_a[25] = jk.a(13, var2);
+            oe.field_a[25] = jk.a(param0 + 13, var2);
             break L137;
           } else {
             break L137;
@@ -1637,11 +1632,11 @@ final class rc {
           }
         }
         L142: {
-          var2 = ji.a(65, "achievement_criteria,30");
+          var2 = ji.a(param0 ^ 65, "achievement_criteria,30");
           if (null == var2) {
             break L142;
           } else {
-            oe.field_a[30] = jk.a(13, var2);
+            oe.field_a[30] = jk.a(param0 + 13, var2);
             break L142;
           }
         }
@@ -1668,7 +1663,7 @@ final class rc {
           if (var2 == null) {
             break L145;
           } else {
-            oe.field_a[33] = jk.a(bi.a(0, 13), var2);
+            oe.field_a[33] = jk.a(bi.a(param0, 13), var2);
             break L145;
           }
         }
@@ -1677,12 +1672,12 @@ final class rc {
           if (var2 == null) {
             break L146;
           } else {
-            oe.field_a[34] = jk.a(13, var2);
+            oe.field_a[34] = jk.a(param0 + 13, var2);
             break L146;
           }
         }
         L147: {
-          var2 = ji.a(62, "achievement_criteria,35");
+          var2 = ji.a(param0 + 62, "achievement_criteria,35");
           if (var2 != null) {
             oe.field_a[35] = jk.a(13, var2);
             break L147;
@@ -1700,16 +1695,16 @@ final class rc {
           }
         }
         L149: {
-          var2 = ji.a(127, "achievement_criteria,37");
+          var2 = ji.a(param0 ^ 127, "achievement_criteria,37");
           if (null == var2) {
             break L149;
           } else {
-            oe.field_a[37] = jk.a(bi.a(0, 13), var2);
+            oe.field_a[37] = jk.a(bi.a(param0, 13), var2);
             break L149;
           }
         }
         L150: {
-          var2 = ji.a(119, "achievement_criteria,38");
+          var2 = ji.a(param0 + 119, "achievement_criteria,38");
           if (var2 == null) {
             break L150;
           } else {
@@ -1718,7 +1713,7 @@ final class rc {
           }
         }
         L151: {
-          var2 = ji.a(95, "tabnames,0");
+          var2 = ji.a(param0 + 95, "tabnames,0");
           if (var2 == null) {
             break L151;
           } else {
@@ -1763,7 +1758,7 @@ final class rc {
           }
         }
         L156: {
-          var2 = ji.a(79, "modulenames,1");
+          var2 = ji.a(param0 ^ 79, "modulenames,1");
           if (var2 == null) {
             break L156;
           } else {
@@ -1781,7 +1776,7 @@ final class rc {
           }
         }
         L158: {
-          var2 = ji.a(53, "modulenames,3");
+          var2 = ji.a(param0 ^ 53, "modulenames,3");
           if (null == var2) {
             break L158;
           } else {
@@ -1794,14 +1789,14 @@ final class rc {
           if (null == var2) {
             break L159;
           } else {
-            rj.field_m[4] = jk.a(bi.a(0, 13), var2);
+            rj.field_m[4] = jk.a(bi.a(param0, 13), var2);
             break L159;
           }
         }
         L160: {
           var2 = ji.a(114, "modulenames,5");
           if (null != var2) {
-            rj.field_m[5] = jk.a(13, var2);
+            rj.field_m[5] = jk.a(param0 + 13, var2);
             break L160;
           } else {
             break L160;
@@ -1826,7 +1821,7 @@ final class rc {
           }
         }
         L163: {
-          var2 = ji.a(121, "modulenames,8");
+          var2 = ji.a(param0 + 121, "modulenames,8");
           if (var2 == null) {
             break L163;
           } else {
@@ -1835,9 +1830,9 @@ final class rc {
           }
         }
         L164: {
-          var2 = ji.a(91, "modulenames,9");
+          var2 = ji.a(param0 ^ 91, "modulenames,9");
           if (null != var2) {
-            rj.field_m[9] = jk.a(bi.a(0, 13), var2);
+            rj.field_m[9] = jk.a(bi.a(param0, 13), var2);
             break L164;
           } else {
             break L164;
@@ -1855,7 +1850,7 @@ final class rc {
         L166: {
           var2 = ji.a(122, "modulenames,11");
           if (null != var2) {
-            rj.field_m[11] = jk.a(13, var2);
+            rj.field_m[11] = jk.a(param0 + 13, var2);
             break L166;
           } else {
             break L166;
@@ -1873,7 +1868,7 @@ final class rc {
         L168: {
           var2 = ji.a(114, "modulenames,13");
           if (null != var2) {
-            rj.field_m[13] = jk.a(13, var2);
+            rj.field_m[13] = jk.a(param0 + 13, var2);
             break L168;
           } else {
             break L168;
@@ -1907,7 +1902,7 @@ final class rc {
           }
         }
         L172: {
-          var2 = ji.a(102, "modulenames,17");
+          var2 = ji.a(param0 ^ 102, "modulenames,17");
           if (null != var2) {
             rj.field_m[17] = jk.a(13, var2);
             break L172;
@@ -1925,7 +1920,7 @@ final class rc {
           }
         }
         L174: {
-          var2 = ji.a(57, "modulenames,19");
+          var2 = ji.a(param0 ^ 57, "modulenames,19");
           if (var2 == null) {
             break L174;
           } else {
@@ -1934,7 +1929,7 @@ final class rc {
           }
         }
         L175: {
-          var2 = ji.a(74, "modulenames,20");
+          var2 = ji.a(param0 ^ 74, "modulenames,20");
           if (var2 == null) {
             break L175;
           } else {
@@ -2001,7 +1996,7 @@ final class rc {
           if (var2 == null) {
             break L182;
           } else {
-            rj.field_m[27] = jk.a(13, var2);
+            rj.field_m[27] = jk.a(param0 + 13, var2);
             break L182;
           }
         }
@@ -2015,7 +2010,7 @@ final class rc {
           }
         }
         L184: {
-          var2 = ji.a(114, "modulenames,29");
+          var2 = ji.a(param0 + 114, "modulenames,29");
           if (null != var2) {
             rj.field_m[29] = jk.a(13, var2);
             break L184;
@@ -2037,7 +2032,7 @@ final class rc {
           if (var2 == null) {
             break L186;
           } else {
-            rj.field_m[31] = jk.a(13, var2);
+            rj.field_m[31] = jk.a(param0 + 13, var2);
             break L186;
           }
         }
@@ -2060,7 +2055,7 @@ final class rc {
           }
         }
         L189: {
-          var2 = ji.a(57, "targetlocktxt");
+          var2 = ji.a(param0 ^ 57, "targetlocktxt");
           if (null != var2) {
             ac.field_gb = jk.a(13, var2);
             break L189;
@@ -2069,7 +2064,7 @@ final class rc {
           }
         }
         L190: {
-          var2 = ji.a(119, "edd_shortname");
+          var2 = ji.a(param0 + 119, "edd_shortname");
           if (null == var2) {
             break L190;
           } else {
@@ -2078,7 +2073,7 @@ final class rc {
           }
         }
         L191: {
-          var2 = ji.a(63, "powerupnames,0");
+          var2 = ji.a(param0 ^ 63, "powerupnames,0");
           if (null != var2) {
             qj.field_v[0] = jk.a(13, var2);
             break L191;
@@ -2118,7 +2113,7 @@ final class rc {
           if (null == var2) {
             break L195;
           } else {
-            qj.field_v[4] = jk.a(13, var2);
+            qj.field_v[4] = jk.a(param0 + 13, var2);
             break L195;
           }
         }
@@ -2127,7 +2122,7 @@ final class rc {
           if (var2 == null) {
             break L196;
           } else {
-            qj.field_v[5] = jk.a(bi.a(0, 13), var2);
+            qj.field_v[5] = jk.a(bi.a(param0, 13), var2);
             break L196;
           }
         }
@@ -2141,7 +2136,7 @@ final class rc {
           }
         }
         L198: {
-          var2 = ji.a(98, "powerupnames,7");
+          var2 = ji.a(param0 + 98, "powerupnames,7");
           if (null != var2) {
             qj.field_v[7] = jk.a(13, var2);
             break L198;
@@ -2152,7 +2147,7 @@ final class rc {
         L199: {
           var2 = ji.a(86, "powerupnames,8");
           if (null != var2) {
-            qj.field_v[8] = jk.a(bi.a(0, 13), var2);
+            qj.field_v[8] = jk.a(bi.a(param0, 13), var2);
             break L199;
           } else {
             break L199;
@@ -2170,18 +2165,18 @@ final class rc {
         L201: {
           var2 = ji.a(71, "powerupnames,10");
           if (null != var2) {
-            qj.field_v[10] = jk.a(bi.a(0, 13), var2);
+            qj.field_v[10] = jk.a(bi.a(param0, 13), var2);
             break L201;
           } else {
             break L201;
           }
         }
         L202: {
-          var2 = ji.a(99, "meleeattackdesc,0");
+          var2 = ji.a(param0 ^ 99, "meleeattackdesc,0");
           if (null == var2) {
             break L202;
           } else {
-            jd.field_nb[0] = jk.a(13, var2);
+            jd.field_nb[0] = jk.a(param0 + 13, var2);
             break L202;
           }
         }
@@ -2190,7 +2185,7 @@ final class rc {
           if (null == var2) {
             break L203;
           } else {
-            jd.field_nb[1] = jk.a(bi.a(0, 13), var2);
+            jd.field_nb[1] = jk.a(bi.a(param0, 13), var2);
             break L203;
           }
         }
@@ -2213,7 +2208,7 @@ final class rc {
           }
         }
         L206: {
-          var2 = ji.a(119, "poweruptips,1");
+          var2 = ji.a(param0 + 119, "poweruptips,1");
           if (null != var2) {
             ll.field_p[1] = jk.a(13, var2);
             break L206;
@@ -2231,7 +2226,7 @@ final class rc {
           }
         }
         L208: {
-          var2 = ji.a(101, "poweruptips,3");
+          var2 = ji.a(param0 + 101, "poweruptips,3");
           if (null == var2) {
             break L208;
           } else {
@@ -2240,7 +2235,7 @@ final class rc {
           }
         }
         L209: {
-          var2 = ji.a(88, "poweruptips,4");
+          var2 = ji.a(param0 ^ 88, "poweruptips,4");
           if (null != var2) {
             ll.field_p[4] = jk.a(13, var2);
             break L209;
@@ -2253,7 +2248,7 @@ final class rc {
           if (var2 == null) {
             break L210;
           } else {
-            ll.field_p[5] = jk.a(13, var2);
+            ll.field_p[5] = jk.a(param0 + 13, var2);
             break L210;
           }
         }
@@ -2267,11 +2262,11 @@ final class rc {
           }
         }
         L212: {
-          var2 = ji.a(119, "poweruptips,7");
+          var2 = ji.a(param0 ^ 119, "poweruptips,7");
           if (null == var2) {
             break L212;
           } else {
-            ll.field_p[7] = jk.a(bi.a(0, 13), var2);
+            ll.field_p[7] = jk.a(bi.a(param0, 13), var2);
             break L212;
           }
         }
@@ -2280,7 +2275,7 @@ final class rc {
           if (null == var2) {
             break L213;
           } else {
-            ll.field_p[8] = jk.a(13, var2);
+            ll.field_p[8] = jk.a(param0 + 13, var2);
             break L213;
           }
         }
@@ -2289,16 +2284,16 @@ final class rc {
           if (null == var2) {
             break L214;
           } else {
-            ll.field_p[9] = jk.a(13, var2);
+            ll.field_p[9] = jk.a(param0 + 13, var2);
             break L214;
           }
         }
         L215: {
-          var2 = ji.a(56, "poweruptips,10");
+          var2 = ji.a(param0 ^ 56, "poweruptips,10");
           if (var2 == null) {
             break L215;
           } else {
-            ll.field_p[10] = jk.a(13, var2);
+            ll.field_p[10] = jk.a(param0 + 13, var2);
             break L215;
           }
         }
@@ -2312,7 +2307,7 @@ final class rc {
           }
         }
         L217: {
-          var2 = ji.a(79, "poweruptips,12");
+          var2 = ji.a(param0 + 79, "poweruptips,12");
           if (null == var2) {
             break L217;
           } else {
@@ -2321,7 +2316,7 @@ final class rc {
           }
         }
         L218: {
-          var2 = ji.a(73, "poweruptips,13");
+          var2 = ji.a(param0 ^ 73, "poweruptips,13");
           if (var2 == null) {
             break L218;
           } else {
@@ -2330,7 +2325,7 @@ final class rc {
           }
         }
         L219: {
-          var2 = ji.a(92, "poweruptips,14");
+          var2 = ji.a(param0 ^ 92, "poweruptips,14");
           if (null == var2) {
             break L219;
           } else {
@@ -2357,7 +2352,7 @@ final class rc {
           }
         }
         L222: {
-          var2 = ji.a(64, "poweruptips,17");
+          var2 = ji.a(param0 ^ 64, "poweruptips,17");
           if (null == var2) {
             break L222;
           } else {
@@ -2420,11 +2415,11 @@ final class rc {
           }
         }
         L229: {
-          var2 = ji.a(64, "poweruptips,24");
+          var2 = ji.a(param0 ^ 64, "poweruptips,24");
           if (var2 == null) {
             break L229;
           } else {
-            ll.field_p[24] = jk.a(bi.a(0, 13), var2);
+            ll.field_p[24] = jk.a(bi.a(param0, 13), var2);
             break L229;
           }
         }
@@ -2433,7 +2428,7 @@ final class rc {
           if (null == var2) {
             break L230;
           } else {
-            ll.field_p[25] = jk.a(13, var2);
+            ll.field_p[25] = jk.a(param0 + 13, var2);
             break L230;
           }
         }
@@ -2458,7 +2453,7 @@ final class rc {
         L233: {
           var2 = ji.a(98, "poweruptips,28");
           if (var2 != null) {
-            ll.field_p[28] = jk.a(bi.a(0, 13), var2);
+            ll.field_p[28] = jk.a(bi.a(param0, 13), var2);
             break L233;
           } else {
             break L233;
@@ -2467,7 +2462,7 @@ final class rc {
         L234: {
           var2 = ji.a(90, "poweruptips,29");
           if (null != var2) {
-            ll.field_p[29] = jk.a(13, var2);
+            ll.field_p[29] = jk.a(param0 + 13, var2);
             break L234;
           } else {
             break L234;
@@ -2487,21 +2482,21 @@ final class rc {
           if (var2 == null) {
             break L236;
           } else {
-            ll.field_p[31] = jk.a(bi.a(0, 13), var2);
+            ll.field_p[31] = jk.a(bi.a(param0, 13), var2);
             break L236;
           }
         }
         L237: {
           var2 = ji.a(85, "poweruptips,32");
           if (var2 != null) {
-            ll.field_p[32] = jk.a(bi.a(0, 13), var2);
+            ll.field_p[32] = jk.a(bi.a(param0, 13), var2);
             break L237;
           } else {
             break L237;
           }
         }
         L238: {
-          var2 = ji.a(69, "poweruptips,33");
+          var2 = ji.a(param0 ^ 69, "poweruptips,33");
           if (var2 == null) {
             break L238;
           } else {
@@ -2514,7 +2509,7 @@ final class rc {
           if (var2 == null) {
             break L239;
           } else {
-            ll.field_p[34] = jk.a(13, var2);
+            ll.field_p[34] = jk.a(param0 + 13, var2);
             break L239;
           }
         }
@@ -2528,7 +2523,7 @@ final class rc {
           }
         }
         L241: {
-          var2 = ji.a(72, "poweruptips,36");
+          var2 = ji.a(param0 ^ 72, "poweruptips,36");
           if (var2 != null) {
             ll.field_p[36] = jk.a(13, var2);
             break L241;
@@ -2546,7 +2541,7 @@ final class rc {
           }
         }
         L243: {
-          var2 = ji.a(94, "poweruptips,38");
+          var2 = ji.a(param0 ^ 94, "poweruptips,38");
           if (var2 == null) {
             break L243;
           } else {
@@ -2557,14 +2552,14 @@ final class rc {
         L244: {
           var2 = ji.a(85, "poweruptips,39");
           if (null != var2) {
-            ll.field_p[39] = jk.a(bi.a(0, 13), var2);
+            ll.field_p[39] = jk.a(bi.a(param0, 13), var2);
             break L244;
           } else {
             break L244;
           }
         }
         L245: {
-          var2 = ji.a(125, "poweruptips,40");
+          var2 = ji.a(param0 + 125, "poweruptips,40");
           if (null != var2) {
             ll.field_p[40] = jk.a(13, var2);
             break L245;
@@ -2654,7 +2649,7 @@ final class rc {
           }
         }
         L255: {
-          var2 = ji.a(77, "moduledescriptions,3");
+          var2 = ji.a(param0 + 77, "moduledescriptions,3");
           if (null == var2) {
             break L255;
           } else {
@@ -2726,11 +2721,11 @@ final class rc {
           }
         }
         L263: {
-          var2 = ji.a(69, "moduledescriptions,11");
+          var2 = ji.a(param0 ^ 69, "moduledescriptions,11");
           if (var2 == null) {
             break L263;
           } else {
-            se.field_a[11] = jk.a(bi.a(0, 13), var2);
+            se.field_a[11] = jk.a(bi.a(param0, 13), var2);
             break L263;
           }
         }
@@ -2748,7 +2743,7 @@ final class rc {
           if (null == var2) {
             break L265;
           } else {
-            se.field_a[13] = jk.a(bi.a(0, 13), var2);
+            se.field_a[13] = jk.a(bi.a(param0, 13), var2);
             break L265;
           }
         }
@@ -2764,7 +2759,7 @@ final class rc {
         L267: {
           var2 = ji.a(110, "moduledescriptions,15");
           if (null != var2) {
-            se.field_a[15] = jk.a(bi.a(0, 13), var2);
+            se.field_a[15] = jk.a(bi.a(param0, 13), var2);
             break L267;
           } else {
             break L267;
@@ -2789,7 +2784,7 @@ final class rc {
           }
         }
         L270: {
-          var2 = ji.a(55, "moduledescriptions,18");
+          var2 = ji.a(param0 ^ 55, "moduledescriptions,18");
           if (null == var2) {
             break L270;
           } else {
@@ -2811,7 +2806,7 @@ final class rc {
           if (null == var2) {
             break L272;
           } else {
-            se.field_a[20] = jk.a(bi.a(0, 13), var2);
+            se.field_a[20] = jk.a(bi.a(param0, 13), var2);
             break L272;
           }
         }
@@ -2829,14 +2824,14 @@ final class rc {
           if (var2 == null) {
             break L274;
           } else {
-            se.field_a[22] = jk.a(bi.a(0, 13), var2);
+            se.field_a[22] = jk.a(bi.a(param0, 13), var2);
             break L274;
           }
         }
         L275: {
           var2 = ji.a(111, "moduledescriptions,23");
           if (var2 != null) {
-            se.field_a[23] = jk.a(bi.a(0, 13), var2);
+            se.field_a[23] = jk.a(bi.a(param0, 13), var2);
             break L275;
           } else {
             break L275;
@@ -2865,12 +2860,12 @@ final class rc {
           if (null == var2) {
             break L278;
           } else {
-            se.field_a[26] = jk.a(13, var2);
+            se.field_a[26] = jk.a(param0 + 13, var2);
             break L278;
           }
         }
         L279: {
-          var2 = ji.a(79, "moduledescriptions,27");
+          var2 = ji.a(param0 + 79, "moduledescriptions,27");
           if (var2 == null) {
             break L279;
           } else {
@@ -2888,7 +2883,7 @@ final class rc {
           }
         }
         L281: {
-          var2 = ji.a(80, "moduledescriptions,29");
+          var2 = ji.a(param0 ^ 80, "moduledescriptions,29");
           if (var2 != null) {
             se.field_a[29] = jk.a(13, var2);
             break L281;
@@ -2899,16 +2894,16 @@ final class rc {
         L282: {
           var2 = ji.a(57, "moduledescriptions,30");
           if (var2 != null) {
-            se.field_a[30] = jk.a(13, var2);
+            se.field_a[30] = jk.a(param0 + 13, var2);
             break L282;
           } else {
             break L282;
           }
         }
         L283: {
-          var2 = ji.a(122, "moduledescriptions,31");
+          var2 = ji.a(param0 + 122, "moduledescriptions,31");
           if (var2 != null) {
-            se.field_a[31] = jk.a(13, var2);
+            se.field_a[31] = jk.a(param0 + 13, var2);
             break L283;
           } else {
             break L283;
@@ -2924,7 +2919,7 @@ final class rc {
           }
         }
         L285: {
-          var2 = ji.a(63, "moduledescriptions,33");
+          var2 = ji.a(param0 ^ 63, "moduledescriptions,33");
           if (null != var2) {
             se.field_a[33] = jk.a(13, var2);
             break L285;
@@ -2937,7 +2932,7 @@ final class rc {
           if (null == var2) {
             break L286;
           } else {
-            sn.field_i[0] = jk.a(bi.a(0, 13), var2);
+            sn.field_i[0] = jk.a(bi.a(param0, 13), var2);
             break L286;
           }
         }
@@ -2978,7 +2973,7 @@ final class rc {
           }
         }
         L291: {
-          var2 = ji.a(122, "comtypenames,5");
+          var2 = ji.a(param0 + 122, "comtypenames,5");
           if (null != var2) {
             sn.field_i[5] = jk.a(13, var2);
             break L291;
@@ -3023,7 +3018,7 @@ final class rc {
           }
         }
         L296: {
-          var2 = ji.a(110, "comtypenames,10");
+          var2 = ji.a(param0 + 110, "comtypenames,10");
           if (null != var2) {
             sn.field_i[10] = jk.a(13, var2);
             break L296;
@@ -3045,7 +3040,7 @@ final class rc {
           if (var2 == null) {
             break L298;
           } else {
-            si.field_D[0] = jk.a(bi.a(0, 13), var2);
+            si.field_D[0] = jk.a(bi.a(param0, 13), var2);
             break L298;
           }
         }
@@ -3086,7 +3081,7 @@ final class rc {
           }
         }
         L303: {
-          var2 = ji.a(107, "mod_category_names,5");
+          var2 = ji.a(param0 + 107, "mod_category_names,5");
           if (null != var2) {
             si.field_D[5] = jk.a(13, var2);
             break L303;
@@ -3097,7 +3092,7 @@ final class rc {
         L304: {
           var2 = ji.a(80, "mod_category_names,6");
           if (var2 != null) {
-            si.field_D[6] = jk.a(13, var2);
+            si.field_D[6] = jk.a(param0 + 13, var2);
             break L304;
           } else {
             break L304;
@@ -3122,16 +3117,16 @@ final class rc {
           }
         }
         L307: {
-          var2 = ji.a(79, "weaponnames,1");
+          var2 = ji.a(param0 ^ 79, "weaponnames,1");
           if (null == var2) {
             break L307;
           } else {
-            uh.field_i[1] = jk.a(bi.a(0, 13), var2);
+            uh.field_i[1] = jk.a(bi.a(param0, 13), var2);
             break L307;
           }
         }
         L308: {
-          var2 = ji.a(72, "weaponnames,2");
+          var2 = ji.a(param0 + 72, "weaponnames,2");
           if (null != var2) {
             uh.field_i[2] = jk.a(13, var2);
             break L308;
@@ -3140,7 +3135,7 @@ final class rc {
           }
         }
         L309: {
-          var2 = ji.a(88, "weaponnames,3");
+          var2 = ji.a(param0 + 88, "weaponnames,3");
           if (var2 == null) {
             break L309;
           } else {
@@ -3149,7 +3144,7 @@ final class rc {
           }
         }
         L310: {
-          var2 = ji.a(126, "weaponnames,4");
+          var2 = ji.a(param0 ^ 126, "weaponnames,4");
           if (null == var2) {
             break L310;
           } else {
@@ -3176,27 +3171,27 @@ final class rc {
           }
         }
         L313: {
-          var2 = ji.a(103, "weaponnames,7");
+          var2 = ji.a(param0 + 103, "weaponnames,7");
           if (var2 == null) {
             break L313;
           } else {
-            uh.field_i[7] = jk.a(bi.a(0, 13), var2);
+            uh.field_i[7] = jk.a(bi.a(param0, 13), var2);
             break L313;
           }
         }
         L314: {
-          var2 = ji.a(117, "weaponnames,8");
+          var2 = ji.a(param0 + 117, "weaponnames,8");
           if (var2 == null) {
             break L314;
           } else {
-            uh.field_i[8] = jk.a(bi.a(0, 13), var2);
+            uh.field_i[8] = jk.a(bi.a(param0, 13), var2);
             break L314;
           }
         }
         L315: {
           var2 = ji.a(110, "weaponnames,9");
           if (null != var2) {
-            uh.field_i[9] = jk.a(13, var2);
+            uh.field_i[9] = jk.a(param0 + 13, var2);
             break L315;
           } else {
             break L315;
@@ -3221,7 +3216,7 @@ final class rc {
           }
         }
         L318: {
-          var2 = ji.a(77, "weaponnames,12");
+          var2 = ji.a(param0 + 77, "weaponnames,12");
           if (var2 == null) {
             break L318;
           } else {
@@ -3241,14 +3236,14 @@ final class rc {
         L320: {
           var2 = ji.a(104, "weaponnames,14");
           if (var2 != null) {
-            uh.field_i[14] = jk.a(bi.a(0, 13), var2);
+            uh.field_i[14] = jk.a(bi.a(param0, 13), var2);
             break L320;
           } else {
             break L320;
           }
         }
         L321: {
-          var2 = ji.a(93, "weaponnames,15");
+          var2 = ji.a(param0 ^ 93, "weaponnames,15");
           if (null == var2) {
             break L321;
           } else {
@@ -3268,7 +3263,7 @@ final class rc {
         L323: {
           var2 = ji.a(118, "weaponnames,17");
           if (var2 != null) {
-            uh.field_i[17] = jk.a(13, var2);
+            uh.field_i[17] = jk.a(param0 + 13, var2);
             break L323;
           } else {
             break L323;
@@ -3315,7 +3310,7 @@ final class rc {
           if (null == var2) {
             break L328;
           } else {
-            uh.field_i[22] = jk.a(13, var2);
+            uh.field_i[22] = jk.a(param0 + 13, var2);
             break L328;
           }
         }
@@ -3331,7 +3326,7 @@ final class rc {
         L330: {
           var2 = ji.a(125, "weaponnames,24");
           if (null != var2) {
-            uh.field_i[24] = jk.a(bi.a(0, 13), var2);
+            uh.field_i[24] = jk.a(bi.a(param0, 13), var2);
             break L330;
           } else {
             break L330;
@@ -3351,7 +3346,7 @@ final class rc {
           if (var2 == null) {
             break L332;
           } else {
-            uh.field_i[26] = jk.a(bi.a(0, 13), var2);
+            uh.field_i[26] = jk.a(bi.a(param0, 13), var2);
             break L332;
           }
         }
@@ -3360,7 +3355,7 @@ final class rc {
           if (null == var2) {
             break L333;
           } else {
-            uh.field_i[27] = jk.a(13, var2);
+            uh.field_i[27] = jk.a(param0 + 13, var2);
             break L333;
           }
         }
@@ -3374,7 +3369,7 @@ final class rc {
           }
         }
         L335: {
-          var2 = ji.a(120, "weaponnames,29");
+          var2 = ji.a(param0 ^ 120, "weaponnames,29");
           if (var2 != null) {
             uh.field_i[29] = jk.a(13, var2);
             break L335;
@@ -3405,7 +3400,7 @@ final class rc {
           if (var2 == null) {
             break L338;
           } else {
-            uh.field_i[32] = jk.a(13, var2);
+            uh.field_i[32] = jk.a(param0 + 13, var2);
             break L338;
           }
         }
@@ -3430,7 +3425,7 @@ final class rc {
         L341: {
           var2 = ji.a(95, "weaponnames,35");
           if (null != var2) {
-            uh.field_i[35] = jk.a(bi.a(0, 13), var2);
+            uh.field_i[35] = jk.a(bi.a(param0, 13), var2);
             break L341;
           } else {
             break L341;
@@ -3439,7 +3434,7 @@ final class rc {
         L342: {
           var2 = ji.a(58, "weaponkillstrings,0");
           if (var2 != null) {
-            pe.field_D[0] = jk.a(13, var2);
+            pe.field_D[0] = jk.a(param0 + 13, var2);
             break L342;
           } else {
             break L342;
@@ -3473,7 +3468,7 @@ final class rc {
           }
         }
         L346: {
-          var2 = ji.a(118, "weaponkillstrings,4");
+          var2 = ji.a(param0 + 118, "weaponkillstrings,4");
           if (null == var2) {
             break L346;
           } else {
@@ -3495,12 +3490,12 @@ final class rc {
           if (var2 == null) {
             break L348;
           } else {
-            pe.field_D[6] = jk.a(bi.a(0, 13), var2);
+            pe.field_D[6] = jk.a(bi.a(param0, 13), var2);
             break L348;
           }
         }
         L349: {
-          var2 = ji.a(65, "weaponkillstrings,7");
+          var2 = ji.a(param0 ^ 65, "weaponkillstrings,7");
           if (var2 == null) {
             break L349;
           } else {
@@ -3527,7 +3522,7 @@ final class rc {
           }
         }
         L352: {
-          var2 = ji.a(71, "weaponkillstrings,10");
+          var2 = ji.a(param0 + 71, "weaponkillstrings,10");
           if (null != var2) {
             pe.field_D[10] = jk.a(13, var2);
             break L352;
@@ -3536,7 +3531,7 @@ final class rc {
           }
         }
         L353: {
-          var2 = ji.a(91, "weaponkillstrings,11");
+          var2 = ji.a(param0 ^ 91, "weaponkillstrings,11");
           if (var2 == null) {
             break L353;
           } else {
@@ -3565,7 +3560,7 @@ final class rc {
         L356: {
           var2 = ji.a(94, "weaponkillstrings,14");
           if (null != var2) {
-            pe.field_D[14] = jk.a(13, var2);
+            pe.field_D[14] = jk.a(param0 + 13, var2);
             break L356;
           } else {
             break L356;
@@ -3594,7 +3589,7 @@ final class rc {
           if (var2 == null) {
             break L359;
           } else {
-            pe.field_D[17] = jk.a(bi.a(0, 13), var2);
+            pe.field_D[17] = jk.a(bi.a(param0, 13), var2);
             break L359;
           }
         }
@@ -3621,14 +3616,14 @@ final class rc {
           if (null == var2) {
             break L362;
           } else {
-            pe.field_D[20] = jk.a(13, var2);
+            pe.field_D[20] = jk.a(param0 + 13, var2);
             break L362;
           }
         }
         L363: {
           var2 = ji.a(122, "weaponkillstrings,21");
           if (null != var2) {
-            pe.field_D[21] = jk.a(bi.a(0, 13), var2);
+            pe.field_D[21] = jk.a(bi.a(param0, 13), var2);
             break L363;
           } else {
             break L363;
@@ -3673,7 +3668,7 @@ final class rc {
         L368: {
           var2 = ji.a(109, "weaponkillstrings,26");
           if (null != var2) {
-            pe.field_D[26] = jk.a(bi.a(0, 13), var2);
+            pe.field_D[26] = jk.a(bi.a(param0, 13), var2);
             break L368;
           } else {
             break L368;
@@ -3707,7 +3702,7 @@ final class rc {
           }
         }
         L372: {
-          var2 = ji.a(96, "weaponkillstrings,30");
+          var2 = ji.a(param0 ^ 96, "weaponkillstrings,30");
           if (var2 == null) {
             break L372;
           } else {
@@ -3716,7 +3711,7 @@ final class rc {
           }
         }
         L373: {
-          var2 = ji.a(92, "weaponkillstrings,31");
+          var2 = ji.a(param0 + 92, "weaponkillstrings,31");
           if (null != var2) {
             pe.field_D[31] = jk.a(13, var2);
             break L373;
@@ -3729,12 +3724,12 @@ final class rc {
           if (var2 == null) {
             break L374;
           } else {
-            pe.field_D[32] = jk.a(13, var2);
+            pe.field_D[32] = jk.a(param0 + 13, var2);
             break L374;
           }
         }
         L375: {
-          var2 = ji.a(69, "weaponkillstrings,33");
+          var2 = ji.a(param0 + 69, "weaponkillstrings,33");
           if (var2 == null) {
             break L375;
           } else {
@@ -3743,7 +3738,7 @@ final class rc {
           }
         }
         L376: {
-          var2 = ji.a(125, "weaponkillstrings,34");
+          var2 = ji.a(param0 + 125, "weaponkillstrings,34");
           if (var2 != null) {
             pe.field_D[34] = jk.a(13, var2);
             break L376;
@@ -3752,7 +3747,7 @@ final class rc {
           }
         }
         L377: {
-          var2 = ji.a(76, "weaponkillstrings,35");
+          var2 = ji.a(param0 ^ 76, "weaponkillstrings,35");
           if (null == var2) {
             break L377;
           } else {
@@ -3765,7 +3760,7 @@ final class rc {
           if (null == var2) {
             break L378;
           } else {
-            ac.field_Z = jk.a(13, var2);
+            ac.field_Z = jk.a(param0 ^ 13, var2);
             break L378;
           }
         }
@@ -3788,7 +3783,7 @@ final class rc {
           }
         }
         L381: {
-          var2 = ji.a(65, "selfkillmsg");
+          var2 = ji.a(param0 ^ 65, "selfkillmsg");
           if (var2 != null) {
             l.field_a = jk.a(13, var2);
             break L381;
@@ -3797,7 +3792,7 @@ final class rc {
           }
         }
         L382: {
-          var2 = ji.a(99, "caughtinexplosionmsg");
+          var2 = ji.a(param0 ^ 99, "caughtinexplosionmsg");
           if (null != var2) {
             jk.field_k = jk.a(13, var2);
             break L382;
@@ -3864,14 +3859,14 @@ final class rc {
           if (null == var2) {
             break L389;
           } else {
-            un.field_k[2] = jk.a(bi.a(0, 13), var2);
+            un.field_k[2] = jk.a(bi.a(param0, 13), var2);
             break L389;
           }
         }
         L390: {
           var2 = ji.a(53, "closecombatmsg,3");
           if (var2 != null) {
-            un.field_k[3] = jk.a(13, var2);
+            un.field_k[3] = jk.a(param0 + 13, var2);
             break L390;
           } else {
             break L390;
@@ -3887,7 +3882,7 @@ final class rc {
           }
         }
         L392: {
-          var2 = ji.a(110, "destroyedsomehowmsg");
+          var2 = ji.a(param0 ^ 110, "destroyedsomehowmsg");
           if (null != var2) {
             ob.field_s = jk.a(13, var2);
             break L392;
@@ -3896,7 +3891,7 @@ final class rc {
           }
         }
         L393: {
-          var2 = ji.a(76, "damagedmsg");
+          var2 = ji.a(param0 ^ 76, "damagedmsg");
           if (null == var2) {
             break L393;
           } else {
@@ -3914,9 +3909,9 @@ final class rc {
           }
         }
         L395: {
-          var2 = ji.a(69, "andfinishedbyrockmsg");
+          var2 = ji.a(param0 ^ 69, "andfinishedbyrockmsg");
           if (var2 != null) {
-            da.field_i = jk.a(13, var2);
+            da.field_i = jk.a(param0 ^ 13, var2);
             break L395;
           } else {
             break L395;
@@ -3932,11 +3927,11 @@ final class rc {
           }
         }
         L397: {
-          var2 = ji.a(96, "andplummetmsg");
+          var2 = ji.a(param0 ^ 96, "andplummetmsg");
           if (null == var2) {
             break L397;
           } else {
-            qd.field_c = jk.a(13, var2);
+            qd.field_c = jk.a(param0 ^ 13, var2);
             break L397;
           }
         }
@@ -3950,7 +3945,7 @@ final class rc {
           }
         }
         L399: {
-          var2 = ji.a(81, "killedwhenrocketintercepted");
+          var2 = ji.a(param0 + 81, "killedwhenrocketintercepted");
           if (null != var2) {
             ki.field_pb = jk.a(13, var2);
             break L399;
@@ -3959,25 +3954,25 @@ final class rc {
           }
         }
         L400: {
-          var2 = ji.a(90, "killedwhenmissileintercepted");
+          var2 = ji.a(param0 ^ 90, "killedwhenmissileintercepted");
           if (var2 != null) {
-            vm.field_o = jk.a(13, var2);
+            vm.field_o = jk.a(param0 + 13, var2);
             break L400;
           } else {
             break L400;
           }
         }
         L401: {
-          var2 = ji.a(112, "killedwhenbombintercepted");
+          var2 = ji.a(param0 + 112, "killedwhenbombintercepted");
           if (null == var2) {
             break L401;
           } else {
-            gl.field_r = jk.a(13, var2);
+            gl.field_r = jk.a(param0 ^ 13, var2);
             break L401;
           }
         }
         L402: {
-          var2 = ji.a(78, "weaponstatlabels,0");
+          var2 = ji.a(param0 + 78, "weaponstatlabels,0");
           if (var2 == null) {
             break L402;
           } else {
@@ -3986,7 +3981,7 @@ final class rc {
           }
         }
         L403: {
-          var2 = ji.a(113, "weaponstatlabels,1");
+          var2 = ji.a(param0 + 113, "weaponstatlabels,1");
           if (var2 != null) {
             bi.field_b[1] = jk.a(13, var2);
             break L403;
@@ -4008,7 +4003,7 @@ final class rc {
           if (var2 == null) {
             break L405;
           } else {
-            bi.field_b[3] = jk.a(bi.a(0, 13), var2);
+            bi.field_b[3] = jk.a(bi.a(param0, 13), var2);
             break L405;
           }
         }
@@ -4058,7 +4053,7 @@ final class rc {
           }
         }
         L411: {
-          var2 = ji.a(120, "weaponclasstxt");
+          var2 = ji.a(param0 + 120, "weaponclasstxt");
           if (var2 == null) {
             break L411;
           } else {
@@ -4103,7 +4098,7 @@ final class rc {
           }
         }
         L416: {
-          var2 = ji.a(60, "Weapon_class_names,4");
+          var2 = ji.a(param0 ^ 60, "Weapon_class_names,4");
           if (null != var2) {
             li.field_B[4] = jk.a(13, var2);
             break L416;
@@ -4116,7 +4111,7 @@ final class rc {
           if (var2 == null) {
             break L417;
           } else {
-            li.field_B[5] = jk.a(bi.a(0, 13), var2);
+            li.field_B[5] = jk.a(bi.a(param0, 13), var2);
             break L417;
           }
         }
@@ -4125,7 +4120,7 @@ final class rc {
           if (null == var2) {
             break L418;
           } else {
-            li.field_B[6] = jk.a(13, var2);
+            li.field_B[6] = jk.a(param0 + 13, var2);
             break L418;
           }
         }
@@ -4148,7 +4143,7 @@ final class rc {
           }
         }
         L421: {
-          var2 = ji.a(85, "Weapon_class_names,9");
+          var2 = ji.a(param0 + 85, "Weapon_class_names,9");
           if (var2 != null) {
             li.field_B[9] = jk.a(13, var2);
             break L421;
@@ -4159,7 +4154,7 @@ final class rc {
         L422: {
           var2 = ji.a(90, "Weapon_class_names,10");
           if (null != var2) {
-            li.field_B[10] = jk.a(13, var2);
+            li.field_B[10] = jk.a(param0 + 13, var2);
             break L422;
           } else {
             break L422;
@@ -4175,7 +4170,7 @@ final class rc {
           }
         }
         L424: {
-          var2 = ji.a(92, "Weapon_class_names,12");
+          var2 = ji.a(param0 ^ 92, "Weapon_class_names,12");
           if (var2 != null) {
             li.field_B[12] = jk.a(13, var2);
             break L424;
@@ -4213,7 +4208,7 @@ final class rc {
         L428: {
           var2 = ji.a(62, "Weapon_class_names,16");
           if (null != var2) {
-            li.field_B[16] = jk.a(bi.a(0, 13), var2);
+            li.field_B[16] = jk.a(bi.a(param0, 13), var2);
             break L428;
           } else {
             break L428;
@@ -4231,7 +4226,7 @@ final class rc {
         L430: {
           var2 = ji.a(122, "Weapon_class_names,18");
           if (var2 != null) {
-            li.field_B[18] = jk.a(bi.a(0, 13), var2);
+            li.field_B[18] = jk.a(bi.a(param0, 13), var2);
             break L430;
           } else {
             break L430;
@@ -4294,7 +4289,7 @@ final class rc {
         L437: {
           var2 = ji.a(99, "sentinel_descriptions,5");
           if (var2 != null) {
-            ig.field_g[5] = jk.a(13, var2);
+            ig.field_g[5] = jk.a(param0 + 13, var2);
             break L437;
           } else {
             break L437;
@@ -4303,14 +4298,14 @@ final class rc {
         L438: {
           var2 = ji.a(76, "sentinel_descriptions,6");
           if (var2 != null) {
-            ig.field_g[6] = jk.a(bi.a(0, 13), var2);
+            ig.field_g[6] = jk.a(bi.a(param0, 13), var2);
             break L438;
           } else {
             break L438;
           }
         }
         L439: {
-          var2 = ji.a(69, "sentinel_descriptions,7");
+          var2 = ji.a(param0 ^ 69, "sentinel_descriptions,7");
           if (var2 != null) {
             ig.field_g[7] = jk.a(13, var2);
             break L439;
@@ -4355,18 +4350,18 @@ final class rc {
           }
         }
         L444: {
-          var2 = ji.a(57, "weapondescriptions,0");
+          var2 = ji.a(param0 + 57, "weapondescriptions,0");
           if (var2 != null) {
-            db.field_g[0] = jk.a(13, var2);
+            db.field_g[0] = jk.a(param0 + 13, var2);
             break L444;
           } else {
             break L444;
           }
         }
         L445: {
-          var2 = ji.a(61, "weapondescriptions,1");
+          var2 = ji.a(param0 ^ 61, "weapondescriptions,1");
           if (null != var2) {
-            db.field_g[1] = jk.a(13, var2);
+            db.field_g[1] = jk.a(param0 + 13, var2);
             break L445;
           } else {
             break L445;
@@ -4382,9 +4377,9 @@ final class rc {
           }
         }
         L447: {
-          var2 = ji.a(97, "weapondescriptions,3");
+          var2 = ji.a(param0 + 97, "weapondescriptions,3");
           if (null != var2) {
-            db.field_g[3] = jk.a(bi.a(0, 13), var2);
+            db.field_g[3] = jk.a(bi.a(param0, 13), var2);
             break L447;
           } else {
             break L447;
@@ -4404,7 +4399,7 @@ final class rc {
           if (null == var2) {
             break L449;
           } else {
-            db.field_g[5] = jk.a(13, var2);
+            db.field_g[5] = jk.a(param0 + 13, var2);
             break L449;
           }
         }
@@ -4422,7 +4417,7 @@ final class rc {
           if (var2 == null) {
             break L451;
           } else {
-            db.field_g[7] = jk.a(13, var2);
+            db.field_g[7] = jk.a(param0 + 13, var2);
             break L451;
           }
         }
@@ -4431,7 +4426,7 @@ final class rc {
           if (var2 == null) {
             break L452;
           } else {
-            db.field_g[8] = jk.a(13, var2);
+            db.field_g[8] = jk.a(param0 + 13, var2);
             break L452;
           }
         }
@@ -4463,7 +4458,7 @@ final class rc {
           }
         }
         L456: {
-          var2 = ji.a(116, "weapondescriptions,12");
+          var2 = ji.a(param0 + 116, "weapondescriptions,12");
           if (null != var2) {
             db.field_g[12] = jk.a(13, var2);
             break L456;
@@ -4474,7 +4469,7 @@ final class rc {
         L457: {
           var2 = ji.a(95, "weapondescriptions,13");
           if (null != var2) {
-            db.field_g[13] = jk.a(bi.a(0, 13), var2);
+            db.field_g[13] = jk.a(bi.a(param0, 13), var2);
             break L457;
           } else {
             break L457;
@@ -4503,7 +4498,7 @@ final class rc {
           if (null == var2) {
             break L460;
           } else {
-            db.field_g[16] = jk.a(bi.a(0, 13), var2);
+            db.field_g[16] = jk.a(bi.a(param0, 13), var2);
             break L460;
           }
         }
@@ -4526,7 +4521,7 @@ final class rc {
           }
         }
         L463: {
-          var2 = ji.a(65, "weapondescriptions,19");
+          var2 = ji.a(param0 + 65, "weapondescriptions,19");
           if (null != var2) {
             db.field_g[19] = jk.a(13, var2);
             break L463;
@@ -4546,7 +4541,7 @@ final class rc {
         L465: {
           var2 = ji.a(95, "weapondescriptions,21");
           if (null != var2) {
-            db.field_g[21] = jk.a(bi.a(0, 13), var2);
+            db.field_g[21] = jk.a(bi.a(param0, 13), var2);
             break L465;
           } else {
             break L465;
@@ -4616,7 +4611,7 @@ final class rc {
           }
         }
         L473: {
-          var2 = ji.a(123, "weapondescriptions,29");
+          var2 = ji.a(param0 + 123, "weapondescriptions,29");
           if (null == var2) {
             break L473;
           } else {
@@ -4629,12 +4624,12 @@ final class rc {
           if (var2 == null) {
             break L474;
           } else {
-            db.field_g[30] = jk.a(13, var2);
+            db.field_g[30] = jk.a(param0 + 13, var2);
             break L474;
           }
         }
         L475: {
-          var2 = ji.a(111, "weapondescriptions,31");
+          var2 = ji.a(param0 ^ 111, "weapondescriptions,31");
           if (var2 != null) {
             db.field_g[31] = jk.a(13, var2);
             break L475;
@@ -4661,7 +4656,7 @@ final class rc {
           }
         }
         L478: {
-          var2 = ji.a(94, "weapondescriptions,34");
+          var2 = ji.a(param0 + 94, "weapondescriptions,34");
           if (null != var2) {
             db.field_g[34] = jk.a(13, var2);
             break L478;
@@ -4670,9 +4665,9 @@ final class rc {
           }
         }
         L479: {
-          var2 = ji.a(105, "weapondescriptions,35");
+          var2 = ji.a(param0 + 105, "weapondescriptions,35");
           if (null != var2) {
-            db.field_g[35] = jk.a(13, var2);
+            db.field_g[35] = jk.a(param0 + 13, var2);
             break L479;
           } else {
             break L479;
@@ -4681,7 +4676,7 @@ final class rc {
         L480: {
           var2 = ji.a(106, "cannotbefiredinair");
           if (null != var2) {
-            al.field_h = jk.a(13, var2);
+            al.field_h = jk.a(param0 + 13, var2);
             break L480;
           } else {
             break L480;
@@ -4697,7 +4692,7 @@ final class rc {
           }
         }
         L482: {
-          var2 = ji.a(88, "gameoptlabels,0");
+          var2 = ji.a(param0 + 88, "gameoptlabels,0");
           if (null == var2) {
             break L482;
           } else {
@@ -4724,7 +4719,7 @@ final class rc {
           }
         }
         L485: {
-          var2 = ji.a(87, "gameoptnames,0,0");
+          var2 = ji.a(param0 ^ 87, "gameoptnames,0,0");
           if (null == var2) {
             break L485;
           } else {
@@ -4771,7 +4766,7 @@ final class rc {
         L490: {
           var2 = ji.a(121, "gameoptnames,1,3");
           if (null != var2) {
-            te.field_c[1][3] = jk.a(bi.a(0, 13), var2);
+            te.field_c[1][3] = jk.a(bi.a(param0, 13), var2);
             break L490;
           } else {
             break L490;
@@ -4787,7 +4782,7 @@ final class rc {
           }
         }
         L492: {
-          var2 = ji.a(54, "gameoptnames,2,0");
+          var2 = ji.a(param0 + 54, "gameoptnames,2,0");
           if (null == var2) {
             break L492;
           } else {
@@ -4796,7 +4791,7 @@ final class rc {
           }
         }
         L493: {
-          var2 = ji.a(118, "gameoptnames,2,1");
+          var2 = ji.a(param0 + 118, "gameoptnames,2,1");
           if (var2 != null) {
             te.field_c[2][1] = jk.a(13, var2);
             break L493;
@@ -4805,11 +4800,11 @@ final class rc {
           }
         }
         L494: {
-          var2 = ji.a(85, "gameoptnames,2,2");
+          var2 = ji.a(param0 ^ 85, "gameoptnames,2,2");
           if (var2 == null) {
             break L494;
           } else {
-            te.field_c[2][2] = jk.a(13, var2);
+            te.field_c[2][2] = jk.a(param0 + 13, var2);
             break L494;
           }
         }
@@ -4832,9 +4827,9 @@ final class rc {
           }
         }
         L497: {
-          var2 = ji.a(75, "gameoptnames,2,5");
+          var2 = ji.a(param0 + 75, "gameoptnames,2,5");
           if (var2 != null) {
-            te.field_c[2][5] = jk.a(bi.a(0, 13), var2);
+            te.field_c[2][5] = jk.a(bi.a(param0, 13), var2);
             break L497;
           } else {
             break L497;
@@ -4843,7 +4838,7 @@ final class rc {
         L498: {
           var2 = ji.a(58, "gameopttooltips,0,0");
           if (var2 != null) {
-            qb.field_y[0][0] = jk.a(bi.a(0, 13), var2);
+            qb.field_y[0][0] = jk.a(bi.a(param0, 13), var2);
             break L498;
           } else {
             break L498;
@@ -4868,7 +4863,7 @@ final class rc {
           }
         }
         L501: {
-          var2 = ji.a(92, "gameopttooltips,1,1");
+          var2 = ji.a(param0 ^ 92, "gameopttooltips,1,1");
           if (var2 == null) {
             break L501;
           } else {
@@ -4886,7 +4881,7 @@ final class rc {
           }
         }
         L503: {
-          var2 = ji.a(61, "gameopttooltips,1,3");
+          var2 = ji.a(param0 ^ 61, "gameopttooltips,1,3");
           if (var2 == null) {
             break L503;
           } else {
@@ -4895,7 +4890,7 @@ final class rc {
           }
         }
         L504: {
-          var2 = ji.a(90, "gameopttooltips,1,4");
+          var2 = ji.a(param0 ^ 90, "gameopttooltips,1,4");
           if (var2 != null) {
             qb.field_y[1][4] = jk.a(13, var2);
             break L504;
@@ -4904,7 +4899,7 @@ final class rc {
           }
         }
         L505: {
-          var2 = ji.a(53, "gameopttooltips,2,0");
+          var2 = ji.a(param0 ^ 53, "gameopttooltips,2,0");
           if (var2 == null) {
             break L505;
           } else {
@@ -4924,7 +4919,7 @@ final class rc {
         L507: {
           var2 = ji.a(112, "gameopttooltips,2,2");
           if (var2 != null) {
-            qb.field_y[2][2] = jk.a(bi.a(0, 13), var2);
+            qb.field_y[2][2] = jk.a(bi.a(param0, 13), var2);
             break L507;
           } else {
             break L507;
@@ -4944,7 +4939,7 @@ final class rc {
           if (null == var2) {
             break L509;
           } else {
-            qb.field_y[2][4] = jk.a(bi.a(0, 13), var2);
+            qb.field_y[2][4] = jk.a(bi.a(param0, 13), var2);
             break L509;
           }
         }
@@ -4998,7 +4993,7 @@ final class rc {
           if (var2 == null) {
             break L515;
           } else {
-            wc.field_g[3][0] = jk.a(bi.a(0, 13), var2);
+            wc.field_g[3][0] = jk.a(bi.a(param0, 13), var2);
             break L515;
           }
         }
@@ -5057,7 +5052,7 @@ final class rc {
           }
         }
         L522: {
-          var2 = ji.a(51, "instruction_set,9,0");
+          var2 = ji.a(param0 + 51, "instruction_set,9,0");
           if (null == var2) {
             break L522;
           } else {
@@ -5075,16 +5070,16 @@ final class rc {
           }
         }
         L524: {
-          var2 = ji.a(117, "instruction_set,11,0");
+          var2 = ji.a(param0 + 117, "instruction_set,11,0");
           if (null == var2) {
             break L524;
           } else {
-            wc.field_g[11][0] = jk.a(bi.a(0, 13), var2);
+            wc.field_g[11][0] = jk.a(bi.a(param0, 13), var2);
             break L524;
           }
         }
         L525: {
-          var2 = ji.a(115, "instruction_set,12,0");
+          var2 = ji.a(param0 ^ 115, "instruction_set,12,0");
           if (var2 == null) {
             break L525;
           } else {
@@ -5113,7 +5108,7 @@ final class rc {
         L528: {
           var2 = ji.a(77, "instruction_set,13,1");
           if (var2 != null) {
-            wc.field_g[13][1] = jk.a(bi.a(0, 13), var2);
+            wc.field_g[13][1] = jk.a(bi.a(param0, 13), var2);
             break L528;
           } else {
             break L528;
@@ -5140,16 +5135,16 @@ final class rc {
         L531: {
           var2 = ji.a(124, "instruction_set,16,0");
           if (var2 != null) {
-            wc.field_g[16][0] = jk.a(bi.a(0, 13), var2);
+            wc.field_g[16][0] = jk.a(bi.a(param0, 13), var2);
             break L531;
           } else {
             break L531;
           }
         }
         L532: {
-          var2 = ji.a(88, "instruction_set,17,0");
+          var2 = ji.a(param0 ^ 88, "instruction_set,17,0");
           if (var2 != null) {
-            wc.field_g[17][0] = jk.a(13, var2);
+            wc.field_g[17][0] = jk.a(param0 + 13, var2);
             break L532;
           } else {
             break L532;
@@ -5167,16 +5162,16 @@ final class rc {
         L534: {
           var2 = ji.a(85, "instruction_set,19,0");
           if (var2 != null) {
-            wc.field_g[19][0] = jk.a(bi.a(0, 13), var2);
+            wc.field_g[19][0] = jk.a(bi.a(param0, 13), var2);
             break L534;
           } else {
             break L534;
           }
         }
         L535: {
-          var2 = ji.a(72, "instruction_set,20,0");
+          var2 = ji.a(param0 ^ 72, "instruction_set,20,0");
           if (null != var2) {
-            wc.field_g[20][0] = jk.a(13, var2);
+            wc.field_g[20][0] = jk.a(param0 + 13, var2);
             break L535;
           } else {
             break L535;
@@ -5241,34 +5236,34 @@ final class rc {
           if (var2 == null) {
             break L542;
           } else {
-            wc.field_g[25][0] = jk.a(bi.a(0, 13), var2);
+            wc.field_g[25][0] = jk.a(bi.a(param0, 13), var2);
             break L542;
           }
         }
         L543: {
-          var2 = ji.a(74, "instruction_set,26,0");
+          var2 = ji.a(param0 + 74, "instruction_set,26,0");
           if (var2 == null) {
             break L543;
           } else {
-            wc.field_g[26][0] = jk.a(13, var2);
+            wc.field_g[26][0] = jk.a(param0 + 13, var2);
             break L543;
           }
         }
         L544: {
           var2 = ji.a(108, "instruction_set,27,0");
           if (var2 != null) {
-            wc.field_g[27][0] = jk.a(bi.a(0, 13), var2);
+            wc.field_g[27][0] = jk.a(bi.a(param0, 13), var2);
             break L544;
           } else {
             break L544;
           }
         }
         L545: {
-          var2 = ji.a(106, "instruction_set,28,0");
+          var2 = ji.a(param0 + 106, "instruction_set,28,0");
           if (var2 == null) {
             break L545;
           } else {
-            wc.field_g[28][0] = jk.a(bi.a(0, 13), var2);
+            wc.field_g[28][0] = jk.a(bi.a(param0, 13), var2);
             break L545;
           }
         }
@@ -5300,9 +5295,9 @@ final class rc {
           }
         }
         L549: {
-          var2 = ji.a(118, "instruction_set,32,0");
+          var2 = ji.a(param0 + 118, "instruction_set,32,0");
           if (var2 != null) {
-            wc.field_g[32][0] = jk.a(bi.a(0, 13), var2);
+            wc.field_g[32][0] = jk.a(bi.a(param0, 13), var2);
             break L549;
           } else {
             break L549;
@@ -5318,7 +5313,7 @@ final class rc {
           }
         }
         L551: {
-          var2 = ji.a(84, "instruction_set,33,0");
+          var2 = ji.a(param0 ^ 84, "instruction_set,33,0");
           if (var2 != null) {
             wc.field_g[33][0] = jk.a(13, var2);
             break L551;
@@ -5338,7 +5333,7 @@ final class rc {
         L553: {
           var2 = ji.a(94, "instruction_set,35,0");
           if (var2 != null) {
-            wc.field_g[35][0] = jk.a(13, var2);
+            wc.field_g[35][0] = jk.a(param0 + 13, var2);
             break L553;
           } else {
             break L553;
@@ -5354,7 +5349,7 @@ final class rc {
           }
         }
         L555: {
-          var2 = ji.a(114, "instruction_set,36,0");
+          var2 = ji.a(param0 ^ 114, "instruction_set,36,0");
           if (null == var2) {
             break L555;
           } else {
@@ -5381,7 +5376,7 @@ final class rc {
           }
         }
         L558: {
-          var2 = ji.a(88, "instruction_set,37,1");
+          var2 = ji.a(param0 + 88, "instruction_set,37,1");
           if (var2 == null) {
             break L558;
           } else {
@@ -5390,7 +5385,7 @@ final class rc {
           }
         }
         L559: {
-          var2 = ji.a(63, "instruction_set,38,0");
+          var2 = ji.a(param0 ^ 63, "instruction_set,38,0");
           if (var2 == null) {
             break L559;
           } else {
@@ -5408,11 +5403,11 @@ final class rc {
           }
         }
         L561: {
-          var2 = ji.a(51, "instruction_set,39,0");
+          var2 = ji.a(param0 ^ 51, "instruction_set,39,0");
           if (var2 == null) {
             break L561;
           } else {
-            wc.field_g[39][0] = jk.a(bi.a(0, 13), var2);
+            wc.field_g[39][0] = jk.a(bi.a(param0, 13), var2);
             break L561;
           }
         }
@@ -5421,7 +5416,7 @@ final class rc {
           if (var2 == null) {
             break L562;
           } else {
-            wc.field_g[40][0] = jk.a(13, var2);
+            wc.field_g[40][0] = jk.a(param0 + 13, var2);
             break L562;
           }
         }
@@ -5466,12 +5461,12 @@ final class rc {
           if (var2 == null) {
             break L567;
           } else {
-            wc.field_g[45][0] = jk.a(13, var2);
+            wc.field_g[45][0] = jk.a(param0 + 13, var2);
             break L567;
           }
         }
         L568: {
-          var2 = ji.a(98, "instruction_set,46,0");
+          var2 = ji.a(param0 + 98, "instruction_set,46,0");
           if (var2 == null) {
             break L568;
           } else {
@@ -5480,7 +5475,7 @@ final class rc {
           }
         }
         L569: {
-          var2 = ji.a(110, "instruction_set,47,0");
+          var2 = ji.a(param0 + 110, "instruction_set,47,0");
           if (var2 == null) {
             break L569;
           } else {
@@ -5498,11 +5493,11 @@ final class rc {
           }
         }
         L571: {
-          var2 = ji.a(69, "instruction_set,49,0");
+          var2 = ji.a(param0 ^ 69, "instruction_set,49,0");
           if (null == var2) {
             break L571;
           } else {
-            wc.field_g[49][0] = jk.a(13, var2);
+            wc.field_g[49][0] = jk.a(param0 + 13, var2);
             break L571;
           }
         }
@@ -5520,7 +5515,7 @@ final class rc {
           if (null == var2) {
             break L573;
           } else {
-            wc.field_g[51][0] = jk.a(13, var2);
+            wc.field_g[51][0] = jk.a(param0 + 13, var2);
             break L573;
           }
         }
@@ -5534,7 +5529,7 @@ final class rc {
           }
         }
         L575: {
-          var2 = ji.a(59, "instruction_set,53,0");
+          var2 = ji.a(param0 ^ 59, "instruction_set,53,0");
           if (var2 != null) {
             wc.field_g[53][0] = jk.a(13, var2);
             break L575;
@@ -5543,9 +5538,9 @@ final class rc {
           }
         }
         L576: {
-          var2 = ji.a(77, "instruction_set,54,0");
+          var2 = ji.a(param0 + 77, "instruction_set,54,0");
           if (null != var2) {
-            wc.field_g[54][0] = jk.a(13, var2);
+            wc.field_g[54][0] = jk.a(param0 + 13, var2);
             break L576;
           } else {
             break L576;
@@ -5588,7 +5583,7 @@ final class rc {
           }
         }
         L581: {
-          var2 = ji.a(57, "instruction_set,58,0");
+          var2 = ji.a(param0 + 57, "instruction_set,58,0");
           if (null == var2) {
             break L581;
           } else {
@@ -5606,11 +5601,11 @@ final class rc {
           }
         }
         L583: {
-          var2 = ji.a(71, "instruction_set,60,0");
+          var2 = ji.a(param0 + 71, "instruction_set,60,0");
           if (null == var2) {
             break L583;
           } else {
-            wc.field_g[60][0] = jk.a(13, var2);
+            wc.field_g[60][0] = jk.a(param0 + 13, var2);
             break L583;
           }
         }
@@ -5633,7 +5628,7 @@ final class rc {
           }
         }
         L586: {
-          var2 = ji.a(109, "instruction_set,63,0");
+          var2 = ji.a(param0 ^ 109, "instruction_set,63,0");
           if (var2 == null) {
             break L586;
           } else {
@@ -5669,7 +5664,7 @@ final class rc {
           }
         }
         L590: {
-          var2 = ji.a(107, "instruction_set,67,0");
+          var2 = ji.a(param0 + 107, "instruction_set,67,0");
           if (null != var2) {
             wc.field_g[67][0] = jk.a(13, var2);
             break L590;
@@ -5682,7 +5677,7 @@ final class rc {
           if (null == var2) {
             break L591;
           } else {
-            wc.field_g[68][0] = jk.a(13, var2);
+            wc.field_g[68][0] = jk.a(param0 + 13, var2);
             break L591;
           }
         }
@@ -5696,7 +5691,7 @@ final class rc {
           }
         }
         L593: {
-          var2 = ji.a(92, "instruction_set,70,0");
+          var2 = ji.a(param0 + 92, "instruction_set,70,0");
           if (null == var2) {
             break L593;
           } else {
@@ -5716,14 +5711,14 @@ final class rc {
         L595: {
           var2 = ji.a(74, "instruction_set,72,0");
           if (null != var2) {
-            wc.field_g[72][0] = jk.a(13, var2);
+            wc.field_g[72][0] = jk.a(param0 + 13, var2);
             break L595;
           } else {
             break L595;
           }
         }
         L596: {
-          var2 = ji.a(67, "instruction_set,73,0");
+          var2 = ji.a(param0 ^ 67, "instruction_set,73,0");
           if (var2 != null) {
             wc.field_g[73][0] = jk.a(13, var2);
             break L596;
@@ -5743,7 +5738,7 @@ final class rc {
         L598: {
           var2 = ji.a(60, "instruction_set,73,2");
           if (null != var2) {
-            wc.field_g[73][2] = jk.a(13, var2);
+            wc.field_g[73][2] = jk.a(param0 + 13, var2);
             break L598;
           } else {
             break L598;
@@ -5759,7 +5754,7 @@ final class rc {
           }
         }
         L600: {
-          var2 = ji.a(115, "instruction_set,74,0");
+          var2 = ji.a(param0 ^ 115, "instruction_set,74,0");
           if (var2 == null) {
             break L600;
           } else {
@@ -5768,7 +5763,7 @@ final class rc {
           }
         }
         L601: {
-          var2 = ji.a(51, "instruction_set,74,1");
+          var2 = ji.a(param0 + 51, "instruction_set,74,1");
           if (null != var2) {
             wc.field_g[74][1] = jk.a(13, var2);
             break L601;
@@ -5813,11 +5808,11 @@ final class rc {
           }
         }
         L606: {
-          var2 = ji.a(101, "instruction_set,75,2");
+          var2 = ji.a(param0 ^ 101, "instruction_set,75,2");
           if (null == var2) {
             break L606;
           } else {
-            wc.field_g[75][2] = jk.a(bi.a(0, 13), var2);
+            wc.field_g[75][2] = jk.a(bi.a(param0, 13), var2);
             break L606;
           }
         }
@@ -5835,14 +5830,14 @@ final class rc {
           if (var2 == null) {
             break L608;
           } else {
-            wc.field_g[76][0] = jk.a(13, var2);
+            wc.field_g[76][0] = jk.a(param0 + 13, var2);
             break L608;
           }
         }
         L609: {
           var2 = ji.a(55, "instruction_set,76,1");
           if (var2 != null) {
-            wc.field_g[76][1] = jk.a(bi.a(0, 13), var2);
+            wc.field_g[76][1] = jk.a(bi.a(param0, 13), var2);
             break L609;
           } else {
             break L609;
@@ -5885,7 +5880,7 @@ final class rc {
           }
         }
         L614: {
-          var2 = ji.a(93, "instruction_set,77,2");
+          var2 = ji.a(param0 ^ 93, "instruction_set,77,2");
           if (var2 == null) {
             break L614;
           } else {
@@ -5934,7 +5929,7 @@ final class rc {
           if (var2 == null) {
             break L619;
           } else {
-            wc.field_g[78][3] = jk.a(13, var2);
+            wc.field_g[78][3] = jk.a(param0 + 13, var2);
             break L619;
           }
         }
@@ -5986,7 +5981,7 @@ final class rc {
         L625: {
           var2 = ji.a(108, "instruction_set,80,1");
           if (null != var2) {
-            wc.field_g[80][1] = jk.a(13, var2);
+            wc.field_g[80][1] = jk.a(param0 + 13, var2);
             break L625;
           } else {
             break L625;
@@ -6011,7 +6006,7 @@ final class rc {
           }
         }
         L628: {
-          var2 = ji.a(101, "instruction_set,81,0");
+          var2 = ji.a(param0 ^ 101, "instruction_set,81,0");
           if (null == var2) {
             break L628;
           } else {
@@ -6024,16 +6019,16 @@ final class rc {
           if (var2 == null) {
             break L629;
           } else {
-            wc.field_g[81][1] = jk.a(bi.a(0, 13), var2);
+            wc.field_g[81][1] = jk.a(bi.a(param0, 13), var2);
             break L629;
           }
         }
         L630: {
-          var2 = ji.a(84, "instruction_set,81,2");
+          var2 = ji.a(param0 ^ 84, "instruction_set,81,2");
           if (var2 == null) {
             break L630;
           } else {
-            wc.field_g[81][2] = jk.a(bi.a(0, 13), var2);
+            wc.field_g[81][2] = jk.a(bi.a(param0, 13), var2);
             break L630;
           }
         }
@@ -6058,7 +6053,7 @@ final class rc {
         L633: {
           var2 = ji.a(70, "instruction_set,82,1");
           if (var2 != null) {
-            wc.field_g[82][1] = jk.a(13, var2);
+            wc.field_g[82][1] = jk.a(param0 + 13, var2);
             break L633;
           } else {
             break L633;
@@ -6096,12 +6091,12 @@ final class rc {
           if (null == var2) {
             break L637;
           } else {
-            wc.field_g[86][0] = jk.a(bi.a(0, 13), var2);
+            wc.field_g[86][0] = jk.a(bi.a(param0, 13), var2);
             break L637;
           }
         }
         L638: {
-          var2 = ji.a(86, "instruction_set,87,0");
+          var2 = ji.a(param0 ^ 86, "instruction_set,87,0");
           if (null != var2) {
             wc.field_g[87][0] = jk.a(13, var2);
             break L638;
@@ -6114,7 +6109,7 @@ final class rc {
           if (var2 == null) {
             break L639;
           } else {
-            wc.field_g[88][0] = jk.a(13, var2);
+            wc.field_g[88][0] = jk.a(param0 + 13, var2);
             break L639;
           }
         }
@@ -6148,7 +6143,7 @@ final class rc {
         L643: {
           var2 = ji.a(82, "instruction_set,89,0");
           if (var2 != null) {
-            wc.field_g[89][0] = jk.a(13, var2);
+            wc.field_g[89][0] = jk.a(param0 + 13, var2);
             break L643;
           } else {
             break L643;
@@ -6164,7 +6159,7 @@ final class rc {
           }
         }
         L645: {
-          var2 = ji.a(120, "instruction_set,89,2");
+          var2 = ji.a(param0 + 120, "instruction_set,89,2");
           if (var2 != null) {
             wc.field_g[89][2] = jk.a(13, var2);
             break L645;
@@ -6177,7 +6172,7 @@ final class rc {
           if (var2 == null) {
             break L646;
           } else {
-            wc.field_g[89][3] = jk.a(13, var2);
+            wc.field_g[89][3] = jk.a(param0 + 13, var2);
             break L646;
           }
         }
@@ -6211,14 +6206,14 @@ final class rc {
         L650: {
           var2 = ji.a(110, "instruction_set,90,3");
           if (null != var2) {
-            wc.field_g[90][3] = jk.a(bi.a(0, 13), var2);
+            wc.field_g[90][3] = jk.a(bi.a(param0, 13), var2);
             break L650;
           } else {
             break L650;
           }
         }
         L651: {
-          var2 = ji.a(69, "instruction_set,91,0");
+          var2 = ji.a(param0 ^ 69, "instruction_set,91,0");
           if (null != var2) {
             wc.field_g[91][0] = jk.a(13, var2);
             break L651;
@@ -6245,7 +6240,7 @@ final class rc {
           }
         }
         L654: {
-          var2 = ji.a(110, "instruction_set,91,3");
+          var2 = ji.a(param0 ^ 110, "instruction_set,91,3");
           if (var2 == null) {
             break L654;
           } else {
@@ -6265,7 +6260,7 @@ final class rc {
         L656: {
           var2 = ji.a(80, "instruction_set,92,1");
           if (null != var2) {
-            wc.field_g[92][1] = jk.a(13, var2);
+            wc.field_g[92][1] = jk.a(param0 + 13, var2);
             break L656;
           } else {
             break L656;
@@ -6335,7 +6330,7 @@ final class rc {
           }
         }
         L664: {
-          var2 = ji.a(117, "CONFIRM_ENGINEER_MSG");
+          var2 = ji.a(param0 ^ 117, "CONFIRM_ENGINEER_MSG");
           if (var2 == null) {
             break L664;
           } else {
@@ -6391,14 +6386,14 @@ final class rc {
         L670: {
           var2 = ji.a(124, "RECOMMEND_LOGIN_MSG");
           if (null != var2) {
-            id.field_Tb = jk.a(13, var2);
+            id.field_Tb = jk.a(param0 ^ 13, var2);
             break L670;
           } else {
             break L670;
           }
         }
         L671: {
-          var2 = ji.a(66, "DISCARD_PROGRESS_MSG");
+          var2 = ji.a(param0 ^ 66, "DISCARD_PROGRESS_MSG");
           if (null != var2) {
             ee.field_I = jk.a(13, var2);
             break L671;
@@ -6407,7 +6402,7 @@ final class rc {
           }
         }
         L672: {
-          var2 = ji.a(53, "TRAINING_COMPLETE_LOGIN_MSG");
+          var2 = ji.a(param0 ^ 53, "TRAINING_COMPLETE_LOGIN_MSG");
           if (var2 != null) {
             ra.field_b = jk.a(13, var2);
             break L672;
@@ -6416,7 +6411,7 @@ final class rc {
           }
         }
         L673: {
-          var2 = ji.a(98, "ITEMS_UNLOCKED_1_MSG");
+          var2 = ji.a(param0 + 98, "ITEMS_UNLOCKED_1_MSG");
           if (null == var2) {
             break L673;
           } else {
@@ -6445,7 +6440,7 @@ final class rc {
         L676: {
           var2 = ji.a(88, "CAMPAIGN_NAMES,1");
           if (var2 != null) {
-            cc.field_ic[1] = jk.a(13, var2);
+            cc.field_ic[1] = jk.a(param0 + 13, var2);
             break L676;
           } else {
             break L676;
@@ -6456,7 +6451,7 @@ final class rc {
           if (var2 == null) {
             break L677;
           } else {
-            cc.field_ic[2] = jk.a(13, var2);
+            cc.field_ic[2] = jk.a(param0 + 13, var2);
             break L677;
           }
         }
@@ -6472,7 +6467,7 @@ final class rc {
         L679: {
           var2 = ji.a(85, "mission_titles,0");
           if (var2 != null) {
-            um.field_cb[0] = jk.a(13, var2);
+            um.field_cb[0] = jk.a(param0 + 13, var2);
             break L679;
           } else {
             break L679;
@@ -6481,7 +6476,7 @@ final class rc {
         L680: {
           var2 = ji.a(93, "mission_titles,1");
           if (null != var2) {
-            um.field_cb[1] = jk.a(13, var2);
+            um.field_cb[1] = jk.a(param0 + 13, var2);
             break L680;
           } else {
             break L680;
@@ -6506,7 +6501,7 @@ final class rc {
           }
         }
         L683: {
-          var2 = ji.a(127, "mission_titles,4");
+          var2 = ji.a(param0 ^ 127, "mission_titles,4");
           if (null != var2) {
             um.field_cb[4] = jk.a(13, var2);
             break L683;
@@ -6542,9 +6537,9 @@ final class rc {
           }
         }
         L687: {
-          var2 = ji.a(72, "mission_titles,8");
+          var2 = ji.a(param0 ^ 72, "mission_titles,8");
           if (null != var2) {
-            um.field_cb[8] = jk.a(13, var2);
+            um.field_cb[8] = jk.a(param0 + 13, var2);
             break L687;
           } else {
             break L687;
@@ -6560,7 +6555,7 @@ final class rc {
           }
         }
         L689: {
-          var2 = ji.a(76, "mission_titles,10");
+          var2 = ji.a(param0 ^ 76, "mission_titles,10");
           if (null == var2) {
             break L689;
           } else {
@@ -6569,7 +6564,7 @@ final class rc {
           }
         }
         L690: {
-          var2 = ji.a(78, "mission_titles,11");
+          var2 = ji.a(param0 ^ 78, "mission_titles,11");
           if (var2 != null) {
             um.field_cb[11] = jk.a(13, var2);
             break L690;
@@ -6632,16 +6627,16 @@ final class rc {
           }
         }
         L697: {
-          var2 = ji.a(108, "mission_titles,18");
+          var2 = ji.a(param0 + 108, "mission_titles,18");
           if (var2 != null) {
-            um.field_cb[18] = jk.a(13, var2);
+            um.field_cb[18] = jk.a(param0 + 13, var2);
             break L697;
           } else {
             break L697;
           }
         }
         L698: {
-          var2 = ji.a(76, "mission_titles,19");
+          var2 = ji.a(param0 + 76, "mission_titles,19");
           if (var2 == null) {
             break L698;
           } else {
@@ -6668,7 +6663,7 @@ final class rc {
           }
         }
         L701: {
-          var2 = ji.a(127, "mission_titles,22");
+          var2 = ji.a(param0 ^ 127, "mission_titles,22");
           if (null != var2) {
             um.field_cb[22] = jk.a(13, var2);
             break L701;
@@ -6686,7 +6681,7 @@ final class rc {
           }
         }
         L703: {
-          var2 = ji.a(106, "mission_titles,24");
+          var2 = ji.a(param0 + 106, "mission_titles,24");
           if (var2 == null) {
             break L703;
           } else {
@@ -6735,12 +6730,12 @@ final class rc {
           if (var2 == null) {
             break L708;
           } else {
-            um.field_cb[29] = jk.a(bi.a(0, 13), var2);
+            um.field_cb[29] = jk.a(bi.a(param0, 13), var2);
             break L708;
           }
         }
         L709: {
-          var2 = ji.a(95, "tutorialpagenames,0,0");
+          var2 = ji.a(param0 ^ 95, "tutorialpagenames,0,0");
           if (null != var2) {
             dl.field_N[0][0] = jk.a(13, var2);
             break L709;
@@ -6776,11 +6771,11 @@ final class rc {
           }
         }
         L713: {
-          var2 = ji.a(96, "tutorialpagenames,0,4");
+          var2 = ji.a(param0 + 96, "tutorialpagenames,0,4");
           if (var2 == null) {
             break L713;
           } else {
-            dl.field_N[0][4] = jk.a(13, var2);
+            dl.field_N[0][4] = jk.a(param0 + 13, var2);
             break L713;
           }
         }
@@ -6798,12 +6793,12 @@ final class rc {
           if (null == var2) {
             break L715;
           } else {
-            dl.field_N[0][6] = jk.a(13, var2);
+            dl.field_N[0][6] = jk.a(param0 + 13, var2);
             break L715;
           }
         }
         L716: {
-          var2 = ji.a(86, "tutorialpagenames,0,7");
+          var2 = ji.a(param0 + 86, "tutorialpagenames,0,7");
           if (var2 == null) {
             break L716;
           } else {
@@ -6812,7 +6807,7 @@ final class rc {
           }
         }
         L717: {
-          var2 = ji.a(122, "tutorialpagenames,0,8");
+          var2 = ji.a(param0 + 122, "tutorialpagenames,0,8");
           if (var2 != null) {
             dl.field_N[0][8] = jk.a(13, var2);
             break L717;
@@ -6823,7 +6818,7 @@ final class rc {
         L718: {
           var2 = ji.a(90, "tutorialpagenames,0,9");
           if (null != var2) {
-            dl.field_N[0][9] = jk.a(13, var2);
+            dl.field_N[0][9] = jk.a(param0 + 13, var2);
             break L718;
           } else {
             break L718;
@@ -6834,14 +6829,14 @@ final class rc {
           if (var2 == null) {
             break L719;
           } else {
-            dl.field_N[0][10] = jk.a(13, var2);
+            dl.field_N[0][10] = jk.a(param0 + 13, var2);
             break L719;
           }
         }
         L720: {
           var2 = ji.a(127, "tutorialpagenames,0,11");
           if (null != var2) {
-            dl.field_N[0][11] = jk.a(bi.a(0, 13), var2);
+            dl.field_N[0][11] = jk.a(bi.a(param0, 13), var2);
             break L720;
           } else {
             break L720;
@@ -6868,7 +6863,7 @@ final class rc {
         L723: {
           var2 = ji.a(90, "tutorialpagenames,1,2");
           if (var2 != null) {
-            dl.field_N[1][2] = jk.a(13, var2);
+            dl.field_N[1][2] = jk.a(param0 + 13, var2);
             break L723;
           } else {
             break L723;
@@ -6884,7 +6879,7 @@ final class rc {
           }
         }
         L725: {
-          var2 = ji.a(102, "tutorialpagenames,1,4");
+          var2 = ji.a(param0 ^ 102, "tutorialpagenames,1,4");
           if (var2 == null) {
             break L725;
           } else {
@@ -6902,7 +6897,7 @@ final class rc {
           }
         }
         L727: {
-          var2 = ji.a(71, "tutorialpagenames,1,6");
+          var2 = ji.a(param0 + 71, "tutorialpagenames,1,6");
           if (var2 == null) {
             break L727;
           } else {
@@ -6949,7 +6944,7 @@ final class rc {
         L732: {
           var2 = ji.a(79, "tutorialpagenames,1,11");
           if (null != var2) {
-            dl.field_N[1][11] = jk.a(13, var2);
+            dl.field_N[1][11] = jk.a(param0 + 13, var2);
             break L732;
           } else {
             break L732;
@@ -6974,34 +6969,34 @@ final class rc {
           }
         }
         L735: {
-          var2 = ji.a(90, "tutorialpagenames,1,14");
+          var2 = ji.a(param0 ^ 90, "tutorialpagenames,1,14");
           if (null == var2) {
             break L735;
           } else {
-            dl.field_N[1][14] = jk.a(13, var2);
+            dl.field_N[1][14] = jk.a(param0 + 13, var2);
             break L735;
           }
         }
         L736: {
-          var2 = ji.a(126, "tutorialpagenames,3,0");
+          var2 = ji.a(param0 + 126, "tutorialpagenames,3,0");
           if (null == var2) {
             break L736;
           } else {
-            dl.field_N[3][0] = jk.a(bi.a(0, 13), var2);
+            dl.field_N[3][0] = jk.a(bi.a(param0, 13), var2);
             break L736;
           }
         }
         L737: {
           var2 = ji.a(113, "tutorialpagenames,3,1");
           if (var2 != null) {
-            dl.field_N[3][1] = jk.a(13, var2);
+            dl.field_N[3][1] = jk.a(param0 + 13, var2);
             break L737;
           } else {
             break L737;
           }
         }
         L738: {
-          var2 = ji.a(88, "tutorialpagenames,3,2");
+          var2 = ji.a(param0 ^ 88, "tutorialpagenames,3,2");
           if (var2 == null) {
             break L738;
           } else {
@@ -7028,7 +7023,7 @@ final class rc {
           }
         }
         L741: {
-          var2 = ji.a(91, "tutorialpagenames,3,5");
+          var2 = ji.a(param0 ^ 91, "tutorialpagenames,3,5");
           if (var2 == null) {
             break L741;
           } else {
@@ -7037,16 +7032,16 @@ final class rc {
           }
         }
         L742: {
-          var2 = ji.a(111, "tutorialpagenames,3,6");
+          var2 = ji.a(param0 + 111, "tutorialpagenames,3,6");
           if (null != var2) {
-            dl.field_N[3][6] = jk.a(bi.a(0, 13), var2);
+            dl.field_N[3][6] = jk.a(bi.a(param0, 13), var2);
             break L742;
           } else {
             break L742;
           }
         }
         L743: {
-          var2 = ji.a(52, "tutorialpagenames,5,0");
+          var2 = ji.a(param0 ^ 52, "tutorialpagenames,5,0");
           if (var2 != null) {
             dl.field_N[5][0] = jk.a(13, var2);
             break L743;
@@ -7059,12 +7054,12 @@ final class rc {
           if (null == var2) {
             break L744;
           } else {
-            dl.field_N[5][1] = jk.a(bi.a(0, 13), var2);
+            dl.field_N[5][1] = jk.a(bi.a(param0, 13), var2);
             break L744;
           }
         }
         L745: {
-          var2 = ji.a(110, "tutorialpagenames,5,2");
+          var2 = ji.a(param0 ^ 110, "tutorialpagenames,5,2");
           if (null == var2) {
             break L745;
           } else {
@@ -7073,11 +7068,11 @@ final class rc {
           }
         }
         L746: {
-          var2 = ji.a(55, "tutorialpagenames,5,3");
+          var2 = ji.a(param0 ^ 55, "tutorialpagenames,5,3");
           if (null == var2) {
             break L746;
           } else {
-            dl.field_N[5][3] = jk.a(13, var2);
+            dl.field_N[5][3] = jk.a(param0 + 13, var2);
             break L746;
           }
         }
@@ -7093,7 +7088,7 @@ final class rc {
         L748: {
           var2 = ji.a(100, "tutorialpagenames,7,0");
           if (var2 != null) {
-            dl.field_N[7][0] = jk.a(13, var2);
+            dl.field_N[7][0] = jk.a(param0 + 13, var2);
             break L748;
           } else {
             break L748;
@@ -7118,7 +7113,7 @@ final class rc {
           }
         }
         L751: {
-          var2 = ji.a(126, "tutorialpagenames,7,3");
+          var2 = ji.a(param0 ^ 126, "tutorialpagenames,7,3");
           if (var2 != null) {
             dl.field_N[7][3] = jk.a(13, var2);
             break L751;
@@ -7136,7 +7131,7 @@ final class rc {
           }
         }
         L753: {
-          var2 = ji.a(53, "tutorialpagenames,7,5");
+          var2 = ji.a(param0 + 53, "tutorialpagenames,7,5");
           if (var2 == null) {
             break L753;
           } else {
@@ -7154,9 +7149,9 @@ final class rc {
           }
         }
         L755: {
-          var2 = ji.a(80, "tutorialpagenames,9,0");
+          var2 = ji.a(param0 + 80, "tutorialpagenames,9,0");
           if (var2 != null) {
-            dl.field_N[9][0] = jk.a(13, var2);
+            dl.field_N[9][0] = jk.a(param0 + 13, var2);
             break L755;
           } else {
             break L755;
@@ -7181,7 +7176,7 @@ final class rc {
           }
         }
         L758: {
-          var2 = ji.a(78, "tutorialpagenames,9,3");
+          var2 = ji.a(param0 ^ 78, "tutorialpagenames,9,3");
           if (var2 == null) {
             break L758;
           } else {
@@ -7190,11 +7185,11 @@ final class rc {
           }
         }
         L759: {
-          var2 = ji.a(118, "tutorialpagenames,9,4");
+          var2 = ji.a(param0 + 118, "tutorialpagenames,9,4");
           if (var2 == null) {
             break L759;
           } else {
-            dl.field_N[9][4] = jk.a(13, var2);
+            dl.field_N[9][4] = jk.a(param0 + 13, var2);
             break L759;
           }
         }
@@ -7226,7 +7221,7 @@ final class rc {
           }
         }
         L763: {
-          var2 = ji.a(76, "tutorial_alt_controls,0,4");
+          var2 = ji.a(param0 + 76, "tutorial_alt_controls,0,4");
           if (null != var2) {
             dj.field_g[0][4] = jk.a(13, var2);
             break L763;
@@ -7244,7 +7239,7 @@ final class rc {
           }
         }
         L765: {
-          var2 = ji.a(127, "tutorial_alt_controls,0,6");
+          var2 = ji.a(param0 ^ 127, "tutorial_alt_controls,0,6");
           if (var2 != null) {
             dj.field_g[0][6] = jk.a(13, var2);
             break L765;
@@ -7253,16 +7248,16 @@ final class rc {
           }
         }
         L766: {
-          var2 = ji.a(71, "tutorial_alt_controls,0,7");
+          var2 = ji.a(param0 + 71, "tutorial_alt_controls,0,7");
           if (var2 != null) {
-            dj.field_g[0][7] = jk.a(13, var2);
+            dj.field_g[0][7] = jk.a(param0 + 13, var2);
             break L766;
           } else {
             break L766;
           }
         }
         L767: {
-          var2 = ji.a(117, "tutorial_alt_controls,0,8");
+          var2 = ji.a(param0 + 117, "tutorial_alt_controls,0,8");
           if (var2 == null) {
             break L767;
           } else {
@@ -7289,7 +7284,7 @@ final class rc {
           }
         }
         L770: {
-          var2 = ji.a(89, "tutorial_alt_controls,0,12");
+          var2 = ji.a(param0 ^ 89, "tutorial_alt_controls,0,12");
           if (var2 != null) {
             dj.field_g[0][12] = jk.a(13, var2);
             break L770;
@@ -7307,7 +7302,7 @@ final class rc {
           }
         }
         L772: {
-          var2 = ji.a(70, "tutorial_alt_controls,0,14");
+          var2 = ji.a(param0 + 70, "tutorial_alt_controls,0,14");
           if (var2 == null) {
             break L772;
           } else {
@@ -7354,7 +7349,7 @@ final class rc {
         L777: {
           var2 = ji.a(110, "tutorial_alt_controls,1,12");
           if (null != var2) {
-            dj.field_g[1][12] = jk.a(bi.a(0, 13), var2);
+            dj.field_g[1][12] = jk.a(bi.a(param0, 13), var2);
             break L777;
           } else {
             break L777;
@@ -7370,7 +7365,7 @@ final class rc {
           }
         }
         L779: {
-          var2 = ji.a(100, "tutorial_alt_controls,3,2");
+          var2 = ji.a(param0 + 100, "tutorial_alt_controls,3,2");
           if (null == var2) {
             break L779;
           } else {
@@ -7397,9 +7392,9 @@ final class rc {
           }
         }
         L782: {
-          var2 = ji.a(75, "tutorial_alt_controls,3,5");
+          var2 = ji.a(param0 ^ 75, "tutorial_alt_controls,3,5");
           if (null != var2) {
-            dj.field_g[3][5] = jk.a(13, var2);
+            dj.field_g[3][5] = jk.a(param0 + 13, var2);
             break L782;
           } else {
             break L782;
@@ -7433,7 +7428,7 @@ final class rc {
           }
         }
         L786: {
-          var2 = ji.a(121, "tutorial_b,0,3");
+          var2 = ji.a(param0 ^ 121, "tutorial_b,0,3");
           if (var2 == null) {
             break L786;
           } else {
@@ -7444,7 +7439,7 @@ final class rc {
         L787: {
           var2 = ji.a(87, "tutorial_b,0,4");
           if (var2 != null) {
-            dl.field_H[0][4] = jk.a(bi.a(0, 13), var2);
+            dl.field_H[0][4] = jk.a(bi.a(param0, 13), var2);
             break L787;
           } else {
             break L787;
@@ -7478,7 +7473,7 @@ final class rc {
           }
         }
         L791: {
-          var2 = ji.a(86, "tutorial_b,0,8");
+          var2 = ji.a(param0 ^ 86, "tutorial_b,0,8");
           if (var2 == null) {
             break L791;
           } else {
@@ -7487,7 +7482,7 @@ final class rc {
           }
         }
         L792: {
-          var2 = ji.a(106, "tutorial_b,0,9");
+          var2 = ji.a(param0 + 106, "tutorial_b,0,9");
           if (var2 != null) {
             dl.field_H[0][9] = jk.a(13, var2);
             break L792;
@@ -7505,7 +7500,7 @@ final class rc {
           }
         }
         L794: {
-          var2 = ji.a(118, "tutorial_b,0,11");
+          var2 = ji.a(param0 + 118, "tutorial_b,0,11");
           if (null == var2) {
             break L794;
           } else {
@@ -7541,7 +7536,7 @@ final class rc {
           }
         }
         L798: {
-          var2 = ji.a(120, "tutorial_b,0,15");
+          var2 = ji.a(param0 ^ 120, "tutorial_b,0,15");
           if (null != var2) {
             dl.field_H[0][15] = jk.a(13, var2);
             break L798;
@@ -7554,7 +7549,7 @@ final class rc {
           if (var2 == null) {
             break L799;
           } else {
-            dl.field_H[0][16] = jk.a(13, var2);
+            dl.field_H[0][16] = jk.a(param0 + 13, var2);
             break L799;
           }
         }
@@ -7568,7 +7563,7 @@ final class rc {
           }
         }
         L801: {
-          var2 = ji.a(107, "tutorial_b,0,18");
+          var2 = ji.a(param0 ^ 107, "tutorial_b,0,18");
           if (null == var2) {
             break L801;
           } else {
@@ -7579,14 +7574,14 @@ final class rc {
         L802: {
           var2 = ji.a(126, "tutorial_b,0,19");
           if (var2 != null) {
-            dl.field_H[0][19] = jk.a(bi.a(0, 13), var2);
+            dl.field_H[0][19] = jk.a(bi.a(param0, 13), var2);
             break L802;
           } else {
             break L802;
           }
         }
         L803: {
-          var2 = ji.a(98, "tutorial_b,0,20");
+          var2 = ji.a(param0 ^ 98, "tutorial_b,0,20");
           if (var2 != null) {
             dl.field_H[0][20] = jk.a(13, var2);
             break L803;
@@ -7597,7 +7592,7 @@ final class rc {
         L804: {
           var2 = ji.a(60, "tutorial_b,0,21");
           if (var2 != null) {
-            dl.field_H[0][21] = jk.a(bi.a(0, 13), var2);
+            dl.field_H[0][21] = jk.a(bi.a(param0, 13), var2);
             break L804;
           } else {
             break L804;
@@ -7608,14 +7603,14 @@ final class rc {
           if (var2 == null) {
             break L805;
           } else {
-            dl.field_H[0][22] = jk.a(13, var2);
+            dl.field_H[0][22] = jk.a(param0 + 13, var2);
             break L805;
           }
         }
         L806: {
           var2 = ji.a(95, "tutorial_b,0,23");
           if (null != var2) {
-            dl.field_H[0][23] = jk.a(13, var2);
+            dl.field_H[0][23] = jk.a(param0 + 13, var2);
             break L806;
           } else {
             break L806;
@@ -7649,20 +7644,20 @@ final class rc {
           }
         }
         L810: {
-          var2 = ji.a(75, "tutorial_b,1,3");
+          var2 = ji.a(param0 ^ 75, "tutorial_b,1,3");
           if (var2 != null) {
-            dl.field_H[1][3] = jk.a(bi.a(0, 13), var2);
+            dl.field_H[1][3] = jk.a(bi.a(param0, 13), var2);
             break L810;
           } else {
             break L810;
           }
         }
         L811: {
-          var2 = ji.a(106, "tutorial_b,1,4");
+          var2 = ji.a(param0 ^ 106, "tutorial_b,1,4");
           if (null == var2) {
             break L811;
           } else {
-            dl.field_H[1][4] = jk.a(bi.a(0, 13), var2);
+            dl.field_H[1][4] = jk.a(bi.a(param0, 13), var2);
             break L811;
           }
         }
@@ -7696,7 +7691,7 @@ final class rc {
         L815: {
           var2 = ji.a(78, "tutorial_b,1,8");
           if (null != var2) {
-            dl.field_H[1][8] = jk.a(bi.a(0, 13), var2);
+            dl.field_H[1][8] = jk.a(bi.a(param0, 13), var2);
             break L815;
           } else {
             break L815;
@@ -7705,7 +7700,7 @@ final class rc {
         L816: {
           var2 = ji.a(62, "tutorial_b,1,9");
           if (null != var2) {
-            dl.field_H[1][9] = jk.a(13, var2);
+            dl.field_H[1][9] = jk.a(param0 + 13, var2);
             break L816;
           } else {
             break L816;
@@ -7730,7 +7725,7 @@ final class rc {
           }
         }
         L819: {
-          var2 = ji.a(55, "tutorial_b,1,12");
+          var2 = ji.a(param0 ^ 55, "tutorial_b,1,12");
           if (null != var2) {
             dl.field_H[1][12] = jk.a(13, var2);
             break L819;
@@ -7766,7 +7761,7 @@ final class rc {
           }
         }
         L823: {
-          var2 = ji.a(89, "tutorial_b,1,16");
+          var2 = ji.a(param0 + 89, "tutorial_b,1,16");
           if (var2 != null) {
             dl.field_H[1][16] = jk.a(13, var2);
             break L823;
@@ -7804,7 +7799,7 @@ final class rc {
         L827: {
           var2 = ji.a(67, "tutorial_b,1,20");
           if (null != var2) {
-            dl.field_H[1][20] = jk.a(bi.a(0, 13), var2);
+            dl.field_H[1][20] = jk.a(bi.a(param0, 13), var2);
             break L827;
           } else {
             break L827;
@@ -7856,7 +7851,7 @@ final class rc {
           }
         }
         L833: {
-          var2 = ji.a(80, "tutorial_b,1,26");
+          var2 = ji.a(param0 ^ 80, "tutorial_b,1,26");
           if (null != var2) {
             dl.field_H[1][26] = jk.a(13, var2);
             break L833;
@@ -7874,7 +7869,7 @@ final class rc {
           }
         }
         L835: {
-          var2 = ji.a(99, "tutorial_b,1,28");
+          var2 = ji.a(param0 ^ 99, "tutorial_b,1,28");
           if (var2 == null) {
             break L835;
           } else {
@@ -7883,7 +7878,7 @@ final class rc {
           }
         }
         L836: {
-          var2 = ji.a(119, "tutorial_b,1,29");
+          var2 = ji.a(param0 ^ 119, "tutorial_b,1,29");
           if (null != var2) {
             dl.field_H[1][29] = jk.a(13, var2);
             break L836;
@@ -7932,7 +7927,7 @@ final class rc {
           if (var2 == null) {
             break L841;
           } else {
-            dl.field_H[3][4] = jk.a(bi.a(0, 13), var2);
+            dl.field_H[3][4] = jk.a(bi.a(param0, 13), var2);
             break L841;
           }
         }
@@ -7964,7 +7959,7 @@ final class rc {
           }
         }
         L845: {
-          var2 = ji.a(96, "tutorial_b,3,8");
+          var2 = ji.a(param0 ^ 96, "tutorial_b,3,8");
           if (var2 == null) {
             break L845;
           } else {
@@ -7984,7 +7979,7 @@ final class rc {
         L847: {
           var2 = ji.a(71, "tutorial_b,3,10");
           if (var2 != null) {
-            dl.field_H[3][10] = jk.a(bi.a(0, 13), var2);
+            dl.field_H[3][10] = jk.a(bi.a(param0, 13), var2);
             break L847;
           } else {
             break L847;
@@ -8004,7 +7999,7 @@ final class rc {
           if (null == var2) {
             break L849;
           } else {
-            dl.field_H[3][12] = jk.a(bi.a(0, 13), var2);
+            dl.field_H[3][12] = jk.a(bi.a(param0, 13), var2);
             break L849;
           }
         }
@@ -8029,7 +8024,7 @@ final class rc {
         L852: {
           var2 = ji.a(124, "tutorial_b,5,1");
           if (null != var2) {
-            dl.field_H[5][1] = jk.a(13, var2);
+            dl.field_H[5][1] = jk.a(param0 + 13, var2);
             break L852;
           } else {
             break L852;
@@ -8072,7 +8067,7 @@ final class rc {
           }
         }
         L857: {
-          var2 = ji.a(63, "tutorial_b,5,6");
+          var2 = ji.a(param0 ^ 63, "tutorial_b,5,6");
           if (null != var2) {
             dl.field_H[5][6] = jk.a(13, var2);
             break L857;
@@ -8117,7 +8112,7 @@ final class rc {
           }
         }
         L862: {
-          var2 = ji.a(61, "tutorial_b,7,3");
+          var2 = ji.a(param0 + 61, "tutorial_b,7,3");
           if (null != var2) {
             dl.field_H[7][3] = jk.a(13, var2);
             break L862;
@@ -8126,7 +8121,7 @@ final class rc {
           }
         }
         L863: {
-          var2 = ji.a(85, "tutorial_b,7,4");
+          var2 = ji.a(param0 + 85, "tutorial_b,7,4");
           if (var2 != null) {
             dl.field_H[7][4] = jk.a(13, var2);
             break L863;
@@ -8153,7 +8148,7 @@ final class rc {
           }
         }
         L866: {
-          var2 = ji.a(101, "tutorial_b,7,7");
+          var2 = ji.a(param0 ^ 101, "tutorial_b,7,7");
           if (null != var2) {
             dl.field_H[7][7] = jk.a(13, var2);
             break L866;
@@ -8162,7 +8157,7 @@ final class rc {
           }
         }
         L867: {
-          var2 = ji.a(103, "tutorial_b,7,8");
+          var2 = ji.a(param0 ^ 103, "tutorial_b,7,8");
           if (var2 != null) {
             dl.field_H[7][8] = jk.a(13, var2);
             break L867;
@@ -8184,7 +8179,7 @@ final class rc {
           if (var2 == null) {
             break L869;
           } else {
-            dl.field_H[7][10] = jk.a(13, var2);
+            dl.field_H[7][10] = jk.a(param0 + 13, var2);
             break L869;
           }
         }
@@ -8198,7 +8193,7 @@ final class rc {
           }
         }
         L871: {
-          var2 = ji.a(100, "tutorial_b,7,12");
+          var2 = ji.a(param0 ^ 100, "tutorial_b,7,12");
           if (null != var2) {
             dl.field_H[7][12] = jk.a(13, var2);
             break L871;
@@ -8236,7 +8231,7 @@ final class rc {
         L875: {
           var2 = ji.a(93, "tutorial_b,9,2");
           if (var2 != null) {
-            dl.field_H[9][2] = jk.a(13, var2);
+            dl.field_H[9][2] = jk.a(param0 + 13, var2);
             break L875;
           } else {
             break L875;
@@ -8281,7 +8276,7 @@ final class rc {
         L880: {
           var2 = ji.a(90, "tutorial_b,9,7");
           if (null != var2) {
-            dl.field_H[9][7] = jk.a(13, var2);
+            dl.field_H[9][7] = jk.a(param0 + 13, var2);
             break L880;
           } else {
             break L880;
@@ -8292,12 +8287,12 @@ final class rc {
           if (null == var2) {
             break L881;
           } else {
-            dl.field_H[9][8] = jk.a(13, var2);
+            dl.field_H[9][8] = jk.a(param0 + 13, var2);
             break L881;
           }
         }
         L882: {
-          var2 = ji.a(99, "tutorial_b,9,9");
+          var2 = ji.a(param0 ^ 99, "tutorial_b,9,9");
           if (null != var2) {
             dl.field_H[9][9] = jk.a(13, var2);
             break L882;
@@ -8335,7 +8330,7 @@ final class rc {
         L886: {
           var2 = ji.a(55, "tutorial_b,9,13");
           if (null != var2) {
-            dl.field_H[9][13] = jk.a(13, var2);
+            dl.field_H[9][13] = jk.a(param0 + 13, var2);
             break L886;
           } else {
             break L886;
@@ -8387,16 +8382,16 @@ final class rc {
           }
         }
         L892: {
-          var2 = ji.a(51, "CONFIG_TUTORIAL,3");
+          var2 = ji.a(param0 ^ 51, "CONFIG_TUTORIAL,3");
           if (null != var2) {
-            jm.field_u[3] = jk.a(13, var2);
+            jm.field_u[3] = jk.a(param0 + 13, var2);
             break L892;
           } else {
             break L892;
           }
         }
         L893: {
-          var2 = ji.a(54, "CONFIG_TUTORIAL,4");
+          var2 = ji.a(param0 + 54, "CONFIG_TUTORIAL,4");
           if (var2 != null) {
             jm.field_u[4] = jk.a(13, var2);
             break L893;
@@ -8407,7 +8402,7 @@ final class rc {
         L894: {
           var2 = ji.a(108, "CONFIG_TUTORIAL,5");
           if (var2 != null) {
-            jm.field_u[5] = jk.a(13, var2);
+            jm.field_u[5] = jk.a(param0 + 13, var2);
             break L894;
           } else {
             break L894;
@@ -8441,7 +8436,7 @@ final class rc {
           }
         }
         L898: {
-          var2 = ji.a(58, "CONFIG_TUTORIAL,9");
+          var2 = ji.a(param0 + 58, "CONFIG_TUTORIAL,9");
           if (null == var2) {
             break L898;
           } else {
@@ -8461,14 +8456,14 @@ final class rc {
         L900: {
           var2 = ji.a(51, "CONFIG_TUTORIAL,11");
           if (var2 != null) {
-            jm.field_u[11] = jk.a(bi.a(0, 13), var2);
+            jm.field_u[11] = jk.a(bi.a(param0, 13), var2);
             break L900;
           } else {
             break L900;
           }
         }
         L901: {
-          var2 = ji.a(105, "CONFIG_TUTORIAL,12");
+          var2 = ji.a(param0 + 105, "CONFIG_TUTORIAL,12");
           if (null != var2) {
             jm.field_u[12] = jk.a(13, var2);
             break L901;
@@ -8477,7 +8472,7 @@ final class rc {
           }
         }
         L902: {
-          var2 = ji.a(53, "CONFIG_TUTORIAL,13");
+          var2 = ji.a(param0 + 53, "CONFIG_TUTORIAL,13");
           if (var2 != null) {
             jm.field_u[13] = jk.a(13, var2);
             break L902;
@@ -8490,12 +8485,12 @@ final class rc {
           if (var2 == null) {
             break L903;
           } else {
-            jm.field_u[14] = jk.a(bi.a(0, 13), var2);
+            jm.field_u[14] = jk.a(bi.a(param0, 13), var2);
             break L903;
           }
         }
         L904: {
-          var2 = ji.a(108, "CONFIG_TUTORIAL,15");
+          var2 = ji.a(param0 + 108, "CONFIG_TUTORIAL,15");
           if (null == var2) {
             break L904;
           } else {
@@ -8508,7 +8503,7 @@ final class rc {
           if (null == var2) {
             break L905;
           } else {
-            jm.field_u[16] = jk.a(13, var2);
+            jm.field_u[16] = jk.a(param0 + 13, var2);
             break L905;
           }
         }
@@ -8522,11 +8517,11 @@ final class rc {
           }
         }
         L907: {
-          var2 = ji.a(76, "contxt");
+          var2 = ji.a(param0 + 76, "contxt");
           if (var2 == null) {
             break L907;
           } else {
-            hc.field_cb = jk.a(13, var2);
+            hc.field_cb = jk.a(param0 ^ 13, var2);
             break L907;
           }
         }
@@ -8544,16 +8539,16 @@ final class rc {
           if (var2 == null) {
             break L909;
           } else {
-            fk.field_f = jk.a(13, var2);
+            fk.field_f = jk.a(param0 + 13, var2);
             break L909;
           }
         }
         L910: {
-          var2 = ji.a(84, "detailtxt");
+          var2 = ji.a(param0 ^ 84, "detailtxt");
           if (var2 == null) {
             break L910;
           } else {
-            ge.field_i = jk.a(13, var2);
+            ge.field_i = jk.a(param0 + 13, var2);
             break L910;
           }
         }
@@ -8576,11 +8571,11 @@ final class rc {
           }
         }
         L913: {
-          var2 = ji.a(81, "camerafollowontxt");
+          var2 = ji.a(param0 + 81, "camerafollowontxt");
           if (null == var2) {
             break L913;
           } else {
-            hf.field_b = jk.a(13, var2);
+            hf.field_b = jk.a(param0 ^ 13, var2);
             break L913;
           }
         }
@@ -8594,7 +8589,7 @@ final class rc {
           }
         }
         L915: {
-          var2 = ji.a(60, "rmbcancelslockontxt");
+          var2 = ji.a(param0 + 60, "rmbcancelslockontxt");
           if (var2 == null) {
             break L915;
           } else {
@@ -8614,18 +8609,18 @@ final class rc {
         L917: {
           var2 = ji.a(109, "controlrmbscrolls");
           if (null != var2) {
-            qm.field_c = jk.a(13, var2);
+            qm.field_c = jk.a(param0 + 13, var2);
             break L917;
           } else {
             break L917;
           }
         }
         L918: {
-          var2 = ji.a(121, "controlwasdscrolls");
+          var2 = ji.a(param0 + 121, "controlwasdscrolls");
           if (var2 == null) {
             break L918;
           } else {
-            od.field_j = jk.a(13, var2);
+            od.field_j = jk.a(param0 ^ 13, var2);
             break L918;
           }
         }
@@ -8711,16 +8706,16 @@ final class rc {
           }
         }
         L928: {
-          var2 = ji.a(76, "freeforalltxt");
+          var2 = ji.a(param0 + 76, "freeforalltxt");
           if (var2 == null) {
             break L928;
           } else {
-            vn.field_k = jk.a(13, var2);
+            vn.field_k = jk.a(param0 + 13, var2);
             break L928;
           }
         }
         L929: {
-          var2 = ji.a(65, "teambattletxt");
+          var2 = ji.a(param0 ^ 65, "teambattletxt");
           if (var2 != null) {
             ag.field_t = jk.a(13, var2);
             break L929;
@@ -8729,7 +8724,7 @@ final class rc {
           }
         }
         L930: {
-          var2 = ji.a(126, "warmodetxt");
+          var2 = ji.a(param0 + 126, "warmodetxt");
           if (var2 != null) {
             a.field_b = jk.a(13, var2);
             break L930;
@@ -8765,7 +8760,7 @@ final class rc {
           }
         }
         L934: {
-          var2 = ji.a(105, "gamemodebriefings,0");
+          var2 = ji.a(param0 + 105, "gamemodebriefings,0");
           if (var2 == null) {
             break L934;
           } else {
@@ -8783,7 +8778,7 @@ final class rc {
           }
         }
         L936: {
-          var2 = ji.a(96, "gamemodebriefings,2");
+          var2 = ji.a(param0 ^ 96, "gamemodebriefings,2");
           if (var2 != null) {
             vd.field_e[2] = jk.a(13, var2);
             break L936;
@@ -8810,7 +8805,7 @@ final class rc {
           }
         }
         L939: {
-          var2 = ji.a(118, "mapbriefings,1");
+          var2 = ji.a(param0 + 118, "mapbriefings,1");
           if (var2 != null) {
             nh.field_o[1] = jk.a(13, var2);
             break L939;
@@ -8819,7 +8814,7 @@ final class rc {
           }
         }
         L940: {
-          var2 = ji.a(79, "mapbriefings,2");
+          var2 = ji.a(param0 + 79, "mapbriefings,2");
           if (null == var2) {
             break L940;
           } else {
@@ -8828,7 +8823,7 @@ final class rc {
           }
         }
         L941: {
-          var2 = ji.a(54, "mapbriefings,3");
+          var2 = ji.a(param0 + 54, "mapbriefings,3");
           if (var2 == null) {
             break L941;
           } else {
@@ -8873,11 +8868,11 @@ final class rc {
           }
         }
         L946: {
-          var2 = ji.a(76, "missionendedwithoutwinningtxt");
+          var2 = ji.a(param0 + 76, "missionendedwithoutwinningtxt");
           if (null == var2) {
             break L946;
           } else {
-            bf.field_Eb = jk.a(13, var2);
+            bf.field_Eb = jk.a(param0 ^ 13, var2);
             break L946;
           }
         }
@@ -8902,7 +8897,7 @@ final class rc {
         L949: {
           var2 = ji.a(110, "returntocampaigntxt");
           if (var2 != null) {
-            bf.field_Db = jk.a(13, var2);
+            bf.field_Db = jk.a(param0 + 13, var2);
             break L949;
           } else {
             break L949;
@@ -8936,7 +8931,7 @@ final class rc {
           }
         }
         L953: {
-          var2 = ji.a(90, "missiontimetxt");
+          var2 = ji.a(param0 + 90, "missiontimetxt");
           if (null != var2) {
             ak.field_a = jk.a(13, var2);
             break L953;
@@ -8947,7 +8942,7 @@ final class rc {
         L954: {
           var2 = ji.a(121, "wavetxt");
           if (var2 != null) {
-            jf.field_W = jk.a(13, var2);
+            jf.field_W = jk.a(param0 ^ 13, var2);
             break L954;
           } else {
             break L954;
@@ -8972,7 +8967,7 @@ final class rc {
           }
         }
         L957: {
-          var2 = ji.a(110, "unlockedcomptxt");
+          var2 = ji.a(param0 + 110, "unlockedcomptxt");
           if (null == var2) {
             break L957;
           } else {
@@ -8990,18 +8985,18 @@ final class rc {
           }
         }
         L959: {
-          var2 = ji.a(91, "solariteearnedtxt");
+          var2 = ji.a(param0 ^ 91, "solariteearnedtxt");
           if (null == var2) {
             break L959;
           } else {
-            de.field_g = jk.a(13, var2);
+            de.field_g = jk.a(param0 + 13, var2);
             break L959;
           }
         }
         L960: {
-          var2 = ji.a(78, "solaritetotaltxt");
+          var2 = ji.a(param0 ^ 78, "solaritetotaltxt");
           if (null != var2) {
-            ph.field_d = jk.a(13, var2);
+            ph.field_d = jk.a(param0 ^ 13, var2);
             break L960;
           } else {
             break L960;
@@ -9017,7 +9012,7 @@ final class rc {
           }
         }
         L962: {
-          var2 = ji.a(94, "jumpcolon");
+          var2 = ji.a(param0 ^ 94, "jumpcolon");
           if (null != var2) {
             l.field_f = jk.a(13, var2);
             break L962;
@@ -9062,7 +9057,7 @@ final class rc {
           }
         }
         L967: {
-          var2 = ji.a(59, "weaponleftkey");
+          var2 = ji.a(param0 + 59, "weaponleftkey");
           if (null == var2) {
             break L967;
           } else {
@@ -9107,7 +9102,7 @@ final class rc {
           }
         }
         L972: {
-          var2 = ji.a(54, "fireempbombdesc");
+          var2 = ji.a(param0 + 54, "fireempbombdesc");
           if (var2 == null) {
             break L972;
           } else {
@@ -9134,7 +9129,7 @@ final class rc {
           }
         }
         L975: {
-          var2 = ji.a(105, "targetlockkey");
+          var2 = ji.a(param0 ^ 105, "targetlockkey");
           if (null != var2) {
             sn.field_a = jk.a(13, var2);
             break L975;
@@ -9143,9 +9138,9 @@ final class rc {
           }
         }
         L976: {
-          var2 = ji.a(52, "closecombatdesc");
+          var2 = ji.a(param0 + 52, "closecombatdesc");
           if (var2 != null) {
-            fk.field_l = jk.a(13, var2);
+            fk.field_l = jk.a(param0 + 13, var2);
             break L976;
           } else {
             break L976;
@@ -9156,7 +9151,7 @@ final class rc {
           if (null == var2) {
             break L977;
           } else {
-            jf.field_eb = jk.a(13, var2);
+            jf.field_eb = jk.a(param0 + 13, var2);
             break L977;
           }
         }
@@ -9179,7 +9174,7 @@ final class rc {
           }
         }
         L980: {
-          var2 = ji.a(101, "haltkey");
+          var2 = ji.a(param0 + 101, "haltkey");
           if (var2 == null) {
             break L980;
           } else {
@@ -9188,16 +9183,16 @@ final class rc {
           }
         }
         L981: {
-          var2 = ji.a(84, "moveleftkey");
+          var2 = ji.a(param0 ^ 84, "moveleftkey");
           if (null == var2) {
             break L981;
           } else {
-            fm.field_i = jk.a(13, var2);
+            fm.field_i = jk.a(param0 ^ 13, var2);
             break L981;
           }
         }
         L982: {
-          var2 = ji.a(60, "moverightkey");
+          var2 = ji.a(param0 + 60, "moverightkey");
           if (var2 != null) {
             gm.field_a = jk.a(13, var2);
             break L982;
@@ -9215,7 +9210,7 @@ final class rc {
           }
         }
         L984: {
-          var2 = ji.a(113, "alternativerightkey");
+          var2 = ji.a(param0 + 113, "alternativerightkey");
           if (var2 != null) {
             lk.field_X = jk.a(13, var2);
             break L984;
@@ -9233,7 +9228,7 @@ final class rc {
           }
         }
         L986: {
-          var2 = ji.a(96, "alternativehaltkey");
+          var2 = ji.a(param0 + 96, "alternativehaltkey");
           if (var2 == null) {
             break L986;
           } else {
@@ -9242,7 +9237,7 @@ final class rc {
           }
         }
         L987: {
-          var2 = ji.a(104, "spacekey");
+          var2 = ji.a(param0 ^ 104, "spacekey");
           if (var2 == null) {
             break L987;
           } else {
@@ -9251,7 +9246,7 @@ final class rc {
           }
         }
         L988: {
-          var2 = ji.a(60, "shiftkey");
+          var2 = ji.a(param0 ^ 60, "shiftkey");
           if (var2 != null) {
             hm.field_e = jk.a(13, var2);
             break L988;
@@ -9262,14 +9257,14 @@ final class rc {
         L989: {
           var2 = ji.a(126, "centrecamerakey");
           if (var2 != null) {
-            pl.field_V = jk.a(13, var2);
+            pl.field_V = jk.a(param0 + 13, var2);
             break L989;
           } else {
             break L989;
           }
         }
         L990: {
-          var2 = ji.a(62, "keycode_scrollup");
+          var2 = ji.a(param0 + 62, "keycode_scrollup");
           if (null == var2) {
             break L990;
           } else {
@@ -9305,7 +9300,7 @@ final class rc {
           }
         }
         L994: {
-          var2 = ji.a(119, "keycode_moveleft");
+          var2 = ji.a(param0 ^ 119, "keycode_moveleft");
           if (var2 != null) {
             jf.field_hb = var2[0] & 255;
             break L994;
@@ -9314,7 +9309,7 @@ final class rc {
           }
         }
         L995: {
-          var2 = ji.a(61, "keycode_moveright");
+          var2 = ji.a(param0 ^ 61, "keycode_moveright");
           if (null != var2) {
             rj.field_b = 255 & var2[0];
             break L995;
@@ -9359,7 +9354,7 @@ final class rc {
           }
         }
         L1000: {
-          var2 = ji.a(112, "keycode_empbomb");
+          var2 = ji.a(param0 ^ 112, "keycode_empbomb");
           if (null != var2) {
             ff.field_nb = 255 & var2[0];
             break L1000;
@@ -9397,7 +9392,7 @@ final class rc {
         L1004: {
           var2 = ji.a(80, "cleardronestxt");
           if (null != var2) {
-            sl.field_f = jk.a(13, var2);
+            sl.field_f = jk.a(param0 ^ 13, var2);
             break L1004;
           } else {
             break L1004;
@@ -9431,9 +9426,9 @@ final class rc {
           }
         }
         L1008: {
-          var2 = ji.a(69, "empstatus");
+          var2 = ji.a(param0 ^ 69, "empstatus");
           if (null != var2) {
-            r.field_i = jk.a(13, var2);
+            r.field_i = jk.a(param0 ^ 13, var2);
             break L1008;
           } else {
             break L1008;
@@ -9453,7 +9448,7 @@ final class rc {
           if (var2 == null) {
             break L1010;
           } else {
-            f.field_E = jk.a(13, var2);
+            f.field_E = jk.a(param0 + 13, var2);
             break L1010;
           }
         }
@@ -9467,7 +9462,7 @@ final class rc {
           }
         }
         L1012: {
-          var2 = ji.a(126, "componentnames,1");
+          var2 = ji.a(param0 + 126, "componentnames,1");
           if (var2 != null) {
             t.field_e[1] = jk.a(13, var2);
             break L1012;
@@ -9476,29 +9471,29 @@ final class rc {
           }
         }
         L1013: {
-          var2 = ji.a(82, "componentnames,2");
+          var2 = ji.a(param0 ^ 82, "componentnames,2");
           if (null == var2) {
             break L1013;
           } else {
-            t.field_e[2] = jk.a(13, var2);
+            t.field_e[2] = jk.a(param0 + 13, var2);
             break L1013;
           }
         }
         L1014: {
           var2 = ji.a(91, "componentnames,3");
           if (var2 != null) {
-            t.field_e[3] = jk.a(bi.a(0, 13), var2);
+            t.field_e[3] = jk.a(bi.a(param0, 13), var2);
             break L1014;
           } else {
             break L1014;
           }
         }
         L1015: {
-          var2 = ji.a(90, "componentnames,17");
+          var2 = ji.a(param0 + 90, "componentnames,17");
           if (null == var2) {
             break L1015;
           } else {
-            t.field_e[17] = jk.a(bi.a(0, 13), var2);
+            t.field_e[17] = jk.a(bi.a(param0, 13), var2);
             break L1015;
           }
         }
@@ -9539,11 +9534,11 @@ final class rc {
           }
         }
         L1020: {
-          var2 = ji.a(106, "componentnames,22");
+          var2 = ji.a(param0 ^ 106, "componentnames,22");
           if (var2 == null) {
             break L1020;
           } else {
-            t.field_e[22] = jk.a(13, var2);
+            t.field_e[22] = jk.a(param0 + 13, var2);
             break L1020;
           }
         }
@@ -9552,12 +9547,12 @@ final class rc {
           if (null == var2) {
             break L1021;
           } else {
-            t.field_e[23] = jk.a(13, var2);
+            t.field_e[23] = jk.a(param0 + 13, var2);
             break L1021;
           }
         }
         L1022: {
-          var2 = ji.a(88, "componentnames,24");
+          var2 = ji.a(param0 + 88, "componentnames,24");
           if (var2 == null) {
             break L1022;
           } else {
@@ -9620,20 +9615,20 @@ final class rc {
           }
         }
         L1029: {
-          var2 = ji.a(105, "componentnames,31");
+          var2 = ji.a(param0 + 105, "componentnames,31");
           if (var2 == null) {
             break L1029;
           } else {
-            t.field_e[31] = jk.a(13, var2);
+            t.field_e[31] = jk.a(param0 + 13, var2);
             break L1029;
           }
         }
         L1030: {
-          var2 = ji.a(72, "componentnames,32");
+          var2 = ji.a(param0 ^ 72, "componentnames,32");
           if (var2 == null) {
             break L1030;
           } else {
-            t.field_e[32] = jk.a(bi.a(0, 13), var2);
+            t.field_e[32] = jk.a(bi.a(param0, 13), var2);
             break L1030;
           }
         }
@@ -9642,7 +9637,7 @@ final class rc {
           if (var2 == null) {
             break L1031;
           } else {
-            t.field_e[33] = jk.a(bi.a(0, 13), var2);
+            t.field_e[33] = jk.a(bi.a(param0, 13), var2);
             break L1031;
           }
         }
@@ -9656,7 +9651,7 @@ final class rc {
           }
         }
         L1033: {
-          var2 = ji.a(93, "componentnames,35");
+          var2 = ji.a(param0 ^ 93, "componentnames,35");
           if (null != var2) {
             t.field_e[35] = jk.a(13, var2);
             break L1033;
@@ -9665,11 +9660,11 @@ final class rc {
           }
         }
         L1034: {
-          var2 = ji.a(58, "componentnames,36");
+          var2 = ji.a(param0 + 58, "componentnames,36");
           if (var2 == null) {
             break L1034;
           } else {
-            t.field_e[36] = jk.a(13, var2);
+            t.field_e[36] = jk.a(param0 + 13, var2);
             break L1034;
           }
         }
@@ -9692,11 +9687,11 @@ final class rc {
           }
         }
         L1037: {
-          var2 = ji.a(120, "componentnames,42");
+          var2 = ji.a(param0 ^ 120, "componentnames,42");
           if (null == var2) {
             break L1037;
           } else {
-            t.field_e[42] = jk.a(13, var2);
+            t.field_e[42] = jk.a(param0 + 13, var2);
             break L1037;
           }
         }
@@ -9710,7 +9705,7 @@ final class rc {
           }
         }
         L1039: {
-          var2 = ji.a(122, "componentnames,44");
+          var2 = ji.a(param0 + 122, "componentnames,44");
           if (var2 != null) {
             t.field_e[44] = jk.a(13, var2);
             break L1039;
@@ -9728,7 +9723,7 @@ final class rc {
           }
         }
         L1041: {
-          var2 = ji.a(61, "componentnames,46");
+          var2 = ji.a(param0 + 61, "componentnames,46");
           if (null == var2) {
             break L1041;
           } else {
@@ -9748,7 +9743,7 @@ final class rc {
         L1043: {
           var2 = ji.a(90, "componentnames,48");
           if (null != var2) {
-            t.field_e[48] = jk.a(13, var2);
+            t.field_e[48] = jk.a(param0 + 13, var2);
             break L1043;
           } else {
             break L1043;
@@ -9791,7 +9786,7 @@ final class rc {
           }
         }
         L1048: {
-          var2 = ji.a(100, "componentnames,53");
+          var2 = ji.a(param0 + 100, "componentnames,53");
           if (null == var2) {
             break L1048;
           } else {
@@ -9804,7 +9799,7 @@ final class rc {
           if (null == var2) {
             break L1049;
           } else {
-            t.field_e[54] = jk.a(bi.a(0, 13), var2);
+            t.field_e[54] = jk.a(bi.a(param0, 13), var2);
             break L1049;
           }
         }
@@ -9829,7 +9824,7 @@ final class rc {
         L1052: {
           var2 = ji.a(107, "componentnames,57");
           if (null != var2) {
-            t.field_e[57] = jk.a(13, var2);
+            t.field_e[57] = jk.a(param0 + 13, var2);
             break L1052;
           } else {
             break L1052;
@@ -9847,7 +9842,7 @@ final class rc {
         L1054: {
           var2 = ji.a(120, "componentnames,59");
           if (var2 != null) {
-            t.field_e[59] = jk.a(bi.a(0, 13), var2);
+            t.field_e[59] = jk.a(bi.a(param0, 13), var2);
             break L1054;
           } else {
             break L1054;
@@ -9874,7 +9869,7 @@ final class rc {
         L1057: {
           var2 = ji.a(91, "componentnames,62");
           if (var2 != null) {
-            t.field_e[62] = jk.a(bi.a(0, 13), var2);
+            t.field_e[62] = jk.a(bi.a(param0, 13), var2);
             break L1057;
           } else {
             break L1057;
@@ -9890,7 +9885,7 @@ final class rc {
           }
         }
         L1059: {
-          var2 = ji.a(86, "componentnames,65");
+          var2 = ji.a(param0 ^ 86, "componentnames,65");
           if (null == var2) {
             break L1059;
           } else {
@@ -9899,7 +9894,7 @@ final class rc {
           }
         }
         L1060: {
-          var2 = ji.a(55, "componentnames,66");
+          var2 = ji.a(param0 ^ 55, "componentnames,66");
           if (null != var2) {
             t.field_e[66] = jk.a(13, var2);
             break L1060;
@@ -9917,7 +9912,7 @@ final class rc {
           }
         }
         L1062: {
-          var2 = ji.a(52, "componentnames,68");
+          var2 = ji.a(param0 ^ 52, "componentnames,68");
           if (null != var2) {
             t.field_e[68] = jk.a(13, var2);
             break L1062;
@@ -9926,7 +9921,7 @@ final class rc {
           }
         }
         L1063: {
-          var2 = ji.a(118, "componentnames,69");
+          var2 = ji.a(param0 + 118, "componentnames,69");
           if (var2 != null) {
             t.field_e[69] = jk.a(13, var2);
             break L1063;
@@ -9935,16 +9930,16 @@ final class rc {
           }
         }
         L1064: {
-          var2 = ji.a(115, "componentnames,70");
+          var2 = ji.a(param0 ^ 115, "componentnames,70");
           if (var2 != null) {
-            t.field_e[70] = jk.a(13, var2);
+            t.field_e[70] = jk.a(param0 + 13, var2);
             break L1064;
           } else {
             break L1064;
           }
         }
         L1065: {
-          var2 = ji.a(112, "componentnames,71");
+          var2 = ji.a(param0 ^ 112, "componentnames,71");
           if (var2 != null) {
             t.field_e[71] = jk.a(13, var2);
             break L1065;
@@ -9998,9 +9993,9 @@ final class rc {
           }
         }
         L1071: {
-          var2 = ji.a(57, "componentnames,77");
+          var2 = ji.a(param0 + 57, "componentnames,77");
           if (var2 != null) {
-            t.field_e[77] = jk.a(bi.a(0, 13), var2);
+            t.field_e[77] = jk.a(bi.a(param0, 13), var2);
             break L1071;
           } else {
             break L1071;
@@ -10009,7 +10004,7 @@ final class rc {
         L1072: {
           var2 = ji.a(81, "componentnames,78");
           if (null != var2) {
-            t.field_e[78] = jk.a(13, var2);
+            t.field_e[78] = jk.a(param0 + 13, var2);
             break L1072;
           } else {
             break L1072;
@@ -10025,7 +10020,7 @@ final class rc {
           }
         }
         L1074: {
-          var2 = ji.a(96, "componentnames,80");
+          var2 = ji.a(param0 + 96, "componentnames,80");
           if (var2 == null) {
             break L1074;
           } else {
@@ -10043,18 +10038,18 @@ final class rc {
           }
         }
         L1076: {
-          var2 = ji.a(84, "componentnames,82");
+          var2 = ji.a(param0 ^ 84, "componentnames,82");
           if (null == var2) {
             break L1076;
           } else {
-            t.field_e[82] = jk.a(13, var2);
+            t.field_e[82] = jk.a(param0 + 13, var2);
             break L1076;
           }
         }
         L1077: {
-          var2 = ji.a(106, "componentnames,83");
+          var2 = ji.a(param0 + 106, "componentnames,83");
           if (var2 != null) {
-            t.field_e[83] = jk.a(13, var2);
+            t.field_e[83] = jk.a(param0 + 13, var2);
             break L1077;
           } else {
             break L1077;
@@ -10063,7 +10058,7 @@ final class rc {
         L1078: {
           var2 = ji.a(67, "componentnames,84");
           if (null != var2) {
-            t.field_e[84] = jk.a(bi.a(0, 13), var2);
+            t.field_e[84] = jk.a(bi.a(param0, 13), var2);
             break L1078;
           } else {
             break L1078;
@@ -10074,7 +10069,7 @@ final class rc {
           if (null == var2) {
             break L1079;
           } else {
-            t.field_e[85] = jk.a(13, var2);
+            t.field_e[85] = jk.a(param0 + 13, var2);
             break L1079;
           }
         }
@@ -10106,7 +10101,7 @@ final class rc {
           }
         }
         L1083: {
-          var2 = ji.a(79, "componentnames,89");
+          var2 = ji.a(param0 ^ 79, "componentnames,89");
           if (var2 == null) {
             break L1083;
           } else {
@@ -10135,14 +10130,14 @@ final class rc {
         L1086: {
           var2 = ji.a(85, "componentnames,92");
           if (null != var2) {
-            t.field_e[92] = jk.a(bi.a(0, 13), var2);
+            t.field_e[92] = jk.a(bi.a(param0, 13), var2);
             break L1086;
           } else {
             break L1086;
           }
         }
         L1087: {
-          var2 = ji.a(105, "componentnames,93");
+          var2 = ji.a(param0 + 105, "componentnames,93");
           if (var2 != null) {
             t.field_e[93] = jk.a(13, var2);
             break L1087;
@@ -10169,16 +10164,16 @@ final class rc {
           }
         }
         L1090: {
-          var2 = ji.a(83, "slotnames,1");
+          var2 = ji.a(param0 + 83, "slotnames,1");
           if (var2 != null) {
-            kk.field_h[1] = jk.a(13, var2);
+            kk.field_h[1] = jk.a(param0 + 13, var2);
             break L1090;
           } else {
             break L1090;
           }
         }
         L1091: {
-          var2 = ji.a(61, "slotnames,2");
+          var2 = ji.a(param0 + 61, "slotnames,2");
           if (var2 != null) {
             kk.field_h[2] = jk.a(13, var2);
             break L1091;
@@ -10187,25 +10182,25 @@ final class rc {
           }
         }
         L1092: {
-          var2 = ji.a(97, "slotnames,3");
+          var2 = ji.a(param0 + 97, "slotnames,3");
           if (null == var2) {
             break L1092;
           } else {
-            kk.field_h[3] = jk.a(13, var2);
+            kk.field_h[3] = jk.a(param0 + 13, var2);
             break L1092;
           }
         }
         L1093: {
           var2 = ji.a(79, "slotnames,4");
           if (var2 != null) {
-            kk.field_h[4] = jk.a(13, var2);
+            kk.field_h[4] = jk.a(param0 + 13, var2);
             break L1093;
           } else {
             break L1093;
           }
         }
         L1094: {
-          var2 = ji.a(62, "slotnames,5");
+          var2 = ji.a(param0 + 62, "slotnames,5");
           if (null != var2) {
             kk.field_h[5] = jk.a(13, var2);
             break L1094;
@@ -10254,7 +10249,7 @@ final class rc {
           if (var2 == null) {
             break L1099;
           } else {
-            hk.field_jc = jk.a(13, var2);
+            hk.field_jc = jk.a(param0 + 13, var2);
             break L1099;
           }
         }
@@ -10313,16 +10308,16 @@ final class rc {
           }
         }
         L1106: {
-          var2 = ji.a(64, "missionprogresstxt");
+          var2 = ji.a(param0 + 64, "missionprogresstxt");
           if (null == var2) {
             break L1106;
           } else {
-            ne.field_J = jk.a(13, var2);
+            ne.field_J = jk.a(param0 + 13, var2);
             break L1106;
           }
         }
         L1107: {
-          var2 = ji.a(103, "missioncurtime");
+          var2 = ji.a(param0 ^ 103, "missioncurtime");
           if (null != var2) {
             il.field_g = jk.a(13, var2);
             break L1107;
@@ -10340,7 +10335,7 @@ final class rc {
           }
         }
         L1109: {
-          var2 = ji.a(57, "missioncampaigntime");
+          var2 = ji.a(param0 ^ 57, "missioncampaigntime");
           if (null != var2) {
             ub.field_k = jk.a(13, var2);
             break L1109;
@@ -10367,7 +10362,7 @@ final class rc {
           }
         }
         L1112: {
-          var2 = ji.a(65, "campaigntimetxt");
+          var2 = ji.a(param0 ^ 65, "campaigntimetxt");
           if (var2 == null) {
             break L1112;
           } else {
@@ -10378,7 +10373,7 @@ final class rc {
         L1113: {
           var2 = ji.a(54, "unlimitedtxt");
           if (null != var2) {
-            ul.field_b = jk.a(13, var2);
+            ul.field_b = jk.a(param0 ^ 13, var2);
             break L1113;
           } else {
             break L1113;
@@ -10430,7 +10425,7 @@ final class rc {
           }
         }
         L1119: {
-          var2 = ji.a(109, "SENTINEL_NAMES,2");
+          var2 = ji.a(param0 + 109, "SENTINEL_NAMES,2");
           if (null != var2) {
             cd.field_c[2] = jk.a(13, var2);
             break L1119;
@@ -10452,7 +10447,7 @@ final class rc {
           if (var2 == null) {
             break L1121;
           } else {
-            cd.field_c[4] = jk.a(13, var2);
+            cd.field_c[4] = jk.a(param0 + 13, var2);
             break L1121;
           }
         }
@@ -10466,7 +10461,7 @@ final class rc {
           }
         }
         L1123: {
-          var2 = ji.a(69, "SENTINEL_NAMES,6");
+          var2 = ji.a(param0 ^ 69, "SENTINEL_NAMES,6");
           if (var2 != null) {
             cd.field_c[6] = jk.a(13, var2);
             break L1123;
@@ -10484,7 +10479,7 @@ final class rc {
           }
         }
         L1125: {
-          var2 = ji.a(67, "SENTINEL_NAMES,8");
+          var2 = ji.a(param0 ^ 67, "SENTINEL_NAMES,8");
           if (null == var2) {
             break L1125;
           } else {
@@ -10493,16 +10488,16 @@ final class rc {
           }
         }
         L1126: {
-          var2 = ji.a(83, "SENTINEL_NAMES,9");
+          var2 = ji.a(param0 + 83, "SENTINEL_NAMES,9");
           if (var2 != null) {
-            cd.field_c[9] = jk.a(bi.a(0, 13), var2);
+            cd.field_c[9] = jk.a(bi.a(param0, 13), var2);
             break L1126;
           } else {
             break L1126;
           }
         }
         L1127: {
-          var2 = ji.a(86, "SENTINEL_NAMES,10");
+          var2 = ji.a(param0 ^ 86, "SENTINEL_NAMES,10");
           if (null == var2) {
             break L1127;
           } else {
@@ -10520,11 +10515,11 @@ final class rc {
           }
         }
         L1129: {
-          var2 = ji.a(117, "GAMEBEST_TIP,0");
+          var2 = ji.a(param0 + 117, "GAMEBEST_TIP,0");
           if (var2 == null) {
             break L1129;
           } else {
-            bj.field_l[0] = jk.a(13, var2);
+            bj.field_l[0] = jk.a(param0 + 13, var2);
             break L1129;
           }
         }
@@ -10556,7 +10551,7 @@ final class rc {
           }
         }
         L1133: {
-          var2 = ji.a(103, "GAMEBEST_TIP,4");
+          var2 = ji.a(param0 + 103, "GAMEBEST_TIP,4");
           if (null == var2) {
             break L1133;
           } else {
@@ -10583,7 +10578,7 @@ final class rc {
           }
         }
         L1136: {
-          var2 = ji.a(73, "GAMEBEST_TIP,8");
+          var2 = ji.a(param0 ^ 73, "GAMEBEST_TIP,8");
           if (null == var2) {
             break L1136;
           } else {
@@ -10592,7 +10587,7 @@ final class rc {
           }
         }
         L1137: {
-          var2 = ji.a(99, "GAMEBEST_TIP,9");
+          var2 = ji.a(param0 + 99, "GAMEBEST_TIP,9");
           if (var2 != null) {
             bj.field_l[9] = jk.a(13, var2);
             break L1137;
@@ -10605,7 +10600,7 @@ final class rc {
           if (var2 == null) {
             break L1138;
           } else {
-            bj.field_l[10] = jk.a(13, var2);
+            bj.field_l[10] = jk.a(param0 + 13, var2);
             break L1138;
           }
         }
@@ -10636,1788 +10631,1796 @@ final class rc {
             break L1141;
           }
         }
-        var2 = ji.a(92, "GAMEBEST_TIP,15");
         L1142: {
-          if (null == var2) {
+          var2 = ji.a(param0 ^ 92, "GAMEBEST_TIP,15");
+          if (param0 == 0) {
             break L1142;
           } else {
-            bj.field_l[15] = jk.a(13, var2);
+            field_d = null;
             break L1142;
           }
         }
         L1143: {
-          var2 = ji.a(98, "GAMEBEST_TIP,16");
-          if (var2 != null) {
-            bj.field_l[16] = jk.a(13, var2);
+          if (null == var2) {
             break L1143;
           } else {
+            bj.field_l[15] = jk.a(param0 + 13, var2);
             break L1143;
           }
         }
         L1144: {
-          var2 = ji.a(82, "GAMEBEST_TIP,18");
-          if (null == var2) {
+          var2 = ji.a(98, "GAMEBEST_TIP,16");
+          if (var2 != null) {
+            bj.field_l[16] = jk.a(13, var2);
             break L1144;
           } else {
-            bj.field_l[18] = jk.a(13, var2);
             break L1144;
           }
         }
         L1145: {
-          var2 = ji.a(75, "GAMEBEST_TIP,19");
-          if (var2 == null) {
+          var2 = ji.a(82, "GAMEBEST_TIP,18");
+          if (null == var2) {
             break L1145;
           } else {
-            bj.field_l[19] = jk.a(13, var2);
+            bj.field_l[18] = jk.a(param0 + 13, var2);
             break L1145;
           }
         }
         L1146: {
-          var2 = ji.a(67, "GAMEBEST_TIP,20");
-          if (null == var2) {
+          var2 = ji.a(75, "GAMEBEST_TIP,19");
+          if (var2 == null) {
             break L1146;
           } else {
-            bj.field_l[20] = jk.a(13, var2);
+            bj.field_l[19] = jk.a(13, var2);
             break L1146;
           }
         }
         L1147: {
-          var2 = ji.a(119, "GAMEBEST_TIP,21");
-          if (null != var2) {
-            bj.field_l[21] = jk.a(13, var2);
+          var2 = ji.a(67, "GAMEBEST_TIP,20");
+          if (null == var2) {
             break L1147;
           } else {
+            bj.field_l[20] = jk.a(13, var2);
             break L1147;
           }
         }
         L1148: {
-          var2 = ji.a(89, "GAMEBEST_TIP,22");
-          if (var2 == null) {
+          var2 = ji.a(119, "GAMEBEST_TIP,21");
+          if (null != var2) {
+            bj.field_l[21] = jk.a(13, var2);
             break L1148;
           } else {
-            bj.field_l[22] = jk.a(13, var2);
             break L1148;
           }
         }
         L1149: {
-          var2 = ji.a(81, "GAMEBEST_TIP,23");
-          if (var2 != null) {
-            bj.field_l[23] = jk.a(13, var2);
+          var2 = ji.a(89, "GAMEBEST_TIP,22");
+          if (var2 == null) {
             break L1149;
           } else {
+            bj.field_l[22] = jk.a(13, var2);
             break L1149;
           }
         }
         L1150: {
-          var2 = ji.a(116, "GAMEBEST_TIP,24");
-          if (null != var2) {
-            bj.field_l[24] = jk.a(13, var2);
+          var2 = ji.a(81, "GAMEBEST_TIP,23");
+          if (var2 != null) {
+            bj.field_l[23] = jk.a(13, var2);
             break L1150;
           } else {
             break L1150;
           }
         }
         L1151: {
-          var2 = ji.a(87, "GAMEBEST_TIP,25");
-          if (var2 == null) {
+          var2 = ji.a(param0 ^ 116, "GAMEBEST_TIP,24");
+          if (null != var2) {
+            bj.field_l[24] = jk.a(13, var2);
             break L1151;
           } else {
-            bj.field_l[25] = jk.a(13, var2);
             break L1151;
           }
         }
         L1152: {
-          var2 = ji.a(59, "GAMEBEST_TIP,26");
-          if (null == var2) {
+          var2 = ji.a(param0 + 87, "GAMEBEST_TIP,25");
+          if (var2 == null) {
             break L1152;
           } else {
-            bj.field_l[26] = jk.a(13, var2);
+            bj.field_l[25] = jk.a(13, var2);
             break L1152;
           }
         }
         L1153: {
-          var2 = ji.a(90, "GAMEBEST_TIP,27");
-          if (var2 != null) {
-            bj.field_l[27] = jk.a(13, var2);
+          var2 = ji.a(59, "GAMEBEST_TIP,26");
+          if (null == var2) {
             break L1153;
           } else {
+            bj.field_l[26] = jk.a(13, var2);
             break L1153;
           }
         }
         L1154: {
-          var2 = ji.a(70, "GAMEBEST_TIP,28");
-          if (null != var2) {
-            bj.field_l[28] = jk.a(13, var2);
+          var2 = ji.a(90, "GAMEBEST_TIP,27");
+          if (var2 != null) {
+            bj.field_l[27] = jk.a(param0 + 13, var2);
             break L1154;
           } else {
             break L1154;
           }
         }
         L1155: {
-          var2 = ji.a(104, "GAMEBEST_TIP,29");
-          if (null == var2) {
+          var2 = ji.a(70, "GAMEBEST_TIP,28");
+          if (null != var2) {
+            bj.field_l[28] = jk.a(13, var2);
             break L1155;
           } else {
-            bj.field_l[29] = jk.a(13, var2);
             break L1155;
           }
         }
         L1156: {
-          var2 = ji.a(84, "GAMEBEST_TIP,30");
-          if (var2 == null) {
+          var2 = ji.a(104, "GAMEBEST_TIP,29");
+          if (null == var2) {
             break L1156;
           } else {
-            bj.field_l[30] = jk.a(13, var2);
+            bj.field_l[29] = jk.a(13, var2);
             break L1156;
           }
         }
         L1157: {
-          var2 = ji.a(109, "GAMEBEST_TIP,31");
+          var2 = ji.a(84, "GAMEBEST_TIP,30");
           if (var2 == null) {
             break L1157;
           } else {
-            bj.field_l[31] = jk.a(bi.a(0, 13), var2);
+            bj.field_l[30] = jk.a(13, var2);
             break L1157;
           }
         }
         L1158: {
-          var2 = ji.a(54, "GAMEBEST_TIP,32");
-          if (null == var2) {
+          var2 = ji.a(109, "GAMEBEST_TIP,31");
+          if (var2 == null) {
             break L1158;
           } else {
-            bj.field_l[32] = jk.a(13, var2);
+            bj.field_l[31] = jk.a(bi.a(param0, 13), var2);
             break L1158;
           }
         }
         L1159: {
-          var2 = ji.a(105, "GAMEBEST_TIP,33");
-          if (null != var2) {
-            bj.field_l[33] = jk.a(13, var2);
+          var2 = ji.a(54, "GAMEBEST_TIP,32");
+          if (null == var2) {
             break L1159;
           } else {
+            bj.field_l[32] = jk.a(13, var2);
             break L1159;
           }
         }
         L1160: {
-          var2 = ji.a(64, "GAMEBEST_TIP,34");
-          if (null == var2) {
+          var2 = ji.a(105, "GAMEBEST_TIP,33");
+          if (null != var2) {
+            bj.field_l[33] = jk.a(13, var2);
             break L1160;
           } else {
-            bj.field_l[34] = jk.a(13, var2);
             break L1160;
           }
         }
         L1161: {
-          var2 = ji.a(107, "GAMEBEST_TIP,35");
-          if (null != var2) {
-            bj.field_l[35] = jk.a(13, var2);
+          var2 = ji.a(64, "GAMEBEST_TIP,34");
+          if (null == var2) {
             break L1161;
           } else {
+            bj.field_l[34] = jk.a(13, var2);
             break L1161;
           }
         }
         L1162: {
-          var2 = ji.a(61, "GAMEBEST_TIP,36");
+          var2 = ji.a(param0 ^ 107, "GAMEBEST_TIP,35");
           if (null != var2) {
-            bj.field_l[36] = jk.a(bi.a(0, 13), var2);
+            bj.field_l[35] = jk.a(param0 + 13, var2);
             break L1162;
           } else {
             break L1162;
           }
         }
         L1163: {
-          var2 = ji.a(64, "GAMEBEST_TIP,37");
-          if (var2 != null) {
-            bj.field_l[37] = jk.a(bi.a(0, 13), var2);
+          var2 = ji.a(61, "GAMEBEST_TIP,36");
+          if (null != var2) {
+            bj.field_l[36] = jk.a(bi.a(param0, 13), var2);
             break L1163;
           } else {
             break L1163;
           }
         }
         L1164: {
-          var2 = ji.a(95, "GAMEBEST_TIP,38");
-          if (null == var2) {
+          var2 = ji.a(64, "GAMEBEST_TIP,37");
+          if (var2 != null) {
+            bj.field_l[37] = jk.a(bi.a(param0, 13), var2);
             break L1164;
           } else {
-            bj.field_l[38] = jk.a(13, var2);
             break L1164;
           }
         }
         L1165: {
-          var2 = ji.a(114, "GAMEBEST_TIP,39");
+          var2 = ji.a(95, "GAMEBEST_TIP,38");
           if (null == var2) {
             break L1165;
           } else {
-            bj.field_l[39] = jk.a(13, var2);
+            bj.field_l[38] = jk.a(13, var2);
             break L1165;
           }
         }
         L1166: {
-          var2 = ji.a(113, "GAMEBEST_TIP,40");
-          if (var2 == null) {
+          var2 = ji.a(114, "GAMEBEST_TIP,39");
+          if (null == var2) {
             break L1166;
           } else {
-            bj.field_l[40] = jk.a(13, var2);
+            bj.field_l[39] = jk.a(13, var2);
             break L1166;
           }
         }
         L1167: {
-          var2 = ji.a(104, "GAMEBEST_TIP,42");
-          if (null != var2) {
-            bj.field_l[42] = jk.a(bi.a(0, 13), var2);
+          var2 = ji.a(113, "GAMEBEST_TIP,40");
+          if (var2 == null) {
             break L1167;
           } else {
+            bj.field_l[40] = jk.a(13, var2);
             break L1167;
           }
         }
         L1168: {
-          var2 = ji.a(120, "GAMEBEST_TIP,43");
-          if (var2 == null) {
+          var2 = ji.a(param0 ^ 104, "GAMEBEST_TIP,42");
+          if (null != var2) {
+            bj.field_l[42] = jk.a(bi.a(param0, 13), var2);
             break L1168;
           } else {
-            bj.field_l[43] = jk.a(13, var2);
             break L1168;
           }
         }
         L1169: {
-          var2 = ji.a(79, "GAMEBEST_TIP,44");
+          var2 = ji.a(param0 ^ 120, "GAMEBEST_TIP,43");
           if (var2 == null) {
             break L1169;
           } else {
-            bj.field_l[44] = jk.a(13, var2);
+            bj.field_l[43] = jk.a(13, var2);
             break L1169;
           }
         }
         L1170: {
-          var2 = ji.a(112, "GAMEBEST_TIP,46");
-          if (var2 != null) {
-            bj.field_l[46] = jk.a(13, var2);
+          var2 = ji.a(79, "GAMEBEST_TIP,44");
+          if (var2 == null) {
             break L1170;
           } else {
+            bj.field_l[44] = jk.a(13, var2);
             break L1170;
           }
         }
         L1171: {
-          var2 = ji.a(107, "GAMEBEST_TIP,47");
-          if (null == var2) {
+          var2 = ji.a(param0 + 112, "GAMEBEST_TIP,46");
+          if (var2 != null) {
+            bj.field_l[46] = jk.a(param0 + 13, var2);
             break L1171;
           } else {
-            bj.field_l[47] = jk.a(13, var2);
             break L1171;
           }
         }
         L1172: {
-          var2 = ji.a(120, "GAMEBEST_TIP,48");
+          var2 = ji.a(107, "GAMEBEST_TIP,47");
           if (null == var2) {
             break L1172;
           } else {
-            bj.field_l[48] = jk.a(bi.a(0, 13), var2);
+            bj.field_l[47] = jk.a(13, var2);
             break L1172;
           }
         }
         L1173: {
-          var2 = ji.a(97, "GAMEBEST_TIP,49");
-          if (null != var2) {
-            bj.field_l[49] = jk.a(13, var2);
+          var2 = ji.a(120, "GAMEBEST_TIP,48");
+          if (null == var2) {
             break L1173;
           } else {
+            bj.field_l[48] = jk.a(bi.a(param0, 13), var2);
             break L1173;
           }
         }
         L1174: {
-          var2 = ji.a(76, "GAMEBEST_TIP,50");
-          if (var2 != null) {
-            bj.field_l[50] = jk.a(13, var2);
+          var2 = ji.a(97, "GAMEBEST_TIP,49");
+          if (null != var2) {
+            bj.field_l[49] = jk.a(13, var2);
             break L1174;
           } else {
             break L1174;
           }
         }
         L1175: {
-          var2 = ji.a(74, "GAMEBEST_TIP,51");
-          if (var2 == null) {
+          var2 = ji.a(76, "GAMEBEST_TIP,50");
+          if (var2 != null) {
+            bj.field_l[50] = jk.a(param0 + 13, var2);
             break L1175;
           } else {
-            bj.field_l[51] = jk.a(bi.a(0, 13), var2);
             break L1175;
           }
         }
         L1176: {
-          var2 = ji.a(123, "GAMEBEST_TIP,52");
+          var2 = ji.a(74, "GAMEBEST_TIP,51");
           if (var2 == null) {
             break L1176;
           } else {
-            bj.field_l[52] = jk.a(13, var2);
+            bj.field_l[51] = jk.a(bi.a(param0, 13), var2);
             break L1176;
           }
         }
         L1177: {
-          var2 = ji.a(70, "GAMEBEST_TIP,54");
-          if (null == var2) {
+          var2 = ji.a(123, "GAMEBEST_TIP,52");
+          if (var2 == null) {
             break L1177;
           } else {
-            bj.field_l[54] = jk.a(13, var2);
+            bj.field_l[52] = jk.a(13, var2);
             break L1177;
           }
         }
         L1178: {
-          var2 = ji.a(88, "GAMEBEST_TIP,55");
-          if (null != var2) {
-            bj.field_l[55] = jk.a(13, var2);
+          var2 = ji.a(70, "GAMEBEST_TIP,54");
+          if (null == var2) {
             break L1178;
           } else {
+            bj.field_l[54] = jk.a(13, var2);
             break L1178;
           }
         }
         L1179: {
-          var2 = ji.a(91, "GAMEBEST_TIP,56");
+          var2 = ji.a(88, "GAMEBEST_TIP,55");
           if (null != var2) {
-            bj.field_l[56] = jk.a(13, var2);
+            bj.field_l[55] = jk.a(13, var2);
             break L1179;
           } else {
             break L1179;
           }
         }
         L1180: {
-          var2 = ji.a(71, "GAMEBEST_TIP,57");
+          var2 = ji.a(91, "GAMEBEST_TIP,56");
           if (null != var2) {
-            bj.field_l[57] = jk.a(13, var2);
+            bj.field_l[56] = jk.a(13, var2);
             break L1180;
           } else {
             break L1180;
           }
         }
         L1181: {
-          var2 = ji.a(60, "GAMEBEST_TIP,58");
-          if (null == var2) {
+          var2 = ji.a(71, "GAMEBEST_TIP,57");
+          if (null != var2) {
+            bj.field_l[57] = jk.a(13, var2);
             break L1181;
           } else {
-            bj.field_l[58] = jk.a(13, var2);
             break L1181;
           }
         }
         L1182: {
-          var2 = ji.a(72, "GAMEBEST_TIP,59");
-          if (var2 == null) {
+          var2 = ji.a(60, "GAMEBEST_TIP,58");
+          if (null == var2) {
             break L1182;
           } else {
-            bj.field_l[59] = jk.a(13, var2);
+            bj.field_l[58] = jk.a(13, var2);
             break L1182;
           }
         }
         L1183: {
-          var2 = ji.a(62, "GAMEBEST_TIP,60");
-          if (null != var2) {
-            bj.field_l[60] = jk.a(13, var2);
+          var2 = ji.a(72, "GAMEBEST_TIP,59");
+          if (var2 == null) {
             break L1183;
           } else {
+            bj.field_l[59] = jk.a(13, var2);
             break L1183;
           }
         }
         L1184: {
-          var2 = ji.a(113, "GAMEBEST_TIP,61");
-          if (var2 == null) {
+          var2 = ji.a(62, "GAMEBEST_TIP,60");
+          if (null != var2) {
+            bj.field_l[60] = jk.a(13, var2);
             break L1184;
           } else {
-            bj.field_l[61] = jk.a(13, var2);
             break L1184;
           }
         }
         L1185: {
-          var2 = ji.a(67, "GAMEBEST_TIP,62");
-          if (null != var2) {
-            bj.field_l[62] = jk.a(13, var2);
+          var2 = ji.a(param0 ^ 113, "GAMEBEST_TIP,61");
+          if (var2 == null) {
             break L1185;
           } else {
+            bj.field_l[61] = jk.a(13, var2);
             break L1185;
           }
         }
         L1186: {
-          var2 = ji.a(91, "GAMEBEST_TIP,63");
-          if (var2 == null) {
+          var2 = ji.a(param0 + 67, "GAMEBEST_TIP,62");
+          if (null != var2) {
+            bj.field_l[62] = jk.a(13, var2);
             break L1186;
           } else {
-            bj.field_l[63] = jk.a(13, var2);
             break L1186;
           }
         }
         L1187: {
-          var2 = ji.a(55, "second_tx");
-          if (null == var2) {
+          var2 = ji.a(param0 ^ 91, "GAMEBEST_TIP,63");
+          if (var2 == null) {
             break L1187;
           } else {
-            ck.field_d = jk.a(13, var2);
+            bj.field_l[63] = jk.a(13, var2);
             break L1187;
           }
         }
         L1188: {
-          var2 = ji.a(58, "seconds_tx");
-          if (var2 == null) {
+          var2 = ji.a(param0 ^ 55, "second_tx");
+          if (null == var2) {
             break L1188;
           } else {
-            tc.field_s = jk.a(13, var2);
+            ck.field_d = jk.a(param0 ^ 13, var2);
             break L1188;
           }
         }
         L1189: {
-          var2 = ji.a(87, "numberoftimes_tx,0");
-          if (null == var2) {
+          var2 = ji.a(58, "seconds_tx");
+          if (var2 == null) {
             break L1189;
           } else {
-            dl.field_I[0] = jk.a(13, var2);
+            tc.field_s = jk.a(13, var2);
             break L1189;
           }
         }
         L1190: {
-          var2 = ji.a(127, "numberoftimes_tx,1");
-          if (var2 != null) {
-            dl.field_I[1] = jk.a(13, var2);
+          var2 = ji.a(param0 ^ 87, "numberoftimes_tx,0");
+          if (null == var2) {
             break L1190;
           } else {
+            dl.field_I[0] = jk.a(13, var2);
             break L1190;
           }
         }
         L1191: {
-          var2 = ji.a(123, "numberoftimes_tx,2");
+          var2 = ji.a(127, "numberoftimes_tx,1");
           if (var2 != null) {
-            dl.field_I[2] = jk.a(13, var2);
+            dl.field_I[1] = jk.a(13, var2);
             break L1191;
           } else {
             break L1191;
           }
         }
         L1192: {
-          var2 = ji.a(114, "numberoftimes_tx,3");
+          var2 = ji.a(123, "numberoftimes_tx,2");
           if (var2 != null) {
-            dl.field_I[3] = jk.a(13, var2);
+            dl.field_I[2] = jk.a(param0 + 13, var2);
             break L1192;
           } else {
             break L1192;
           }
         }
         L1193: {
-          var2 = ji.a(93, "ALREADY_ENG_MOD_TXT");
-          if (null != var2) {
-            va.field_i = jk.a(13, var2);
+          var2 = ji.a(param0 + 114, "numberoftimes_tx,3");
+          if (var2 != null) {
+            dl.field_I[3] = jk.a(13, var2);
             break L1193;
           } else {
             break L1193;
           }
         }
         L1194: {
-          var2 = ji.a(104, "CANNOT_ENG_MOD_TXT");
+          var2 = ji.a(93, "ALREADY_ENG_MOD_TXT");
           if (null != var2) {
-            ha.field_R = jk.a(13, var2);
+            va.field_i = jk.a(13, var2);
             break L1194;
           } else {
             break L1194;
           }
         }
         L1195: {
-          var2 = ji.a(112, "FIRST_ENG_THIS_TXT");
-          if (var2 != null) {
-            oc.field_e = jk.a(13, var2);
+          var2 = ji.a(param0 ^ 104, "CANNOT_ENG_MOD_TXT");
+          if (null != var2) {
+            ha.field_R = jk.a(param0 ^ 13, var2);
             break L1195;
           } else {
             break L1195;
           }
         }
         L1196: {
-          var2 = ji.a(52, "FIRST_ENG_SHIELDS_TXT");
-          if (null != var2) {
-            b.field_i = jk.a(13, var2);
+          var2 = ji.a(112, "FIRST_ENG_THIS_TXT");
+          if (var2 != null) {
+            oc.field_e = jk.a(13, var2);
             break L1196;
           } else {
             break L1196;
           }
         }
         L1197: {
-          var2 = ji.a(99, "FIRST_ENG_PLASMA_TXT");
-          if (var2 == null) {
+          var2 = ji.a(52, "FIRST_ENG_SHIELDS_TXT");
+          if (null != var2) {
+            b.field_i = jk.a(13, var2);
             break L1197;
           } else {
-            k.field_Eb = jk.a(13, var2);
             break L1197;
           }
         }
         L1198: {
-          var2 = ji.a(85, "FIRST_ENG_LASERS_TXT");
-          if (null != var2) {
-            rd.field_c = jk.a(13, var2);
+          var2 = ji.a(99, "FIRST_ENG_PLASMA_TXT");
+          if (var2 == null) {
             break L1198;
           } else {
+            k.field_Eb = jk.a(13, var2);
             break L1198;
           }
         }
         L1199: {
-          var2 = ji.a(114, "FIRST_ENG_EMP_TXT");
-          if (var2 == null) {
+          var2 = ji.a(85, "FIRST_ENG_LASERS_TXT");
+          if (null != var2) {
+            rd.field_c = jk.a(param0 + 13, var2);
             break L1199;
           } else {
-            kd.field_t = jk.a(13, var2);
             break L1199;
           }
         }
         L1200: {
-          var2 = ji.a(119, "CANT_AFFORD_MOD_TXT");
+          var2 = ji.a(114, "FIRST_ENG_EMP_TXT");
           if (var2 == null) {
             break L1200;
           } else {
-            hd.field_g = jk.a(13, var2);
+            kd.field_t = jk.a(13, var2);
             break L1200;
           }
         }
         L1201: {
-          var2 = ji.a(114, "ALREADY_ENG_COMP_TXT");
-          if (null == var2) {
+          var2 = ji.a(119, "CANT_AFFORD_MOD_TXT");
+          if (var2 == null) {
             break L1201;
           } else {
-            qi.field_e = jk.a(13, var2);
+            hd.field_g = jk.a(13, var2);
             break L1201;
           }
         }
         L1202: {
-          var2 = ji.a(114, "CANT_AFFORD_COMP_TXT");
-          if (var2 == null) {
+          var2 = ji.a(param0 ^ 114, "ALREADY_ENG_COMP_TXT");
+          if (null == var2) {
             break L1202;
           } else {
-            bj.field_a = jk.a(13, var2);
+            qi.field_e = jk.a(param0 + 13, var2);
             break L1202;
           }
         }
         L1203: {
-          var2 = ji.a(118, "CHASSISLIST_BLURB");
+          var2 = ji.a(param0 + 114, "CANT_AFFORD_COMP_TXT");
           if (var2 == null) {
             break L1203;
           } else {
-            kc.field_u = jk.a(13, var2);
+            bj.field_a = jk.a(param0 ^ 13, var2);
             break L1203;
           }
         }
         L1204: {
-          var2 = ji.a(67, "COMPLIST_BLURB");
-          if (var2 != null) {
-            li.field_E = jk.a(13, var2);
+          var2 = ji.a(118, "CHASSISLIST_BLURB");
+          if (var2 == null) {
             break L1204;
           } else {
+            kc.field_u = jk.a(13, var2);
             break L1204;
           }
         }
         L1205: {
-          var2 = ji.a(90, "WEAPONLIST_BLURB");
-          if (null != var2) {
-            re.field_hb = jk.a(13, var2);
+          var2 = ji.a(67, "COMPLIST_BLURB");
+          if (var2 != null) {
+            li.field_E = jk.a(13, var2);
             break L1205;
           } else {
             break L1205;
           }
         }
         L1206: {
-          var2 = ji.a(115, "MODLIST_BLURB");
+          var2 = ji.a(90, "WEAPONLIST_BLURB");
           if (null != var2) {
-            bg.field_D = jk.a(13, var2);
+            re.field_hb = jk.a(param0 + 13, var2);
             break L1206;
           } else {
             break L1206;
           }
         }
         L1207: {
-          var2 = ji.a(108, "CUSTOM_ADVANCED_ONLY_TXT");
+          var2 = ji.a(115, "MODLIST_BLURB");
           if (null != var2) {
-            ai.field_v = jk.a(13, var2);
+            bg.field_D = jk.a(13, var2);
             break L1207;
           } else {
             break L1207;
           }
         }
         L1208: {
-          var2 = ji.a(84, "UNLOCKED_DESTROYED_CHASSIS_MSG");
-          if (var2 == null) {
+          var2 = ji.a(param0 ^ 108, "CUSTOM_ADVANCED_ONLY_TXT");
+          if (null != var2) {
+            ai.field_v = jk.a(13, var2);
             break L1208;
           } else {
-            qg.field_o = jk.a(13, var2);
             break L1208;
           }
         }
         L1209: {
-          var2 = ji.a(70, "PROGRESS_UNLOCKED_CHASSIS_MSG");
-          if (null == var2) {
+          var2 = ji.a(84, "UNLOCKED_DESTROYED_CHASSIS_MSG");
+          if (var2 == null) {
             break L1209;
           } else {
-            c.field_r = jk.a(13, var2);
+            qg.field_o = jk.a(13, var2);
             break L1209;
           }
         }
         L1210: {
-          var2 = ji.a(53, "GETDEFAULTSET_TXT");
-          if (null != var2) {
-            td.field_Vb = jk.a(13, var2);
+          var2 = ji.a(param0 + 70, "PROGRESS_UNLOCKED_CHASSIS_MSG");
+          if (null == var2) {
             break L1210;
           } else {
+            c.field_r = jk.a(13, var2);
             break L1210;
           }
         }
         L1211: {
-          var2 = ji.a(114, "DEFAULTSET_TXT");
-          if (var2 == null) {
+          var2 = ji.a(53, "GETDEFAULTSET_TXT");
+          if (null != var2) {
+            td.field_Vb = jk.a(13, var2);
             break L1211;
           } else {
-            cb.field_a = jk.a(13, var2);
             break L1211;
           }
         }
         L1212: {
-          var2 = ji.a(64, "HEADSLOT_TXT");
+          var2 = ji.a(114, "DEFAULTSET_TXT");
           if (var2 == null) {
             break L1212;
           } else {
-            im.field_e = jk.a(13, var2);
+            cb.field_a = jk.a(13, var2);
             break L1212;
           }
         }
         L1213: {
-          var2 = ji.a(66, "ARMSLOT_TXT");
+          var2 = ji.a(64, "HEADSLOT_TXT");
           if (var2 == null) {
             break L1213;
           } else {
-            tc.field_r = jk.a(13, var2);
+            im.field_e = jk.a(13, var2);
             break L1213;
           }
         }
         L1214: {
-          var2 = ji.a(92, "WINGSLOT_TXT");
-          if (null != var2) {
-            ti.field_o = jk.a(13, var2);
+          var2 = ji.a(66, "ARMSLOT_TXT");
+          if (var2 == null) {
             break L1214;
           } else {
+            tc.field_r = jk.a(13, var2);
             break L1214;
           }
         }
         L1215: {
-          var2 = ji.a(96, "NOSLOT_TXT");
-          if (var2 == null) {
+          var2 = ji.a(92, "WINGSLOT_TXT");
+          if (null != var2) {
+            ti.field_o = jk.a(13, var2);
             break L1215;
           } else {
-            mc.field_d = jk.a(13, var2);
             break L1215;
           }
         }
         L1216: {
-          var2 = ji.a(86, "EMPTYSLOT_TXT");
-          if (null != var2) {
-            bc.field_nb = jk.a(13, var2);
+          var2 = ji.a(96, "NOSLOT_TXT");
+          if (var2 == null) {
             break L1216;
           } else {
+            mc.field_d = jk.a(13, var2);
             break L1216;
           }
         }
         L1217: {
-          var2 = ji.a(66, "deleteafavouritetxt");
-          if (var2 == null) {
+          var2 = ji.a(param0 + 86, "EMPTYSLOT_TXT");
+          if (null != var2) {
+            bc.field_nb = jk.a(13, var2);
             break L1217;
           } else {
-            wh.field_i = jk.a(13, var2);
             break L1217;
           }
         }
         L1218: {
-          var2 = ji.a(99, "savefavouritetxt");
-          if (null != var2) {
-            jd.field_jb = jk.a(13, var2);
+          var2 = ji.a(66, "deleteafavouritetxt");
+          if (var2 == null) {
             break L1218;
           } else {
+            wh.field_i = jk.a(param0 + 13, var2);
             break L1218;
           }
         }
         L1219: {
-          var2 = ji.a(122, "defaultmarker");
-          if (var2 != null) {
-            uh.field_h = jk.a(13, var2);
+          var2 = ji.a(99, "savefavouritetxt");
+          if (null != var2) {
+            jd.field_jb = jk.a(13, var2);
             break L1219;
           } else {
             break L1219;
           }
         }
         L1220: {
-          var2 = ji.a(127, "favouriteslottxt");
-          if (null == var2) {
+          var2 = ji.a(122, "defaultmarker");
+          if (var2 != null) {
+            uh.field_h = jk.a(param0 + 13, var2);
             break L1220;
           } else {
-            String discarded$17 = jk.a(13, var2);
             break L1220;
           }
         }
         L1221: {
-          var2 = ji.a(113, "favouritestxt");
-          if (null != var2) {
-            cm.field_p = jk.a(13, var2);
+          var2 = ji.a(param0 ^ 127, "favouriteslottxt");
+          if (null == var2) {
             break L1221;
           } else {
+            String discarded$17 = jk.a(13, var2);
             break L1221;
           }
         }
         L1222: {
-          var2 = ji.a(59, "engineeredtxt");
-          if (var2 != null) {
-            qj.field_c = jk.a(13, var2);
+          var2 = ji.a(113, "favouritestxt");
+          if (null != var2) {
+            cm.field_p = jk.a(13, var2);
             break L1222;
           } else {
             break L1222;
           }
         }
         L1223: {
-          var2 = ji.a(95, "notengineeredtxt");
-          if (null != var2) {
-            he.field_h = jk.a(13, var2);
+          var2 = ji.a(59, "engineeredtxt");
+          if (var2 != null) {
+            qj.field_c = jk.a(13, var2);
             break L1223;
           } else {
             break L1223;
           }
         }
         L1224: {
-          var2 = ji.a(120, "complist_txt");
+          var2 = ji.a(95, "notengineeredtxt");
           if (null != var2) {
-            mc.field_b = jk.a(13, var2);
+            he.field_h = jk.a(13, var2);
             break L1224;
           } else {
             break L1224;
           }
         }
         L1225: {
-          var2 = ji.a(126, "gunlist_txt");
-          if (var2 != null) {
-            kf.field_B = jk.a(13, var2);
+          var2 = ji.a(param0 + 120, "complist_txt");
+          if (null != var2) {
+            mc.field_b = jk.a(13, var2);
             break L1225;
           } else {
             break L1225;
           }
         }
         L1226: {
-          var2 = ji.a(67, "modlist_txt");
-          if (null == var2) {
+          var2 = ji.a(param0 + 126, "gunlist_txt");
+          if (var2 != null) {
+            kf.field_B = jk.a(13, var2);
             break L1226;
           } else {
-            vf.field_c = jk.a(13, var2);
             break L1226;
           }
         }
         L1227: {
-          var2 = ji.a(124, "techstandardtxt");
-          if (null != var2) {
-            ej.field_C = jk.a(13, var2);
+          var2 = ji.a(67, "modlist_txt");
+          if (null == var2) {
             break L1227;
           } else {
+            vf.field_c = jk.a(13, var2);
             break L1227;
           }
         }
         L1228: {
-          var2 = ji.a(61, "techadvancedtxt");
-          if (null == var2) {
+          var2 = ji.a(124, "techstandardtxt");
+          if (null != var2) {
+            ej.field_C = jk.a(13, var2);
             break L1228;
           } else {
-            fi.field_z = jk.a(13, var2);
             break L1228;
           }
         }
         L1229: {
-          var2 = ji.a(95, "techvaluecolon");
-          if (var2 != null) {
-            bf.field_zb = jk.a(13, var2);
+          var2 = ji.a(61, "techadvancedtxt");
+          if (null == var2) {
             break L1229;
           } else {
+            fi.field_z = jk.a(13, var2);
             break L1229;
           }
         }
         L1230: {
-          var2 = ji.a(96, "heightstring");
-          if (null != var2) {
-            de.field_e = jk.a(13, var2);
+          var2 = ji.a(param0 + 95, "techvaluecolon");
+          if (var2 != null) {
+            bf.field_zb = jk.a(13, var2);
             break L1230;
           } else {
             break L1230;
           }
         }
         L1231: {
-          var2 = ji.a(95, "solaritecubescolon");
-          if (var2 == null) {
+          var2 = ji.a(param0 + 96, "heightstring");
+          if (null != var2) {
+            de.field_e = jk.a(13, var2);
             break L1231;
           } else {
-            jb.field_E = jk.a(13, var2);
             break L1231;
           }
         }
         L1232: {
-          var2 = ji.a(51, "percentengineered");
+          var2 = ji.a(param0 ^ 95, "solaritecubescolon");
           if (var2 == null) {
             break L1232;
           } else {
-            mm.field_c = jk.a(13, var2);
+            jb.field_E = jk.a(13, var2);
             break L1232;
           }
         }
         L1233: {
-          var2 = ji.a(111, "sentineluses");
-          if (null == var2) {
+          var2 = ji.a(param0 ^ 51, "percentengineered");
+          if (var2 == null) {
             break L1233;
           } else {
-            qm.field_e = jk.a(13, var2);
+            mm.field_c = jk.a(13, var2);
             break L1233;
           }
         }
         L1234: {
-          var2 = ji.a(54, "anduses");
-          if (null != var2) {
-            re.field_X = jk.a(13, var2);
+          var2 = ji.a(111, "sentineluses");
+          if (null == var2) {
             break L1234;
           } else {
+            qm.field_e = jk.a(13, var2);
             break L1234;
           }
         }
         L1235: {
-          var2 = ji.a(82, "usescomponents");
-          if (var2 != null) {
-            v.field_c = jk.a(13, var2);
+          var2 = ji.a(54, "anduses");
+          if (null != var2) {
+            re.field_X = jk.a(13, var2);
             break L1235;
           } else {
             break L1235;
           }
         }
         L1236: {
-          var2 = ji.a(94, "usesmodules");
-          if (var2 == null) {
+          var2 = ji.a(82, "usescomponents");
+          if (var2 != null) {
+            v.field_c = jk.a(13, var2);
             break L1236;
           } else {
-            dk.field_i = jk.a(13, var2);
             break L1236;
           }
         }
         L1237: {
-          var2 = ji.a(60, "usesmodule");
-          if (var2 != null) {
-            ed.field_g = jk.a(13, var2);
+          var2 = ji.a(94, "usesmodules");
+          if (var2 == null) {
             break L1237;
           } else {
+            dk.field_i = jk.a(13, var2);
             break L1237;
           }
         }
         L1238: {
-          var2 = ji.a(127, "cubesneeded");
+          var2 = ji.a(60, "usesmodule");
           if (var2 != null) {
-            mm.field_f = jk.a(13, var2);
+            ed.field_g = jk.a(13, var2);
             break L1238;
           } else {
             break L1238;
           }
         }
         L1239: {
-          var2 = ji.a(73, "holdsonetimes");
+          var2 = ji.a(127, "cubesneeded");
           if (var2 != null) {
-            wh.field_h = jk.a(13, var2);
+            mm.field_f = jk.a(param0 + 13, var2);
             break L1239;
           } else {
             break L1239;
           }
         }
         L1240: {
-          var2 = ji.a(78, "slotsntimesx");
-          if (null == var2) {
+          var2 = ji.a(73, "holdsonetimes");
+          if (var2 != null) {
+            wh.field_h = jk.a(param0 + 13, var2);
             break L1240;
           } else {
-            hf.field_a = jk.a(13, var2);
             break L1240;
           }
         }
         L1241: {
-          var2 = ji.a(115, "alsontimesx");
-          if (var2 == null) {
+          var2 = ji.a(78, "slotsntimesx");
+          if (null == var2) {
             break L1241;
           } else {
-            q.field_a = jk.a(13, var2);
+            hf.field_a = jk.a(param0 ^ 13, var2);
             break L1241;
           }
         }
         L1242: {
-          var2 = ji.a(86, "shiftclickmsg");
-          if (null != var2) {
-            dg.field_c = jk.a(13, var2);
+          var2 = ji.a(115, "alsontimesx");
+          if (var2 == null) {
             break L1242;
           } else {
+            q.field_a = jk.a(13, var2);
             break L1242;
           }
         }
         L1243: {
-          var2 = ji.a(121, "engineeringstatedesc,0");
-          if (null == var2) {
+          var2 = ji.a(86, "shiftclickmsg");
+          if (null != var2) {
+            dg.field_c = jk.a(13, var2);
             break L1243;
           } else {
-            a.field_d[0] = jk.a(13, var2);
             break L1243;
           }
         }
         L1244: {
-          var2 = ji.a(73, "engineeringstatedesc,1");
-          if (null != var2) {
-            a.field_d[1] = jk.a(13, var2);
+          var2 = ji.a(param0 + 121, "engineeringstatedesc,0");
+          if (null == var2) {
             break L1244;
           } else {
+            a.field_d[0] = jk.a(13, var2);
             break L1244;
           }
         }
         L1245: {
-          var2 = ji.a(121, "engineeringstatedesc,2");
+          var2 = ji.a(param0 ^ 73, "engineeringstatedesc,1");
           if (null != var2) {
-            a.field_d[2] = jk.a(13, var2);
+            a.field_d[1] = jk.a(13, var2);
             break L1245;
           } else {
             break L1245;
           }
         }
         L1246: {
-          var2 = ji.a(51, "engineeringstatedesc,3");
-          if (null == var2) {
+          var2 = ji.a(param0 + 121, "engineeringstatedesc,2");
+          if (null != var2) {
+            a.field_d[2] = jk.a(13, var2);
             break L1246;
           } else {
-            a.field_d[3] = jk.a(13, var2);
             break L1246;
           }
         }
         L1247: {
-          var2 = ji.a(79, "firingarctxt");
+          var2 = ji.a(51, "engineeringstatedesc,3");
           if (null == var2) {
             break L1247;
           } else {
-            tk.field_s = jk.a(13, var2);
+            a.field_d[3] = jk.a(13, var2);
             break L1247;
           }
         }
         L1248: {
-          var2 = ji.a(102, "warningcolon");
-          if (null != var2) {
-            jn.field_e = jk.a(13, var2);
+          var2 = ji.a(79, "firingarctxt");
+          if (null == var2) {
             break L1248;
           } else {
+            tk.field_s = jk.a(13, var2);
             break L1248;
           }
         }
         L1249: {
-          var2 = ji.a(57, "oddmechwarnings,0");
-          if (null == var2) {
+          var2 = ji.a(102, "warningcolon");
+          if (null != var2) {
+            jn.field_e = jk.a(13, var2);
             break L1249;
           } else {
-            ji.field_b[0] = jk.a(13, var2);
             break L1249;
           }
         }
         L1250: {
-          var2 = ji.a(125, "oddmechwarnings,1");
-          if (null != var2) {
-            ji.field_b[1] = jk.a(13, var2);
+          var2 = ji.a(57, "oddmechwarnings,0");
+          if (null == var2) {
             break L1250;
           } else {
+            ji.field_b[0] = jk.a(param0 + 13, var2);
             break L1250;
           }
         }
         L1251: {
-          var2 = ji.a(116, "oddmechwarnings,2");
-          if (var2 != null) {
-            ji.field_b[2] = jk.a(13, var2);
+          var2 = ji.a(param0 ^ 125, "oddmechwarnings,1");
+          if (null != var2) {
+            ji.field_b[1] = jk.a(13, var2);
             break L1251;
           } else {
             break L1251;
           }
         }
         L1252: {
-          var2 = ji.a(58, "oddmechwarnings,3");
-          if (null == var2) {
+          var2 = ji.a(param0 ^ 116, "oddmechwarnings,2");
+          if (var2 != null) {
+            ji.field_b[2] = jk.a(13, var2);
             break L1252;
           } else {
-            ji.field_b[3] = jk.a(13, var2);
             break L1252;
           }
         }
         L1253: {
-          var2 = ji.a(59, "oddmechwarnings,4");
-          if (null != var2) {
-            ji.field_b[4] = jk.a(13, var2);
+          var2 = ji.a(param0 ^ 58, "oddmechwarnings,3");
+          if (null == var2) {
             break L1253;
           } else {
+            ji.field_b[3] = jk.a(13, var2);
             break L1253;
           }
         }
         L1254: {
-          var2 = ji.a(81, "oddmechwarnings,5");
-          if (null == var2) {
+          var2 = ji.a(param0 + 59, "oddmechwarnings,4");
+          if (null != var2) {
+            ji.field_b[4] = jk.a(13, var2);
             break L1254;
           } else {
-            ji.field_b[5] = jk.a(13, var2);
             break L1254;
           }
         }
         L1255: {
-          var2 = ji.a(109, "oddmechwarnings,6");
-          if (null != var2) {
-            ji.field_b[6] = jk.a(13, var2);
+          var2 = ji.a(81, "oddmechwarnings,5");
+          if (null == var2) {
             break L1255;
           } else {
+            ji.field_b[5] = jk.a(13, var2);
             break L1255;
           }
         }
         L1256: {
-          var2 = ji.a(109, "oddmechwarnings,7");
-          if (null == var2) {
+          var2 = ji.a(109, "oddmechwarnings,6");
+          if (null != var2) {
+            ji.field_b[6] = jk.a(13, var2);
             break L1256;
           } else {
-            ji.field_b[7] = jk.a(bi.a(0, 13), var2);
             break L1256;
           }
         }
         L1257: {
-          var2 = ji.a(109, "oddmechwarnings,8");
-          if (var2 == null) {
+          var2 = ji.a(109, "oddmechwarnings,7");
+          if (null == var2) {
             break L1257;
           } else {
-            ji.field_b[8] = jk.a(13, var2);
+            ji.field_b[7] = jk.a(bi.a(param0, 13), var2);
             break L1257;
           }
         }
         L1258: {
-          var2 = ji.a(63, "oddmechwarnings,9");
-          if (var2 != null) {
-            ji.field_b[9] = jk.a(bi.a(0, 13), var2);
+          var2 = ji.a(109, "oddmechwarnings,8");
+          if (var2 == null) {
             break L1258;
           } else {
+            ji.field_b[8] = jk.a(13, var2);
             break L1258;
           }
         }
         L1259: {
-          var2 = ji.a(89, "oddmechwarnings,10");
+          var2 = ji.a(63, "oddmechwarnings,9");
           if (var2 != null) {
-            ji.field_b[10] = jk.a(13, var2);
+            ji.field_b[9] = jk.a(bi.a(param0, 13), var2);
             break L1259;
           } else {
             break L1259;
           }
         }
         L1260: {
-          var2 = ji.a(75, "oddmechwarnings,11");
-          if (var2 == null) {
+          var2 = ji.a(89, "oddmechwarnings,10");
+          if (var2 != null) {
+            ji.field_b[10] = jk.a(13, var2);
             break L1260;
           } else {
-            ji.field_b[11] = jk.a(13, var2);
             break L1260;
           }
         }
         L1261: {
-          var2 = ji.a(93, "coopcomplete");
-          if (null != var2) {
-            of.field_a = jk.a(13, var2);
+          var2 = ji.a(param0 + 75, "oddmechwarnings,11");
+          if (var2 == null) {
             break L1261;
           } else {
+            ji.field_b[11] = jk.a(param0 + 13, var2);
             break L1261;
           }
         }
         L1262: {
-          var2 = ji.a(82, "coopboss");
+          var2 = ji.a(93, "coopcomplete");
           if (null != var2) {
-            ob.field_x = jk.a(13, var2);
+            of.field_a = jk.a(13, var2);
             break L1262;
           } else {
             break L1262;
           }
         }
         L1263: {
-          var2 = ji.a(78, "score_headings,0");
-          if (var2 == null) {
+          var2 = ji.a(param0 + 82, "coopboss");
+          if (null != var2) {
+            ob.field_x = jk.a(13, var2);
             break L1263;
           } else {
-            k.field_Ib[0] = jk.a(13, var2);
             break L1263;
           }
         }
         L1264: {
-          var2 = ji.a(52, "score_headings,1");
+          var2 = ji.a(78, "score_headings,0");
           if (var2 == null) {
             break L1264;
           } else {
-            k.field_Ib[1] = jk.a(13, var2);
+            k.field_Ib[0] = jk.a(13, var2);
             break L1264;
           }
         }
         L1265: {
-          var2 = ji.a(69, "score_headings,2");
-          if (null == var2) {
+          var2 = ji.a(52, "score_headings,1");
+          if (var2 == null) {
             break L1265;
           } else {
-            k.field_Ib[2] = jk.a(13, var2);
+            k.field_Ib[1] = jk.a(param0 + 13, var2);
             break L1265;
           }
         }
         L1266: {
-          var2 = ji.a(59, "score_headings,3");
-          if (var2 != null) {
-            k.field_Ib[3] = jk.a(13, var2);
+          var2 = ji.a(69, "score_headings,2");
+          if (null == var2) {
             break L1266;
           } else {
+            k.field_Ib[2] = jk.a(13, var2);
             break L1266;
           }
         }
         L1267: {
-          var2 = ji.a(99, "ratings_headings,0");
-          if (null != var2) {
-            pe.field_h[0] = jk.a(bi.a(0, 13), var2);
+          var2 = ji.a(59, "score_headings,3");
+          if (var2 != null) {
+            k.field_Ib[3] = jk.a(13, var2);
             break L1267;
           } else {
             break L1267;
           }
         }
         L1268: {
-          var2 = ji.a(71, "ratings_headings,1");
+          var2 = ji.a(99, "ratings_headings,0");
           if (null != var2) {
-            pe.field_h[1] = jk.a(13, var2);
+            pe.field_h[0] = jk.a(bi.a(param0, 13), var2);
             break L1268;
           } else {
             break L1268;
           }
         }
         L1269: {
-          var2 = ji.a(99, "ratings_headings,2");
-          if (var2 == null) {
+          var2 = ji.a(71, "ratings_headings,1");
+          if (null != var2) {
+            pe.field_h[1] = jk.a(param0 + 13, var2);
             break L1269;
           } else {
-            pe.field_h[2] = jk.a(13, var2);
             break L1269;
           }
         }
         L1270: {
-          var2 = ji.a(64, "ratings_headings,3");
+          var2 = ji.a(99, "ratings_headings,2");
           if (var2 == null) {
             break L1270;
           } else {
-            pe.field_h[3] = jk.a(13, var2);
+            pe.field_h[2] = jk.a(13, var2);
             break L1270;
           }
         }
         L1271: {
-          var2 = ji.a(80, "ratings_headings,4");
-          if (null == var2) {
+          var2 = ji.a(64, "ratings_headings,3");
+          if (var2 == null) {
             break L1271;
           } else {
-            pe.field_h[4] = jk.a(bi.a(0, 13), var2);
+            pe.field_h[3] = jk.a(13, var2);
             break L1271;
           }
         }
         L1272: {
-          var2 = ji.a(123, "ratings_headings,5");
-          if (var2 == null) {
+          var2 = ji.a(param0 ^ 80, "ratings_headings,4");
+          if (null == var2) {
             break L1272;
           } else {
-            pe.field_h[5] = jk.a(13, var2);
+            pe.field_h[4] = jk.a(bi.a(param0, 13), var2);
             break L1272;
           }
         }
         L1273: {
-          var2 = ji.a(61, "achievements_hidden_text");
+          var2 = ji.a(123, "ratings_headings,5");
           if (var2 == null) {
             break L1273;
           } else {
-            gj.field_c = jk.a(13, var2);
+            pe.field_h[5] = jk.a(13, var2);
             break L1273;
           }
         }
         L1274: {
-          var2 = ji.a(56, "maxtxt");
-          if (var2 != null) {
-            ll.field_m = jk.a(13, var2);
+          var2 = ji.a(61, "achievements_hidden_text");
+          if (var2 == null) {
             break L1274;
           } else {
+            gj.field_c = jk.a(param0 + 13, var2);
             break L1274;
           }
         }
         L1275: {
-          var2 = ji.a(94, "timeformat");
+          var2 = ji.a(56, "maxtxt");
           if (var2 != null) {
-            ui.field_S = jk.a(13, var2);
+            ll.field_m = jk.a(13, var2);
             break L1275;
           } else {
             break L1275;
           }
         }
         L1276: {
-          var2 = ji.a(71, "expansiononlyitem");
-          if (null == var2) {
+          var2 = ji.a(param0 ^ 94, "timeformat");
+          if (var2 != null) {
+            ui.field_S = jk.a(13, var2);
             break L1276;
           } else {
-            of.field_b = jk.a(13, var2);
             break L1276;
           }
         }
         L1277: {
-          var2 = ji.a(110, "stathints,0");
-          if (var2 == null) {
+          var2 = ji.a(71, "expansiononlyitem");
+          if (null == var2) {
             break L1277;
           } else {
-            jj.field_h[0] = jk.a(13, var2);
+            of.field_b = jk.a(13, var2);
             break L1277;
           }
         }
         L1278: {
-          var2 = ji.a(123, "stathints,1");
-          if (null == var2) {
+          var2 = ji.a(110, "stathints,0");
+          if (var2 == null) {
             break L1278;
           } else {
-            jj.field_h[1] = jk.a(13, var2);
+            jj.field_h[0] = jk.a(13, var2);
             break L1278;
           }
         }
         L1279: {
-          var2 = ji.a(71, "stathints,2");
-          if (var2 == null) {
+          var2 = ji.a(123, "stathints,1");
+          if (null == var2) {
             break L1279;
           } else {
-            jj.field_h[2] = jk.a(13, var2);
+            jj.field_h[1] = jk.a(13, var2);
             break L1279;
           }
         }
         L1280: {
-          var2 = ji.a(119, "stathints,3");
-          if (null == var2) {
+          var2 = ji.a(param0 ^ 71, "stathints,2");
+          if (var2 == null) {
             break L1280;
           } else {
-            jj.field_h[3] = jk.a(13, var2);
+            jj.field_h[2] = jk.a(13, var2);
             break L1280;
           }
         }
         L1281: {
-          var2 = ji.a(57, "stathints,4");
-          if (var2 == null) {
+          var2 = ji.a(119, "stathints,3");
+          if (null == var2) {
             break L1281;
           } else {
-            jj.field_h[4] = jk.a(bi.a(0, 13), var2);
+            jj.field_h[3] = jk.a(13, var2);
             break L1281;
           }
         }
         L1282: {
-          var2 = ji.a(72, "stathints,5");
-          if (var2 != null) {
-            jj.field_h[5] = jk.a(13, var2);
+          var2 = ji.a(57, "stathints,4");
+          if (var2 == null) {
             break L1282;
           } else {
+            jj.field_h[4] = jk.a(bi.a(param0, 13), var2);
             break L1282;
           }
         }
         L1283: {
-          var2 = ji.a(93, "stathints,6");
-          if (null == var2) {
+          var2 = ji.a(72, "stathints,5");
+          if (var2 != null) {
+            jj.field_h[5] = jk.a(13, var2);
             break L1283;
           } else {
-            jj.field_h[6] = jk.a(13, var2);
             break L1283;
           }
         }
         L1284: {
-          var2 = ji.a(90, "stathints,7");
-          if (var2 == null) {
+          var2 = ji.a(param0 ^ 93, "stathints,6");
+          if (null == var2) {
             break L1284;
           } else {
-            jj.field_h[7] = jk.a(13, var2);
+            jj.field_h[6] = jk.a(13, var2);
             break L1284;
           }
         }
         L1285: {
-          var2 = ji.a(113, "stathints,8");
+          var2 = ji.a(90, "stathints,7");
           if (var2 == null) {
             break L1285;
           } else {
-            jj.field_h[8] = jk.a(13, var2);
+            jj.field_h[7] = jk.a(param0 + 13, var2);
             break L1285;
           }
         }
         L1286: {
-          var2 = ji.a(76, "stathints,9");
-          if (var2 != null) {
-            jj.field_h[9] = jk.a(13, var2);
+          var2 = ji.a(param0 + 113, "stathints,8");
+          if (var2 == null) {
             break L1286;
           } else {
+            jj.field_h[8] = jk.a(13, var2);
             break L1286;
           }
         }
         L1287: {
-          var2 = ji.a(108, "stathints,10");
+          var2 = ji.a(76, "stathints,9");
           if (var2 != null) {
-            jj.field_h[10] = jk.a(bi.a(0, 13), var2);
+            jj.field_h[9] = jk.a(13, var2);
             break L1287;
           } else {
             break L1287;
           }
         }
         L1288: {
-          var2 = ji.a(51, "stathints,11");
-          if (var2 == null) {
+          var2 = ji.a(108, "stathints,10");
+          if (var2 != null) {
+            jj.field_h[10] = jk.a(bi.a(param0, 13), var2);
             break L1288;
           } else {
-            jj.field_h[11] = jk.a(13, var2);
             break L1288;
           }
         }
         L1289: {
-          var2 = ji.a(74, "itemstathints,0");
-          if (var2 != null) {
-            sl.field_j[0] = jk.a(13, var2);
+          var2 = ji.a(51, "stathints,11");
+          if (var2 == null) {
             break L1289;
           } else {
+            jj.field_h[11] = jk.a(13, var2);
             break L1289;
           }
         }
         L1290: {
-          var2 = ji.a(105, "itemstathints,1");
-          if (null == var2) {
+          var2 = ji.a(param0 ^ 74, "itemstathints,0");
+          if (var2 != null) {
+            sl.field_j[0] = jk.a(13, var2);
             break L1290;
           } else {
-            sl.field_j[1] = jk.a(bi.a(0, 13), var2);
             break L1290;
           }
         }
         L1291: {
-          var2 = ji.a(107, "itemstathints,2");
+          var2 = ji.a(105, "itemstathints,1");
           if (null == var2) {
             break L1291;
           } else {
-            sl.field_j[2] = jk.a(13, var2);
+            sl.field_j[1] = jk.a(bi.a(param0, 13), var2);
             break L1291;
           }
         }
         L1292: {
-          var2 = ji.a(70, "itemstathints,3");
-          if (var2 != null) {
-            sl.field_j[3] = jk.a(13, var2);
+          var2 = ji.a(param0 + 107, "itemstathints,2");
+          if (null == var2) {
             break L1292;
           } else {
+            sl.field_j[2] = jk.a(13, var2);
             break L1292;
           }
         }
         L1293: {
-          var2 = ji.a(71, "itemstathints,4");
-          if (null == var2) {
+          var2 = ji.a(param0 + 70, "itemstathints,3");
+          if (var2 != null) {
+            sl.field_j[3] = jk.a(param0 + 13, var2);
             break L1293;
           } else {
-            sl.field_j[4] = jk.a(13, var2);
             break L1293;
           }
         }
         L1294: {
-          var2 = ji.a(80, "itemstathints,5");
-          if (null != var2) {
-            sl.field_j[5] = jk.a(13, var2);
+          var2 = ji.a(71, "itemstathints,4");
+          if (null == var2) {
             break L1294;
           } else {
+            sl.field_j[4] = jk.a(13, var2);
             break L1294;
           }
         }
         L1295: {
-          var2 = ji.a(105, "itemstathints,6");
+          var2 = ji.a(param0 + 80, "itemstathints,5");
           if (null != var2) {
-            sl.field_j[6] = jk.a(13, var2);
+            sl.field_j[5] = jk.a(13, var2);
             break L1295;
           } else {
             break L1295;
           }
         }
         L1296: {
-          var2 = ji.a(65, "itemstathints,7");
-          if (null == var2) {
+          var2 = ji.a(105, "itemstathints,6");
+          if (null != var2) {
+            sl.field_j[6] = jk.a(13, var2);
             break L1296;
           } else {
-            sl.field_j[7] = jk.a(bi.a(0, 13), var2);
             break L1296;
           }
         }
         L1297: {
-          var2 = ji.a(80, "itemstathints,8");
-          if (var2 == null) {
+          var2 = ji.a(65, "itemstathints,7");
+          if (null == var2) {
             break L1297;
           } else {
-            sl.field_j[8] = jk.a(13, var2);
+            sl.field_j[7] = jk.a(bi.a(param0, 13), var2);
             break L1297;
           }
         }
         L1298: {
-          var2 = ji.a(102, "itemstathints,9");
-          if (null == var2) {
+          var2 = ji.a(param0 ^ 80, "itemstathints,8");
+          if (var2 == null) {
             break L1298;
           } else {
-            sl.field_j[9] = jk.a(13, var2);
+            sl.field_j[8] = jk.a(13, var2);
             break L1298;
           }
         }
         L1299: {
-          var2 = ji.a(59, "itemstathints,10");
-          if (var2 != null) {
-            sl.field_j[10] = jk.a(13, var2);
+          var2 = ji.a(102, "itemstathints,9");
+          if (null == var2) {
             break L1299;
           } else {
+            sl.field_j[9] = jk.a(13, var2);
             break L1299;
           }
         }
         L1300: {
-          var2 = ji.a(113, "itemstathints,11");
-          if (var2 == null) {
+          var2 = ji.a(59, "itemstathints,10");
+          if (var2 != null) {
+            sl.field_j[10] = jk.a(13, var2);
             break L1300;
           } else {
-            sl.field_j[11] = jk.a(13, var2);
             break L1300;
           }
         }
         L1301: {
-          var2 = ji.a(72, "statnone");
-          if (var2 != null) {
-            ej.field_E = jk.a(13, var2);
+          var2 = ji.a(113, "itemstathints,11");
+          if (var2 == null) {
             break L1301;
           } else {
+            sl.field_j[11] = jk.a(param0 + 13, var2);
             break L1301;
           }
         }
         L1302: {
-          var2 = ji.a(53, "moduleslotnum");
+          var2 = ji.a(72, "statnone");
           if (var2 != null) {
-            al.field_e = jk.a(13, var2);
+            ej.field_E = jk.a(param0 ^ 13, var2);
             break L1302;
           } else {
             break L1302;
           }
         }
         L1303: {
-          var2 = ji.a(90, "defaultheadfor");
+          var2 = ji.a(53, "moduleslotnum");
           if (var2 != null) {
-            si.field_F = jk.a(13, var2);
+            al.field_e = jk.a(13, var2);
             break L1303;
           } else {
             break L1303;
           }
         }
         L1304: {
-          var2 = ji.a(117, "defaultarmfor");
-          if (null == var2) {
+          var2 = ji.a(param0 ^ 90, "defaultheadfor");
+          if (var2 != null) {
+            si.field_F = jk.a(13, var2);
             break L1304;
           } else {
-            nj.field_T = jk.a(13, var2);
             break L1304;
           }
         }
         L1305: {
-          var2 = ji.a(94, "defaultwingformany,0");
-          if (var2 != null) {
-            lj.field_g[0] = jk.a(13, var2);
+          var2 = ji.a(param0 ^ 117, "defaultarmfor");
+          if (null == var2) {
             break L1305;
           } else {
+            nj.field_T = jk.a(param0 ^ 13, var2);
             break L1305;
           }
         }
         L1306: {
-          var2 = ji.a(65, "defaultwingformany,1");
-          if (var2 == null) {
+          var2 = ji.a(94, "defaultwingformany,0");
+          if (var2 != null) {
+            lj.field_g[0] = jk.a(13, var2);
             break L1306;
           } else {
-            lj.field_g[1] = jk.a(bi.a(0, 13), var2);
             break L1306;
           }
         }
         L1307: {
-          var2 = ji.a(94, "defaultwingformany,2");
-          if (var2 != null) {
-            lj.field_g[2] = jk.a(13, var2);
+          var2 = ji.a(param0 + 65, "defaultwingformany,1");
+          if (var2 == null) {
             break L1307;
           } else {
+            lj.field_g[1] = jk.a(bi.a(param0, 13), var2);
             break L1307;
           }
         }
         L1308: {
-          var2 = ji.a(66, "defaultwingformany,3");
-          if (var2 == null) {
+          var2 = ji.a(94, "defaultwingformany,2");
+          if (var2 != null) {
+            lj.field_g[2] = jk.a(13, var2);
             break L1308;
           } else {
-            lj.field_g[3] = jk.a(13, var2);
             break L1308;
           }
         }
         L1309: {
-          var2 = ji.a(116, "defaultwingformany,4");
-          if (var2 != null) {
-            lj.field_g[4] = jk.a(13, var2);
+          var2 = ji.a(66, "defaultwingformany,3");
+          if (var2 == null) {
             break L1309;
           } else {
+            lj.field_g[3] = jk.a(13, var2);
             break L1309;
           }
         }
         L1310: {
-          var2 = ji.a(122, "ignoretxt");
-          if (var2 == null) {
+          var2 = ji.a(116, "defaultwingformany,4");
+          if (var2 != null) {
+            lj.field_g[4] = jk.a(13, var2);
             break L1310;
           } else {
-            ma.field_Z = jk.a(13, var2);
             break L1310;
           }
         }
         L1311: {
-          var2 = ji.a(118, "mission_num_status");
-          if (null == var2) {
+          var2 = ji.a(122, "ignoretxt");
+          if (var2 == null) {
             break L1311;
           } else {
-            v.field_f = jk.a(13, var2);
+            ma.field_Z = jk.a(13, var2);
             break L1311;
           }
         }
         L1312: {
-          var2 = ji.a(98, "training_mission_num_status");
+          var2 = ji.a(118, "mission_num_status");
           if (null == var2) {
             break L1312;
           } else {
-            ul.field_h = jk.a(13, var2);
+            v.field_f = jk.a(param0 + 13, var2);
             break L1312;
           }
         }
         L1313: {
-          var2 = ji.a(111, "missionstatustxt,0");
-          if (null != var2) {
-            gh.field_jb[0] = jk.a(13, var2);
+          var2 = ji.a(param0 + 98, "training_mission_num_status");
+          if (null == var2) {
             break L1313;
           } else {
+            ul.field_h = jk.a(param0 + 13, var2);
             break L1313;
           }
         }
         L1314: {
-          var2 = ji.a(110, "missionstatustxt,1");
-          if (var2 == null) {
+          var2 = ji.a(param0 + 111, "missionstatustxt,0");
+          if (null != var2) {
+            gh.field_jb[0] = jk.a(param0 + 13, var2);
             break L1314;
           } else {
-            gh.field_jb[1] = jk.a(13, var2);
             break L1314;
           }
         }
         L1315: {
-          var2 = ji.a(118, "missionstatustxt,2");
-          if (null != var2) {
-            gh.field_jb[2] = jk.a(13, var2);
+          var2 = ji.a(110, "missionstatustxt,1");
+          if (var2 == null) {
             break L1315;
           } else {
+            gh.field_jb[1] = jk.a(param0 + 13, var2);
             break L1315;
           }
         }
         L1316: {
-          var2 = ji.a(60, "missionstatustxt,3");
-          if (null == var2) {
+          var2 = ji.a(param0 + 118, "missionstatustxt,2");
+          if (null != var2) {
+            gh.field_jb[2] = jk.a(13, var2);
             break L1316;
           } else {
-            gh.field_jb[3] = jk.a(13, var2);
             break L1316;
           }
         }
         L1317: {
-          var2 = ji.a(124, "missionstatustxt,4");
-          if (var2 == null) {
+          var2 = ji.a(60, "missionstatustxt,3");
+          if (null == var2) {
             break L1317;
           } else {
-            gh.field_jb[4] = jk.a(13, var2);
+            gh.field_jb[3] = jk.a(13, var2);
             break L1317;
           }
         }
         L1318: {
-          var2 = ji.a(120, "missionstatustxt,5");
+          var2 = ji.a(124, "missionstatustxt,4");
           if (var2 == null) {
             break L1318;
           } else {
-            gh.field_jb[5] = jk.a(bi.a(0, 13), var2);
+            gh.field_jb[4] = jk.a(13, var2);
             break L1318;
           }
         }
         L1319: {
-          var2 = ji.a(113, "missionstatustxt,6");
-          if (null != var2) {
-            gh.field_jb[6] = jk.a(13, var2);
+          var2 = ji.a(120, "missionstatustxt,5");
+          if (var2 == null) {
             break L1319;
           } else {
+            gh.field_jb[5] = jk.a(bi.a(param0, 13), var2);
             break L1319;
           }
         }
         L1320: {
-          var2 = ji.a(119, "missiondesc");
-          if (var2 != null) {
-            oe.field_j = jk.a(13, var2);
+          var2 = ji.a(113, "missionstatustxt,6");
+          if (null != var2) {
+            gh.field_jb[6] = jk.a(13, var2);
             break L1320;
           } else {
             break L1320;
           }
         }
         L1321: {
-          var2 = ji.a(101, "pageMofN");
+          var2 = ji.a(119, "missiondesc");
           if (var2 != null) {
-            am.field_e = jk.a(13, var2);
+            oe.field_j = jk.a(13, var2);
             break L1321;
           } else {
             break L1321;
           }
         }
         L1322: {
-          var2 = ji.a(112, "RANK_TXT,0");
-          if (null == var2) {
+          var2 = ji.a(param0 ^ 101, "pageMofN");
+          if (var2 != null) {
+            am.field_e = jk.a(param0 + 13, var2);
             break L1322;
           } else {
-            qf.field_a[0] = jk.a(13, var2);
             break L1322;
           }
         }
         L1323: {
-          var2 = ji.a(71, "RANK_TXT,1");
-          if (null != var2) {
-            qf.field_a[1] = jk.a(13, var2);
+          var2 = ji.a(param0 + 112, "RANK_TXT,0");
+          if (null == var2) {
             break L1323;
           } else {
+            qf.field_a[0] = jk.a(13, var2);
             break L1323;
           }
         }
         L1324: {
-          var2 = ji.a(88, "RANK_TXT,2");
-          if (var2 == null) {
+          var2 = ji.a(71, "RANK_TXT,1");
+          if (null != var2) {
+            qf.field_a[1] = jk.a(13, var2);
             break L1324;
           } else {
-            qf.field_a[2] = jk.a(13, var2);
             break L1324;
           }
         }
         L1325: {
-          var2 = ji.a(71, "RANK_TXT,3");
-          if (null == var2) {
+          var2 = ji.a(88, "RANK_TXT,2");
+          if (var2 == null) {
             break L1325;
           } else {
-            qf.field_a[3] = jk.a(13, var2);
+            qf.field_a[2] = jk.a(13, var2);
             break L1325;
           }
         }
         L1326: {
-          var2 = ji.a(123, "RANK_TXT,4");
-          if (var2 != null) {
-            qf.field_a[4] = jk.a(13, var2);
+          var2 = ji.a(71, "RANK_TXT,3");
+          if (null == var2) {
             break L1326;
           } else {
+            qf.field_a[3] = jk.a(13, var2);
             break L1326;
           }
         }
         L1327: {
-          var2 = ji.a(116, "RANK_TXT,5");
-          if (null == var2) {
+          var2 = ji.a(123, "RANK_TXT,4");
+          if (var2 != null) {
+            qf.field_a[4] = jk.a(param0 + 13, var2);
             break L1327;
           } else {
-            qf.field_a[5] = jk.a(13, var2);
             break L1327;
           }
         }
         L1328: {
-          var2 = ji.a(124, "RANK_TXT,6");
-          if (null != var2) {
-            qf.field_a[6] = jk.a(13, var2);
+          var2 = ji.a(116, "RANK_TXT,5");
+          if (null == var2) {
             break L1328;
           } else {
+            qf.field_a[5] = jk.a(13, var2);
             break L1328;
           }
         }
         L1329: {
-          var2 = ji.a(115, "RANK_TXT,7");
-          if (var2 != null) {
-            qf.field_a[7] = jk.a(13, var2);
+          var2 = ji.a(124, "RANK_TXT,6");
+          if (null != var2) {
+            qf.field_a[6] = jk.a(13, var2);
             break L1329;
           } else {
             break L1329;
           }
         }
         L1330: {
-          var2 = ji.a(124, "RANK_TXT,8");
-          if (null == var2) {
+          var2 = ji.a(115, "RANK_TXT,7");
+          if (var2 != null) {
+            qf.field_a[7] = jk.a(13, var2);
             break L1330;
           } else {
-            qf.field_a[8] = jk.a(13, var2);
             break L1330;
           }
         }
         L1331: {
-          var2 = ji.a(58, "RANK_TXT,9");
-          if (var2 == null) {
+          var2 = ji.a(124, "RANK_TXT,8");
+          if (null == var2) {
             break L1331;
           } else {
-            qf.field_a[9] = jk.a(13, var2);
+            qf.field_a[8] = jk.a(13, var2);
             break L1331;
           }
         }
         L1332: {
-          var2 = ji.a(104, "RANK_TXT,10");
+          var2 = ji.a(58, "RANK_TXT,9");
           if (var2 == null) {
             break L1332;
           } else {
-            qf.field_a[10] = jk.a(13, var2);
+            qf.field_a[9] = jk.a(13, var2);
             break L1332;
           }
         }
         L1333: {
-          var2 = ji.a(66, "RANK_TXT,11");
-          if (var2 != null) {
-            qf.field_a[11] = jk.a(13, var2);
+          var2 = ji.a(param0 ^ 104, "RANK_TXT,10");
+          if (var2 == null) {
             break L1333;
           } else {
+            qf.field_a[10] = jk.a(13, var2);
             break L1333;
           }
         }
         L1334: {
-          var2 = ji.a(115, "endmissiontxt");
+          var2 = ji.a(66, "RANK_TXT,11");
           if (var2 != null) {
-            ec.field_f = jk.a(13, var2);
+            qf.field_a[11] = jk.a(param0 + 13, var2);
             break L1334;
           } else {
             break L1334;
           }
         }
         L1335: {
-          var2 = ji.a(102, "endtestfieldtxt");
-          if (null != var2) {
-            lb.field_fc = jk.a(13, var2);
+          var2 = ji.a(115, "endmissiontxt");
+          if (var2 != null) {
+            ec.field_f = jk.a(13, var2);
             break L1335;
           } else {
             break L1335;
           }
         }
         L1336: {
-          var2 = ji.a(99, "referencemanual");
-          if (var2 != null) {
-            kd.field_s = jk.a(13, var2);
+          var2 = ji.a(102, "endtestfieldtxt");
+          if (null != var2) {
+            lb.field_fc = jk.a(13, var2);
             break L1336;
           } else {
             break L1336;
           }
         }
         L1337: {
-          var2 = ji.a(87, "coophighscorestxt");
-          if (null == var2) {
+          var2 = ji.a(99, "referencemanual");
+          if (var2 != null) {
+            kd.field_s = jk.a(13, var2);
             break L1337;
           } else {
-            pa.field_j = jk.a(13, var2);
             break L1337;
           }
         }
-        sj.field_y = null;
         L1338: {
-          if (var3 == 0) {
+          var2 = ji.a(87, "coophighscorestxt");
+          if (null == var2) {
             break L1338;
           } else {
-            L1339: {
+            pa.field_j = jk.a(13, var2);
+            break L1338;
+          }
+        }
+        sj.field_y = null;
+        L1339: {
+          if (var3 == 0) {
+            break L1339;
+          } else {
+            L1340: {
               if (!lg.field_i) {
-                stackOut_3346_0 = 1;
-                stackIn_3347_0 = stackOut_3346_0;
-                break L1339;
+                stackOut_3347_0 = 1;
+                stackIn_3348_0 = stackOut_3347_0;
+                break L1340;
               } else {
-                stackOut_3345_0 = 0;
-                stackIn_3347_0 = stackOut_3345_0;
-                break L1339;
+                stackOut_3346_0 = 0;
+                stackIn_3348_0 = stackOut_3346_0;
+                break L1340;
               }
             }
-            lg.field_i = stackIn_3347_0 != 0;
-            break L1338;
+            lg.field_i = stackIn_3348_0 != 0;
+            break L1339;
           }
         }
     }
@@ -12646,9 +12649,17 @@ final class rc {
                         return stackIn_10_0 != 0;
                       }
                     }
-                    wl.field_db[1] = (byte)(param1 >> 8);
-                    wl.field_db[5] = (byte)var7_int;
-                    wl.field_db[4] = (byte)(var7_int >> 8);
+                    L4: {
+                      wl.field_db[1] = (byte)(param1 >> 8);
+                      wl.field_db[5] = (byte)var7_int;
+                      wl.field_db[4] = (byte)(var7_int >> 8);
+                      if (param0) {
+                        break L4;
+                      } else {
+                        byte[] discarded$1 = ((rc) this).b(-30, true);
+                        break L4;
+                      }
+                    }
                     wl.field_db[0] = (byte)(param1 >> 16);
                     wl.field_db[3] = (byte)(var7_int >> 16);
                     wl.field_db[2] = (byte)param1;
@@ -12656,43 +12667,43 @@ final class rc {
                     ((rc) this).field_c.a(0, 6, 38, wl.field_db);
                     var8 = 0;
                     var9 = 0;
-                    L4: while (true) {
-                      L5: {
-                        L6: {
+                    L5: while (true) {
+                      L6: {
+                        L7: {
                           if (param1 <= var8) {
-                            break L6;
+                            break L7;
                           } else {
                             var10 = 0;
                             stackOut_25_0 = param2;
                             stackIn_80_0 = stackOut_25_0 ? 1 : 0;
                             stackIn_26_0 = stackOut_25_0;
                             if (var16 != 0) {
-                              break L5;
+                              break L6;
                             } else {
-                              L7: {
+                              L8: {
                                 if (stackIn_26_0) {
-                                  L8: {
-                                    L9: {
+                                  L9: {
+                                    L10: {
                                       ((rc) this).field_h.a(-111, (long)(520 * var7_int));
                                       if (param4 > 65535) {
-                                        break L9;
+                                        break L10;
                                       } else {
                                         try {
-                                          L10: {
+                                          L11: {
                                             ((rc) this).field_h.a((byte) 115, wl.field_db, 8, 0);
                                             decompiledRegionSelector0 = 0;
-                                            break L10;
+                                            break L11;
                                           }
                                         } catch (java.lang.Exception decompiledCaughtParameter0) {
                                           decompiledCaughtException = decompiledCaughtParameter0;
-                                          L11: {
+                                          L12: {
                                             var14 = (EOFException) (Object) decompiledCaughtException;
                                             if (var16 == 0) {
                                               decompiledRegionSelector0 = 1;
-                                              break L11;
+                                              break L12;
                                             } else {
                                               decompiledRegionSelector0 = 0;
-                                              break L11;
+                                              break L12;
                                             }
                                           }
                                         }
@@ -12702,31 +12713,31 @@ final class rc {
                                           var12 = ((255 & wl.field_db[2]) << 8) + (wl.field_db[3] & 255);
                                           var10 = ((255 & wl.field_db[5]) << 8) + ((16711680 & wl.field_db[4] << 16) + (255 & wl.field_db[6]));
                                           if (var16 == 0) {
-                                            break L8;
-                                          } else {
                                             break L9;
+                                          } else {
+                                            break L10;
                                           }
                                         } else {
-                                          break L6;
+                                          break L7;
                                         }
                                       }
                                     }
                                     try {
-                                      L12: {
+                                      L13: {
                                         ((rc) this).field_h.a((byte) 115, wl.field_db, 10, 0);
                                         decompiledRegionSelector1 = 0;
-                                        break L12;
+                                        break L13;
                                       }
                                     } catch (java.lang.Exception decompiledCaughtParameter1) {
                                       decompiledCaughtException = decompiledCaughtParameter1;
-                                      L13: {
+                                      L14: {
                                         var14 = (EOFException) (Object) decompiledCaughtException;
                                         if (var16 == 0) {
                                           decompiledRegionSelector1 = 1;
-                                          break L13;
+                                          break L14;
                                         } else {
                                           decompiledRegionSelector1 = 0;
-                                          break L13;
+                                          break L14;
                                         }
                                       }
                                     }
@@ -12735,27 +12746,27 @@ final class rc {
                                       var12 = (65280 & wl.field_db[4] << 8) + (wl.field_db[5] & 255);
                                       var13 = 255 & wl.field_db[9];
                                       var10 = (wl.field_db[8] & 255) + ((wl.field_db[7] & 255) << 8) + ((wl.field_db[6] & 255) << 16);
-                                      break L8;
+                                      break L9;
                                     } else {
-                                      break L6;
+                                      break L7;
                                     }
                                   }
-                                  L14: {
+                                  L15: {
                                     if (~param4 != ~var11) {
-                                      break L14;
+                                      break L15;
                                     } else {
                                       if (~var9 != ~var12) {
-                                        break L14;
+                                        break L15;
                                       } else {
                                         if (~((rc) this).field_e == ~var13) {
-                                          L15: {
+                                          L16: {
                                             if (var10 < 0) {
-                                              break L15;
+                                              break L16;
                                             } else {
                                               if (~(((rc) this).field_h.a((byte) 113) / 520L) <= ~(long)var10) {
-                                                break L7;
+                                                break L8;
                                               } else {
-                                                break L15;
+                                                break L16;
                                               }
                                             }
                                           }
@@ -12765,7 +12776,7 @@ final class rc {
                                           stackIn_57_0 = stackOut_56_0;
                                           return stackIn_57_0 != 0;
                                         } else {
-                                          break L14;
+                                          break L15;
                                         }
                                       }
                                     }
@@ -12776,45 +12787,45 @@ final class rc {
                                   stackIn_50_0 = stackOut_49_0;
                                   return stackIn_50_0 != 0;
                                 } else {
-                                  break L7;
+                                  break L8;
                                 }
                               }
-                              L16: {
+                              L17: {
                                 if (0 != var10) {
-                                  break L16;
+                                  break L17;
                                 } else {
-                                  L17: {
+                                  L18: {
                                     var10 = (int)((519L + ((rc) this).field_h.a((byte) 97)) / 520L);
                                     param2 = false;
                                     if (var10 == 0) {
                                       var10++;
-                                      break L17;
+                                      break L18;
                                     } else {
-                                      break L17;
+                                      break L18;
                                     }
                                   }
                                   if (var10 != var7_int) {
-                                    break L16;
+                                    break L17;
                                   } else {
                                     var10++;
-                                    break L16;
+                                    break L17;
                                   }
                                 }
                               }
-                              L18: {
+                              L19: {
                                 if (param1 - var8 > 512) {
-                                  break L18;
+                                  break L19;
                                 } else {
                                   var10 = 0;
-                                  break L18;
+                                  break L19;
                                 }
                               }
-                              L19: {
-                                L20: {
+                              L20: {
+                                L21: {
                                   if (65535 < param4) {
-                                    break L20;
+                                    break L21;
                                   } else {
-                                    L21: {
+                                    L22: {
                                       wl.field_db[0] = (byte)(param4 >> 8);
                                       wl.field_db[2] = (byte)(var9 >> 8);
                                       wl.field_db[6] = (byte)var10;
@@ -12827,22 +12838,22 @@ final class rc {
                                       ((rc) this).field_h.a(0, 8, 48, wl.field_db);
                                       var11 = -var8 + param1;
                                       if (512 >= var11) {
-                                        break L21;
+                                        break L22;
                                       } else {
                                         var11 = 512;
-                                        break L21;
+                                        break L22;
                                       }
                                     }
                                     ((rc) this).field_h.a(var8, var11, 112, param3);
                                     var8 = var8 + var11;
                                     if (var16 == 0) {
-                                      break L19;
-                                    } else {
                                       break L20;
+                                    } else {
+                                      break L21;
                                     }
                                   }
                                 }
-                                L22: {
+                                L23: {
                                   wl.field_db[0] = (byte)(param4 >> 24);
                                   wl.field_db[4] = (byte)(var9 >> 8);
                                   wl.field_db[2] = (byte)(param4 >> 8);
@@ -12858,21 +12869,21 @@ final class rc {
                                   var11 = param1 - var8;
                                   if (510 < var11) {
                                     var11 = 510;
-                                    break L22;
+                                    break L23;
                                   } else {
-                                    break L22;
+                                    break L23;
                                   }
                                 }
                                 ((rc) this).field_h.a(var8, var11, 110, param3);
                                 var8 = var8 + var11;
-                                break L19;
+                                break L20;
                               }
                               var7_int = var10;
                               var9++;
                               if (var16 == 0) {
-                                continue L4;
+                                continue L5;
                               } else {
-                                break L6;
+                                break L7;
                               }
                             }
                           }
@@ -12881,7 +12892,7 @@ final class rc {
                         stackIn_79_0 = stackOut_78_0;
                         stackOut_79_0 = stackIn_79_0;
                         stackIn_80_0 = stackOut_79_0;
-                        break L5;
+                        break L6;
                       }
                       break L0;
                     }
@@ -12897,10 +12908,10 @@ final class rc {
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
-              L23: {
+              L24: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_85_0 = (RuntimeException) var6_ref;
-                stackOut_85_1 = new StringBuilder().append("rc.G(").append(true).append(',').append(param1).append(',').append(param2).append(',');
+                stackOut_85_1 = new StringBuilder().append("rc.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
                 stackIn_88_0 = stackOut_85_0;
                 stackIn_88_1 = stackOut_85_1;
                 stackIn_86_0 = stackOut_85_0;
@@ -12912,7 +12923,7 @@ final class rc {
                   stackIn_89_0 = stackOut_88_0;
                   stackIn_89_1 = stackOut_88_1;
                   stackIn_89_2 = stackOut_88_2;
-                  break L23;
+                  break L24;
                 } else {
                   stackOut_86_0 = (RuntimeException) (Object) stackIn_86_0;
                   stackOut_86_1 = (StringBuilder) (Object) stackIn_86_1;
@@ -12920,7 +12931,7 @@ final class rc {
                   stackIn_89_0 = stackOut_86_0;
                   stackIn_89_1 = stackOut_86_1;
                   stackIn_89_2 = stackOut_86_2;
-                  break L23;
+                  break L24;
                 }
               }
               throw ci.a((Throwable) (Object) stackIn_89_0, stackIn_89_2 + ',' + param4 + ')');
@@ -13104,7 +13115,7 @@ final class rc {
                 break L1;
               }
             }
-            var6_int = param0;
+            var6_int = -param2 + param0;
             var7 = 0;
             L2: while (true) {
               L3: {
@@ -13112,7 +13123,7 @@ final class rc {
                   if (~var6_int >= ~var7) {
                     break L4;
                   } else {
-                    var8 = param1.charAt(var7);
+                    var8 = param1.charAt(param2 + var7);
                     stackOut_6_0 = 0;
                     stackIn_188_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
@@ -13523,7 +13534,7 @@ final class rc {
           }
           L37: {
             stackOut_193_0 = (RuntimeException) (Object) stackIn_193_0;
-            stackOut_193_1 = ((StringBuilder) (Object) stackIn_193_1).append(stackIn_193_2).append(',').append(0).append(',').append(param3).append(',');
+            stackOut_193_1 = ((StringBuilder) (Object) stackIn_193_1).append(stackIn_193_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_196_0 = stackOut_193_0;
             stackIn_196_1 = stackOut_193_1;
             stackIn_194_0 = stackOut_193_0;

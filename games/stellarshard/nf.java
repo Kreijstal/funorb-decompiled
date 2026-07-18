@@ -18,13 +18,13 @@ final class nf extends gg {
         field_o = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         mk var3_ref_mk = null;
         int var3 = 0;
-        le var4 = null;
         int var4_int = 0;
+        le var4 = null;
         Object var5 = null;
         int var6 = 0;
         ha var9 = null;
@@ -38,8 +38,7 @@ final class nf extends gg {
             if (0 != var2) {
               if (var2 != 1) {
                 qe.a(-111, "A1: " + bh.b((byte) -127), (Throwable) null);
-                int discarded$4 = -2290;
-                oj.c();
+                oj.c(-2290);
                 break L0;
               } else {
                 var3 = var9.b(false);
@@ -61,8 +60,7 @@ final class nf extends gg {
                     var4.c(20);
                     return;
                   } else {
-                    int discarded$5 = -2290;
-                    oj.c();
+                    oj.c(-2290);
                     return;
                   }
                 }
@@ -70,8 +68,7 @@ final class nf extends gg {
             } else {
               var3_ref_mk = (mk) (Object) gg.field_b.b(-96);
               if (var3_ref_mk == null) {
-                int discarded$6 = -2290;
-                oj.c();
+                oj.c(-2290);
                 return;
               } else {
                 L3: {
@@ -90,8 +87,7 @@ final class nf extends gg {
                   var3_ref_mk.c(20);
                   return;
                 } else {
-                  int discarded$7 = -2290;
-                  oj.c();
+                  oj.c(-2290);
                   return;
                 }
               }

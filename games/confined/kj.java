@@ -21,7 +21,7 @@ final class kj {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         if (gg.field_m == null) {
             return false;
         }
@@ -31,7 +31,7 @@ final class kj {
         return true;
     }
 
-    final static bm[] a(mi param0, int param1, int param2) {
+    final static bm[] a(mi param0, int param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

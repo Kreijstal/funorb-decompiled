@@ -7,14 +7,14 @@ final class rp {
     static String field_a;
     static String field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
         field_a = null;
         field_c = null;
     }
 
-    final static void a(vh param0, vh param1) {
+    final static void a(vh param0, vh param1, int param2) {
         try {
             if (!(null != param0.field_T)) {
                 param0.field_T = new ko();

@@ -14,7 +14,7 @@ final class fe extends rh {
     int field_K;
     int field_O;
 
-    final static void a(bh param0) {
+    final static void a(bh param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -69,7 +69,7 @@ final class fe extends rh {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_J = null;
     }
 

@@ -14,7 +14,7 @@ final class wg extends le {
     static byte[][][] field_j;
     int field_k;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 2;
         field_l = null;
         field_o = null;
@@ -41,8 +41,7 @@ final class wg extends le {
         String stackOut_5_2 = null;
         try {
           if (ph.a(param3, 31043, param0, param1)) {
-            int discarded$2 = 1;
-            return fe.b();
+            return fe.b(true);
           } else {
             return null;
           }

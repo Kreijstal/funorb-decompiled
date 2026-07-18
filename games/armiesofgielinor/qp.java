@@ -73,7 +73,7 @@ final class qp extends dr {
         return stackIn_3_0;
     }
 
-    final static int e() {
+    final static int e(byte param0) {
         return nm.field_z;
     }
 

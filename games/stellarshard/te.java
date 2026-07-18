@@ -16,7 +16,7 @@ final class te {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, pb param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, pb param6, int param7, byte param8) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;
@@ -96,7 +96,7 @@ final class te {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, pb param4) {
+    final static void a(int param0, int param1, int param2, int param3, pb param4, int param5, int param6, int param7, int param8) {
         try {
             vh.field_i = 129;
             i.field_a = 134;

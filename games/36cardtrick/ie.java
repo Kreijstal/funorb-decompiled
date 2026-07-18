@@ -11,30 +11,13 @@ abstract class ie extends he {
     int field_n;
 
     final static boolean b(byte param0) {
-        int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        if (cd.field_e >= 10) {
-          if (vg.field_d) {
+        if (cd.field_e < 10) {
             return false;
-          } else {
-            L0: {
-              int discarded$6 = 7;
-              if (g.j()) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
-                break L0;
-              } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                break L0;
-              }
-            }
-            return stackIn_6_0 != 0;
-          }
-        } else {
-          return false;
         }
+        if (vg.field_d) {
+            return false;
+        }
+        return !g.j(7) ? true : false;
     }
 
     public static void e(int param0) {
@@ -120,7 +103,7 @@ abstract class ie extends he {
         return stackIn_1_0;
     }
 
-    final static void f() {
+    final static void f(int param0) {
     }
 
     ie() {

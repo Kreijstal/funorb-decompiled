@@ -6,7 +6,7 @@ final class sja extends uda {
     static pf field_fb;
     static long field_hb;
 
-    final static void a(int param0, mha param1) {
+    final static void a(int param0, mha param1, boolean param2) {
         pf var3 = field_fb;
         var3.c(param0, (byte) 122);
         try {

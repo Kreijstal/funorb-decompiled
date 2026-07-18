@@ -58,8 +58,7 @@ final class eq extends nv {
                 if (!fia.field_j.startsWith("win")) {
                   break L0;
                 } else {
-                  int discarded$8 = -127;
-                  if (qla.a(param2)) {
+                  if (qla.a(param2, -127)) {
                     return;
                   } else {
                     break L0;
@@ -303,7 +302,7 @@ final class eq extends nv {
         return stackIn_7_0 != 0;
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         if (vpa.a(79)) {
             return false;
         }

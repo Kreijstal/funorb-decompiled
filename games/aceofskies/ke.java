@@ -103,8 +103,7 @@ final class ke {
               L2: while (true) {
                 if (var3.field_a != 0) {
                   if (var3.field_a != 1) {
-                    int discarded$10 = 0;
-                    wf.a(100L);
+                    wf.a(100L, false);
                     continue L1;
                   } else {
                     param2.setVisible(false);
@@ -118,8 +117,7 @@ final class ke {
                     }
                   }
                 } else {
-                  int discarded$11 = 0;
-                  wf.a(10L);
+                  wf.a(10L, false);
                   continue L2;
                 }
               }

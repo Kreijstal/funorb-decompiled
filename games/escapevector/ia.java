@@ -54,8 +54,7 @@ final class ia {
             ((ia) this).field_r[var6] = (short)(((ia) this).field_r[var6] * param2 / param1);
             ((ia) this).field_J[var6] = (short)(((ia) this).field_J[var6] * param0 / param1);
         }
-        int discarded$0 = 77;
-        this.b();
+        this.b((byte) 77);
         var6 = -28 % ((64 - param4) / 54);
     }
 
@@ -153,11 +152,11 @@ final class ia {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         ((ia) this).field_B = false;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_z = null;
         field_y = null;
         field_p = null;
@@ -171,8 +170,7 @@ final class ia {
             ((ia) this).field_r[var5] = (short)(((ia) this).field_r[var5] + param3);
             ((ia) this).field_J[var5] = (short)(((ia) this).field_J[var5] + param0);
         }
-        int discarded$0 = 77;
-        this.b();
+        this.b((byte) 77);
     }
 
     ia() {

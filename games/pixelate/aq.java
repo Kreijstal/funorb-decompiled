@@ -9,7 +9,7 @@ final class aq {
     static String field_c;
     static String field_b;
 
-    final static String a(String param0, int param1, String param2) {
+    final static String a(String param0, int param1, String param2, int param3) {
         RuntimeException var4 = null;
         pc var5 = null;
         int var6 = 0;
@@ -318,7 +318,7 @@ final class aq {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         int var1 = 17;
@@ -337,7 +337,7 @@ final class aq {
         }
     }
 
-    final static boolean a(char param0, CharSequence param1) {
+    final static boolean a(char param0, CharSequence param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;

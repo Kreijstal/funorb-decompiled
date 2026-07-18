@@ -35,8 +35,7 @@ final class mj {
         String stackOut_15_2 = null;
         var5 = StarCannon.field_A;
         try {
-          int discarded$2 = -81;
-          var3 = md.a(false, param2);
+          var3 = md.a(false, param2, (byte) -81);
           if (var3 == null) {
             var4 = 0;
             L0: while (true) {
@@ -101,7 +100,7 @@ final class mj {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_b = null;
     }

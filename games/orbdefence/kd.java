@@ -563,20 +563,19 @@ final class kd {
 
     private final int a(int param0, byte param1) {
         if (param1 <= 38) {
-            int discarded$0 = 0;
-            jc discarded$1 = kd.a();
+            jc discarded$0 = kd.a(false);
         }
         return m.field_d[((kd) this).field_o[param0]] - -(!((kd) this).field_e[param0] ? 0 : 25000) - -((((kd) this).field_v[param0] + ((kd) this).field_g[param0]) * ((kd) this).field_n);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = -87;
         field_q = null;
         field_f = null;
         field_b = null;
     }
 
-    final static jc a() {
+    final static jc a(boolean param0) {
         if (!(null != ve.field_O)) {
             ve.field_O = new jc(pc.field_bb, 20, 0, 0, 0, 11579568, -1, 0, 0, pc.field_bb.field_H, -1, 2147483647, true);
         }

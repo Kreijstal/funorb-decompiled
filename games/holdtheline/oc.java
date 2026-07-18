@@ -150,7 +150,7 @@ final class oc {
         return stackIn_1_0;
     }
 
-    final static ef a(int param0, int param1, int param2, int param3, ib param4) {
+    final static ef a(int param0, int param1, int param2, int param3, ib param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         ef var7 = null;
@@ -176,14 +176,13 @@ final class oc {
         String stackOut_6_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            var9 = mk.a(2, 640, 0, 480, param4);
+            var9 = mk.a(2, 640, 0, 480, param4, 0);
             var6 = var9;
             if (var9 != null) {
               var8 = 0;
               var7 = new ef();
               var7.field_f = var9;
-              java.awt.Component discarded$5 = var7.field_f.add((java.awt.Component) (Object) var7);
+              java.awt.Component discarded$2 = var7.field_f.add((java.awt.Component) (Object) var7);
               var7.setBounds(0, 0, 640, 480);
               var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
               var7.requestFocus();

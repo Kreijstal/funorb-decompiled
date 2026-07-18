@@ -6,13 +6,13 @@ final class id {
     static lc[] field_b;
     static dm[] field_c;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_c = null;
         field_b = null;
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         tl var1 = (tl) (Object) n.field_l.e(1);
         if (!(var1 != null)) {
             throw new IllegalStateException();

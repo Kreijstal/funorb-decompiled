@@ -380,8 +380,7 @@ final class ad extends uc {
             he.field_a = new sb(param0);
             gh.field_t = param3;
             we.field_n = param1;
-            int discarded$1 = -126;
-            bb.h();
+            bb.h(-126);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "ad.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

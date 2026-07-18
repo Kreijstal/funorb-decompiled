@@ -72,23 +72,19 @@ final class ul {
         return stackIn_4_0;
     }
 
-    public static void a() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void a(int param0) {
+        field_s = null;
+        field_M = null;
+        field_j = null;
+        field_y = null;
+        field_v = null;
+        if (param0 != 4) {
+            return;
+        }
         try {
-          L0: {
-            field_s = null;
-            field_M = null;
-            field_j = null;
-            field_y = null;
-            field_v = null;
             field_k = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "ul.A(" + 4 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "ul.A(" + param0 + ')');
         }
     }
 
@@ -273,7 +269,7 @@ final class ul {
             nf.field_A = param2;
             wd.field_c[2] = 9474303;
             wd.field_c[1] = 6356832;
-            hm.field_c = true;
+            hm.field_c = param5;
             wd.field_c[0] = 16764000;
             wd.field_c[4] = 16711935;
             an.field_h[0] = 16764000;
@@ -294,7 +290,7 @@ final class ul {
             var16[4] = var12_ref;
             n.field_g = new kc(0L, param0);
             lj.field_t = new kc(0L, param4);
-            n.field_g.a(lj.field_t, 16);
+            n.field_g.a(lj.field_t, param8 ^ 27890);
             var17 = new kc(0L, (kc) null);
             var17.field_G = new vn();
             qo.field_f = new dn(0L, var17, param1, param11);
@@ -382,7 +378,7 @@ final class ul {
                         ia.field_b[var18].field_gb = 1;
                         oc.field_f[var18] = new kc(0L, nf.field_A);
                         oc.field_f[var18].field_gb = 1;
-                        mn.field_s[var18].a(ta.field_i[var18], 97);
+                        mn.field_s[var18].a(ta.field_i[var18], param8 + -27777);
                         mn.field_s[var18].a(ia.field_b[var18], 81);
                         mn.field_s[var18].a(oc.field_f[var18], 102);
                         mn.field_s[var18].e((byte) 20);
@@ -417,7 +413,7 @@ final class ul {
                   ln.field_U = new cn(0, 0, 0, 0);
                   break L9;
                 }
-                stackOut_34_0 = 27874;
+                stackOut_34_0 = param8;
                 stackOut_34_1 = 27874;
                 stackIn_35_0 = stackOut_34_0;
                 stackIn_35_1 = stackOut_34_1;
@@ -564,7 +560,7 @@ final class ul {
           }
           L17: {
             stackOut_59_0 = (RuntimeException) (Object) stackIn_59_0;
-            stackOut_59_1 = ((StringBuilder) (Object) stackIn_59_1).append(stackIn_59_2).append(',').append(true).append(',');
+            stackOut_59_1 = ((StringBuilder) (Object) stackIn_59_1).append(stackIn_59_2).append(',').append(param5).append(',');
             stackIn_62_0 = stackOut_59_0;
             stackIn_62_1 = stackOut_59_1;
             stackIn_60_0 = stackOut_59_0;
@@ -614,7 +610,7 @@ final class ul {
           }
           L19: {
             stackOut_67_0 = (RuntimeException) (Object) stackIn_67_0;
-            stackOut_67_1 = ((StringBuilder) (Object) stackIn_67_1).append(stackIn_67_2).append(',').append(27874).append(',');
+            stackOut_67_1 = ((StringBuilder) (Object) stackIn_67_1).append(stackIn_67_2).append(',').append(param8).append(',');
             stackIn_70_0 = stackOut_67_0;
             stackIn_70_1 = stackOut_67_1;
             stackIn_68_0 = stackOut_67_0;

@@ -6,7 +6,7 @@ final class gk {
     static int[] field_a;
     static cr field_c;
 
-    final static er[] a(r param0, String param1, String param2) {
+    final static er[] a(r param0, String param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -62,8 +62,7 @@ final class gk {
           L0: {
             var4_int = param0.a((byte) 114, param1);
             var5 = param0.a(var4_int, param2, 106);
-            int discarded$2 = 13416;
-            stackOut_2_0 = nl.a(var5, var4_int, param0);
+            stackOut_2_0 = nl.a(var5, var4_int, param0, 13416);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -150,7 +149,7 @@ final class gk {
         return stackIn_3_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_a = null;
         field_b = null;

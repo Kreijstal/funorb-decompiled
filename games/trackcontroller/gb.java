@@ -26,9 +26,7 @@ class gb extends fc {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    int discarded$8 = 0;
-                    int discarded$9 = 6;
-                    cj.a();
+                    cj.a(6, false);
                     var2 = ne.field_b.a(10);
                     continue L2;
                   }

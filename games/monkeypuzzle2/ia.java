@@ -267,7 +267,7 @@ final class ia extends al {
         ((ia) this).field_e = java.net.ProxySelector.getDefault();
     }
 
-    private final java.net.Socket a(String param0, String param1, int param2) throws IOException {
+    private final java.net.Socket a(String param0, String param1, int param2, int param3) throws IOException {
         RuntimeException var5 = null;
         OutputStream var6 = null;
         BufferedReader var7 = null;
@@ -465,7 +465,7 @@ final class ia extends al {
         return (java.net.Socket) (Object) stackIn_29_0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_d = null;
         field_g = null;
         int var1 = 83;
@@ -558,8 +558,7 @@ final class ia extends al {
                       break L3;
                     }
                   }
-                  int discarded$1 = 56;
-                  stackOut_18_0 = this.a((String) var6, var4_ref.getHostName(), var4_ref.getPort());
+                  stackOut_18_0 = this.a((String) var6, var4_ref.getHostName(), var4_ref.getPort(), 56);
                   stackIn_19_0 = stackOut_18_0;
                   break L0;
                 } else {

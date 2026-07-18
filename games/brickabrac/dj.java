@@ -94,7 +94,7 @@ abstract class dj {
         return i.field_j == 11 ? true : false;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_f = null;
         field_c = null;
@@ -327,7 +327,7 @@ abstract class dj {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         kd.field_d = new String[rg.field_a];
         kd.field_d[18] = ta.field_c;
         kd.field_d[4] = fd.field_a;

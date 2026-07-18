@@ -154,7 +154,7 @@ final class qb {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         field_e = null;
@@ -184,7 +184,7 @@ final class qb {
         return true;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         ja var3 = null;
@@ -232,8 +232,7 @@ final class qb {
                     var6_int = 1;
                     L4: while (true) {
                       if (var6_int >= var4) {
-                        int discarded$1 = 0;
-                        le.a(var4, var5);
+                        le.a(var4, var5, false);
                         var6_int = 0;
                         L5: while (true) {
                           if (var6_int >= var4) {

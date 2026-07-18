@@ -209,7 +209,7 @@ final class ij extends de {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_o = null;
         field_r = null;
         field_q = null;

@@ -7,7 +7,7 @@ final class gi {
     static String[] field_c;
     static String field_a;
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         return du.field_d == mh.field_b;
     }
 

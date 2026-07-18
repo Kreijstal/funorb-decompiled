@@ -137,8 +137,7 @@ final class ni extends ei {
               }
             }
             L2: {
-              int discarded$8 = -3303;
-              if (bc.a(param1) != null) {
+              if (bc.a(param1, -3303) != null) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;

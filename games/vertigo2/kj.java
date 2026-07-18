@@ -9,7 +9,7 @@ final class kj extends ji {
     static boolean field_C;
     static String field_A;
 
-    final static void g() {
+    final static void g(int param0) {
     }
 
     final int[][] b(int param0, int param1) {
@@ -169,7 +169,7 @@ final class kj extends ji {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = -1;
         field_A = null;
     }

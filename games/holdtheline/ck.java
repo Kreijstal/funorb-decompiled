@@ -203,7 +203,7 @@ final class ck extends hl {
         return stackIn_14_0 != 0;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         int var1 = 0;
         return ff.field_b;
     }
@@ -219,15 +219,10 @@ final class ck extends hl {
     final static void a(byte param0, java.awt.Canvas param1) {
         try {
             if (bk.field_w == 11) {
-                int discarded$0 = 0;
-                nn.a();
+                nn.a(false);
             }
-            int discarded$1 = -115;
-            sj.a(de.field_K, aa.field_m, nj.field_e);
-            int discarded$2 = 0;
-            int discarded$3 = 1;
-            int discarded$4 = 0;
-            hi.a(param1);
+            sj.a(de.field_K, aa.field_m, nj.field_e, -115);
+            hi.a(param1, 0, true, 0);
         } catch (RuntimeException runtimeException) {
             throw kk.a((Throwable) (Object) runtimeException, "ck.A(" + -97 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

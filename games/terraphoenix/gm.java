@@ -17,7 +17,7 @@ final class gm {
     int field_b;
     private static String field_z;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_j = null;
         field_l = null;

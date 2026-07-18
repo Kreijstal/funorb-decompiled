@@ -8,14 +8,13 @@ final class uj {
     static jb field_b;
     static rd field_c;
 
-    final static String a() {
+    final static String a(int param0) {
         String var1 = "";
         if (!(ra.field_y == null)) {
             var1 = ra.field_y.d(true);
         }
         if (var1.length() == 0) {
-            int discarded$0 = -579139480;
-            var1 = li.d();
+            var1 = li.d(-579139480);
         }
         if (0 == var1.length()) {
             var1 = ib.field_b;

@@ -16,7 +16,7 @@ final class pj extends cb {
         return false;
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         hg var3 = null;
@@ -89,8 +89,7 @@ final class pj extends cb {
                                       var20[1][var15 * 4 + 1] = kk.field_b[var11];
                                       var20[1][4 * var15 - -2] = hg.field_q[var11];
                                       var20[1][3 + 4 * var15] = vh.field_i[var11];
-                                      int discarded$2 = 7;
-                                      if (!ng.a(hm.field_c[var11])) {
+                                      if (!ng.a(hm.field_c[var11], (byte) 7)) {
                                         break L8;
                                       } else {
                                         if (0 != vh.field_i[var11] + (hg.field_q[var11] + kk.field_b[var11])) {
@@ -118,8 +117,7 @@ final class pj extends cb {
                                   var20[0][1 + var10 * 4] = kk.field_b[var11];
                                   var20[0][4 * var10 + 2] = hg.field_q[var11];
                                   var20[0][4 * var10 + 3] = vh.field_i[var11];
-                                  int discarded$3 = 7;
-                                  if (ng.a(hm.field_c[var11])) {
+                                  if (ng.a(hm.field_c[var11], (byte) 7)) {
                                     if (kk.field_b[var11] - -hg.field_q[var11] + vh.field_i[var11] == 0) {
                                       var6[0][var10] = null;
                                       var10--;
@@ -185,7 +183,7 @@ final class pj extends cb {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_y = null;
         field_z = null;
         field_x = null;
@@ -245,7 +243,7 @@ final class pj extends cb {
         }
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;

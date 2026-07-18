@@ -78,7 +78,7 @@ final class bta extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         ksa var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -95,9 +95,7 @@ final class bta extends rqa {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    int discarded$8 = 4;
-                    int discarded$9 = -105;
-                    uaa.b();
+                    uaa.b(-105, 4);
                     var2 = klb.field_q.a((byte) 9);
                     continue L2;
                   }
@@ -116,7 +114,7 @@ final class bta extends rqa {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_r = null;
         field_o = null;
     }

@@ -142,7 +142,7 @@ final class dn extends ma {
         return stackIn_8_0;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         wf.field_c = null;
         cl.field_c = null;
     }

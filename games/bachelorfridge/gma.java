@@ -10,7 +10,7 @@ final class gma {
     boolean field_a;
     static int[][] field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_c = null;
     }
@@ -23,7 +23,7 @@ final class gma {
         uv.a(false, hla.field_r, false);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         try {
             Exception var1 = null;
             Throwable decompiledCaughtException = null;
@@ -53,7 +53,7 @@ final class gma {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, boolean param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

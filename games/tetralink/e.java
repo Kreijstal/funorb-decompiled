@@ -9,7 +9,7 @@ final class e {
     static wf field_c;
     static oh field_f;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
         field_b = null;
         field_f = null;

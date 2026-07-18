@@ -15,7 +15,7 @@ final class ki {
         var2.a(-11, 2);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_e = null;
     }

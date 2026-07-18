@@ -83,7 +83,7 @@ final class qc extends aa {
         }
     }
 
-    public static void n() {
+    public static void n(int param0) {
         field_ab = null;
         field_cb = null;
         field_db = null;

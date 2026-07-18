@@ -46,7 +46,7 @@ final class rj extends sp {
         }
     }
 
-    private final int a(lf param0) {
+    private final int a(lf param0, byte param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -312,8 +312,7 @@ final class rj extends sp {
                 ((rj) this).a(stackIn_19_1, stackIn_19_2, stackIn_19_3 != 0);
                 break L3;
               } else {
-                int discarded$1 = -111;
-                var7.field_E = fn.a(var6, this.a(-20165, var7), this.a(var7), this.a(var7, true));
+                var7.field_E = fn.a(var6, this.a(-20165, var7), this.a(var7, (byte) -111), this.a(var7, true));
                 break L3;
               }
             }
@@ -868,8 +867,7 @@ final class rj extends sp {
                   if (var11 != null) {
                     break L4;
                   } else {
-                    int discarded$1 = 0;
-                    var11 = vk.a(param2, var10);
+                    var11 = vk.a(param2, var10, 0);
                     if (var11 != null) {
                       ((rj) this).field_A.a(-106, (long)var10, (le) (Object) var11);
                       break L4;
@@ -2016,8 +2014,7 @@ final class rj extends sp {
               }
             }
             if (var8 == 0) {
-              int discarded$1 = -111;
-              param2.field_E.a(param2.field_r, this.a(param2), this.a(param2, true));
+              param2.field_E.a(param2.field_r, this.a(param2, (byte) -111), this.a(param2, true));
               stackOut_65_0 = 0;
               stackIn_66_0 = stackOut_65_0;
               break L0;

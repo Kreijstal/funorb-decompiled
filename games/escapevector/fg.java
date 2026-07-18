@@ -13,7 +13,7 @@ final class fg {
         return var4 * var5 + param2 * var3 - -(var6 * var4 >> 16);
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         int var1 = mm.a(4, 5) ? 1 : 0;
         sl.field_b[6][0] = uj.field_a;
         return var1 != 0;
@@ -30,11 +30,11 @@ final class fg {
         return var1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         String[] var2 = null;
         int var3_int = 0;
         String var4 = null;
@@ -53,18 +53,15 @@ final class fg {
             var2 = pl.field_k;
             for (var3_int = 0; var2.length > var3_int; var3_int++) {
                 var4 = var2[var3_int];
-                int discarded$0 = 1;
-                var5 = fe.a(var1, fi.field_j, var4);
+                var5 = fe.a(var1, fi.field_j, var4, true);
                 ob.field_b[var3_int] = var5;
             }
             var3 = "infrastructure_virtual";
             v.field_a = kh.a(fi.field_j, (byte) 126, var1, var3);
             var3 = "seeker_mine";
-            int discarded$1 = 1;
-            ka.field_a = fe.a(var1, fi.field_j, var3);
+            ka.field_a = fe.a(var1, fi.field_j, var3, true);
             var3 = "rock_buster";
-            int discarded$2 = 1;
-            ej.field_a = fe.a(var1, fi.field_j, var3);
+            ej.field_a = fe.a(var1, fi.field_j, var3, true);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "fg.B(" + 0 + ')');
         }

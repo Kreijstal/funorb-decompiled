@@ -483,7 +483,7 @@ final class nh extends og implements vd {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_H = null;
         field_A = null;
         field_z = null;

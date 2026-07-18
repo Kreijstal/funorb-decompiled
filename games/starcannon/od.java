@@ -403,7 +403,7 @@ class od extends hh {
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         fb.field_c = null;
         se.field_n = null;
         rd.field_q = null;

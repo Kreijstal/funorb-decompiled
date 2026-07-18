@@ -6,7 +6,7 @@ final class tb {
     static String[] field_b;
     static String[] field_c;
 
-    final static java.awt.Canvas a() {
+    final static java.awt.Canvas a(byte param0) {
         return null != mg.field_k ? (java.awt.Canvas) (Object) mg.field_k : tf.field_f;
     }
 

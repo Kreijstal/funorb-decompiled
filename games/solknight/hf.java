@@ -414,7 +414,7 @@ final class hf {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_c = null;
     }
@@ -463,8 +463,7 @@ final class hf {
 
     final static void a(boolean param0, int param1, boolean param2, String param3) {
         try {
-            int discarded$0 = -35;
-            k.a();
+            k.a((byte) -35);
             u.field_b.j(param1 ^ 17073);
             ve.field_a = new bb(me.field_h, (String) null, k.field_b, param0, param2);
             if (param1 != 17072) {

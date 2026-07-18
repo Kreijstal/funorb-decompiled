@@ -8,7 +8,7 @@ final class ok {
     static String field_c;
     static float field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_e = null;
         field_c = null;
@@ -18,7 +18,7 @@ final class ok {
         throw new IllegalStateException();
     }
 
-    final static oh[] a(oh param0) {
+    final static oh[] a(oh param0, byte param1) {
         oh[] var2 = null;
         RuntimeException var2_ref = null;
         oh[] var3 = null;

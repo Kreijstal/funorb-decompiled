@@ -9,7 +9,7 @@ final class wk {
     static boolean[] field_b;
     static boolean field_c;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_e = null;
         field_a = null;
@@ -152,7 +152,7 @@ final class wk {
         vl.field_e = 2147483647;
     }
 
-    final static int a(boolean param0, int param1, CharSequence param2) {
+    final static int a(boolean param0, int param1, CharSequence param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -366,33 +366,21 @@ final class wk {
                 var5 = da.a(param1, (byte) -114) ? 1 : 0;
                 var6 = new ia();
                 var6.field_K = (short)param1.j(16, 8);
-                int discarded$19 = -1;
-                var6.field_L = rg.a(param1, 16, var6.field_L);
-                int discarded$20 = -1;
-                var6.field_r = rg.a(param1, 16, var6.field_r);
-                int discarded$21 = -1;
-                var6.field_J = rg.a(param1, 16, var6.field_J);
+                var6.field_L = rg.a(param1, 16, var6.field_L, -1);
+                var6.field_r = rg.a(param1, 16, var6.field_r, -1);
+                var6.field_J = rg.a(param1, 16, var6.field_J, -1);
                 var6.field_D = (short)param1.j(16, 8);
-                int discarded$22 = -1;
-                var6.field_e = rg.a(param1, 16, var6.field_e);
-                int discarded$23 = -1;
-                var6.field_o = rg.a(param1, 16, var6.field_o);
-                int discarded$24 = -1;
-                var6.field_f = rg.a(param1, 16, var6.field_f);
+                var6.field_e = rg.a(param1, 16, var6.field_e, -1);
+                var6.field_o = rg.a(param1, 16, var6.field_o, -1);
+                var6.field_f = rg.a(param1, 16, var6.field_f, -1);
                 if (var4 != 0) {
                   var6.field_M = (short)param1.j(16, 8);
-                  int discarded$25 = -1;
-                  var6.field_N = rg.a(param1, 16, var6.field_N);
-                  int discarded$26 = -1;
-                  var6.field_q = rg.a(param1, 16, var6.field_q);
-                  int discarded$27 = -1;
-                  var6.field_w = rg.a(param1, 16, var6.field_w);
-                  int discarded$28 = -1;
-                  var6.field_h = rg.a(param1, 16, var6.field_h);
-                  int discarded$29 = -1;
-                  var6.field_u = rg.a(param1, 16, var6.field_u);
-                  int discarded$30 = -1;
-                  var6.field_j = rg.a(param1, 16, var6.field_j);
+                  var6.field_N = rg.a(param1, 16, var6.field_N, -1);
+                  var6.field_q = rg.a(param1, 16, var6.field_q, -1);
+                  var6.field_w = rg.a(param1, 16, var6.field_w, -1);
+                  var6.field_h = rg.a(param1, 16, var6.field_h, -1);
+                  var6.field_u = rg.a(param1, 16, var6.field_u, -1);
+                  var6.field_j = rg.a(param1, 16, var6.field_j, -1);
                   break L1;
                 } else {
                   break L1;
@@ -402,17 +390,12 @@ final class wk {
                 if (var5 == 0) {
                   break L2;
                 } else {
-                  int discarded$31 = param1.j(16, 8);
-                  int discarded$32 = -1;
-                  var6.field_v = rg.a(param1, 16, var6.field_v);
-                  int discarded$33 = -1;
-                  var6.field_c = rg.a(param1, 16, var6.field_c);
-                  int discarded$34 = -1;
-                  var6.field_Q = rg.a(param1, 16, var6.field_Q);
-                  int discarded$35 = -1;
-                  var6.field_G = rg.a(param1, 16, var6.field_G);
-                  int discarded$36 = -1;
-                  var6.field_F = rg.a(param1, 16, var6.field_F);
+                  int discarded$1 = param1.j(16, 8);
+                  var6.field_v = rg.a(param1, 16, var6.field_v, -1);
+                  var6.field_c = rg.a(param1, 16, var6.field_c, -1);
+                  var6.field_Q = rg.a(param1, 16, var6.field_Q, -1);
+                  var6.field_G = rg.a(param1, 16, var6.field_G, -1);
+                  var6.field_F = rg.a(param1, 16, var6.field_F, -1);
                   break L2;
                 }
               }
@@ -420,8 +403,7 @@ final class wk {
                 if (!da.a(param1, (byte) -104)) {
                   break L3;
                 } else {
-                  int discarded$37 = -1;
-                  var6.field_m = rg.a(param1, 16, var6.field_m);
+                  var6.field_m = rg.a(param1, 16, var6.field_m, -1);
                   break L3;
                 }
               }

@@ -9,12 +9,12 @@ final class pd {
     static int field_b;
     static n field_d;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_d = null;
     }
 
-    final static vi a(String param0) {
+    final static vi a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -70,8 +70,7 @@ final class pd {
                       break L0;
                     } else {
                       var6 = var4[var5];
-                      int discarded$2 = -33;
-                      var7 = nc.a(var6);
+                      var7 = nc.a(var6, (byte) -33);
                       if (var7 != null) {
                         stackOut_15_0 = (vi) var7;
                         stackIn_16_0 = stackOut_15_0;

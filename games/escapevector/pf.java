@@ -98,7 +98,7 @@ final class pf {
         return stackIn_10_0;
     }
 
-    private final int a(int param0, int param1, dk[] param2) {
+    private final int a(int param0, int param1, dk[] param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -165,7 +165,7 @@ final class pf {
         return stackIn_1_0;
     }
 
-    private final int b() {
+    private final int b(byte param0) {
         int var2 = this.a(6481, ((pf) this).field_c);
         if (var2 == 0) {
             return 1;
@@ -194,13 +194,11 @@ final class pf {
     }
 
     private final int a(int param0, int param1, int param2) {
-        int discarded$0 = 3;
-        int var4 = this.a(param1, ((pf) this).field_c, param2);
+        int var4 = this.a(param1, ((pf) this).field_c, param2, 3);
         if (var4 >= 0) {
             return var4;
         }
-        int discarded$1 = 3;
-        var4 = this.a(param1, ((pf) this).field_a, param2);
+        var4 = this.a(param1, ((pf) this).field_a, param2, 3);
         if (!(var4 < 0)) {
             return var4;
         }
@@ -543,8 +541,7 @@ final class pf {
             }
             var11 = var9.length;
             var20 = this.a(param3, true, var11);
-            int discarded$2 = -17;
-            var21 = vl.a(10, param3, var11);
+            var21 = vl.a(10, param3, var11, (byte) -17);
             ((pf) this).field_a = na.a(var6, var20, var7, var5_int, param0, var9, var10, false, var21);
             stackOut_3_0 = (int[]) var8;
             stackIn_4_0 = stackOut_3_0;
@@ -681,7 +678,7 @@ final class pf {
         }
     }
 
-    private final boolean a() {
+    private final boolean a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -759,8 +756,7 @@ final class pf {
                 break L7;
               }
             }
-            int discarded$5 = 91;
-            if (this.a(var2 != 0)) {
+            if (this.a(var2 != 0, (byte) 91)) {
               return true;
             } else {
               continue L0;
@@ -770,10 +766,8 @@ final class pf {
     }
 
     final void e(int param0) {
-        int discarded$0 = 16;
-        this.c();
-        int discarded$1 = 94;
-        if (!(!this.a())) {
+        this.c((byte) 16);
+        if (!(!this.a((byte) 94))) {
             return;
         }
         if (param0 <= 61) {
@@ -782,11 +776,10 @@ final class pf {
         int var2 = this.a(1, bj.field_y, dh.field_d);
         int var3 = this.a(1, ng.field_ob, sf.field_c);
         ((pf) this).field_b.a(var3, (byte) 121, var2);
-        int discarded$2 = 91;
-        boolean discarded$3 = this.a(true);
+        boolean discarded$0 = this.a(true, (byte) 91);
     }
 
-    private final int a(int param0, dk[] param1, int param2) {
+    private final int a(int param0, dk[] param1, int param2, int param3) {
         dk[] var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -1394,7 +1387,7 @@ final class pf {
         }
     }
 
-    private final boolean a(boolean param0) {
+    private final boolean a(boolean param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1428,8 +1421,7 @@ final class pf {
                   qk.a(param0, 125);
                   return true;
                 } else {
-                  int discarded$2 = 89;
-                  if (this.b() != var4) {
+                  if (this.b((byte) 89) != var4) {
                     return false;
                   } else {
                     pg.field_b = false;
@@ -1568,7 +1560,7 @@ final class pf {
         return stackIn_8_0 != 0;
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         if (!(mj.field_d != 0)) {
             sj.a(8192, (byte) 51);
         }
@@ -1792,7 +1784,7 @@ final class pf {
                 var15 = var14 + var13;
                 var16 = k.field_j.field_z / 2 + 77;
                 var17 = 442;
-                var18 = this.a(4, var16, ((pf) this).field_c);
+                var18 = this.a(4, var16, ((pf) this).field_c, var17);
                 var19 = ((pf) this).field_c;
                 var20 = 0;
                 L2: while (true) {
@@ -1948,7 +1940,7 @@ final class pf {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         ih var2 = fh.field_g;
         int var3 = 10;
         int[] var4 = this.a(0, var3, var2, (byte) 102);
@@ -1958,10 +1950,8 @@ final class pf {
         ((pf) this).field_d = new int[var6];
         qg.a(var4, 0, ((pf) this).field_d, 0, var4.length);
         qg.a(var5, 0, ((pf) this).field_d, var4.length, var5.length);
-        int discarded$0 = 0;
-        fi.a(((pf) this).field_c);
-        int discarded$1 = 0;
-        fi.a(((pf) this).field_a);
+        fi.a(((pf) this).field_c, 0);
+        fi.a(((pf) this).field_a, 0);
     }
 
     final static void a(boolean param0, String param1, Throwable param2) {
@@ -2020,8 +2010,7 @@ final class pf {
                   if (param2 == null) {
                     break L1;
                   } else {
-                    int discarded$2 = 41;
-                    var3_ref = jg.a(param2);
+                    var3_ref = jg.a(param2, 41);
                     break L1;
                   }
                 }
@@ -2108,7 +2097,7 @@ final class pf {
                       L6: {
                         if (var4.field_f == 1) {
                           var5 = (DataInputStream) var4.field_b;
-                          int discarded$3 = var5.read();
+                          int discarded$1 = var5.read();
                           var5.close();
                           break L6;
                         } else {
@@ -2139,11 +2128,9 @@ final class pf {
 
     private final void a(boolean param0, byte param1, int param2) {
         ((pf) this).field_b = new wc(param2);
-        int discarded$0 = 3;
-        int var4 = this.a(bj.field_y, ((pf) this).field_c, dh.field_d);
+        int var4 = this.a(bj.field_y, ((pf) this).field_c, dh.field_d, 3);
         if (var4 < 0) {
-            int discarded$1 = 3;
-            var4 = this.a(bj.field_y, ((pf) this).field_a, dh.field_d);
+            var4 = this.a(bj.field_y, ((pf) this).field_a, dh.field_d, 3);
         }
         ((pf) this).field_b.a(125, param0, var4, 0);
     }
@@ -2175,8 +2162,7 @@ final class pf {
     }
 
     pf(boolean param0) {
-        int discarded$0 = -35;
-        this.d();
+        this.d((byte) -35);
         int var2 = ((pf) this).field_d.length;
         this.a(param0, (byte) -73, var2);
         ((pf) this).field_f = vh.f(104);

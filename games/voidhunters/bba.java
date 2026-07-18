@@ -386,10 +386,10 @@ final class bba implements ntb {
           L0: {
             L1: {
               var3 = (bba) (Object) param0;
-              boolean discarded$4 = tja.a((ntb[]) (Object) var3.field_b, 1, (ntb[]) (Object) var3.field_b, true, 5547);
-              boolean discarded$5 = tja.a((ntb[]) (Object) var3.field_c, 1, (ntb[]) (Object) var3.field_c, true, 5547);
+              boolean discarded$4 = tja.a((ntb[]) (Object) var3.field_b, 1, (ntb[]) (Object) ((bba) this).field_b, true, 5547);
+              boolean discarded$5 = tja.a((ntb[]) (Object) var3.field_c, 1, (ntb[]) (Object) ((bba) this).field_c, true, 5547);
               var4 = 0;
-              if (!dn.a((tv[]) (Object) var3.field_b, true, 1, (tv[]) (Object) var3.field_b, -64)) {
+              if (!dn.a((tv[]) (Object) var3.field_b, true, 1, (tv[]) (Object) ((bba) this).field_b, -64)) {
                 break L1;
               } else {
                 System.out.println("MissionCondition[] conditions has changed. ");
@@ -399,7 +399,7 @@ final class bba implements ntb {
             }
             if (param1 < -19) {
               L2: {
-                if (dn.a((tv[]) (Object) var3.field_c, true, 1, (tv[]) (Object) var3.field_c, -13)) {
+                if (dn.a((tv[]) (Object) var3.field_c, true, 1, (tv[]) (Object) ((bba) this).field_c, -13)) {
                   System.out.println("MissionAction[] actions has changed. ");
                   var4 = 1;
                   break L2;
@@ -528,7 +528,7 @@ final class bba implements ntb {
         return ((bba) this).field_b;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_f = null;
         field_e = null;
     }

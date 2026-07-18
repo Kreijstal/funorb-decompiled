@@ -93,7 +93,7 @@ final class ff implements dv {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_N = null;
         field_p = null;
         field_j = null;
@@ -415,15 +415,13 @@ final class ff implements dv {
           L0: {
             L1: {
               ((ff) this).field_h = uha.a(5907, param0);
-              int discarded$3 = -26803;
-              ((ff) this).field_z = uma.a(32, param0);
+              ((ff) this).field_z = uma.a(32, param0, -26803);
               ((ff) this).field_A = param0.b((byte) 44, 32);
               ((ff) this).field_C = param0.b((byte) 44, 32);
               ((ff) this).field_y = (wd[]) (Object) gha.a((mva[]) (Object) ((ff) this).field_y, 1, 8, -16499, nfa.field_q, param0);
               ((ff) this).field_u = (wea[]) (Object) gha.a((mva[]) (Object) ((ff) this).field_u, 1, 8, -16499, kba.field_u, param0);
               ((ff) this).field_v = fa.a(0, param0, 8, ((ff) this).field_v);
-              int discarded$4 = -26803;
-              ((ff) this).field_o = uma.a(32, param0);
+              ((ff) this).field_o = uma.a(32, param0, -26803);
               ((ff) this).field_q = c.a(8, ((ff) this).field_q, (byte) 93, param0);
               ((ff) this).field_P = param0.b((byte) 44, 32);
               ((ff) this).field_s = uha.a(5907, param0);
@@ -443,8 +441,7 @@ final class ff implements dv {
                 break L1;
               }
             }
-            int discarded$5 = -26803;
-            ((ff) this).field_E = uma.a(32, param0);
+            ((ff) this).field_E = uma.a(32, param0, -26803);
             ((ff) this).field_I = c.a(8, ((ff) this).field_I, (byte) -41, param0);
             if (!param1) {
               this.c(22640);
@@ -587,7 +584,7 @@ final class ff implements dv {
         return stackIn_6_0 != 0;
     }
 
-    final static boolean h() {
+    final static boolean h(int param0) {
         return du.field_e;
     }
 
@@ -1043,8 +1040,7 @@ final class ff implements dv {
                           break L6;
                         } else {
                           if (3 == var12_int) {
-                            int discarded$1 = 64;
-                            ((ff) this).field_r = pl.a();
+                            ((ff) this).field_r = pl.a((byte) 64);
                             break L6;
                           } else {
                             if (2 == var12_int) {

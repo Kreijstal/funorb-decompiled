@@ -97,7 +97,7 @@ final class aa extends kj {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_fb = null;
         field_db = null;
     }

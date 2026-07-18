@@ -222,7 +222,7 @@ final class h extends wl {
         return stackIn_19_0 != 0;
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         int stackIn_5_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_4_0 = 0;
@@ -283,8 +283,7 @@ final class h extends wl {
               var5 = param2.a(param1, param0, 1);
               var4 = var5;
               if (var5 != null) {
-                int discarded$2 = 1;
-                jg.a(var5);
+                jg.a(var5, true);
                 stackOut_6_0 = 1;
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
@@ -355,7 +354,7 @@ final class h extends wl {
         ((h) this).field_i = null;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_j = null;
         field_s = null;
     }

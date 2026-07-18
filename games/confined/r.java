@@ -17,7 +17,7 @@ final class r {
         }
     }
 
-    final static void a(bj param0) {
+    final static void a(bj param0, int param1, int param2) {
         lf.field_k.a((rk) (Object) param0, (byte) 67);
         try {
             lf.a(3, 102, param0);

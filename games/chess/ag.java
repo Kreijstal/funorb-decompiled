@@ -10,7 +10,7 @@ final class ag {
     static String[] field_d;
     static int[] field_a;
 
-    final static void a() {
+    final static void a(byte param0) {
     }
 
     final static void a(int param0, boolean param1, float param2, String param3) {

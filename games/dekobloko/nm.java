@@ -143,7 +143,7 @@ final class nm extends w {
         ((nm) this).field_Sb.a(((nm) this).field_mb + -param2, (byte) -32, ((nm) this).field_N, ((nm) this).field_Ob.field_N, param2, -((nm) this).field_Ob.field_Ib, ((nm) this).field_Rb.field_N, 0);
     }
 
-    final static ck g() {
+    final static ck g(byte param0) {
         int var4 = 0;
         int var6 = client.field_A ? 1 : 0;
         int var1 = tm.field_a[0] * hc.field_c[0];
@@ -158,7 +158,7 @@ final class nm extends w {
         return var5;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         String var4_ref_String = null;
@@ -168,15 +168,19 @@ final class nm extends w {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        String var12 = null;
-        String var13 = null;
-        String var14 = null;
-        String var15 = null;
+        Object var12 = null;
+        Object var13 = null;
+        Object var14 = null;
+        Object var15 = null;
         String var16 = null;
-        Object var17 = null;
-        CharSequence var18 = null;
+        String var17 = null;
+        String var18 = null;
+        String var19 = null;
+        String var20 = null;
+        Object var21 = null;
+        CharSequence var22 = null;
         L0: {
-          var17 = null;
+          var21 = null;
           var11 = client.field_A ? 1 : 0;
           var3 = 1;
           if (sc.field_m) {
@@ -206,8 +210,7 @@ final class nm extends w {
           if (2 != pk.field_r) {
             break L2;
           } else {
-            int discarded$15 = -53;
-            if (hl.a()) {
+            if (hl.a((byte) -53)) {
               break L2;
             } else {
               var3 = 0;
@@ -225,23 +228,22 @@ final class nm extends w {
                 } else {
                   if (80 > dj.field_ab.length()) {
                     L4: {
-                      StringBuilder discarded$16 = dj.field_ab.append((char) var4);
+                      StringBuilder discarded$3 = dj.field_ab.append((char) var4);
                       var5 = 485;
-                      var13 = oa.field_f;
-                      var7 = var13;
-                      var7 = var13;
-                      var12 = b.a(83, var13);
-                      var7 = var12;
-                      var7 = var12;
-                      var14 = var12;
-                      var7 = var14;
-                      var7 = var14;
+                      var17 = oa.field_f;
+                      var7 = var17;
+                      var7 = var17;
+                      var16 = b.a(83, var17);
+                      var7 = var16;
+                      var7 = var16;
+                      var18 = var16;
+                      var7 = var18;
+                      var7 = var18;
                       if (pk.field_r == 2) {
-                        var18 = (CharSequence) (Object) ed.field_c;
-                        int discarded$17 = 1;
-                        var16 = cm.a((byte) 94, oj.field_b, new String[1]);
+                        var22 = (CharSequence) (Object) ed.field_c;
+                        var20 = cm.a((byte) 94, oj.field_b, new String[1]);
                         var8 = cm.a((byte) 108, im.field_j, new String[1]);
-                        var9 = ff.field_o.a(var16);
+                        var9 = ff.field_o.a(var20);
                         var10 = ff.field_o.a(var8);
                         if (var9 <= var10) {
                           var5 = var5 - var10;
@@ -288,14 +290,13 @@ final class nm extends w {
                             }
                           }
                         }
-                        var15 = var7 + var14 + ": ";
-                        var5 = var5 - ff.field_o.a(var15);
+                        var19 = var7 + var18 + ": ";
+                        var5 = var5 - ff.field_o.a(var19);
                         break L4;
                       }
                     }
                     if (ff.field_o.a(dj.field_ab.toString()) > var5) {
-                      int discarded$18 = 32;
-                      StringBuilder discarded$19 = vf.a(dj.field_ab, -23510, dj.field_ab.length() + -1);
+                      StringBuilder discarded$4 = vf.a(dj.field_ab, -23510, dj.field_ab.length() + -1, ' ');
                       break L3;
                     } else {
                       break L3;
@@ -317,8 +318,7 @@ final class nm extends w {
                 if (0 >= dj.field_ab.length()) {
                   break L8;
                 } else {
-                  int discarded$20 = 32;
-                  StringBuilder discarded$21 = vf.a(dj.field_ab, -23510, dj.field_ab.length() - 1);
+                  StringBuilder discarded$5 = vf.a(dj.field_ab, -23510, dj.field_ab.length() - 1, ' ');
                   return true;
                 }
               }
@@ -331,28 +331,25 @@ final class nm extends w {
               if (0 == pk.field_r) {
                 break L9;
               } else {
-                int discarded$22 = 94;
-                qk.a();
+                qk.a((byte) 94);
                 break L9;
               }
             } else {
               if (dj.field_ab.length() <= 0) {
-                int discarded$23 = 94;
-                qk.a();
+                qk.a((byte) 94);
                 break L9;
               } else {
                 var4_ref_String = dj.field_ab.toString();
                 var7 = var4_ref_String;
                 var7 = var4_ref_String;
                 if (ue.a(2048, var4_ref_String)) {
-                  int discarded$24 = 0;
-                  int discarded$25 = 2;
-                  ca.a((String) null, (String) null, wd.field_a, (byte) 90);
-                  int discarded$26 = 0;
-                  int discarded$27 = 2;
-                  ca.a((String) null, (String) null, um.field_e, (byte) 69);
-                  int discarded$28 = 94;
-                  qk.a();
+                  var13 = null;
+                  var12 = null;
+                  ca.a((String) null, (String) null, wd.field_a, (byte) 90, 2, 0);
+                  var15 = null;
+                  var14 = null;
+                  ca.a((String) null, (String) null, um.field_e, (byte) 69, 2, 0);
+                  qk.a((byte) 94);
                   break L9;
                 } else {
                   L10: {
@@ -377,8 +374,7 @@ final class nm extends w {
                     }
                   }
                   ce.a(12, (byte) -85, pk.field_r, ed.field_c, -1, var4_ref_String);
-                  int discarded$29 = 94;
-                  qk.a();
+                  qk.a((byte) 94);
                   break L9;
                 }
               }
@@ -422,7 +418,7 @@ final class nm extends w {
         }
     }
 
-    final static void e() {
+    final static void e(int param0) {
         if (!(ai.f((byte) -126))) {
             return;
         }

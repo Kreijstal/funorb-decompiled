@@ -30,20 +30,19 @@ final class fl {
             ((fl) this).field_g = param0;
         }
         if (!(((fl) this).field_f.length > param0)) {
-            int discarded$0 = -34;
-            this.f(param0);
+            this.f(param0, -34);
         }
         ((fl) this).field_f[param0] = param2;
     }
 
-    final static void b() {
+    final static void b(int param0, int param1) {
         w var2 = na.field_r;
         var2.h(4, 0);
         var2.b(-9469, 1);
         var2.b(-9469, 2);
     }
 
-    private final void f(int param0) {
+    private final void f(int param0, int param1) {
         int var4 = 0;
         int[] var5 = new int[this.d(16912, param0)];
         int[] var3 = var5;
@@ -51,7 +50,7 @@ final class fl {
         ((fl) this).field_f = var5;
     }
 
-    final static void a(w param0) {
+    final static void a(w param0, boolean param1) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;

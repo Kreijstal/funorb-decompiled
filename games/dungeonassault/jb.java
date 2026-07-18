@@ -22,7 +22,7 @@ final class jb extends nk implements vg {
         }
     }
 
-    final static void q() {
+    final static void q(int param0) {
         nk.field_Hb = false;
         mo.field_g = null;
         sn.field_a = null;
@@ -69,7 +69,7 @@ final class jb extends nk implements vg {
         }
     }
 
-    public static void p() {
+    public static void p(int param0) {
         field_Sb = null;
         field_Vb = null;
         field_Ub = null;
@@ -174,8 +174,7 @@ final class jb extends nk implements vg {
                   } else {
                     L2: {
                       if (!param2) {
-                        int discarded$3 = -8;
-                        li.a();
+                        li.a(-8);
                         break L2;
                       } else {
                         break L2;
@@ -193,7 +192,7 @@ final class jb extends nk implements vg {
               if (!param0.field_a) {
                 L4: {
                   if (((jb) this).field_Wb) {
-                    ck discarded$4 = var5.a(gl.field_Jb, (pg) this, (byte) -83);
+                    ck discarded$2 = var5.a(gl.field_Jb, (pg) this, (byte) -83);
                     break L4;
                   } else {
                     if (param0.field_d != 5) {
@@ -219,7 +218,7 @@ final class jb extends nk implements vg {
                 }
               } else {
                 if (!param0.field_f) {
-                  ck discarded$5 = var5.a(gl.field_Jb, (pg) this, (byte) -91);
+                  ck discarded$3 = var5.a(gl.field_Jb, (pg) this, (byte) -91);
                   break L3;
                 } else {
                   ((jb) this).b(1, (lm) (Object) new cm((jb) this));
@@ -264,19 +263,17 @@ final class jb extends nk implements vg {
 
     final void r(int param0) {
         int var2 = -20 / ((param0 - -37) / 34);
-        int discarded$0 = -28323;
-        this.a(p.a(248, im.field_l), true, true);
+        this.a(p.a(248, im.field_l, -28323), true, true);
     }
 
-    final static void k() {
+    final static void k(byte param0) {
         if (!(lg.field_w == null)) {
             lg.field_w.j(-33);
         }
         if (!(null == hg.field_r)) {
             hg.field_r.j((byte) -115);
         }
-        int discarded$0 = -81;
-        tb.a();
+        tb.a((byte) -81);
     }
 
     final static cn a(byte param0, int param1) {

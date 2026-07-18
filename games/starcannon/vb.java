@@ -213,14 +213,13 @@ final class vb extends qf {
         }
     }
 
-    final static void a(ue param0) {
+    final static void a(ue param0, int param1) {
         byte[] var2 = null;
         int var3 = 0;
         L0: {
           var3 = StarCannon.field_A;
           ri.field_c = param0;
-          int discarded$122 = -124;
-          var2 = cb.a("gamename");
+          var2 = cb.a("gamename", (byte) -124);
           if (null != var2) {
             wc.field_g = uh.a(121, var2);
             break L0;
@@ -229,8 +228,7 @@ final class vb extends qf {
           }
         }
         L1: {
-          int discarded$123 = -124;
-          var2 = cb.a("achievement_names,0");
+          var2 = cb.a("achievement_names,0", (byte) -124);
           if (null != var2) {
             di.field_j[0] = uh.a(127, var2);
             break L1;
@@ -239,18 +237,16 @@ final class vb extends qf {
           }
         }
         L2: {
-          int discarded$124 = -124;
-          var2 = cb.a("achievement_names,1");
+          var2 = cb.a("achievement_names,1", (byte) -124);
           if (var2 != null) {
-            di.field_j[1] = uh.a(dg.a(30962, 30856), var2);
+            di.field_j[1] = uh.a(dg.a(param1, 30856), var2);
             break L2;
           } else {
             break L2;
           }
         }
         L3: {
-          int discarded$125 = -124;
-          var2 = cb.a("achievement_names,2");
+          var2 = cb.a("achievement_names,2", (byte) -124);
           if (null != var2) {
             di.field_j[2] = uh.a(126, var2);
             break L3;
@@ -259,18 +255,16 @@ final class vb extends qf {
           }
         }
         L4: {
-          int discarded$126 = -124;
-          var2 = cb.a("achievement_names,3");
+          var2 = cb.a("achievement_names,3", (byte) -124);
           if (var2 == null) {
             break L4;
           } else {
-            di.field_j[3] = uh.a(dg.a(30962, 30858), var2);
+            di.field_j[3] = uh.a(dg.a(param1, 30858), var2);
             break L4;
           }
         }
         L5: {
-          int discarded$127 = -124;
-          var2 = cb.a("achievement_names,4");
+          var2 = cb.a("achievement_names,4", (byte) -124);
           if (var2 == null) {
             break L5;
           } else {
@@ -279,8 +273,7 @@ final class vb extends qf {
           }
         }
         L6: {
-          int discarded$128 = -124;
-          var2 = cb.a("achievement_names,5");
+          var2 = cb.a("achievement_names,5", (byte) -124);
           if (null == var2) {
             break L6;
           } else {
@@ -289,28 +282,25 @@ final class vb extends qf {
           }
         }
         L7: {
-          int discarded$129 = -124;
-          var2 = cb.a("achievement_names,6");
+          var2 = cb.a("achievement_names,6", (byte) -124);
           if (var2 == null) {
             break L7;
           } else {
-            di.field_j[6] = uh.a(127, var2);
+            di.field_j[6] = uh.a(param1 + -30835, var2);
             break L7;
           }
         }
         L8: {
-          int discarded$130 = -124;
-          var2 = cb.a("achievement_names,7");
+          var2 = cb.a("achievement_names,7", (byte) -124);
           if (var2 != null) {
-            di.field_j[7] = uh.a(112, var2);
+            di.field_j[7] = uh.a(param1 + -30850, var2);
             break L8;
           } else {
             break L8;
           }
         }
         L9: {
-          int discarded$131 = -124;
-          var2 = cb.a("achievement_names,8");
+          var2 = cb.a("achievement_names,8", (byte) -124);
           if (var2 != null) {
             di.field_j[8] = uh.a(113, var2);
             break L9;
@@ -319,8 +309,7 @@ final class vb extends qf {
           }
         }
         L10: {
-          int discarded$132 = -124;
-          var2 = cb.a("achievement_names,9");
+          var2 = cb.a("achievement_names,9", (byte) -124);
           if (var2 == null) {
             break L10;
           } else {
@@ -329,8 +318,7 @@ final class vb extends qf {
           }
         }
         L11: {
-          int discarded$133 = -124;
-          var2 = cb.a("achievement_names,10");
+          var2 = cb.a("achievement_names,10", (byte) -124);
           if (var2 == null) {
             break L11;
           } else {
@@ -339,8 +327,7 @@ final class vb extends qf {
           }
         }
         L12: {
-          int discarded$134 = -124;
-          var2 = cb.a("achievement_names,11");
+          var2 = cb.a("achievement_names,11", (byte) -124);
           if (var2 != null) {
             di.field_j[11] = uh.a(126, var2);
             break L12;
@@ -349,8 +336,7 @@ final class vb extends qf {
           }
         }
         L13: {
-          int discarded$135 = -124;
-          var2 = cb.a("achievement_names,12");
+          var2 = cb.a("achievement_names,12", (byte) -124);
           if (null != var2) {
             di.field_j[12] = uh.a(123, var2);
             break L13;
@@ -359,8 +345,7 @@ final class vb extends qf {
           }
         }
         L14: {
-          int discarded$136 = -124;
-          var2 = cb.a("achievement_names,13");
+          var2 = cb.a("achievement_names,13", (byte) -124);
           if (var2 != null) {
             di.field_j[13] = uh.a(120, var2);
             break L14;
@@ -369,8 +354,7 @@ final class vb extends qf {
           }
         }
         L15: {
-          int discarded$137 = -124;
-          var2 = cb.a("achievement_names,14");
+          var2 = cb.a("achievement_names,14", (byte) -124);
           if (var2 == null) {
             break L15;
           } else {
@@ -379,8 +363,7 @@ final class vb extends qf {
           }
         }
         L16: {
-          int discarded$138 = -124;
-          var2 = cb.a("achievement_criteria,0");
+          var2 = cb.a("achievement_criteria,0", (byte) -124);
           if (null == var2) {
             break L16;
           } else {
@@ -389,18 +372,16 @@ final class vb extends qf {
           }
         }
         L17: {
-          int discarded$139 = -124;
-          var2 = cb.a("achievement_criteria,1");
+          var2 = cb.a("achievement_criteria,1", (byte) -124);
           if (null == var2) {
             break L17;
           } else {
-            vd.field_h[1] = uh.a(dg.a(30962, 30850), var2);
+            vd.field_h[1] = uh.a(dg.a(param1, 30850), var2);
             break L17;
           }
         }
         L18: {
-          int discarded$140 = -124;
-          var2 = cb.a("achievement_criteria,2");
+          var2 = cb.a("achievement_criteria,2", (byte) -124);
           if (null == var2) {
             break L18;
           } else {
@@ -409,18 +390,16 @@ final class vb extends qf {
           }
         }
         L19: {
-          int discarded$141 = -124;
-          var2 = cb.a("achievement_criteria,3");
+          var2 = cb.a("achievement_criteria,3", (byte) -124);
           if (var2 == null) {
             break L19;
           } else {
-            vd.field_h[3] = uh.a(dg.a(30962, 30850), var2);
+            vd.field_h[3] = uh.a(dg.a(param1, 30850), var2);
             break L19;
           }
         }
         L20: {
-          int discarded$142 = -124;
-          var2 = cb.a("achievement_criteria,4");
+          var2 = cb.a("achievement_criteria,4", (byte) -124);
           if (var2 != null) {
             vd.field_h[4] = uh.a(120, var2);
             break L20;
@@ -429,8 +408,7 @@ final class vb extends qf {
           }
         }
         L21: {
-          int discarded$143 = -124;
-          var2 = cb.a("achievement_criteria,5");
+          var2 = cb.a("achievement_criteria,5", (byte) -124);
           if (var2 != null) {
             vd.field_h[5] = uh.a(120, var2);
             break L21;
@@ -439,18 +417,16 @@ final class vb extends qf {
           }
         }
         L22: {
-          int discarded$144 = -124;
-          var2 = cb.a("achievement_criteria,6");
+          var2 = cb.a("achievement_criteria,6", (byte) -124);
           if (var2 == null) {
             break L22;
           } else {
-            vd.field_h[6] = uh.a(119, var2);
+            vd.field_h[6] = uh.a(param1 + -30843, var2);
             break L22;
           }
         }
         L23: {
-          int discarded$145 = -124;
-          var2 = cb.a("achievement_criteria,7");
+          var2 = cb.a("achievement_criteria,7", (byte) -124);
           if (null == var2) {
             break L23;
           } else {
@@ -459,8 +435,7 @@ final class vb extends qf {
           }
         }
         L24: {
-          int discarded$146 = -124;
-          var2 = cb.a("achievement_criteria,8");
+          var2 = cb.a("achievement_criteria,8", (byte) -124);
           if (var2 != null) {
             vd.field_h[8] = uh.a(117, var2);
             break L24;
@@ -469,8 +444,7 @@ final class vb extends qf {
           }
         }
         L25: {
-          int discarded$147 = -124;
-          var2 = cb.a("achievement_criteria,9");
+          var2 = cb.a("achievement_criteria,9", (byte) -124);
           if (null != var2) {
             vd.field_h[9] = uh.a(127, var2);
             break L25;
@@ -479,18 +453,16 @@ final class vb extends qf {
           }
         }
         L26: {
-          int discarded$148 = -124;
-          var2 = cb.a("achievement_criteria,10");
+          var2 = cb.a("achievement_criteria,10", (byte) -124);
           if (var2 == null) {
             break L26;
           } else {
-            vd.field_h[10] = uh.a(122, var2);
+            vd.field_h[10] = uh.a(param1 + -30840, var2);
             break L26;
           }
         }
         L27: {
-          int discarded$149 = -124;
-          var2 = cb.a("achievement_criteria,11");
+          var2 = cb.a("achievement_criteria,11", (byte) -124);
           if (null == var2) {
             break L27;
           } else {
@@ -499,8 +471,7 @@ final class vb extends qf {
           }
         }
         L28: {
-          int discarded$150 = -124;
-          var2 = cb.a("achievement_criteria,12");
+          var2 = cb.a("achievement_criteria,12", (byte) -124);
           if (var2 != null) {
             vd.field_h[12] = uh.a(117, var2);
             break L28;
@@ -509,8 +480,7 @@ final class vb extends qf {
           }
         }
         L29: {
-          int discarded$151 = -124;
-          var2 = cb.a("achievement_criteria,13");
+          var2 = cb.a("achievement_criteria,13", (byte) -124);
           if (var2 == null) {
             break L29;
           } else {
@@ -519,8 +489,7 @@ final class vb extends qf {
           }
         }
         L30: {
-          int discarded$152 = -124;
-          var2 = cb.a("achievement_criteria,14");
+          var2 = cb.a("achievement_criteria,14", (byte) -124);
           if (var2 != null) {
             vd.field_h[14] = uh.a(121, var2);
             break L30;
@@ -529,18 +498,16 @@ final class vb extends qf {
           }
         }
         L31: {
-          int discarded$153 = -124;
-          var2 = cb.a("optionscaps");
+          var2 = cb.a("optionscaps", (byte) -124);
           if (null == var2) {
             break L31;
           } else {
-            String discarded$154 = uh.a(127, var2);
+            String discarded$19 = uh.a(param1 ^ 30861, var2);
             break L31;
           }
         }
         L32: {
-          int discarded$155 = -124;
-          var2 = cb.a("bosshealthcaps");
+          var2 = cb.a("bosshealthcaps", (byte) -124);
           if (var2 != null) {
             s.field_h = uh.a(112, var2);
             break L32;
@@ -549,8 +516,7 @@ final class vb extends qf {
           }
         }
         L33: {
-          int discarded$156 = -124;
-          var2 = cb.a("lev7a");
+          var2 = cb.a("lev7a", (byte) -124);
           if (var2 != null) {
             jg.field_I = uh.a(127, var2);
             break L33;
@@ -559,8 +525,7 @@ final class vb extends qf {
           }
         }
         L34: {
-          int discarded$157 = -124;
-          var2 = cb.a("lev6c");
+          var2 = cb.a("lev6c", (byte) -124);
           if (var2 == null) {
             break L34;
           } else {
@@ -569,8 +534,7 @@ final class vb extends qf {
           }
         }
         L35: {
-          int discarded$158 = -124;
-          var2 = cb.a("lev6b");
+          var2 = cb.a("lev6b", (byte) -124);
           if (var2 != null) {
             jf.field_b = uh.a(122, var2);
             break L35;
@@ -579,8 +543,7 @@ final class vb extends qf {
           }
         }
         L36: {
-          int discarded$159 = -124;
-          var2 = cb.a("lev6a");
+          var2 = cb.a("lev6a", (byte) -124);
           if (var2 == null) {
             break L36;
           } else {
@@ -589,8 +552,7 @@ final class vb extends qf {
           }
         }
         L37: {
-          int discarded$160 = -124;
-          var2 = cb.a("lev5b");
+          var2 = cb.a("lev5b", (byte) -124);
           if (var2 == null) {
             break L37;
           } else {
@@ -599,8 +561,7 @@ final class vb extends qf {
           }
         }
         L38: {
-          int discarded$161 = -124;
-          var2 = cb.a("lev5a");
+          var2 = cb.a("lev5a", (byte) -124);
           if (var2 != null) {
             bc.field_l = uh.a(126, var2);
             break L38;
@@ -609,18 +570,16 @@ final class vb extends qf {
           }
         }
         L39: {
-          int discarded$162 = -124;
-          var2 = cb.a("lev4a");
+          var2 = cb.a("lev4a", (byte) -124);
           if (null != var2) {
-            vf.field_a = uh.a(126, var2);
+            vf.field_a = uh.a(param1 ^ 30860, var2);
             break L39;
           } else {
             break L39;
           }
         }
         L40: {
-          int discarded$163 = -124;
-          var2 = cb.a("lev3a");
+          var2 = cb.a("lev3a", (byte) -124);
           if (null == var2) {
             break L40;
           } else {
@@ -629,8 +588,7 @@ final class vb extends qf {
           }
         }
         L41: {
-          int discarded$164 = -124;
-          var2 = cb.a("lev2a");
+          var2 = cb.a("lev2a", (byte) -124);
           if (null == var2) {
             break L41;
           } else {
@@ -639,8 +597,7 @@ final class vb extends qf {
           }
         }
         L42: {
-          int discarded$165 = -124;
-          var2 = cb.a("lev1");
+          var2 = cb.a("lev1", (byte) -124);
           if (null == var2) {
             break L42;
           } else {
@@ -649,28 +606,25 @@ final class vb extends qf {
           }
         }
         L43: {
-          int discarded$166 = -124;
-          var2 = cb.a("spacetofire");
+          var2 = cb.a("spacetofire", (byte) -124);
           if (null != var2) {
-            String discarded$167 = uh.a(120, var2);
+            String discarded$20 = uh.a(120, var2);
             break L43;
           } else {
             break L43;
           }
         }
         L44: {
-          int discarded$168 = -124;
-          var2 = cb.a("escforopts");
+          var2 = cb.a("escforopts", (byte) -124);
           if (null != var2) {
-            String discarded$169 = uh.a(112, var2);
+            String discarded$21 = uh.a(112, var2);
             break L44;
           } else {
             break L44;
           }
         }
         L45: {
-          int discarded$170 = -124;
-          var2 = cb.a("scorecapscolon");
+          var2 = cb.a("scorecapscolon", (byte) -124);
           if (null == var2) {
             break L45;
           } else {
@@ -679,18 +633,16 @@ final class vb extends qf {
           }
         }
         L46: {
-          int discarded$171 = -124;
-          var2 = cb.a("collecttopowerup");
+          var2 = cb.a("collecttopowerup", (byte) -124);
           if (null == var2) {
             break L46;
           } else {
-            p.field_e = uh.a(117, var2);
+            p.field_e = uh.a(param1 + -30845, var2);
             break L46;
           }
         }
         L47: {
-          int discarded$172 = -124;
-          var2 = cb.a("lancepower");
+          var2 = cb.a("lancepower", (byte) -124);
           if (var2 == null) {
             break L47;
           } else {
@@ -699,18 +651,16 @@ final class vb extends qf {
           }
         }
         L48: {
-          int discarded$173 = -124;
-          var2 = cb.a("helixpower");
+          var2 = cb.a("helixpower", (byte) -124);
           if (null == var2) {
             break L48;
           } else {
-            b.field_d = uh.a(124, var2);
+            b.field_d = uh.a(param1 + -30838, var2);
             break L48;
           }
         }
         L49: {
-          int discarded$174 = -124;
-          var2 = cb.a("pulsepower");
+          var2 = cb.a("pulsepower", (byte) -124);
           if (null == var2) {
             break L49;
           } else {
@@ -719,28 +669,25 @@ final class vb extends qf {
           }
         }
         L50: {
-          int discarded$175 = -124;
-          var2 = cb.a("livescapscolon");
+          var2 = cb.a("livescapscolon", (byte) -124);
           if (var2 != null) {
-            vk.field_w = uh.a(120, var2);
+            vk.field_w = uh.a(param1 + -30842, var2);
             break L50;
           } else {
             break L50;
           }
         }
         L51: {
-          int discarded$176 = -124;
-          var2 = cb.a("atgcaps");
+          var2 = cb.a("atgcaps", (byte) -124);
           if (null != var2) {
-            String discarded$177 = uh.a(115, var2);
+            String discarded$22 = uh.a(115, var2);
             break L51;
           } else {
             break L51;
           }
         }
         L52: {
-          int discarded$178 = -124;
-          var2 = cb.a("levhard");
+          var2 = cb.a("levhard", (byte) -124);
           if (null != var2) {
             hg.field_D = uh.a(127, var2);
             break L52;
@@ -749,8 +696,7 @@ final class vb extends qf {
           }
         }
         L53: {
-          int discarded$179 = -124;
-          var2 = cb.a("levmedium");
+          var2 = cb.a("levmedium", (byte) -124);
           if (var2 != null) {
             fl.field_g = uh.a(120, var2);
             break L53;
@@ -759,38 +705,34 @@ final class vb extends qf {
           }
         }
         L54: {
-          int discarded$180 = -124;
-          var2 = cb.a("leveasy");
+          var2 = cb.a("leveasy", (byte) -124);
           if (null != var2) {
-            cf.field_k = uh.a(115, var2);
+            cf.field_k = uh.a(param1 + -30847, var2);
             break L54;
           } else {
             break L54;
           }
         }
         L55: {
-          int discarded$181 = -124;
-          var2 = cb.a("fsoff");
+          var2 = cb.a("fsoff", (byte) -124);
           if (var2 == null) {
             break L55;
           } else {
-            String discarded$182 = uh.a(126, var2);
+            String discarded$23 = uh.a(126, var2);
             break L55;
           }
         }
         L56: {
-          int discarded$183 = -124;
-          var2 = cb.a("fson");
+          var2 = cb.a("fson", (byte) -124);
           if (var2 == null) {
             break L56;
           } else {
-            String discarded$184 = uh.a(114, var2);
+            String discarded$24 = uh.a(114, var2);
             break L56;
           }
         }
         L57: {
-          int discarded$185 = -124;
-          var2 = cb.a("gfxhigh");
+          var2 = cb.a("gfxhigh", (byte) -124);
           if (null != var2) {
             gh.field_A = uh.a(120, var2);
             break L57;
@@ -799,18 +741,16 @@ final class vb extends qf {
           }
         }
         L58: {
-          int discarded$186 = -124;
-          var2 = cb.a("gfxmed");
+          var2 = cb.a("gfxmed", (byte) -124);
           if (var2 != null) {
-            fd.field_d = uh.a(112, var2);
+            fd.field_d = uh.a(param1 + -30850, var2);
             break L58;
           } else {
             break L58;
           }
         }
         L59: {
-          int discarded$187 = -124;
-          var2 = cb.a("gfxlow");
+          var2 = cb.a("gfxlow", (byte) -124);
           if (var2 != null) {
             ec.field_d = uh.a(121, var2);
             break L59;
@@ -819,18 +759,16 @@ final class vb extends qf {
           }
         }
         L60: {
-          int discarded$188 = -124;
-          var2 = cb.a("maxpowtext");
+          var2 = cb.a("maxpowtext", (byte) -124);
           if (var2 != null) {
-            ab.field_B = uh.a(117, var2);
+            ab.field_B = uh.a(param1 ^ 30855, var2);
             break L60;
           } else {
             break L60;
           }
         }
         L61: {
-          int discarded$189 = -124;
-          var2 = cb.a("sideguntext");
+          var2 = cb.a("sideguntext", (byte) -124);
           if (null == var2) {
             break L61;
           } else {
@@ -839,8 +777,7 @@ final class vb extends qf {
           }
         }
         L62: {
-          int discarded$190 = -124;
-          var2 = cb.a("backguntext");
+          var2 = cb.a("backguntext", (byte) -124);
           if (null != var2) {
             oi.field_i = uh.a(119, var2);
             break L62;
@@ -849,8 +786,7 @@ final class vb extends qf {
           }
         }
         L63: {
-          int discarded$191 = -124;
-          var2 = cb.a("shieldtext");
+          var2 = cb.a("shieldtext", (byte) -124);
           if (null != var2) {
             t.field_x = uh.a(113, var2);
             break L63;
@@ -859,8 +795,7 @@ final class vb extends qf {
           }
         }
         L64: {
-          int discarded$192 = -124;
-          var2 = cb.a("enginetext");
+          var2 = cb.a("enginetext", (byte) -124);
           if (var2 != null) {
             hb.field_g = uh.a(126, var2);
             break L64;
@@ -869,8 +804,7 @@ final class vb extends qf {
           }
         }
         L65: {
-          int discarded$193 = -124;
-          var2 = cb.a("powerup2of2");
+          var2 = cb.a("powerup2of2", (byte) -124);
           if (var2 != null) {
             di.field_k = uh.a(120, var2);
             break L65;
@@ -879,8 +813,7 @@ final class vb extends qf {
           }
         }
         L66: {
-          int discarded$194 = -124;
-          var2 = cb.a("collecttext");
+          var2 = cb.a("collecttext", (byte) -124);
           if (var2 != null) {
             la.field_a = uh.a(117, var2);
             break L66;
@@ -889,8 +822,7 @@ final class vb extends qf {
           }
         }
         L67: {
-          int discarded$195 = -124;
-          var2 = cb.a("lifetext");
+          var2 = cb.a("lifetext", (byte) -124);
           if (null != var2) {
             a.field_c = uh.a(126, var2);
             break L67;
@@ -899,8 +831,7 @@ final class vb extends qf {
           }
         }
         L68: {
-          int discarded$196 = -124;
-          var2 = cb.a("lancetext");
+          var2 = cb.a("lancetext", (byte) -124);
           if (var2 != null) {
             mg.field_k = uh.a(118, var2);
             break L68;
@@ -909,8 +840,7 @@ final class vb extends qf {
           }
         }
         L69: {
-          int discarded$197 = -124;
-          var2 = cb.a("helixtext");
+          var2 = cb.a("helixtext", (byte) -124);
           if (null != var2) {
             mc.field_i = uh.a(120, var2);
             break L69;
@@ -919,8 +849,7 @@ final class vb extends qf {
           }
         }
         L70: {
-          int discarded$198 = -124;
-          var2 = cb.a("pulsetext");
+          var2 = cb.a("pulsetext", (byte) -124);
           if (var2 != null) {
             gf.field_e = uh.a(123, var2);
             break L70;
@@ -929,8 +858,7 @@ final class vb extends qf {
           }
         }
         L71: {
-          int discarded$199 = -124;
-          var2 = cb.a("powerup1of2");
+          var2 = cb.a("powerup1of2", (byte) -124);
           if (null != var2) {
             vc.field_k = uh.a(127, var2);
             break L71;
@@ -939,8 +867,7 @@ final class vb extends qf {
           }
         }
         L72: {
-          int discarded$200 = -124;
-          var2 = cb.a("con7");
+          var2 = cb.a("con7", (byte) -124);
           if (null != var2) {
             eb.field_e = uh.a(127, var2);
             break L72;
@@ -949,8 +876,7 @@ final class vb extends qf {
           }
         }
         L73: {
-          int discarded$201 = -124;
-          var2 = cb.a("con6");
+          var2 = cb.a("con6", (byte) -124);
           if (var2 != null) {
             p.field_b = uh.a(114, var2);
             break L73;
@@ -959,8 +885,7 @@ final class vb extends qf {
           }
         }
         L74: {
-          int discarded$202 = -124;
-          var2 = cb.a("con5");
+          var2 = cb.a("con5", (byte) -124);
           if (var2 != null) {
             cc.field_k = uh.a(119, var2);
             break L74;
@@ -969,18 +894,16 @@ final class vb extends qf {
           }
         }
         L75: {
-          int discarded$203 = -124;
-          var2 = cb.a("con4");
+          var2 = cb.a("con4", (byte) -124);
           if (null == var2) {
             break L75;
           } else {
-            qd.field_y = uh.a(119, var2);
+            qd.field_y = uh.a(param1 + -30843, var2);
             break L75;
           }
         }
         L76: {
-          int discarded$204 = -124;
-          var2 = cb.a("con3");
+          var2 = cb.a("con3", (byte) -124);
           if (null == var2) {
             break L76;
           } else {
@@ -989,8 +912,7 @@ final class vb extends qf {
           }
         }
         L77: {
-          int discarded$205 = -124;
-          var2 = cb.a("con2");
+          var2 = cb.a("con2", (byte) -124);
           if (null == var2) {
             break L77;
           } else {
@@ -999,28 +921,25 @@ final class vb extends qf {
           }
         }
         L78: {
-          int discarded$206 = -124;
-          var2 = cb.a("con1");
+          var2 = cb.a("con1", (byte) -124);
           if (null == var2) {
             break L78;
           } else {
-            s.field_a = uh.a(122, var2);
+            s.field_a = uh.a(param1 + -30840, var2);
             break L78;
           }
         }
         L79: {
-          int discarded$207 = -124;
-          var2 = cb.a("controlcaps");
+          var2 = cb.a("controlcaps", (byte) -124);
           if (null == var2) {
             break L79;
           } else {
-            tc.field_y = uh.a(126, var2);
+            tc.field_y = uh.a(param1 ^ 30860, var2);
             break L79;
           }
         }
         L80: {
-          int discarded$208 = -124;
-          var2 = cb.a("storytext");
+          var2 = cb.a("storytext", (byte) -124);
           if (var2 == null) {
             break L80;
           } else {
@@ -1029,8 +948,7 @@ final class vb extends qf {
           }
         }
         L81: {
-          int discarded$209 = -124;
-          var2 = cb.a("storycaps");
+          var2 = cb.a("storycaps", (byte) -124);
           if (null == var2) {
             break L81;
           } else {
@@ -1039,28 +957,25 @@ final class vb extends qf {
           }
         }
         L82: {
-          int discarded$210 = -124;
-          var2 = cb.a("nextcaps");
+          var2 = cb.a("nextcaps", (byte) -124);
           if (null == var2) {
             break L82;
           } else {
-            String discarded$211 = uh.a(127, var2);
+            String discarded$25 = uh.a(127, var2);
             break L82;
           }
         }
         L83: {
-          int discarded$212 = -124;
-          var2 = cb.a("prevcaps");
+          var2 = cb.a("prevcaps", (byte) -124);
           if (null != var2) {
-            String discarded$213 = uh.a(119, var2);
+            String discarded$26 = uh.a(param1 ^ 30853, var2);
             break L83;
           } else {
             break L83;
           }
         }
         L84: {
-          int discarded$214 = -124;
-          var2 = cb.a("pageno");
+          var2 = cb.a("pageno", (byte) -124);
           if (null != var2) {
             ui.field_t = uh.a(120, var2);
             break L84;
@@ -1069,38 +984,34 @@ final class vb extends qf {
           }
         }
         L85: {
-          int discarded$215 = -124;
-          var2 = cb.a("instrcaps");
+          var2 = cb.a("instrcaps", (byte) -124);
           if (null != var2) {
-            String discarded$216 = uh.a(114, var2);
+            String discarded$27 = uh.a(114, var2);
             break L85;
           } else {
             break L85;
           }
         }
         L86: {
-          int discarded$217 = -124;
-          var2 = cb.a("hsunavail");
+          var2 = cb.a("hsunavail", (byte) -124);
           if (null == var2) {
             break L86;
           } else {
-            String discarded$218 = uh.a(115, var2);
+            String discarded$28 = uh.a(115, var2);
             break L86;
           }
         }
         L87: {
-          int discarded$219 = -124;
-          var2 = cb.a("waitforhs");
+          var2 = cb.a("waitforhs", (byte) -124);
           if (null == var2) {
             break L87;
           } else {
-            String discarded$220 = uh.a(127, var2);
+            String discarded$29 = uh.a(127, var2);
             break L87;
           }
         }
         L88: {
-          int discarded$221 = -124;
-          var2 = cb.a("hardcaps");
+          var2 = cb.a("hardcaps", (byte) -124);
           if (var2 == null) {
             break L88;
           } else {
@@ -1109,8 +1020,7 @@ final class vb extends qf {
           }
         }
         L89: {
-          int discarded$222 = -124;
-          var2 = cb.a("mediumcaps");
+          var2 = cb.a("mediumcaps", (byte) -124);
           if (var2 == null) {
             break L89;
           } else {
@@ -1119,98 +1029,88 @@ final class vb extends qf {
           }
         }
         L90: {
-          int discarded$223 = -124;
-          var2 = cb.a("easycaps");
+          var2 = cb.a("easycaps", (byte) -124);
           if (null != var2) {
-            ta.field_a = uh.a(124, var2);
+            ta.field_a = uh.a(param1 ^ 30862, var2);
             break L90;
           } else {
             break L90;
           }
         }
         L91: {
-          int discarded$224 = -124;
-          var2 = cb.a("lastscorestring");
+          var2 = cb.a("lastscorestring", (byte) -124);
           if (null == var2) {
             break L91;
           } else {
-            String discarded$225 = uh.a(120, var2);
+            String discarded$30 = uh.a(120, var2);
             break L91;
           }
         }
         L92: {
-          int discarded$226 = -124;
-          var2 = cb.a("logincaps");
+          var2 = cb.a("logincaps", (byte) -124);
           if (null != var2) {
-            String discarded$227 = uh.a(122, var2);
+            String discarded$31 = uh.a(param1 + -30840, var2);
             break L92;
           } else {
             break L92;
           }
         }
         L93: {
-          int discarded$228 = -124;
-          var2 = cb.a("highscorescaps");
+          var2 = cb.a("highscorescaps", (byte) -124);
           if (null == var2) {
             break L93;
           } else {
-            String discarded$229 = uh.a(113, var2);
+            String discarded$32 = uh.a(113, var2);
             break L93;
           }
         }
         L94: {
-          int discarded$230 = -124;
-          var2 = cb.a("menucaps");
+          var2 = cb.a("menucaps", (byte) -124);
           if (null == var2) {
             break L94;
           } else {
-            String discarded$231 = uh.a(123, var2);
+            String discarded$33 = uh.a(123, var2);
             break L94;
           }
         }
         L95: {
-          int discarded$232 = -124;
-          var2 = cb.a("hiddenachievement");
+          var2 = cb.a("hiddenachievement", (byte) -124);
           if (null != var2) {
-            String discarded$233 = uh.a(127, var2);
+            String discarded$34 = uh.a(127, var2);
             break L95;
           } else {
             break L95;
           }
         }
         L96: {
-          int discarded$234 = -124;
-          var2 = cb.a("achievementscaps");
+          var2 = cb.a("achievementscaps", (byte) -124);
           if (var2 != null) {
-            String discarded$235 = uh.a(112, var2);
+            String discarded$35 = uh.a(param1 + -30850, var2);
             break L96;
           } else {
             break L96;
           }
         }
         L97: {
-          int discarded$236 = -124;
-          var2 = cb.a("mainmenucaps");
+          var2 = cb.a("mainmenucaps", (byte) -124);
           if (null != var2) {
-            String discarded$237 = uh.a(120, var2);
+            String discarded$36 = uh.a(param1 + -30842, var2);
             break L97;
           } else {
             break L97;
           }
         }
         L98: {
-          int discarded$238 = -124;
-          var2 = cb.a("warninghardmode");
+          var2 = cb.a("warninghardmode", (byte) -124);
           if (var2 == null) {
             break L98;
           } else {
-            String discarded$239 = uh.a(126, var2);
+            String discarded$37 = uh.a(param1 + -30836, var2);
             break L98;
           }
         }
         L99: {
-          int discarded$240 = -124;
-          var2 = cb.a("gameover");
+          var2 = cb.a("gameover", (byte) -124);
           if (var2 != null) {
             ne.field_i = uh.a(127, var2);
             break L99;
@@ -1218,44 +1118,49 @@ final class vb extends qf {
             break L99;
           }
         }
-        int discarded$241 = -124;
-        var2 = cb.a("benefits,0");
         L100: {
-          if (null != var2) {
-            rj.field_l[0] = uh.a(114, var2);
+          var2 = cb.a("benefits,0", (byte) -124);
+          if (param1 == 30962) {
             break L100;
           } else {
+            field_j = null;
             break L100;
           }
         }
         L101: {
-          int discarded$242 = -124;
-          var2 = cb.a("benefits,1");
           if (null != var2) {
-            rj.field_l[1] = uh.a(121, var2);
+            rj.field_l[0] = uh.a(114, var2);
             break L101;
           } else {
             break L101;
           }
         }
         L102: {
-          int discarded$243 = -124;
-          var2 = cb.a("benefits,2");
-          if (null == var2) {
+          var2 = cb.a("benefits,1", (byte) -124);
+          if (null != var2) {
+            rj.field_l[1] = uh.a(121, var2);
             break L102;
           } else {
-            rj.field_l[2] = uh.a(125, var2);
             break L102;
           }
         }
-        ri.field_c = null;
         L103: {
-          if (!th.field_i) {
+          var2 = cb.a("benefits,2", (byte) -124);
+          if (null == var2) {
             break L103;
+          } else {
+            rj.field_l[2] = uh.a(125, var2);
+            break L103;
+          }
+        }
+        ri.field_c = null;
+        L104: {
+          if (!th.field_i) {
+            break L104;
           } else {
             var3++;
             StarCannon.field_A = var3;
-            break L103;
+            break L104;
           }
         }
     }

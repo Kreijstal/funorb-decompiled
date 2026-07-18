@@ -7,12 +7,12 @@ final class jd {
     static int field_c;
     static int field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_b = null;
     }
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -31,10 +31,8 @@ final class jd {
         StringBuilder stackOut_5_1 = null;
         String stackOut_5_2 = null;
         try {
-          int discarded$14 = 20;
-          r.a((java.awt.Component) (Object) param0);
-          int discarded$15 = 123;
-          ph.a((java.awt.Component) (Object) param0);
+          r.a((java.awt.Component) (Object) param0, 20);
+          ph.a((java.awt.Component) (Object) param0, 123);
           if (null != rk.field_c) {
             rk.field_c.a(3, (java.awt.Component) (Object) param0);
             return;
@@ -73,7 +71,7 @@ final class jd {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0, boolean param1, int param2) {
         Object var4 = null;
         rb.a((String) null, param1, param0, 14635);
     }
@@ -166,7 +164,7 @@ final class jd {
         }
     }
 
-    final static String a(long param0) {
+    final static String a(long param0, int param1) {
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;

@@ -31,8 +31,7 @@ final class rl {
     }
 
     final static void b(int param0) {
-        int discarded$3 = 40;
-        nq.e();
+        nq.e(40);
         if (param0 != 18) {
             rl.a(81);
         }

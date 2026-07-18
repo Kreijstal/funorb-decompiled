@@ -13,6 +13,7 @@ final class bq extends wia {
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
+        int stackIn_17_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_27_0 = 0;
         int stackIn_32_0 = 0;
@@ -41,6 +42,7 @@ final class bq extends wia {
         int stackOut_31_0 = 0;
         int stackOut_36_0 = 0;
         int stackOut_34_0 = 0;
+        int stackOut_16_0 = 0;
         RuntimeException stackOut_38_0 = null;
         StringBuilder stackOut_38_1 = null;
         RuntimeException stackOut_41_0 = null;
@@ -59,8 +61,7 @@ final class bq extends wia {
         String stackOut_43_2 = null;
         try {
           L0: {
-            int discarded$7 = 63;
-            if (kaa.a(param0)) {
+            if (kaa.a(param0, (byte) 63)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
@@ -75,33 +76,38 @@ final class bq extends wia {
                   stackIn_14_0 = stackOut_13_0;
                   return stackIn_14_0 != 0;
                 } else {
-                  if (param2.length() == 0) {
-                    stackOut_21_0 = 1;
-                    stackIn_22_0 = stackOut_21_0;
-                    return stackIn_22_0 != 0;
-                  } else {
-                    if (vs.a(-32, param2, param0)) {
-                      stackOut_26_0 = 0;
-                      stackIn_27_0 = stackOut_26_0;
-                      return stackIn_27_0 != 0;
+                  if (param1 == 20133) {
+                    if (param2.length() == 0) {
+                      stackOut_21_0 = 1;
+                      stackIn_22_0 = stackOut_21_0;
+                      return stackIn_22_0 != 0;
                     } else {
-                      if (cw.a(param0, param2, true)) {
-                        stackOut_31_0 = 0;
-                        stackIn_32_0 = stackOut_31_0;
-                        return stackIn_32_0 != 0;
+                      if (vs.a(param1 + -20165, param2, param0)) {
+                        stackOut_26_0 = 0;
+                        stackIn_27_0 = stackOut_26_0;
+                        return stackIn_27_0 != 0;
                       } else {
-                        int discarded$8 = 0;
-                        if (!db.a(param2, param0)) {
-                          stackOut_36_0 = 1;
-                          stackIn_37_0 = stackOut_36_0;
-                          break L0;
+                        if (cw.a(param0, param2, true)) {
+                          stackOut_31_0 = 0;
+                          stackIn_32_0 = stackOut_31_0;
+                          return stackIn_32_0 != 0;
                         } else {
-                          stackOut_34_0 = 0;
-                          stackIn_35_0 = stackOut_34_0;
-                          return stackIn_35_0 != 0;
+                          if (!db.a(param2, param0, false)) {
+                            stackOut_36_0 = 1;
+                            stackIn_37_0 = stackOut_36_0;
+                            break L0;
+                          } else {
+                            stackOut_34_0 = 0;
+                            stackIn_35_0 = stackOut_34_0;
+                            return stackIn_35_0 != 0;
+                          }
                         }
                       }
                     }
+                  } else {
+                    stackOut_16_0 = 0;
+                    stackIn_17_0 = stackOut_16_0;
+                    return stackIn_17_0 != 0;
                   }
                 }
               }
@@ -137,7 +143,7 @@ final class bq extends wia {
           }
           L2: {
             stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
-            stackOut_42_1 = ((StringBuilder) (Object) stackIn_42_1).append(stackIn_42_2).append(',').append(20133).append(',');
+            stackOut_42_1 = ((StringBuilder) (Object) stackIn_42_1).append(stackIn_42_2).append(',').append(param1).append(',');
             stackIn_45_0 = stackOut_42_0;
             stackIn_45_1 = stackOut_42_1;
             stackIn_43_0 = stackOut_42_0;

@@ -16,11 +16,11 @@ final class jd extends ac implements ae {
     static int[] field_lb;
     static String[] field_mb;
 
-    final static void m() {
+    final static void m(int param0) {
         qf.field_e = new ol(an.field_a, od.field_g, hg.field_e, bd.field_f, (gh) (Object) ol.field_Tb, qb.field_K);
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         if (!(((jd) this).field_Q)) {
             return;
         }
@@ -73,8 +73,7 @@ final class jd extends ac implements ae {
                 if (wh.field_b == param1) {
                   var3 = (Object) (Object) ff.field_gb;
                   ((jd) this).field_E = ((jd) this).field_E + 10;
-                  int discarded$26 = 12412;
-                  if (!ph.b()) {
+                  if (!ph.b(12412)) {
                     break L1;
                   } else {
                     ((jd) this).field_E = ((jd) this).field_E + 20;
@@ -99,8 +98,7 @@ final class jd extends ac implements ae {
             var4.field_x = ((jd) this).field_x;
             var4.field_p = (qk) (Object) new cn(rc.field_m, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((jd) this).a(var4, -107);
-            int discarded$27 = 104;
-            ((jd) this).field_ob = this.a((tn) this, jf.field_cb);
+            ((jd) this).field_ob = this.a((tn) this, jf.field_cb, 104);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -160,7 +158,7 @@ final class jd extends ac implements ae {
         }
     }
 
-    private final oa a(tn param0, String param1) {
+    private final oa a(tn param0, String param1, int param2) {
         oa var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -291,8 +289,7 @@ final class jd extends ac implements ae {
           L0: {
             var6_int = -73 / ((param1 - -85) / 36);
             if (param3 == ((jd) this).field_ob) {
-              int discarded$2 = 1;
-              this.c();
+              this.c(true);
               break L0;
             } else {
               return;
@@ -330,7 +327,7 @@ final class jd extends ac implements ae {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         int stackIn_7_0 = 0;
         int stackOut_5_0 = 0;
         if (param0 != 160) {
@@ -354,7 +351,7 @@ final class jd extends ac implements ae {
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, boolean param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -413,12 +410,10 @@ final class jd extends ac implements ae {
                       } else {
                         if (var4.length() >= 1) {
                           L3: {
-                            int discarded$24 = -33;
-                            if (jd.a(var4.charAt(0))) {
+                            if (jd.a(var4.charAt(0), -33)) {
                               break L3;
                             } else {
-                              int discarded$25 = -33;
-                              if (jd.a(var4.charAt(var4.length() + -1))) {
+                              if (jd.a(var4.charAt(var4.length() + -1), -33)) {
                                 break L3;
                               } else {
                                 var5 = 0;
@@ -435,8 +430,7 @@ final class jd extends ac implements ae {
                                   } else {
                                     L5: {
                                       var7 = param0.charAt(var6);
-                                      int discarded$26 = -33;
-                                      if (!jd.a((char) var7)) {
+                                      if (!jd.a((char) var7, -33)) {
                                         var5 = 0;
                                         break L5;
                                       } else {
@@ -509,7 +503,7 @@ final class jd extends ac implements ae {
         return stackIn_34_0;
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_pb = null;
         field_kb = null;
         field_sb = null;

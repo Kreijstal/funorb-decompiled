@@ -103,7 +103,7 @@ abstract class ab extends l {
 
     abstract int f(int param0);
 
-    public static void g() {
+    public static void g(int param0) {
         field_r = null;
         int var1 = 55;
         field_t = null;
@@ -147,12 +147,11 @@ abstract class ab extends l {
         try {
           L0: {
             var10 = (CharSequence) (Object) param2;
-            int discarded$7 = 21257;
-            if (ed.a(var10)) {
+            if (ed.a(var10, 21257)) {
               if (ld.field_g == 2) {
                 var8 = mn.a(-1, param2);
                 if (var8 != null) {
-                  o discarded$8 = me.field_e.b((o) (Object) var8, (byte) 123);
+                  o discarded$2 = me.field_e.b((o) (Object) var8, (byte) 123);
                   L1: while (true) {
                     var7 = (ve) (Object) me.field_e.a((byte) -110);
                     if (var7 == null) {
@@ -223,7 +222,7 @@ abstract class ab extends l {
         return (String) (Object) stackIn_14_0;
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         l var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -262,7 +261,7 @@ abstract class ab extends l {
         }
     }
 
-    final static void h() {
+    final static void h(int param0) {
         fm.field_R = new String[38];
         fm.field_R[16] = cn.field_a;
         fm.field_R[17] = aa.field_a;

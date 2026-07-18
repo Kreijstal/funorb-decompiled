@@ -82,8 +82,7 @@ final class ck extends mh {
     }
 
     ck(ip param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (fp) (Object) ub.c());
-        int discarded$0 = 4;
+        super(param1, (fp) (Object) ub.c(4));
         try {
             ((ck) this).field_S = param0;
             ((ck) this).field_X = param1;
@@ -443,7 +442,7 @@ final class ck extends mh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_Y = null;
         field_T = null;
         field_R = null;

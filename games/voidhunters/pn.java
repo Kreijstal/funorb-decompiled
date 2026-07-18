@@ -10,7 +10,7 @@ final class pn implements dja {
         return (tv) (Object) new qjb();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

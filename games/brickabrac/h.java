@@ -9,7 +9,7 @@ abstract class h extends oc implements sd {
     static String[] field_F;
     static tp[] field_C;
 
-    public static void f() {
+    public static void f(byte param0) {
         field_C = null;
         field_F = null;
         field_D = null;
@@ -220,8 +220,7 @@ abstract class h extends oc implements sd {
             } else {
               L2: {
                 if (pe.field_l[81]) {
-                  int discarded$3 = -35;
-                  stackOut_8_0 = this.a(param2);
+                  stackOut_8_0 = this.a(param2, (byte) -35);
                   stackIn_9_0 = stackOut_8_0;
                   break L2;
                 } else {
@@ -996,8 +995,7 @@ abstract class h extends oc implements sd {
     }
 
     final static boolean a(int param0, int param1, int param2, byte param3, int param4, boolean param5, int param6) {
-        int discarded$4 = -4858;
-        if (gp.a()) {
+        if (gp.a(-4858)) {
             hc.a(param5, -7812, param4, param1);
             if (bm.field_d != null) {
                 if (bm.field_d.a(-2, param1, param6, param0, param5)) {
@@ -1006,14 +1004,13 @@ abstract class h extends oc implements sd {
                 }
             }
             wp.a(124, param1, param5);
-            int discarded$5 = 124;
-            vo.a(param2, param5);
+            vo.a(param2, param5, 124);
             param5 = false;
         }
         return param5;
     }
 
-    private final boolean a(oc param0) {
+    private final boolean a(oc param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -1374,7 +1371,7 @@ abstract class h extends oc implements sd {
         }
     }
 
-    final static void g() {
+    final static void g(byte param0) {
         bn.field_q = new mh(0L, (mh) null);
         if (vd.field_e) {
             bn.field_q.a(dn.field_N, 0);

@@ -127,9 +127,8 @@ final class rl {
         }
     }
 
-    final static void a() {
-        int discarded$0 = -98;
-        gg.b();
+    final static void a(byte param0) {
+        gg.b((byte) -98);
         nm.field_a = true;
         nf.field_a = true;
         vn.field_f.e((byte) 89);

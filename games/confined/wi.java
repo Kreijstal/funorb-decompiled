@@ -84,7 +84,7 @@ final class wi {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_q = null;
     }
@@ -130,9 +130,9 @@ final class wi {
             }
             return;
           } else {
-            int fieldTemp$2 = ((wi) this).field_l - 1;
+            int fieldTemp$1 = ((wi) this).field_l - 1;
             ((wi) this).field_l = ((wi) this).field_l - 1;
-            if (fieldTemp$2 > 0) {
+            if (fieldTemp$1 > 0) {
               return;
             } else {
               ((wi) this).field_l = ((wi) this).field_i;
@@ -141,8 +141,7 @@ final class wi {
                 return;
               } else {
                 L3: {
-                  int discarded$3 = -128;
-                  this.c();
+                  this.c((byte) -128);
                   if (param0 == -44) {
                     break L3;
                   } else {
@@ -190,7 +189,7 @@ final class wi {
         return stackIn_6_0 != 0;
     }
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         dg var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -284,7 +283,7 @@ final class wi {
         }
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

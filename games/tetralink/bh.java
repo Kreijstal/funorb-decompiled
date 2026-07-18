@@ -279,7 +279,7 @@ class bh extends mc {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = 0;
         if (wb.field_c >= 224) {
             qn.a(256, 128);
@@ -586,7 +586,7 @@ class bh extends mc {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_o = null;
         field_n = null;
         field_s = null;
@@ -1048,7 +1048,7 @@ class bh extends mc {
         ((bh) this).field_u[fieldTemp$1] = (byte)param0;
     }
 
-    final static int h() {
+    final static int h(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -1122,8 +1122,7 @@ class bh extends mc {
     }
 
     bh(int param0) {
-        int discarded$0 = -2;
-        ((bh) this).field_u = pe.a(param0);
+        ((bh) this).field_u = pe.a(param0, (byte) -2);
         ((bh) this).field_t = 0;
     }
 

@@ -20,7 +20,7 @@ final class sp extends im {
     static String field_Cb;
     String field_Nb;
 
-    final static void a(int param0, fa param1) {
+    final static void a(int param0, fa param1, int param2) {
         ml var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_3_0 = null;
@@ -84,7 +84,7 @@ final class sp extends im {
         return gt.a(false, 128, (byte) 126, param0);
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -393,7 +393,7 @@ final class sp extends im {
         }
     }
 
-    final static void i() {
+    final static void i(int param0) {
         if (!(!pb.field_B)) {
             return;
         }
@@ -614,8 +614,7 @@ final class sp extends im {
               if (var6_int >= ((sp) this).field_Pb.length - 1) {
                 L3: {
                   ((sp) this).field_Mb.field_J = 21;
-                  int discarded$1 = -576054046;
-                  ((sp) this).field_Gb = gp.a(((sp) this).field_Sb);
+                  ((sp) this).field_Gb = gp.a(((sp) this).field_Sb, -576054046);
                   if (((sp) this).field_Fb != -1) {
                     break L3;
                   } else {

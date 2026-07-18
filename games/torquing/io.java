@@ -125,7 +125,7 @@ final class io extends ig {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_s = null;
     }
 

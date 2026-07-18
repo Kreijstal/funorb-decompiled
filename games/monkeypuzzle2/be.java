@@ -38,15 +38,13 @@ final class be {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (gj.field_a != null) {
             if (!(gj.field_a.h())) {
                 return;
             }
         }
-        int discarded$0 = 96;
-        int discarded$1 = 100;
-        gj.field_a = li.a(ke.field_h[5]);
+        gj.field_a = li.a(ke.field_h[5], 100, 96);
         int var1 = -39;
         na.a((byte) 125, gj.field_a);
     }
@@ -91,7 +89,7 @@ final class be {
         return 0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_e = null;
     }
@@ -424,13 +422,12 @@ final class be {
         return stackIn_1_0;
     }
 
-    final static ad a(boolean param0, boolean param1, int param2) {
+    final static ad a(boolean param0, boolean param1, int param2, int param3, boolean param4) {
         if (param2 != 13271) {
             Object var6 = null;
             be.a((gk) null, (java.math.BigInteger) null, -19, 70, -21, (java.math.BigInteger) null, (byte[]) null);
         }
-        int discarded$0 = 50;
-        return em.a(false, 6, false, true, 0);
+        return em.a(false, 6, false, true, 0, 50);
     }
 
     be(int param0, int param1, int param2) {

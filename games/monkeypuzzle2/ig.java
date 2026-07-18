@@ -35,8 +35,7 @@ final class ig {
         field_a = param3 - param1;
         ig.c();
         if (field_i.length < field_a) {
-            int discarded$0 = 1;
-            field_i = new int[i.a(field_a)];
+            field_i = new int[i.a(field_a, true)];
         }
         int var4 = param1 * ge.field_h + param0;
         for (var5 = 0; var5 < field_a; var5++) {

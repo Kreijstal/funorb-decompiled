@@ -129,7 +129,7 @@ final class ee {
         return ((ee) this).field_e;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_b = null;
         field_d = null;

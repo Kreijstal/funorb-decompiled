@@ -125,11 +125,11 @@ final class lh {
         return stackIn_15_0;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return qg.field_g == vc.field_F;
     }
 
-    final static String a(int param0, int param1, CharSequence[] param2) {
+    final static String a(int param0, int param1, CharSequence[] param2, int param3) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;

@@ -102,7 +102,7 @@ final class bw extends qt {
         }
     }
 
-    final static wb[] b() {
+    final static wb[] b(int param0) {
         wb[] var1 = null;
         int var2 = 0;
         int var3 = 0;

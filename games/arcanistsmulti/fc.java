@@ -223,7 +223,7 @@ final class fc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
         field_c = null;
@@ -265,8 +265,7 @@ final class fc {
               return stackIn_3_0 != 0;
             } else {
               var5 = -27 % ((param0 - -66) / 51);
-              int discarded$2 = 1;
-              e.a(var6);
+              e.a(var6, true);
               stackOut_4_0 = 1;
               stackIn_5_0 = stackOut_4_0;
               break L0;

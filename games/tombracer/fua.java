@@ -66,11 +66,9 @@ final class fua implements isa {
               L1: {
                 var6_int = param1 + param0.field_i;
                 var7 = param0.field_n + param3;
-                int discarded$2 = 1;
-                bl.a(param0.field_m, var7, param0.field_p, var6_int);
+                bl.a(param0.field_m, var7, param0.field_p, var6_int, 1);
                 if (param0.b((byte) -34)) {
-                  int discarded$3 = 0;
-                  nn.a(var6_int - -2, 2 + var7, -4 + param0.field_p, param0.field_m - 4);
+                  nn.a(var6_int - -2, 2 + var7, -4 + param0.field_p, param0.field_m - 4, false);
                   break L1;
                 } else {
                   break L1;

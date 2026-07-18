@@ -173,7 +173,7 @@ class ff implements dh, cc {
                 ((ff) this).field_n.a(((ff) this).c(121, param2), this.a(param2, param7, 11875, param6), this.b(param2, param0, 1674, param4) + var11, param5, param1);
                 break L1;
               } else {
-                int discarded$2 = ((ff) this).field_n.a(((ff) this).c(113, param2), this.a(param2, param7, 11875, param6), this.b(param2, param0, 1674, param4), var9_int, var10, param5, param1, ((ff) this).field_g, ((ff) this).field_i, ((ff) this).field_f);
+                int discarded$1 = ((ff) this).field_n.a(((ff) this).c(113, param2), this.a(param2, param7, 11875, param6), this.b(param2, param0, 1674, param4), var9_int, var10, param5, param1, ((ff) this).field_g, ((ff) this).field_i, ((ff) this).field_f);
                 break L1;
               }
             }
@@ -185,8 +185,7 @@ class ff implements dh, cc {
                 break L5;
               }
             }
-            int discarded$3 = 1;
-            id.a();
+            id.a(true);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -699,7 +698,7 @@ class ff implements dh, cc {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_l = null;
         field_d = null;
         field_a = null;
@@ -1218,8 +1217,7 @@ class ff implements dh, cc {
                 var12 = stackIn_5_0 + Math.min(stackIn_5_1, Math.min(stackIn_5_2, stackIn_5_3));
                 uh.a(param4 - -param3.field_m, param0 - -param3.field_v, -14045, param4 + param3.field_m - -param3.field_h, param3.field_r + param0 + param3.field_v);
                 hb.field_j.a(var12, var10, ((ff) this).field_c, var11, var10, 8947848);
-                int discarded$2 = 1;
-                id.a();
+                id.a(true);
                 break L1;
               } else {
                 break L1;
@@ -1230,7 +1228,7 @@ class ff implements dh, cc {
                 break L3;
               } else {
                 var13 = null;
-                int discarded$3 = ((ff) this).a((el) null, (byte) 70);
+                int discarded$1 = ((ff) this).a((el) null, (byte) 70);
                 break L3;
               }
             }
@@ -1383,7 +1381,7 @@ class ff implements dh, cc {
                   break L1;
                 } else {
                   var17 = null;
-                  int discarded$2 = ((ff) this).a(90, -50, (el) null);
+                  int discarded$1 = ((ff) this).a(90, -50, (el) null);
                   break L1;
                 }
               }
@@ -1408,8 +1406,7 @@ class ff implements dh, cc {
                   var12 = var10;
                   L4: while (true) {
                     if (var12 > var11) {
-                      int discarded$3 = 1;
-                      id.a();
+                      id.a(true);
                       break L2;
                     } else {
                       L5: {

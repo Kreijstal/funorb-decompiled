@@ -64,8 +64,7 @@ final class qe {
         try {
           L0: {
             L1: {
-              int discarded$2 = -1;
-              this.a(18476, param0, (String) null, param2, param3);
+              this.a(18476, param0, (String) null, param2, param3, -1);
               if (param1 <= -105) {
                 break L1;
               } else {
@@ -710,14 +709,13 @@ final class qe {
             return;
         }
         try {
-            int discarded$0 = -1;
-            this.a(param2 ^ -21241, param0, param3, param1, param4);
+            this.a(param2 ^ -21241, param0, param3, param1, param4, -1);
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) (Object) runtimeException, "qe.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(int param0, sj param1, String param2, String param3, String param4) {
+    private final void a(int param0, sj param1, String param2, String param3, String param4, int param5) {
         oc[] var7 = null;
         oc var7_ref = null;
         RuntimeException var7_ref2 = null;
@@ -926,7 +924,7 @@ final class qe {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_f = null;
         field_i = null;
@@ -939,8 +937,7 @@ final class qe {
                 Object var5 = null;
                 ((qe) this).a((String) null, (sj) null, -7);
             }
-            int discarded$0 = -1;
-            this.a(18476, param1, (String) null, (String) null, param0);
+            this.a(18476, param1, (String) null, (String) null, param0, -1);
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) (Object) runtimeException, "qe.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

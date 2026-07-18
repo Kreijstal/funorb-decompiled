@@ -6,12 +6,12 @@ final class ca extends oh {
     static a field_h;
     static int field_j;
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_h = null;
     }
 
-    final static void a(int param0, int param1, int param2, String param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -194,8 +194,7 @@ final class ca extends oh {
                 pe.field_D = ms.field_c;
                 ra.a(115, 200);
                 rj.a(-94, param2, param1);
-                int discarded$1 = 16777215;
-                nh.a(param0, 0, 0, (byte) -3, cg.field_B);
+                nh.a(param0, 0, 0, (byte) -3, cg.field_B, 16777215);
                 break L0;
               } else {
                 L2: {

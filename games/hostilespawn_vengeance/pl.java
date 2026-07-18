@@ -29,7 +29,7 @@ final class pl {
         field_i = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         bd var1 = null;
         bd var2 = null;
         int var3 = 0;
@@ -48,8 +48,7 @@ final class pl {
             }
             ti.field_c.a();
             var1.f(0, 0);
-            int discarded$0 = 0;
-            eh.b();
+            eh.b(false);
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "pl.C(" + -16183 + ')');
         }

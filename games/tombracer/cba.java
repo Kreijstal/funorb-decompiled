@@ -7,7 +7,7 @@ final class cba {
     static oc[] field_b;
     static String field_c;
 
-    final static int a(byte param0, double param1) {
+    final static int a(byte param0, double param1, int param2) {
         return qma.a((byte) 123, (double)8192 * param1 / 360.0);
     }
 

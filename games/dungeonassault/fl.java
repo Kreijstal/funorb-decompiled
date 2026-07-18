@@ -100,8 +100,7 @@ final class fl extends ne {
                   }
                 }
               } else {
-                int discarded$2 = 3;
-                ch.a((byte) -16, var4);
+                ch.a((byte) -16, var4, 3);
                 var4 = (fn) (Object) cb.field_a.a(4);
                 continue L1;
               }
@@ -114,7 +113,7 @@ final class fl extends ne {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_o = null;
         field_m = null;
         field_n = null;
@@ -142,8 +141,7 @@ final class fl extends ne {
         String stackOut_5_2 = null;
         try {
           if (kk.a(param1, 1, param3, param2)) {
-            int discarded$2 = 0;
-            return ec.g();
+            return ec.g(0);
           } else {
             return null;
           }

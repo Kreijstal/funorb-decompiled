@@ -9,7 +9,7 @@ final class gb {
     static double field_a;
     static h field_f;
 
-    final static void a(int param0, int param1, eg param2, int param3, ka[] param4, ka[] param5, boolean param6, int param7, eg param8) {
+    final static void a(int param0, int param1, eg param2, int param3, ka[] param4, ka[] param5, boolean param6, int param7, eg param8, int param9, int param10, int param11, int param12, int param13, int param14) {
         try {
             Object var16 = null;
             bh.a(24, 240, ai.field_d, 0, param4, qa.field_f, 24, param5, param7, 18, 32, 320, 0, 2, param8, 8, -96, 480, (ka[]) null, lg.field_f, param2);
@@ -47,8 +47,7 @@ final class gb {
           L0: {
             if (param1 != null) {
               var2 = new qj(param1, ug.field_e, dd.field_t, pg.field_r, lg.field_e, td.field_m, h.field_a);
-              int discarded$2 = 0;
-              p.a();
+              p.a(0);
               stackOut_3_0 = (qj) var2;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -177,12 +176,12 @@ final class gb {
         return stackIn_12_0;
     }
 
-    final static int b() {
+    final static int b(int param0) {
         int var1 = -82;
         return ea.field_f;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_e = null;
         field_c = null;

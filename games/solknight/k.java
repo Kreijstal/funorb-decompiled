@@ -9,7 +9,7 @@ final class k {
     static String field_a;
     static int field_c;
 
-    final static void a() {
+    final static void a(byte param0) {
         ce.field_b = false;
         field_b = false;
         h.a(-1, true);
@@ -17,7 +17,7 @@ final class k {
         ma.field_o = el.field_p;
     }
 
-    final static StringBuilder a(StringBuilder param0) {
+    final static StringBuilder a(StringBuilder param0, int param1, char param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

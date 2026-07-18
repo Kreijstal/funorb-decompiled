@@ -94,8 +94,7 @@ final class kn implements ur {
               if (param2) {
                 break L5;
               } else {
-                int discarded$2 = 1;
-                kn.a();
+                kn.a(true);
                 break L5;
               }
             }
@@ -104,7 +103,7 @@ final class kn implements ur {
                 break L6;
               } else {
                 var10 = ((kn) this).field_d + (((kn) this).field_i + ((kn) this).field_n);
-                int discarded$3 = ((kn) this).field_b.a(param3.field_w, var10 + (param1 + param3.field_o), ((kn) this).field_g + param4 + param3.field_t, param3.field_n - (var10 - -((kn) this).field_n), -(((kn) this).field_n << 1) + param3.field_s, ((kn) this).field_e, ((kn) this).field_j, ((kn) this).field_o, ((kn) this).field_l, 0);
+                int discarded$1 = ((kn) this).field_b.a(param3.field_w, var10 + (param1 + param3.field_o), ((kn) this).field_g + param4 + param3.field_t, param3.field_n - (var10 - -((kn) this).field_n), -(((kn) this).field_n << 1) + param3.field_s, ((kn) this).field_e, ((kn) this).field_j, ((kn) this).field_o, ((kn) this).field_l, 0);
                 break L6;
               }
             }
@@ -142,7 +141,7 @@ final class kn implements ur {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_p = null;
         field_m = null;
         field_h = null;

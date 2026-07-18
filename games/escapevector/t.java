@@ -8,7 +8,7 @@ final class t {
     static ka field_a;
     private int[] field_e;
 
-    private final void c() {
+    private final void c(byte param0) {
         if (((t) this).field_c) {
             ((t) this).field_d = 8;
         } else {
@@ -160,9 +160,7 @@ final class t {
           }
           L4: {
             md.field_D.a(112);
-            int discarded$2 = 1;
-            int discarded$3 = 1;
-            cf.a(mj.field_b);
+            cf.a(mj.field_b, true, 1);
             mj.field_b.h(5267536);
             var7 = -mj.field_d + 30 + 5 * param0;
             if (var7 <= 0) {
@@ -443,8 +441,7 @@ final class t {
             break L3;
           } else {
             if (((t) this).field_b.b((byte) -18)) {
-              int discarded$1 = 0;
-              ek.a(((t) this).field_b.field_j);
+              ek.a(((t) this).field_b.field_j, false);
               return true;
             } else {
               break L3;
@@ -777,8 +774,7 @@ final class t {
 
     t() {
         ((t) this).field_c = bj.e((byte) 117);
-        int discarded$0 = 62;
-        this.c();
+        this.c((byte) 62);
         this.c(22);
         ((t) this).field_b = new wc(((t) this).field_d);
     }

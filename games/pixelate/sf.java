@@ -4,7 +4,7 @@
 final class sf {
     static String field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         int var1 = -110;
     }

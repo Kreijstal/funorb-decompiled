@@ -135,13 +135,10 @@ final class fc extends en {
         }
         L4: {
           if (((fc) this).field_k.field_s != -1) {
-            int discarded$6 = 30496;
-            var14_ref_String = jk.a(new String[1], "<col=178B8B><%0></col>");
+            var14_ref_String = jk.a(new String[1], "<col=178B8B><%0></col>", 30496);
             var22 = ((fc) this).field_k.field_d;
-            int discarded$7 = 30496;
-            var16_ref_String = jk.a(new String[1], lc.field_g);
-            int discarded$8 = 30496;
-            var17_ref_String = ck.field_H.a(jk.a(new String[1], var22[1]), (byte) -48);
+            var16_ref_String = jk.a(new String[1], lc.field_g, 30496);
+            var17_ref_String = ck.field_H.a(jk.a(new String[1], var22[1], 30496), (byte) -48);
             var24 = jn.a(var16_ref_String, new int[1], -118, (se) (Object) la.field_b);
             var4 = (Object) (Object) var24;
             var23 = jn.a(var17_ref_String, new int[1], -75, (se) (Object) la.field_b);
@@ -294,13 +291,10 @@ final class fc extends en {
               }
             }
           } else {
-            int discarded$9 = 30496;
-            var15_ref_String = jk.a(new String[1], "<col=FF8000><%0></col>");
+            var15_ref_String = jk.a(new String[1], "<col=FF8000><%0></col>", 30496);
             var25 = ((fc) this).field_k.field_D[var14];
-            int discarded$10 = 30496;
-            var17_ref_String = jk.a(new String[1], rm.field_J);
-            int discarded$11 = 30496;
-            var18_ref_String = ck.field_H.a(jk.a(new String[1], var25[1]), (byte) -48);
+            var17_ref_String = jk.a(new String[1], rm.field_J, 30496);
+            var18_ref_String = ck.field_H.a(jk.a(new String[1], var25[1], 30496), (byte) -48);
             var6[var14] = jn.a(var17_ref_String, new int[1], -80, (se) (Object) la.field_b);
             var7[var14] = jn.a(var18_ref_String, new int[1], md.b(16777215, -16777100), (se) (Object) la.field_b);
             var9 = var9 + (2 - -var6[var14].length - -var7[var14].length) * la.field_b.field_H;
@@ -350,23 +344,19 @@ final class fc extends en {
         int var4 = db.field_v.field_E + db.field_v.field_H;
         int var5 = db.field_v.field_H;
         if (-1 != ((fc) this).field_k.field_s) {
-            int discarded$0 = 30496;
-            String var6_ref_String = jk.a(new String[1], "<col=178B8B><%0></col>");
+            String var6_ref_String = jk.a(new String[1], "<col=178B8B><%0></col>", 30496);
             var13 = ((fc) this).field_k.field_C;
             var14 = var13[0];
-            int discarded$1 = 30496;
-            var15 = ck.field_H.a(jk.a(new String[1], var13[1]), (byte) -48);
+            var15 = ck.field_H.a(jk.a(new String[1], var13[1], 30496), (byte) -48);
             var16 = jn.a("<col=178B8B>" + var14 + "</col> - " + var15, new int[1], -94, (se) (Object) db.field_v);
             var2 = (Object) (Object) var16;
             var4 = var4 + db.field_v.field_H * (1 - -var16.length);
         }
         for (var6 = 0; var6 < ((fc) this).field_k.field_A.length; var6++) {
-            int discarded$2 = 30496;
-            String var7_ref_String = jk.a(new String[1], "<col=FF8000><%0></col>");
+            String var7_ref_String = jk.a(new String[1], "<col=FF8000><%0></col>", 30496);
             var17 = ((fc) this).field_k.field_k[var6];
             var18 = var17[0];
-            int discarded$3 = 30496;
-            var19 = ck.field_H.a(jk.a(new String[1], var17[1]), (byte) -48);
+            var19 = ck.field_H.a(jk.a(new String[1], var17[1], 30496), (byte) -48);
             var3[var6] = jn.a("<col=FF8000>" + var18 + "</col> - " + var19, new int[1], -95, (se) (Object) db.field_v);
             var4 = var4 + db.field_v.field_H * (1 - -var3[var6].length);
         }
@@ -396,7 +386,7 @@ final class fc extends en {
         return var20;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
         field_l = null;
         field_e = null;
@@ -484,13 +474,11 @@ final class fc extends en {
         String stackOut_15_2 = null;
         try {
           L0: {
-            int discarded$2 = 2;
-            lb.a(param16, param19, param20);
+            lb.a(param16, param19, param20, 2);
             mi.a(param12, 25570, param9, param5, param15);
             wm.a((byte) -66, param3, param13);
             bk.a(param11, (byte) -40, param18, param1, param6, param0);
-            int discarded$3 = -8;
-            mn.a(param8, param17, param10);
+            mn.a(param8, param17, param10, -8);
             tk.a(param2, -122, param7, param4);
             break L0;
           }

@@ -26,8 +26,7 @@ final class o {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$4 = 3;
-                    ak.a(-26039, var5);
+                    ak.a(-26039, var5, 3);
                     var5 = (oc) (Object) fn.field_a.a(16213);
                     continue L2;
                   }
@@ -46,7 +45,7 @@ final class o {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
         field_b = null;

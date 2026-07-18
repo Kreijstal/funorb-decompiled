@@ -13,8 +13,7 @@ final class ih {
             }
             na.field_c.a(param3, param0, param2, 2113632);
             ul.d();
-            int discarded$0 = 0;
-            m.a(true);
+            m.a(true, 0);
         } catch (RuntimeException runtimeException) {
             throw dd.a((Throwable) (Object) runtimeException, "ih.A(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ',' + param2 + ',' + param3 + ')');
         }

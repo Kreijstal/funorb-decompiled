@@ -143,7 +143,7 @@ final class jh extends ch implements vo {
                 break L1;
               } else {
                 var8 = null;
-                boolean discarded$4 = ((jh) this).a(-91, 51, (ng) null, '0');
+                boolean discarded$2 = ((jh) this).a(-91, 51, (ng) null, '0');
                 break L1;
               }
             }
@@ -160,8 +160,7 @@ final class jh extends ch implements vo {
                 return;
               }
             } else {
-              int discarded$5 = 1;
-              nm.b();
+              nm.b(true);
               return;
             }
           }
@@ -222,7 +221,7 @@ final class jh extends ch implements vo {
         ((jh) this).b((ng) (Object) ((jh) this).field_L, 80);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_K = null;
         field_P = null;
         field_I = null;

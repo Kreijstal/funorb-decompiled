@@ -46,8 +46,7 @@ final class d extends ug {
                   }
                 }
               } else {
-                int discarded$2 = 4;
-                pf.a((byte) -104, var4);
+                pf.a((byte) -104, var4, 4);
                 var4 = (vl) (Object) ob.field_s.d((byte) 63);
                 continue L1;
               }
@@ -60,7 +59,7 @@ final class d extends ug {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_h = null;
     }
 

@@ -181,7 +181,7 @@ final class ib {
         ka.a(param2, param1, param6, param0, var8, param5, 127, param3);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         int var1 = 0;
     }

@@ -635,10 +635,8 @@ final class ig extends wo {
             re.field_g = param0;
             wb.field_m = param5;
             di.a(param17, param10, param12, (byte) -116, param19);
-            int discarded$2 = 0;
-            hn.a(1780, 0, param13);
-            int discarded$3 = -386;
-            ro.a(param4, param7, param9, param11, param16);
+            hn.a(1780, 0, param13, 0);
+            ro.a(param4, param7, param9, param11, param16, -386);
             ba.a(18002, param18, param2);
             kc.a((byte) 50, param15, param1, param6);
             break L0;

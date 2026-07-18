@@ -8,7 +8,7 @@ final class mh extends pa {
     static int field_G;
     static ec field_E;
 
-    public static void e() {
+    public static void e(byte param0) {
         field_I = null;
         field_E = null;
         int var1 = -24;

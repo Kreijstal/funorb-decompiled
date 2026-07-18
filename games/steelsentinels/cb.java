@@ -1988,7 +1988,7 @@ final class cb implements Runnable {
         return stackIn_4_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
         field_a = null;
         field_e = null;

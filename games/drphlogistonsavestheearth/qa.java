@@ -223,7 +223,7 @@ class qa extends hf {
         ((qa) this).h(param3 + -16466);
     }
 
-    final static void a(int param0, int[] param1, int param2, int param3) {
+    final static void a(int param0, int[] param1, int param2, int param3, int param4) {
         int[] var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;

@@ -28,7 +28,7 @@ final class ni extends r {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_M = null;
         field_K = null;
         field_D = null;

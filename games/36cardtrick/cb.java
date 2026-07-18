@@ -7,7 +7,7 @@ final class cb extends qb {
     static gd field_g;
     static int field_i;
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_j = null;
         field_g = null;

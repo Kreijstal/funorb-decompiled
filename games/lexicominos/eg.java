@@ -195,7 +195,7 @@ final class eg extends mg {
         }
     }
 
-    final static vj a(int param0, int param1, sh param2, sh param3) {
+    final static vj a(int param0, int param1, sh param2, sh param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         vj stackIn_4_0 = null;

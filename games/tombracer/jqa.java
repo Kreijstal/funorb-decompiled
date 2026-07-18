@@ -23,7 +23,7 @@ final class jqa implements Runnable {
         ((jqa) this).a((byte) 105);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

@@ -117,13 +117,13 @@ final class bm {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         field_g = null;
         field_e = null;
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -284,8 +284,7 @@ final class bm {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((bm) this).field_f[var2_int] = param0[var2_int];
             }
-            int discarded$0 = 1;
-            this.b();
+            this.b(true);
         } catch (RuntimeException runtimeException) {
             throw dn.a((Throwable) (Object) runtimeException, "bm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

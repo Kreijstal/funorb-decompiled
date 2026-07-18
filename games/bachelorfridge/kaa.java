@@ -34,11 +34,11 @@ final class kaa extends pu {
         return stackIn_5_0 != 0;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_l = null;
     }
 
-    final static String c() {
+    final static String c(int param0) {
         String var1 = "";
         if (!(ola.field_e == null)) {
             var1 = ola.field_e.a(1);
@@ -52,7 +52,7 @@ final class kaa extends pu {
         return var1;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -92,8 +92,7 @@ final class kaa extends pu {
                   if (ml.a(-130697146, (char) var3)) {
                     break L2;
                   } else {
-                    int discarded$9 = 48;
-                    if (!ula.a((char) var3)) {
+                    if (!ula.a((char) var3, 48)) {
                       stackOut_6_0 = 1;
                       stackIn_7_0 = stackOut_6_0;
                       return stackIn_7_0 != 0;

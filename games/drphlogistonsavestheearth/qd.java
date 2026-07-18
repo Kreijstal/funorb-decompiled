@@ -11,7 +11,7 @@ final class qd extends ma implements ke {
     private v field_Ib;
     private boolean field_Eb;
 
-    public static void o() {
+    public static void o(int param0) {
         field_Gb = null;
         field_Fb = null;
         field_Cb = null;
@@ -244,8 +244,7 @@ final class qd extends ma implements ke {
             return;
         }
         try {
-            int discarded$0 = 1;
-            lk.b();
+            lk.b(1);
             ((qd) this).d(param2);
         } catch (RuntimeException runtimeException) {
             throw ie.a((Throwable) (Object) runtimeException, "qd.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

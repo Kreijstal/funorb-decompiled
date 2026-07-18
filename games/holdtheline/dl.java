@@ -437,7 +437,7 @@ final class dl implements Runnable {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_n = null;
         field_h = null;
         int var1 = 0;

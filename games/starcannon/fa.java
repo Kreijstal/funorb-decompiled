@@ -55,12 +55,10 @@ final class fa extends uj {
         }
         int var5 = ((fa) this).field_s + param1;
         int var6 = param3 - -((fa) this).field_j;
-        int discarded$0 = -22917;
-        this.a(((fa) this).field_y[0], var5, var6);
+        this.a(((fa) this).field_y[0], var5, var6, -22917);
         if (!(((fa) this).field_x >= 65536)) {
             cl.a(true, ((fa) this).field_f + var6, (((fa) this).field_x * ((fa) this).field_i >> 16) + var5, var6, var5 - -((fa) this).field_i);
-            int discarded$1 = -22917;
-            this.a(((fa) this).field_y[1], var5, var6);
+            this.a(((fa) this).field_y[1], var5, var6, -22917);
             wf.a(-127);
         }
     }
@@ -70,14 +68,13 @@ final class fa extends uj {
         ((fa) this).field_F = param2;
         ((fa) this).field_w = (param2 & 16711422) >> 1;
         ((fa) this).field_u = 8355711 & param0 >> 1;
-        int discarded$0 = 34;
-        this.e();
+        this.e((byte) 34);
         if (param1 != 2) {
             ((fa) this).field_y = null;
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_A = null;
         field_G = null;
         field_z = null;
@@ -154,7 +151,7 @@ final class fa extends uj {
         this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 1, 8355711 & param6 >> 1);
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         ((fa) this).field_y = new hl[]{this.a(0, ((fa) this).field_F, ((fa) this).field_B), this.a(0, ((fa) this).field_w, ((fa) this).field_u)};
         ((fa) this).field_v = this.a(true);
         ((fa) this).field_J = ((fa) this).field_v.g();
@@ -186,8 +183,7 @@ final class fa extends uj {
 
     final void a(int param0, int param1, byte param2, int param3, int param4) {
         super.a(param0, param1, (byte) 124, param3, param4);
-        int discarded$0 = 34;
-        this.e();
+        this.e((byte) 34);
         if (param2 <= 115) {
             ((fa) this).field_w = 40;
         }
@@ -277,7 +273,7 @@ final class fa extends uj {
         }
     }
 
-    private final void a(hl param0, int param1, int param2) {
+    private final void a(hl param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -382,9 +378,8 @@ final class fa extends uj {
         }
     }
 
-    final static int a(int param0, boolean param1, int param2) {
-        int discarded$0 = -78;
-        return mg.a();
+    final static int a(int param0, boolean param1, int param2, byte param3) {
+        return mg.a((byte) -78);
     }
 
     static {

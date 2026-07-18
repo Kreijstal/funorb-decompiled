@@ -207,9 +207,9 @@ class tra extends rj {
                               }
                             }
                             ((tra) this).field_o = ((tra) this).field_o + param0;
-                            int dupTemp$4 = ((tra) this).field_o.length();
-                            ((tra) this).field_I = dupTemp$4;
-                            ((tra) this).field_B = dupTemp$4;
+                            int dupTemp$1 = ((tra) this).field_o.length();
+                            ((tra) this).field_I = dupTemp$1;
+                            ((tra) this).field_B = dupTemp$1;
                             break L7;
                           }
                           ((tra) this).i(200);
@@ -320,8 +320,7 @@ class tra extends rj {
                               if (param2 != 102) {
                                 if (param2 != 103) {
                                   if (param2 == 84) {
-                                    int discarded$5 = 93;
-                                    this.c();
+                                    this.c(93);
                                     stackOut_87_0 = 1;
                                     stackIn_88_0 = stackOut_87_0;
                                     return stackIn_88_0 != 0;
@@ -331,8 +330,7 @@ class tra extends rj {
                                         break L12;
                                       } else {
                                         if (param2 == 65) {
-                                          int discarded$6 = 10571;
-                                          this.l();
+                                          this.l(10571);
                                           stackOut_85_0 = 1;
                                           stackIn_86_0 = stackOut_85_0;
                                           return stackIn_86_0 != 0;
@@ -359,8 +357,7 @@ class tra extends rj {
                                       break L9;
                                     } else {
                                       if (param2 == 67) {
-                                        int discarded$7 = 31;
-                                        this.d();
+                                        this.d(31);
                                         stackOut_83_0 = 1;
                                         stackIn_84_0 = stackOut_83_0;
                                         return stackIn_84_0 != 0;
@@ -919,26 +916,30 @@ class tra extends rj {
 
     private final void e(int param0) {
         try {
-            RuntimeException var2 = null;
-            String var2_ref = null;
+            RuntimeException runtimeException = null;
+            String var2 = null;
             RuntimeException decompiledCaughtException = null;
             try {
               L0: {
-                L1: {
-                  var2_ref = this.h(-106);
-                  if (var2_ref.length() > 0) {
-                    java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.h(86)), (java.awt.datatransfer.ClipboardOwner) null);
-                    break L1;
-                  } else {
-                    break L1;
+                if (param0 == 0) {
+                  L1: {
+                    var2 = this.h(-106);
+                    if (var2.length() > 0) {
+                      java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.h(86)), (java.awt.datatransfer.ClipboardOwner) null);
+                      break L1;
+                    } else {
+                      break L1;
+                    }
                   }
+                  break L0;
+                } else {
+                  return;
                 }
-                break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2 = decompiledCaughtException;
-              throw tba.a((Throwable) (Object) var2, "tra.O(" + 0 + ')');
+              runtimeException = decompiledCaughtException;
+              throw tba.a((Throwable) (Object) runtimeException, "tra.O(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -959,8 +960,7 @@ class tra extends rj {
               if (null == ak.field_o) {
                 var1_ref = new ot();
                 var2 = var1_ref.a(128, true, 16, 128);
-                int discarded$3 = 0;
-                ak.field_o = bw.a(270, var2);
+                ak.field_o = bw.a(270, var2, false);
                 break L1;
               } else {
                 break L1;
@@ -973,8 +973,7 @@ class tra extends rj {
                 } else {
                   var1 = new pn();
                   var2 = var1.a(128, 0, 16, 128);
-                  int discarded$4 = 0;
-                  lt.field_f = bw.a(270, var2);
+                  lt.field_f = bw.a(270, var2, false);
                   break L2;
                 }
               }
@@ -990,7 +989,7 @@ class tra extends rj {
         }
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         RuntimeException var2 = null;
         oaa var2_ref = null;
         bja var3 = null;
@@ -1017,7 +1016,7 @@ class tra extends rj {
                 var4 = var3.a(0);
                 var5 = var2_ref.a((byte) 117, (ae) this);
                 var6 = var2_ref.a((byte) -90) >> 1;
-                var7 = -7;
+                var7 = 28 / ((param0 - 47) / 36);
                 if (var4 < -var6 + var5) {
                   ((tra) this).field_j = 0;
                   ((tra) this).field_t = 0;
@@ -1072,7 +1071,7 @@ class tra extends rj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2, "tra.LA(" + -105 + ')');
+          throw tba.a((Throwable) (Object) var2, "tra.LA(" + param0 + ')');
         }
     }
 
@@ -1190,8 +1189,7 @@ class tra extends rj {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              int discarded$2 = -105;
-              this.h();
+              this.h((byte) -105);
               if (((tra) this).field_s != 1) {
                 break L1;
               } else {
@@ -1441,14 +1439,14 @@ class tra extends rj {
         return stackIn_28_0 != 0;
     }
 
-    private final void c() {
+    private final void c(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
             L1: {
-              var2_int = 54;
+              var2_int = 54 / ((param0 - 31) / 62);
               if (!(((tra) this).field_h instanceof cd)) {
                 break L1;
               } else {
@@ -1461,11 +1459,11 @@ class tra extends rj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) runtimeException, "tra.SA(" + 93 + ')');
+          throw tba.a((Throwable) (Object) runtimeException, "tra.SA(" + param0 + ')');
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -1476,11 +1474,10 @@ class tra extends rj {
               L0: {
                 try {
                   L1: {
-                    var3 = 0;
+                    var3 = -61 % ((-29 - param0) / 55);
                     var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                     this.k(0);
-                    int discarded$1 = 0;
-                    this.a(var2);
+                    this.a(var2, false);
                     break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -1495,7 +1492,7 @@ class tra extends rj {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              throw tba.a((Throwable) (Object) var2_ref2, "tra.H(" + 31 + ')');
+              throw tba.a((Throwable) (Object) var2_ref2, "tra.H(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -1616,7 +1613,7 @@ class tra extends rj {
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_16_0 = null;
@@ -1666,14 +1663,22 @@ class tra extends rj {
               ((tra) this).field_o = ((tra) this).field_o.substring(0, ((tra) this).field_I) + param0 + ((tra) this).field_o.substring(((tra) this).field_I, ((tra) this).field_o.length());
               break L2;
             }
-            ((tra) this).field_I = ((tra) this).field_I + param0.length();
+            L4: {
+              ((tra) this).field_I = ((tra) this).field_I + param0.length();
+              if (!param1) {
+                break L4;
+              } else {
+                this.d(104);
+                break L4;
+              }
+            }
             ((tra) this).field_B = ((tra) this).field_I;
             ((tra) this).i(200);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var3 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var3;
             stackOut_15_1 = new StringBuilder().append("tra.J(");
@@ -1688,7 +1693,7 @@ class tra extends rj {
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
-              break L4;
+              break L5;
             } else {
               stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
               stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
@@ -1696,19 +1701,19 @@ class tra extends rj {
               stackIn_19_0 = stackOut_16_0;
               stackIn_19_1 = stackOut_16_1;
               stackIn_19_2 = stackOut_16_2;
-              break L4;
+              break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + false + ')');
+          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
         }
     }
 
-    private final void l() {
+    private final void l(int param0) {
         try {
             this.e(0);
-            this.k(0);
+            this.k(param0 ^ param0);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "tra.QA(" + 10571 + ')');
+            throw tba.a((Throwable) (Object) runtimeException, "tra.QA(" + param0 + ')');
         }
     }
 
@@ -1868,13 +1873,13 @@ class tra extends rj {
         }
     }
 
-    public static void j() {
+    public static void j(int param0) {
         try {
             field_z = null;
             field_A = null;
-            int var1_int = -88;
+            int var1_int = 88 / ((-30 - param0) / 62);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "tra.N(" + 68 + ')');
+            throw tba.a((Throwable) (Object) runtimeException, "tra.N(" + param0 + ')');
         }
     }
 

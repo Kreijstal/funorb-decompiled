@@ -7,7 +7,7 @@ final class oh {
     static String field_a;
     static int field_b;
 
-    final static void a() {
+    final static void a(byte param0) {
         L0: {
           if (null != dc.field_a) {
             dc.field_a.b(false);
@@ -18,12 +18,10 @@ final class oh {
         }
         if (null != d.field_r) {
           d.field_r.h((byte) 86);
-          int discarded$4 = -68;
-          gm.c();
+          gm.c(-68);
           return;
         } else {
-          int discarded$5 = -68;
-          gm.c();
+          gm.c(-68);
           return;
         }
     }

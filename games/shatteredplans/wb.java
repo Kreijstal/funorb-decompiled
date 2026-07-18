@@ -60,7 +60,7 @@ final class wb {
         return var2;
     }
 
-    final static int[][] a(ln[] param0) {
+    final static int[][] a(ln[] param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int[][] var3 = null;

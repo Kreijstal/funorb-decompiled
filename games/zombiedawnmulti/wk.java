@@ -38,7 +38,7 @@ abstract class wk extends se implements kh {
         }
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         try {
             oe.field_f = param0;
         } catch (RuntimeException runtimeException) {
@@ -46,7 +46,7 @@ abstract class wk extends se implements kh {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_L = null;
         field_I = null;
         int var1 = 0;

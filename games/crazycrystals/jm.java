@@ -14,7 +14,7 @@ abstract class jm {
     static String field_f;
     static ke field_h;
 
-    final static jp a(String param0) {
+    final static jp a(String param0, boolean param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -197,7 +197,7 @@ abstract class jm {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_i = null;
         field_k = null;

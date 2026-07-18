@@ -35,7 +35,7 @@ abstract class ck implements uh {
         return ((ck) this).b(-1);
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_e = null;
         field_f = null;
     }
@@ -51,7 +51,7 @@ abstract class ck implements uh {
         ((ck) this).field_d = fa.a(-85);
     }
 
-    final static ng a(String param0, String param1, long param2, int param3) {
+    final static ng a(String param0, String param1, long param2, int param3, boolean param4) {
         RuntimeException var6 = null;
         qe stackIn_5_0 = null;
         ek stackIn_7_0 = null;
@@ -173,7 +173,7 @@ abstract class ck implements uh {
         return (ng) (Object) stackIn_7_0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -347,14 +347,13 @@ abstract class ck implements uh {
         }
     }
 
-    final static boolean g() {
+    final static boolean g(byte param0) {
         int var1 = 62;
         return !pb.field_k.a(1000) ? true : false;
     }
 
     final static void e(byte param0) {
-        int discarded$0 = 0;
-        d.a(ej.field_b, true, eb.field_z);
+        d.a(ej.field_b, true, eb.field_z, 0);
         va.field_f = true;
         int var1 = -3 % ((param0 - 28) / 62);
     }

@@ -6,7 +6,7 @@ final class mc {
     static ti[] field_b;
     static String[] field_a;
 
-    final static long b() {
+    final static long b(boolean param0) {
         return -wi.field_q + lk.a(0);
     }
 
@@ -16,7 +16,7 @@ final class mc {
         field_b = null;
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         if (!(rh.field_v != of.field_d)) {
             return ta.field_h;
         }

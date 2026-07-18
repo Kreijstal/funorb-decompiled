@@ -22,8 +22,7 @@ final class mh extends cq implements bp {
             ((mh) this).field_k = param2;
             ((mh) this).field_g.a((jj) this, -9135);
             jaggl.OpenGL.glPixelStorei(3317, 1);
-            int discarded$0 = -29824;
-            jaggl.OpenGL.glTexImage3Dub(((mh) this).field_e, 0, ((mh) this).a(false), ((mh) this).field_k, ((mh) this).field_i, ((mh) this).field_m, 0, gq.a(((mh) this).field_h), 5121, param5, 0);
+            jaggl.OpenGL.glTexImage3Dub(((mh) this).field_e, 0, ((mh) this).a(false), ((mh) this).field_k, ((mh) this).field_i, ((mh) this).field_m, 0, gq.a(((mh) this).field_h, -29824), 5121, param5, 0);
             jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');

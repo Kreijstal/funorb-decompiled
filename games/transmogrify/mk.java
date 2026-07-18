@@ -13,8 +13,7 @@ abstract class mk extends aj {
     private da field_z;
 
     boolean a(byte param0) {
-        int discarded$2 = -18555;
-        ((mk) this).field_D = this.l();
+        ((mk) this).field_D = this.l(-18555);
         if (param0 == -97) {
           if (0 == ((mk) this).field_D) {
             if (((mk) this).field_A) {
@@ -40,8 +39,7 @@ abstract class mk extends aj {
         int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
         L0: {
-          int discarded$2 = -18555;
-          var2 = this.l();
+          var2 = this.l(-18555);
           var3 = -((mk) this).field_D + var2;
           if (var3 > param0) {
             ((mk) this).field_D = ((mk) this).field_D + (var3 + 7) / 8;
@@ -96,7 +94,7 @@ abstract class mk extends aj {
         }
     }
 
-    private final int l() {
+    private final int l(int param0) {
         return !((mk) this).field_A ? 0 : (Object) (Object) ((mk) this).field_z.e((byte) 14) == this ? 256 : 0;
     }
 
@@ -286,8 +284,7 @@ abstract class mk extends aj {
             if (qk.field_c != null) {
               if (((mk) this).field_l <= qk.field_c.field_n) {
                 if (qk.field_c.field_m >= ((mk) this).field_h) {
-                  int discarded$4 = 256;
-                  oj.a(qk.field_c);
+                  oj.a(qk.field_c, 256);
                   sb.c();
                   ((mk) this).a(0, (byte) -81, 0);
                   super.a(-((mk) this).field_p + -param0, -((mk) this).field_n + -param1, param2, (byte) -93);
@@ -296,8 +293,7 @@ abstract class mk extends aj {
                   return;
                 } else {
                   qk.field_c = new ti(((mk) this).field_l, ((mk) this).field_h);
-                  int discarded$5 = 256;
-                  oj.a(qk.field_c);
+                  oj.a(qk.field_c, 256);
                   sb.c();
                   ((mk) this).a(0, (byte) -81, 0);
                   super.a(-((mk) this).field_p + -param0, -((mk) this).field_n + -param1, param2, (byte) -93);
@@ -307,8 +303,7 @@ abstract class mk extends aj {
                 }
               } else {
                 qk.field_c = new ti(((mk) this).field_l, ((mk) this).field_h);
-                int discarded$6 = 256;
-                oj.a(qk.field_c);
+                oj.a(qk.field_c, 256);
                 sb.c();
                 ((mk) this).a(0, (byte) -81, 0);
                 super.a(-((mk) this).field_p + -param0, -((mk) this).field_n + -param1, param2, (byte) -93);
@@ -318,8 +313,7 @@ abstract class mk extends aj {
               }
             } else {
               qk.field_c = new ti(((mk) this).field_l, ((mk) this).field_h);
-              int discarded$7 = 256;
-              oj.a(qk.field_c);
+              oj.a(qk.field_c, 256);
               sb.c();
               ((mk) this).a(0, (byte) -81, 0);
               super.a(-((mk) this).field_p + -param0, -((mk) this).field_n + -param1, param2, (byte) -93);

@@ -46,7 +46,7 @@ final class rk implements Iterable {
         dh.field_i = param0;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         int var1_int = 0;
         int var2 = TetraLink.field_J;
         try {
@@ -69,7 +69,7 @@ final class rk implements Iterable {
         ((rk) this).field_e.field_o = ((rk) this).field_e;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;

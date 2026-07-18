@@ -25,7 +25,7 @@ abstract class rg {
         }
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, boolean param1) {
         int var5 = 0;
         uj.field_Wb = true;
         jm.field_h.field_cb = param0;
@@ -35,8 +35,7 @@ abstract class rg {
         try {
             var5 = -(var4 / 2) + -110 + var3 / 2 + 7;
             nc.field_e.a(var5, -(var5 * 2) + (-120 + var3), (-320 + var2_int) / 2, 256, 320);
-            int discarded$0 = 3;
-            nc.field_e.field_zb = op.a(8421504, 16, 11579568, nc.field_e.field_nb, 2105376);
+            nc.field_e.field_zb = op.a(8421504, 16, 11579568, nc.field_e.field_nb, 2105376, 3);
             jm.field_h.a(16, -24 + nc.field_e.field_nb + -20, 24, 256, -24 + (nc.field_e.field_K + -24));
             hk.field_h.a(-24 + (nc.field_e.field_nb - 20), 24, 120, 256, 80);
         } catch (RuntimeException runtimeException) {

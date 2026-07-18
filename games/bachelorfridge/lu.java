@@ -88,10 +88,8 @@ class lu extends bw {
             var9 = 19;
             L1: while (true) {
               if (0 > var9) {
-                int discarded$2 = 10847;
-                this.a(var4);
-                int discarded$3 = 10847;
-                this.a(var6);
+                this.a(var4, 10847);
+                this.a(var6, 10847);
                 break L0;
               } else {
                 L2: {
@@ -262,11 +260,10 @@ class lu extends bw {
                 throw new IllegalArgumentException("");
             }
             var4 = (CharSequence) (Object) param1;
-            int discarded$0 = 0;
-            ((lu) this).field_g = ((lu) this).field_g + jm.a(param1.length(), -56, ((lu) this).field_g, var4, ((lu) this).field_h);
-            int fieldTemp$1 = ((lu) this).field_g;
+            ((lu) this).field_g = ((lu) this).field_g + jm.a(param1.length(), -56, ((lu) this).field_g, var4, ((lu) this).field_h, 0);
+            int fieldTemp$0 = ((lu) this).field_g;
             ((lu) this).field_g = ((lu) this).field_g + 1;
-            ((lu) this).field_h[fieldTemp$1] = (byte) 0;
+            ((lu) this).field_h[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "lu.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -466,7 +463,7 @@ class lu extends bw {
         ((lu) this).field_h[fieldTemp$7] = (byte)(int)param1;
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_4_0 = null;
@@ -490,8 +487,7 @@ class lu extends bw {
         try {
           L0: {
             L1: {
-              int discarded$2 = 1;
-              var2 = uga.a(mp.a(param0), 120);
+              var2 = uga.a(mp.a(param0, true), 120);
               if (var2 == null) {
                 var2 = "";
                 break L1;
@@ -567,8 +563,7 @@ class lu extends bw {
         if (!(((lu) this).field_h.length >= ((lu) this).field_g + var4)) {
             throw new IllegalStateException("");
         }
-        int discarded$1 = 258048;
-        String var5 = ida.a(var4, ((lu) this).field_h, ((lu) this).field_g);
+        String var5 = ida.a(var4, ((lu) this).field_h, ((lu) this).field_g, 258048);
         ((lu) this).field_g = ((lu) this).field_g + var4;
         return var5;
     }
@@ -2115,7 +2110,7 @@ class lu extends bw {
         }
     }
 
-    private final void a(long param0) {
+    private final void a(long param0, int param1) {
         int fieldTemp$0 = ((lu) this).field_g;
         ((lu) this).field_g = ((lu) this).field_g + 1;
         ((lu) this).field_h[fieldTemp$0] = (byte)(int)(param0 >> 48);
@@ -2159,11 +2154,10 @@ class lu extends bw {
             ((lu) this).field_g = ((lu) this).field_g + 1;
             ((lu) this).field_h[fieldTemp$0] = (byte) 0;
             var4 = (CharSequence) (Object) param0;
-            int discarded$1 = 0;
-            ((lu) this).field_g = ((lu) this).field_g + jm.a(param0.length(), -113, ((lu) this).field_g, var4, ((lu) this).field_h);
-            int fieldTemp$2 = ((lu) this).field_g;
+            ((lu) this).field_g = ((lu) this).field_g + jm.a(param0.length(), -113, ((lu) this).field_g, var4, ((lu) this).field_h, 0);
+            int fieldTemp$1 = ((lu) this).field_g;
             ((lu) this).field_g = ((lu) this).field_g + 1;
-            ((lu) this).field_h[fieldTemp$2] = (byte) 0;
+            ((lu) this).field_h[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "lu.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

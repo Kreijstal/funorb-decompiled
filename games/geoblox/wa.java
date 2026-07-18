@@ -244,7 +244,7 @@ final class wa {
         }
     }
 
-    private final void a(int param0, String param1, int param2) {
+    private final void a(int param0, String param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -422,8 +422,7 @@ final class wa {
                 this.a((byte) 69, param2, param3, param0);
                 break L1;
               } else {
-                int discarded$3 = -3140;
-                this.a(param0, param3, param2);
+                this.a(param0, param3, param2, -3140);
                 break L1;
               }
             }
@@ -473,8 +472,7 @@ final class wa {
         if (param3 != 1) {
             dm[] discarded$0 = wa.a(-34, 65, 52, 47);
         }
-        int discarded$1 = 1;
-        return dj.a(param0, (byte) -70, param2, param1);
+        return dj.a(param0, (byte) -70, param2, param1, 1);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

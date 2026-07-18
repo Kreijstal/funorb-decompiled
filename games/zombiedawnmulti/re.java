@@ -8,8 +8,7 @@ final class re {
     final static void a(boolean param0) {
         ta.field_lb = s.field_e.f((byte) -107);
         CharSequence var2 = (CharSequence) (Object) ta.field_lb;
-        int discarded$0 = 0;
-        kf.field_k = tg.a(var2);
+        kf.field_k = tg.a(var2, false);
     }
 
     final static boolean b(int param0) {
@@ -164,7 +163,7 @@ final class re {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 0;
         field_a = null;
     }

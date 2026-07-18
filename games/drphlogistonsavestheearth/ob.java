@@ -12,7 +12,7 @@ final class ob {
     static int field_c;
     static int field_g;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_d = null;
         field_b = null;
@@ -43,8 +43,7 @@ final class ob {
         String stackOut_6_2 = null;
         try {
           L0: {
-            int discarded$7 = -98;
-            if (fl.a(param0, param2, param3)) {
+            if (fl.a(param0, param2, param3, (byte) -98)) {
               stackOut_3_0 = vd.b((byte) -22);
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -146,7 +145,7 @@ final class ob {
                     case 2: {
                         try {
                             var9 = null;
-                            String discarded$4 = ob.a((byte) -24, (java.applet.Applet) null);
+                            String discarded$2 = ob.a((byte) -24, (java.applet.Applet) null);
                             statePc = 3;
                             continue stateLoop;
                         } catch (Throwable stateCaught_2) {
@@ -159,8 +158,7 @@ final class ob {
                         try {
                             var10 = param1.getParameter("cookieprefix");
                             var3 = var10 + "settings";
-                            int discarded$5 = 1;
-                            var4 = (String) pb.a("getcookies", param1);
+                            var4 = (String) pb.a("getcookies", param1, true);
                             var5 = ki.a((byte) -115, ';', var4);
                             var6 = 0;
                             statePc = 4;

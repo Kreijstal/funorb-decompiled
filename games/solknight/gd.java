@@ -24,10 +24,8 @@ final class gd {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          int discarded$4 = -3603;
-          g.a(param1, "");
-          int discarded$5 = 63;
-          di.a(param1);
+          g.a(param1, "", -3603);
+          di.a(param1, 63);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -61,13 +59,13 @@ final class gd {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         int var1 = 25;
         field_b = null;
     }
 
-    final static void a(int param0, o param1, int param2, byte param3, int param4, int param5, int param6) {
+    final static void a(int param0, o param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;

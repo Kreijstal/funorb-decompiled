@@ -472,7 +472,7 @@ abstract class sl {
         return var2;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
     }
 
     final static nl a(Throwable param0, String param1) {

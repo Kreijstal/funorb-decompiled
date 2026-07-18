@@ -75,7 +75,7 @@ final class gd extends rk {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_r = null;
         field_q = null;
         field_m = null;

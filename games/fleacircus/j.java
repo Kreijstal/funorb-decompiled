@@ -17,7 +17,7 @@ final class j extends ne {
     static int field_f;
     private int field_q;
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
         field_o = null;
         field_h = null;

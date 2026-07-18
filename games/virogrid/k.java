@@ -6,13 +6,13 @@ final class k {
     static byte[][] field_b;
     static int[] field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return wl.field_d.field_gc == hh.field_d;
     }
 

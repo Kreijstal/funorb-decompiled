@@ -129,7 +129,7 @@ final class ke extends ui implements sg {
         }
     }
 
-    final static void a(wh param0, boolean param1) {
+    final static void a(wh param0, boolean param1, int param2, boolean param3) {
         Object var4 = null;
         RuntimeException var4_ref = null;
         Throwable var5 = null;
@@ -155,10 +155,7 @@ final class ke extends ui implements sg {
               if (nj.field_e == null) {
                 break L1;
               } else {
-                int discarded$9 = 256;
-                int discarded$10 = 1048576;
-                int discarded$11 = -32532;
-                dl.a(param1, param0);
+                dl.a(param1, param0, -32532, 1048576, 256);
                 break L1;
               }
             }
@@ -434,8 +431,7 @@ final class ke extends ui implements sg {
     final String h(int param0) {
         if (((ke) this).field_x) {
           if (null != ((ke) this).field_n) {
-            int discarded$13 = 1;
-            qh.a(gb.field_e, nk.field_w + (-((ke) this).field_T + ((ke) this).field_v));
+            qh.a(gb.field_e, nk.field_w + (-((ke) this).field_T + ((ke) this).field_v), 1);
             if (param0 != -27867) {
               field_W = null;
               return ((ke) this).field_n;
@@ -450,7 +446,7 @@ final class ke extends ui implements sg {
         }
     }
 
-    public static void s() {
+    public static void s(int param0) {
         field_X = null;
         field_U = null;
         field_W = null;

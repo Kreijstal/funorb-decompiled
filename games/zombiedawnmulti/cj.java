@@ -1103,8 +1103,8 @@ class cj extends qo {
               if (var23_ref == null) {
                 break L31;
               } else {
-                var23_ref.a(var23_ref.field_zb, param1, var23_ref.field_z, var23_ref.field_bb, param4, param5, param6, param7, var20 + var23_ref.field_qb, 80, var19 + var23_ref.field_w);
-                var23_ref = (cj) (Object) var23_ref.field_Cb.b(6);
+                var23_ref.a(((cj) this).field_zb, param1, ((cj) this).field_z, ((cj) this).field_bb, param4, param5, param6, param7, var20 + ((cj) this).field_qb, 80, var19 + ((cj) this).field_w);
+                var23_ref = (cj) (Object) ((cj) this).field_Cb.b(6);
                 continue L32;
               }
             }
@@ -1156,7 +1156,7 @@ class cj extends qo {
             while (var4 != null) {
                 var4.field_W = true;
                 var4.f(-128);
-                var4 = (cj) (Object) var4.field_Cb.c((byte) 123);
+                var4 = (cj) (Object) ((cj) this).field_Cb.c((byte) 123);
             }
         }
     }
@@ -1168,7 +1168,7 @@ class cj extends qo {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        Object var13 = null;
+        cj var13 = null;
         int var14 = 0;
         Object stackIn_28_0 = null;
         Object stackIn_29_0 = null;
@@ -1201,7 +1201,6 @@ class cj extends qo {
         Object stackOut_38_0 = null;
         int stackOut_38_1 = 0;
         L0: {
-          var13 = null;
           var14 = ZombieDawnMulti.field_E ? 1 : 0;
           if (((cj) this).field_A <= 0) {
             var7 = ((cj) this).field_A >> 2;
@@ -1399,13 +1398,13 @@ class cj extends qo {
         L12: {
           ((cj) this).field_L = stackIn_39_1 != 0;
           if (((cj) this).field_Cb != null) {
-            var13 = (Object) (Object) (cj) (Object) ((cj) this).field_Cb.a((byte) -44);
+            var13 = (cj) (Object) ((cj) this).field_Cb.a((byte) -44);
             L13: while (true) {
               if (var13 == null) {
                 break L12;
               } else {
-                ((cj) var13).a(-120, param1, ((cj) var13).field_z, ((cj) var13).field_w, ((cj) var13).field_qb, ((cj) var13).field_zb);
-                var13 = (Object) (Object) (cj) (Object) ((cj) var13).field_Cb.c((byte) 109);
+                var13.a(-120, param1, ((cj) this).field_z, ((cj) this).field_w, ((cj) this).field_qb, ((cj) this).field_zb);
+                var13 = (cj) (Object) ((cj) this).field_Cb.c((byte) 109);
                 continue L13;
               }
             }
@@ -1414,7 +1413,7 @@ class cj extends qo {
           }
         }
         L14: {
-          if (((cj) var13).field_pb) {
+          if (((cj) this).field_pb) {
             me.field_g = true;
             break L14;
           } else {
@@ -1439,14 +1438,14 @@ class cj extends qo {
         }
         L17: {
           oo.h(var8, var9, var10, var11);
-          if (0 == ((cj) var13).field_jb) {
+          if (0 == ((cj) this).field_jb) {
             break L17;
           } else {
-            if (((cj) var13).field_fb) {
+            if (((cj) this).field_fb) {
               L18: {
-                ((cj) this).field_x = -param3 + -((cj) var13).field_U + bd.field_g;
-                ((cj) this).field_Q = -((cj) var13).field_G + (bo.field_d + -param4);
-                if (((cj) var13).field_x < 0) {
+                ((cj) this).field_x = -param3 + -((cj) this).field_U + bd.field_g;
+                ((cj) this).field_Q = -((cj) this).field_G + (bo.field_d + -param4);
+                if (((cj) this).field_x < 0) {
                   ((cj) this).field_x = 0;
                   break L18;
                 } else {
@@ -1454,15 +1453,15 @@ class cj extends qo {
                 }
               }
               L19: {
-                if (param5 - ((cj) var13).field_zb >= ((cj) var13).field_x) {
+                if (param5 - ((cj) this).field_zb >= ((cj) this).field_x) {
                   break L19;
                 } else {
-                  ((cj) this).field_x = param5 + -((cj) var13).field_zb;
+                  ((cj) this).field_x = param5 + -((cj) this).field_zb;
                   break L19;
                 }
               }
               L20: {
-                if (((cj) var13).field_Q >= 0) {
+                if (((cj) this).field_Q >= 0) {
                   break L20;
                 } else {
                   ((cj) this).field_Q = 0;
@@ -1470,17 +1469,17 @@ class cj extends qo {
                 }
               }
               L21: {
-                if (-((cj) var13).field_z + param2 < ((cj) var13).field_Q) {
-                  ((cj) this).field_Q = -((cj) var13).field_z + param2;
+                if (-((cj) this).field_z + param2 < ((cj) this).field_Q) {
+                  ((cj) this).field_Q = -((cj) this).field_z + param2;
                   break L21;
                 } else {
                   break L21;
                 }
               }
               ((cj) this).field_A = 0;
-              ((cj) this).field_w = param3 - -((cj) var13).field_x;
+              ((cj) this).field_w = param3 - -((cj) this).field_x;
               ((cj) this).field_mb = 0;
-              ((cj) this).field_qb = param4 + ((cj) var13).field_Q;
+              ((cj) this).field_qb = param4 + ((cj) this).field_Q;
               break L17;
             } else {
               break L17;
@@ -1497,7 +1496,7 @@ class cj extends qo {
         td.field_b = null;
     }
 
-    final static String g() {
+    final static String g(int param0) {
         if (2 <= fn.field_i) {
           if (null != cp.field_P) {
             if (!cp.field_P.a((byte) -122)) {
@@ -1537,7 +1536,7 @@ class cj extends qo {
         }
     }
 
-    final static int a(ka param0) {
+    final static int a(ka param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

@@ -1622,7 +1622,7 @@ final class df {
         }
     }
 
-    final static void f(int param0, int param1, int param2) {
+    final static void f(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -2521,7 +2521,7 @@ final class df {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -2778,9 +2778,8 @@ final class df {
         field_j = null;
     }
 
-    final static void d() {
-        int discarded$0 = 140;
-        df.a(field_d, 0, 0 * field_e, 4, 0, 540, field_e - 540);
+    final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
+        df.a(field_d, 0, 0 * field_e, 4, 0, 540, field_e - 540, 140);
         df.a(field_d, 0, 0 * field_e, 4, 0, 140, field_e - 540, 0, 540);
     }
 

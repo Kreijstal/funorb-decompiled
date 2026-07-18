@@ -698,7 +698,7 @@ final class m {
         return stackIn_66_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_h = null;
         field_b = null;
@@ -887,7 +887,7 @@ final class m {
         return stackIn_16_0;
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -909,8 +909,7 @@ final class m {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_0_0 = ne.a((byte) -118, param0);
+            stackOut_0_0 = ne.a((byte) -118, param0, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

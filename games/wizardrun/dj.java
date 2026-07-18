@@ -10,12 +10,10 @@ abstract class dj {
 
     final static void a(int param0, kl param1, kl param2, kl param3, boolean param4) {
         try {
-            int discarded$0 = 0;
-            we.field_c = ql.a("");
+            we.field_c = ql.a("", false);
             we.field_c.a(false, 104);
             eg.a(param3, param0 + -2109, param1, param2);
-            int discarded$1 = -126;
-            bd.a();
+            bd.a(-126);
             fi.field_y = ej.field_b;
             if (param0 != 2202) {
                 field_a = null;
@@ -28,7 +26,7 @@ abstract class dj {
 
     abstract void a(byte[] param0, int param1);
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_c = null;
     }

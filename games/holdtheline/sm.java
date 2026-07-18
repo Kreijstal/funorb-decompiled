@@ -125,7 +125,7 @@ final class sm {
         return stackIn_15_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
         field_a = null;

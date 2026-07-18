@@ -148,8 +148,7 @@ class ck extends lm {
     }
 
     final static void h(int param0) {
-        int discarded$0 = -82;
-        jb.k();
+        jb.k((byte) -82);
         int var1 = 28 / ((param0 - -14) / 61);
     }
 

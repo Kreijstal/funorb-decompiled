@@ -10,7 +10,7 @@ final class aj extends qd {
     static long[] field_w;
     static long[][] field_t;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_r = null;
         field_w = null;
         field_v = null;

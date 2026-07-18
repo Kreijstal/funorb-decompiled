@@ -320,8 +320,7 @@ class qr extends hm {
                     L2: {
                       L3: {
                         L4: {
-                          int discarded$1 = 27;
-                          var10_int = lr.a();
+                          var10_int = lr.a((byte) 27);
                           var11 = var8 * 100 / 45;
                           var12 = (int)Math.sqrt((double)var11);
                           var13 = param4;
@@ -608,11 +607,10 @@ class qr extends hm {
     }
 
     final static void a(boolean param0, byte param1) {
-        int discarded$3 = -27;
-        jb.a(param0);
+        jb.a(param0, (byte) -27);
         if (param1 <= 107) {
             Object var3 = null;
-            dc discarded$4 = qr.a(46, -4, (String[]) null, (vr) null, -66, -4);
+            dc discarded$0 = qr.a(46, -4, (String[]) null, (vr) null, -66, -4);
         }
         mj.a(0, param0);
     }
@@ -703,7 +701,7 @@ class qr extends hm {
             while (var4 != null) {
                 var4.field_H = true;
                 var4.e((byte) -123);
-                var4 = (qr) (Object) var4.field_M.b(-125);
+                var4 = (qr) (Object) ((qr) this).field_M.b(-125);
             }
         }
         if (param0 >= -122) {
@@ -719,7 +717,7 @@ class qr extends hm {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        Object var14 = null;
+        qr var14 = null;
         int var15 = 0;
         Object stackIn_28_0 = null;
         Object stackIn_29_0 = null;
@@ -752,7 +750,6 @@ class qr extends hm {
         Object stackOut_38_0 = null;
         int stackOut_38_1 = 0;
         L0: {
-          var14 = null;
           var15 = ShatteredPlansClient.field_F ? 1 : 0;
           if (0 >= ((qr) this).field_cb) {
             var7 = ((qr) this).field_cb >> 2;
@@ -951,13 +948,13 @@ class qr extends hm {
         L12: {
           ((qr) this).field_L = stackIn_39_1 != 0;
           if (null != ((qr) this).field_M) {
-            var14 = (Object) (Object) (qr) (Object) ((qr) this).field_M.f(3725);
+            var14 = (qr) (Object) ((qr) this).field_M.f(3725);
             L13: while (true) {
               if (var14 == null) {
                 break L12;
               } else {
-                ((qr) var14).a(((qr) var14).field_B, ((qr) var14).field_N, ((qr) var14).field_K, param3, -93, ((qr) var14).field_mb);
-                var14 = (Object) (Object) (qr) (Object) ((qr) var14).field_M.b(-125);
+                var14.a(((qr) this).field_B, ((qr) this).field_N, ((qr) this).field_K, param3, -93, ((qr) this).field_mb);
+                var14 = (qr) (Object) ((qr) this).field_M.b(-125);
                 continue L13;
               }
             }
@@ -966,7 +963,7 @@ class qr extends hm {
           }
         }
         L14: {
-          if (((qr) var14).field_v) {
+          if (((qr) this).field_v) {
             pa.field_j = true;
             break L14;
           } else {
@@ -983,14 +980,14 @@ class qr extends hm {
         }
         L16: {
           gf.d(var9, var10, var11, var12);
-          if (((qr) var14).field_ub == 0) {
+          if (((qr) this).field_ub == 0) {
             break L16;
           } else {
-            if (((qr) var14).field_P) {
+            if (((qr) this).field_P) {
               L17: {
-                ((qr) this).field_db = -param1 + (bb.field_b - ((qr) var14).field_X);
-                ((qr) this).field_hb = -param0 + -((qr) var14).field_Q + pd.field_k;
-                if (((qr) var14).field_hb >= 0) {
+                ((qr) this).field_db = -param1 + (bb.field_b - ((qr) this).field_X);
+                ((qr) this).field_hb = -param0 + -((qr) this).field_Q + pd.field_k;
+                if (((qr) this).field_hb >= 0) {
                   break L17;
                 } else {
                   ((qr) this).field_hb = 0;
@@ -998,15 +995,15 @@ class qr extends hm {
                 }
               }
               L18: {
-                if (((qr) var14).field_hb <= param2 - ((qr) var14).field_K) {
+                if (((qr) this).field_hb <= param2 - ((qr) this).field_K) {
                   break L18;
                 } else {
-                  ((qr) this).field_hb = -((qr) var14).field_K + param2;
+                  ((qr) this).field_hb = -((qr) this).field_K + param2;
                   break L18;
                 }
               }
               L19: {
-                if (((qr) var14).field_db < 0) {
+                if (((qr) this).field_db < 0) {
                   ((qr) this).field_db = 0;
                   break L19;
                 } else {
@@ -1015,16 +1012,16 @@ class qr extends hm {
               }
               L20: {
                 ((qr) this).field_cb = 0;
-                if (((qr) var14).field_db <= -((qr) var14).field_mb + param5) {
+                if (((qr) this).field_db <= -((qr) this).field_mb + param5) {
                   break L20;
                 } else {
-                  ((qr) this).field_db = param5 - ((qr) var14).field_mb;
+                  ((qr) this).field_db = param5 - ((qr) this).field_mb;
                   break L20;
                 }
               }
-              ((qr) this).field_B = param0 - -((qr) var14).field_hb;
+              ((qr) this).field_B = param0 - -((qr) this).field_hb;
               ((qr) this).field_w = 0;
-              ((qr) this).field_N = param1 + ((qr) var14).field_db;
+              ((qr) this).field_N = param1 + ((qr) this).field_db;
               break L16;
             } else {
               break L16;
@@ -2298,8 +2295,8 @@ class qr extends hm {
               if (var23_ref == null) {
                 break L31;
               } else {
-                var23_ref.a(var23_ref.field_ib, param1, param2, var23_ref.field_B - -var19, var20 + var23_ref.field_N, -2147483648, param6, var23_ref.field_mb, param8, param9, var23_ref.field_K);
-                var23_ref = (qr) (Object) var23_ref.field_M.a((byte) -71);
+                var23_ref.a(((qr) this).field_ib, param1, param2, ((qr) this).field_B - -var19, var20 + ((qr) this).field_N, -2147483648, param6, ((qr) this).field_mb, param8, param9, ((qr) this).field_K);
+                var23_ref = (qr) (Object) ((qr) this).field_M.a((byte) -71);
                 continue L32;
               }
             }
@@ -2308,7 +2305,7 @@ class qr extends hm {
         gf.d(var12, var13, var14, var15);
     }
 
-    final static void a(bc param0) {
+    final static void a(bc param0, byte param1) {
         bi var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -2334,7 +2331,7 @@ class qr extends hm {
         this(param0, param1, 0, 0, 0, 0, param2);
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_A = null;
         field_R = null;
     }

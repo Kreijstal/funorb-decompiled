@@ -22,8 +22,7 @@ abstract class dc extends u {
         }
         if (((dc) this).field_db != hn.field_G) {
             ((dc) this).b(537342017, ((dc) this).field_X.field_x + 12, 12 - (-((dc) this).field_Z + -((dc) this).field_X.field_u));
-            int discarded$0 = -100;
-            this.d(((dc) this).field_X);
+            this.d(((dc) this).field_X, -100);
         } else {
             ((dc) this).field_db = null;
             ((dc) this).field_eb.field_F = 256;
@@ -140,7 +139,7 @@ abstract class dc extends u {
         }
     }
 
-    private final void d(n param0) {
+    private final void d(n param0, int param1) {
         try {
             if (null != ((dc) this).field_eb) {
                 ((dc) this).field_eb.d(0);
@@ -245,7 +244,7 @@ abstract class dc extends u {
         return stackIn_9_0 != 0;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_hb = null;
         field_ib = null;
         field_ab = null;
@@ -253,8 +252,7 @@ abstract class dc extends u {
 
     final static int m(int param0) {
         if (param0 != 29675) {
-            int discarded$0 = 0;
-            dc.c();
+            dc.c(false);
             return ua.field_a;
         }
         return ua.field_a;
@@ -277,14 +275,12 @@ abstract class dc extends u {
           if (param0 >= -100) {
             var3 = null;
             ((dc) this).a((n) null, (byte) -61);
-            int discarded$4 = -100;
-            this.d(((dc) this).field_X);
+            this.d(((dc) this).field_X, -100);
             ((dc) this).field_X = null;
             ((dc) this).field_eb.field_F = 0;
             return;
           } else {
-            int discarded$5 = -100;
-            this.d(((dc) this).field_X);
+            this.d(((dc) this).field_X, -100);
             ((dc) this).field_X = null;
             ((dc) this).field_eb.field_F = 0;
             return;
@@ -301,8 +297,7 @@ abstract class dc extends u {
             ((dc) this).field_cb = param3;
             ((dc) this).field_fb = param3;
             ((dc) this).field_Z = param2;
-            int discarded$0 = -100;
-            this.d(param1);
+            this.d(param1, -100);
         } catch (RuntimeException runtimeException) {
             throw kk.a((Throwable) (Object) runtimeException, "dc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

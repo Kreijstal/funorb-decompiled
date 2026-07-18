@@ -13,7 +13,7 @@ final class ai extends wj implements qu, vh {
     private lb field_D;
     static int field_J;
 
-    private final String m() {
+    private final String m(int param0) {
         return "</col></u>";
     }
 
@@ -35,7 +35,7 @@ final class ai extends wj implements qu, vh {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         int var1 = 1;
         if (null == kl.field_h) {
             return false;
@@ -75,8 +75,6 @@ final class ai extends wj implements qu, vh {
             ((ai) this).field_B = param0;
             ((ai) this).field_I = new wi(es.field_g, (jv) null);
             ((ai) this).field_I.field_r = (gj) (Object) new op();
-            int discarded$2 = 107;
-            int discarded$3 = -1522433695;
             var7 = vo.a((byte) -18, ov.field_a, new String[2]);
             var3 = 20;
             var4 = new qv(gf.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, gf.field_a.field_G, -1, 2147483647, true);
@@ -360,7 +358,7 @@ final class ai extends wj implements qu, vh {
         }
     }
 
-    private final String k() {
+    private final String k(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 

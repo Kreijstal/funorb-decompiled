@@ -10,8 +10,9 @@ final class jra {
     final static void a(int param0, boolean param1, int param2) {
         int var3 = 0;
         String var4 = null;
-        Object var5 = null;
-        CharSequence var9 = null;
+        String var5 = null;
+        Object var6 = null;
+        CharSequence var11 = null;
         if (ola.field_p == null) {
           if (param2 == 19717) {
             return;
@@ -46,17 +47,19 @@ final class jra {
                   L0: {
                     if (91 == ola.field_p.field_R.charAt(0)) {
                       var4 = ola.field_p.field_R;
+                      var5 = var4;
+                      var5 = var4;
                       break L0;
                     } else {
-                      var9 = (CharSequence) (Object) ola.field_p.field_R;
-                      var4 = jwa.a(false, var9);
+                      var11 = (CharSequence) (Object) ola.field_p.field_R;
+                      var4 = jwa.a(false, var11);
                       break L0;
                     }
                   }
                   L1: {
                     var5 = null;
                     if (0 == rc.field_b) {
-                      var5 = (Object) (Object) ukb.a(var4, param0, param2 + -10115);
+                      var5 = ukb.a(var4, param0, param2 + -10115);
                       break L1;
                     } else {
                       break L1;
@@ -66,7 +69,7 @@ final class jra {
                     if (rc.field_b != 1) {
                       break L2;
                     } else {
-                      var5 = (Object) (Object) npa.a((byte) 90, var4, param0);
+                      var5 = npa.a((byte) 90, var4, param0);
                       break L2;
                     }
                   }
@@ -74,7 +77,7 @@ final class jra {
                     if (2 != rc.field_b) {
                       break L3;
                     } else {
-                      var5 = (Object) (Object) tba.a(2, var4, param0);
+                      var5 = tba.a(2, var4, param0);
                       break L3;
                     }
                   }
@@ -82,8 +85,7 @@ final class jra {
                     if (rc.field_b != 3) {
                       break L4;
                     } else {
-                      int discarded$2 = -76;
-                      var5 = (Object) (Object) iab.a(param0, var4, var4);
+                      var5 = iab.a(param0, var4, var4, (byte) -76);
                       break L4;
                     }
                   }
@@ -97,8 +99,8 @@ final class jra {
                       return;
                     }
                   } else {
-                    int discarded$3 = 2;
-                    lh.a((byte) -86, 0, (String) null, var4, (String) var5);
+                    var6 = null;
+                    lh.a((byte) -86, 0, (String) null, var4, var5, 2);
                     rc.field_b = -1;
                     ola.field_p = null;
                     if (param2 == 19717) {
@@ -135,7 +137,7 @@ final class jra {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
         field_a = null;

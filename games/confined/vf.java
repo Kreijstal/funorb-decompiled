@@ -590,8 +590,7 @@ class vf implements fe, pj {
         var13 = Confined.field_J ? 1 : 0;
         try {
           L0: {
-            int discarded$3 = 14907;
-            lc.a(param6.field_q + param3, param6.field_F + (param3 - -param6.field_q), param6.field_m + (param2 + param6.field_z), param2 - -param6.field_m);
+            lc.a(param6.field_q + param3, param6.field_F + (param3 - -param6.field_q), param6.field_m + (param2 + param6.field_z), param2 - -param6.field_m, 14907);
             L1: {
               var9_int = ((vf) this).a(param6, 111);
               var10 = this.c(param6, 88);
@@ -647,12 +646,11 @@ class vf implements fe, pj {
                 ((vf) this).field_a.c(((vf) this).b(param6, -2), this.a(param3, 14525, 0, param6), var11 + this.a(param6, -91, param2, 0), param7, param0);
                 break L1;
               } else {
-                int discarded$4 = ((vf) this).field_a.a(((vf) this).b(param6, -2), this.a(param3, 14525, 0, param6), this.a(param6, -34, param2, 0), var9_int, var10, param7, param0, ((vf) this).field_p, ((vf) this).field_k, ((vf) this).field_s);
+                int discarded$1 = ((vf) this).field_a.a(((vf) this).b(param6, -2), this.a(param3, 14525, 0, param6), this.a(param6, -34, param2, 0), var9_int, var10, param7, param0, ((vf) this).field_p, ((vf) this).field_k, ((vf) this).field_s);
                 break L1;
               }
             }
-            int discarded$5 = 0;
-            ib.b();
+            ib.b(false);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -969,11 +967,9 @@ class vf implements fe, pj {
                   }
                 }
                 var12 = stackIn_5_0 + Math.min(stackIn_5_1, Math.min(stackIn_5_2, stackIn_5_3));
-                int discarded$3 = 14907;
-                lc.a(param1.field_q + param0, param1.field_F + param1.field_q + param0, param1.field_z + param1.field_m + param2, param2 + param1.field_m);
+                lc.a(param1.field_q + param0, param1.field_F + param1.field_q + param0, param1.field_z + param1.field_m + param2, param2 + param1.field_m, 14907);
                 bg.field_d.a(var10, var11, var12, var10, (byte) -62, ((vf) this).field_m);
-                int discarded$4 = 0;
-                ib.b();
+                ib.b(false);
                 break L1;
               } else {
                 break L1;
@@ -984,7 +980,7 @@ class vf implements fe, pj {
                 break L3;
               } else {
                 var13 = null;
-                String discarded$5 = ((vf) this).b((fj) null, 103);
+                String discarded$1 = ((vf) this).b((fj) null, 103);
                 break L3;
               }
             }
@@ -1147,13 +1143,11 @@ class vf implements fe, pj {
                     }
                     var10 = var18.b(-96, var8);
                     var11 = var18.b(-120, var9);
-                    int discarded$2 = 14907;
-                    lc.a(param0 - -param1.field_q, param1.field_q + param0 + param1.field_F, param4 - -param1.field_m + param1.field_z, param4 + param1.field_m);
+                    lc.a(param0 - -param1.field_q, param1.field_q + param0 + param1.field_F, param4 - -param1.field_m + param1.field_z, param4 + param1.field_m, 14907);
                     var12 = var10;
                     L3: while (true) {
                       if (var12 > var11) {
-                        int discarded$3 = 0;
-                        ib.b();
+                        ib.b(false);
                         break L1;
                       } else {
                         L4: {

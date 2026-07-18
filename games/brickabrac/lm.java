@@ -86,7 +86,7 @@ final class lm {
         return stackIn_4_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_e = null;
         field_c = null;
@@ -96,8 +96,7 @@ final class lm {
     final static void a(int param0) {
         t.field_g = false;
         cg.field_l = false;
-        int discarded$0 = 1;
-        bd.a(param0);
+        bd.a(param0, true);
         ka.field_l = ej.field_P;
         ik.field_g = ej.field_P;
     }

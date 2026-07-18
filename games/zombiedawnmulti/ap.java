@@ -115,7 +115,9 @@ final class ap extends qb {
         int var9 = 0;
         int var10 = 0;
         Object var11 = null;
-        int[] var15 = null;
+        Object var12 = null;
+        Object var13 = null;
+        int[] var17 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -158,28 +160,26 @@ final class ap extends qb {
               param0.field_b = 0;
               ok.field_p = new ig(var3_int, param0, param0);
               bd.field_c = new an(var3_int, param0, param0, (dr) (Object) new dd());
-              int discarded$4 = 0;
-              var5 = ha.b();
+              var5 = ha.b(false);
               if (var5 == null) {
-                int discarded$5 = 0;
-                bd.a("QC2", (Throwable) null);
+                var12 = null;
+                bd.a("QC2", (Throwable) null, false);
                 return;
               } else {
-                int discarded$6 = -19;
-                fb.a(var5);
-                var11 = null;
+                fb.a(var5, (byte) -19);
+                var13 = null;
                 tg.field_d = qd.a(1127256, (fm) null, 65793, 1513239, 8947848, 4020342, 65793, (byte) 123, 0, 2245737, 65793, 1513239, 5138823);
                 bb.field_k = qd.a(0, param2, 0, 0, 0, 0, 0, (byte) 127, 16764006, 0, 0, 0, 0);
                 kb.field_x = qd.a(0, param2, 0, 0, 0, 0, 0, (byte) 122, 16777215, 0, 0, 0, 0);
                 var6 = oo.field_b;
                 var7 = oo.field_l;
-                var15 = oo.field_i;
+                var17 = oo.field_i;
                 tb.field_v = new ja(10, 14);
                 tb.field_v.a();
                 var9 = 2;
                 L1: while (true) {
                   if (7 <= var9) {
-                    oo.a(var15, var6, var7);
+                    oo.a(var17, var6, var7);
                     tl.field_t = eh.a(false, tg.field_d, bb.field_k, kb.field_x, var5);
                     rp.field_l.field_Cb = new th();
                     break L0;
@@ -191,8 +191,8 @@ final class ap extends qb {
                 }
               }
             } else {
-              int discarded$7 = 0;
-              bd.a("QC1", (Throwable) null);
+              var11 = null;
+              bd.a("QC1", (Throwable) null, false);
               return;
             }
           }
@@ -698,7 +698,7 @@ final class ap extends qb {
         return stackIn_3_0;
     }
 
-    private final void g() {
+    private final void g(int param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -797,8 +797,7 @@ final class ap extends qb {
                   }
                 }
                 ((ap) this).field_q = (ej) param1;
-                int discarded$1 = 0;
-                this.g();
+                this.g(0);
                 this.a(param0, true);
                 ((ap) this).field_m = null;
                 ((ap) this).field_k.field_j = 0;
@@ -877,7 +876,7 @@ final class ap extends qb {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_r = null;
         field_u = null;
         field_t = null;

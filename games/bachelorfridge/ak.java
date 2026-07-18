@@ -77,7 +77,7 @@ final class ak extends bca {
         return (at) (Object) stackIn_3_0;
     }
 
-    final static boolean e() {
+    final static boolean e(int param0) {
         return null != lna.field_C;
     }
 
@@ -119,7 +119,7 @@ final class ak extends bca {
         super(param0, param1);
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_t = null;
         field_q = null;
     }

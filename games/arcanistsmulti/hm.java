@@ -7,7 +7,7 @@ final class hm {
     static String field_d;
     static boolean field_c;
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_6_0 = 0;
@@ -148,7 +148,7 @@ final class hm {
         return stackIn_14_0 != 0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
     }
 
     final static char a(byte param0, int param1) {
@@ -170,7 +170,7 @@ final class hm {
         return (char)var3;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 47;
         field_a = null;
         field_b = null;

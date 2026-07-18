@@ -19,7 +19,7 @@ final class ch extends gn {
     int field_f;
     private int field_g;
 
-    final static void a(ut param0, ot param1, ot param2) {
+    final static void a(ut param0, ot param1, ot param2, int param3) {
         int var4_int = 0;
         int var5 = Kickabout.field_G;
         try {
@@ -100,7 +100,7 @@ final class ch extends gn {
         return "LoggedGoal{" + (Object) (Object) var3 + "}";
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_o = null;
         int var1 = 12;
     }

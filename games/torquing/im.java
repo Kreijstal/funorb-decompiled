@@ -259,7 +259,7 @@ abstract class im extends bb {
         return super.h(-7);
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_J = null;
         field_L = null;
     }

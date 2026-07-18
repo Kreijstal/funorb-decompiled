@@ -6,7 +6,7 @@ final class we {
     static int field_c;
     static String field_b;
 
-    final static void a() {
+    final static void a(int param0) {
         rh var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -90,7 +90,7 @@ final class we {
         field_a = null;
     }
 
-    final static w a(String param0) {
+    final static w a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

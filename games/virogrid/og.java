@@ -27,7 +27,7 @@ final class og implements Runnable {
     private java.net.URL field_r;
     static String field_a;
 
-    final static void a(int param0, int param1, int param2, int[] param3, int param4, byte param5) {
+    final static void a(int param0, int param1, int param2, int[] param3, int param4, byte param5, int param6) {
         ag.field_j[param0] = param3;
         ag.field_b[param0] = 150;
         ag.field_h[param0] = 490;
@@ -432,7 +432,7 @@ final class og implements Runnable {
         }
     }
 
-    final static String c() {
+    final static String c(int param0) {
         String var1 = "";
         if (aa.field_a != null) {
             var1 = aa.field_a.f(-3);
@@ -646,6 +646,8 @@ final class og implements Runnable {
               } else {
                 if (!rh.field_a.equals((Object) (Object) param1.getParameter("settings"))) {
                   var3 = (Object) (Object) rh.field_a;
+                  var4 = var3;
+                  var4 = var3;
                   break L1;
                 } else {
                   break L1;
@@ -664,9 +666,7 @@ final class og implements Runnable {
                 }
               }
             }
-            int discarded$4 = -31;
-            int discarded$5 = -1;
-            stackOut_8_0 = tk.a(param2, (String) var3, (String) var4);
+            stackOut_8_0 = tk.a(param2, (String) var3, (String) var4, -1, (byte) -31);
             stackIn_9_0 = stackOut_8_0;
             break L0;
           }

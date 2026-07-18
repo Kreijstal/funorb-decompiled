@@ -10,7 +10,7 @@ final class dm {
     static long field_c;
     static String field_e;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_a = null;
         field_d = null;
@@ -18,7 +18,8 @@ final class dm {
     }
 
     final static q a(byte param0, String param1) {
-        Object var2 = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
         q var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -27,22 +28,22 @@ final class dm {
         CharSequence var8 = null;
         Object stackIn_5_0 = null;
         q stackIn_16_0 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        Object stackIn_21_0 = null;
+        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        Object stackIn_22_0 = null;
+        RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         q stackOut_15_0 = null;
         Object stackOut_4_0 = null;
-        Object stackOut_19_0 = null;
+        RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
-        Object stackOut_21_0 = null;
+        RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
         String stackOut_21_2 = null;
-        Object stackOut_20_0 = null;
+        RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         String stackOut_20_2 = null;
         var5 = Terraphoenix.field_V;
@@ -59,15 +60,15 @@ final class dm {
           if (ai.field_f != null) {
             L1: {
               var7 = (CharSequence) (Object) param1;
-              var2 = (Object) (Object) hm.a((byte) 126, var7);
+              var2 = hm.a((byte) 126, var7);
               if (var2 != null) {
                 break L1;
               } else {
-                var2 = (Object) (Object) var7;
+                var2 = param1;
                 break L1;
               }
             }
-            var3 = (q) (Object) ai.field_f.a(param0 + 203, (long)((String) var2).hashCode());
+            var3 = (q) (Object) ai.field_f.a(param0 + 203, (long)var2.hashCode());
             L2: while (true) {
               if (var3 != null) {
                 L3: {
@@ -80,7 +81,7 @@ final class dm {
                     break L3;
                   }
                 }
-                if (var4.equals(var2)) {
+                if (var4.equals((Object) (Object) var2)) {
                   stackOut_15_0 = (q) var3;
                   stackIn_16_0 = stackOut_15_0;
                   return stackIn_16_0;
@@ -100,15 +101,15 @@ final class dm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_19_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var2_ref;
             stackOut_19_1 = new StringBuilder().append("dm.C(").append(param0).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param1 == null) {
-              stackOut_21_0 = stackIn_21_0;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
@@ -116,7 +117,7 @@ final class dm {
               stackIn_22_2 = stackOut_21_2;
               break L4;
             } else {
-              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
               stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;

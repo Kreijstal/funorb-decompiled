@@ -172,8 +172,7 @@ final class cl extends al {
                     if (param2 != 10) {
                       break L5;
                     } else {
-                      int discarded$2 = 0;
-                      qf.a();
+                      qf.a(0);
                       var3_int = 0;
                       break L5;
                     }
@@ -253,7 +252,7 @@ final class cl extends al {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_n = null;
         field_p = null;
     }
@@ -350,7 +349,7 @@ final class cl extends al {
         return stackIn_8_0;
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -401,15 +400,13 @@ final class cl extends al {
                 }
               }
             } else {
-              int discarded$3 = 18;
-              kc.a();
+              kc.a((byte) 18);
               return;
             }
           } else {
             if (var2 != 1) {
               ti.a((Throwable) null, (byte) 100, "LR1: " + la.a(-114));
-              int discarded$4 = 18;
-              kc.a();
+              kc.a((byte) 18);
               return;
             } else {
               var4_int = var9.i(128);
@@ -435,8 +432,7 @@ final class cl extends al {
                   }
                 }
                 if (var5_ref_jc == null) {
-                  int discarded$5 = 18;
-                  kc.a();
+                  kc.a((byte) 18);
                   return;
                 } else {
                   var5_ref_jc.c(2);

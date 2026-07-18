@@ -13,7 +13,7 @@ final class ue {
         nj.field_c = 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_d = null;
@@ -35,7 +35,7 @@ final class ue {
         }
     }
 
-    final static int b() {
+    final static int b(byte param0) {
         return uc.field_b;
     }
 

@@ -20,10 +20,9 @@ final class g {
     int[] field_c;
     int[] field_q;
 
-    final static we b() {
+    final static we b(int param0) {
         we var1 = new we(se.field_C, fk.field_e, cl.field_n[0], ae.field_c[0], ih.field_V[0], qh.field_i[0], ph.field_c[0], he.field_k);
-        int discarded$0 = 122;
-        vb.a();
+        vb.a((byte) 122);
         return var1;
     }
 
@@ -440,13 +439,12 @@ final class g {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
     }
 
     final static boolean a(boolean param0) {
-        int discarded$0 = -75;
-        return dl.a();
+        return dl.a((byte) -75);
     }
 
     g(byte[] param0, int param1, byte[] param2) {

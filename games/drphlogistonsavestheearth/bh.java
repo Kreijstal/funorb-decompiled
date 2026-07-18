@@ -27,7 +27,7 @@ abstract class bh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_b = null;
         field_c = null;
@@ -38,13 +38,12 @@ abstract class bh {
 
     final static void b(int param0) {
         int var1 = -57 % ((param0 - -21) / 51);
-        int discarded$0 = -20480;
-        e.e();
+        e.e(-20480);
     }
 
     abstract void a(byte[] param0, byte param1);
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         return hg.field_ub == lc.field_h;
     }
 

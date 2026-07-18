@@ -189,8 +189,7 @@ final class qr extends jq {
               }
               var10 = nb.a(var8_ref_tn, 106);
               var11 = var10 + cc.b(var8_ref_tn.field_d);
-              int discarded$1 = 0;
-              var12 = mm.a(var8_ref_tn);
+              var12 = mm.a(var8_ref_tn, 0);
               var8_ref_tn.field_e = new cr(0L, np.field_Ib, var11);
               var8_ref_tn.field_e.field_A = var12;
               var8_ref_tn.field_e.field_B = (np.field_Ib.field_B >> 1 & 8355711) + var12 + -(8355711 & var12 >> 1);
@@ -215,7 +214,7 @@ final class qr extends jq {
         ng.a(((qr) this).field_a, var4, var7, var5, ((qr) this).field_f, param2 + -131, var6);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_k = null;
         field_l = null;
         field_q = null;
@@ -232,8 +231,7 @@ final class qr extends jq {
         }
         int var6 = param0 * ((qr) this).field_p >> 12;
         int var7 = ((qr) this).field_r * param0 >> 12;
-        int discarded$0 = -109;
-        ml.a(((qr) this).field_g, var4, var7, var6, var5);
+        ml.a(((qr) this).field_g, var4, var7, var6, var5, -109);
     }
 
     final void b(int param0, byte param1, int param2) {

@@ -5,7 +5,7 @@ final class jha extends rqa {
     static int field_p;
     static String[] field_o;
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
     }
 

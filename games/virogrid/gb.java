@@ -22,16 +22,15 @@ final class gb extends tg {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_H = null;
         field_M = null;
         field_L = null;
         field_F = null;
     }
 
-    final static boolean g() {
-        int discarded$0 = -31609;
-        return ak.b();
+    final static boolean g(boolean param0) {
+        return ak.b(-31609);
     }
 
     final int a(int param0, int param1) {

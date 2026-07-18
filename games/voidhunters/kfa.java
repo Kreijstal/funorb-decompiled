@@ -10,7 +10,7 @@ final class kfa implements dja {
         return (tv[]) (Object) new cq[param1];
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return null != wga.field_a || uga.field_d;
     }
 

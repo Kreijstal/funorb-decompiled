@@ -8,7 +8,7 @@ abstract class kf extends uj implements ch {
     uj field_t;
     static String field_u;
 
-    public static void a() {
+    public static void a(int param0) {
         field_u = null;
     }
 

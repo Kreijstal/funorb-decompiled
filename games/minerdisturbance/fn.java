@@ -10,7 +10,7 @@ final class fn extends pi {
     static String field_q;
     static int field_p;
 
-    final static int b() {
+    final static int b(boolean param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -389,17 +389,14 @@ final class fn extends pi {
         if (!qm.field_f) {
           L0: {
             if (null == sj.field_d) {
-              int discarded$4 = 0;
-              sj.field_d = hk.b();
-              int discarded$5 = 0;
-              di.field_x = hk.b();
+              sj.field_d = hk.b(0);
+              di.field_x = hk.b(0);
               break L0;
             } else {
               break L0;
             }
           }
-          int discarded$6 = -827843803;
-          if (!nm.a(param0, sj.field_d)) {
+          if (!nm.a(param0, sj.field_d, -827843803)) {
             L1: {
               var3_int = param0;
               if (0 == ((1633100126 ^ pe.field_sb) & 1 << var3_int % 32)) {
@@ -440,7 +437,7 @@ final class fn extends pi {
                   if (!wf.q(89)) {
                     break L4;
                   } else {
-                    sl discarded$7 = qa.a(pn.field_b, hl.field_b, param0, pe.field_sb, (byte) 56, 4, param1, aa.field_b);
+                    sl discarded$1 = qa.a(pn.field_b, hl.field_b, param0, pe.field_sb, (byte) 56, 4, param1, aa.field_b);
                     r.field_d = gk.b(4, 1);
                     break L3;
                   }
@@ -472,13 +469,13 @@ final class fn extends pi {
         rb.field_l[sj.field_f] = param0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_q = null;
         field_r = null;
         int var1 = 0;
     }
 
-    final static void a(byte[] param0) {
+    final static void a(byte[] param0, boolean param1) {
         if (param0 == null) {
             aa.field_j = new th();
             return;

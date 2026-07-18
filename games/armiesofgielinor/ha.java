@@ -371,8 +371,7 @@ final class ha {
                 break L1;
               }
             }
-            int discarded$2 = 1;
-            stackOut_2_0 = pj.a(((ha) this).field_v, ((ha) this).field_Eb, param5, param2, param3, ((ha) this).field_db, ((ha) this).o(param3, param1 ^ 15), param4, param0, false);
+            stackOut_2_0 = pj.a(((ha) this).field_v, ((ha) this).field_Eb, param5, param2, param3, ((ha) this).field_db, ((ha) this).o(param3, param1 ^ 15), param4, param0, false, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -409,7 +408,7 @@ final class ha {
         return stackIn_3_0;
     }
 
-    final static int a(int param0, byte[] param1) {
+    final static int a(int param0, byte[] param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -538,8 +537,7 @@ final class ha {
             break L0;
           }
         }
-        int discarded$3 = -15;
-        this.g();
+        this.g((byte) -15);
         if (param0) {
           return (at) var4;
         } else {
@@ -559,8 +557,7 @@ final class ha {
                 if (var5_ref_jd == null) {
                   L4: {
                     if (param1) {
-                      int discarded$4 = 108;
-                      this.h();
+                      this.h((byte) 108);
                       break L4;
                     } else {
                       break L4;
@@ -646,8 +643,7 @@ final class ha {
                           if (!param1) {
                             break L9;
                           } else {
-                            int discarded$5 = 108;
-                            this.h();
+                            this.h((byte) 108);
                             ((ha) this).d(((ha) this).field_gb, ((ha) this).field_t[((ha) this).field_gb].b(false), 91, 13);
                             ((ha) this).d(((ha) this).field_gb, ((ha) this).field_ob[((ha) this).field_gb], param2 ^ 82, 12);
                             break L9;
@@ -905,8 +901,7 @@ final class ha {
           if (param0 == 10001) {
             L9: {
               L10: {
-                int discarded$1 = -42;
-                if (this.e()) {
+                if (this.e((byte) -42)) {
                   break L10;
                 } else {
                   if (null == ((ha) this).field_K) {
@@ -990,8 +985,7 @@ final class ha {
                       }
                     }
                   } else {
-                    int discarded$3 = 1;
-                    this.a();
+                    this.a(true);
                     ((ha) this).field_gb = (((ha) this).field_gb - -1) % ((ha) this).field_W;
                     L5: while (true) {
                       if (((ha) this).field_gb == var4) {
@@ -1017,8 +1011,7 @@ final class ha {
                       if (var4 == ((ha) this).field_gb) {
                         break L7;
                       } else {
-                        int discarded$4 = -42;
-                        if (!this.e()) {
+                        if (!this.e((byte) -42)) {
                           break L6;
                         } else {
                           break L7;
@@ -1033,8 +1026,7 @@ final class ha {
                   if (!param0) {
                     break L8;
                   } else {
-                    int discarded$5 = 0;
-                    if (!this.i()) {
+                    if (!this.i(0)) {
                       break L8;
                     } else {
                       L9: {
@@ -1347,9 +1339,7 @@ final class ha {
           }
         }
         L4: {
-          int discarded$2 = -98;
-          int discarded$3 = 0;
-          if (!re.a()) {
+          if (!re.a(0, (byte) -98)) {
             break L4;
           } else {
             if (((ha) this).field_b) {
@@ -1576,7 +1566,7 @@ final class ha {
         }
     }
 
-    private final boolean i() {
+    private final boolean i(int param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = ArmiesOfGielinor.field_M ? 1 : 0;
@@ -1826,7 +1816,7 @@ final class ha {
         }
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -3017,8 +3007,7 @@ final class ha {
           var3 = var3 ^ 783246 * ((ha) this).field_hb;
           var3 = var3 ^ ((ha) this).field_Q * 545542;
           if (param1 >= 0) {
-            int discarded$1 = -111;
-            var3 = var3 ^ this.n(param1) * (7 * param1 - -11);
+            var3 = var3 ^ this.n(param1, -111) * (7 * param1 - -11);
             break L1;
           } else {
             break L1;
@@ -3289,7 +3278,7 @@ final class ha {
         }
     }
 
-    private final void j() {
+    private final void j(int param0) {
     }
 
     final int[] a(jd param0, int param1, byte param2, int param3, jd param4, int param5, int param6) {
@@ -3660,8 +3649,7 @@ final class ha {
                               }
                             } else {
                               L23: {
-                                int discarded$3 = -128;
-                                var20 = ((ha) this).a(var9, (byte) -123, var13, this.a(param1, 0, param6, var9, var8_ref) - -var15);
+                                var20 = ((ha) this).a(var9, (byte) -123, var13, this.a(param1, 0, param6, var9, var23, (byte) -128) - -var15);
                                 if (var20 == 0) {
                                   var20 = 1;
                                   break L23;
@@ -3703,8 +3691,7 @@ final class ha {
                               L27: {
                                 var19 = bw.field_m[var9.field_N][6];
                                 if (var19 <= 1) {
-                                  int discarded$4 = -128;
-                                  var21 = ((ha) this).a(var8_ref, (byte) -125, var14, this.a(param1 - -param3, var20, param5 + param6, var8_ref, var9) + var16);
+                                  var21 = ((ha) this).a(var8_ref, (byte) -125, var14, this.a(param1 - -param3, var20, param5 + param6, var23, var9, (byte) -128) + var16);
                                   if (var21 != 0) {
                                     break L27;
                                   } else {
@@ -3712,8 +3699,7 @@ final class ha {
                                     break L27;
                                   }
                                 } else {
-                                  int discarded$5 = -128;
-                                  var21 = ((ha) this).a(var8_ref, (byte) -123, var14, this.a(param1 - -param3, var20, param6 - -param5, var8_ref, var9) * 3 / 20 + var16);
+                                  var21 = ((ha) this).a(var8_ref, (byte) -123, var14, this.a(param1 - -param3, var20, param6 - -param5, var23, var9, (byte) -128) * 3 / 20 + var16);
                                   break L27;
                                 }
                               }
@@ -4026,7 +4012,7 @@ final class ha {
         return ((ha) this).field_Eb[param0].a((byte) 97, param1, var4);
     }
 
-    private final int a(int param0, int param1, int param2, jd param3, jd param4) {
+    private final int a(int param0, int param1, int param2, jd param3, jd param4, byte param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
@@ -4269,7 +4255,7 @@ final class ha {
         }
     }
 
-    private final void b(vh param0) {
+    private final void b(vh param0, byte param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -4421,12 +4407,10 @@ final class ha {
             if (param0 != 0) {
                 ((ha) this).field_D = -23;
             }
-            int discarded$0 = 7;
-            this.j();
+            this.j(7);
             var4 = param1 + "\n" + var4;
             ((ha) this).field_l.b(param0 ^ 98);
-            int discarded$1 = 40;
-            ik.a("Dropping conection: turn: " + ((ha) this).field_Gb + ", player: " + ((ha) this).field_gb + "\n" + var4);
+            ik.a("Dropping conection: turn: " + ((ha) this).field_Gb + ", player: " + ((ha) this).field_gb + "\n" + var4, (byte) 40);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "ha.JC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -4442,7 +4426,7 @@ final class ha {
         return ((ha) this).field_w[param1].c(16648);
     }
 
-    private final void a(vh param0) {
+    private final void a(vh param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -5287,7 +5271,7 @@ final class ha {
         }
     }
 
-    private final boolean d() {
+    private final boolean d(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -5807,8 +5791,7 @@ final class ha {
                               var8 = param0;
                               L23: while (true) {
                                 if (~var8 <= ~var6) {
-                                  int discarded$1 = -29673;
-                                  this.k();
+                                  this.k(-29673);
                                   ((ha) this).f(-2);
                                   ((ha) this).field_xb = this.f((byte) -82);
                                   ((ha) this).b(param0 ^ 2);
@@ -5950,7 +5933,7 @@ final class ha {
         }
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -6155,7 +6138,7 @@ final class ha {
         }
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         oj var2 = null;
         int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         while (((ha) this).field_l.b(false) > 0) {
@@ -7005,7 +6988,7 @@ final class ha {
                       if (param0 < -69) {
                         break L2;
                       } else {
-                        int discarded$5 = ((ha) this).a(83, -46, -45, (byte) -10);
+                        int discarded$4 = ((ha) this).a(83, -46, -45, (byte) -10);
                         break L2;
                       }
                     }
@@ -7013,8 +6996,7 @@ final class ha {
                     var6 = var23;
                     L3: while (true) {
                       if (~var23 <= ~((ha) this).field_Eb.length) {
-                        int discarded$6 = -29673;
-                        this.k();
+                        this.k(-29673);
                         ((ha) this).f(-2);
                         break L0;
                       } else {
@@ -7266,8 +7248,8 @@ final class ha {
                                               break L4;
                                             }
                                           } else {
-                                            int[] dupTemp$7 = ((ha) this).field_z[((ha) this).o(var26.field_a, -1)];
-                                            dupTemp$7[2] = dupTemp$7[2] + 1;
+                                            int[] dupTemp$5 = ((ha) this).field_z[((ha) this).o(var26.field_a, -1)];
+                                            dupTemp$5[2] = dupTemp$5[2] + 1;
                                             break L4;
                                           }
                                         } else {
@@ -7277,8 +7259,8 @@ final class ha {
                                         break L19;
                                       }
                                     }
-                                    int[] dupTemp$8 = ((ha) this).field_z[((ha) this).o(var26.field_a, -1)];
-                                    dupTemp$8[1] = dupTemp$8[1] + 1;
+                                    int[] dupTemp$6 = ((ha) this).field_z[((ha) this).o(var26.field_a, -1)];
+                                    dupTemp$6[1] = dupTemp$6[1] + 1;
                                     break L4;
                                   }
                                 } else {
@@ -7309,8 +7291,8 @@ final class ha {
                                   }
                                 }
                               }
-                              int[] dupTemp$9 = ((ha) this).field_z[((ha) this).o(var26.field_a, -1)];
-                              dupTemp$9[0] = dupTemp$9[0] + 1;
+                              int[] dupTemp$7 = ((ha) this).field_z[((ha) this).o(var26.field_a, -1)];
+                              dupTemp$7[0] = dupTemp$7[0] + 1;
                               break L4;
                             } else {
                               break L4;
@@ -7722,8 +7704,7 @@ final class ha {
         try {
           L0: {
             if (param2 == 14336) {
-              int discarded$2 = 1;
-              stackOut_3_0 = pj.a(((ha) this).field_v, ((ha) this).field_Eb, param3, param4, param6, ((ha) this).field_db, ((ha) this).o(param6, -1), param0, param5, param1);
+              stackOut_3_0 = pj.a(((ha) this).field_v, ((ha) this).field_Eb, param3, param4, param6, ((ha) this).field_db, ((ha) this).o(param6, -1), param0, param5, param1, true);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -8908,8 +8889,7 @@ final class ha {
             }
           }
         }
-        int discarded$2 = 0;
-        boolean discarded$3 = this.a(var20, param1, param7, param2, param0, -1, param4, var12, param3, param8, param9, param6);
+        boolean discarded$1 = this.a(var20, param1, param7, param2, param0, -1, param4, var12, param3, param8, param9, param6, 0);
     }
 
     final void l(int param0, int param1) {
@@ -9124,7 +9104,7 @@ final class ha {
         return var4 != 0;
     }
 
-    private final boolean a(jd param0, int param1, int param2, boolean param3, int param4, int param5, int param6, jd param7, int param8, int param9, int param10, boolean param11) {
+    private final boolean a(jd param0, int param1, int param2, boolean param3, int param4, int param5, int param6, jd param7, int param8, int param9, int param10, boolean param11, int param12) {
         RuntimeException var14 = null;
         String var15 = null;
         String var16 = null;
@@ -9510,7 +9490,7 @@ final class ha {
         return var4 != 0;
     }
 
-    private final int b() {
+    private final int b(byte param0) {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -9577,8 +9557,7 @@ final class ha {
               if (var4 != 0) {
                 if (1 != var4) {
                   if (3 == var4) {
-                    int discarded$2 = -1;
-                    this.a(param0);
+                    this.a(param0, -1);
                     break L1;
                   } else {
                     if (5 == var4) {
@@ -9586,8 +9565,7 @@ final class ha {
                       break L1;
                     } else {
                       if (var4 == 6) {
-                        int discarded$3 = -84;
-                        this.b(param0);
+                        this.b(param0, (byte) -84);
                         break L1;
                       } else {
                         break L1;
@@ -9824,7 +9802,7 @@ final class ha {
         return stackIn_18_0;
     }
 
-    private final void k() {
+    private final void k(int param0) {
         int var2 = 0;
         int var3 = 0;
         boolean[] var4 = null;
@@ -10080,7 +10058,7 @@ final class ha {
         }
     }
 
-    private final int n(int param0) {
+    private final int n(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -10172,7 +10150,7 @@ final class ha {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_pb = null;
         field_nb = null;
         field_q = null;
@@ -10341,7 +10319,7 @@ final class ha {
         }
     }
 
-    private final boolean e() {
+    private final boolean e(byte param0) {
         int var2 = 0;
         go[] var3 = null;
         int var4 = 0;
@@ -10883,8 +10861,7 @@ final class ha {
               }
             }
             L5: {
-              int discarded$4 = 125;
-              if (this.d()) {
+              if (this.d((byte) 125)) {
                 ((ha) this).field_p[1] = 1;
                 ((ha) this).field_p[0] = 0;
                 break L5;
@@ -10919,8 +10896,7 @@ final class ha {
                       break L0;
                     } else {
                       L9: {
-                        int discarded$5 = -42;
-                        if (this.e()) {
+                        if (this.e((byte) -42)) {
                           ((ha) this).field_R = 1;
                           break L9;
                         } else {
@@ -10981,7 +10957,7 @@ final class ha {
                         if (param0 == 1) {
                           break L14;
                         } else {
-                          int discarded$6 = this.f((byte) 28);
+                          int discarded$1 = this.f((byte) 28);
                           break L14;
                         }
                       }
@@ -11025,8 +11001,7 @@ final class ha {
                             if (0 != ((ha) this).field_R) {
                               break L19;
                             } else {
-                              int discarded$7 = -42;
-                              if (this.e()) {
+                              if (this.e((byte) -42)) {
                                 break L18;
                               } else {
                                 break L19;
@@ -11517,15 +11492,15 @@ final class ha {
                   } else {
                     L14: {
                       if ((var21 & 1) != 0) {
-                        int incrementValue$6 = var20;
+                        int incrementValue$5 = var20;
                         var20++;
-                        var19_ref_int__[incrementValue$6] = var21;
+                        var19_ref_int__[incrementValue$5] = var21;
                         ((ha) this).field_yb[var21] = 1;
                         break L14;
                       } else {
-                        int incrementValue$7 = var18;
+                        int incrementValue$6 = var18;
                         var18++;
-                        var17[incrementValue$7] = var21;
+                        var17[incrementValue$6] = var21;
                         ((ha) this).field_yb[var21] = 0;
                         break L14;
                       }
@@ -11821,9 +11796,9 @@ final class ha {
                                             if (var42[var23] != var18) {
                                               break L39;
                                             } else {
-                                              int incrementValue$8 = var22;
+                                              int incrementValue$7 = var22;
                                               var22++;
-                                              var21_ref_int__[incrementValue$8] = var23;
+                                              var21_ref_int__[incrementValue$7] = var23;
                                               ((ha) this).field_yb[var23] = var18;
                                               break L39;
                                             }
@@ -11913,9 +11888,9 @@ final class ha {
                                             break L48;
                                           }
                                         }
-                                        int incrementValue$9 = var21;
+                                        int incrementValue$8 = var21;
                                         var21++;
-                                        ((ha) this).field_c[var18][incrementValue$9] = var26 - 1;
+                                        ((ha) this).field_c[var18][incrementValue$8] = var26 - 1;
                                         break L47;
                                       } else {
                                         if (var22 >= var24) {
@@ -11963,8 +11938,7 @@ final class ha {
                     break L50;
                   }
                 }
-                int discarded$10 = 32;
-                ((ha) this).field_O = this.b();
+                ((ha) this).field_O = this.b((byte) 32);
                 ((ha) this).f(-2);
                 ((ha) this).field_xb = this.f((byte) -80);
                 ((ha) this).field_F = false;
@@ -12038,9 +12012,9 @@ final class ha {
                                   if (0 == ((ha) this).field_a[var17_int][var20]) {
                                     break L59;
                                   } else {
-                                    int incrementValue$11 = var19;
+                                    int incrementValue$9 = var19;
                                     var19++;
-                                    ((ha) this).field_c[var17_int][incrementValue$11] = var20;
+                                    ((ha) this).field_c[var17_int][incrementValue$9] = var20;
                                     break L59;
                                   }
                                 }

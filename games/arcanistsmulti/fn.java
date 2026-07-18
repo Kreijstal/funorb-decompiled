@@ -275,7 +275,7 @@ final class fn {
         return stackIn_42_0;
     }
 
-    final static void a(boolean param0, boolean param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7) {
+    final static void a(boolean param0, boolean param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, boolean param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         L0: {
@@ -340,8 +340,7 @@ final class fn {
           if (sm.field_a <= 0) {
             break L4;
           } else {
-            int discarded$3 = 118;
-            ng.a(param3, param7, param1);
+            ng.a(param3, param7, param1, 118);
             break L4;
           }
         }
@@ -370,14 +369,12 @@ final class fn {
           }
           nj.field_m.field_Hb.field_rb = null;
           mj.field_s.field_ub = true;
-          int discarded$4 = 1;
-          fn.a(param2, nj.field_m, param6, param7);
+          fn.a(param2, nj.field_m, param6, param7, true);
           break L6;
         }
         var10 = 52;
         pe.a(param7, param2, 16777215, 0, 16777215, true, param6);
-        int discarded$5 = 1;
-        fn.a(param2, lf.field_b, param6, param7);
+        fn.a(param2, lf.field_b, param6, param7, true);
         sb.field_e = sb.field_e + 1;
     }
 
@@ -388,7 +385,7 @@ final class fn {
         return (cg) (Object) bc.field_c.a(param0, (byte) -63);
     }
 
-    private final static void a(int param0, dn param1, boolean param2, int param3) {
+    private final static void a(int param0, dn param1, boolean param2, int param3, boolean param4) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1293,7 +1290,7 @@ final class fn {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_i = null;
         field_h = null;

@@ -98,7 +98,7 @@ final class dp {
         field_b = null;
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         vl var4 = null;
@@ -111,8 +111,7 @@ final class dp {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$4 = 2;
-                uk.a((byte) 127, var4);
+                uk.a((byte) 127, var4, 2);
                 var4 = (vl) (Object) lf.field_e.b(6);
                 continue L1;
               }

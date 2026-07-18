@@ -413,7 +413,7 @@ final class ej extends jm {
         return stackIn_5_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -467,7 +467,7 @@ final class ej extends jm {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_o = null;
         field_n = null;
     }

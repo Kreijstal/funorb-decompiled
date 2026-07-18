@@ -15,8 +15,7 @@ final class ff {
 
     final static void a(String param0, boolean param1, int param2, boolean param3) {
         try {
-            int discarded$0 = 3161;
-            fc.a();
+            fc.a(3161);
             bo.field_F.l(17415);
             dd.field_d = new h(vk.field_v, (String) null, eb.field_H, param3, param1);
             rd.field_c = new ng(bo.field_F, (hm) (Object) dd.field_d);
@@ -26,7 +25,7 @@ final class ff {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_b = null;
         field_f = null;
@@ -79,8 +78,7 @@ final class ff {
 
     final static void a(byte param0) {
         if (param0 > 50) {
-          int discarded$2 = 123;
-          jg.a();
+          jg.a((byte) 123);
           if (mj.field_d == 0) {
             if (dj.field_c == null) {
               dj.field_c = hl.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
@@ -132,8 +130,7 @@ final class ff {
           }
         } else {
           ff.a((byte) -15);
-          int discarded$3 = 123;
-          jg.a();
+          jg.a((byte) 123);
           if (mj.field_d == 0) {
             if (dj.field_c == null) {
               dj.field_c = hl.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);

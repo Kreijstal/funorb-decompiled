@@ -322,11 +322,14 @@ final class cbb {
 
     final static void a(asb param0, int param1, asb param2) {
         RuntimeException var3 = null;
-        ima[] var4 = null;
         int var5 = 0;
         ima[] var6 = null;
         ima[] var7 = null;
         jva var8 = null;
+        ima[] var9 = null;
+        ima[] var10 = null;
+        ima[] var11 = null;
+        ima[] var12 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
@@ -393,9 +396,8 @@ final class cbb {
             hwa.field_r[26] = ima.b(param2, "basic", "chassis8_glow");
             hwa.field_r[27] = ima.b(param2, "basic", "chassis9");
             hwa.field_r[28] = ima.b(param2, "basic", "chassis9_glow");
-            var4 = ima.a(param2, "basic", "box_pack");
-            int discarded$4 = -25801;
-            ww.a((Object[]) (Object) hwa.field_r, 31, (Object[]) (Object) var4);
+            var9 = ima.a(param2, "basic", "box_pack");
+            ww.a((Object[]) (Object) hwa.field_r, 31, (Object[]) (Object) var9, -25801);
             hwa.field_r[40] = ima.b(param2, "basic", "icon_frame_lrg");
             hwa.field_r[41] = ima.b(param2, "basic", "icon_frame_lrg_select");
             hwa.field_r[42] = ima.b(param2, "basic", "icon_frame_sml");
@@ -459,16 +461,13 @@ final class cbb {
             hwa.field_r[99] = ima.b(param2, "basic", "more_weapons");
             hwa.field_r[100] = ima.b(param2, "basic", "more_weapons_small");
             hwa.field_r[101] = ima.b(param2, "basic", "icon_box");
-            var4 = ima.a(param2, "basic", "icons_hud");
-            int discarded$5 = -25801;
-            ww.a((Object[]) (Object) hwa.field_r, 102, (Object[]) (Object) var4);
-            var4 = ima.a(param2, "basic", "self_destruct");
-            int discarded$6 = -25801;
-            ww.a((Object[]) (Object) hwa.field_r, 112, (Object[]) (Object) var4);
+            var10 = ima.a(param2, "basic", "icons_hud");
+            ww.a((Object[]) (Object) hwa.field_r, 102, (Object[]) (Object) var10, -25801);
+            var11 = ima.a(param2, "basic", "self_destruct");
+            ww.a((Object[]) (Object) hwa.field_r, 112, (Object[]) (Object) var11, -25801);
             hwa.field_r[115] = ima.b(param2, "basic", "chat");
-            var4 = ima.a(param2, "basic", "frame_outer");
-            int discarded$7 = -25801;
-            ww.a((Object[]) (Object) hwa.field_r, 116, (Object[]) (Object) var4);
+            var12 = ima.a(param2, "basic", "frame_outer");
+            ww.a((Object[]) (Object) hwa.field_r, 116, (Object[]) (Object) var12, -25801);
             hwa.field_r[125] = ima.b(param2, "basic", "button_off");
             hwa.field_r[126] = ima.b(param2, "basic", "button_on");
             hwa.field_r[127] = ima.b(param2, "basic", "buttonbig_off");

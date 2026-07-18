@@ -62,21 +62,19 @@ final class te extends wm {
             if (var4.length() != 0) {
               var5 = var4;
               if (!client.a(param1 + 111, var5)) {
-                int discarded$12 = 0;
-                if (qf.a(var5)) {
+                if (qf.a(var5, 0)) {
                   stackOut_8_0 = uk.field_y;
                   stackIn_9_0 = stackOut_8_0;
                   return stackIn_9_0;
                 } else {
                   if (!mc.a(var5, (byte) -121)) {
-                    int discarded$13 = 14;
-                    if (!this.c(param0)) {
+                    if (!this.c(param0, (byte) 14)) {
                       L1: {
                         if (param1 == -11) {
                           break L1;
                         } else {
                           var6 = null;
-                          String discarded$14 = ((te) this).a((String) null, (byte) -103);
+                          String discarded$2 = ((te) this).a((String) null, (byte) -103);
                           break L1;
                         }
                       }
@@ -172,13 +170,13 @@ final class te extends wm {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_q = null;
         field_v = null;
         field_t = null;
     }
 
-    private final boolean c(String param0) {
+    private final boolean c(String param0, byte param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -352,7 +350,7 @@ final class te extends wm {
                 break L1;
               } else {
                 if (param0.indexOf("<br>") == -1) {
-                  param3[0] = (String) (Object) param3;
+                  param3[0] = param0;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;
@@ -553,8 +551,7 @@ final class te extends wm {
                     break L1;
                   }
                 }
-                int discarded$2 = 14;
-                if (!this.c(param0)) {
+                if (!this.c(param0, (byte) 14)) {
                   stackOut_11_0 = dc.field_b;
                   stackIn_12_0 = stackOut_11_0;
                   break L0;

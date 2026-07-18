@@ -419,7 +419,7 @@ final class vk extends kd {
         this.a(8192, param1, 6779);
     }
 
-    final static String a(String param0, int param1) {
+    final static String a(String param0, int param1, byte param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         String stackIn_3_0 = null;
@@ -951,7 +951,7 @@ final class vk extends kd {
         return stackIn_13_0;
     }
 
-    private final void b(boolean param0) {
+    private final void b(boolean param0, int param1) {
         int var3 = 0;
         if (!param0) {
             this.a(-1, 0);
@@ -1147,8 +1147,7 @@ final class vk extends kd {
                             }
                           }
                         }
-                        int discarded$1 = 123;
-                        this.b(true);
+                        this.b(true, 123);
                         ((vk) this).field_Z.e();
                         return;
                       }
@@ -1530,8 +1529,7 @@ final class vk extends kd {
                       if (var3 != 255) {
                         return;
                       } else {
-                        int discarded$1 = 123;
-                        this.b(true);
+                        this.b(true, 123);
                         return;
                       }
                     }
@@ -1915,8 +1913,7 @@ final class vk extends kd {
             Object var4 = null;
             ((vk) this).a(88, (pr) null, true);
         }
-        int discarded$0 = 123;
-        this.b(param0);
+        this.b(param0, 123);
     }
 
     private final void b(byte param0, int param1, int param2) {
@@ -2318,8 +2315,7 @@ final class vk extends kd {
         ((vk) this).field_u = new ib((vk) this);
         ((vk) this).field_z = new bm(128);
         ((vk) this).a((byte) -127, -1, 256);
-        int discarded$0 = 123;
-        this.b(true);
+        this.b(true, 123);
     }
 
     static {

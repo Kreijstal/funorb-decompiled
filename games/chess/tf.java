@@ -88,8 +88,7 @@ final class tf extends o {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_0_0 = cf.a(param1, -51);
+            stackOut_0_0 = cf.a(param1, -51, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -126,7 +125,7 @@ final class tf extends o {
         return stackIn_1_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = (-640 + vi.field_d) / 2;
         int var2 = ug.field_b * ug.field_b;
         int var3 = -(an.field_e * an.field_e) + var2;
@@ -135,8 +134,7 @@ final class tf extends o {
     }
 
     final static km[] a(int param0, byte param1, int param2) {
-        int discarded$0 = -87;
-        return om.a(1, param0, param2);
+        return om.a(1, param0, param2, (byte) -87);
     }
 
     public static void a(boolean param0) {

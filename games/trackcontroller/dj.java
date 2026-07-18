@@ -95,7 +95,7 @@ final class dj extends IOException {
         return stackIn_6_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = -23;
         field_b = null;
         field_a = null;

@@ -10,11 +10,10 @@ final class ih {
         if (param1 != 0) {
             return null;
         }
-        int discarded$0 = 124;
-        return cq.a(1, param2, param0);
+        return cq.a(1, param2, param0, 124);
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, boolean param1) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -36,8 +35,7 @@ final class ih {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_0_0 = gv.a(false, param0);
+            stackOut_0_0 = gv.a(false, param0, 0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -74,7 +72,7 @@ final class ih {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

@@ -65,7 +65,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
         }
     }
 
-    final static String a(int param0, ds param1) {
+    final static String a(int param0, ds param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4_int = 0;

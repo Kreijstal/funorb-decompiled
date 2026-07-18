@@ -211,14 +211,13 @@ final class hf extends qe {
         return (java.net.Socket) (Object) stackIn_25_0;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         qd.a(20830, 0);
         cf.field_w = 0;
         nm.field_b = tk.field_c[4][0];
         vg.field_P = 0;
         eb.field_o = null;
-        int discarded$6 = 1;
-        if (!pd.a(nm.field_b)) {
+        if (!pd.a(nm.field_b, true)) {
           qn.field_k = false;
           on.field_r = -1;
           bl.field_r = null;
@@ -317,7 +316,7 @@ final class hf extends qe {
         L0: {
           var13 = HoldTheLine.field_D;
           if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
-            String discarded$4 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$3 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           } else {
             break L0;
@@ -425,7 +424,7 @@ final class hf extends qe {
           return ((hf) this).a(675834672);
         }
         L5: {
-          boolean discarded$5 = var3.addAll((Collection) (Object) var4);
+          boolean discarded$4 = var3.addAll((Collection) (Object) var4);
           var6_array = var3.toArray();
           var7 = null;
           var8_array = var6_array;
@@ -433,7 +432,7 @@ final class hf extends qe {
             break L5;
           } else {
             var14 = null;
-            boolean discarded$6 = hf.a((ib) null, -54);
+            boolean discarded$5 = hf.a((ib) null, -54);
             break L5;
           }
         }
@@ -450,8 +449,7 @@ final class hf extends qe {
             var11 = (java.net.Proxy) var10;
             try {
               L7: {
-                int discarded$7 = 110;
-                var12_ref2 = this.a(var11);
+                var12_ref2 = this.a(var11, (byte) 110);
                 if (var12_ref2 != null) {
                   stackOut_23_0 = (java.net.Socket) var12_ref2;
                   stackIn_24_0 = stackOut_23_0;
@@ -492,7 +490,7 @@ final class hf extends qe {
         }
     }
 
-    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0, byte param1) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;
@@ -717,7 +715,7 @@ final class hf extends qe {
         ((hf) this).field_k = java.net.ProxySelector.getDefault();
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_j = null;
         field_l = null;
         field_h = null;

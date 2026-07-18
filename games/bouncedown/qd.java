@@ -87,7 +87,7 @@ final class qd {
         return stackIn_6_0;
     }
 
-    final static lj a(String param0) {
+    final static lj a(String param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

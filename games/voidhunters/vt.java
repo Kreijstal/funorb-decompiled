@@ -5,8 +5,7 @@ final class vt extends rqa {
     static int field_o;
 
     final static void a(boolean param0, int param1, boolean param2, String param3) {
-        int discarded$2 = -1;
-        lba.a();
+        lba.a(-1);
         klb.field_r.g((byte) -17);
         if (param1 >= -77) {
             return;

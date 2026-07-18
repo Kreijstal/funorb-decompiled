@@ -183,8 +183,7 @@ final class hf extends fd {
     hf(hf param0, boolean param1) {
         this();
         try {
-            int discarded$0 = -126;
-            param0.a(param1, (hf) this);
+            param0.a(param1, (hf) this, (byte) -126);
         } catch (RuntimeException runtimeException) {
             throw qk.a((Throwable) (Object) runtimeException, "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -321,13 +320,11 @@ final class hf extends fd {
                 break L1;
               } else {
                 var3 = null;
-                String discarded$6 = hf.a((CharSequence) null, (byte) 93);
+                String discarded$2 = hf.a((CharSequence) null, (byte) 93);
                 break L1;
               }
             }
-            int discarded$7 = 0;
-            int discarded$8 = -14;
-            stackOut_2_0 = im.a(param0);
+            stackOut_2_0 = im.a(param0, (byte) -14, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -464,7 +461,7 @@ final class hf extends fd {
         }
     }
 
-    private final void a(boolean param0, hf param1) {
+    private final void a(boolean param0, hf param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         bd var5 = null;

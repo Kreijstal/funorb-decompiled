@@ -62,8 +62,7 @@ abstract class dl extends pa {
         try {
           L0: {
             if (ha.a(param4, -32180, param2, param0)) {
-              int discarded$2 = 1;
-              stackOut_3_0 = pd.a(param3.a(param2, (byte) 122, param0));
+              stackOut_3_0 = pd.a(param3.a(param2, (byte) 122, param0), true);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

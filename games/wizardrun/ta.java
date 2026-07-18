@@ -152,11 +152,10 @@ abstract class ta {
                       } else {
                         L6: {
                           var7 = param1.charAt(var6);
-                          int discarded$2 = 0;
-                          if (fg.a((char) var7)) {
+                          if (fg.a((char) var7, 0)) {
                             var8 = sf.a(-1514, (char) var7);
                             if (var8 != 0) {
-                              StringBuilder discarded$3 = var5.append((char) var8);
+                              StringBuilder discarded$1 = var5.append((char) var8);
                               break L6;
                             } else {
                               break L6;

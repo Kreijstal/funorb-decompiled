@@ -169,7 +169,7 @@ final class mg {
         return stackIn_6_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_b = null;
         field_g = null;

@@ -263,7 +263,7 @@ abstract class dc implements qi {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_f = null;
         field_b = null;
         field_g = null;

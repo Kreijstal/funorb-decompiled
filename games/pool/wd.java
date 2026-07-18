@@ -54,7 +54,7 @@ final class wd extends vh {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_Lb = null;
         field_Ob = null;
         field_Rb = null;

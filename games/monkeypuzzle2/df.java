@@ -11,7 +11,7 @@ final class df extends wj {
     static ad field_p;
     private rj field_r;
 
-    final static void f() {
+    final static void f(int param0) {
         int var1_int = 0;
         int var2 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
@@ -29,7 +29,7 @@ final class df extends wj {
         }
     }
 
-    final static void h() {
+    final static void h(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int[] var2 = null;
@@ -151,8 +151,7 @@ final class df extends wj {
                 var5 = var4;
                 if (!tl.a(0, var5)) {
                   if (!bg.a(param0 ^ 4827, var5)) {
-                    int discarded$6 = 0;
-                    if (!sg.a(var5)) {
+                    if (!sg.a(var5, false)) {
                       if (this.a((byte) 119, param1)) {
                         stackOut_17_0 = ad.field_d;
                         stackIn_18_0 = stackOut_17_0;
@@ -359,7 +358,7 @@ final class df extends wj {
         return stackIn_16_0 != 0;
     }
 
-    final static void a(gk param0) {
+    final static void a(gk param0, boolean param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;
@@ -544,8 +543,7 @@ final class df extends wj {
           L0: {
             var4_int = param1.c(param0, (byte) -105);
             var5 = param1.a(param3, var4_int, -28459);
-            int discarded$2 = 1896;
-            stackOut_0_0 = rd.a(var5, param1, var4_int);
+            stackOut_0_0 = rd.a(var5, param1, var4_int, 1896);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -730,7 +728,7 @@ final class df extends wj {
         return stackIn_11_0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_p = null;
         field_q = null;
         field_o = null;

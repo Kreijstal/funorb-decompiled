@@ -83,7 +83,7 @@ final class jg extends al {
         }
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_kb = null;
         field_jb = null;
         field_hb = null;

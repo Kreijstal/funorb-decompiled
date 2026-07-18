@@ -7,7 +7,7 @@ final class n {
     static int field_a;
     static li[] field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
         field_b = null;
@@ -52,8 +52,7 @@ final class n {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$7 = -3;
-            if (wg.a(param3, param4, param0)) {
+            if (wg.a(param3, param4, param0, -3)) {
               stackOut_3_0 = pj.a((byte) 101, param1.b(255, param4, param3));
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -121,12 +120,11 @@ final class n {
         return stackIn_4_0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         ki var5 = null;
         float var6 = 0.0f;
         if (wd.field_h.b(-89) > 0) {
-          int discarded$4 = 1;
-          if (jj.b()) {
+          if (jj.b(true)) {
             var5 = (ki) (Object) wd.field_h.d(4011);
             var5.field_q = (float)(-48 + param3);
             var5.field_B = (float)param2;

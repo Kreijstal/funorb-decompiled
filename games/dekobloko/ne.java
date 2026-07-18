@@ -13,7 +13,7 @@ final class ne {
     private java.math.BigInteger field_g;
     private java.math.BigInteger field_e;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
         field_d = null;
@@ -247,7 +247,7 @@ final class ne {
         return stackIn_11_0;
     }
 
-    final static void e() {
+    final static void e(int param0) {
         wj.q(114);
         vb.field_Z = true;
         tj.field_Vb = true;
@@ -255,7 +255,7 @@ final class ne {
         wi.a(false, -54, ak.field_g);
     }
 
-    final static java.awt.Canvas d() {
+    final static java.awt.Canvas d(int param0) {
         return null != cl.field_v ? (java.awt.Canvas) (Object) cl.field_v : jh.field_b;
     }
 
@@ -273,7 +273,7 @@ final class ne {
         return true;
     }
 
-    final static int b() {
+    final static int b(byte param0) {
         return pf.field_g;
     }
 
@@ -322,7 +322,7 @@ final class ne {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         wc.field_n = false;
         wl.field_p = 0 == de.field_V.d((byte) -96) ? true : false;
     }

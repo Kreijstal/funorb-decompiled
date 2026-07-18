@@ -80,7 +80,7 @@ final class qn extends hl {
         throw new Error();
     }
 
-    final static lc a(String param0) {
+    final static lc a(String param0, int param1) {
         RuntimeException var2 = null;
         lc stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;

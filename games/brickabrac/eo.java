@@ -140,7 +140,7 @@ final class eo extends tl {
         }
     }
 
-    final static boolean a(int[] param0, int param1) {
+    final static boolean a(int[] param0, int param1, byte param2) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -209,7 +209,7 @@ final class eo extends tl {
         return stackIn_5_0 != 0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_l = null;
         field_g = null;
         field_f = null;

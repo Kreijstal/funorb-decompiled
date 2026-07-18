@@ -7,7 +7,7 @@ final class w {
     static o[] field_b;
     static String field_d;
 
-    final static Object a(byte[] param0) {
+    final static Object a(byte[] param0, byte param1, boolean param2) {
         f var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_4_0 = null;
@@ -85,7 +85,7 @@ final class w {
         return (Object) (Object) stackIn_9_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_d = null;
         field_c = null;

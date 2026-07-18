@@ -20,8 +20,7 @@ final class ti extends qg {
 
     final boolean b(int param0) {
         if (param0 >= -87) {
-            int discarded$0 = 1;
-            ti.a();
+            ti.a(true);
             return false;
         }
         return false;
@@ -310,7 +309,7 @@ final class ti extends qg {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_k = null;
         field_i = null;

@@ -37,7 +37,7 @@ final class od extends cb {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_i = null;
         field_k = null;
     }
@@ -258,7 +258,7 @@ final class od extends cb {
                     }
                   }
                   wi.field_v = rc.b(re.field_a[param1], 100, param2, param0);
-                  sa discarded$7 = mg.a(1963987425, wi.field_v);
+                  sa discarded$6 = mg.a(1963987425, wi.field_v);
                   break L1;
                 } else {
                   if (param1 != 42) {
@@ -284,13 +284,12 @@ final class od extends cb {
                               }
                             }
                             si.field_b[var6] = rc.b(re.field_a[param1], 100, param2, param0);
-                            sa discarded$8 = mg.a(1963987425, si.field_b[var6]);
+                            sa discarded$7 = mg.a(1963987425, si.field_b[var6]);
                             break L1;
                           }
                         }
                       } else {
-                        int discarded$9 = 0;
-                        sa discarded$10 = ii.a(re.field_a[param1]);
+                        sa discarded$8 = ii.a(re.field_a[param1], false);
                         break L1;
                       }
                     } else {
@@ -313,7 +312,7 @@ final class od extends cb {
                             }
                           }
                           mh.field_b[var4_int] = rc.b(re.field_a[param1], 100, param2, param0);
-                          sa discarded$11 = mg.a(param3 + 1963987421, mh.field_b[var4_int]);
+                          sa discarded$9 = mg.a(param3 + 1963987421, mh.field_b[var4_int]);
                           break L1;
                         }
                       }
@@ -331,7 +330,7 @@ final class od extends cb {
                       }
                     }
                     df.field_a = rc.b(re.field_a[param1], 100, param2, param0);
-                    sa discarded$12 = mg.a(1963987425, df.field_a);
+                    sa discarded$10 = mg.a(1963987425, df.field_a);
                     break L1;
                   }
                 }
@@ -348,7 +347,7 @@ final class od extends cb {
                   }
                 }
                 qg.field_b = rc.b(re.field_a[param1], 100, param2, param0);
-                sa discarded$13 = mg.a(param3 + 1963987421, qg.field_b);
+                sa discarded$11 = mg.a(param3 + 1963987421, qg.field_b);
                 break L1;
               }
             }

@@ -25,7 +25,7 @@ abstract class mb extends gb {
 
     abstract boolean f(int param0);
 
-    final static float a(float param0, float param1) {
+    final static float a(float param0, float param1, boolean param2) {
         float var3_float = 0.0f;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -45,10 +45,7 @@ abstract class mb extends gb {
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                int discarded$6 = 1;
-                int discarded$7 = 1;
-                int discarded$8 = 1;
-                var3_float = (float)((double)var3_float + (double)vj.a(param1) * Math.sin((double)((float)(1 << var4) * param0 + vj.a(vj.a(param1) + param1))));
+                var3_float = (float)((double)var3_float + (double)vj.a(param1, true) * Math.sin((double)((float)(1 << var4) * param0 + vj.a(vj.a(param1, true) + param1, true))));
                 var4++;
                 continue L1;
               }
@@ -62,7 +59,7 @@ abstract class mb extends gb {
         return stackIn_5_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_v = null;
         field_A = null;
         field_x = null;

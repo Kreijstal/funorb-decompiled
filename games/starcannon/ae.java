@@ -67,8 +67,7 @@ final class ae {
             try {
               L0: {
                 var2_int = 31;
-                int discarded$2 = -27504;
-                Object discarded$3 = mb.a(new Object[1], ll.b(105), "resizing");
+                Object discarded$1 = mb.a(new Object[1], ll.b(105), "resizing", -27504);
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -89,15 +88,14 @@ final class ae {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_b = null;
         field_a = null;
     }
 
     final static void a(String param0, boolean param1, int param2, boolean param3) {
-        int discarded$0 = -1;
-        qb.b();
+        qb.b(-1);
         ti.field_b.l(26756);
         try {
             wi.field_c = new rg(lc.field_hb, (String) null, tc.field_x, param1, param3);

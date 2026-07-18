@@ -396,7 +396,7 @@ class pj extends rc {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_G = null;
         int var1 = -16;
         field_D = null;
@@ -803,13 +803,9 @@ class pj extends rc {
         return stackIn_16_0;
     }
 
-    final static da a(int param0, byte param1) {
+    final static da a(int param0, byte param1, int param2, boolean param3, boolean param4) {
         int var5 = 10 / ((-74 - param1) / 37);
-        int discarded$0 = 0;
-        int discarded$1 = 1;
-        int discarded$2 = 0;
-        int discarded$3 = 1;
-        return ab.a(2097152, param0);
+        return ab.a(2097152, param0, 1, false, true, false);
     }
 
     final static void a(int param0, da param1) {
@@ -820,8 +816,7 @@ class pj extends rc {
             var2 = new o(param1.a(4, "final_frame.jpg", ""), (java.awt.Component) (Object) dc.field_q);
             var3 = var2.field_p;
             var4 = var2.field_t;
-            int discarded$0 = 91;
-            fl.b();
+            fl.b((byte) 91);
             gg.field_e = new o(var3, var4 * param0 / 4);
             gg.field_e.a();
             var2.c(0, 0);

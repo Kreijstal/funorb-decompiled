@@ -5,7 +5,7 @@ final class ab {
     static int field_a;
     static String field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 
@@ -153,8 +153,7 @@ final class ab {
     }
 
     final static kh a(boolean param0) {
-        int discarded$0 = 1;
-        return new kh(re.c(6), r.b());
+        return new kh(re.c(6), r.b(true));
     }
 
     static {

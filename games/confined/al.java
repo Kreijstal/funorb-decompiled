@@ -145,7 +145,7 @@ final class al {
         throw new IllegalStateException();
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         int var1 = 0;
         if (sa.field_R) {
             return null;
@@ -167,7 +167,7 @@ final class al {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
         field_c = null;
         field_a = null;

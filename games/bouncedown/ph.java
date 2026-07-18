@@ -166,8 +166,7 @@ final class ph {
                     ac.a((byte) 91, param1, "document.cookie=\"" + var5 + "\"");
                 } catch (Throwable throwable) {
                 }
-                int discarded$0 = 27477;
-                kc.a(param1);
+                kc.a(param1, 27477);
             } catch (RuntimeException runtimeException) {
                 throw ii.a((Throwable) (Object) runtimeException, "ph.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
             }

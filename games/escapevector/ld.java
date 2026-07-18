@@ -19,7 +19,7 @@ class ld extends vj {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_h = null;
         field_g = null;
     }
@@ -368,7 +368,7 @@ class ld extends vj {
         }
     }
 
-    final static hj c() {
+    final static hj c(byte param0) {
         return aj.field_f;
     }
 

@@ -11,7 +11,7 @@ final class ml {
     int field_g;
     static int field_b;
 
-    final static bh a(java.applet.Applet param0) {
+    final static bh a(java.applet.Applet param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         bh[] var3 = null;
@@ -43,15 +43,13 @@ final class ml {
         var6 = stellarshard.field_B;
         try {
           L0: {
-            int discarded$4 = 61;
-            var2 = bi.a(param0, "jagex-last-login-method");
+            var2 = bi.a(param0, "jagex-last-login-method", 61);
             if (var2 == null) {
               stackOut_3_0 = ma.field_m;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              int discarded$5 = -1;
-              var3 = jj.b();
+              var3 = jj.b(-1);
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -105,7 +103,7 @@ final class ml {
         return stackIn_14_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
     }
 
@@ -167,8 +165,7 @@ final class ml {
             var4_int = param2.b(param0, (byte) -118);
             var5 = 102 / ((31 - param1) / 48);
             var6 = param2.a(var4_int, param3, (byte) -11);
-            int discarded$2 = 55;
-            stackOut_0_0 = wb.a(var6, var4_int, param2);
+            stackOut_0_0 = wb.a(var6, var4_int, param2, 55);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

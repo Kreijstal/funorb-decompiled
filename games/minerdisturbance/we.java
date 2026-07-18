@@ -138,8 +138,7 @@ abstract class we extends al {
                                         try {
                                           L2: {
                                             var10 = (CharSequence) (Object) var8.substring(4);
-                                            int discarded$1 = 1;
-                                            var9_int = md.a(var10);
+                                            var9_int = md.a(var10, true);
                                             var4 = var4 + ((we) this).field_x[var9_int].field_j;
                                             var3 = 0;
                                             var6++;
@@ -267,9 +266,7 @@ abstract class we extends al {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    int discarded$9 = 92;
-                                    int discarded$10 = 16;
-                                    field_C = ha.a(var7);
+                                    field_C = ha.a(var7, 16, 92);
                                     break L1;
                                   }
                                 } else {
@@ -282,9 +279,7 @@ abstract class we extends al {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              int discarded$11 = 92;
-                              int discarded$12 = 16;
-                              field_B = ha.a(var6);
+                              field_B = ha.a(var6, 16, 92);
                               break L1;
                             }
                           } else {
@@ -297,9 +292,7 @@ abstract class we extends al {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        int discarded$13 = 92;
-                        int discarded$14 = 16;
-                        field_Q = ha.a(var5);
+                        field_Q = ha.a(var5, 16, 92);
                         break L1;
                       }
                     } else {
@@ -308,8 +301,7 @@ abstract class we extends al {
                     }
                   } else {
                     var4 = (CharSequence) (Object) param0.substring(6);
-                    int discarded$15 = 1;
-                    field_K = md.a(var4);
+                    field_K = md.a(var4, true);
                     break L1;
                   }
                 } else {
@@ -318,9 +310,7 @@ abstract class we extends al {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                int discarded$16 = 92;
-                int discarded$17 = 16;
-                field_A = ha.a(var3);
+                field_A = ha.a(var3, 16, 92);
                 break L1;
               }
             }
@@ -568,10 +558,7 @@ abstract class we extends al {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          int discarded$9 = -125;
-          int discarded$10 = 0;
-          int discarded$11 = 32;
-          StringBuilder discarded$12 = ie.a(field_v);
+          StringBuilder discarded$5 = ie.a(field_v, ' ', 0, (byte) -125);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -607,9 +594,9 @@ abstract class we extends al {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$13 = field_v.append('<');
-                        StringBuilder discarded$14 = field_v.append(var15);
-                        StringBuilder discarded$15 = field_v.append('>');
+                        StringBuilder discarded$6 = field_v.append('<');
+                        StringBuilder discarded$7 = field_v.append(var15);
+                        StringBuilder discarded$8 = field_v.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -625,8 +612,7 @@ abstract class we extends al {
                                             try {
                                               L4: {
                                                 var18 = (CharSequence) (Object) var15.substring(4);
-                                                int discarded$16 = 1;
-                                                var16_int = md.a(var18);
+                                                var16_int = md.a(var18, true);
                                                 var4 = var4 + ((we) this).field_x[var16_int].field_j;
                                                 var10 = 0;
                                                 break L4;
@@ -797,7 +783,7 @@ abstract class we extends al {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$17 = field_v.append((char) var14);
+                        StringBuilder discarded$9 = field_v.append((char) var14);
                         var14 = (char)(kj.a((char) var14, -8251) & 255);
                         var4 = var4 + ((we) this).field_u[var14];
                         if (((we) this).field_L == null) {
@@ -978,8 +964,7 @@ abstract class we extends al {
                                         L2: {
                                           L3: {
                                             var13 = (CharSequence) (Object) var9_ref_String.substring(4);
-                                            int discarded$1 = 1;
-                                            var10 = md.a(var13);
+                                            var10 = md.a(var13, true);
                                             var11_ref_hd = ((we) this).field_x[var10];
                                             if (((we) this).field_O == null) {
                                               stackOut_25_0 = var11_ref_hd.field_k;
@@ -1354,7 +1339,7 @@ abstract class we extends al {
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
-    final static String a(we param0, String param1) {
+    final static String a(we param0, String param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;

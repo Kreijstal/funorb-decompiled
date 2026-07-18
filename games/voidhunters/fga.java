@@ -1786,7 +1786,7 @@ final class fga extends f {
         }
     }
 
-    final static fga a(gd param0) {
+    final static fga a(gd param0, int param1, int param2) {
         if (param0.field_i != null) {
           if (param0.field_i.length == 0) {
             return null;

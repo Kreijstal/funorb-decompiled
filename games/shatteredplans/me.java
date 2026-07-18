@@ -31,8 +31,7 @@ abstract class me {
         }
         L1: {
           L2: {
-            int discarded$7 = 29443;
-            if (!qh.f()) {
+            if (!qh.f(29443)) {
               break L2;
             } else {
               if (0 != (8 & cl.field_n)) {
@@ -53,7 +52,7 @@ abstract class me {
 
     abstract fs[] b(int param0);
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_f = null;
         field_h = null;

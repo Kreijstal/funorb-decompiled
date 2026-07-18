@@ -25,7 +25,7 @@ final class ee {
         field_d = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, boolean param2) {
         if (ln.field_a.field_o[param1] >= 0) {
             return sa.a((byte) -118, param1) >> 1;
         }
@@ -236,7 +236,7 @@ final class ee {
                     break L2;
                   } else {
                     var10 = null;
-                    int discarded$10 = ee.a(true, 46, false, -119, (String) null, (String) null);
+                    int discarded$7 = ee.a(true, 46, false, -119, (String) null, (String) null);
                     break L2;
                   }
                 }
@@ -345,13 +345,12 @@ final class ee {
                       L11: {
                         ib.field_d = sc.field_g.c(10818);
                         li.field_q = sc.field_g.l(32270);
-                        int discarded$11 = sc.field_g.l(32270);
+                        int discarded$8 = sc.field_g.l(32270);
                         wb.field_S = sc.field_g.e(8);
                         var12 = sc.field_g.a((byte) 28);
                         var7 = sc.field_g.l(32270);
                         if ((1 & var7) != 0) {
-                          int discarded$12 = -6;
-                          rd.a();
+                          rd.a(-6);
                           break L11;
                         } else {
                           break L11;
@@ -394,9 +393,9 @@ final class ee {
                       }
                       L15: {
                         if (sd.field_u) {
-                          int discarded$13 = sc.field_g.l(32270);
-                          int discarded$14 = sc.field_g.l(32270);
-                          int discarded$15 = sc.field_g.d(8195);
+                          int discarded$9 = sc.field_g.l(32270);
+                          int discarded$10 = sc.field_g.l(32270);
+                          int discarded$11 = sc.field_g.d(8195);
                           l.field_a = sc.field_g.e(8);
                           qj.field_h = new byte[l.field_a];
                           var8 = 0;
@@ -450,7 +449,7 @@ final class ee {
                             } else {
                               try {
                                 L21: {
-                                  Object discarded$16 = a.a("unzap", bn.c(-1), -124);
+                                  Object discarded$12 = a.a("unzap", bn.c(-1), -124);
                                   break L21;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -466,8 +465,7 @@ final class ee {
                         }
                         try {
                           L23: {
-                            int discarded$17 = 100;
-                            Object discarded$18 = a.a(bn.c(-1), new Object[1], "zap", -13730);
+                            Object discarded$13 = a.a(bn.c(-1), new Object[1], "zap", -13730);
                             break L23;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -558,8 +556,7 @@ final class ee {
                       break L30;
                     } else {
                       L31: {
-                        int discarded$19 = 1;
-                        if (m.a() <= 30000L) {
+                        if (m.a(true) <= 30000L) {
                           km.field_x = fl.field_d;
                           break L31;
                         } else {

@@ -653,14 +653,13 @@ final class nf extends ch implements jb, tb, jn {
     final void a(ei param0, int param1, int param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = 3;
-            ((nf) this).field_U.field_I = this.k();
+            ((nf) this).field_U.field_I = this.k(3);
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) (Object) runtimeException, "nf.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static vh g() {
+    final static vh g(byte param0) {
         return wo.field_f.field_Rb;
     }
 
@@ -803,7 +802,7 @@ final class nf extends ch implements jb, tb, jn {
         return stackIn_3_0;
     }
 
-    private final boolean k() {
+    private final boolean k(int param0) {
         if (this.a((byte) -3, (sc) (Object) ((nf) this).field_bb)) {
           if (this.a((byte) -3, (sc) (Object) ((nf) this).field_cb)) {
             if (this.a((byte) -3, (sc) (Object) ((nf) this).field_O)) {
@@ -905,7 +904,7 @@ final class nf extends ch implements jb, tb, jn {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_S = null;
         field_Z = null;
         field_V = null;
@@ -949,7 +948,6 @@ final class nf extends ch implements jb, tb, jn {
         sm dupTemp$1 = new sm(10000536);
         ((nf) this).field_R.field_z = (fp) (Object) dupTemp$1;
         ((nf) this).field_X.field_z = (fp) (Object) dupTemp$1;
-        int discarded$2 = 11579568;
         String var2 = nr.a(new String[2], -1, lh.field_d);
         int var3 = 20;
         var3 = var3 + this.a((byte) 44, (ei) (Object) ((nf) this).field_cb, var3, 170, ng.field_x);
@@ -1064,13 +1062,12 @@ final class nf extends ch implements jb, tb, jn {
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final String i() {
+    private final String i(int param0) {
         return "</col></u>";
     }
 
     private final boolean h(int param0) {
-        int discarded$0 = 3;
-        if (!this.k()) {
+        if (!this.k(3)) {
             return false;
         }
         int var2 = -1;

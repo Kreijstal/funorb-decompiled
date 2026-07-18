@@ -90,8 +90,7 @@ final class hg extends hc {
               var8 = new qd(ng.field_c, param6);
               var7 = var8;
               ng.field_c.a((byte) -109, (vg) (Object) var8);
-              int discarded$8 = 0;
-              if (wh.a()) {
+              if (wh.a(false)) {
                 var8.p(248);
                 stackOut_8_0 = 1;
                 stackIn_9_0 = stackOut_8_0;
@@ -231,22 +230,21 @@ final class hg extends hc {
         return stackIn_9_0 != 0;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_ob = null;
         int var1 = -51;
         field_S = null;
         field_ub = null;
     }
 
-    final static a d() {
+    final static a d(byte param0) {
         String var1 = vd.f(-120);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
                 var1 = "";
             }
         }
-        int discarded$0 = -94;
-        return new a(vd.f(-52), bh.b());
+        return new a(vd.f(-52), bh.b((byte) -94));
     }
 
     static long a(long param0, long param1) {
@@ -285,12 +283,12 @@ final class hg extends hc {
         super(0L, (hc) null);
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         Object var2 = null;
         cd.a(bg.field_q, -123, (String) null);
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

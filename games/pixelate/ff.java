@@ -35,8 +35,7 @@ final class ff {
         String stackOut_7_2 = null;
         try {
           if (rk.a(param2, false, param0, param1)) {
-            int discarded$2 = 0;
-            return ff.b();
+            return ff.b(0);
           } else {
             return null;
           }
@@ -72,7 +71,7 @@ final class ff {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_a = null;
         field_h = null;
@@ -84,7 +83,7 @@ final class ff {
         field_g = null;
     }
 
-    final static String a(int param0, String param1) {
+    final static String a(int param0, String param1, byte param2) {
         RuntimeException var3 = null;
         int var5 = 0;
         int var6 = 0;
@@ -130,10 +129,9 @@ final class ff {
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;
               } else {
-                int discarded$2 = -1;
-                var8 = re.a(param1);
+                var8 = re.a(param1, -1);
                 if (var8 != null) {
-                  fa discarded$3 = vp.field_Hb.a((fa) (Object) var8, 1504642273);
+                  fa discarded$1 = vp.field_Hb.a((fa) (Object) var8, 1504642273);
                   L1: while (true) {
                     var7 = (im) (Object) vp.field_Hb.f(1504642273);
                     if (var7 != null) {
@@ -196,7 +194,7 @@ final class ff {
         return (String) (Object) stackIn_17_0;
     }
 
-    private final static tf[] b() {
+    private final static tf[] b(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -213,12 +211,11 @@ final class ff {
             }
             var1[var2] = new tf(tj.field_y, jb.field_a, fa.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var5);
         }
-        int discarded$0 = 140;
-        re.b();
+        re.b(140);
         return var1;
     }
 
-    final static hh[] a(fm param0, int param1, int param2) {
+    final static hh[] a(fm param0, int param1, int param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         hh[] stackIn_4_0 = null;
@@ -243,8 +240,7 @@ final class ff {
           L0: {
             if (rk.a(param1, false, param0, param2)) {
               var4_int = 0;
-              int discarded$2 = -96;
-              stackOut_3_0 = gb.a();
+              stackOut_3_0 = gb.a((byte) -96);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

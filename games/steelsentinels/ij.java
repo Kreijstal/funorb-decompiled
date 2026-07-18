@@ -14,7 +14,7 @@ final class ij extends dl implements ae {
     static String field_V;
     private String[] field_Z;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_T = null;
         field_S = null;
         field_V = null;
@@ -307,7 +307,7 @@ final class ij extends dl implements ae {
         }
     }
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -343,8 +343,7 @@ final class ij extends dl implements ae {
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                int discarded$2 = 732;
-                var3 = -var3 + ((var3 << 5) + e.a(param0.charAt(var4)));
+                var3 = -var3 + ((var3 << 5) + e.a(param0.charAt(var4), 732));
                 var4++;
                 continue L1;
               }
@@ -383,7 +382,7 @@ final class ij extends dl implements ae {
         return stackIn_7_0;
     }
 
-    final static void k() {
+    final static void k(int param0) {
         int var1 = 0;
         if (32 >= lb.field_ac) {
             bb.a(0, (byte) 64);
@@ -411,7 +410,7 @@ final class ij extends dl implements ae {
         }
     }
 
-    final static wk j() {
+    final static wk j(int param0) {
         int var4_int = 0;
         int var5 = SteelSentinels.field_G;
         int var1 = ca.field_r[0] * le.field_L[0];
@@ -421,20 +420,18 @@ final class ij extends dl implements ae {
             var3[var4_int] = ba.field_d[ec.a(255, (int) var2[var4_int])];
         }
         wk var4 = new wk(un.field_n, eb.field_n, rl.field_a[0], oa.field_M[0], le.field_L[0], ca.field_r[0], var3);
-        int discarded$0 = 9324;
-        uh.a();
+        uh.a(9324);
         return var4;
     }
 
-    final static gk[] i() {
+    final static gk[] i(int param0) {
         int var2 = 0;
         int var3 = SteelSentinels.field_G;
         gk[] var1 = new gk[rl.field_d];
         for (var2 = 0; rl.field_d > var2; var2++) {
             var1[var2] = new gk(un.field_n, eb.field_n, rl.field_a[var2], oa.field_M[var2], le.field_L[var2], ca.field_r[var2], dl.field_L[var2], ba.field_d);
         }
-        int discarded$0 = 9324;
-        uh.a();
+        uh.a(9324);
         return var1;
     }
 

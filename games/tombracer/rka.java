@@ -11,17 +11,16 @@ abstract class rka {
 
     abstract void a(int param0, int param1, int param2);
 
-    final static void a(String param0) {
+    final static void a(String param0, boolean param1) {
         try {
-            int discarded$0 = -55;
-            wta.a(param0);
+            wta.a(param0, (byte) -55);
             vn.a(100, gja.field_bb, false);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "rka.E(" + (param0 != null ? "{...}" : "null") + ',' + false + ')');
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         kn.field_p = null;
         eda.field_f = null;
         qf.field_j = null;
@@ -35,7 +34,7 @@ abstract class rka {
         return 1 + param0 + "/" + 11;
     }
 
-    final static String a(int param0) {
+    final static String a(int param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

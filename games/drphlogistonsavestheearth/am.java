@@ -385,7 +385,7 @@ final class am extends ic {
         }
     }
 
-    final static String h() {
+    final static String h(int param0) {
         if (!(null != oa.field_d)) {
             return "";
         }
@@ -834,7 +834,7 @@ final class am extends ic {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_o = null;
         field_m = null;
         field_n = null;
@@ -879,14 +879,13 @@ final class am extends ic {
         }
     }
 
-    final static void e() {
+    final static void e(int param0) {
         L0: {
           L1: {
             if (af.field_b == 10) {
               break L1;
             } else {
-              int discarded$2 = 1;
-              if (hc.a()) {
+              if (hc.a(true)) {
                 break L0;
               } else {
                 break L1;

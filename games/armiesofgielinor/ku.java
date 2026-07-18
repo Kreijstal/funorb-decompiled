@@ -133,10 +133,7 @@ final class ku extends nl {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          int discarded$6 = 41;
-          int discarded$7 = 256;
-          int discarded$8 = 1;
-          nm.a(param2);
+          nm.a(param2, true, 256, (byte) 41);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

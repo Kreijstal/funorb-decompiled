@@ -55,7 +55,7 @@ final class qo extends am {
         return var3;
     }
 
-    final static void g() {
+    final static void g(byte param0) {
         i.field_R = false;
         me.field_a = null;
         ib.field_c = null;

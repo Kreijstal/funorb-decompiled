@@ -74,7 +74,7 @@ final class qj {
         return var1;
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void a(boolean param0, int param1, int param2, boolean param3) {
         int var4 = 0;
         L0: {
           uh.field_r.d(param2, param1);
@@ -164,7 +164,7 @@ final class qj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_b = null;
         field_f = null;

@@ -29,7 +29,7 @@ final class pb {
         int var2 = 67 / ((param0 - -37) / 44);
     }
 
-    final static boolean a(wi param0) {
+    final static boolean a(wi param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -138,7 +138,7 @@ final class pb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_k = null;
         int var1 = 0;
         field_g = null;
@@ -301,7 +301,7 @@ final class pb {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
     }
 
     private final void d(int param0) {
@@ -551,7 +551,7 @@ final class pb {
         }
     }
 
-    final static he a(int[] param0, int param1, int param2, int param3, int param4) {
+    final static he a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
         he var9 = null;
         RuntimeException var9_ref = null;
         he stackIn_3_0 = null;
@@ -614,7 +614,7 @@ final class pb {
         return stackIn_3_0;
     }
 
-    final static int c() {
+    final static int c(int param0) {
         return ih.field_D;
     }
 

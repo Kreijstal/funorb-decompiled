@@ -33,8 +33,7 @@ final class ag {
         try {
           L0: {
             L1: {
-              int discarded$2 = -127;
-              this.a(1, param2, param0);
+              this.a(1, param2, param0, -127);
               if (param1 == -122) {
                 break L1;
               } else {
@@ -76,7 +75,7 @@ final class ag {
         }
     }
 
-    private final void a(int param0, long param1, Object param2) {
+    private final void a(int param0, long param1, Object param2, int param3) {
         cb var6 = null;
         pj var7 = null;
         int var8 = fleas.field_A ? 1 : 0;
@@ -84,8 +83,7 @@ final class ag {
             if (!(1 <= ((ag) this).field_g)) {
                 throw new IllegalStateException();
             }
-            int discarded$0 = 94;
-            this.a(param1);
+            this.a(param1, (byte) 94);
             ((ag) this).field_d = ((ag) this).field_d - 1;
             while (((ag) this).field_d < 0) {
                 var6 = (cb) (Object) ((ag) this).field_c.d(-27593);
@@ -101,7 +99,7 @@ final class ag {
         }
     }
 
-    private final void a(long param0) {
+    private final void a(long param0, byte param1) {
         cb var4 = (cb) (Object) ((ag) this).field_b.a(true, param0);
         this.a(var4, 13);
     }
@@ -110,7 +108,7 @@ final class ag {
         throw new Error();
     }
 
-    final static rh a(boolean param0, int param1) {
+    final static rh a(boolean param0, int param1, boolean param2, int param3, boolean param4, int param5) {
         try {
             Object var6 = null;
             Object var7 = null;

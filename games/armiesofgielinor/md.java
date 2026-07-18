@@ -23,13 +23,13 @@ final class md extends oj {
         return var3;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_A = null;
         field_y = null;
         field_F = null;
     }
 
-    final static wk[] g() {
+    final static wk[] g(int param0) {
         wk[] var1 = null;
         int var2 = 0;
         int var3 = 0;

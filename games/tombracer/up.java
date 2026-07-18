@@ -26,7 +26,7 @@ final class up implements noa {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, boolean param1) {
         if (param0 == 32) {
             return true;
         }
@@ -55,7 +55,7 @@ final class up implements noa {
         return ((up) this).field_f;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_h = null;
         field_i = null;

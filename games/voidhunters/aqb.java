@@ -12,7 +12,7 @@ final class aqb extends rb {
     static llb field_e;
     static int field_f;
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_e = null;
     }
 
@@ -96,7 +96,7 @@ final class aqb extends rb {
         L0: {
           var13 = VoidHunters.field_G;
           if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
-            String discarded$3 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           } else {
             break L0;
@@ -203,7 +203,7 @@ final class aqb extends rb {
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
           return ((aqb) this).a(false);
         }
-        boolean discarded$4 = var3.addAll((Collection) (Object) var4);
+        boolean discarded$3 = var3.addAll((Collection) (Object) var4);
         var6_array = var3.toArray();
         var7 = null;
         var8_array = var6_array;
@@ -228,8 +228,7 @@ final class aqb extends rb {
             var11 = (java.net.Proxy) var10;
             try {
               L7: {
-                int discarded$5 = 1;
-                var12_ref2 = this.a(var11);
+                var12_ref2 = this.a(var11, true);
                 if (var12_ref2 != null) {
                   stackOut_21_0 = (java.net.Socket) var12_ref2;
                   stackIn_22_0 = stackOut_21_0;
@@ -469,7 +468,7 @@ final class aqb extends rb {
         ((aqb) this).field_d = java.net.ProxySelector.getDefault();
     }
 
-    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0, boolean param1) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;

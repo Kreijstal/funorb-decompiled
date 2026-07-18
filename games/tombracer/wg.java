@@ -10,8 +10,7 @@ final class wg extends tu {
 
     final void a(int param0, hca param1, int param2, la param3, int param4, int param5) {
         try {
-            int discarded$6 = 108;
-            nba.a(((wg) this).field_f, param3);
+            nba.a(((wg) this).field_f, param3, (byte) 108);
             if (param0 != 15) {
                 Object var8 = null;
                 ((wg) this).a((hca) null, (la) null, true);
@@ -131,8 +130,7 @@ final class wg extends tu {
                 Object var5 = null;
                 ((wg) this).a((hca) null, (la) null, false);
             }
-            int discarded$0 = 108;
-            caa.a(((wg) this).field_f, param1);
+            caa.a(((wg) this).field_f, param1, 108);
             super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "wg.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

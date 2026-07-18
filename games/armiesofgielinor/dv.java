@@ -162,15 +162,14 @@ abstract class dv implements ap {
 
     abstract void a(byte param0);
 
-    private final je a() {
+    private final je a(byte param0, int param1) {
         int var4 = 0;
         je var3 = new je(0L, (je) null);
-        int discarded$0 = 5;
-        var3.field_G = ak.b(2263074);
+        var3.field_G = ak.b(2263074, 5);
         return var3;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_k = null;
         field_r = null;
         field_m = null;
@@ -179,7 +178,7 @@ abstract class dv implements ap {
         field_i = null;
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, int param1) {
         rq var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_9_0 = null;
@@ -745,7 +744,7 @@ abstract class dv implements ap {
 
     abstract String[] b(boolean param0);
 
-    private final void b() {
+    private final void b(byte param0) {
         Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
@@ -843,8 +842,7 @@ abstract class dv implements ap {
         tc stackOut_21_1 = null;
         var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (96 == param1) {
-          int discarded$3 = -4;
-          this.b();
+          this.b((byte) -4);
           return true;
         } else {
           if (((dv) this).field_f) {
@@ -905,7 +903,7 @@ abstract class dv implements ap {
                       ((dv) this).a((byte) 122);
                       break L0;
                     } else {
-                      boolean discarded$4 = ((dv) this).field_o.a(param2, -26126, param1);
+                      boolean discarded$1 = ((dv) this).field_o.a(param2, -26126, param1);
                       break L0;
                     }
                   }
@@ -924,8 +922,7 @@ abstract class dv implements ap {
                     }
                   }
                   ((dv) this).field_o.a(true);
-                  int discarded$5 = 96;
-                  this.a(var7);
+                  this.a(var7, 96);
                   ((dv) this).field_b = null;
                   break L0;
                 } else {
@@ -1010,9 +1007,7 @@ abstract class dv implements ap {
             var8 = this.a(5592405, 7829367, 2236962);
             var9 = this.a(5592405, 65793, 65793);
             var10 = this.a(5592405, 3355443, 65793);
-            int discarded$2 = 2263074;
-            int discarded$3 = 71;
-            var11 = this.a();
+            var11 = this.a((byte) 71, 2263074);
             var12 = this.a(5592405, 2236962, 65793);
             ((dv) this).field_q = new je(0L, var5);
             ((dv) this).field_q.a(200, -20500, bn.field_b, -200, 0);

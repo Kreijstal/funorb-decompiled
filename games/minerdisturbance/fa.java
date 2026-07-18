@@ -8,7 +8,7 @@ final class fa {
     static volatile boolean field_a;
     static String field_c;
 
-    final static void c() {
+    final static void c(int param0) {
         if (null != mb.field_b) {
             mb.field_b.a(true);
             if (!(null == bd.field_e)) {
@@ -27,7 +27,7 @@ final class fa {
         return g.field_o;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_d = null;
     }
@@ -70,7 +70,7 @@ final class fa {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;

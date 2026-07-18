@@ -327,7 +327,7 @@ final class qh extends vd {
         return var4;
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_u = null;
         field_C = null;
         field_D = null;
@@ -335,11 +335,11 @@ final class qh extends vd {
         field_w = null;
     }
 
-    final static boolean f() {
+    final static boolean f(int param0) {
         return null != bj.field_K ? true : br.field_i;
     }
 
-    final static void g() {
+    final static void g(int param0) {
         if (!(pg.field_J <= 0)) {
             pg.field_J = pg.field_J - 1;
         }

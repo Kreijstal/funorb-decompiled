@@ -173,18 +173,17 @@ final class tk extends IOException {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
     }
 
-    final static void a() {
-        int discarded$0 = 67;
-        ma.field_m = qj.a();
+    final static void a(int param0) {
+        ma.field_m = qj.a((byte) 67);
         q.field_N = new pf();
         l.a(true, true, 43);
     }
 
-    final static void d() {
+    final static void d(int param0) {
         if (!pg.field_c) {
             throw new IllegalStateException();
         }

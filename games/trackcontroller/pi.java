@@ -86,9 +86,7 @@ final class pi extends fh {
         String stackOut_17_2 = null;
         try {
           L0: {
-            int discarded$2 = 240;
-            int discarded$3 = 0;
-            hf.a(param19, 20, 480, param10, false, 26, param20, param14, 0, param7, new na(param12), 18, 320, 10, new na(param8), 0, 26, 0, new na(param4));
+            hf.a(param19, 20, 480, param10, false, 26, param20, param14, 0, param7, new na(param12), 18, 320, 10, new na(param8), 0, 26, 0, new na(param4), 0, 240);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

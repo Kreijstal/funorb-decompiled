@@ -9,7 +9,7 @@ final class hf implements j {
     static int field_e;
     static ne field_b;
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return qf.field_a != null && qc.field_d == aj.field_c;
     }
 
@@ -340,7 +340,7 @@ final class hf implements j {
         return stackIn_16_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_a = null;
         field_b = null;
@@ -348,8 +348,7 @@ final class hf implements j {
     }
 
     final static void a(byte param0) {
-        int discarded$2 = 15;
-        ba.c();
+        ba.c((byte) 15);
         if (param0 >= -105) {
             return;
         }

@@ -290,7 +290,7 @@ final class ac extends wf {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_t = null;
         field_s = null;
         field_r = null;
@@ -301,7 +301,7 @@ final class ac extends wf {
         field_v = null;
     }
 
-    final static boolean d() {
+    final static boolean d(int param0) {
         return lg.field_e != null && lg.field_e.f((byte) -99);
     }
 

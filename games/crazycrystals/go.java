@@ -55,7 +55,7 @@ final class go extends ln {
         super(param0, param1, param2, param3);
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -109,7 +109,7 @@ final class go extends ln {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         ne.field_b = false;
         int discarded$0 = kd.field_n.h(255);
     }

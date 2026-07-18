@@ -136,7 +136,7 @@ final class vl implements kj {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_f = null;
         field_i = null;

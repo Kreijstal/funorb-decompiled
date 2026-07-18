@@ -53,7 +53,7 @@ final class de extends km {
         }
     }
 
-    final static long f() {
+    final static long f(int param0) {
         return ue.a(false) - oj.field_t;
     }
 
@@ -118,12 +118,11 @@ final class de extends km {
               ff.field_c = new w((java.applet.Applet) (Object) sl.field_C, oc.field_u, ((de) this).field_r, false, hq.field_u);
               return;
             } else {
-              boolean discarded$4 = this.c(460, ff.field_c.a(false, param1));
+              boolean discarded$2 = this.c(460, ff.field_c.a(false, param1));
               return;
             }
           } else {
-            int discarded$5 = -946715356;
-            ((de) this).field_r = wq.a("benefits", ((de) this).field_u, "members_benefits_screenshots");
+            ((de) this).field_r = wq.a("benefits", ((de) this).field_u, "members_benefits_screenshots", -946715356);
             return;
           }
         } else {

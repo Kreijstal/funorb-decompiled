@@ -372,13 +372,9 @@ final class p {
     final static eh a(int param0, int param1) {
         if (param0 < 32) {
           field_e = null;
-          int discarded$8 = 0;
-          int discarded$9 = 1;
-          return va.a(1, false, param1, -105);
+          return va.a(1, false, param1, -105, true, false);
         } else {
-          int discarded$10 = 0;
-          int discarded$11 = 1;
-          return va.a(1, false, param1, -105);
+          return va.a(1, false, param1, -105, true, false);
         }
     }
 

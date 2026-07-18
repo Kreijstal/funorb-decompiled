@@ -16,7 +16,7 @@ final class bc {
         return true;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;

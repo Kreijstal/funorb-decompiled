@@ -18,7 +18,7 @@ final class jl {
         field_c = null;
     }
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         nm var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -118,7 +118,7 @@ final class jl {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

@@ -33,7 +33,7 @@ final class f extends rk {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
     }
 

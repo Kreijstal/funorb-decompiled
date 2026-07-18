@@ -12,7 +12,7 @@ final class sa {
     static wk field_a;
     static String field_c;
 
-    final static long a(bv param0) {
+    final static long a(bv param0, int param1, int param2) {
         RuntimeException var3 = null;
         long stackIn_1_0 = 0L;
         RuntimeException stackIn_3_0 = null;
@@ -71,7 +71,7 @@ final class sa {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_i = null;
         field_g = null;

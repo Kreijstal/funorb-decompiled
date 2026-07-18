@@ -11,8 +11,7 @@ final class sd extends am {
         if (param0 <= 123) {
             return;
         }
-        int discarded$0 = 14837;
-        ie.a();
+        ie.a(14837);
     }
 
     final int[] a(byte param0, int param1) {
@@ -101,7 +100,7 @@ final class sd extends am {
         }
     }
 
-    final static void a(rm param0) {
+    final static void a(rm param0, int param1, int param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         byte[] var4 = null;
@@ -217,7 +216,7 @@ final class sd extends am {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         int var1 = 127;
         field_s = null;
     }
@@ -229,14 +228,11 @@ final class sd extends am {
         ((sd) this).field_v = 0;
     }
 
-    final static la a(boolean param0, int param1, byte param2, int param3) {
+    final static la a(boolean param0, int param1, byte param2, int param3, boolean param4) {
         if (param2 > -62) {
             return null;
         }
-        int discarded$0 = 1;
-        int discarded$1 = 0;
-        int discarded$2 = 8505;
-        return hc.a(false, true, param3);
+        return hc.a(false, true, param3, 8505, false, 1);
     }
 
     final static boolean b(int param0) {

@@ -91,12 +91,10 @@ final class cm extends oka {
             param0 = param0 + (pda.field_p - param0) * var3 / var2;
         }
         i.field_a.a(120, 31407, 640, ce.field_t, param0);
-        int discarded$0 = 640;
-        int discarded$1 = 0;
-        taa.a(5, gba.field_Bb, 115, -24 + pda.field_p, lm.field_d);
+        taa.a(5, gba.field_Bb, 115, -24 + pda.field_p, lm.field_d, 0, 640);
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1, int param2, int param3) {
         int var4 = 1;
         mt.field_v = param2;
         wk.field_f = param0;

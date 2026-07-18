@@ -94,7 +94,7 @@ final class nj {
                 break L1;
               } else {
                 if (-1 == param4.indexOf("<br>")) {
-                  param2[0] = (String) (Object) param2;
+                  param2[0] = param4;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;

@@ -105,7 +105,7 @@ abstract class rl extends ee implements bn {
         return 250 < gi.field_a;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_h = null;
         field_j = null;
         field_n = null;
@@ -195,7 +195,7 @@ abstract class rl extends ee implements bn {
         }
     }
 
-    final static String a(long param0) {
+    final static String a(long param0, int param1) {
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;

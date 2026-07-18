@@ -9,18 +9,18 @@ abstract class ff {
 
     abstract fe a(byte param0);
 
-    final static qa[] a() {
+    final static qa[] a(int param0) {
         return new qa[]{ke.field_c, oj.field_e, bf.field_c};
     }
 
-    final static void b() {
+    final static void b(int param0) {
         Object var2 = null;
         uk.a(lh.field_c, -23804, (String) null);
     }
 
     final static String a(byte param0, CharSequence param1) {
-        RuntimeException var2 = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         StringBuilder var5 = null;
@@ -90,13 +90,12 @@ abstract class ff {
                       } else {
                         L5: {
                           var7 = param1.charAt(var6);
-                          int discarded$2 = 0;
-                          if (!rf.a((char) var7)) {
+                          if (!rf.a((char) var7, 0)) {
                             break L5;
                           } else {
                             var8 = r.a(-219, (char) var7);
                             if (var8 != 0) {
-                              StringBuilder discarded$3 = var5.append((char) var8);
+                              StringBuilder discarded$1 = var5.append((char) var8);
                               break L5;
                             } else {
                               break L5;

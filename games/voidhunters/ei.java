@@ -16,7 +16,7 @@ final class ei implements wwa {
     private no field_j;
     static int field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_e = null;
         field_i = null;

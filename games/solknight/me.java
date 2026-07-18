@@ -120,7 +120,7 @@ final class me {
         return stackIn_13_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_e = null;
         field_f = null;

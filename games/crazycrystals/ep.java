@@ -79,7 +79,7 @@ final class ep extends f implements Cloneable {
         return ((ep) this).field_j.d(-82);
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         if (65 > param0) {
           if (param0 >= 97) {
             if (param0 <= 122) {
@@ -114,7 +114,7 @@ final class ep extends f implements Cloneable {
         return 0;
     }
 
-    final static wj[] a(db param0, String param1, String param2) {
+    final static wj[] a(db param0, String param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -259,7 +259,7 @@ final class ep extends f implements Cloneable {
 
     protected final Object clone() {
         ep var1 = (ep) super.clone();
-        var1.field_j = (f) var1.field_j.clone();
+        var1.field_j = (f) ((ep) this).field_j.clone();
         return (Object) (Object) var1;
     }
 
@@ -329,7 +329,7 @@ final class ep extends f implements Cloneable {
         }
     }
 
-    final static int c() {
+    final static int c(byte param0) {
         return lg.field_b;
     }
 

@@ -243,8 +243,7 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 var2_int = param0.getKeyChar();
                 if (var2_int != 0) {
                     if (var2_int != 65535) {
-                        int discarded$4 = -1;
-                        if (hc.a((char) var2_int)) {
+                        if (hc.a((char) var2_int, -1)) {
                             var3 = 127 & hh.field_e + 1;
                             if (var3 != ph.field_h) {
                                 cj.field_o[hh.field_e] = -1;
@@ -261,7 +260,7 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 32;
         field_g = null;
         field_h = null;

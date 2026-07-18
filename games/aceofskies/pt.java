@@ -5,11 +5,11 @@ final class pt {
     static rk field_b;
     static int field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 
-    final static String a(byte param0, int param1) {
+    final static String a(byte param0, int param1, char param2) {
         int var4 = 0;
         int var5 = AceOfSkies.field_G ? 1 : 0;
         char[] var6 = new char[param1];

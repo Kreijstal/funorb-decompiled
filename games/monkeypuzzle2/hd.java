@@ -87,7 +87,7 @@ final class hd extends a {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_u = null;
     }
 
@@ -178,8 +178,7 @@ final class hd extends a {
             }
             L4: {
               var7 = stackIn_13_0;
-              int discarded$2 = 42;
-              ab.a(param1.field_l, var7, ((hd) this).field_r, (-((hd) this).field_r[0].field_n + param1.field_p >> 1) + param1.field_e + param2, param3 - -param1.field_r);
+              ab.a(param1.field_l, var7, ((hd) this).field_r, (-((hd) this).field_r[0].field_n + param1.field_p >> 1) + param1.field_e + param2, param3 - -param1.field_r, (byte) 42);
               if (!param0) {
                 stackOut_15_0 = 7105644;
                 stackIn_16_0 = stackOut_15_0;
@@ -192,7 +191,7 @@ final class hd extends a {
             }
             var8 = stackIn_16_0;
             if (param4 > 19) {
-              int discarded$3 = ((hd) this).field_p.a(param1.field_s, param1.field_r + param3, param2 + (param1.field_e + -2), param1.field_l, param1.field_p, var8, -1, 1, 1, ((hd) this).field_p.field_C);
+              int discarded$1 = ((hd) this).field_p.a(param1.field_s, param1.field_r + param3, param2 + (param1.field_e + -2), param1.field_l, param1.field_p, var8, -1, 1, 1, ((hd) this).field_p.field_C);
               break L0;
             } else {
               return;
@@ -236,11 +235,9 @@ final class hd extends a {
           if (!param0) {
             var2 = null;
             hd.a(false, (java.applet.Applet) null);
-            int discarded$4 = 0;
-            return (java.awt.Container) (Object) ii.a();
+            return (java.awt.Container) (Object) ii.a(false);
           } else {
-            int discarded$5 = 0;
-            return (java.awt.Container) (Object) ii.a();
+            return (java.awt.Container) (Object) ii.a(false);
           }
         } else {
           return (java.awt.Container) (Object) hk.field_e;

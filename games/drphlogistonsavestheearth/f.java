@@ -9,7 +9,7 @@ final class f extends gi {
     int[] field_k;
     static nh[] field_i;
 
-    public static void d() {
+    public static void d(int param0) {
         field_m = null;
         field_i = null;
     }
@@ -24,7 +24,8 @@ final class f extends gi {
             Throwable var9_ref_Throwable = null;
             int var9 = 0;
             int var10 = 0;
-            CharSequence var11 = null;
+            Object var11 = null;
+            CharSequence var12 = null;
             int stackIn_4_0 = 0;
             int stackIn_31_0 = 0;
             int stackIn_43_0 = 0;
@@ -97,9 +98,8 @@ final class f extends gi {
                   if (hh.field_b == tl.field_O) {
                     L3: {
                       if (param2) {
-                        int discarded$12 = 0;
-                        int discarded$13 = 0;
-                        dl.field_H = tc.a(ld.field_b, param3, (String) null);
+                        var11 = null;
+                        dl.field_H = tc.a(ld.field_b, param3, (String) null, 0, false);
                         break L3;
                       } else {
                         dl.field_H = wi.a(param4, 7957, false, param3);
@@ -147,8 +147,7 @@ final class f extends gi {
                     if (jd.a(8, 5929)) {
                       s.field_c = dh.field_N.a((byte) -53);
                       dh.field_N.field_j = 0;
-                      int discarded$14 = 16;
-                      le.a(dl.field_H, param5, param0, param2);
+                      le.a(dl.field_H, param5, param0, param2, 16);
                       tl.field_O = uf.field_c;
                       break L6;
                     } else {
@@ -175,8 +174,7 @@ final class f extends gi {
                               gf.field_C = -1;
                               break L7;
                             } else {
-                              int discarded$15 = 126;
-                              eg.a();
+                              eg.a((byte) 126);
                               dk.field_b = false;
                               stackOut_30_0 = var7;
                               stackIn_31_0 = stackOut_30_0;
@@ -203,7 +201,7 @@ final class f extends gi {
                       L10: {
                         ld.field_b = dh.field_N.a((byte) -53);
                         nj.field_j = dh.field_N.l(31760);
-                        int discarded$16 = dh.field_N.l(31760);
+                        int discarded$6 = dh.field_N.l(31760);
                         hb.field_g = dh.field_N.j(-788751192);
                         var7_ref_String = dh.field_N.i(715718304);
                         var8 = dh.field_N.l(31760);
@@ -251,9 +249,9 @@ final class f extends gi {
                       }
                       L14: {
                         if (wg.field_d) {
-                          int discarded$17 = dh.field_N.l(31760);
-                          int discarded$18 = dh.field_N.l(31760);
-                          int discarded$19 = dh.field_N.h(-108);
+                          int discarded$7 = dh.field_N.l(31760);
+                          int discarded$8 = dh.field_N.l(31760);
+                          int discarded$9 = dh.field_N.h(-108);
                           ka.field_n = dh.field_N.j(-788751192);
                           cf.field_b = new byte[ka.field_n];
                           var9 = 0;
@@ -272,8 +270,8 @@ final class f extends gi {
                       }
                       L16: {
                         oa.field_d = dh.field_N.b((byte) -64);
-                        var11 = (CharSequence) (Object) oa.field_d;
-                        tf.field_pb = rh.a(117, var11);
+                        var12 = (CharSequence) (Object) oa.field_d;
+                        tf.field_pb = rh.a(117, var12);
                         rh.field_a = dh.field_N.l(31760);
                         tl.field_O = ik.field_d;
                         if (dl.field_H.b((byte) -98) == ll.field_p) {
@@ -307,8 +305,7 @@ final class f extends gi {
                             } else {
                               try {
                                 L20: {
-                                  int discarded$20 = 1;
-                                  Object discarded$21 = pb.a("unzap", nb.a(-114));
+                                  Object discarded$10 = pb.a("unzap", nb.a(-114), true);
                                   break L20;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -324,7 +321,7 @@ final class f extends gi {
                         }
                         try {
                           L22: {
-                            Object discarded$22 = pb.a(nb.a(-128), -11455, new Object[1], "zap");
+                            Object discarded$11 = pb.a(nb.a(-128), -11455, new Object[1], "zap");
                             break L22;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -369,8 +366,7 @@ final class f extends gi {
                   } else {
                     if (li.d(-29427)) {
                       L27: {
-                        int discarded$23 = 126;
-                        eg.a();
+                        eg.a((byte) 126);
                         if (t.field_b != 7) {
                           break L27;
                         } else {

@@ -69,8 +69,7 @@ final class wn extends ih {
                     break L1;
                   } else {
                     L2: {
-                      int discarded$2 = 0;
-                      var4 = k.a(param0);
+                      var4 = k.a(param0, false);
                       if (var4 == null) {
                         break L2;
                       } else {
@@ -195,11 +194,10 @@ final class wn extends ih {
         ((wn) this).field_fb = new int[16];
         ((wn) this).field_ib = 256;
         ((wn) this).field_S = new int[16];
-        int discarded$0 = 3933;
-        this.k();
+        this.k(3933);
     }
 
-    final static void a(int param0, wk[] param1, int param2, int param3, int param4) {
+    final static void a(int param0, wk[] param1, int param2, int param3, int param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -447,7 +445,7 @@ final class wn extends ih {
         }
     }
 
-    private final synchronized void a(int param0, vk param1) {
+    private final synchronized void a(int param0, vk param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -540,8 +538,7 @@ final class wn extends ih {
         ((wn) this).field_ib = 256;
         ((wn) this).field_S = new int[16];
         try {
-            int discarded$0 = 3933;
-            this.k();
+            this.k(3933);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "wn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -565,8 +562,7 @@ final class wn extends ih {
             if (param1 > -78) {
                 ((wn) this).field_hb = null;
             }
-            int discarded$0 = 3933;
-            this.k();
+            this.k(3933);
             super.a(param0, (byte) -110, param2, param3);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "wn.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -578,14 +574,13 @@ final class wn extends ih {
         try {
             var4_int = param1 * rc.field_d / 1000;
             int var5 = 58 / ((9 - param0) / 36);
-            int discarded$0 = -20751;
-            this.a(var4_int, param2);
+            this.a(var4_int, param2, -20751);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "wn.BB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void k() {
+    private final void k(int param0) {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         for (var2 = 0; var2 < 16; var2++) {

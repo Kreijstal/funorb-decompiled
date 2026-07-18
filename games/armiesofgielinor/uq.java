@@ -106,8 +106,7 @@ abstract class uq extends ms {
               if (null != am.field_z) {
                 break L1;
               } else {
-                int discarded$5 = 0;
-                if (tb.a(false)) {
+                if (tb.a(false, 0)) {
                   break L1;
                 } else {
                   stackOut_3_0 = -1;
@@ -236,8 +235,7 @@ abstract class uq extends ms {
                   }
                   if (var9 != 248) {
                     if (var9 == 99) {
-                      int discarded$6 = 1;
-                      boolean discarded$7 = es.a(-81, qa.h());
+                      boolean discarded$1 = es.a(-81, qa.h(1));
                       cv.field_s = new Boolean(rr.a((byte) -76, (vh) (Object) mg.field_e));
                       mg.field_e.field_q = 0;
                       break L8;
@@ -295,8 +293,7 @@ abstract class uq extends ms {
             }
             L12: {
               if (da.field_b == ov.field_g) {
-                int discarded$8 = 2;
-                if (!jh.g()) {
+                if (!jh.g(2)) {
                   break L12;
                 } else {
                   L13: {
@@ -305,8 +302,7 @@ abstract class uq extends ms {
                       if (var9_ref_String == null) {
                         break L13;
                       } else {
-                        int discarded$9 = 0;
-                        ph.a(var9_ref_String, ag.d((byte) -5));
+                        ph.a(var9_ref_String, ag.d((byte) -5), false);
                         break L13;
                       }
                     } else {
@@ -457,7 +453,7 @@ abstract class uq extends ms {
         ((uq) this).field_z = param0;
     }
 
-    final static ln a(vh param0) {
+    final static ln a(vh param0, boolean param1) {
         ln var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

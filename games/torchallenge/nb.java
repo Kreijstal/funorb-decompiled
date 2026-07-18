@@ -12,8 +12,7 @@ final class nb {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                int discarded$2 = -29585;
-                Object discarded$3 = ff.a("resizing", new Object[1], gi.b(12476));
+                Object discarded$1 = ff.a("resizing", new Object[1], gi.b(12476), -29585);
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -30,7 +29,7 @@ final class nb {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         int stackIn_5_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_4_0 = 0;
@@ -42,8 +41,7 @@ final class nb {
               if (lj.field_q) {
                 break L1;
               } else {
-                int discarded$2 = 4;
-                if (hf.a()) {
+                if (hf.a(4)) {
                   break L1;
                 } else {
                   stackOut_3_0 = 1;
@@ -442,7 +440,7 @@ final class nb {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
     }
 

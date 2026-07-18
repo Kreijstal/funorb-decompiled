@@ -14,7 +14,7 @@ final class mn extends wn {
     static String field_i;
     static String field_j;
 
-    final static double a(double param0) {
+    final static double a(double param0, int param1) {
         return li.field_d[65535 & (int)(32768.0 * param0 / 3.141592653589793)];
     }
 
@@ -320,7 +320,7 @@ final class mn extends wn {
                         break L2;
                       } else {
                         var6 = null;
-                        String discarded$4 = mn.a((byte) 26, (ld) null);
+                        String discarded$2 = mn.a((byte) 26, (ld) null);
                         break L2;
                       }
                     }
@@ -328,8 +328,7 @@ final class mn extends wn {
                     var4 = param0.substring(1 + var2_int);
                     var5 = qm.a((byte) -24, var3);
                     if (var5 == null) {
-                      int discarded$5 = 86;
-                      stackOut_14_0 = oj.a(var4);
+                      stackOut_14_0 = oj.a(var4, (byte) 86);
                       stackIn_15_0 = stackOut_14_0;
                       break L0;
                     } else {
@@ -547,7 +546,7 @@ final class mn extends wn {
         return stackIn_30_0;
     }
 
-    private final java.net.Socket a(String param0, String param1, int param2) throws IOException {
+    private final java.net.Socket a(String param0, String param1, int param2, int param3) throws IOException {
         RuntimeException var5 = null;
         OutputStream var6 = null;
         BufferedReader var7 = null;
@@ -743,7 +742,7 @@ final class mn extends wn {
         return (java.net.Socket) (Object) stackIn_24_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
         field_j = null;
         field_i = null;
@@ -931,8 +930,7 @@ final class mn extends wn {
                       break L3;
                     }
                   }
-                  int discarded$1 = 25748;
-                  stackOut_19_0 = this.a((String) var5, var4_ref.getHostName(), var4_ref.getPort());
+                  stackOut_19_0 = this.a((String) var5, var4_ref.getHostName(), var4_ref.getPort(), 25748);
                   stackIn_20_0 = stackOut_19_0;
                   break L0;
                 } else {

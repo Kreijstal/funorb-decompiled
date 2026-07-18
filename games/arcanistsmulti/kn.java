@@ -74,7 +74,7 @@ final class kn extends ob implements vb {
                       if (!var7.field_w) {
                         break L3;
                       } else {
-                        boolean discarded$8 = var7.a(0, (qm) this);
+                        boolean discarded$2 = var7.a(0, (qm) this);
                         break L3;
                       }
                     }
@@ -90,8 +90,7 @@ final class kn extends ob implements vb {
               if (((kn) this).field_wb) {
                 break L4;
               } else {
-                int discarded$9 = 112;
-                if (lc.a()) {
+                if (lc.a((byte) 112)) {
                   break L4;
                 } else {
                   this.g(param2 + -171);
@@ -125,8 +124,7 @@ final class kn extends ob implements vb {
                 if ((stackIn_15_0 ? 1 : 0) != stackIn_15_1) {
                   break L5;
                 } else {
-                  int discarded$10 = 0;
-                  this.a(((kn) this).field_lb);
+                  this.a(((kn) this).field_lb, 0);
                   ((kn) this).field_nb = ((kn) this).field_zb.j(2);
                   break L5;
                 }
@@ -206,8 +204,7 @@ final class kn extends ob implements vb {
         try {
           L0: {
             if (fc.a(-123, param0, param1, param3)) {
-              int discarded$2 = 3417;
-              stackOut_3_0 = ge.a(param4.b(param3, 26219, param1));
+              stackOut_3_0 = ge.a(param4.b(param3, 26219, param1), 3417);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -402,17 +399,16 @@ final class kn extends ob implements vb {
                         var5 = 0;
                         L4: while (true) {
                           if (var5 >= var3_ref_uj__.length) {
-                            int discarded$7 = -1;
-                            pm.a(((kn) this).field_V);
+                            pm.a(((kn) this).field_V, -1);
                             break L1;
                           } else {
                             L5: {
                               if (var3_ref_uj__[var5] == null) {
                                 break L5;
                               } else {
-                                int incrementValue$8 = var4;
+                                int incrementValue$1 = var4;
                                 var4++;
-                                ((kn) this).field_V[incrementValue$8] = var3_ref_uj__[var5];
+                                ((kn) this).field_V[incrementValue$1] = var3_ref_uj__[var5];
                                 break L5;
                               }
                             }
@@ -504,8 +500,7 @@ final class kn extends ob implements vb {
             }
             L11: {
               ((kn) this).field_yb = stackIn_31_1 != 0;
-              int discarded$9 = -22768;
-              if (!ne.b()) {
+              if (!ne.b(-22768)) {
                 stackOut_33_0 = 0;
                 stackIn_34_0 = stackOut_33_0;
                 break L11;
@@ -529,11 +524,10 @@ final class kn extends ob implements vb {
             }
             L13: {
               var3 = stackIn_37_0;
-              int discarded$10 = 112;
               stackOut_37_0 = this;
               stackIn_39_0 = stackOut_37_0;
               stackIn_38_0 = stackOut_37_0;
-              if (lc.a()) {
+              if (lc.a((byte) 112)) {
                 stackOut_39_0 = this;
                 stackOut_39_1 = 0;
                 stackIn_40_0 = stackOut_39_0;
@@ -717,13 +711,11 @@ final class kn extends ob implements vb {
             }
             L23: {
               L24: {
-                int discarded$11 = 410;
-                ((kn) this).field_kb = this.a((wc) this, lm.field_a);
+                ((kn) this).field_kb = this.a((wc) this, lm.field_a, 410);
                 var5 = ((kn) this).field_kb.field_v / 2 + ((kn) this).field_kb.field_n;
                 ((kn) this).field_kb.field_v = 150;
                 ((kn) this).field_kb.field_n = var5 - (20 + ((kn) this).field_kb.field_v);
-                int discarded$12 = 410;
-                ((kn) this).field_ub = this.a((wc) this, hj.field_e);
+                ((kn) this).field_ub = this.a((wc) this, hj.field_e, 410);
                 ((kn) this).field_ub.field_B = false;
                 ((kn) this).field_ub.field_v = ((kn) this).field_kb.field_v;
                 ((kn) this).field_ub.field_n = var5 - -20;
@@ -761,8 +753,7 @@ final class kn extends ob implements vb {
             }
             L26: {
               ((kn) this).field_nb = false;
-              int discarded$13 = 2;
-              var6 = this.j();
+              var6 = this.j(2);
               if (var6 == null) {
                 break L26;
               } else {
@@ -810,7 +801,7 @@ final class kn extends ob implements vb {
         wm.field_I = param1;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_tb = null;
         field_qb = null;
         field_sb = null;
@@ -897,7 +888,7 @@ final class kn extends ob implements vb {
         }
     }
 
-    private final ag a(wc param0, String param1) {
+    private final ag a(wc param0, String param1, int param2) {
         ag var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -1034,8 +1025,7 @@ final class kn extends ob implements vb {
             }
             if (jo.field_e > 0) {
               L3: {
-                int discarded$4 = 120;
-                ed.j();
+                ed.j(120);
                 n.field_g.b(param3, (byte) 60);
                 if (null == ln.field_U) {
                   break L3;
@@ -1044,7 +1034,7 @@ final class kn extends ob implements vb {
                     ln.field_U = null;
                     break L3;
                   } else {
-                    boolean discarded$5 = ln.field_U.a(n.field_g.field_V, n.field_g.field_nb, param3, (byte) -104);
+                    boolean discarded$1 = ln.field_U.a(n.field_g.field_V, n.field_g.field_nb, param3, (byte) -104);
                     break L3;
                   }
                 }
@@ -1070,8 +1060,7 @@ final class kn extends ob implements vb {
                     }
                   }
                   L7: {
-                    int discarded$6 = 0;
-                    var8 = jl.b();
+                    var8 = jl.b(0);
                     if (var8 == null) {
                       break L7;
                     } else {
@@ -1088,8 +1077,7 @@ final class kn extends ob implements vb {
                         if (var5.field_U == 0) {
                           break L9;
                         } else {
-                          int discarded$7 = -86;
-                          ko.a(var4_int, var5);
+                          ko.a(var4_int, var5, (byte) -86);
                           break L9;
                         }
                       }
@@ -1116,15 +1104,14 @@ final class kn extends ob implements vb {
         }
     }
 
-    private final void k() {
+    private final void k(int param0) {
         int var2 = 0;
         int var3 = 0;
         L0: {
           L1: {
             var3 = ArcanistsMulti.field_G ? 1 : 0;
             if (((kn) this).field_jb == ((kn) this).field_xb) {
-              int discarded$81 = 6;
-              u.b();
+              u.b(6);
               tl.a(-30267);
               break L1;
             } else {
@@ -1143,8 +1130,7 @@ final class kn extends ob implements vb {
                       }
                     }
                   }
-                  int discarded$82 = 5;
-                  nb.a(true);
+                  nb.a(true, 5);
                   ((kn) this).field_H.b((qm) (Object) new bj(((kn) this).field_H), 15637);
                   break L1;
                 } else {
@@ -1153,10 +1139,8 @@ final class kn extends ob implements vb {
                   break L0;
                 }
               } else {
-                int discarded$83 = 6;
-                u.b();
-                int discarded$84 = -127;
-                gm.a();
+                u.b(6);
+                gm.a((byte) -127);
                 break L1;
               }
             }
@@ -1167,7 +1151,7 @@ final class kn extends ob implements vb {
         }
     }
 
-    final static void g() {
+    final static void g(boolean param0) {
         k.field_o = 0;
     }
 
@@ -1201,18 +1185,15 @@ final class kn extends ob implements vb {
             L1: {
               if (param4 != ((kn) this).field_kb) {
                 if (param4 == ((kn) this).field_ub) {
-                  int discarded$4 = 46;
-                  this.k();
+                  this.k(46);
                   break L1;
                 } else {
                   if (param4 == ((kn) this).field_jb) {
-                    int discarded$5 = 0;
-                    this.a(param4);
+                    this.a(param4, 0);
                     break L1;
                   } else {
                     if (((kn) this).field_mb == param4) {
-                      int discarded$6 = 0;
-                      this.a(param4);
+                      this.a(param4, 0);
                       break L1;
                     } else {
                       L2: {
@@ -1242,8 +1223,7 @@ final class kn extends ob implements vb {
                             break L1;
                           } else {
                             if (ah.field_c > 0) {
-                              int discarded$7 = 0;
-                              this.a(param4);
+                              this.a(param4, 0);
                               break L1;
                             } else {
                               ((kn) this).field_H.b((qm) (Object) new gf(((kn) this).field_H), 15637);
@@ -1304,7 +1284,7 @@ final class kn extends ob implements vb {
         }
     }
 
-    private final void i() {
+    private final void i(int param0) {
         int var3 = 0;
         ag var4 = null;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
@@ -1464,7 +1444,7 @@ final class kn extends ob implements vb {
         return stackIn_3_0;
     }
 
-    private final ag j() {
+    private final ag j(int param0) {
         if (null != ka.field_m) {
             return ((kn) this).field_lb;
         }
@@ -1758,43 +1738,42 @@ final class kn extends ob implements vb {
         return stackIn_74_0;
     }
 
-    private final void a(ag param0) {
-        RuntimeException runtimeException = null;
+    private final void a(ag param0, int param1) {
         ag var3 = null;
+        RuntimeException var3_ref = null;
         int var4 = 0;
         uj var5 = null;
         ag stackIn_1_0 = null;
         ag stackIn_2_0 = null;
         ag stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         ag stackOut_0_0 = null;
         ag stackOut_2_0 = null;
         int stackOut_2_1 = 0;
         ag stackOut_1_0 = null;
         int stackOut_1_1 = 0;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         try {
           L0: {
             L1: {
               ((kn) this).field_xb = param0;
-              boolean discarded$6 = param0.a(0, (qm) this);
-              int discarded$7 = 2;
-              var3 = this.j();
+              boolean discarded$3 = param0.a(0, (qm) this);
+              var3 = this.j(2);
               stackOut_0_0 = ((kn) this).field_ub;
               stackIn_2_0 = stackOut_0_0;
               stackIn_1_0 = stackOut_0_0;
@@ -1814,67 +1793,70 @@ final class kn extends ob implements vb {
             }
             L2: {
               stackIn_3_0.field_B = stackIn_3_1 != 0;
-              if (param0 != ((kn) this).field_lb) {
-                break L2;
-              } else {
-                if (param0 != var3) {
-                  break L2;
-                } else {
-                  if (((kn) this).field_zb == null) {
-                    break L2;
-                  } else {
+              if (param0 == ((kn) this).field_lb) {
+                if (param0 == var3) {
+                  if (((kn) this).field_zb != null) {
                     L3: {
                       var4 = ((kn) this).field_zb.g((byte) 37);
                       var5 = ((kn) this).field_V[var4];
                       if (var5.field_g != ob.field_Y.field_m) {
                         break L3;
                       } else {
-                        if (var5.field_e == ob.field_Y.field_c) {
-                          break L2;
-                        } else {
+                        if (var5.field_e != ob.field_Y.field_c) {
                           break L3;
+                        } else {
+                          this.i(-121);
+                          break L2;
                         }
                       }
                     }
                     ((kn) this).field_ub.field_B = true;
+                    this.i(-121);
+                    break L2;
+                  } else {
+                    this.i(-121);
                     break L2;
                   }
+                } else {
+                  this.i(-121);
+                  break L2;
                 }
+              } else {
+                this.i(-121);
+                break L2;
               }
             }
-            int discarded$8 = -121;
-            this.i();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            runtimeException = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) runtimeException;
-            stackOut_12_1 = new StringBuilder().append("kn.V(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            var3_ref = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var3_ref;
+            stackOut_16_1 = new StringBuilder().append("kn.V(");
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + 0 + ')');
+          throw aa.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + 0 + ')');
         }
     }
 

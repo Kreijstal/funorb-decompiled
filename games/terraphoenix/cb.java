@@ -398,7 +398,7 @@ final class cb extends jc {
         return stackIn_10_0 != 0;
     }
 
-    final static boolean a(dh param0) {
+    final static boolean a(dh param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -475,7 +475,7 @@ final class cb extends jc {
         return stackIn_6_0 != 0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_J = null;
     }
 

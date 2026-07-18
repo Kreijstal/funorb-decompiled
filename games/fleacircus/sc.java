@@ -11,14 +11,14 @@ final class sc {
         return param0 & param1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_d = null;
         int var1 = 88;
     }
 
-    final static void a(int param0, hi param1) {
+    final static void a(int param0, hi param1, int param2) {
         ih var3 = null;
         int var4 = 0;
         try {

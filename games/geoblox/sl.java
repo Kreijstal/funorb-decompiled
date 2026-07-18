@@ -15,7 +15,7 @@ final class sl {
     static rh field_l;
     static dm field_c;
 
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -36,8 +36,7 @@ final class sl {
         try {
           L0: {
             hj.a((byte) -85, (java.awt.Component) (Object) param0);
-            int discarded$5 = 1;
-            fk.a((java.awt.Component) (Object) param0);
+            fk.a((java.awt.Component) (Object) param0, 1);
             if (null != vc.field_f) {
               vc.field_f.a(124, (java.awt.Component) (Object) param0);
               break L0;
@@ -77,7 +76,7 @@ final class sl {
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -212,7 +211,7 @@ final class sl {
         return stackIn_22_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_c = null;
         field_l = null;
@@ -227,7 +226,7 @@ final class sl {
         ((sl) this).field_g = param0 ? true : false;
     }
 
-    final static int a(boolean param0, wf param1) {
+    final static int a(boolean param0, wf param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

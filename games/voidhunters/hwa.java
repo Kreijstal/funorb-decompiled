@@ -37,10 +37,7 @@ final class hwa extends rqa {
                 break L1;
               }
             }
-            int discarded$6 = 10;
-            int discarded$7 = 117;
-            int discarded$8 = 1;
-            stackOut_2_0 = gra.a(param0);
+            stackOut_2_0 = gra.a(param0, true, (byte) 117, 10);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -149,7 +146,7 @@ final class hwa extends rqa {
         return stackIn_4_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_r = null;
         field_o = null;
         int var1 = -98;

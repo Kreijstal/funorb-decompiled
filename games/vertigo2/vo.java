@@ -14,7 +14,7 @@ final class vo extends va {
     static String field_v;
     private er[] field_w;
 
-    final static r a(boolean param0, int param1, int param2, int param3) {
+    final static r a(boolean param0, int param1, int param2, int param3, boolean param4, boolean param5) {
         try {
             Object var6 = null;
             Object var7 = null;
@@ -93,7 +93,7 @@ final class vo extends va {
         this(2188450, 2591221, 9543);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_v = null;
         field_u = null;
         field_C = null;
@@ -136,8 +136,7 @@ final class vo extends va {
                   if (param1 == 0) {
                     break L0;
                   } else {
-                    int discarded$2 = 1;
-                    vo.a();
+                    vo.a(true);
                     break L0;
                   }
                 }
@@ -215,7 +214,7 @@ final class vo extends va {
         ((vo) this).field_t = param0;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         int var1 = 0;
         int var2 = 0;
         var2 = Vertigo2.field_L ? 1 : 0;
@@ -226,15 +225,13 @@ final class vo extends va {
           if (0 < var1) {
             if (1 != var1) {
               eg.field_t = Vertigo2.a(new String[1], kn.field_a, 6);
-              int discarded$2 = 86;
-              eg.field_t = oq.a(new CharSequence[3]);
+              eg.field_t = oq.a(new CharSequence[3], 86);
               df.field_l.h((byte) 63);
               p.a(-33);
               return;
             } else {
               eg.field_t = ll.field_c;
-              int discarded$3 = 86;
-              eg.field_t = oq.a(new CharSequence[3]);
+              eg.field_t = oq.a(new CharSequence[3], 86);
               df.field_l.h((byte) 63);
               p.a(-33);
               return;

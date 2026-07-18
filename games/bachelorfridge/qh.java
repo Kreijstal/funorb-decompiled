@@ -77,9 +77,9 @@ final class qh {
               ((qh) this).field_k = 3;
               ((qh) this).field_n = -1;
               ((qh) this).field_p = 3;
-              tc discarded$15 = var4.a(0, (byte) 78).b(15658734, -25251).a(ida.a(7829367, -95, 10066329, 8947848), (byte) -40);
-              tc discarded$16 = var4.a(1, (byte) 78).a(ida.a(13421772, -34, 10066329, 11184810), (byte) -40);
-              tc discarded$17 = var4.a(3, (byte) 78).a(ida.a(10066329, -32, 7829367, 8947848), (byte) -40).b((byte) -88, 1).a((byte) 0, 1);
+              tc discarded$10 = var4.a(0, (byte) 78).b(15658734, -25251).a(ida.a(7829367, -95, 10066329, 8947848), (byte) -40);
+              tc discarded$11 = var4.a(1, (byte) 78).a(ida.a(13421772, -34, 10066329, 11184810), (byte) -40);
+              tc discarded$12 = var4.a(3, (byte) 78).a(ida.a(10066329, -32, 7829367, 8947848), (byte) -40).b((byte) -88, 1).a((byte) 0, 1);
               if (param1) {
                 break L1;
               } else {
@@ -94,27 +94,22 @@ final class qh {
             L2: while (true) {
               if (var7_int >= var18.field_v.length) {
                 var5[4] = (kv) (Object) var18;
-                tc discarded$18 = var4.a(4, (byte) 78).a(true, -2147483648).a(var5, (byte) -40);
-                int discarded$19 = 0;
-                int discarded$20 = 0;
-                int discarded$21 = 3;
-                int discarded$22 = 65793;
-                int discarded$23 = 0;
-                tc discarded$24 = var4.a(5, (byte) 78).a(rma.a(), (byte) -40).a(true, -2147483648).b(-1, -25251);
+                tc discarded$13 = var4.a(4, (byte) 78).a(true, -2147483648).a(var5, (byte) -40);
+                tc discarded$14 = var4.a(5, (byte) 78).a(rma.a(0, 65793, 3, 0, 0), (byte) -40).a(true, -2147483648).b(-1, -25251);
                 ((qh) this).field_r = (qda) (Object) var4;
                 var6 = new wd(var4, true);
                 var6.field_m = 0;
                 var7 = new wd(var4, true);
                 var7.field_m = 0;
                 var7.a((byte) 95, qaa.a(8947848, -16));
-                tc discarded$25 = var7.a(1, (byte) 78).a(qaa.a(11184810, -25), (byte) -40).b(2236962, -25251);
+                tc discarded$15 = var7.a(1, (byte) 78).a(qaa.a(11184810, -25), (byte) -40).b(2236962, -25251);
                 ((qh) this).field_h = (qda) (Object) new sea(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                via discarded$26 = new via(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                bka discarded$27 = new bka(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                via discarded$16 = new via(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                bka discarded$17 = new bka(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
                 var8 = new wd();
                 var17.a(-24, (gha) (Object) var8);
-                tc discarded$28 = var8.a(0, (byte) 78).a(ida.a(10066329, -99, 7829367, 15658734), (byte) -40).b(1118481, -25251).c(127, -1);
-                tc discarded$29 = var8.a(4, (byte) 78).a(true, -2147483648).a(var5, (byte) -40);
+                tc discarded$18 = var8.a(0, (byte) 78).a(ida.a(10066329, -99, 7829367, 15658734), (byte) -40).b(1118481, -25251).c(127, -1);
+                tc discarded$19 = var8.a(4, (byte) 78).a(true, -2147483648).a(var5, (byte) -40);
                 ((qh) this).field_s = (qda) (Object) var8;
                 var9 = new kv[9];
                 var9[4] = new kv(2, 1);
@@ -179,7 +174,7 @@ final class qh {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -487,7 +482,7 @@ final class qh {
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -619,7 +614,7 @@ final class qh {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

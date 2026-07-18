@@ -565,7 +565,7 @@ final class ua {
         return "" + ((ua) this).field_i;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_g = null;
         field_c = null;
@@ -666,7 +666,7 @@ final class ua {
         }
     }
 
-    final static int a(String param0, String param1) {
+    final static int a(String param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

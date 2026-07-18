@@ -6,7 +6,7 @@ final class glb {
     static String[] field_c;
     static String field_a;
 
-    final static void c() {
+    final static void c(int param0) {
         qw var1 = null;
         nl var1_ref = null;
         RuntimeException var1_ref2 = null;
@@ -112,7 +112,7 @@ final class glb {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_a = null;
     }

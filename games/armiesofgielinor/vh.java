@@ -531,9 +531,9 @@ class vh extends tc {
                               }
                             } else {
                               vt.field_m[var11] = vt.field_m[var8];
-                              int incrementValue$2 = var8;
+                              int incrementValue$1 = var8;
                               var8++;
-                              vt.field_m[incrementValue$2] = var12;
+                              vt.field_m[incrementValue$1] = var12;
                               if (var9 > var13) {
                                 var9 = var13;
                                 break L4;
@@ -563,8 +563,7 @@ class vh extends tc {
                         L7: {
                           var9 = vt.field_m[var8];
                           var10 = vt.field_m[1 + var8];
-                          int discarded$3 = -27;
-                          if (co.a(param6, var10, var9)) {
+                          if (co.a(param6, var10, var9, -27)) {
                             vt.field_m[var8] = var10;
                             vt.field_m[var8 + 1] = var9;
                             break L7;
@@ -591,10 +590,8 @@ class vh extends tc {
     }
 
     final static void i(byte param0) {
-        int discarded$0 = 76;
-        ot.g();
-        int discarded$1 = -1;
-        dh.d();
+        ot.g(76);
+        dh.d(-1);
         ik.field_b = null;
         int var1 = -111 % ((-16 - param0) / 46);
         e.a((byte) -117);
@@ -632,8 +629,7 @@ class vh extends tc {
         try {
           L0: {
             if (kp.a(false, param1, param2, param3)) {
-              int discarded$2 = 12722;
-              stackOut_4_0 = bj.e();
+              stackOut_4_0 = bj.e(12722);
               stackIn_5_0 = stackOut_4_0;
               break L0;
             } else {
@@ -815,8 +811,7 @@ class vh extends tc {
     }
 
     final int b(byte param0, int param1) {
-        int discarded$0 = -8779;
-        int var3 = im.a(((vh) this).field_q, ((vh) this).field_o, param1);
+        int var3 = im.a(((vh) this).field_q, ((vh) this).field_o, param1, -8779);
         ((vh) this).a((byte) -87, var3);
         if (param0 != -39) {
             ((vh) this).c((byte) -110, 112);
@@ -907,8 +902,7 @@ class vh extends tc {
             field_k = null;
         }
         ((vh) this).field_q = ((vh) this).field_q - 4;
-        int discarded$0 = -8779;
-        int var2 = im.a(((vh) this).field_q, ((vh) this).field_o, 0);
+        int var2 = im.a(((vh) this).field_q, ((vh) this).field_o, 0, -8779);
         int var3 = ((vh) this).i(1);
         if (var3 == var2) {
             return true;
@@ -1189,7 +1183,7 @@ class vh extends tc {
         ((vh) this).field_o[fieldTemp$2] = (byte)param0;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_k = null;
         field_l = null;
         field_r = null;

@@ -32,7 +32,7 @@ final class hoa extends kl {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_n = null;
         field_l = null;
         field_m = null;

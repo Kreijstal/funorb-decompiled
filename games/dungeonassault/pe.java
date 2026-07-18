@@ -33,7 +33,7 @@ final class pe extends ne {
         }
     }
 
-    final static cn[] a(int param0, int param1, int param2, int param3) {
+    final static cn[] a(int param0, int param1, int param2, int param3, int param4) {
         cn[] var5 = null;
         cn[] var6 = null;
         var6 = new cn[9];
@@ -56,7 +56,7 @@ final class pe extends ne {
         }
     }
 
-    final static boolean a(CharSequence param0, char param1) {
+    final static boolean a(CharSequence param0, char param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

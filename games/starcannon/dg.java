@@ -12,11 +12,11 @@ final class dg extends rf {
     int field_f;
     static String field_j;
 
-    final static int b() {
+    final static int b(byte param0) {
         return qb.field_a;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         ti.field_c = -1;
         di.field_m = 0;
         eg.field_h = false;
@@ -24,7 +24,7 @@ final class dg extends rf {
         sc.field_c = null;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         int var1 = -57;
         field_j = null;
     }

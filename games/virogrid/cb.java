@@ -14,15 +14,13 @@ abstract class cb {
           if (ac.field_e) {
             return vl.a((byte) 103, param3, param2);
           } else {
-            int discarded$12 = 1;
-            if (bi.a(param3, param2)) {
+            if (bi.a(param3, param2, true)) {
               return true;
             } else {
               if (dh.field_n) {
                 return false;
               } else {
-                int discarded$13 = -97;
-                return fn.a(param1, param2);
+                return fn.a(param1, param2, (byte) -97);
               }
             }
           }
@@ -33,7 +31,7 @@ abstract class cb {
 
     abstract void b(int param0, java.awt.Component param1);
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;

@@ -60,8 +60,7 @@ abstract class eg extends na implements nf {
             L2: {
               if (((eg) this).a(param0, param2, 105, param1)) {
                 ((eg) this).a(param3 ^ 372494831, param1, param0, param2);
-                int discarded$2 = 0;
-                this.b(param2, param1, param0);
+                this.b(param2, param1, param0, 0);
                 break L2;
               } else {
                 break L2;
@@ -232,7 +231,7 @@ abstract class eg extends na implements nf {
         super(param0, param1, param2, param3, param4, (dn) null);
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_K = null;
         field_N = null;
         field_O = null;
@@ -279,7 +278,7 @@ abstract class eg extends na implements nf {
         }
     }
 
-    private final void b(int param0, StringBuilder param1, Hashtable param2) {
+    private final void b(int param0, StringBuilder param1, Hashtable param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         na var7 = null;
@@ -1093,7 +1092,7 @@ abstract class eg extends na implements nf {
         }
     }
 
-    private final boolean a(na param0) {
+    private final boolean a(na param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -1297,8 +1296,7 @@ abstract class eg extends na implements nf {
                           stackIn_21_0 = stackOut_20_0;
                           break L2;
                         } else {
-                          int discarded$3 = 45;
-                          stackOut_19_0 = this.a(param3);
+                          stackOut_19_0 = this.a(param3, (byte) 45);
                           stackIn_21_0 = stackOut_19_0;
                           break L2;
                         }

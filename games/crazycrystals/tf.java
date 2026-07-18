@@ -217,9 +217,7 @@ final class tf {
             }
             L6: {
               tp.field_f.a(true, var6);
-              int discarded$2 = -20;
-              int discarded$3 = -28697;
-              var7 = mf.a(le.b());
+              var7 = mf.a(le.b((byte) -20), -28697);
               if (var7 == null) {
                 var7 = "";
                 break L6;

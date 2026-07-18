@@ -8,7 +8,7 @@ final class cva {
     static String field_e;
     static dk[] field_c;
 
-    final static void a() {
+    final static void a(int param0) {
         if (wba.field_o == null) {
             throw new IllegalStateException("NGR");
         }

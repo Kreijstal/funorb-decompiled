@@ -11,7 +11,7 @@ final class lo {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_b = null;
     }
@@ -118,7 +118,7 @@ final class lo {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         RuntimeException var1 = null;
         ola var1_ref = null;
         int var1_int = 0;

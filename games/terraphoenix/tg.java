@@ -16,7 +16,7 @@ final class tg {
     private byte[] field_m;
     static int field_l;
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = Terraphoenix.field_V;
         for (var2 = 0; var2 < 32; var2++) {
@@ -249,7 +249,7 @@ final class tg {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_h = null;
         field_e = null;
@@ -405,7 +405,7 @@ final class tg {
         }
     }
 
-    final static byte[] a(byte[] param0, int param1, int param2) {
+    final static byte[] a(byte[] param0, int param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5_int = 0;
@@ -454,8 +454,7 @@ final class tg {
               }
             }
             var5 = new tg();
-            int discarded$2 = -31201;
-            var5.a();
+            var5.a(-31201);
             var5.a((byte) 104, (long)(8 * param1), var4);
             var6 = new byte[64];
             var5.a(0, 4, var6);

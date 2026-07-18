@@ -18,7 +18,7 @@ final class ll extends hg {
         gi.a((byte) -70);
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         ll var1 = null;
         c var2 = null;
         var1 = (ll) (Object) jl.field_n.a(false);
@@ -190,7 +190,7 @@ final class ll extends hg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
     }
 

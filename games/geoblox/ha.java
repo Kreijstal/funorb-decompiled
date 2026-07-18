@@ -192,19 +192,16 @@ abstract class ha {
         var13 = Geoblox.field_C;
         try {
           L0: {
-            int discarded$5 = 0;
-            id.field_c = wj.a("frame_top", "commonui", param2);
-            int discarded$6 = 0;
-            fh.field_e = wj.a("frame_bottom", "commonui", param2);
+            id.field_c = wj.a("frame_top", "commonui", param2, 0);
+            fh.field_e = wj.a("frame_bottom", "commonui", param2, 0);
             jc.field_a = ug.a("jagex_logo_grey", param2, (byte) -78, "commonui");
-            int discarded$7 = 0;
-            vk.field_e = wj.a("button", "commonui", param2);
+            vk.field_e = wj.a("button", "commonui", param2, 0);
             oa.field_e = oi.a((byte) -39, "validation", "commonui", param2);
             hh.field_d = (m) (Object) q.a(param3, 1, "arezzo12", "commonui", param2);
             ng.field_F = (m) (Object) q.a(param3, 1, "arezzo14", "commonui", param2);
             hh.field_c = (m) (Object) q.a(param3, 1, "arezzo14bold", "commonui", param2);
             var18 = new dm(param1.a(0, "", "button.gif"), (java.awt.Component) (Object) f.field_kb);
-            na discarded$8 = jg.a(param2, 1, "commonui", "dropdown");
+            na discarded$1 = jg.a(param2, 1, "commonui", "dropdown");
             var5 = ka.a("commonui", "screen_options", true, param2);
             ek.field_a = new na[4];
             sb.field_e = new na[4];
@@ -240,8 +237,7 @@ abstract class ha {
                     var12 = new dm(var18.field_r + -(2 * var9), var9);
                     var12.e();
                     var18.c(-var9, 0);
-                    int discarded$9 = 1;
-                    id.a();
+                    id.a(true);
                     vk.field_e = new dm[]{var16, var12, var11};
                     break L0;
                   } else {
@@ -349,7 +345,7 @@ abstract class ha {
         }
     }
 
-    final static int a() {
+    final static int a(int param0) {
         int var1 = -77;
         return nk.field_e;
     }

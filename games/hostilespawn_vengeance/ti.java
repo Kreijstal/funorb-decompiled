@@ -29,7 +29,7 @@ final class ti implements nn {
         ((ti) this).field_h = jd.field_s;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return wc.field_m;
     }
 
@@ -209,7 +209,7 @@ final class ti implements nn {
         }
     }
 
-    final static kb b() {
+    final static kb b(byte param0) {
         try {
             Throwable var1 = null;
             kb stackIn_2_0 = null;

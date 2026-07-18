@@ -188,7 +188,7 @@ final class sg {
         }
     }
 
-    final static String a(String param0, java.applet.Applet param1) {
+    final static String a(String param0, java.applet.Applet param1, int param2) {
         try {
             String var3 = null;
             Throwable var3_ref = null;
@@ -455,11 +455,11 @@ final class sg {
         eb.field_a = false;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
     }
 
-    private final boolean a(int param0, byte[] param1, int param2, boolean param3) {
+    private final boolean a(int param0, byte[] param1, int param2, boolean param3, boolean param4) {
         try {
             Object var6 = null;
             RuntimeException var6_ref = null;
@@ -843,13 +843,11 @@ final class sg {
                     break L1;
                   } else {
                     L2: {
-                      int discarded$6 = 1;
-                      var6 = this.a(param1, param0, param3, true) ? 1 : 0;
+                      var6 = this.a(param1, param0, param3, true, true) ? 1 : 0;
                       if (var6 != 0) {
                         break L2;
                       } else {
-                        int discarded$7 = 1;
-                        var6 = this.a(param1, param0, param3, false) ? 1 : 0;
+                        var6 = this.a(param1, param0, param3, false, true) ? 1 : 0;
                         break L2;
                       }
                     }

@@ -164,7 +164,7 @@ final class pj extends rd {
         n.field_s = null;
     }
 
-    final static int a(CharSequence param0, int param1, int param2, byte[] param3) {
+    final static int a(CharSequence param0, int param1, int param2, byte[] param3, int param4, byte param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;

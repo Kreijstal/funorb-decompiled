@@ -6,15 +6,14 @@ final class ju extends rt {
     static gb field_k;
     static int field_m;
 
-    final static cd e() {
+    final static cd e(int param0) {
         String var1 = la.a(4);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
                 var1 = "";
             }
         }
-        int discarded$0 = -98;
-        return new cd(la.a(4), pk.d());
+        return new cd(la.a(4), pk.d(-98));
     }
 
     final void b(boolean param0, boolean param1) {
@@ -135,8 +134,7 @@ final class ju extends rt {
         try {
           L0: {
             L1: {
-              int discarded$2 = 28304;
-              var2 = vf.a(AceOfSkies.a(param1, -44));
+              var2 = vf.a(AceOfSkies.a(param1, -44), 28304);
               if (var2 != null) {
                 break L1;
               } else {
@@ -187,7 +185,7 @@ final class ju extends rt {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
     }
 

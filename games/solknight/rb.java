@@ -1633,7 +1633,7 @@ final class rb {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         if (ad.field_h != -a.field_i) {
             if (ad.field_h != 250 + -a.field_i) {
             }
@@ -1641,9 +1641,8 @@ final class rb {
         ad.field_h = ad.field_h + 1;
     }
 
-    final static boolean a() {
-        int discarded$0 = 6669;
-        return lb.b(ia.g(-45));
+    final static boolean a(int param0) {
+        return lb.b(ia.g(-45), 6669);
     }
 
     private final void a(int param0, int param1, int param2) {

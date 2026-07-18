@@ -242,7 +242,7 @@ final class ue {
         return ((ue) this).field_a.a(param1, true);
     }
 
-    final static String a(long param0) {
+    final static String a(long param0, int param1) {
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
@@ -608,8 +608,7 @@ final class ue {
         if (!param1) {
             return null;
         }
-        int discarded$0 = 1;
-        return this.a((int[]) null, param0, param2);
+        return this.a((int[]) null, param0, param2, true);
     }
 
     final synchronized boolean b(byte param0) {
@@ -1313,7 +1312,7 @@ final class ue {
         return stackIn_102_0 != 0;
     }
 
-    private final synchronized byte[] a(int[] param0, int param1, int param2) {
+    private final synchronized byte[] a(int[] param0, int param1, int param2, boolean param3) {
         Object var5 = null;
         byte[] var7 = null;
         Object stackIn_2_0 = null;

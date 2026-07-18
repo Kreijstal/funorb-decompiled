@@ -8,7 +8,7 @@ final class pj {
     static eh field_c;
     static String field_e;
 
-    final static void a() {
+    final static void a(int param0) {
         Object var2 = null;
         nd.a((byte) 119, "", (String) null);
     }
@@ -52,8 +52,7 @@ final class pj {
                   }
                 }
               } else {
-                int discarded$2 = 4;
-                te.a(param1 ^ -11514, var4);
+                te.a(param1 ^ -11514, var4, 4);
                 var4 = (sa) (Object) fj.field_b.a(param1 ^ -5038);
                 continue L1;
               }

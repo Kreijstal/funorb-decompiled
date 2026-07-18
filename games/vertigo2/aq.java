@@ -176,7 +176,7 @@ final class aq {
         }
     }
 
-    final static void a(mp param0) {
+    final static void a(mp param0, byte param1, int param2, int param3) {
         try {
             int var4_int = -57;
         } catch (RuntimeException runtimeException) {

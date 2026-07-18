@@ -224,7 +224,7 @@ final class wd {
         return stackIn_10_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
     }
 

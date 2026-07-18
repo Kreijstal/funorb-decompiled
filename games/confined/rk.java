@@ -107,8 +107,7 @@ class rk {
             var4_int = 0;
             fd.field_k = (ok) (Object) ej.a("arezzo14bold", param3, param2, "commonui", 0);
             var5 = new nf(param0.a(110, "button.gif", ""), (java.awt.Component) (Object) fb.field_b);
-            int discarded$5 = 112;
-            bm discarded$6 = pm.a(param3, "commonui", "dropdown");
+            bm discarded$1 = pm.a(param3, "commonui", "dropdown", (byte) 112);
             var6 = ql.a("commonui", (byte) 90, "screen_options", param3);
             qm.field_B = new bm[4];
             jg.field_d = new bm[4];
@@ -131,8 +130,7 @@ class rk {
                 L2: while (true) {
                   if (var10 >= 3) {
                     var10 = var5.field_w;
-                    int discarded$7 = 128;
-                    mk.b();
+                    mk.b(128);
                     var5.d();
                     fn.c(0, 0, fn.field_g, fn.field_l);
                     var16 = new nf(var10, var10);
@@ -145,8 +143,7 @@ class rk {
                     var13 = new nf(var5.field_u - 2 * var10, var10);
                     var13.d();
                     var5.c(-var10, 0);
-                    int discarded$8 = 0;
-                    ib.b();
+                    ib.b(false);
                     em.field_d = new nf[]{var16, var13, var12};
                     break L0;
                   } else {
@@ -158,8 +155,7 @@ class rk {
                         var10++;
                         continue L2;
                       } else {
-                        int discarded$9 = 0;
-                        var15[var12_int] = jl.a(var21[var12_int], var6[var10]);
+                        var15[var12_int] = jl.a(var21[var12_int], var6[var10], 0);
                         var12_int++;
                         continue L3;
                       }

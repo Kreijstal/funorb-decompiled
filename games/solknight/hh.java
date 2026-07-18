@@ -25,12 +25,12 @@ final class hh extends pj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_N = null;
         field_J = null;
     }
 
-    final static ce a(String param0) {
+    final static ce a(String param0, boolean param1) {
         RuntimeException var2 = null;
         ce stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -279,8 +279,7 @@ final class hh extends pj {
                             var2 = param1.getParameter("cookieprefix");
                             var3 = var2 + "settings";
                             var4 = (String) fd.a(param1, "getcookies", (byte) 116);
-                            int discarded$2 = 1;
-                            var5 = b.a(var4, ';');
+                            var5 = b.a(var4, ';', true);
                             var6 = 0;
                             statePc = 2;
                             continue stateLoop;

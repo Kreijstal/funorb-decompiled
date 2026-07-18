@@ -27,7 +27,7 @@ final class fh {
     static String field_l;
     int field_k;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_x = null;
         field_c = null;
         field_d = null;
@@ -325,9 +325,9 @@ final class fh {
             ((fh) this).field_p = -1;
             ((fh) this).field_b = param0;
             ((fh) this).field_r = 15658734;
-            bd discarded$17 = var4.a(0, 3).b(15658734, true).a(hl.a((byte) 94, 8947848, 7829367, 10066329), (byte) 45);
-            bd discarded$18 = var4.a(1, 3).a(hl.a((byte) 18, 11184810, 13421772, 10066329), (byte) 45);
-            bd discarded$19 = var4.a(3, 3).a(hl.a((byte) 115, 8947848, 10066329, 7829367), (byte) 45).b(80, 1).c(2, 1);
+            bd discarded$10 = var4.a(0, 3).b(15658734, true).a(hl.a((byte) 94, 8947848, 7829367, 10066329), (byte) 45);
+            bd discarded$11 = var4.a(1, 3).a(hl.a((byte) 18, 11184810, 13421772, 10066329), (byte) 45);
+            bd discarded$12 = var4.a(3, 3).a(hl.a((byte) 115, 8947848, 10066329, 7829367), (byte) 45).b(80, 1).c(2, 1);
             var5 = new ci[9];
             var16 = new sg(32, 32);
             var18 = var16;
@@ -336,29 +336,22 @@ final class fh {
               if (var7_int >= var18.field_z.length) {
                 if (param1 < -84) {
                   var5[4] = (ci) (Object) var18;
-                  bd discarded$20 = var4.a(4, 3).a(-47, true).a(var5, (byte) 45);
-                  int discarded$21 = -123;
-                  int discarded$22 = 65793;
-                  int discarded$23 = 0;
-                  int discarded$24 = 0;
-                  int discarded$25 = 0;
-                  bd discarded$26 = var4.a(5, 3).a(al.a(), (byte) 45).a(-82, true).b(-1, true);
+                  bd discarded$13 = var4.a(4, 3).a(-47, true).a(var5, (byte) 45);
+                  bd discarded$14 = var4.a(5, 3).a(al.a(0, 0, 0, 65793, (byte) -123), (byte) 45).a(-82, true).b(-1, true);
                   ((fh) this).field_n = (cj) (Object) var4;
                   var6 = new hf(var4, true);
                   var6.field_h = 0;
                   var7 = new hf(var4, true);
                   var7.field_h = 0;
-                  int discarded$27 = 4;
-                  var7.a(fa.f(8947848), (byte) -24);
-                  int discarded$28 = 4;
-                  bd discarded$29 = var7.a(1, 3).a(fa.f(11184810), (byte) 45).b(2236962, true);
+                  var7.a(fa.f(8947848, 4), (byte) -24);
+                  bd discarded$15 = var7.a(1, 3).a(fa.f(11184810, 4), (byte) 45).b(2236962, true);
                   ((fh) this).field_q = (cj) (Object) new ea(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                  f discarded$30 = new f(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                  sk discarded$31 = new sk(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                  f discarded$16 = new f(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                  sk discarded$17 = new sk(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
                   var8 = new hf();
                   var17.a((fd) (Object) var8, -32);
-                  bd discarded$32 = var8.a(0, 3).a(hl.a((byte) -81, 15658734, 10066329, 7829367), (byte) 45).b(1118481, true).a(-19426, -1);
-                  bd discarded$33 = var8.a(4, 3).a(-86, true).a(var5, (byte) 45);
+                  bd discarded$18 = var8.a(0, 3).a(hl.a((byte) -81, 15658734, 10066329, 7829367), (byte) 45).b(1118481, true).a(-19426, -1);
+                  bd discarded$19 = var8.a(4, 3).a(-86, true).a(var5, (byte) 45);
                   ((fh) this).field_i = (cj) (Object) var8;
                   var9 = new ci[9];
                   var9[4] = new ci(2, 1);

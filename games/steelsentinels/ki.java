@@ -145,7 +145,7 @@ final class ki extends ac {
         }
     }
 
-    public static void l() {
+    public static void l(byte param0) {
         int var1 = 0;
         field_ob = null;
         field_pb = null;

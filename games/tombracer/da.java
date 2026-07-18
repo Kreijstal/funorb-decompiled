@@ -51,7 +51,7 @@ abstract class da {
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, int param1) {
         Exception var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -91,8 +91,7 @@ abstract class da {
                     }
                   } else {
                     var5 = (CharSequence) (Object) param0.substring(4);
-                    int discarded$5 = 16;
-                    v.field_k = -16777216 & v.field_k | 16777215 & eba.a(var5, -105);
+                    v.field_k = -16777216 & v.field_k | 16777215 & eba.a(var5, -105, 16);
                     break L2;
                   }
                 }
@@ -113,8 +112,7 @@ abstract class da {
                           } else {
                             if (param0.startsWith("u=")) {
                               var9 = (CharSequence) (Object) param0.substring(2);
-                              int discarded$6 = 16;
-                              moa.field_b = v.field_k & -16777216 | eba.a(var9, -65);
+                              moa.field_b = v.field_k & -16777216 | eba.a(var9, -65, 16);
                               break L3;
                             } else {
                               if (param0.equals((Object) (Object) "u")) {
@@ -125,8 +123,7 @@ abstract class da {
                                   if (!param0.equalsIgnoreCase("shad=-1")) {
                                     if (param0.startsWith("shad=")) {
                                       var8 = (CharSequence) (Object) param0.substring(5);
-                                      int discarded$7 = 16;
-                                      wqa.field_G = v.field_k & -16777216 | eba.a(var8, -52);
+                                      wqa.field_G = v.field_k & -16777216 | eba.a(var8, -52, 16);
                                       break L3;
                                     } else {
                                       if (param0.equals((Object) (Object) "shad")) {
@@ -160,15 +157,13 @@ abstract class da {
                         }
                       } else {
                         var7 = (CharSequence) (Object) param0.substring(4);
-                        int discarded$8 = 16;
-                        nt.field_b = v.field_k & -16777216 | eba.a(var7, -45);
+                        nt.field_b = v.field_k & -16777216 | eba.a(var7, -45, 16);
                         break L3;
                       }
                     }
                   } else {
                     var6 = (CharSequence) (Object) param0.substring(5);
-                    int discarded$9 = 16;
-                    v.field_k = eba.a(var6, -63);
+                    v.field_k = eba.a(var6, -63, 16);
                     break L3;
                   }
                 }
@@ -766,8 +761,7 @@ abstract class da {
                                                 L4: {
                                                   L5: {
                                                     var21 = (CharSequence) (Object) var15_ref_String.substring(4);
-                                                    int discarded$2 = 70;
-                                                    var16_int = jb.a(var21);
+                                                    var16_int = jb.a(var21, (byte) 70);
                                                     var17 = param5[var16_int];
                                                     if (param3 == null) {
                                                       stackOut_28_0 = var17.b();
@@ -802,8 +796,7 @@ abstract class da {
                                               }
                                               break L2;
                                             } else {
-                                              int discarded$3 = 115;
-                                              this.a(var15_ref_String);
+                                              this.a(var15_ref_String, 115);
                                               break L2;
                                             }
                                           } else {

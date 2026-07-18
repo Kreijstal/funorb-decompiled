@@ -39,7 +39,7 @@ class dh extends uf {
         return (255 & ((dh) this).field_i[-1 + ((dh) this).field_k]) + ((((dh) this).field_i[-2 + ((dh) this).field_k] & 255) << 8);
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, boolean param1) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;
@@ -67,18 +67,12 @@ class dh extends uf {
                   L1: {
                     var4 = param0.getCodeBase();
                     var3 = bb.a((byte) 122, var4, param0).getFile();
-                    int discarded$12 = 10056;
-                    Object discarded$13 = cd.a(param0, "updatelinks", new Object[2]);
-                    int discarded$14 = 10056;
-                    Object discarded$15 = cd.a(param0, "updatelinks", new Object[2]);
-                    int discarded$16 = 10056;
-                    Object discarded$17 = cd.a(param0, "updatelinks", new Object[2]);
-                    int discarded$18 = 10056;
-                    Object discarded$19 = cd.a(param0, "updatelinks", new Object[2]);
-                    int discarded$20 = 10056;
-                    Object discarded$21 = cd.a(param0, "updatelinks", new Object[2]);
-                    int discarded$22 = 10056;
-                    Object discarded$23 = cd.a(param0, "updatelinks", new Object[2]);
+                    Object discarded$6 = cd.a(param0, "updatelinks", new Object[2], 10056);
+                    Object discarded$7 = cd.a(param0, "updatelinks", new Object[2], 10056);
+                    Object discarded$8 = cd.a(param0, "updatelinks", new Object[2], 10056);
+                    Object discarded$9 = cd.a(param0, "updatelinks", new Object[2], 10056);
+                    Object discarded$10 = cd.a(param0, "updatelinks", new Object[2], 10056);
+                    Object discarded$11 = cd.a(param0, "updatelinks", new Object[2], 10056);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -325,7 +319,7 @@ class dh extends uf {
         return ((dh) this).i(-25578) - 32768;
     }
 
-    final static void g() {
+    final static void g(byte param0) {
         qi.field_b = false;
         fd.field_k = false;
         bm.a(-1, (byte) 1);

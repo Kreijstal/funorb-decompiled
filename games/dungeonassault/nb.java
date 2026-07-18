@@ -12,7 +12,7 @@ final class nb {
         return param0 & param1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_e = null;
         field_c = null;
@@ -27,8 +27,7 @@ final class nb {
         wh.field_d = rf.field_S;
         if (!(!wh.field_d)) {
             ck.h(94);
-            int discarded$0 = 1;
-            bo.g();
+            bo.g(1);
         }
     }
 

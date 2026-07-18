@@ -13,11 +13,11 @@ final class qi extends bj implements qb {
     private int[] field_O;
     private wl field_L;
 
-    final static void a() {
+    final static void a(int param0, boolean param1) {
         sn.field_d = 20000000L;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_P = null;
         field_J = null;
         field_M = null;

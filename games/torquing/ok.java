@@ -192,13 +192,13 @@ final class ok extends lg {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (sn.field_i == 3) {
             de.field_c[4] = de.field_c[4] - 5;
         }
     }
 
-    final static void a(fj param0, java.math.BigInteger param1, fj param2, java.math.BigInteger param3) {
+    final static void a(fj param0, java.math.BigInteger param1, fj param2, java.math.BigInteger param3, int param4) {
         try {
             op.a((byte) 20, param2, param3, param1, param0.field_n, param0.field_j, 0);
         } catch (RuntimeException runtimeException) {

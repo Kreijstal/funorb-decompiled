@@ -108,23 +108,19 @@ final class af implements Runnable {
             if (param2) {
               L1: {
                 if (ib.field_k >= 10) {
-                  int discarded$19 = 27415;
-                  if (wh.b()) {
+                  if (wh.b(27415)) {
                     if (bh.field_t != 0) {
                       bg.a((byte) -66, param0);
                       break L1;
                     } else {
-                      int discarded$20 = 0;
-                      pd.a(param1, false);
-                      int discarded$21 = 0;
-                      be.a(0, param0, (byte) -61);
+                      pd.a(param1, false, 0);
+                      be.a(0, param0, (byte) -61, 0);
                       break L1;
                     }
                   } else {
                     gb.c();
                     hd.a(320, 240, -27794);
-                    int discarded$22 = 0;
-                    be.a(0, param0, (byte) -29);
+                    be.a(0, param0, (byte) -29, 0);
                     break L1;
                   }
                 } else {
@@ -138,10 +134,7 @@ final class af implements Runnable {
                       break L2;
                     }
                   }
-                  int discarded$23 = -85;
-                  int discarded$24 = -1917;
-                  int discarded$25 = -81;
-                  se.a(hl.d(), ga.field_p, gk.a(), var3_int != 0);
+                  se.a(hl.d((byte) -85), ga.field_p, gk.a(-1917), var3_int != 0, (byte) -81);
                   break L1;
                 }
               }
@@ -455,7 +448,7 @@ final class af implements Runnable {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_f = null;
     }

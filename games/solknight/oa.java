@@ -23,7 +23,7 @@ final class oa extends pd implements java.awt.image.ImageProducer, java.awt.imag
         ((oa) this).field_k.imageComplete(2);
     }
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -49,8 +49,7 @@ final class oa extends pd implements java.awt.image.ImageProducer, java.awt.imag
               var3 = var9.j(255);
               if (var2 != 0) {
                 if (var2 != 1) {
-                  int discarded$1 = 1;
-                  hi.a((Throwable) null, "LR1: " + oc.a(false));
+                  hi.a((Throwable) null, "LR1: " + oc.a(false), 1);
                   je.a(false);
                   break L1;
                 } else {
@@ -340,7 +339,7 @@ final class oa extends pd implements java.awt.image.ImageProducer, java.awt.imag
         return stackIn_1_0 != 0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_i = null;
         field_j = null;
         field_l = null;

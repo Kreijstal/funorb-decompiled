@@ -55,7 +55,7 @@ final class bk extends da {
         ((bk) this).field_m = param2;
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, boolean param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -107,8 +107,7 @@ final class bk extends da {
               } else {
                 if (var3_int <= 12) {
                   L1: {
-                    int discarded$2 = 21;
-                    var4 = il.a(param0);
+                    var4 = il.a(param0, (byte) 21);
                     if (var4 == null) {
                       break L1;
                     } else {
@@ -205,7 +204,7 @@ final class bk extends da {
         return stackIn_32_0 != 0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_s = null;
         field_n = null;
         field_r = null;

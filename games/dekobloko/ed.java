@@ -140,7 +140,7 @@ final class ed {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_b = null;
         int var1 = -49;
@@ -163,12 +163,11 @@ final class ed {
         }
     }
 
-    final static void a(ji param0, int param1, mi param2) {
+    final static void a(ji param0, int param1, mi param2, int param3) {
         sh.field_i = param1 * n.a((byte) -74) / 1000;
         try {
             wi.a((byte) -51, param0);
-            int discarded$0 = -2;
-            pb.a(param0);
+            pb.a(param0, -2);
             em.a((byte) -113, param0);
             bg.a(-120);
             bb.a(true);
@@ -178,13 +177,12 @@ final class ed {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!v.field_d) {
             throw new IllegalStateException();
         }
         qi.field_M = true;
-        int discarded$0 = 841566312;
-        vk.a(true);
+        vk.a(true, 841566312);
         hc.field_d = 0;
     }
 
@@ -221,16 +219,14 @@ final class ed {
             if (param0 != null) {
               if (param0.length() != 0) {
                 var7 = (CharSequence) (Object) param0;
-                int discarded$4 = 2;
-                var2 = kf.a(var7);
+                var2 = kf.a(var7, (byte) 2);
                 var3 = 38 % ((-44 - param1) / 47);
                 if (var2 != null) {
                   var4 = (wb) (Object) mc.field_a.a(24710, (long)var2.hashCode());
                   L0: while (true) {
                     if (var4 != null) {
                       var8 = (CharSequence) (Object) var4.field_Ob;
-                      int discarded$5 = 2;
-                      var5 = kf.a(var8);
+                      var5 = kf.a(var8, (byte) 2);
                       if (var5.equals((Object) (Object) var2)) {
                         stackOut_16_0 = (wb) var4;
                         stackIn_17_0 = stackOut_16_0;

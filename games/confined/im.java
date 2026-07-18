@@ -7,7 +7,7 @@ final class im {
     static long field_d;
     static he[] field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 
@@ -85,15 +85,14 @@ final class im {
         return stackIn_1_0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         nf var1 = null;
         nf var3 = null;
         int var4 = 0;
         int var5 = Confined.field_J ? 1 : 0;
         try {
             var1 = new nf(540, 140);
-            int discarded$0 = -8409;
-            vm.a(var1);
+            vm.a(var1, -8409);
             ti.b();
             int var2 = 56;
             fn.d();
@@ -106,8 +105,7 @@ final class im {
             }
             bg.field_c.d();
             var1.b(0, 0);
-            int discarded$1 = 0;
-            ib.b();
+            ib.b(false);
         } catch (RuntimeException runtimeException) {
             throw sd.a((Throwable) (Object) runtimeException, "im.D(" + -85 + ')');
         }

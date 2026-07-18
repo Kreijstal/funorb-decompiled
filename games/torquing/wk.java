@@ -273,9 +273,8 @@ class wk implements si {
     }
 
     final static void a(int param0, t[] param1, t[] param2, int param3, int param4, int param5, int param6, boolean param7, int param8, int param9, int param10, uc param11, int param12, int param13, uc param14) {
-        int discarded$0 = 127;
-        int discarded$1 = 320;
-        pl.a(param12, 0, param4, (t[]) null, param13, param1, cc.field_c, qa.field_l, param14, param2, 0, param11, 0, 0, 240, param6, 0, 480, uf.field_c);
+        Object var16 = null;
+        pl.a(param12, 0, param4, (t[]) null, param13, param1, cc.field_c, qa.field_l, param14, param2, 0, param11, 0, 0, 240, param6, 0, 480, uf.field_c, 320, 127);
         try {
             Torquing.a(-49, param7);
         } catch (RuntimeException runtimeException) {
@@ -321,7 +320,7 @@ class wk implements si {
         return ((wk) this).a((byte) 52, param4).a(((wk) this).field_b[param4].field_e, ((wk) this).field_c, param1, (double)param3, param2, 0, (si) this, param5);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

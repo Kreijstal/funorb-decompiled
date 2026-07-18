@@ -13,14 +13,14 @@ final class el extends dk {
     static hl field_J;
     int field_B;
 
-    public static void e() {
+    public static void e(byte param0) {
         field_J = null;
         field_H = null;
         field_D = null;
         field_A = null;
     }
 
-    final static void a(gi param0, int param1, int param2) {
+    final static void a(gi param0, int param1, int param2, boolean param3) {
         try {
             qc.field_g = param1;
             u.field_c = param0;

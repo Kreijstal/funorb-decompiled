@@ -193,7 +193,7 @@ final class bh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -75;
         field_c = null;
         field_e = null;

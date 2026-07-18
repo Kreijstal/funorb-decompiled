@@ -83,7 +83,7 @@ final class lh {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_n = null;
     }

@@ -32,8 +32,7 @@ final class wda extends rqa {
         String stackOut_6_2 = null;
         try {
           L0: {
-            int discarded$9 = 32;
-            hb.a((String) param0[0].field_b);
+            hb.a((String) param0[0].field_b, 32);
             if (param1 <= -119) {
               stackOut_3_0 = new nc((Object) (Object) "void");
               stackIn_4_0 = stackOut_3_0;
@@ -137,8 +136,7 @@ final class wda extends rqa {
         try {
           L0: {
             L1: {
-              int discarded$2 = 0;
-              chb.a();
+              chb.a(0);
               var13 = param0.field_g.e(0);
               if (var13 != null) {
                 var6 = var13.b(1);
@@ -267,7 +265,7 @@ final class wda extends rqa {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
         field_r = null;
     }

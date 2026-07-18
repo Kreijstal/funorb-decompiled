@@ -295,7 +295,7 @@ final class dq {
         }
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -324,8 +324,7 @@ final class dq {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= 256) {
-                    int discarded$1 = 57;
-                    this.b();
+                    this.b((byte) 57);
                     ((dq) this).field_c = 256;
                     return;
                   } else {
@@ -449,7 +448,7 @@ final class dq {
         }
     }
 
-    private final void b() {
+    private final void b(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -498,16 +497,15 @@ final class dq {
 
     final int a(byte param0) {
         if (((dq) this).field_c == 0) {
-            int discarded$0 = 57;
-            this.b();
+            this.b((byte) 57);
             ((dq) this).field_c = 256;
         }
         if (param0 != -41) {
             ((dq) this).field_a = -75;
         }
-        int fieldTemp$1 = ((dq) this).field_c - 1;
+        int fieldTemp$0 = ((dq) this).field_c - 1;
         ((dq) this).field_c = ((dq) this).field_c - 1;
-        return ((dq) this).field_e[fieldTemp$1];
+        return ((dq) this).field_e[fieldTemp$0];
     }
 
     dq(int[] param0) {
@@ -518,8 +516,7 @@ final class dq {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((dq) this).field_e[var2_int] = param0[var2_int];
             }
-            int discarded$0 = 1;
-            this.a();
+            this.a(true);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "dq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -116,7 +116,7 @@ final class fg extends cg {
         return stackIn_15_0;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_m = null;
         field_n = null;
         field_j = null;

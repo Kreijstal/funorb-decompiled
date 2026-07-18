@@ -49,7 +49,7 @@ final class gk {
     short[] field_R;
     short field_D;
 
-    final static void b() {
+    final static void b(boolean param0) {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
@@ -99,7 +99,7 @@ final class gk {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_N = null;
         field_H = null;
         field_v = null;

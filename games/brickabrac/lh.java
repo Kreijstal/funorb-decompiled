@@ -12,7 +12,7 @@ class lh extends km {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_t = null;
         field_s = null;
         field_r = null;
@@ -320,7 +320,7 @@ class lh extends km {
         return var3;
     }
 
-    final static int g() {
+    final static int g(byte param0) {
         return ki.field_d;
     }
 

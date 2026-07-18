@@ -16,7 +16,7 @@ final class lg {
     static int field_c;
     String field_k;
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
     }
 

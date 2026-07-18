@@ -11,7 +11,7 @@ final class he extends ci {
     static int[] field_Fb;
     private ci field_Kb;
 
-    final static void a(o param0, o param1) {
+    final static void a(o param0, o param1, boolean param2) {
         try {
             if (null != param0.field_c) {
                 param0.c(-2193);
@@ -48,7 +48,7 @@ final class he extends ci {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_Jb = null;
         field_Hb = null;
         field_Fb = null;

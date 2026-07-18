@@ -24,7 +24,7 @@ class wq extends nm {
         ((wq) this).field_k[fieldTemp$2] = (byte)param1;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_i = null;
         field_m = null;
     }
@@ -254,11 +254,10 @@ class wq extends nm {
                 throw new IllegalArgumentException("");
             }
             var4 = (CharSequence) (Object) param0;
-            int discarded$0 = 0;
-            ((wq) this).field_l = ((wq) this).field_l + hj.a(param0.length(), ((wq) this).field_k, (byte) 86, ((wq) this).field_l, var4);
-            int fieldTemp$1 = ((wq) this).field_l;
+            ((wq) this).field_l = ((wq) this).field_l + hj.a(param0.length(), ((wq) this).field_k, (byte) 86, ((wq) this).field_l, var4, 0);
+            int fieldTemp$0 = ((wq) this).field_l;
             ((wq) this).field_l = ((wq) this).field_l + 1;
-            ((wq) this).field_k[fieldTemp$1] = (byte) 0;
+            ((wq) this).field_k[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "wq.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -583,11 +582,10 @@ class wq extends nm {
             ((wq) this).field_l = ((wq) this).field_l + 1;
             ((wq) this).field_k[fieldTemp$0] = (byte) 0;
             var4 = (CharSequence) (Object) param1;
-            int discarded$1 = 0;
-            ((wq) this).field_l = ((wq) this).field_l + hj.a(param1.length(), ((wq) this).field_k, (byte) 86, ((wq) this).field_l, var4);
-            int fieldTemp$2 = ((wq) this).field_l;
+            ((wq) this).field_l = ((wq) this).field_l + hj.a(param1.length(), ((wq) this).field_k, (byte) 86, ((wq) this).field_l, var4, 0);
+            int fieldTemp$1 = ((wq) this).field_l;
             ((wq) this).field_l = ((wq) this).field_l + 1;
-            ((wq) this).field_k[fieldTemp$2] = (byte) 0;
+            ((wq) this).field_k[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "wq.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -727,7 +725,7 @@ class wq extends nm {
         ((wq) this).field_k[((wq) this).field_l + -param0 + -1] = (byte)param0;
     }
 
-    final static tp[] a(String param0, mf param1, String param2) {
+    final static tp[] a(String param0, mf param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -1148,8 +1146,7 @@ class wq extends nm {
 
     wq(int param0) {
         ((wq) this).field_l = 0;
-        int discarded$0 = 113;
-        ((wq) this).field_k = gd.a(param0);
+        ((wq) this).field_k = gd.a(param0, (byte) 113);
     }
 
     wq(byte[] param0) {

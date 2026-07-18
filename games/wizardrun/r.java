@@ -100,8 +100,7 @@ abstract class r implements dk {
         int var4 = wizardrun.field_H;
         try {
             var1 = new o(540, 140);
-            int discarded$0 = 0;
-            ud.a(var1);
+            ud.a(var1, false);
             cj.c();
             ed.d();
             jd.field_f = 0;
@@ -113,8 +112,7 @@ abstract class r implements dk {
             }
             ag.field_t.b();
             var1.a(0, 0);
-            int discarded$1 = 4;
-            bb.b();
+            bb.b(4);
         } catch (RuntimeException runtimeException) {
             throw bd.a((Throwable) (Object) runtimeException, "r.N(" + 350 + ')');
         }

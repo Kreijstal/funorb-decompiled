@@ -28,7 +28,7 @@ abstract class rj {
 
     abstract void c(int param0);
 
-    final static aa a(String param0, byte param1, String param2) {
+    final static aa a(String param0, byte param1, String param2, boolean param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -73,8 +73,7 @@ abstract class rj {
               var6 = null;
               if (param0.indexOf('@') == -1) {
                 var7 = (CharSequence) (Object) param0;
-                int discarded$2 = 44;
-                var4_long = ti.a(var7);
+                var4_long = ti.a(var7, (byte) 44);
                 break L1;
               } else {
                 var6 = (Object) (Object) param0;

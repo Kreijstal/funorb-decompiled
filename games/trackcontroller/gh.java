@@ -14,12 +14,12 @@ final class gh implements t {
     private int field_i;
     private int field_h;
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
         field_c = null;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         if (null == r.field_i) {
             return false;
         }

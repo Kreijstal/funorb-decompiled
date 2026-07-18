@@ -13,7 +13,7 @@ final class dh extends qb {
     int field_p;
     int field_l;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_o = null;
         field_g = null;
     }

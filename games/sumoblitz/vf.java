@@ -8,7 +8,7 @@ final class vf {
     static ki field_a;
     static int field_d;
 
-    final static void a() {
+    final static void a(byte param0) {
         if (null != hc.field_c) {
             hc.field_c.n(-7);
             ro.field_a = new vq();
@@ -206,7 +206,7 @@ final class vf {
         throw new IllegalStateException();
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_e = null;
         field_c = null;

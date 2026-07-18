@@ -8,7 +8,7 @@ abstract class rh extends ca {
     static dg field_r;
     static sc field_p;
 
-    public static void c() {
+    public static void c(int param0) {
         field_p = null;
         field_r = null;
     }
@@ -54,15 +54,14 @@ abstract class rh extends ca {
                     break L1;
                   } else {
                     var5 = null;
-                    String discarded$4 = rh.a((sh) null, (byte) -41, (String) null, (String) null, (String) null);
+                    String discarded$2 = rh.a((sh) null, (byte) -41, (String) null, (String) null, (String) null);
                     break L1;
                   }
                 }
                 L2: while (true) {
                   var4 = param1.nextInt();
                   if (var3_int > var4) {
-                    int discarded$5 = 71;
-                    stackOut_11_0 = gk.a(var4, param2);
+                    stackOut_11_0 = gk.a(var4, param2, (byte) 71);
                     stackIn_12_0 = stackOut_11_0;
                     break L0;
                   } else {

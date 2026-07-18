@@ -97,7 +97,7 @@ final class qk extends ug {
         L0: {
           var13 = SolKnight.field_L ? 1 : 0;
           if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
-            String discarded$3 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           } else {
             break L0;
@@ -205,7 +205,7 @@ final class qk extends ug {
           return ((qk) this).a(-57);
         }
         L5: {
-          boolean discarded$4 = var3.addAll((Collection) (Object) var4);
+          boolean discarded$3 = var3.addAll((Collection) (Object) var4);
           var6_array = var3.toArray();
           var7 = null;
           if (param0 == -93) {
@@ -229,8 +229,7 @@ final class qk extends ug {
             var11 = (java.net.Proxy) var10;
             try {
               L7: {
-                int discarded$5 = 80;
-                var12_ref2 = this.a(var11);
+                var12_ref2 = this.a(var11, 80);
                 if (var12_ref2 != null) {
                   stackOut_23_0 = (java.net.Socket) var12_ref2;
                   stackIn_24_0 = stackOut_23_0;
@@ -333,9 +332,9 @@ final class qk extends ug {
         dc.field_q.requestFocus();
     }
 
-    final static boolean a(CharSequence param0) {
-        RuntimeException var3 = null;
+    final static boolean a(CharSequence param0, boolean param1, int param2) {
         int var3_int = 0;
+        RuntimeException var3 = null;
         String var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -385,19 +384,16 @@ final class qk extends ug {
               } else {
                 if (var3_int <= 12) {
                   L1: {
-                    int discarded$4 = -2;
-                    var4 = jg.a(param0);
+                    var4 = jg.a(param0, -2);
                     if (var4 == null) {
                       break L1;
                     } else {
                       if (var4.length() >= 1) {
                         L2: {
-                          int discarded$5 = 1;
-                          if (ck.a(var4.charAt(0))) {
+                          if (ck.a(var4.charAt(0), true)) {
                             break L2;
                           } else {
-                            int discarded$6 = 1;
-                            if (ck.a(var4.charAt(var4.length() - 1))) {
+                            if (ck.a(var4.charAt(var4.length() - 1), true)) {
                               break L2;
                             } else {
                               var5 = 0;
@@ -414,8 +410,7 @@ final class qk extends ug {
                                 } else {
                                   L4: {
                                     var7 = param0.charAt(var6);
-                                    int discarded$7 = 1;
-                                    if (!ck.a((char) var7)) {
+                                    if (!ck.a((char) var7, true)) {
                                       var5 = 0;
                                       break L4;
                                     } else {
@@ -686,7 +681,7 @@ final class qk extends ug {
         return param0 | param1;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_o = null;
         field_n = null;
         field_j = null;
@@ -695,7 +690,7 @@ final class qk extends ug {
         field_k = null;
     }
 
-    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0, int param1) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;
@@ -837,9 +832,8 @@ final class qk extends ug {
         ((qk) this).field_i = java.net.ProxySelector.getDefault();
     }
 
-    final static void f() {
-        int discarded$0 = 18962;
-        ql.d();
+    final static void f(int param0) {
+        ql.d(18962);
         h.a(4, true);
     }
 

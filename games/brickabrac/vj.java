@@ -27,7 +27,7 @@ final class vj {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_f = null;
         field_a = null;
@@ -60,10 +60,7 @@ final class vj {
             L1: {
               var4_int = 1;
               if (null != dc.field_e) {
-                int discarded$9 = -104;
-                int discarded$10 = 1;
-                int discarded$11 = 256;
-                ul.a(1048576, param3);
+                ul.a(1048576, param3, 256, true, -104);
                 break L1;
               } else {
                 break L1;

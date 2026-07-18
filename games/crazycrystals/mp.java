@@ -98,8 +98,7 @@ final class mp extends ij {
               L1: {
                 var8 = new sa(qe.field_g, param2);
                 qe.field_g.b(-3264, (qm) (Object) var8);
-                int discarded$16 = -120;
-                if (!il.b()) {
+                if (!il.b(-120)) {
                   L2: {
                     ro.field_n = param6;
                     qc.field_i = null;
@@ -278,8 +277,7 @@ final class mp extends ij {
               if (var3_int == 0) {
                 break L0;
               } else {
-                int discarded$7 = -3;
-                this.a(var3_int, param0);
+                this.a(var3_int, param0, -3);
                 continue L2;
               }
             }
@@ -338,7 +336,7 @@ final class mp extends ij {
     mp() {
     }
 
-    private final void a(int param0, ng param1) {
+    private final void a(int param0, ng param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

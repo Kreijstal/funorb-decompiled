@@ -15,7 +15,7 @@ final class jk {
     static cj field_d;
     static int[] field_k;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_i = null;
         field_k = null;

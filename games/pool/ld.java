@@ -135,7 +135,7 @@ final class ld {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (em.field_P > 0) {
             em.field_P = em.field_P - 1;
         }
@@ -145,8 +145,7 @@ final class ld {
         }
         int var1 = -37;
         if (0 < em.field_P) {
-            int discarded$0 = 23323;
-            wa.l();
+            wa.l(23323);
         }
     }
 
@@ -666,7 +665,7 @@ final class ld {
         return 1;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_i = null;
         field_f = null;
         field_h = null;

@@ -561,8 +561,7 @@ class se extends fb {
                 break L1;
               }
             }
-            int discarded$1 = 2278;
-            var15 = var11 * mn.a(var9);
+            var15 = var11 * mn.a(var9, 2278);
             var17 = 0;
             L2: while (true) {
               if (var17 >= param1.length) {

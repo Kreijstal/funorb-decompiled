@@ -110,7 +110,7 @@ final class jia extends rqa {
         super(param0, param1, param2);
     }
 
-    final static int a(int param0) {
+    final static int a(int param0, byte param1) {
         int var2 = 0;
         if (param0 == 0) {
             var2 = kib.field_d;

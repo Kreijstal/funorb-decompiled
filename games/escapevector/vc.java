@@ -14,7 +14,7 @@ final class vc {
     int field_h;
     int field_f;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         int var1 = 112;
         field_i = null;
@@ -166,8 +166,7 @@ final class vc {
                             if (-2 != (var4 & 3)) {
                               ((vc) this).field_d[var3_int + var5] = new int[32];
                               var6 = new int[32];
-                              int discarded$1 = 2147483647;
-                              bf.a(0, 32, param0, 0, 32, var6);
+                              bf.a(0, 32, param0, 0, 32, var6, 2147483647);
                               break L5;
                             } else {
                               ((vc) this).field_d[var5 + var3_int] = si.field_v;

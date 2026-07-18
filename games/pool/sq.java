@@ -343,8 +343,7 @@ abstract class sq {
                     if (param2 <= 105) {
                       var4_array = args;
                       gf.a(92, var4_array);
-                      int discarded$19 = 57;
-                      uf.field_gb = jo.a(args);
+                      uf.field_gb = jo.a(args, 57);
                       break L1;
                     } else {
                       break L2;
@@ -365,8 +364,7 @@ abstract class sq {
                     break L3;
                   }
                 }
-                int discarded$20 = -30914;
-                uf.field_gb = ta.a(stackIn_4_0 != 0);
+                uf.field_gb = ta.a(stackIn_4_0 != 0, -30914);
                 var5 = null;
                 gf.a(108, (String[]) null);
                 break L1;

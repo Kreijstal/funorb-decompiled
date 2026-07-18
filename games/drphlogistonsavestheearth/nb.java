@@ -15,7 +15,7 @@ final class nb {
         return (java.applet.Applet) (Object) hh.field_e;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;

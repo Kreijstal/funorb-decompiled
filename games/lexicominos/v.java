@@ -158,7 +158,7 @@ final class v extends ik {
         return (tb) (Object) new rk();
     }
 
-    final static lg a(String param0, int param1) {
+    final static lg a(String param0, int param1, byte param2) {
         ch var3 = null;
         RuntimeException var3_ref = null;
         ch stackIn_3_0 = null;
@@ -221,7 +221,7 @@ final class v extends ik {
         return (lg) (Object) stackIn_3_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_w = null;
         field_t = null;
         field_B = null;

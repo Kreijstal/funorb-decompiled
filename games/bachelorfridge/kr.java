@@ -20,7 +20,7 @@ final class kr extends sna {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_zb = null;
         int var1 = 0;
         field_xb = null;

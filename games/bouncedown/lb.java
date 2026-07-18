@@ -17,14 +17,13 @@ final class lb {
             ba.field_E = param3;
             l.a(na.field_k / 2, (byte) 127, na.field_e / 2);
             int var4_int = 0;
-            int discarded$0 = 0;
-            hh.b(param0.field_x + param0.field_F, param3.field_F, param0.field_F, param3.field_F + param3.field_x);
+            hh.b(param0.field_x + param0.field_F, param3.field_F, param0.field_F, param3.field_F + param3.field_x, 0);
         } catch (RuntimeException runtimeException) {
             throw ii.a((Throwable) (Object) runtimeException, "lb.C(" + (param0 != null ? "{...}" : "null") + ',' + 320 + ',' + -101 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_g = null;
     }

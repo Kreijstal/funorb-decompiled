@@ -58,8 +58,7 @@ final class tb extends v {
                   }
                 }
                 ((tb) this).field_q = (pc) param1;
-                int discarded$1 = 31383;
-                this.d();
+                this.d(31383);
                 this.a(param2, (byte) 119);
                 ((tb) this).field_c.field_h = 0;
                 ((tb) this).field_b = null;
@@ -141,7 +140,7 @@ final class tb extends v {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_r = null;
         field_o = null;
         field_p = null;
@@ -644,7 +643,7 @@ final class tb extends v {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;

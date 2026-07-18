@@ -240,7 +240,7 @@ final class pf implements ub {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;
@@ -478,15 +478,11 @@ final class pf implements ub {
         try {
           L0: {
             hc.a((byte) 113, param12, param9, param7, param19);
-            int discarded$4 = 121;
-            fr.a(param7);
+            fr.a(param7, (byte) 121);
             sl.a(param17, param11, 45, param10, 1, param1, param3, param7, param18, param6, param14, param0, param16, param8, param15);
-            int discarded$5 = 104;
-            ed.a(true, param7, param2);
-            int discarded$6 = 13;
-            dj.b();
-            int discarded$7 = -24;
-            h.g();
+            ed.a(true, param7, param2, (byte) 104);
+            dj.b((byte) 13);
+            h.g((byte) -24);
             nb.b((byte) 40);
             break L0;
           }
@@ -872,7 +868,7 @@ final class pf implements ub {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, boolean param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -896,8 +892,7 @@ final class pf implements ub {
             try {
               try {
                 var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-                int discarded$2 = -1;
-                param0.getAppletContext().showDocument(hg.a(param0, var2), "_top");
+                param0.getAppletContext().showDocument(hg.a(param0, var2, -1), "_top");
                 return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

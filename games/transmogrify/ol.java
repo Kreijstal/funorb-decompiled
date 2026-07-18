@@ -169,8 +169,7 @@ final class ol {
             return stackIn_11_0;
           }
         } else {
-          int discarded$5 = 0;
-          ol.a();
+          ol.a(false);
           if (null == ((ol) this).field_g) {
             return 0;
           } else {
@@ -190,7 +189,7 @@ final class ol {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_d = null;
         field_e = null;

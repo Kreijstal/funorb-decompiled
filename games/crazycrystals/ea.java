@@ -1096,7 +1096,7 @@ abstract class ea extends pn {
 
     abstract int a(boolean param0, int param1);
 
-    public static void f() {
+    public static void f(int param0) {
         field_q = null;
     }
 
@@ -1851,8 +1851,7 @@ abstract class ea extends pn {
         var4.field_g = new int[1];
         var4.field_f = param0;
         nh.field_A.b(0, (jb) (Object) var4);
-        int discarded$0 = 113;
-        pk.a(5, var4);
+        pk.a(5, var4, (byte) 113);
         return var4;
     }
 

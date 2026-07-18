@@ -9,7 +9,7 @@ final class ab extends ln {
     private int field_i;
     private long field_f;
 
-    private final long b() {
+    private final long b(boolean param0) {
         int var8 = 0;
         int var9 = ZombieDawn.field_J;
         long var2 = System.nanoTime();
@@ -35,8 +35,7 @@ final class ab extends ln {
         if (param0 > -110) {
             ((ab) this).field_e = null;
         }
-        int discarded$0 = 1;
-        ((ab) this).field_h = ((ab) this).field_h + this.b();
+        ((ab) this).field_h = ((ab) this).field_h + this.b(true);
         if (!(~((ab) this).field_h <= ~((ab) this).field_f)) {
             return (-((ab) this).field_h + ((ab) this).field_f) / 1000000L;
         }
@@ -298,8 +297,7 @@ final class ab extends ln {
         if (param1 >= -6) {
             vn[] discarded$0 = ab.a(61, (byte) -100, -10, 45, -84);
         }
-        int discarded$1 = -120;
-        return ca.a(param2, param0, 1, 1, param4, 1, 3, param3);
+        return ca.a(param2, param0, 1, 1, param4, 1, 3, param3, -120);
     }
 
     final static void a(de param0, java.math.BigInteger param1, byte param2, de param3, java.math.BigInteger param4) {

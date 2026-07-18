@@ -11,16 +11,15 @@ final class jb {
     static String field_a;
     static int field_g;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_f = null;
         field_e = null;
         field_h = null;
     }
 
-    final static void a(boolean param0) {
-        int discarded$0 = 121;
-        ta.a(param0);
+    final static void a(boolean param0, byte param1) {
+        ta.a(param0, 121);
         im.a(true, param0);
     }
 

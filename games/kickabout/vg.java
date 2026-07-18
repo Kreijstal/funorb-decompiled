@@ -265,7 +265,7 @@ final class vg extends hd {
         field_Qb = null;
     }
 
-    private final void c() {
+    private final void c(boolean param0) {
         if (!(null != ((vg) this).field_Pb)) {
             return;
         }
@@ -377,8 +377,7 @@ final class vg extends hd {
               }
             }
             L6: {
-              int discarded$1 = 0;
-              c.a(param0);
+              c.a(param0, false);
               if (param1 == 0) {
                 break L6;
               } else {
@@ -413,7 +412,7 @@ final class vg extends hd {
         }
     }
 
-    final static void a(boolean param0, wd param1) {
+    final static void a(boolean param0, wd param1, int param2) {
         ml var3 = null;
         try {
             var3 = or.field_d;
@@ -467,16 +466,15 @@ final class vg extends hd {
         ep.field_e = ss.field_a[param0];
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         if (null == ((vg) this).field_Pb) {
             return;
         }
-        int discarded$0 = 0;
-        this.c();
+        this.c(false);
         this.l(32);
     }
 
-    private final void k() {
+    private final void k(byte param0) {
         if (null == ((vg) this).field_Pb) {
             return;
         }
@@ -531,7 +529,7 @@ final class vg extends hd {
                 if (param2 == 875) {
                   break L1;
                 } else {
-                  int discarded$8 = this.d(-84, 20);
+                  int discarded$5 = this.d(-84, 20);
                   break L1;
                 }
               }
@@ -563,13 +561,13 @@ final class vg extends hd {
                     }
                     L5: {
                       if (((vg) this).field_Mb == ((vg) this).field_Ub.length()) {
-                        StringBuilder discarded$9 = ((vg) this).field_Ub.append(param1);
+                        StringBuilder discarded$6 = ((vg) this).field_Ub.append(param1);
                         break L5;
                       } else {
                         var5 = ((vg) this).field_Ub.toString().substring(((vg) this).field_Mb, ((vg) this).field_Ub.length());
-                        StringBuilder discarded$10 = dj.a(((vg) this).field_Mb, ' ', param2 + -12282, ((vg) this).field_Ub);
-                        StringBuilder discarded$11 = ((vg) this).field_Ub.append(param1);
-                        StringBuilder discarded$12 = ((vg) this).field_Ub.append(var5);
+                        StringBuilder discarded$7 = dj.a(((vg) this).field_Mb, ' ', param2 + -12282, ((vg) this).field_Ub);
+                        StringBuilder discarded$8 = ((vg) this).field_Ub.append(param1);
+                        StringBuilder discarded$9 = ((vg) this).field_Ub.append(var5);
                         break L5;
                       }
                     }
@@ -630,8 +628,7 @@ final class vg extends hd {
                                   if (65 != param0) {
                                     break L8;
                                   } else {
-                                    int discarded$13 = 74;
-                                    this.h();
+                                    this.h((byte) 74);
                                     return true;
                                   }
                                 }
@@ -641,8 +638,7 @@ final class vg extends hd {
                                   break L9;
                                 } else {
                                   if (param0 == 66) {
-                                    int discarded$14 = 0;
-                                    this.c();
+                                    this.c(false);
                                     return true;
                                   } else {
                                     break L9;
@@ -655,8 +651,7 @@ final class vg extends hd {
                                 if (param0 != 67) {
                                   break L6;
                                 } else {
-                                  int discarded$15 = 38;
-                                  this.k();
+                                  this.k((byte) 38);
                                   return true;
                                 }
                               }
@@ -775,8 +770,7 @@ final class vg extends hd {
             var2 = pb.field_E.a(124);
         }
         if (var2.length() == 0) {
-            int discarded$0 = 99;
-            var2 = ue.f();
+            var2 = ue.f((byte) 99);
         }
         if (0 == var2.length()) {
             var2 = pc.field_d;
@@ -828,7 +822,7 @@ final class vg extends hd {
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -938,8 +932,7 @@ final class vg extends hd {
           if (param1 < -83) {
             break L1;
           } else {
-            int discarded$2 = 0;
-            this.c();
+            this.c(false);
             break L1;
           }
         }
@@ -1069,9 +1062,9 @@ final class vg extends hd {
             }
             L6: {
               if (!((vg) this).field_wb) {
-                int dupTemp$2 = ((vg) this).field_Ub.length();
-                ((vg) this).field_Fb = dupTemp$2;
-                ((vg) this).field_Mb = dupTemp$2;
+                int dupTemp$1 = ((vg) this).field_Ub.length();
+                ((vg) this).field_Fb = dupTemp$1;
+                ((vg) this).field_Mb = dupTemp$1;
                 break L6;
               } else {
                 break L6;
@@ -1111,8 +1104,7 @@ final class vg extends hd {
                     L10: {
                       var8 = (String) var7.getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                       this.l(32);
-                      int discarded$3 = -41;
-                      this.a(var8);
+                      this.a(var8, -41);
                       break L10;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter0) {

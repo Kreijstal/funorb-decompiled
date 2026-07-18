@@ -71,9 +71,7 @@ final class fn extends ji {
     }
 
     final static void a(byte param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, int param9, int param10, boolean param11) {
-        int discarded$0 = 16777215;
-        int discarded$1 = 0;
-        ok.a(15, 14, 13, param5, param11, true, 16777215, 12423, param2, 11, param9, param8);
+        ok.a(15, 14, 13, param5, param11, true, 16777215, 12423, param2, 11, param9, param8, 0, 16777215);
     }
 
     public static void g(int param0) {

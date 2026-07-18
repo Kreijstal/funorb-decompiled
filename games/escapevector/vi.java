@@ -10,13 +10,13 @@ final class vi {
     static int field_a;
     static hl field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
         field_e = null;
     }
 
-    final static void a(gi param0) {
+    final static void a(gi param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -135,7 +135,7 @@ final class vi {
         }
     }
 
-    final static void a(int param0, String param1, vl param2, wl param3) {
+    final static void a(int param0, String param1, vl param2, wl param3, boolean param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;

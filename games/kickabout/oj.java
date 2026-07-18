@@ -128,7 +128,7 @@ final class oj extends cm {
         ((oj) this).field_X = true;
     }
 
-    public static void j() {
+    public static void j(byte param0) {
         int var1 = -8;
         field_Q = null;
         field_R = null;

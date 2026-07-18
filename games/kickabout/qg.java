@@ -258,7 +258,7 @@ final class qg extends gn {
     qg() {
     }
 
-    final static void a() {
+    final static void a(int param0) {
         am var1 = null;
         int var2 = Kickabout.field_G;
         try {

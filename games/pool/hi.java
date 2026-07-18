@@ -8,7 +8,7 @@ final class hi extends mb {
     static String field_i;
     private java.nio.ByteBuffer field_l;
 
-    public static void f() {
+    public static void f(int param0) {
         field_k = null;
         field_j = null;
         field_h = null;
@@ -264,7 +264,7 @@ final class hi extends mb {
         return stackIn_68_0;
     }
 
-    final static void g() {
+    final static void g(int param0) {
         f.field_c = uc.a(true, new double[4][][]);
         f.field_a = uc.a(true, new double[4][][]);
     }
@@ -305,7 +305,7 @@ final class hi extends mb {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         oq var2 = ej.field_j;
         var2.b(false, 6);
         var2.a(1, false);

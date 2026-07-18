@@ -8,7 +8,7 @@ final class hw {
     static int[][] field_d;
     static int field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_e = null;
     }

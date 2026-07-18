@@ -34,10 +34,10 @@ final class be implements ntb {
               L2: {
                 var3_int = 34 / ((param0 - 22) / 59);
                 var4 = (be) (Object) param1;
-                if (var4.field_b != var4.field_b) {
+                if (((be) this).field_b != var4.field_b) {
                   break L2;
                 } else {
-                  if (var4.field_a == var4.field_a) {
+                  if (var4.field_a == ((be) this).field_a) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
                     break L1;
@@ -111,8 +111,8 @@ final class be implements ntb {
               L1: {
                 var3 = (be) (Object) param0;
                 var4 = 0;
-                if (var3.field_b != var3.field_b) {
-                  System.out.println("int index has changed. before=" + var3.field_b + ", now=" + var3.field_b);
+                if (((be) this).field_b != var3.field_b) {
+                  System.out.println("int index has changed. before=" + var3.field_b + ", now=" + ((be) this).field_b);
                   var4 = 1;
                   break L1;
                 } else {
@@ -120,11 +120,11 @@ final class be implements ntb {
                 }
               }
               L2: {
-                if (var3.field_a == var3.field_a) {
+                if (var3.field_a == ((be) this).field_a) {
                   break L2;
                 } else {
                   var4 = 1;
-                  System.out.println("int value has changed. before=" + var3.field_a + ", now=" + var3.field_a);
+                  System.out.println("int value has changed. before=" + var3.field_a + ", now=" + ((be) this).field_a);
                   break L2;
                 }
               }
@@ -192,9 +192,7 @@ final class be implements ntb {
                 Object var4 = null;
                 be.a(-122, false, (kka) null);
             }
-            int discarded$0 = 97;
-            int discarded$1 = 256;
-            mi.a(param2, param1);
+            mi.a(param2, param1, 256, (byte) 97);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "be.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -224,8 +222,8 @@ final class be implements ntb {
           L0: {
             var5 = (be) (Object) param1;
             var6 = var5;
-            var6.field_a = var5.field_a;
-            var6.field_b = var5.field_b;
+            var6.field_a = ((be) this).field_a;
+            var6.field_b = ((be) this).field_b;
             if (param0 >= 54) {
               break L0;
             } else {

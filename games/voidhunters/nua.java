@@ -146,7 +146,7 @@ final class nua extends rqa {
         return stackIn_4_0;
     }
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         return true;
     }
 

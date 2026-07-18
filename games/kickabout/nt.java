@@ -18,7 +18,7 @@ final class nt extends hd implements lv {
     rd field_Cb;
     private gr field_Hb;
 
-    final static void j() {
+    final static void j(int param0) {
         int var2 = 0;
         nl var2_ref_nl = null;
         int var3 = 0;
@@ -185,14 +185,13 @@ final class nt extends hd implements lv {
         la.field_e.f(-(la.field_e.field_o >> 2) + param2, param0 - (la.field_e.field_v >> 2));
     }
 
-    final static int[] k() {
+    final static int[] k(int param0) {
         int var1 = 0;
         return new int[]{1, 2, 3, 4};
     }
 
     final static void c(boolean param0) {
-        int discarded$3 = -1456;
-        up.e();
+        up.e(-1456);
         if (param0) {
             Object var2 = null;
             nt.a(-120, (sj) null, 13, (gq) null);
@@ -408,8 +407,7 @@ final class nt extends hd implements lv {
             ou.a((byte) 49, param1);
             ml.a(3, param1);
             ip.a(false);
-            int discarded$0 = -128;
-            fn.d();
+            fn.d((byte) -128);
             up.field_p = 0 - qt.field_l;
             int var4_int = -119 / ((param2 - -39) / 58);
         } catch (RuntimeException runtimeException) {
@@ -631,7 +629,7 @@ final class nt extends hd implements lv {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_yb = null;
         field_zb = null;
         field_Bb = null;
@@ -641,8 +639,8 @@ final class nt extends hd implements lv {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;
-            java.net.URL var2_ref2 = null;
             String var3 = null;
+            java.net.URL var4 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
@@ -671,21 +669,14 @@ final class nt extends hd implements lv {
                         break L2;
                       }
                     }
-                    var2_ref2 = param0.getCodeBase();
-                    int discarded$13 = 3;
-                    var3 = qr.a(param0, var2_ref2).getFile();
-                    int discarded$14 = 25449;
-                    Object discarded$15 = mm.a(new Object[2], param0, "updatelinks");
-                    int discarded$16 = 25449;
-                    Object discarded$17 = mm.a(new Object[2], param0, "updatelinks");
-                    int discarded$18 = 25449;
-                    Object discarded$19 = mm.a(new Object[2], param0, "updatelinks");
-                    int discarded$20 = 25449;
-                    Object discarded$21 = mm.a(new Object[2], param0, "updatelinks");
-                    int discarded$22 = 25449;
-                    Object discarded$23 = mm.a(new Object[2], param0, "updatelinks");
-                    int discarded$24 = 25449;
-                    Object discarded$25 = mm.a(new Object[2], param0, "updatelinks");
+                    var4 = param0.getCodeBase();
+                    var3 = qr.a(param0, var4, 3).getFile();
+                    Object discarded$6 = mm.a(new Object[2], param0, "updatelinks", 25449);
+                    Object discarded$7 = mm.a(new Object[2], param0, "updatelinks", 25449);
+                    Object discarded$8 = mm.a(new Object[2], param0, "updatelinks", 25449);
+                    Object discarded$9 = mm.a(new Object[2], param0, "updatelinks", 25449);
+                    Object discarded$10 = mm.a(new Object[2], param0, "updatelinks", 25449);
+                    Object discarded$11 = mm.a(new Object[2], param0, "updatelinks", 25449);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {

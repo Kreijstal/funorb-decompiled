@@ -9,7 +9,7 @@ final class ph extends hf {
     int field_f;
     static d field_i;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         field_k = null;
         field_i = null;

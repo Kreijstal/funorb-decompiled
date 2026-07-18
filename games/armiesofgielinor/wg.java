@@ -87,8 +87,7 @@ final class wg implements Iterable {
     final static boolean a(char param0, int param1) {
         if (param1 == -3904) {
           if (!Character.isISOControl(param0)) {
-            int discarded$2 = -31000;
-            if (!bi.a(param0)) {
+            if (!bi.a(param0, -31000)) {
               L0: {
                 if (param0 == 45) {
                   break L0;
@@ -118,8 +117,7 @@ final class wg implements Iterable {
         } else {
           field_b = null;
           if (!Character.isISOControl(param0)) {
-            int discarded$3 = -31000;
-            if (!bi.a(param0)) {
+            if (!bi.a(param0, -31000)) {
               if (param0 != 45) {
                 if (param0 != 160) {
                   L1: {

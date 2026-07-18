@@ -8,7 +8,7 @@ final class md {
     static byte[] field_c;
     static vh field_d;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         field_d = null;
         return re.field_b;
     }
@@ -23,8 +23,7 @@ final class md {
         fb.b(320, 240);
         hr.field_q.field_k = 0;
         fb.a((in) (Object) new dp(ep.field_F, hr.field_q, 32, 128));
-        int discarded$0 = 0;
-        di.a();
+        di.a(0);
     }
 
     public static void a(boolean param0) {

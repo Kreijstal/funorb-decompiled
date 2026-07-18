@@ -68,7 +68,7 @@ final class s extends ke {
         return ue.a(9, param0, 1, param2, param1);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
         field_h = null;
         field_f = null;
@@ -89,7 +89,7 @@ final class s extends ke {
         }
     }
 
-    final static String a(ng param0) {
+    final static String a(ng param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -174,8 +174,7 @@ final class s extends ke {
     }
 
     final long a(boolean param0) {
-        int discarded$2 = 14;
-        ((s) this).field_i = ((s) this).field_i + this.c();
+        ((s) this).field_i = ((s) this).field_i + this.c((byte) 14);
         if (~((s) this).field_e >= ~((s) this).field_i) {
           if (!param0) {
             return 27L;
@@ -187,7 +186,7 @@ final class s extends ke {
         }
     }
 
-    private final long c() {
+    private final long c(byte param0) {
         long var2 = 0L;
         long var4 = 0L;
         long var6 = 0L;

@@ -89,11 +89,11 @@ final class nh extends br {
         return stackIn_6_0;
     }
 
-    final static boolean c() {
+    final static boolean c(byte param0) {
         return ab.field_k;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         field_i = null;
         field_g = null;

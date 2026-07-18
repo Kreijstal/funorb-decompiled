@@ -5,7 +5,7 @@ final class ava {
     static int field_a;
     private static String field_z;
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0, int param1, boolean param2) {
         return (52 & param1) != 0;
     }
 

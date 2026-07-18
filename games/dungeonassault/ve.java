@@ -9,7 +9,7 @@ final class ve {
     int field_d;
     static String field_c;
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         return ed.c(true) || pb.field_G <= 0;
     }
 
@@ -28,16 +28,14 @@ final class ve {
         if (param0) {
           L0: while (true) {
             if (((Math.abs(((ve) this).field_d) | Math.abs(((ve) this).field_f) | Math.abs(((ve) this).field_b)) & -65536) == 0) {
-              int discarded$2 = 0;
-              var2 = this.c() >> 1;
+              var2 = this.c(false) >> 1;
               var3 = 15;
               L1: while (true) {
                 if (65536 > var2) {
                   ((ve) this).field_d = (((ve) this).field_d << var3) / var2;
                   ((ve) this).field_f = (((ve) this).field_f << var3) / var2;
                   ((ve) this).field_b = (((ve) this).field_b << var3) / var2;
-                  int discarded$3 = 0;
-                  var4 = this.c();
+                  var4 = this.c(false);
                   if (var4 >= 64512) {
                     if (66560 < var4) {
                       throw new RuntimeException();
@@ -75,7 +73,7 @@ final class ve {
         field_c = null;
     }
 
-    final static String a(int param0, long param1, int param2, int param3) {
+    final static String a(int param0, long param1, int param2, int param3, boolean param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -153,7 +151,7 @@ final class ve {
         }
     }
 
-    private final int c() {
+    private final int c(boolean param0) {
         int var2 = 0;
         var2 = (((ve) this).field_b >> 2) * (((ve) this).field_b >> 2) + (((ve) this).field_f >> 2) * (((ve) this).field_f >> 2) + (((ve) this).field_d >> 2) * (((ve) this).field_d >> 2);
         if (var2 < 0) {

@@ -268,7 +268,7 @@ abstract class k extends bw {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         eia.field_d = dg.field_k;
         jf.field_m = dg.field_f;
         tq.field_r = dg.field_h;

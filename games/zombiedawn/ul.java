@@ -123,7 +123,7 @@ final class ul {
         throw new Error();
     }
 
-    final static boolean a(int param0) {
+    final static boolean a(int param0, byte param1) {
         int var2 = 1;
         return ~param0 == ~(-param0 & param0) ? true : false;
     }

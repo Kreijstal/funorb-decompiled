@@ -61,8 +61,7 @@ final class dk {
             }
           }
           L2: {
-            int discarded$3 = -102;
-            var7 = this.b();
+            var7 = this.b((byte) -102);
             if (((dk) this).field_d != 2) {
               break L2;
             } else {
@@ -92,8 +91,7 @@ final class dk {
             if (((dk) this).field_d != 0) {
               if (((dk) this).field_d != 1) {
                 if (((dk) this).field_d == 4) {
-                  int discarded$4 = -18641;
-                  var8 = this.c();
+                  var8 = this.c(-18641);
                   var9 = ((dk) this).field_b + " - ";
                   ((dk) this).field_s.b(var9, ((dk) this).field_f - -((dk) this).field_j, var8, ((dk) this).field_r[1], -1);
                   ((dk) this).field_s.a(((dk) this).field_o, ((dk) this).field_f - -((dk) this).field_j, var8, ((dk) this).field_r[var6], -1);
@@ -104,8 +102,7 @@ final class dk {
                     break L5;
                   }
                 } else {
-                  int discarded$5 = -18641;
-                  var8 = this.c();
+                  var8 = this.c(-18641);
                   var9_int = ((dk) this).field_p / 2 + ((dk) this).field_f;
                   lb.a(var8, ((dk) this).field_o, ((dk) this).field_r[var6], -128, var9_int);
                   break L5;
@@ -153,7 +150,7 @@ final class dk {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -205,10 +202,8 @@ final class dk {
         try {
             ((dk) this).field_n = param4;
             ((dk) this).field_g = param5;
-            int discarded$0 = -1;
-            ((dk) this).field_p = this.d();
-            int discarded$1 = -16;
-            ((dk) this).field_i = this.a();
+            ((dk) this).field_p = this.d(-1);
+            ((dk) this).field_i = this.a((byte) -16);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "dk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
@@ -221,7 +216,7 @@ final class dk {
         return ((dk) this).field_n.field_A;
     }
 
-    private final int d() {
+    private final int d(int param0) {
         int var2 = this.b(0);
         int var3 = this.a(false);
         return var3 > var2 ? var3 : var2;
@@ -492,12 +487,11 @@ final class dk {
         }
     }
 
-    private final int a() {
+    private final int a(byte param0) {
         if (!(((dk) this).field_d != 1)) {
             return 0;
         }
-        int discarded$0 = -95;
-        int var2 = this.f();
+        int var2 = this.f(-95);
         int var3 = this.a(0);
         return var3 + var2;
     }
@@ -506,22 +500,20 @@ final class dk {
         this(param0, param1, param2, param3, param5);
         try {
             ((dk) this).field_g = param4;
-            int discarded$0 = -1;
-            ((dk) this).field_p = this.d();
-            int discarded$1 = -16;
-            ((dk) this).field_i = this.a();
+            ((dk) this).field_p = this.d(-1);
+            ((dk) this).field_i = this.a((byte) -16);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "dk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final int c() {
+    private final int c(int param0) {
         int var2 = ((dk) this).field_i + ((dk) this).field_l;
         int var3 = -3 + var2 - ((dk) this).field_s.field_x;
         return var3;
     }
 
-    final static void e() {
+    final static void e(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -660,7 +652,7 @@ final class dk {
         return false;
     }
 
-    private final int f() {
+    private final int f(int param0) {
         int var2 = ((dk) this).field_s.field_r + ((dk) this).field_s.field_x;
         int var3 = var2 + 6;
         int var4 = 50;
@@ -692,7 +684,7 @@ final class dk {
         ((dk) this).field_f = param1;
     }
 
-    private final int b() {
+    private final int b(byte param0) {
         int var2 = 0;
         if (!(1 != ((dk) this).field_d)) {
             return 0;
@@ -700,7 +692,7 @@ final class dk {
         return mj.field_d < ((dk) this).field_q ? (((dk) this).field_q + -mj.field_d) * 2 : 0;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_h = null;
     }
 
@@ -718,8 +710,7 @@ final class dk {
             ((dk) this).field_d = -53;
         }
         ((dk) this).field_p = param2;
-        int discarded$0 = 160;
-        this.h();
+        this.h(160);
     }
 
     dk(int param0, int param1, int param2, String param3, int param4, ed param5, int param6, ih param7) {
@@ -728,10 +719,8 @@ final class dk {
             ((dk) this).field_n = param5;
             ((dk) this).field_b = param2;
             ((dk) this).field_j = param4;
-            int discarded$0 = -1;
-            ((dk) this).field_p = this.d();
-            int discarded$1 = -16;
-            ((dk) this).field_i = this.a();
+            ((dk) this).field_p = this.d(-1);
+            ((dk) this).field_i = this.a((byte) -16);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "dk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }

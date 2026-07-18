@@ -1476,7 +1476,7 @@ final class hc {
         }
     }
 
-    final static la a(boolean param0, boolean param1, int param2) {
+    final static la a(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5) {
         try {
             Object var6 = null;
             Object var7 = null;
@@ -1541,7 +1541,7 @@ final class hc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_u = null;
         field_c = null;
         field_d = null;

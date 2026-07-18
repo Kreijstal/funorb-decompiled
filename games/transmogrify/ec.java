@@ -69,7 +69,7 @@ abstract class ec {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_d = null;
         field_b = null;

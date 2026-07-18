@@ -11,7 +11,7 @@ final class td {
     static String[] field_e;
     static volatile boolean field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_e = null;
         field_a = null;
@@ -260,9 +260,7 @@ final class td {
                         var19 = 0;
                         L5: while (true) {
                           if (3 <= var19) {
-                            int discarded$2 = 0;
-                            int discarded$3 = 1;
-                            ch.a(HoldTheLine.field_E, false, fe.field_b, (byte) 96, var18);
+                            ch.a(HoldTheLine.field_E, false, fe.field_b, (byte) 96, var18, true, false);
                             ai.a(-4006, var8, var9, var14, var18, var13, var7, var15);
                             var16++;
                             continue L3;

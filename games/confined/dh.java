@@ -70,8 +70,7 @@ class dh extends sj implements el {
           L0: {
             var4_int = param3.a(-37, param2);
             var5 = param3.a(var4_int, param1, -127);
-            int discarded$2 = 0;
-            stackOut_2_0 = ci.a(var4_int, param3, var5);
+            stackOut_2_0 = ci.a(var4_int, param3, var5, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -241,7 +240,7 @@ class dh extends sj implements el {
         return stackIn_4_0;
     }
 
-    final static void a(int param0, qn param1) {
+    final static void a(int param0, qn param1, int param2) {
         hb var3 = vh.field_a;
         var3.b(true, 3);
         var3.f(118, 5);
@@ -458,8 +457,7 @@ class dh extends sj implements el {
                 return;
               }
             } else {
-              int discarded$2 = 2;
-              bh.b();
+              bh.b(2);
               return;
             }
           } else {
@@ -531,7 +529,7 @@ class dh extends sj implements el {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_vb = null;
     }
 

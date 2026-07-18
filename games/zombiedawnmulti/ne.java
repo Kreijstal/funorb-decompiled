@@ -206,7 +206,7 @@ class ne extends ie implements in {
         po.field_n = param3;
     }
 
-    public static void n() {
+    public static void n(int param0) {
         field_Ab = null;
         field_vb = null;
     }

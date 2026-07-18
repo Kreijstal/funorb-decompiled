@@ -47,8 +47,7 @@ final class fpa extends uj {
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4) {
         if (li.field_i) {
-          int discarded$2 = 1;
-          feb.a(og.field_r).a(param4, param3, param0, param1, (byte) -45);
+          feb.a(og.field_r, true).a(param4, param3, param0, param1, (byte) -45);
           return;
         } else {
           qca.a(param3, param1, param4, true, param0);

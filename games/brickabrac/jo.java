@@ -75,7 +75,7 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_j = null;
         field_k = null;
         field_h = null;
@@ -103,9 +103,8 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
         try {
           L0: {
             L1: {
-              int discarded$5 = 0;
-              this.c();
-              boolean discarded$6 = param3.drawImage(((jo) this).field_c, param1, param0, (java.awt.image.ImageObserver) this);
+              this.c(0);
+              boolean discarded$3 = param3.drawImage(((jo) this).field_c, param1, param0, (java.awt.image.ImageObserver) this);
               if (param2 == -17260) {
                 break L1;
               } else {
@@ -154,19 +153,16 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
         ((jo) this).field_g = param3;
         ((jo) this).field_i = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
         ((jo) this).field_c = param0.createImage((java.awt.image.ImageProducer) this);
-        int discarded$0 = 0;
-        this.c();
-        boolean discarded$1 = param0.prepareImage(((jo) this).field_c, (java.awt.image.ImageObserver) this);
-        int discarded$2 = 0;
-        this.c();
-        boolean discarded$10 = param0.prepareImage(((jo) this).field_c, (java.awt.image.ImageObserver) this);
+        this.c(0);
+        boolean discarded$0 = param0.prepareImage(((jo) this).field_c, (java.awt.image.ImageObserver) this);
+        this.c(0);
+        boolean discarded$8 = param0.prepareImage(((jo) this).field_c, (java.awt.image.ImageObserver) this);
         if (!param2) {
             return;
         }
         try {
-            int discarded$11 = 0;
-            this.c();
-            boolean discarded$12 = param0.prepareImage(((jo) this).field_c, (java.awt.image.ImageObserver) this);
+            this.c(0);
+            boolean discarded$9 = param0.prepareImage(((jo) this).field_c, (java.awt.image.ImageObserver) this);
             ((jo) this).a((byte) 100);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "jo.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -248,7 +244,7 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    private final synchronized void c() {
+    private final synchronized void c(int param0) {
         if (!(((jo) this).field_l != null)) {
             return;
         }

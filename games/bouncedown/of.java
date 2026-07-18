@@ -15,12 +15,11 @@ final class of {
             na.a();
             na.a();
         }
-        int discarded$0 = 1;
-        pj.a(param0);
+        pj.a(param0, 1);
         int var3 = -128 / ((param2 - 41) / 34);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_b = null;
         field_a = null;

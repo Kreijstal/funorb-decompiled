@@ -23,7 +23,11 @@ public class NativeInterface {
     public final native void setAmbient(float param0);
 
     public NativeInterface(int param0, int param1) {
-        this.init(param0, param1);
+        try {
+            this.init(param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw runtimeException;
+        }
     }
 
     private final native void init(int param0, int param1);

@@ -5,7 +5,7 @@ final class tab extends rqa {
     static String field_o;
     static int[][] field_p;
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_p = null;
     }

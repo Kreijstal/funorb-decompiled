@@ -63,8 +63,7 @@ final class ofa extends sna {
         try {
           L0: {
             L1: {
-              int discarded$6 = -36;
-              cq discarded$7 = tw.a(param1);
+              cq discarded$3 = tw.a(param1, (byte) -36);
               if (param0 == 0) {
                 break L1;
               } else {

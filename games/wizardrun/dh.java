@@ -6,7 +6,7 @@ final class dh {
     static String field_c;
     static int field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
     }
 
@@ -61,8 +61,7 @@ final class dh {
                   var5 = 0;
                   L1: while (true) {
                     if (var5 >= var4.length) {
-                      int discarded$2 = -125;
-                      stackOut_18_0 = u.b(var3[var3.length + -1]);
+                      stackOut_18_0 = u.b(var3[var3.length + -1], (byte) -125);
                       stackIn_19_0 = stackOut_18_0;
                       break L0;
                     } else {

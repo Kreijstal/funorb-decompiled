@@ -6,7 +6,7 @@ final class ge extends ms {
     int field_m;
     static String field_l;
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
         field_k = null;
     }

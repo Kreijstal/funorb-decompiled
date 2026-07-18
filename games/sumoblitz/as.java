@@ -11,7 +11,7 @@ final class as extends nt {
     private int field_u;
     static ns field_w;
 
-    final static void f() {
+    final static void f(int param0) {
         ct var1 = null;
         byte[] var3 = null;
         ks var1_ref = null;
@@ -19,14 +19,12 @@ final class as extends nt {
         if (null == pd.field_n) {
             var1 = new ct();
             var3 = var1.a(128, 128, false, 16);
-            int discarded$0 = 0;
-            pd.field_n = aj.a((byte) -125, var3);
+            pd.field_n = aj.a((byte) -125, var3, false);
         }
         if (!(mk.field_d != null)) {
             var1_ref = new ks();
             var4 = var1_ref.b(1, 128, 128, 16);
-            int discarded$1 = 0;
-            mk.field_d = aj.a((byte) -120, var4);
+            mk.field_d = aj.a((byte) -120, var4, false);
         }
     }
 

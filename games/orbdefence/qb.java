@@ -6,7 +6,7 @@ final class qb {
     static k field_a;
     static int field_c;
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         return n.b((byte) 111) || tc.field_b <= 0;
     }
 

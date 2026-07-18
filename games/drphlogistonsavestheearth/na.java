@@ -13,7 +13,7 @@ abstract class na {
     static he field_c;
     int field_g;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return sg.field_a;
     }
 
@@ -166,7 +166,7 @@ abstract class na {
 
     abstract void a(java.awt.Graphics param0, int param1, int param2, int param3);
 
-    final static vj a(boolean param0, int param1) {
+    final static vj a(boolean param0, int param1, boolean param2, boolean param3, boolean param4, int param5) {
         try {
             Object var6 = null;
             Object var7 = null;

@@ -72,7 +72,7 @@ final class jd extends jh {
         }
     }
 
-    final static boolean g() {
+    final static boolean g(byte param0) {
         pm var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -166,7 +166,7 @@ final class jd extends jh {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_D = null;
         field_F = null;
     }
@@ -180,7 +180,7 @@ final class jd extends jh {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0, int param1) {
         q var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -197,17 +197,13 @@ final class jd extends jh {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    int discarded$12 = 6;
-                    int discarded$13 = 0;
-                    lc.b();
+                    lc.b(0, 6);
                     var2 = qf.field_a.f(-24059);
                     continue L2;
                   }
                 }
               } else {
-                int discarded$14 = 1;
-                int discarded$15 = 6;
-                l.a(var4);
+                l.a(var4, 6, 1);
                 var4 = (ni) (Object) vb.field_f.f(-24059);
                 continue L1;
               }

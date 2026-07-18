@@ -251,7 +251,7 @@ final class hda extends k {
         ((hda) this).field_m = 0;
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var5 = 0;
         int var6 = BachelorFridge.field_y;
         ((hda) this).field_q = new int[((hda) this).field_k + 1];
@@ -268,7 +268,7 @@ final class hda extends k {
         ((hda) this).field_p[((hda) this).field_k] = ((hda) this).field_p[0] + 4096;
     }
 
-    final static void a(int param0, kia param1, boolean param2) {
+    final static void a(int param0, kia param1, boolean param2, int param3) {
         Object var4 = null;
         RuntimeException var4_ref = null;
         Throwable var5 = null;
@@ -292,8 +292,7 @@ final class hda extends k {
           L0: {
             L1: {
               if (kw.field_j != null) {
-                int discarded$3 = -112;
-                uka.a(1048576, param1, 256, param2);
+                uka.a(1048576, param1, 256, param2, (byte) -112);
                 break L1;
               } else {
                 break L1;
@@ -366,8 +365,7 @@ final class hda extends k {
         if (param0 != -68) {
             return;
         }
-        int discarded$0 = 2048;
-        this.d();
+        this.d(2048);
     }
 
     static {

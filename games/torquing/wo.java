@@ -68,7 +68,7 @@ final class wo implements Iterator {
         return ((wo) this).field_a.field_a != ((wo) this).field_c;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(ff.field_a)) {
             throw new IllegalStateException();
         }

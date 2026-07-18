@@ -253,7 +253,7 @@ final class ak {
         return stackIn_12_0 != 0;
     }
 
-    final static od[] a() {
+    final static od[] a(boolean param0) {
         return new od[]{mb.field_b, rl.field_W, td.field_I};
     }
 

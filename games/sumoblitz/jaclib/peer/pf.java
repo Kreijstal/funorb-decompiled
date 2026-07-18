@@ -9,8 +9,7 @@ public final class pf {
     private jaclib.peer.PeerReference c;
 
     public final void b(int param0) {
-        int discarded$0 = 0;
-        this.a();
+        this.a(false);
         if (param0 == 12575) {
             return;
         }
@@ -79,12 +78,10 @@ public final class pf {
     public final void a(int param0) {
         Object var3 = null;
         if (param0 == -25924) {
-          int discarded$8 = 0;
-          this.a();
+          this.a(false);
           L0: while (true) {
             if (((jaclib.peer.pf) this).c == null) {
-              int discarded$9 = 0;
-              this.a();
+              this.a(false);
               return;
             } else {
               this.a(19176, ((jaclib.peer.pf) this).c);
@@ -94,12 +91,10 @@ public final class pf {
         } else {
           var3 = null;
           ((jaclib.peer.pf) this).a((jaclib.peer.PeerReference) null, -79);
-          int discarded$10 = 0;
-          this.a();
+          this.a(false);
           L1: while (true) {
             if (((jaclib.peer.pf) this).c == null) {
-              int discarded$11 = 0;
-              this.a();
+              this.a(false);
               return;
             } else {
               this.a(19176, ((jaclib.peer.pf) this).c);
@@ -129,7 +124,7 @@ public final class pf {
         }
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         java.lang.ref.Reference var2 = null;
         jaclib.peer.PeerReference var3 = null;
         L0: while (true) {

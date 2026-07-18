@@ -10,7 +10,7 @@ final class lk {
     static int field_f;
     private static String field_z;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_d = null;
     }

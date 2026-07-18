@@ -74,7 +74,7 @@ final class iu extends gn {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_e = null;
     }

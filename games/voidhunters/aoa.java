@@ -254,11 +254,11 @@ final class aoa implements ntb {
             L1: {
               var3 = (aoa) (Object) param0;
               var4 = 0;
-              if (var3.field_b == var3.field_b) {
+              if (var3.field_b == ((aoa) this).field_b) {
                 break L1;
               } else {
                 var4 = 1;
-                System.out.println("int parent_player has changed. before=" + var3.field_b + ", now=" + var3.field_b);
+                System.out.println("int parent_player has changed. before=" + var3.field_b + ", now=" + ((aoa) this).field_b);
                 break L1;
               }
             }
@@ -462,7 +462,7 @@ final class aoa implements ntb {
             L1: {
               var3 = (aoa) (Object) param1;
               var4 = -12 % ((param0 - 22) / 59);
-              if (var3.field_b == var3.field_b) {
+              if (var3.field_b == ((aoa) this).field_b) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -507,7 +507,7 @@ final class aoa implements ntb {
         return stackIn_3_0 != 0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
     }
 

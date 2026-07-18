@@ -27,12 +27,10 @@ final class fha extends at {
             break L0;
           }
         }
-        int fieldTemp$6 = ((fha) this).field_m + 1;
+        int fieldTemp$2 = ((fha) this).field_m + 1;
         ((fha) this).field_m = ((fha) this).field_m + 1;
-        int discarded$7 = -18093;
-        if (fieldTemp$6 >= this.d()) {
-          int discarded$8 = 1;
-          this.e();
+        if (fieldTemp$2 >= this.d(-18093)) {
+          this.e(1);
           return true;
         } else {
           return false;
@@ -177,10 +175,10 @@ final class fha extends at {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
     }
 
-    private final int d() {
+    private final int d(int param0) {
         return 10;
     }
 

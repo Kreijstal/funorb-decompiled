@@ -173,17 +173,8 @@ final class vb extends pl {
         return ((vb) this).field_H.a(-5);
     }
 
-    final static o[] c() {
-        int discarded$0 = 1;
-        int discarded$1 = 0;
-        int discarded$2 = 3;
-        int discarded$3 = 0;
-        int discarded$4 = 1;
-        int discarded$5 = 1;
-        int discarded$6 = 1;
-        int discarded$7 = 0;
-        int discarded$8 = 65793;
-        return cb.a();
+    final static o[] c(int param0, int param1, int param2, int param3, int param4) {
+        return cb.a(65793, 0, 1, true, 1, 0, 3, 0, 1);
     }
 
     final int e(int param0) {
@@ -193,7 +184,7 @@ final class vb extends pl {
         return ((vb) this).field_K;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_I = null;
         field_F = null;
     }

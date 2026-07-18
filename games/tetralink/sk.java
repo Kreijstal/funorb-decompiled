@@ -722,8 +722,7 @@ final class sk {
                 if (param0 != 0) {
                   break L1;
                 } else {
-                  int discarded$2 = 37956674;
-                  var10 = mn.a(param1);
+                  var10 = mn.a(param1, 37956674);
                   var6_array = var10;
                   if (var6_array != null) {
                     var7_int = 0;
@@ -758,8 +757,7 @@ final class sk {
                   var7 = (java.awt.Frame) var11.field_f;
                   if (var7 != null) {
                     if (var11.field_d == 2) {
-                      int discarded$3 = 0;
-                      r.a(param1, var7);
+                      r.a(param1, var7, 0);
                       stackOut_26_0 = null;
                       stackIn_27_0 = stackOut_26_0;
                       break L0;
@@ -829,7 +827,7 @@ final class sk {
         return "" + ((sk) this).field_d;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_b = null;
         field_f = null;
         field_a = null;
@@ -950,7 +948,7 @@ final class sk {
         return stackIn_6_0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         gd var1_ref = null;
         el var1_ref2 = null;
@@ -1141,8 +1139,7 @@ final class sk {
                     }
                   }
                   var7_ref_String = param1.substring(var6_int + 2, var5);
-                  int discarded$7 = 10;
-                  if (!ni.a((CharSequence) (Object) var7_ref_String)) {
+                  if (!ni.a((CharSequence) (Object) var7_ref_String, 10)) {
                     continue L2;
                   } else {
                     if (var5 >= var3_int) {
@@ -1150,8 +1147,7 @@ final class sk {
                     } else {
                       if (62 == param1.charAt(var5)) {
                         var5++;
-                        int discarded$8 = 10;
-                        var8 = rc.a((CharSequence) (Object) var7_ref_String);
+                        var8 = rc.a((CharSequence) (Object) var7_ref_String, 10);
                         var4 = var4 + (args[var8].length() - (-var6_int + var5));
                         continue L2;
                       } else {
@@ -1167,7 +1163,7 @@ final class sk {
                 L5: while (true) {
                   var8 = param1.indexOf("<%", var5);
                   if (var8 < 0) {
-                    StringBuilder discarded$9 = var6.append(param1.substring(var7));
+                    StringBuilder discarded$3 = var6.append(param1.substring(var7));
                     stackOut_26_0 = var6.toString();
                     stackIn_27_0 = stackOut_26_0;
                     break L0;
@@ -1187,8 +1183,7 @@ final class sk {
                         }
                       }
                       var9 = param1.substring(2 + var8, var5);
-                      int discarded$10 = 10;
-                      if (ni.a((CharSequence) (Object) var9)) {
+                      if (ni.a((CharSequence) (Object) var9, 10)) {
                         if (var5 >= var3_int) {
                           continue L5;
                         } else {
@@ -1196,10 +1191,9 @@ final class sk {
                             continue L5;
                           } else {
                             var5++;
-                            int discarded$11 = 10;
-                            var10 = rc.a((CharSequence) (Object) var9);
-                            StringBuilder discarded$12 = var6.append(param1.substring(var7, var8));
-                            StringBuilder discarded$13 = var6.append(args[var10]);
+                            var10 = rc.a((CharSequence) (Object) var9, 10);
+                            StringBuilder discarded$4 = var6.append(param1.substring(var7, var8));
+                            StringBuilder discarded$5 = var6.append(args[var10]);
                             var7 = var5;
                             continue L5;
                           }

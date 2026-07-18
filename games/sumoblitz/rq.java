@@ -11,13 +11,12 @@ abstract class rq {
         int var2 = -35 / ((param0 - 41) / 46);
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (null == wd.field_e) {
-          int discarded$4 = 106;
-          rq.c();
+          rq.c(106);
           return;
         } else {
           var1 = (Object) (Object) wd.field_e;
@@ -27,15 +26,14 @@ abstract class rq {
               break L0;
             }
           }
-          int discarded$5 = 106;
-          rq.c();
+          rq.c(106);
           return;
         }
     }
 
     abstract void a(int param0, int param1, int param2);
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_a = null;
     }

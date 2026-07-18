@@ -12,7 +12,7 @@ final class qd {
     static String field_i;
     static pi field_b;
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_h = null;
         field_a = null;
@@ -105,7 +105,7 @@ final class qd {
         return stackIn_12_0;
     }
 
-    final static Boolean a() {
+    final static Boolean a(int param0) {
         Boolean var1 = jl.field_T;
         jl.field_T = null;
         return var1;

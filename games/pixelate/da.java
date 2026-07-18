@@ -87,8 +87,7 @@ final class da extends jj {
         String stackOut_15_2 = null;
         try {
           L0: {
-            int discarded$1 = 320;
-            vc.a(param17, 8, 8, new sb(param2), 2, new sb(param16), 480, param11, 240, param7, 0, param18, 0, new sb(param0), param19, param4, (byte) 119, param15, param20, param6);
+            vc.a(param17, 8, 8, new sb(param2), 2, new sb(param16), 480, param11, 240, param7, 0, param18, 0, new sb(param0), param19, param4, (byte) 119, param15, param20, param6, 320);
             var21_int = -40;
             break L0;
           }
@@ -227,14 +226,13 @@ final class da extends jj {
     da(String param0, tf[] param1) {
         super(param0, param1);
         try {
-            int discarded$0 = -14116;
-            this.d();
+            this.d(-14116);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void e() {
+    final static void e(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -358,7 +356,7 @@ final class da extends jj {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = Pixelate.field_H ? 1 : 0;

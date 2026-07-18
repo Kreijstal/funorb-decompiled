@@ -11,7 +11,7 @@ final class jj extends fb {
     static vo field_D;
     private int field_I;
 
-    public static void j() {
+    public static void j(int param0) {
         field_G = null;
         field_H = null;
         field_D = null;
@@ -63,11 +63,11 @@ final class jj extends fb {
         ((jj) this).field_E = hp.field_A.f(237239984) + 40;
     }
 
-    final static String i() {
+    final static String i(int param0) {
         return fj.field_g.a(true);
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         int var1_int = 0;
         int var2 = ZombieDawn.field_J;
         try {
@@ -76,8 +76,7 @@ final class jj extends fb {
             for (var1_int = 256; var1_int > 0; var1_int--) {
                 bi.g(256, 256, var1_int, -var1_int + 256);
             }
-            int discarded$0 = 115;
-            jj.j();
+            jj.j(115);
             cn.field_f.b(109);
         } catch (RuntimeException runtimeException) {
             throw sh.a((Throwable) (Object) runtimeException, "jj.G(" + false + ')');

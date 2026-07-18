@@ -36,8 +36,7 @@ final class bi extends pi {
         var4 = MinerDisturbance.field_ab;
         try {
           L0: {
-            int discarded$6 = 0;
-            if (ok.a(111, param2)) {
+            if (ok.a(111, param2, false)) {
               field_p = -19;
               var3_int = 0;
               L1: while (true) {
@@ -135,8 +134,7 @@ final class bi extends pi {
                   if (ra.a((byte) 121, (char) var3)) {
                     break L2;
                   } else {
-                    int discarded$9 = -68;
-                    if (!g.a((char) var3)) {
+                    if (!g.a((char) var3, (byte) -68)) {
                       stackOut_6_0 = 1;
                       stackIn_7_0 = stackOut_6_0;
                       return stackIn_7_0 != 0;
@@ -183,7 +181,7 @@ final class bi extends pi {
         return stackIn_10_0 != 0;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return fh.field_b >= 10 && 13 <= af.field_u;
     }
 
@@ -191,7 +189,7 @@ final class bi extends pi {
         throw new Error();
     }
 
-    final static String a(int[] param0) {
+    final static String a(int[] param0, boolean param1) {
         StringBuilder var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

@@ -60,8 +60,7 @@ final class s extends nf implements ql {
                 } else {
                   var3 = (Object) (Object) pd.field_e;
                   ((s) this).field_p = ((s) this).field_p + 10;
-                  int discarded$3 = 352;
-                  if (!da.a()) {
+                  if (!da.a(352)) {
                     break L1;
                   } else {
                     var3 = (Object) (Object) kk.field_h;
@@ -141,7 +140,7 @@ final class s extends nf implements ql {
         }
     }
 
-    public static void q() {
+    public static void q(int param0) {
         field_S = null;
         field_Q = null;
     }
@@ -254,7 +253,7 @@ final class s extends nf implements ql {
         return stackIn_1_0;
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         if (!(((s) this).field_z)) {
             return;
         }
@@ -284,8 +283,7 @@ final class s extends nf implements ql {
               if (param4 != ((s) this).field_P) {
                 break L1;
               } else {
-                int discarded$2 = -93;
-                this.f();
+                this.f((byte) -93);
                 break L1;
               }
             }

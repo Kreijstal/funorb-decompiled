@@ -6,14 +6,14 @@ final class ac {
     static String field_b;
     static int[] field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 85;
         field_c = null;
         field_a = null;
         field_b = null;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;

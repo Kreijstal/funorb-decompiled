@@ -42,15 +42,11 @@ final class er extends gn {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$4 = 1;
-            var2_double = (double)fr.a(param1, ra.field_F);
-            int discarded$5 = 1;
-            var4 = (double)fr.a(param1, tf.field_g);
-            int discarded$6 = 1;
-            var6 = (double)fr.a(param1, gm.field_fb);
+            var2_double = (double)fr.a(param1, ra.field_F, true);
+            var4 = (double)fr.a(param1, tf.field_g, true);
+            var6 = (double)fr.a(param1, gm.field_fb, true);
             var8 = -uc.field_C[param1.field_c][param1.field_i][param1.field_k] + (uc.field_C[param1.field_c][param1.field_i][param1.field_e] + (uc.field_C[param1.field_c][param1.field_d][param1.field_k] + (-uc.field_C[param1.field_l][param1.field_i][param1.field_e] + (-uc.field_C[param1.field_l][param1.field_d][param1.field_k] + uc.field_C[param1.field_l][param1.field_d][param1.field_e]) + uc.field_C[param1.field_l][param1.field_i][param1.field_k] - uc.field_C[param1.field_c][param1.field_d][param1.field_e])));
-            int discarded$7 = 1;
-            stackOut_2_0 = var8 - (var6 * var6 + (var4 * var4 + var2_double * var2_double)) / (double)fr.a(param1, ao.field_i);
+            stackOut_2_0 = var8 - (var6 * var6 + (var4 * var4 + var2_double * var2_double)) / (double)fr.a(param1, ao.field_i, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -146,7 +142,7 @@ final class er extends gn {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
     }
 

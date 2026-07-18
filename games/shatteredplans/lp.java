@@ -38,7 +38,7 @@ final class lp extends vd implements gj {
         ((lp) this).field_x = param1;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_v = null;
         field_A = null;
         field_w = null;
@@ -127,6 +127,7 @@ final class lp extends vd implements gj {
         int var9 = 0;
         lm var10 = null;
         int var11 = 0;
+        Object var12 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
@@ -155,8 +156,8 @@ final class lp extends vd implements gj {
                 jb.field_d = kp.field_j + jc.field_r >> 1;
                 fe.field_B = kp.field_j + jc.field_r >> 1;
                 oi.field_a = be.field_h;
-                int discarded$2 = -1;
-                qj.a((sq) null);
+                var12 = null;
+                qj.a((sq) null, -1);
                 return;
               } else {
                 L1: {
@@ -231,8 +232,7 @@ final class lp extends vd implements gj {
                   tp.field_b = var3 + var5;
                   oi.field_a = var3;
                   fe.field_B = var2_int;
-                  int discarded$3 = -1;
-                  qj.a(param1);
+                  qj.a(param1, -1);
                   if (param1.field_c.indexOf("<%tabresizehint>") != -1) {
                     uq.field_m.a("", 27275, "tabresizehint");
                     break L7;

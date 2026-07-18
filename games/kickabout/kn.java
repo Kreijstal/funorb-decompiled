@@ -9,7 +9,7 @@ final class kn extends i {
     private hd field_K;
     private dn[] field_I;
 
-    public static void g() {
+    public static void g(int param0) {
         field_J = null;
         field_F = null;
         field_G = null;

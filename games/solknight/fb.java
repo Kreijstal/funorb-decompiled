@@ -156,15 +156,14 @@ final class fb {
         field_b = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(null == u.field_b)) {
             u.field_b.d(true);
         }
         if (!(null == pc.field_b)) {
             pc.field_b.f((byte) -85);
         }
-        int discarded$0 = -1;
-        df.h();
+        df.h(-1);
     }
 
     static {

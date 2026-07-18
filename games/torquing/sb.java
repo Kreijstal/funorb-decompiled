@@ -10,7 +10,7 @@ final class sb extends q {
     private int field_l;
     static String[] field_n;
 
-    public static void a() {
+    public static void a(int param0) {
         field_n = null;
     }
 
@@ -32,7 +32,7 @@ final class sb extends q {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return no.field_n.a((byte) -74);
     }
 

@@ -12,7 +12,7 @@ final class oc extends vm {
     static jk field_l;
     static String field_m;
 
-    public static void h() {
+    public static void h(int param0) {
         field_r = null;
         field_p = null;
         field_n = null;
@@ -369,13 +369,12 @@ final class oc extends vm {
         try {
           L0: {
             L1: {
-              int discarded$4 = -51;
-              param2 = qm.a('_', param2, "");
+              param2 = qm.a('_', param2, "", (byte) -51);
               if (param1 < -114) {
                 break L1;
               } else {
                 var4 = null;
-                String discarded$5 = oc.a((String) null, (String[]) null, (byte) -72);
+                String discarded$2 = oc.a((String) null, (String[]) null, (byte) -72);
                 break L1;
               }
             }

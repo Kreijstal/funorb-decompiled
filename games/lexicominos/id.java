@@ -33,13 +33,14 @@ class id extends ik {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        String var7_ref_String = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         String[] var11 = null;
         String[] var12 = null;
+        String var13 = null;
+        String var14 = null;
         int stackIn_28_0 = 0;
         int stackIn_31_0 = 0;
         String[] stackIn_37_0 = null;
@@ -239,8 +240,7 @@ class id extends ik {
                   }
                 }
               } else {
-                int discarded$6 = 0;
-                var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, da.a(new String[1], pl.field_a), nb.field_x);
+                var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, da.a(new String[1], pl.field_a, false), nb.field_x);
                 var4 = -1;
                 var5 = 0;
                 L10: while (true) {
@@ -263,8 +263,7 @@ class id extends ik {
                     qc.field_e = new String[-1 + (-var4 + var3_int)];
                     o.a((Object[]) (Object) ug.field_r, 1 + var4, (Object[]) (Object) qc.field_e, 0, -1 + var3_int + -var4);
                     var4 = -1;
-                    int discarded$7 = 0;
-                    var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, da.a(new String[1], mg.field_z), nb.field_x);
+                    var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, da.a(new String[1], mg.field_z, false), nb.field_x);
                     var5 = 0;
                     L12: while (true) {
                       L13: {
@@ -464,9 +463,8 @@ class id extends ik {
                         break L24;
                       } else {
                         L27: {
-                          var7_ref_String = var12[var6];
-                          int discarded$8 = 0;
-                          var8 = ii.a(var7_ref_String, false);
+                          var14 = var12[var6];
+                          var8 = ii.a(var14, false, 0);
                           if (var8 <= var3_int) {
                             break L27;
                           } else {
@@ -479,9 +477,8 @@ class id extends ik {
                     }
                   } else {
                     L28: {
-                      var7_ref_String = var11[var6];
-                      int discarded$9 = 0;
-                      var8 = ii.a(var7_ref_String, false);
+                      var13 = var11[var6];
+                      var8 = ii.a(var13, false, 0);
                       if (var8 <= var3_int) {
                         break L28;
                       } else {
@@ -525,8 +522,7 @@ class id extends ik {
                         var6 = var6 + hc.field_fb;
                         break L32;
                       } else {
-                        int discarded$10 = 0;
-                        var8 = ii.a(ee.field_g[var5], true);
+                        var8 = ii.a(ee.field_g[var5], true, 0);
                         var9 = -(var8 >> 1) + uh.field_D;
                         var6 = var6 + we.field_l;
                         wd.field_a[var5] = new int[4];
@@ -586,8 +582,7 @@ class id extends ik {
               }
             }
             L35: {
-              int discarded$11 = 0;
-              var6 = ii.a(stackIn_87_0, stackIn_87_1 != 0);
+              var6 = ii.a(stackIn_87_0, stackIn_87_1 != 0, 0);
               if (var6 > var3_int) {
                 var3_int = var6;
                 break L35;
@@ -601,7 +596,7 @@ class id extends ik {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_t = null;
         field_u = null;
         field_w = null;

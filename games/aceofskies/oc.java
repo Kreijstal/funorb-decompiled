@@ -11,7 +11,7 @@ final class oc extends wf {
     int field_i;
     static int[] field_g;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         int var1 = -105;
     }

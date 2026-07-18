@@ -13,19 +13,18 @@ final class il extends pi {
     int field_q;
     int field_r;
 
-    final static boolean e() {
+    final static boolean e(int param0) {
         return pl.field_h != 15;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_t = null;
         field_s = null;
         int var1 = 15;
     }
 
     final static void a(int param0, byte param1) {
-        int discarded$0 = -27911;
-        int discarded$1 = s.a();
+        int discarded$0 = s.a(-27911);
     }
 
     private il() throws Throwable {

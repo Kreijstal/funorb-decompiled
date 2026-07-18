@@ -674,8 +674,7 @@ class ch extends ng implements j {
             ((ch) this).field_F = null;
         }
         super.a(param0, (byte) 126, param2, param3, param4);
-        int discarded$0 = -8133;
-        this.j();
+        this.j(-8133);
     }
 
     final boolean a(byte param0, ng param1, int param2, int param3, int param4, int param5, int param6) {
@@ -851,7 +850,7 @@ class ch extends ng implements j {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_H = null;
         field_G = null;
         int var1 = -21;
@@ -1212,7 +1211,7 @@ class ch extends ng implements j {
         return var2;
     }
 
-    private final void j() {
+    private final void j(int param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         nm var2 = new nm(((ch) this).field_F);
         ng var3 = (ng) (Object) var2.d(0);
@@ -1222,7 +1221,7 @@ class ch extends ng implements j {
         }
     }
 
-    final static void a(boolean param0, String param1, int param2, int param3, tf[] param4, int param5, int param6, int param7, tf[] param8, boolean param9, jl param10, int param11) {
+    final static void a(boolean param0, String param1, int param2, int param3, tf[] param4, int param5, int param6, int param7, tf[] param8, boolean param9, jl param10, int param11, byte param12, int param13, int param14) {
         try {
             qm.a(15, nl.field_c, 5, param11, new sb(param4), ao.field_d, v.field_d, mh.field_a, new sb(param8), param6, param11, param10, 10, param6, param10, 240, mj.field_k, 108, hd.field_n, 320);
             int var15_int = 0;

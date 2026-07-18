@@ -268,8 +268,7 @@ abstract class cv {
                 cq.field_h = ra.field_G;
                 ra.field_G = null;
                 ce.field_I = 0;
-                int discarded$4 = -4;
-                wr.field_f = po.a(cq.field_h);
+                wr.field_f = po.a(cq.field_h, -4);
                 if (wi.field_B) {
                   sr.field_l = null;
                   wi.field_B = false;
@@ -284,8 +283,7 @@ abstract class cv {
                 } else {
                   um.field_e = null;
                   al.field_Db = false;
-                  int discarded$5 = -23217;
-                  oa.b();
+                  oa.b(-23217);
                   mv.a((byte) 119);
                   el.g(0);
                   break L3;
@@ -336,11 +334,9 @@ abstract class cv {
                 if (!k.field_k) {
                   break L7;
                 } else {
-                  int discarded$6 = 119;
-                  vc.f();
+                  vc.f((byte) 119);
                   vr.a(-2);
-                  int discarded$7 = 0;
-                  qg.a();
+                  qg.a(0);
                   k.field_k = false;
                   break L7;
                 }

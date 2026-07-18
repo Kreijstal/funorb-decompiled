@@ -7,7 +7,7 @@ final class ic {
     static String field_b;
     static String field_a;
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -203,7 +203,7 @@ final class ic {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         try {
             Exception var1 = null;
             int decompiledRegionSelector0 = 0;

@@ -137,7 +137,7 @@ class ro extends am {
         return pm.field_p;
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_t = null;
     }
 

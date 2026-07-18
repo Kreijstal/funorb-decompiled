@@ -58,19 +58,13 @@ final class tf extends kf implements rl, vn, fi {
         gm dupTemp$1 = new gm(10000536);
         ((tf) this).field_S.field_p = (gl) (Object) dupTemp$1;
         ((tf) this).field_hb.field_p = (gl) (Object) dupTemp$1;
-        int discarded$2 = 63;
-        int discarded$3 = 29;
         String var2 = cm.a((byte) 102, me.field_G, new String[2]);
         int var3 = 20;
-        int discarded$4 = 170;
-        var3 = var3 + this.a(9828, (ce) (Object) ((tf) this).field_Y, var3, eg.field_c);
+        var3 = var3 + this.a(9828, (ce) (Object) ((tf) this).field_Y, var3, eg.field_c, 170);
         var3 = var3 + (5 + this.a((ce) (Object) ((tf) this).field_eb, oc.field_d, 20, (byte) -44, 170, var3, ""));
-        int discarded$5 = 170;
-        var3 = var3 + this.a(9828, (ce) (Object) ((tf) this).field_hb, var3, ch.field_d);
-        int discarded$6 = 170;
-        var3 = var3 + (this.a(125, (ce) (Object) ((tf) this).field_S, var3, sl.field_e, ga.field_c) + 5);
-        int discarded$7 = 170;
-        var3 = var3 + (5 + this.a(114, (ce) (Object) ((tf) this).field_fb, var3, rg.field_e, ij.field_b));
+        var3 = var3 + this.a(9828, (ce) (Object) ((tf) this).field_hb, var3, ch.field_d, 170);
+        var3 = var3 + (this.a(125, (ce) (Object) ((tf) this).field_S, var3, sl.field_e, ga.field_c, 170) + 5);
+        var3 = var3 + (5 + this.a(114, (ce) (Object) ((tf) this).field_fb, var3, rg.field_e, ij.field_b, 170));
         var3 = var3 + this.a(qe.field_e, (byte) -107, (ce) (Object) ((tf) this).field_T, 170, var3);
         de var4 = new de(46, var3, -90 + ((tf) this).field_t, 25, (ce) (Object) ((tf) this).field_W, true, -120 + ((tf) this).field_t, 5, bj.field_f, 11579568, h.field_a);
         ((tf) this).b((ce) (Object) var4, (byte) -55);
@@ -98,7 +92,7 @@ final class tf extends kf implements rl, vn, fi {
         ((tf) this).b(55 + var3 - -var6, 496, 0, 0, -16555);
     }
 
-    private final boolean f() {
+    private final boolean f(byte param0) {
         if (!(this.i(94))) {
             return false;
         }
@@ -228,13 +222,11 @@ final class tf extends kf implements rl, vn, fi {
                   if (param2 != ((tf) this).field_X) {
                     break L1;
                   } else {
-                    int discarded$7 = -35;
-                    boolean discarded$8 = this.f();
+                    boolean discarded$2 = this.f((byte) -35);
                     break L1;
                   }
                 } else {
-                  int discarded$9 = -73;
-                  t.k();
+                  t.k((byte) -73);
                   break L1;
                 }
               }
@@ -361,7 +353,7 @@ final class tf extends kf implements rl, vn, fi {
         ((jm) (Object) ((tf) this).field_fb.a(-96)).a(true);
     }
 
-    private final int a(int param0, ce param1, int param2, String param3, String param4) {
+    private final int a(int param0, ce param1, int param2, String param3, String param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -654,7 +646,7 @@ final class tf extends kf implements rl, vn, fi {
         return stackIn_1_0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_ab = null;
         field_Z = null;
         field_gb = null;
@@ -754,11 +746,11 @@ final class tf extends kf implements rl, vn, fi {
         return stackIn_14_0 != 0;
     }
 
-    private final String h() {
+    private final String h(byte param0) {
         return "</col></u>";
     }
 
-    private final String g() {
+    private final String g(byte param0) {
         int var2 = 85;
         return "<u=2164A2><col=2164A2>";
     }
@@ -881,10 +873,7 @@ final class tf extends kf implements rl, vn, fi {
         if (param1 < 73) {
             field_Z = null;
         }
-        int discarded$0 = 0;
-        int discarded$1 = 0;
-        int discarded$2 = 0;
-        return kc.a(true, 1, param4);
+        return kc.a(true, 1, param4, false, false, false);
     }
 
     public final void a(qi param0, int param1, int param2, int param3) {
@@ -988,11 +977,11 @@ final class tf extends kf implements rl, vn, fi {
     final static void b(int param0, boolean param1, int param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
-        hl var4_ref = null;
         w var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
+        hl var9 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = client.field_A ? 1 : 0;
         try {
@@ -1016,12 +1005,11 @@ final class tf extends kf implements rl, vn, fi {
             }
             if (bl.field_T > 0) {
               L3: {
-                int discarded$4 = -100;
-                on.b();
+                on.b((byte) -100);
                 ea.field_D.a(false, param1);
                 if (bc.field_E != null) {
                   if (wc.field_n) {
-                    boolean discarded$5 = bc.field_E.a(ea.field_D.field_pb, param1, ea.field_D.field_E, 29166);
+                    boolean discarded$1 = bc.field_E.a(ea.field_D.field_pb, param1, ea.field_D.field_E, 29166);
                     break L3;
                   } else {
                     bc.field_E = null;
@@ -1043,18 +1031,16 @@ final class tf extends kf implements rl, vn, fi {
                     }
                   }
                   L6: {
-                    var4_ref = wj.a((byte) 55, kf.field_O, param3, nk.field_b);
-                    if (var4_ref == null) {
+                    var9 = wj.a((byte) 55, kf.field_O, param3, nk.field_b);
+                    if (var9 == null) {
                       break L6;
                     } else {
-                      int discarded$6 = 0;
-                      cb.a(var4_ref);
+                      cb.a(var9, false);
                       break L6;
                     }
                   }
                   L7: {
-                    int discarded$7 = -36;
-                    var8 = sf.c();
+                    var8 = sf.c(-36);
                     if (var8 == null) {
                       break L7;
                     } else {
@@ -1212,7 +1198,7 @@ final class tf extends kf implements rl, vn, fi {
         return stackIn_3_0;
     }
 
-    private final int a(int param0, ce param1, int param2, String param3) {
+    private final int a(int param0, ce param1, int param2, String param3, int param4) {
         de var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;

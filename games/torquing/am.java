@@ -26,7 +26,7 @@ abstract class am extends q {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_q = null;
         field_o = null;
         field_j = null;
@@ -57,7 +57,7 @@ abstract class am extends q {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var2 = 0;
         var2 = Torquing.field_u;
         int fieldTemp$2 = fh.field_r + 1;

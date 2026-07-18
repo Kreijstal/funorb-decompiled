@@ -6,7 +6,7 @@ final class ak {
     static int field_b;
     static String field_c;
 
-    final static void a(kk param0) {
+    final static void a(kk param0, int param1) {
         ml var2 = null;
         try {
             ml.a(param0.a("headers.packvorbis", -1, ""));
@@ -17,12 +17,12 @@ final class ak {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
     }
 
-    final static void a(kk param0, kk param1, kk param2) {
+    final static void a(kk param0, kk param1, kk param2, int param3) {
         RuntimeException var4 = null;
         ng[] var5 = null;
         ng[][] var6 = null;
@@ -96,15 +96,11 @@ final class ak {
             ol.field_n = ab.a("commonui", -15383, "jagex_logo_grey", param1);
             il.field_l = ib.a(10, "commonui", param1, "button");
             TrackController.field_D = uj.a("validation", param1, (byte) -109, "commonui");
-            int discarded$6 = 1;
-            fk.field_a = (oh) (Object) kh.a(param2, "arezzo12", param1, "commonui");
-            int discarded$7 = 1;
-            gk.field_c = (oh) (Object) kh.a(param2, "arezzo14", param1, "commonui");
-            int discarded$8 = 1;
-            p.field_a = (oh) (Object) kh.a(param2, "arezzo14bold", param1, "commonui");
+            fk.field_a = (oh) (Object) kh.a(param2, "arezzo12", param1, "commonui", 1);
+            gk.field_c = (oh) (Object) kh.a(param2, "arezzo14", param1, "commonui", 1);
+            p.field_a = (oh) (Object) kh.a(param2, "arezzo14bold", param1, "commonui", 1);
             var17 = new qj(param0.a("button.gif", -1, ""), (java.awt.Component) (Object) ki.field_f);
-            int discarded$9 = 17;
-            ng discarded$10 = ti.a("dropdown", param1, "commonui");
+            ng discarded$1 = ti.a("dropdown", param1, "commonui", 17);
             var5 = ie.a("commonui", param1, "screen_options", 124);
             fj.field_M = new ng[4];
             al.field_j = new ng[4];
@@ -127,8 +123,7 @@ final class ak {
                 L2: while (true) {
                   if (var9 >= 3) {
                     var9 = var17.field_q;
-                    int discarded$11 = 0;
-                    nk.b();
+                    nk.b(false);
                     var17.a();
                     ll.d(0, 0, ll.field_d, ll.field_k);
                     var15 = new qj(var9, var9);

@@ -125,17 +125,16 @@ final class eh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_c = null;
         field_d = null;
     }
 
-    final static void a(vb param0) {
+    final static void a(vb param0, int param1, byte param2) {
         try {
             jl.field_a.b(101, (kd) (Object) param0);
-            int discarded$0 = 1;
-            vi.a(4, param0);
+            vi.a(4, param0, 1);
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) (Object) runtimeException, "eh.B(" + (param0 != null ? "{...}" : "null") + ',' + 4 + ',' + -4 + ')');
         }

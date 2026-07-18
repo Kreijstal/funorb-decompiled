@@ -310,7 +310,7 @@ final class pe {
         this.a(-20);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_N = null;
         field_A = null;
         field_q = null;

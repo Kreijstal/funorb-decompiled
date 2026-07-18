@@ -13,7 +13,7 @@ final class qk {
     static int[] field_f;
     String field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -4;
         field_e = null;
         field_f = null;
@@ -29,7 +29,7 @@ final class qk {
         gi.a((byte) -123);
     }
 
-    final static void a(int[] param0) {
+    final static void a(int[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException stackIn_15_0 = null;

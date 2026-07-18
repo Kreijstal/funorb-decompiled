@@ -304,12 +304,10 @@ final class vl implements Runnable {
                       if (var4.length() >= 1) {
                         if (param2 <= -119) {
                           L2: {
-                            int discarded$3 = -46;
-                            if (sk.a(var4.charAt(0))) {
+                            if (sk.a(var4.charAt(0), -46)) {
                               break L2;
                             } else {
-                              int discarded$4 = -46;
-                              if (!sk.a(var4.charAt(var4.length() - 1))) {
+                              if (!sk.a(var4.charAt(var4.length() - 1), -46)) {
                                 var5 = 0;
                                 var6 = 0;
                                 L3: while (true) {
@@ -324,8 +322,7 @@ final class vl implements Runnable {
                                   } else {
                                     L4: {
                                       var7 = param1.charAt(var6);
-                                      int discarded$5 = -46;
-                                      if (sk.a((char) var7)) {
+                                      if (sk.a((char) var7, -46)) {
                                         var5++;
                                         break L4;
                                       } else {

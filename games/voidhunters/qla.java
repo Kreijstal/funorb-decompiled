@@ -15,7 +15,7 @@ final class qla extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void a(faa param0, byte param1, boolean[] param2) {
+    final static void a(faa param0, byte param1, boolean[] param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

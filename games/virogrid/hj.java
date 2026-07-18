@@ -6,7 +6,7 @@ final class hj extends l {
     static int field_h;
     static rm[] field_g;
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
     }
 
@@ -87,7 +87,7 @@ final class hj extends l {
         return stackIn_6_0;
     }
 
-    final static void a(int param0, jc param1, int param2, int param3) {
+    final static void a(int param0, jc param1, int param2, int param3, int param4) {
         try {
             param1.a(12, 84);
             param1.a((byte) -73, 17);
@@ -99,7 +99,7 @@ final class hj extends l {
         }
     }
 
-    final static km c() {
+    final static km c(int param0) {
         return wm.field_r.field_Jb;
     }
 

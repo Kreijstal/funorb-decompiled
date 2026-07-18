@@ -340,7 +340,7 @@ abstract class uw {
 
     abstract int a(int param0, long param1);
 
-    public static void c() {
+    public static void c(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;

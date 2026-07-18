@@ -33,13 +33,12 @@ final class of extends wl {
               break L0;
             } else {
               var5 = null;
-              db discarded$4 = of.a((kl) null, 20, (byte) -110, 17);
+              db discarded$2 = of.a((kl) null, 20, (byte) -110, 17);
               break L0;
             }
           }
           if (h.a(param3, param1, param0, -128)) {
-            int discarded$5 = -92;
-            return md.c();
+            return md.c((byte) -92);
           } else {
             return null;
           }
@@ -256,13 +255,13 @@ final class of extends wl {
         return stackIn_16_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_l = null;
         field_m = null;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         he.field_s[46] = 72;
         he.field_s[44] = 71;
         he.field_s[61] = 27;
@@ -290,13 +289,12 @@ final class of extends wl {
           var1 = pf.c((byte) -89);
           var2 = lb.a((byte) 47);
           tl.field_c.a(pf.field_f - ic.field_c, var2 + (ic.field_c << 1), var1 + (ii.field_c << 1), 1, fe.field_l - ii.field_c);
-          int discarded$2 = 99;
-          nf.a();
+          nf.a(99);
           return;
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

@@ -173,7 +173,7 @@ final class paa extends rqa {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         int var1 = -59;
         field_p = null;
         field_o = null;

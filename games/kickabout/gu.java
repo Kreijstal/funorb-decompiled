@@ -24,7 +24,7 @@ final class gu extends hd {
         sk.field_d.field_n[param0] = -param2;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         return mj.field_a == nr.field_f;
     }
 
@@ -74,8 +74,7 @@ final class gu extends hd {
             var6 = var6 + 2 * ((gu) this).field_Mb;
             var7 = ((gu) this).field_Fb - -(((gu) this).field_Ab * ((gu) this).field_Cb) + ((gu) this).field_Fb;
             var8 = ou.b(var6, param2, param1, param0 ^ 127);
-            int discarded$1 = 29079;
-            var9 = nj.a(param3, param4, var7);
+            var9 = nj.a(param3, param4, var7, 29079);
             ((gu) this).a(true, var6, var8, var9, var7);
             var10 = param0;
             L2: while (true) {
@@ -130,11 +129,7 @@ final class gu extends hd {
         if (param4 <= 107) {
             return null;
         }
-        int discarded$0 = 1;
-        int discarded$1 = 0;
-        int discarded$2 = 0;
-        int discarded$3 = 1;
-        return uj.a(param1, (byte) 112);
+        return uj.a(param1, (byte) 112, 1, false, false, true);
     }
 
     final void a(String param0, boolean param1, int param2, ut param3) {
@@ -232,7 +227,7 @@ final class gu extends hd {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_zb = null;
         field_Jb = null;
         field_Ib = null;

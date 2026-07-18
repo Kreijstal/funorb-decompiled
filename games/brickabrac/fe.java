@@ -269,7 +269,7 @@ abstract class fe extends bj {
         return stackIn_11_0 != 0;
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_ib = null;
         field_hb = null;
         field_jb = null;

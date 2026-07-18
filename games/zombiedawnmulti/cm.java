@@ -8,13 +8,13 @@ final class cm {
     static long field_d;
     static cj field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, byte[] param3) {
+    final static void a(int param0, int param1, int param2, byte[] param3, boolean param4, int param5) {
         ga var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -238,7 +238,7 @@ final class cm {
         }
     }
 
-    final static int a(int param0) {
+    final static int a(int param0, boolean param1) {
         param0 = (param0 >>> 1 & 1431655765) + (1431655765 & param0);
         param0 = (param0 & 858993459) - -(param0 >>> 2 & 858993459);
         param0 = (param0 >>> 4) + param0 & 252645135;

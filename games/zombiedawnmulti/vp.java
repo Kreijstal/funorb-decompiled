@@ -65,14 +65,12 @@ final class vp extends gq {
               param0 = param0.field_d;
               continue L0;
             } else {
-              int discarded$4 = 1;
-              vc.a(param0, (br) (Object) param1);
+              vc.a(param0, (br) (Object) param1, true);
               ((vp) this).field_m = ((rc) (Object) ((vp) this).field_k.field_b.field_d).field_f;
               return;
             }
           } else {
-            int discarded$5 = 1;
-            vc.a(param0, (br) (Object) param1);
+            vc.a(param0, (br) (Object) param1, true);
             ((vp) this).field_m = ((rc) (Object) ((vp) this).field_k.field_b.field_d).field_f;
             return;
           }

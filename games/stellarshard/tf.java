@@ -10,8 +10,7 @@ abstract class tf {
         int var1 = ok.a((byte) 125);
         int var2 = kb.b((byte) 98);
         eh.field_a.a(true, var1 - -(ka.field_q << 1), var2 + (sa.field_h << 1), rg.field_F + -sa.field_h, -ka.field_q + od.field_r);
-        int discarded$0 = 1;
-        kl.a();
+        kl.a(true);
     }
 
     public static void b(int param0) {

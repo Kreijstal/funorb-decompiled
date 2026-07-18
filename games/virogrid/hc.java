@@ -7,7 +7,7 @@ final class hc {
     static long field_a;
     static String field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
     }
 
@@ -93,7 +93,7 @@ final class hc {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

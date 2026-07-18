@@ -363,7 +363,7 @@ final class cl extends rl implements nd {
         return ((cl) this).field_q;
     }
 
-    final static sh a(boolean param0, byte param1, boolean param2, int param3) {
+    final static sh a(boolean param0, byte param1, boolean param2, int param3, int param4) {
         int var5 = -35 % ((46 - param1) / 55);
         return il.a(true, 12317, false, param3, false, 1);
     }

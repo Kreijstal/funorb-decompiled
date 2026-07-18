@@ -627,7 +627,7 @@ final class da {
         return stackIn_7_0;
     }
 
-    private final gg a(int[] param0, String param1) {
+    private final gg a(int[] param0, String param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         gg stackIn_3_0 = null;
@@ -736,7 +736,7 @@ final class da {
         return stackIn_5_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_h = null;
         field_i = null;
@@ -848,12 +848,11 @@ final class da {
                 break L1;
               } else {
                 var4 = null;
-                gg discarded$4 = this.a((String) null, (String) null, (byte) -60, (int[]) null);
+                gg discarded$2 = this.a((String) null, (String) null, (byte) -60, (int[]) null);
                 break L1;
               }
             }
-            int discarded$5 = -127;
-            stackOut_2_0 = this.a((int[]) null, param0);
+            stackOut_2_0 = this.a((int[]) null, param0, -127);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

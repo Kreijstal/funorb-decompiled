@@ -762,7 +762,7 @@ final class vl {
         ((vl) this).field_c = ((vl) this).field_c - (double)param1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_r = null;
         field_s = null;
         field_o = null;

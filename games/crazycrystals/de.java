@@ -7,7 +7,7 @@ final class de extends f implements Cloneable {
     ea field_j;
     private int field_i;
 
-    public static void f() {
+    public static void f(int param0) {
         field_k = null;
         field_l = null;
     }

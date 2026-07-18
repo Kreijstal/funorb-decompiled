@@ -298,7 +298,7 @@ final class oqb extends le {
         return var12;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_k = null;
         field_n = null;
     }

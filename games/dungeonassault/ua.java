@@ -37,8 +37,7 @@ final class ua {
         var5 = DungeonAssault.field_K;
         try {
           L0: {
-            int discarded$6 = 64;
-            if (mk.a(false, param2)) {
+            if (mk.a(false, param2, (byte) 64)) {
               var3_int = 0;
               L1: while (true) {
                 if (param2.length() <= var3_int) {
@@ -107,7 +106,7 @@ final class ua {
         return (java.awt.Container) (Object) m.c(true);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
         field_b = null;

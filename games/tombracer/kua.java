@@ -201,7 +201,7 @@ final class kua extends vg implements fo {
         }
     }
 
-    final static hra a(String param0) {
+    final static hra a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -314,7 +314,7 @@ final class kua extends vg implements fo {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         int var1 = -102;
     }

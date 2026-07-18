@@ -127,7 +127,7 @@ final class wq {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 
@@ -188,8 +188,7 @@ final class wq {
                   }
                 }
               } else {
-                int discarded$1 = -16736;
-                mr.field_b[var4] = fh.a(var8);
+                mr.field_b[var4] = fh.a(var8, -16736);
                 var4++;
                 continue L1;
               }

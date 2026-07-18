@@ -5,11 +5,11 @@ final class wn {
     static sn field_a;
     static boolean field_b;
 
-    final static dj a(boolean param0, int param1) {
+    final static dj a(boolean param0, int param1, byte param2, int param3, boolean param4) {
         return hd.a(false, true, param1, 1, true, false);
     }
 
-    final static void a(int param0, rj param1, int param2, java.awt.Component param3, ec param4) {
+    final static void a(int param0, rj param1, int param2, java.awt.Component param3, ec param4, int param5, boolean param6, int param7) {
         try {
             qf.a(22050, true, 10);
             sh.field_d = qf.a(param4, param3, 0, 22050);
@@ -25,7 +25,7 @@ final class wn {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

@@ -127,7 +127,7 @@ final class dv implements mh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
     }
 
@@ -177,8 +177,7 @@ final class dv implements mh {
                             var9 = param1.getParameter("cookieprefix");
                             var3 = var9 + "settings";
                             var4 = (String) tw.a(param1, 109, "getcookies");
-                            int discarded$2 = -27224;
-                            var5 = cn.a(';', var4);
+                            var5 = cn.a(';', var4, -27224);
                             var6 = 0;
                             statePc = 2;
                             continue stateLoop;

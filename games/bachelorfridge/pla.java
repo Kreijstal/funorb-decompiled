@@ -4,7 +4,7 @@
 final class pla extends pn {
     static long field_g;
 
-    private final void b() {
+    private final void b(byte param0) {
         ((pla) this).field_a = new kv[4];
         kv var6 = new kv(384, 192);
         kv var2 = var6;
@@ -185,8 +185,7 @@ final class pla extends pn {
     pla(vr param0) {
         try {
             ((pla) this).field_b = bla.a(29611, "basic", "tiles_dessert", param0);
-            int discarded$0 = -117;
-            this.b();
+            this.b((byte) -117);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "pla.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

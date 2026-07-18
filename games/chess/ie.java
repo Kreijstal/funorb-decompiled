@@ -6,7 +6,7 @@ final class ie {
     static le field_b;
     static String field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
     }
@@ -21,7 +21,7 @@ final class ie {
         return param0 & ~var2;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         km var1 = null;
         km var2 = null;
         int var3 = 0;
@@ -32,8 +32,7 @@ final class ie {
             nh.a();
             wb.b();
             sl.field_a = 0;
-            int discarded$0 = 9;
-            di.k();
+            di.k(9);
             var2 = var1.c();
             for (var3 = 0; var3 < 15; var3++) {
                 var2.c(-2, -2, 16777215);
@@ -41,8 +40,7 @@ final class ie {
             }
             tg.field_u.e();
             var1.c(0, 0);
-            int discarded$1 = 28773;
-            fd.a();
+            fd.a(28773);
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "ie.C(" + 540 + ')');
         }
@@ -80,7 +78,7 @@ final class ie {
         return stackIn_6_0;
     }
 
-    final static sa a(String param0) {
+    final static sa a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -198,8 +196,7 @@ final class ie {
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        int discarded$0 = -128;
-        ve var3 = ca.a(param0, param2);
+        ve var3 = ca.a(param0, param2, -128);
         if (!(var3 == null)) {
             pi.field_d.a(0, false);
             var4_ref_dh = pi.field_d;

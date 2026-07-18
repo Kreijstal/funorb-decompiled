@@ -16,8 +16,7 @@ final class so {
           if (2 != param0) {
             if (param0 == 3) {
               if (param3) {
-                int discarded$4 = 2147483647;
-                ui.a(2, 7, vc.field_E[4]);
+                ui.a(2, 7, vc.field_E[4], 2147483647);
                 return;
               } else {
                 gu.b(2, (byte) 60, vc.field_E[5]);
@@ -31,8 +30,7 @@ final class so {
               gu.b(2, (byte) 60, vc.field_E[5]);
               if (param0 == 3) {
                 if (param3) {
-                  int discarded$5 = 2147483647;
-                  ui.a(2, 7, vc.field_E[4]);
+                  ui.a(2, 7, vc.field_E[4], 2147483647);
                   return;
                 } else {
                   gu.b(2, (byte) 60, vc.field_E[5]);
@@ -42,12 +40,10 @@ final class so {
                 return;
               }
             } else {
-              int discarded$6 = 2147483647;
-              ui.a(2, 5, vc.field_E[4]);
+              ui.a(2, 5, vc.field_E[4], 2147483647);
               if (param0 == 3) {
                 if (param3) {
-                  int discarded$7 = 2147483647;
-                  ui.a(2, 7, vc.field_E[4]);
+                  ui.a(2, 7, vc.field_E[4], 2147483647);
                   return;
                 } else {
                   gu.b(2, (byte) 60, vc.field_E[5]);
@@ -240,7 +236,7 @@ final class so {
         return stackIn_14_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
         field_d = null;

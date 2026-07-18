@@ -6,12 +6,11 @@ final class baa extends rqa {
     static int field_p;
     static volatile int field_q;
 
-    final static void a(boolean param0, asb param1, asb param2, asb param3) {
+    final static void a(boolean param0, asb param1, asb param2, asb param3, boolean param4) {
         try {
             wba.field_p = gi.a("", (byte) 110);
             wba.field_p.a(7861, false);
-            int discarded$0 = 0;
-            uo.a(param3, param2, param1);
+            uo.a(param3, param2, param1, 0);
             ieb.e(121);
             dn.field_r = kla.field_d;
             lrb.field_b = kla.field_d;
@@ -93,7 +92,7 @@ final class baa extends rqa {
         return stackIn_3_0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_o = null;
     }
 

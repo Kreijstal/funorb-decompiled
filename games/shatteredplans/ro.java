@@ -8,7 +8,7 @@ final class ro {
     static java.security.SecureRandom field_b;
     static ub field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
         field_e = null;

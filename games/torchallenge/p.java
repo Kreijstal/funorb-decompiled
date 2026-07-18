@@ -9,7 +9,7 @@ final class p {
     static String[][] field_c;
     static int[][][] field_e;
 
-    final static void a() {
+    final static void a(int param0) {
         dd.field_t = null;
         h.field_a = null;
         ug.field_e = null;

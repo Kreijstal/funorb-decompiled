@@ -27,7 +27,7 @@ final class nh extends ug {
         field_f = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -76,7 +76,7 @@ final class nh extends ug {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;

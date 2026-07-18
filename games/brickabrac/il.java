@@ -268,7 +268,7 @@ final class il extends no {
         }
     }
 
-    final static void a(ie param0, tg param1, int param2, int param3, int param4, int param5, java.awt.Component param6) {
+    final static void a(ie param0, tg param1, int param2, int param3, int param4, int param5, java.awt.Component param6, boolean param7) {
         try {
             tj.a(param2, true, 10);
             eo.field_f = tj.a(param1, param6, 0, param4);
@@ -284,7 +284,7 @@ final class il extends no {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_A = null;
         field_D = null;
         field_B = null;
@@ -479,6 +479,7 @@ final class il extends no {
     final int a(int param0, StringBuilder param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
+        Object var4 = null;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -503,17 +504,17 @@ final class il extends no {
               if (param0 > 79) {
                 break L1;
               } else {
-                int discarded$4 = 1;
-                il.a((ie) null, (tg) null, 83, 59, 15, -106, (java.awt.Component) null);
+                var4 = null;
+                il.a((ie) null, (tg) null, 83, 59, 15, -106, (java.awt.Component) null, true);
                 break L1;
               }
             }
             L2: {
               var3_int = super.a(120, param1) ^ -72674834;
               if (param1 != null) {
-                StringBuilder discarded$5 = param1.append(((il) this).field_j + " " + ((il) this).field_m + " ");
-                StringBuilder discarded$6 = param1.append(((il) this).field_E + " " + ((il) this).field_l + " ");
-                StringBuilder discarded$7 = param1.append("\n");
+                StringBuilder discarded$3 = param1.append(((il) this).field_j + " " + ((il) this).field_m + " ");
+                StringBuilder discarded$4 = param1.append(((il) this).field_E + " " + ((il) this).field_l + " ");
+                StringBuilder discarded$5 = param1.append("\n");
                 break L2;
               } else {
                 break L2;

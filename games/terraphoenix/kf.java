@@ -330,7 +330,7 @@ final class kf {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         return !vc.field_a.a(-121);
     }
 

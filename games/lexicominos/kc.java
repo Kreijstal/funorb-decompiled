@@ -74,7 +74,7 @@ final class kc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         field_d = null;
         field_l = null;

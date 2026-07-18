@@ -17,7 +17,7 @@ final class fg extends kj implements cc, sg {
     static int field_N;
     private ng field_J;
 
-    final static void i() {
+    final static void i(int param0) {
         eb.field_m = false;
         hl.field_e = false;
         fk.a(true, -1);
@@ -35,7 +35,7 @@ final class fg extends kj implements cc, sg {
         ((fg) this).field_Q.i(param0 ^ -22617);
     }
 
-    final static void a() {
+    final static void a(int param0, boolean param1) {
         da var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -71,7 +71,7 @@ final class fg extends kj implements cc, sg {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_M = null;
     }
 
@@ -362,8 +362,7 @@ final class fg extends kj implements cc, sg {
             }
             L13: {
               var8 = ea.field_b;
-              int discarded$3 = 126;
-              var9 = lg.a(gi.b(12476));
+              var9 = lg.a(gi.b(12476), 126);
               if (sd.field_e == var9) {
                 var8 = wl.field_d;
                 break L13;
@@ -377,13 +376,13 @@ final class fg extends kj implements cc, sg {
               }
             }
             L14: {
-              bg dupTemp$4 = new bg(10, ((fg) this).field_i, ((fg) this).field_p - 20, 25, (ee) (Object) ((fg) this).field_T, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$4;
-              ((fg) this).a(0, (ee) (Object) dupTemp$4);
+              bg dupTemp$2 = new bg(10, ((fg) this).field_i, ((fg) this).field_p - 20, 25, (ee) (Object) ((fg) this).field_T, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$2;
+              ((fg) this).a(0, (ee) (Object) dupTemp$2);
               ((fg) this).field_i = ((fg) this).field_i + (5 + ((ee) (Object) var12).field_l);
-              bg dupTemp$5 = new bg(10, ((fg) this).field_i, ((fg) this).field_p + -20, 25, (ee) (Object) ((fg) this).field_Q, false, 80, 3, var7, 16777215, bd.field_n);
-              var13 = dupTemp$5;
-              ((fg) this).a(0, (ee) (Object) dupTemp$5);
+              bg dupTemp$3 = new bg(10, ((fg) this).field_i, ((fg) this).field_p + -20, 25, (ee) (Object) ((fg) this).field_Q, false, 80, 3, var7, 16777215, bd.field_n);
+              var13 = dupTemp$3;
+              ((fg) this).a(0, (ee) (Object) dupTemp$3);
               ((fg) this).field_i = ((fg) this).field_i + (5 + ((ee) (Object) var13).field_l);
               ((fg) this).field_J.field_k = (gg) this;
               if (null == ((fg) this).field_O) {
@@ -538,8 +537,7 @@ final class fg extends kj implements cc, sg {
               }
             }
           }
-          int discarded$2 = 44;
-          kb.a(((fg) this).field_T.field_v, ((fg) this).field_Q.field_v);
+          kb.a(((fg) this).field_T.field_v, ((fg) this).field_Q.field_v, (byte) 44);
           break L0;
         }
         var2 = 83 % ((46 - param0) / 56);
@@ -823,8 +821,7 @@ final class fg extends kj implements cc, sg {
             L1: {
               if (param0 != ((fg) this).field_J) {
                 if (((fg) this).field_O == param0) {
-                  int discarded$638 = -14956;
-                  k.a();
+                  k.a(-14956);
                   break L1;
                 } else {
                   if (((fg) this).field_R != param0) {
@@ -849,8 +846,7 @@ final class fg extends kj implements cc, sg {
                         fd.a(-2068);
                         break L1;
                       } else {
-                        int discarded$639 = 1;
-                        ek.h();
+                        ek.h(1);
                         break L1;
                       }
                     }

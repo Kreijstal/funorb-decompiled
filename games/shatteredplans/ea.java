@@ -69,14 +69,14 @@ final class ea extends Random {
         ((ea) this).field_f = new mh(var4);
     }
 
-    final static o b() {
+    final static o b(int param0) {
         if (!(qq.field_o != null)) {
             qq.field_o = new o(mf.field_x, 20, 0, 0, 0, 11579568, -1, 0, 0, mf.field_x.field_J, -1, 2147483647, true);
         }
         return qq.field_o;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_a = null;

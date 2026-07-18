@@ -4,7 +4,7 @@
 final class vma extends pv {
     static kv[] field_j;
 
-    public static void b() {
+    public static void b(int param0) {
         field_j = null;
         int var1 = 0;
     }
@@ -156,7 +156,7 @@ final class vma extends pv {
         }
     }
 
-    final static kv[] c() {
+    final static kv[] c(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -174,8 +174,7 @@ final class vma extends pv {
             var1[var2] = new kv(ok.field_Bb, kh.field_r, fl.field_j[var2], fd.field_D[var2], lq.field_A[var2], eha.field_s[var2], var5);
         }
         var3 = -60;
-        int discarded$0 = -18073;
-        al.b();
+        al.b(-18073);
         return var1;
     }
 
@@ -185,8 +184,7 @@ final class vma extends pv {
         }
         int fieldTemp$0 = ((vma) this).field_g + 1;
         ((vma) this).field_g = ((vma) this).field_g + 1;
-        int discarded$1 = 2;
-        if (!(fieldTemp$0 <= this.d())) {
+        if (!(fieldTemp$0 <= this.d(2))) {
             return true;
         }
         if (((vma) this).field_g == 1) {
@@ -195,7 +193,7 @@ final class vma extends pv {
         return false;
     }
 
-    private final int d() {
+    private final int d(int param0) {
         int var2 = 11;
         return 50;
     }

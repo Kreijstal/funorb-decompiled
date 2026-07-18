@@ -10,12 +10,12 @@ final class ao extends ne {
     static int field_o;
     byte[] field_m;
 
-    public static void d() {
+    public static void d(int param0) {
         field_n = null;
         field_i = null;
     }
 
-    final static String a() {
+    final static String a(int param0) {
         return jj.field_d;
     }
 
@@ -35,8 +35,7 @@ final class ao extends ne {
         if (dk.field_c >= 20) {
           if (vk.a(22084)) {
             if (hf.field_sb > 0) {
-              int discarded$4 = 0;
-              if (dh.a()) {
+              if (dh.a(false)) {
                 return false;
               } else {
                 return true;

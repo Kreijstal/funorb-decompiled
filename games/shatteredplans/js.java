@@ -374,7 +374,7 @@ final class js {
         return d.field_a.field_Eb;
     }
 
-    final static int a(int param0) {
+    final static int a(int param0, byte param1) {
         param0--;
         param0 = param0 | param0 >>> 1;
         param0 = param0 | param0 >>> 2;
@@ -384,7 +384,7 @@ final class js {
         return param0 + 1;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_a = null;
         field_h = null;
         field_c = null;

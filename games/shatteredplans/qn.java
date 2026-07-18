@@ -71,19 +71,17 @@ final class qn {
         return stackIn_1_0;
     }
 
-    final static void a(ik[] param0, int param1) {
+    final static void a(ik[] param0, int param1, boolean param2) {
         try {
-            int discarded$0 = 26987;
-            bj.k();
-            int discarded$1 = 0;
-            bk.a(param0);
+            bj.k(26987);
+            bk.a(param0, 0);
             vp.c(-20677, param1);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "qn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + true + ')');
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         hd var1_ref = null;
         int var2 = 0;

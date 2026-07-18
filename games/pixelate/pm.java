@@ -27,13 +27,13 @@ final class pm {
     private int field_n;
     static rf field_h;
 
-    public static void b() {
+    public static void b(int param0) {
         field_l = null;
         field_s = null;
         field_h = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -633,7 +633,7 @@ final class pm {
     pm(String[] param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
-        Random var7_ref = null;
+        Random var9 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -681,11 +681,10 @@ final class pm {
               if (param2 != 2) {
                 break L3;
               } else {
-                var7_ref = new Random((long)((pm) this).field_c);
-                int discarded$2 = 116;
-                ((pm) this).field_d = wo.a(((pm) this).field_r, cl.field_e[((pm) this).field_n], var7_ref);
+                var9 = new Random((long)((pm) this).field_c);
+                ((pm) this).field_d = wo.a(((pm) this).field_r, cl.field_e[((pm) this).field_n], var9, (byte) 116);
                 ((pm) this).field_d.field_e = 1000;
-                int discarded$3 = ok.a(var7_ref, -98, 2147483647);
+                int discarded$1 = ok.a(var9, -98, 2147483647);
                 break L3;
               }
             }

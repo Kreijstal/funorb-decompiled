@@ -251,7 +251,7 @@ final class bn extends nv {
         }
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_u = null;
         field_o = null;
         field_t = null;

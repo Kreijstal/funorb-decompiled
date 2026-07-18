@@ -33,8 +33,7 @@ abstract class lb extends w {
             }
             var1[var2] = new ka(ij.field_B, le.field_g, ug.field_e[var2], dd.field_t[var2], pg.field_r[var2], lg.field_e[var2], var11);
         }
-        int discarded$0 = 0;
-        p.a();
+        p.a(0);
         return var1;
     }
 
@@ -81,7 +80,7 @@ abstract class lb extends w {
                   if (param2 > 35) {
                     break L2;
                   } else {
-                    ka[] discarded$2 = lb.f(-115);
+                    ka[] discarded$1 = lb.f(-115);
                     break L2;
                   }
                 }
@@ -116,8 +115,7 @@ abstract class lb extends w {
                               var6 = var6 - (var10 >> 1) * 256 / 64;
                               var5 = var5 + var6 / 256;
                               var6 = var6 % 256;
-                              int discarded$3 = -2140919664;
-                              qb.a(var4, var5, param1, param0, var3_int, var6);
+                              qb.a(var4, var5, param1, param0, var3_int, var6, -2140919664);
                               var14 = ak.field_a[vj.field_c][var12];
                               var7 = dl.field_n[0];
                               var8 = dl.field_n[2];

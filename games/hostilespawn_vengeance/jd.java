@@ -32,7 +32,7 @@ final class jd extends am {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         am var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -49,16 +49,13 @@ final class jd extends am {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    int discarded$10 = 6;
-                    int discarded$11 = 51;
-                    pe.a();
+                    pe.a((byte) 51, 6);
                     var2 = ve.field_b.a(12684);
                     continue L2;
                   }
                 }
               } else {
-                int discarded$12 = 1;
-                fj.a(6, var4);
+                fj.a(6, var4, true);
                 var4 = (m) (Object) wk.field_g.a(12684);
                 continue L1;
               }
@@ -144,8 +141,7 @@ final class jd extends am {
           L0: {
             var4_int = param2.a((byte) -2, param1);
             var5 = param2.a(var4_int, param3, -1);
-            int discarded$2 = 0;
-            stackOut_0_0 = mg.a(param2, var4_int, var5);
+            stackOut_0_0 = mg.a(param2, var4_int, var5, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -232,7 +228,7 @@ final class jd extends am {
         return stackIn_1_0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_i = null;
         field_h = null;
         field_x = null;

@@ -20,7 +20,7 @@ final class wa {
         field_f = null;
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         n var1 = (n) (Object) k.field_B.e((byte) 123);
         if (!(var1 != null)) {
             var1 = new n();

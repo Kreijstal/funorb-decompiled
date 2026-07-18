@@ -9,7 +9,7 @@ final class bj {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 

@@ -157,7 +157,7 @@ final class fa {
                 if (-1 != param4.indexOf("<br>")) {
                   break L2;
                 } else {
-                  args[0] = (String) (Object) args;
+                  args[0] = param4;
                   stackOut_5_0 = 1;
                   stackIn_6_0 = stackOut_5_0;
                   return stackIn_6_0;
@@ -334,7 +334,7 @@ final class fa {
         field_e = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         Object var2 = null;
         ak.a(false, (String) null, "");
     }

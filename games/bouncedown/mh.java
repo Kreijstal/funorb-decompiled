@@ -294,19 +294,12 @@ abstract class mh extends wk {
         try {
           L0: {
             lb.a(param7, 320, -101, param15);
-            int discarded$7 = 0;
-            hh.b(20, 14, 20, 20);
+            hh.b(20, 14, 20, 20, 0);
             l.a(240, (byte) 127, 320);
-            int discarded$8 = 82;
-            int discarded$9 = 8;
-            uk.a(param3, 4, 8, param19);
+            uk.a(param3, 4, 8, param19, 8, (byte) 82);
             var21_int = 0;
             di.a(0, 0, 0, param20);
-            int discarded$10 = 102;
-            int discarded$11 = 16741888;
-            int discarded$12 = 16777215;
-            int discarded$13 = 16697912;
-            ti.a();
+            ti.a(16697912, 16777215, 16741888, (byte) 102);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -539,8 +532,7 @@ abstract class mh extends wk {
             if (param1 >= 77) {
               L1: {
                 le.a(-1, (java.awt.Component) (Object) param0);
-                int discarded$2 = -80;
-                ka.a((java.awt.Component) (Object) param0);
+                ka.a((java.awt.Component) (Object) param0, (byte) -80);
                 if (null == hg.field_k) {
                   break L1;
                 } else {

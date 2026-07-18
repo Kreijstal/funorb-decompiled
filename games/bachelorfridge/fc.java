@@ -107,7 +107,7 @@ final class fc extends td {
         }
     }
 
-    final static void a(int param0, int param1, kv param2, int param3, byte param4) {
+    final static void a(int param0, int param1, kv param2, int param3, byte param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

@@ -5,19 +5,17 @@ final class lga {
     lga(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, boolean param9, boolean param10, int param11) {
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         crb.a(3, param0);
         ao.a((byte) 91, param0);
     }
 
     final static boolean a(int param0, int param1, int param2) {
         if (param0 != 14216) {
-          boolean discarded$3 = lga.a(-124, 11, -116);
-          int discarded$4 = 0;
-          return (uoa.a(92, param2, param1) | pca.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2)) & rfb.a((byte) -49, param2, param1);
+          boolean discarded$2 = lga.a(-124, 11, -116);
+          return (uoa.a(92, param2, param1) | pca.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & rfb.a((byte) -49, param2, param1);
         } else {
-          int discarded$5 = 0;
-          return (uoa.a(92, param2, param1) | pca.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2)) & rfb.a((byte) -49, param2, param1);
+          return (uoa.a(92, param2, param1) | pca.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & rfb.a((byte) -49, param2, param1);
         }
     }
 

@@ -399,8 +399,7 @@ final class mo extends am {
                     }
                   }
                   L13: while (true) {
-                    int discarded$1 = -13;
-                    if (!np.a()) {
+                    if (!np.a((byte) -13)) {
                       stackOut_78_0 = 0;
                       stackIn_79_0 = stackOut_78_0;
                       break L0;
@@ -864,7 +863,7 @@ final class mo extends am {
         }
     }
 
-    final static void a(t param0) {
+    final static void a(t param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -965,7 +964,7 @@ final class mo extends am {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_B = null;
         field_x = null;
         field_D = null;

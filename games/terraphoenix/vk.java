@@ -149,7 +149,7 @@ final class vk {
         return stackIn_13_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
         field_d = null;

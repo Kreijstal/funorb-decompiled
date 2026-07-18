@@ -96,8 +96,7 @@ final class pf {
     private final boolean a(int param0, boolean param1, int param2) {
         int var5 = client.field_A ? 1 : 0;
         if (0 == param2) {
-            int discarded$1 = -84;
-            bn.a(((pf) this).field_e, param0);
+            bn.a(((pf) this).field_e, param0, (byte) -84);
         } else {
             if (1 != param2) {
                 if (param2 == 2) {
@@ -144,8 +143,7 @@ final class pf {
                 if (cd.field_m == null) {
                   break L0;
                 } else {
-                  int discarded$2 = 1;
-                  if (!ig.b()) {
+                  if (!ig.b(true)) {
                     break L0;
                   } else {
                     var7 = ma.a(-105, ((pf) this).field_e);
@@ -207,8 +205,7 @@ final class pf {
           if (null != ((pf) this).field_b) {
             if (((pf) this).field_e != uc.field_g) {
               if (cd.field_m != null) {
-                int discarded$3 = 1;
-                if (ig.b()) {
+                if (ig.b(true)) {
                   L1: {
                     var7 = ma.a(-105, ((pf) this).field_e);
                     var4 = bj.a(((pf) this).field_e, (byte) 58);
@@ -426,7 +423,7 @@ final class pf {
         }
     }
 
-    private final boolean a(int param0, int param1) {
+    private final boolean a(int param0, int param1, byte param2) {
         int var5 = 0;
         var5 = client.field_A ? 1 : 0;
         if (param0 != 8) {
@@ -437,19 +434,17 @@ final class pf {
                   if (14 != param0) {
                     if (param0 != -21) {
                       if (-20 == param0) {
-                        boolean discarded$3 = vm.a(((pf) this).field_j, ((pf) this).field_e, ((pf) this).field_b, -120, ((pf) this).field_a);
+                        boolean discarded$1 = vm.a(((pf) this).field_j, ((pf) this).field_e, ((pf) this).field_b, -120, ((pf) this).field_a);
                         return true;
                       } else {
                         return false;
                       }
                     } else {
-                      int discarded$4 = -1045;
-                      aj.a();
+                      aj.a(-1045);
                       return true;
                     }
                   } else {
-                    int discarded$5 = 0;
-                    ke.o();
+                    ke.o(0);
                     return true;
                   }
                 } else {
@@ -661,11 +656,11 @@ final class pf {
         }
     }
 
-    final static String a(char param0) {
+    final static String a(char param0, byte param1) {
         return String.valueOf(param0);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         field_d = null;
         field_c = null;
@@ -680,9 +675,8 @@ final class pf {
         }
         boolean discarded$0 = this.a(param1, true, var6);
         boolean discarded$1 = this.b(param4, var6, param3);
-        int discarded$2 = -92;
-        boolean discarded$3 = this.a(var6, param4);
-        boolean discarded$4 = this.a(param3 ^ -18, var6, param2);
+        boolean discarded$2 = this.a(var6, param4, (byte) -92);
+        boolean discarded$3 = this.a(param3 ^ -18, var6, param2);
         return true;
     }
 
@@ -852,8 +846,7 @@ final class pf {
                     var8 = this.d(-66);
                     var4_ref = var8;
                     var5 = ed.a(((pf) this).field_b, (byte) -125);
-                    int discarded$1 = -118;
-                    var6 = ik.a(((pf) this).field_b) ? 1 : 0;
+                    var6 = ik.a(((pf) this).field_b, (byte) -118) ? 1 : 0;
                     if (var5 != null) {
                       break L4;
                     } else {
@@ -965,8 +958,7 @@ final class pf {
           L0: {
             mg.field_bc.e(0);
             if (pk.field_r != 0) {
-              int discarded$4 = 94;
-              qk.a();
+              qk.a((byte) 94);
               break L0;
             } else {
               break L0;
@@ -977,8 +969,7 @@ final class pf {
         } else {
           L1: {
             if (pk.field_r != 0) {
-              int discarded$5 = 94;
-              qk.a();
+              qk.a((byte) 94);
               break L1;
             } else {
               break L1;
@@ -992,16 +983,15 @@ final class pf {
     private final boolean b(int param0, int param1, int param2) {
         Object var4 = null;
         String var4_ref = null;
+        Object var5 = null;
         if (param2 == 0) {
           var4 = null;
           if (4 != param1) {
             if (param1 == 5) {
-              int discarded$9 = 0;
-              var4_ref = md.a(param0, ((pf) this).field_b);
+              var4_ref = md.a(param0, ((pf) this).field_b, false);
               if (var4_ref != null) {
-                int discarded$10 = 0;
-                int discarded$11 = 2;
-                ca.a(((pf) this).field_b, (String) null, var4_ref, (byte) -79);
+                var5 = null;
+                ca.a(((pf) this).field_b, (String) null, var4_ref, (byte) -79, 2, 0);
                 return true;
               } else {
                 return true;
@@ -1011,9 +1001,8 @@ final class pf {
                 if (7 == param1) {
                   var4_ref = sg.a(((pf) this).field_b, ((pf) this).field_m, param0, (byte) 126);
                   if (var4_ref != null) {
-                    int discarded$12 = 0;
-                    int discarded$13 = 2;
-                    ca.a(((pf) this).field_b, (String) null, var4_ref, (byte) -79);
+                    var5 = null;
+                    ca.a(((pf) this).field_b, (String) null, var4_ref, (byte) -79, 2, 0);
                     return true;
                   } else {
                     return true;
@@ -1026,9 +1015,8 @@ final class pf {
                 if (var4_ref == null) {
                   return true;
                 } else {
-                  int discarded$14 = 0;
-                  int discarded$15 = 2;
-                  ca.a(((pf) this).field_b, (String) null, var4_ref, (byte) -79);
+                  var5 = null;
+                  ca.a(((pf) this).field_b, (String) null, var4_ref, (byte) -79, 2, 0);
                   return true;
                 }
               }
@@ -1038,9 +1026,8 @@ final class pf {
             if (var4_ref == null) {
               return true;
             } else {
-              int discarded$16 = 0;
-              int discarded$17 = 2;
-              ca.a(((pf) this).field_b, (String) null, var4_ref, (byte) -79);
+              var5 = null;
+              ca.a(((pf) this).field_b, (String) null, var4_ref, (byte) -79, 2, 0);
               return true;
             }
           }

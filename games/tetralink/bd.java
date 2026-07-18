@@ -10,7 +10,7 @@ final class bd {
     static int[] field_a;
     static hl field_g;
 
-    final static oh[] a(int param0, int param1, int param2, int param3) {
+    final static oh[] a(int param0, int param1, int param2, int param3, byte param4) {
         oh[] var5 = null;
         oh[] var6 = null;
         var6 = new oh[9];
@@ -53,7 +53,7 @@ final class bd {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_d = null;
         field_c = null;

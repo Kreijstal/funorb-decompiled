@@ -35,8 +35,7 @@ final class he extends oh {
         try {
           L0: {
             L1: {
-              int discarded$3 = -70;
-              oo.a(param1);
+              oo.a(param1, (byte) -70);
               fk.a(rg.field_c, 72, false);
               if (param0 == 8192) {
                 break L1;
@@ -95,7 +94,7 @@ final class he extends oh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_q = null;
         field_m = null;
         field_p = null;

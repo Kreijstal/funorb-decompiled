@@ -77,7 +77,7 @@ final class vj extends al {
         }
     }
 
-    final static String a(Throwable param0) throws IOException {
+    final static String a(Throwable param0, byte param1) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;
@@ -218,7 +218,7 @@ final class vj extends al {
         return super.b(param0, true);
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_m = null;
         field_s = null;
         field_p = null;
@@ -253,8 +253,7 @@ final class vj extends al {
         L0: {
           var14 = ZombieDawn.field_J;
           super.a((byte) -51);
-          int discarded$2 = 0;
-          li.a();
+          li.a(false);
           if (((vj) this).field_r == null) {
             ((vj) this).field_r = new vn(100, 100);
             ki.a((byte) -92, ((vj) this).field_r);
@@ -302,8 +301,7 @@ final class vj extends al {
               if (2 <= var5_int) {
                 L5: {
                   if (null == bd.field_m) {
-                    int discarded$3 = 1;
-                    bd.field_m = fg.a(3, 10, 1, qm.field_b + 42);
+                    bd.field_m = fg.a(3, 10, 1, qm.field_b + 42, 1);
                     break L5;
                   } else {
                     break L5;
@@ -467,7 +465,7 @@ final class vj extends al {
         return id.field_M + ((vj) this).field_k;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         le var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

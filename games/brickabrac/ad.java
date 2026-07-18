@@ -267,8 +267,7 @@ final class ad implements Runnable {
                       var3 = var4.getOutputStream();
                       var3.write(17);
                       var5 = (CharSequence) (Object) ("JAGGRAB " + ((ad) this).field_a.getFile() + "\n\n");
-                      int discarded$1 = 0;
-                      var3.write(uj.a(var5));
+                      var3.write(uj.a(var5, false));
                       ((ad) this).field_k = new DataInputStream(var4.getInputStream());
                       break L7;
                     } else {

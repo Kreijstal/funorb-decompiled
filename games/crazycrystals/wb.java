@@ -66,7 +66,7 @@ final class wb {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_e = null;
         field_b = null;
     }

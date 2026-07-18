@@ -17,8 +17,7 @@ final class vm extends ab implements pi {
         nd var2 = null;
         if (((vm) this).field_F) {
           if (!((vm) this).field_wb) {
-            int discarded$2 = -67;
-            var2 = th.c();
+            var2 = th.c((byte) -67);
             if (var2 != null) {
               this.a((byte) 100, false, var2);
               if (param0 != 39) {
@@ -93,8 +92,7 @@ final class vm extends ab implements pi {
                   } else {
                     L2: {
                       if (!param1) {
-                        int discarded$3 = 1;
-                        qf.a();
+                        qf.a(true);
                         break L2;
                       } else {
                         break L2;
@@ -117,13 +115,13 @@ final class vm extends ab implements pi {
                   ((vm) this).a((n) (Object) new bj((vm) this), (byte) 126);
                   return;
                 } else {
-                  rm discarded$4 = var5.a(112, (tb) this, sf.field_j);
+                  rm discarded$2 = var5.a(112, (tb) this, sf.field_j);
                   break L3;
                 }
               } else {
                 L4: {
                   if (((vm) this).field_yb) {
-                    rm discarded$5 = var5.a(81, (tb) this, sf.field_j);
+                    rm discarded$3 = var5.a(81, (tb) this, sf.field_j);
                     break L4;
                   } else {
                     if (param2.field_b == 5) {

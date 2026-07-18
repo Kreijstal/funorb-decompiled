@@ -81,7 +81,7 @@ final class m extends ji {
         super(1, true);
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_y = null;
         field_z = null;
     }
@@ -122,7 +122,7 @@ final class m extends ji {
         }
     }
 
-    final static co a(byte[] param0) {
+    final static co a(byte[] param0, int param1) {
         co var2 = null;
         RuntimeException var2_ref = null;
         co stackIn_4_0 = null;

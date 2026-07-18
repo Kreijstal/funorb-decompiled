@@ -77,15 +77,13 @@ final class gl extends qe {
                     }
                   }
                   var7_ref_String = param1.substring(2 + var6_int, var5);
-                  int discarded$7 = -3;
-                  if (sqa.a((CharSequence) (Object) var7_ref_String)) {
+                  if (sqa.a((CharSequence) (Object) var7_ref_String, -3)) {
                     if (var3_int <= var5) {
                       continue L1;
                     } else {
                       if (62 == param1.charAt(var5)) {
                         var5++;
-                        int discarded$8 = 70;
-                        var8 = jb.a((CharSequence) (Object) var7_ref_String);
+                        var8 = jb.a((CharSequence) (Object) var7_ref_String, (byte) 70);
                         var4 = var4 + (param2[var8].length() + (-var5 + var6_int));
                         continue L1;
                       } else {
@@ -119,17 +117,15 @@ final class gl extends qe {
                           }
                         }
                         var9 = param1.substring(var8 - -2, var5);
-                        int discarded$9 = -3;
-                        if (sqa.a((CharSequence) (Object) var9)) {
+                        if (sqa.a((CharSequence) (Object) var9, -3)) {
                           if (var3_int <= var5) {
                             continue L4;
                           } else {
                             if (62 == param1.charAt(var5)) {
                               var5++;
-                              int discarded$10 = 70;
-                              var10 = jb.a((CharSequence) (Object) var9);
-                              StringBuilder discarded$11 = var6.append(param1.substring(var7, var8));
-                              StringBuilder discarded$12 = var6.append(param2[var10]);
+                              var10 = jb.a((CharSequence) (Object) var9, (byte) 70);
+                              StringBuilder discarded$3 = var6.append(param1.substring(var7, var8));
+                              StringBuilder discarded$4 = var6.append(param2[var10]);
                               var7 = var5;
                               continue L4;
                             } else {
@@ -141,7 +137,7 @@ final class gl extends qe {
                         }
                       }
                     } else {
-                      StringBuilder discarded$13 = var6.append(param1.substring(var7));
+                      StringBuilder discarded$5 = var6.append(param1.substring(var7));
                       stackOut_29_0 = var6.toString();
                       stackIn_30_0 = stackOut_29_0;
                       break L0;

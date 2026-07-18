@@ -75,7 +75,7 @@ final class sna extends le {
         return var18;
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] a(byte[] param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;

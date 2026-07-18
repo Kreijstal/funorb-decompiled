@@ -7,7 +7,7 @@ final class gg {
     static db[] field_a;
     static String field_c;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_b = null;
         field_d = null;

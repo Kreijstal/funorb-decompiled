@@ -122,7 +122,7 @@ abstract class ok extends al implements je {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_G = null;
         field_C = null;
         field_F = null;
@@ -452,15 +452,11 @@ abstract class ok extends al implements je {
     final static void a(k param0, int param1, byte param2, kk param3) {
         vi.field_c = il.c(-14496) * param1 / 1000;
         try {
-            int discarded$0 = 4;
-            ak.a(param3);
+            ak.a(param3, 4);
             fe.a(30344, param3);
-            int discarded$1 = -123;
-            cl.a(param3);
-            int discarded$2 = 0;
-            ea.a();
-            int discarded$3 = 97;
-            cj.d();
+            cl.a(param3, (byte) -123);
+            ea.a(false);
+            cj.d(97);
             fb.field_a = -vi.field_c;
         } catch (RuntimeException runtimeException) {
             throw sl.a((Throwable) (Object) runtimeException, "ok.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + 52 + ',' + (param3 != null ? "{...}" : "null") + ')');

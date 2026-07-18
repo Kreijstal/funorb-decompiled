@@ -92,8 +92,7 @@ final class rda extends ci {
                         break L5;
                       } else {
                         if (var6 == 1) {
-                          int discarded$1 = -88;
-                          ((rda) this).field_p[var4_int] = (rra) (Object) lga.a(param1);
+                          ((rda) this).field_p[var4_int] = (rra) (Object) lga.a(param1, (byte) -88);
                           break L5;
                         } else {
                           if (var6 == 2) {
@@ -264,11 +263,11 @@ final class rda extends ci {
         super(0, true);
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         bl.field_a = null;
     }
 
-    final static void e() {
+    final static void e(int param0) {
         RuntimeException var1 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -292,7 +291,7 @@ final class rda extends ci {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_m = null;
         field_n = null;
     }

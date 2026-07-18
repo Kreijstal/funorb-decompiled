@@ -18,7 +18,7 @@ final class ve {
         return se.field_a;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         int var1 = 2;

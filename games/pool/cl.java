@@ -105,7 +105,7 @@ final class cl {
         return stackIn_6_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_j = null;
         field_k = null;
@@ -118,7 +118,7 @@ final class cl {
         field_c = null;
     }
 
-    final static wl a(byte[] param0) {
+    final static wl a(byte[] param0, boolean param1) {
         wl var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;

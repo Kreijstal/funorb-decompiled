@@ -28,7 +28,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_b = null;
         field_a = null;
@@ -168,8 +168,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           L0: {
             L1: {
-              int discarded$3 = 0;
-              af.a(param0, ((af) this).field_d);
+              af.a(param0, ((af) this).field_d, false);
               if (param1) {
                 break L1;
               } else {
@@ -415,7 +414,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static void a(lk param0, java.awt.Frame param1) {
+    final static void a(lk param0, java.awt.Frame param1, boolean param2) {
         la var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

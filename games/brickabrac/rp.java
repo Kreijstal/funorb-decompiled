@@ -143,8 +143,7 @@ final class rp extends km {
                 c.field_g = c.field_g - 1;
                 if (0 == fieldTemp$1) {
                     fc.a(-59, field_s);
-                    int discarded$7 = 1;
-                    pa.a();
+                    pa.a(true);
                     sc.b(-96);
                     if (si.field_k != null) {
                         pe.field_n = si.field_k.field_m;

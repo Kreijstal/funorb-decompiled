@@ -12,7 +12,7 @@ final class ah {
     static ea field_d;
     static boolean field_i;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_c = null;
         field_g = null;

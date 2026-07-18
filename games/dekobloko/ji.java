@@ -15,9 +15,7 @@ final class ji {
         if (((ji) this).field_b) {
             ((ji) this).field_d[param1] = (Object) (Object) ((ji) this).field_a.a(param1, (byte) 91);
         } else {
-            int discarded$0 = 0;
-            int discarded$1 = -1389597532;
-            ((ji) this).field_d[param1] = qk.a(((ji) this).field_a.a(param1, (byte) 91));
+            ((ji) this).field_d[param1] = qk.a(((ji) this).field_a.a(param1, (byte) 91), -1389597532, false);
         }
         if (param0 != 20351) {
             field_c = null;
@@ -268,7 +266,7 @@ final class ji {
         return ((ji) this).field_f.field_k[param1];
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_h = null;
     }
@@ -423,7 +421,7 @@ final class ji {
         return stackIn_6_0 != 0;
     }
 
-    private final synchronized boolean a(int[] param0, int param1, int param2) {
+    private final synchronized boolean a(int[] param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int[] var6 = null;
@@ -654,9 +652,7 @@ final class ji {
                           var7[var11] = (Object) (Object) var54;
                           break L11;
                         } else {
-                          int discarded$4 = 0;
-                          int discarded$5 = -1389597532;
-                          var7[var11] = qk.a(var23);
+                          var7[var11] = qk.a(var53, -1389597532, false);
                           break L11;
                         }
                       } else {
@@ -798,9 +794,7 @@ final class ji {
                                           }
                                           L26: {
                                             if (((ji) this).field_g == 0) {
-                                              int discarded$6 = 0;
-                                              int discarded$7 = -1389597532;
-                                              var7[var18] = qk.a(var56[var17]);
+                                              var7[var18] = qk.a(var56[var17], -1389597532, false);
                                               break L26;
                                             } else {
                                               var7[var18] = (Object) (Object) var56[var17];
@@ -1116,8 +1110,7 @@ final class ji {
 
     final byte[] a(int param0, int param1, int param2) {
         int var4 = 118 / ((param1 - -44) / 62);
-        int discarded$0 = -33;
-        return this.a(param0, (int[]) null, param2);
+        return this.a(param0, (int[]) null, param2, (byte) -33);
     }
 
     final static String[] a(char param0, byte param1, String param2) {
@@ -1345,7 +1338,7 @@ final class ji {
         return stackIn_10_0;
     }
 
-    final static void c(int param0) {
+    final static void c(int param0, int param1) {
         uf var2 = we.field_b;
         var2.f(param0, -4);
         var2.a(true, 1);
@@ -1439,7 +1432,7 @@ final class ji {
         return stackIn_4_0;
     }
 
-    private final synchronized byte[] a(int param0, int[] param1, int param2) {
+    private final synchronized byte[] a(int param0, int[] param1, int param2, byte param3) {
         Object var5 = null;
         byte[] var7 = null;
         Object stackIn_2_0 = null;
@@ -1478,11 +1471,9 @@ final class ji {
                     }
                   }
                 }
-                int discarded$2 = 26687;
-                if (!this.a(param1, param2, param0)) {
+                if (!this.a(param1, param2, param0, 26687)) {
                   this.a(20351, param2);
-                  int discarded$3 = 26687;
-                  if (this.a(param1, param2, param0)) {
+                  if (this.a(param1, param2, param0, 26687)) {
                     break L1;
                   } else {
                     return null;

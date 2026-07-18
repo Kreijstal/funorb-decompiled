@@ -178,8 +178,7 @@ final class dd extends u {
                   }
                 }
               }
-              int discarded$2 = 0;
-              qb.a();
+              qb.a(0);
               break L1;
             }
             var66 = new int[param7.field_H];
@@ -304,8 +303,7 @@ final class dd extends u {
                             var32 = 65280 & var30;
                             var33 = -620822273 & var28 * var31 >>> 8 | var28 * var32 >>> 8 & -486473984;
                             var33 = var33 + var29 * 65793;
-                            int discarded$3 = 28183;
-                            kc.a(var33 >> 1 & 8355711, var22, var24, var25, var27, var23, var26);
+                            kc.a(var33 >> 1 & 8355711, var22, var24, var25, var27, var23, var26, 28183);
                             break L10;
                           }
                         }

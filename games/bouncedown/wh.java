@@ -99,7 +99,7 @@ final class wh implements Iterable {
         }
     }
 
-    final static int a(int param0, CharSequence param1) {
+    final static int a(int param0, CharSequence param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -158,7 +158,7 @@ final class wh implements Iterable {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
     }
@@ -167,7 +167,7 @@ final class wh implements Iterable {
         throw new Error();
     }
 
-    final static void a(long param0) {
+    final static void a(long param0, int param1) {
         if (0L >= param0) {
           return;
         } else {

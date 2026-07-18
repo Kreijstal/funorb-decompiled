@@ -23,7 +23,7 @@ class fk extends kb {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_c = null;
         field_d = null;
         field_i = null;
@@ -42,10 +42,8 @@ class fk extends kb {
         try {
             qa.field_c = mb.a((byte) -63, "");
             qa.field_c.a((byte) 121, false);
-            int discarded$0 = 109;
-            ul.a(param1, param4, param3);
-            int discarded$1 = 1;
-            kf.f();
+            ul.a(param1, param4, param3, (byte) 109);
+            kf.f(1);
             bk.field_c = c.field_m;
             ee.field_c = c.field_m;
         } catch (RuntimeException runtimeException) {
@@ -53,10 +51,9 @@ class fk extends kb {
         }
     }
 
-    final static gb a() {
+    final static gb a(int param0) {
         int var1 = 0;
-        int discarded$0 = 25594;
-        return new gb(ve.b(), ja.a(-2116060060));
+        return new gb(ve.b(25594), ja.a(-2116060060));
     }
 
     fk(long param0, String param1) {

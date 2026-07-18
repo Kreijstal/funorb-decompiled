@@ -8,7 +8,7 @@ final class qg {
     static int field_d;
     static String field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_e = null;
     }
@@ -21,16 +21,14 @@ final class qg {
         ((qg) this).field_c = param0;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (fh.c(-114)) {
             return;
         }
         if (vk.field_b != null) {
             return;
         }
-        int discarded$0 = 94;
-        int discarded$1 = 4;
-        vk.field_b = cf.a();
+        vk.field_b = cf.a(4, 94);
     }
 
     static {

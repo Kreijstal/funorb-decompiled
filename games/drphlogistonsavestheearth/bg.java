@@ -90,20 +90,13 @@ final class bg extends gi {
                     if (!sb.field_g.a(param0 ^ -11140, "benefits")) {
                       break L0;
                     } else {
-                      int discarded$14 = 1;
-                      ua.field_c = qk.a("benefits", ce.field_a, "headline");
-                      int discarded$15 = 1;
-                      t.field_d = qk.a("benefits", ce.field_a, "blurbpane");
-                      int discarded$16 = 1;
-                      r.field_b = qk.a("benefits", ce.field_a, "button");
-                      int discarded$17 = 1;
-                      eg.field_d = qk.a("benefits", ce.field_a, "signup_text");
-                      int discarded$18 = 1;
-                      nj.field_f = qk.a("benefits", ce.field_a, "menu_text");
-                      int discarded$19 = 1;
-                      uh.field_r = qk.a("benefits", ce.field_a, "button_frame");
-                      int discarded$20 = 1;
-                      sc.field_c = qk.a("benefits", ce.field_a, "arrow");
+                      ua.field_c = qk.a("benefits", ce.field_a, "headline", true);
+                      t.field_d = qk.a("benefits", ce.field_a, "blurbpane", true);
+                      r.field_b = qk.a("benefits", ce.field_a, "button", true);
+                      eg.field_d = qk.a("benefits", ce.field_a, "signup_text", true);
+                      nj.field_f = qk.a("benefits", ce.field_a, "menu_text", true);
+                      uh.field_r = qk.a("benefits", ce.field_a, "button_frame", true);
+                      sc.field_c = qk.a("benefits", ce.field_a, "arrow", true);
                       md.field_a = (rf) (Object) kc.a(sb.field_g, ce.field_a, "benefits", 125, "large_font");
                       sc.field_f = (rf) (Object) kc.a(sb.field_g, ce.field_a, "benefits", 64, "small_font");
                       var28 = wj.field_l;
@@ -145,7 +138,7 @@ final class bg extends gi {
                           break L0;
                         } else {
                           bh.field_c[var7].c();
-                          int discarded$21 = sc.field_f.a(bc.field_b[var7], 3, 3, -6 + bh.field_c[var7].field_y, bh.field_c[var7].field_w - 6, rh.field_e, -1, 1, 1, sc.field_f.field_x + sc.field_f.field_S);
+                          int discarded$3 = sc.field_f.a(bc.field_b[var7], 3, 3, -6 + bh.field_c[var7].field_y, bh.field_c[var7].field_w - 6, rh.field_e, -1, 1, 1, sc.field_f.field_x + sc.field_f.field_S);
                           p.a(bh.field_c[var7].field_y, 3, 0, bh.field_c[var7].field_w, 1, 0, 0, bh.field_c[var7]);
                           var7++;
                           continue L1;
@@ -238,7 +231,7 @@ final class bg extends gi {
                 hf.field_z.b();
                 var9 = new nh(hf.field_z.field_z, hf.field_z.field_C);
                 var9.c();
-                int discarded$22 = md.field_a.a(var14, fe.field_a, ph.field_e, ca.field_db, af.field_d, 16777215, -1, 1, 1, md.field_a.field_x + md.field_a.field_S);
+                int discarded$4 = md.field_a.a(var14, fe.field_a, ph.field_e, ca.field_db, af.field_d, 16777215, -1, 1, 1, md.field_a.field_x + md.field_a.field_S);
                 p.a(var9.field_z, 3, 0, var9.field_C, 1, 0, 0, var9);
                 hf.field_z.c();
                 var9.d(0, 0);
@@ -274,7 +267,7 @@ final class bg extends gi {
                 var17 = a.a(5044, jl.field_i, new String[1]);
                 df.field_b = null;
                 var16.c();
-                int discarded$23 = sc.field_f.a(var17, 3, 3, -6 + var16.field_y, var16.field_w - 6, 16777215, -1, 0, 1, sc.field_f.field_S + sc.field_f.field_x);
+                int discarded$5 = sc.field_f.a(var17, 3, 3, -6 + var16.field_y, var16.field_w - 6, 16777215, -1, 0, 1, sc.field_f.field_S + sc.field_f.field_x);
                 p.a(var16.field_y, 3, 0, var16.field_w, 1, 0, 0, var16);
                 hf.field_D.c();
                 var16.d(-hf.field_D.field_D + 199, -hf.field_D.field_v + 83);
@@ -416,8 +409,7 @@ final class bg extends gi {
                     break L17;
                   }
                 }
-                int discarded$24 = 1;
-                qj.a(stackIn_57_0 != 0, tb.field_c, ka.field_o);
+                qj.a(stackIn_57_0 != 0, tb.field_c, ka.field_o, true);
                 break L13;
               } else {
                 break L13;
@@ -452,8 +444,7 @@ final class bg extends gi {
                     break L20;
                   }
                 }
-                int discarded$25 = 1;
-                qj.a(stackIn_66_0 != 0, v.field_N, ch.field_A);
+                qj.a(stackIn_66_0 != 0, v.field_N, ch.field_A, true);
                 break L18;
               }
             }
@@ -501,8 +492,7 @@ final class bg extends gi {
                         }
                       }
                     } else {
-                      int discarded$26 = 139;
-                      wd.b();
+                      wd.b(139);
                       bh.field_c[ig.field_k].d(269, 340);
                       break L21;
                     }
@@ -512,8 +502,7 @@ final class bg extends gi {
                 }
               }
             }
-            int discarded$27 = 139;
-            wd.b();
+            wd.b(139);
             bh.field_c[ig.field_k].d(269, 340);
             break L21;
           }
@@ -523,7 +512,7 @@ final class bg extends gi {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_p = null;
         field_t = null;
         field_q = null;

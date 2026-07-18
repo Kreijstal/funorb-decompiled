@@ -11,7 +11,7 @@ abstract class w {
 
     abstract byte[] a(int param0, byte param1);
 
-    final static void a(vn[] param0) {
+    final static void a(vn[] param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -99,7 +99,7 @@ abstract class w {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

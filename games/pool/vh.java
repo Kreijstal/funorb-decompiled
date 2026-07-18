@@ -539,7 +539,7 @@ class vh extends o {
             while (var3 != null) {
                 var3.field_ub = true;
                 var3.d((byte) -128);
-                var3 = (vh) (Object) var3.field_T.b((byte) -46);
+                var3 = (vh) (Object) ((vh) this).field_T.b((byte) -46);
             }
         }
         if (param0 >= -123) {
@@ -904,8 +904,8 @@ class vh extends o {
               if (var23_ref == null) {
                 break L30;
               } else {
-                var23_ref.a(param0, var23_ref.field_sb - -var19, (byte) 85, param3, param4, var23_ref.field_Db, var23_ref.field_ib + var20, var23_ref.field_gb, param8, var23_ref.field_fb, param10);
-                var23_ref = (vh) (Object) var23_ref.field_T.f((byte) -5);
+                var23_ref.a(param0, ((vh) this).field_sb - -var19, (byte) 85, param3, param4, ((vh) this).field_Db, ((vh) this).field_ib + var20, ((vh) this).field_gb, param8, ((vh) this).field_fb, param10);
+                var23_ref = (vh) (Object) ((vh) this).field_T.f((byte) -5);
                 continue L31;
               }
             }
@@ -1027,7 +1027,7 @@ class vh extends o {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_S = null;
         field_Ab = null;
     }
@@ -1139,7 +1139,7 @@ class vh extends o {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        Object var14 = null;
+        vh var14 = null;
         Object stackIn_27_0 = null;
         Object stackIn_28_0 = null;
         Object stackIn_29_0 = null;
@@ -1171,7 +1171,6 @@ class vh extends o {
         Object stackOut_37_0 = null;
         int stackOut_37_1 = 0;
         L0: {
-          var14 = null;
           if (((vh) this).field_rb > 0) {
             var7 = -(-((vh) this).field_rb >> 2);
             break L0;
@@ -1369,13 +1368,13 @@ class vh extends o {
         L12: {
           ((vh) this).field_W = stackIn_38_1 != 0;
           if (((vh) this).field_T != null) {
-            var14 = (Object) (Object) (vh) (Object) ((vh) this).field_T.a((byte) -127);
+            var14 = (vh) (Object) ((vh) this).field_T.a((byte) -127);
             L13: while (true) {
               if (var14 == null) {
                 break L12;
               } else {
-                ((vh) var14).a(((vh) var14).field_ib, param1, ((vh) var14).field_gb, ((vh) var14).field_Db, (byte) 63, ((vh) var14).field_sb);
-                var14 = (Object) (Object) (vh) (Object) ((vh) var14).field_T.b((byte) -46);
+                var14.a(((vh) this).field_ib, param1, ((vh) this).field_gb, ((vh) this).field_Db, (byte) 63, ((vh) this).field_sb);
+                var14 = (vh) (Object) ((vh) this).field_T.b((byte) -46);
                 continue L13;
               }
             }
@@ -1392,7 +1391,7 @@ class vh extends o {
           }
         }
         L15: {
-          if (!((vh) var14).field_db) {
+          if (!((vh) this).field_db) {
             break L15;
           } else {
             cl.field_f = true;
@@ -1401,14 +1400,14 @@ class vh extends o {
         }
         L16: {
           qh.c(var8, var9, var10, var12);
-          if (((vh) var14).field_jb == 0) {
+          if (((vh) this).field_jb == 0) {
             break L16;
           } else {
-            if (((vh) var14).field_Jb) {
+            if (((vh) this).field_Jb) {
               L17: {
-                ((vh) this).field_qb = -param5 + (wn.field_i + -((vh) var14).field_mb);
-                ((vh) this).field_eb = -param0 + (gg.field_f + -((vh) var14).field_Hb);
-                if (((vh) var14).field_qb < 0) {
+                ((vh) this).field_qb = -param5 + (wn.field_i + -((vh) this).field_mb);
+                ((vh) this).field_eb = -param0 + (gg.field_f + -((vh) this).field_Hb);
+                if (((vh) this).field_qb < 0) {
                   ((vh) this).field_qb = 0;
                   break L17;
                 } else {
@@ -1416,7 +1415,7 @@ class vh extends o {
                 }
               }
               L18: {
-                if (((vh) var14).field_eb < 0) {
+                if (((vh) this).field_eb < 0) {
                   ((vh) this).field_eb = 0;
                   break L18;
                 } else {
@@ -1424,25 +1423,25 @@ class vh extends o {
                 }
               }
               L19: {
-                if (param2 + -((vh) var14).field_gb < ((vh) var14).field_qb) {
-                  ((vh) this).field_qb = param2 + -((vh) var14).field_gb;
+                if (param2 + -((vh) this).field_gb < ((vh) this).field_qb) {
+                  ((vh) this).field_qb = param2 + -((vh) this).field_gb;
                   break L19;
                 } else {
                   break L19;
                 }
               }
               L20: {
-                ((vh) this).field_sb = param5 + ((vh) var14).field_qb;
+                ((vh) this).field_sb = param5 + ((vh) this).field_qb;
                 ((vh) this).field_rb = 0;
-                if (param3 + -((vh) var14).field_Db < ((vh) var14).field_eb) {
-                  ((vh) this).field_eb = -((vh) var14).field_Db + param3;
+                if (param3 + -((vh) this).field_Db < ((vh) this).field_eb) {
+                  ((vh) this).field_eb = -((vh) this).field_Db + param3;
                   break L20;
                 } else {
                   break L20;
                 }
               }
               ((vh) this).field_E = 0;
-              ((vh) this).field_ib = ((vh) var14).field_eb + param0;
+              ((vh) this).field_ib = ((vh) this).field_eb + param0;
               break L16;
             } else {
               break L16;

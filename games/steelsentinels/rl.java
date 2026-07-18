@@ -9,7 +9,7 @@ final class rl {
     static int field_d;
     static String field_e;
 
-    final static wk a(cm param0, String param1, String param2) {
+    final static wk a(cm param0, String param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -65,8 +65,7 @@ final class rl {
           L0: {
             var4_int = param0.a(param1, 32);
             var5 = param0.a(var4_int, -32759, param2);
-            int discarded$2 = 1048576;
-            stackOut_2_0 = im.a(param0, var5, var4_int);
+            stackOut_2_0 = im.a(param0, var5, var4_int, 1048576);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -153,7 +152,7 @@ final class rl {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_f = null;
         field_c = null;
@@ -362,7 +361,7 @@ final class rl {
         }
     }
 
-    final static boolean a(String param0, vi param1, String param2, int param3, String param4, boolean param5) {
+    final static boolean a(String param0, vi param1, String param2, int param3, String param4, boolean param5, boolean param6) {
         RuntimeException var7 = null;
         fg var8 = null;
         int stackIn_2_0 = 0;
@@ -438,8 +437,7 @@ final class rl {
             if (cb.field_j == mm.field_e) {
               var8 = new fg(ag.field_p, param1);
               ag.field_p.a((lh) (Object) var8, 20);
-              int discarded$16 = 88;
-              if (!ee.b()) {
+              if (!ee.b(88)) {
                 L1: {
                   bk.field_ab = param0;
                   if (!param5) {

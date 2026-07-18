@@ -73,7 +73,7 @@ final class df extends fa {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_r = null;
         field_m = null;
     }

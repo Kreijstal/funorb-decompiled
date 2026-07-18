@@ -14,7 +14,7 @@ final class lo extends tc {
     static String field_m;
     static String field_o;
 
-    final static void a(mo param0) {
+    final static void a(mo param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         mo var3 = null;
@@ -126,7 +126,7 @@ final class lo extends tc {
         }
     }
 
-    private final void a(ne[] param0, vh param1) {
+    private final void a(ne[] param0, vh param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -311,8 +311,7 @@ final class lo extends tc {
               }
             }
           } else {
-            int discarded$5 = 126;
-            var3_ref_vh = this.a();
+            var3_ref_vh = this.a((byte) 126);
             var4 = 0;
             L3: while (true) {
               if (((lo) this).field_n <= var4) {
@@ -482,7 +481,7 @@ final class lo extends tc {
         return stackIn_13_0;
     }
 
-    private final vh a() {
+    private final vh a(byte param0) {
         sc var3_ref_sc = null;
         int var3 = 0;
         ne[] var4 = null;
@@ -493,11 +492,9 @@ final class lo extends tc {
         var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (((lo) this).field_s.length >= 4) {
           var8 = new bv(((lo) this).field_s);
-          int discarded$2 = 3;
-          ((lo) this).field_t = bs.a((vh) (Object) var8);
+          ((lo) this).field_t = bs.a((vh) (Object) var8, 3);
           if (((lo) this).field_t == 2) {
-            int discarded$3 = -23920;
-            var3_ref_sc = po.a(var8);
+            var3_ref_sc = po.a(var8, -23920);
             ((lo) this).field_l = var3_ref_sc.field_k;
             ((lo) this).field_p = var3_ref_sc.field_a;
             ((lo) this).field_n = var3_ref_sc.field_e;
@@ -820,8 +817,7 @@ final class lo extends tc {
           L0: {
             if (null == ((lo) this).field_r) {
               var3_int = 116 % ((param0 - -31) / 60);
-              int discarded$4 = 126;
-              var4 = this.a();
+              var4 = this.a((byte) 126);
               var5 = ((lo) this).field_n * ((lo) this).field_l;
               var20 = new int[var5];
               var19 = var20;
@@ -885,8 +881,7 @@ final class lo extends tc {
                           }
                         }
                       } else {
-                        int discarded$5 = 105;
-                        this.a(var7, var4);
+                        this.a(var7, var4, 105);
                         break L2;
                       }
                     }
@@ -901,8 +896,7 @@ final class lo extends tc {
                 }
               }
             } else {
-              int discarded$6 = 126;
-              vh discarded$7 = this.a();
+              vh discarded$1 = this.a((byte) 126);
               var16 = ((lo) this).field_r;
               var3_array = var16;
               var4_int = 0;
@@ -964,8 +958,7 @@ final class lo extends tc {
         try {
             ((lo) this).field_s = param1;
             ((lo) this).field_r = null;
-            int discarded$0 = 126;
-            vh discarded$1 = this.a();
+            vh discarded$0 = this.a((byte) 126);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "lo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

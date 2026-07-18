@@ -7,7 +7,7 @@ final class dm {
     static int field_a;
     static int field_d;
 
-    final static w a() {
+    final static w a(byte param0) {
         return ge.field_f.field_Sb;
     }
 

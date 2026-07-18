@@ -47,8 +47,7 @@ abstract class nq extends qa {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$5 = 127;
-            eq.a((java.awt.Component) (Object) param1);
+            eq.a((java.awt.Component) (Object) param1, (byte) 127);
             of.a(-1693, (java.awt.Component) (Object) param1);
             if (ll.field_a != null) {
               ll.field_a.a((java.awt.Component) (Object) param1, (byte) 62);

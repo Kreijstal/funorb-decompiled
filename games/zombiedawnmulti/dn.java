@@ -5,7 +5,7 @@ final class dn {
     static String field_b;
     static int[] field_a;
 
-    final static byte[] a(ga param0, byte[] param1) {
+    final static byte[] a(ga param0, byte[] param1, byte param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -157,7 +157,7 @@ final class dn {
         return stackIn_16_0;
     }
 
-    final static ml a(String param0) {
+    final static ml a(String param0, boolean param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         ml var3 = null;
@@ -189,15 +189,13 @@ final class dn {
             if (param0 != null) {
               if (0 != param0.length()) {
                 var6 = (CharSequence) (Object) param0;
-                int discarded$4 = 0;
-                var2 = tg.a(var6);
+                var2 = tg.a(var6, false);
                 if (var2 != null) {
                   var3 = (ml) (Object) ol.field_o.a((long)var2.hashCode(), -22877);
                   L0: while (true) {
                     if (var3 != null) {
                       var7 = (CharSequence) (Object) var3.field_Hb;
-                      int discarded$5 = 0;
-                      var4 = tg.a(var7);
+                      var4 = tg.a(var7, false);
                       if (!var4.equals((Object) (Object) var2)) {
                         var3 = (ml) (Object) ol.field_o.b((byte) 68);
                         continue L0;
@@ -254,7 +252,7 @@ final class dn {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }

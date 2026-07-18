@@ -61,7 +61,7 @@ final class oc {
         }
     }
 
-    final static int b() {
+    final static int b(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -218,7 +218,7 @@ final class oc {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_l = null;
         field_b = null;
         int var1 = 0;

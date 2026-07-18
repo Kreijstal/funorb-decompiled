@@ -9,7 +9,7 @@ abstract class rj {
 
     abstract int a(int param0);
 
-    final static String a(ci param0) {
+    final static String a(ci param0, byte param1) {
         int[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -117,7 +117,7 @@ abstract class rj {
         return eh.field_e;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 

@@ -108,7 +108,7 @@ final class nk extends dg {
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         RuntimeException var1 = null;
         int var3 = 0;
         int decompiledRegionSelector0 = 0;

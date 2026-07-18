@@ -7,7 +7,7 @@ final class pl {
     static String field_d;
     static int[] field_a;
 
-    private final static boolean a(byte param0, CharSequence param1) {
+    private final static boolean a(byte param0, CharSequence param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -36,9 +36,7 @@ final class pl {
         var4 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
-            int discarded$13 = -2;
-            int discarded$14 = 0;
-            if (ka.a(param1)) {
+            if (ka.a(param1, false, -2)) {
               var3_int = 0;
               L1: while (true) {
                 if (var3_int >= param1.length()) {
@@ -95,7 +93,7 @@ final class pl {
         return stackIn_13_0 != 0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(null == kb.field_a)) {
             kb.field_a.t(20252);
         }
@@ -103,7 +101,7 @@ final class pl {
         re.field_g.b((al) (Object) ne.field_d, -113);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -471,7 +469,7 @@ final class pl {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_b = null;
         field_a = null;
         field_d = null;
@@ -500,8 +498,7 @@ final class pl {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_0_0 = pl.a((byte) -110, param1);
+            stackOut_0_0 = pl.a((byte) -110, param1, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

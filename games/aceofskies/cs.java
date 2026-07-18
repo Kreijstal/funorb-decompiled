@@ -301,8 +301,7 @@ final class cs {
         String stackOut_12_2 = null;
         try {
           if (param3 != null) {
-            int discarded$6 = 1;
-            cs.a();
+            cs.a(true);
             if (param3 instanceof byte[]) {
               var4 = (byte[]) param3;
               stackOut_5_0 = eu.a(var4, 32768, (byte) 20, param1);
@@ -492,7 +491,7 @@ final class cs {
         return stackIn_13_0 != 0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
     }
 

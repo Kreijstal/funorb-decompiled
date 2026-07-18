@@ -145,12 +145,12 @@ final class ifa extends td {
         return (ii) (Object) stackIn_20_0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_p = null;
         int var1 = 3;
     }
 
-    final static vr a(int param0, boolean param1, boolean param2, int param3) {
+    final static vr a(int param0, boolean param1, boolean param2, int param3, boolean param4) {
         int var5 = 76 / ((param3 - 1) / 56);
         return qma.a(false, 2097152, false, 0, false, param0);
     }

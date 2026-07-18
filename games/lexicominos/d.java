@@ -9,7 +9,7 @@ final class d {
     String field_f;
     String field_d;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_c = null;
     }
@@ -28,8 +28,7 @@ final class d {
               if (qg.field_d) {
                 break L1;
               } else {
-                int discarded$2 = 0;
-                if (bd.c()) {
+                if (bd.c(false)) {
                   break L1;
                 } else {
                   stackOut_3_0 = 1;

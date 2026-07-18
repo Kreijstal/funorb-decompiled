@@ -32,7 +32,7 @@ final class ck extends ud {
         }
     }
 
-    final static void n() {
+    final static void n(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -86,7 +86,7 @@ final class ck extends ud {
         }
     }
 
-    final static void m() {
+    final static void m(int param0) {
         kf.field_f = null;
         co.field_F = false;
         cl.field_o = 0;

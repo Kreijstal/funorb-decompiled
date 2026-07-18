@@ -648,12 +648,12 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
     pi() {
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
         field_l = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, byte param2) {
         L0: {
           param0 = param0 / 24;
           param1 = param1 / 24;
@@ -720,21 +720,19 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
                   break L0;
                 } else {
                   L2: {
-                    int discarded$23 = 0;
-                    if (!dg.a(param1)) {
-                      int discarded$24 = 21;
-                      var6 = param1.k(40, gf.a(-1 + var5));
+                    if (!dg.a(param1, false)) {
+                      var6 = param1.k(40, gf.a(-1 + var5, 21));
                       var4[var5] = var4[var6];
                       break L2;
                     } else {
                       var6_ref_f = new f();
-                      int discarded$25 = param1.k(94, 24);
-                      int discarded$26 = param1.k(108, 24);
+                      int discarded$12 = param1.k(94, 24);
+                      int discarded$13 = param1.k(108, 24);
                       var6_ref_f.field_h = param1.k(91, 24);
-                      int discarded$27 = param1.k(54, 9);
-                      int discarded$28 = param1.k(116, 12);
-                      int discarded$29 = param1.k(118, 12);
-                      int discarded$30 = param1.k(70, 12);
+                      int discarded$14 = param1.k(54, 9);
+                      int discarded$15 = param1.k(116, 12);
+                      int discarded$16 = param1.k(118, 12);
+                      int discarded$17 = param1.k(70, 12);
                       var4[var5] = var6_ref_f;
                       break L2;
                     }

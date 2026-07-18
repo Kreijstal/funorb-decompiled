@@ -19,7 +19,7 @@ final class jg extends di {
         return ((jg) this).d();
     }
 
-    private final void a(int param0, he param1) {
+    private final void a(int param0, he param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -393,13 +393,11 @@ final class jg extends di {
                 var2 = param0;
                 L2: while (true) {
                   if (var3.field_w >= var2) {
-                    int discarded$4 = -23887;
-                    this.a(var2, var3);
+                    this.a(var2, var3, -23887);
                     var3.field_w = var3.field_w - var2;
                     break L1;
                   } else {
-                    int discarded$5 = -23887;
-                    this.a(var3.field_w, var3);
+                    this.a(var3.field_w, var3, -23887);
                     var2 = var2 - var3.field_w;
                     if (((jg) this).field_j.a(4160, var3, 0, var2, (int[]) null)) {
                       break L1;

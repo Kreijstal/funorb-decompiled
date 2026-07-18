@@ -18,7 +18,7 @@ final class wb {
         }
     }
 
-    final static void a(ea param0, int param1) {
+    final static void a(ea param0, int param1, byte param2) {
         oq var3 = null;
         try {
             var3 = ej.field_j;
@@ -30,7 +30,7 @@ final class wb {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_c = null;
         field_b = null;

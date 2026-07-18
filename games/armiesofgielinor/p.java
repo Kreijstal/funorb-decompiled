@@ -468,7 +468,7 @@ final class p {
         return stackIn_18_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_f = null;
         field_i = null;
@@ -695,8 +695,7 @@ final class p {
                   break L1;
                 } else {
                   var3 = (CharSequence) (Object) var2;
-                  int discarded$2 = 0;
-                  if (0L != wc.a(var3)) {
+                  if (0L != wc.a(var3, 0)) {
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {

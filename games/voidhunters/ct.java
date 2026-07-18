@@ -160,7 +160,7 @@ final class ct {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_b = null;
         field_a = null;

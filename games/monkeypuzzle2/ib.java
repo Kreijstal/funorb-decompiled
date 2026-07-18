@@ -44,7 +44,7 @@ final class ib {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException runtimeException = null;
         int var1_int = 0;
         int var2 = 0;
@@ -79,9 +79,7 @@ final class ib {
               if (var1_int == 0) {
                 return;
               } else {
-                int discarded$4 = 96;
-                int discarded$5 = 100;
-                jk.field_C[var2] = li.a(ke.field_h[2]);
+                jk.field_C[var2] = li.a(ke.field_h[2], 100, 96);
                 na.a((byte) 38, jk.field_C[var2]);
                 break L0;
               }
@@ -94,7 +92,7 @@ final class ib {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_d = null;
         int var1 = 1;

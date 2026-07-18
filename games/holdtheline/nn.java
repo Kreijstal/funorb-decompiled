@@ -66,8 +66,7 @@ final class nn implements Runnable {
                     break L2;
                   }
                 } else {
-                  int discarded$2 = 45;
-                  qe.a(1L);
+                  qe.a(1L, (byte) 45);
                   continue L3;
                 }
               }
@@ -80,7 +79,7 @@ final class nn implements Runnable {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         qn var3 = null;
@@ -152,8 +151,7 @@ final class nn implements Runnable {
                                       var18[1][var13 * 4 - -1] = da.field_u[var11];
                                       var18[1][4 * var13 + 2] = ua.field_c[var11];
                                       var18[1][var13 * 4 - -3] = fj.field_q[var11];
-                                      int discarded$2 = 0;
-                                      if (!ra.a(wd.field_v[var11])) {
+                                      if (!ra.a(wd.field_v[var11], false)) {
                                         break L8;
                                       } else {
                                         if (fj.field_q[var11] + da.field_u[var11] - -ua.field_c[var11] != 0) {
@@ -181,8 +179,7 @@ final class nn implements Runnable {
                                   var18[0][1 + var10 * 4] = da.field_u[var11];
                                   var18[0][2 + var10 * 4] = ua.field_c[var11];
                                   var18[0][4 * var10 - -3] = fj.field_q[var11];
-                                  int discarded$3 = 0;
-                                  if (!ra.a(wd.field_v[var11])) {
+                                  if (!ra.a(wd.field_v[var11], false)) {
                                     break L9;
                                   } else {
                                     if (fj.field_q[var11] + (da.field_u[var11] - -ua.field_c[var11]) != 0) {
@@ -439,7 +436,7 @@ final class nn implements Runnable {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
     }
 
     protected final void finalize() {
@@ -617,7 +614,7 @@ final class nn implements Runnable {
           if (param0 < -126) {
             break L0;
           } else {
-            boolean discarded$7 = nn.a(-24);
+            boolean discarded$2 = nn.a(-24);
             break L0;
           }
         }
@@ -626,8 +623,7 @@ final class nn implements Runnable {
             if (pf.field_d < 20) {
               break L2;
             } else {
-              int discarded$8 = -30;
-              if (!jn.a()) {
+              if (!jn.a((byte) -30)) {
                 break L2;
               } else {
                 L3: {

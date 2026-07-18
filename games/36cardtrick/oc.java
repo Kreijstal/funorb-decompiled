@@ -21,7 +21,7 @@ final class oc {
         return (oc) this;
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, byte param1) {
         try {
             param0.setFocusTraversalKeysEnabled(false);
             param0.addKeyListener((java.awt.event.KeyListener) (Object) sj.field_d);
@@ -636,8 +636,7 @@ final class oc {
             } else {
               var8 = new bg(sd.field_c, param1);
               sd.field_c.b((lk) (Object) var8, (byte) -121);
-              int discarded$16 = -101;
-              if (!md.a()) {
+              if (!md.a((byte) -101)) {
                 L1: {
                   lh.field_c = param0;
                   jc.field_P = hh.field_g;

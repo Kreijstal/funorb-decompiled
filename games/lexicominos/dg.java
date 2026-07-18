@@ -53,7 +53,7 @@ final class dg {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var3 = 0;
         int var4 = Lexicominos.field_L ? 1 : 0;
         db var1 = new db(540, 140);
@@ -61,8 +61,7 @@ final class dg {
         k.b();
         lf.a();
         mc.field_k = 0;
-        int discarded$0 = 0;
-        rg.b();
+        rg.b(0);
         db var2 = var1.c();
         for (var3 = 0; var3 < 15; var3++) {
             var2.c(-2, -2, 16777215);

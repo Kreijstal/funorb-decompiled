@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bu {
-    final static boolean a(gk param0, gk param1, gk param2) {
+    final static boolean a(gk param0, gk param1, gk param2, boolean param3) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -204,8 +204,7 @@ final class bu {
         try {
           L0: {
             if (!ul.a(param1, (byte) -106)) {
-              int discarded$6 = 26035;
-              if (!kc.a(param1)) {
+              if (!kc.a(param1, 26035)) {
                 if (!vr.a(param1, 2)) {
                   if (param2.length() == 0) {
                     stackOut_11_0 = 1;

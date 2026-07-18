@@ -5,7 +5,7 @@ final class ib {
     static int field_a;
     static String field_b;
 
-    final static int a(int param0) {
+    final static int a(int param0, byte param1) {
         int var2 = param0 >>> 1;
         var2 = var2 | var2 >>> 1;
         var2 = var2 | var2 >>> 2;
@@ -15,7 +15,7 @@ final class ib {
         return param0 & ~var2;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 

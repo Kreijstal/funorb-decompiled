@@ -67,7 +67,7 @@ final class qd extends hg {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_n = null;
     }
 
@@ -100,7 +100,7 @@ final class qd extends hg {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         int var1 = 0;
         int var2 = 0;
         var2 = EscapeVector.field_A;
@@ -113,21 +113,18 @@ final class qd extends hg {
               dj.field_b = cf.field_a;
               dj.field_b = s.a((byte) -31, new CharSequence[3]);
               be.field_b.o(-18861);
-              int discarded$5 = 32;
-              cg.d();
+              cg.d(32);
               return;
             } else {
               dj.field_b = r.a(mi.field_j, -63, new String[1]);
               dj.field_b = s.a((byte) -31, new CharSequence[3]);
               be.field_b.o(-18861);
-              int discarded$6 = 32;
-              cg.d();
+              cg.d(32);
               return;
             }
           } else {
             be.field_b.o(-18861);
-            int discarded$7 = 32;
-            cg.d();
+            cg.d(32);
             return;
           }
         } else {

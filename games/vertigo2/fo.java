@@ -160,14 +160,12 @@ final class fo {
               break L0;
             } else {
               L1: while (true) {
-                int discarded$4 = 0;
-                if (!gf.a()) {
+                if (!gf.a(false)) {
                   ((fo) this).field_a.a((byte) -29, this.a(31, ed.field_n, gb.field_d), this.a(121, sd.field_N, no.field_e));
                   if (((fo) this).field_a.field_c == 0) {
                     break L0;
                   } else {
-                    int discarded$5 = 404;
-                    this.b(((fo) this).field_a.field_c, true);
+                    this.b(((fo) this).field_a.field_c, true, 404);
                     break L0;
                   }
                 } else {
@@ -291,11 +289,9 @@ final class fo {
                       continue L1;
                     }
                   } else {
-                    int discarded$6 = 106;
-                    this.d();
+                    this.d((byte) 106);
                     if (-1 != ((fo) this).field_a.field_c) {
-                      int discarded$7 = 404;
-                      this.b(((fo) this).field_a.field_c, false);
+                      this.b(((fo) this).field_a.field_c, false, 404);
                       continue L1;
                     } else {
                       continue L1;
@@ -519,7 +515,7 @@ final class fo {
         this.a((byte) 7, var5);
     }
 
-    private final void c() {
+    private final void c(byte param0) {
     }
 
     private final int a(int param0, int param1) {
@@ -573,18 +569,16 @@ final class fo {
     private final void d(int param0) {
         jq.a(92, 20, 110, 360, 310);
         if (!ag.b(49)) {
-            int discarded$1 = 2;
-            this.g();
+            this.g(2);
         } else {
-            int discarded$2 = 109;
-            this.c();
+            this.c((byte) 109);
         }
         String var2 = !ag.b(49) ? tr.field_O : vg.field_b;
         rq.a(36, 32 + va.field_s.a(1, var2), 425, -(va.field_s.a(1, var2) / 2) + 304, 73, 100);
         va.field_s.a(var2, 16777215, -1, 320, 450, 2);
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = Vertigo2.field_L ? 1 : 0;
@@ -1198,7 +1192,7 @@ final class fo {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         int var3 = 0;
         bl stackIn_6_0 = null;
         bl stackIn_7_0 = null;
@@ -1345,7 +1339,7 @@ final class fo {
         ie.field_Hb.e(-(ie.field_Hb.field_y / 2) + 320, 240 - ie.field_Hb.field_t / 2);
     }
 
-    private final void b() {
+    private final void b(int param0) {
         va.field_s.a(vg.field_b, 16777215, -1, 320, 220 + (va.field_s.field_j + 120), 2);
     }
 
@@ -1803,11 +1797,7 @@ final class fo {
                 }
                 L22: {
                   bi.b(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_70_3, stackIn_70_4);
-                  int discarded$4 = 1;
-                  int discarded$5 = 2;
-                  int discarded$6 = 10;
-                  int discarded$7 = 121;
-                  bi.d(var10, -5 + var9);
+                  bi.d(var10, -5 + var9, 121, 10, 2, 1);
                   var19 = or.field_b;
                   if (param1) {
                     var19 = cd.field_b;
@@ -1832,11 +1822,11 @@ final class fo {
         }
     }
 
-    private final void b(int param0, boolean param1) {
+    private final void b(int param0, boolean param1, int param2) {
         this.a(false, (byte) -95, param1, param0);
     }
 
-    private final void e() {
+    private final void e(int param0) {
         int var2 = 0;
         String var3 = null;
         String var4 = null;
@@ -2225,7 +2215,7 @@ final class fo {
         ((fo) this).field_a = new uj(oj.field_O[((fo) this).field_b].length);
     }
 
-    private final void g() {
+    private final void g(int param0) {
         String var2 = null;
         int var3 = 0;
         s var4 = null;
@@ -2576,8 +2566,7 @@ final class fo {
           } else {
             if (var5 != 20) {
               if (((fo) this).field_a.a(84)) {
-                int discarded$6 = 0;
-                gg discarded$7 = e.a(on.field_b[0][0]);
+                gg discarded$2 = e.a(on.field_b[0][0], false);
                 break L1;
               } else {
                 break L1;
@@ -2757,8 +2746,7 @@ final class fo {
                                               } else {
                                                 if (0 < tg.field_e) {
                                                   var7 = 1;
-                                                  int discarded$8 = -94;
-                                                  dk.d();
+                                                  dk.d((byte) -94);
                                                   break L9;
                                                 } else {
                                                   break L9;
@@ -2771,8 +2759,7 @@ final class fo {
                                               } else {
                                                 if (tg.field_e < 256) {
                                                   var7 = 1;
-                                                  int discarded$9 = 10;
-                                                  ti.b();
+                                                  ti.b(10);
                                                   break L10;
                                                 } else {
                                                   break L10;
@@ -2791,8 +2778,7 @@ final class fo {
                                                   }
                                                 }
                                               }
-                                              int discarded$10 = 0;
-                                              gg discarded$11 = e.a(on.field_b[0][0]);
+                                              gg discarded$3 = e.a(on.field_b[0][0], false);
                                               dc.field_O = rg.field_f - -20;
                                               break L3;
                                             } else {
@@ -3419,8 +3405,7 @@ final class fo {
                                     if (10 != ((fo) this).field_b) {
                                       if (((fo) this).field_b != 5) {
                                         if (((fo) this).field_b == 7) {
-                                          int discarded$11 = -32163;
-                                          rc.a();
+                                          rc.a(-32163);
                                           break L0;
                                         } else {
                                           if (((fo) this).field_b == 8) {
@@ -3430,8 +3415,7 @@ final class fo {
                                             if (((fo) this).field_b != 9) {
                                               if (((fo) this).field_b != 14) {
                                                 if (((fo) this).field_b == 20) {
-                                                  int discarded$12 = 122;
-                                                  this.a();
+                                                  this.a((byte) 122);
                                                   break L0;
                                                 } else {
                                                   if (((fo) this).field_b == 15) {
@@ -3502,9 +3486,7 @@ final class fo {
                                         }
                                       }
                                       L4: {
-                                        int discarded$13 = 1;
-                                        int discarded$14 = 6337;
-                                        ((wn) (Object) stackIn_33_0).a(eb.a(stackIn_33_1 != 0, stackIn_33_2 != 0), 16777215, -1, 320, var2, 2);
+                                        ((wn) (Object) stackIn_33_0).a(eb.a(stackIn_33_1 != 0, stackIn_33_2 != 0, 6337, true), 16777215, -1, 320, var2, 2);
                                         var2 += 100;
                                         stackOut_33_0 = va.field_s;
                                         stackOut_33_1 = 116;
@@ -3531,9 +3513,7 @@ final class fo {
                                         }
                                       }
                                       L5: {
-                                        int discarded$15 = 1;
-                                        int discarded$16 = 1;
-                                        ((wn) (Object) stackIn_36_0).a(vi.a((byte) stackIn_36_1, stackIn_36_2 != 0), 16777215, -1, 320, var2, 2);
+                                        ((wn) (Object) stackIn_36_0).a(vi.a((byte) stackIn_36_1, stackIn_36_2 != 0, true, true), 16777215, -1, 320, var2, 2);
                                         var2 += 80;
                                         stackOut_36_0 = va.field_s;
                                         stackIn_38_0 = stackOut_36_0;
@@ -3552,10 +3532,7 @@ final class fo {
                                           break L5;
                                         }
                                       }
-                                      int discarded$17 = 1;
-                                      int discarded$18 = 1;
-                                      int discarded$19 = 1342181375;
-                                      ((wn) (Object) stackIn_39_0).a(id.a(stackIn_39_1 != 0), 16777215, -1, 320, var2, 2);
+                                      ((wn) (Object) stackIn_39_0).a(id.a(stackIn_39_1 != 0, 1342181375, true, true), 16777215, -1, 320, var2, 2);
                                       break L0;
                                     }
                                   } else {
@@ -3606,8 +3583,7 @@ final class fo {
                                         break L7;
                                       }
                                     }
-                                    int discarded$20 = -14189;
-                                    this.e();
+                                    this.e(-14189);
                                     break L0;
                                   }
                                 } else {
@@ -3669,7 +3645,7 @@ final class fo {
               if (param0 == -114) {
                 break L12;
               } else {
-                int discarded$21 = this.a(98, -113, 89);
+                int discarded$1 = this.a(98, -113, 89);
                 break L12;
               }
             }
@@ -3707,7 +3683,7 @@ final class fo {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_f = null;
         field_e = null;
         int var1 = 61;
@@ -3797,8 +3773,7 @@ final class fo {
           va.field_s.a(var4, 16777215, -1, 335, var2, 2);
           return;
         } else {
-          int discarded$1 = 126;
-          this.b();
+          this.b(126);
           return;
         }
     }

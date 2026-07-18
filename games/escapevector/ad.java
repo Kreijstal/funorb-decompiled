@@ -46,7 +46,7 @@ final class ad implements Runnable {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_h = null;
     }

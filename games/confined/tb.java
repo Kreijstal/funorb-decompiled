@@ -238,7 +238,7 @@ final class tb {
         }
     }
 
-    final static String a(int param0, kg param1) {
+    final static String a(int param0, kg param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -320,7 +320,7 @@ final class tb {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         int var1 = 1;
     }
@@ -359,7 +359,7 @@ final class tb {
         }
     }
 
-    final static String a(int param0, CharSequence param1) {
+    final static String a(int param0, CharSequence param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -386,8 +386,7 @@ final class tb {
         String stackOut_14_2 = null;
         var5 = Confined.field_J ? 1 : 0;
         try {
-          int discarded$2 = -2;
-          var3 = vk.a(false, param1);
+          var3 = vk.a(false, param1, (byte) -2);
           if (var3 != null) {
             stackOut_3_0 = (String) var3;
             stackIn_4_0 = stackOut_3_0;

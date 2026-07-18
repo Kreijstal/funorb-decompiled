@@ -12,7 +12,7 @@ final class il extends gf {
     static int[] field_p;
     static java.awt.Frame field_q;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_p = null;
         field_o = null;
         field_m = null;
@@ -296,7 +296,7 @@ final class il extends gf {
         return stackIn_5_0;
     }
 
-    final static void f() {
+    final static void f(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -356,15 +356,13 @@ final class il extends gf {
                       var6.f(0);
                       break L1;
                     } else {
-                      int discarded$10 = 1;
-                      ih.b();
+                      ih.b(true);
                       return;
                     }
                   }
                 } else {
                   nn.a("HS1: " + me.a(-1), (Throwable) null, -9958);
-                  int discarded$11 = 1;
-                  ih.b();
+                  ih.b(true);
                   break L1;
                 }
               } else {
@@ -397,16 +395,16 @@ final class il extends gf {
                         var8_int = 1;
                         L7: while (true) {
                           if (var8_int >= var5) {
-                            String[][] dupTemp$12 = new String[3][var6_int];
-                            var4_ref_bm.field_p = dupTemp$12;
-                            var8 = dupTemp$12;
+                            String[][] dupTemp$6 = new String[3][var6_int];
+                            var4_ref_bm.field_p = dupTemp$6;
+                            var8 = dupTemp$6;
                             var9 = new String[3][var6_int];
-                            long[][] dupTemp$13 = new long[3][var6_int];
-                            var4_ref_bm.field_m = dupTemp$13;
-                            var10 = dupTemp$13;
-                            int[][] dupTemp$14 = new int[3][var6_int * var7];
-                            var4_ref_bm.field_n = dupTemp$14;
-                            var11 = dupTemp$14;
+                            long[][] dupTemp$7 = new long[3][var6_int];
+                            var4_ref_bm.field_m = dupTemp$7;
+                            var10 = dupTemp$7;
+                            int[][] dupTemp$8 = new int[3][var6_int * var7];
+                            var4_ref_bm.field_n = dupTemp$8;
+                            var11 = dupTemp$8;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -435,9 +433,9 @@ final class il extends gf {
                                         if (var25 >= var7) {
                                           break L9;
                                         } else {
-                                          int incrementValue$15 = var15;
+                                          int incrementValue$9 = var15;
                                           var15++;
-                                          var11[0][incrementValue$15] = var28.c((byte) -33);
+                                          var11[0][incrementValue$9] = var28.c((byte) -33);
                                           var25++;
                                           continue L10;
                                         }
@@ -450,8 +448,7 @@ final class il extends gf {
                                     if (var21 == null) {
                                       break L11;
                                     } else {
-                                      int discarded$16 = -17310;
-                                      if (!bn.a(var21)) {
+                                      if (!bn.a(var21, -17310)) {
                                         break L11;
                                       } else {
                                         var8[1][var13] = re.field_e;
@@ -464,9 +461,9 @@ final class il extends gf {
                                           if (var7 <= var25) {
                                             break L11;
                                           } else {
-                                            int incrementValue$17 = var16;
+                                            int incrementValue$10 = var16;
                                             var16++;
-                                            var11[1][incrementValue$17] = var28.c((byte) -76);
+                                            var11[1][incrementValue$10] = var28.c((byte) -76);
                                             var25++;
                                             continue L12;
                                           }
@@ -490,9 +487,9 @@ final class il extends gf {
                                           if (var7 <= var25) {
                                             break L13;
                                           } else {
-                                            int incrementValue$18 = var17;
+                                            int incrementValue$11 = var17;
                                             var17++;
-                                            var11[2][incrementValue$18] = var28.c((byte) -55);
+                                            var11[2][incrementValue$11] = var28.c((byte) -55);
                                             var25++;
                                             continue L14;
                                           }
@@ -531,8 +528,7 @@ final class il extends gf {
                     var4_ref_bm.f(0);
                     break L1;
                   } else {
-                    int discarded$19 = 1;
-                    ih.b();
+                    ih.b(true);
                     return;
                   }
                 }

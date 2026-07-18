@@ -25,11 +25,11 @@ abstract class rw extends pj {
 
     abstract byte[] d(boolean param0);
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_r = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         wb var1 = null;
         wb var2 = null;
         int var3 = 0;

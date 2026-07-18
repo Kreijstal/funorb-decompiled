@@ -164,7 +164,7 @@ final class mq extends va {
         }
     }
 
-    final static void b() {
+    final static void b(boolean param0) {
         int var2 = 0;
         L0: {
           var2 = Vertigo2.field_L ? 1 : 0;
@@ -633,7 +633,7 @@ final class mq extends va {
         }
     }
 
-    final static void a(int param0, mp param1, int param2, cc param3, int param4, int param5, int param6, int param7, int param8, mp param9, byte param10, int param11, int param12, int param13, int param14, cc param15, int param16, int param17, int param18, mp param19) {
+    final static void a(int param0, mp param1, int param2, cc param3, int param4, int param5, int param6, int param7, int param8, mp param9, byte param10, int param11, int param12, int param13, int param14, cc param15, int param16, int param17, int param18, mp param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -713,19 +713,12 @@ final class mq extends va {
         String stackOut_15_2 = null;
         try {
           L0: {
-            int discarded$7 = -99;
-            nb.a(480, param3, param15);
+            nb.a(480, param3, param15, (byte) -99);
             ar.a(param13, (byte) 77, param14, param5, param18);
-            int discarded$8 = 55;
-            tn.a(240, 320);
+            tn.a(240, 320, 55);
             vd.a(12, param9, 1516482162, 12, 10, param1);
-            int discarded$9 = -25220;
-            tr.a(0, 0, param19);
-            int discarded$10 = 16777215;
-            int discarded$11 = 16777215;
-            int discarded$12 = 16777215;
-            int discarded$13 = -26;
-            pb.a();
+            tr.a(0, 0, param19, -25220);
+            pb.a((byte) -26, 16777215, 16777215, 16777215);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -878,7 +871,7 @@ final class mq extends va {
         var1.a(-21151);
     }
 
-    final static String a(String param0) {
+    final static String a(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -953,7 +946,7 @@ final class mq extends va {
         return stackIn_5_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_t = null;
         field_v = null;
         field_u = null;

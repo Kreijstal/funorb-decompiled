@@ -199,13 +199,13 @@ final class aj extends ck {
         return stackIn_21_0 != 0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_v = null;
         field_r = null;
         field_x = null;
     }
 
-    final static Boolean a() {
+    final static Boolean a(boolean param0) {
         Boolean var1 = ma.field_bb;
         ma.field_bb = null;
         return var1;

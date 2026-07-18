@@ -32,7 +32,7 @@ final class ki {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -386,7 +386,7 @@ final class ki {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
         field_b = null;
         field_k = null;

@@ -158,7 +158,7 @@ final class la extends gg {
         return stackIn_30_0;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, boolean param1) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;
@@ -234,13 +234,10 @@ final class la extends gg {
     }
 
     final static void a(int param0) {
-        int discarded$0 = -37;
-        int var1 = bf.b();
-        int discarded$1 = -76;
-        int var2 = vb.a();
+        int var1 = bf.b((byte) -37);
+        int var2 = vb.a((byte) -76);
         he.field_c.a(false, var1 - -(pg.field_b << 1), -fh.field_b + th.field_J, (fh.field_b << 1) + var2, pk.field_ab - pg.field_b);
-        int discarded$2 = -4537;
-        ee.d();
+        ee.d(-4537);
     }
 
     final static void a(int param0, java.awt.Color param1, int param2, boolean param3, String param4) {
@@ -457,7 +454,7 @@ final class la extends gg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         field_i = null;
         field_m = null;
@@ -468,7 +465,7 @@ final class la extends gg {
         ((la) this).field_h = param0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, mg param4, hi param5, int param6, int param7, int param8, int param9, int param10, int param11, mg param12, int param13, int param14, int param15, hi param16, int param17, hi param18, int param19) {
+    final static void a(int param0, int param1, int param2, int param3, mg param4, hi param5, int param6, int param7, int param8, int param9, int param10, int param11, mg param12, int param13, int param14, int param15, hi param16, int param17, hi param18, int param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

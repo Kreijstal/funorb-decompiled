@@ -26,7 +26,7 @@ final class jn extends ab implements dn {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_u = null;
     }
 
@@ -169,14 +169,11 @@ final class jn extends ab implements dn {
         }
     }
 
-    final static void g() {
-        int discarded$5 = 1;
-        if (!(cn.b())) {
+    final static void g(int param0) {
+        if (!(cn.b(true))) {
             if (!ml.field_p) {
                 if (fa.field_b == null) {
-                    int discarded$6 = 4;
-                    int discarded$7 = 0;
-                    fa.field_b = sc.a();
+                    fa.field_b = sc.a(false, 4);
                 }
                 if (fa.field_b.field_g) {
                     r.field_n = r.field_n & ~fa.field_b.field_e;

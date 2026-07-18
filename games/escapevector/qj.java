@@ -222,7 +222,7 @@ final class qj {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1 = 0;
         int var2 = 0;
         L0: {
@@ -298,7 +298,7 @@ final class qj {
         ((qj) this).field_h = param0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_i = null;
         field_g = null;
         field_e = null;

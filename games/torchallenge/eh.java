@@ -173,11 +173,11 @@ final class eh extends da {
         return jc.field_c > 250 ? true : false;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_p = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         pf.field_d = new sl();
     }
 

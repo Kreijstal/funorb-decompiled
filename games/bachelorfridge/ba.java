@@ -7,7 +7,7 @@ final class ba extends mv {
     private gj field_p;
     private hba field_o;
 
-    final static cj a(lu param0) {
+    final static cj a(lu param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -506,7 +506,7 @@ final class ba extends mv {
         var16 = 6;
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_r = null;
     }
 

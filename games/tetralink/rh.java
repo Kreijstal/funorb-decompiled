@@ -398,7 +398,7 @@ final class rh extends ll {
         return stackIn_8_0;
     }
 
-    final static byte a(char param0) {
+    final static byte a(char param0, boolean param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = TetraLink.field_J;
@@ -988,7 +988,7 @@ final class rh extends ll {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_N = null;
         field_J = null;
         field_M = null;
@@ -998,7 +998,7 @@ final class rh extends ll {
         field_G = null;
     }
 
-    final static String a(int param0, bh param1) {
+    final static String a(int param0, bh param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;

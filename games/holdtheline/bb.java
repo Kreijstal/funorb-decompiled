@@ -4,7 +4,7 @@
 final class bb {
     static sa field_a;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         try {
             Throwable var2 = null;
             RuntimeException var2_ref = null;

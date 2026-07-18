@@ -8,13 +8,13 @@ final class rf {
     static String field_a;
     static String[] field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_b = null;
         field_a = null;
     }
 
-    final static long b() {
+    final static long b(byte param0) {
         return -ue.field_s + bva.b((byte) -107);
     }
 

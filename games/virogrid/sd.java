@@ -10,7 +10,7 @@ final class sd {
     static km field_a;
     static String field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_f = null;
         field_d = null;

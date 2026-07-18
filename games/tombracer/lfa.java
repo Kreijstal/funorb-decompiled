@@ -212,7 +212,7 @@ final class lfa extends dg {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_o = null;
         field_m = null;
         field_n = null;

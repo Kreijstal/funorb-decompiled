@@ -8,7 +8,7 @@ final class dh {
     int field_c;
     int field_b;
 
-    final static void a(int param0, int param1, int param2, an param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, an param3, int param4, int param5, int param6, byte param7) {
         RuntimeException var8 = null;
         int[] var8_array = null;
         int var13 = 0;
@@ -117,8 +117,7 @@ final class dh {
                   }
                 }
               }
-              int discarded$1 = -124;
-              ne.a();
+              ne.a((byte) -124);
               break L1;
             }
             var66 = new int[param3.field_A];
@@ -369,7 +368,7 @@ final class dh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
     }
 

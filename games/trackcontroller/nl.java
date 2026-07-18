@@ -9,7 +9,7 @@ final class nl extends RuntimeException {
     static long field_e;
     static boolean field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_c = null;
     }
@@ -237,11 +237,10 @@ final class nl extends RuntimeException {
         }
     }
 
-    final static int b() {
+    final static int b(byte param0) {
         ij.field_d.a((byte) 95);
         if (!rj.field_d.b(29166)) {
-            int discarded$0 = -124;
-            return bl.a();
+            return bl.a((byte) -124);
         }
         return 0;
     }

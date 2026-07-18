@@ -237,7 +237,7 @@ final class uqa extends osa {
         }
     }
 
-    public static void j() {
+    public static void j(byte param0) {
         field_x = null;
         field_y = null;
         field_t = null;

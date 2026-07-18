@@ -7,11 +7,10 @@ final class te {
     static String field_b;
 
     final static void a(int param0, int param1) {
-        int discarded$0 = -75;
-        int discarded$1 = uo.a();
+        int discarded$0 = uo.a((byte) -75);
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         bq.a(127);
         hr.a(bh.field_m[0].field_o, cr.field_c, tg.field_a, 113, pe.field_K, rc.field_l);
     }

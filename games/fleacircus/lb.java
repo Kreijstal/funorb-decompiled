@@ -56,8 +56,7 @@ final class lb implements ch {
         try {
           L0: {
             if (ha.a(param0, -32180, param2, param3)) {
-              int discarded$2 = 0;
-              stackOut_4_0 = lc.a(param4.a(param2, (byte) 122, param3));
+              stackOut_4_0 = lc.a(param4.a(param2, (byte) 122, param3), false);
               stackIn_5_0 = stackOut_4_0;
               break L0;
             } else {

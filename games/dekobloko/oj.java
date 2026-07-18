@@ -419,7 +419,7 @@ final class oj {
         }
     }
 
-    final static int b() {
+    final static int b(int param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -543,7 +543,7 @@ final class oj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
         field_a = null;

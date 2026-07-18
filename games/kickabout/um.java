@@ -10,7 +10,7 @@ final class um {
     static String[][] field_a;
     static hd field_d;
 
-    final static void a() {
+    final static void a(byte param0) {
         try {
             Exception var1 = null;
             Throwable decompiledCaughtException = null;

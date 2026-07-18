@@ -8,7 +8,7 @@ abstract class oga extends vg {
 
     abstract void a(rt param0, int param1, byte param2, rt param3);
 
-    final static void a() {
+    final static void a(boolean param0) {
         nfa.field_p = false;
         jf.field_r = false;
         jsa.a(false, -1);

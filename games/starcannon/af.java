@@ -95,7 +95,7 @@ final class af extends kf {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_y = null;
         field_w = null;
     }

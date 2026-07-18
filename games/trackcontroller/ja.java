@@ -228,7 +228,7 @@ final class ja {
         field_a = null;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         Object var2 = null;
         oc.a(fi.field_l, (byte) 79, (String) null);
     }

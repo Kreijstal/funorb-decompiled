@@ -34,13 +34,13 @@ final class bf extends ga implements pg, el {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_L = null;
         field_R = null;
         field_S = null;
     }
 
-    private final int a(fj param0, int param1, int param2, int param3, String param4, String param5) {
+    private final int a(fj param0, int param1, int param2, int param3, String param4, String param5, int param6) {
         RuntimeException var8 = null;
         rh var9 = null;
         la var10 = null;
@@ -288,7 +288,7 @@ final class bf extends ga implements pg, el {
         var2.a(-125, 270, var3, 50, 20);
         ((bf) this).b(var2, 10);
         var3 += 50;
-        var3 = var3 + (5 + this.a((fj) (Object) ((bf) this).field_O, 170, rc.field_a, 3, va.field_d));
+        var3 = var3 + (5 + this.a((fj) (Object) ((bf) this).field_O, 170, rc.field_a, 3, va.field_d, var3));
         ((bf) this).field_Q.a(-117, var5, var3, 40, 496 + -var5 >> 1);
         ((bf) this).field_P.a(-128, 60, var3 - -15, 40, 3 + var4);
         ((bf) this).field_P.field_t = (uk) this;
@@ -304,14 +304,12 @@ final class bf extends ga implements pg, el {
     public final void a(byte param0) {
         ((qg) (Object) ((bf) this).field_O.a((byte) -9)).e(639775169);
         if (param0 >= -101) {
-            int discarded$0 = 0;
-            bf.b();
+            bf.b(false);
         }
     }
 
     private final boolean j(int param0) {
-        int discarded$0 = 0;
-        if (!this.a((j) (Object) ((bf) this).field_O)) {
+        if (!this.a((j) (Object) ((bf) this).field_O, false)) {
             return false;
         }
         if (param0 > -82) {
@@ -414,7 +412,7 @@ final class bf extends ga implements pg, el {
         return stackIn_11_0 != 0;
     }
 
-    private final int a(fj param0, int param1, String param2, int param3, String param4) {
+    private final int a(fj param0, int param1, String param2, int param3, String param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -466,8 +464,7 @@ final class bf extends ga implements pg, el {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$2 = 35;
-            stackOut_0_0 = this.a(param0, 3, 70, 170, param4, param2);
+            stackOut_0_0 = this.a(param0, 3, 70, 170, param4, param2, 35);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -554,7 +551,7 @@ final class bf extends ga implements pg, el {
         return stackIn_1_0;
     }
 
-    private final boolean a(j param0) {
+    private final boolean a(j param0, boolean param1) {
         dm var3 = null;
         RuntimeException var3_ref = null;
         fi var4 = null;

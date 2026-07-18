@@ -38,10 +38,9 @@ final class gs extends fp {
     }
 
     final long a(int param0) {
-        int discarded$0 = 1;
-        ((gs) this).field_l = ((gs) this).field_l + this.c();
+        ((gs) this).field_l = ((gs) this).field_l + this.c(1);
         if (param0 != 0) {
-            int discarded$11 = ((gs) this).a(-15, -125L);
+            int discarded$10 = ((gs) this).a(-15, -125L);
             if (!(~((gs) this).field_l <= ~((gs) this).field_n)) {
                 return (-((gs) this).field_l + ((gs) this).field_n) / 1000000L;
             }
@@ -53,13 +52,13 @@ final class gs extends fp {
         return 0L;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_m = null;
         field_j = null;
         field_i = null;
     }
 
-    private final long c() {
+    private final long c(int param0) {
         long var2 = 0L;
         long var4 = 0L;
         long var6 = 0L;
@@ -206,7 +205,7 @@ final class gs extends fp {
         er.a(param4, param6, var7, 320, (byte) 122, param1, 180, param5);
     }
 
-    final static void a(tm param0) {
+    final static void a(tm param0, boolean param1) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2_int = hj.field_l.length + -1;
         try {

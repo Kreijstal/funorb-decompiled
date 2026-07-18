@@ -97,8 +97,7 @@ final class dea {
                       ((dea) this).field_b = ((dea) this).field_e;
                       return;
                     } else {
-                      int discarded$10 = 141;
-                      vb discarded$11 = paa.c();
+                      vb discarded$5 = paa.c(141);
                       ((dea) this).field_f = true;
                       ((dea) this).field_d = -((dea) this).field_d / 8.0f;
                       ((dea) this).field_b = ((dea) this).field_e;
@@ -120,8 +119,7 @@ final class dea {
                 ((dea) this).field_b = ((dea) this).field_e;
                 return;
               } else {
-                int discarded$12 = 141;
-                vb discarded$13 = paa.c();
+                vb discarded$6 = paa.c(141);
                 ((dea) this).field_f = true;
                 ((dea) this).field_d = -((dea) this).field_d / 8.0f;
                 ((dea) this).field_b = ((dea) this).field_e;
@@ -149,8 +147,7 @@ final class dea {
                     ((dea) this).field_b = ((dea) this).field_e;
                     return;
                   } else {
-                    int discarded$14 = 141;
-                    vb discarded$15 = paa.c();
+                    vb discarded$7 = paa.c(141);
                     ((dea) this).field_f = true;
                     ((dea) this).field_d = -((dea) this).field_d / 8.0f;
                     ((dea) this).field_b = ((dea) this).field_e;
@@ -170,8 +167,7 @@ final class dea {
                     ((dea) this).field_b = ((dea) this).field_e;
                     return;
                   } else {
-                    int discarded$16 = 141;
-                    vb discarded$17 = paa.c();
+                    vb discarded$8 = paa.c(141);
                     ((dea) this).field_f = true;
                     ((dea) this).field_d = -((dea) this).field_d / 8.0f;
                     ((dea) this).field_b = ((dea) this).field_e;
@@ -192,8 +188,7 @@ final class dea {
                   ((dea) this).field_b = ((dea) this).field_e;
                   return;
                 } else {
-                  int discarded$18 = 141;
-                  vb discarded$19 = paa.c();
+                  vb discarded$9 = paa.c(141);
                   ((dea) this).field_f = true;
                   ((dea) this).field_d = -((dea) this).field_d / 8.0f;
                   ((dea) this).field_b = ((dea) this).field_e;
@@ -220,7 +215,7 @@ final class dea {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(oba.field_e == null)) {
             oba.field_e.a((byte) 105);
             oba.field_e = null;

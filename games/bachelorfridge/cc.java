@@ -33,7 +33,7 @@ final class cc {
         return var3;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_e = null;
         field_b = null;
@@ -262,8 +262,7 @@ final class cc {
                   }
                 }
               }
-              int discarded$1 = -372;
-              ku.d();
+              ku.d(-372);
               break L1;
             }
             var66 = new int[param4.field_i];

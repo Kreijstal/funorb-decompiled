@@ -51,7 +51,7 @@ final class hf extends fi {
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, boolean param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_4_0 = null;
@@ -75,8 +75,7 @@ final class hf extends fi {
         try {
           L0: {
             L1: {
-              int discarded$2 = 16778;
-              var2 = ue.a(ik.a(param0, (byte) -113));
+              var2 = ue.a(ik.a(param0, (byte) -113), 16778);
               if (var2 == null) {
                 var2 = "";
                 break L1;

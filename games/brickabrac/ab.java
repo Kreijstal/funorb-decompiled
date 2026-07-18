@@ -90,8 +90,7 @@ final class ab extends ld {
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0 != 0;
               } else {
-                int discarded$6 = 1;
-                if (!pp.a(param1)) {
+                if (!pp.a(param1, true)) {
                   if (param2.length() == 0) {
                     stackOut_13_0 = 1;
                     stackIn_14_0 = stackOut_13_0;

@@ -18,7 +18,7 @@ final class bm extends q {
         ad.field_n = param0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = -82;
         field_l = null;
         field_j = null;

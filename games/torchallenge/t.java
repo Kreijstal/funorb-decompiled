@@ -59,7 +59,7 @@ abstract class t {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         we.field_c = new String[37][];
         we.field_c[5] = new String[1];
         we.field_c[13] = new String[1];
@@ -98,12 +98,12 @@ abstract class t {
 
     abstract am a(boolean param0);
 
-    final static String d() {
+    final static String d(int param0) {
         int var1 = 94;
         return kg.field_P;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         if (~(0 - vk.field_h) != ~jc.field_c) {
             if (jc.field_c == 250 + -vk.field_h) {
             }

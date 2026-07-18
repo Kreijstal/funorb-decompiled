@@ -8,7 +8,7 @@ class il extends aa {
     static int[] field_e;
     private String field_b;
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -30,8 +30,7 @@ class il extends aa {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 1;
-            stackOut_0_0 = v.a(-84, param0, 10);
+            stackOut_0_0 = v.a(-84, param0, 10, true);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -151,7 +150,7 @@ class il extends aa {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_d = null;
         field_e = null;

@@ -133,7 +133,7 @@ final class jf implements dh {
         }
     }
 
-    final static java.awt.Container a() {
+    final static java.awt.Container a(boolean param0) {
         if (sg.field_a != null) {
             return (java.awt.Container) (Object) sg.field_a;
         }
@@ -222,13 +222,13 @@ final class jf implements dh {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
         int var1 = 0;
         field_b = null;
     }
 
-    final static void a(dm[] param0, int param1, int param2, int param3, int param4) {
+    final static void a(dm[] param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -317,7 +317,7 @@ final class jf implements dh {
         }
     }
 
-    final static byte[] a(CharSequence param0) {
+    final static byte[] a(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;

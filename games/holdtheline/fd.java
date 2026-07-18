@@ -8,7 +8,7 @@ final class fd {
     static String field_b;
     static int field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = -56;
         field_e = null;
         field_b = null;

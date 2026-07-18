@@ -33,7 +33,7 @@ final class ls {
         }
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         return ig.field_a.d(-1);
     }
 

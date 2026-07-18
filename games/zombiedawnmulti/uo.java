@@ -9,7 +9,7 @@ final class uo extends ae {
     static ri field_n;
     private int field_i;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_n = null;
         field_j = null;
     }

@@ -81,17 +81,16 @@ final class ar {
               }
             }
           } else {
-            int fieldTemp$2 = ((ar) this).field_m - 1;
+            int fieldTemp$1 = ((ar) this).field_m - 1;
             ((ar) this).field_m = ((ar) this).field_m - 1;
-            if (fieldTemp$2 <= 0) {
+            if (fieldTemp$1 <= 0) {
               ((ar) this).field_m = ((ar) this).field_d;
               if (param0 == 16671) {
                 if (ci.field_a < ((ar) this).field_e) {
                   ((ar) this).field_b = false;
                   return;
                 } else {
-                  int discarded$3 = -128;
-                  this.a();
+                  this.a((byte) -128);
                   return;
                 }
               } else {
@@ -117,7 +116,7 @@ final class ar {
         var2.b((byte) 6, -var3 + var2.field_u);
     }
 
-    final static java.net.URL a(java.applet.Applet param0, java.net.URL param1) {
+    final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, int param2) {
         Object var3 = null;
         Object var4 = null;
         java.net.URL stackIn_10_0 = null;
@@ -245,7 +244,7 @@ final class ar {
         return stackIn_10_0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_a = null;
     }
@@ -291,7 +290,7 @@ final class ar {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

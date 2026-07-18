@@ -13,7 +13,7 @@ final class nf extends ll {
     static String field_x;
     private int[] field_E;
 
-    public static void e() {
+    public static void e(byte param0) {
         field_w = null;
         field_C = null;
         field_v = null;
@@ -450,8 +450,7 @@ final class nf extends ll {
                       if (10 != param0) {
                         break L5;
                       } else {
-                        int discarded$4 = -61;
-                        rp.a();
+                        rp.a((byte) -61);
                         var3_int = 0;
                         break L5;
                       }
@@ -460,8 +459,7 @@ final class nf extends ll {
                       if (var3_int != 0) {
                         L7: {
                           if (he.field_s) {
-                            int discarded$5 = 30496;
-                            param2 = jk.a(new String[1], oi.field_G);
+                            param2 = jk.a(new String[1], oi.field_G, 30496);
                             break L7;
                           } else {
                             break L7;

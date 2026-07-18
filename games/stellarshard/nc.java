@@ -20,7 +20,7 @@ final class nc extends rj {
     static int field_H;
     private pb field_E;
 
-    private final pb d() {
+    private final pb d(boolean param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -52,8 +52,7 @@ final class nc extends rj {
             return;
         }
         ((nc) this).field_L = param1;
-        int discarded$0 = 15035;
-        this.a();
+        this.a(15035);
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
@@ -78,21 +77,17 @@ final class nc extends rj {
             ((nc) this).field_K = -78;
         }
         super.b(param0, param1, param2, param3, param4);
-        int discarded$0 = 15035;
-        this.a();
+        this.a(15035);
     }
 
-    public static void e() {
+    public static void e(boolean param0) {
         field_y = null;
         field_F = null;
     }
 
-    private final void a() {
-        int discarded$0 = 0;
-        int discarded$1 = 0;
-        ((nc) this).field_C = new pb[]{this.b(((nc) this).field_L, ((nc) this).field_D), this.b(((nc) this).field_N, ((nc) this).field_O)};
-        int discarded$2 = 0;
-        ((nc) this).field_P = this.d();
+    private final void a(int param0) {
+        ((nc) this).field_C = new pb[]{this.b(((nc) this).field_L, ((nc) this).field_D, 0), this.b(((nc) this).field_N, ((nc) this).field_O, 0)};
+        ((nc) this).field_P = this.d(false);
         ((nc) this).field_E = ((nc) this).field_P.f();
         ((nc) this).field_I = new pb(((nc) this).field_t >> 1, ((nc) this).field_t);
     }
@@ -200,8 +195,7 @@ final class nc extends rj {
             fk.a(-28092, (java.awt.Component) (Object) param0);
             if (param1 > 84) {
               L1: {
-                int discarded$12 = -41;
-                ge.a((java.awt.Component) (Object) param0);
+                ge.a((java.awt.Component) (Object) param0, (byte) -41);
                 if (null != og.field_c) {
                   og.field_c.a((byte) -93, (java.awt.Component) (Object) param0);
                   break L1;
@@ -351,7 +345,7 @@ final class nc extends rj {
         }
     }
 
-    private final pb b(int param0, int param1) {
+    private final pb b(int param0, int param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;

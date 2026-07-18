@@ -13,7 +13,7 @@ abstract class qc {
     static String field_f;
     static at field_g;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_b = null;
         field_e = null;

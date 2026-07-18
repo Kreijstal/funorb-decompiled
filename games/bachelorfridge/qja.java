@@ -6,7 +6,7 @@ import java.io.*;
 final class qja extends bf {
     nq field_i;
 
-    final static void a() {
+    final static void a(int param0) {
         fr.field_n = false;
         wba.field_a = null;
         ta.field_b = null;

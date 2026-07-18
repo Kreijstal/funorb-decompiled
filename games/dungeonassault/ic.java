@@ -6,7 +6,7 @@ final class ic extends mc {
     static String field_z;
     static pp field_y;
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = DungeonAssault.field_K;
@@ -31,8 +31,7 @@ final class ic extends mc {
                 if (!wo.field_c) {
                   break L1;
                 } else {
-                  int discarded$4 = -1;
-                  ae.a(param0, var2);
+                  ae.a(param0, var2, -1);
                   return;
                 }
               }
@@ -57,8 +56,7 @@ final class ic extends mc {
                 if (!wo.field_c) {
                   break L3;
                 } else {
-                  int discarded$5 = -1;
-                  ae.a(param0, var2);
+                  ae.a(param0, var2, -1);
                   return;
                 }
               }
@@ -75,8 +73,7 @@ final class ic extends mc {
                 if (!wo.field_c) {
                   break L4;
                 } else {
-                  int discarded$6 = -1;
-                  ae.a(param0, var2);
+                  ae.a(param0, var2, -1);
                   return;
                 }
               }
@@ -86,8 +83,7 @@ final class ic extends mc {
             var2 = 1;
             if (il.field_c == null) {
               if (wo.field_c) {
-                int discarded$7 = -1;
-                ae.a(param0, var2);
+                ae.a(param0, var2, -1);
                 return;
               } else {
                 return;
@@ -103,7 +99,7 @@ final class ic extends mc {
         this(lp.field_C, param0);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_A = null;
         field_z = null;
         field_y = null;
@@ -115,8 +111,7 @@ final class ic extends mc {
             return;
         }
         try {
-            int discarded$0 = -1998;
-            var3.field_d = tp.a(kf.field_p, "idle", param2);
+            var3.field_d = tp.a(kf.field_p, "idle", param2, -1998);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "ic.EA(" + param0 + ',' + 27029 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -152,8 +147,7 @@ final class ic extends mc {
                 break L1;
               }
             }
-            int discarded$2 = 10854;
-            stackOut_2_0 = cc.a('*', param0.field_w.length());
+            stackOut_2_0 = cc.a('*', param0.field_w.length(), 10854);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

@@ -12,7 +12,7 @@ final class ck {
     static String field_f;
     static String field_c;
 
-    final static void a(bc param0, java.applet.Applet param1, bc param2, bc param3, bc param4, bc param5) {
+    final static void a(bc param0, java.applet.Applet param1, bc param2, bc param3, bc param4, bc param5, byte param6) {
         int var7_int = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -760,7 +760,7 @@ final class ck {
         }
     }
 
-    final static byte[] a(byte[] param0) {
+    final static byte[] a(byte[] param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -824,7 +824,7 @@ final class ck {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_f = null;

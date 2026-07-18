@@ -706,7 +706,7 @@ final class bm extends ie {
     final static void c(int param0, int param1) {
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_o = null;
         field_i = null;
         field_n = null;

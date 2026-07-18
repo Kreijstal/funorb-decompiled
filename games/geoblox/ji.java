@@ -23,7 +23,7 @@ abstract class ji {
 
     abstract void h(int param0);
 
-    final static void f() {
+    final static void f(int param0) {
         pk var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -392,7 +392,7 @@ abstract class ji {
         }
     }
 
-    final static na[] c() {
+    final static na[] c(int param0) {
         int var2 = 0;
         int var3 = Geoblox.field_C;
         na[] var1 = new na[sb.field_a];
@@ -403,7 +403,7 @@ abstract class ji {
         return var1;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_n = null;
         field_r = null;
         field_a = null;

@@ -204,8 +204,7 @@ final class cp extends gd {
                   var14 = var14 + (la.field_b.field_H - -2);
                   if (var8 == 0) {
                     if (var9 == 0) {
-                      int discarded$1 = 30496;
-                      la.field_b.b(jk.a(new String[1], n.field_a), 52, var14, 12632256, -1);
+                      la.field_b.b(jk.a(new String[1], n.field_a, 30496), 52, var14, 12632256, -1);
                       break L4;
                     } else {
                       la.field_b.b(be.field_q, 52, var14, 16711680, -1);
@@ -349,7 +348,7 @@ final class cp extends gd {
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1, byte param2, int param3, String[] param4) {
+    final static void a(int param0, java.applet.Applet param1, byte param2, int param3, String[] param4, int param5) {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -412,8 +411,7 @@ final class cp extends gd {
                 wo.field_g = 2;
                 break L3;
               } else {
-                int discarded$29 = 10;
-                if (!sj.a((CharSequence) (Object) var6)) {
+                if (!sj.a((CharSequence) (Object) var6, 10)) {
                   wo.field_g = 2;
                   break L3;
                 } else {
@@ -501,22 +499,21 @@ final class cp extends gd {
         return (var4 + param2) / param1 - var4;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_O = null;
         field_Q = null;
         field_P = null;
         field_T = null;
     }
 
-    final static void f() {
+    final static void f(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = DungeonAssault.field_K;
         try {
           L0: {
-            int discarded$37 = -123;
-            if (!fm.a()) {
+            if (!fm.a((byte) -123)) {
               L1: {
                 if (cm.field_R == null) {
                   break L1;
@@ -524,8 +521,7 @@ final class cp extends gd {
                   if (!cm.field_R.field_g) {
                     break L1;
                   } else {
-                    int discarded$38 = 930;
-                    ib.a();
+                    ib.a(930);
                     na.field_D.a((lm) (Object) new nm(na.field_D, of.field_g), -1);
                     break L1;
                   }
@@ -533,14 +529,13 @@ final class cp extends gd {
               }
               return;
             } else {
-              boolean discarded$39 = na.field_D.a(am.field_e, (byte) 66, bp.field_d, true);
+              boolean discarded$12 = na.field_D.a(am.field_e, (byte) 66, bp.field_d, true);
               na.field_D.b(true);
               L2: while (true) {
-                int discarded$40 = 47;
-                if (!ha.b()) {
+                if (!ha.b((byte) 47)) {
                   break L0;
                 } else {
-                  boolean discarded$41 = na.field_D.a(127, mm.field_t, ob.field_Yb);
+                  boolean discarded$13 = na.field_D.a(127, mm.field_t, ob.field_Yb);
                   continue L2;
                 }
               }

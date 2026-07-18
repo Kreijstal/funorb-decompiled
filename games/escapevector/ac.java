@@ -13,14 +13,14 @@ final class ac {
         int discarded$0 = dj.a(6445);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (bk.field_r != null) {
             bk.field_r.a((byte) -124);
             return;
         }
     }
 
-    final static void d() {
+    final static void d(int param0) {
         try {
             IOException var1 = null;
             RuntimeException var1_ref = null;
@@ -101,7 +101,7 @@ final class ac {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -345,7 +345,7 @@ final class ac {
         return stackIn_1_0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_d = null;
         int var1 = 25;
         field_a = null;

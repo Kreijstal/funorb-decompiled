@@ -92,8 +92,7 @@ final class eea extends ela {
         try {
           L0: {
             if (param1 == 0) {
-              int discarded$2 = -80;
-              stackOut_3_0 = new bfa((Object) (Object) rma.a());
+              stackOut_3_0 = new bfa((Object) (Object) rma.a(-80));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

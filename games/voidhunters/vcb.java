@@ -183,8 +183,7 @@ final class vcb extends oda implements oo {
                 L3: {
                   if (((vcb) this).field_w) {
                     var5_int = ((vcb) this).field_M;
-                    int discarded$2 = 79;
-                    this.h();
+                    this.h((byte) 79);
                     if (var5_int == ((vcb) this).field_M) {
                       break L3;
                     } else {
@@ -196,8 +195,7 @@ final class vcb extends oda implements oo {
                       }
                     }
                   } else {
-                    int discarded$3 = -8;
-                    this.i();
+                    this.i((byte) -8);
                     break L3;
                   }
                 }
@@ -326,8 +324,7 @@ final class vcb extends oda implements oo {
             ((vcb) this).field_P.a(((vcb) this).field_P.field_g, ((vcb) this).field_N.field_h, ((vcb) this).field_P.field_f, param1 ^ 21945, ((vcb) this).field_P.field_r);
             this.a((byte) -110, false);
         }
-        int discarded$1 = -8;
-        this.i();
+        this.i((byte) -8);
     }
 
     final void c(int param0, int param1) {
@@ -563,7 +560,7 @@ final class vcb extends oda implements oo {
         }
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         int var2 = null != ((vcb) this).field_D ? ((vcb) this).field_D.field_g - -((vcb) this).field_D.field_h : ((vcb) this).field_N.field_g;
         int var3 = ((vcb) this).field_C != null ? ((vcb) this).field_C.field_g - ((vcb) this).field_P.field_h : ((vcb) this).field_N.field_h + ((vcb) this).field_N.field_g + -((vcb) this).field_P.field_h;
         this.b(var3 <= var2 ? 0 : (((vcb) this).field_P.field_g + -var2 << 16) / (var3 - var2), 65536);
@@ -789,7 +786,7 @@ final class vcb extends oda implements oo {
         field_z = null;
     }
 
-    private final int k() {
+    private final int k(byte param0) {
         return (((vcb) this).field_P.field_f << 16) / ((vcb) this).field_N.field_f;
     }
 
@@ -975,7 +972,7 @@ final class vcb extends oda implements oo {
         }
     }
 
-    private final void i() {
+    private final void i(byte param0) {
         int var2 = null == ((vcb) this).field_D ? ((vcb) this).field_N.field_g : ((vcb) this).field_D.field_h + ((vcb) this).field_D.field_g;
         int var3 = null != ((vcb) this).field_C ? -((vcb) this).field_P.field_h + ((vcb) this).field_C.field_g : ((vcb) this).field_N.field_h + (((vcb) this).field_N.field_g + -((vcb) this).field_P.field_h);
         ((vcb) this).field_P.field_g = ((var3 + -var2) * ((vcb) this).field_M >> 16) + var2;
@@ -1328,8 +1325,7 @@ final class vcb extends oda implements oo {
           }
         }
         L2: {
-          int discarded$1 = -8;
-          this.i();
+          this.i((byte) -8);
           if (((vcb) this).field_A == null) {
             ((vcb) this).field_N.field_r = 0;
             break L2;
@@ -1611,15 +1607,13 @@ final class vcb extends oda implements oo {
                                   }
                                 }
                               } else {
-                                int discarded$2 = 110;
-                                this.a((byte) -17, ((vcb) this).field_L + this.k());
+                                this.a((byte) -17, ((vcb) this).field_L + this.k((byte) 110));
                                 stackOut_19_0 = 1;
                                 stackIn_20_0 = stackOut_19_0;
                                 return stackIn_20_0 != 0;
                               }
                             } else {
-                              int discarded$3 = 110;
-                              this.a((byte) -17, ((vcb) this).field_L - this.k());
+                              this.a((byte) -17, ((vcb) this).field_L - this.k((byte) 110));
                               stackOut_16_0 = 1;
                               stackIn_17_0 = stackOut_16_0;
                               return stackIn_17_0 != 0;

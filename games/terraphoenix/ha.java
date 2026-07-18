@@ -187,7 +187,7 @@ final class ha extends di {
         return stackIn_8_0;
     }
 
-    final static void a(eg param0) {
+    final static void a(eg param0, int param1, byte param2) {
         try {
             ic.field_s.a((uf) (Object) param0, -16611);
             qc.a(4, param0, (byte) 118);
@@ -224,7 +224,7 @@ final class ha extends di {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_n = null;
         field_m = null;
         field_s = null;

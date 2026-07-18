@@ -52,8 +52,7 @@ final class kb {
                   break L0;
                 } else {
                   param0 = false;
-                  int discarded$1 = 3;
-                  uc.c();
+                  uc.c(3);
                   break L0;
                 }
               }
@@ -288,11 +287,11 @@ final class kb {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         ee.a(17, (byte) 30);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_c = null;
         field_e = null;
     }

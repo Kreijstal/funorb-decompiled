@@ -9,11 +9,11 @@ final class ga extends RuntimeException {
     static String[] field_d;
     static int field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
     }
 
-    final static void a(fj param0) {
+    final static void a(fj param0, int param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;

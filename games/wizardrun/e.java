@@ -17,7 +17,7 @@ final class e {
         return qb.field_p;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_e = null;
         field_b = null;

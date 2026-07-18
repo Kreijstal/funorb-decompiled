@@ -11,8 +11,7 @@ final class pa extends ab {
     static hl[] field_I;
 
     pa(he param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (de) (Object) lb.b());
-        int discarded$0 = -127;
+        super(param1, (de) (Object) lb.b((byte) -127));
         try {
             ((pa) this).field_M = param1;
             ((pa) this).field_O = param0;
@@ -22,7 +21,7 @@ final class pa extends ab {
         }
     }
 
-    final static boolean a(ue param0) {
+    final static boolean a(ue param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -81,7 +80,7 @@ final class pa extends ab {
         return stackIn_1_0;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_I = null;
         field_J = null;
     }

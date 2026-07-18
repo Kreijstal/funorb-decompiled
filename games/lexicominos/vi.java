@@ -8,11 +8,11 @@ final class vi extends kd {
     boolean field_h;
     int[] field_k;
 
-    final static void a() {
+    final static void a(byte param0) {
         ni.a(75, 17);
     }
 
-    final static db[] b() {
+    final static db[] b(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -33,7 +33,7 @@ final class vi extends kd {
         return var1;
     }
 
-    final static void a(int param0, vb param1) {
+    final static void a(int param0, vb param1, int param2) {
         th var5 = null;
         int var4 = 0;
         try {
@@ -60,7 +60,7 @@ final class vi extends kd {
         field_l = null;
     }
 
-    final static cd a(byte[] param0) {
+    final static cd a(byte[] param0, byte param1) {
         cd var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;

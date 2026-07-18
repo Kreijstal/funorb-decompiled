@@ -247,8 +247,7 @@ final class na implements Runnable {
                 try {
                   L2: {
                     var3 = (String) fd.a(param1, "getcookies", (byte) 100);
-                    int discarded$2 = 1;
-                    var4 = b.a(var3, ';');
+                    var4 = b.a(var3, ';', true);
                     var5 = 0;
                     L3: while (true) {
                       if (var4.length <= var5) {

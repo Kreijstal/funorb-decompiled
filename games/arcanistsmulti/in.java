@@ -358,7 +358,7 @@ final class in extends kc {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_Jb = null;
         field_Nb = null;
         field_Kb = null;

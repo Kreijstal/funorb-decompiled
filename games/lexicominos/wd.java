@@ -91,7 +91,7 @@ final class wd {
         return stackIn_11_0;
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String a(boolean param0, CharSequence param1, byte param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -174,7 +174,7 @@ final class wd {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

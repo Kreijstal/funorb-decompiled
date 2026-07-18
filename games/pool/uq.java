@@ -40,7 +40,7 @@ final class uq {
     byte[] field_r;
     int field_z;
 
-    final static void a(long param0) {
+    final static void a(long param0, byte param1) {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
@@ -138,7 +138,7 @@ final class uq {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_i = null;
         field_K = null;

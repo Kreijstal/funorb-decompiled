@@ -108,7 +108,7 @@ final class pi extends si {
         ((pi) this).field_K = ((pi) this).field_m;
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         param0.removeMouseListener((java.awt.event.MouseListener) (Object) pj.field_G);
         param0.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) pj.field_G);
         try {
@@ -224,7 +224,7 @@ final class pi extends si {
         return stackIn_14_0 != 0;
     }
 
-    final static void a(nh param0) {
+    final static void a(nh param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -403,7 +403,7 @@ final class pi extends si {
         return stackIn_9_0;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_I = null;
         field_V = null;
         field_J = null;

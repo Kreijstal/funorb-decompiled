@@ -15,7 +15,7 @@ final class rw extends le {
     private byte[] field_p;
     static asb field_l;
 
-    private final void d() {
+    private final void d(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -126,8 +126,7 @@ final class rw extends le {
                       break L1;
                     } else {
                       var4_int = grb.field_l[var10] * ((rw) this).field_j;
-                      int discarded$5 = -34;
-                      var6 = this.a(var18, var17, var12, var4_int * var8 >> 12, var14, var11);
+                      var6 = this.a(var18, var17, var12, var4_int * var8 >> 12, var14, var11, (byte) -34);
                       var6 = var9 * var6 >> 12;
                       param2[var10] = 2048 + (var6 >> 1);
                       var10++;
@@ -141,8 +140,7 @@ final class rw extends le {
                       break L1;
                     } else {
                       var4_int = ((rw) this).field_j * grb.field_l[var10];
-                      int discarded$6 = -34;
-                      var6 = this.a(var18, var17, var12, var4_int * var8 >> 12, var14, var11);
+                      var6 = this.a(var18, var17, var12, var4_int * var8 >> 12, var14, var11, (byte) -34);
                       param2[var10] = var9 * var6 >> 12;
                       var10++;
                       continue L4;
@@ -187,8 +185,7 @@ final class rw extends le {
                       break L5;
                     } else {
                       var4_int = grb.field_l[var10] * ((rw) this).field_j;
-                      int discarded$7 = -34;
-                      var6 = this.a(var18, var17, var12, var4_int * var8 >> 12, var14, var11);
+                      var6 = this.a(var18, var17, var12, var4_int * var8 >> 12, var14, var11, (byte) -34);
                       param2[var10] = var9 * var6 >> 12;
                       var10++;
                       continue L8;
@@ -244,8 +241,7 @@ final class rw extends le {
                                 break L10;
                               } else {
                                 var4_int = ((rw) this).field_j * grb.field_l[var10];
-                                int discarded$8 = -34;
-                                var6 = this.a(var18, var17, var12, var8 * var4_int >> 12, var14, var11);
+                                var6 = this.a(var18, var17, var12, var8 * var4_int >> 12, var14, var11, (byte) -34);
                                 var6 = (var9 * var6 >> 12) + param2[var10];
                                 param2[var10] = 2048 - -(var6 >> 1);
                                 var10++;
@@ -261,8 +257,7 @@ final class rw extends le {
                           break L10;
                         } else {
                           var4_int = grb.field_l[var10] * ((rw) this).field_j;
-                          int discarded$9 = -34;
-                          var6 = this.a(var18, var17, var12, var8 * var4_int >> 12, var14, var11);
+                          var6 = this.a(var18, var17, var12, var8 * var4_int >> 12, var14, var11, (byte) -34);
                           param2[var10] = param2[var10] + (var6 * var9 >> 12);
                           var10++;
                           continue L15;
@@ -315,8 +310,7 @@ final class rw extends le {
         int var4 = 0;
         var4 = VoidHunters.field_G;
         ((rw) this).field_p = ihb.a((byte) 95, ((rw) this).field_i);
-        int discarded$2 = -80;
-        this.d();
+        this.d(-80);
         var2 = ((rw) this).field_r - 1;
         if (param0 < -35) {
           L0: while (true) {
@@ -506,7 +500,7 @@ final class rw extends le {
         }
     }
 
-    private final int a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private final int a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -692,7 +686,7 @@ final class rw extends le {
         return (param4 * (-var16 + var17) >> 12) + var16;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_l = null;
         int var1 = -1;
     }
@@ -710,7 +704,7 @@ final class rw extends le {
         return var5;
     }
 
-    final static void a() {
+    final static void a(boolean param0, byte param1) {
         pi.a((byte) -121, true, false);
     }
 

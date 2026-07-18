@@ -107,13 +107,11 @@ final class bua {
               }
             }
           } else {
-            int discarded$2 = 110;
-            this.d();
+            this.d(110);
             return;
           }
         } else {
-          int discarded$3 = 110;
-          this.d();
+          this.d(110);
           return;
         }
     }
@@ -325,7 +323,7 @@ final class bua {
         ((bua) this).field_i = 1.865414023399353f;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_g = null;
     }
@@ -368,7 +366,7 @@ final class bua {
         return var5.a((byte) 117, true);
     }
 
-    private final void d() {
+    private final void d(int param0) {
         ((bua) this).field_e = -1;
         ((bua) this).field_k = null;
         ((bua) this).field_j = -1;

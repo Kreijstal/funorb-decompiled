@@ -116,11 +116,11 @@ final class vp extends wm implements ntb {
               var5 = (vp) (Object) param0;
               super.a(param0, -98);
               var4 = 0;
-              if (var5.field_d == var5.field_d) {
+              if (((vp) this).field_d == var5.field_d) {
                 break L1;
               } else {
                 var4 = 1;
-                System.out.println("int team_id has changed. before=" + var5.field_d + ", now=" + var5.field_d);
+                System.out.println("int team_id has changed. before=" + var5.field_d + ", now=" + ((vp) this).field_d);
                 break L1;
               }
             }
@@ -133,8 +133,8 @@ final class vp extends wm implements ntb {
               }
             }
             L3: {
-              if (var5.field_c != var5.field_c) {
-                System.out.println("int component_type_id has changed. before=" + var5.field_c + ", now=" + var5.field_c);
+              if (((vp) this).field_c != var5.field_c) {
+                System.out.println("int component_type_id has changed. before=" + var5.field_c + ", now=" + ((vp) this).field_c);
                 var4 = 1;
                 break L3;
               } else {
@@ -193,8 +193,8 @@ final class vp extends wm implements ntb {
         try {
             var5 = (vp) (Object) param1;
             var6 = var5;
-            var6.field_d = var5.field_d;
-            var6.field_c = var5.field_c;
+            var6.field_d = ((vp) this).field_d;
+            var6.field_c = ((vp) this).field_c;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "vp.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -596,10 +596,10 @@ final class vp extends wm implements ntb {
                 if (super.a((byte) -76, param1)) {
                   break L2;
                 } else {
-                  if (var4.field_d != var4.field_d) {
+                  if (var4.field_d != ((vp) this).field_d) {
                     break L2;
                   } else {
-                    if (var4.field_c == var4.field_c) {
+                    if (var4.field_c == ((vp) this).field_c) {
                       stackOut_5_0 = 0;
                       stackIn_6_0 = stackOut_5_0;
                       break L1;

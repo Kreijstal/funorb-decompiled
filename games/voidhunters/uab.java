@@ -9,7 +9,7 @@ final class uab {
         field_a = null;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return knb.field_o;
     }
 

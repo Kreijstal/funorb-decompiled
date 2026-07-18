@@ -38,7 +38,7 @@ final class jd {
         field_e = null;
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -303,8 +303,7 @@ final class jd {
             for (var2_int = 0; var2_int < param0.length; var2_int++) {
                 ((jd) this).field_a[var2_int] = param0[var2_int];
             }
-            int discarded$0 = 1046142536;
-            this.a();
+            this.a(1046142536);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "jd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

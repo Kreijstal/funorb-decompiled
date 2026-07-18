@@ -172,7 +172,7 @@ abstract class en extends na implements nf {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_I = null;
         field_M = null;
         field_L = null;
@@ -279,13 +279,11 @@ abstract class en extends na implements nf {
             }
             {
                 if (var2_int >= 0) {
-                    int discarded$2 = 127;
-                    if (ib.a() <= 30000L) {
+                    if (ib.a((byte) 127) <= 30000L) {
                         return false;
                     }
                 }
-                int discarded$3 = 0;
-                mk.a();
+                mk.a(false);
             }
             return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -919,7 +917,7 @@ abstract class en extends na implements nf {
         return null;
     }
 
-    private final boolean b(na param0) {
+    private final boolean b(na param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -999,7 +997,7 @@ abstract class en extends na implements nf {
         return stackIn_5_0 != 0;
     }
 
-    private final boolean c(na param0) {
+    private final boolean c(na param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -1206,13 +1204,11 @@ abstract class en extends na implements nf {
             if (var5_int == 80) {
               L2: {
                 if (sn.field_a[81]) {
-                  int discarded$5 = 0;
-                  stackOut_9_0 = this.c(param3);
+                  stackOut_9_0 = this.c(param3, 0);
                   stackIn_10_0 = stackOut_9_0;
                   break L2;
                 } else {
-                  int discarded$6 = -62;
-                  stackOut_8_0 = this.b(param3);
+                  stackOut_8_0 = this.b(param3, -62);
                   stackIn_10_0 = stackOut_8_0;
                   break L2;
                 }

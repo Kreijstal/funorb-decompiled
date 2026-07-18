@@ -5,7 +5,7 @@ final class vo {
     static String field_b;
     static String field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_a = null;
     }
@@ -50,8 +50,7 @@ final class vo {
               try {
                 L0: {
                   var3 = new java.net.URL(param2.getCodeBase(), param1);
-                  int discarded$2 = 67;
-                  var3 = gh.a(param2, var3);
+                  var3 = gh.a(param2, var3, (byte) 67);
                   ec.a(true, var3.toString(), param2, (byte) -17);
                   break L0;
                 }

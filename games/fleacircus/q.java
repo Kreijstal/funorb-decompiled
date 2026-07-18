@@ -7,7 +7,7 @@ final class q {
     static int[] field_a;
     static String[] field_b;
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, boolean param1) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -29,9 +29,7 @@ final class q {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            int discarded$5 = 0;
-            stackOut_0_0 = e.a(param0);
+            stackOut_0_0 = e.a(param0, false, 0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -69,11 +67,7 @@ final class q {
     }
 
     final static rh a(int param0, int param1) {
-        int discarded$0 = 1;
-        int discarded$1 = 1;
-        int discarded$2 = 1;
-        int discarded$3 = 0;
-        return ag.a(false, param1);
+        return ag.a(false, param1, false, 1, true, 1);
     }
 
     final static void a(boolean param0) {
@@ -121,8 +115,7 @@ final class q {
               }
             } else {
               if (1 != var2) {
-                int discarded$2 = 1;
-                ud.a("A1: " + ak.a(), (Throwable) null, 0);
+                ud.a("A1: " + ak.a(true), (Throwable) null, 0);
                 k.c(-28354);
                 return;
               } else {
@@ -159,7 +152,7 @@ final class q {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_c = null;

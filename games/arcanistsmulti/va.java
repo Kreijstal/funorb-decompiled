@@ -175,8 +175,7 @@ final class va implements pf {
               ua.field_S = gk.a(var7, -13);
               gg.field_e = param0;
               var6 = ff.a(param2, 49, gl.field_c, mj.field_z, ab.field_p);
-              int discarded$2 = -104;
-              ag.a(var6);
+              ag.a(var6, (byte) -104);
               stackOut_5_0 = 1;
               stackIn_6_0 = stackOut_5_0;
               break L0;
@@ -244,7 +243,7 @@ final class va implements pf {
         return stackIn_6_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_e = null;
         field_a = null;

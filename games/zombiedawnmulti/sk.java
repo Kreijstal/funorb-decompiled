@@ -22,7 +22,7 @@ final class sk {
     int field_l;
     private boolean field_g;
 
-    final static int a() {
+    final static int a(byte param0) {
         int var1 = -1;
         return qk.field_j;
     }

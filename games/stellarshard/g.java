@@ -7862,7 +7862,7 @@ class g extends rj implements f {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
-        int stackOut_12_0 = 0;
+        byte stackOut_12_0 = 0;
         RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
         RuntimeException stackOut_20_0 = null;
@@ -7930,7 +7930,7 @@ class g extends rj implements f {
                     }
                   }
                 }
-                stackOut_12_0 = 126;
+                stackOut_12_0 = param1;
                 stackIn_13_0 = stackOut_12_0;
                 break L2;
               }
@@ -7950,7 +7950,7 @@ class g extends rj implements f {
           L8: {
             runtimeException = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) runtimeException;
-            stackOut_17_1 = new StringBuilder().append("g.SA(").append(param0).append(',').append(126).append(',');
+            stackOut_17_1 = new StringBuilder().append("g.SA(").append(param0).append(',').append(param1).append(',');
             stackIn_20_0 = stackOut_17_0;
             stackIn_20_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;

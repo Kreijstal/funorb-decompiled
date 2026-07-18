@@ -38,7 +38,7 @@ final class er {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         double var1_double = 0.0;
         int var3 = 0;
@@ -242,7 +242,7 @@ final class er {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         int var1 = 0;
         field_c = null;
     }

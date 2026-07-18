@@ -372,8 +372,7 @@ final class lo extends wda {
             } else {
               if (hc.field_h >= param2) {
                 if (1 == param1) {
-                  int discarded$1 = 0;
-                  tia.a(param2, param4, param0, param6, param3);
+                  tia.a(param2, param4, param0, param6, param3, false);
                   if (!param5) {
                     lo.a(69, -19, 4, 24, 126, false, -104);
                     return;

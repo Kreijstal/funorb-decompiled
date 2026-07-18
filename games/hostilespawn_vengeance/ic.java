@@ -17,7 +17,7 @@ final class ic extends am {
     static int field_n;
     int field_j;
 
-    final static void a(int param0, int param1, p param2) {
+    final static void a(int param0, int param1, p param2, byte param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -151,8 +151,7 @@ final class ic extends am {
                     break L2;
                   }
                 }
-                int discarded$2 = 19;
-                jf.a(var3_ref);
+                jf.a(var3_ref, (byte) 19);
                 var7 = re.a(var3_ref, ":", "%3a", -125);
                 var8 = re.a(var7, "@", "%40", -124);
                 var9 = re.a(var8, "&", "%26", -113);
@@ -220,7 +219,7 @@ final class ic extends am {
                             break L6;
                           } else {
                             var5 = (DataInputStream) var4.field_c;
-                            int discarded$3 = var5.read();
+                            int discarded$1 = var5.read();
                             var5.close();
                             break L6;
                           }
@@ -252,7 +251,7 @@ final class ic extends am {
         }
     }
 
-    final static ll b(String param0) {
+    final static ll b(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -303,8 +302,7 @@ final class ic extends am {
                   var5 = 0;
                   L1: while (true) {
                     if (var5 >= var4.length) {
-                      int discarded$2 = 0;
-                      stackOut_18_0 = gn.a(var3[-1 + var3.length]);
+                      stackOut_18_0 = gn.a(var3[-1 + var3.length], false);
                       stackIn_19_0 = stackOut_18_0;
                       break L0;
                     } else {
@@ -365,7 +363,7 @@ final class ic extends am {
         return stackIn_19_0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_o = null;
         field_k = null;
     }

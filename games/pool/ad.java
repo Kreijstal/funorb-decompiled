@@ -94,9 +94,7 @@ final class ad {
         String stackOut_12_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            int discarded$5 = 0;
-            lf.a(param3, param2.field_t, param1, param4, param2.field_v);
+            lf.a(param3, param2.field_t, param1, param4, param2.field_v, 0, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -206,7 +204,7 @@ final class ad {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
         field_t = null;
         field_y = null;
@@ -215,7 +213,7 @@ final class ad {
         field_l = null;
     }
 
-    private final void a(byte[] param0) {
+    private final void a(byte[] param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -645,14 +643,13 @@ final class ad {
                     }
                 }
             }
-            int discarded$0 = -1;
-            this.a(param0);
+            this.a(param0, -1);
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) (Object) runtimeException, "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static dd a(int param0, int param1) {
+    final static dd a(int param0, int param1, int param2) {
         int var4 = 0;
         dd var5 = new dd(param1, param1);
         dd var3 = var5;

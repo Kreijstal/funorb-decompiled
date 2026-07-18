@@ -602,7 +602,7 @@ final class qga extends td {
         return (ii) (Object) stackIn_16_0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_s = null;
         field_r = null;
         field_p = null;

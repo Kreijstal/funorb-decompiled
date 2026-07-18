@@ -29,9 +29,7 @@ final class ea {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            int discarded$5 = 0;
-            stackOut_0_0 = ch.a(param1);
+            stackOut_0_0 = ch.a(param1, false, 0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -68,7 +66,7 @@ final class ea {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_b = null;
         field_c = null;

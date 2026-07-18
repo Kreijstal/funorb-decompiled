@@ -290,7 +290,7 @@ final class ve implements db {
         int var3 = 104 / ((31 - param0) / 61);
     }
 
-    final static mf a(int param0, int param1, boolean param2) {
+    final static mf a(int param0, int param1, boolean param2, int param3, boolean param4) {
         return ji.a(param2, param0, false, 1, true, (byte) 114);
     }
 
@@ -477,7 +477,7 @@ final class ve implements db {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_n = null;
         field_f = null;
         field_h = null;

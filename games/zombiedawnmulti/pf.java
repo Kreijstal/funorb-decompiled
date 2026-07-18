@@ -8,7 +8,7 @@ final class pf {
     static ri field_a;
     static ul field_b;
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_b = null;
         field_e = null;
@@ -39,10 +39,8 @@ final class pf {
         String stackOut_7_2 = null;
         try {
           L0: {
-            int discarded$9 = -42;
-            if (ud.a(param0, param1, param3)) {
-              int discarded$10 = 2;
-              stackOut_4_0 = bc.a();
+            if (ud.a(param0, param1, param3, (byte) -42)) {
+              stackOut_4_0 = bc.a(2);
               stackIn_5_0 = stackOut_4_0;
               break L0;
             } else {

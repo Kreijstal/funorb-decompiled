@@ -134,7 +134,7 @@ final class dm extends mj {
         return stackIn_1_0;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         ac.field_h = null;
         bd.field_S = null;
     }
@@ -161,7 +161,7 @@ final class dm extends mj {
         super(param0, param1);
     }
 
-    final static int d() {
+    final static int d(int param0) {
         fl.field_a.a(64);
         if (!p.field_a.b(false)) {
             return vj.e((byte) -95);

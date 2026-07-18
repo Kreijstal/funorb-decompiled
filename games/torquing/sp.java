@@ -38,7 +38,7 @@ final class sp extends im {
         }
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_R = null;
         field_Q = null;
     }

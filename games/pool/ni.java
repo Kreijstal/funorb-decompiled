@@ -270,7 +270,6 @@ final class ni extends vc {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int[] var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -284,18 +283,15 @@ final class ni extends vc {
         so var21 = null;
         int[] var23 = null;
         so var24 = null;
-        int[] var26 = null;
         so var27 = null;
         so var29 = null;
         so var32 = null;
         int[] var35 = null;
         int[] var36 = null;
         int[] var38 = null;
-        int[] var40 = null;
         int[] var46 = null;
         int[] var47 = null;
         int[] var49 = null;
-        int[] var51 = null;
         int[] var57 = null;
         int[] var58 = null;
         int[] var59 = null;
@@ -448,10 +444,8 @@ final class ni extends vc {
           var18 = var35;
           var16 = var18;
           var5_ref_int__ = var16;
-          int discarded$11 = 1;
-          oh.field_d[0] = var57[0] + -sb.a(288.0f) >> 2;
-          int discarded$12 = 1;
-          oh.field_d[1] = var57[1] + -sb.a(144.0f) >> 2;
+          oh.field_d[0] = var57[0] + -sb.a(288.0f, true) >> 2;
+          oh.field_d[1] = var57[1] + -sb.a(144.0f, true) >> 2;
           oh.field_d[2] = var57[2] >> 2;
           if (var5_ref_int__ == oh.field_d) {
             break L0;
@@ -488,12 +482,7 @@ final class ni extends vc {
             en.b(param0 + 55);
             this.a(false, param1);
             var62 = new int[3];
-            var51 = var62;
-            var40 = var51;
-            var26 = var40;
-            var10 = var26;
-            int discarded$13 = 9;
-            hr.a(th.field_l[vf.field_lb].field_l[0], var10, oh.field_d, th.field_l[vf.field_lb].field_l[1], th.field_l[vf.field_lb].field_l[2]);
+            hr.a(th.field_l[vf.field_lb].field_l[0], var62, oh.field_d, th.field_l[vf.field_lb].field_l[1], th.field_l[vf.field_lb].field_l[2], (byte) 9);
             var9 = var62[1];
             var8 = var62[1];
             var7 = var62[0];
@@ -710,8 +699,7 @@ final class ni extends vc {
               } else {
                 L21: {
                   th.field_l[var5].c(6710886, oh.field_d);
-                  int discarded$14 = 9;
-                  hr.a((int) th.field_l[var5].field_h, var10, oh.field_d, (int) th.field_l[var5].field_a, (int) th.field_l[var5].field_o);
+                  hr.a((int) th.field_l[var5].field_h, var62, oh.field_d, (int) th.field_l[var5].field_a, (int) th.field_l[var5].field_o, (byte) 9);
                   if (var6 <= var62[0]) {
                     if (var7 < var62[0]) {
                       var7 = var62[0];
@@ -738,8 +726,7 @@ final class ni extends vc {
                   }
                 }
                 L23: {
-                  int discarded$15 = 9;
-                  hr.a((int) th.field_l[var5].field_p, var10, oh.field_d, (int) th.field_l[var5].field_a, (int) th.field_l[var5].field_o);
+                  hr.a((int) th.field_l[var5].field_p, var62, oh.field_d, (int) th.field_l[var5].field_a, (int) th.field_l[var5].field_o, (byte) 9);
                   if (var62[0] >= var6) {
                     if (var7 >= var62[0]) {
                       break L23;
@@ -766,8 +753,7 @@ final class ni extends vc {
                   }
                 }
                 L25: {
-                  int discarded$16 = 9;
-                  hr.a((int) th.field_l[var5].field_h, var10, oh.field_d, (int) th.field_l[var5].field_m, (int) th.field_l[var5].field_o);
+                  hr.a((int) th.field_l[var5].field_h, var62, oh.field_d, (int) th.field_l[var5].field_m, (int) th.field_l[var5].field_o, (byte) 9);
                   if (var6 > var62[0]) {
                     var6 = var62[0];
                     break L25;
@@ -794,8 +780,7 @@ final class ni extends vc {
                   }
                 }
                 L27: {
-                  int discarded$17 = 9;
-                  hr.a((int) th.field_l[var5].field_p, var10, oh.field_d, (int) th.field_l[var5].field_m, (int) th.field_l[var5].field_o);
+                  hr.a((int) th.field_l[var5].field_p, var62, oh.field_d, (int) th.field_l[var5].field_m, (int) th.field_l[var5].field_o, (byte) 9);
                   if (var8 <= var62[1]) {
                     if (var9 < var62[1]) {
                       var9 = var62[1];
@@ -822,8 +807,7 @@ final class ni extends vc {
                   }
                 }
                 L29: {
-                  int discarded$18 = 9;
-                  hr.a((int) th.field_l[var5].field_h, var10, oh.field_d, (int) th.field_l[var5].field_a, (int) th.field_l[var5].field_f);
+                  hr.a((int) th.field_l[var5].field_h, var62, oh.field_d, (int) th.field_l[var5].field_a, (int) th.field_l[var5].field_f, (byte) 9);
                   if (var8 <= var62[1]) {
                     if (var9 < var62[1]) {
                       var9 = var62[1];
@@ -850,8 +834,7 @@ final class ni extends vc {
                   }
                 }
                 L31: {
-                  int discarded$19 = 9;
-                  hr.a((int) th.field_l[var5].field_p, var10, oh.field_d, (int) th.field_l[var5].field_a, (int) th.field_l[var5].field_f);
+                  hr.a((int) th.field_l[var5].field_p, var62, oh.field_d, (int) th.field_l[var5].field_a, (int) th.field_l[var5].field_f, (byte) 9);
                   if (var6 > var62[0]) {
                     var6 = var62[0];
                     break L31;
@@ -878,8 +861,7 @@ final class ni extends vc {
                   }
                 }
                 L33: {
-                  int discarded$20 = 9;
-                  hr.a((int) th.field_l[var5].field_h, var10, oh.field_d, (int) th.field_l[var5].field_m, (int) th.field_l[var5].field_f);
+                  hr.a((int) th.field_l[var5].field_h, var62, oh.field_d, (int) th.field_l[var5].field_m, (int) th.field_l[var5].field_f, (byte) 9);
                   if (var6 <= var62[0]) {
                     if (var62[0] > var7) {
                       var7 = var62[0];
@@ -906,8 +888,7 @@ final class ni extends vc {
                   }
                 }
                 L35: {
-                  int discarded$21 = 9;
-                  hr.a((int) th.field_l[var5].field_p, var10, oh.field_d, (int) th.field_l[var5].field_m, (int) th.field_l[var5].field_f);
+                  hr.a((int) th.field_l[var5].field_p, var62, oh.field_d, (int) th.field_l[var5].field_m, (int) th.field_l[var5].field_f, (byte) 9);
                   if (var62[1] >= var8) {
                     if (var9 >= var62[1]) {
                       break L35;
@@ -1274,16 +1255,16 @@ final class ni extends vc {
                               L5: while (true) {
                                 if (oo.field_I <= var2) {
                                   bf.field_k = var11;
-                                  so dupTemp$11 = new so(4 * (af.field_e - ch.field_G));
-                                  ((ni) this).field_jb = dupTemp$11;
-                                  so dupTemp$12 = new so(new so[1]);
-                                  ((ni) this).field_bb = dupTemp$12;
-                                  so dupTemp$13 = new so(4 * (af.field_e + -ch.field_G));
-                                  ((ni) this).field_U = dupTemp$13;
-                                  so dupTemp$14 = new so(4 * (-fc.field_c + pf.field_k) + (rg.field_u - rb.field_a) * 2);
-                                  ((ni) this).field_gb = dupTemp$14;
-                                  so dupTemp$15 = new so(new so[2]);
-                                  ((ni) this).field_R = dupTemp$15;
+                                  so dupTemp$9 = new so(4 * (af.field_e - ch.field_G));
+                                  ((ni) this).field_jb = dupTemp$9;
+                                  so dupTemp$10 = new so(new so[1]);
+                                  ((ni) this).field_bb = dupTemp$10;
+                                  so dupTemp$11 = new so(4 * (af.field_e + -ch.field_G));
+                                  ((ni) this).field_U = dupTemp$11;
+                                  so dupTemp$12 = new so(4 * (-fc.field_c + pf.field_k) + (rg.field_u - rb.field_a) * 2);
+                                  ((ni) this).field_gb = dupTemp$12;
+                                  so dupTemp$13 = new so(new so[2]);
+                                  ((ni) this).field_R = dupTemp$13;
                                   var12 = new so(new so[2]);
                                   var13 = new so(new so[2]);
                                   var14 = new eg[af.field_e + -ch.field_G][2];
@@ -1376,12 +1357,12 @@ final class ni extends vc {
                                         }
                                       }
                                     } else {
-                                      eg dupTemp$16 = hq.b((byte) 125);
-                                      var14[var2 - ch.field_G][0] = dupTemp$16;
-                                      var15_ref_eg = dupTemp$16;
-                                      eg dupTemp$17 = hq.b((byte) 127);
-                                      var14[-ch.field_G + var2][1] = dupTemp$17;
-                                      var28 = dupTemp$17;
+                                      eg dupTemp$14 = hq.b((byte) 125);
+                                      var14[var2 - ch.field_G][0] = dupTemp$14;
+                                      var15_ref_eg = dupTemp$14;
+                                      eg dupTemp$15 = hq.b((byte) 127);
+                                      var14[-ch.field_G + var2][1] = dupTemp$15;
+                                      var28 = dupTemp$15;
                                       ej.a(0, var15_ref_eg, 0, false, -((ni) this).field_M[var2][2], 0, 0, 1, var28, ((ni) this).field_O[var2]);
                                       var2++;
                                       continue L6;
@@ -1460,9 +1441,9 @@ final class ni extends vc {
                             var2++;
                             continue L3;
                           } else {
-                            int incrementValue$18 = var12_int;
+                            int incrementValue$16 = var12_int;
                             var12_int++;
-                            th.field_l[incrementValue$18] = new p((nc) (Object) ((ni) this).a(0, var25[var15]), new int[3]);
+                            th.field_l[incrementValue$16] = new p((nc) (Object) ((ni) this).a(0, var25[var15]), new int[3]);
                             var15++;
                             continue L13;
                           }
@@ -1480,9 +1461,9 @@ final class ni extends vc {
                         var2++;
                         continue L2;
                       } else {
-                        int incrementValue$19 = var12_int;
+                        int incrementValue$17 = var12_int;
                         var12_int++;
-                        th.field_l[incrementValue$19] = new p((nc) (Object) ((ni) this).a(108, var23[var15]), new int[3]);
+                        th.field_l[incrementValue$17] = new p((nc) (Object) ((ni) this).a(108, var23[var15]), new int[3]);
                         var15++;
                         continue L14;
                       }
@@ -1496,8 +1477,7 @@ final class ni extends vc {
                     var11++;
                     continue L1;
                   } else {
-                    int discarded$20 = -37;
-                    nd.a(var8[var11][var12_int]);
+                    nd.a(var8[var11][var12_int], (byte) -37);
                     var12_int++;
                     continue L15;
                   }
@@ -1508,8 +1488,7 @@ final class ni extends vc {
             var12_int = 0;
             L16: while (true) {
               if (var12_int < var4[var11].length) {
-                int discarded$21 = -37;
-                nd.a(var4[var11][var12_int]);
+                nd.a(var4[var11][var12_int], (byte) -37);
                 var12_int++;
                 continue L16;
               } else {
@@ -1588,7 +1567,7 @@ final class ni extends vc {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_Z = null;
         field_S = null;
         field_eb = null;
@@ -2197,7 +2176,7 @@ final class ni extends vc {
         }
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         int var2 = Pool.field_O;
         if ((ba.field_ub.field_I.field_b & 1 << ba.field_ub.field_db) != 0) {
             nk.field_f[12] = ba.field_ub.field_r ? w.field_l : df.field_m;

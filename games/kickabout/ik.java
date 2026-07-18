@@ -807,7 +807,7 @@ final class ik extends tm {
         super(param0, param1, param2);
     }
 
-    final static void a(float param0, String param1, boolean param2) {
+    final static void a(float param0, String param1, boolean param2, byte param3) {
         try {
             if (nm.field_d == null) {
                 nm.field_d = new oj(wd.field_l, st.field_m);

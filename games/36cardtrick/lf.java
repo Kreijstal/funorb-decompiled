@@ -47,7 +47,7 @@ final class lf {
         field_d = null;
     }
 
-    final static qk a(boolean param0, boolean param1, int param2, int param3) {
+    final static qk a(boolean param0, boolean param1, int param2, int param3, byte param4, boolean param5) {
         try {
             Object var6 = null;
             Object var7 = null;

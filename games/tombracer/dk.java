@@ -387,7 +387,7 @@ final class dk {
         }
     }
 
-    final static int a(dn param0) {
+    final static int a(dn param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;

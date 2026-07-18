@@ -65,8 +65,7 @@ final class ad {
                           if (var4 == 0) {
                             break L4;
                           } else {
-                            int discarded$4 = 1;
-                            if (!this.a(var4, ((ad) this).field_g)) {
+                            if (!this.a(var4, ((ad) this).field_g, true)) {
                               var5--;
                               continue L3;
                             } else {
@@ -92,8 +91,7 @@ final class ad {
                     } else {
                       var4 = this.a(0, var4, de.a(33, param1[var5]), ((ad) this).field_g);
                       if (var4 != 0) {
-                        int discarded$5 = 1;
-                        if (!this.a(var4, ((ad) this).field_g)) {
+                        if (!this.a(var4, ((ad) this).field_g, true)) {
                           var5++;
                           continue L5;
                         } else {
@@ -177,8 +175,7 @@ final class ad {
               }
             }
             L2: {
-              int discarded$2 = -118;
-              if (this.a(0, param1) != param1.length) {
+              if (this.a(0, param1, (byte) -118) != param1.length) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
@@ -223,11 +220,11 @@ final class ad {
         return stackIn_5_0 != 0;
     }
 
-    private final boolean a(int param0, byte[][] param1) {
+    private final boolean a(int param0, byte[][] param1, boolean param2) {
         return param1[param0][0] == -1;
     }
 
-    final static ti[] a(int param0, int param1, int param2) {
+    final static ti[] a(int param0, int param1, int param2, int param3, int param4) {
         int var5 = -101;
         ti[] var6 = new ti[9];
         ti dupTemp$0 = cd.a(param1, 1, (byte) -20);
@@ -357,7 +354,7 @@ final class ad {
         ((ad) this).field_c = new String[param1][2];
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
     }
 
@@ -527,8 +524,7 @@ final class ad {
                         if (param3 == 3670) {
                           break L3;
                         } else {
-                          int discarded$3 = 1;
-                          boolean discarded$4 = this.a(-50, (byte[][]) null);
+                          boolean discarded$1 = this.a(-50, (byte[][]) null, true);
                           break L3;
                         }
                       }
@@ -554,8 +550,7 @@ final class ad {
                       }
                     }
                     var7 = stackIn_10_0[stackIn_10_1];
-                    int discarded$5 = 0;
-                    var5_int = var7[li.a(var7.length, param1)] & 255;
+                    var5_int = var7[li.a(var7.length, param1, false)] & 255;
                     param0[var6] = di.a(68, (byte)var5_int);
                     var6++;
                     continue L2;
@@ -623,7 +618,7 @@ final class ad {
         }
     }
 
-    private final int a(int param0, char[] param1) {
+    private final int a(int param0, char[] param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -671,8 +666,7 @@ final class ad {
                   var5 = this.a(0, var5, (byte) var7, ((ad) this).field_h);
                   if (var5 != 0) {
                     L4: {
-                      int discarded$2 = 1;
-                      if (this.a(var5, ((ad) this).field_h)) {
+                      if (this.a(var5, ((ad) this).field_h, true)) {
                         var4_int = var6 + 1;
                         break L4;
                       } else {
@@ -728,11 +722,9 @@ final class ad {
         try {
             tf.field_a = wi.b(-125) * param1 / 1000;
             kf.a(param3, (byte) -80);
-            int discarded$0 = 1;
-            sd.a(param3);
+            sd.a(param3, true);
             v.a((byte) 118, param3);
-            int discarded$1 = 1;
-            rd.a();
+            rd.a(true);
             ra.a(0);
             si.field_l = -tf.field_a;
         } catch (RuntimeException runtimeException) {

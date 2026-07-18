@@ -17,7 +17,7 @@ final class rb {
     static String[] field_n;
     private we[] field_j;
 
-    final static void c() {
+    final static void c(int param0, int param1) {
         oq var2 = ej.field_j;
         var2.b(false, 11);
         var2.a(1, false);
@@ -189,15 +189,14 @@ final class rb {
             me.field_n = param4;
             rl.field_b.field_nb = param1;
             kh.field_Vb.field_nb = param0;
-            int discarded$0 = -86;
-            mc.c();
+            mc.c((byte) -86);
             oh.field_h = true;
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) (Object) runtimeException, "rb.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final static kh a(int param0) {
+    final static kh a(int param0, int param1) {
         int var2 = -8;
         return lf.field_a == null ? null : (kh) (Object) lf.field_a.a((long)param0, false);
     }

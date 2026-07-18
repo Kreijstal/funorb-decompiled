@@ -84,7 +84,7 @@ final class og extends n {
         }
     }
 
-    private final java.net.Socket a(String param0, String param1, int param2) throws IOException {
+    private final java.net.Socket a(String param0, String param1, int param2, int param3) throws IOException {
         RuntimeException var5 = null;
         OutputStream var6 = null;
         BufferedReader var7 = null;
@@ -532,7 +532,7 @@ final class og extends n {
         }
     }
 
-    final static jg e() {
+    final static jg e(int param0) {
         return (jg) (Object) new q();
     }
 
@@ -585,7 +585,7 @@ final class og extends n {
                 if (param0 == -4) {
                   break L1;
                 } else {
-                  jb discarded$2 = og.a(true, (byte) 97);
+                  jb discarded$1 = og.a(true, (byte) 97);
                   break L1;
                 }
               }
@@ -630,8 +630,7 @@ final class og extends n {
                       break L4;
                     }
                   }
-                  int discarded$3 = 0;
-                  stackOut_22_0 = this.a(var4_ref.getHostName(), (String) var5, var4_ref.getPort());
+                  stackOut_22_0 = this.a(var4_ref.getHostName(), (String) var5, var4_ref.getPort(), 0);
                   stackIn_23_0 = stackOut_22_0;
                   break L0;
                 } else {
@@ -1214,16 +1213,14 @@ final class og extends n {
           L0: {
             var1 = vh.field_a;
             L1: while (true) {
-              int discarded$13 = 0;
-              if (!wi.a()) {
+              if (!wi.a(false)) {
                 break L0;
               } else {
                 var1.b(true, 8);
-                int fieldTemp$14 = var1.field_n + 1;
+                int fieldTemp$5 = var1.field_n + 1;
                 var1.field_n = var1.field_n + 1;
-                var2 = fieldTemp$14;
-                int discarded$15 = 126;
-                md.a(var1);
+                var2 = fieldTemp$5;
+                md.a(var1, (byte) 126);
                 vh.field_a.a(25859, -var2 + var1.field_n);
                 continue L1;
               }
@@ -1238,16 +1235,12 @@ final class og extends n {
 
     final static void a(byte param0, mi param1, be param2, int param3) {
         mg.field_g = bg.a(12398) * param3 / 1000;
-        int discarded$0 = 1;
-        pl.a(param1);
+        pl.a(param1, true);
         try {
             ck.a(26613, param1);
-            int discarded$1 = 70;
-            ee.a(param1);
-            int discarded$2 = 126;
-            pb.b();
-            int discarded$3 = -85;
-            im.b();
+            ee.a(param1, (byte) 70);
+            pb.b(126);
+            im.b((byte) -85);
             tg.field_H = -mg.field_g;
         } catch (RuntimeException runtimeException) {
             throw sd.a((Throwable) (Object) runtimeException, "og.L(" + 122 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

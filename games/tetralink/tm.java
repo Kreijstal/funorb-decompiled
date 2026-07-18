@@ -69,8 +69,7 @@ final class tm extends um {
               L2: {
                 if (!param1.equals((Object) (Object) ((tm) this).field_q)) {
                   L3: {
-                    int discarded$2 = -80;
-                    var3 = hi.a(param1);
+                    var3 = hi.a(param1, (byte) -80);
                     if (var3 == null) {
                       break L3;
                     } else {
@@ -141,7 +140,7 @@ final class tm extends um {
         return param0 | param1;
     }
 
-    final static gd a(long param0) {
+    final static gd a(long param0, int param1) {
         return (gd) (Object) db.field_a.a(param0, 1);
     }
 
@@ -188,8 +187,7 @@ final class tm extends um {
                   if (param0.equals((Object) (Object) ((tm) this).field_q)) {
                     break L1;
                   } else {
-                    int discarded$2 = -80;
-                    var4 = hi.a(param0);
+                    var4 = hi.a(param0, (byte) -80);
                     if (var4 != null) {
                       if (null == var4.field_i) {
                         ((tm) this).field_s = var4.field_f;

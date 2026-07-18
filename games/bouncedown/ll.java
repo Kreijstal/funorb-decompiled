@@ -27,8 +27,7 @@ final class ll extends lk {
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
         super.b(param0, param1, param2, param3, param4);
-        int discarded$0 = 1;
-        this.a();
+        this.a(true);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -49,7 +48,6 @@ final class ll extends lk {
     }
 
     private final tg b(int param0, int param1, int param2) {
-        tg var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -59,6 +57,7 @@ final class ll extends lk {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        tg var14 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_4_0 = 0;
@@ -66,15 +65,14 @@ final class ll extends lk {
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
         var13 = Bounce.field_N;
-        var4 = new tg(2 * ((ll) this).field_K, ((ll) this).field_m);
-        int discarded$1 = 1;
-        kh.a(var4);
+        var14 = new tg(2 * ((ll) this).field_K, ((ll) this).field_m);
+        kh.a(var14, 1);
         var5 = ((ll) this).field_m >> 1;
         var6 = 0;
         L0: while (true) {
           if (var6 >= ((ll) this).field_m) {
             ve.a(-124);
-            return var4;
+            return var14;
           } else {
             L1: {
               var7 = (var6 >> 1) * (2 * ((ll) this).field_K - 1) % (((ll) this).field_K * 2);
@@ -239,7 +237,7 @@ final class ll extends lk {
         return stackIn_12_0;
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         ((ll) this).field_z = new tg[]{this.b(((ll) this).field_G, -30578, ((ll) this).field_H), this.b(((ll) this).field_L, -30578, ((ll) this).field_x)};
         ((ll) this).field_M = this.d((byte) -21);
         ((ll) this).field_I = ((ll) this).field_M.a();
@@ -279,8 +277,7 @@ final class ll extends lk {
                 L2: {
                   ve.a(-125);
                   if (na.field_g <= param1 - -((ll) this).field_M.field_s) {
-                    int discarded$2 = 1;
-                    kh.a(((ll) this).field_B);
+                    kh.a(((ll) this).field_B, 1);
                     param0.a(-((ll) this).field_w, 0);
                     param0.a(-((ll) this).field_w + 2 * ((ll) this).field_K, 0);
                     ((ll) this).field_I.e(0, 0);
@@ -293,8 +290,7 @@ final class ll extends lk {
                 }
                 L3: {
                   if (na.field_b >= var5_int - ((ll) this).field_M.field_s) {
-                    int discarded$3 = 1;
-                    kh.a(((ll) this).field_B);
+                    kh.a(((ll) this).field_B, 1);
                     var7 = ((ll) this).field_k + -((ll) this).field_M.field_s + ((ll) this).field_w;
                     L4: while (true) {
                       if (var7 <= 2 * ((ll) this).field_K) {
@@ -376,8 +372,7 @@ final class ll extends lk {
         ((ll) this).field_G = param2;
         ((ll) this).field_L = (param2 & 16711422) >> 1;
         ((ll) this).field_H = param0;
-        int discarded$0 = 1;
-        this.a();
+        this.a(true);
     }
 
     private final tg d(byte param0) {
@@ -388,8 +383,7 @@ final class ll extends lk {
         int var9 = Bounce.field_N;
         int var2 = ((ll) this).field_m >> 1;
         tg var3 = new tg(var2, ((ll) this).field_m);
-        int discarded$0 = 1;
-        kh.a(var3);
+        kh.a(var3, 1);
         for (var4 = 0; var4 < ((ll) this).field_m; var4++) {
             for (var5 = 0; var2 > var5; var5++) {
                 var6 = (double)var5 * (double)var5 / (double)((-var4 + ((ll) this).field_m) * var4);

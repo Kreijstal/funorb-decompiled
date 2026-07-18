@@ -41,8 +41,7 @@ final class oe extends tg {
         int stackOut_7_0 = 0;
         var1 = 0;
         if (param0 > 101) {
-          int discarded$2 = 0;
-          if (!ol.d()) {
+          if (!ol.d(0)) {
             if (of.a(-969)) {
               if (hf.a(wi.field_b, 0)) {
                 L0: {
@@ -88,8 +87,7 @@ final class oe extends tg {
         } else {
           var2 = null;
           oe.a(-1.8653900623321533f, -111, (ei) null, (byte) 86, 0.6255527138710022f, (ei) null);
-          int discarded$3 = 0;
-          if (!ol.d()) {
+          if (!ol.d(0)) {
             if (of.a(-969)) {
               if (!hf.a(wi.field_b, 0)) {
                 L2: {
@@ -135,7 +133,7 @@ final class oe extends tg {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         if (65 > param0) {
           if (param0 >= 97) {
             if (param0 <= 122) {

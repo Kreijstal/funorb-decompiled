@@ -63,7 +63,7 @@ final class ll implements Runnable {
         ((ll) this).field_j = null;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_g = null;
         field_k = null;
@@ -161,8 +161,7 @@ final class ll implements Runnable {
                       var3 = var4.getOutputStream();
                       var3.write(17);
                       var5 = (CharSequence) (Object) ("JAGGRAB " + ((ll) this).field_b.getFile() + "\n\n");
-                      int discarded$1 = 353;
-                      var3.write(gk.b(var5));
+                      var3.write(gk.b(var5, 353));
                       ((ll) this).field_o = new DataInputStream(var4.getInputStream());
                       break L7;
                     } else {

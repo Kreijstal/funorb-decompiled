@@ -21,17 +21,14 @@ final class hd extends ob {
         L0: {
           var3 = Pool.field_O;
           pn.field_l.a(0, 0);
-          int discarded$28 = 109;
-          if (cm.f()) {
-            int discarded$29 = -2;
-            ae.a();
+          if (cm.f((byte) 109)) {
+            ae.a(-2);
             if (!ea.field_l) {
               var2 = 0;
               L1: while (true) {
                 if (var2 >= cr.field_m.field_D.length) {
                   ea.field_l = true;
-                  int discarded$30 = -2;
-                  ae.a();
+                  ae.a(-2);
                   break L0;
                 } else {
                   if ((cr.field_m.field_D[var2] & -16777216) == 0) {
@@ -266,17 +263,18 @@ final class hd extends ob {
     }
 
     final void d(int param0) {
-        if (param0 != -1) {
+        int var2 = 0;
+        if (param0 == -1) {
+            var2 = fd.a(!ue.a(11) ? true : false, (byte) 65);
+        } else {
             hd.b(false);
+            var2 = fd.a(!ue.a(11) ? true : false, (byte) 65);
         }
-        int discarded$4 = 11;
-        int var2 = fd.a(!ue.a() ? true : false, (byte) 65);
         if (3 == var2) {
             if (!(ne.field_u == null)) {
                 tq.d((byte) -106);
             }
-            int discarded$5 = 2056898529;
-            s.a(hk.d(58));
+            s.a(hk.d(58), 2056898529);
         }
         if (!(var2 != 1)) {
             fq.a(-3405, 0, sq.field_b, false);

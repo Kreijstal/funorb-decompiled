@@ -9,7 +9,7 @@ final class sh {
     static String field_c;
     static String field_d;
 
-    final static void a() {
+    final static void a(byte param0) {
         bo.a((byte) 33);
         dk.field_g = true;
         bc.field_d = true;
@@ -17,7 +17,7 @@ final class sh {
         qd.a(-1845, qi.field_n, false);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -41,12 +41,10 @@ final class sh {
         }
         if (null != mk.field_e) {
           mk.field_e.l(-30336);
-          int discarded$4 = -103;
-          of.d();
+          of.d(-103);
           return;
         } else {
-          int discarded$5 = -103;
-          of.d();
+          of.d(-103);
           return;
         }
     }
@@ -78,8 +76,7 @@ final class sh {
           L0: {
             if (param1 != null) {
               var2 = new c(param1, be.field_a, a.field_c, wm.field_b, b.field_c, vk.field_d);
-              int discarded$2 = 4210752;
-              ch.k();
+              ch.k(4210752);
               stackOut_3_0 = (c) var2;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -141,7 +138,7 @@ final class sh {
         return true;
     }
 
-    final static int b() {
+    final static int b(int param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -267,8 +264,7 @@ final class sh {
 
     final static void a(boolean param0) {
         vk.field_g = 0;
-        int discarded$0 = 1;
-        df.a();
+        df.a(true);
     }
 
     static {

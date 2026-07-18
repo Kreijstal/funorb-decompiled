@@ -10,7 +10,7 @@ final class ri {
     static int field_b;
     static String field_f;
 
-    final static hh a() {
+    final static hh a(byte param0) {
         if (null == ne.field_b) {
           ne.field_b = new hh(ta.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, ta.field_e.field_H, -1, 2147483647, true);
           return ne.field_b;
@@ -19,7 +19,7 @@ final class ri {
         }
     }
 
-    final static void a(String param0, String[] param1, int param2) {
+    final static void a(String param0, String[] param1, int param2, int param3) {
         String[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -93,19 +93,16 @@ final class ri {
               break L0;
             } else {
               if (param2 < 100) {
-                int discarded$6 = -28323;
-                ll.field_p = p.a(param2, param0);
+                ll.field_p = p.a(param2, param0, -28323);
                 return;
               } else {
                 if (param2 > 105) {
-                  int discarded$7 = -28323;
-                  ll.field_p = p.a(param2, param0);
+                  ll.field_p = p.a(param2, param0, -28323);
                   return;
                 } else {
                   var4 = param1;
                   ok.a(2, var4);
-                  int discarded$8 = 8082;
-                  ll.field_p = em.a(param1);
+                  ll.field_p = em.a(param1, 8082);
                   return;
                 }
               }
@@ -224,8 +221,7 @@ final class ri {
                 break L1;
               }
             }
-            int discarded$2 = 3703;
-            stackOut_2_0 = mm.a(param1, true, 10);
+            stackOut_2_0 = mm.a(param1, true, 10, 3703);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

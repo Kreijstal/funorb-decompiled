@@ -6,7 +6,7 @@ final class jd {
     static String field_c;
     static cn field_a;
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -214,14 +214,14 @@ final class jd {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_c = null;
         int var1 = 0;
         field_a = null;
         field_b = null;
     }
 
-    final synchronized static byte[] a(int param0) {
+    final synchronized static byte[] a(int param0, boolean param1) {
         byte[] var2_ref_byte__ = null;
         int var2 = 0;
         byte[] var3 = null;
@@ -307,8 +307,7 @@ final class jd {
                 var1 = "";
             }
         }
-        int discarded$0 = 62;
-        return new sn(fl.e(0), uf.c());
+        return new sn(fl.e(0), uf.c(62));
     }
 
     final static int a(ih param0, byte param1, String[] param2) {

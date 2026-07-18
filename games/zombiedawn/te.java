@@ -25,7 +25,7 @@ final class te extends id {
     private int field_H;
     static int[] field_T;
 
-    public static void f() {
+    public static void f(byte param0) {
         field_Q = null;
         field_kb = null;
         field_T = null;

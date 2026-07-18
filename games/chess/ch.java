@@ -20,7 +20,7 @@ final class ch extends k {
         }
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_gb = null;
         field_db = null;
         field_eb = null;
@@ -180,7 +180,7 @@ final class ch extends k {
         }
     }
 
-    final static void k() {
+    final static void k(int param0) {
         vk.field_d = null;
         b.field_c = null;
         uh.field_r = null;

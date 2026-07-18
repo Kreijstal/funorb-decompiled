@@ -41,7 +41,7 @@ final class al {
         field_c = null;
     }
 
-    final static ed a() {
+    final static ed a(byte param0) {
         int var4_int = 0;
         int var5 = EscapeVector.field_A;
         int var1 = bc.field_a[0] * qh.field_k[0];
@@ -55,7 +55,7 @@ final class al {
         return var4;
     }
 
-    final static af a(int param0, int param1, lk param2, int param3) {
+    final static af a(int param0, int param1, lk param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         af var7 = null;
@@ -80,13 +80,12 @@ final class al {
         String stackOut_6_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            var8 = ib.a((byte) 93, param0, param3, param2, 0);
+            var8 = ib.a((byte) 93, param0, param3, param2, 0, 0);
             var6 = var8;
             if (var8 != null) {
               var7 = new af();
               var7.field_d = var8;
-              java.awt.Component discarded$5 = var7.field_d.add((java.awt.Component) (Object) var7);
+              java.awt.Component discarded$2 = var7.field_d.add((java.awt.Component) (Object) var7);
               var7.setBounds(0, 0, param0, param3);
               var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
               var7.requestFocus();

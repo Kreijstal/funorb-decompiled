@@ -91,7 +91,7 @@ final class gl extends jl {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_s = null;
         field_r = null;
     }
@@ -106,7 +106,7 @@ final class gl extends jl {
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         int var2 = 0;
         int var3 = 640;
         int var4 = ((gl) this).a(((gl) this).field_u, 0);
@@ -115,7 +115,7 @@ final class gl extends jl {
         ((gl) this).field_d = (-((gl) this).field_o + var3) / 2 + var4;
     }
 
-    final static k c() {
+    final static k c(boolean param0) {
         if (!(null != vg.field_U)) {
             vg.field_U = new k(ke.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, ke.field_c.field_r, -1, 2147483647, true);
         }
@@ -130,8 +130,7 @@ final class gl extends jl {
         try {
             ((gl) this).field_v = param0;
             ((gl) this).field_q = param1;
-            int discarded$0 = 38;
-            this.d();
+            this.d((byte) 38);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "gl.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -250,8 +249,7 @@ final class gl extends jl {
             return;
         }
         if (param1 != 3) {
-            int discarded$0 = 0;
-            gl.b();
+            gl.b(false);
         }
         int var3 = ((gl) this).field_h.field_r;
         param0 = param0 + var3;

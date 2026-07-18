@@ -823,7 +823,7 @@ class ga extends fj implements hi {
         }
     }
 
-    final static boolean g() {
+    final static boolean g(int param0) {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;

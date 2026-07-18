@@ -80,7 +80,7 @@ final class we {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_e = null;
@@ -94,8 +94,7 @@ final class we {
             param1 = false;
         }
         vm.a((byte) 32, param1);
-        int discarded$0 = -26808;
-        rn.a();
+        rn.a(-26808);
     }
 
     final static boolean a(byte param0, String param1) {

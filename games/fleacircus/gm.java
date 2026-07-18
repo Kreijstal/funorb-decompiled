@@ -10,7 +10,7 @@ final class gm extends hl {
     static int field_ob;
     static int field_nb;
 
-    final static void e() {
+    final static void e(byte param0) {
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;
@@ -30,7 +30,7 @@ final class gm extends hl {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_ib = null;
         field_kb = null;
     }

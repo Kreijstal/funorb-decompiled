@@ -8,7 +8,7 @@ final class cn {
     static am field_e;
     static double[] field_d;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         pi var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -82,7 +82,7 @@ final class cn {
         return stackIn_17_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_d = null;

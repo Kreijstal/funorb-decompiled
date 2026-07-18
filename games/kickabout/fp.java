@@ -220,10 +220,7 @@ class fp extends gn {
                         var19 = 0;
                         L5: while (true) {
                           if (var19 >= 3) {
-                            int discarded$3 = 1;
-                            int discarded$4 = 0;
-                            int discarded$5 = -96;
-                            os.a(var18, false, hh.field_g, dh.field_i);
+                            os.a(var18, false, hh.field_g, dh.field_i, (byte) -96, false, true);
                             ei.a(var8, var7, var13, var9, var14, (byte) -125, var18, var15);
                             var16++;
                             continue L3;
@@ -279,7 +276,7 @@ class fp extends gn {
         return var1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
         field_p = null;
         field_n = null;

@@ -4,11 +4,11 @@
 final class jn {
     static String field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
-    final static void a(int param0, lda param1, int param2) {
+    final static void a(int param0, lda param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -63,9 +63,8 @@ final class jn {
         }
     }
 
-    final static void b() {
-        int discarded$0 = 1;
-        cq discarded$1 = ol.a(bi.field_i[0]);
+    final static void b(int param0) {
+        cq discarded$0 = ol.a(bi.field_i[0], true);
     }
 
     static {

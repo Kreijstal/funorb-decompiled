@@ -7,7 +7,7 @@ final class apa {
     private iu[] field_d;
     static ada field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         int var1 = 71;
         field_b = null;

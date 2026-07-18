@@ -17,7 +17,7 @@ final class mi extends el {
         return param1 >= 6144 ? ta.field_b[-6144 + param1] : -ta.field_b[6144 - param1];
     }
 
-    final static void k() {
+    final static void k(int param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -301,8 +301,7 @@ final class mi extends el {
     }
 
     mi(eh param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (t) (Object) jc.a());
-        int discarded$0 = 97;
+        super(param1, (t) (Object) jc.a((byte) 97));
         try {
             ((mi) this).field_S = param0;
             ((mi) this).field_R = param1;

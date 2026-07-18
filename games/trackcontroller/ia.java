@@ -5,12 +5,12 @@ final class ia {
     static rc field_b;
     static aa field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static int b() {
+    final static int b(boolean param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -30,11 +30,10 @@ final class ia {
         var2 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
-            boolean discarded$28 = gl.field_E.a(hf.field_d, true, false, ra.field_z);
+            boolean discarded$12 = gl.field_E.a(hf.field_d, true, false, ra.field_z);
             gl.field_E.b(true);
             L1: while (true) {
-              int discarded$29 = 127;
-              if (!mh.e()) {
+              if (!mh.e(127)) {
                 if (ra.field_v == -1) {
                   if (!gh.field_k) {
                     if (rk.field_X != oe.field_b) {
@@ -71,7 +70,7 @@ final class ia {
                   return stackIn_8_0;
                 }
               } else {
-                boolean discarded$30 = gl.field_E.a(md.field_d, 3931, kg.field_d);
+                boolean discarded$13 = gl.field_E.a(md.field_d, 3931, kg.field_d);
                 continue L1;
               }
             }

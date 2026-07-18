@@ -12,7 +12,7 @@ final class nd extends qf {
     static int field_m;
     private boolean field_o;
 
-    public static void g() {
+    public static void g(int param0) {
         field_l = null;
         field_p = null;
         field_j = null;
@@ -365,7 +365,7 @@ final class nd extends qf {
         return stackIn_7_0;
     }
 
-    final static void b() {
+    final static void b(int param0, byte param1) {
         rf var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

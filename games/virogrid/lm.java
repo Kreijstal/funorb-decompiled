@@ -14,7 +14,7 @@ final class lm implements Runnable {
     static String field_k;
     static String field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_g = null;
         field_k = null;
@@ -34,7 +34,7 @@ final class lm implements Runnable {
         jk.field_a.a((l) (Object) var1, (byte) -37);
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
+    final static void a(int param0, int param1, boolean param2, int param3, int param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -309,8 +309,8 @@ final class lm implements Runnable {
                 od.a(((lm) this).field_b, (Object) null, (byte) -100);
             }
         } catch (Exception exception) {
-            int discarded$0 = 1;
-            en.a((String) null, (Throwable) (Object) exception);
+            Object var6 = null;
+            en.a((String) null, (Throwable) (Object) exception, 1);
         } finally {
             ((lm) this).field_f = false;
         }

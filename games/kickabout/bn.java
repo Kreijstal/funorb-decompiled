@@ -160,8 +160,7 @@ final class bn extends qt {
                 break L6;
               } else {
                 if (w.field_b.j((byte) -16).length() > 0) {
-                  int discarded$5 = 74;
-                  sp.a(w.field_b.j((byte) -16));
+                  sp.a(w.field_b.j((byte) -16), (byte) 74);
                   w.field_b.b("", -23174);
                   kj.a((byte) -105);
                   break L6;
@@ -175,9 +174,9 @@ final class bn extends qt {
                 if (!uv.field_f) {
                   break L8;
                 } else {
-                  int fieldTemp$6 = ri.field_t - 1;
+                  int fieldTemp$3 = ri.field_t - 1;
                   ri.field_t = ri.field_t - 1;
-                  if (fieldTemp$6 <= 0) {
+                  if (fieldTemp$3 <= 0) {
                     break L8;
                   } else {
                     stackOut_25_0 = 1;
@@ -198,8 +197,7 @@ final class bn extends qt {
                 break L9;
               } else {
                 L10: {
-                  int discarded$7 = -72;
-                  var7 = vc.a(18, -(jh.field_Hb.field_Db.field_J + 5));
+                  var7 = vc.a(18, -(jh.field_Hb.field_Db.field_J + 5), (byte) -72);
                   bf.field_y.a(30 + var7, -20 + var7, -108);
                   re.a((byte) 125, -10 + var7, var7 + 20, var5);
                   if (mf.field_Gb != var7) {
@@ -236,7 +234,7 @@ final class bn extends qt {
                     if (((bn) this).field_D != 0) {
                       break L13;
                     } else {
-                      wh discarded$8 = sp.c(59, 76);
+                      wh discarded$4 = sp.c(59, 76);
                       ((bn) this).field_D = 5;
                       break L13;
                     }
@@ -247,7 +245,7 @@ final class bn extends qt {
                     break L14;
                   } else {
                     if (0 == ((bn) this).field_D) {
-                      wh discarded$9 = sp.c(60, -118);
+                      wh discarded$5 = sp.c(60, -118);
                       ((bn) this).field_D = 5;
                       break L14;
                     } else {
@@ -347,8 +345,7 @@ final class bn extends qt {
               io.field_e.a((byte) -106, (hd) (Object) w.field_b);
               io.field_e.a((byte) -112, np.field_Cb);
               if (!la.a(100)) {
-                int discarded$1 = 74;
-                sp.a(ow.field_e);
+                sp.a(ow.field_e, (byte) 74);
                 break L2;
               } else {
                 break L2;
@@ -391,8 +388,7 @@ final class bn extends qt {
             if (param0 == 84) {
                 var4 = w.field_b.j((byte) -16);
                 if (var4.length() > 0) {
-                    int discarded$3 = 74;
-                    sp.a(w.field_b.j((byte) -16));
+                    sp.a(w.field_b.j((byte) -16), (byte) 74);
                     w.field_b.b("", -23174);
                     kj.a((byte) -115);
                 }
@@ -481,14 +477,13 @@ final class bn extends qt {
             }
             L4: {
               L5: {
-                int discarded$2 = 2368;
                 stackOut_21_0 = io.field_e;
                 stackOut_21_1 = 85;
                 stackIn_24_0 = stackOut_21_0;
                 stackIn_24_1 = stackOut_21_1;
                 stackIn_22_0 = stackOut_21_0;
                 stackIn_22_1 = stackOut_21_1;
-                if (!pn.g()) {
+                if (!pn.g(2368)) {
                   break L5;
                 } else {
                   stackOut_22_0 = (hd) (Object) stackIn_22_0;
@@ -588,7 +583,7 @@ final class bn extends qt {
               }
               on.g(((bn) this).field_j, 48, 450, 382);
               if (rr.field_f) {
-                int discarded$3 = pb.field_C.a(pi.field_d, ((bn) this).field_j, 48, 450, 382, 16777215, -1, 1, 1, 0);
+                int discarded$1 = pb.field_C.a(pi.field_d, ((bn) this).field_j, 48, 450, 382, 16777215, -1, 1, 1, 0);
                 break L11;
               } else {
                 break L11;

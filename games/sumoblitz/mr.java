@@ -996,7 +996,7 @@ final class mr {
         }
     }
 
-    final static byte[] a(float param0, float param1, int param2, int param3, ab param4, float param5, float param6, float param7) {
+    final static byte[] a(float param0, float param1, int param2, int param3, ab param4, float param5, float param6, float param7, int param8, int param9, int param10) {
         byte[] var11 = null;
         RuntimeException var11_ref = null;
         byte[] var12 = null;
@@ -1022,10 +1022,7 @@ final class mr {
           L0: {
             var12 = new byte[262144];
             var11 = var12;
-            int discarded$6 = 128;
-            int discarded$7 = 16;
-            int discarded$8 = 128;
-            cn.a(param7, param4, 0, var12, 8, param0, param6, param1, 24046, param5);
+            cn.a(param7, param4, 0, var12, 8, param0, param6, param1, 24046, param5, 128, 16, 128);
             stackOut_0_0 = (byte[]) var12;
             stackIn_1_0 = stackOut_0_0;
             break L0;

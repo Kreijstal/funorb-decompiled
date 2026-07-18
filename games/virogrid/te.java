@@ -14,7 +14,7 @@ final class te extends IOException {
     static String field_a;
     static int field_h;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_b = null;
         field_a = null;
@@ -28,7 +28,7 @@ final class te extends IOException {
         super(param0);
     }
 
-    final static void a(int param0, sa param1) {
+    final static void a(int param0, sa param1, int param2) {
         hg var5 = null;
         int var4 = 0;
         try {
@@ -50,7 +50,7 @@ final class te extends IOException {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         if (null != km.field_yb) {

@@ -25,7 +25,7 @@ final class pf {
         }
     }
 
-    final static int b() {
+    final static int b(int param0) {
         return -sc.field_g + h.field_b;
     }
 
@@ -34,7 +34,7 @@ final class pf {
         return jg.a((byte) 80, param1, pb.field_n);
     }
 
-    final static void a(byte param0, vl param1) {
+    final static void a(byte param0, vl param1, int param2) {
         hb var6 = null;
         int var5 = 0;
         try {
@@ -57,7 +57,7 @@ final class pf {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 39;
         field_b = null;
         field_c = null;

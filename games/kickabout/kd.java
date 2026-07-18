@@ -55,8 +55,7 @@ final class kd extends be {
                 }
               }
               var7 = new q(var6);
-              int discarded$2 = 1422;
-              var5 = jh.a(var7);
+              var5 = jh.a(var7, 1422);
               if (!var7.a(6)) {
                 throw new fi(var7.a((byte) 114).field_f);
               } else {
@@ -222,8 +221,7 @@ final class kd extends be {
           var6 = var13;
           var3 = ((kd) this).field_k.j(-1);
           var4 = w.a(var13, (byte) -81);
-          int discarded$2 = 1;
-          var5 = mi.a(var3, var4);
+          var5 = mi.a(var3, var4, 1);
           ((kd) this).field_j.field_s = 0;
           var6 = "";
           if (var5 < 0) {
@@ -298,9 +296,9 @@ final class kd extends be {
           if (var11 == null) {
             return var8;
           } else {
-            int incrementValue$3 = var9;
+            int incrementValue$1 = var9;
             var9++;
-            var8[incrementValue$3] = var11.field_s;
+            var8[incrementValue$1] = var11.field_s;
             var11 = (tm) (Object) var15.b(0);
             continue L6;
           }
@@ -821,8 +819,7 @@ final class kd extends be {
           var6 = var16;
           var3 = ((kd) this).field_k.j(-1);
           var4 = w.a(var16, (byte) -33);
-          int discarded$3 = 1;
-          var5 = mi.a(var3, var4);
+          var5 = mi.a(var3, var4, 1);
           var6 = "";
           if (var5 >= 0) {
             var17 = var4[var5];
@@ -871,7 +868,7 @@ final class kd extends be {
                         if (var14 == null) {
                           var9++;
                           if (var10 != 0) {
-                            StringBuilder discarded$4 = var8.append((char) var13);
+                            StringBuilder discarded$2 = var8.append((char) var13);
                             continue L2;
                           } else {
                             continue L2;
@@ -908,7 +905,7 @@ final class kd extends be {
                   if (var12 != var6.length() + var8.length()) {
                     break L6;
                   } else {
-                    StringBuilder discarded$5 = var8.append("()");
+                    StringBuilder discarded$3 = var8.append("()");
                     var13++;
                     if (1 != var18.c(-1976587888)) {
                       break L6;
@@ -1098,7 +1095,7 @@ final class kd extends be {
         ((kd) this).field_k.field_Lb.field_E = var4;
     }
 
-    final static kg[] a(int param0, int param1, boolean param2) {
+    final static kg[] a(int param0, int param1, boolean param2, boolean param3, int param4, int param5) {
         kg[] var6 = null;
         kg var7_ref_kg = null;
         int var7 = 0;

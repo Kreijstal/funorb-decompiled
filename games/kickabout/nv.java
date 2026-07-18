@@ -292,7 +292,7 @@ final class nv extends wi {
         return ((nv) this).field_M;
     }
 
-    final static void a(int param0, int param1, String param2, String param3) {
+    final static void a(int param0, int param1, String param2, String param3, byte param4) {
         try {
             ei.field_b.field_y = param1;
             ei.field_b.field_V = param3;
@@ -440,7 +440,7 @@ final class nv extends wi {
         return stackIn_21_0 != 0;
     }
 
-    public static void j() {
+    public static void j(int param0) {
         field_I = null;
         field_F = null;
         field_G = null;
@@ -463,7 +463,7 @@ final class nv extends wi {
         }
     }
 
-    final static boolean i() {
+    final static boolean i(int param0) {
         return ~eq.field_j != ~eq.field_a;
     }
 

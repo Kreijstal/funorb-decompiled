@@ -6,7 +6,7 @@ final class gl extends ok {
     int field_H;
     static vl field_E;
 
-    public static void j() {
+    public static void j(int param0) {
         field_E = null;
     }
 
@@ -46,7 +46,7 @@ final class gl extends ok {
         ((gl) this).field_H = 256;
     }
 
-    final static void a(String param0, String[] param1, int param2) {
+    final static void a(String param0, String[] param1, int param2, byte param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int stackIn_5_0 = 0;

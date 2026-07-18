@@ -34,7 +34,7 @@ abstract class nb {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, byte param1) {
         qc.a(param0, false, 115);
     }
 
@@ -43,8 +43,7 @@ abstract class nb {
             throw new IllegalStateException();
         }
         wd.field_b = true;
-        int discarded$0 = -126;
-        nb.a(true);
+        nb.a(true, (byte) -126);
         q.field_Jb = 0;
     }
 
@@ -52,7 +51,7 @@ abstract class nb {
 
     abstract cm c(int param0);
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_f = null;
         field_c = null;

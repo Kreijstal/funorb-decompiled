@@ -35,7 +35,7 @@ final class lg extends kf implements vn {
         ((lg) this).b((ce) (Object) ((lg) this).field_V, (byte) -55);
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_T = null;
         field_Y = null;
     }
@@ -67,8 +67,7 @@ final class lg extends kf implements vn {
           L0: {
             sc.field_n = sc.field_n + 65536;
             L1: while (true) {
-              int discarded$3 = 11469;
-              if (um.a(dk.field_c, sc.field_n) < 65536) {
+              if (um.a(dk.field_c, sc.field_n, 11469) < 65536) {
                 L2: {
                   var2_int = -1;
                   if (null != d.field_h) {
@@ -246,9 +245,7 @@ final class lg extends kf implements vn {
                   }
                 }
                 L13: {
-                  int discarded$4 = 7;
-                  int discarded$5 = 7;
-                  rg.field_a.a(ak.a(bh.field_g, pm.field_f), -20563, ak.a(he.field_S, nf.field_h));
+                  rg.field_a.a(ak.a(bh.field_g, pm.field_f, (byte) 7), -20563, ak.a(he.field_S, nf.field_h, (byte) 7));
                   if (rg.field_a.b((byte) 114)) {
                     if (rg.field_a.field_h == 0) {
                       stackOut_57_0 = 3;
@@ -321,7 +318,7 @@ final class lg extends kf implements vn {
         return stackIn_77_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         hm.a(4, (byte) -111);
     }
 
@@ -378,8 +375,7 @@ final class lg extends kf implements vn {
           L0: {
             L1: {
               if (((lg) this).field_S == param2) {
-                int discarded$31 = 105;
-                vb.g();
+                vb.g((byte) 105);
                 break L1;
               } else {
                 if (param2 != ((lg) this).field_X) {
@@ -390,8 +386,7 @@ final class lg extends kf implements vn {
                     break L1;
                   }
                 } else {
-                  int discarded$32 = 0;
-                  ha.e();
+                  ha.e(0);
                   break L1;
                 }
               }

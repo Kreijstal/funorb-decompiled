@@ -108,9 +108,8 @@ final class v {
         return stackIn_10_0;
     }
 
-    final static void a() {
-        int discarded$0 = 39;
-        cf.a(pd.field_f);
+    final static void a(byte param0) {
+        cf.a(pd.field_f, (byte) 39);
         int var1 = 0;
     }
 

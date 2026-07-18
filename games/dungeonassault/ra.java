@@ -34,7 +34,7 @@ final class ra {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -46,8 +46,7 @@ final class ra {
         int var3 = 0;
         L0: {
           var3 = DungeonAssault.field_K;
-          int discarded$9 = -103;
-          jj.b();
+          jj.b((byte) -103);
           var1 = lc.a(hj.field_S, (byte) -98, eh.field_h);
           if (var1 == ak.field_n) {
             break L0;
@@ -63,8 +62,7 @@ final class ra {
           }
         }
         L1: {
-          int discarded$10 = -102;
-          ra.b();
+          ra.b(-102);
           if (1 == no.field_d) {
             var2 = lc.a(lc.field_c, (byte) -94, hm.field_k);
             if (var2 == kg.field_f) {
@@ -86,7 +84,7 @@ final class ra {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -259,7 +257,7 @@ final class ra {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         ha.field_k = new lc(ia.field_W, ll.field_r);
         cf discarded$0 = hd.a(false, 30, "menu_select");
         sa.field_v = sh.a(-77, "da_ambience_drip", new int[5]);
@@ -315,46 +313,26 @@ final class ra {
         bf.a(147, 31, 200, -18228, "chaos_champion");
         bf.a(74, 33, 73, -18228, "daemonette");
         to.a(190, -99, 198, 197, "dryad", 34);
-        int discarded$1 = -1;
-        ki.a(90, 15, 100, "giant_rats");
-        int discarded$2 = -1;
-        ki.a(125, 16, 76, "rot_worms");
-        int discarded$3 = -1;
-        ki.a(175, 17, 134, "troglodyte");
-        int discarded$4 = -1;
-        ki.a(110, 18, 110, "giant_snake");
-        int discarded$5 = -1;
-        ki.a(89, 19, 89, "giant_spider");
-        int discarded$6 = -1;
-        ki.a(201, 20, 102, "skeleton_sentinals");
-        int discarded$7 = -1;
-        ki.a(150, 21, 141, "corrosive_slime");
-        int discarded$8 = -1;
-        ki.a(100, 22, 83, "razor_construct");
-        int discarded$9 = -1;
-        ki.a(135, 23, 120, "rabid_wolf");
-        int discarded$10 = -1;
-        ki.a(112, 24, 109, "vampire_bat");
-        int discarded$11 = -1;
-        ki.a(180, 25, 91, "imp");
-        int discarded$12 = -1;
-        ki.a(200, 26, 120, "stone_golem");
-        int discarded$13 = -1;
-        ki.a(135, 27, 119, "spectre");
-        int discarded$14 = -1;
-        ki.a(42, 28, 57, "banshee");
-        int discarded$15 = -1;
-        ki.a(197, 29, 133, "raging_beast");
-        int discarded$16 = -1;
-        ki.a(147, 30, 143, "basilisk");
-        int discarded$17 = -1;
-        ki.a(99, 31, 125, "pit_demon");
-        int discarded$18 = -1;
-        ki.a(114, 32, 114, "vampire_lord");
-        int discarded$19 = -1;
-        ki.a(103, 33, 116, "hell_beast");
-        int discarded$20 = -1;
-        ki.a(97, 34, 100, "demon_lord");
+        ki.a(90, 15, 100, "giant_rats", -1);
+        ki.a(125, 16, 76, "rot_worms", -1);
+        ki.a(175, 17, 134, "troglodyte", -1);
+        ki.a(110, 18, 110, "giant_snake", -1);
+        ki.a(89, 19, 89, "giant_spider", -1);
+        ki.a(201, 20, 102, "skeleton_sentinals", -1);
+        ki.a(150, 21, 141, "corrosive_slime", -1);
+        ki.a(100, 22, 83, "razor_construct", -1);
+        ki.a(135, 23, 120, "rabid_wolf", -1);
+        ki.a(112, 24, 109, "vampire_bat", -1);
+        ki.a(180, 25, 91, "imp", -1);
+        ki.a(200, 26, 120, "stone_golem", -1);
+        ki.a(135, 27, 119, "spectre", -1);
+        ki.a(42, 28, 57, "banshee", -1);
+        ki.a(197, 29, 133, "raging_beast", -1);
+        ki.a(147, 30, 143, "basilisk", -1);
+        ki.a(99, 31, 125, "pit_demon", -1);
+        ki.a(114, 32, 114, "vampire_lord", -1);
+        ki.a(103, 33, 116, "hell_beast", -1);
+        ki.a(97, 34, 100, "demon_lord", -1);
         fi.a(160, -51, "tripwire_bell", 35);
         fi.a(60, 124, "hallofglass", 36);
         fi.a(58, 110, "magical_guardian", 37);

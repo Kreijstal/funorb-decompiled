@@ -9,7 +9,7 @@ final class so implements ntb {
     static String field_d;
     static int[] field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_d = null;
         field_f = null;
@@ -273,10 +273,10 @@ final class so implements ntb {
               L2: {
                 var3 = (so) (Object) param1;
                 var4 = -54 / ((22 - param0) / 59);
-                if (var3.field_a != var3.field_a) {
+                if (((so) this).field_a != var3.field_a) {
                   break L2;
                 } else {
-                  if (var3.field_c == var3.field_c) {
+                  if (var3.field_c == ((so) this).field_c) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
                     break L1;
@@ -348,8 +348,8 @@ final class so implements ntb {
           L0: {
             var5 = (so) (Object) param1;
             var6 = var5;
-            var6.field_a = var5.field_a;
-            var6.field_c = var5.field_c;
+            var6.field_a = ((so) this).field_a;
+            var6.field_c = ((so) this).field_c;
             if (param0 > 54) {
               break L0;
             } else {

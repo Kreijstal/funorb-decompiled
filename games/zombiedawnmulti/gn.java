@@ -723,14 +723,13 @@ class gn extends cf {
             if (em.a(var10, (byte) -38)) {
               if (2 == ge.field_zb) {
                 if (param1 >= 70) {
-                  int discarded$2 = 0;
-                  var8 = dn.a(param0);
+                  var8 = dn.a(param0, false);
                   if (var8 == null) {
                     stackOut_12_0 = vl.a(ki.field_i, new String[1], 2);
                     stackIn_13_0 = stackOut_12_0;
                     return stackIn_13_0;
                   } else {
-                    br discarded$3 = ro.field_M.a((byte) 120, (br) (Object) var8);
+                    br discarded$1 = ro.field_M.a((byte) 120, (br) (Object) var8);
                     L1: while (true) {
                       var7 = (ml) (Object) ro.field_M.b(6);
                       if (var7 == null) {

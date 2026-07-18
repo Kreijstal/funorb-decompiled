@@ -15,12 +15,12 @@ final class gp extends ps {
         return qq.field_K;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         int var1 = -1;
         field_g = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         ag var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -84,7 +84,7 @@ final class gp extends ps {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, byte param1) {
         g.field_a.a(97, param0);
         ib var2 = la.field_a;
         if (!(var2 == null)) {
@@ -355,8 +355,7 @@ final class gp extends ps {
             } else {
               var8 = new jn(wd.field_l, param4);
               wd.field_l.a((fd) (Object) var8, false);
-              int discarded$16 = 59;
-              if (!wq.c()) {
+              if (!wq.c((byte) 59)) {
                 L1: {
                   kl.field_a = null;
                   if (!param2) {
@@ -529,7 +528,7 @@ final class gp extends ps {
         }
     }
 
-    final static int a(up param0) {
+    final static int a(up param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

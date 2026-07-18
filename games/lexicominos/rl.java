@@ -14,12 +14,12 @@ class rl extends kf {
     static rb field_H;
     static volatile boolean field_O;
 
-    final static int b(int param0, int param1) {
+    final static int b(int param0, int param1, int param2) {
         int var3 = param1 >>> 31;
         return (var3 + param1) / param0 - var3;
     }
 
-    private final void l() {
+    private final void l(int param0) {
         int var2 = 0;
         int var3 = 0;
         if (((rl) this).field_F != ((rl) this).field_I) {
@@ -32,7 +32,7 @@ class rl extends kf {
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
@@ -200,8 +200,7 @@ class rl extends kf {
                         if (((rl) this).field_F == ((rl) this).field_I) {
                           break L2;
                         } else {
-                          int discarded$9 = -1;
-                          this.l();
+                          this.l(-1);
                           break L2;
                         }
                       }
@@ -225,9 +224,9 @@ class rl extends kf {
                             break L5;
                           } else {
                             ((rl) this).field_u = ((rl) this).field_u + param0;
-                            int dupTemp$10 = ((rl) this).field_u.length();
-                            ((rl) this).field_F = dupTemp$10;
-                            ((rl) this).field_I = dupTemp$10;
+                            int dupTemp$1 = ((rl) this).field_u.length();
+                            ((rl) this).field_F = dupTemp$1;
+                            ((rl) this).field_I = dupTemp$1;
                             break L5;
                           }
                         }
@@ -249,15 +248,13 @@ class rl extends kf {
                         break L6;
                       } else {
                         ((rl) this).field_I = ((rl) this).field_F + -1;
-                        int discarded$11 = -1;
-                        this.l();
+                        this.l(-1);
                         stackOut_59_0 = 1;
                         stackIn_60_0 = stackOut_59_0;
                         return stackIn_60_0 != 0;
                       }
                     } else {
-                      int discarded$12 = -1;
-                      this.l();
+                      this.l(-1);
                       stackOut_56_0 = 1;
                       stackIn_57_0 = stackOut_56_0;
                       return stackIn_57_0 != 0;
@@ -269,15 +266,13 @@ class rl extends kf {
                           break L6;
                         } else {
                           ((rl) this).field_I = ((rl) this).field_F - -1;
-                          int discarded$13 = -1;
-                          this.l();
+                          this.l(-1);
                           stackOut_53_0 = 1;
                           stackIn_54_0 = stackOut_53_0;
                           return stackIn_54_0 != 0;
                         }
                       } else {
-                        int discarded$14 = -1;
-                        this.l();
+                        this.l(-1);
                         stackOut_50_0 = 1;
                         stackIn_51_0 = stackOut_50_0;
                         return stackIn_51_0 != 0;
@@ -328,8 +323,7 @@ class rl extends kf {
                                       if (param1 != 65) {
                                         break L8;
                                       } else {
-                                        int discarded$15 = 67;
-                                        this.m();
+                                        this.m(67);
                                         stackOut_31_0 = 1;
                                         stackIn_32_0 = stackOut_31_0;
                                         return stackIn_32_0 != 0;
@@ -343,8 +337,7 @@ class rl extends kf {
                                       if (param1 != 66) {
                                         break L9;
                                       } else {
-                                        int discarded$16 = -1;
-                                        this.k();
+                                        this.k(-1);
                                         stackOut_35_0 = 1;
                                         stackIn_36_0 = stackOut_35_0;
                                         return stackIn_36_0 != 0;
@@ -389,9 +382,8 @@ class rl extends kf {
                                   stackIn_20_1 = stackOut_19_1;
                                   break L10;
                                 } else {
-                                  int discarded$17 = 32;
                                   stackOut_18_0 = this;
-                                  stackOut_18_1 = this.i();
+                                  stackOut_18_1 = this.i(32);
                                   stackIn_20_0 = stackOut_18_0;
                                   stackIn_20_1 = stackOut_18_1;
                                   break L10;
@@ -550,8 +542,7 @@ class rl extends kf {
                   if (((rl) this).field_K) {
                     L4: {
                       ((rl) this).field_I = this.n(param0 ^ 4807);
-                      int discarded$1 = 32;
-                      ((rl) this).field_F = this.i();
+                      ((rl) this).field_F = this.i(32);
                       if (0 >= ((rl) this).field_F) {
                         break L4;
                       } else {
@@ -847,11 +838,9 @@ class rl extends kf {
         }
     }
 
-    private final void m() {
-        int discarded$0 = -1;
-        this.k();
-        int discarded$1 = -1;
-        this.l();
+    private final void m(int param0) {
+        this.k(-1);
+        this.l(-1);
     }
 
     void a(byte param0, w param1, int param2, int param3) {
@@ -965,11 +954,9 @@ class rl extends kf {
             try {
               L0: {
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                int discarded$2 = -1;
-                this.l();
+                this.l(-1);
                 var3 = -67 % ((19 - param0) / 35);
-                int discarded$3 = 100;
-                this.a(var2);
+                this.a(var2, (byte) 100);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -986,7 +973,7 @@ class rl extends kf {
         }
     }
 
-    private final void k() {
+    private final void k(int param0) {
         String var2 = this.d((byte) -83);
         if (!(var2.length() <= 0)) {
             java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.d((byte) -41)), (java.awt.datatransfer.ClipboardOwner) null);
@@ -1002,7 +989,7 @@ class rl extends kf {
         return ((rl) this).field_u.substring(var2, var3);
     }
 
-    private final int i() {
+    private final int i(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

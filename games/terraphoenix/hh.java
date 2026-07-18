@@ -13,7 +13,7 @@ final class hh extends uf {
     static ci field_m;
     static String field_k;
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
         field_p = null;
         field_k = null;

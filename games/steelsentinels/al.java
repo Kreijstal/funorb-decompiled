@@ -347,7 +347,7 @@ abstract class al {
 
     abstract void c(byte param0);
 
-    final static e b() {
+    final static e b(byte param0) {
         if (cb.field_j == mm.field_e) {
             throw new IllegalStateException();
         }

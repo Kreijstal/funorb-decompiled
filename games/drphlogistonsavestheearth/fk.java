@@ -16,7 +16,7 @@ final class fk extends gi {
     int field_i;
     static String field_r;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_m = null;
         field_p = null;
         field_r = null;
@@ -54,12 +54,11 @@ final class fk extends gi {
                 break L1;
               } else {
                 var5 = null;
-                nh discarded$9 = fk.a(-100, (vj) null, -21, -59);
+                nh discarded$2 = fk.a(-100, (vj) null, -21, -59);
                 break L1;
               }
             }
-            int discarded$10 = -98;
-            if (fl.a(param2, param1, param0)) {
+            if (fl.a(param2, param1, param0, (byte) -98)) {
               stackOut_5_0 = ta.a(param3 ^ 16732209);
               stackIn_6_0 = stackOut_5_0;
               break L0;

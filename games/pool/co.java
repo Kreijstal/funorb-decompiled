@@ -145,10 +145,8 @@ final class co extends eq {
             }
             L2: {
               L3: {
-                int discarded$4 = 1;
-                param0 = o.a('_', "", param0);
-                int discarded$5 = 0;
-                var3 = qa.a(param2);
+                param0 = o.a('_', "", param0, 1);
+                var3 = qa.a(param2, 0);
                 if (0 != param0.indexOf(param2)) {
                   break L3;
                 } else {
@@ -225,7 +223,7 @@ final class co extends eq {
         return stackIn_7_0 != 0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_ab = null;
     }
 

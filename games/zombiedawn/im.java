@@ -12,7 +12,7 @@ abstract class im {
     private short[] field_c;
     private short[] field_e;
 
-    private final void a() {
+    private final void a(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -36,7 +36,7 @@ abstract class im {
 
     abstract void a(boolean param0);
 
-    private final void b() {
+    private final void b(boolean param0) {
         int var2 = 0;
         int var3 = ZombieDawn.field_J;
         ((im) this).field_c = new short[((im) this).field_g];
@@ -213,10 +213,8 @@ abstract class im {
         ((im) this).field_b = param0;
         ((im) this).field_f = param3;
         ((im) this).field_g = param1;
-        int discarded$0 = 1;
-        this.b();
-        int discarded$1 = 255;
-        this.a();
+        this.b(true);
+        this.a(255);
     }
 
     static {

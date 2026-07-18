@@ -36,7 +36,7 @@ final class tr extends ia {
     static String field_pb;
     static int field_Lb;
 
-    private final void c(ln param0) {
+    private final void c(ln param0, int param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -58,10 +58,8 @@ final class tr extends ia {
           L0: {
             L1: {
               this.b(param0, true);
-              int discarded$4 = -29952;
-              this.e(param0);
-              int discarded$5 = -29496;
-              this.b(param0);
+              this.e(param0, -29952);
+              this.b(param0, -29496);
               if (((tr) this).field_I >= 1024.0f) {
                 break L1;
               } else {
@@ -103,7 +101,7 @@ final class tr extends ia {
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -179,8 +177,7 @@ final class tr extends ia {
                       }
                     }
                     this.h(-52);
-                    int discarded$3 = 92;
-                    this.i();
+                    this.i(92);
                     break L0;
                   } else {
                     var25 = var24[var3];
@@ -191,8 +188,7 @@ final class tr extends ia {
                       if (480 >= var26.field_q) {
                         if (var26.field_o >= 0) {
                           if (0 <= var26.field_i) {
-                            int discarded$4 = 2;
-                            this.c(var25);
+                            this.c(var25, 2);
                             if (((tr) this).field_I > 330.0f) {
                               if (var25.field_u) {
                                 this.a(var25, (byte) 102);
@@ -286,8 +282,7 @@ final class tr extends ia {
                         var4 = 0;
                         L10: while (true) {
                           if (var16.length <= var4) {
-                            int discarded$5 = 92;
-                            this.i();
+                            this.i(92);
                             break L0;
                           } else {
                             var17 = var16[var4];
@@ -410,7 +405,7 @@ final class tr extends ia {
         }
     }
 
-    private final mg a(ln param0, int param1, int param2) {
+    private final mg a(ln param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         mg var6 = null;
@@ -676,7 +671,7 @@ final class tr extends ia {
         }
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_Fb = null;
         field_Eb = null;
         field_zb = null;
@@ -686,7 +681,7 @@ final class tr extends ia {
         field_sb = null;
     }
 
-    private final void i() {
+    private final void i(int param0) {
         int var2 = 0;
         int var3 = 0;
         mg var3_ref_mg = null;
@@ -1259,8 +1254,7 @@ final class tr extends ia {
               break L0;
             } else {
               if (var4 == 0) {
-                int discarded$2 = 0;
-                eo.f();
+                eo.f(false);
                 param1 = false;
                 break L0;
               } else {
@@ -1306,7 +1300,7 @@ final class tr extends ia {
         }
     }
 
-    private final void a(byte param0, int param1) {
+    private final void a(byte param0, int param1, int param2) {
         vn var4 = null;
         int var5 = 0;
         ln var6 = null;
@@ -2257,14 +2251,12 @@ final class tr extends ia {
               if (((tr) this).field_T != -1) {
                 break L2;
               } else {
-                int discarded$2 = 0;
-                this.a(param1);
+                this.a(param1, false);
                 break L2;
               }
             }
             L3: {
-              int discarded$3 = -29952;
-              this.e(param1);
+              this.e(param1, -29952);
               if (param1.field_B >= 6) {
                 L4: {
                   ((tr) this).a(-86, param1);
@@ -2332,14 +2324,13 @@ final class tr extends ia {
                 this.d((ln) null, -124);
             }
             ((tr) this).field_cb = new int[((tr) this).field_ib.length][];
-            int discarded$0 = 0;
-            this.j();
+            this.j(0);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "tr.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(pf param0, boolean param1, boolean param2) {
+    private final void a(pf param0, boolean param1, boolean param2, boolean param3) {
         RuntimeException var5 = null;
         as var5_ref = null;
         int var6 = 0;
@@ -2535,7 +2526,7 @@ final class tr extends ia {
         }
     }
 
-    private final void j() {
+    private final void j(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -2696,8 +2687,7 @@ final class tr extends ia {
     private final void b(int param0, ln param1) {
         try {
             if (!(((tr) this).field_T != -1)) {
-                int discarded$0 = 0;
-                this.a(param1);
+                this.a(param1, false);
             }
             this.a(false, param1);
         } catch (RuntimeException runtimeException) {
@@ -2937,6 +2927,10 @@ final class tr extends ia {
         om var11 = null;
         om var12 = null;
         om var13 = null;
+        ik[] var14 = null;
+        ik[] var15 = null;
+        ik[] var16 = null;
+        ik[] var17 = null;
         L0: {
           var9 = ShatteredPlansClient.field_F ? 1 : 0;
           if (param0.field_B == 6) {
@@ -2956,14 +2950,14 @@ final class tr extends ia {
                         if (param0.field_G[0] == 0) {
                           break L2;
                         } else {
-                          var5 = new ik[2 + 2 * param0.field_G[0]];
+                          var14 = new ik[2 + 2 * param0.field_G[0]];
+                          var5 = var14;
                           var5[0] = el.a(0, ((tr) this).field_J[var3_int] << 4, ((tr) this).field_i[var3_int] << 4);
                           var5[1] = el.a(0, ((tr) this).field_J[var3_int] + var4 / 2 << 4, -(int)((double)var4 * rh.field_e) + ((tr) this).field_i[var3_int] << 4);
                           var6 = 0;
                           L3: while (true) {
                             if (param0.field_G[0] <= var6) {
-                              int discarded$4 = 1;
-                              qn.a(var5, gm.field_k[0]);
+                              qn.a(var14, gm.field_k[0], true);
                               break L2;
                             } else {
                               var5[2 + 2 * var6] = el.a(0, ((tr) this).field_J[var3_int] - -(int)((double)var4 * Math.sin((double)(24 - 12 * var6) * 3.141592653589793 / 180.0)) << 4, ((tr) this).field_i[var3_int] - (int)((double)var4 * Math.cos((double)(24 - var6 * 12) * 3.141592653589793 / 180.0)) << 4);
@@ -2976,14 +2970,14 @@ final class tr extends ia {
                       }
                       L4: {
                         if (param0.field_G[1] != 0) {
-                          var5 = new ik[2 + 2 * param0.field_G[1]];
+                          var15 = new ik[2 + 2 * param0.field_G[1]];
+                          var5 = var15;
                           var5[0] = el.a(0, ((tr) this).field_J[var3_int] << 4, ((tr) this).field_i[var3_int] << 4);
                           var5[1] = el.a(0, var4 + ((tr) this).field_J[var3_int] << 4, ((tr) this).field_i[var3_int] << 4);
                           var6 = 0;
                           L5: while (true) {
                             if (var6 >= param0.field_G[1]) {
-                              int discarded$5 = 1;
-                              qn.a(var5, gm.field_k[1]);
+                              qn.a(var15, gm.field_k[1], true);
                               break L4;
                             } else {
                               var5[2 - -(2 * var6)] = el.a(0, ((tr) this).field_J[var3_int] + (int)(Math.cos((double)(6 + 12 * var6) * 3.141592653589793 / 180.0) * (double)var4) << 4, ((tr) this).field_i[var3_int] - (int)((double)var4 * Math.sin((double)(6 + var6 * 12) * 3.141592653589793 / 180.0)) << 4);
@@ -3000,14 +2994,14 @@ final class tr extends ia {
                         if (param0.field_G[2] == 0) {
                           break L6;
                         } else {
-                          var5 = new ik[2 + param0.field_G[2] * 2];
+                          var16 = new ik[2 + param0.field_G[2] * 2];
+                          var5 = var16;
                           var5[0] = el.a(0, ((tr) this).field_J[var3_int] << 4, ((tr) this).field_i[var3_int] << 4);
                           var5[1] = el.a(0, ((tr) this).field_J[var3_int] - -var4 << 4, ((tr) this).field_i[var3_int] << 4);
                           var6 = 0;
                           L7: while (true) {
                             if (var6 >= param0.field_G[2]) {
-                              int discarded$6 = 1;
-                              qn.a(var5, gm.field_k[2]);
+                              qn.a(var16, gm.field_k[2], true);
                               break L6;
                             } else {
                               var5[var6 * 2 + 2] = el.a(0, ((tr) this).field_J[var3_int] - -(int)(Math.cos((double)(6 + 12 * var6) * 3.141592653589793 / 180.0) * (double)var4) << 4, ((tr) this).field_i[var3_int] - -(int)(Math.sin(3.141592653589793 * (double)(6 + var6 * 12) / 180.0) * (double)var4) << 4);
@@ -3021,14 +3015,14 @@ final class tr extends ia {
                       if (param0.field_G[3] == 0) {
                         break L1;
                       } else {
-                        var5 = new ik[2 * param0.field_G[3] + 2];
+                        var17 = new ik[2 * param0.field_G[3] + 2];
+                        var5 = var17;
                         var5[0] = el.a(0, ((tr) this).field_J[var3_int] << 4, ((tr) this).field_i[var3_int] << 4);
                         var5[1] = el.a(0, var4 / 2 + ((tr) this).field_J[var3_int] << 4, (int)(rh.field_e * (double)var4) + ((tr) this).field_i[var3_int] << 4);
                         var6 = 0;
                         L8: while (true) {
                           if (param0.field_G[3] <= var6) {
-                            int discarded$7 = 1;
-                            qn.a(var5, gm.field_k[3]);
+                            qn.a(var17, gm.field_k[3], true);
                             break L1;
                           } else {
                             var5[2 + 2 * var6] = el.a(0, ((tr) this).field_J[var3_int] + (int)((double)var4 * Math.sin(3.141592653589793 * (double)(-(12 * var6) + 24) / 180.0)) << 4, ((tr) this).field_i[var3_int] + (int)(Math.cos(3.141592653589793 * (double)(24 - 12 * var6) / 180.0) * (double)var4) << 4);
@@ -3234,10 +3228,8 @@ final class tr extends ia {
             var6 = 0;
             L1: while (true) {
               if (var13 >= var15.length) {
-                int discarded$4 = 1;
-                this.a(((tr) this).field_hb, false, true);
-                int discarded$5 = 1;
-                this.a(((tr) this).field_hb, true, true);
+                this.a(((tr) this).field_hb, false, true, true);
+                this.a(((tr) this).field_hb, true, true, true);
                 return;
               } else {
                 L2: {
@@ -3355,10 +3347,10 @@ final class tr extends ia {
                   if (var8 < 25) {
                     L12: {
                       if (125 >= ((tr) this).field_t) {
-                        int discarded$6 = re.a(var9, 25, ((tr) this).field_t, 0, 0);
+                        int discarded$2 = re.a(var9, 25, ((tr) this).field_t, 0, 0);
                         break L12;
                       } else {
-                        int discarded$7 = re.a(0, 25, -125 + ((tr) this).field_t, -var9, 0);
+                        int discarded$3 = re.a(0, 25, -125 + ((tr) this).field_t, -var9, 0);
                         break L12;
                       }
                     }
@@ -3376,7 +3368,7 @@ final class tr extends ia {
         }
     }
 
-    private final void a(ln param0) {
+    private final void a(ln param0, boolean param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         fs var4 = null;
@@ -3569,7 +3561,7 @@ final class tr extends ia {
         }
     }
 
-    private final void b(ln param0) {
+    private final void b(ln param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         fs var4 = null;
@@ -4627,10 +4619,8 @@ final class tr extends ia {
               }
             }
             L16: {
-              int discarded$2 = 29201;
-              this.f();
-              int discarded$3 = 1;
-              this.d();
+              this.f(29201);
+              this.d(true);
               if (!param2) {
                 break L16;
               } else {
@@ -4811,7 +4801,7 @@ final class tr extends ia {
         }
     }
 
-    private final mg c(int param0, int param1) {
+    private final mg c(int param0, int param1, byte param2) {
         mg var4 = null;
         ln[] var5 = null;
         int var6 = 0;
@@ -4851,8 +4841,7 @@ final class tr extends ia {
           if (null == ((tr) this).field_p) {
             break L1;
           } else {
-            int discarded$2 = -1;
-            var4 = this.a(((tr) this).field_p, param1, param0);
+            var4 = this.a(((tr) this).field_p, param1, param0, -1);
             if (var4 == null) {
               break L1;
             } else {
@@ -4865,8 +4854,7 @@ final class tr extends ia {
         L2: while (true) {
           if (var6 < var5.length) {
             var7 = var5[var6];
-            int discarded$3 = -1;
-            var4 = this.a(var7, param1, param0);
+            var4 = this.a(var7, param1, param0, -1);
             if (var4 != null) {
               return var4;
             } else {
@@ -4879,7 +4867,7 @@ final class tr extends ia {
         }
     }
 
-    private final void b(int param0, int param1) {
+    private final void b(int param0, int param1, byte param2) {
         es var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -5036,13 +5024,11 @@ final class tr extends ia {
     }
 
     private final void a(int param0, int param1, int param2) {
-        int discarded$0 = 1;
-        this.a(((tr) this).field_v, false, true);
-        int discarded$1 = 1;
-        this.a(((tr) this).field_v, true, true);
+        this.a(((tr) this).field_v, false, true, true);
+        this.a(((tr) this).field_v, true, true, true);
     }
 
-    private final void d() {
+    private final void d(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -5070,12 +5056,9 @@ final class tr extends ia {
               if (var6 == null) {
                 L2: {
                   if (((tr) this).field_T == 0) {
-                    int discarded$4 = 1;
-                    this.a(((tr) this).field_c, false, false);
-                    int discarded$5 = 1;
-                    this.a(((tr) this).field_c, true, false);
-                    int discarded$6 = 101;
-                    this.b(320, var2);
+                    this.a(((tr) this).field_c, false, false, true);
+                    this.a(((tr) this).field_c, true, false, true);
+                    this.b(320, var2, (byte) 101);
                     break L2;
                   } else {
                     if (((tr) this).field_T != 1) {
@@ -5092,8 +5075,7 @@ final class tr extends ia {
                       }
                     } else {
                       this.a(var2, 320, 150);
-                      int discarded$7 = 320;
-                      this.a((byte) 82, var2);
+                      this.a((byte) 82, var2, 320);
                       break L2;
                     }
                   }
@@ -5321,13 +5303,11 @@ final class tr extends ia {
                                 var22 = (-1 + var23_ref.field_m) * var22 / 2;
                                 var29 = 65537 * var22 - -(256 * (var22 >> 1));
                                 if (fj.field_t.field_f) {
-                                  int discarded$2 = 80;
-                                  we.a(9, var27 << 4, var26 << 4, var25 << 4, var24, 0, var28 << 4, var29);
+                                  we.a(9, var27 << 4, var26 << 4, var25 << 4, var24, 0, var28 << 4, var29, 80);
                                   var10++;
                                   continue L1;
                                 } else {
-                                  int discarded$3 = 5;
-                                  be.a((byte) 92, 0, var27 << 4, var24, var26 << 4, var29, var25 << 4, var28 << 4);
+                                  be.a((byte) 92, 0, var27 << 4, var24, var26 << 4, var29, var25 << 4, var28 << 4, 5);
                                   var10++;
                                   continue L1;
                                 }
@@ -5383,8 +5363,7 @@ final class tr extends ia {
               if (param0 == 7) {
                 break L0;
               } else {
-                int discarded$1 = 111;
-                ((tr) this).field_S = this.c(param3, param2);
+                ((tr) this).field_S = this.c(param3, param2, (byte) 111);
                 if (((tr) this).field_S == null) {
                   L1: {
                     ((tr) this).field_p = ((tr) this).a(param2, false, param3);
@@ -5653,7 +5632,7 @@ final class tr extends ia {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         nd[] var1_array = null;
         int var2 = 0;
@@ -5781,7 +5760,7 @@ final class tr extends ia {
         }
     }
 
-    private final void e(ln param0) {
+    private final void e(ln param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         qm[] var4 = null;
@@ -6169,8 +6148,7 @@ final class tr extends ia {
             ((tr) this).field_X = stackIn_4_1 != 0;
             ((tr) this).field_B = param2;
             ((tr) this).field_cb = new int[((tr) this).field_ib.length][];
-            int discarded$1 = 0;
-            this.j();
+            this.j(0);
             ((tr) this).field_E = (float)(((tr) this).field_O.field_b / 2);
             ((tr) this).field_g = 200.0f;
             ((tr) this).field_I = 300.0f;

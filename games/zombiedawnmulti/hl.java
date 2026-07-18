@@ -187,7 +187,7 @@ final class hl {
         }
     }
 
-    final static void a(byte[] param0, byte param1, cj param2, int param3, cj param4, int param5, int param6, cj param7, int param8) {
+    final static void a(byte[] param0, byte param1, cj param2, int param3, cj param4, int param5, int param6, cj param7, int param8, int param9) {
         RuntimeException var10 = null;
         int var10_int = 0;
         int var11 = 0;
@@ -424,7 +424,7 @@ final class hl {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_c = null;
         field_f = null;

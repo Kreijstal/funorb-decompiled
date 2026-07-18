@@ -69,7 +69,7 @@ final class lj {
         }
     }
 
-    final static void a(int param0, java.awt.Canvas param1) {
+    final static void a(int param0, java.awt.Canvas param1, int param2, byte param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -195,7 +195,7 @@ final class lj {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

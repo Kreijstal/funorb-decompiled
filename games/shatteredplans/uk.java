@@ -5,7 +5,7 @@ final class uk {
     static int field_a;
     static bi[] field_b;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         int var1 = -36;
     }
@@ -154,8 +154,8 @@ final class uk {
         int var21 = 0;
         fs var21_ref_fs = null;
         ln var21_ref_ln = null;
-        int var22 = 0;
         ln var22_ref_ln = null;
+        int var22 = 0;
         int var23 = 0;
         ln var23_ref_ln = null;
         int var24 = 0;
@@ -456,8 +456,7 @@ final class uk {
                                     if (var21_ref_ln == null) {
                                       break L19;
                                     } else {
-                                      int discarded$3 = -2;
-                                      kd.a(param7, false, var21_ref_ln);
+                                      kd.a(param7, false, var21_ref_ln, (byte) -2);
                                       var21_ref_ln = param4[var20].field_m.h(-23410);
                                       continue L20;
                                     }
@@ -479,8 +478,7 @@ final class uk {
                                         var38 = (sd) (Object) param4[var20].field_i.a((byte) -71);
                                         continue L21;
                                       } else {
-                                        int discarded$4 = -2;
-                                        kd.a(param7, false, var22_ref_ln);
+                                        kd.a(param7, false, var22_ref_ln, (byte) -2);
                                         var22_ref_ln = var38.h(-23410);
                                         continue L22;
                                       }
@@ -544,8 +542,9 @@ final class uk {
                 }
               } else {
                 var18_ref_ln = var16_ref_ln__[var17_int];
-                int discarded$5 = 2;
-                var18_ref_ln.field_t = us.a(param2, param4);
+                var22_ref_ln = var18_ref_ln;
+                var22_ref_ln = var18_ref_ln;
+                var18_ref_ln.field_t = us.a(param2, param4, 2);
                 var17_int++;
                 continue L3;
               }

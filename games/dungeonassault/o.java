@@ -25,7 +25,7 @@ final class o extends ne {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_n = null;
         field_l = null;
         field_o = null;
@@ -98,12 +98,9 @@ final class o extends ne {
             return;
         }
         try {
-            int discarded$0 = -1998;
-            var3.field_d = tp.a(kf.field_p, "idle", param1);
-            int discarded$1 = -1998;
-            var3.field_u = tp.a(kf.field_p, "victory", param1);
-            int discarded$2 = -1998;
-            var3.field_m = tp.a(kf.field_p, "defeat", param1);
+            var3.field_d = tp.a(kf.field_p, "idle", param1, -1998);
+            var3.field_u = tp.a(kf.field_p, "victory", param1, -1998);
+            var3.field_m = tp.a(kf.field_p, "defeat", param1, -1998);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "o.G(" + 11404 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -124,7 +121,7 @@ final class o extends ne {
         return param2 * tg.field_d[param0] + tg.field_h[param0];
     }
 
-    final static boolean a(int[] param0, int[] param1, int param2, lb param3) {
+    final static boolean a(int[] param0, int[] param1, int param2, lb param3, boolean param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -520,7 +517,7 @@ final class o extends ne {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         kn.field_g = false;
     }
 

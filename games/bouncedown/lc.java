@@ -97,7 +97,7 @@ class lc extends lk implements ik {
         }
     }
 
-    final static rb h() {
+    final static rb h(int param0) {
         return ch.field_j;
     }
 
@@ -834,7 +834,7 @@ class lc extends lk implements ik {
         ((lc) this).field_w = new bc();
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_x = null;
     }
 
@@ -986,8 +986,7 @@ class lc extends lk implements ik {
             L1: {
               if (((lc) this).a(param2, param3, (byte) 14, param0)) {
                 ((lc) this).a(param0, param3, param2, 32362);
-                int discarded$2 = 12500;
-                this.a(param2, param3, param0);
+                this.a(param2, param3, param0, 12500);
                 break L1;
               } else {
                 break L1;
@@ -1065,11 +1064,10 @@ class lc extends lk implements ik {
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
         super.b(param0, param1, param2, param3, param4);
-        int discarded$0 = 63680;
-        this.j();
+        this.j(63680);
     }
 
-    private final void j() {
+    private final void j(int param0) {
         int var4 = Bounce.field_N;
         ea var2 = new ea(((lc) this).field_w);
         lk var3 = (lk) (Object) var2.a(22092);
@@ -1164,7 +1162,7 @@ class lc extends lk implements ik {
         return stackIn_10_0 != 0;
     }
 
-    private final void a(Hashtable param0, StringBuilder param1, int param2) {
+    private final void a(Hashtable param0, StringBuilder param1, int param2, int param3) {
         ea var5 = null;
         RuntimeException var5_ref = null;
         lk var6 = null;

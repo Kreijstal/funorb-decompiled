@@ -6,7 +6,7 @@ final class wea extends at {
     private gj field_j;
     private vg field_l;
 
-    final static int b() {
+    final static int b(boolean param0) {
         if (2 <= lk.field_r) {
           if (kt.field_k != 0) {
             if (null != lh.field_s) {

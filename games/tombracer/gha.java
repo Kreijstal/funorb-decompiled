@@ -295,8 +295,7 @@ final class gha implements pp {
           var4_int = -46 / ((-55 - param2) / 54);
           try {
             L0: {
-              int discarded$2 = 1;
-              stackOut_1_0 = lga.a(param3, param1, param0);
+              stackOut_1_0 = lga.a(param3, param1, param0, true);
               stackIn_2_0 = stackOut_1_0;
               break L0;
             }

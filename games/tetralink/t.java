@@ -169,7 +169,7 @@ final class t {
                 break L1;
               } else {
                 if (-1 == param2.indexOf("<br>")) {
-                  param3[0] = (String) (Object) param3;
+                  param3[0] = param2;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;
@@ -320,7 +320,7 @@ final class t {
         return stackIn_20_0;
     }
 
-    private final void a(byte[] param0) {
+    private final void a(byte[] param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -738,9 +738,8 @@ final class t {
         fk.field_W = param0;
     }
 
-    final static void b(int param0) {
-        int discarded$0 = -47;
-        int discarded$1 = bh.h();
+    final static void b(int param0, int param1) {
+        int discarded$0 = bh.h((byte) -47);
     }
 
     final static void a(boolean param0, ie param1, long param2, int param3, int param4, int param5, int param6, int param7, int param8, byte param9, int param10, String param11, boolean param12, int param13) {
@@ -926,8 +925,7 @@ final class t {
                     }
                 }
             }
-            int discarded$0 = 0;
-            this.a(param0);
+            this.a(param0, 0);
         } catch (RuntimeException runtimeException) {
             throw oi.a((Throwable) (Object) runtimeException, "t.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

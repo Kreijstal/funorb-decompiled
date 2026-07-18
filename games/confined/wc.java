@@ -38,7 +38,7 @@ final class wc extends id {
     private boolean field_dc;
     static mi field_Wb;
 
-    public static void n() {
+    public static void n(int param0) {
         field_Wb = null;
         field_jc = null;
         field_nc = null;

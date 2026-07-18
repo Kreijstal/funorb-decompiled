@@ -239,7 +239,7 @@ final class um extends rf {
         return 0;
     }
 
-    final static s a(boolean param0) {
+    final static s a(boolean param0, int param1) {
         dl var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -312,13 +312,13 @@ final class um extends rf {
         }
         L4: {
           if (1 == m.field_f) {
-            int discarded$6 = var8.i((byte) 0);
-            String discarded$7 = var8.h(-17883);
+            int discarded$4 = var8.i((byte) 0);
+            String discarded$5 = var8.h(-17883);
             break L4;
           } else {
             if (m.field_f == 4) {
-              int discarded$8 = var8.i((byte) 0);
-              String discarded$9 = var8.h(-17883);
+              int discarded$6 = var8.i((byte) 0);
+              String discarded$7 = var8.h(-17883);
               break L4;
             } else {
               break L4;
@@ -355,9 +355,7 @@ final class um extends rf {
           }
           return new s(param0);
         } else {
-          int discarded$10 = -114;
-          int discarded$11 = 80;
-          ep.field_x = ko.a((rb) (Object) var8);
+          ep.field_x = ko.a((rb) (Object) var8, 80, (byte) -114);
           ku.field_e = null;
           return new s(param0);
         }
@@ -441,15 +439,13 @@ final class um extends rf {
           if (var1 > 0) {
             if (var1 == 1) {
               uf.field_e = qk.field_f;
-              int discarded$2 = 3;
-              uf.field_e = od.a(new CharSequence[3]);
+              uf.field_e = od.a(new CharSequence[3], 3);
               ml.field_m.h((byte) 127);
               nj.c(98);
               return;
             } else {
               uf.field_e = sn.a(field_n, 121, new String[1]);
-              int discarded$3 = 3;
-              uf.field_e = od.a(new CharSequence[3]);
+              uf.field_e = od.a(new CharSequence[3], 3);
               ml.field_m.h((byte) 127);
               nj.c(98);
               return;

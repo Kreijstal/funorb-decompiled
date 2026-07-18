@@ -754,7 +754,7 @@ abstract class r extends hm implements ba {
                 L3: while (true) {
                   var8 = param0.indexOf("<%", var5);
                   if (var8 < 0) {
-                    StringBuilder discarded$5 = var6.append(param0.substring(var7));
+                    StringBuilder discarded$3 = var6.append(param0.substring(var7));
                     stackOut_24_0 = var6.toString();
                     stackIn_25_0 = stackOut_24_0;
                     break L0;
@@ -765,8 +765,7 @@ abstract class r extends hm implements ba {
                         if (var5 >= var3_int) {
                           break L5;
                         } else {
-                          int discarded$6 = 0;
-                          if (!on.a(param0.charAt(var5))) {
+                          if (!on.a(param0.charAt(var5), false)) {
                             break L5;
                           } else {
                             var5++;
@@ -786,8 +785,8 @@ abstract class r extends hm implements ba {
                           } else {
                             var5++;
                             var10 = gn.a(16777215, (CharSequence) (Object) var9);
-                            StringBuilder discarded$7 = var6.append(param0.substring(var7, var8));
-                            StringBuilder discarded$8 = var6.append(param2[var10]);
+                            StringBuilder discarded$4 = var6.append(param0.substring(var7, var8));
+                            StringBuilder discarded$5 = var6.append(param2[var10]);
                             var7 = var5;
                             continue L3;
                           }
@@ -803,8 +802,7 @@ abstract class r extends hm implements ba {
                     if (var3_int <= var5) {
                       break L7;
                     } else {
-                      int discarded$9 = 0;
-                      if (!on.a(param0.charAt(var5))) {
+                      if (!on.a(param0.charAt(var5), false)) {
                         break L7;
                       } else {
                         var5++;

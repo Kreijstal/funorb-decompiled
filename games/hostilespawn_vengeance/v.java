@@ -16,7 +16,7 @@ final class v {
     private int field_f;
     static bd field_j;
 
-    public static void b() {
+    public static void b(int param0) {
         field_j = null;
     }
 
@@ -29,7 +29,7 @@ final class v {
         }
     }
 
-    private final boolean d() {
+    private final boolean d(int param0) {
         int var2 = 48;
         return ((v) this).field_f == ul.field_L ? true : false;
     }
@@ -61,8 +61,7 @@ final class v {
           L0: {
             ea.a(1, (java.awt.Component) (Object) param1);
             var2_int = 111 / ((param0 - -52) / 39);
-            int discarded$6 = -100;
-            te.a((java.awt.Component) (Object) param1);
+            te.a((java.awt.Component) (Object) param1, -100);
             if (null == h.field_b) {
               break L0;
             } else {
@@ -105,22 +104,20 @@ final class v {
     final boolean a(int param0) {
         if (param0 != 32669) {
             field_g = 7;
-            int discarded$0 = 123;
-            if (this.d()) {
-                boolean discarded$1 = ((v) this).a((byte) -69);
+            if (this.d(123)) {
+                boolean discarded$0 = ((v) this).a((byte) -69);
                 return true;
             }
             return false;
         }
-        int discarded$2 = 123;
-        if (!(!this.d())) {
-            boolean discarded$3 = ((v) this).a((byte) -69);
+        if (!(!this.d(123))) {
+            boolean discarded$1 = ((v) this).a((byte) -69);
             return true;
         }
         return false;
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var2 = ((v) this).field_i.b(((v) this).field_k, ((v) this).field_m, ((v) this).field_b);
         ((v) this).field_h = var2;
     }
@@ -447,8 +444,7 @@ final class v {
               break L0;
             } else {
               ((v) this).field_k = ((v) this).field_k.toUpperCase();
-              int discarded$2 = 16;
-              this.c();
+              this.c(16);
               decompiledRegionSelector0 = 1;
               break L0;
             }

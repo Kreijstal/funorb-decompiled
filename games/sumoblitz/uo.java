@@ -33,12 +33,11 @@ final class uo extends rq {
                 break L1;
               } else {
                 var3 = null;
-                String discarded$4 = uo.a(false, (CharSequence[]) null);
+                String discarded$2 = uo.a(false, (CharSequence[]) null);
                 break L1;
               }
             }
-            int discarded$5 = 14156;
-            stackOut_2_0 = se.a(param1, 0, param1.length);
+            stackOut_2_0 = se.a(param1, 0, param1.length, 14156);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -874,7 +873,7 @@ final class uo extends rq {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_e = null;
     }
 

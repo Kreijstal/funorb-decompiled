@@ -7,7 +7,7 @@ final class kf extends ma {
     int field_n;
     ma field_m;
 
-    public static void a() {
+    public static void a(int param0) {
         field_l = null;
     }
 

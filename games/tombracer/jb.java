@@ -30,7 +30,7 @@ final class jb extends fqa {
         return false;
     }
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -196,7 +196,7 @@ final class jb extends fqa {
         return 7;
     }
 
-    public static void s() {
+    public static void s(byte param0) {
         field_K = null;
         field_J = null;
     }

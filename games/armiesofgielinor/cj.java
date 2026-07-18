@@ -12,7 +12,7 @@ final class cj extends mg {
     static String field_i;
     static String[] field_j;
 
-    public static void c() {
+    public static void c(int param0) {
         field_o = null;
         field_n = null;
         field_j = null;

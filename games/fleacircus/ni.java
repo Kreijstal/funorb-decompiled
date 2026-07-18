@@ -28,8 +28,7 @@ class ni extends lh {
         if (var3 == param0) {
             return "";
         }
-        int discarded$1 = 0;
-        return pg.a(var3, var2, ((ni) this).field_k);
+        return pg.a(var3, var2, ((ni) this).field_k, 0);
     }
 
     final void b(byte[] param0, int param1, int param2, int param3) {
@@ -260,14 +259,13 @@ class ni extends lh {
         return (var2 << 32) + var4;
     }
 
-    final static String d() {
+    final static String d(boolean param0) {
         String var1 = "";
         if (null != lg.field_b) {
             var1 = lg.field_b.j(-1);
         }
         if (var1.length() == 0) {
-            int discarded$0 = 10158;
-            var1 = em.c();
+            var1 = em.c(10158);
         }
         if (var1.length() == 0) {
             var1 = gg.field_a;
@@ -326,8 +324,7 @@ class ni extends lh {
         if (var4 == 0) {
             return "";
         }
-        int discarded$2 = 0;
-        return pg.a(var4, var3, ((ni) this).field_k);
+        return pg.a(var4, var3, ((ni) this).field_k, 0);
     }
 
     final int e(byte param0) {

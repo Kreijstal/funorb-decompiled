@@ -8,7 +8,7 @@ abstract class ie {
     static kf field_a;
     static String field_c;
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -151,10 +151,8 @@ abstract class ie {
         String stackOut_11_2 = null;
         try {
           L0: {
-            int discarded$9 = 109;
-            if (hn.a(param3, param2, param1)) {
-              int discarded$10 = 20;
-              stackOut_5_0 = jf.a(param4.a(param2, param1, 0));
+            if (hn.a(param3, param2, param1, (byte) 109)) {
+              stackOut_5_0 = jf.a(param4.a(param2, param1, 0), 20);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

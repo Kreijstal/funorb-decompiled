@@ -10,7 +10,7 @@ final class ui extends ug {
     static String field_S;
     static boolean field_G;
 
-    public static void h() {
+    public static void h(int param0) {
         field_U = null;
         field_V = null;
         field_W = null;
@@ -55,8 +55,7 @@ final class ui extends ug {
                 if (var3 <= var2_int) {
                   break L1;
                 } else {
-                  int discarded$3 = -33;
-                  if (!jd.a(param1.charAt(var2_int))) {
+                  if (!jd.a(param1.charAt(var2_int), -33)) {
                     break L1;
                   } else {
                     var2_int++;
@@ -69,8 +68,7 @@ final class ui extends ug {
                   if (var2_int >= var3) {
                     break L3;
                   } else {
-                    int discarded$4 = -33;
-                    if (!jd.a(param1.charAt(-1 + var3))) {
+                    if (!jd.a(param1.charAt(-1 + var3), -33)) {
                       break L3;
                     } else {
                       var3--;
@@ -102,7 +100,7 @@ final class ui extends ug {
                               var6++;
                               break L5;
                             } else {
-                              StringBuilder discarded$5 = var5.append((char) var8);
+                              StringBuilder discarded$1 = var5.append((char) var8);
                               var6++;
                               break L5;
                             }
@@ -203,7 +201,7 @@ final class ui extends ug {
         return al.field_d;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         kj var2 = mm.field_g;
         var2.a(11, (byte) -117);
         var2.a((byte) 111, 1);

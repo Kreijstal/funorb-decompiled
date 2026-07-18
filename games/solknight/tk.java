@@ -26,8 +26,7 @@ final class tk extends pe {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          int discarded$2 = 44;
-          ei.a(param1);
+          ei.a(param1, 44);
           nf.a(false, ab.field_p, -104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

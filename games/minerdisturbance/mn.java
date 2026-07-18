@@ -36,9 +36,7 @@ final class mn extends gk {
         try {
           L0: {
             var3_int = 2 / ((0 - param1) / 33);
-            int discarded$4 = 42;
-            int discarded$5 = 0;
-            stackOut_0_0 = kb.a(param0.field_s.length());
+            stackOut_0_0 = kb.a(param0.field_s.length(), false, '*');
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

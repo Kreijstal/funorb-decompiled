@@ -165,12 +165,12 @@ final class sm extends bca {
         super(param0, param1);
     }
 
-    final static String e() {
+    final static String e(int param0) {
         int var1 = -30;
         return ig.field_m.g(-32);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_s = null;
         field_q = null;
     }

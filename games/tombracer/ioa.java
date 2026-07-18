@@ -143,8 +143,7 @@ final class ioa extends dg {
             var8 = ((ioa) this).field_h.c(-29) / 2;
             var9 = ((ioa) this).field_h.a((byte) 55) / 2;
             int var10 = 86 % ((param4 - -38) / 47);
-            int discarded$0 = 1;
-            oq.a(-var8 + param2, -var9 + param1, param3, 255, param2 + var8, var6_int, param1 + var9);
+            oq.a(-var8 + param2, -var9 + param1, param3, 255, param2 + var8, var6_int, param1 + var9, true);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "ioa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -158,7 +157,7 @@ final class ioa extends dg {
         super(param0);
     }
 
-    public static void i() {
+    public static void i(int param0) {
         int var1 = 55;
         field_n = null;
         field_o = null;

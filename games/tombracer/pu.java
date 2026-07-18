@@ -5,7 +5,7 @@ final class pu implements isa {
     static int[] field_a;
     static int field_b;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
@@ -374,7 +374,7 @@ final class pu implements isa {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

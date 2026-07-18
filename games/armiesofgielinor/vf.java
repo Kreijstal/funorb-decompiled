@@ -24,7 +24,7 @@ abstract class vf {
         pg.field_f = cj.field_h;
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         ((vf) this).field_g = new short[((vf) this).field_b];
         int var2 = 0;
@@ -286,8 +286,7 @@ abstract class vf {
           } else {
             L2: {
               L3: {
-                int discarded$4 = 0;
-                if (!vu.b()) {
+                if (!vu.b(false)) {
                   break L3;
                 } else {
                   if (param3.field_kc) {
@@ -319,8 +318,7 @@ abstract class vf {
                       if (!pu.field_k[0][2].field_jb) {
                         break L8;
                       } else {
-                        int discarded$5 = 0;
-                        if (!vu.b()) {
+                        if (!vu.b(false)) {
                           ad.field_I = fo.a(4800, op.field_a, new String[1]);
                           break L8;
                         } else {
@@ -799,9 +797,7 @@ abstract class vf {
                       break L43;
                     } else {
                       if (!param1) {
-                        int discarded$6 = 11;
-                        int discarded$7 = 5;
-                        cl.b();
+                        cl.b(5, 11);
                         break L43;
                       } else {
                         break L42;
@@ -1904,10 +1900,8 @@ abstract class vf {
         ((vf) this).field_i = param0;
         ((vf) this).field_b = param1;
         ((vf) this).field_d = param3;
-        int discarded$0 = -125;
-        this.b();
-        int discarded$1 = -256;
-        this.d();
+        this.b(-125);
+        this.d(-256);
     }
 
     final static int a(int param0, int param1, int param2) {
@@ -1935,7 +1929,7 @@ abstract class vf {
         return -1;
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;

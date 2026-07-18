@@ -157,7 +157,7 @@ final class bl extends ng {
         return stackIn_25_0 != 0;
     }
 
-    final static ka[] a(int param0, int param1, lj param2) {
+    final static ka[] a(int param0, int param1, lj param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         ka[] stackIn_5_0 = null;
@@ -304,7 +304,7 @@ final class bl extends ng {
         return ((bl) this).field_Z;
     }
 
-    public static void e() {
+    public static void e(boolean param0) {
         field_T = null;
         field_O = null;
         field_V = null;

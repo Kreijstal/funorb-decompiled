@@ -486,7 +486,7 @@ abstract class id {
 
     abstract int b(int param0);
 
-    final static void a(int param0, int param1, dd[] param2, int param3) {
+    final static void a(int param0, int param1, dd[] param2, int param3, byte param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -579,7 +579,7 @@ abstract class id {
 
     abstract void a(byte param0, java.awt.Component param1);
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
         field_d = null;

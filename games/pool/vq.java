@@ -22,7 +22,7 @@ final class vq extends vh {
     private int[] field_dc;
     private int field_Vb;
 
-    public static void f() {
+    public static void f(int param0) {
         field_bc = null;
         field_Zb = null;
         field_Ub = null;
@@ -41,7 +41,7 @@ final class vq extends vh {
         return true;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;

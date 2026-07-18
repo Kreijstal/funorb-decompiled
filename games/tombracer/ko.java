@@ -751,15 +751,11 @@ final class ko {
         afa.field_c = qk.h(122);
         wu.field_a = new jta();
         if (param0 < 10) {
-          ko.c((byte) -39);
-          int discarded$4 = -114;
-          kea.b();
-          return;
-        } else {
-          int discarded$5 = -114;
-          kea.b();
-          return;
+            ko.c((byte) -39);
+            kea.b(-114);
+            return;
         }
+        kea.b(-114);
     }
 
     final void c(int param0) {

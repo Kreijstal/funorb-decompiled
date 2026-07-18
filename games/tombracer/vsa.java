@@ -409,7 +409,7 @@ final class vsa extends dg {
         }
     }
 
-    final static void a(cn param0, fia param1) {
+    final static void a(cn param0, fia param1, int param2) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -730,8 +730,7 @@ final class vsa extends dg {
     final void b(int param0, uw param1) {
         try {
             if (((vsa) this).field_q == null) {
-                int discarded$0 = -128;
-                this.n();
+                this.n((byte) -128);
             }
             super.b(param0 ^ param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -832,7 +831,7 @@ final class vsa extends dg {
         }
     }
 
-    private final void n() {
+    private final void n(byte param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1139,7 +1138,7 @@ final class vsa extends dg {
         super(param0);
     }
 
-    final static void c() {
+    final static void c(byte param0, int param1) {
         RuntimeException var2 = null;
         long var2_long = 0L;
         int var4 = 0;

@@ -11,8 +11,7 @@ final class ua extends bd {
     static boolean field_s;
 
     final static void b(int param0, int param1) {
-        int discarded$0 = 1;
-        ps.a(param1);
+        ps.a(param1, true);
     }
 
     final void a(int param0, ha param1) {
@@ -196,8 +195,7 @@ final class ua extends bd {
         try {
             int var4_int = 0;
             if (!(!hd.field_n.startsWith("win"))) {
-                int discarded$4 = 1;
-                if (br.a(param2)) {
+                if (br.a(param2, true)) {
                     return;
                 }
             }
@@ -276,7 +274,7 @@ final class ua extends bd {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_v = null;
         field_u = null;
         field_y = null;

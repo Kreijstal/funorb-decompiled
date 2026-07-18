@@ -122,8 +122,7 @@ final class wl extends d {
               if (param0) {
                 break L1;
               } else {
-                int discarded$2 = 0;
-                wl.c();
+                wl.c(false);
                 break L1;
               }
             }
@@ -164,7 +163,7 @@ final class wl extends d {
         return stackIn_3_0 != 0;
     }
 
-    final static void c() {
+    final static void c(boolean param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         cq var3 = null;
@@ -322,7 +321,7 @@ final class wl extends d {
         }
     }
 
-    final static int a(String param0, boolean param1, int param2, m param3, int param4, m param5) {
+    final static int a(String param0, boolean param1, int param2, m param3, int param4, m param5, int param6) {
         RuntimeException var7 = null;
         String var8 = null;
         int var9 = 0;
@@ -464,8 +463,7 @@ final class wl extends d {
                       tq.field_f.a(0, var14);
                       tq.field_f.a(0, var8);
                       var15 = (CharSequence) (Object) param0;
-                      int discarded$4 = -58;
-                      tq.field_f.a(0, he.a(var15));
+                      tq.field_f.a(0, he.a(var15, -58));
                       tq.field_f.b((byte) 113, param4);
                       tq.field_f.a(89, param2);
                       tq.field_f.a(127, var9);
@@ -576,8 +574,7 @@ final class wl extends d {
                     }
                   }
                   if (var9 == 248) {
-                    int discarded$5 = 9;
-                    cb.a(uc.e((byte) -108));
+                    cb.a(uc.e((byte) -108), 9);
                     eo.field_e = m.field_d;
                     hn.a((byte) 96);
                     pf.field_d = false;
@@ -586,7 +583,7 @@ final class wl extends d {
                     return stackIn_33_0;
                   } else {
                     if (var9 == 99) {
-                      boolean discarded$6 = vd.a(20, oc.d((byte) -59));
+                      boolean discarded$1 = vd.a(20, oc.d((byte) -59));
                       af.field_r = new Boolean(kd.a(-2, (wq) (Object) jl.field_e));
                       jl.field_e.field_l = 0;
                       break L8;
@@ -665,8 +662,7 @@ final class wl extends d {
               if (null == eq.field_g) {
                 if (pf.field_d) {
                   L15: {
-                    int discarded$7 = -6792;
-                    if (de.f() > 30000L) {
+                    if (de.f(-6792) > 30000L) {
                       eo.field_e = hg.field_b;
                       break L15;
                     } else {
@@ -776,7 +772,7 @@ final class wl extends d {
         return stackIn_62_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_K = null;
         field_L = null;
         field_R = null;

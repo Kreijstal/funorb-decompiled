@@ -247,8 +247,7 @@ abstract class pl extends cf implements dh {
         if (param0 < 123) {
             field_L = null;
         }
-        int discarded$0 = 8464;
-        return null != this.a() ? true : false;
+        return null != this.a(8464) ? true : false;
     }
 
     final boolean a(cf param0, int param1) {
@@ -513,7 +512,7 @@ abstract class pl extends cf implements dh {
         }
     }
 
-    private final cf a() {
+    private final cf a(int param0) {
         cf[] var2 = null;
         int var3 = 0;
         cf var4 = null;
@@ -820,7 +819,7 @@ abstract class pl extends cf implements dh {
         ((pl) this).g(140);
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_C = null;
         field_J = null;
         field_L = null;
@@ -1069,7 +1068,7 @@ abstract class pl extends cf implements dh {
         return stackIn_5_0;
     }
 
-    private final boolean a(cf param0) {
+    private final boolean a(cf param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -1384,7 +1383,7 @@ abstract class pl extends cf implements dh {
                       break L2;
                     } else {
                       var9 = null;
-                      boolean discarded$5 = ((pl) this).a((cf) null, -34);
+                      boolean discarded$2 = ((pl) this).a((cf) null, -34);
                       break L2;
                     }
                   }
@@ -1396,8 +1395,7 @@ abstract class pl extends cf implements dh {
                   } else {
                     L3: {
                       if (lc.field_m[81]) {
-                        int discarded$6 = -80;
-                        stackOut_18_0 = this.a(param2);
+                        stackOut_18_0 = this.a(param2, (byte) -80);
                         stackIn_19_0 = stackOut_18_0;
                         break L3;
                       } else {

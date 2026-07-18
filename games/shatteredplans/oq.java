@@ -22,7 +22,7 @@ final class oq {
         return er.field_b[param2];
     }
 
-    final static String[] a(byte[] param0) {
+    final static String[] a(byte[] param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String[] var3 = null;
@@ -275,7 +275,7 @@ final class oq {
         return stackIn_24_0;
     }
 
-    final static ro a(String param0) {
+    final static ro a(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -361,7 +361,7 @@ final class oq {
         return stackIn_10_0;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         oh var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -384,8 +384,7 @@ final class oq {
                   }
                 }
               } else {
-                int discarded$2 = 13;
-                dn.a(6, var4);
+                dn.a(6, var4, (byte) 13);
                 var4 = (fk) (Object) tr.field_vb.a((byte) -71);
                 continue L1;
               }

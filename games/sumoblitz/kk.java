@@ -14,7 +14,7 @@ final class kk {
         int var2 = 36 / ((param0 - 41) / 59);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
         field_f = null;
         field_b = null;

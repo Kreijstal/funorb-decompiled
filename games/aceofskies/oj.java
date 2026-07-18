@@ -736,8 +736,7 @@ final class oj extends sk {
             var2 = "tuhstatbut";
             var3 = "rvnadlm";
             var4 = -1L;
-            int discarded$2 = 0;
-            jt.a(var2, var3, var4, param1);
+            jt.a(var2, var3, var4, param1, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

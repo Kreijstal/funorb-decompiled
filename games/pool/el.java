@@ -154,7 +154,7 @@ final class el extends ob {
                   mc.field_e.b(fd.field_L, qh.field_l >> 1, 215 - -mc.field_e.field_C, 4, -1);
                   if (hk.b(-107)) {
                     var7 = 215 - -((el) this).field_x >> 1;
-                    int discarded$5 = mc.field_e.a(ra.field_a, qh.field_l >> 2, -mc.field_e.field_G + var7, qh.field_l >> 1, 240, 4, -1, 0, 0, 0);
+                    int discarded$3 = mc.field_e.a(ra.field_a, qh.field_l >> 2, -mc.field_e.field_G + var7, qh.field_l >> 1, 240, 4, -1, 0, 0, 0);
                     break L6;
                   } else {
                     break L6;
@@ -284,7 +284,7 @@ final class el extends ob {
                       break L14;
                     }
                   }
-                  int discarded$6 = ((an) (Object) stackIn_62_0).a(stackIn_62_1, 225, 260, 260, 70, 13421772, -1, 0, 1, var8);
+                  int discarded$4 = ((an) (Object) stackIn_62_0).a(stackIn_62_1, 225, 260, 260, 70, 13421772, -1, 0, 1, var8);
                   sa.field_h.d(sd.field_W + ch.field_J[var6] * 100, 225, 340 + sa.field_h.field_C, 13421772, -1);
                   sa.field_h.d(ri.field_R, 345, sa.field_h.field_C + 340, 13421772, -1);
                   var10 = 345 + sa.field_h.b(ri.field_R);
@@ -306,7 +306,7 @@ final class el extends ob {
                 if (((el) this).field_B.field_e != 1) {
                   break L16;
                 } else {
-                  int discarded$7 = sa.field_h.a(ab.field_a, 220, 390, 360, 36, 15658734, -1, 1, 1, 0);
+                  int discarded$5 = sa.field_h.a(ab.field_a, 220, 390, 360, 36, 15658734, -1, 1, 1, 0);
                   break L16;
                 }
               }
@@ -315,9 +315,7 @@ final class el extends ob {
                 if (-1 == var7) {
                   break L17;
                 } else {
-                  int discarded$8 = 4144959;
-                  int discarded$9 = 15658734;
-                  qa.a((byte) 71, qh.field_l >> 1, (lr) (Object) sa.field_h, re.field_e[var7]);
+                  qa.a((byte) 71, qh.field_l >> 1, (lr) (Object) sa.field_h, re.field_e[var7], 15658734, 4144959);
                   if (((el) this).field_G != null) {
                     ((el) this).field_G.a(15658734, 0, 128, -1, true, 70 - qi.field_b >> 1);
                     break L17;
@@ -533,7 +531,7 @@ final class el extends ob {
         return ((el) this).field_x;
     }
 
-    final static int a(int param0, CharSequence param1) {
+    final static int a(int param0, CharSequence param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -740,7 +738,7 @@ final class el extends ob {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_K = null;
         field_L = null;
         field_H = null;

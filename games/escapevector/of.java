@@ -70,7 +70,7 @@ final class of {
         return stackIn_10_0 != 0;
     }
 
-    final static boolean a(mf param0, mf param1, mf param2) {
+    final static boolean a(mf param0, mf param1, mf param2, byte param3) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
@@ -338,7 +338,7 @@ final class of {
         qh.field_k = null;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         return md.field_G;
     }
 

@@ -9,7 +9,7 @@ final class ah {
     static String field_d;
     static ln field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_d = null;
@@ -28,7 +28,7 @@ final class ah {
         }
     }
 
-    final static Class a(String param0) throws ClassNotFoundException {
+    final static Class a(String param0, byte param1) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_3_0 = null;
         Class stackIn_6_0 = null;
@@ -177,8 +177,7 @@ final class ah {
                       return;
                     }
                   } else {
-                    int discarded$2 = -32;
-                    a.a(param1);
+                    a.a(param1, (byte) -32);
                     var2 = ta.field_O.a((byte) 123);
                     continue L2;
                   }

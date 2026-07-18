@@ -10,7 +10,7 @@ final class rk {
     static oi field_c;
     static int field_b;
 
-    final static void a(String[] args) {
+    final static void a(String[] args, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -77,7 +77,7 @@ final class rk {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_c = null;
         field_a = null;
@@ -89,8 +89,7 @@ final class rk {
             throw new IllegalStateException();
         }
         jd.field_z = true;
-        int discarded$0 = 1;
-        fl.a(true);
+        fl.a(true, 1);
         hp.field_s = 0;
     }
 

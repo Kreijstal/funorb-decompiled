@@ -15,7 +15,7 @@ final class rc extends en {
     private jb field_R;
     private boolean field_W;
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -222,7 +222,7 @@ final class rc extends en {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_U = null;
         field_S = null;
         field_T = null;

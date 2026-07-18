@@ -187,8 +187,7 @@ final class ud extends q {
                     var5 = ((ud) this).field_m.a(var4 + -6, 63 + -var4);
                     if (0L != var5) {
                       ((ud) this).field_p = false;
-                      int discarded$1 = -109;
-                      ((ud) this).field_o[var4] = ag.a(var5);
+                      ((ud) this).field_o[var4] = ag.a(var5, -109);
                       var4++;
                       continue L5;
                     } else {

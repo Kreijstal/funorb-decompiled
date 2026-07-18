@@ -15,7 +15,7 @@ final class ua {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         int var1 = 0;
         field_a = null;

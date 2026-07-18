@@ -161,8 +161,7 @@ final class av {
         if (var6 == 0) {
             return;
         }
-        int discarded$0 = 8421504;
-        ((av) this).field_f.a(param2, this.b(param3), 0, param1);
+        ((av) this).field_f.a(param2, this.b(param3, 8421504), 0, param1);
         param3++;
         this.a(param0, -1 + param1, param2, param3);
         this.a(true, 1 + param1, param2, param3);
@@ -170,7 +169,7 @@ final class av {
         this.a(param0, param1, param2 - -1, param3);
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -236,7 +235,7 @@ final class av {
         return ((av) this).field_a;
     }
 
-    private final int b(int param0) {
+    private final int b(int param0, int param1) {
         return -param0 + -100;
     }
 
@@ -347,7 +346,7 @@ final class av {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_b = null;
     }
 
@@ -378,8 +377,7 @@ final class av {
         if (param3 <= 79) {
             return;
         }
-        int discarded$0 = 66;
-        this.a();
+        this.a(66);
         this.a(true);
     }
 

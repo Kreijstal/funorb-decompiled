@@ -16,7 +16,7 @@ final class mm extends ana {
     private cq field_y;
     private int field_B;
 
-    private final void e() {
+    private final void e(byte param0) {
         int var2 = 0;
         if (!(null == ((mm) this).field_y)) {
             id.a(127, ((mm) this).field_y);
@@ -37,14 +37,13 @@ final class mm extends ana {
               } else {
                 var5 = je.a(rt.field_a[20], 256, 192);
                 var5.d(-1);
-                int discarded$3 = -36;
-                ((mm) this).field_y = tw.a(var5);
+                ((mm) this).field_y = tw.a(var5, (byte) -36);
                 break L0;
               }
             }
-            int fieldTemp$4 = ((mm) this).field_F + 1;
+            int fieldTemp$1 = ((mm) this).field_F + 1;
             ((mm) this).field_F = ((mm) this).field_F + 1;
-            if (((mm) this).field_H > fieldTemp$4) {
+            if (((mm) this).field_H > fieldTemp$1) {
               L1: {
                 if (((mm) this).field_F == -25) {
                   var2_ref_uea = new uea(((mm) this).field_q, ((mm) this).field_C.field_s, ((mm) this).field_C.field_u, 16777215);
@@ -69,8 +68,7 @@ final class mm extends ana {
                 return false;
               }
             } else {
-              int discarded$5 = -111;
-              this.e();
+              this.e((byte) -111);
               return true;
             }
           } else {

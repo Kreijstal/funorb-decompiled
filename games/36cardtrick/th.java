@@ -89,8 +89,7 @@ final class th {
           if (g.field_A >= 20) {
             if (ri.b((byte) 64)) {
               if (qb.field_b > 0) {
-                int discarded$4 = 1;
-                if (c.b()) {
+                if (c.b(true)) {
                   return false;
                 } else {
                   return true;
@@ -109,7 +108,7 @@ final class th {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_b = null;
     }
 

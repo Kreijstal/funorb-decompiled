@@ -114,7 +114,7 @@ abstract class cc extends kn {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         cm var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -155,7 +155,7 @@ abstract class cc extends kn {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_M = null;
         field_L = null;
     }

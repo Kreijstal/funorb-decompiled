@@ -134,13 +134,13 @@ final class fj {
         bl.field_F = -2147483648;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;
     }
 
-    final static tf[] a(hg param0) {
+    final static tf[] a(hg param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

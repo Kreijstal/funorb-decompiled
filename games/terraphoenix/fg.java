@@ -9,7 +9,7 @@ final class fg {
     static String field_c;
     static int field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_f = null;
         field_c = null;

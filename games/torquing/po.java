@@ -93,7 +93,7 @@ final class po extends am {
         ((po) this).field_s = param1 >> 4 & 4080;
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_x = null;
         int var1 = 0;
         field_y = null;

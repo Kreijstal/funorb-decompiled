@@ -132,7 +132,7 @@ abstract class sg extends ta {
         return stackIn_9_0 != 0;
     }
 
-    final static void k() {
+    final static void k(int param0) {
         Object var2 = null;
         ed.a((String) null, 0, "");
     }
@@ -165,8 +165,7 @@ abstract class sg extends ta {
             ul.d();
             ((sg) this).a(0, 0, -9111);
             super.a(-param0 - ((sg) this).field_n, param1, param2, -((sg) this).field_s + -param3);
-            int discarded$2 = -105;
-            oc.g();
+            oc.g((byte) -105);
             me.field_f.a(param3 + ((sg) this).field_s, param0 - -((sg) this).field_n, ((sg) this).field_D);
             return;
           } else {
@@ -194,7 +193,7 @@ abstract class sg extends ta {
 
     abstract void a(int param0, int param1, int param2);
 
-    final static boolean c() {
+    final static boolean c(boolean param0) {
         int stackIn_5_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_4_0 = 0;
@@ -278,8 +277,7 @@ abstract class sg extends ta {
                   var5 = 0;
                   L1: while (true) {
                     if (var5 >= var4.length) {
-                      int discarded$2 = 118;
-                      stackOut_18_0 = dh.a(var3[-1 + var3.length]);
+                      stackOut_18_0 = dh.a(var3[-1 + var3.length], (byte) 118);
                       stackIn_19_0 = stackOut_18_0;
                       break L0;
                     } else {
@@ -344,7 +342,7 @@ abstract class sg extends ta {
         return (pj) this;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_F = null;
         field_E = null;
         int var1 = 15;

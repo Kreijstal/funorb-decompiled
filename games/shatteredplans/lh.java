@@ -74,7 +74,7 @@ final class lh extends vd {
         }
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_G = null;
         field_H = null;
         field_u = null;
@@ -85,7 +85,7 @@ final class lh extends vd {
         field_E = null;
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         int fieldTemp$2 = di.field_m + 1;
         di.field_m = di.field_m + 1;
         if (fieldTemp$2 >= 200) {

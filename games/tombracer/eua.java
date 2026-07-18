@@ -463,8 +463,7 @@ final class eua extends jea {
               this.a(0, 60);
               ((eua) this).field_tb = param2;
               ((eua) this).field_Eb = ((eua) this).field_zb[((eua) this).field_tb];
-              int discarded$283 = 122;
-              hj.a(((eua) this).field_Eb);
+              hj.a(((eua) this).field_Eb, (byte) 122);
               ((eua) this).field_Eb.a(12, 116);
               break L0;
             } else {
@@ -495,12 +494,10 @@ final class eua extends jea {
                 opa.a(bta.field_q, (String) null, param1, 32371, wp.field_a, var5);
                 oi.a(ica.field_b, var5, 4, wp.field_a, bta.field_q);
                 f.b(-110);
-                int discarded$284 = -25;
-                jq.c();
+                jq.c((byte) -25);
                 break L0;
               } else {
-                int discarded$285 = 0;
-                kra.a();
+                kra.a(false);
                 f.b(-55);
                 break L0;
               }

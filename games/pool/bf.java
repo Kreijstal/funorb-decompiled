@@ -23,7 +23,7 @@ final class bf {
         return rl.a((byte) -104) + -ob.field_v;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;

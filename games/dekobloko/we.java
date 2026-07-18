@@ -15,22 +15,20 @@ abstract class we {
     final static void a(byte param0) {
         if (!gd.field_f) {
           if (param0 <= 46) {
-            int discarded$8 = we.a(true);
+            int discarded$4 = we.a(true);
             return;
           } else {
             return;
           }
         } else {
-          int discarded$9 = 1;
-          bb.b();
-          int discarded$10 = 74;
-          jd.g();
+          bb.b(true);
+          jd.g(74);
           d.a(true);
           gd.field_f = false;
           if (param0 > 46) {
             return;
           } else {
-            int discarded$11 = we.a(true);
+            int discarded$5 = we.a(true);
             return;
           }
         }
@@ -101,7 +99,7 @@ abstract class we {
 
     abstract java.net.Socket a(int param0) throws IOException;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_g = null;
         field_e = null;
         field_b = null;
@@ -140,8 +138,7 @@ abstract class we {
                     if (wj.field_Jb.field_h >= 0) {
                       var2 = ef.field_T[wj.field_Jb.field_h];
                       if (var2 == 2) {
-                        int discarded$2 = -1209;
-                        ek.g();
+                        ek.g(-1209);
                         break L3;
                       } else {
                         break L3;

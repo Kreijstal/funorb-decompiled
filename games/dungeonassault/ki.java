@@ -20,7 +20,7 @@ final class ki {
         }
     }
 
-    final static void a(int param0, int param1, int param2, String param3) {
+    final static void a(int param0, int param1, int param2, String param3, int param4) {
         RuntimeException var5 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

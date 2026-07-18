@@ -619,7 +619,7 @@ class fj extends rl implements ij {
         }
     }
 
-    public static void n() {
+    public static void n(int param0) {
         int var1 = -106;
         field_lb = null;
         field_hb = null;

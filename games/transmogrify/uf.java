@@ -132,7 +132,7 @@ final class uf {
         field_b = null;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return !dl.field_l.b(-26753);
     }
 

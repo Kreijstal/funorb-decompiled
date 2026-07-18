@@ -47,7 +47,7 @@ final class he extends km {
     km field_tc;
     int field_vc;
 
-    final static mg[] a(mg[] param0) {
+    final static mg[] a(mg[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         mg var3 = null;
@@ -123,7 +123,7 @@ final class he extends km {
         return stackIn_5_0;
     }
 
-    final static String a(String param0, int param1) {
+    final static String a(String param0, int param1, boolean param2) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -266,7 +266,7 @@ final class he extends km {
         return stackIn_39_0;
     }
 
-    final static void i() {
+    final static void i(int param0) {
         wg.field_f = false;
         dh.field_n = 0 == sh.field_qb.g(11132) ? true : false;
     }
@@ -283,7 +283,7 @@ final class he extends km {
         return (int)((he) this).a((byte) 102);
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_Wb = null;
         field_Xb = null;
         field_pc = null;
@@ -296,7 +296,7 @@ final class he extends km {
         return !((he) this).a(1) ? true : false;
     }
 
-    final static boolean h() {
+    final static boolean h(int param0) {
         long var1 = 0L;
         long var3 = 0L;
         int var5 = 0;

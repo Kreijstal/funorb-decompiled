@@ -518,12 +518,10 @@ class am implements fp, io {
             }
             L2: {
               if (!((am) this).field_o) {
-                int discarded$5 = 0;
-                this.a(param1);
+                this.a(param1, false);
                 break L2;
               } else {
-                int discarded$6 = -3;
-                ((ve) (Object) param1.field_x).a(((am) this).field_m, ((am) this).c(-1, param1), ((am) this).field_a, this.b(param1), ((am) this).field_b, ((am) this).a((byte) 26, param1), ((am) this).field_p, 0);
+                ((ve) (Object) param1.field_x).a(((am) this).field_m, ((am) this).c(-1, param1), ((am) this).field_a, this.b(param1, -3), ((am) this).field_b, ((am) this).a((byte) 26, param1), ((am) this).field_p, 0);
                 break L2;
               }
             }
@@ -718,7 +716,7 @@ class am implements fp, io {
         return stackIn_3_0;
     }
 
-    private final void a(ei param0) {
+    private final void a(ei param0, boolean param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -754,8 +752,7 @@ class am implements fp, io {
             }
             L2: {
               var3_int = ((am) this).a((byte) 26, param0);
-              int discarded$1 = -3;
-              var4 = this.b(param0);
+              var4 = this.b(param0, -3);
               var6 = ((am) this).field_p;
               if (var6 != 0) {
                 if (2 == var6) {
@@ -879,7 +876,7 @@ class am implements fp, io {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -1283,9 +1280,8 @@ class am implements fp, io {
                   var9 = var15.a(param2, (byte) -94);
                   var10 = this.a(var9, (byte) 11, param3, param4);
                   var11 = ((am) this).a(param1, param4, (byte) -7) + Math.max(0, var8.field_e);
-                  int discarded$2 = -3;
                   stackOut_1_0 = ((am) this).a(param1, param4, (byte) -7);
-                  stackOut_1_1 = this.b(param4);
+                  stackOut_1_1 = this.b(param4, -3);
                   stackOut_1_2 = var8.field_i;
                   stackIn_3_0 = stackOut_1_0;
                   stackIn_3_1 = stackOut_1_1;
@@ -1327,7 +1323,7 @@ class am implements fp, io {
                 break L3;
               } else {
                 var13 = null;
-                int discarded$3 = this.a((ei) null, 37, -42, (byte) -76);
+                int discarded$1 = this.a((ei) null, 37, -42, (byte) -76);
                 break L3;
               }
             }
@@ -1439,7 +1435,7 @@ class am implements fp, io {
         v.b((byte) -60);
     }
 
-    private final int b(ei param0) {
+    private final int b(ei param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -1498,7 +1494,7 @@ class am implements fp, io {
         return stackIn_1_0;
     }
 
-    private final void a(int param0, int param1, ei param2, int param3, int param4, int param5, int param6) {
+    private final void a(int param0, int param1, ei param2, int param3, int param4, int param5, int param6, byte param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -1527,8 +1523,7 @@ class am implements fp, io {
             L1: {
               wh.a(param2.field_C + param6, param5 + param2.field_D, param2.field_l + param2.field_C + param6, (byte) 85, param2.field_D + param5 + param2.field_y);
               var9_int = ((am) this).a((byte) 26, param2);
-              int discarded$2 = -3;
-              var10 = this.b(param2);
+              var10 = this.b(param2, -3);
               if (!((am) this).field_o) {
                 L2: {
                   var12 = ((am) this).field_p;
@@ -1581,7 +1576,7 @@ class am implements fp, io {
                 ((am) this).field_a.d(((am) this).c(-1, param2), this.a(0, (byte) 11, param6, param2), var11 + this.a(param2, 0, param5, (byte) 92), param1, param4);
                 break L1;
               } else {
-                int discarded$3 = ((am) this).field_a.a(((am) this).c(-1, param2), this.a(0, (byte) 11, param6, param2), this.a(param2, 0, param5, (byte) 70), var9_int, var10, param1, param4, ((am) this).field_m, ((am) this).field_p, ((am) this).field_b);
+                int discarded$1 = ((am) this).field_a.a(((am) this).c(-1, param2), this.a(0, (byte) 11, param6, param2), this.a(param2, 0, param5, (byte) 70), var9_int, var10, param1, param4, ((am) this).field_m, ((am) this).field_p, ((am) this).field_b);
                 break L1;
               }
             }
@@ -1623,8 +1618,7 @@ class am implements fp, io {
     private final void a(byte param0, ei param1, int param2, int param3) {
         try {
             int var5_int = 52;
-            int discarded$0 = -22;
-            this.a(0, ((am) this).field_d, param1, 0, ((am) this).field_l, param3, param2);
+            this.a(0, ((am) this).field_d, param1, 0, ((am) this).field_l, param3, param2, (byte) -22);
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) (Object) runtimeException, "am.M(" + -117 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

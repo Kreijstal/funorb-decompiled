@@ -141,13 +141,11 @@ final class lh extends ej {
                     var4_int = param1;
                     L3: while (true) {
                       if (var5 <= var6.field_t) {
-                        int discarded$2 = -117;
-                        this.a(param0, var5 + var4_int, var6, var4_int, var5);
+                        this.a(param0, var5 + var4_int, var6, var4_int, var5, (byte) -117);
                         var6.field_t = var6.field_t - var5;
                         break L2;
                       } else {
-                        int discarded$3 = -117;
-                        this.a(param0, var5 + var4_int, var6, var4_int, var6.field_t);
+                        this.a(param0, var5 + var4_int, var6, var4_int, var6.field_t, (byte) -117);
                         var5 = var5 - var6.field_t;
                         var4_int = var4_int + var6.field_t;
                         if (!((lh) this).field_n.a(var4_int, param0, var5, 100, var6)) {
@@ -345,7 +343,7 @@ final class lh extends ej {
         }
     }
 
-    private final void a(int[] param0, int param1, hg param2, int param3, int param4) {
+    private final void a(int[] param0, int param1, hg param2, int param3, int param4, byte param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;

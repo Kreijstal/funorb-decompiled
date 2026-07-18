@@ -83,8 +83,7 @@ final class bo extends jl implements bp {
             var4.field_n = 80;
             var4.field_p = (iq) (Object) new o(mf.field_x, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((bo) this).b((byte) -49, var4);
-            int discarded$2 = 0;
-            ((bo) this).field_X = this.a((ko) this, nf.field_i);
+            ((bo) this).field_X = this.a((ko) this, nf.field_i, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -144,16 +143,16 @@ final class bo extends jl implements bp {
         }
     }
 
-    final static void r() {
+    final static void r(int param0) {
         sl.a(0, of.field_b);
     }
 
-    final static boolean q() {
+    final static boolean q(int param0) {
         int var1 = 98;
         return !wh.field_a.b(14) ? true : false;
     }
 
-    private final kg a(ko param0, String param1) {
+    private final kg a(ko param0, String param1, int param2) {
         kg var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -261,14 +260,14 @@ final class bo extends jl implements bp {
         return stackIn_1_0;
     }
 
-    private final void f() {
+    private final void f(boolean param0) {
         if (!((bo) this).field_E) {
             return;
         }
         ((bo) this).field_E = false;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         sl var2 = js.field_f;
         var2.h(4, 255);
         var2.c(1, (byte) -76);
@@ -299,16 +298,14 @@ final class bo extends jl implements bp {
               if (param0 != ((bo) this).field_X) {
                 break L1;
               } else {
-                int discarded$4 = 1;
-                this.f();
+                this.f(true);
                 break L1;
               }
             }
             if (param1 == 6) {
               break L0;
             } else {
-              int discarded$5 = 1;
-              this.f();
+              this.f(true);
               return;
             }
           }

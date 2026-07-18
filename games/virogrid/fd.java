@@ -35,7 +35,7 @@ class fd extends fi implements ja {
         return var2;
     }
 
-    private final void a(Hashtable param0, StringBuilder param1, int param2) {
+    private final void a(Hashtable param0, StringBuilder param1, int param2, int param3) {
         ma var5 = null;
         RuntimeException var5_ref = null;
         fi var6 = null;
@@ -202,8 +202,7 @@ class fd extends fi implements ja {
             L2: {
               if (((fd) this).a(param0, param2, 34, param3)) {
                 ((fd) this).a(param2, param0, (byte) 127, param3);
-                int discarded$2 = 54;
-                this.a(param0, param3, param2);
+                this.a(param0, param3, param2, 54);
                 break L2;
               } else {
                 break L2;
@@ -271,7 +270,7 @@ class fd extends fi implements ja {
         return stackIn_6_0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_x = null;
         field_B = null;
         field_y = null;

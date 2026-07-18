@@ -271,8 +271,7 @@ final class w extends uc {
               }
             }
             ((w) this).field_x.a(param2, param3, param0, (byte) 122, (w) this);
-            int discarded$1 = 92;
-            ia.a();
+            ia.a((byte) 92);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -365,10 +365,8 @@ final class ira extends osa {
               L12: {
                 if (era.field_c) {
                   cv.o((byte) -119);
-                  int discarded$2 = -125;
-                  ig.a();
-                  int discarded$3 = 0;
-                  ub.b();
+                  ig.a(-125);
+                  ub.b(0);
                   era.field_c = false;
                   break L12;
                 } else {
@@ -739,7 +737,7 @@ final class ira extends osa {
         }
     }
 
-    public static void j() {
+    public static void j(byte param0) {
         field_t = null;
     }
 

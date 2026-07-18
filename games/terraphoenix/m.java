@@ -90,7 +90,7 @@ final class m {
         return param0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_e = null;
         field_a = null;
@@ -98,7 +98,7 @@ final class m {
         field_b = null;
     }
 
-    final static void a(java.applet.Applet param0, boolean param1, String param2) {
+    final static void a(java.applet.Applet param0, boolean param1, String param2, int param3) {
         try {
             java.net.MalformedURLException var4 = null;
             RuntimeException var4_ref = null;
@@ -137,8 +137,7 @@ final class m {
               L0: {
                 L1: {
                   if (he.field_o.startsWith("win")) {
-                    int discarded$6 = 0;
-                    if (!ue.a(param2)) {
+                    if (!ue.a(param2, 0)) {
                       break L1;
                     } else {
                       return;

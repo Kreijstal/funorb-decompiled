@@ -18,15 +18,13 @@ final class qf implements Runnable {
         try {
             var3 = (fk) (Object) tf.field_a.b(-92);
             while (var3 != null) {
-                int discarded$0 = 5;
-                hf.a(var3, 58);
+                hf.a(var3, 58, 5);
                 var3 = (fk) (Object) tf.field_a.b((byte) 109);
             }
             if (param0 != -125) {
                 qf.a((byte) 102);
             }
-            int discarded$1 = 1;
-            gg.field_f = ee.a(5, 0, (byte) -124);
+            gg.field_f = ee.a(5, 0, (byte) -124, 1);
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) (Object) runtimeException, "qf.B(" + param0 + ')');
         }
@@ -64,7 +62,7 @@ final class qf implements Runnable {
         ((qf) this).field_c = false;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_g = null;
         field_f = null;

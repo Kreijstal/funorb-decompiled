@@ -21,7 +21,7 @@ final class jn extends fb {
         }
     }
 
-    final static void a(double[] param0) {
+    final static void a(double[] param0, int param1, int param2) {
         double var3_double = param0[0];
         double var5 = param0[1];
         double var7 = param0[2];
@@ -217,16 +217,14 @@ final class jn extends fb {
                     tl.a((byte) -67, ca.field_a);
                     wb.b();
                     var20.b(112, 144, var20.field_v << 4, var20.field_u << 4, -((jn) this).field_N << 10, 4096);
-                    int discarded$11 = 28773;
-                    fd.a();
+                    fd.a(28773);
                     ca.field_a.d(var5 - var20.field_v, var6 - var20.field_u, 256);
                     return;
                   } else {
                     ca.field_a = new km(var9, var10);
                     tl.a((byte) -67, ca.field_a);
                     var20.b(112, 144, var20.field_v << 4, var20.field_u << 4, -((jn) this).field_N << 10, 4096);
-                    int discarded$12 = 28773;
-                    fd.a();
+                    fd.a(28773);
                     ca.field_a.d(var5 - var20.field_v, var6 - var20.field_u, 256);
                     return;
                   }
@@ -234,8 +232,7 @@ final class jn extends fb {
                   ca.field_a = new km(var9, var10);
                   tl.a((byte) -67, ca.field_a);
                   var20.b(112, 144, var20.field_v << 4, var20.field_u << 4, -((jn) this).field_N << 10, 4096);
-                  int discarded$13 = 28773;
-                  fd.a();
+                  fd.a(28773);
                   ca.field_a.d(var5 - var20.field_v, var6 - var20.field_u, 256);
                   return;
                 }
@@ -243,8 +240,7 @@ final class jn extends fb {
                 ca.field_a = new km(var9, var10);
                 tl.a((byte) -67, ca.field_a);
                 var20.b(112, 144, var20.field_v << 4, var20.field_u << 4, -((jn) this).field_N << 10, 4096);
-                int discarded$14 = 28773;
-                fd.a();
+                fd.a(28773);
                 ca.field_a.d(var5 - var20.field_v, var6 - var20.field_u, 256);
                 return;
               }
@@ -271,8 +267,7 @@ final class jn extends fb {
                   ca.field_a = new km(var9, var10);
                   tl.a((byte) -67, ca.field_a);
                   var19.b(112, 144, var19.field_v << 4, var19.field_u << 4, -((jn) this).field_N << 10, 4096);
-                  int discarded$15 = 28773;
-                  fd.a();
+                  fd.a(28773);
                   ca.field_a.d(var5 - var19.field_v, var6 - var19.field_u, 256);
                   return;
                 } else {
@@ -295,8 +290,7 @@ final class jn extends fb {
                     break L0;
                   }
                   var19.b(112, 144, var19.field_v << 4, var19.field_u << 4, -((jn) this).field_N << 10, 4096);
-                  int discarded$16 = 28773;
-                  fd.a();
+                  fd.a(28773);
                   ca.field_a.d(var5 - var19.field_v, var6 - var19.field_u, 256);
                   return;
                 }
@@ -321,16 +315,14 @@ final class jn extends fb {
                     tl.a((byte) -67, ca.field_a);
                     wb.b();
                     var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((jn) this).field_N << 10, 4096);
-                    int discarded$17 = 28773;
-                    fd.a();
+                    fd.a(28773);
                     ca.field_a.d(var5 - var16.field_v, var6 - var16.field_u, 256);
                     return;
                   } else {
                     ca.field_a = new km(var9, var10);
                     tl.a((byte) -67, ca.field_a);
                     var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((jn) this).field_N << 10, 4096);
-                    int discarded$18 = 28773;
-                    fd.a();
+                    fd.a(28773);
                     ca.field_a.d(var5 - var16.field_v, var6 - var16.field_u, 256);
                     return;
                   }
@@ -338,8 +330,7 @@ final class jn extends fb {
                   ca.field_a = new km(var9, var10);
                   tl.a((byte) -67, ca.field_a);
                   var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((jn) this).field_N << 10, 4096);
-                  int discarded$19 = 28773;
-                  fd.a();
+                  fd.a(28773);
                   ca.field_a.d(var5 - var16.field_v, var6 - var16.field_u, 256);
                   return;
                 }
@@ -347,8 +338,7 @@ final class jn extends fb {
                 ca.field_a = new km(var9, var10);
                 tl.a((byte) -67, ca.field_a);
                 var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((jn) this).field_N << 10, 4096);
-                int discarded$20 = 28773;
-                fd.a();
+                fd.a(28773);
                 ca.field_a.d(var5 - var16.field_v, var6 - var16.field_u, 256);
                 return;
               }
@@ -394,8 +384,7 @@ final class jn extends fb {
                   break L2;
                 }
                 var15.b(112, 144, var15.field_v << 4, var15.field_u << 4, -((jn) this).field_N << 10, 4096);
-                int discarded$21 = 28773;
-                fd.a();
+                fd.a(28773);
                 ca.field_a.d(var5 - var15.field_v, var6 - var15.field_u, 256);
                 return;
               }
@@ -641,11 +630,11 @@ final class jn extends fb {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return of.a(bh.i(81), (byte) 95);
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_P = null;
         field_M = null;
     }

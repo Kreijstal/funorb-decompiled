@@ -15,7 +15,7 @@ final class j extends li {
         throw new Error();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_p = null;
         field_s = null;
         field_n = null;

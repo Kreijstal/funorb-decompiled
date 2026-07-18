@@ -685,8 +685,7 @@ final class bn extends ar {
     }
 
     bn(v param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (mh) (Object) fw.a());
-        int discarded$0 = 0;
+        super(param1, (mh) (Object) fw.a(0));
         try {
             ((bn) this).field_U = param1;
             ((bn) this).field_Q = param0;
@@ -696,7 +695,7 @@ final class bn extends ar {
         }
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_O = null;
         int var1 = 83;
     }

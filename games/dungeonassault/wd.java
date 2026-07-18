@@ -38,8 +38,7 @@ final class wd {
               ((wd) this).field_c = ((wd) this).field_c - param1;
               L1: while (true) {
                 if (((wd) this).field_c < 0) {
-                  int discarded$2 = 0;
-                  if (!this.b()) {
+                  if (!this.b(0)) {
                     return;
                   } else {
                     continue L1;
@@ -106,7 +105,7 @@ final class wd {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         if (((wd) this).field_n == null) {
           ((wd) this).field_g = null;
           return;
@@ -191,8 +190,7 @@ final class wd {
                 ((wd) this).field_b = ((wd) this).field_n.field_j[0] * ji.a(320, false, 192) >>> 8;
                 ((wd) this).field_c = ((wd) this).field_b;
                 ((wd) this).field_k = rl.field_f;
-                int discarded$2 = 28;
-                this.a();
+                this.a((byte) 28);
                 break L1;
               } else {
                 ((wd) this).field_k = ga.field_n;
@@ -238,7 +236,7 @@ final class wd {
         }
     }
 
-    private final boolean b() {
+    private final boolean b(int param0) {
         ((wd) this).field_m = ((wd) this).field_m + 1;
         if (((wd) this).field_n.field_c <= ((wd) this).field_m) {
           if (((wd) this).field_a != rl.field_b) {
@@ -256,16 +254,14 @@ final class wd {
             wd.a(-49);
             ((wd) this).field_b = ((wd) this).field_n.field_j[((wd) this).field_m] * ji.a(320, false, 192) >>> 8;
             ((wd) this).field_c = ((wd) this).field_c + ((wd) this).field_b;
-            int discarded$2 = 28;
-            this.a();
+            this.a((byte) 28);
             return true;
           }
         } else {
           wd.a(-49);
           ((wd) this).field_b = ((wd) this).field_n.field_j[((wd) this).field_m] * ji.a(320, false, 192) >>> 8;
           ((wd) this).field_c = ((wd) this).field_c + ((wd) this).field_b;
-          int discarded$3 = 28;
-          this.a();
+          this.a((byte) 28);
           return true;
         }
     }

@@ -23,10 +23,8 @@ final class oa extends dr {
         field_F = null;
     }
 
-    final static void h() {
-        int discarded$0 = -113;
-        int discarded$1 = 1;
-        np.a();
+    final static void h(int param0) {
+        np.a(true, (byte) -113);
     }
 
     final static void a(int param0, um param1) {
@@ -71,8 +69,7 @@ final class oa extends dr {
                 break L1;
               }
             }
-            int discarded$2 = -120;
-            stackOut_2_0 = new nd((Object) (Object) ti.b());
+            stackOut_2_0 = new nd((Object) (Object) ti.b((byte) -120));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

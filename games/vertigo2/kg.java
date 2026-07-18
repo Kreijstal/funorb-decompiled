@@ -22,8 +22,7 @@ final class kg extends ji {
         int[] var4 = ((kg) this).field_x.a(param0, (byte) -74);
         int[] var3 = var4;
         if (((kg) this).field_x.field_i) {
-            int discarded$0 = -107;
-            this.a(var4, param0);
+            this.a(var4, param0, -107);
         }
         return var4;
     }
@@ -69,11 +68,10 @@ final class kg extends ji {
         int var3 = var2 * (-tc.field_b + ce.field_b) / var1 + tc.field_b;
         td.field_c.a(82, 640, 120, var3, ml.field_w);
         int var4 = 65 % ((param0 - -14) / 47);
-        int discarded$0 = 5;
-        rg.a(640, r.field_j, 0, ce.field_b - 24, -4803, ia.field_G);
+        rg.a(640, r.field_j, 0, ce.field_b - 24, -4803, ia.field_G, 5);
     }
 
-    private final void a(int[] param0, int param1) {
+    private final void a(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -319,7 +317,7 @@ final class kg extends ji {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_G = null;
         field_I = null;
     }

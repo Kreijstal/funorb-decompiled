@@ -8,7 +8,7 @@ final class te {
     static String field_c;
     static byte[] field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
         field_b = null;

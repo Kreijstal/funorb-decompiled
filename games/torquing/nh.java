@@ -12,7 +12,7 @@ final class nh extends q {
     static String field_o;
     int[] field_r;
 
-    final static void a(vh param0, int param1, fj param2) {
+    final static void a(vh param0, int param1, fj param2, byte param3) {
         try {
             RuntimeException var4 = null;
             int var5 = 0;
@@ -289,7 +289,7 @@ final class nh extends q {
         field_j = null;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         return null != ki.field_D && ki.field_D.c((byte) -19);
     }
 

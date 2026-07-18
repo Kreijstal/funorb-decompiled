@@ -51,8 +51,7 @@ abstract class hn implements ml {
           L0: {
             var3_int = param2.field_m;
             var5 = (CharSequence) (Object) param1;
-            int discarded$2 = 353;
-            var4 = gk.b(var5);
+            var4 = gk.b(var5, 353);
             param2.a((byte) 81, var4.length);
             param2.field_m = param2.field_m + kp.field_v.a(param2.field_m, var4.length, param2.field_k, 0, var4, false);
             stackOut_0_0 = -var3_int + param2.field_m;
@@ -206,8 +205,7 @@ abstract class hn implements ml {
                     break L3;
                   }
                 }
-                int discarded$3 = 5731;
-                jc.field_f = pk.a(stackIn_5_0 != 0);
+                jc.field_f = pk.a(stackIn_5_0 != 0, 5731);
                 ro.a((String[]) null, param0 ^ -99);
                 break L1;
               }
@@ -599,8 +597,7 @@ abstract class hn implements ml {
                 ra.field_e.a(10, -10 + (-10 + (-4 + (-120 + t.field_d))), t.field_j + -360 >> 1, 256, 360);
                 ih.field_g.a(0, 24, 0, 256, ra.field_e.field_K);
                 kh.field_a.a(24, -24 + ra.field_e.field_nb, 0, 256, ra.field_e.field_K);
-                int discarded$1 = 3;
-                kh.field_a.field_zb = op.a(8421504, 16, 11579568, kh.field_a.field_nb, 1);
+                kh.field_a.field_zb = op.a(8421504, 16, 11579568, kh.field_a.field_nb, 1, 3);
                 oc.field_O.a(5, -2 + kh.field_a.field_nb - 34, 5, 256, kh.field_a.field_K + -10);
                 hb.field_eb.a(-24 + kh.field_a.field_nb - 5, 24, (-80 + kh.field_a.field_K) / 2, 256, 80);
                 mi.b(false);
@@ -788,7 +785,7 @@ abstract class hn implements ml {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = -29;
         field_e = null;
         field_b = null;
@@ -833,8 +830,7 @@ abstract class hn implements ml {
     final static boolean a(int param0, int param1, int param2) {
         int var3 = bn.field_S != null ? 1 : 0;
         if (9 == ke.field_a) {
-            int discarded$12 = 500;
-            if (!(!cf.a(vi.field_F, up.field_h, um.field_o, hm.field_b))) {
+            if (!(!cf.a(vi.field_F, up.field_h, um.field_o, hm.field_b, 500))) {
                 if (hm.field_b != 2) {
                     if (!(var3 == 0)) {
                         return false;
@@ -847,8 +843,7 @@ abstract class hn implements ml {
             if (!(var3 == 0)) {
                 return false;
             }
-            int discarded$13 = 1;
-            ak.c();
+            ak.c(true);
             return true;
         }
         if (11 == ke.field_a) {

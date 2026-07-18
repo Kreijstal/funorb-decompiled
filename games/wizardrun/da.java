@@ -193,12 +193,23 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
                     if (var5_ref.regionMatches(var6, "/l=", 0, 3)) {
                       var7_int = var5_ref.indexOf('/', var6 - -1);
                       if (var7_int >= 0) {
-                        if (param1 < 0) {
-                          var6 = var7_int;
+                        L2: {
+                          if (param1 < 0) {
+                            break L2;
+                          } else {
+                            var5_ref = var5_ref.substring(0, var6) + var5_ref.substring(var7_int);
+                            if (var9 == 0) {
+                              continue L0;
+                            } else {
+                              break L2;
+                            }
+                          }
+                        }
+                        var6 = var7_int;
+                        if (var9 == 0) {
                           continue L0;
                         } else {
-                          var5_ref = var5_ref.substring(0, var6) + var5_ref.substring(var7_int);
-                          continue L0;
+                          break L1;
                         }
                       } else {
                         break L1;
@@ -207,113 +218,149 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
                       break L1;
                     }
                   }
-                  L2: {
+                  L3: {
                     if (!var5_ref.regionMatches(var6, "/a=", 0, 3)) {
-                      break L2;
+                      break L3;
                     } else {
                       var7_int = var5_ref.indexOf('/', 1 + var6);
                       if (var7_int < 0) {
-                        break L2;
+                        break L3;
                       } else {
                         var6 = var7_int;
-                        continue L0;
-                      }
-                    }
-                  }
-                  L3: {
-                    if (var5_ref.regionMatches(var6, "/p=", 0, 3)) {
-                      var7_int = var5_ref.indexOf('/', 1 + var6);
-                      if (var7_int >= 0) {
-                        if (param4 == null) {
-                          var6 = var7_int;
+                        if (var9 == 0) {
                           continue L0;
                         } else {
-                          var5_ref = var5_ref.substring(0, var6) + var5_ref.substring(var7_int);
-                          continue L0;
+                          break L3;
                         }
-                      } else {
-                        break L3;
                       }
-                    } else {
-                      break L3;
                     }
                   }
                   L4: {
-                    L5: {
-                      if (var5_ref.regionMatches(var6, "/s=", 0, 3)) {
-                        break L5;
-                      } else {
-                        if (!var5_ref.regionMatches(var6, "/c=", 0, 3)) {
-                          break L4;
-                        } else {
-                          break L5;
+                    if (var5_ref.regionMatches(var6, "/p=", 0, 3)) {
+                      var7_int = var5_ref.indexOf('/', 1 + var6);
+                      if (var7_int >= 0) {
+                        L5: {
+                          if (param4 == null) {
+                            break L5;
+                          } else {
+                            var5_ref = var5_ref.substring(0, var6) + var5_ref.substring(var7_int);
+                            if (var9 == 0) {
+                              continue L0;
+                            } else {
+                              break L5;
+                            }
+                          }
                         }
-                      }
-                    }
-                    var7_int = var5_ref.indexOf('/', 1 + var6);
-                    if (var7_int < 0) {
-                      break L4;
-                    } else {
-                      if (null != param2) {
-                        var5_ref = var5_ref.substring(0, var6) + var5_ref.substring(var7_int);
-                        continue L0;
-                      } else {
                         var6 = var7_int;
-                        continue L0;
+                        if (var9 == 0) {
+                          continue L0;
+                        } else {
+                          break L4;
+                        }
+                      } else {
+                        break L4;
                       }
+                    } else {
+                      break L4;
                     }
                   }
                   L6: {
+                    L7: {
+                      if (var5_ref.regionMatches(var6, "/s=", 0, 3)) {
+                        break L7;
+                      } else {
+                        if (!var5_ref.regionMatches(var6, "/c=", 0, 3)) {
+                          break L6;
+                        } else {
+                          break L7;
+                        }
+                      }
+                    }
+                    L8: {
+                      var7_int = var5_ref.indexOf('/', 1 + var6);
+                      if (var7_int < 0) {
+                        break L8;
+                      } else {
+                        L9: {
+                          if (null != param2) {
+                            break L9;
+                          } else {
+                            var6 = var7_int;
+                            if (var9 == 0) {
+                              continue L0;
+                            } else {
+                              break L9;
+                            }
+                          }
+                        }
+                        var5_ref = var5_ref.substring(0, var6) + var5_ref.substring(var7_int);
+                        if (var9 == 0) {
+                          continue L0;
+                        } else {
+                          break L8;
+                        }
+                      }
+                    }
+                    break L6;
+                  }
+                  L10: {
                     var7 = new StringBuilder(var6);
                     StringBuilder discarded$9 = var7.append(var5_ref.substring(0, var6));
                     if (param1 > 0) {
                       StringBuilder discarded$10 = var7.append("/l=");
                       StringBuilder discarded$11 = var7.append(Integer.toString(param1));
-                      break L6;
+                      break L10;
                     } else {
-                      break L6;
+                      break L10;
                     }
                   }
-                  L7: {
+                  L11: {
                     if (null == param4) {
-                      break L7;
+                      break L11;
                     } else {
                       if (param4.length() <= 0) {
-                        break L7;
+                        break L11;
                       } else {
                         StringBuilder discarded$12 = var7.append("/p=");
                         StringBuilder discarded$13 = var7.append(param4);
-                        break L7;
+                        break L11;
                       }
                     }
                   }
-                  L8: {
+                  L12: {
                     if (param2 == null) {
-                      break L8;
+                      break L12;
                     } else {
                       if (param2.length() <= 0) {
-                        break L8;
+                        break L12;
                       } else {
                         StringBuilder discarded$14 = var7.append("/s=");
                         StringBuilder discarded$15 = var7.append(param2);
-                        break L8;
+                        break L12;
                       }
                     }
                   }
-                  L9: {
-                    if (var5_ref.length() > var6) {
-                      StringBuilder discarded$16 = var7.append(var5_ref.substring(var6, var5_ref.length()));
-                      break L9;
-                    } else {
-                      StringBuilder discarded$17 = var7.append('/');
-                      break L9;
+                  L13: {
+                    L14: {
+                      if (var5_ref.length() > var6) {
+                        break L14;
+                      } else {
+                        StringBuilder discarded$16 = var7.append('/');
+                        if (var9 == 0) {
+                          break L13;
+                        } else {
+                          break L14;
+                        }
+                      }
                     }
+                    StringBuilder discarded$17 = var7.append(var5_ref.substring(var6, var5_ref.length()));
+                    break L13;
                   }
                   try {
-                    L10: {
+                    L15: {
                       stackOut_57_0 = new java.net.URL(param3, var7.toString());
                       stackIn_58_0 = stackOut_57_0;
-                      break L10;
+                      break L15;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
@@ -332,7 +379,7 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L11: {
+              L16: {
                 var5 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_61_0 = (RuntimeException) var5;
                 stackOut_61_1 = new StringBuilder().append("da.C(").append(param0).append(',').append(param1).append(',');
@@ -347,7 +394,7 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
                   stackIn_65_0 = stackOut_64_0;
                   stackIn_65_1 = stackOut_64_1;
                   stackIn_65_2 = stackOut_64_2;
-                  break L11;
+                  break L16;
                 } else {
                   stackOut_62_0 = (RuntimeException) (Object) stackIn_62_0;
                   stackOut_62_1 = (StringBuilder) (Object) stackIn_62_1;
@@ -355,10 +402,10 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
                   stackIn_65_0 = stackOut_62_0;
                   stackIn_65_1 = stackOut_62_1;
                   stackIn_65_2 = stackOut_62_2;
-                  break L11;
+                  break L16;
                 }
               }
-              L12: {
+              L17: {
                 stackOut_65_0 = (RuntimeException) (Object) stackIn_65_0;
                 stackOut_65_1 = ((StringBuilder) (Object) stackIn_65_1).append(stackIn_65_2).append(',');
                 stackIn_68_0 = stackOut_65_0;
@@ -372,7 +419,7 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
                   stackIn_69_0 = stackOut_68_0;
                   stackIn_69_1 = stackOut_68_1;
                   stackIn_69_2 = stackOut_68_2;
-                  break L12;
+                  break L17;
                 } else {
                   stackOut_66_0 = (RuntimeException) (Object) stackIn_66_0;
                   stackOut_66_1 = (StringBuilder) (Object) stackIn_66_1;
@@ -380,10 +427,10 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
                   stackIn_69_0 = stackOut_66_0;
                   stackIn_69_1 = stackOut_66_1;
                   stackIn_69_2 = stackOut_66_2;
-                  break L12;
+                  break L17;
                 }
               }
-              L13: {
+              L18: {
                 stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
                 stackOut_69_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_69_2).append(',');
                 stackIn_72_0 = stackOut_69_0;
@@ -397,7 +444,7 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
                   stackIn_73_0 = stackOut_72_0;
                   stackIn_73_1 = stackOut_72_1;
                   stackIn_73_2 = stackOut_72_2;
-                  break L13;
+                  break L18;
                 } else {
                   stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
                   stackOut_70_1 = (StringBuilder) (Object) stackIn_70_1;
@@ -405,7 +452,7 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
                   stackIn_73_0 = stackOut_70_0;
                   stackIn_73_1 = stackOut_70_1;
                   stackIn_73_2 = stackOut_70_2;
-                  break L13;
+                  break L18;
                 }
               }
               throw bd.a((Throwable) (Object) stackIn_73_0, stackIn_73_2 + ')');
@@ -517,8 +564,7 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
               } else {
                 if (!mk.field_d) {
                   lc.field_b = d.a((byte) 53);
-                  int discarded$2 = 0;
-                  tg.a(5000L);
+                  tg.a(5000L, false);
                   qf.field_m = null;
                   this.b(77, false);
                   break L0;
@@ -582,38 +628,66 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
               }
             }
             L3: {
-              if (fl.field_H == null) {
-                if (he.field_u != null) {
-                  var2 = (Object) (Object) he.field_u;
-                  break L3;
+              L4: {
+                if (fl.field_H == null) {
+                  break L4;
                 } else {
-                  if (null != fl.field_F) {
-                    var2 = (Object) (Object) fl.field_F;
+                  var2 = (Object) (Object) fl.field_H;
+                  if (var4 == 0) {
                     break L3;
                   } else {
-                    var2 = (Object) (Object) ca.field_c;
-                    break L3;
+                    break L4;
                   }
                 }
-              } else {
-                var2 = (Object) (Object) fl.field_H;
-                break L3;
               }
+              L5: {
+                if (he.field_u != null) {
+                  break L5;
+                } else {
+                  L6: {
+                    if (null != fl.field_F) {
+                      break L6;
+                    } else {
+                      var2 = (Object) (Object) ca.field_c;
+                      if (var4 == 0) {
+                        break L3;
+                      } else {
+                        break L6;
+                      }
+                    }
+                  }
+                  var2 = (Object) (Object) fl.field_F;
+                  if (var4 == 0) {
+                    break L3;
+                  } else {
+                    break L5;
+                  }
+                }
+              }
+              var2 = (Object) (Object) he.field_u;
+              break L3;
             }
-            L4: {
-              ((java.awt.Container) var2).setLayout((java.awt.LayoutManager) null);
-              wizardrun.field_G = (java.awt.Canvas) (Object) new gd((java.awt.Component) this);
-              java.awt.Component discarded$1 = ((java.awt.Container) var2).add((java.awt.Component) (Object) wizardrun.field_G);
-              wizardrun.field_G.setSize(rg.field_R, rg.field_P);
-              wizardrun.field_G.setVisible(true);
-              if (var2 == (Object) (Object) he.field_u) {
-                var3 = he.field_u.getInsets();
-                wizardrun.field_G.setLocation(var3.left - -ph.field_o, hb.field_n + var3.top);
-                break L4;
-              } else {
-                wizardrun.field_G.setLocation(ph.field_o, hb.field_n);
-                break L4;
+            L7: {
+              L8: {
+                ((java.awt.Container) var2).setLayout((java.awt.LayoutManager) null);
+                wizardrun.field_G = (java.awt.Canvas) (Object) new gd((java.awt.Component) this);
+                java.awt.Component discarded$2 = ((java.awt.Container) var2).add((java.awt.Component) (Object) wizardrun.field_G);
+                wizardrun.field_G.setSize(rg.field_R, rg.field_P);
+                wizardrun.field_G.setVisible(true);
+                if (var2 == (Object) (Object) he.field_u) {
+                  break L8;
+                } else {
+                  wizardrun.field_G.setLocation(ph.field_o, hb.field_n);
+                  if (var4 == 0) {
+                    break L7;
+                  } else {
+                    break L8;
+                  }
+                }
               }
+              var3 = he.field_u.getInsets();
+              wizardrun.field_G.setLocation(var3.left - -ph.field_o, hb.field_n + var3.top);
+              break L7;
             }
             wizardrun.field_G.addFocusListener((java.awt.event.FocusListener) this);
             wizardrun.field_G.requestFocus();
@@ -655,11 +729,13 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
                       break L2;
                     } else {
                       ei.field_k = param1;
-                      int discarded$148 = 2;
-                      int discarded$149 = 65533;
-                      fa.field_a = mg.a(wg.field_b, new int[1], ic.field_a, 3, (byte) 99, me.field_f, qh.field_g + hi.field_c);
+                      fa.field_a = mg.a(wg.field_b, new int[1], ic.field_a, 3, (byte) 99, me.field_f, qh.field_g + hi.field_c, 65533, 2);
                       th.field_g = ff.a(10, 2, (byte) 59, 3, 1);
-                      break L1;
+                      if (wizardrun.field_H == 0) {
+                        break L1;
+                      } else {
+                        break L2;
+                      }
                     }
                   }
                 }
@@ -685,54 +761,69 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
+        RuntimeException runtimeException = null;
         long var2_long = 0L;
-        RuntimeException var2 = null;
         long var4 = 0L;
         java.awt.Insets var6 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            var2_long = d.a((byte) 22);
-            var4 = pc.field_k[jk.field_e];
-            pc.field_k[jk.field_e] = var2_long;
             L1: {
-              if (0L == var4) {
+              var2_long = d.a((byte) 22);
+              var4 = pc.field_k[jk.field_e];
+              pc.field_k[jk.field_e] = var2_long;
+              if (param0 == -107) {
                 break L1;
               } else {
-                if (var4 >= var2_long) {
-                  break L1;
-                } else {
-                  break L1;
-                }
+                java.net.URL discarded$4 = da.a(-58, 96, (String) null, (java.net.URL) null, (String) null);
+                break L1;
               }
             }
             L2: {
-              jk.field_e = 1 + jk.field_e & 31;
-              int fieldTemp$1 = kk.field_zb;
-              kk.field_zb = kk.field_zb + 1;
-              if (fieldTemp$1 > 50) {
-                L3: {
-                  pk.field_o = true;
-                  kk.field_zb = kk.field_zb - 50;
-                  wizardrun.field_G.setSize(rg.field_R, rg.field_P);
-                  wizardrun.field_G.setVisible(true);
-                  if (null == he.field_u) {
-                    break L3;
-                  } else {
-                    if (null == fl.field_H) {
-                      var6 = he.field_u.getInsets();
-                      wizardrun.field_G.setLocation(ph.field_o + var6.left, hb.field_n + var6.top);
-                      break L2;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                wizardrun.field_G.setLocation(ph.field_o, hb.field_n);
+              if (0L == var4) {
                 break L2;
               } else {
-                break L2;
+                if (var4 >= var2_long) {
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+            }
+            L3: {
+              jk.field_e = 1 + jk.field_e & 31;
+              int fieldTemp$5 = kk.field_zb;
+              kk.field_zb = kk.field_zb + 1;
+              if (fieldTemp$5 > 50) {
+                L4: {
+                  L5: {
+                    pk.field_o = true;
+                    kk.field_zb = kk.field_zb - 50;
+                    wizardrun.field_G.setSize(rg.field_R, rg.field_P);
+                    wizardrun.field_G.setVisible(true);
+                    if (null == he.field_u) {
+                      break L5;
+                    } else {
+                      if (null == fl.field_H) {
+                        break L4;
+                      } else {
+                        break L5;
+                      }
+                    }
+                  }
+                  wizardrun.field_G.setLocation(ph.field_o, hb.field_n);
+                  if (wizardrun.field_H == 0) {
+                    break L3;
+                  } else {
+                    break L4;
+                  }
+                }
+                var6 = he.field_u.getInsets();
+                wizardrun.field_G.setLocation(ph.field_o + var6.left, hb.field_n + var6.top);
+                break L3;
+              } else {
+                break L3;
               }
             }
             ((da) this).f(-103);
@@ -740,8 +831,8 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var2, "da.D(" + -107 + ')');
+          runtimeException = decompiledCaughtException;
+          throw bd.a((Throwable) (Object) runtimeException, "da.D(" + param0 + ')');
         }
     }
 
@@ -858,7 +949,7 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    private final void c() {
+    private final void c(int param0) {
         RuntimeException runtimeException = null;
         long var2_long = 0L;
         long var4 = 0L;
@@ -872,7 +963,7 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
               var4 = ql.field_b[oj.field_c];
               ql.field_b[oj.field_c] = var2_long;
               oj.field_c = 31 & oj.field_c + 1;
-              if (var4 == 0L) {
+              if (var4 == (long)param0) {
                 break L1;
               } else {
                 if (~var4 > ~var2_long) {
@@ -895,7 +986,7 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw bd.a((Throwable) (Object) runtimeException, "da.H(" + 0 + ')');
+          throw bd.a((Throwable) (Object) runtimeException, "da.H(" + param0 + ')');
         }
     }
 
@@ -1056,11 +1147,23 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
             int var3 = 0;
             String var4 = null;
             int var5 = 0;
-            boolean stackIn_69_0 = false;
-            int stackIn_103_0 = 0;
+            boolean stackIn_52_0 = false;
+            boolean stackIn_70_0 = false;
+            int stackIn_75_0 = 0;
+            int stackIn_75_1 = 0;
+            int stackIn_86_0 = 0;
+            int stackIn_86_1 = 0;
+            int stackIn_102_0 = 0;
+            int stackIn_107_0 = 0;
             Throwable decompiledCaughtException = null;
-            boolean stackOut_67_0 = false;
+            boolean stackOut_51_0 = false;
+            boolean stackOut_68_0 = false;
+            int stackOut_74_0 = 0;
+            int stackOut_74_1 = 0;
+            int stackOut_85_0 = 0;
+            int stackOut_85_1 = 0;
             int stackOut_101_0 = 0;
+            int stackOut_105_0 = 0;
             var5 = wizardrun.field_H;
             try {
               L0: {
@@ -1068,84 +1171,60 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
                   L1: {
                     L2: {
                       L3: {
-                        if (vh.field_p != null) {
-                          L4: {
-                            var1 = (Object) (Object) vh.field_p.toLowerCase();
-                            if (((String) var1).indexOf("sun") != -1) {
-                              break L4;
-                            } else {
-                              if (((String) var1).indexOf("apple") != -1) {
-                                break L4;
-                              } else {
-                                break L3;
-                              }
-                            }
-                          }
+                        L4: {
                           L5: {
-                            var2 = vh.field_b;
-                            if (var2.equals((Object) (Object) "1.1")) {
-                              break L5;
-                            } else {
-                              if (var2.startsWith("1.1.")) {
-                                break L5;
-                              } else {
-                                if (var2.equals((Object) (Object) "1.2")) {
-                                  break L5;
+                            if (vh.field_p != null) {
+                              L6: {
+                                var1 = (Object) (Object) vh.field_p.toLowerCase();
+                                if (((String) var1).indexOf("sun") != -1) {
+                                  break L6;
                                 } else {
-                                  if (var2.startsWith("1.2.")) {
-                                    break L5;
+                                  if (((String) var1).indexOf("apple") != -1) {
+                                    break L6;
                                   } else {
-                                    if (var2.equals((Object) (Object) "1.3")) {
-                                      break L5;
+                                    break L5;
+                                  }
+                                }
+                              }
+                              L7: {
+                                L8: {
+                                  var2 = vh.field_b;
+                                  if (var2.equals((Object) (Object) "1.1")) {
+                                    break L8;
+                                  } else {
+                                    if (var2.startsWith("1.1.")) {
+                                      break L8;
                                     } else {
-                                      if (var2.startsWith("1.3.")) {
-                                        break L5;
+                                      if (var2.equals((Object) (Object) "1.2")) {
+                                        break L8;
                                       } else {
-                                        if (var2.equals((Object) (Object) "1.4")) {
-                                          break L5;
+                                        if (var2.startsWith("1.2.")) {
+                                          break L8;
                                         } else {
-                                          if (var2.startsWith("1.4.")) {
-                                            break L5;
+                                          if (var2.equals((Object) (Object) "1.3")) {
+                                            break L8;
                                           } else {
-                                            if (var2.equals((Object) (Object) "1.5")) {
-                                              break L5;
+                                            if (var2.startsWith("1.3.")) {
+                                              break L8;
                                             } else {
-                                              if (var2.startsWith("1.5.")) {
-                                                break L5;
+                                              if (var2.equals((Object) (Object) "1.4")) {
+                                                break L8;
                                               } else {
-                                                if (var2.equals((Object) (Object) "1.6.0")) {
-                                                  break L5;
+                                                if (var2.startsWith("1.4.")) {
+                                                  break L8;
                                                 } else {
-                                                  if (var2.startsWith("1.6.0_")) {
-                                                    var3 = 6;
-                                                    L6: while (true) {
-                                                      L7: {
-                                                        if (~var3 <= ~var2.length()) {
-                                                          break L7;
-                                                        } else {
-                                                          int discarded$4 = -5717;
-                                                          if (!vl.a(var2.charAt(var3))) {
-                                                            break L7;
-                                                          } else {
-                                                            var3++;
-                                                            continue L6;
-                                                          }
-                                                        }
-                                                      }
-                                                      var4 = var2.substring(6, var3);
-                                                      if (!af.a((CharSequence) (Object) var4, (byte) 78)) {
-                                                        break L3;
+                                                  if (var2.equals((Object) (Object) "1.5")) {
+                                                    break L8;
+                                                  } else {
+                                                    if (var2.startsWith("1.5.")) {
+                                                      break L8;
+                                                    } else {
+                                                      if (var2.equals((Object) (Object) "1.6.0")) {
+                                                        break L8;
                                                       } else {
-                                                        if (ph.a(1124, (CharSequence) (Object) var4) < 10) {
-                                                          ((da) this).a("wrongjava", (byte) 126);
-                                                          break L2;
-                                                        } else {
-                                                          break L3;
-                                                        }
+                                                        break L7;
                                                       }
                                                     }
-                                                  } else {
-                                                    break L3;
                                                   }
                                                 }
                                               }
@@ -1156,82 +1235,158 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
                                     }
                                   }
                                 }
+                                ((da) this).a("wrongjava", (byte) 126);
+                                if (var5 == 0) {
+                                  break L2;
+                                } else {
+                                  break L7;
+                                }
                               }
+                              if (var2.startsWith("1.6.0_")) {
+                                var3 = 6;
+                                L9: while (true) {
+                                  L10: {
+                                    if (~var3 <= ~var2.length()) {
+                                      break L10;
+                                    } else {
+                                      stackOut_51_0 = vl.a(var2.charAt(var3), -5717);
+                                      stackIn_70_0 = stackOut_51_0;
+                                      stackIn_52_0 = stackOut_51_0;
+                                      if (var5 != 0) {
+                                        break L4;
+                                      } else {
+                                        if (!stackIn_52_0) {
+                                          break L10;
+                                        } else {
+                                          var3++;
+                                          if (var5 == 0) {
+                                            continue L9;
+                                          } else {
+                                            break L10;
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                  var4 = var2.substring(6, var3);
+                                  if (!af.a((CharSequence) (Object) var4, (byte) 78)) {
+                                    break L5;
+                                  } else {
+                                    if (ph.a(1124, (CharSequence) (Object) var4) < 10) {
+                                      ((da) this).a("wrongjava", (byte) 126);
+                                      if (var5 == 0) {
+                                        break L2;
+                                      } else {
+                                        break L5;
+                                      }
+                                    } else {
+                                      break L5;
+                                    }
+                                  }
+                                }
+                              } else {
+                                break L5;
+                              }
+                            } else {
+                              break L5;
                             }
                           }
-                          ((da) this).a("wrongjava", (byte) 126);
-                          break L2;
-                        } else {
-                          break L3;
+                          if (null == vh.field_b) {
+                            break L3;
+                          } else {
+                            stackOut_68_0 = vh.field_b.startsWith("1.");
+                            stackIn_70_0 = stackOut_68_0;
+                            break L4;
+                          }
                         }
-                      }
-                      L8: {
-                        if (null == vh.field_b) {
-                          break L8;
-                        } else {
-                          stackOut_67_0 = vh.field_b.startsWith("1.");
-                          stackIn_69_0 = stackOut_67_0;
-                          if (stackIn_69_0) {
-                            var1_int = 2;
-                            var2_int = 0;
-                            L9: while (true) {
-                              L10: {
+                        if (stackIn_70_0) {
+                          var1_int = 2;
+                          var2_int = 0;
+                          L11: while (true) {
+                            L12: {
+                              L13: {
                                 if (var1_int >= vh.field_b.length()) {
-                                  break L10;
+                                  break L13;
                                 } else {
                                   var3 = vh.field_b.charAt(var1_int);
-                                  if (48 > var3) {
-                                    break L10;
+                                  stackOut_74_0 = 48;
+                                  stackOut_74_1 = var3;
+                                  stackIn_86_0 = stackOut_74_0;
+                                  stackIn_86_1 = stackOut_74_1;
+                                  stackIn_75_0 = stackOut_74_0;
+                                  stackIn_75_1 = stackOut_74_1;
+                                  if (var5 != 0) {
+                                    break L12;
                                   } else {
-                                    if (var3 <= 57) {
+                                    if (stackIn_75_0 > stackIn_75_1) {
+                                      break L13;
+                                    } else {
+                                      L14: {
+                                        if (var3 <= 57) {
+                                          break L14;
+                                        } else {
+                                          if (var5 == 0) {
+                                            break L13;
+                                          } else {
+                                            break L14;
+                                          }
+                                        }
+                                      }
                                       var2_int = -48 - -var3 + 10 * var2_int;
                                       var1_int++;
-                                      continue L9;
-                                    } else {
-                                      break L10;
+                                      if (var5 == 0) {
+                                        continue L11;
+                                      } else {
+                                        break L13;
+                                      }
                                     }
                                   }
                                 }
                               }
-                              if (5 <= var2_int) {
-                                ug.field_Q = true;
-                                break L8;
-                              } else {
-                                break L8;
-                              }
+                              stackOut_85_0 = 5;
+                              stackOut_85_1 = var2_int;
+                              stackIn_86_0 = stackOut_85_0;
+                              stackIn_86_1 = stackOut_85_1;
+                              break L12;
                             }
-                          } else {
-                            break L8;
+                            if (stackIn_86_0 <= stackIn_86_1) {
+                              ug.field_Q = true;
+                              break L3;
+                            } else {
+                              break L3;
+                            }
                           }
+                        } else {
+                          break L3;
                         }
                       }
-                      L11: {
+                      L15: {
                         var1 = (Object) (Object) ca.field_c;
                         if (null != fl.field_F) {
                           var1 = (Object) (Object) fl.field_F;
-                          break L11;
+                          break L15;
                         } else {
-                          break L11;
+                          break L15;
                         }
                       }
-                      L12: {
+                      L16: {
                         var2_ref = vh.field_q;
                         if (var2_ref != null) {
                           try {
-                            L13: {
-                              Object discarded$5 = var2_ref.invoke(var1, new Object[1]);
-                              break L13;
+                            L17: {
+                              Object discarded$1 = var2_ref.invoke(var1, new Object[1]);
+                              break L17;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter0) {
                             decompiledCaughtException = decompiledCaughtParameter0;
-                            L14: {
+                            L18: {
                               var3_ref_Throwable = decompiledCaughtException;
-                              break L14;
+                              break L18;
                             }
                           }
-                          break L12;
+                          break L16;
                         } else {
-                          break L12;
+                          break L16;
                         }
                       }
                       kj.a(47);
@@ -1239,33 +1394,59 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
                       hl.field_b = bh.a((java.awt.Component) (Object) wizardrun.field_G, (byte) 105, rg.field_R, rg.field_P);
                       ((da) this).a(6);
                       pe.field_y = wl.b(250);
-                      L15: while (true) {
-                        L16: {
-                          if (lc.field_b == 0L) {
-                            break L16;
-                          } else {
-                            if (~lc.field_b >= ~d.a((byte) 76)) {
-                              break L2;
+                      L19: while (true) {
+                        L20: {
+                          L21: {
+                            if (lc.field_b == 0L) {
+                              break L21;
                             } else {
-                              break L16;
+                              stackOut_101_0 = (~lc.field_b < ~d.a((byte) 76) ? -1 : (~lc.field_b == ~d.a((byte) 76) ? 0 : 1));
+                              stackIn_107_0 = stackOut_101_0;
+                              stackIn_102_0 = stackOut_101_0;
+                              if (var5 != 0) {
+                                break L20;
+                              } else {
+                                if (stackIn_102_0 >= 0) {
+                                  break L2;
+                                } else {
+                                  break L21;
+                                }
+                              }
                             }
                           }
+                          uh.field_c = pe.field_y.a(wj.field_E, 0);
+                          stackOut_105_0 = 0;
+                          stackIn_107_0 = stackOut_105_0;
+                          break L20;
                         }
-                        uh.field_c = pe.field_y.a(wj.field_E, 0);
-                        stackOut_101_0 = 0;
-                        stackIn_103_0 = stackOut_101_0;
-                        var3 = stackIn_103_0;
-                        L17: while (true) {
-                          if (var3 >= uh.field_c) {
-                            int discarded$6 = -107;
-                            this.a();
+                        var3 = stackIn_107_0;
+                        L22: while (true) {
+                          L23: {
+                            L24: {
+                              if (var3 >= uh.field_c) {
+                                break L24;
+                              } else {
+                                this.c(0);
+                                var3++;
+                                if (var5 != 0) {
+                                  break L23;
+                                } else {
+                                  if (var5 == 0) {
+                                    continue L22;
+                                  } else {
+                                    break L24;
+                                  }
+                                }
+                              }
+                            }
+                            this.a((byte) -107);
                             bi.a(ld.field_g, (byte) -88, (Object) (Object) wizardrun.field_G);
-                            continue L15;
+                            break L23;
+                          }
+                          if (var5 == 0) {
+                            continue L19;
                           } else {
-                            int discarded$7 = 0;
-                            this.c();
-                            var3++;
-                            continue L17;
+                            break L2;
                           }
                         }
                       }
@@ -1274,11 +1455,11 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
-                  L18: {
+                  L25: {
                     var1 = (Object) (Object) decompiledCaughtException;
                     rg.a((Throwable) var1, (String) null, -562);
                     ((da) this).a("crash", (byte) 126);
-                    break L18;
+                    break L25;
                   }
                 }
                 this.b(118, true);
@@ -1899,22 +2080,22 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
             int var8_int = 0;
             jh var9 = null;
             int var10 = 0;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
-            RuntimeException stackIn_20_0 = null;
-            StringBuilder stackIn_20_1 = null;
+            RuntimeException stackIn_19_0 = null;
+            StringBuilder stackIn_19_1 = null;
             RuntimeException stackIn_21_0 = null;
             StringBuilder stackIn_21_1 = null;
-            String stackIn_21_2 = null;
+            RuntimeException stackIn_22_0 = null;
+            StringBuilder stackIn_22_1 = null;
+            String stackIn_22_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_17_0 = null;
-            StringBuilder stackOut_17_1 = null;
-            RuntimeException stackOut_20_0 = null;
-            StringBuilder stackOut_20_1 = null;
-            String stackOut_20_2 = null;
             RuntimeException stackOut_18_0 = null;
             StringBuilder stackOut_18_1 = null;
-            String stackOut_18_2 = null;
+            RuntimeException stackOut_21_0 = null;
+            StringBuilder stackOut_21_1 = null;
+            String stackOut_21_2 = null;
+            RuntimeException stackOut_19_0 = null;
+            StringBuilder stackOut_19_1 = null;
+            String stackOut_19_2 = null;
             var10 = wizardrun.field_H;
             try {
               try {
@@ -1939,59 +2120,72 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
                     rg.field_P = param4;
                     oj.field_b = param4;
                     ej.field_a = jg.f(1);
-                    vh dupTemp$2 = new vh(param6, param3, param1, true);
-                    ld.field_g = dupTemp$2;
-                    qf.field_m = dupTemp$2;
+                    vh dupTemp$1 = new vh(param6, param3, param1, true);
+                    ld.field_g = dupTemp$1;
+                    qf.field_m = dupTemp$1;
                     var9 = ld.field_g.a((byte) -88, (Runnable) this, 1);
                     L1: while (true) {
-                      if (var9.field_a != 0) {
-                        break L0;
-                      } else {
-                        int discarded$3 = 0;
-                        tg.a(10L);
-                        continue L1;
+                      L2: {
+                        L3: {
+                          if (var9.field_a != 0) {
+                            break L3;
+                          } else {
+                            tg.a(10L, false);
+                            if (var10 != 0) {
+                              break L2;
+                            } else {
+                              if (var10 == 0) {
+                                continue L1;
+                              } else {
+                                break L3;
+                              }
+                            }
+                          }
+                        }
+                        break L2;
                       }
+                      break L0;
                     }
                   }
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
-                L2: {
+                L4: {
                   var8 = decompiledCaughtException;
                   rg.a(var8, (String) null, -562);
                   ((da) this).a("crash", (byte) 126);
-                  break L2;
+                  break L4;
                 }
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L3: {
+              L5: {
                 var8_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_17_0 = (RuntimeException) var8_ref;
-                stackOut_17_1 = new StringBuilder().append("da.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-                stackIn_20_0 = stackOut_17_0;
-                stackIn_20_1 = stackOut_17_1;
-                stackIn_18_0 = stackOut_17_0;
-                stackIn_18_1 = stackOut_17_1;
+                stackOut_18_0 = (RuntimeException) var8_ref;
+                stackOut_18_1 = new StringBuilder().append("da.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+                stackIn_21_0 = stackOut_18_0;
+                stackIn_21_1 = stackOut_18_1;
+                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_1 = stackOut_18_1;
                 if (param3 == null) {
-                  stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-                  stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-                  stackOut_20_2 = "null";
-                  stackIn_21_0 = stackOut_20_0;
-                  stackIn_21_1 = stackOut_20_1;
-                  stackIn_21_2 = stackOut_20_2;
-                  break L3;
+                  stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+                  stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+                  stackOut_21_2 = "null";
+                  stackIn_22_0 = stackOut_21_0;
+                  stackIn_22_1 = stackOut_21_1;
+                  stackIn_22_2 = stackOut_21_2;
+                  break L5;
                 } else {
-                  stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-                  stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-                  stackOut_18_2 = "{...}";
-                  stackIn_21_0 = stackOut_18_0;
-                  stackIn_21_1 = stackOut_18_1;
-                  stackIn_21_2 = stackOut_18_2;
-                  break L3;
+                  stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+                  stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+                  stackOut_19_2 = "{...}";
+                  stackIn_22_0 = stackOut_19_0;
+                  stackIn_22_1 = stackOut_19_1;
+                  stackIn_22_2 = stackOut_19_2;
+                  break L5;
                 }
               }
-              throw bd.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+              throw bd.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -2010,32 +2204,36 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
         int var9 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_9_0 = null;
-        Object stackIn_37_0 = null;
-        Object stackIn_43_0 = null;
-        Object stackIn_46_0 = null;
-        java.awt.Frame stackIn_48_0 = null;
-        RuntimeException stackIn_50_0 = null;
-        StringBuilder stackIn_50_1 = null;
+        int stackIn_13_0 = 0;
+        int stackIn_36_0 = 0;
+        Object stackIn_39_0 = null;
+        Object stackIn_45_0 = null;
+        Object stackIn_48_0 = null;
+        java.awt.Frame stackIn_50_0 = null;
         RuntimeException stackIn_52_0 = null;
         StringBuilder stackIn_52_1 = null;
-        RuntimeException stackIn_53_0 = null;
-        StringBuilder stackIn_53_1 = null;
-        String stackIn_53_2 = null;
+        RuntimeException stackIn_54_0 = null;
+        StringBuilder stackIn_54_1 = null;
+        RuntimeException stackIn_55_0 = null;
+        StringBuilder stackIn_55_1 = null;
+        String stackIn_55_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_36_0 = null;
+        int stackOut_12_0 = 0;
+        int stackOut_35_0 = 0;
+        Object stackOut_38_0 = null;
         Object stackOut_8_0 = null;
-        java.awt.Frame stackOut_47_0 = null;
-        Object stackOut_45_0 = null;
-        Object stackOut_42_0 = null;
+        java.awt.Frame stackOut_49_0 = null;
+        Object stackOut_47_0 = null;
+        Object stackOut_44_0 = null;
         Object stackOut_2_0 = null;
-        RuntimeException stackOut_49_0 = null;
-        StringBuilder stackOut_49_1 = null;
+        RuntimeException stackOut_51_0 = null;
+        StringBuilder stackOut_51_1 = null;
+        RuntimeException stackOut_54_0 = null;
+        StringBuilder stackOut_54_1 = null;
+        String stackOut_54_2 = null;
         RuntimeException stackOut_52_0 = null;
         StringBuilder stackOut_52_1 = null;
         String stackOut_52_2 = null;
-        RuntimeException stackOut_50_0 = null;
-        StringBuilder stackOut_50_1 = null;
-        String stackOut_50_2 = null;
         var9 = wizardrun.field_H;
         try {
           L0: {
@@ -2047,52 +2245,71 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
                     var7_int = 0;
                     var8 = 0;
                     L2: while (true) {
-                      if (~var8 <= ~var6_array.length) {
-                        if (var7_int == 0) {
-                          stackOut_36_0 = null;
-                          stackIn_37_0 = stackOut_36_0;
-                          return (java.awt.Frame) (Object) stackIn_37_0;
-                        } else {
-                          break L1;
-                        }
-                      } else {
-                        L3: {
-                          if (~param1 != ~var6_array[var8].field_g) {
-                            break L3;
+                      L3: {
+                        L4: {
+                          if (~var8 <= ~var6_array.length) {
+                            break L4;
                           } else {
-                            if (~var6_array[var8].field_h == ~param0) {
-                              L4: {
-                                if (param5 == 0) {
-                                  break L4;
-                                } else {
-                                  if (var6_array[var8].field_f != param5) {
-                                    break L3;
-                                  } else {
-                                    break L4;
-                                  }
-                                }
-                              }
-                              L5: {
-                                if (var7_int == 0) {
-                                  break L5;
-                                } else {
-                                  if (var6_array[var8].field_c > param4) {
-                                    break L5;
-                                  } else {
-                                    break L3;
-                                  }
-                                }
-                              }
-                              var7_int = 1;
-                              param4 = var6_array[var8].field_c;
+                            stackOut_12_0 = ~param1;
+                            stackIn_36_0 = stackOut_12_0;
+                            stackIn_13_0 = stackOut_12_0;
+                            if (var9 != 0) {
                               break L3;
                             } else {
-                              break L3;
+                              L5: {
+                                if (stackIn_13_0 != ~var6_array[var8].field_g) {
+                                  break L5;
+                                } else {
+                                  if (~var6_array[var8].field_h == ~param0) {
+                                    L6: {
+                                      if (param5 == 0) {
+                                        break L6;
+                                      } else {
+                                        if (var6_array[var8].field_f != param5) {
+                                          break L5;
+                                        } else {
+                                          break L6;
+                                        }
+                                      }
+                                    }
+                                    L7: {
+                                      if (var7_int == 0) {
+                                        break L7;
+                                      } else {
+                                        if (var6_array[var8].field_c > param4) {
+                                          break L7;
+                                        } else {
+                                          break L5;
+                                        }
+                                      }
+                                    }
+                                    var7_int = 1;
+                                    param4 = var6_array[var8].field_c;
+                                    break L5;
+                                  } else {
+                                    break L5;
+                                  }
+                                }
+                              }
+                              var8++;
+                              if (var9 == 0) {
+                                continue L2;
+                              } else {
+                                break L4;
+                              }
                             }
                           }
                         }
-                        var8++;
-                        continue L2;
+                        stackOut_35_0 = var7_int;
+                        stackIn_36_0 = stackOut_35_0;
+                        break L3;
+                      }
+                      if (stackIn_36_0 == 0) {
+                        stackOut_38_0 = null;
+                        stackIn_39_0 = stackOut_38_0;
+                        return (java.awt.Frame) (Object) stackIn_39_0;
+                      } else {
+                        break L1;
                       }
                     }
                   } else {
@@ -2105,29 +2322,35 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
                 }
               }
               var6_ref = param3.a(param4, 114, param5, param1, param0);
-              L6: while (true) {
-                if (var6_ref.field_a != 0) {
-                  var7 = (java.awt.Frame) var6_ref.field_e;
-                  if (null != var7) {
-                    if (var6_ref.field_a != 2) {
-                      stackOut_47_0 = (java.awt.Frame) var7;
-                      stackIn_48_0 = stackOut_47_0;
-                      break L0;
-                    } else {
-                      q.a(62, var7, param3);
-                      stackOut_45_0 = null;
-                      stackIn_46_0 = stackOut_45_0;
-                      return (java.awt.Frame) (Object) stackIn_46_0;
-                    }
+              L8: while (true) {
+                L9: {
+                  if (var6_ref.field_a != 0) {
+                    break L9;
                   } else {
-                    stackOut_42_0 = null;
-                    stackIn_43_0 = stackOut_42_0;
-                    return (java.awt.Frame) (Object) stackIn_43_0;
+                    tg.a(10L, false);
+                    if (var9 == 0) {
+                      continue L8;
+                    } else {
+                      break L9;
+                    }
+                  }
+                }
+                var7 = (java.awt.Frame) var6_ref.field_e;
+                if (null != var7) {
+                  if (var6_ref.field_a != 2) {
+                    stackOut_49_0 = (java.awt.Frame) var7;
+                    stackIn_50_0 = stackOut_49_0;
+                    break L0;
+                  } else {
+                    q.a(62, var7, param3);
+                    stackOut_47_0 = null;
+                    stackIn_48_0 = stackOut_47_0;
+                    return (java.awt.Frame) (Object) stackIn_48_0;
                   }
                 } else {
-                  int discarded$1 = 0;
-                  tg.a(10L);
-                  continue L6;
+                  stackOut_44_0 = null;
+                  stackIn_45_0 = stackOut_44_0;
+                  return (java.awt.Frame) (Object) stackIn_45_0;
                 }
               }
             } else {
@@ -2138,35 +2361,35 @@ public abstract class da extends java.applet.Applet implements Runnable, java.aw
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L10: {
             var6 = decompiledCaughtException;
-            stackOut_49_0 = (RuntimeException) var6;
-            stackOut_49_1 = new StringBuilder().append("da.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_52_0 = stackOut_49_0;
-            stackIn_52_1 = stackOut_49_1;
-            stackIn_50_0 = stackOut_49_0;
-            stackIn_50_1 = stackOut_49_1;
+            stackOut_51_0 = (RuntimeException) var6;
+            stackOut_51_1 = new StringBuilder().append("da.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_54_0 = stackOut_51_0;
+            stackIn_54_1 = stackOut_51_1;
+            stackIn_52_0 = stackOut_51_0;
+            stackIn_52_1 = stackOut_51_1;
             if (param3 == null) {
+              stackOut_54_0 = (RuntimeException) (Object) stackIn_54_0;
+              stackOut_54_1 = (StringBuilder) (Object) stackIn_54_1;
+              stackOut_54_2 = "null";
+              stackIn_55_0 = stackOut_54_0;
+              stackIn_55_1 = stackOut_54_1;
+              stackIn_55_2 = stackOut_54_2;
+              break L10;
+            } else {
               stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
               stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
-              stackOut_52_2 = "null";
-              stackIn_53_0 = stackOut_52_0;
-              stackIn_53_1 = stackOut_52_1;
-              stackIn_53_2 = stackOut_52_2;
-              break L7;
-            } else {
-              stackOut_50_0 = (RuntimeException) (Object) stackIn_50_0;
-              stackOut_50_1 = (StringBuilder) (Object) stackIn_50_1;
-              stackOut_50_2 = "{...}";
-              stackIn_53_0 = stackOut_50_0;
-              stackIn_53_1 = stackOut_50_1;
-              stackIn_53_2 = stackOut_50_2;
-              break L7;
+              stackOut_52_2 = "{...}";
+              stackIn_55_0 = stackOut_52_0;
+              stackIn_55_1 = stackOut_52_1;
+              stackIn_55_2 = stackOut_52_2;
+              break L10;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + ',' + param4 + ',' + param5 + ')');
+          throw bd.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + ',' + param4 + ',' + param5 + ')');
         }
-        return stackIn_48_0;
+        return stackIn_50_0;
     }
 
     static {

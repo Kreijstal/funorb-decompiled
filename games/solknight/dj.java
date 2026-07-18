@@ -11,7 +11,7 @@ final class dj extends gg {
         throw new Error();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_k = null;
     }

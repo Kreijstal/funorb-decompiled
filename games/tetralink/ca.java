@@ -15,7 +15,7 @@ abstract class ca {
     static long field_g;
     static String field_d;
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         if (fn.field_R < 10) {
             return false;
         }
@@ -38,17 +38,14 @@ abstract class ca {
 
     final static void b(int param0) {
         int var1 = nn.f((byte) -102);
-        int discarded$0 = 32768;
-        int var2 = ed.h();
+        int var2 = ed.h(32768);
         nm.field_o.a(ab.field_Q - fl.field_b, ja.field_j + -ng.field_D, (byte) -21, (ng.field_D << 1) + var1, var2 + (fl.field_b << 1));
         if (param0 >= -2) {
             ca.a(false, (byte) 121);
-            int discarded$1 = 1;
-            na.c();
+            na.c(true);
             return;
         }
-        int discarded$2 = 1;
-        na.c();
+        na.c(true);
     }
 
     final static void a(float param0, float param1, int param2) {
@@ -145,8 +142,7 @@ abstract class ca {
                     if (ma.field_f > ng.field_t) {
                       L0: {
                         if (ng.field_t == 0) {
-                          int discarded$6 = -128;
-                          ic.a(true);
+                          ic.a(true, (byte) -128);
                           break L0;
                         } else {
                           break L0;
@@ -245,40 +241,37 @@ abstract class ca {
                   return;
                 }
               } else {
-                if (ng.field_t <= 0) {
-                  if (am.field_f < ma.field_f) {
-                    L1: {
-                      if (am.field_f == 0) {
-                        int discarded$7 = -128;
-                        ic.a(false);
-                        break L1;
-                      } else {
-                        break L1;
+                L1: {
+                  if (ng.field_t <= 0) {
+                    if (am.field_f < ma.field_f) {
+                      L2: {
+                        if (am.field_f == 0) {
+                          ic.a(false, (byte) -128);
+                          break L2;
+                        } else {
+                          break L2;
+                        }
                       }
-                    }
-                    am.field_f = am.field_f + 1;
-                    if (param1 == 16) {
-                      return;
+                      am.field_f = am.field_f + 1;
+                      if (param1 == 16) {
+                        return;
+                      } else {
+                        ca.b(-74);
+                        return;
+                      }
                     } else {
-                      ca.b(-74);
-                      return;
+                      break L1;
                     }
                   } else {
-                    if (param1 == 16) {
-                      return;
-                    } else {
-                      ca.b(-74);
-                      return;
-                    }
+                    ng.field_t = ng.field_t - 1;
+                    break L1;
                   }
+                }
+                if (param1 == 16) {
+                  return;
                 } else {
-                  ng.field_t = ng.field_t - 1;
-                  if (param1 == 16) {
-                    return;
-                  } else {
-                    ca.b(-74);
-                    return;
-                  }
+                  ca.b(-74);
+                  return;
                 }
               }
             }
@@ -329,13 +322,12 @@ abstract class ca {
                   if (qd.field_ab <= 0) {
                     if (am.field_f <= 0) {
                       if (ma.field_f > ng.field_t) {
-                        L2: {
+                        L3: {
                           if (ng.field_t == 0) {
-                            int discarded$8 = -128;
-                            ic.a(true);
-                            break L2;
+                            ic.a(true, (byte) -128);
+                            break L3;
                           } else {
-                            break L2;
+                            break L3;
                           }
                         }
                         ng.field_t = ng.field_t + 1;
@@ -433,13 +425,12 @@ abstract class ca {
                 } else {
                   if (ng.field_t <= 0) {
                     if (am.field_f < ma.field_f) {
-                      L3: {
+                      L4: {
                         if (am.field_f == 0) {
-                          int discarded$9 = -128;
-                          ic.a(false);
-                          break L3;
+                          ic.a(false, (byte) -128);
+                          break L4;
                         } else {
-                          break L3;
+                          break L4;
                         }
                       }
                       am.field_f = am.field_f + 1;
@@ -513,13 +504,12 @@ abstract class ca {
                   if (qd.field_ab <= 0) {
                     if (am.field_f <= 0) {
                       if (ma.field_f > ng.field_t) {
-                        L4: {
+                        L5: {
                           if (ng.field_t == 0) {
-                            int discarded$10 = -128;
-                            ic.a(true);
-                            break L4;
+                            ic.a(true, (byte) -128);
+                            break L5;
                           } else {
-                            break L4;
+                            break L5;
                           }
                         }
                         ng.field_t = ng.field_t + 1;
@@ -617,13 +607,12 @@ abstract class ca {
                 } else {
                   if (ng.field_t <= 0) {
                     if (am.field_f < ma.field_f) {
-                      L5: {
+                      L6: {
                         if (am.field_f == 0) {
-                          int discarded$11 = -128;
-                          ic.a(false);
-                          break L5;
+                          ic.a(false, (byte) -128);
+                          break L6;
                         } else {
-                          break L5;
+                          break L6;
                         }
                       }
                       am.field_f = am.field_f + 1;

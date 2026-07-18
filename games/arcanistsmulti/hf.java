@@ -47,7 +47,7 @@ final class hf {
         }
     }
 
-    private final int a() {
+    private final int a(byte param0) {
         ((hf) this).field_d.a((byte) -76);
         if (!(!((hf) this).field_d.b(true))) {
             if (!(((hf) this).field_d.field_h != 0)) {
@@ -64,7 +64,7 @@ final class hf {
         return 0;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         char[] var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
@@ -148,7 +148,7 @@ final class hf {
         ld.field_p = df.field_z.e((byte) 88) == 0 ? true : false;
     }
 
-    private final void a(int param0, int param1, int param2, dj param3, String param4, int param5, int[] param6) {
+    private final void a(int param0, int param1, int param2, dj param3, String param4, int param5, int[] param6, int param7) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;
@@ -203,8 +203,7 @@ final class hf {
         var12 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            int discarded$4 = 65280;
-            ec.a();
+            ec.a(65280);
             var9_int = 0;
             L1: while (true) {
               if (var9_int >= param0) {
@@ -214,7 +213,7 @@ final class hf {
                 de.h(0, var9_int, param1, 1 + var9_int);
                 var10 = var9_int * param6.length / param0;
                 var11 = param6[-var10 + param6.length + -1];
-                int discarded$5 = param3.a(param4, 0, 0, param1, param0, var11, -1, 1, 1, 0);
+                int discarded$2 = param3.a(param4, 0, 0, param1, param0, var11, -1, 1, 1, 0);
                 var9_int++;
                 continue L1;
               }
@@ -319,8 +318,7 @@ final class hf {
             L1: while (true) {
               if (var2 >= 2) {
                 L2: {
-                  int discarded$6 = -101;
-                  this.c();
+                  this.c((byte) -101);
                   if (null == an.field_o) {
                     break L2;
                   } else {
@@ -368,8 +366,7 @@ final class hf {
                     }
                   }
                 }
-                int discarded$7 = 16180917;
-                this.b();
+                this.b(16180917);
                 if (null != be.field_j) {
                   L3: {
                     ((hf) this).field_e.c(376, 339);
@@ -428,11 +425,11 @@ final class hf {
                   L5: {
                     var2 = 89 % ((-46 - param0) / 43);
                     ((hf) this).field_g.c(16, 302);
-                    int discarded$8 = li.field_F.a(((hf) this).field_a[((hf) this).field_l], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+                    int discarded$4 = li.field_F.a(((hf) this).field_a[((hf) this).field_l], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
                     fd.field_f.c(30, 330);
-                    int discarded$9 = li.field_F.a(nf.field_qb[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-                    int discarded$10 = li.field_F.a(nf.field_qb[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-                    int discarded$11 = li.field_F.a(nf.field_qb[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$5 = li.field_F.a(nf.field_qb[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$6 = li.field_F.a(nf.field_qb[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+                    int discarded$7 = li.field_F.a(nf.field_qb[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
                     qf.field_b.c(508 + (127 - qf.field_b.field_n) / 2, 315);
                     if (0 != ((hf) this).field_d.field_h) {
                       if (((hf) this).field_d.field_h == 1) {
@@ -467,7 +464,7 @@ final class hf {
         }
     }
 
-    final static String a(String param0, String param1, int param2) {
+    final static String a(String param0, String param1, int param2, int param3) {
         RuntimeException var4 = null;
         ab var5 = null;
         int var6 = 0;
@@ -686,8 +683,7 @@ final class hf {
                 if (var7 == null) {
                   break L2;
                 } else {
-                  int discarded$3 = 10;
-                  if (fi.a((CharSequence) (Object) var7)) {
+                  if (fi.a((CharSequence) (Object) var7, 10)) {
                     ((hf) this).field_u = dc.a((CharSequence) (Object) var7, 126);
                     break L1;
                   } else {
@@ -823,19 +819,15 @@ final class hf {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
         qb var5 = null;
         String var6 = null;
         String var7 = null;
-        int[] var8 = null;
         int[] var9 = null;
-        int[] var10 = null;
         int[] var11 = null;
-        int[] var12 = null;
         int[] var13 = null;
-        int[] var14 = null;
         int[] var15 = null;
         int[] var16 = null;
         int[] var17 = null;
@@ -851,12 +843,7 @@ final class hf {
             var2 = 16448250;
             var3 = 10068666;
             var16 = kb.a(var3, var2, 65535);
-            var14 = var16;
-            var12 = var14;
-            var10 = var12;
-            var8 = var10;
-            int discarded$1 = 0;
-            this.a(47, 622, 0, (dj) (Object) fd.field_b, ((hf) this).field_j, 23146, var8);
+            this.a(47, 622, 0, (dj) (Object) fd.field_b, ((hf) this).field_j, 23146, var16, 0);
             oo.c(-15405);
             ((hf) this).field_g = new qb(475, 24);
             this.a(((hf) this).field_g, 0.75f, 0, 127, 24, var16, -4, (dj) (Object) fd.field_b, mm.field_r, 475);
@@ -957,8 +944,7 @@ final class hf {
             var13 = new qb(var11_int, var12);
             fk.a(var13, -23095);
             param0.c((int)((float)0 / param1), (int)((float)(-param6) / param1), (int)((float)param0.field_q / param1), (int)((float)param0.field_y / param1));
-            int discarded$1 = 0;
-            this.a(var12, var11_int, 0, param7, param8, 23146, param5);
+            this.a(var12, var11_int, 0, param7, param8, 23146, param5, 0);
             oo.c(-15405);
             fk.a(param0, -23095);
             var13.d(0, param6, param9, param4);
@@ -1072,7 +1058,7 @@ final class hf {
         }
     }
 
-    private final void c() {
+    private final void c(byte param0) {
         ll var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -1344,8 +1330,7 @@ final class hf {
                         if (!ib.b(false)) {
                           break L15;
                         } else {
-                          int discarded$1 = -73;
-                          var5 = this.a();
+                          var5 = this.a((byte) -73);
                           if (0 == var5) {
                             continue L16;
                           } else {
@@ -1403,7 +1388,7 @@ final class hf {
         return -1;
     }
 
-    final static int a(String[] args, String param1, int param2, dj param3) {
+    final static int a(String[] args, String param1, int param2, dj param3, int param4) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -1475,7 +1460,7 @@ final class hf {
                 if (param1.indexOf("<br>") != -1) {
                   break L1;
                 } else {
-                  args[0] = (String) (Object) args;
+                  args[0] = param1;
                   stackOut_3_0 = 1;
                   stackIn_4_0 = stackOut_3_0;
                   return stackIn_4_0;

@@ -16,7 +16,7 @@ final class bw {
     private long[] field_e;
     private byte[] field_i;
 
-    final static void d() {
+    final static void d(int param0) {
         int var2 = 0;
         L0: {
           var2 = ArmiesOfGielinor.field_M ? 1 : 0;
@@ -126,8 +126,7 @@ final class bw {
                           if (((bw) this).field_c != 512) {
                             break L6;
                           } else {
-                            int discarded$2 = -11;
-                            this.c();
+                            this.c(-11);
                             ((bw) this).field_c = 0;
                             ((bw) this).field_d = 0;
                             break L6;
@@ -156,8 +155,7 @@ final class bw {
                             if (((bw) this).field_c != 512) {
                               break L8;
                             } else {
-                              int discarded$3 = -11;
-                              this.c();
+                              this.c(-11);
                               ((bw) this).field_c = 0;
                               ((bw) this).field_d = 0;
                               break L8;
@@ -243,8 +241,7 @@ final class bw {
                     }
                     break L0;
                   } else {
-                    int discarded$2 = 0;
-                    gn.a(param1, var5);
+                    gn.a(param1, var5, 0);
                     var5 = (wj) (Object) lf.field_c.a((byte) 123);
                     continue L2;
                   }
@@ -308,7 +305,7 @@ final class bw {
         field_h = null;
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -460,14 +457,13 @@ final class bw {
               if (32 < ((bw) this).field_d) {
                 L2: while (true) {
                   if (64 <= ((bw) this).field_d) {
-                    int discarded$4 = -11;
-                    this.c();
+                    this.c(-11);
                     ((bw) this).field_d = 0;
                     break L1;
                   } else {
-                    int fieldTemp$5 = ((bw) this).field_d;
+                    int fieldTemp$2 = ((bw) this).field_d;
                     ((bw) this).field_d = ((bw) this).field_d + 1;
-                    ((bw) this).field_i[fieldTemp$5] = (byte) 0;
+                    ((bw) this).field_i[fieldTemp$2] = (byte) 0;
                     continue L2;
                   }
                 }
@@ -486,8 +482,7 @@ final class bw {
                   }
                 }
                 vm.a(((bw) this).field_b, 0, ((bw) this).field_i, 32, 32);
-                int discarded$6 = -11;
-                this.c();
+                this.c(-11);
                 var4_int = 0;
                 var5 = param1;
                 L5: while (true) {
@@ -509,9 +504,9 @@ final class bw {
                   }
                 }
               } else {
-                int fieldTemp$7 = ((bw) this).field_d;
+                int fieldTemp$3 = ((bw) this).field_d;
                 ((bw) this).field_d = ((bw) this).field_d + 1;
-                ((bw) this).field_i[fieldTemp$7] = (byte) 0;
+                ((bw) this).field_i[fieldTemp$3] = (byte) 0;
                 continue L3;
               }
             }

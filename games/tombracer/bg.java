@@ -488,7 +488,7 @@ final class bg extends wda {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_s = null;
         field_p = null;
     }

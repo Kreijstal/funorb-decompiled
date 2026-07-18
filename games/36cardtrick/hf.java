@@ -31,10 +31,8 @@ class hf extends hl {
               L0: {
                 L1: {
                   var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                  int discarded$2 = -56;
-                  this.f();
-                  int discarded$3 = 127;
-                  this.a(var2);
+                  this.f((byte) -56);
+                  this.a(var2, (byte) 127);
                   if (!param0) {
                     break L1;
                   } else {
@@ -58,7 +56,7 @@ class hf extends hl {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8, int[] param9) {
+    final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8, int[] param9, int param10) {
         RuntimeException var11 = null;
         int var11_int = 0;
         int var12 = 0;
@@ -192,7 +190,7 @@ class hf extends hl {
         }
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, byte param1) {
         int var3_int = 0;
         if (!(((hf) this).field_K == -1)) {
             var3_int = ((hf) this).field_K + -((hf) this).field_r.length();
@@ -289,7 +287,7 @@ class hf extends hl {
                 break L1;
               } else {
                 var10 = null;
-                boolean discarded$2 = ((hf) this).a('k', (byte) 63, -72, (lk) null);
+                boolean discarded$1 = ((hf) this).a('k', (byte) 63, -72, (lk) null);
                 break L1;
               }
             }
@@ -344,8 +342,7 @@ class hf extends hl {
                     break L4;
                   } else {
                     L5: {
-                      int discarded$3 = -1;
-                      ((hf) this).field_F = this.m();
+                      ((hf) this).field_F = this.m(-1);
                       ((hf) this).field_N = this.j(-98);
                       if (0 >= ((hf) this).field_N) {
                         break L5;
@@ -586,8 +583,7 @@ class hf extends hl {
                         if (~((hf) this).field_N == ~((hf) this).field_F) {
                           break L2;
                         } else {
-                          int discarded$10 = -56;
-                          this.f();
+                          this.f((byte) -56);
                           break L2;
                         }
                       }
@@ -611,9 +607,9 @@ class hf extends hl {
                             break L5;
                           } else {
                             ((hf) this).field_r = ((hf) this).field_r + param0;
-                            int dupTemp$11 = ((hf) this).field_r.length();
-                            ((hf) this).field_N = dupTemp$11;
-                            ((hf) this).field_F = dupTemp$11;
+                            int dupTemp$1 = ((hf) this).field_r.length();
+                            ((hf) this).field_N = dupTemp$1;
+                            ((hf) this).field_F = dupTemp$1;
                             break L5;
                           }
                         }
@@ -635,15 +631,13 @@ class hf extends hl {
                         break L6;
                       } else {
                         ((hf) this).field_F = -1 + ((hf) this).field_N;
-                        int discarded$12 = -56;
-                        this.f();
+                        this.f((byte) -56);
                         stackOut_59_0 = 1;
                         stackIn_60_0 = stackOut_59_0;
                         return stackIn_60_0 != 0;
                       }
                     } else {
-                      int discarded$13 = -56;
-                      this.f();
+                      this.f((byte) -56);
                       stackOut_56_0 = 1;
                       stackIn_57_0 = stackOut_56_0;
                       return stackIn_57_0 != 0;
@@ -655,15 +649,13 @@ class hf extends hl {
                           break L6;
                         } else {
                           ((hf) this).field_F = 1 + ((hf) this).field_N;
-                          int discarded$14 = -56;
-                          this.f();
+                          this.f((byte) -56);
                           stackOut_53_0 = 1;
                           stackIn_54_0 = stackOut_53_0;
                           return stackIn_54_0 != 0;
                         }
                       } else {
-                        int discarded$15 = -56;
-                        this.f();
+                        this.f((byte) -56);
                         stackOut_50_0 = 1;
                         stackIn_51_0 = stackOut_50_0;
                         return stackIn_51_0 != 0;
@@ -707,8 +699,7 @@ class hf extends hl {
                                 return stackIn_42_0 != 0;
                               } else {
                                 if (param2 == 84) {
-                                  int discarded$16 = 17091;
-                                  this.i();
+                                  this.i(17091);
                                   stackOut_39_0 = 1;
                                   stackIn_40_0 = stackOut_39_0;
                                   return stackIn_40_0 != 0;
@@ -718,8 +709,7 @@ class hf extends hl {
                                       break L8;
                                     } else {
                                       if (param2 == 65) {
-                                        int discarded$17 = 11514;
-                                        this.l();
+                                        this.l(11514);
                                         stackOut_37_0 = 1;
                                         stackIn_38_0 = stackOut_37_0;
                                         return stackIn_38_0 != 0;
@@ -735,8 +725,7 @@ class hf extends hl {
                                       if (param2 != 66) {
                                         break L9;
                                       } else {
-                                        int discarded$18 = 1;
-                                        this.a();
+                                        this.a(true);
                                         stackOut_31_0 = 1;
                                         stackIn_32_0 = stackOut_31_0;
                                         return stackIn_32_0 != 0;
@@ -773,9 +762,8 @@ class hf extends hl {
                               stackIn_17_0 = stackOut_15_0;
                               stackIn_16_0 = stackOut_15_0;
                               if (ge.field_c[82]) {
-                                int discarded$19 = -1;
                                 stackOut_17_0 = this;
-                                stackOut_17_1 = this.m();
+                                stackOut_17_1 = this.m(-1);
                                 stackIn_18_0 = stackOut_17_0;
                                 stackIn_18_1 = stackOut_17_1;
                                 break L10;
@@ -861,7 +849,7 @@ class hf extends hl {
         }
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         String var2 = this.h(121);
         if (var2.length() > 0) {
             java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.h(88)), (java.awt.datatransfer.ClipboardOwner) null);
@@ -900,8 +888,7 @@ class hf extends hl {
             }
             L2: {
               super.a(param0, param1, param2, param3);
-              int discarded$3 = -120;
-              this.e();
+              this.e((byte) -120);
               if (((hf) this).field_x == 1) {
                 L3: {
                   if (((hf) this).field_v instanceof ne) {
@@ -973,7 +960,7 @@ class hf extends hl {
         }
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -995,8 +982,7 @@ class hf extends hl {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_2_0 = ha.a(param0, -30773);
+            stackOut_2_0 = ha.a(param0, -30773, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -1033,7 +1019,7 @@ class hf extends hl {
         return stackIn_3_0;
     }
 
-    private final int m() {
+    private final int m(int param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = Main.field_T;
@@ -1121,7 +1107,7 @@ class hf extends hl {
         }
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         int var8 = Main.field_T;
         if (!((hf) this).field_J) {
             ((hf) this).field_m = 0;
@@ -1133,13 +1119,13 @@ class hf extends hl {
         }
     }
 
-    private final void i() {
+    private final void i(int param0) {
         if (((hf) this).field_k instanceof pi) {
             ((pi) (Object) ((hf) this).field_k).a(-1, (hf) this);
         }
     }
 
-    private final void f() {
+    private final void f(byte param0) {
         int var2 = 0;
         int var3 = 0;
         if (((hf) this).field_F != ((hf) this).field_N) {
@@ -1152,14 +1138,12 @@ class hf extends hl {
         }
     }
 
-    private final void l() {
-        int discarded$0 = 1;
-        this.a();
-        int discarded$1 = -56;
-        this.f();
+    private final void l(int param0) {
+        this.a(true);
+        this.f((byte) -56);
     }
 
-    public static void o() {
+    public static void o(int param0) {
         field_H = null;
     }
 

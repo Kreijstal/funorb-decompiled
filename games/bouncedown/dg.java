@@ -153,7 +153,7 @@ final class dg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_f = null;
         field_k = null;

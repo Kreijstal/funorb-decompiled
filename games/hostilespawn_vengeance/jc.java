@@ -20,7 +20,7 @@ final class jc {
         jc.a((byte) 73);
     }
 
-    final static void a(int[] param0, int param1, int param2, byte[] param3) {
+    final static void a(int[] param0, int param1, int param2, byte[] param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -162,8 +162,7 @@ final class jc {
         String stackOut_5_2 = null;
         try {
           if (rl.a(2884, param0, param3, param2)) {
-            int discarded$2 = -58;
-            return rf.a();
+            return rf.a(-58);
           } else {
             return null;
           }
@@ -199,7 +198,7 @@ final class jc {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

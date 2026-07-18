@@ -102,7 +102,7 @@ final class sr {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
         field_j = null;
         field_c = null;

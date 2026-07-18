@@ -54,7 +54,7 @@ final class ap {
         }
     }
 
-    final static tf[] a(int param0, int param1, int param2, int param3) {
+    final static tf[] a(int param0, int param1, int param2, int param3, int param4) {
         tf[] var5 = null;
         tf[] var6 = null;
         var6 = new tf[9];
@@ -170,7 +170,7 @@ final class ap {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_i = null;
         field_g = null;

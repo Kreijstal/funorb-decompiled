@@ -240,19 +240,13 @@ final class pl extends gb implements jf, n, rg {
         ah dupTemp$1 = new ah(10000536);
         ((pl) this).field_U.field_l = (cj) (Object) dupTemp$1;
         ((pl) this).field_H.field_l = (cj) (Object) dupTemp$1;
-        int discarded$2 = 9;
         String var2 = ij.a(new String[2], -1, h.field_d);
         int var3 = 20;
         var3 = var3 + this.a(g.field_nb, (gl) (Object) ((pl) this).field_S, 170, 16777215, var3);
-        int discarded$3 = 170;
-        var3 = var3 + (5 + this.a(false, 20, "", (gl) (Object) ((pl) this).field_I, bh.field_h, var3));
+        var3 = var3 + (5 + this.a(false, 20, "", (gl) (Object) ((pl) this).field_I, bh.field_h, var3, 170));
         var3 = var3 + this.a(eb.field_E, (gl) (Object) ((pl) this).field_H, 170, 16777215, var3);
-        int discarded$4 = 16777215;
-        int discarded$5 = 170;
-        var3 = var3 + (5 + this.a(q.field_Kb, (gl) (Object) ((pl) this).field_U, var3, ej.field_N));
-        int discarded$6 = 16777215;
-        int discarded$7 = 170;
-        var3 = var3 + (this.a(im.field_b, (gl) (Object) ((pl) this).field_J, var3, ag.field_b) + 5);
+        var3 = var3 + (5 + this.a(q.field_Kb, (gl) (Object) ((pl) this).field_U, var3, ej.field_N, 170, 16777215));
+        var3 = var3 + (this.a(im.field_b, (gl) (Object) ((pl) this).field_J, var3, ag.field_b, 170, 16777215) + 5);
         var3 = var3 + this.a(170, false, ig.field_d, (gl) (Object) ((pl) this).field_R, var3);
         j var4 = new j(46, var3, ((pl) this).field_p + -90, 25, (gl) (Object) ((pl) this).field_W, true, ((pl) this).field_p + -120, 5, ra.field_l, 11579568, p.field_b);
         ((pl) this).b((byte) 95, (gl) (Object) var4);
@@ -286,8 +280,7 @@ final class pl extends gb implements jf, n, rg {
                 fd.c(-113);
             } else {
                 if (param0 == ((pl) this).field_O) {
-                    int discarded$0 = -111;
-                    boolean discarded$1 = this.h();
+                    boolean discarded$0 = this.h((byte) -111);
                 }
             }
             int var6_int = 105 / ((param4 - -5) / 57);
@@ -296,7 +289,7 @@ final class pl extends gb implements jf, n, rg {
         }
     }
 
-    private final int a(String param0, gl param1, int param2, String param3) {
+    private final int a(String param0, gl param1, int param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -348,8 +341,7 @@ final class pl extends gb implements jf, n, rg {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$2 = 170;
-            stackOut_0_0 = this.a(false, 35, param0, param1, param3, param2);
+            stackOut_0_0 = this.a(false, 35, param0, param1, param3, param2, 170);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -448,7 +440,7 @@ final class pl extends gb implements jf, n, rg {
         }
     }
 
-    private final boolean h() {
+    private final boolean h(byte param0) {
         if (!(this.i((byte) -100))) {
             return false;
         }
@@ -581,7 +573,7 @@ final class pl extends gb implements jf, n, rg {
         }
     }
 
-    private final int a(boolean param0, int param1, String param2, gl param3, String param4, int param5) {
+    private final int a(boolean param0, int param1, String param2, gl param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         ki var9 = null;
         j var10 = null;
@@ -934,7 +926,7 @@ final class pl extends gb implements jf, n, rg {
         return stackIn_15_0 != 0;
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_G = null;
         field_V = null;
     }
@@ -952,7 +944,7 @@ final class pl extends gb implements jf, n, rg {
         }
     }
 
-    private final String g() {
+    private final String g(byte param0) {
         return "</col></u>";
     }
 

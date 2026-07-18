@@ -7,7 +7,7 @@ final class ue implements cg {
     static gk field_a;
     static String field_c;
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -31,8 +31,7 @@ final class ue implements cg {
         try {
           L0: {
             if (!Character.isISOControl(param0)) {
-              int discarded$8 = -17321;
-              if (de.a(param0)) {
+              if (de.a(param0, -17321)) {
                 stackOut_6_0 = 1;
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0 != 0;
@@ -93,7 +92,7 @@ final class ue implements cg {
     final static void a(boolean param0) {
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_a = null;
         field_c = null;
@@ -329,8 +328,7 @@ final class ue implements cg {
             break L13;
           }
         }
-        int discarded$1 = 32767;
-        lc.field_u = ja.a(var4 * var2, var5 * var2);
+        lc.field_u = ja.a(var4 * var2, var5 * var2, 32767);
     }
 
     static {

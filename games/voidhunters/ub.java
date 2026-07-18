@@ -263,7 +263,7 @@ abstract class ub extends ksa implements tv {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_d = null;
         field_h = null;
         field_e = null;

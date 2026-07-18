@@ -54,8 +54,7 @@ final class uk {
                   if (var2_int != -1) {
                     var3 = param1.substring(0, var2_int);
                     var4 = param1.substring(1 + var2_int);
-                    int discarded$2 = -127;
-                    var5 = gk.a(var3);
+                    var5 = gk.a(var3, (byte) -127);
                     if (var5 == null) {
                       stackOut_11_0 = sg.a(-1326, var4);
                       stackIn_12_0 = stackOut_11_0;
@@ -112,7 +111,7 @@ final class uk {
         return stackIn_12_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

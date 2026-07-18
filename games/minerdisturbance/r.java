@@ -11,9 +11,9 @@ final class r {
         throw new IllegalStateException();
     }
 
-    final static void a() {
-        int discarded$0 = -1;
-        ed.a((String) null, km.field_b);
+    final static void a(byte param0) {
+        Object var2 = null;
+        ed.a((String) null, km.field_b, -1);
     }
 
     public static void b(byte param0) {
@@ -25,7 +25,7 @@ final class r {
         }
     }
 
-    final static int a(CharSequence param0, byte[] param1, int param2, int param3, int param4) {
+    final static int a(CharSequence param0, byte[] param1, int param2, int param3, int param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -304,14 +304,9 @@ final class r {
         return stackIn_67_0;
     }
 
-    final static ea[] a(byte param0, int param1, int param2, int param3) {
+    final static ea[] a(byte param0, int param1, int param2, int param3, int param4) {
         int var5 = -30;
-        int discarded$0 = 1;
-        int discarded$1 = 0;
-        int discarded$2 = -81;
-        int discarded$3 = 1;
-        int discarded$4 = 0;
-        return sc.a(3, 0, 1, param3);
+        return sc.a(3, 0, 1, param3, 0, 1, (byte) -81, 0, 1);
     }
 
     final static void a(int param0) {

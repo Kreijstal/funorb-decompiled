@@ -94,11 +94,10 @@ final class c extends rc {
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
         super.b(param0, param1, param2, param3, param4);
-        int discarded$0 = -277997311;
-        this.a();
+        this.a(-277997311);
     }
 
-    private final void a() {
+    private final void a(int param0) {
         ((c) this).field_S = new o[]{this.b(((c) this).field_O, 16711935, ((c) this).field_K), this.b(((c) this).field_I, 16711935, ((c) this).field_F)};
         ((c) this).field_P = this.a((byte) -119);
         ((c) this).field_A = ((c) this).field_P.b();
@@ -313,11 +312,10 @@ final class c extends rc {
         ((c) this).field_K = param1;
         int var4 = 99 / ((-54 - param0) / 58);
         ((c) this).field_O = param2;
-        int discarded$0 = -277997311;
-        this.a();
+        this.a(-277997311);
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_E = null;
         field_M = null;
         int var1 = -1;

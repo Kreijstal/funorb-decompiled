@@ -9,7 +9,7 @@ final class ll implements uk {
     static hl field_c;
     static int field_d;
 
-    final static void c() {
+    final static void c(int param0) {
         Object var2 = null;
         mj.a((String) null, "", 99);
     }
@@ -20,7 +20,7 @@ final class ll implements uk {
         ((ll) this).field_e = 1;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
     }
 

@@ -9,7 +9,7 @@ final class oj extends rf {
     static String field_k;
     static java.applet.Applet field_f;
 
-    final static int a() {
+    final static int a(int param0) {
         return pg.field_g;
     }
 
@@ -24,7 +24,7 @@ final class oj extends rf {
         return var3;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_f = null;
         field_j = null;
         field_g = null;

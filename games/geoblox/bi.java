@@ -17,7 +17,7 @@ final class bi implements dh {
     private int field_h;
     static String[] field_c;
 
-    final static boolean a(boolean param0, CharSequence param1) {
+    final static boolean a(boolean param0, CharSequence param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -46,8 +46,7 @@ final class bi implements dh {
         var4 = Geoblox.field_C;
         try {
           L0: {
-            int discarded$6 = 118;
-            if (kk.a(false, param1)) {
+            if (kk.a(false, param1, (byte) 118)) {
               var3_int = 0;
               L1: while (true) {
                 if (param1.length() <= var3_int) {
@@ -226,7 +225,7 @@ final class bi implements dh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
     }
 

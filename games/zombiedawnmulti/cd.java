@@ -58,7 +58,7 @@ final class cd extends cj {
         ((cd) this).field_Hb.field_z = param3;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         RuntimeException var1 = null;
         Object var2 = null;
         int var2_int = 0;
@@ -159,7 +159,7 @@ final class cd extends cj {
         }
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_Mb = null;
         field_Fb = null;
         field_Lb = null;

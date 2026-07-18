@@ -11,7 +11,7 @@ final class sb {
     static String field_d;
     static int field_e;
 
-    public static void c() {
+    public static void c(int param0) {
         field_b = null;
         field_h = null;
         field_c = null;
@@ -69,7 +69,7 @@ final class sb {
         }
     }
 
-    final static void a(boolean param0, byte param1, ha param2) {
+    final static void a(boolean param0, byte param1, ha param2, int param3) {
         Object var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -164,7 +164,7 @@ final class sb {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         Object var3 = null;

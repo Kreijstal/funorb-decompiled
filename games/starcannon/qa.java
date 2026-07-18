@@ -8,7 +8,7 @@ final class qa {
     static boolean field_e;
     static int field_c;
 
-    final static void a(int param0, String[] param1, String param2) {
+    final static void a(int param0, String[] param1, String param2, byte param3) {
         RuntimeException var4 = null;
         int stackIn_9_0 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -62,17 +62,14 @@ final class qa {
             return;
           } else {
             if (param0 < 100) {
-              int discarded$6 = 0;
-              gj.field_a = fb.a(param2, param0);
+              gj.field_a = fb.a(param2, param0, 0);
               return;
             } else {
               if (105 < param0) {
-                int discarded$7 = 0;
-                gj.field_a = fb.a(param2, param0);
+                gj.field_a = fb.a(param2, param0, 0);
                 return;
               } else {
-                int discarded$8 = 0;
-                gj.field_a = hc.a(param1);
+                gj.field_a = hc.a(param1, 0);
                 return;
               }
             }

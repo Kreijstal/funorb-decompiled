@@ -41,12 +41,12 @@ final class nh {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_h = null;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

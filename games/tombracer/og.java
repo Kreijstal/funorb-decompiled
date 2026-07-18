@@ -16,12 +16,11 @@ final class og extends hl implements qm {
         return super.a(((og) this).field_h.field_Tc, param1, 1);
     }
 
-    final static void b() {
+    final static void b(int param0) {
         if (null == dq.field_f) {
             return;
         }
-        int discarded$0 = 0;
-        pq.a((java.awt.Canvas) (Object) dq.field_f);
+        pq.a((java.awt.Canvas) (Object) dq.field_f, false);
         dq.field_f.a((byte) -34, dsa.field_c);
         dq.field_f = null;
         if (null != wba.field_o) {
@@ -30,7 +29,7 @@ final class og extends hl implements qm {
         nma.field_l.requestFocus();
     }
 
-    final static String a(java.applet.Applet param0, String param1) {
+    final static String a(java.applet.Applet param0, String param1, byte param2) {
         try {
             String var3 = null;
             Throwable var3_ref = null;

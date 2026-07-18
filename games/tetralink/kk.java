@@ -12,7 +12,7 @@ final class kk extends ae {
     static cl[] field_X;
     private int field_S;
 
-    public static void h() {
+    public static void h(int param0) {
         field_X = null;
         field_P = null;
         field_T = null;
@@ -56,7 +56,7 @@ final class kk extends ae {
         return -1;
     }
 
-    final static void g() {
+    final static void g(int param0) {
         if (!(!hi.field_a)) {
             ra.e(ra.field_j, ra.field_i, ra.field_l - ra.field_j, -ra.field_i + ra.field_g);
             ck.field_bb.a(false, 256);
@@ -189,7 +189,7 @@ final class kk extends ae {
         return stackIn_21_0 != 0;
     }
 
-    final static int i() {
+    final static int i(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

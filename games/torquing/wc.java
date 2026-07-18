@@ -231,7 +231,7 @@ final class wc extends q {
         return true;
     }
 
-    final static void a(qp param0) {
+    final static void a(qp param0, byte param1, int param2) {
         try {
             tl.field_p.a((byte) 54, (q) (Object) param0);
             l.a(4, param0, 1);

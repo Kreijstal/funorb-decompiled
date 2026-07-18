@@ -10,7 +10,7 @@ final class cn extends RuntimeException {
     static nh[][] field_e;
     static String field_b;
 
-    final static hl a() {
+    final static hl a(int param0) {
         return qj.b(0);
     }
 

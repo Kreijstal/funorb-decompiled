@@ -7,8 +7,7 @@ final class eb extends RuntimeException {
     static boolean field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int discarded$3 = -31782;
-        ph.d();
+        ph.d(-31782);
         if (param0 != 0) {
             return;
         }

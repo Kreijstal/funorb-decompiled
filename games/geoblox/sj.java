@@ -10,18 +10,17 @@ final class sj {
     static String field_b;
     private int field_a;
 
-    final static void a(p param0) {
+    final static void a(p param0, int param1, int param2) {
         try {
             rh.field_a.a(-81, (hf) (Object) param0);
-            int discarded$0 = 30175;
-            ol.a(4, param0);
+            ol.a(4, param0, 30175);
             int var3_int = 0;
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "sj.A(" + (param0 != null ? "{...}" : "null") + ',' + -56 + ',' + 4 + ')');
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_e = null;
         field_b = null;
@@ -47,7 +46,7 @@ final class sj {
         }
     }
 
-    private final int b(int param0) {
+    private final int b(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         var4 = Geoblox.field_C;
@@ -107,8 +106,7 @@ final class sj {
     private final void c(int param0, int param1) {
         int[] var3 = null;
         int[] var4 = null;
-        int discarded$2 = 1;
-        var4 = new int[this.b(param0)];
+        var4 = new int[this.b(param0, 1)];
         var3 = var4;
         if (param1 != 25177) {
           ((sj) this).field_f = null;

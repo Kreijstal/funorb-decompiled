@@ -7,7 +7,7 @@ final class gg {
     static boolean field_a;
     static String field_c;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_c = null;
     }
@@ -214,7 +214,7 @@ final class gg {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -239,8 +239,7 @@ final class gg {
               try {
                 L0: {
                   var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-                  int discarded$2 = -1;
-                  param0.getAppletContext().showDocument(fh.a(param0, var2), "_top");
+                  param0.getAppletContext().showDocument(fh.a(param0, var2, -1), "_top");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {

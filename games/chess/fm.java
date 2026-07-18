@@ -169,7 +169,7 @@ final class fm extends kn {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_T = null;
         field_O = null;
         field_R = null;

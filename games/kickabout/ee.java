@@ -8,12 +8,12 @@ final class ee {
     static boolean field_e;
     static int field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_c = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         if (!(rq.field_D == null)) {
             pi.field_b.b((lq) (Object) rq.field_D);
         }
@@ -40,7 +40,7 @@ final class ee {
         }
     }
 
-    final static void a(ks param0) {
+    final static void a(ks param0, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

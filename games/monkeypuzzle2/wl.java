@@ -152,7 +152,7 @@ abstract class wl {
 
     abstract boolean a(byte param0);
 
-    public static void c() {
+    public static void c(byte param0) {
         field_f = null;
         field_d = null;
     }
@@ -194,8 +194,7 @@ abstract class wl {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$7 = -3;
-            if (wg.a(param4, param3, param2)) {
+            if (wg.a(param4, param3, param2, -3)) {
               stackOut_3_0 = rl.a(-32466, param0.b(255, param3, param4));
               stackIn_4_0 = stackOut_3_0;
               break L0;

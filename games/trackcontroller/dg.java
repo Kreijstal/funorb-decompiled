@@ -31,7 +31,7 @@ final class dg extends al {
         }
     }
 
-    private final qj b() {
+    private final qj b(boolean param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -55,7 +55,7 @@ final class dg extends al {
         return var3;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = -59;
         field_H = null;
         field_E = null;
@@ -352,8 +352,7 @@ final class dg extends al {
           return;
         } else {
           ((dg) this).field_Q = new qj[]{this.a(((dg) this).field_D, true, ((dg) this).field_I), this.a(((dg) this).field_F, true, ((dg) this).field_P)};
-          int discarded$1 = 1;
-          ((dg) this).field_O = this.b();
+          ((dg) this).field_O = this.b(true);
           ((dg) this).field_R = ((dg) this).field_O.c();
           ((dg) this).field_G = new qj(((dg) this).field_u >> 1, ((dg) this).field_u);
           return;

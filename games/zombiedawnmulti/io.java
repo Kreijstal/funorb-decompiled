@@ -13,7 +13,7 @@ final class io {
     static String field_a;
     static String field_h;
 
-    private final void a(int param0, Object param1, long param2) {
+    private final void a(int param0, Object param1, long param2, int param3) {
         kk var6 = null;
         eg var6_ref = null;
         int var8 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -21,8 +21,7 @@ final class io {
             if (((io) this).field_i < param0) {
                 throw new IllegalStateException();
             }
-            int discarded$0 = 0;
-            this.a(param2);
+            this.a(param2, false);
             ((io) this).field_f = ((io) this).field_f - param0;
             while (((io) this).field_f < 0) {
                 var6 = (kk) (Object) ((io) this).field_c.a(false);
@@ -267,7 +266,7 @@ final class io {
         oi.a((String) null, param2, (byte) -67, param1);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_h = null;
         field_d = null;
@@ -368,7 +367,7 @@ final class io {
         return stackIn_8_0 != 0;
     }
 
-    private final void a(long param0) {
+    private final void a(long param0, boolean param1) {
         kk var4 = (kk) (Object) ((io) this).field_j.a(param0, 72);
         this.a(1, var4);
     }
@@ -440,8 +439,7 @@ final class io {
 
     final void a(Object param0, long param1, int param2) {
         try {
-            int discarded$0 = -107;
-            this.a(param2, param0, param1);
+            this.a(param2, param0, param1, -107);
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) (Object) runtimeException, "io.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

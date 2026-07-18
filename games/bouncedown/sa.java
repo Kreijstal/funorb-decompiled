@@ -452,7 +452,7 @@ final class sa extends ai {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_j = null;
     }
 

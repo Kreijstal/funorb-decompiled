@@ -57,8 +57,7 @@ final class ue {
               if (0 >= param5) {
                 break L1;
               } else {
-                int discarded$2 = -95;
-                if (!bd.a(param5)) {
+                if (!bd.a(param5, (byte) -95)) {
                   throw new IllegalArgumentException("");
                 } else {
                   break L1;
@@ -69,8 +68,7 @@ final class ue {
               if (0 >= param6) {
                 break L2;
               } else {
-                int discarded$3 = -95;
-                if (bd.a(param6)) {
+                if (bd.a(param6, (byte) -95)) {
                   break L2;
                 } else {
                   throw new IllegalArgumentException("");
@@ -195,7 +193,7 @@ final class ue {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
     }
 

@@ -5,7 +5,7 @@ final class rn {
     static lg field_b;
     static String field_a;
 
-    final static void a(byte[] param0) {
+    final static void a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -307,7 +307,7 @@ final class rn {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

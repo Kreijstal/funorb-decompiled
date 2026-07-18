@@ -110,7 +110,7 @@ final class nh extends jq {
         ((nh) this).field_k = param1;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_h = null;
         field_m = null;
         field_i = null;

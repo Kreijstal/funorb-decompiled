@@ -10,143 +10,36 @@ final class nc implements ad {
 
     final static void a(java.applet.Applet param0, String param1, byte param2) {
         try {
-            Throwable var3 = null;
-            RuntimeException var3_ref = null;
-            String var4 = null;
-            String var5 = null;
             String var6 = null;
+            String var5 = null;
+            String var4 = null;
             String var7 = null;
-            RuntimeException stackIn_12_0 = null;
-            StringBuilder stackIn_12_1 = null;
-            RuntimeException stackIn_13_0 = null;
-            StringBuilder stackIn_13_1 = null;
-            RuntimeException stackIn_14_0 = null;
-            StringBuilder stackIn_14_1 = null;
-            String stackIn_14_2 = null;
-            RuntimeException stackIn_15_0 = null;
-            StringBuilder stackIn_15_1 = null;
-            RuntimeException stackIn_16_0 = null;
-            StringBuilder stackIn_16_1 = null;
-            RuntimeException stackIn_17_0 = null;
-            StringBuilder stackIn_17_1 = null;
-            String stackIn_17_2 = null;
-            Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_11_0 = null;
-            StringBuilder stackOut_11_1 = null;
-            RuntimeException stackOut_13_0 = null;
-            StringBuilder stackOut_13_1 = null;
-            String stackOut_13_2 = null;
-            RuntimeException stackOut_12_0 = null;
-            StringBuilder stackOut_12_1 = null;
-            String stackOut_12_2 = null;
-            RuntimeException stackOut_14_0 = null;
-            StringBuilder stackOut_14_1 = null;
-            RuntimeException stackOut_16_0 = null;
-            StringBuilder stackOut_16_1 = null;
-            String stackOut_16_2 = null;
-            RuntimeException stackOut_15_0 = null;
-            StringBuilder stackOut_15_1 = null;
-            String stackOut_15_2 = null;
             try {
-              L0: {
                 nj.field_a = param1;
                 try {
-                  L1: {
-                    L2: {
-                      var6 = param0.getParameter("cookieprefix");
-                      var5 = var6;
-                      var5 = var6;
-                      var4 = param0.getParameter("cookiehost");
-                      var5 = var4;
-                      var5 = var4;
-                      if (param2 >= 66) {
-                        break L2;
-                      } else {
+                    var6 = param0.getParameter("cookieprefix");
+                    var5 = var6;
+                    var5 = var6;
+                    var4 = param0.getParameter("cookiehost");
+                    var5 = var4;
+                    var5 = var4;
+                    if (param2 < 66) {
                         field_b = null;
-                        break L2;
-                      }
                     }
-                    L3: {
-                      var7 = var6 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
-                      var5 = var7;
-                      var5 = var7;
-                      if (param1.length() != 0) {
-                        var5 = var7 + "; Expires=" + e.a(sf.a((byte) -122) - -94608000000L, -127) + "; Max-Age=" + 94608000L;
-                        break L3;
-                      } else {
+                    var7 = var6 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
+                    var5 = var7;
+                    var5 = var7;
+                    if (param1.length() == 0) {
                         var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                        break L3;
-                      }
+                    } else {
+                        var5 = var7 + "; Expires=" + e.a(sf.a((byte) -122) - -94608000000L, -127) + "; Max-Age=" + 94608000L;
                     }
-                    int discarded$2 = -106;
-                    lk.a(param0, "document.cookie=\"" + var5 + "\"");
-                    break L1;
-                  }
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L4: {
-                    var3 = decompiledCaughtException;
-                    break L4;
-                  }
+                    lk.a(param0, "document.cookie=\"" + var5 + "\"", (byte) -106);
+                } catch (Throwable throwable) {
                 }
-                int discarded$3 = 1;
-                ie.a(param0);
-                break L0;
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L5: {
-                var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_11_0 = (RuntimeException) var3_ref;
-                stackOut_11_1 = new StringBuilder().append("nc.A(");
-                stackIn_13_0 = stackOut_11_0;
-                stackIn_13_1 = stackOut_11_1;
-                stackIn_12_0 = stackOut_11_0;
-                stackIn_12_1 = stackOut_11_1;
-                if (param0 == null) {
-                  stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-                  stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-                  stackOut_13_2 = "null";
-                  stackIn_14_0 = stackOut_13_0;
-                  stackIn_14_1 = stackOut_13_1;
-                  stackIn_14_2 = stackOut_13_2;
-                  break L5;
-                } else {
-                  stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                  stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-                  stackOut_12_2 = "{...}";
-                  stackIn_14_0 = stackOut_12_0;
-                  stackIn_14_1 = stackOut_12_1;
-                  stackIn_14_2 = stackOut_12_2;
-                  break L5;
-                }
-              }
-              L6: {
-                stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
-                stackIn_16_0 = stackOut_14_0;
-                stackIn_16_1 = stackOut_14_1;
-                stackIn_15_0 = stackOut_14_0;
-                stackIn_15_1 = stackOut_14_1;
-                if (param1 == null) {
-                  stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-                  stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-                  stackOut_16_2 = "null";
-                  stackIn_17_0 = stackOut_16_0;
-                  stackIn_17_1 = stackOut_16_1;
-                  stackIn_17_2 = stackOut_16_2;
-                  break L6;
-                } else {
-                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-                  stackOut_15_2 = "{...}";
-                  stackIn_17_0 = stackOut_15_0;
-                  stackIn_17_1 = stackOut_15_1;
-                  stackIn_17_2 = stackOut_15_2;
-                  break L6;
-                }
-              }
-              throw lj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param2 + ')');
+                ie.a(param0, true);
+            } catch (RuntimeException runtimeException) {
+                throw lj.a((Throwable) (Object) runtimeException, "nc.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

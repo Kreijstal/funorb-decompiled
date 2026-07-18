@@ -12,7 +12,7 @@ final class e {
     int field_d;
     static tk field_e;
 
-    final static void a() {
+    final static void a(byte param0) {
         sd.field_c.k(119);
         if (ji.field_a == null) {
             ji.field_a = new rk(sd.field_c, rk.field_ab);

@@ -18,7 +18,7 @@ final class tia {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
         field_b = null;
@@ -97,7 +97,7 @@ final class tia {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int[] var7 = null;

@@ -34,7 +34,7 @@ final class qi {
         return var2;
     }
 
-    final static boolean d() {
+    final static boolean d(int param0) {
         return wi.field_J;
     }
 
@@ -49,9 +49,9 @@ final class qi {
             }
           }
           if (((qi) this).field_d) {
-            int fieldTemp$4 = ((qi) this).field_e - 1;
+            int fieldTemp$2 = ((qi) this).field_e - 1;
             ((qi) this).field_e = ((qi) this).field_e - 1;
-            if (fieldTemp$4 > 0) {
+            if (fieldTemp$2 > 0) {
               return;
             } else {
               L1: {
@@ -67,8 +67,7 @@ final class qi {
                 ((qi) this).field_d = false;
                 return;
               } else {
-                int discarded$5 = 99;
-                this.a();
+                this.a((byte) 99);
                 return;
               }
             }
@@ -108,7 +107,7 @@ final class qi {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_b = null;
     }
 
@@ -127,7 +126,7 @@ final class qi {
         ((qi) this).field_k = param1;
     }
 
-    final static int a(ne param0, ne param1, String param2, int param3, int param4, boolean param5) {
+    final static int a(ne param0, ne param1, String param2, int param3, int param4, boolean param5, int param6) {
         RuntimeException var7 = null;
         String var8 = null;
         int var9 = 0;
@@ -233,6 +232,7 @@ final class qi {
             L1: {
               var14 = param0.a(160);
               var11_ref_String = var14;
+              var11_ref_String = var14;
               var8 = param1.a(160);
               var11_ref_String = var8;
               var11_ref_String = var8;
@@ -272,16 +272,14 @@ final class qi {
                       re.field_G.b(0, var14);
                       re.field_G.b(0, var8);
                       var15 = (CharSequence) (Object) param2;
-                      int discarded$4 = 83;
-                      re.field_G.b(0, fi.a(var15));
+                      re.field_G.b(0, fi.a(var15, 83));
                       re.field_G.b(-1947079288, param4);
                       re.field_G.b((byte) 11, param3);
                       re.field_G.b((byte) 11, var9);
                       n.field_b.b((byte) 11, 18);
                       n.field_b.field_m = n.field_b.field_m + 2;
                       var10 = n.field_b.field_m;
-                      int discarded$5 = 102;
-                      var11_ref_String = fb.a(jg.f(1));
+                      var11_ref_String = fb.a(jg.f(1), (byte) 102);
                       if (var11_ref_String != null) {
                         break L5;
                       } else {
@@ -384,7 +382,7 @@ final class qi {
                   }
                   if (var9 != 248) {
                     if (var9 == 99) {
-                      boolean discarded$6 = hc.a(uf.a(true), -28266);
+                      boolean discarded$1 = hc.a(uf.a(true), -28266);
                       gh.field_c = new Boolean(qj.a((byte) -100, (va) (Object) nk.field_N));
                       nk.field_N.field_m = 0;
                       break L8;
@@ -481,8 +479,7 @@ final class qi {
                   break L14;
                 } else {
                   L15: {
-                    int discarded$7 = 2;
-                    if (eh.a() > 30000L) {
+                    if (eh.a(2) > 30000L) {
                       bh.field_g = sa.field_b;
                       break L15;
                     } else {
@@ -623,7 +620,7 @@ final class qi {
         return stackIn_6_0 != 0;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

@@ -9,13 +9,13 @@ final class ud {
     static String field_f;
     static char field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         int var1 = -96;
         field_f = null;
     }
 
-    final static void a(ac param0) {
+    final static void a(ac param0, int param1, int param2, int param3) {
         try {
             pm.field_c = 30;
             rb.field_e = param0;

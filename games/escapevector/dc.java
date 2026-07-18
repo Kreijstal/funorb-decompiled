@@ -274,7 +274,7 @@ final class dc extends hg {
         }
     }
 
-    final static void a(byte param0, String param1) {
+    final static void a(byte param0, String param1, int param2, int param3) {
         try {
             fh.field_g.b(param1, 319, 475, 0, -1, 64);
             fh.field_g.b(param1, 321, 475, 0, -1, 64);
@@ -286,7 +286,7 @@ final class dc extends hg {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int a(int param0, int param1, int param2, int param3, int param4) {
         return param3 * (-param2 + param0) / param1 + param2;
     }
 

@@ -15,24 +15,21 @@ final class mf {
     final static void c(byte param0) {
         if (param0 <= 111) {
             kk discarded$0 = mf.a(45, (byte) -128);
-            int discarded$1 = 25;
-            p.a();
+            p.a((byte) 25);
             return;
         }
-        int discarded$2 = 25;
-        p.a();
+        p.a((byte) 25);
     }
 
     final static void a(int param0, boolean param1, int param2, uf param3, java.awt.Component param4, nb param5) {
         try {
-            int discarded$0 = 22050;
-            jb.a((byte) -109, true, param5, 22050, param4, 1024, param3);
+            jb.a((byte) -109, true, param5, 22050, param4, 1024, param3, 22050);
         } catch (RuntimeException runtimeException) {
             throw sl.a((Throwable) (Object) runtimeException, "mf.A(" + 15 + ',' + true + ',' + 22050 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -136,7 +133,7 @@ final class mf {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_h = null;
         field_e = null;
         field_d = null;

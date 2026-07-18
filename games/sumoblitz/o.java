@@ -14,10 +14,8 @@ final class o {
         if (!(nd.field_F != 3)) {
             up.field_g[oh.field_e] = true;
         }
-        int discarded$4 = -104;
-        of.a();
-        int discarded$8 = 123;
-        ju.g();
+        of.a((byte) -104);
+        ju.g(123);
         if (!og.a(-77)) {
             av.a(-7753, true, 10);
         }
@@ -41,12 +39,12 @@ final class o {
         il.field_a = in.field_z;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         double var1_double = 0.0;
         int var3 = 0;

@@ -12,7 +12,7 @@ final class jf extends bj implements sg, qb {
     static String[] field_I;
     private ue field_L;
 
-    public static void j() {
+    public static void j(int param0) {
         field_K = null;
         field_H = null;
         field_I = null;
@@ -20,7 +20,7 @@ final class jf extends bj implements sg, qb {
         field_M = null;
     }
 
-    private final String a() {
+    private final String a(byte param0) {
         return "</col></u>";
     }
 
@@ -53,8 +53,6 @@ final class jf extends bj implements sg, qb {
             ((jf) this).field_G = param0;
             ((jf) this).field_N = new hc(bm.field_d, (wn) null);
             ((jf) this).field_N.field_s = (db) (Object) new ck();
-            int discarded$2 = -102;
-            int discarded$3 = 126;
             var7 = r.a(mh.field_c, -63, new String[2]);
             var3 = 20;
             var4 = new k(sb.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, sb.field_a.field_r, -1, 2147483647, true);
@@ -107,7 +105,7 @@ final class jf extends bj implements sg, qb {
         }
     }
 
-    final static boolean l() {
+    final static boolean l(int param0) {
         return kb.field_d > 250;
     }
 
@@ -277,7 +275,7 @@ final class jf extends bj implements sg, qb {
         return stackIn_13_0;
     }
 
-    private final String k() {
+    private final String k(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 

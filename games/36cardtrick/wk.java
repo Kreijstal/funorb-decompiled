@@ -147,8 +147,7 @@ final class wk {
               if (param1 > 11) {
                 break L1;
               } else {
-                int discarded$5 = 0;
-                wk.a();
+                wk.a(false);
                 break L1;
               }
             }
@@ -176,13 +175,13 @@ final class wk {
             L4: while (true) {
               var10 = param2.indexOf('_', var9);
               if (var10 < 0) {
-                StringBuilder discarded$6 = var8.append(param2.substring(var9));
+                StringBuilder discarded$3 = var8.append(param2.substring(var9));
                 stackOut_11_0 = var8.toString();
                 stackIn_12_0 = stackOut_11_0;
                 break L0;
               } else {
-                StringBuilder discarded$7 = var8.append(param2.substring(var9, var10));
-                StringBuilder discarded$8 = var8.append(param3);
+                StringBuilder discarded$4 = var8.append(param2.substring(var9, var10));
+                StringBuilder discarded$5 = var8.append(param3);
                 var9 = var10 - -1;
                 continue L4;
               }
@@ -260,7 +259,7 @@ final class wk {
         }
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         if (null == cb.field_j) {
             return false;
         }
@@ -278,15 +277,14 @@ final class wk {
         ((wk) this).field_b = param0;
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = Main.field_T;
         try {
           L0: {
-            int discarded$18 = -79;
-            if (!ia.a()) {
+            if (!ia.a((byte) -79)) {
               L1: {
                 if (null == gj.field_a) {
                   break L1;
@@ -302,14 +300,13 @@ final class wk {
               }
               return;
             } else {
-              boolean discarded$19 = s.field_d.a((byte) -116, hk.field_b, e.field_c, true);
+              boolean discarded$7 = s.field_d.a((byte) -116, hk.field_b, e.field_c, true);
               s.field_d.l(-2054);
               L2: while (true) {
-                int discarded$20 = -114;
-                if (!ge.b()) {
+                if (!ge.b((byte) -114)) {
                   break L0;
                 } else {
-                  boolean discarded$21 = s.field_d.a(fd.field_n, 34, tb.field_d);
+                  boolean discarded$8 = s.field_d.a(fd.field_n, 34, tb.field_d);
                   continue L2;
                 }
               }

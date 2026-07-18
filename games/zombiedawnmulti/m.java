@@ -41,8 +41,7 @@ final class m extends tb {
                   L0: {
                     if (gi.field_i.field_wb.charAt(0) != 91) {
                       var7 = (CharSequence) (Object) gi.field_i.field_wb;
-                      int discarded$1 = 0;
-                      var4 = tg.a(var7);
+                      var4 = tg.a(var7, false);
                       var5 = var4;
                       var5 = var4;
                       break L0;
@@ -177,7 +176,7 @@ final class m extends tb {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_A = null;
         field_C = null;
         field_x = null;
@@ -185,7 +184,7 @@ final class m extends tb {
         field_B = null;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         il var1 = (il) (Object) db.field_a.a(true);
         if (!(var1 != null)) {
             var1 = new il();

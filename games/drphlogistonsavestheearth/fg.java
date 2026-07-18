@@ -14,7 +14,7 @@ final class fg {
     int field_a;
     private long field_c;
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -152,7 +152,7 @@ final class fg {
         return stackIn_20_0;
     }
 
-    final static sf a() {
+    final static sf a(int param0) {
         if (!(null != th.field_c)) {
             th.field_c = new sf();
             th.field_c.a(42, uh.field_i);
@@ -191,8 +191,7 @@ final class fg {
             if (((fg) this).field_c != DrPhlogistonSavesTheEarth.field_I) {
               var2 = 19 / ((param0 - -29) / 38);
               if (of.field_v == 2) {
-                int discarded$12 = -119;
-                if (ik.a(((fg) this).field_b)) {
+                if (ik.a(((fg) this).field_b, (byte) -119)) {
                   return 1;
                 } else {
                   return 0;
@@ -208,8 +207,7 @@ final class fg {
               if (((fg) this).field_c != DrPhlogistonSavesTheEarth.field_I) {
                 var2 = 19 / ((param0 - -29) / 38);
                 if (of.field_v == 2) {
-                  int discarded$13 = -119;
-                  if (ik.a(((fg) this).field_b)) {
+                  if (ik.a(((fg) this).field_b, (byte) -119)) {
                     return 1;
                   } else {
                     return 0;

@@ -274,11 +274,10 @@ final class hm extends am {
             Object var3 = null;
             ((hm) this).a((fj) null, 19, 48);
         }
-        int discarded$0 = 255;
-        this.d();
+        this.d(255);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_s = null;
         field_u = null;
         field_t = null;
@@ -528,7 +527,7 @@ final class hm extends am {
         }
     }
 
-    final static void a(boolean param0, int param1, t[] param2, int param3, uc param4, int param5, t[] param6, int param7, int param8, int param9, int param10) {
+    final static void a(boolean param0, int param1, t[] param2, int param3, uc param4, int param5, t[] param6, int param7, int param8, int param9, int param10, int param11) {
         try {
             wk.a(0, param2, param6, 0, param1, 320, param10, param0, 112, 240, 0, param4, param1, param10, param4);
         } catch (RuntimeException runtimeException) {
@@ -541,7 +540,7 @@ final class hm extends am {
         ((hm) this).field_x = new int[257];
     }
 
-    final static int a(boolean param0, CharSequence param1) {
+    final static int a(boolean param0, CharSequence param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -692,7 +691,7 @@ final class hm extends am {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

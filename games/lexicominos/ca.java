@@ -14,15 +14,11 @@ class ca extends kd {
     final static void c(boolean param0) {
         af.a(-56);
         if (null != ug.field_y) {
-            int discarded$12 = 160;
-            jd.a(ug.field_y);
-            int discarded$22 = -124;
-            rg.a();
-            int discarded$29 = 249;
-            hc.h();
+            jd.a(ug.field_y, 160);
+            rg.a(-124);
+            hc.h(249);
             wa.a(-45);
-            int discarded$35 = 1;
-            if (!el.a()) {
+            if (!el.a(1)) {
                 ck.b((byte) -60);
                 return;
             }
@@ -31,13 +27,10 @@ class ca extends kd {
             ck.b((byte) -60);
             return;
         }
-        int discarded$45 = -124;
-        rg.a();
-        int discarded$56 = 249;
-        hc.h();
+        rg.a(-124);
+        hc.h(249);
         wa.a(-45);
-        int discarded$65 = 1;
-        if (el.a()) {
+        if (el.a(1)) {
             ed.field_q.h(1, 0);
             kc.a(0, -1);
             ck.b((byte) -60);

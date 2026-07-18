@@ -6,7 +6,7 @@ final class qr extends ana {
     private taa field_w;
     private tba field_x;
 
-    private final void e() {
+    private final void e(int param0) {
         ad var4 = null;
         int var5 = BachelorFridge.field_y;
         aga var2 = ((qr) this).field_x.field_l.a(8, ((qr) this).field_q.field_h);
@@ -39,13 +39,12 @@ final class qr extends ana {
               }
             }
             var2 = 93 / ((71 - param0) / 47);
-            int fieldTemp$4 = ((qr) this).field_l - 1;
+            int fieldTemp$2 = ((qr) this).field_l - 1;
             ((qr) this).field_l = ((qr) this).field_l - 1;
-            if (fieldTemp$4 >= 0) {
+            if (fieldTemp$2 >= 0) {
               return false;
             } else {
-              int discarded$5 = -1;
-              this.f();
+              this.f(-1);
               return true;
             }
           } else {
@@ -114,9 +113,8 @@ final class qr extends ana {
         }
     }
 
-    private final void f() {
-        int discarded$0 = 75;
-        this.e();
+    private final void f(int param0) {
+        this.e(75);
     }
 
     static {

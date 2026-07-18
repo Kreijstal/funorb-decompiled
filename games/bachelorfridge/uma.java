@@ -198,7 +198,7 @@ final class uma extends sh {
         return stackIn_3_0;
     }
 
-    final static void n() {
+    final static void n(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -326,7 +326,7 @@ final class uma extends sh {
         }
     }
 
-    public static void m() {
+    public static void m(int param0) {
         field_O = null;
         field_P = null;
         field_J = null;

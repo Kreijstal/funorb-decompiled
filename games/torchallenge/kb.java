@@ -35,7 +35,7 @@ final class kb extends qd {
     private boolean field_Q;
     private int field_z;
 
-    final static void a(String param0, String param1) {
+    final static void a(String param0, String param1, byte param2) {
         try {
             fl.a(-125, false, param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -48,8 +48,7 @@ final class kb extends qd {
             if (param0 != -8126) {
                 ((kb) this).field_I = null;
             }
-            int discarded$0 = 28050;
-            this.a(true, param2, param1);
+            this.a(true, param2, param1, 28050);
         } catch (RuntimeException runtimeException) {
             throw oj.a((Throwable) (Object) runtimeException, "kb.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -711,7 +710,7 @@ final class kb extends qd {
         return stackIn_4_0;
     }
 
-    private final synchronized void a(boolean param0, boolean param1, ej param2) {
+    private final synchronized void a(boolean param0, boolean param1, ej param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = TorChallenge.field_F ? 1 : 0;
@@ -828,8 +827,7 @@ final class kb extends qd {
             if (var3 != ((kb) this).field_z) {
               break L0;
             } else {
-              int discarded$1 = 28050;
-              this.a(((kb) this).field_Q, ((kb) this).field_B, ((kb) this).field_C);
+              this.a(((kb) this).field_Q, ((kb) this).field_B, ((kb) this).field_C, 28050);
               this.c(true);
               return;
             }

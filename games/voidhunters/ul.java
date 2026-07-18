@@ -5,7 +5,7 @@ final class ul {
     static llb[] field_b;
     static int field_a;
 
-    final static phb[] a(int param0, int param1, int param2, int param3) {
+    final static phb[] a(int param0, int param1, int param2, int param3, boolean param4) {
         phb[] var6 = new phb[9];
         phb[] var5 = var6;
         phb dupTemp$0 = mra.a(param0, (byte) -119, 1);
@@ -84,7 +84,7 @@ final class ul {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

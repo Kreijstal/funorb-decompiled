@@ -21,7 +21,7 @@ final class ti extends fc {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         int var1 = 0;
         field_p = null;
         field_j = null;
@@ -40,7 +40,7 @@ final class ti extends fc {
         }
     }
 
-    final static ng a(String param0, kk param1, String param2) {
+    final static ng a(String param0, kk param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -183,7 +183,7 @@ final class ti extends fc {
         return stackIn_3_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         qc.b(17, (byte) -42);
     }
 

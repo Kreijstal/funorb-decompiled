@@ -38,7 +38,7 @@ final class aoa implements bo {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         int var1 = 0;
     }

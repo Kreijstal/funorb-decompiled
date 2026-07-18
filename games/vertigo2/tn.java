@@ -173,7 +173,7 @@ final class tn {
         return stackIn_4_0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         vm.field_c = param1;
         s.field_u = param0;
     }
@@ -217,7 +217,7 @@ final class tn {
         return 2;
     }
 
-    final static boolean a(int param0, boolean param1, CharSequence param2) {
+    final static boolean a(int param0, boolean param1, CharSequence param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -575,7 +575,7 @@ final class tn {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_i = null;
         field_r = null;
         field_g = null;

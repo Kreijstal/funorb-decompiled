@@ -7,7 +7,7 @@ final class am {
     static String field_b;
     static boolean field_c;
 
-    final static kc a(int param0, boolean param1, int param2, int param3) {
+    final static kc a(int param0, boolean param1, int param2, int param3, int param4) {
         kc var5 = null;
         int var6 = 0;
         var6 = client.field_A ? 1 : 0;
@@ -41,7 +41,7 @@ final class am {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         field_a = null;

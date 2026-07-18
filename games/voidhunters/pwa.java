@@ -13,43 +13,79 @@ final class pwa implements ntb {
         RuntimeException var3 = null;
         int var4 = 0;
         pwa var5 = null;
-        int stackIn_32_0 = 0;
-        int stackIn_33_0 = 0;
-        int stackIn_34_0 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_35_1 = 0;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        String stackIn_46_2 = null;
+        int stackIn_14_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_17_1 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_26_0 = 0;
+        int stackIn_27_0 = 0;
+        int stackIn_28_0 = 0;
+        int stackIn_28_1 = 0;
+        int stackIn_36_0 = 0;
+        int stackIn_37_0 = 0;
+        int stackIn_38_0 = 0;
+        int stackIn_39_0 = 0;
+        int stackIn_39_1 = 0;
+        int stackIn_47_0 = 0;
+        int stackIn_48_0 = 0;
+        int stackIn_49_0 = 0;
+        int stackIn_50_0 = 0;
+        int stackIn_50_1 = 0;
+        RuntimeException stackIn_59_0 = null;
+        StringBuilder stackIn_59_1 = null;
+        RuntimeException stackIn_60_0 = null;
+        StringBuilder stackIn_60_1 = null;
+        RuntimeException stackIn_61_0 = null;
+        StringBuilder stackIn_61_1 = null;
+        String stackIn_61_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_31_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_32_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_16_1 = 0;
+        int stackOut_15_0 = 0;
+        int stackOut_15_1 = 0;
+        int stackOut_24_0 = 0;
+        int stackOut_23_0 = 0;
+        int stackOut_25_0 = 0;
+        int stackOut_27_0 = 0;
+        int stackOut_27_1 = 0;
+        int stackOut_26_0 = 0;
+        int stackOut_26_1 = 0;
+        int stackOut_35_0 = 0;
         int stackOut_34_0 = 0;
-        int stackOut_34_1 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_33_1 = 0;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
+        int stackOut_36_0 = 0;
+        int stackOut_38_0 = 0;
+        int stackOut_38_1 = 0;
+        int stackOut_37_0 = 0;
+        int stackOut_37_1 = 0;
+        int stackOut_46_0 = 0;
+        int stackOut_45_0 = 0;
+        int stackOut_47_0 = 0;
+        int stackOut_49_0 = 0;
+        int stackOut_49_1 = 0;
+        int stackOut_48_0 = 0;
+        int stackOut_48_1 = 0;
+        RuntimeException stackOut_58_0 = null;
+        StringBuilder stackOut_58_1 = null;
+        RuntimeException stackOut_60_0 = null;
+        StringBuilder stackOut_60_1 = null;
+        String stackOut_60_2 = null;
+        RuntimeException stackOut_59_0 = null;
+        StringBuilder stackOut_59_1 = null;
+        String stackOut_59_2 = null;
         try {
           L0: {
             L1: {
               var5 = (pwa) (Object) param0;
-              if (null == var5.field_e) {
+              if (null == ((pwa) this).field_e) {
                 break L1;
               } else {
                 if (var5.field_e != null) {
-                  var5.field_e.a((tv) (Object) var5.field_e, -63);
+                  ((pwa) this).field_e.a((tv) (Object) var5.field_e, -63);
                   break L1;
                 } else {
                   break L1;
@@ -57,11 +93,11 @@ final class pwa implements ntb {
               }
             }
             L2: {
-              if (var5.field_d == null) {
+              if (((pwa) this).field_d == null) {
                 break L2;
               } else {
                 if (var5.field_d != null) {
-                  var5.field_d.a((tv) (Object) var5.field_d, -125);
+                  ((pwa) this).field_d.a((tv) (Object) var5.field_d, -125);
                   break L2;
                 } else {
                   break L2;
@@ -69,104 +105,209 @@ final class pwa implements ntb {
               }
             }
             L3: {
-              if (var5.field_f == null) {
+              if (((pwa) this).field_f == null) {
                 break L3;
               } else {
                 if (var5.field_f == null) {
                   break L3;
                 } else {
-                  var5.field_f.a((tv) (Object) var5.field_f, -39);
+                  ((pwa) this).field_f.a((tv) (Object) var5.field_f, -39);
                   break L3;
                 }
               }
             }
-            var4 = 0;
-            gqa discarded$3 = var5.field_e;
             L4: {
-              if (null == var5.field_e) {
+              var4 = 0;
+              if (((pwa) this).field_e != null) {
+                stackOut_13_0 = 0;
+                stackIn_14_0 = stackOut_13_0;
                 break L4;
               } else {
-                if (var5.field_e.a((byte) 115, (tv) (Object) var5.field_e)) {
-                  iva.a(-6940, "PlayerJoin join has changed. before=" + (Object) (Object) var5.field_e + ", now=" + (Object) (Object) var5.field_e);
-                  var4 = 1;
-                  break L4;
-                } else {
-                  break L4;
-                }
+                stackOut_12_0 = 1;
+                stackIn_14_0 = stackOut_12_0;
+                break L4;
               }
             }
-            hg discarded$4 = var5.field_d;
             L5: {
-              if (var5.field_d == null) {
+              stackOut_14_0 = stackIn_14_0;
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_15_0 = stackOut_14_0;
+              if (var5.field_e != null) {
+                stackOut_16_0 = stackIn_16_0;
+                stackOut_16_1 = 0;
+                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_1 = stackOut_16_1;
                 break L5;
               } else {
-                if (!var5.field_d.a((byte) -51, (tv) (Object) var5.field_d)) {
-                  break L5;
-                } else {
-                  iva.a(-6940, "PlayerLeave leave has changed. before=" + (Object) (Object) var5.field_d + ", now=" + (Object) (Object) var5.field_d);
-                  var4 = 1;
-                  break L5;
-                }
+                stackOut_15_0 = stackIn_15_0;
+                stackOut_15_1 = 1;
+                stackIn_17_0 = stackOut_15_0;
+                stackIn_17_1 = stackOut_15_1;
+                break L5;
               }
             }
-            gtb discarded$5 = var5.field_f;
             L6: {
-              if (var5.field_f == null) {
-                break L6;
-              } else {
-                if (!var5.field_f.a((byte) -121, (tv) (Object) var5.field_f)) {
-                  break L6;
+              L7: {
+                if ((stackIn_17_0 ^ stackIn_17_1) != 0) {
+                  break L7;
                 } else {
-                  var4 = 1;
-                  iva.a(-6940, "PlayerReady ready has changed. before=" + (Object) (Object) var5.field_f + ", now=" + (Object) (Object) var5.field_f);
-                  break L6;
+                  if (null == ((pwa) this).field_e) {
+                    break L6;
+                  } else {
+                    if (((pwa) this).field_e.a((byte) 115, (tv) (Object) var5.field_e)) {
+                      break L7;
+                    } else {
+                      break L6;
+                    }
+                  }
                 }
               }
-            }
-            L7: {
-              if (var5.field_c) {
-                stackOut_31_0 = 0;
-                stackIn_32_0 = stackOut_31_0;
-                break L7;
-              } else {
-                stackOut_30_0 = 1;
-                stackIn_32_0 = stackOut_30_0;
-                break L7;
-              }
+              iva.a(-6940, "PlayerJoin join has changed. before=" + (Object) (Object) var5.field_e + ", now=" + (Object) (Object) ((pwa) this).field_e);
+              var4 = 1;
+              break L6;
             }
             L8: {
-              stackOut_32_0 = stackIn_32_0;
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_33_0 = stackOut_32_0;
-              if (var5.field_c) {
-                stackOut_34_0 = stackIn_34_0;
-                stackOut_34_1 = 0;
-                stackIn_35_0 = stackOut_34_0;
-                stackIn_35_1 = stackOut_34_1;
+              if (((pwa) this).field_d != null) {
+                stackOut_24_0 = 0;
+                stackIn_25_0 = stackOut_24_0;
                 break L8;
               } else {
-                stackOut_33_0 = stackIn_33_0;
-                stackOut_33_1 = 1;
-                stackIn_35_0 = stackOut_33_0;
-                stackIn_35_1 = stackOut_33_1;
+                stackOut_23_0 = 1;
+                stackIn_25_0 = stackOut_23_0;
                 break L8;
               }
             }
             L9: {
-              if (stackIn_35_0 == stackIn_35_1) {
+              stackOut_25_0 = stackIn_25_0;
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_26_0 = stackOut_25_0;
+              if (var5.field_d != null) {
+                stackOut_27_0 = stackIn_27_0;
+                stackOut_27_1 = 0;
+                stackIn_28_0 = stackOut_27_0;
+                stackIn_28_1 = stackOut_27_1;
                 break L9;
               } else {
-                iva.a(-6940, "boolean event_cancellation has changed. before=" + var5.field_c + ", now=" + var5.field_c);
-                var4 = 1;
+                stackOut_26_0 = stackIn_26_0;
+                stackOut_26_1 = 1;
+                stackIn_28_0 = stackOut_26_0;
+                stackIn_28_1 = stackOut_26_1;
                 break L9;
               }
             }
             L10: {
+              L11: {
+                if ((stackIn_28_0 ^ stackIn_28_1) != 0) {
+                  break L11;
+                } else {
+                  if (((pwa) this).field_d == null) {
+                    break L10;
+                  } else {
+                    if (!((pwa) this).field_d.a((byte) -51, (tv) (Object) var5.field_d)) {
+                      break L10;
+                    } else {
+                      break L11;
+                    }
+                  }
+                }
+              }
+              iva.a(-6940, "PlayerLeave leave has changed. before=" + (Object) (Object) var5.field_d + ", now=" + (Object) (Object) ((pwa) this).field_d);
+              var4 = 1;
+              break L10;
+            }
+            L12: {
+              if (((pwa) this).field_f != null) {
+                stackOut_35_0 = 0;
+                stackIn_36_0 = stackOut_35_0;
+                break L12;
+              } else {
+                stackOut_34_0 = 1;
+                stackIn_36_0 = stackOut_34_0;
+                break L12;
+              }
+            }
+            L13: {
+              stackOut_36_0 = stackIn_36_0;
+              stackIn_38_0 = stackOut_36_0;
+              stackIn_37_0 = stackOut_36_0;
+              if (null != var5.field_f) {
+                stackOut_38_0 = stackIn_38_0;
+                stackOut_38_1 = 0;
+                stackIn_39_0 = stackOut_38_0;
+                stackIn_39_1 = stackOut_38_1;
+                break L13;
+              } else {
+                stackOut_37_0 = stackIn_37_0;
+                stackOut_37_1 = 1;
+                stackIn_39_0 = stackOut_37_0;
+                stackIn_39_1 = stackOut_37_1;
+                break L13;
+              }
+            }
+            L14: {
+              L15: {
+                if ((stackIn_39_0 ^ stackIn_39_1) != 0) {
+                  break L15;
+                } else {
+                  if (((pwa) this).field_f == null) {
+                    break L14;
+                  } else {
+                    if (!((pwa) this).field_f.a((byte) -121, (tv) (Object) var5.field_f)) {
+                      break L14;
+                    } else {
+                      break L15;
+                    }
+                  }
+                }
+              }
+              var4 = 1;
+              iva.a(-6940, "PlayerReady ready has changed. before=" + (Object) (Object) var5.field_f + ", now=" + (Object) (Object) ((pwa) this).field_f);
+              break L14;
+            }
+            L16: {
+              if (((pwa) this).field_c) {
+                stackOut_46_0 = 0;
+                stackIn_47_0 = stackOut_46_0;
+                break L16;
+              } else {
+                stackOut_45_0 = 1;
+                stackIn_47_0 = stackOut_45_0;
+                break L16;
+              }
+            }
+            L17: {
+              stackOut_47_0 = stackIn_47_0;
+              stackIn_49_0 = stackOut_47_0;
+              stackIn_48_0 = stackOut_47_0;
+              if (var5.field_c) {
+                stackOut_49_0 = stackIn_49_0;
+                stackOut_49_1 = 0;
+                stackIn_50_0 = stackOut_49_0;
+                stackIn_50_1 = stackOut_49_1;
+                break L17;
+              } else {
+                stackOut_48_0 = stackIn_48_0;
+                stackOut_48_1 = 1;
+                stackIn_50_0 = stackOut_48_0;
+                stackIn_50_1 = stackOut_48_1;
+                break L17;
+              }
+            }
+            L18: {
+              if (stackIn_50_0 == stackIn_50_1) {
+                break L18;
+              } else {
+                iva.a(-6940, "boolean event_cancellation has changed. before=" + var5.field_c + ", now=" + ((pwa) this).field_c);
+                var4 = 1;
+                break L18;
+              }
+            }
+            L19: {
               if (var4 != 0) {
                 iva.a(-6940, "This instance of CarouselSystemEvent has changed");
-                break L10;
+                break L19;
               } else {
-                break L10;
+                break L19;
               }
             }
             if (param1 <= -19) {
@@ -178,33 +319,33 @@ final class pwa implements ntb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
+          L20: {
             var3 = decompiledCaughtException;
-            stackOut_43_0 = (RuntimeException) var3;
-            stackOut_43_1 = new StringBuilder().append("pwa.F(");
-            stackIn_45_0 = stackOut_43_0;
-            stackIn_45_1 = stackOut_43_1;
-            stackIn_44_0 = stackOut_43_0;
-            stackIn_44_1 = stackOut_43_1;
+            stackOut_58_0 = (RuntimeException) var3;
+            stackOut_58_1 = new StringBuilder().append("pwa.F(");
+            stackIn_60_0 = stackOut_58_0;
+            stackIn_60_1 = stackOut_58_1;
+            stackIn_59_0 = stackOut_58_0;
+            stackIn_59_1 = stackOut_58_1;
             if (param0 == null) {
-              stackOut_45_0 = (RuntimeException) (Object) stackIn_45_0;
-              stackOut_45_1 = (StringBuilder) (Object) stackIn_45_1;
-              stackOut_45_2 = "null";
-              stackIn_46_0 = stackOut_45_0;
-              stackIn_46_1 = stackOut_45_1;
-              stackIn_46_2 = stackOut_45_2;
-              break L11;
+              stackOut_60_0 = (RuntimeException) (Object) stackIn_60_0;
+              stackOut_60_1 = (StringBuilder) (Object) stackIn_60_1;
+              stackOut_60_2 = "null";
+              stackIn_61_0 = stackOut_60_0;
+              stackIn_61_1 = stackOut_60_1;
+              stackIn_61_2 = stackOut_60_2;
+              break L20;
             } else {
-              stackOut_44_0 = (RuntimeException) (Object) stackIn_44_0;
-              stackOut_44_1 = (StringBuilder) (Object) stackIn_44_1;
-              stackOut_44_2 = "{...}";
-              stackIn_46_0 = stackOut_44_0;
-              stackIn_46_1 = stackOut_44_1;
-              stackIn_46_2 = stackOut_44_2;
-              break L11;
+              stackOut_59_0 = (RuntimeException) (Object) stackIn_59_0;
+              stackOut_59_1 = (StringBuilder) (Object) stackIn_59_1;
+              stackOut_59_2 = "{...}";
+              stackIn_61_0 = stackOut_59_0;
+              stackIn_61_1 = stackOut_59_1;
+              stackIn_61_2 = stackOut_59_2;
+              break L20;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) (Object) stackIn_61_0, stackIn_61_2 + ',' + param1 + ')');
         }
     }
 
@@ -412,7 +553,7 @@ final class pwa implements ntb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
@@ -444,7 +585,7 @@ final class pwa implements ntb {
             L1: {
               var6 = (pwa) (Object) param1;
               var7 = var6;
-              if (null != var6.field_e) {
+              if (null != ((pwa) this).field_e) {
                 L2: {
                   if (null == var7.field_e) {
                     var7.field_e = new gqa();
@@ -453,7 +594,7 @@ final class pwa implements ntb {
                     break L2;
                   }
                 }
-                var6.field_e.b((byte) 110, (tv) (Object) var7.field_e);
+                ((pwa) this).field_e.b((byte) 110, (tv) (Object) var7.field_e);
                 break L1;
               } else {
                 var6.field_e = null;
@@ -461,7 +602,7 @@ final class pwa implements ntb {
               }
             }
             L3: {
-              if (var6.field_d == null) {
+              if (((pwa) this).field_d == null) {
                 var7.field_d = null;
                 break L3;
               } else {
@@ -473,12 +614,12 @@ final class pwa implements ntb {
                     break L4;
                   }
                 }
-                var6.field_d.b((byte) 65, (tv) (Object) var7.field_d);
+                ((pwa) this).field_d.b((byte) 65, (tv) (Object) var7.field_d);
                 break L3;
               }
             }
             L5: {
-              if (var6.field_f == null) {
+              if (((pwa) this).field_f == null) {
                 var7.field_f = null;
                 break L5;
               } else {
@@ -490,11 +631,11 @@ final class pwa implements ntb {
                     break L6;
                   }
                 }
-                var6.field_f.b((byte) 99, (tv) (Object) var7.field_f);
+                ((pwa) this).field_f.b((byte) 99, (tv) (Object) var7.field_f);
                 break L5;
               }
             }
-            var7.field_c = var6.field_c;
+            var7.field_c = ((pwa) this).field_c;
             if (param0 > 54) {
               break L0;
             } else {
@@ -543,139 +684,271 @@ final class pwa implements ntb {
         int var3_int = 0;
         RuntimeException var3 = null;
         pwa var4 = null;
-        boolean stackIn_16_0 = false;
-        boolean stackIn_17_0 = false;
-        boolean stackIn_18_0 = false;
-        int stackIn_18_1 = 0;
-        int stackIn_21_0 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_6_1 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_16_1 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_24_0 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_26_0 = 0;
+        int stackIn_26_1 = 0;
+        boolean stackIn_31_0 = false;
+        boolean stackIn_32_0 = false;
+        boolean stackIn_33_0 = false;
+        int stackIn_33_1 = 0;
+        int stackIn_36_0 = 0;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        String stackIn_40_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_15_0 = false;
-        boolean stackOut_17_0 = false;
-        int stackOut_17_1 = 0;
-        boolean stackOut_16_0 = false;
-        int stackOut_16_1 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_5_1 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_4_1 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_15_0 = 0;
+        int stackOut_15_1 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_14_1 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_21_0 = 0;
+        int stackOut_23_0 = 0;
+        int stackOut_25_0 = 0;
+        int stackOut_25_1 = 0;
+        int stackOut_24_0 = 0;
+        int stackOut_24_1 = 0;
+        boolean stackOut_30_0 = false;
+        boolean stackOut_32_0 = false;
+        int stackOut_32_1 = 0;
+        boolean stackOut_31_0 = false;
+        int stackOut_31_1 = 0;
+        int stackOut_35_0 = 0;
+        int stackOut_34_0 = 0;
+        RuntimeException stackOut_37_0 = null;
+        StringBuilder stackOut_37_1 = null;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
+        String stackOut_39_2 = null;
+        RuntimeException stackOut_38_0 = null;
+        StringBuilder stackOut_38_1 = null;
+        String stackOut_38_2 = null;
         try {
           L0: {
-            var3_int = 105 % ((22 - param0) / 59);
-            var4 = (pwa) (Object) param1;
-            gqa discarded$3 = var4.field_e;
             L1: {
-              L2: {
-                L3: {
-                  if (null == var4.field_e) {
-                    break L3;
-                  } else {
-                    if (var4.field_e.a((byte) 90, (tv) (Object) var4.field_e)) {
-                      break L2;
+              var3_int = 105 % ((22 - param0) / 59);
+              var4 = (pwa) (Object) param1;
+              if (var4.field_e != null) {
+                stackOut_2_0 = 0;
+                stackIn_3_0 = stackOut_2_0;
+                break L1;
+              } else {
+                stackOut_1_0 = 1;
+                stackIn_3_0 = stackOut_1_0;
+                break L1;
+              }
+            }
+            L2: {
+              stackOut_3_0 = stackIn_3_0;
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_4_0 = stackOut_3_0;
+              if (null != ((pwa) this).field_e) {
+                stackOut_5_0 = stackIn_5_0;
+                stackOut_5_1 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_1 = stackOut_5_1;
+                break L2;
+              } else {
+                stackOut_4_0 = stackIn_4_0;
+                stackOut_4_1 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_1 = stackOut_4_1;
+                break L2;
+              }
+            }
+            L3: {
+              L4: {
+                if ((stackIn_6_0 ^ stackIn_6_1) != 0) {
+                  break L4;
+                } else {
+                  L5: {
+                    if (null == ((pwa) this).field_e) {
+                      break L5;
                     } else {
-                      break L3;
+                      if (((pwa) this).field_e.a((byte) 90, (tv) (Object) var4.field_e)) {
+                        break L4;
+                      } else {
+                        break L5;
+                      }
                     }
                   }
-                }
-                hg discarded$4 = var4.field_d;
-                L4: {
-                  if (null == var4.field_d) {
+                  L6: {
+                    if (null != var4.field_d) {
+                      stackOut_12_0 = 0;
+                      stackIn_13_0 = stackOut_12_0;
+                      break L6;
+                    } else {
+                      stackOut_11_0 = 1;
+                      stackIn_13_0 = stackOut_11_0;
+                      break L6;
+                    }
+                  }
+                  L7: {
+                    stackOut_13_0 = stackIn_13_0;
+                    stackIn_15_0 = stackOut_13_0;
+                    stackIn_14_0 = stackOut_13_0;
+                    if (null != ((pwa) this).field_d) {
+                      stackOut_15_0 = stackIn_15_0;
+                      stackOut_15_1 = 0;
+                      stackIn_16_0 = stackOut_15_0;
+                      stackIn_16_1 = stackOut_15_1;
+                      break L7;
+                    } else {
+                      stackOut_14_0 = stackIn_14_0;
+                      stackOut_14_1 = 1;
+                      stackIn_16_0 = stackOut_14_0;
+                      stackIn_16_1 = stackOut_14_1;
+                      break L7;
+                    }
+                  }
+                  if ((stackIn_16_0 ^ stackIn_16_1) != 0) {
                     break L4;
                   } else {
-                    if (var4.field_d.a((byte) -57, (tv) (Object) var4.field_d)) {
-                      break L2;
-                    } else {
+                    L8: {
+                      if (null == ((pwa) this).field_d) {
+                        break L8;
+                      } else {
+                        if (((pwa) this).field_d.a((byte) -57, (tv) (Object) var4.field_d)) {
+                          break L4;
+                        } else {
+                          break L8;
+                        }
+                      }
+                    }
+                    L9: {
+                      if (((pwa) this).field_f != null) {
+                        stackOut_22_0 = 0;
+                        stackIn_23_0 = stackOut_22_0;
+                        break L9;
+                      } else {
+                        stackOut_21_0 = 1;
+                        stackIn_23_0 = stackOut_21_0;
+                        break L9;
+                      }
+                    }
+                    L10: {
+                      stackOut_23_0 = stackIn_23_0;
+                      stackIn_25_0 = stackOut_23_0;
+                      stackIn_24_0 = stackOut_23_0;
+                      if (null != var4.field_f) {
+                        stackOut_25_0 = stackIn_25_0;
+                        stackOut_25_1 = 0;
+                        stackIn_26_0 = stackOut_25_0;
+                        stackIn_26_1 = stackOut_25_1;
+                        break L10;
+                      } else {
+                        stackOut_24_0 = stackIn_24_0;
+                        stackOut_24_1 = 1;
+                        stackIn_26_0 = stackOut_24_0;
+                        stackIn_26_1 = stackOut_24_1;
+                        break L10;
+                      }
+                    }
+                    if ((stackIn_26_0 ^ stackIn_26_1) != 0) {
                       break L4;
-                    }
-                  }
-                }
-                gtb discarded$5 = var4.field_f;
-                L5: {
-                  if (var4.field_f == null) {
-                    break L5;
-                  } else {
-                    if (var4.field_f.a((byte) 122, (tv) (Object) var4.field_f)) {
-                      break L2;
                     } else {
-                      break L5;
+                      L11: {
+                        if (((pwa) this).field_f == null) {
+                          break L11;
+                        } else {
+                          if (((pwa) this).field_f.a((byte) 122, (tv) (Object) var4.field_f)) {
+                            break L4;
+                          } else {
+                            break L11;
+                          }
+                        }
+                      }
+                      L12: {
+                        stackOut_30_0 = ((pwa) this).field_c;
+                        stackIn_32_0 = stackOut_30_0;
+                        stackIn_31_0 = stackOut_30_0;
+                        if (var4.field_c) {
+                          stackOut_32_0 = stackIn_32_0;
+                          stackOut_32_1 = 0;
+                          stackIn_33_0 = stackOut_32_0;
+                          stackIn_33_1 = stackOut_32_1;
+                          break L12;
+                        } else {
+                          stackOut_31_0 = stackIn_31_0;
+                          stackOut_31_1 = 1;
+                          stackIn_33_0 = stackOut_31_0;
+                          stackIn_33_1 = stackOut_31_1;
+                          break L12;
+                        }
+                      }
+                      if ((stackIn_33_0 ? 1 : 0) != stackIn_33_1) {
+                        stackOut_35_0 = 0;
+                        stackIn_36_0 = stackOut_35_0;
+                        break L3;
+                      } else {
+                        break L4;
+                      }
                     }
                   }
-                }
-                L6: {
-                  stackOut_15_0 = var4.field_c;
-                  stackIn_17_0 = stackOut_15_0;
-                  stackIn_16_0 = stackOut_15_0;
-                  if (var4.field_c) {
-                    stackOut_17_0 = stackIn_17_0;
-                    stackOut_17_1 = 0;
-                    stackIn_18_0 = stackOut_17_0;
-                    stackIn_18_1 = stackOut_17_1;
-                    break L6;
-                  } else {
-                    stackOut_16_0 = stackIn_16_0;
-                    stackOut_16_1 = 1;
-                    stackIn_18_0 = stackOut_16_0;
-                    stackIn_18_1 = stackOut_16_1;
-                    break L6;
-                  }
-                }
-                if ((stackIn_18_0 ? 1 : 0) != stackIn_18_1) {
-                  stackOut_20_0 = 0;
-                  stackIn_21_0 = stackOut_20_0;
-                  break L1;
-                } else {
-                  break L2;
                 }
               }
-              stackOut_19_0 = 1;
-              stackIn_21_0 = stackOut_19_0;
-              break L1;
+              stackOut_34_0 = 1;
+              stackIn_36_0 = stackOut_34_0;
+              break L3;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L13: {
             var3 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var3;
-            stackOut_22_1 = new StringBuilder().append("pwa.C(").append(param0).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackOut_37_0 = (RuntimeException) var3;
+            stackOut_37_1 = new StringBuilder().append("pwa.C(").append(param0).append(',');
+            stackIn_39_0 = stackOut_37_0;
+            stackIn_39_1 = stackOut_37_1;
+            stackIn_38_0 = stackOut_37_0;
+            stackIn_38_1 = stackOut_37_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
-              break L7;
+              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
+              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_2 = "null";
+              stackIn_40_0 = stackOut_39_0;
+              stackIn_40_1 = stackOut_39_1;
+              stackIn_40_2 = stackOut_39_2;
+              break L13;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
-              break L7;
+              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
+              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_2 = "{...}";
+              stackIn_40_0 = stackOut_38_0;
+              stackIn_40_1 = stackOut_38_1;
+              stackIn_40_2 = stackOut_38_2;
+              break L13;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
+          throw rta.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ')');
         }
-        return stackIn_21_0 != 0;
+        return stackIn_36_0 != 0;
     }
 
     public final void a(faa param0, boolean param1) {

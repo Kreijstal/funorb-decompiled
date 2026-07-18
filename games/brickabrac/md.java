@@ -10,7 +10,7 @@ final class md extends km {
     private int field_s;
     static String field_w;
 
-    final static int f() {
+    final static int f(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -27,8 +27,7 @@ final class md extends km {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              int discarded$5 = 5;
-              if (!jl.a()) {
+              if (!jl.a((byte) 5)) {
                 L2: {
                   mh.field_H.a(qo.b(120, po.field_a, pq.field_k), 27479, qo.b(120, qo.field_O, tb.field_fb));
                   if (mh.field_H.a((byte) 113)) {
@@ -47,15 +46,13 @@ final class md extends km {
                       if (mh.field_H.field_j >= 0) {
                         var3 = ri.field_I[mh.field_H.field_j];
                         if (var3 == 2) {
-                          int discarded$6 = 3;
-                          w.c();
+                          w.c((byte) 3);
                           break L3;
                         } else {
                           if (5 != var3) {
                             break L3;
                           } else {
-                            int discarded$7 = 3;
-                            w.c();
+                            w.c((byte) 3);
                             break L3;
                           }
                         }
@@ -68,8 +65,7 @@ final class md extends km {
                     break L3;
                   } else {
                     if (ih.field_p != 2) {
-                      int discarded$8 = 3;
-                      w.c();
+                      w.c((byte) 3);
                       break L3;
                     } else {
                       break L3;
@@ -84,8 +80,7 @@ final class md extends km {
                       var4 = ue.a(false) - un.field_g;
                       var6 = (int)((-var4 + 10999L) / 1000L);
                       if (var6 <= 0) {
-                        int discarded$9 = 104;
-                        bq.a(true, 5);
+                        bq.a(true, 5, (byte) 104);
                         var3 = 2;
                         break L5;
                       } else {
@@ -168,8 +163,7 @@ final class md extends km {
           L0: {
             var3_int = param2.field_l;
             var5 = (CharSequence) (Object) param1;
-            int discarded$2 = 0;
-            var4 = uj.a(var5);
+            var4 = uj.a(var5, false);
             param2.b(-1, var4.length);
             param2.field_l = param2.field_l + so.field_d.a((byte) -119, var4.length, 0, param2.field_k, param2.field_l, var4);
             stackOut_2_0 = param2.field_l - var3_int;
@@ -733,7 +727,7 @@ final class md extends km {
         return ((md) this).field_p;
     }
 
-    final static void a(String[] args) {
+    final static void a(String[] args, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

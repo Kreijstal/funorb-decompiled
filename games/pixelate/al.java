@@ -283,7 +283,7 @@ final class al {
         }
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         System.out.println("Error: " + qk.a(param0, "%0a", "\n", -127));
     }
 
@@ -693,7 +693,7 @@ final class al {
         return stackIn_6_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_m = null;
         field_d = null;

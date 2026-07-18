@@ -107,7 +107,7 @@ final class pd implements fp {
             }
             L3: {
               var6_int = stackIn_6_0;
-              int discarded$2 = ((pd) this).field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_m + "</u>", param1 - -param4.field_C, param3 - -param4.field_D, param4.field_l, param4.field_y, var6_int, -1, ((pd) this).field_h, ((pd) this).field_c, ((pd) this).field_b.field_w + ((pd) this).field_b.field_C);
+              int discarded$1 = ((pd) this).field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_m + "</u>", param1 - -param4.field_C, param3 - -param4.field_D, param4.field_l, param4.field_y, var6_int, -1, ((pd) this).field_h, ((pd) this).field_c, ((pd) this).field_b.field_w + ((pd) this).field_b.field_C);
               if (param4.d(-52)) {
                 L4: {
                   var7 = ((pd) this).field_b.b(param4.field_m);
@@ -139,8 +139,7 @@ final class pd implements fp {
                     break L5;
                   }
                 }
-                int discarded$3 = 2187;
-                bj.a(var10 - -2, var8, var7 + 4, -2 + var9);
+                bj.a(var10 - -2, var8, var7 + 4, -2 + var9, 2187);
                 break L3;
               } else {
                 break L3;

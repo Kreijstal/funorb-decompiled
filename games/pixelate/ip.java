@@ -74,7 +74,7 @@ final class ip extends gh {
         return stackIn_3_0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_z = null;
         field_y = null;
         field_x = null;

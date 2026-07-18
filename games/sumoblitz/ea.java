@@ -5,17 +5,17 @@ final class ea {
     static ts field_a;
     static String field_b;
 
-    public static void b() {
+    public static void b(int param0) {
         int var1 = 0;
         field_a = null;
         field_b = null;
     }
 
-    final static al a() {
+    final static al a(int param0) {
         return sj.field_c;
     }
 
-    final static int a(byte param0, CharSequence param1) {
+    final static int a(byte param0, CharSequence param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -96,7 +96,7 @@ final class ea {
         return true;
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_1_0 = false;
@@ -162,8 +162,7 @@ final class ea {
         ut.field_o.a(113, false);
         da.a(param4, param3, 17474, param0);
         try {
-            int discarded$0 = 246;
-            ro.b();
+            ro.b(246);
             vm.field_c = hm.field_a;
             nw.field_e = hm.field_a;
         } catch (RuntimeException runtimeException) {

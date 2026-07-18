@@ -299,7 +299,7 @@ final class mb extends ml {
         }
     }
 
-    final static int[][] a(ln[] param0) {
+    final static int[][] a(ln[] param0, boolean param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int[][] var3 = null;
@@ -461,7 +461,7 @@ final class mb extends ml {
         super(param0);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_o = null;
         field_p = null;
         field_n = null;

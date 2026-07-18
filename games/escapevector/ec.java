@@ -121,7 +121,7 @@ final class ec {
         return stackIn_19_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         int var1 = -39;
         field_c = null;

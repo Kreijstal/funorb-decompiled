@@ -6,7 +6,7 @@ final class dl {
     static boolean[][] field_b;
     static String field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         int var1 = 96;
         field_b = null;
@@ -151,7 +151,7 @@ final class dl {
         }
     }
 
-    final static void a(double param0) {
+    final static void a(double param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -237,8 +237,7 @@ final class dl {
               if (var4 == null) {
                 break L0;
               } else {
-                int discarded$4 = 0;
-                tg.a(7, var4);
+                tg.a(7, var4, 0);
                 var4 = (ri) (Object) ob.field_M.b(42);
                 continue L1;
               }

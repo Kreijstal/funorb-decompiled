@@ -82,13 +82,13 @@ final class vg {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_c = null;
         field_d = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         ug.field_A.h(0);
         if (qj.field_fb == null) {
           qj.field_fb = new uk(ug.field_A, jj.field_d);

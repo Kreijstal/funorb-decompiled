@@ -7,7 +7,7 @@ final class aa extends pu {
     static eaa field_l;
     private static String field_z;
 
-    public static void b() {
+    public static void b(int param0) {
         int var1 = -34;
         field_m = null;
         field_n = null;

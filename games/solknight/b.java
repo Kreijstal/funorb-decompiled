@@ -5,7 +5,7 @@ final class b {
     static boolean field_b;
     static String field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 
@@ -91,7 +91,7 @@ final class b {
         return stackIn_8_0 != 0;
     }
 
-    final static String[] a(String param0, char param1) {
+    final static String[] a(String param0, char param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;

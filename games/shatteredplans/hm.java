@@ -6,7 +6,7 @@ class hm extends df {
     static sq field_q;
     static String[] field_p;
 
-    final static String a(CharSequence[] param0, int param1, int param2) {
+    final static String a(CharSequence[] param0, int param1, int param2, byte param3) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -152,7 +152,7 @@ class hm extends df {
     hm() {
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_p = null;
         field_q = null;
     }

@@ -28,7 +28,7 @@ final class lf {
         }
     }
 
-    final static int a() {
+    final static int a(int param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;

@@ -177,8 +177,7 @@ final class pb extends le {
             return;
           }
         } else {
-          int discarded$2 = 1;
-          this.a(param2, param0, param1);
+          this.a(param2, param0, param1, true);
           if (!param3) {
             return;
           } else {
@@ -393,7 +392,7 @@ final class pb extends le {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void a(int param0, int param1, int param2, boolean param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;

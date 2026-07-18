@@ -719,7 +719,7 @@ class sp extends pk implements ug {
         return stackIn_11_0 != 0;
     }
 
-    public static void d() {
+    public static void d(boolean param0) {
         field_z = null;
         field_x = null;
     }

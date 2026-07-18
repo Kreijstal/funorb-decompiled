@@ -105,7 +105,7 @@ final class wj extends ud {
         ((wj) this).field_P = ((wj) this).field_C;
     }
 
-    final static void a() {
+    final static void a(int param0, int param1) {
         ap.field_E = 200;
         g.field_l = new int[3];
         wb.field_e = new pn[3000];
@@ -238,7 +238,7 @@ final class wj extends ud {
         return stackIn_8_0;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_S = null;
         field_U = null;
     }
@@ -271,15 +271,11 @@ final class wj extends ud {
     final static void a(di param0, int param1, boolean param2, ai param3) {
         try {
             cl.field_h = param1 * up.a(-21282) / 1000;
-            int discarded$0 = 102;
-            q.a(param0);
-            int discarded$1 = -106;
-            oj.a(param0);
+            q.a(param0, 102);
+            oj.a(param0, (byte) -106);
             dr.a((byte) -65, param0);
-            int discarded$2 = -257;
-            wk.a();
-            int discarded$3 = 23;
-            lm.i();
+            wk.a(-257);
+            lm.i(23);
             im.field_fc = -cl.field_h;
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) (Object) runtimeException, "wj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + false + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -629,7 +625,7 @@ final class wj extends ud {
         }
     }
 
-    final static boolean i() {
+    final static boolean i(int param0) {
         return null != sa.field_f || fm.field_H;
     }
 

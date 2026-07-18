@@ -8,7 +8,7 @@ final class ck {
     static ea field_a;
     static long field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_c = null;
         field_b = null;
@@ -85,18 +85,14 @@ final class ck {
           if (aa.field_j != null) {
             if (param0 != -30833) {
               field_e = null;
-              int discarded$12 = -92;
-              var2 = en.a();
+              var2 = en.a((byte) -92);
               var1 = var2;
-              int discarded$13 = 6;
-              hf discarded$14 = le.a(0, var2);
+              hf discarded$4 = le.a(0, var2, 6);
               return;
             } else {
-              int discarded$15 = -92;
-              var2 = en.a();
+              var2 = en.a((byte) -92);
               var1 = var2;
-              int discarded$16 = 6;
-              hf discarded$17 = le.a(0, var2);
+              hf discarded$5 = le.a(0, var2, 6);
               return;
             }
           } else {

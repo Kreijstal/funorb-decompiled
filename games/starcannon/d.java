@@ -178,8 +178,7 @@ final class d {
                                                       ((d) this).field_d = ((d) this).field_d - 1;
                                                       ((d) this).field_a = ((d) this).field_a - 1;
                                                       var9 = this;
-                                                      int discarded$12 = -4001;
-                                                      boolean discarded$13 = v.a(new d((d) var9, 14));
+                                                      boolean discarded$6 = v.a(new d((d) var9, 14), -4001);
                                                       ((d) this).field_d = ((d) this).field_d + 1;
                                                       ((d) this).field_a = ((d) this).field_a + 1;
                                                       break L12;
@@ -188,8 +187,7 @@ final class d {
                                                     }
                                                   }
                                                   var10 = this;
-                                                  int discarded$14 = -4001;
-                                                  boolean discarded$15 = v.a(new d((d) var10, 14));
+                                                  boolean discarded$7 = v.a(new d((d) var10, 14), -4001);
                                                   ((d) this).field_d = ((d) this).field_d + 1;
                                                   ((d) this).field_a = ((d) this).field_a + 1;
                                                   break L11;
@@ -197,8 +195,7 @@ final class d {
                                               }
                                               L13: {
                                                 var11 = this;
-                                                int discarded$16 = -4001;
-                                                boolean discarded$17 = v.a(new d((d) var11, 14));
+                                                boolean discarded$8 = v.a(new d((d) var11, 14), -4001);
                                                 if (((d) this).field_i > 1) {
                                                   L14: {
                                                     ((d) this).field_a = ((d) this).field_a + 1;
@@ -209,16 +206,14 @@ final class d {
                                                       ((d) this).field_a = ((d) this).field_a + 1;
                                                       ((d) this).field_d = ((d) this).field_d + 1;
                                                       var12 = this;
-                                                      int discarded$18 = -4001;
-                                                      boolean discarded$19 = v.a(new d((d) var12, 14));
+                                                      boolean discarded$9 = v.a(new d((d) var12, 14), -4001);
                                                       ((d) this).field_a = ((d) this).field_a - 1;
                                                       ((d) this).field_d = ((d) this).field_d - 1;
                                                       break L14;
                                                     }
                                                   }
                                                   var13 = this;
-                                                  int discarded$20 = -4001;
-                                                  boolean discarded$21 = v.a(new d((d) var13, 14));
+                                                  boolean discarded$10 = v.a(new d((d) var13, 14), -4001);
                                                   ((d) this).field_d = ((d) this).field_d - 1;
                                                   ((d) this).field_a = ((d) this).field_a - 1;
                                                   break L13;
@@ -268,8 +263,7 @@ final class d {
                                       } else {
                                         L17: {
                                           var8 = this;
-                                          int discarded$22 = -4001;
-                                          boolean discarded$23 = v.a(new d((d) var8, 13));
+                                          boolean discarded$11 = v.a(new d((d) var8, 13), -4001);
                                           var4 = -16;
                                           var3 = -((d) this).field_d + ((d) this).field_a;
                                           var5 = (int)Math.sqrt((double)(var3 * var3 - -(var4 * var4)));
@@ -857,7 +851,7 @@ final class d {
         return (Object) (Object) stackIn_6_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_n = null;
         field_m = null;

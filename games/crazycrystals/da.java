@@ -20,7 +20,7 @@ final class da extends ue {
     private f[][] field_p;
     private int field_j;
 
-    private final void c() {
+    private final void c(int param0) {
         if (((da) this).field_r != 1) {
             return;
         }
@@ -117,8 +117,7 @@ final class da extends ue {
             ((da) this).field_m = param3;
             ((da) this).field_n = param0;
             ((da) this).field_r = param1;
-            int discarded$0 = 0;
-            this.b();
+            this.b(false);
         } catch (RuntimeException runtimeException) {
             throw dn.a((Throwable) (Object) runtimeException, "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -162,7 +161,7 @@ final class da extends ue {
         return var3;
     }
 
-    private final String a(String param0, int param1) {
+    private final String a(String param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
@@ -625,8 +624,7 @@ final class da extends ue {
             } else {
               if (((da) this).field_b.a(true)) {
                 ((da) this).field_e = ((da) this).field_b.field_c;
-                int discarded$1 = 24902;
-                this.d();
+                this.d(24902);
                 return true;
               } else {
                 break L1;
@@ -873,17 +871,16 @@ final class da extends ue {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         if (!(!this.d(((da) this).field_e, -1))) {
             return;
         }
         ((da) this).field_j = ((da) this).field_e;
         ((da) this).field_j = ((da) this).field_j + this.c(((da) this).field_e, 20);
-        int discarded$0 = 17832;
-        this.e();
+        this.e(17832);
     }
 
-    final static int a() {
+    final static int a(boolean param0, boolean param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -1230,8 +1227,7 @@ final class da extends ue {
                     if (rc.a(-71)) {
                       break L2;
                     } else {
-                      int discarded$13 = 0;
-                      this.b();
+                      this.b(false);
                       break L2;
                     }
                   }
@@ -1250,8 +1246,7 @@ final class da extends ue {
               ((da) this).field_n.c(-1);
               if (!((da) this).field_b.g(-1)) {
                 ((da) this).field_j = ((da) this).field_j + 3 * of.field_H;
-                int discarded$14 = 17832;
-                this.e();
+                this.e(17832);
                 L6: while (true) {
                   if (!ge.b(-35)) {
                     break L5;
@@ -1314,8 +1309,7 @@ final class da extends ue {
                               break L11;
                             }
                           }
-                          int discarded$15 = 24902;
-                          this.d();
+                          this.d(24902);
                           ((da) this).field_b.field_c = ((da) this).field_e;
                           break L8;
                         }
@@ -1362,8 +1356,7 @@ final class da extends ue {
                                     break L16;
                                   }
                                 }
-                                int discarded$16 = 24902;
-                                this.d();
+                                this.d(24902);
                                 ((da) this).field_b.field_c = ((da) this).field_e;
                                 break L15;
                               }
@@ -1472,15 +1465,13 @@ final class da extends ue {
                                       break L28;
                                     }
                                   }
-                                  int discarded$17 = 24902;
-                                  this.d();
+                                  this.d(24902);
                                   ((da) this).field_b.field_c = ((da) this).field_e;
                                   break L27;
                                 } else {
                                   if (0 < ((da) this).field_e) {
                                     ((da) this).field_e = ((da) this).field_e - 1;
-                                    int discarded$18 = 24902;
-                                    this.d();
+                                    this.d(24902);
                                     ((da) this).field_b.field_c = ((da) this).field_e;
                                     break L27;
                                   } else {
@@ -1559,8 +1550,7 @@ final class da extends ue {
                                 }
                                 if (((da) this).field_e < ((da) this).field_m - 1) {
                                   ((da) this).field_e = ((da) this).field_e + 1;
-                                  int discarded$19 = 24902;
-                                  this.d();
+                                  this.d(24902);
                                   ((da) this).field_b.field_c = ((da) this).field_e;
                                   break L33;
                                 } else {
@@ -1630,10 +1620,8 @@ final class da extends ue {
                             break L39;
                           }
                         }
-                        int discarded$20 = -62;
-                        this.c();
-                        int discarded$21 = 24902;
-                        this.d();
+                        this.c(-62);
+                        this.d(24902);
                         ((da) this).field_b.field_i = false;
                         ((da) this).field_b.field_c = ((da) this).field_e;
                         break L37;
@@ -1659,8 +1647,7 @@ final class da extends ue {
                           }
                         }
                         this.f(-101);
-                        int discarded$22 = 24902;
-                        this.d();
+                        this.d(24902);
                         ((da) this).field_b.field_c = ((da) this).field_e;
                         ((da) this).field_b.field_i = false;
                         break L40;
@@ -1671,8 +1658,7 @@ final class da extends ue {
                     L43: {
                       if (pj.field_q == 102) {
                         ((da) this).field_e = 0;
-                        int discarded$23 = 24902;
-                        this.d();
+                        this.d(24902);
                         ((da) this).field_b.field_i = false;
                         ((da) this).field_b.field_c = ((da) this).field_e;
                         break L43;
@@ -1684,8 +1670,7 @@ final class da extends ue {
                       if (103 == pj.field_q) {
                         ((da) this).field_e = ((da) this).field_m + -1;
                         this.f(116);
-                        int discarded$24 = 24902;
-                        this.d();
+                        this.d(24902);
                         ((da) this).field_b.field_c = ((da) this).field_e;
                         ((da) this).field_b.field_i = false;
                         break L44;
@@ -1760,7 +1745,7 @@ final class da extends ue {
                     if (!param0) {
                       break L49;
                     } else {
-                      int discarded$25 = this.c((byte) 35);
+                      int discarded$1 = this.c((byte) 35);
                       break L49;
                     }
                   }
@@ -2014,7 +1999,7 @@ final class da extends ue {
         }
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
         int var3 = 0;
         String var4 = null;
         String var6 = null;
@@ -2086,8 +2071,7 @@ final class da extends ue {
           }
         }
         ((da) this).field_e = stackIn_12_1;
-        int discarded$2 = 24902;
-        this.d();
+        this.d(24902);
         ((da) this).field_b.field_c = -1;
         var9 = ol.field_z[((da) this).field_r];
         ((da) this).field_d = new ik[5 + ((da) this).field_m];
@@ -2163,8 +2147,7 @@ final class da extends ue {
               var12 = 1 + var3 + ". ";
               var7 = var12;
               var7 = var12;
-              int discarded$3 = 20;
-              var6 = this.a(var12, var3);
+              var6 = this.a(var12, var3, 20);
               var7 = var6;
               var7 = var6;
               var7 = null;
@@ -2361,7 +2344,7 @@ final class da extends ue {
         }
     }
 
-    private final void e() {
+    private final void e(int param0) {
         int var2 = 0;
         L0: {
           var2 = this.c((byte) -99);

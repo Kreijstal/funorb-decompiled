@@ -232,13 +232,12 @@ final class kf extends k {
             if (dc.a(var5, -125)) {
               L1: {
                 var6 = (CharSequence) (Object) param0;
-                int discarded$4 = -28734;
-                var3_int = fl.a(var6);
+                var3_int = fl.a(var6, -28734);
                 if (param1 == 106) {
                   break L1;
                 } else {
                   var4 = null;
-                  jp[] discarded$5 = kf.a((String) null, (String) null, (mf) null, -17);
+                  jp[] discarded$2 = kf.a((String) null, (String) null, (mf) null, -17);
                   break L1;
                 }
               }
@@ -368,7 +367,7 @@ final class kf extends k {
         return (String) (Object) stackIn_5_0;
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String a(boolean param0, CharSequence param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -561,8 +560,7 @@ final class kf extends k {
                 L0: {
                   if (param1 <= -111) {
                     var3 = new java.net.URL(param2.getCodeBase(), param0);
-                    int discarded$2 = -1;
-                    var3 = hg.a(param2, var3);
+                    var3 = hg.a(param2, var3, -1);
                     fk.a((byte) 94, param2, var3.toString(), true);
                     break L0;
                   } else {
@@ -694,23 +692,16 @@ final class kf extends k {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$7 = 2;
-            var6 = cr.a(param1, param2, param0);
+            var6 = cr.a(param1, param2, param0, 2);
             var4 = var6;
             var6[3].field_z = var6[3].field_C;
             var6[1].field_x = var6[1].field_D;
             var6[5].field_z = var6[5].field_C;
             var6[7].field_x = var6[7].field_D;
-            int discarded$8 = 8;
-            int discarded$9 = 0;
-            var6[1] = qb.a(var6[1]);
-            int discarded$10 = 8;
-            int discarded$11 = 0;
-            var6[7] = qb.a(var6[7]);
-            int discarded$12 = 8;
-            var6[3] = k.a(var6[3], 101);
-            int discarded$13 = 8;
-            var6[5] = k.a(var6[5], 89);
+            var6[1] = qb.a(var6[1], false, 8);
+            var6[7] = qb.a(var6[7], false, 8);
+            var6[3] = k.a(var6[3], 101, 8);
+            var6[5] = k.a(var6[5], 89, 8);
             var5 = -92 / ((-45 - param3) / 34);
             stackOut_0_0 = (jp[]) var4;
             stackIn_1_0 = stackOut_0_0;

@@ -10,7 +10,7 @@ final class le {
     static pp field_g;
     static String field_e;
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -144,7 +144,7 @@ final class le {
         return stackIn_13_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_g = null;
         field_f = null;
         field_e = null;

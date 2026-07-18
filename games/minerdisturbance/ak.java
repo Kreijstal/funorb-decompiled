@@ -6,7 +6,7 @@ final class ak {
     static ea[] field_a;
     static ea field_c;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_b = null;
         field_c = null;

@@ -14,7 +14,7 @@ final class l implements Iterator {
     private int field_b;
     private ck field_c;
 
-    final static void a(em param0) {
+    final static void a(em param0, byte param1) {
         try {
             int var2_int = -1;
             ll.field_e.a((we) (Object) param0);
@@ -266,12 +266,10 @@ final class l implements Iterator {
               }
             }
             oh.a(param7, param16, param5, param10, param2, param9 ^ 94, param6, param4, param11, param14, param17, param18, param13, param19, param8);
-            int discarded$2 = -119;
-            vl.a(param8, param1, param15);
+            vl.a(param8, param1, param15, -119);
             rm.b((byte) -115);
             bf.m(854);
-            int discarded$3 = 0;
-            sb.a();
+            sb.a(false);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -725,7 +723,7 @@ final class l implements Iterator {
         ((l) this).field_c = ((l) this).field_d.field_j[0].field_k;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_f = null;
         field_e = null;

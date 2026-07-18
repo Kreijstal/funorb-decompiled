@@ -131,7 +131,7 @@ final class vp extends km {
         return stackIn_1_0;
     }
 
-    public static void f() {
+    public static void f(int param0) {
         field_u = null;
         field_s = null;
         field_r = null;
@@ -142,8 +142,7 @@ final class vp extends km {
             return;
         }
         lf.field_t.b(0, 0);
-        int discarded$0 = 0;
-        pg.d();
+        pg.d(0);
         vi.a((byte) -115);
     }
 

@@ -11,7 +11,7 @@ final class ad {
     static String field_b;
     private static String field_z;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_g = null;
         field_e = null;

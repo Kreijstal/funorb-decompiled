@@ -38,7 +38,7 @@ final class cb extends kd {
         field_n = null;
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -80,7 +80,7 @@ final class cb extends kd {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ug.field_m = 0;
         nc.field_p = null;
         af.field_b = false;

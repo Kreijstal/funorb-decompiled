@@ -137,8 +137,7 @@ final class ic extends ka implements vo {
           L0: {
             L1: {
               if (param0 == ((ic) this).field_ab) {
-                int discarded$2 = 1;
-                this.g();
+                this.g(true);
                 break L1;
               } else {
                 break L1;
@@ -186,7 +185,7 @@ final class ic extends ka implements vo {
         }
     }
 
-    private final void g() {
+    private final void g(boolean param0) {
         if (!(((ic) this).field_N)) {
             return;
         }
@@ -896,7 +895,7 @@ final class ic extends ka implements vo {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_bb = null;
         int var1 = -30;
     }

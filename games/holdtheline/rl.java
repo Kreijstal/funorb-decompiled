@@ -284,8 +284,7 @@ abstract class rl extends v {
             var5_int = Math.max(param4.field_s, 10 + param2.field_s);
             var6 = Math.max(param4.field_y, param2.field_y);
             var7 = new hj(var5_int, var6);
-            int discarded$2 = 32381;
-            ok.a();
+            ok.a(32381);
             var7.f();
             param4.b(0, 0);
             pa.a(0, 10, 107, param2);
@@ -370,8 +369,7 @@ abstract class rl extends v {
                   tc.c();
                   ((rl) this).a(0, 0, (byte) 20);
                   super.a(param0, -param1 - ((rl) this).field_o, -((rl) this).field_k + -param2, param3);
-                  int discarded$4 = -10;
-                  dm.b();
+                  dm.b((byte) -10);
                   jh.field_c.d(param2 + ((rl) this).field_k, param1 + ((rl) this).field_o, ((rl) this).field_G);
                   return;
                 } else {
@@ -380,8 +378,7 @@ abstract class rl extends v {
                   tc.c();
                   ((rl) this).a(0, 0, (byte) 20);
                   super.a(param0, -param1 - ((rl) this).field_o, -((rl) this).field_k + -param2, param3);
-                  int discarded$5 = -10;
-                  dm.b();
+                  dm.b((byte) -10);
                   jh.field_c.d(param2 + ((rl) this).field_k, param1 + ((rl) this).field_o, ((rl) this).field_G);
                   return;
                 }
@@ -391,8 +388,7 @@ abstract class rl extends v {
                 tc.c();
                 ((rl) this).a(0, 0, (byte) 20);
                 super.a(param0, -param1 - ((rl) this).field_o, -((rl) this).field_k + -param2, param3);
-                int discarded$6 = -10;
-                dm.b();
+                dm.b((byte) -10);
                 jh.field_c.d(param2 + ((rl) this).field_k, param1 + ((rl) this).field_o, ((rl) this).field_G);
                 return;
               }
@@ -402,8 +398,7 @@ abstract class rl extends v {
               tc.c();
               ((rl) this).a(0, 0, (byte) 20);
               super.a(param0, -param1 - ((rl) this).field_o, -((rl) this).field_k + -param2, param3);
-              int discarded$7 = -10;
-              dm.b();
+              dm.b((byte) -10);
               jh.field_c.d(param2 + ((rl) this).field_k, param1 + ((rl) this).field_o, ((rl) this).field_G);
               return;
             }
@@ -492,7 +487,7 @@ abstract class rl extends v {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_J = null;
         field_K = null;
     }

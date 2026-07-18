@@ -9,7 +9,7 @@ final class dm extends vk implements vo {
     static int field_Cb;
     static int field_Bb;
 
-    final static void i() {
+    final static void i(byte param0) {
         if (!(null == to.field_r)) {
             to.field_r.p(-108);
         }
@@ -26,7 +26,7 @@ final class dm extends vk implements vo {
         }
     }
 
-    final static boolean q() {
+    final static boolean q(int param0) {
         return ga.field_f > 250;
     }
 
@@ -68,7 +68,7 @@ final class dm extends vk implements vo {
         }
     }
 
-    public static void r() {
+    public static void r(int param0) {
         field_zb = null;
     }
 

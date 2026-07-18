@@ -16,7 +16,7 @@ class km extends be {
     km() {
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_D = null;
         field_y = null;
         field_B = null;

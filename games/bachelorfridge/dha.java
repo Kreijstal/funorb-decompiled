@@ -299,12 +299,12 @@ final class dha {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_b = null;
     }
 
-    final static void a(eaa param0, int param1, Random param2) {
+    final static void a(eaa param0, int param1, Random param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         rea var5 = null;

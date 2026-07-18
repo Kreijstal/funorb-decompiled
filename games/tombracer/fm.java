@@ -11,7 +11,7 @@ final class fm extends vg {
     static String field_l;
     private int field_f;
 
-    public static void d() {
+    public static void d(int param0) {
         field_h = null;
         field_l = null;
     }

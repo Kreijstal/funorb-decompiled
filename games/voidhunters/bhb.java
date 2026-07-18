@@ -53,7 +53,7 @@ final class bhb extends ksa implements tv {
         this(param0, param1.field_h, param1.field_e);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
     }
 
@@ -147,7 +147,7 @@ final class bhb extends ksa implements tv {
           L0: {
             L1: {
               var3 = (bhb) (Object) param1;
-              if (null == var3.field_d) {
+              if (null == ((bhb) this).field_d) {
                 var3.field_d = null;
                 break L1;
               } else {
@@ -156,17 +156,17 @@ final class bhb extends ksa implements tv {
                     if (null == var3.field_d) {
                       break L3;
                     } else {
-                      if (var3.field_d.length != var3.field_d.length) {
+                      if (((bhb) this).field_d.length != var3.field_d.length) {
                         break L3;
                       } else {
                         break L2;
                       }
                     }
                   }
-                  var3.field_d = new byte[var3.field_d.length];
+                  var3.field_d = new byte[((bhb) this).field_d.length];
                   break L2;
                 }
-                cua.a(var3.field_d, 0, var3.field_d, 0, var3.field_d.length);
+                cua.a(((bhb) this).field_d, 0, var3.field_d, 0, ((bhb) this).field_d.length);
                 break L1;
               }
             }

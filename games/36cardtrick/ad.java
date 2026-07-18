@@ -17,10 +17,10 @@ final class ad extends qb {
     static int[] field_g;
     int field_l;
 
-    final static void a() {
+    final static void a(int param0) {
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_g = null;
         field_q = null;
         field_i = null;

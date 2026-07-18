@@ -29,7 +29,7 @@ final class jm extends java.awt.Canvas {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_e = null;
         field_d = null;

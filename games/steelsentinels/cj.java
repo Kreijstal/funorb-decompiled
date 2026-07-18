@@ -559,16 +559,14 @@ final class cj {
         }
         if (null != an.field_i) {
             if (!(!an.field_i.b((byte) 126))) {
-                int discarded$0 = 0;
-                rh.a();
+                rh.a(false);
                 return true;
             }
         }
         if (n.field_x != null) {
             if (!(!n.field_x.k(-91))) {
                 n.field_x = null;
-                int discarded$1 = 0;
-                rh.a();
+                rh.a(false);
                 return true;
             }
         }

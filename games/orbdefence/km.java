@@ -207,7 +207,7 @@ final class km {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -225,7 +225,7 @@ final class km {
         }
     }
 
-    final static void a(long param0) {
+    final static void a(long param0, int param1) {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
@@ -265,7 +265,7 @@ final class km {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_b = null;
     }
 

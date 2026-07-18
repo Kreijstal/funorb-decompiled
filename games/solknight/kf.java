@@ -49,8 +49,7 @@ abstract class kf extends ki {
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
-        int discarded$4 = 91;
-        fl.b();
+        fl.b((byte) 91);
         if (param0 != 97) {
           field_G = null;
           mi.d(param1, param2, param3, param4);

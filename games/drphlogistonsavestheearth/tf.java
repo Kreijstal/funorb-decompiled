@@ -15,7 +15,7 @@ final class tf extends ca {
     static int field_jb;
     static String field_ib;
 
-    final static int a(CharSequence param0, char param1) {
+    final static int a(CharSequence param0, char param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -100,7 +100,7 @@ final class tf extends ca {
         return stackIn_11_0;
     }
 
-    final static void n() {
+    final static void n(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -283,8 +283,7 @@ final class tf extends ca {
                   }
                 }
                 L12: {
-                  int discarded$1 = 1;
-                  var7 = u.a(stackIn_40_0, stackIn_40_1 != 0);
+                  var7 = u.a(stackIn_40_0, stackIn_40_1 != 0, true);
                   var8 = -(var7 >> 1) + ji.field_f;
                   if (var4 >= 0) {
                     L13: {
@@ -531,7 +530,7 @@ final class tf extends ca {
         }
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_ib = null;
         field_pb = null;
         field_kb = null;

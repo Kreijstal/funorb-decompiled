@@ -16,7 +16,7 @@ final class pg extends o {
     int field_p;
     static String field_n;
 
-    public static void c() {
+    public static void c(byte param0) {
         field_o = null;
         field_n = null;
         field_v = null;
@@ -37,9 +37,8 @@ final class pg extends o {
         }
     }
 
-    final static vg a() {
-        int discarded$0 = -111;
-        return new vg(jb.f(98), kb.j());
+    final static vg a(int param0) {
+        return new vg(jb.f(98), kb.j(-111));
     }
 
     pg() {

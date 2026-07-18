@@ -19,7 +19,7 @@ final class oga extends bca {
         }
     }
 
-    final static void e() {
+    final static void e(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         ema var3 = null;
@@ -99,7 +99,7 @@ final class oga extends bca {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_r = null;
         field_t = null;
     }

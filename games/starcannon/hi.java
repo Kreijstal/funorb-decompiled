@@ -17,7 +17,7 @@ final class hi extends java.awt.Canvas {
         }
     }
 
-    final static void a(byte[] param0) {
+    final static void a(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -319,7 +319,7 @@ final class hi extends java.awt.Canvas {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_a = null;
         field_e = null;
@@ -356,8 +356,7 @@ final class hi extends java.awt.Canvas {
                     if (!(0 != param1.length())) {
                         var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
-                    int discarded$0 = 790;
-                    mb.a("document.cookie=\"" + var5 + "\"", param2);
+                    mb.a("document.cookie=\"" + var5 + "\"", param2, 790);
                 } catch (Throwable throwable) {
                 }
                 lj.a(816415832, param2);

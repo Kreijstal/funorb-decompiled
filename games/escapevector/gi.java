@@ -38,8 +38,7 @@ final class gi {
                 if (mi.field_g != 2) {
                   break L2;
                 } else {
-                  int discarded$10 = 0;
-                  if (kl.a(((gi) this).field_j)) {
+                  if (kl.a(((gi) this).field_j, 0)) {
                     return 1;
                   } else {
                     break L2;
@@ -59,7 +58,7 @@ final class gi {
         return 2;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -278,10 +277,8 @@ final class gi {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          int discarded$4 = -127;
-          var2_int = co.a(param1);
-          int discarded$5 = 20;
-          var3 = mn.a(-80, (char) var2_int);
+          var2_int = co.a(param1, (byte) -127);
+          var3 = mn.a(-80, (char) var2_int, 20);
           return param1.b(var3);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -315,7 +312,7 @@ final class gi {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_i = null;
         field_e = null;

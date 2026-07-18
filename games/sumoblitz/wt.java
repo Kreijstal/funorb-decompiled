@@ -93,7 +93,7 @@ final class wt extends bq {
         }
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var3 = 0;
         L0: {
           var3 = Sumoblitz.field_L ? 1 : 0;
@@ -252,8 +252,7 @@ final class wt extends bq {
                     ((wt) this).field_e[0] = new hp(((wt) this).field_b, 6406, 64, false, var27, 6406);
                     ((wt) this).field_e[1] = new hp(((wt) this).field_b, 6406, 64, false, var28, 6406);
                     ((wt) this).field_e[2] = new hp(((wt) this).field_b, 6406, 64, false, var29, 6406);
-                    int discarded$1 = -125;
-                    this.d();
+                    this.d(-125);
                     break L1;
                   } else {
                     var15 = 0;
@@ -363,7 +362,7 @@ final class wt extends bq {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_i = null;
         field_h = null;
     }
@@ -427,8 +426,7 @@ final class wt extends bq {
     }
 
     final static void a(int param0, byte param1) {
-        int discarded$7 = 1;
-        ut.a(8, (byte) -55, nt.field_m[param0]);
+        ut.a(8, (byte) -55, nt.field_m[param0], true);
         if (param1 < 27) {
             field_i = null;
         }

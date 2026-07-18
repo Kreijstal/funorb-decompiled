@@ -769,8 +769,7 @@ class lba extends fi {
                 if (0 == qpa.field_b.field_y) {
                   break L0;
                 } else {
-                  int discarded$2 = 1;
-                  ufa.a();
+                  ufa.a(true);
                   ni.field_c = false;
                   return;
                 }

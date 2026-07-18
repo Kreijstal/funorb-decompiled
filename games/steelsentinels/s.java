@@ -5,7 +5,7 @@ final class s implements qk {
     static int field_a;
     static String field_b;
 
-    final static void b() {
+    final static void b(int param0) {
         int var1 = 0;
         if (32 < ll.field_q) {
             var1 = ll.field_q % 32;
@@ -249,15 +249,14 @@ final class s implements qk {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (ag.field_p != null) {
             ag.field_p.g((byte) 103);
         }
         if (!(r.field_r == null)) {
             r.field_r.m(-13521);
         }
-        int discarded$0 = -30603;
-        ca.d();
+        ca.d(-30603);
     }
 
     public static void a(byte param0) {
@@ -354,7 +353,7 @@ final class s implements qk {
         }
     }
 
-    final static short[] a(short[] param0, int param1, kj param2) {
+    final static short[] a(short[] param0, int param1, kj param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

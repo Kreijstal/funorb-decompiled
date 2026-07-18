@@ -392,8 +392,7 @@ final class oc {
                   break L1;
                 }
               }
-              int discarded$4 = 42;
-              rl.field_b = ld.a(stackIn_10_0 != 0);
+              rl.field_b = ld.a(stackIn_10_0 != 0, (byte) 42);
               break L0;
             } else {
               L2: {
@@ -401,8 +400,7 @@ final class oc {
                   break L2;
                 } else {
                   if (param2 <= 105) {
-                    int discarded$5 = -21916;
-                    rl.field_b = ha.a(param1);
+                    rl.field_b = ha.a(param1, -21916);
                     return;
                   } else {
                     break L2;
@@ -470,7 +468,7 @@ final class oc {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_d = null;
         field_b = null;
@@ -481,7 +479,7 @@ final class oc {
         throw new Error();
     }
 
-    final static dd[] a(rh param0, int param1, int param2) {
+    final static dd[] a(rh param0, int param1, int param2, byte param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         dd[] stackIn_5_0 = null;
@@ -506,8 +504,7 @@ final class oc {
         try {
           L0: {
             if (ha.a(param0, -32180, param2, param1)) {
-              int discarded$2 = 120;
-              stackOut_4_0 = me.b();
+              stackOut_4_0 = me.b(120);
               stackIn_5_0 = stackOut_4_0;
               break L0;
             } else {

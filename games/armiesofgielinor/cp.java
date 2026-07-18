@@ -196,7 +196,7 @@ final class cp {
         return stackIn_5_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_d = null;
         field_e = null;
         field_f = null;

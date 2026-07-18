@@ -9,7 +9,7 @@ final class bl {
     private fl field_a;
     private fl field_e;
 
-    private final hb b(int param0, int param1, int[] param2) {
+    private final hb b(int param0, int param1, int[] param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -157,8 +157,7 @@ final class bl {
               if (((bl) this).field_f.a(param1, (byte) 121) != 1) {
                 throw new RuntimeException();
               } else {
-                int discarded$4 = 79289964;
-                stackOut_7_0 = this.b(0, param1, param2);
+                stackOut_7_0 = this.b(0, param1, param2, 79289964);
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;
               }
@@ -168,8 +167,7 @@ final class bl {
               return (hb) (Object) stackIn_5_0;
             }
           } else {
-            int discarded$5 = 79289964;
-            stackOut_1_0 = this.b(param1, 0, param2);
+            stackOut_1_0 = this.b(param1, 0, param2, 79289964);
             stackIn_2_0 = stackOut_1_0;
             return stackIn_2_0;
           }
@@ -281,7 +279,7 @@ final class bl {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         cf var4 = null;
@@ -294,8 +292,7 @@ final class bl {
               field_d = null;
               return;
             } else {
-              int discarded$2 = 2;
-              gj.a((byte) 83, var4);
+              gj.a((byte) 83, var4, 2);
               var4 = (cf) (Object) mh.field_e.a(true);
               continue L0;
             }
@@ -307,7 +304,7 @@ final class bl {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_b = null;
     }

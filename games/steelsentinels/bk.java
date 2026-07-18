@@ -24,7 +24,7 @@ final class bk extends lh {
     static String field_H;
     static String field_P;
 
-    public static void g() {
+    public static void g(int param0) {
         field_M = null;
         field_O = null;
         field_U = null;
@@ -511,8 +511,7 @@ final class bk extends lh {
         if (param0 > -66) {
             return;
         }
-        int discarded$0 = -127;
-        ((bk) this).field_L = this.a();
+        ((bk) this).field_L = this.a((byte) -127);
         ((bk) this).field_K = ((bk) this).field_L.a();
         ((bk) this).field_Y = new wk(((bk) this).field_E >> 1, ((bk) this).field_E);
     }
@@ -571,8 +570,7 @@ final class bk extends lh {
               jl.field_w = new oe(var3_int, param0, param0, (om) (Object) new kb());
               var5 = ul.d(0);
               if (var5 != null) {
-                int discarded$1 = 101;
-                fc.a(var5);
+                fc.a(var5, 101);
                 pg.field_u = fm.a(65793, false, 2245737, 1127256, 65793, 4020342, 1513239, 0, 1513239, 5138823, 8947848, (mi) null, 65793);
                 ea.field_f = fm.a(0, false, 0, 0, 0, 0, 0, 16764006, 0, 0, 0, param2, 0);
                 fb.field_l = fm.a(0, false, 0, 0, 0, 0, 0, 16777215, 0, 0, 0, param2, 0);
@@ -664,7 +662,7 @@ final class bk extends lh {
         this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 1, 8355711 & param6 >> 1);
     }
 
-    private final wk a() {
+    private final wk a(byte param0) {
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;

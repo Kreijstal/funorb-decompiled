@@ -11,7 +11,7 @@ final class lg extends am {
     private pf[] field_u;
     static String field_r;
 
-    private final void a(boolean param0, lg param1) {
+    private final void a(boolean param0, lg param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         pf var5 = null;
@@ -256,7 +256,7 @@ final class lg extends am {
         return dupTemp$0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_v = null;
         field_w = null;
         field_r = null;
@@ -511,8 +511,7 @@ final class lg extends am {
     lg(lg param0, boolean param1) {
         this();
         try {
-            int discarded$0 = 89;
-            param0.a(param1, (lg) this);
+            param0.a(param1, (lg) this, (byte) 89);
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) (Object) runtimeException, "lg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -522,8 +521,7 @@ final class lg extends am {
         if (param0 != 5) {
             ke discarded$0 = lg.c(-37);
         }
-        int discarded$1 = 1;
-        return new ke(gd.a(true), mn.a());
+        return new ke(gd.a(true), mn.a(true));
     }
 
     static {

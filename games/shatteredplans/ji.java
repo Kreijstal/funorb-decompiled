@@ -11,7 +11,7 @@ abstract class ji extends f implements ki {
 
     abstract int d(boolean param0);
 
-    public static void g() {
+    public static void g(byte param0) {
         field_E = null;
         field_G = null;
         field_F = null;
@@ -100,9 +100,9 @@ abstract class ji extends f implements ki {
         return kl.field_t;
     }
 
-    final static String a(CharSequence param0) {
-        RuntimeException var2 = null;
+    final static String a(CharSequence param0, boolean param1) {
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         StringBuilder var5 = null;
@@ -140,8 +140,7 @@ abstract class ji extends f implements ki {
                 if (var2_int >= var3) {
                   break L1;
                 } else {
-                  int discarded$4 = 2;
-                  if (!tc.a(param0.charAt(var2_int))) {
+                  if (!tc.a(param0.charAt(var2_int), 2)) {
                     break L1;
                   } else {
                     var2_int++;
@@ -154,8 +153,7 @@ abstract class ji extends f implements ki {
                   if (var3 <= var2_int) {
                     break L3;
                   } else {
-                    int discarded$5 = 2;
-                    if (!tc.a(param0.charAt(-1 + var3))) {
+                    if (!tc.a(param0.charAt(-1 + var3), 2)) {
                       break L3;
                     } else {
                       var3--;
@@ -179,10 +177,9 @@ abstract class ji extends f implements ki {
                         L5: {
                           var7 = param0.charAt(var6);
                           if (ne.a(0, (char) var7)) {
-                            int discarded$6 = -31024;
-                            var8 = os.a((char) var7);
+                            var8 = os.a((char) var7, -31024);
                             if (var8 != 0) {
-                              StringBuilder discarded$7 = var5.append((char) var8);
+                              StringBuilder discarded$1 = var5.append((char) var8);
                               break L5;
                             } else {
                               break L5;
@@ -242,7 +239,7 @@ abstract class ji extends f implements ki {
         }
     }
 
-    final static void a(String[] args) {
+    final static void a(String[] args, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -285,10 +282,8 @@ abstract class ji extends f implements ki {
                     break L2;
                   }
                 }
-                int discarded$12 = 0;
-                var5 = ua.a(var4, "<col=");
-                int discarded$13 = 0;
-                var6 = ua.a(var4, "</col>");
+                var5 = ua.a(var4, "<col=", 0);
+                var6 = ua.a(var4, "</col>", 0);
                 if (var5 <= var6) {
                   L3: {
                     if (var6 != -1) {

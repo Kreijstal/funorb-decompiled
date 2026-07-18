@@ -193,7 +193,7 @@ final class ck extends le {
         }
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         return null != cn.field_b ? true : mp.field_c;
     }
 

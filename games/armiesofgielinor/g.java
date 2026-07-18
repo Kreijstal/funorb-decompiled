@@ -10,7 +10,7 @@ final class g extends RuntimeException {
     static String field_a;
     static String field_d;
 
-    public static void c() {
+    public static void c(int param0) {
         field_f = null;
         field_e = null;
         field_d = null;
@@ -121,7 +121,7 @@ final class g extends RuntimeException {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         int var2 = 0;
         L0: {
           var2 = ArmiesOfGielinor.field_M ? 1 : 0;
@@ -144,8 +144,7 @@ final class g extends RuntimeException {
         }
         L1: {
           if (gk.field_J > 0) {
-            int discarded$1 = 0;
-            bh.d();
+            bh.d(false);
             break L1;
           } else {
             break L1;
@@ -174,7 +173,7 @@ final class g extends RuntimeException {
         ((g) this).field_g = param1;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         dc var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

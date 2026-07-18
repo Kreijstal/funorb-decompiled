@@ -122,9 +122,9 @@ final class bj {
             }
             return;
           } else {
-            int fieldTemp$4 = ((bj) this).field_i - 1;
+            int fieldTemp$2 = ((bj) this).field_i - 1;
             ((bj) this).field_i = ((bj) this).field_i - 1;
-            if (fieldTemp$4 <= 0) {
+            if (fieldTemp$2 <= 0) {
               L4: {
                 if (param0 == 5718) {
                   break L4;
@@ -135,8 +135,7 @@ final class bj {
               }
               ((bj) this).field_i = ((bj) this).field_e;
               if (((bj) this).field_t <= v.field_Q) {
-                int discarded$5 = 0;
-                this.a();
+                this.a(false);
                 return;
               } else {
                 ((bj) this).field_k = false;
@@ -149,7 +148,7 @@ final class bj {
         }
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -242,7 +241,7 @@ final class bj {
         throw new Error();
     }
 
-    final static void a(pb param0) {
+    final static void a(pb param0, int param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;

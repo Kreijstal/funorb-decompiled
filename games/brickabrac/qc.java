@@ -12,7 +12,7 @@ final class qc extends nm {
     static mf field_k;
     int field_m;
 
-    final static oh a(String param0) {
+    final static oh a(String param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -68,13 +68,13 @@ final class qc extends nm {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_n = null;
         field_l = null;
         field_k = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -148,23 +148,21 @@ final class qc extends nm {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
-            int discarded$19 = 2;
-            if (m.a()) {
-              boolean discarded$20 = wo.field_b.a(rj.field_b, fh.field_g, -124, true);
+            if (m.a(2)) {
+              boolean discarded$7 = wo.field_b.a(rj.field_b, fh.field_g, -124, true);
               wo.field_b.i(82);
               L1: while (true) {
-                int discarded$21 = 5;
-                if (!jl.a()) {
+                if (!jl.a((byte) 5)) {
                   break L0;
                 } else {
-                  boolean discarded$22 = wo.field_b.a(go.field_b, dc.field_b, true);
+                  boolean discarded$8 = wo.field_b.a(go.field_b, dc.field_b, true);
                   continue L1;
                 }
               }
@@ -196,7 +194,7 @@ final class qc extends nm {
         this(param0, -1);
     }
 
-    final static String a(long param0) {
+    final static String a(long param0, byte param1) {
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;

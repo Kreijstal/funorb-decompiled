@@ -29,7 +29,7 @@ final class dl {
         return false;
     }
 
-    final static boolean a() {
+    final static boolean a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -82,7 +82,7 @@ final class dl {
         return stackIn_13_0 != 0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_h = null;
         field_j = null;
         field_e = null;

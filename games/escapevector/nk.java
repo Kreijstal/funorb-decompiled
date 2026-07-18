@@ -146,7 +146,7 @@ final class nk extends ah {
         return stackIn_33_0;
     }
 
-    final static void h() {
+    final static void h(int param0) {
         cg.field_l = null;
         bj.field_z = null;
     }
@@ -428,7 +428,7 @@ final class nk extends ah {
         return bc.field_g[param1];
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_p = null;
         field_s = null;
         field_r = null;

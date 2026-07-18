@@ -871,17 +871,25 @@ final class se extends ct {
         String stackOut_6_2 = null;
         try {
           L0: {
-            param1.addMouseListener((java.awt.event.MouseListener) (Object) lw.field_e);
+            L1: {
+              param1.addMouseListener((java.awt.event.MouseListener) (Object) lw.field_e);
+              if (param0 == 15282) {
+                break L1;
+              } else {
+                se.m(110);
+                break L1;
+              }
+            }
             param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) lw.field_e);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) lw.field_e);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("se.I(").append(15282).append(',');
+            stackOut_5_1 = new StringBuilder().append("se.I(").append(param0).append(',');
             stackIn_8_0 = stackOut_5_0;
             stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -893,7 +901,7 @@ final class se extends ct {
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
-              break L1;
+              break L2;
             } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
@@ -901,7 +909,7 @@ final class se extends ct {
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
               stackIn_9_2 = stackOut_6_2;
-              break L1;
+              break L2;
             }
           }
           throw nb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
@@ -959,11 +967,19 @@ final class se extends ct {
         }
     }
 
-    public static void m() {
+    public static void m(int param0) {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
+            L1: {
+              if (param0 == -1) {
+                break L1;
+              } else {
+                field_C = null;
+                break L1;
+              }
+            }
             field_C = null;
             field_B = null;
             break L0;
@@ -971,7 +987,7 @@ final class se extends ct {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "se.SA(" + -1 + ')');
+          throw nb.a((Throwable) (Object) var1, "se.SA(" + param0 + ')');
         }
     }
 

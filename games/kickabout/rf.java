@@ -67,8 +67,7 @@ final class rf {
           L0: {
             pv.field_I = new nm[5][17];
             hq.field_b = new nm[5];
-            int discarded$2 = -69;
-            de.a(param1, param3);
+            de.a(param1, param3, (byte) -69);
             var10 = new ef(0);
             var11 = var10;
             L1: while (true) {
@@ -156,9 +155,9 @@ final class rf {
                             var6++;
                             continue L4;
                           } else {
-                            int incrementValue$3 = var7;
+                            int incrementValue$1 = var7;
                             var7++;
-                            pv.field_I[var5][var6] = pv.field_I[incrementValue$3][var6];
+                            pv.field_I[var5][var6] = pv.field_I[incrementValue$1][var6];
                             continue L5;
                           }
                         }
@@ -265,17 +264,13 @@ final class rf {
         nq.field_F.a(2, oe.field_f, (byte) 19, 20);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
-        int[] var1_array = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int[] var7 = null;
-        int[] var9 = null;
-        int[] var11 = null;
         int[] var13 = null;
         int[] var14 = null;
         int stackIn_6_0 = 0;
@@ -289,10 +284,6 @@ final class rf {
         try {
           L0: {
             var13 = new int[256];
-            var11 = var13;
-            var9 = var11;
-            var7 = var9;
-            var1_array = var7;
             var2 = 0;
             L1: while (true) {
               if (var2 >= var13.length) {
@@ -319,8 +310,7 @@ final class rf {
                           }
                         }
                       } else {
-                        int discarded$1 = 210;
-                        kj.field_b[var3] = eo.a(var1_array, var3);
+                        kj.field_b[var3] = eo.a(var13, var3, 210);
                         var3++;
                         continue L3;
                       }
@@ -393,7 +383,7 @@ final class rf {
         return ~(param0 & -param0) == ~param0;
     }
 
-    final static void a(hr param0) {
+    final static void a(hr param0, int param1, boolean param2) {
         ml var5 = null;
         int var4 = 0;
         try {

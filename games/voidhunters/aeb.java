@@ -26,7 +26,7 @@ final class aeb {
         }
     }
 
-    final static void a(int param0) {
+    final static void a(int param0, int param1) {
         tdb.field_p = qqa.field_i[param0];
         ocb.field_i = gib.field_b[param0];
         lo.field_d = twa.field_b[param0];

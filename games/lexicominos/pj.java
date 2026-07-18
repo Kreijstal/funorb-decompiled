@@ -39,7 +39,7 @@ final class pj extends nb implements ue, jk, ag {
         }
     }
 
-    private final boolean h() {
+    private final boolean h(int param0) {
         if (this.a((byte) 35, (nd) (Object) ((pj) this).field_E)) {
           if (this.a((byte) 35, (nd) (Object) ((pj) this).field_G)) {
             if (this.a((byte) 35, (nd) (Object) ((pj) this).field_K)) {
@@ -104,18 +104,13 @@ final class pj extends nb implements ue, jk, ag {
         di dupTemp$1 = new di(10000536);
         ((pj) this).field_D.field_i = (rd) (Object) dupTemp$1;
         ((pj) this).field_O.field_i = (rd) (Object) dupTemp$1;
-        int discarded$2 = 38;
-        int discarded$3 = 14359;
-        int discarded$4 = 0;
-        String var2 = da.a(new String[2], di.field_y);
+        String var2 = da.a(new String[2], di.field_y, false);
         int var3 = 20;
         var3 = var3 + this.a(170, 170, sa.field_a, (w) (Object) ((pj) this).field_G, var3);
         var3 = var3 + (this.a(20, "", true, 170, var3, ti.field_C, (w) (Object) ((pj) this).field_K) + 5);
         var3 = var3 + this.a(170, 170, p.field_b, (w) (Object) ((pj) this).field_O, var3);
-        int discarded$5 = 10000536;
-        var3 = var3 + (this.a(170, sc.field_a, uc.field_nb, var3, (w) (Object) ((pj) this).field_D) + 5);
-        int discarded$6 = 10000536;
-        var3 = var3 + (5 + this.a(170, hc.field_kb, nk.field_C, var3, (w) (Object) ((pj) this).field_E));
+        var3 = var3 + (this.a(170, sc.field_a, uc.field_nb, var3, (w) (Object) ((pj) this).field_D, 10000536) + 5);
+        var3 = var3 + (5 + this.a(170, hc.field_kb, nk.field_C, var3, (w) (Object) ((pj) this).field_E, 10000536));
         var3 = var3 + this.a((byte) -78, (w) (Object) ((pj) this).field_M, 170, var3, uf.field_o);
         jf var4 = new jf(46, var3, ((pj) this).field_j - 90, 25, (w) (Object) ((pj) this).field_J, true, -120 + ((pj) this).field_j, 5, cl.field_T, 11579568, pe.field_j);
         ((pj) this).b((byte) -74, (w) (Object) var4);
@@ -246,15 +241,13 @@ final class pj extends nb implements ue, jk, ag {
           L0: {
             L1: {
               if (param4 == ((pj) this).field_P) {
-                int discarded$6 = 0;
-                ga.b();
+                ga.b(0);
                 break L1;
               } else {
                 if (((pj) this).field_I != param4) {
                   break L1;
                 } else {
-                  int discarded$7 = 1;
-                  boolean discarded$8 = this.e();
+                  boolean discarded$2 = this.e(true);
                   break L1;
                 }
               }
@@ -298,7 +291,7 @@ final class pj extends nb implements ue, jk, ag {
         }
     }
 
-    private final String d() {
+    private final String d(byte param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -404,11 +397,11 @@ final class pj extends nb implements ue, jk, ag {
         return stackIn_1_0;
     }
 
-    private final String g() {
+    private final String g(int param0) {
         return "</col></u>";
     }
 
-    final static String a(CharSequence param0) {
+    final static String a(CharSequence param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_3_0 = null;
@@ -432,8 +425,7 @@ final class pj extends nb implements ue, jk, ag {
         try {
           L0: {
             L1: {
-              int discarded$2 = 37;
-              var2 = jd.a(fd.a((byte) -58, param0));
+              var2 = jd.a(fd.a((byte) -58, param0), 37);
               if (var2 != null) {
                 break L1;
               } else {
@@ -559,7 +551,7 @@ final class pj extends nb implements ue, jk, ag {
         }
     }
 
-    private final int a(int param0, String param1, String param2, int param3, w param4) {
+    private final int a(int param0, String param1, String param2, int param3, w param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -1136,16 +1128,14 @@ final class pj extends nb implements ue, jk, ag {
     final void a(byte param0, w param1, int param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            int discarded$0 = -5210;
-            ((pj) this).field_I.field_D = this.h();
+            ((pj) this).field_I.field_D = this.h(-5210);
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) (Object) runtimeException, "pj.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final boolean e() {
-        int discarded$0 = -5210;
-        if (!this.h()) {
+    private final boolean e(boolean param0) {
+        if (!this.h(-5210)) {
             return false;
         }
         int var2 = -1;

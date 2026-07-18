@@ -20,7 +20,7 @@ final class hc {
         return (java.applet.Applet) (Object) nh.field_J;
     }
 
-    final static String a() {
+    final static String a(boolean param0) {
         if (df.field_h) {
             return md.field_qb[0];
         }

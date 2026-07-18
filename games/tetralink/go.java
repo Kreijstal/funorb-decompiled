@@ -12,7 +12,7 @@ final class go {
     static tb field_a;
     static de field_g;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_e = null;
         field_a = null;
@@ -20,7 +20,7 @@ final class go {
         field_g = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         if (jj.field_a >= 224) {
             ve.a(256, 51);
@@ -101,7 +101,7 @@ final class go {
         return stackIn_6_0;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         hi.field_a = false;
         if (!(null == gl.field_o)) {
             gl.field_o.i(20424);

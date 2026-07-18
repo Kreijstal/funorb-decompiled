@@ -10,7 +10,7 @@ final class ui extends td {
         super(param0, param1);
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_r = null;
         field_p = null;
     }

@@ -5,7 +5,7 @@ final class mr {
     static Boolean field_a;
     static jj field_b;
 
-    final static void b() {
+    final static void b(boolean param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -27,7 +27,7 @@ final class mr {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (ol.field_B != 1) {
             ol.field_B = 1;
             return;
@@ -35,7 +35,7 @@ final class mr {
         ol.field_B = -1;
     }
 
-    public static void c() {
+    public static void c(boolean param0) {
         field_a = null;
         field_b = null;
     }
@@ -215,8 +215,7 @@ final class mr {
     }
 
     final static void a(boolean param0) {
-        int discarded$0 = 11514;
-        fk.a(ob.e((byte) 99));
+        fk.a(ob.e((byte) 99), 11514);
     }
 
     final static String a(String param0, byte param1, String param2, String param3) {

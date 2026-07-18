@@ -40,8 +40,7 @@ final class eh {
           vb.c();
           ck.a((byte) 123);
           if (var5 >= 256) {
-            int discarded$2 = 1;
-            id.a();
+            id.a(true);
             if (gb.field_f >= 150) {
               bk.field_b.d(15 + var3, var4 + 10, var5);
               var6 = -125 + gb.field_f;
@@ -276,8 +275,7 @@ final class eh {
           } else {
             L22: {
               vb.b(0, 0, vb.field_f, vb.field_b, 0, -var5 + 256);
-              int discarded$3 = 1;
-              id.a();
+              id.a(true);
               if (gb.field_f >= 150) {
                 bk.field_b.d(15 + var3, var4 + 10, var5);
                 break L22;
@@ -411,7 +409,7 @@ final class eh {
         field_b = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         vl.field_q = false;
         tc.field_a = null;
         int var1 = 46;

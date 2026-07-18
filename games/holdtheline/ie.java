@@ -21,7 +21,7 @@ final class ie extends hl {
     ie() {
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         field_k = null;
     }

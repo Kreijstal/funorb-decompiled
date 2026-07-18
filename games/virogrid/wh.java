@@ -9,7 +9,7 @@ abstract class wh {
 
     abstract void a(byte[] param0, byte param1);
 
-    final static int a() {
+    final static int a(byte param0) {
         return (int)(1000000000L / hd.field_f);
     }
 
@@ -159,8 +159,7 @@ abstract class wh {
                       }
                     }
                     gk.field_g.a(var11_ref_String, (byte) -75);
-                    int discarded$7 = 0;
-                    nl.a(on.field_a, gg.field_D, (jc) (Object) gk.field_g, ch.field_i);
+                    nl.a(on.field_a, gg.field_D, (jc) (Object) gk.field_g, ch.field_i, 0);
                     gk.field_g.c(-var10 + gk.field_g.field_l, -3991);
                     break L3;
                   } else {
@@ -208,8 +207,7 @@ abstract class wh {
                     gk.field_g.a(16, -90);
                     gk.field_g.field_l = gk.field_g.field_l + 1;
                     var9 = gk.field_g.field_l;
-                    int discarded$8 = 0;
-                    nl.a(on.field_a, gg.field_D, (jc) (Object) gk.field_g, ch.field_i);
+                    nl.a(on.field_a, gg.field_D, (jc) (Object) gk.field_g, ch.field_i, 0);
                     gk.field_g.b(gk.field_g.field_l + -var9, -1);
                     break L3;
                   }
@@ -239,10 +237,8 @@ abstract class wh {
                   }
                   if (var9 != 248) {
                     if (99 == var9) {
-                      int discarded$9 = 0;
-                      boolean discarded$10 = wg.a(bl.f(), 0);
-                      int discarded$11 = -87;
-                      ia.field_b = new Boolean(mk.a((jc) (Object) sh.field_qb));
+                      boolean discarded$1 = wg.a(bl.f(0), 0);
+                      ia.field_b = new Boolean(mk.a((jc) (Object) sh.field_qb, -87));
                       sh.field_qb.field_l = 0;
                       break L8;
                     } else {
@@ -252,8 +248,7 @@ abstract class wh {
                       break L8;
                     }
                   } else {
-                    int discarded$12 = 20298;
-                    sj.a(mb.g((byte) -112));
+                    sj.a(mb.g((byte) -112), 20298);
                     ld.field_g = wf.field_a;
                     tn.a(false);
                     fh.field_e = false;
@@ -339,8 +334,7 @@ abstract class wh {
                   break L14;
                 } else {
                   L15: {
-                    int discarded$13 = -126;
-                    if (30000L >= af.b()) {
+                    if (30000L >= af.b(-126)) {
                       ld.field_g = ll.field_a;
                       break L15;
                     } else {

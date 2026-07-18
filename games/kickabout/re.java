@@ -268,7 +268,7 @@ final class re implements gj {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_o = null;
         field_c = null;
@@ -314,8 +314,7 @@ final class re implements gj {
                       if (ih.field_c != 2) {
                         break L3;
                       } else {
-                        int discarded$8 = -124;
-                        var1 = k.b();
+                        var1 = k.b(-124);
                         if (var1 != -1) {
                           jm.a(100, 9863, var1);
                           return;
@@ -325,8 +324,7 @@ final class re implements gj {
                       }
                     }
                   } else {
-                    int discarded$9 = 0;
-                    var1 = ve.c();
+                    var1 = ve.c(false);
                     if (var1 == -1) {
                       break L3;
                     } else {
@@ -350,8 +348,7 @@ final class re implements gj {
                       break L4;
                     }
                   } else {
-                    int discarded$10 = -94;
-                    if (bl.a()) {
+                    if (bl.a((byte) -94)) {
                       break L4;
                     } else {
                       jm.a(1, 9863, 0);
@@ -447,9 +444,7 @@ final class re implements gj {
                           if (rm.field_C != 2) {
                             break L11;
                           } else {
-                            int discarded$11 = 128;
-                            int discarded$12 = 1;
-                            in.a();
+                            in.a(true, 128);
                             break L11;
                           }
                         }
@@ -457,9 +452,7 @@ final class re implements gj {
                           if (rm.field_C != 3) {
                             break L12;
                           } else {
-                            int discarded$13 = 128;
-                            int discarded$14 = -39;
-                            mj.a();
+                            mj.a((byte) -39, 128);
                             break L12;
                           }
                         }
@@ -478,8 +471,7 @@ final class re implements gj {
                           if (ih.field_c != 1) {
                             break L14;
                           } else {
-                            int discarded$15 = -48;
-                            eh.a();
+                            eh.a((byte) -48);
                             break L14;
                           }
                         }

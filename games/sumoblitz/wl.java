@@ -10,7 +10,7 @@ final class wl {
     private int field_d;
     private gj field_e;
 
-    private final boolean a(byte[] param0, boolean param1, int param2, int param3) {
+    private final boolean a(byte[] param0, boolean param1, int param2, int param3, int param4) {
         try {
             Object var6 = null;
             RuntimeException var6_ref = null;
@@ -363,7 +363,7 @@ final class wl {
         return "" + ((wl) this).field_d;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 
@@ -586,13 +586,11 @@ final class wl {
                 } else {
                   if (((wl) this).field_a >= param2) {
                     L2: {
-                      int discarded$6 = 255;
-                      var6 = this.a(param0, true, param2, param1) ? 1 : 0;
+                      var6 = this.a(param0, true, param2, param1, 255) ? 1 : 0;
                       if (var6 != 0) {
                         break L2;
                       } else {
-                        int discarded$7 = 255;
-                        var6 = this.a(param0, false, param2, param1) ? 1 : 0;
+                        var6 = this.a(param0, false, param2, param1, 255) ? 1 : 0;
                         break L2;
                       }
                     }

@@ -102,7 +102,7 @@ final class um {
         return stackIn_7_0;
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, int param2) {
         int var3 = param1 >> 16;
         int var4 = param1 & 65535;
         int var5 = param0 >> 16;
@@ -130,7 +130,7 @@ final class um {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_e = null;

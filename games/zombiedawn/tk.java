@@ -11,7 +11,7 @@ final class tk {
     private boolean field_c;
     static String field_b;
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_e = null;
         int var1 = 2;

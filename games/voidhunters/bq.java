@@ -114,8 +114,7 @@ final class bq extends rqa {
                 break L0;
               } else {
                 if (!upa.field_a) {
-                  int discarded$20 = 6045;
-                  jea.a();
+                  jea.a(6045);
                   if (!upa.field_a) {
                     noa.field_q = uia.field_b;
                     pk.field_o = kc.field_b;
@@ -152,7 +151,7 @@ final class bq extends rqa {
                       }
                     }
                     var4 = stackIn_83_0;
-                    mob discarded$21 = bm.field_o.a((java.awt.Component) var4, stb.field_p, uqb.field_h, 14);
+                    mob discarded$16 = bm.field_o.a((java.awt.Component) var4, stb.field_p, uqb.field_h, 14);
                     sab.field_o = hu.field_b;
                     ujb.field_c = pba.field_o;
                     return;
@@ -164,8 +163,7 @@ final class bq extends rqa {
             }
             if (!param1) {
               if (upa.field_a) {
-                int discarded$22 = -128;
-                brb.e();
+                brb.e((byte) -128);
                 if (!upa.field_a) {
                   noa.field_q = uia.field_b;
                   pk.field_o = kc.field_b;
@@ -195,7 +193,7 @@ final class bq extends rqa {
                         }
                       }
                       var4 = stackIn_98_0;
-                      mob discarded$23 = bm.field_o.a((java.awt.Component) var4, stb.field_p, uqb.field_h, 14);
+                      mob discarded$17 = bm.field_o.a((java.awt.Component) var4, stb.field_p, uqb.field_h, 14);
                       sab.field_o = hu.field_b;
                       ujb.field_c = pba.field_o;
                       return;
@@ -217,7 +215,7 @@ final class bq extends rqa {
                       }
                     }
                     var4 = stackIn_93_0;
-                    mob discarded$24 = bm.field_o.a((java.awt.Component) var4, stb.field_p, uqb.field_h, 14);
+                    mob discarded$18 = bm.field_o.a((java.awt.Component) var4, stb.field_p, uqb.field_h, 14);
                     sab.field_o = hu.field_b;
                     ujb.field_c = pba.field_o;
                     return;
@@ -260,7 +258,7 @@ final class bq extends rqa {
                     }
                   }
                   var4 = stackIn_70_0;
-                  mob discarded$25 = bm.field_o.a((java.awt.Component) var4, stb.field_p, uqb.field_h, 14);
+                  mob discarded$19 = bm.field_o.a((java.awt.Component) var4, stb.field_p, uqb.field_h, 14);
                   sab.field_o = hu.field_b;
                   ujb.field_c = pba.field_o;
                   return;
@@ -303,7 +301,7 @@ final class bq extends rqa {
                   }
                 }
                 var4 = stackIn_57_0;
-                mob discarded$26 = bm.field_o.a((java.awt.Component) var4, stb.field_p, uqb.field_h, 14);
+                mob discarded$20 = bm.field_o.a((java.awt.Component) var4, stb.field_p, uqb.field_h, 14);
                 sab.field_o = hu.field_b;
                 ujb.field_c = pba.field_o;
                 return;
@@ -346,7 +344,7 @@ final class bq extends rqa {
                 }
               }
               var4 = stackIn_41_0;
-              mob discarded$27 = bm.field_o.a((java.awt.Component) var4, stb.field_p, uqb.field_h, 14);
+              mob discarded$21 = bm.field_o.a((java.awt.Component) var4, stb.field_p, uqb.field_h, 14);
               sab.field_o = hu.field_b;
               ujb.field_c = pba.field_o;
               return;
@@ -364,8 +362,7 @@ final class bq extends rqa {
                 } else {
                   if (!upa.field_a) {
                     L13: {
-                      int discarded$28 = 6045;
-                      jea.a();
+                      jea.a(6045);
                       if (!upa.field_a) {
                         noa.field_q = uia.field_b;
                         pk.field_o = kc.field_b;
@@ -402,7 +399,7 @@ final class bq extends rqa {
                           }
                         }
                         var4 = stackIn_15_0;
-                        mob discarded$29 = bm.field_o.a((java.awt.Component) var4, stb.field_p, uqb.field_h, 14);
+                        mob discarded$22 = bm.field_o.a((java.awt.Component) var4, stb.field_p, uqb.field_h, 14);
                         sab.field_o = hu.field_b;
                         ujb.field_c = pba.field_o;
                         break L13;
@@ -420,8 +417,7 @@ final class bq extends rqa {
                 if (!upa.field_a) {
                   break L11;
                 } else {
-                  int discarded$30 = -128;
-                  brb.e();
+                  brb.e((byte) -128);
                   break L11;
                 }
               }
@@ -463,7 +459,7 @@ final class bq extends rqa {
               }
             }
             var4 = stackIn_28_0;
-            mob discarded$31 = bm.field_o.a((java.awt.Component) var4, stb.field_p, uqb.field_h, 14);
+            mob discarded$23 = bm.field_o.a((java.awt.Component) var4, stb.field_p, uqb.field_h, 14);
             sab.field_o = hu.field_b;
             ujb.field_c = pba.field_o;
             return;

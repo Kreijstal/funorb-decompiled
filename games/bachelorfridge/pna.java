@@ -18,7 +18,7 @@ final class pna extends sna {
     private int field_wb;
     private int field_xb;
 
-    public static void f() {
+    public static void f(int param0) {
         field_zb = null;
     }
 

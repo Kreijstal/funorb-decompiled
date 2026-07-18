@@ -16,7 +16,7 @@ final class koa {
         return qf.field_i;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3_int = 0;
         lj[] var3 = null;
@@ -135,10 +135,8 @@ final class koa {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            int discarded$4 = -12;
-            this.a();
-            int discarded$5 = 22972;
-            param2.a((byte) 43, ((koa) this).field_f.length, iia.d(((koa) this).field_e));
+            this.a((byte) -12);
+            param2.a((byte) 43, ((koa) this).field_f.length, iia.d(((koa) this).field_e, 22972));
             var4_int = 0;
             L1: while (true) {
               if (((koa) this).field_f.length <= var4_int) {
@@ -227,25 +225,85 @@ final class koa {
 
     final void a(ew param0, int param1) {
         int var3_int = 0;
+        RuntimeException var3 = null;
         dha var4 = null;
-        int var5 = TombRacer.field_G ? 1 : 0;
-        if (!(((koa) this).field_a != null)) {
-            return;
-        }
+        int var5 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        var5 = TombRacer.field_G ? 1 : 0;
         try {
-            ((koa) this).field_f = new lj[((koa) this).field_a.length];
-            for (var3_int = 0; ((koa) this).field_a.length > var3_int; var3_int++) {
-                var4 = ((koa) this).field_a[var3_int];
-                ((koa) this).field_f[var3_int] = param0.a(28672, var4.field_a, var4.field_b);
+          L0: {
+            if (((koa) this).field_a == null) {
+              return;
+            } else {
+              ((koa) this).field_f = new lj[((koa) this).field_a.length];
+              var3_int = 0;
+              L1: while (true) {
+                if (((koa) this).field_a.length <= var3_int) {
+                  L2: {
+                    ((koa) this).field_a = null;
+                    if (param1 != 8) {
+                      field_b = null;
+                      this.a((byte) -12);
+                      break L2;
+                    } else {
+                      this.a((byte) -12);
+                      break L2;
+                    }
+                  }
+                  break L0;
+                } else {
+                  var4 = ((koa) this).field_a[var3_int];
+                  ((koa) this).field_f[var3_int] = param0.a(28672, var4.field_a, var4.field_b);
+                  var3_int++;
+                  continue L1;
+                }
+              }
             }
-            ((koa) this).field_a = null;
-            if (param1 != 8) {
-                field_b = null;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var3;
+            stackOut_12_1 = new StringBuilder().append("koa.E(");
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param0 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L3;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L3;
             }
-            int discarded$0 = -12;
-            this.a();
-        } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "koa.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          }
+          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ')');
         }
     }
 
@@ -311,8 +369,7 @@ final class koa {
         try {
           L0: {
             ((koa) this).field_e = param0;
-            int discarded$2 = 22972;
-            var5_int = param3.b((byte) 44, iia.d(param0));
+            var5_int = param3.b((byte) 44, iia.d(param0, 22972));
             ((koa) this).field_f = new lj[var5_int];
             ((koa) this).field_a = new dha[var5_int];
             var6 = 0;

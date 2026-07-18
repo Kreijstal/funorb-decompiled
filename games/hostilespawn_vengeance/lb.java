@@ -6,7 +6,7 @@ final class lb {
     static bd[][] field_a;
     static String field_c;
 
-    final static void b() {
+    final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -93,7 +93,7 @@ final class lb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
     }
@@ -355,8 +355,7 @@ final class lb {
                       }
                     }
                     if (var9 == 248) {
-                      int discarded$4 = 0;
-                      cj.a(bn.c(-1));
+                      cj.a(bn.c(-1), 0);
                       km.field_x = sg.field_g;
                       le.c((byte) 119);
                       jn.field_C = false;
@@ -365,8 +364,7 @@ final class lb {
                       return stackIn_36_0;
                     } else {
                       if (99 == var9) {
-                        int discarded$5 = -79;
-                        boolean discarded$6 = re.c((byte) 33, ob.c());
+                        boolean discarded$1 = re.c((byte) 33, ob.c((byte) -79));
                         ii.field_h = new Boolean(gn.a(0, (vi) (Object) sc.field_g));
                         sc.field_g.field_i = 0;
                         break L8;
@@ -449,8 +447,7 @@ final class lb {
                 } else {
                   if (jn.field_C) {
                     L15: {
-                      int discarded$7 = 1;
-                      if (m.a() <= 30000L) {
+                      if (m.a(true) <= 30000L) {
                         km.field_x = fl.field_d;
                         break L15;
                       } else {

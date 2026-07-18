@@ -8,13 +8,13 @@ final class nn {
     static byte[][][] field_c;
     static String field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 50;
         field_c = null;
         field_a = null;
     }
 
-    final static int a(ln[] param0) {
+    final static int a(ln[] param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -73,7 +73,7 @@ final class nn {
         return stackIn_3_0;
     }
 
-    final static String a(int param0, CharSequence param1) {
+    final static String a(int param0, CharSequence param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -101,8 +101,7 @@ final class nn {
         String stackOut_14_2 = null;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          int discarded$2 = 0;
-          var3 = wp.a((byte) -127, param1);
+          var3 = wp.a((byte) -127, param1, false);
           var4 = 0;
           if (var3 != null) {
             stackOut_3_0 = (String) var3;

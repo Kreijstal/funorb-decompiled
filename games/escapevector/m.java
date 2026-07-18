@@ -42,7 +42,7 @@ final class m extends wg {
         return -param1 + (param1 * (32767 & param0) >> 14);
     }
 
-    final static dk a(dk[] param0, int param1) {
+    final static dk a(dk[] param0, int param1, int param2) {
         dk[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

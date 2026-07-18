@@ -15,7 +15,7 @@ final class pg {
     static int field_d;
     private wf field_e;
 
-    final static String a(java.applet.Applet param0) {
+    final static String a(java.applet.Applet param0, byte param1) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -61,8 +61,7 @@ final class pg {
                             var2 = param0.getParameter("cookieprefix");
                             var3 = var2 + "settings";
                             var4 = (String) oa.a(true, param0, "getcookies");
-                            int discarded$2 = -125;
-                            var5 = dc.a(var4, ';');
+                            var5 = dc.a(var4, ';', (byte) -125);
                             var6 = 0;
                             statePc = 2;
                             continue stateLoop;
@@ -334,11 +333,11 @@ final class pg {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_b = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         al.field_C = new ng();
     }
 

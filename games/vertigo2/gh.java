@@ -15,23 +15,19 @@ final class gh {
                 m.a(param1, param4, (byte) -78, param2, param0);
                 return;
               } else {
-                int discarded$8 = 0;
-                tq.a(param0, param4, param1, param2);
+                tq.a(param0, param4, param1, param2, false);
                 return;
               }
             } else {
-              int discarded$9 = 0;
-              tq.a(param0, param4, param1, param2);
+              tq.a(param0, param4, param1, param2, false);
               return;
             }
           } else {
-            int discarded$10 = 0;
-            tq.a(param0, param4, param1, param2);
+            tq.a(param0, param4, param1, param2, false);
             return;
           }
         } else {
-          int discarded$11 = 0;
-          tq.a(param0, param4, param1, param2);
+          tq.a(param0, param4, param1, param2, false);
           return;
         }
     }
@@ -257,7 +253,7 @@ final class gh {
         }
     }
 
-    final static void a(si param0, byte param1, boolean param2) {
+    final static void a(si param0, byte param1, boolean param2, int param3) {
         Object var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -352,7 +348,7 @@ final class gh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         int var1 = 11;
         field_b = null;

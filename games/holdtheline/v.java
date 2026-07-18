@@ -164,7 +164,8 @@ class v extends n implements jm {
             Throwable var8_ref_Throwable = null;
             int var8 = 0;
             int var9 = 0;
-            CharSequence var10 = null;
+            Object var10 = null;
+            CharSequence var11 = null;
             int stackIn_5_0 = 0;
             int stackIn_29_0 = 0;
             int stackIn_40_0 = 0;
@@ -238,8 +239,8 @@ class v extends n implements jm {
                   } else {
                     L3: {
                       if (param4) {
-                        int discarded$8 = 1;
-                        qk.field_j = eb.a((String) null, vd.field_a, false, param3);
+                        var10 = null;
+                        qk.field_j = eb.a((String) null, vd.field_a, false, param3, true);
                         break L3;
                       } else {
                         qk.field_j = wi.a((byte) 126, false, param2, param3);
@@ -336,15 +337,14 @@ class v extends n implements jm {
                       L9: {
                         vd.field_a = rd.field_e.d(true);
                         rb.field_x = rd.field_e.f((byte) -33);
-                        int discarded$9 = rd.field_e.f((byte) -43);
+                        int discarded$6 = rd.field_e.f((byte) -43);
                         fc.field_a = rd.field_e.k(-119);
                         var6_ref = rd.field_e.i(-1);
                         var7 = rd.field_e.f((byte) -57);
                         if (0 == (var7 & 1)) {
                           break L9;
                         } else {
-                          int discarded$10 = 66;
-                          j.a();
+                          j.a((byte) 66);
                           break L9;
                         }
                       }
@@ -387,9 +387,9 @@ class v extends n implements jm {
                         if (!mi.field_f) {
                           break L13;
                         } else {
-                          int discarded$11 = rd.field_e.f((byte) -53);
-                          int discarded$12 = rd.field_e.f((byte) -82);
-                          int discarded$13 = rd.field_e.a(-116);
+                          int discarded$7 = rd.field_e.f((byte) -53);
+                          int discarded$8 = rd.field_e.f((byte) -82);
+                          int discarded$9 = rd.field_e.a(-116);
                           ho.field_l = rd.field_e.k(-59);
                           im.field_i = new byte[ho.field_l];
                           var8 = 0;
@@ -406,8 +406,8 @@ class v extends n implements jm {
                       }
                       L15: {
                         ng.field_e = rd.field_e.j(-1231);
-                        var10 = (CharSequence) (Object) ng.field_e;
-                        co.field_e = kf.a(var10, (byte) -12);
+                        var11 = (CharSequence) (Object) ng.field_e;
+                        co.field_e = kf.a(var11, (byte) -12);
                         q.field_c = rd.field_e.f((byte) -95);
                         d.field_f = ad.field_b;
                         if (qk.field_j.a(true) == sb.field_d) {
@@ -439,7 +439,7 @@ class v extends n implements jm {
                             if (!uj.field_c) {
                               try {
                                 L19: {
-                                  Object discarded$14 = eo.a(21896, "unzap", en.a(92));
+                                  Object discarded$10 = eo.a(21896, "unzap", en.a(92));
                                   break L19;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -457,7 +457,7 @@ class v extends n implements jm {
                         }
                         try {
                           L21: {
-                            Object discarded$15 = eo.a(en.a(78), new Object[1], false, "zap");
+                            Object discarded$11 = eo.a(en.a(78), new Object[1], false, "zap");
                             break L21;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -715,7 +715,7 @@ class v extends n implements jm {
         return ((v) this).f((byte) 118) != null ? true : false;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_A = null;
     }
 
@@ -1046,7 +1046,7 @@ class v extends n implements jm {
         }
     }
 
-    final static boolean a(th param0) {
+    final static boolean a(th param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -1364,7 +1364,7 @@ class v extends n implements jm {
         return stackIn_11_0 != 0;
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;

@@ -85,7 +85,7 @@ final class wga implements dja {
         return (tv[]) (Object) new wna[param1];
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

@@ -144,7 +144,7 @@ final class ol {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         sj.field_F = null;
         wc.field_C = null;
     }

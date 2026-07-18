@@ -9,7 +9,7 @@ abstract class bc {
     static jh field_f;
     int field_d;
 
-    final static void a() {
+    final static void a(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -43,8 +43,7 @@ abstract class bc {
             em.a((byte) 38, rk.field_a);
             nb.b();
             kh.a();
-            int discarded$1 = -67;
-            ja.d();
+            ja.d((byte) -67);
             if (var5 < 256) {
               kh.d(0, 0, kh.field_l, kh.field_d, 0, 256 - var5);
               break L2;
@@ -258,7 +257,7 @@ abstract class bc {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_f = null;
     }

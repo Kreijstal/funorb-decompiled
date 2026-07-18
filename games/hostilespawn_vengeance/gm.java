@@ -1012,8 +1012,7 @@ final class gm {
             }
             L1: while (true) {
               if (param0.length() > var4) {
-                int discarded$8 = 108;
-                if (aa.a(param0.charAt(var4))) {
+                if (aa.a(param0.charAt(var4), (byte) 108)) {
                   var4++;
                   continue L1;
                 } else {

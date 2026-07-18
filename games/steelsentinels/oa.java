@@ -522,10 +522,8 @@ class oa extends lh {
     }
 
     final static void f(int param0) {
-        int discarded$0 = 0;
-        rh.a();
-        int discarded$1 = -70;
-        jb.c();
+        rh.a(false);
+        jb.c((byte) -70);
         n.field_x = null;
         ke.a(2);
         if (param0 != -12161) {

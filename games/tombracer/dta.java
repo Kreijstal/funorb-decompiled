@@ -11,7 +11,7 @@ final class dta {
     static String[] field_b;
     private String[] field_h;
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_d = null;
         field_b = null;
@@ -103,8 +103,8 @@ final class dta {
                   if (var9.b((byte) 90, param2)) {
                     tga.field_a.KA(param0, param5, param1, param6);
                     la.field_j.a(0, 0);
-                    int discarded$4 = be.a(ad.field_i.toUpperCase(), 1, qr.field_v, 10981495, 20, -param5 + param6, 1, param5, param0, 1, (byte) 60, -param0 + param1);
-                    int discarded$5 = be.a(dea.a(var9.c((byte) 115, param2), (byte) -8), 1, eda.field_f, 10981495, 20, param6 - param5, 1, param5 + 30, param0, 1, (byte) 60, param1 + -param0);
+                    int discarded$3 = be.a(ad.field_i.toUpperCase(), 1, qr.field_v, 10981495, 20, -param5 + param6, 1, param5, param0, 1, (byte) 60, -param0 + param1);
+                    int discarded$4 = be.a(dea.a(var9.c((byte) 115, param2), (byte) -8), 1, eda.field_f, 10981495, 20, param6 - param5, 1, param5 + 30, param0, 1, (byte) 60, param1 + -param0);
                     tga.field_a.la();
                     return;
                   } else {
@@ -156,8 +156,7 @@ final class dta {
                         } else {
                           ura.a(-10985);
                           hp.a(1024, 512, 0, ((dta) this).field_c.b((byte) 74), -1918106173, 70 + var18, var17 - -55);
-                          int discarded$6 = -6;
-                          se.f();
+                          se.f((byte) -6);
                           break L5;
                         }
                       }
@@ -230,7 +229,7 @@ final class dta {
                             }
                           }
                           L13: {
-                            int discarded$7 = qf.field_j.a((aa) null, 12, 0, 0, var18 - (po.field_l.c() + -32), -16777216, (int[]) null, 1, -5599403, bd.field_j.toUpperCase(), (byte) -66, 300, 0, (nh[]) null, -14 + (param1 - -var24), 0);
+                            int discarded$5 = qf.field_j.a((aa) null, 12, 0, 0, var18 - (po.field_l.c() + -32), -16777216, (int[]) null, 1, -5599403, bd.field_j.toUpperCase(), (byte) -66, 300, 0, (nh[]) null, -14 + (param1 - -var24), 0);
                             var30 = 30 + (-po.field_l.c() + var18) + 80;
                             vua.field_A.a(param1 - (po.field_l.a() + -var24), var18 - po.field_l.c() + (-vua.field_A.c() + var25));
                             var31 = (int)(-var28_double + (double)var30);

@@ -54,8 +54,7 @@ final class ud implements Runnable {
             }
           }
           if (ri.field_a >= 10) {
-            int discarded$6 = -117;
-            if (w.a()) {
+            if (w.a((byte) -117)) {
               if (ml.field_t == 0) {
                 uk.a((byte) -123, param1, false);
                 fc.a((byte) 80, 0, param2, 0);
@@ -81,8 +80,7 @@ final class ud implements Runnable {
                 break L1;
               }
             }
-            int discarded$7 = 1;
-            ug.a(10487, var3_int != 0, dl.a(), wj.g(17325), sa.field_e);
+            ug.a(10487, var3_int != 0, dl.a(true), wj.g(17325), sa.field_e);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -206,8 +204,7 @@ final class ud implements Runnable {
                   if (var6 == null) {
                     break L0;
                   } else {
-                    int discarded$4 = 0;
-                    ld.a(param0, var6);
+                    ld.a(param0, var6, 0);
                     var6 = (sc) (Object) tg.field_c.d(8192);
                     continue L2;
                   }
@@ -446,10 +443,9 @@ final class ud implements Runnable {
         }
     }
 
-    final static void a(o param0) {
+    final static void a(o param0, boolean param1) {
         try {
-            int discarded$0 = -31782;
-            ph.d();
+            ph.d(-31782);
             ed.a(param0.field_B, param0.field_x, param0.field_s);
         } catch (RuntimeException runtimeException) {
             throw bd.a((Throwable) (Object) runtimeException, "ud.F(" + (param0 != null ? "{...}" : "null") + ',' + false + ')');

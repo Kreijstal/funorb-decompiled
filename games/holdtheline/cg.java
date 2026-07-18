@@ -28,7 +28,7 @@ final class cg {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_j = null;
         field_f = null;
@@ -57,7 +57,7 @@ final class cg {
         return ra.a(param1, 85) != null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

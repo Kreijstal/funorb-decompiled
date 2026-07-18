@@ -9,7 +9,7 @@ final class rb {
     private int field_f;
     private int[] field_d;
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_4_0 = 0;
@@ -193,7 +193,7 @@ final class rb {
         }
     }
 
-    final static void a(int param0, String[] param1, String param2) {
+    final static void a(int param0, String[] param1, String param2, int param3) {
         String[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -326,7 +326,7 @@ final class rb {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         pi.field_Q = -1;
         em.field_c = false;
         dd.field_l = 0;

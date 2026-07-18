@@ -11,7 +11,7 @@ final class ok extends sna {
     sga field_xb;
     sna field_Ab;
 
-    final static boolean a(CharSequence param0, char param1) {
+    final static boolean a(CharSequence param0, char param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -108,7 +108,7 @@ final class ok extends sna {
         return stackIn_18_0 != 0;
     }
 
-    final static sna f() {
+    final static sna f(byte param0) {
         return p.field_n.field_vb;
     }
 

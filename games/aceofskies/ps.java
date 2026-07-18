@@ -100,7 +100,7 @@ final class ps {
         qn.field_d = null;
     }
 
-    private final void a(byte[] param0) {
+    private final void a(byte[] param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -143,8 +143,7 @@ final class ps {
         try {
           L0: {
             L1: {
-              int discarded$5 = 0;
-              var17 = new rb(pn.a(param0));
+              var17 = new rb(pn.a(param0, 0));
               var4 = var17.g(-112);
               if (var4 < 5) {
                 break L1;
@@ -204,9 +203,9 @@ final class ps {
                           break L6;
                         } else {
                           L8: {
-                            int dupTemp$6 = var8 + var17.c((byte) 127);
-                            var8 = dupTemp$6;
-                            ((ps) this).field_o[var10] = dupTemp$6;
+                            int dupTemp$4 = var8 + var17.c((byte) 127);
+                            var8 = dupTemp$4;
+                            ((ps) this).field_o[var10] = dupTemp$4;
                             if (((ps) this).field_o[var10] <= var9) {
                               break L8;
                             } else {
@@ -224,9 +223,9 @@ final class ps {
                           break L6;
                         } else {
                           L10: {
-                            int dupTemp$7 = var8 + var17.i((byte) 0);
-                            var8 = dupTemp$7;
-                            ((ps) this).field_o[var10] = dupTemp$7;
+                            int dupTemp$5 = var8 + var17.i((byte) 0);
+                            var8 = dupTemp$5;
+                            ((ps) this).field_o[var10] = dupTemp$5;
                             if (((ps) this).field_o[var10] > var9) {
                               var9 = ((ps) this).field_o[var10];
                               break L10;
@@ -336,10 +335,10 @@ final class ps {
                                           continue L21;
                                         } else {
                                           L24: {
-                                            int dupTemp$8 = var8 + var17.i((byte) 0);
-                                            var8 = dupTemp$8;
-                                            ((ps) this).field_q[var11][var14] = dupTemp$8;
-                                            var15 = dupTemp$8;
+                                            int dupTemp$6 = var8 + var17.i((byte) 0);
+                                            var8 = dupTemp$6;
+                                            ((ps) this).field_q[var11][var14] = dupTemp$6;
+                                            var15 = dupTemp$6;
                                             if (var15 > var13) {
                                               var13 = var15;
                                               break L24;
@@ -389,10 +388,10 @@ final class ps {
                                           continue L26;
                                         } else {
                                           L29: {
-                                            int dupTemp$9 = var8 + var17.c((byte) 124);
-                                            var8 = dupTemp$9;
-                                            ((ps) this).field_q[var11][var14] = dupTemp$9;
-                                            var15 = dupTemp$9;
+                                            int dupTemp$7 = var8 + var17.c((byte) 124);
+                                            var8 = dupTemp$7;
+                                            ((ps) this).field_q[var11][var14] = dupTemp$7;
+                                            var15 = dupTemp$7;
                                             if (var13 >= var15) {
                                               break L29;
                                             } else {
@@ -513,11 +512,11 @@ final class ps {
         }
     }
 
-    final static void b() {
+    final static void b(int param0) {
         oi.a(17, 20665);
     }
 
-    final static void a(int param0, boolean param1, java.awt.Canvas param2) {
+    final static void a(int param0, boolean param1, java.awt.Canvas param2, int param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -585,7 +584,7 @@ final class ps {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_e = null;
         field_f = null;
@@ -609,8 +608,7 @@ final class ps {
                     }
                 }
             }
-            int discarded$0 = 100;
-            this.a(param0);
+            this.a(param0, 100);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "ps.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -7,7 +7,7 @@ final class rb {
     static int[] field_a;
     static String field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_b = null;
         field_a = null;

@@ -15,7 +15,7 @@ final class og {
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         go.a(-1, (byte) -128, 0);
         go.a(-1, (byte) -128, 1);
         go.a(-1, (byte) -128, 2);

@@ -331,7 +331,7 @@ final class w extends hd {
         field_q = null;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1 = 0;
         s.field_c = false;
         sg.field_n = null;

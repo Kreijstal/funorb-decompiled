@@ -13,20 +13,17 @@ final class jea {
         if (!(dca.field_y == null)) {
             wd.a((byte) 70, dca.field_y);
         }
-        int discarded$12 = -705481812;
-        oda.a();
-        int discarded$25 = -1;
-        qi.b();
+        oda.a(-705481812);
+        qi.b(-1);
         te.c((byte) 94);
-        int discarded$36 = 99;
-        if (!(!lt.a())) {
+        if (!(!lt.a((byte) 99))) {
             sja.field_fb.c(1, (byte) 125);
             hna.a(0, 68);
         }
         vc.a((byte) -96);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_d = null;
     }

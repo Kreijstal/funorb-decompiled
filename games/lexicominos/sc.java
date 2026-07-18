@@ -76,8 +76,7 @@ final class sc {
                         if (!dl.field_g) {
                           break L6;
                         } else {
-                          int discarded$2 = 0;
-                          param2 = da.a(new String[1], Lexicominos.field_F);
+                          param2 = da.a(new String[1], Lexicominos.field_F, false);
                           break L6;
                         }
                       }
@@ -152,7 +151,7 @@ final class sc {
         ea.field_b = param3;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         int var1 = -110;

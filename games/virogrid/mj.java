@@ -21,9 +21,8 @@ final class mj extends dm {
         }
     }
 
-    final static void f() {
-        int discarded$0 = 20298;
-        sj.a(mb.g((byte) 93));
+    final static void f(int param0) {
+        sj.a(mb.g((byte) 93), 20298);
     }
 
     final static void a(int param0, boolean param1) {

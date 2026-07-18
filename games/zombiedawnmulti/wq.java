@@ -162,7 +162,7 @@ final class wq {
         return (int)(1000000000L / td.field_g);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_d = null;
         field_c = null;
@@ -171,7 +171,7 @@ final class wq {
         field_e = null;
     }
 
-    final static wf a(ga param0) {
+    final static wf a(ga param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -246,7 +246,7 @@ final class wq {
         return stackIn_1_0;
     }
 
-    final static void a(int param0, pd param1, int param2, pd param3) {
+    final static void a(int param0, pd param1, int param2, pd param3, int param4, boolean param5) {
         try {
             wb.field_db = 15;
             pb.field_b = 5;

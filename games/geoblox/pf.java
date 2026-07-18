@@ -69,7 +69,7 @@ final class pf extends ee implements ga, pl {
         return stackIn_11_0 != 0;
     }
 
-    final static void f() {
+    final static void f(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -95,8 +95,7 @@ final class pf extends ee implements ga, pl {
               var3 = var9.c((byte) 34);
               if (0 != var2) {
                 if (var2 != 1) {
-                  int discarded$1 = 125;
-                  gi.a((Throwable) null, "LR1: " + og.e(55));
+                  gi.a((Throwable) null, "LR1: " + og.e(55), (byte) 125);
                   jl.a((byte) -123);
                   break L1;
                 } else {
@@ -535,8 +534,7 @@ final class pf extends ee implements ga, pl {
               if (oc.field_e != null) {
                 break L1;
               } else {
-                int discarded$5 = 52;
-                if (!w.a(false)) {
+                if (!w.a(false, 52)) {
                   stackOut_3_0 = -1;
                   stackIn_4_0 = stackOut_3_0;
                   return stackIn_4_0;
@@ -569,8 +567,7 @@ final class pf extends ee implements ga, pl {
                       fc.field_d.a(var13, (byte) -126);
                       fc.field_d.a(var8, (byte) -126);
                       var14 = (CharSequence) (Object) param4;
-                      int discarded$6 = 48;
-                      fc.field_d.a(sl.a(var14), (byte) -126);
+                      fc.field_d.a(sl.a(var14, 48), (byte) -126);
                       fc.field_d.e(param0, 28695);
                       fc.field_d.d((byte) -94, param1);
                       fc.field_d.d((byte) 123, var9);
@@ -669,9 +666,8 @@ final class pf extends ee implements ga, pl {
                       me.field_l = var9;
                       break L8;
                     } else {
-                      boolean discarded$7 = el.b(30000, rc.d(112));
-                      int discarded$8 = 0;
-                      fi.field_b = new Boolean(jl.a((qc) (Object) eh.field_d));
+                      boolean discarded$1 = el.b(30000, rc.d(112));
+                      fi.field_b = new Boolean(jl.a((qc) (Object) eh.field_d, 0));
                       eh.field_d.field_f = 0;
                       break L8;
                     }
@@ -772,8 +768,7 @@ final class pf extends ee implements ga, pl {
                   break L15;
                 } else {
                   L16: {
-                    int discarded$9 = 12;
-                    if (ll.a() <= 30000L) {
+                    if (ll.a((byte) 12) <= 30000L) {
                       kh.field_a = uj.field_e;
                       break L16;
                     } else {
@@ -1568,8 +1563,7 @@ final class pf extends ee implements ga, pl {
             }
             L13: {
               var8 = jj.field_c;
-              int discarded$3 = 200;
-              var9 = th.a(k.c(120));
+              var9 = th.a(k.c(120), 200);
               if (var9 != mb.field_b) {
                 if (var9 != rl.field_W) {
                   break L13;
@@ -1583,13 +1577,13 @@ final class pf extends ee implements ga, pl {
               }
             }
             L14: {
-              hd dupTemp$4 = new hd(10, ((pf) this).field_m, -20 + ((pf) this).field_r, 25, (el) (Object) ((pf) this).field_J, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$4;
-              ((pf) this).b((byte) -110, (el) (Object) dupTemp$4);
+              hd dupTemp$2 = new hd(10, ((pf) this).field_m, -20 + ((pf) this).field_r, 25, (el) (Object) ((pf) this).field_J, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$2;
+              ((pf) this).b((byte) -110, (el) (Object) dupTemp$2);
               ((pf) this).field_m = ((pf) this).field_m + (((el) (Object) var12).field_h - -5);
-              hd dupTemp$5 = new hd(10, ((pf) this).field_m, ((pf) this).field_r + -20, 25, (el) (Object) ((pf) this).field_P, false, 80, 3, var7, 16777215, qg.field_b);
-              var13 = dupTemp$5;
-              ((pf) this).b((byte) -120, (el) (Object) dupTemp$5);
+              hd dupTemp$3 = new hd(10, ((pf) this).field_m, ((pf) this).field_r + -20, 25, (el) (Object) ((pf) this).field_P, false, 80, 3, var7, 16777215, qg.field_b);
+              var13 = dupTemp$3;
+              ((pf) this).b((byte) -120, (el) (Object) dupTemp$3);
               ((pf) this).field_E.field_u = (bb) this;
               ((pf) this).field_m = ((pf) this).field_m + (((el) (Object) var13).field_h - -5);
               if (((pf) this).field_M == null) {
@@ -1730,8 +1724,7 @@ final class pf extends ee implements ga, pl {
         if (param0 != -42) {
             mb discarded$0 = pf.h((byte) -98);
         }
-        int discarded$1 = 7;
-        return new mb(vh.f(100), jg.d());
+        return new mb(vh.f(100), jg.d(7));
     }
 
     final void i(int param0) {

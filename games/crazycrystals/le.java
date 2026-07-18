@@ -4,7 +4,7 @@
 final class le extends ln {
     static dl[][] field_g;
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -85,9 +85,7 @@ final class le extends ln {
                       return;
                     }
                   } else {
-                    int discarded$2 = -1815;
-                    int discarded$3 = 21862;
-                    wp.a((Throwable) null, "A1: " + ug.a());
+                    wp.a((Throwable) null, "A1: " + ug.a(-1815), 21862);
                     jj.a(4);
                     break L1;
                   }
@@ -107,7 +105,7 @@ final class le extends ln {
         field_g = null;
     }
 
-    final static java.applet.Applet b() {
+    final static java.applet.Applet b(byte param0) {
         if (tk.field_i != null) {
             return tk.field_i;
         }

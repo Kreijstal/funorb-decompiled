@@ -152,16 +152,14 @@ final class hc extends ui {
                       of.field_a.a((byte) -38, var14);
                       of.field_a.a((byte) -38, var8);
                       var15 = (CharSequence) (Object) param5;
-                      int discarded$8 = -20;
-                      of.field_a.a((byte) -38, aa.a(var15));
+                      of.field_a.a((byte) -38, aa.a(var15, -20));
                       of.field_a.e(122, param1);
                       of.field_a.c(param0, -1);
                       of.field_a.c(var9, -1);
                       ed.field_q.c(18, -1);
                       ed.field_q.field_h = ed.field_q.field_h + 2;
                       var10 = ed.field_q.field_h;
-                      int discarded$9 = -28;
-                      var11_ref_String = pg.a(kk.c(-14047));
+                      var11_ref_String = pg.a(kk.c(-14047), (byte) -28);
                       if (var11_ref_String == null) {
                         var11_ref_String = "";
                         break L5;
@@ -246,8 +244,7 @@ final class hc extends ui {
             }
             L8: {
               if (uf.field_m == ve.field_e) {
-                int discarded$10 = 10343;
-                if (!a.b(1)) {
+                if (!a.b(1, 10343)) {
                   break L8;
                 } else {
                   L9: {
@@ -272,8 +269,7 @@ final class hc extends ui {
                       uf.field_m = bc.field_F;
                       break L8;
                     } else {
-                      int discarded$11 = 10343;
-                      boolean discarded$12 = a.b(wg.b(13174));
+                      boolean discarded$1 = a.b(wg.b(13174), 10343);
                       wh.field_d = new Boolean(f.a((wf) (Object) ig.field_a, 25444));
                       ig.field_a.field_h = 0;
                       break L8;
@@ -297,12 +293,10 @@ final class hc extends ui {
                 break L10;
               } else {
                 var9 = 2;
-                int discarded$13 = 10343;
-                if (a.b(var9)) {
+                if (a.b(var9, 10343)) {
                   var10 = ig.field_a.b(-1698573656);
                   ig.field_a.field_h = 0;
-                  int discarded$14 = 10343;
-                  if (a.b(var10)) {
+                  if (a.b(var10, 10343)) {
                     var11 = fc.field_S.length;
                     var12 = 0;
                     L11: while (true) {
@@ -328,8 +322,7 @@ final class hc extends ui {
             }
             L12: {
               if (bc.field_F == uf.field_m) {
-                int discarded$15 = 2;
-                if (dc.d()) {
+                if (dc.d(2)) {
                   L13: {
                     if (pg.field_d == 255) {
                       var9_ref_String = ig.field_a.e((byte) -49);
@@ -510,8 +503,7 @@ final class hc extends ui {
         try {
           L0: {
             if (nb.a(param4, param3, (byte) 124, param1)) {
-              int discarded$2 = -116;
-              stackOut_3_0 = fl.a(param2.a(param4, -27493, param3));
+              stackOut_3_0 = fl.a(param2.a(param4, -27493, param3), (byte) -116);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -578,18 +570,18 @@ final class hc extends ui {
         return stackIn_4_0;
     }
 
-    final static int f() {
+    final static int f(int param0) {
         return gd.field_o + -me.field_v;
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_ib = null;
         field_eb = null;
         field_gb = null;
         field_kb = null;
     }
 
-    final static void h() {
+    final static void h(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

@@ -228,7 +228,7 @@ final class vl extends hf {
         return stackIn_21_0 != 0;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_n = null;
         field_l = null;
     }
@@ -311,7 +311,7 @@ final class vl extends hf {
         ((vl) this).field_h = null;
     }
 
-    final static void a(dm[] param0, int param1, int param2, int param3) {
+    final static void a(dm[] param0, int param1, int param2, int param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

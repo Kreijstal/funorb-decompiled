@@ -212,7 +212,7 @@ class ts extends kg {
         return stackIn_1_0 != 0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_F = null;
         field_E = null;
         int var1 = -63;
@@ -293,7 +293,7 @@ class ts extends kg {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, byte param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -377,8 +377,7 @@ class ts extends kg {
     final static void a(int param0) {
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         if (ui.field_m == 0) {
-            int discarded$0 = -114;
-            gd.a();
+            gd.a(-114);
             return;
         }
         if (ui.field_m == 1) {
@@ -389,18 +388,15 @@ class ts extends kg {
             wj.a(128);
         } else {
             if (ui.field_m == 3) {
-                int discarded$1 = 8421504;
-                pa.c();
+                pa.c(8421504);
                 return;
             }
             if (4 == ui.field_m) {
-                int discarded$2 = 320;
-                eb.a();
+                eb.a(320);
                 return;
             }
             if (ui.field_m == 5) {
-                int discarded$3 = 480;
-                vi.c();
+                vi.c(480);
                 return;
             }
             return;

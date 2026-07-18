@@ -7,13 +7,13 @@ final class cba {
     static int field_d;
     static ee[] field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_c = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         oha var5 = null;
         int var6 = 0;
         int var7 = 0;

@@ -626,22 +626,16 @@ final class ie extends cr {
     final static qj q(int param0) {
         if (param0 != 20) {
           ie.o(-87);
-          int discarded$8 = -1;
-          int discarded$9 = 132199140;
-          return new qj(eb.a(), ln.c());
+          return new qj(eb.a(-1), ln.c(132199140));
         } else {
-          int discarded$10 = -1;
-          int discarded$11 = 132199140;
-          return new qj(eb.a(), ln.c());
+          return new qj(eb.a(-1), ln.c(132199140));
         }
     }
 
     final static void b(int param0, boolean param1) {
-        int discarded$6 = -128;
-        e.a(param1);
+        e.a(param1, (byte) -128);
         if (!(null == ko.field_S)) {
-            int discarded$7 = 0;
-            oh.a(ko.field_S);
+            oh.a(ko.field_S, false);
         }
     }
 

@@ -15,21 +15,20 @@ final class wh extends pj {
         field_w = null;
     }
 
-    private final void f() {
+    private final void f(int param0) {
         if (!(((wh) this).field_t <= 0L)) {
             ((wh) this).field_u.field_y.releasePbuffer(((wh) this).field_t);
             ((wh) this).field_t = 0L;
         }
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         String var1 = "";
         if (no.field_a != null) {
             var1 = no.field_a.a((byte) 48);
         }
         if (0 == var1.length()) {
-            int discarded$0 = 1;
-            var1 = kf.f();
+            var1 = kf.f(1);
         }
         if (!(var1.length() != 0)) {
             var1 = kq.field_R;
@@ -38,8 +37,7 @@ final class wh extends pj {
     }
 
     protected final void finalize() throws Throwable {
-        int discarded$0 = 30611;
-        this.f();
+        this.f(30611);
         super.finalize();
     }
 

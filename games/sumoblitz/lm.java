@@ -24,7 +24,7 @@ final class lm {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
     }
 
@@ -112,8 +112,7 @@ final class lm {
                         try {
                             var2 = "tuhstatbut";
                             var3 = (String) tw.a(param1, 116, "getcookies");
-                            int discarded$2 = -27224;
-                            var4 = cn.a(';', var3);
+                            var4 = cn.a(';', var3, -27224);
                             var5 = 0;
                             statePc = 6;
                             continue stateLoop;

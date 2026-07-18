@@ -10,7 +10,7 @@ final class qa {
     static bd field_c;
     static int field_b;
 
-    final static bd[] a() {
+    final static bd[] a(int param0) {
         bd[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -181,33 +181,25 @@ final class qa {
                           break L4;
                         } else {
                           if (var19 < 0) {
-                            int discarded$8 = 0;
-                            var25 = ee.a(var18, -param5 + var7_int - 1);
+                            var25 = ee.a(var18, -param5 + var7_int - 1, false);
                             var21 = var21 + var25;
-                            int discarded$9 = 0;
-                            var25 = ee.a(var18, var7_int + -param5);
+                            var25 = ee.a(var18, var7_int + -param5, false);
                             var22 = var22 + var25;
                             var21 = var21 + var25;
-                            int discarded$10 = 0;
-                            var25 = ee.a(var18, 1 + (var7_int - param5));
+                            var25 = ee.a(var18, 1 + (var7_int - param5), false);
                             var22 = var22 + var25;
-                            int discarded$11 = 0;
-                            var25 = ee.a(var18, -1 + var7_int);
+                            var25 = ee.a(var18, -1 + var7_int, false);
                             var23 = var23 + var25;
                             var21 = var21 + var25;
-                            int discarded$12 = 0;
-                            var25 = ee.a(var18, 1 + var7_int);
+                            var25 = ee.a(var18, 1 + var7_int, false);
                             var22 = var22 + var25;
                             var24 = var24 + var25;
-                            int discarded$13 = 0;
-                            var25 = ee.a(var18, var7_int + (-1 + param5));
+                            var25 = ee.a(var18, var7_int + (-1 + param5), false);
                             var23 = var23 + var25;
-                            int discarded$14 = 0;
-                            var25 = ee.a(var18, param5 + var7_int);
+                            var25 = ee.a(var18, param5 + var7_int, false);
                             var23 = var23 + var25;
                             var24 = var24 + var25;
-                            int discarded$15 = 0;
-                            var25 = ee.a(var18, param5 + (1 + var7_int));
+                            var25 = ee.a(var18, param5 + (1 + var7_int), false);
                             var24 = var24 + var25;
                             break L3;
                           } else {
@@ -698,7 +690,7 @@ final class qa {
         tk.field_e = tk.field_e + 1;
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_d = null;
         field_a = null;
         field_g = null;

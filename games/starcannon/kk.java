@@ -51,14 +51,14 @@ abstract class kk {
         return sk.field_b;
     }
 
-    final static Boolean c() {
+    final static Boolean c(byte param0) {
         Boolean var1 = oj.field_g;
         int var2 = 0;
         oj.field_g = null;
         return var1;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
     }
 

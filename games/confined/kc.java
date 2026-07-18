@@ -87,7 +87,7 @@ final class kc {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  int discarded$2 = param1.g(16, 0);
+                  int discarded$1 = param1.g(16, 0);
                   var5.field_h = bn.a(0, param1, var5.field_h, 16);
                   var5.field_u = bn.a(0, param1, var5.field_u, 16);
                   var5.field_k = bn.a(0, param1, var5.field_k, 16);
@@ -108,8 +108,7 @@ final class kc {
                 if (!sm.a(119, param1)) {
                   break L4;
                 } else {
-                  int discarded$3 = 16;
-                  var5.field_P = pc.a(var5.field_P, (byte) -126, param1);
+                  var5.field_P = pc.a(var5.field_P, (byte) -126, param1, 16);
                   var6 = 0;
                   var7 = 0;
                   L5: while (true) {
@@ -509,7 +508,7 @@ final class kc {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
         field_k = null;
         field_n = null;
@@ -518,7 +517,7 @@ final class kc {
         field_r = null;
     }
 
-    final static vf a() {
+    final static vf a(byte param0) {
         int var1 = 0;
         if (qh.field_y == null) {
           qh.field_y = new vf(fa.field_Q, 20, 0, 0, 0, 11579568, -1, 0, 0, fa.field_Q.field_C, -1, 2147483647, true);
@@ -530,7 +529,7 @@ final class kc {
         }
     }
 
-    private final void b(int param0, String param1, int param2) {
+    private final void b(int param0, String param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -710,8 +709,7 @@ final class kc {
               this.a(param3, param0, -6, param2);
               return;
             } else {
-              int discarded$2 = -9645;
-              this.b(param3, param0, param2);
+              this.b(param3, param0, param2, -9645);
               return;
             }
           } else {

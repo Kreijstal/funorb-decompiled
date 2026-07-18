@@ -337,8 +337,7 @@ final class ga extends bc {
               }
             }
             ((ga) this).field_t.a(param1, param0, param2, (ga) this, (byte) 44);
-            int discarded$1 = -9;
-            ie.b();
+            ie.b((byte) -9);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -465,7 +464,7 @@ final class ga extends bc {
                 if (param4.indexOf("<br>") != -1) {
                   break L1;
                 } else {
-                  param2[0] = (String) (Object) param2;
+                  param2[0] = param4;
                   stackOut_3_0 = 1;
                   stackIn_4_0 = stackOut_3_0;
                   return stackIn_4_0;
@@ -719,7 +718,7 @@ final class ga extends bc {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_s = null;
         field_w = null;
         field_x = null;

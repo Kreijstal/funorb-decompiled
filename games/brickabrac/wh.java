@@ -373,7 +373,7 @@ final class wh implements Runnable {
         this(param0, param1, 5000);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_h = null;
     }
 
@@ -438,7 +438,7 @@ final class wh implements Runnable {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (nq.field_p) {
             lb.b(lb.field_i, lb.field_b, -lb.field_i + lb.field_f, -lb.field_b + lb.field_j);
             wd.field_w.a(true, false);

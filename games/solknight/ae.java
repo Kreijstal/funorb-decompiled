@@ -8,7 +8,7 @@ final class ae implements Runnable {
     int field_a;
     private boolean field_b;
 
-    public static void b() {
+    public static void b(int param0) {
         field_e = null;
     }
 
@@ -428,7 +428,8 @@ final class ae implements Runnable {
             Exception var2_ref = null;
             Throwable var4 = null;
             int var5 = 0;
-            md var6 = null;
+            Object var6 = null;
+            md var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var5 = SolKnight.field_L ? 1 : 0;
@@ -437,8 +438,8 @@ final class ae implements Runnable {
                 var2 = (Object) (Object) ((ae) this).field_d;
                 synchronized (var2) {
                   L1: {
-                    var6 = (md) (Object) ((ae) this).field_d.c(0);
-                    if (var6 == null) {
+                    var7 = (md) (Object) ((ae) this).field_d.c(0);
+                    if (var7 == null) {
                       {
                         L2: {
                           ((Object) (Object) ((ae) this).field_d).wait();
@@ -460,17 +461,17 @@ final class ae implements Runnable {
                   try {
                     L4: {
                       L5: {
-                        if (var6.field_w == 2) {
-                          boolean discarded$2 = var6.field_x.a((byte) -46, (int)var6.field_l, var6.field_u, var6.field_u.length);
-                          var6.field_m = false;
+                        if (var7.field_w == 2) {
+                          boolean discarded$1 = var7.field_x.a((byte) -46, (int)var7.field_l, var7.field_u, var7.field_u.length);
+                          var7.field_m = false;
                           break L5;
                         } else {
-                          if (3 == var6.field_w) {
-                            var6.field_u = var6.field_x.a(-925871512, (int)var6.field_l);
-                            var6.field_m = false;
+                          if (3 == var7.field_w) {
+                            var7.field_u = var7.field_x.a(-925871512, (int)var7.field_l);
+                            var7.field_m = false;
                             break L5;
                           } else {
-                            var6.field_m = false;
+                            var7.field_m = false;
                             break L5;
                           }
                         }
@@ -481,9 +482,9 @@ final class ae implements Runnable {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     L6: {
                       var2_ref = (Exception) (Object) decompiledCaughtException;
-                      int discarded$3 = 1;
-                      hi.a((Throwable) (Object) var2_ref, (String) null);
-                      var6.field_m = false;
+                      var6 = null;
+                      hi.a((Throwable) (Object) var2_ref, (String) null, 1);
+                      var7.field_m = false;
                       break L6;
                     }
                   }

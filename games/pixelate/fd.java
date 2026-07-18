@@ -7,7 +7,7 @@ final class fd {
     static tf field_a;
     static tf[] field_c;
 
-    final static ak a() {
+    final static ak a(int param0) {
         return jm.field_b.field_Fb;
     }
 

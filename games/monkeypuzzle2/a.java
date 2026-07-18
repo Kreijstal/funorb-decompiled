@@ -125,8 +125,7 @@ class a implements ml, ui {
               }
               L2: {
                 if (!((a) this).field_i) {
-                  int discarded$2 = 30373;
-                  this.b(param1);
+                  this.b(param1, 30373);
                   break L2;
                 } else {
                   ((sb) (Object) param1.field_q).a(((a) this).b(param1, true), ((a) this).field_a, ((a) this).c(param1, -775), ((a) this).field_o, ((a) this).field_p, this.a(param1, param0 + -1), param0 ^ -4477, ((a) this).field_l);
@@ -207,8 +206,7 @@ class a implements ml, ui {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          int discarded$2 = 0;
-          this.a(((a) this).field_m, param1, 0, param3, param2, -1, ((a) this).field_f);
+          this.a(((a) this).field_m, param1, 0, param3, param2, -1, ((a) this).field_f, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -761,7 +759,7 @@ class a implements ml, ui {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final void b(we param0) {
+    private final void b(we param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -895,7 +893,7 @@ class a implements ml, ui {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, we param4, int param5, int param6) {
+    private final void a(int param0, int param1, int param2, int param3, we param4, int param5, int param6, int param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -1347,7 +1345,7 @@ class a implements ml, ui {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_d = null;
         field_j = null;

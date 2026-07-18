@@ -457,7 +457,7 @@ final class wb extends ji {
         uk.d((byte) 37);
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_C = null;
         field_E = null;
     }

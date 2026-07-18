@@ -17,7 +17,7 @@ final class oc extends rq {
         super(param0);
     }
 
-    final static void a(ah param0) {
+    final static void a(ah param0, boolean param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         nm var3 = null;
@@ -303,8 +303,8 @@ final class oc extends rq {
 
     final boolean b(byte param0) {
         if (param0 > -8) {
-            int discarded$0 = 0;
-            oc.a((ah) null);
+            Object var3 = null;
+            oc.a((ah) null, false);
         }
         return true;
     }

@@ -71,7 +71,7 @@ final class qf {
         field_a = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (nk.field_a != null) {
           nk.field_a.a(true);
           il.field_b = new q();

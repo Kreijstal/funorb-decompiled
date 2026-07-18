@@ -7,7 +7,7 @@ final class of extends ec {
     static String field_g;
     static int field_f;
 
-    final static java.net.URL a(java.applet.Applet param0, java.net.URL param1) {
+    final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, boolean param2) {
         Object var3 = null;
         Object var4 = null;
         java.net.URL stackIn_8_0 = null;
@@ -138,6 +138,7 @@ final class of extends ec {
     final static void c(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
+        Object var3 = null;
         Throwable decompiledCaughtException = null;
         var1 = (Object) (Object) hd.field_p;
         synchronized (var1) {
@@ -148,8 +149,8 @@ final class of extends ec {
               if (param0 == 66) {
                 break L1;
               } else {
-                int discarded$6 = 0;
-                java.net.URL discarded$7 = of.a((java.applet.Applet) null, (java.net.URL) null);
+                var3 = null;
+                java.net.URL discarded$3 = of.a((java.applet.Applet) null, (java.net.URL) null, false);
                 break L1;
               }
             }
@@ -166,7 +167,7 @@ final class of extends ec {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_g = null;
     }
 
@@ -208,8 +209,7 @@ final class of extends ec {
               try {
                 L0: {
                   var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-                  int discarded$2 = 0;
-                  param1.getAppletContext().showDocument(of.a(param1, var2), "_top");
+                  param1.getAppletContext().showDocument(of.a(param1, var2, false), "_top");
                   var3 = 1;
                   break L0;
                 }

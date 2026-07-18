@@ -11,11 +11,11 @@ final class pb extends tm {
     static int field_A;
     static pd field_E;
 
-    final static vl[] a() {
+    final static vl[] a(boolean param0) {
         return new vl[]{field_F, ae.field_I, rd.field_h};
     }
 
-    public static void g() {
+    public static void g(int param0) {
         field_E = null;
         field_C = null;
         field_G = null;

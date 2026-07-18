@@ -152,13 +152,13 @@ final class rdb extends ksa implements ntb {
         try {
             var6 = (rdb) (Object) param1;
             var7 = var6;
-            var7.field_g = var6.field_g;
-            var7.field_e = var6.field_e;
+            var7.field_g = ((rdb) this).field_g;
+            var7.field_e = ((rdb) this).field_e;
             if (param0 < 54) {
                 Object var4 = null;
                 boolean discarded$0 = ((rdb) this).a((byte) 14, (tv) null);
             }
-            var7.field_d = var6.field_d;
+            var7.field_d = ((rdb) this).field_d;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "rdb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -177,7 +177,7 @@ final class rdb extends ksa implements ntb {
         return ((rdb) this).field_d;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_f = null;
     }
 
@@ -210,13 +210,13 @@ final class rdb extends ksa implements ntb {
               L2: {
                 var3_int = 28 % ((22 - param0) / 59);
                 var4 = (rdb) (Object) param1;
-                if (var4.field_e != var4.field_e) {
+                if (((rdb) this).field_e != var4.field_e) {
                   break L2;
                 } else {
-                  if (var4.field_d != var4.field_d) {
+                  if (var4.field_d != ((rdb) this).field_d) {
                     break L2;
                   } else {
-                    if (var4.field_g == var4.field_g) {
+                    if (var4.field_g == ((rdb) this).field_g) {
                       stackOut_5_0 = 0;
                       stackIn_6_0 = stackOut_5_0;
                       break L1;
@@ -300,26 +300,26 @@ final class rdb extends ksa implements ntb {
             if (param1 < -19) {
               L1: {
                 var4 = 0;
-                if (var5.field_e == var5.field_e) {
+                if (((rdb) this).field_e == var5.field_e) {
                   break L1;
                 } else {
-                  System.out.println("int x has changed. before=" + var5.field_e + ", now=" + var5.field_e);
+                  System.out.println("int x has changed. before=" + var5.field_e + ", now=" + ((rdb) this).field_e);
                   var4 = 1;
                   break L1;
                 }
               }
               L2: {
-                if (var5.field_d != var5.field_d) {
+                if (((rdb) this).field_d != var5.field_d) {
                   var4 = 1;
-                  System.out.println("int y has changed. before=" + var5.field_d + ", now=" + var5.field_d);
+                  System.out.println("int y has changed. before=" + var5.field_d + ", now=" + ((rdb) this).field_d);
                   break L2;
                 } else {
                   break L2;
                 }
               }
               L3: {
-                if (var5.field_g != var5.field_g) {
-                  System.out.println("int team has changed. before=" + var5.field_g + ", now=" + var5.field_g);
+                if (var5.field_g != ((rdb) this).field_g) {
+                  System.out.println("int team has changed. before=" + var5.field_g + ", now=" + ((rdb) this).field_g);
                   var4 = 1;
                   break L3;
                 } else {

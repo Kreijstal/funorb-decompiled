@@ -41,8 +41,7 @@ final class hn extends le {
                 break L1;
               }
             }
-            int discarded$4 = -67;
-            hn.c();
+            hn.c((byte) -67);
             if (ni.field_c != null) {
               ni.field_c.field_I.a(param1, (byte) 76);
               break L0;
@@ -82,7 +81,7 @@ final class hn extends le {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_q = null;
         int var1 = 31;
         field_p = null;
@@ -90,7 +89,7 @@ final class hn extends le {
         field_o = null;
     }
 
-    final static void a(int param0, int param1, mf param2) {
+    final static void a(int param0, int param1, mf param2, int param3) {
         try {
             cl.field_b = param2;
             pg.field_o = 0;

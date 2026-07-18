@@ -149,7 +149,7 @@ final class ka extends l {
         gb.field_H.field_d = gb.field_H.field_d | param0;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         int var1 = 9;
         field_n = null;
     }

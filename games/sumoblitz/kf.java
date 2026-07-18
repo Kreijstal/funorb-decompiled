@@ -54,14 +54,14 @@ final class kf extends pj implements ft {
         }
     }
 
-    final static String f() {
+    final static String f(int param0) {
         if (!(null != qv.field_o)) {
             return "";
         }
         return qv.field_o;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -223,7 +223,7 @@ final class kf extends pj implements ft {
         super.finalize();
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_w = null;
         field_v = null;
         field_u = null;

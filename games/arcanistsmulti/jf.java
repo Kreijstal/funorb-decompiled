@@ -165,7 +165,7 @@ final class jf implements Iterator {
         }
     }
 
-    final static void a(String param0, java.applet.Applet param1) {
+    final static void a(String param0, java.applet.Applet param1, int param2) {
         try {
             String var6 = null;
             String var5 = null;
@@ -188,8 +188,7 @@ final class jf implements Iterator {
                     } else {
                         var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
-                    int discarded$0 = 269;
-                    ei.a("document.cookie=\"" + var5 + "\"", param1);
+                    ei.a("document.cookie=\"" + var5 + "\"", param1, 269);
                 } catch (Throwable throwable) {
                 }
                 ml.a(-122, param1);
@@ -203,7 +202,7 @@ final class jf implements Iterator {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
         field_f = null;
         field_i = null;

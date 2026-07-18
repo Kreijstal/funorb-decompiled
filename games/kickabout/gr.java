@@ -90,8 +90,7 @@ final class gr {
     gr(long param0) {
         this();
         ((gr) this).field_e = param0;
-        int discarded$0 = -27595;
-        this.b();
+        this.b(-27595);
     }
 
     final boolean a(int param0) {
@@ -671,7 +670,7 @@ final class gr {
         }
     }
 
-    private final boolean a() {
+    private final boolean a(int param0, int param1) {
         return (1 & ((gr) this).field_n) == 1;
     }
 
@@ -730,7 +729,7 @@ final class gr {
         }
     }
 
-    private final void b() {
+    private final void b(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var6 = 0;
@@ -1045,8 +1044,7 @@ final class gr {
                               throw new IllegalStateException("User tried to sell an empty player " + param0.toString());
                             } else {
                               if (!((gr) this).a((byte) -112, var5)) {
-                                int discarded$5 = 1;
-                                ((gr) this).field_x = ((gr) this).field_x + dh.a(((gr) this).field_i[var5]);
+                                ((gr) this).field_x = ((gr) this).field_x + dh.a(((gr) this).field_i[var5], true);
                                 ((gr) this).field_i[var5] = new up();
                                 break L2;
                               } else {
@@ -1338,9 +1336,7 @@ final class gr {
                                               if (72 != var9.field_h) {
                                                 break L22;
                                               } else {
-                                                int discarded$6 = 0;
-                                                int discarded$7 = -2;
-                                                if (this.a()) {
+                                                if (this.a(-2, 0)) {
                                                   break L22;
                                                 } else {
                                                   throw new IllegalStateException("User tried to attach Pumpkins trinket but they haven't unlocked the Halloween Achievement " + param0.toString());
@@ -1405,8 +1401,7 @@ final class gr {
                                     if (-1 == var5) {
                                       break L26;
                                     } else {
-                                      int discarded$8 = -576054046;
-                                      var8 = gp.a(var7_ref_up);
+                                      var8 = gp.a(var7_ref_up, -576054046);
                                       break L26;
                                     }
                                   }
@@ -1443,8 +1438,7 @@ final class gr {
                                       if (-1 == var5) {
                                         break L28;
                                       } else {
-                                        int discarded$9 = -576054046;
-                                        var8 = gp.a(var7_ref_up);
+                                        var8 = gp.a(var7_ref_up, -576054046);
                                         break L28;
                                       }
                                     }

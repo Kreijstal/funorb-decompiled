@@ -120,8 +120,7 @@ final class tm {
                     eo.a(param2, -31645, "document.cookie=\"" + var5 + "\"");
                 } catch (Throwable throwable) {
                 }
-                int discarded$0 = 49;
-                bb.a(param2);
+                bb.a(param2, (byte) 49);
             } catch (RuntimeException runtimeException) {
                 throw kk.a((Throwable) (Object) runtimeException, "tm.G(" + -32312 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
             }
@@ -239,7 +238,7 @@ final class tm {
         return stackIn_9_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 15;
         field_b = null;
     }

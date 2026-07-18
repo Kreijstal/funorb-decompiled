@@ -287,7 +287,7 @@ final class d extends wd {
         return stackIn_34_0 != 0;
     }
 
-    final static void a(String param0, boolean param1, String param2) {
+    final static void a(String param0, boolean param1, String param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -322,6 +322,14 @@ final class d extends wd {
         String stackOut_10_2 = null;
         try {
           L0: {
+            L1: {
+              if (param3 == 0) {
+                break L1;
+              } else {
+                d.f((byte) 70);
+                break L1;
+              }
+            }
             gi.field_b = param2;
             ak.field_w = param0;
             fj.a(param1, sh.field_jb, -1);
@@ -329,7 +337,7 @@ final class d extends wd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
             stackOut_5_1 = new StringBuilder().append("d.A(");
@@ -344,7 +352,7 @@ final class d extends wd {
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
-              break L1;
+              break L2;
             } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
@@ -352,10 +360,10 @@ final class d extends wd {
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
               stackIn_9_2 = stackOut_6_2;
-              break L1;
+              break L2;
             }
           }
-          L2: {
+          L3: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
             stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param1).append(',');
             stackIn_12_0 = stackOut_9_0;
@@ -369,7 +377,7 @@ final class d extends wd {
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L2;
+              break L3;
             } else {
               stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
               stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
@@ -377,10 +385,10 @@ final class d extends wd {
               stackIn_13_0 = stackOut_10_0;
               stackIn_13_1 = stackOut_10_1;
               stackIn_13_2 = stackOut_10_2;
-              break L2;
+              break L3;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + 0 + ')');
+          throw ii.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param3 + ')');
         }
     }
 
@@ -437,7 +445,7 @@ final class d extends wd {
                 var3_int = stackIn_11_0;
                 var4_ref_String = var1_ref.b(true);
                 if (var3_int != 0) {
-                  String discarded$10 = var1_ref.b(true);
+                  String discarded$3 = var1_ref.b(true);
                   break L3;
                 } else {
                   break L3;
@@ -446,8 +454,7 @@ final class d extends wd {
               L4: {
                 var5 = fl.a((byte) -128, var4_ref_String);
                 var6 = var1_ref.b(true);
-                int discarded$11 = 0;
-                var7 = ce.a((CharSequence) (Object) var4_ref_String);
+                var7 = ce.a((CharSequence) (Object) var4_ref_String, 0);
                 if (null == var7) {
                   var7 = var4_ref_String;
                   break L4;
@@ -472,9 +479,9 @@ final class d extends wd {
                 if (null == var5) {
                   var5 = new fb();
                   tk.field_b.a((long)var7.hashCode(), (ug) (Object) var5, -24);
-                  int fieldTemp$12 = bi.field_g;
+                  int fieldTemp$4 = bi.field_g;
                   bi.field_g = bi.field_g + 1;
-                  var5.field_mb = fieldTemp$12;
+                  var5.field_mb = fieldTemp$4;
                   wg.field_v.a(1, (ai) (Object) var5);
                   break L6;
                 } else {
@@ -512,14 +519,12 @@ final class d extends wd {
                       var3 = var1_ref.b(true);
                       u.field_d = var3.intern();
                       var4 = var1_ref.d((byte) -117);
-                      int discarded$13 = 2;
-                      ij.a(var4);
+                      ij.a(var4, 2);
                       return;
                     } else {
                       ti.a((Throwable) null, (byte) 100, "F1: " + la.a(-114));
                       if (param0 <= -12) {
-                        int discarded$14 = 18;
-                        kc.a();
+                        kc.a((byte) 18);
                         break L0;
                       } else {
                         return;
@@ -549,16 +554,13 @@ final class d extends wd {
                 L11: {
                   var4_ref_String = var1_ref.b(true);
                   var5_ref = var1_ref.b(true);
-                  int discarded$15 = 1;
-                  var6_ref = hf.a(var4_ref_String);
+                  var6_ref = hf.a(var4_ref_String, true);
                   if (null == var6_ref) {
-                    int discarded$16 = 1;
-                    var6_ref = hf.a(var5_ref);
+                    var6_ref = hf.a(var5_ref, true);
                     if (var6_ref == null) {
                       break L11;
                     } else {
-                      int discarded$17 = 0;
-                      lf.field_q.a((long)ce.a((CharSequence) (Object) var4_ref_String).hashCode(), (ug) (Object) var6_ref, -127);
+                      lf.field_q.a((long)ce.a((CharSequence) (Object) var4_ref_String, 0).hashCode(), (ug) (Object) var6_ref, -127);
                       break L11;
                     }
                   } else {
@@ -568,11 +570,10 @@ final class d extends wd {
                 L12: {
                   if (var6_ref == null) {
                     var6_ref = new fb();
-                    int discarded$18 = 0;
-                    lf.field_q.a((long)ce.a((CharSequence) (Object) var4_ref_String).hashCode(), (ug) (Object) var6_ref, -121);
-                    int fieldTemp$19 = kc.field_a;
+                    lf.field_q.a((long)ce.a((CharSequence) (Object) var4_ref_String, 0).hashCode(), (ug) (Object) var6_ref, -121);
+                    int fieldTemp$5 = kc.field_a;
                     kc.field_a = kc.field_a + 1;
-                    var6_ref.field_mb = fieldTemp$19;
+                    var6_ref.field_mb = fieldTemp$5;
                     oa.field_b.a(1, (ai) (Object) var6_ref);
                     break L12;
                   } else {

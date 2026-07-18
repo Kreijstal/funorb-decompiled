@@ -31,8 +31,7 @@ final class m extends wf {
                 Object var4 = null;
                 m.a((ap) null, 18, false);
             }
-            int discarded$0 = 256;
-            ha.a(param0, (byte) -109, param2);
+            ha.a(param0, (byte) -109, param2, 256);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "m.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

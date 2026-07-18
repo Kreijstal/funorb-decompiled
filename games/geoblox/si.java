@@ -183,8 +183,7 @@ final class si {
     final si a(boolean param0, byte param1) {
         ((si) this).field_h = param0 ? true : false;
         if (param1 != 73) {
-            int discarded$0 = 0;
-            si.a();
+            si.a(false);
             return (si) this;
         }
         return (si) this;
@@ -609,7 +608,7 @@ final class si {
         return (si) this;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_i = null;
         field_m = null;
         field_g = null;

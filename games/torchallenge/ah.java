@@ -13,7 +13,7 @@ final class ah {
     static int[][][] field_j;
     static int field_b;
 
-    final static void b(int param0) {
+    final static void b(int param0, int param1) {
         int var2 = 0;
         ba.field_i = null;
         var2 = 32 - -(4 * param0);
@@ -23,8 +23,7 @@ final class ah {
         if (wi.field_a != null) {
           L0: {
             if (fj.field_m == null) {
-              int discarded$2 = -7668;
-              uf.c();
+              uf.c(-7668);
               break L0;
             } else {
               break L0;
@@ -66,8 +65,7 @@ final class ah {
           L3: {
             lb.d((byte) -81);
             if (fj.field_m == null) {
-              int discarded$3 = -7668;
-              uf.c();
+              uf.c(-7668);
               break L3;
             } else {
               break L3;
@@ -108,7 +106,7 @@ final class ah {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return !ji.field_k.b(0);
     }
 
@@ -226,15 +224,13 @@ final class ah {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    int discarded$6 = 5;
-                    ue.a(var5, 2);
+                    ue.a(var5, 2, 5);
                     var5 = (tc) (Object) gf.field_q.c(-270);
                     continue L2;
                   }
                 }
               } else {
-                int discarded$7 = -15024;
-                ae.a(5, var4);
+                ae.a(5, var4, -15024);
                 var4 = (bk) (Object) na.field_d.c(-270);
                 continue L1;
               }

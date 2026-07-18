@@ -281,7 +281,7 @@ class cj extends iq implements dq {
         return stackIn_17_0 != 0;
     }
 
-    private final void h() {
+    private final void h(int param0) {
         int var4 = Vertigo2.field_L ? 1 : 0;
         vp var2 = new vp(((cj) this).field_C);
         iq var3 = (iq) (Object) var2.d(4);
@@ -518,8 +518,7 @@ class cj extends iq implements dq {
 
     void a(boolean param0, int param1, int param2, int param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
-        int discarded$0 = -641;
-        this.h();
+        this.h(-641);
     }
 
     private final void a(int param0, boolean param1, StringBuilder param2, Hashtable param3) {
@@ -1102,8 +1101,7 @@ class cj extends iq implements dq {
         if (kf.field_c != 0) {
             if (!(var4 != 0)) {
                 param0 = false;
-                int discarded$0 = 9110;
-                on.a();
+                on.a(9110);
             }
         }
         if (param0) {

@@ -22,7 +22,7 @@ final class ki extends am {
         return 1;
     }
 
-    final static String g() {
+    final static String g(byte param0) {
         if (!(hl.field_d >= 2)) {
             return sr.field_c;
         }
@@ -54,7 +54,7 @@ final class ki extends am {
         return uf.field_a;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_n = null;
         field_q = null;
     }
@@ -109,14 +109,13 @@ final class ki extends am {
                         var6_int = 0;
                         L5: while (true) {
                           if (var6_int >= var4) {
-                            int discarded$5 = 63;
-                            kf.a(var5);
-                            String[][] dupTemp$6 = new String[2][var5];
-                            var3.field_i = dupTemp$6;
-                            var6 = dupTemp$6;
-                            int[][] dupTemp$7 = new int[2][4 * var5];
-                            var3.field_o = dupTemp$7;
-                            var7 = dupTemp$7;
+                            kf.a(var5, (byte) 63);
+                            String[][] dupTemp$2 = new String[2][var5];
+                            var3.field_i = dupTemp$2;
+                            var6 = dupTemp$2;
+                            int[][] dupTemp$3 = new int[2][4 * var5];
+                            var3.field_o = dupTemp$3;
+                            var7 = dupTemp$3;
                             var8 = wf.field_O;
                             var9 = 0;
                             var10 = 0;
@@ -181,8 +180,7 @@ final class ki extends am {
                             }
                           } else {
                             L10: {
-                              int discarded$8 = 542439655;
-                              pf.a((iw) (Object) var15);
+                              pf.a((iw) (Object) var15, 542439655);
                               if (var6_int == 0) {
                                 var3.field_f = lr.field_r;
                                 var3.field_m = pl.field_d;
@@ -213,8 +211,7 @@ final class ki extends am {
                 var3.c((byte) -109);
                 break L0;
               } else {
-                int discarded$9 = -116;
-                lr.b();
+                lr.b((byte) -116);
                 return;
               }
             }
@@ -226,7 +223,7 @@ final class ki extends am {
         }
     }
 
-    final static boolean a(iw param0) {
+    final static boolean a(iw param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

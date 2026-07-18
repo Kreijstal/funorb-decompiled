@@ -10,7 +10,7 @@ abstract class cj extends bw {
 
     abstract void a(lu param0, int param1);
 
-    final static boolean b() {
+    final static boolean b(boolean param0) {
         return dma.field_a || bp.e(-29919);
     }
 

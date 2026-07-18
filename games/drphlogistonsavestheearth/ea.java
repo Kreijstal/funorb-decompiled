@@ -28,7 +28,7 @@ final class ea {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -177,7 +177,7 @@ final class ea {
         return stackIn_1_0;
     }
 
-    final static boolean a(bl param0) {
+    final static boolean a(bl param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;

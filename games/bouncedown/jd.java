@@ -547,8 +547,7 @@ class jd implements fc, sf {
         try {
           L0: {
             if (c.a(param1, false, param0, param3)) {
-              int discarded$2 = -8964;
-              stackOut_3_0 = g.b();
+              stackOut_3_0 = g.b(-8964);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -590,7 +589,7 @@ class jd implements fc, sf {
         return stackIn_4_0;
     }
 
-    private final void a(int param0, int param1, byte param2, lk param3, int param4, int param5, int param6) {
+    private final void a(int param0, int param1, byte param2, lk param3, int param4, int param5, int param6, int param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -655,15 +654,13 @@ class jd implements fc, sf {
                     if (3 != var12) {
                       if (var12 != 1) {
                         if (var12 == 2) {
-                          int discarded$5 = 0;
-                          ((jd) this).field_b.c(((jd) this).a(true, param3), this.a(0, param4, 0, param3) + var9_int, var11 + this.a((byte) 127, param3, param6), param1, param5);
+                          ((jd) this).field_b.c(((jd) this).a(true, param3), this.a(0, param4, 0, param3) + var9_int, var11 + this.a((byte) 127, param3, param6, 0), param1, param5);
                           break L1;
                         } else {
                           break L1;
                         }
                       } else {
-                        int discarded$6 = 0;
-                        ((jd) this).field_b.a(((jd) this).a(true, param3), this.a(0, param4, 0, param3) - -(var9_int >> 1), var11 + this.a((byte) 127, param3, param6), param1, param5);
+                        ((jd) this).field_b.a(((jd) this).a(true, param3), this.a(0, param4, 0, param3) - -(var9_int >> 1), var11 + this.a((byte) 127, param3, param6, 0), param1, param5);
                         break L1;
                       }
                     } else {
@@ -671,12 +668,10 @@ class jd implements fc, sf {
                     }
                   }
                 }
-                int discarded$7 = 0;
-                ((jd) this).field_b.b(((jd) this).a(true, param3), this.a(0, param4, 0, param3), var11 + this.a((byte) 127, param3, param6), param1, param5);
+                ((jd) this).field_b.b(((jd) this).a(true, param3), this.a(0, param4, 0, param3), var11 + this.a((byte) 127, param3, param6, 0), param1, param5);
                 break L1;
               } else {
-                int discarded$8 = 0;
-                int discarded$9 = ((jd) this).field_b.a(((jd) this).a(true, param3), this.a(0, param4, 0, param3), this.a((byte) 127, param3, param6), var9_int, var10, param1, param5, ((jd) this).field_d, ((jd) this).field_p, ((jd) this).field_f);
+                int discarded$1 = ((jd) this).field_b.a(((jd) this).a(true, param3), this.a(0, param4, 0, param3), this.a((byte) 127, param3, param6, 0), var9_int, var10, param1, param5, ((jd) this).field_d, ((jd) this).field_p, ((jd) this).field_f);
                 break L1;
               }
             }
@@ -741,8 +736,7 @@ class jd implements fc, sf {
                     ac.a((byte) 91, param1, "document.cookie=\"" + var5 + "\"");
                 } catch (Throwable throwable) {
                 }
-                int discarded$0 = 27477;
-                kc.a(param1);
+                kc.a(param1, 27477);
             } catch (RuntimeException runtimeException) {
                 throw ii.a((Throwable) (Object) runtimeException, "jd.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
             }
@@ -932,12 +926,11 @@ class jd implements fc, sf {
                 break L1;
               } else {
                 var5 = null;
-                byte[] discarded$4 = jd.a((byte[]) null, 71, 51, -64);
+                byte[] discarded$2 = jd.a((byte[]) null, 71, 51, -64);
                 break L1;
               }
             }
-            int discarded$5 = 0;
-            stackOut_2_0 = this.a((byte) 127, param1, param0);
+            stackOut_2_0 = this.a((byte) 127, param1, param0, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -1402,8 +1395,7 @@ class jd implements fc, sf {
 
     private final void a(int param0, lk param1, int param2, int param3) {
         try {
-            int discarded$0 = 0;
-            this.a(0, ((jd) this).field_h, (byte) 41, param1, param0, ((jd) this).field_c, param3);
+            this.a(0, ((jd) this).field_h, (byte) 41, param1, param0, ((jd) this).field_c, param3, 0);
         } catch (RuntimeException runtimeException) {
             throw ii.a((Throwable) (Object) runtimeException, "jd.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + -9087 + ',' + param3 + ')');
         }
@@ -1626,7 +1618,7 @@ class jd implements fc, sf {
         }
     }
 
-    private final int a(byte param0, lk param1, int param2) {
+    private final int a(byte param0, lk param1, int param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

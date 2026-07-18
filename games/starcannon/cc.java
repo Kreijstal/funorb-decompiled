@@ -59,8 +59,7 @@ final class cc extends qf {
             var3 = ((cc) this).field_m.field_k.toLowerCase();
             var4 = param0.toLowerCase();
             if (var4.length() != 0) {
-              int discarded$11 = -28169;
-              if (!kb.a(var3, var4)) {
+              if (!kb.a(var3, var4, -28169)) {
                 stackOut_7_0 = sb.field_n;
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;
@@ -113,10 +112,10 @@ final class cc extends qf {
     }
 
     final String a(String param0, boolean param1) {
-        RuntimeException var3 = null;
+        String var3 = null;
+        RuntimeException var3_ref = null;
         String var4 = null;
         String var5 = null;
-        String var6 = null;
         String stackIn_7_0 = null;
         String stackIn_10_0 = null;
         String stackIn_13_0 = null;
@@ -153,7 +152,7 @@ final class cc extends qf {
         String stackOut_33_2 = null;
         try {
           L0: {
-            var6 = ((cc) this).field_m.field_k.toLowerCase();
+            var3 = ((cc) this).field_m.field_k.toLowerCase();
             var4 = param0.toLowerCase();
             if (var4.length() != 0) {
               L1: {
@@ -169,15 +168,14 @@ final class cc extends qf {
                 if (!la.a((byte) 96, var5)) {
                   if (!nc.a(-68, var5)) {
                     if (!this.a(5, param0)) {
-                      if (var6.length() > 0) {
-                        if (!k.a(19272, var5, var6)) {
-                          if (ia.a(var5, (byte) -16, var6)) {
+                      if (var3.length() > 0) {
+                        if (!k.a(19272, var5, var3)) {
+                          if (ia.a(var5, (byte) -16, var3)) {
                             stackOut_25_0 = pc.field_c;
                             stackIn_26_0 = stackOut_25_0;
                             return stackIn_26_0;
                           } else {
-                            int discarded$7 = 1;
-                            if (!bj.a(var5, var6)) {
+                            if (!bj.a(var5, var3, true)) {
                               stackOut_30_0 = eb.field_g;
                               stackIn_31_0 = stackOut_30_0;
                               break L0;
@@ -224,8 +222,8 @@ final class cc extends qf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
-            var3 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) var3;
+            var3_ref = decompiledCaughtException;
+            stackOut_32_0 = (RuntimeException) var3_ref;
             stackOut_32_1 = new StringBuilder().append("cc.A(");
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
@@ -374,7 +372,7 @@ final class cc extends qf {
         return stackIn_16_0 != 0;
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_k = null;
     }
 
@@ -699,7 +697,7 @@ final class cc extends qf {
         return stackIn_21_0;
     }
 
-    final static hl[] a() {
+    final static hl[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9 = 0;
         hl[] var10 = null;
         hl[] var11_ref_hl__ = null;

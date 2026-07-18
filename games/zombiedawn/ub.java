@@ -22,7 +22,7 @@ final class ub {
     private boolean field_g;
     private int field_r;
 
-    private final String h() {
+    private final String h(int param0) {
         int var2 = ((ub) this).field_a / 3000;
         int var3 = ((ub) this).field_a % 3000 / 50;
         return var2 + ":" + (10 <= var3 ? "" : "0") + var3;
@@ -133,20 +133,18 @@ final class ub {
         }
     }
 
-    private final void a() {
+    private final void a(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var2 = -1;
         if (((ub) this).field_p == 1.0f) {
             si.field_Ub[5].a();
             bi.d();
-            int discarded$0 = 31214;
-            ((ub) this).field_o.b(this.h(), -5 + bi.field_f, ((ub) this).field_o.field_I + 5, 0, var2);
+            ((ub) this).field_o.b(this.h(31214), -5 + bi.field_f, ((ub) this).field_o.field_I + 5, 0, var2);
         } else {
             pl.field_p.a();
             bi.d();
-            int discarded$1 = 31214;
-            ((ub) this).field_o.b(this.h(), -5 + bi.field_f, 5 + ((ub) this).field_o.field_I, 2, var2);
+            ((ub) this).field_o.b(this.h(31214), -5 + bi.field_f, 5 + ((ub) this).field_o.field_I, 2, var2);
             var3 = (int)(((ub) this).field_p * (float)bi.field_f);
             var4 = (int)((float)bi.field_a * ((ub) this).field_p);
             si.field_Ub[5].a();
@@ -478,9 +476,8 @@ final class ub {
         }
     }
 
-    final static void b() {
-        int discarded$0 = -901373652;
-        jm.a((String) null, to.field_d);
+    final static void b(byte param0) {
+        jm.a((String) null, to.field_d, -901373652);
     }
 
     private final String b(int param0, int param1) {
@@ -683,7 +680,7 @@ final class ub {
                 break L4;
               } else {
                 ((ub) this).field_p = 2.0f;
-                fn discarded$3 = kh.a(47, false);
+                fn discarded$1 = kh.a(47, false);
                 break L4;
               }
             }
@@ -694,15 +691,13 @@ final class ub {
             break L5;
           } else {
             if (1.0f < ((ub) this).field_p) {
-              int discarded$4 = 0;
-              this.a();
+              this.a(0);
               break L5;
             } else {
               if (((ub) this).field_a % 50 != 49) {
                 break L5;
               } else {
-                int discarded$5 = 0;
-                this.a();
+                this.a(0);
                 break L5;
               }
             }
@@ -738,8 +733,7 @@ final class ub {
         ((ub) this).field_a = param0;
         ((ub) this).field_q = 0;
         ((ub) this).field_o = sg.field_jb;
-        int discarded$0 = 0;
-        this.a();
+        this.a(0);
         this.d(3, ((ub) this).field_m);
         ((ub) this).d((byte) -106);
         cn.field_f.b(-123);

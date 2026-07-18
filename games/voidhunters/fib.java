@@ -347,7 +347,7 @@ final class fib extends uda {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_h = null;
         field_j = null;
     }

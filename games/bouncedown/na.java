@@ -736,7 +736,7 @@ final class na {
         na.e(0, 0, param1, param2);
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -1360,8 +1360,7 @@ final class na {
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int discarded$0 = 140;
-        na.a(field_d, 0, 0 * field_e, 4, 0, 540, field_e - 540);
+        na.a(field_d, 0, 0 * field_e, 4, 0, 540, field_e - 540, 140);
         na.a(field_d, 0, 0 * field_e, 4, 0, 140, field_e - 540, 0, 540);
     }
 

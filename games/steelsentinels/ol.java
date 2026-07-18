@@ -15,7 +15,7 @@ final class ol extends gh {
     static int field_Ub;
     static int field_dc;
 
-    final static qb d() {
+    final static qb d(byte param0) {
         int fieldTemp$0 = mg.field_hc - 1;
         mg.field_hc = mg.field_hc - 1;
         if (!(0 <= fieldTemp$0)) {
@@ -26,8 +26,7 @@ final class ol extends gh {
     }
 
     final static void l(int param0) {
-        int discarded$3 = 1;
-        jf.c();
+        jf.c(true);
         if (param0 != 0) {
             field_bc = 91;
         }
@@ -38,8 +37,7 @@ final class ol extends gh {
           if (nj.field_Q >= 20) {
             if (ri.c(6995)) {
               if (ua.field_o > 0) {
-                int discarded$8 = 105;
-                if (a.a()) {
+                if (a.a(105)) {
                   return false;
                 } else {
                   return true;
@@ -58,8 +56,7 @@ final class ol extends gh {
           if (nj.field_Q >= 20) {
             if (ri.c(6995)) {
               if (ua.field_o > 0) {
-                int discarded$9 = 105;
-                if (a.a()) {
+                if (a.a(105)) {
                   return false;
                 } else {
                   return true;
@@ -86,7 +83,7 @@ final class ol extends gh {
         return pb.field_j + -param3;
     }
 
-    final static boolean a(int[] param0, int param1) {
+    final static boolean a(int[] param0, int param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -155,7 +152,7 @@ final class ol extends gh {
         return stackIn_5_0 != 0;
     }
 
-    final static ud a() {
+    final static ud a(int param0, boolean param1, int param2, int param3) {
         ud var4 = null;
         int var5 = 0;
         var5 = SteelSentinels.field_G;
@@ -179,7 +176,7 @@ final class ol extends gh {
         }
     }
 
-    public static void k() {
+    public static void k(int param0) {
         field_Xb = null;
         field_cc = null;
         field_Sb = null;
@@ -608,8 +605,7 @@ final class ol extends gh {
               }
               L2: {
                 if (pm.field_T == 14) {
-                  int discarded$2 = 3;
-                  um.f();
+                  um.f((byte) 3);
                   break L2;
                 } else {
                   break L2;
@@ -708,8 +704,7 @@ final class ol extends gh {
                   } else {
                     oa.f(-12161);
                     im.a(true);
-                    int discarded$3 = 1;
-                    ub.a();
+                    ub.a(true);
                     jc.field_d = false;
                     break L11;
                   }

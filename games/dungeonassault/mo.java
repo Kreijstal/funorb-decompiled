@@ -13,7 +13,7 @@ final class mo {
     static String field_f;
     static String field_d;
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         oe var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -85,7 +85,7 @@ final class mo {
         return stackIn_20_0 != 0;
     }
 
-    final static boolean a(int[] param0, int param1, Random param2) {
+    final static boolean a(int[] param0, int param1, Random param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -211,7 +211,7 @@ final class mo {
         return stackIn_8_0 != 0;
     }
 
-    final static ab a(String param0) {
+    final static ab a(String param0, boolean param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -400,7 +400,7 @@ final class mo {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_b = null;
         field_f = null;

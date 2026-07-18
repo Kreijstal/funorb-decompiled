@@ -958,7 +958,7 @@ final class pn implements uj {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

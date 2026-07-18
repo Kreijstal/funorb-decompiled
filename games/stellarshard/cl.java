@@ -16,11 +16,11 @@ final class cl {
         return var3;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

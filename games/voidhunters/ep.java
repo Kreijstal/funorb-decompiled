@@ -206,7 +206,7 @@ final class ep extends rqa {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         int var1 = 1;
         field_o = null;
     }

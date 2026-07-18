@@ -98,7 +98,7 @@ final class sd extends sh implements rc {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_pb = null;
         field_mb = null;
     }
@@ -148,8 +148,7 @@ final class sd extends sh implements rc {
                   } else {
                     L3: {
                       if (!param1) {
-                        int discarded$3 = -128;
-                        rg.b();
+                        rg.b((byte) -128);
                         break L3;
                       } else {
                         break L3;
@@ -177,13 +176,13 @@ final class sd extends sh implements rc {
                   ((sd) this).a(10768, (lk) (Object) new eb((sd) this));
                   return;
                 } else {
-                  wd discarded$4 = var5.a(pc.field_i, (sk) this, -4);
+                  wd discarded$2 = var5.a(pc.field_i, (sk) this, -4);
                   break L4;
                 }
               } else {
                 L5: {
                   if (((sd) this).field_nb) {
-                    wd discarded$5 = var5.a(pc.field_i, (sk) this, -4);
+                    wd discarded$3 = var5.a(pc.field_i, (sk) this, -4);
                     break L5;
                   } else {
                     if (param2.field_g == 5) {
@@ -249,8 +248,7 @@ final class sd extends sh implements rc {
         if (param0 == 21) {
           if (((sd) this).field_D) {
             if (!((sd) this).field_ob) {
-              int discarded$10 = 1;
-              var2 = jf.a();
+              var2 = jf.a(true);
               if (var2 == null) {
                 return super.e((byte) 21);
               } else {
@@ -264,11 +262,10 @@ final class sd extends sh implements rc {
             return super.e((byte) 21);
           }
         } else {
-          boolean discarded$11 = ((sd) this).e((byte) -34);
+          boolean discarded$6 = ((sd) this).e((byte) -34);
           if (((sd) this).field_D) {
             if (!((sd) this).field_ob) {
-              int discarded$12 = 1;
-              var2 = jf.a();
+              var2 = jf.a(true);
               if (var2 == null) {
                 return super.e((byte) 21);
               } else {

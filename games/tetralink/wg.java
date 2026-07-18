@@ -104,8 +104,7 @@ final class wg {
         }
         L6: {
           if (!param1) {
-            int discarded$1 = 80;
-            ml.field_fb = rh.a(119, (bh) (Object) var8);
+            ml.field_fb = rh.a(119, (bh) (Object) var8, 80);
             ha.field_i = null;
             break L6;
           } else {
@@ -144,7 +143,7 @@ final class wg {
         return new fj(param1);
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_g = null;
         field_a = null;

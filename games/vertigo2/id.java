@@ -11,7 +11,7 @@ final class id {
     static long field_a;
     private jl field_c;
 
-    final static String a(boolean param0) {
+    final static String a(boolean param0, int param1, boolean param2, boolean param3) {
         int var4 = 0;
         if (param0) {
             var4 += 4;
@@ -37,7 +37,7 @@ final class id {
         }
     }
 
-    final static boolean a(mi param0) {
+    final static boolean a(mi param0, int param1) {
         return param0.c((byte) -109, 1) == 1;
     }
 
@@ -187,7 +187,7 @@ final class id {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_g = null;
     }
@@ -410,13 +410,12 @@ final class id {
         String stackOut_8_2 = null;
         try {
           L0: {
-            int discarded$4 = 54;
-            var8 = oc.a(param5, 0, 0, param4, param3);
+            var8 = oc.a(param5, 0, 0, param4, param3, 54);
             var6 = var8;
             if (var8 != null) {
               var7 = new qi();
               var7.field_c = var8;
-              java.awt.Component discarded$5 = var7.field_c.add((java.awt.Component) (Object) var7);
+              java.awt.Component discarded$2 = var7.field_c.add((java.awt.Component) (Object) var7);
               var7.setBounds(0, 0, param3, param5);
               var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
               var7.requestFocus();

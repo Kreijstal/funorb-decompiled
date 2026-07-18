@@ -22,7 +22,7 @@ final class me {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_e = null;
         field_f = null;
         field_a = null;
@@ -73,8 +73,7 @@ final class me {
         try {
           L0: {
             var6 = (CharSequence) (Object) param0;
-            int discarded$5 = 0;
-            if (tk.a(var6)) {
+            if (tk.a(var6, false)) {
               if (!ci.a(param0, -26)) {
                 if (2 != wk.field_m) {
                   stackOut_8_0 = df.field_c;
@@ -154,7 +153,7 @@ final class me {
         return (String) (Object) stackIn_21_0;
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         System.out.println("Error: " + oh.a((byte) 13, "\n", param0, "%0a"));
     }
 

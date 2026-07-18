@@ -14,7 +14,7 @@ final class hg {
     static String field_e;
     static boolean field_c;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         field_j = null;
@@ -299,8 +299,7 @@ final class hg {
           } else {
             L2: {
               L3: {
-                int discarded$2 = 63;
-                if (!s.b()) {
+                if (!s.b(63)) {
                   break L3;
                 } else {
                   if (param1.field_Kb) {
@@ -331,8 +330,7 @@ final class hg {
                 if (!cn.field_e[0][2].field_rb) {
                   break L4;
                 } else {
-                  int discarded$3 = 63;
-                  if (s.b()) {
+                  if (s.b(63)) {
                     re.field_P = bk.field_f;
                     break L4;
                   } else {

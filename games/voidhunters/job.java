@@ -6,7 +6,7 @@ final class job extends rqa {
     static String field_o;
     static int[] field_p;
 
-    public static void e() {
+    public static void e(byte param0) {
         field_p = null;
         field_q = null;
         field_o = null;

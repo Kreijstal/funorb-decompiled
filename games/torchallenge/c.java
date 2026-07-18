@@ -202,7 +202,7 @@ final class c {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_b = null;
         field_c = null;
         field_d = null;
@@ -389,7 +389,7 @@ final class c {
         int var3 = 70 % ((param0 - -35) / 61);
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, boolean param1) {
         t.field_b.a(0, 0, 0);
     }
 
@@ -402,8 +402,7 @@ final class c {
             oa.field_k.a(param2, param0, param3, false);
             qg.b();
             int var4_int = 19;
-            int discarded$0 = 0;
-            c.a(true);
+            c.a(true, false);
         } catch (RuntimeException runtimeException) {
             throw oj.a((Throwable) (Object) runtimeException, "c.A(" + (param0 != null ? "{...}" : "null") + ',' + 127 + ',' + param2 + ',' + param3 + ')');
         }

@@ -126,7 +126,7 @@ final class uf {
         }
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         return dg.field_o == ui.field_b;
     }
 
@@ -507,8 +507,7 @@ final class uf {
           L0: {
             L1: {
               if (!((uf) this).field_m) {
-                int discarded$2 = 16777215;
-                this.a(param1, param3, param2);
+                this.a(param1, param3, param2, 16777215);
                 break L1;
               } else {
                 this.a(param2, 29, param3, param1);
@@ -554,7 +553,7 @@ final class uf {
         }
     }
 
-    private final void a(String param0, int param1, int param2) {
+    private final void a(String param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -635,7 +634,7 @@ final class uf {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_e = null;
         field_s = null;

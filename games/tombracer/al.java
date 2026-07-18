@@ -8,7 +8,7 @@ final class al extends vg {
     static vna field_g;
     static su field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_g = null;
     }

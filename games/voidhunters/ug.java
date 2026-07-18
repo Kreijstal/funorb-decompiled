@@ -8,7 +8,7 @@ final class ug extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_o = null;
     }
 
@@ -80,7 +80,7 @@ final class ug extends rqa {
         return stackIn_3_0;
     }
 
-    final static void e() {
+    final static void e(byte param0) {
         System.out.println("set_loading_missions(" + unb.field_o + ")");
         System.out.println("set_trap_mouse(" + pcb.field_o + ")");
         System.out.println("set_tab_for_scores(" + me.field_r + ")");

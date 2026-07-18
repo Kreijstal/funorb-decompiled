@@ -9,7 +9,7 @@ final class bca implements dja {
         return (tv) (Object) new be();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
     }
 

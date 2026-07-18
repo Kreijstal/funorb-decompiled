@@ -9,7 +9,7 @@ final class be extends wc {
     static String field_w;
     private Object field_t;
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -199,7 +199,7 @@ final class be extends wc {
         }
     }
 
-    public static void e() {
+    public static void e(byte param0) {
         field_w = null;
         int var1 = 77;
         field_u = null;

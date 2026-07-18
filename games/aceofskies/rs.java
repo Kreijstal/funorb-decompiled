@@ -39,20 +39,17 @@ final class rs extends ab implements ue, dn {
               if (param3 != 0) {
                 if (1 != param3) {
                   if (param3 == 2) {
-                    int discarded$8 = 0;
-                    qk.a("conduct.ws");
+                    qk.a("conduct.ws", false);
                     break L1;
                   } else {
                     break L1;
                   }
                 } else {
-                  int discarded$9 = 0;
-                  qk.a("privacy.ws");
+                  qk.a("privacy.ws", false);
                   break L1;
                 }
               } else {
-                int discarded$10 = 0;
-                qk.a("terms.ws");
+                qk.a("terms.ws", false);
                 break L1;
               }
             }
@@ -281,8 +278,6 @@ final class rs extends ab implements ue, dn {
             ((rs) this).field_y = param0;
             ((rs) this).field_z = new mi(mq.field_i, (no) null);
             ((rs) this).field_z.field_e = (ir) (Object) new qb();
-            int discarded$2 = 127;
-            int discarded$3 = 101;
             var7 = sn.a(cd.field_c, 122, new String[2]);
             var3 = 20;
             var4 = new qm(qo.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, qo.field_b.field_I, -1, 2147483647, true);
@@ -335,11 +330,11 @@ final class rs extends ab implements ue, dn {
         }
     }
 
-    private final String e() {
+    private final String e(byte param0) {
         return "</col></u>";
     }
 
-    private final String a() {
+    private final String a(byte param0) {
         return "<u=2164A2><col=2164A2>";
     }
 

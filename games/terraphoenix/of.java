@@ -85,7 +85,7 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    private final synchronized void a() {
+    private final synchronized void a(boolean param0) {
         if (!(null != ((of) this).field_j)) {
             return;
         }
@@ -175,15 +175,12 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
                 ((of) this).addConsumer((java.awt.image.ImageConsumer) null);
             }
             ((of) this).field_d = param3.createImage((java.awt.image.ImageProducer) this);
-            int discarded$0 = 1;
-            this.a();
+            this.a(true);
+            boolean discarded$0 = param3.prepareImage(((of) this).field_d, (java.awt.image.ImageObserver) this);
+            this.a(true);
             boolean discarded$1 = param3.prepareImage(((of) this).field_d, (java.awt.image.ImageObserver) this);
-            int discarded$2 = 1;
-            this.a();
-            boolean discarded$3 = param3.prepareImage(((of) this).field_d, (java.awt.image.ImageObserver) this);
-            int discarded$4 = 1;
-            this.a();
-            boolean discarded$5 = param3.prepareImage(((of) this).field_d, (java.awt.image.ImageObserver) this);
+            this.a(true);
+            boolean discarded$2 = param3.prepareImage(((of) this).field_d, (java.awt.image.ImageObserver) this);
             ((of) this).a(0);
         } catch (RuntimeException runtimeException) {
             throw qk.a((Throwable) (Object) runtimeException, "of.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -192,19 +189,18 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
 
     final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
         try {
-            int discarded$0 = 1;
-            this.a();
+            this.a(true);
             if (param3 <= 34) {
                 Object var6 = null;
                 ((of) this).a(16, 118, (byte) 14, (java.awt.Component) null);
             }
-            boolean discarded$1 = param2.drawImage(((of) this).field_d, param1, param0, (java.awt.image.ImageObserver) this);
+            boolean discarded$0 = param2.drawImage(((of) this).field_d, param1, param0, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
             throw qk.a((Throwable) (Object) runtimeException, "of.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_n = null;
         field_h = null;
         field_i = null;
@@ -212,7 +208,7 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
         field_m = null;
     }
 
-    final static ef[] a(he param0) {
+    final static ef[] a(he param0, int param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
         ef[] var4 = null;

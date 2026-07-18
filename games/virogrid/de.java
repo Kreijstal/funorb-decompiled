@@ -8,7 +8,7 @@ final class de extends mb {
     static String[] field_rb;
     static String field_qb;
 
-    public static void g() {
+    public static void g(boolean param0) {
         field_qb = null;
         field_ob = null;
         field_pb = null;

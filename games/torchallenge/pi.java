@@ -25,11 +25,10 @@ final class pi {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         mf.field_a = id.field_b.b(false);
         CharSequence var2 = (CharSequence) (Object) mf.field_a;
-        int discarded$0 = 21;
-        td.field_i = il.a(var2);
+        td.field_i = il.a(var2, (byte) 21);
     }
 
     final static byte[] a(CharSequence param0, int param1) {

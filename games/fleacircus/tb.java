@@ -18,6 +18,7 @@ final class tb {
         ha var5 = null;
         int var6 = 0;
         int var7 = 0;
+        Object var8 = null;
         int stackIn_4_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_20_0 = 0;
@@ -94,8 +95,8 @@ final class tb {
               if (param0 <= -54) {
                 break L2;
               } else {
-                int discarded$2 = 0;
-                int discarded$3 = tb.a((CharSequence) null);
+                var8 = null;
+                int discarded$1 = tb.a((CharSequence) null, false);
                 break L2;
               }
             }
@@ -195,7 +196,7 @@ final class tb {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_b = null;
         field_d = null;
@@ -203,7 +204,7 @@ final class tb {
         field_e = null;
     }
 
-    final static int a(CharSequence param0) {
+    final static int a(CharSequence param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -239,8 +240,7 @@ final class tb {
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                int discarded$2 = 22861;
-                var3 = rc.a(param0.charAt(var4)) + ((var3 << 5) + -var3);
+                var3 = rc.a(param0.charAt(var4), 22861) + ((var3 << 5) + -var3);
                 var4++;
                 continue L1;
               }

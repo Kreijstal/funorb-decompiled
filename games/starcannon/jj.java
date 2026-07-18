@@ -11,7 +11,7 @@ final class jj extends vk implements dc, ga {
     static hl field_A;
     static int field_F;
 
-    private final String j() {
+    private final String j(int param0) {
         return "</col></u>";
     }
 
@@ -226,8 +226,7 @@ final class jj extends vk implements dc, ga {
               if (param0 != ((jj) this).field_y) {
                 break L1;
               } else {
-                int discarded$2 = -80;
-                ej.f();
+                ej.f((byte) -80);
                 ((jj) this).field_z.n(-94);
                 break L1;
               }
@@ -376,9 +375,7 @@ final class jj extends vk implements dc, ga {
         String stackOut_5_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            int discarded$5 = 0;
-            stackOut_2_0 = pf.a(param1);
+            stackOut_2_0 = pf.a(param1, false, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -423,7 +420,7 @@ final class jj extends vk implements dc, ga {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_C = null;
         field_A = null;
     }
@@ -457,7 +454,6 @@ final class jj extends vk implements dc, ga {
             ((jj) this).field_z = param0;
             ((jj) this).field_y = new dk(ui.field_s, (qg) null);
             ((jj) this).field_y.field_o = (de) (Object) new gb();
-            int discarded$1 = -99;
             var7 = fb.a(field_C, -98, new String[2]);
             var3 = 20;
             var4 = new hd(nb.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, nb.field_c.field_p, -1, 2147483647, true);

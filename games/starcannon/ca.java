@@ -47,17 +47,17 @@ class ca extends rd {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    final static void f() {
+    final static void f(int param0) {
         gd.field_g = false;
         int discarded$0 = se.field_p.j(7909);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_X = null;
         field_M = null;
     }
 
-    private final void a(ca param0) {
+    private final void a(ca param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_96_0 = null;
         StringBuilder stackIn_96_1 = null;
@@ -427,8 +427,7 @@ class ca extends rd {
         ((ca) this).field_G = -2147483648;
         try {
             ((ca) this).field_b = param0;
-            int discarded$0 = -105;
-            this.a(param1);
+            this.a(param1, (byte) -105);
             if (param6 != null) {
                 ((ca) this).field_S = param6;
             }

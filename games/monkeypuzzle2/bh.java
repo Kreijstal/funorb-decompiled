@@ -18,110 +18,121 @@ abstract class bh {
     abstract void a(int param0, int param1, int param2);
 
     public static void a(int param0) {
-        field_h = null;
-        field_b = null;
-        if (param0 != -8765) {
-            bh.a(68);
+        try {
+            field_h = null;
+            field_b = null;
+            if (param0 != -8765) {
+                bh.a(68);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "bh.L(" + param0 + ')');
         }
     }
 
     abstract void a(int param0, int param1);
 
     final static String a(byte param0) {
-        String var1 = null;
+        RuntimeException var1 = null;
+        String var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        String var9 = null;
-        String var13 = null;
-        String var14 = null;
-        String var15 = null;
-        String var16 = null;
-        String var17 = null;
+        String stackIn_8_0 = null;
+        String stackIn_22_0 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_7_0 = null;
+        String stackOut_21_0 = null;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
-        if (param0 < 0) {
-          var15 = "(" + bk.field_f + " " + il.field_e + " " + hk.field_l + ") " + wk.field_a;
-          if (rc.field_f > 0) {
-            var1 = var15 + ":";
-            var2 = 0;
-            L0: while (true) {
-              if (rc.field_f > var2) {
-                L1: {
-                  var16 = var1 + ' ';
-                  var3 = 255 & MonkeyPuzzle2.field_D.field_g[var2];
-                  var4 = var3 >> 4;
-                  var3 = var3 & 15;
-                  if (var4 >= 10) {
-                    var4 += 55;
-                    break L1;
-                  } else {
-                    var4 += 48;
-                    break L1;
-                  }
-                }
-                L2: {
-                  var17 = var16 + (char)var4;
-                  if (var3 < 10) {
-                    var3 += 48;
-                    break L2;
-                  } else {
-                    var3 += 55;
-                    break L2;
-                  }
-                }
-                var1 = var17 + (char)var3;
-                var2++;
-                continue L0;
+        try {
+          L0: {
+            L1: {
+              if (param0 < 0) {
+                break L1;
               } else {
-                return var1;
+                field_j = -79;
+                break L1;
               }
             }
-          } else {
-            return var15;
-          }
-        } else {
-          field_j = -79;
-          var9 = "(" + bk.field_f + " " + il.field_e + " " + hk.field_l + ") " + wk.field_a;
-          if (rc.field_f > 0) {
-            var1 = var9 + ":";
-            var2 = 0;
-            L3: while (true) {
-              if (rc.field_f > var2) {
-                L4: {
-                  var13 = var1 + ' ';
-                  var3 = 255 & MonkeyPuzzle2.field_D.field_g[var2];
-                  var4 = var3 >> 4;
-                  var3 = var3 & 15;
-                  if (var4 >= 10) {
-                    var4 += 55;
-                    break L4;
-                  } else {
-                    var4 += 48;
-                    break L4;
+            L2: {
+              L3: {
+                var1_ref = "(" + bk.field_f + " " + il.field_e + " " + hk.field_l + ") " + wk.field_a;
+                if (rc.field_f <= 0) {
+                  break L3;
+                } else {
+                  var1_ref = var1_ref + ":";
+                  var2 = 0;
+                  L4: while (true) {
+                    if (~rc.field_f >= ~var2) {
+                      break L3;
+                    } else {
+                      stackOut_7_0 = var1_ref + ' ';
+                      stackIn_22_0 = stackOut_7_0;
+                      stackIn_8_0 = stackOut_7_0;
+                      if (var5 != 0) {
+                        break L2;
+                      } else {
+                        L5: {
+                          L6: {
+                            var1_ref = stackIn_8_0;
+                            var3 = 255 & MonkeyPuzzle2.field_D.field_g[var2];
+                            var4 = var3 >> -1395198204;
+                            var3 = var3 & 15;
+                            if (var4 >= 10) {
+                              break L6;
+                            } else {
+                              var4 += 48;
+                              if (var5 == 0) {
+                                break L5;
+                              } else {
+                                break L6;
+                              }
+                            }
+                          }
+                          var4 += 55;
+                          break L5;
+                        }
+                        L7: {
+                          L8: {
+                            var1_ref = var1_ref + (char)var4;
+                            if (var3 < 10) {
+                              break L8;
+                            } else {
+                              var3 += 55;
+                              if (var5 == 0) {
+                                break L7;
+                              } else {
+                                break L8;
+                              }
+                            }
+                          }
+                          var3 += 48;
+                          break L7;
+                        }
+                        var1_ref = var1_ref + (char)var3;
+                        var2++;
+                        if (var5 == 0) {
+                          continue L4;
+                        } else {
+                          break L3;
+                        }
+                      }
+                    }
                   }
                 }
-                L5: {
-                  var14 = var13 + (char)var4;
-                  if (var3 < 10) {
-                    var3 += 48;
-                    break L5;
-                  } else {
-                    var3 += 55;
-                    break L5;
-                  }
-                }
-                var1 = var14 + (char)var3;
-                var2++;
-                continue L3;
-              } else {
-                return var1;
               }
+              stackOut_21_0 = (String) var1_ref;
+              stackIn_22_0 = stackOut_21_0;
+              break L2;
             }
-          } else {
-            return var9;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw la.a((Throwable) (Object) var1, "bh.K(" + param0 + ')');
         }
+        return stackIn_22_0;
     }
 
     static {

@@ -15,7 +15,7 @@ final class jl extends ll {
     private int field_q;
     static String field_v;
 
-    final static void b() {
+    final static void b(int param0) {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -225,7 +225,7 @@ final class jl extends ll {
         return stackIn_11_0;
     }
 
-    final static void a(int param0, int param1, int param2, qj param3, qj param4) {
+    final static void a(int param0, int param1, int param2, qj param3, qj param4, int param5) {
         try {
             og.field_N = param4;
             e.field_d = 12;
@@ -373,7 +373,7 @@ final class jl extends ll {
         }
     }
 
-    final static od c() {
+    final static od c(int param0) {
         if (s.field_b == null) {
             s.field_b = new od();
             s.field_b.a(gh.field_b, -120);

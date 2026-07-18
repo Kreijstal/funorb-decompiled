@@ -15,14 +15,14 @@ final class rf extends Exception {
         return mi.field_a == 1;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_e = null;
         field_c = null;
         field_b = null;
     }
 
-    final static g a(String param0, int param1) {
+    final static g a(String param0, int param1, boolean param2) {
         nw var3 = null;
         RuntimeException var3_ref = null;
         nw stackIn_1_0 = null;

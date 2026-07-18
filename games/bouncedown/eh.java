@@ -122,8 +122,7 @@ final class eh {
                   }
                 }
               }
-              int discarded$1 = -15;
-              w.a();
+              w.a(-15);
               break L1;
             }
             var67 = new int[param0.field_d];
@@ -408,13 +407,13 @@ final class eh {
         ch.field_h.requestFocus();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_b = null;
         field_a = null;
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         try {
             kg.field_j = param0;
             oh.a(-92, 12);

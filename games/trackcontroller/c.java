@@ -5,7 +5,7 @@ final class c {
     static ud field_a;
     static String field_b;
 
-    final static j a(String param0) {
+    final static j a(String param0, int param1) {
         RuntimeException var2 = null;
         j stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -64,7 +64,7 @@ final class c {
         return stackIn_3_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }

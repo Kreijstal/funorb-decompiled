@@ -364,7 +364,7 @@ final class pc implements Runnable {
         return ((pc) this).field_m.read();
     }
 
-    final static boolean a(int param0, boolean param1, CharSequence param2) {
+    final static boolean a(int param0, boolean param1, CharSequence param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -374,30 +374,30 @@ final class pc implements Runnable {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_26_0 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_36_0 = 0;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
+        int stackIn_24_0 = 0;
+        int stackIn_28_0 = 0;
+        int stackIn_34_0 = 0;
+        int stackIn_38_0 = 0;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
-        String stackIn_40_2 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        String stackIn_42_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_35_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_25_0 = 0;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
+        int stackOut_37_0 = 0;
+        int stackOut_23_0 = 0;
+        int stackOut_33_0 = 0;
+        int stackOut_27_0 = 0;
         RuntimeException stackOut_39_0 = null;
         StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
+        RuntimeException stackOut_41_0 = null;
+        StringBuilder stackOut_41_1 = null;
+        String stackOut_41_2 = null;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
+        String stackOut_40_2 = null;
         var11 = Bounce.field_N;
         try {
           L0: {
@@ -408,8 +408,8 @@ final class pc implements Runnable {
             var8 = 0;
             L1: while (true) {
               if (var7 <= var8) {
-                stackOut_35_0 = var5;
-                stackIn_36_0 = stackOut_35_0;
+                stackOut_37_0 = var5;
+                stackIn_38_0 = stackOut_37_0;
                 break L0;
               } else {
                 L2: {
@@ -467,9 +467,9 @@ final class pc implements Runnable {
                         }
                       }
                     }
-                    stackOut_21_0 = 0;
-                    stackIn_22_0 = stackOut_21_0;
-                    return stackIn_22_0 != 0;
+                    stackOut_23_0 = 0;
+                    stackIn_24_0 = stackOut_23_0;
+                    return stackIn_24_0 != 0;
                   }
                   if (var9 < 10) {
                     L8: {
@@ -482,18 +482,18 @@ final class pc implements Runnable {
                     }
                     var10 = var9 + var6 * 10;
                     if (var6 != var10 / 10) {
-                      stackOut_31_0 = 0;
-                      stackIn_32_0 = stackOut_31_0;
-                      return stackIn_32_0 != 0;
+                      stackOut_33_0 = 0;
+                      stackIn_34_0 = stackOut_33_0;
+                      return stackIn_34_0 != 0;
                     } else {
                       var5 = 1;
                       var6 = var10;
                       break L2;
                     }
                   } else {
-                    stackOut_25_0 = 0;
-                    stackIn_26_0 = stackOut_25_0;
-                    return stackIn_26_0 != 0;
+                    stackOut_27_0 = 0;
+                    stackIn_28_0 = stackOut_27_0;
+                    return stackIn_28_0 != 0;
                   }
                 }
                 var8++;
@@ -505,33 +505,33 @@ final class pc implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var4 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) var4;
-            stackOut_37_1 = new StringBuilder().append("pc.F(").append(8272).append(',').append(true).append(',');
-            stackIn_39_0 = stackOut_37_0;
-            stackIn_39_1 = stackOut_37_1;
-            stackIn_38_0 = stackOut_37_0;
-            stackIn_38_1 = stackOut_37_1;
+            stackOut_39_0 = (RuntimeException) var4;
+            stackOut_39_1 = new StringBuilder().append("pc.F(").append(8272).append(',').append(true).append(',');
+            stackIn_41_0 = stackOut_39_0;
+            stackIn_41_1 = stackOut_39_1;
+            stackIn_40_0 = stackOut_39_0;
+            stackIn_40_1 = stackOut_39_1;
             if (param2 == null) {
-              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
-              stackOut_39_2 = "null";
-              stackIn_40_0 = stackOut_39_0;
-              stackIn_40_1 = stackOut_39_1;
-              stackIn_40_2 = stackOut_39_2;
+              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
+              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
+              stackOut_41_2 = "null";
+              stackIn_42_0 = stackOut_41_0;
+              stackIn_42_1 = stackOut_41_1;
+              stackIn_42_2 = stackOut_41_2;
               break L9;
             } else {
-              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
-              stackOut_38_2 = "{...}";
-              stackIn_40_0 = stackOut_38_0;
-              stackIn_40_1 = stackOut_38_1;
-              stackIn_40_2 = stackOut_38_2;
+              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
+              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+              stackOut_40_2 = "{...}";
+              stackIn_42_0 = stackOut_40_0;
+              stackIn_42_1 = stackOut_40_1;
+              stackIn_42_2 = stackOut_40_2;
               break L9;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + 10 + ')');
+          throw ii.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + ',' + 10 + ')');
         }
-        return stackIn_36_0 != 0;
+        return stackIn_38_0 != 0;
     }
 
     final void a(byte param0) {
@@ -575,8 +575,7 @@ final class pc implements Runnable {
                       break L1;
                     }
                   } else {
-                    int discarded$2 = 19406;
-                    wh.a(1L);
+                    wh.a(1L, 19406);
                     continue L2;
                   }
                 }
@@ -592,7 +591,7 @@ final class pc implements Runnable {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, byte param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -621,8 +620,7 @@ final class pc implements Runnable {
             }
           }
           L2: {
-            int discarded$1 = 1;
-            kh.a(bi.field_j);
+            kh.a(bi.field_j, 1);
             qk.c();
             na.a();
             jf.c(0);
@@ -692,7 +690,7 @@ final class pc implements Runnable {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_c = null;
         field_j = null;
         field_p = null;

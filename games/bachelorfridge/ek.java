@@ -9,7 +9,7 @@ final class ek extends at {
     static String field_o;
     static String field_m;
 
-    final static void d() {
+    final static void d(byte param0) {
         int var1 = 0;
         int var2 = 0;
         mv.field_n = kca.field_c.a(lr.field_k[20]);
@@ -99,7 +99,7 @@ final class ek extends at {
         }
     }
 
-    final static int[] a(int param0, int param1) {
+    final static int[] a(int param0, int param1, boolean param2) {
         int var3 = via.a(param0, (byte) 73);
         int var4 = ft.a(param0, (byte) -128);
         int var5 = via.a(param1, (byte) 84);

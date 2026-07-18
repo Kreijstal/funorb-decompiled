@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mm {
-    final static void a(java.awt.Canvas param0) {
+    final static void a(java.awt.Canvas param0, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -66,7 +66,7 @@ final class mm {
         }
     }
 
-    final static dl[] a() {
+    final static dl[] a(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -83,8 +83,7 @@ final class mm {
             }
             var1[var2] = new dl(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], var5);
         }
-        int discarded$0 = 2188450;
-        ok.a();
+        ok.a(2188450);
         var2 = 0;
         return var1;
     }

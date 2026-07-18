@@ -130,13 +130,13 @@ final class gk extends fb {
         }
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_I = null;
         field_F = null;
         field_H = null;
     }
 
-    final static void a(int param0, vn[] param1) {
+    final static void a(int param0, vn[] param1, boolean param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -202,7 +202,7 @@ final class gk extends fb {
         }
     }
 
-    final static void j() {
+    final static void j(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;

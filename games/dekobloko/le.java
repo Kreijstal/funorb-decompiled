@@ -148,7 +148,7 @@ final class le extends of {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_m = null;
         field_D = null;
         field_E = null;

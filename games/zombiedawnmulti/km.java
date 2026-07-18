@@ -70,16 +70,14 @@ final class km extends sq {
                 ((km) this).field_Z = new ja(var11, var12);
                 r.a(0, ((km) this).field_Z);
                 var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -((km) this).field_X << 10, 4096);
-                int discarded$8 = 1;
-                ql.a();
+                ql.a(true);
                 ((km) this).field_Z.e(var9 - (var18.field_z >> 1), var10 + -var18.field_u, 256);
                 return;
               } else {
                 r.a(0, ((km) this).field_Z);
                 oo.b();
                 var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -((km) this).field_X << 10, 4096);
-                int discarded$9 = 1;
-                ql.a();
+                ql.a(true);
                 ((km) this).field_Z.e(var9 - (var18.field_z >> 1), var10 + -var18.field_u, 256);
                 return;
               }
@@ -87,8 +85,7 @@ final class km extends sq {
               ((km) this).field_Z = new ja(var11, var12);
               r.a(0, ((km) this).field_Z);
               var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -((km) this).field_X << 10, 4096);
-              int discarded$10 = 1;
-              ql.a();
+              ql.a(true);
               ((km) this).field_Z.e(var9 - (var18.field_z >> 1), var10 + -var18.field_u, 256);
               return;
             }
@@ -96,8 +93,7 @@ final class km extends sq {
             ((km) this).field_Z = new ja(var11, var12);
             r.a(0, ((km) this).field_Z);
             var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -((km) this).field_X << 10, 4096);
-            int discarded$11 = 1;
-            ql.a();
+            ql.a(true);
             ((km) this).field_Z.e(var9 - (var18.field_z >> 1), var10 + -var18.field_u, 256);
             return;
           }
@@ -129,16 +125,14 @@ final class km extends sq {
                   ((km) this).field_Z = new ja(var11, var12);
                   r.a(0, ((km) this).field_Z);
                   var17.a(112, 144, var17.field_z << 4, var17.field_u << 4, -((km) this).field_X << 10, 4096);
-                  int discarded$12 = 1;
-                  ql.a();
+                  ql.a(true);
                   ((km) this).field_Z.e(var9 - (var17.field_z >> 1), var10 + -var17.field_u, 256);
                   return;
                 } else {
                   r.a(0, ((km) this).field_Z);
                   oo.b();
                   var17.a(112, 144, var17.field_z << 4, var17.field_u << 4, -((km) this).field_X << 10, 4096);
-                  int discarded$13 = 1;
-                  ql.a();
+                  ql.a(true);
                   ((km) this).field_Z.e(var9 - (var17.field_z >> 1), var10 + -var17.field_u, 256);
                   return;
                 }
@@ -146,8 +140,7 @@ final class km extends sq {
                 ((km) this).field_Z = new ja(var11, var12);
                 r.a(0, ((km) this).field_Z);
                 var17.a(112, 144, var17.field_z << 4, var17.field_u << 4, -((km) this).field_X << 10, 4096);
-                int discarded$14 = 1;
-                ql.a();
+                ql.a(true);
                 ((km) this).field_Z.e(var9 - (var17.field_z >> 1), var10 + -var17.field_u, 256);
                 return;
               }
@@ -155,8 +148,7 @@ final class km extends sq {
               ((km) this).field_Z = new ja(var11, var12);
               r.a(0, ((km) this).field_Z);
               var17.a(112, 144, var17.field_z << 4, var17.field_u << 4, -((km) this).field_X << 10, 4096);
-              int discarded$15 = 1;
-              ql.a();
+              ql.a(true);
               ((km) this).field_Z.e(var9 - (var17.field_z >> 1), var10 + -var17.field_u, 256);
               return;
             }
@@ -164,7 +156,7 @@ final class km extends sq {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         br var3 = null;
@@ -189,8 +181,7 @@ final class km extends sq {
                   }
                 }
               } else {
-                int discarded$2 = 4;
-                ih.a((byte) 99, var5);
+                ih.a((byte) 99, var5, 4);
                 var5 = (ab) (Object) ig.field_a.b(6);
                 continue L1;
               }
@@ -223,7 +214,7 @@ final class km extends sq {
         field_ab = null;
     }
 
-    final static void a(ul param0) {
+    final static void a(ul param0, byte param1) {
         RuntimeException var2 = null;
         cj var3 = null;
         cj var5 = null;
@@ -375,7 +366,7 @@ final class km extends sq {
         return stackIn_4_0 != 0;
     }
 
-    final static void h() {
+    final static void h(int param0) {
         if (!(og.field_N)) {
             throw new IllegalStateException();
         }
@@ -683,8 +674,7 @@ final class km extends sq {
               }
               var10_ref_String = bh.a(-126, var8_ref_ka);
               var11 = var10_ref_String + fm.c(var8_ref_ka.field_d);
-              int discarded$1 = -63;
-              var12 = cj.a(var8_ref_ka);
+              var12 = cj.a(var8_ref_ka, (byte) -63);
               var8_ref_ka.field_q = new cj(0L, qq.field_f, var11);
               var6 = var6 + param2;
               var8_ref_ka.field_q.field_xb = (8355711 & qq.field_f.field_xb >> 1) + var12 + -((var12 & 16711422) >> 1);
@@ -704,8 +694,7 @@ final class km extends sq {
     }
 
     km(j param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (nl) (Object) pa.g());
-        int discarded$0 = 120;
+        super(param1, (nl) (Object) pa.g((byte) 120));
         try {
             ((km) this).field_bb = param1;
             ((km) this).field_Y = param0;

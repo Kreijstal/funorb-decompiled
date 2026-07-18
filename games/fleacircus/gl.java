@@ -125,13 +125,11 @@ final class gl extends sh {
                 var2 = param0;
                 L2: while (true) {
                   if (var3.field_u >= var2) {
-                    int discarded$4 = 126;
-                    this.a(var2, var3);
+                    this.a(var2, var3, 126);
                     var3.field_u = var3.field_u - var2;
                     break L1;
                   } else {
-                    int discarded$5 = 126;
-                    this.a(var3.field_u, var3);
+                    this.a(var3.field_u, var3, 126);
                     var2 = var2 - var3.field_u;
                     if (((gl) this).field_p.a(var2, 0, -30686, var3, (int[]) null)) {
                       break L1;
@@ -161,7 +159,7 @@ final class gl extends sh {
         return (sh) (Object) var1_ref.field_k;
     }
 
-    private final void a(int param0, tk param1) {
+    private final void a(int param0, tk param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

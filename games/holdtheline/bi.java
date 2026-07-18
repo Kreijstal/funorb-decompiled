@@ -87,7 +87,7 @@ final class bi {
         this.a(-3393, var4);
     }
 
-    final static go a(boolean param0, String param1) {
+    final static go a(boolean param0, String param1, boolean param2, boolean param3, int param4) {
         RuntimeException var5 = null;
         go stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -205,7 +205,7 @@ final class bi {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_h = null;
     }

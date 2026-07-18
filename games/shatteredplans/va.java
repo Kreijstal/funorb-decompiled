@@ -14,7 +14,7 @@ final class va {
     int field_h;
     int field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 46;
         field_e = null;
         field_g = null;
@@ -315,8 +315,7 @@ final class va {
           L0: {
             var4_int = param3.a(123, param2);
             var5 = param3.a(var4_int, (byte) 106, param0);
-            int discarded$2 = -84;
-            stackOut_2_0 = um.a(var4_int, param3, var5);
+            stackOut_2_0 = um.a(var4_int, param3, var5, -84);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -444,8 +443,7 @@ final class va {
         String stackOut_17_2 = null;
         try {
           L0: {
-            int discarded$2 = 1;
-            var3 = dn.a(param0);
+            var3 = dn.a(param0, true);
             if (param2.indexOf(param0) != -1) {
               stackOut_3_0 = 1;
               stackIn_4_0 = stackOut_3_0;

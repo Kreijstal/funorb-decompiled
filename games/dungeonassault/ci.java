@@ -96,7 +96,7 @@ final class ci extends ne {
         return (va) (Object) stackIn_11_0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -266,8 +266,7 @@ final class ci extends ne {
                   }
                 }
                 L12: {
-                  int discarded$1 = -30633;
-                  var7 = og.a(stackIn_41_0 != 0, var6);
+                  var7 = og.a(stackIn_41_0 != 0, var6, -30633);
                   var8 = -(var7 >> 1) + vo.field_r;
                   if (var4 >= 0) {
                     L13: {
@@ -320,7 +319,7 @@ final class ci extends ne {
         }
     }
 
-    final static long a(CharSequence param0) {
+    final static long a(CharSequence param0, int param1) {
         long var2_long = 0L;
         RuntimeException var2 = null;
         int var4 = 0;

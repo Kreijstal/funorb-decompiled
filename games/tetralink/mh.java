@@ -93,7 +93,7 @@ final class mh {
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2, boolean param3) {
+    final static void a(boolean param0, boolean param1, int param2, boolean param3, int param4) {
         RuntimeException var5 = null;
         hl var5_ref = null;
         int var5_int = 0;
@@ -226,8 +226,7 @@ final class mh {
                   tn.field_a.field_R = 0;
                   var7 = tn.field_a;
                   var7.field_Hb = 0;
-                  int discarded$1 = 63;
-                  if (s.b()) {
+                  if (s.b(63)) {
                     L3: {
                       ua.field_d.field_jb = jn.field_d.toUpperCase();
                       var9 = (2 + fk.field_V.field_Hb) / 2;
@@ -1031,7 +1030,7 @@ final class mh {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1, int param2, int param3) {
         if (param1 - -param0 - -param2 <= ra.field_e) {
             return param0 + param1;
         }

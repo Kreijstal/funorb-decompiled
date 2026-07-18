@@ -93,16 +93,13 @@ final class oo extends ki {
         u.field_c = pl.a("chocolate", "chocolate_small_far", (byte) -36, i.field_m);
         dj.field_a = pl.a("chocolate", "chocolate_small_near", (byte) -69, i.field_m);
         dc.field_c = pl.a("chocolate", "chocolate_character", (byte) 101, i.field_m);
-        int discarded$0 = 2;
-        on.field_I[0] = cr.a("chocolate", i.field_m, "choc_caps");
-        int discarded$1 = 2;
-        aj.field_a[0] = cr.a("chocolate", i.field_m, "choc_segs");
+        on.field_I[0] = cr.a("chocolate", i.field_m, "choc_caps", 2);
+        aj.field_a[0] = cr.a("chocolate", i.field_m, "choc_segs", 2);
         lm.field_e[0] = pl.a("chocolate", "choc_centre", (byte) -126, i.field_m);
         on.field_I[1] = ig.a(on.field_I[0], param0);
         aj.field_a[1] = ig.a(aj.field_a[0], param0);
         lm.field_e[1] = pl.a(-16371, lm.field_e[0]);
-        int discarded$2 = 2;
-        gq.field_Ub = cr.a("chocolate", i.field_m, "choc_lever");
+        gq.field_Ub = cr.a("chocolate", i.field_m, "choc_lever", 2);
         return true;
     }
 
@@ -122,25 +119,18 @@ final class oo extends ki {
         return aj.field_a[-1 + param0];
     }
 
-    final static m f() {
+    final static m f(int param0) {
         String var1 = null;
-        int discarded$14 = 1;
-        var1 = ud.d();
+        var1 = ud.d(true);
         if (var1 != null) {
           if (0 > var1.indexOf('@')) {
-            int discarded$15 = 1;
-            int discarded$16 = 118;
-            return new m(ud.d(), la.b());
+            return new m(ud.d(true), la.b((byte) 118));
           } else {
             var1 = "";
-            int discarded$17 = 1;
-            int discarded$18 = 118;
-            return new m(ud.d(), la.b());
+            return new m(ud.d(true), la.b((byte) 118));
           }
         } else {
-          int discarded$19 = 1;
-          int discarded$20 = 118;
-          return new m(ud.d(), la.b());
+          return new m(ud.d(true), la.b((byte) 118));
         }
     }
 
@@ -164,8 +154,7 @@ final class oo extends ki {
           }
         } else {
           L0: {
-            int discarded$2 = -20777;
-            var6 = ge.a(((oo) this).field_m, param3);
+            var6 = ge.a(((oo) this).field_m, param3, -20777);
             if (!var6.a((byte) -84, param3, ((oo) this).field_m)) {
               l.a(0, 26746, var6, param3, 1, rg.field_f);
               var6.a(((oo) this).field_m, param3, (byte) 78);
@@ -318,8 +307,7 @@ final class oo extends ki {
                     }
                   }
                   var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
-                  int discarded$2 = -1;
-                  param0.getAppletContext().showDocument(hg.a(param0, var2), "_top");
+                  param0.getAppletContext().showDocument(hg.a(param0, var2, -1), "_top");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -366,7 +354,7 @@ final class oo extends ki {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_t = null;
         field_x = null;
         field_y = null;

@@ -11,19 +11,13 @@ final class rm {
         var4 = 0;
         if (!wc.field_n) {
           if (jh.field_h) {
-            int discarded$12 = 13;
-            int discarded$13 = 102;
-            int discarded$14 = 15;
-            return tl.b();
+            return tl.b(15, 102, 13);
           } else {
             if (!dc.a(13, 15, 6774)) {
               if (wl.field_p) {
                 return false;
               } else {
-                int discarded$15 = 13;
-                int discarded$16 = 1;
-                int discarded$17 = 12;
-                return nm.a();
+                return nm.a(12, 1, 13);
               }
             } else {
               return true;
@@ -87,7 +81,7 @@ final class rm {
         }
     }
 
-    final static void a(int param0, ck[] param1, int param2, int param3, int param4) {
+    final static void a(int param0, ck[] param1, int param2, int param3, int param4, int param5) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -178,7 +172,7 @@ final class rm {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

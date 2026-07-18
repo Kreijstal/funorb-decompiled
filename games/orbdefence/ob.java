@@ -26,7 +26,7 @@ final class ob extends ta implements ff, ai {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_E = null;
         field_L = null;
         field_D = null;
@@ -142,8 +142,6 @@ final class ob extends ta implements ff, ai {
             ((ob) this).field_B = param0;
             ((ob) this).field_G = new s(sk.field_C, (ag) null);
             ((ob) this).field_G.field_j = (td) (Object) new vk();
-            int discarded$2 = 67;
-            int discarded$3 = -804;
             var7 = t.a(-415993727, new String[2], lb.field_a);
             var3 = 20;
             var4 = new jc(lm.field_f, 0, 0, 0, 0, 16777215, -1, 3, 0, lm.field_f.field_H, -1, 2147483647, true);
@@ -196,14 +194,14 @@ final class ob extends ta implements ff, ai {
         }
     }
 
-    final static java.awt.Container l() {
+    final static java.awt.Container l(int param0) {
         if (h.field_J != null) {
             return (java.awt.Container) (Object) h.field_J;
         }
         return (java.awt.Container) (Object) uj.b((byte) -120);
     }
 
-    private final String k() {
+    private final String k(int param0) {
         return "</col></u>";
     }
 
@@ -286,7 +284,7 @@ final class ob extends ta implements ff, ai {
         return stackIn_10_0;
     }
 
-    private final String m() {
+    private final String m(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 

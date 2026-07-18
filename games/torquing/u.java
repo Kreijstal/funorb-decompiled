@@ -182,7 +182,7 @@ final class u extends am {
         ((u) this).field_u = param0;
     }
 
-    public static void g() {
+    public static void g(byte param0) {
         field_v = null;
         field_t = null;
         field_w = null;

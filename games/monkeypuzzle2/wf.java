@@ -19,7 +19,7 @@ final class wf extends ug {
         return pf.a(0) - d.field_k;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_i = null;
         field_m = null;

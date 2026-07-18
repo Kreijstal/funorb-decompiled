@@ -31,14 +31,14 @@ final class j {
         ((j) this).field_c[2] = ((j) this).field_c[2] - ((j) this).field_k;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         int var1 = 0;
         field_j = null;
         field_d = null;
         field_e = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -248,7 +248,7 @@ final class j {
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2) {
+    final static void a(int param0, boolean param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         je var5 = null;
         je var6 = null;

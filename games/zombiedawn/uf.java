@@ -81,7 +81,7 @@ final class uf extends le {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_n = null;
         field_o = null;
     }

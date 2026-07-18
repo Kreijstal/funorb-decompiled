@@ -23,8 +23,7 @@ final class gaa extends dg {
                   if (!((gaa) this).field_k.a((byte) 87)) {
                     if (!(((gaa) this).field_k instanceof mra)) {
                       if (((gaa) this).field_k.a(param0 + -85)) {
-                        int discarded$2 = 0;
-                        this.a();
+                        this.a(false);
                         return;
                       } else {
                         this.i(-34);
@@ -33,8 +32,7 @@ final class gaa extends dg {
                     } else {
                       var4 = (mra) (Object) ((gaa) this).field_k;
                       if (var4.b(-90)) {
-                        int discarded$3 = 0;
-                        this.a();
+                        this.a(false);
                         return;
                       } else {
                         this.i(94);
@@ -98,7 +96,7 @@ final class gaa extends dg {
         }
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         if (!(((gaa) this).field_s.f(1))) {
             return;
         }

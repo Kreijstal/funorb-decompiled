@@ -103,7 +103,7 @@ final class q extends ql {
         }
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
         int stackOut_26_0 = 0;
@@ -295,7 +295,7 @@ final class q extends ql {
         return stackIn_7_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_o = null;
     }
 

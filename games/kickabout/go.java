@@ -124,7 +124,7 @@ final class go {
         return stackIn_9_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 36;
         field_a = null;
     }

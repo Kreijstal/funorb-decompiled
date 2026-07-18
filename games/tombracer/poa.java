@@ -42,8 +42,7 @@ final class poa extends hga {
         try {
           L0: {
             if (param0 == -4) {
-              int discarded$2 = -59;
-              stackOut_3_0 = cka.a('*', param1.field_o.length());
+              stackOut_3_0 = cka.a('*', param1.field_o.length(), -59);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

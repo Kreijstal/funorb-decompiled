@@ -119,7 +119,7 @@ abstract class mf extends r implements fj {
         return ((mf) this).a(-1, ((mf) this).field_i.field_k);
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_h = null;
         field_j = null;
         field_g = null;
@@ -200,7 +200,7 @@ abstract class mf extends r implements fj {
         }
     }
 
-    final static db a(String param0, String param1, kl param2) {
+    final static db a(String param0, String param1, kl param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

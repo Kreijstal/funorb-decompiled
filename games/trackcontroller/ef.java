@@ -5,7 +5,7 @@ final class ef {
     static pf[] field_a;
     static ud field_b;
 
-    final static void a(vk param0) {
+    final static void a(vk param0, int param1, int param2) {
         la var3 = ra.field_C;
         var3.c(2, 7);
         try {
@@ -16,7 +16,7 @@ final class ef {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
     }

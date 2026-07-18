@@ -76,8 +76,7 @@ final class lj {
                         break L2;
                       }
                     }
-                    int discarded$1 = 790;
-                    mb.a("document.cookie=\"" + var6 + "\"", param2);
+                    mb.a("document.cookie=\"" + var6 + "\"", param2, 790);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -152,12 +151,12 @@ final class lj {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         jh.field_b.field_p = 0;
         jh.field_b.field_d = 0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_f = null;
         field_c = null;
@@ -255,18 +254,12 @@ final class lj {
                   L1: {
                     var4 = param1.getCodeBase();
                     var3 = wh.a(127, var4, param1).getFile();
-                    int discarded$12 = -27504;
-                    Object discarded$13 = mb.a(new Object[2], param1, "updatelinks");
-                    int discarded$14 = -27504;
-                    Object discarded$15 = mb.a(new Object[2], param1, "updatelinks");
-                    int discarded$16 = -27504;
-                    Object discarded$17 = mb.a(new Object[2], param1, "updatelinks");
-                    int discarded$18 = -27504;
-                    Object discarded$19 = mb.a(new Object[2], param1, "updatelinks");
-                    int discarded$20 = -27504;
-                    Object discarded$21 = mb.a(new Object[2], param1, "updatelinks");
-                    int discarded$22 = -27504;
-                    Object discarded$23 = mb.a(new Object[2], param1, "updatelinks");
+                    Object discarded$6 = mb.a(new Object[2], param1, "updatelinks", -27504);
+                    Object discarded$7 = mb.a(new Object[2], param1, "updatelinks", -27504);
+                    Object discarded$8 = mb.a(new Object[2], param1, "updatelinks", -27504);
+                    Object discarded$9 = mb.a(new Object[2], param1, "updatelinks", -27504);
+                    Object discarded$10 = mb.a(new Object[2], param1, "updatelinks", -27504);
+                    Object discarded$11 = mb.a(new Object[2], param1, "updatelinks", -27504);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {

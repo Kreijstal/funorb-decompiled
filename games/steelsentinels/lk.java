@@ -225,8 +225,7 @@ final class lk extends oa {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
             } else {
-              int discarded$6 = 29974;
-              if (!eb.b(param0)) {
+              if (!eb.b(param0, 29974)) {
                 if (mn.a(-30157, param0)) {
                   stackOut_9_0 = 0;
                   stackIn_10_0 = stackOut_9_0;
@@ -324,7 +323,7 @@ final class lk extends oa {
         return stackIn_23_0 != 0;
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_Z = null;
         field_Y = null;
         field_V = null;
@@ -338,7 +337,7 @@ final class lk extends oa {
         ci.a(param1, (byte) 122);
     }
 
-    final static void g() {
+    final static void g(int param0) {
         jn.field_g = true;
         ib.field_b = 0;
     }
@@ -351,7 +350,7 @@ final class lk extends oa {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;

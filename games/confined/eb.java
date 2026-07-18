@@ -56,8 +56,7 @@ final class eb {
             break L1;
           }
         }
-        int discarded$4 = -107;
-        ei.h();
+        ei.h((byte) -107);
         if (param0 >= -99) {
           eb.a((byte) -85);
           return;
@@ -66,7 +65,7 @@ final class eb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_o = null;
         field_j = null;

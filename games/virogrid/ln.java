@@ -30,8 +30,7 @@ final class ln {
                 return true;
             }
         }
-        int discarded$4 = -109;
-        if (!(!s.b())) {
+        if (!(!s.b((byte) -109))) {
             return true;
         }
         if (cb.a(-13079, param2, param3, param0)) {

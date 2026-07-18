@@ -737,7 +737,7 @@ final class eo extends jl {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_kb = null;
         int var1 = 5;
         field_X = null;
@@ -912,7 +912,7 @@ final class eo extends jl {
         }
     }
 
-    final static void f() {
+    final static void f(boolean param0) {
         if (dp.field_t) {
             jp.g((byte) 118);
         }

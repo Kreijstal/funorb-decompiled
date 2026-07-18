@@ -5,7 +5,7 @@ abstract class ka {
     static String field_a;
     static int field_b;
 
-    final static int a(mp param0) {
+    final static int a(mp param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;

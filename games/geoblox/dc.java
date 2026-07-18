@@ -6,11 +6,11 @@ final class dc {
     static rh field_c;
     static int field_b;
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         ja var3 = null;

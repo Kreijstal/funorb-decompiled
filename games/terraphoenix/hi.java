@@ -8,7 +8,7 @@ final class hi extends ei implements n {
     static String field_Z;
     static bg[] field_W;
 
-    private final void k() {
+    private final void k(int param0) {
         int var2 = 0;
         if (!(((hi) this).field_J)) {
             return;
@@ -16,7 +16,7 @@ final class hi extends ei implements n {
         ((hi) this).field_J = false;
     }
 
-    final static String a(long param0) {
+    final static String a(long param0, int param1) {
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;
@@ -76,8 +76,7 @@ final class hi extends ei implements n {
     public final void a(eb param0, int param1, int param2, int param3, int param4) {
         try {
             if (((hi) this).field_X == param0) {
-                int discarded$0 = 126;
-                this.k();
+                this.k(126);
             }
             int var6_int = 102 % ((-5 - param4) / 57);
         } catch (RuntimeException runtimeException) {
@@ -324,7 +323,7 @@ final class hi extends ei implements n {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_Z = null;
         field_Y = null;
         field_W = null;

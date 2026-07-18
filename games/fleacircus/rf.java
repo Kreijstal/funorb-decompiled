@@ -25,13 +25,13 @@ final class rf {
     fl field_j;
     int[] field_f;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_e = null;
         field_q = null;
     }
 
-    private final void a(byte[] param0) {
+    private final void a(byte[] param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -460,8 +460,7 @@ final class rf {
                     }
                 }
             }
-            int discarded$0 = 19083;
-            this.a(param0);
+            this.a(param0, 19083);
         } catch (RuntimeException runtimeException) {
             throw pf.a((Throwable) (Object) runtimeException, "rf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

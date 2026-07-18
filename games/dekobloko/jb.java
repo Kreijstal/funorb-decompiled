@@ -98,7 +98,7 @@ final class jb extends RuntimeException {
         }
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -193,7 +193,7 @@ final class jb extends RuntimeException {
         return (char)var2;
     }
 
-    final static ij a(java.applet.Applet param0) {
+    final static ij a(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         ij[] var3 = null;
@@ -227,8 +227,7 @@ final class jb extends RuntimeException {
           L0: {
             var2 = wd.a(param0, (byte) -1, "jagex-last-login-method");
             if (var2 != null) {
-              int discarded$2 = 27;
-              var3 = oc.a();
+              var3 = oc.a((byte) 27);
               var4 = 0;
               L1: while (true) {
                 if (var4 >= var3.length) {
@@ -286,7 +285,7 @@ final class jb extends RuntimeException {
         return stackIn_12_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_h = null;
         field_g = null;
         field_j = null;
@@ -298,6 +297,7 @@ final class jb extends RuntimeException {
         RuntimeException var5 = null;
         String var5_ref = null;
         int var6 = 0;
+        Object var7 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -380,8 +380,8 @@ final class jb extends RuntimeException {
                   }
                 }
               }
-              int discarded$1 = -24503;
-              cl.a((String) null, 0, ij.field_c, var5_ref);
+              var7 = null;
+              cl.a((String) null, 0, ij.field_c, var5_ref, -24503);
               wj.field_Mb.field_rb = ((fj.field_g.field_rb & 16711422) >> 1) + -(8355711 & ij.field_c >> 1) + ij.field_c;
               wj.field_Mb.field_fb = ij.field_c + (-(8355711 & ij.field_c >> 1) + ((16711423 & fj.field_g.field_fb) >> 1));
               kf.field_Q = wj.field_Mb;

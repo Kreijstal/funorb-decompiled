@@ -13,13 +13,13 @@ final class jb {
     private int field_g;
     static long[] field_j;
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_h = null;
         field_c = null;
     }
 
-    final static boolean b() {
+    final static boolean b(int param0) {
         int var1 = 0;
         int stackIn_4_0 = 0;
         int stackOut_2_0 = 0;
@@ -101,14 +101,13 @@ final class jb {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((jb) this).field_d[var2_int] = param0[var2_int];
             }
-            int discarded$0 = 119;
-            this.c();
+            this.c(119);
         } catch (RuntimeException runtimeException) {
             throw sd.a((Throwable) (Object) runtimeException, "jb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

@@ -21,7 +21,7 @@ final class ti {
         field_d = null;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

@@ -153,7 +153,7 @@ final class ma extends gg {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_m = null;
         field_o = null;

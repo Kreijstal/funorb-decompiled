@@ -136,7 +136,7 @@ final class gm implements Runnable {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_f = null;
     }
@@ -443,8 +443,7 @@ final class gm implements Runnable {
         try {
             var2 = param0.a(5, (Runnable) this, (byte) -123);
             while (var2.field_b == 0) {
-                int discarded$0 = 23;
-                vg.a(10L);
+                vg.a(10L, (byte) 23);
             }
             if (2 == var2.field_b) {
                 throw new RuntimeException();

@@ -73,8 +73,7 @@ final class tjb extends llb {
                 if (var4 == 0) {
                   break L3;
                 } else {
-                  int discarded$2 = -1;
-                  fea.a();
+                  fea.a(-1);
                   return true;
                 }
               }
@@ -126,8 +125,7 @@ final class tjb extends llb {
               this.a((byte) 116, 0);
               ((tjb) this).field_vb = param0;
               ((tjb) this).field_xb = ((tjb) this).field_Db[((tjb) this).field_vb];
-              int discarded$757 = 6;
-              wkb.a(((tjb) this).field_xb);
+              wkb.a(((tjb) this).field_xb, 6);
               ((tjb) this).field_xb.a((byte) 121, 12);
               break L0;
             } else {
@@ -147,8 +145,7 @@ final class tjb extends llb {
                   }
                 }
                 L2: {
-                  int discarded$758 = 19;
-                  if (jia.a(var6) == 2) {
+                  if (jia.a(var6, (byte) 19) == 2) {
                     mea.a(1, (byte) -119, param2, var6);
                     break L2;
                   } else {
@@ -158,15 +155,12 @@ final class tjb extends llb {
                 var8 = null;
                 va.a((String) null, -25719, var5, param3, ow.field_b, waa.field_x);
                 jtb.a(ow.field_b, var5, lsa.field_f, false, waa.field_x);
-                int discarded$759 = -1;
-                fea.a();
+                fea.a(-1);
                 fd.a(4907);
                 break L0;
               } else {
-                int discarded$760 = 29012;
-                wha.a();
-                int discarded$761 = -1;
-                fea.a();
+                wha.a(29012);
+                fea.a(-1);
                 break L0;
               }
             }
@@ -320,8 +314,7 @@ final class tjb extends llb {
                   if (((tjb) this).field_yb[var13] <= 0) {
                     break L2;
                   } else {
-                    int discarded$1 = 6;
-                    param6[var13] = var11 + av.a(((tjb) this).field_yb[var13]).toUpperCase() + ": " + var12 + param6[var13];
+                    param6[var13] = var11 + av.a(((tjb) this).field_yb[var13], 6).toUpperCase() + ": " + var12 + param6[var13];
                     break L2;
                   }
                 }
@@ -562,7 +555,7 @@ final class tjb extends llb {
         return ((tjb) this).field_Eb - -(null != ((tjb) this).field_xb ? ((tjb) this).field_xb.k(-4109) : 0);
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_Cb = null;
     }
 
@@ -751,7 +744,7 @@ final class tjb extends llb {
         }
     }
 
-    final static Object a(Object[] param0) {
+    final static Object a(Object[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

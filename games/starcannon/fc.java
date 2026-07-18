@@ -14,7 +14,7 @@ final class fc {
         ee.field_b = param0;
     }
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         return null != m.field_b && r.field_c == pb.field_a;
     }
 
@@ -102,10 +102,8 @@ final class fc {
             nb.field_c = (qe) (Object) ai.a(param3, "commonui", true, "arezzo14", param1);
             tk.field_a = (qe) (Object) ai.a(param3, "commonui", true, "arezzo14bold", param1);
             var18 = new hl(param0.a("button.gif", (byte) -95, ""), (java.awt.Component) (Object) kj.field_E);
-            int discarded$4 = 0;
-            id discarded$5 = o.a(param3, "commonui", "dropdown");
-            int discarded$6 = 0;
-            var5 = fg.a(param3, "screen_options", "commonui");
+            id discarded$1 = o.a(param3, "commonui", "dropdown", false);
+            var5 = fg.a(param3, "screen_options", "commonui", false);
             il.field_e = new id[4];
             w.field_u = new id[4];
             rj.field_i = new id[4];
@@ -127,8 +125,7 @@ final class fc {
                 L2: while (true) {
                   if (var9 >= 3) {
                     var9 = var18.field_v;
-                    int discarded$7 = 1;
-                    wj.b();
+                    wj.b(true);
                     var18.e();
                     ki.a(0, 0, ki.field_j, ki.field_f);
                     var16 = new hl(var9, var9);
@@ -250,7 +247,7 @@ final class fc {
         }
     }
 
-    final static void a(rb param0, rb param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    final static void a(rb param0, rb param1, java.math.BigInteger param2, java.math.BigInteger param3, int param4) {
         try {
             vj.a(param0.field_f, 0, param2, param1, param0.field_g, (byte) 99, param3);
         } catch (RuntimeException runtimeException) {

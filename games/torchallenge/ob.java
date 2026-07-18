@@ -6,7 +6,7 @@ final class ob {
     static int[][] field_c;
     static int[] field_b;
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, int param2) {
         int var3 = param1;
         pa.field_x = pa.field_x + var3;
         if (!(bh.field_p)) {
@@ -15,7 +15,7 @@ final class ob {
         pd.field_c = pd.field_c + var3;
     }
 
-    final static void a(String param0, java.applet.Applet param1) {
+    final static void a(String param0, java.applet.Applet param1, byte param2) {
         try {
             java.net.URL var3 = null;
             Exception var3_ref = null;
@@ -128,7 +128,7 @@ final class ob {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;

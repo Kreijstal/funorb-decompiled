@@ -104,8 +104,7 @@ abstract class af extends km {
                     var5 = nn.field_g.field_B + nn.field_g.field_P;
                     if (-1 != var3) {
                       L4: {
-                        int discarded$1 = -75;
-                        if (!eo.a(((af) this).field_t, var3)) {
+                        if (!eo.a(((af) this).field_t, var3, (byte) -75)) {
                           stackOut_16_0 = 0;
                           stackIn_17_0 = stackOut_16_0;
                           break L4;
@@ -205,7 +204,7 @@ abstract class af extends km {
         }
     }
 
-    final static String a(boolean param0, boolean param1) {
+    final static String a(boolean param0, boolean param1, boolean param2, int param3) {
         int var4 = 0;
         if (!(!param0)) {
             var4 += 4;
@@ -453,7 +452,7 @@ abstract class af extends km {
 
     abstract boolean a(int param0, byte param1);
 
-    public static void f() {
+    public static void f(byte param0) {
         field_A = null;
         field_D = null;
         field_r = null;
@@ -639,14 +638,13 @@ abstract class af extends km {
     }
 
     final void d(byte param0) {
-        int discarded$0 = -121;
-        this.g();
+        this.g((byte) -121);
         if (param0 != 79) {
             ((af) this).field_E = null;
         }
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         this.a(32367, ((af) this).field_C);
         this.a(32367, ((af) this).field_v);
     }
@@ -766,8 +764,7 @@ abstract class af extends km {
                   if (var9 == null) {
                     break L0;
                   } else {
-                    int discarded$1 = 1;
-                    ((af) this).field_C.a((nm) (Object) cn.a(-var4_int, var8, 32, (af) this, 32, var10, var4_int + var7, var9.field_p), (byte) 3);
+                    ((af) this).field_C.a((nm) (Object) cn.a(-var4_int, var8, 32, (af) this, 32, var10, var4_int + var7, var9.field_p, 1), (byte) 3);
                     rk.field_Qb = rk.field_Qb | 1 << var10;
                     var9 = (kq) (Object) param2.a((byte) 116);
                     var10++;

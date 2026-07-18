@@ -122,7 +122,7 @@ final class fi extends ki {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_v = null;
         field_u = null;
         field_r = null;
@@ -155,14 +155,13 @@ final class fi extends ki {
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
         pb var6 = null;
         if (((fi) this).b((byte) -125)) {
-          int discarded$8 = -20777;
-          var6 = ge.a(((fi) this).field_m, param3);
+          var6 = ge.a(((fi) this).field_m, param3, -20777);
           if (var6.a((byte) -84, param3, ((fi) this).field_m)) {
             mn.a(var6.field_p, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
             if (param0) {
               return;
             } else {
-              boolean discarded$9 = ((fi) this).a(false);
+              boolean discarded$6 = ((fi) this).a(false);
               return;
             }
           } else {
@@ -170,7 +169,7 @@ final class fi extends ki {
             var6.a(((fi) this).field_m, param3, (byte) 78);
             mn.a(var6.field_p, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
             if (!param0) {
-              boolean discarded$10 = ((fi) this).a(false);
+              boolean discarded$7 = ((fi) this).a(false);
               return;
             } else {
               return;
@@ -181,7 +180,7 @@ final class fi extends ki {
           if (param0) {
             return;
           } else {
-            boolean discarded$11 = ((fi) this).a(false);
+            boolean discarded$8 = ((fi) this).a(false);
             return;
           }
         }
@@ -198,10 +197,8 @@ final class fi extends ki {
           un.field_d = jh.a(0, s.field_d);
           jl.field_d = jh.a(0, kc.field_r);
           on.field_K = jh.a(0, hk.field_I);
-          int discarded$2 = 2;
-          ao.field_o[0] = cr.a("arctic", i.field_m, "arctic_caps");
-          int discarded$3 = 2;
-          ja.field_a[0] = cr.a("arctic", i.field_m, "arctic_segs");
+          ao.field_o[0] = cr.a("arctic", i.field_m, "arctic_caps", 2);
+          ja.field_a[0] = cr.a("arctic", i.field_m, "arctic_segs", 2);
           ga.field_k[0] = pl.a("arctic", "arctic_centre", (byte) -115, i.field_m);
           ao.field_o[1] = ig.a(ao.field_o[0], param0);
           ja.field_a[1] = ig.a(ja.field_a[0], false);

@@ -16,12 +16,11 @@ final class rg extends ii implements pf, vg, mg {
     private ck field_N;
     private bh field_Q;
 
-    final static boolean i() {
-        int discarded$0 = 2;
-        return om.a(m.c(true));
+    final static boolean i(byte param0) {
+        return om.a(m.c(true), 2);
     }
 
-    private final String j() {
+    private final String j(byte param0) {
         return "</col></u>";
     }
 
@@ -192,8 +191,7 @@ final class rg extends ii implements pf, vg, mg {
                 break L1;
               } else {
                 if (((rg) this).field_N == param0) {
-                  int discarded$10 = -124;
-                  boolean discarded$11 = this.f();
+                  boolean discarded$5 = this.f((byte) -124);
                   break L1;
                 } else {
                   break L1;
@@ -247,7 +245,7 @@ final class rg extends ii implements pf, vg, mg {
         field_P = null;
     }
 
-    private final int a(int param0, String param1, lm param2, int param3) {
+    private final int a(int param0, String param1, lm param2, int param3, int param4) {
         dg var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;
@@ -444,21 +442,18 @@ final class rg extends ii implements pf, vg, mg {
             L1: {
               if (param0 != 0) {
                 if (param0 == 1) {
-                  int discarded$14 = 58;
-                  lk.a("privacy.ws");
+                  lk.a("privacy.ws", (byte) 58);
                   break L1;
                 } else {
                   if (param0 == 2) {
-                    int discarded$15 = 58;
-                    lk.a("conduct.ws");
+                    lk.a("conduct.ws", (byte) 58);
                     break L1;
                   } else {
                     break L1;
                   }
                 }
               } else {
-                int discarded$16 = 58;
-                lk.a("terms.ws");
+                lk.a("terms.ws", (byte) 58);
                 break L1;
               }
             }
@@ -799,7 +794,7 @@ final class rg extends ii implements pf, vg, mg {
         return false;
     }
 
-    private final boolean f() {
+    private final boolean f(byte param0) {
         if (!this.b(true)) {
             return false;
         }
@@ -983,15 +978,11 @@ final class rg extends ii implements pf, vg, mg {
         ic dupTemp$1 = new ic(10000536);
         ((rg) this).field_L.field_o = (ca) (Object) dupTemp$1;
         ((rg) this).field_K.field_o = (ca) (Object) dupTemp$1;
-        int discarded$2 = -115;
-        int discarded$3 = 30496;
-        String var2 = jk.a(new String[2], ae.field_h);
+        String var2 = jk.a(new String[2], ae.field_h, 30496);
         int var3 = 20;
-        int discarded$4 = 170;
-        var3 = var3 + this.a(3, mp.field_b, (lm) (Object) ((rg) this).field_O, var3);
+        var3 = var3 + this.a(3, mp.field_b, (lm) (Object) ((rg) this).field_O, var3, 170);
         var3 = var3 + (this.a(-96, var3, hp.field_a, "", 170, (lm) (Object) ((rg) this).field_U, 20) + 5);
-        int discarded$5 = 170;
-        var3 = var3 + this.a(3, fk.field_r, (lm) (Object) ((rg) this).field_K, var3);
+        var3 = var3 + this.a(3, fk.field_r, (lm) (Object) ((rg) this).field_K, var3, 170);
         var3 = var3 + (5 + this.a(qj.field_a, (lm) (Object) ((rg) this).field_L, -126, td.field_b, 170, var3));
         var3 = var3 + (5 + this.a(wf.field_B, (lm) (Object) ((rg) this).field_R, -123, an.field_z, 170, var3));
         var3 = var3 + this.a(fl.field_o, 170, var3, (lm) (Object) ((rg) this).field_S, 3);

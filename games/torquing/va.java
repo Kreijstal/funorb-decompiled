@@ -12,7 +12,7 @@ final class va extends lg {
     int field_I;
     int field_F;
 
-    final static boolean b(String param0) {
+    final static boolean b(String param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_7_0 = 0;
@@ -107,7 +107,7 @@ final class va extends lg {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_H = null;
     }
 
@@ -295,7 +295,7 @@ final class va extends lg {
         return stackIn_18_0 != 0;
     }
 
-    final static wc a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7) {
+    final static wc a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8) {
         wc var9 = null;
         RuntimeException var9_ref = null;
         RuntimeException stackIn_3_0 = null;
@@ -317,9 +317,7 @@ final class va extends lg {
         try {
           var9 = new wc(11, 65524, param2, param4, param6, param1, param7);
           so.field_t.a((byte) 54, (q) (Object) var9);
-          int discarded$4 = 3;
-          int discarded$5 = 1;
-          bp.a(var9);
+          bp.a(var9, 1, 3);
           return var9;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -403,8 +401,7 @@ final class va extends lg {
                 L2: while (true) {
                   var4 = param2.nextInt();
                   if (var4 < var3_int) {
-                    int discarded$2 = -25034;
-                    stackOut_11_0 = b.e(param0, var4);
+                    stackOut_11_0 = b.e(param0, var4, -25034);
                     stackIn_12_0 = stackOut_11_0;
                     break L0;
                   } else {

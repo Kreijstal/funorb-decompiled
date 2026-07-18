@@ -85,8 +85,7 @@ abstract class bc {
             if (ik.field_g == ej.field_P) {
               var8 = new qf(mf.field_f, param5);
               mf.field_f.a(-102, (oc) (Object) var8);
-              int discarded$16 = -56;
-              if (!mq.a()) {
+              if (!mq.a((byte) -56)) {
                 L1: {
                   td.field_w = param0;
                   ik.field_g = jm.field_f;
@@ -251,7 +250,7 @@ abstract class bc {
 
     abstract int a(byte param0, int param1);
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
         field_d = null;

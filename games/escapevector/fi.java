@@ -13,7 +13,7 @@ abstract class fi {
     int field_a;
     int field_f;
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_j = null;
         field_e = null;
@@ -167,7 +167,7 @@ abstract class fi {
         }
     }
 
-    final static void a(dk[] param0) {
+    final static void a(dk[] param0, int param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
         int[] var4 = null;

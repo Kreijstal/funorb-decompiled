@@ -435,7 +435,7 @@ final class em {
         }
     }
 
-    final static wk b() {
+    final static wk b(int param0) {
         if (null == wa.field_c) {
             wa.field_c = new wk();
             wa.field_c.a(15658734, od.field_S);
@@ -536,11 +536,9 @@ final class em {
         if (param0 < 49) {
             em.c(-27);
         }
-        int discarded$0 = 88;
-        int var2 = ia.h();
+        int var2 = ia.h(88);
         qm.field_b.a(pj.field_e - fa.field_d, lb.field_V - nc.field_d, (byte) 28, (nc.field_d << 1) + var1, (fa.field_d << 1) + var2);
-        int discarded$1 = 1000;
-        dc.a();
+        dc.a(1000);
     }
 
     final void a(bh param0, int param1) {
@@ -886,7 +884,7 @@ final class em {
         ((em) this).field_l = true;
     }
 
-    final static void d() {
+    final static void d(int param0) {
         sf.field_d = 0;
         hi.a(76);
     }

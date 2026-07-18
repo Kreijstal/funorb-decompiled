@@ -413,7 +413,7 @@ final class om extends ana {
         ((om) this).field_y = true;
     }
 
-    final static gha b() {
+    final static gha b(boolean param0) {
         if (null == gk.field_e) {
             gk.field_e = new gha(oc.field_l, 20, 0, 0, 0, 11579568, -1, 0, 0, oc.field_l.field_u, -1, 2147483647, true);
         }

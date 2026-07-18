@@ -9,13 +9,13 @@ final class wj extends cb {
     static int field_j;
     static String field_i;
 
-    public static void f() {
+    public static void f(int param0) {
         field_k = null;
         field_l = null;
         field_i = null;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, int param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -93,7 +93,7 @@ final class wj extends cb {
         return stackIn_23_0 != 0;
     }
 
-    final static boolean g() {
+    final static boolean g(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -238,7 +238,7 @@ final class wj extends cb {
                 break L1;
               } else {
                 var4 = null;
-                String discarded$4 = ((wj) this).a((byte) 97, (String) null);
+                String discarded$2 = ((wj) this).a((byte) 97, (String) null);
                 break L1;
               }
             }
@@ -250,8 +250,7 @@ final class wj extends cb {
             } else {
               L2: {
                 var6 = (CharSequence) (Object) param0;
-                int discarded$5 = 1;
-                var3_int = md.a(var6);
+                var3_int = md.a(var6, true);
                 if (var3_int <= 0) {
                   break L2;
                 } else {

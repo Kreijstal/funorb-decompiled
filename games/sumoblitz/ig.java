@@ -88,7 +88,7 @@ final class ig {
         lf.a(0, 256);
     }
 
-    final static int a(String param0) {
+    final static int a(String param0, boolean param1) {
         RuntimeException var2 = null;
         String var3 = null;
         byte[] var4 = null;
@@ -100,9 +100,9 @@ final class ig {
         int var8_int = 0;
         int var9 = 0;
         String var10 = null;
-        byte[] var11 = null;
+        File var11 = null;
         byte[] var12 = null;
-        File var13 = null;
+        byte[] var13 = null;
         byte[] var14 = null;
         byte[] var15 = null;
         byte[] var16 = null;
@@ -168,12 +168,12 @@ final class ig {
                       var19 = ha.field_e.a("", var3, -1);
                       var17 = var19;
                       var15 = var17;
-                      var12 = var15;
-                      var4 = var12;
+                      var13 = var15;
+                      var4 = var13;
                       var5 = null;
                       try {
                         L1: {
-                          var13 = el.a(var10, (byte) -8);
+                          var11 = el.a(var10, (byte) -8);
                           break L1;
                         }
                       } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -187,18 +187,17 @@ final class ig {
                         if (var4 == null) {
                           break L2;
                         } else {
-                          if (var13 == null) {
+                          if (var11 == null) {
                             break L2;
                           } else {
                             L3: {
                               L4: {
                                 var6 = 1;
-                                int discarded$3 = -23;
-                                var18 = si.a(var13);
+                                var18 = si.a(var11, (byte) -23);
                                 var16 = var18;
                                 var14 = var16;
-                                var11 = var14;
-                                var7 = var11;
+                                var12 = var14;
+                                var7 = var12;
                                 if (var7 == null) {
                                   break L4;
                                 } else {
@@ -231,7 +230,7 @@ final class ig {
                                   if (var6 != 0) {
                                     break L7;
                                   } else {
-                                    boolean discarded$4 = qn.field_e.a(var19, -31357, var13);
+                                    boolean discarded$1 = qn.field_e.a(var19, -31357, var11);
                                     break L7;
                                   }
                                 }
@@ -244,8 +243,7 @@ final class ig {
                               stackIn_40_0 = stackOut_39_0;
                               return stackIn_40_0;
                             }
-                            int discarded$5 = 23295;
-                            hw.a(var13, param0);
+                            hw.a(var11, param0, 23295);
                             stackOut_41_0 = 100;
                             stackIn_42_0 = stackOut_41_0;
                             return stackIn_42_0;

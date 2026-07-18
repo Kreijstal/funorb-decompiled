@@ -136,7 +136,7 @@ abstract class av {
 
     abstract java.net.Socket a(int param0) throws IOException;
 
-    public static void b() {
+    public static void b(int param0) {
         field_d = null;
         field_b = null;
     }

@@ -150,7 +150,7 @@ final class ue extends s {
         return stackIn_22_0 != 0;
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_J = null;
         field_G = null;
         field_H = null;
@@ -163,7 +163,7 @@ final class ue extends s {
         return ((ue) this).field_K;
     }
 
-    final static int b() {
+    final static int b(byte param0) {
         return 1;
     }
 

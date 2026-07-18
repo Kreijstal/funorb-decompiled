@@ -130,8 +130,7 @@ final class oc extends hn {
                         break L8;
                       } else {
                         pd.field_b.field_K = false;
-                        int discarded$1 = 92;
-                        kh.a();
+                        kh.a((byte) 92);
                         break L8;
                       }
                     }

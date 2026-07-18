@@ -13,9 +13,8 @@ final class li extends ag {
     static String field_E;
     static wk[][] field_D;
 
-    final static boolean c() {
-        int discarded$3 = 2;
-        if (!qb.g()) {
+    final static boolean c(int param0) {
+        if (!qb.g(2)) {
             return false;
         }
         if ((8 & a.field_c) != 0) {
@@ -24,7 +23,7 @@ final class li extends ag {
         return true;
     }
 
-    final static void e() {
+    final static void e(int param0) {
         if (!(!vb.field_e)) {
             pb.f(pb.field_i, pb.field_l, pb.field_b - pb.field_i, -pb.field_l + pb.field_d);
             qf.field_c.a(false, (byte) 127);

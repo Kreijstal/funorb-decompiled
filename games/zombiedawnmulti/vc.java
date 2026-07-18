@@ -37,7 +37,7 @@ final class vc {
         i.field_a.field_p = 0;
     }
 
-    final static void a(br param0, br param1) {
+    final static void a(br param0, br param1, boolean param2) {
         try {
             if (param1.field_b != null) {
                 param1.a(true);
@@ -51,7 +51,7 @@ final class vc {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ud.field_V[92] = 74;
         ud.field_V[44] = 71;
         ud.field_V[46] = 72;

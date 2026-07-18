@@ -4,7 +4,7 @@
 final class pe {
     static int[] field_a;
 
-    final synchronized static byte[] a(int param0) {
+    final synchronized static byte[] a(int param0, byte param1) {
         byte[] var2_ref_byte__ = null;
         int var2 = 0;
         byte[] var3 = null;
@@ -290,7 +290,7 @@ final class pe {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         ph.field_w = kb.field_q.g((byte) 81);
         CharSequence var2 = (CharSequence) (Object) ph.field_w;
         ik.field_f = cc.a(var2, (byte) 105);

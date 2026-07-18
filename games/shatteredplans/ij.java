@@ -43,7 +43,7 @@ final class ij {
         return (fp) (Object) new gs();
     }
 
-    final static qh b() {
+    final static qh b(byte param0) {
         tm.field_k = new qh(250, 60, 150, 186, ib.field_c.toUpperCase());
         fe var1 = new fe(-16 + (tm.field_k.field_k - -tm.field_k.field_m), tm.field_k.field_t + 2, 11, 11, -1, (bi) null, "X", 16711680);
         var1.field_h = (Object) (Object) tm.field_k;
@@ -57,7 +57,7 @@ final class ij {
         return tm.field_k;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_a = null;
     }
 

@@ -21,7 +21,7 @@ final class gl extends mf {
         }
     }
 
-    public static void c() {
+    public static void c(byte param0) {
         field_k = null;
         field_j = null;
     }
@@ -294,8 +294,7 @@ final class gl extends mf {
                           stackIn_24_0 = stackOut_23_0;
                           return stackIn_24_0;
                         } else {
-                          int discarded$10 = 0;
-                          if (qd.a(var6, var5)) {
+                          if (qd.a(var6, var5, false)) {
                             stackOut_27_0 = wh.field_eb;
                             stackIn_28_0 = stackOut_27_0;
                             return stackIn_28_0;

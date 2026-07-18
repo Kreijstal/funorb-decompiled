@@ -14,7 +14,7 @@ final class vj {
         return cc.field_f == null ? true : false;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;

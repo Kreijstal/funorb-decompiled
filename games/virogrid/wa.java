@@ -114,15 +114,13 @@ class wa extends tg {
     }
 
     private final void f(int param0) {
-        int discarded$0 = -15816;
-        String var2 = this.i();
+        String var2 = this.i(-15816);
         if (!(0 >= var2.length())) {
-            int discarded$1 = -15816;
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.i()), (java.awt.datatransfer.ClipboardOwner) null);
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.i(-15816)), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
-    private final void d() {
+    private final void d(byte param0) {
         ie var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -196,7 +194,7 @@ class wa extends tg {
         }
     }
 
-    private final void h() {
+    private final void h(int param0) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -204,8 +202,7 @@ class wa extends tg {
             try {
               L0: {
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                int discarded$1 = 0;
-                this.k();
+                this.k(0);
                 this.a(var2, (byte) -124);
                 break L0;
               }
@@ -224,9 +221,9 @@ class wa extends tg {
     }
 
     void a(int param0, int param1, fi param2, int param3) {
-        RuntimeException var5 = null;
+        gm var5 = null;
+        RuntimeException var5_ref = null;
         int var6 = 0;
-        gm var7 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -247,8 +244,7 @@ class wa extends tg {
           L0: {
             L1: {
               super.a(param0, 127, param2, param3);
-              int discarded$2 = 103;
-              this.d();
+              this.d((byte) 103);
               if (((wa) this).field_i != 1) {
                 break L1;
               } else {
@@ -256,8 +252,8 @@ class wa extends tg {
                   if (!(((wa) this).field_w instanceof gm)) {
                     break L2;
                   } else {
-                    var7 = (gm) (Object) ((wa) this).field_w;
-                    var6 = var7.a(param0, param3, hk.field_Jb, (fi) this, true, nl.field_u);
+                    var5 = (gm) (Object) ((wa) this).field_w;
+                    var6 = var5.a(param0, param3, hk.field_Jb, (fi) this, true, nl.field_u);
                     if (var6 == -1) {
                       break L2;
                     } else {
@@ -291,8 +287,8 @@ class wa extends tg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var5;
+            var5_ref = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var5_ref;
             stackOut_11_1 = new StringBuilder().append("wa.E(").append(param0).append(',').append(114).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
@@ -610,7 +606,7 @@ class wa extends tg {
         return stackIn_18_0 != 0;
     }
 
-    private final void k() {
+    private final void k(int param0) {
         int var2 = 0;
         int var3 = 0;
         if (((wa) this).field_R != ((wa) this).field_J) {
@@ -623,7 +619,7 @@ class wa extends tg {
         }
     }
 
-    private final String i() {
+    private final String i(int param0) {
         int var2 = ((wa) this).field_J > ((wa) this).field_R ? ((wa) this).field_R : ((wa) this).field_J;
         int var3 = ((wa) this).field_J > ((wa) this).field_R ? ((wa) this).field_J : ((wa) this).field_R;
         return ((wa) this).field_n.substring(var2, var3);
@@ -716,8 +712,7 @@ class wa extends tg {
                         if (~((wa) this).field_R == ~((wa) this).field_J) {
                           break L2;
                         } else {
-                          int discarded$8 = 0;
-                          this.k();
+                          this.k(0);
                           break L2;
                         }
                       }
@@ -741,9 +736,9 @@ class wa extends tg {
                             break L5;
                           } else {
                             ((wa) this).field_n = ((wa) this).field_n + param1;
-                            int dupTemp$9 = ((wa) this).field_n.length();
-                            ((wa) this).field_J = dupTemp$9;
-                            ((wa) this).field_R = dupTemp$9;
+                            int dupTemp$1 = ((wa) this).field_n.length();
+                            ((wa) this).field_J = dupTemp$1;
+                            ((wa) this).field_R = dupTemp$1;
                             break L5;
                           }
                         }
@@ -836,8 +831,7 @@ class wa extends tg {
                                       break L9;
                                     } else {
                                       if (param2 == 65) {
-                                        int discarded$10 = 67;
-                                        this.g();
+                                        this.g((byte) 67);
                                         stackOut_44_0 = 1;
                                         stackIn_45_0 = stackOut_44_0;
                                         return stackIn_45_0 != 0;
@@ -864,8 +858,7 @@ class wa extends tg {
                                     break L6;
                                   } else {
                                     if (param2 == 67) {
-                                      int discarded$11 = 500;
-                                      this.h();
+                                      this.h(500);
                                       stackOut_42_0 = 1;
                                       stackIn_43_0 = stackOut_42_0;
                                       return stackIn_43_0 != 0;
@@ -891,8 +884,7 @@ class wa extends tg {
                       }
                     } else {
                       if (~((wa) this).field_J != ~((wa) this).field_R) {
-                        int discarded$12 = 0;
-                        this.k();
+                        this.k(0);
                         stackOut_20_0 = 1;
                         stackIn_21_0 = stackOut_20_0;
                         return stackIn_21_0 != 0;
@@ -901,8 +893,7 @@ class wa extends tg {
                           break L6;
                         } else {
                           ((wa) this).field_R = 1 + ((wa) this).field_J;
-                          int discarded$13 = 0;
-                          this.k();
+                          this.k(0);
                           stackOut_18_0 = 1;
                           stackIn_19_0 = stackOut_18_0;
                           return stackIn_19_0 != 0;
@@ -915,15 +906,13 @@ class wa extends tg {
                         break L6;
                       } else {
                         ((wa) this).field_R = ((wa) this).field_J + -1;
-                        int discarded$14 = 0;
-                        this.k();
+                        this.k(0);
                         stackOut_13_0 = 1;
                         stackIn_14_0 = stackOut_13_0;
                         return stackIn_14_0 != 0;
                       }
                     } else {
-                      int discarded$15 = 0;
-                      this.k();
+                      this.k(0);
                       stackOut_10_0 = 1;
                       stackIn_11_0 = stackOut_10_0;
                       return stackIn_11_0 != 0;
@@ -997,7 +986,7 @@ class wa extends tg {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_M = null;
         field_L = null;
         field_S = null;
@@ -1043,17 +1032,14 @@ class wa extends tg {
         }
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         this.f(-27135);
-        int discarded$0 = 0;
-        this.k();
+        this.k(0);
     }
 
     final static mg[] a(byte param0, int param1, int param2) {
         int var3 = -45 / ((param0 - -20) / 33);
-        int discarded$0 = 121;
-        int discarded$1 = 1;
-        return ak.a(param1, param2);
+        return ak.a(param1, param2, 1, (byte) 121);
     }
 
     private final int e(byte param0) {

@@ -160,8 +160,8 @@ final class wna implements ntb {
             }
             var5 = (wna) (Object) param1;
             var6 = var5;
-            var6.field_d = var5.field_d;
-            var6.field_b = var5.field_b;
+            var6.field_d = ((wna) this).field_d;
+            var6.field_b = ((wna) this).field_b;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "wna.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -196,10 +196,10 @@ final class wna implements ntb {
               L2: {
                 var3_int = 15 / ((22 - param0) / 59);
                 var4 = (wna) (Object) param1;
-                if (var4.field_d != var4.field_d) {
+                if (var4.field_d != ((wna) this).field_d) {
                   break L2;
                 } else {
-                  if (var4.field_b == var4.field_b) {
+                  if (((wna) this).field_b == var4.field_b) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
                     break L1;
@@ -272,19 +272,19 @@ final class wna implements ntb {
             L1: {
               var3 = (wna) (Object) param0;
               var4 = 0;
-              if (var3.field_d != var3.field_d) {
+              if (var3.field_d != ((wna) this).field_d) {
                 var4 = 1;
-                System.out.println("int winner has changed. before=" + var3.field_d + ", now=" + var3.field_d);
+                System.out.println("int winner has changed. before=" + var3.field_d + ", now=" + ((wna) this).field_d);
                 break L1;
               } else {
                 break L1;
               }
             }
             L2: {
-              if (var3.field_b == var3.field_b) {
+              if (((wna) this).field_b == var3.field_b) {
                 break L2;
               } else {
-                System.out.println("int winning_time has changed. before=" + var3.field_b + ", now=" + var3.field_b);
+                System.out.println("int winning_time has changed. before=" + var3.field_b + ", now=" + ((wna) this).field_b);
                 var4 = 1;
                 break L2;
               }

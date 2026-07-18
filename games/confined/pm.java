@@ -1599,6 +1599,7 @@ abstract class pm extends jl {
 
     final void a(int param0, od param1, int param2, da param3, int param4, oi param5, double param6, vg param7, mn param8) {
         RuntimeException runtimeException = null;
+        Object var12 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -1682,8 +1683,8 @@ abstract class pm extends jl {
               if (param2 == 27902) {
                 break L1;
               } else {
-                int discarded$4 = 1;
-                fg discarded$5 = pm.a((String) null);
+                var12 = null;
+                fg discarded$2 = pm.a((String) null, true);
                 break L1;
               }
             }
@@ -2795,7 +2796,7 @@ abstract class pm extends jl {
         }
     }
 
-    final static fg a(String param0) {
+    final static fg a(String param0, boolean param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         fg var3 = null;
@@ -2910,7 +2911,7 @@ abstract class pm extends jl {
 
     abstract void a(pm param0, int param1);
 
-    final static bm a(mi param0, String param1, String param2) {
+    final static bm a(mi param0, String param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -2966,8 +2967,7 @@ abstract class pm extends jl {
           L0: {
             var4_int = param0.a(-124, param1);
             var5 = param0.a(var4_int, param2, -91);
-            int discarded$2 = -99;
-            stackOut_2_0 = a.a(param0, var4_int, var5);
+            stackOut_2_0 = a.a(param0, var4_int, var5, (byte) -99);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -3065,7 +3065,7 @@ abstract class pm extends jl {
 
     abstract void a(int param0, hf param1);
 
-    public static void e() {
+    public static void e(byte param0) {
         int var1 = 0;
         field_w = null;
         field_u = null;

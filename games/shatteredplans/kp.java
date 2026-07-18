@@ -252,9 +252,8 @@ class kp extends ms {
         return stackIn_25_0 != 0;
     }
 
-    final static void c() {
-        int discarded$0 = 1;
-        ce.a(kq.f((byte) 126));
+    final static void c(int param0) {
+        ce.a(kq.f((byte) 126), true);
     }
 
     ds a(byte param0) {

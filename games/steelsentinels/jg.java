@@ -53,7 +53,7 @@ final class jg {
         }
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -520,7 +520,7 @@ final class jg {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_h = null;
         field_l = null;
         int var1 = 86;
@@ -582,9 +582,9 @@ final class jg {
                 }
               }
             } else {
-              int fieldTemp$4 = ((jg) this).field_m - 1;
+              int fieldTemp$2 = ((jg) this).field_m - 1;
               ((jg) this).field_m = ((jg) this).field_m - 1;
-              if (fieldTemp$4 > 0) {
+              if (fieldTemp$2 > 0) {
                 return;
               } else {
                 ((jg) this).field_m = ((jg) this).field_n;
@@ -592,8 +592,7 @@ final class jg {
                   ((jg) this).field_v = false;
                   return;
                 } else {
-                  int discarded$5 = -95;
-                  this.c();
+                  this.c(-95);
                   return;
                 }
               }
@@ -652,9 +651,9 @@ final class jg {
                 }
               }
             } else {
-              int fieldTemp$6 = ((jg) this).field_m - 1;
+              int fieldTemp$3 = ((jg) this).field_m - 1;
               ((jg) this).field_m = ((jg) this).field_m - 1;
-              if (fieldTemp$6 > 0) {
+              if (fieldTemp$3 > 0) {
                 return;
               } else {
                 ((jg) this).field_m = ((jg) this).field_n;
@@ -662,8 +661,7 @@ final class jg {
                   ((jg) this).field_v = false;
                   return;
                 } else {
-                  int discarded$7 = -95;
-                  this.c();
+                  this.c(-95);
                   return;
                 }
               }

@@ -9,7 +9,7 @@ final class kmb {
     static int field_f;
     static String field_d;
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -68,7 +68,7 @@ final class kmb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_e = null;
         field_b = null;

@@ -10,7 +10,7 @@ final class o {
     static int field_a;
     static int field_c;
 
-    public static void a() {
+    public static void a(byte param0) {
         int var1 = 0;
         field_d = null;
     }
@@ -204,7 +204,7 @@ final class o {
         return stackIn_19_0;
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, boolean param1) {
         try {
             param0.addMouseListener((java.awt.event.MouseListener) (Object) we.field_n);
             param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) we.field_n);

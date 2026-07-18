@@ -41,6 +41,8 @@ abstract class qo extends rg {
 
     final static void a(byte param0, boolean param1, byte[] param2, di param3, di param4, int param5, String[][] param6, int param7, di param8, String[] param9, dd[][] param10, String[][] param11, int[] param12, byte[] param13, dd[][] param14) {
         RuntimeException var15 = null;
+        Object var16 = null;
+        Object var17 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
@@ -209,8 +211,9 @@ abstract class qo extends rg {
         String stackOut_35_2 = null;
         try {
           L0: {
-            int discarded$1 = -6103;
-            pm.a(param13, param2, param11, param8, param14, 2, (qb[]) null, (int[]) null, param10, 4, param9, param4, true, param12, param3, param6);
+            var17 = null;
+            var16 = null;
+            pm.a(param13, param2, param11, param8, param14, 2, (qb[]) null, (int[]) null, param10, 4, param9, param4, true, param12, param3, param6, -6103);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

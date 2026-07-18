@@ -197,7 +197,7 @@ final class cc extends wm implements ntb, hd {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_d = null;
     }
 
@@ -233,7 +233,7 @@ final class cc extends wm implements ntb, hd {
                 if (super.a((byte) 92, param1)) {
                   break L2;
                 } else {
-                  if (var4.field_c == var4.field_c) {
+                  if (var4.field_c == ((cc) this).field_c) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
                     break L1;
@@ -432,8 +432,7 @@ final class cc extends wm implements ntb, hd {
             }
             L2: {
               if (((cc) this).field_c >= 0) {
-                int discarded$2 = -14;
-                param1 = qi.a(((cc) this).field_c, true, param1);
+                param1 = qi.a(((cc) this).field_c, true, param1, (byte) -14);
                 break L2;
               } else {
                 break L2;
@@ -514,7 +513,7 @@ final class cc extends wm implements ntb, hd {
             var5 = (cc) (Object) param1;
             var6 = var5;
             super.b((byte) 116, param1);
-            var6.field_c = var5.field_c;
+            var6.field_c = ((cc) this).field_c;
             if (param0 > 54) {
               break L0;
             } else {

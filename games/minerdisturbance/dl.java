@@ -9,7 +9,7 @@ final class dl {
     static String field_f;
     static String field_a;
 
-    final static void a(boolean param0, wh param1) {
+    final static void a(boolean param0, wh param1, int param2, int param3, int param4) {
         try {
             nj.field_e.a(false, param1, !param0 ? true : false, 1000000, 1048576, 256);
         } catch (RuntimeException runtimeException) {
@@ -17,12 +17,11 @@ final class dl {
         }
     }
 
-    final static String b() {
-        int discarded$0 = 1;
-        return bi.a(sj.field_d);
+    final static String b(byte param0) {
+        return bi.a(sj.field_d, true);
     }
 
-    final static String a(sb param0) {
+    final static String a(sb param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -324,7 +323,7 @@ final class dl {
         return stackIn_27_0;
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -383,7 +382,7 @@ final class dl {
         return gd.field_B;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_a = null;
         field_b = null;

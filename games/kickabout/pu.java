@@ -486,7 +486,7 @@ final class pu extends hd implements lv {
         return var2;
     }
 
-    public static void i() {
+    public static void i(byte param0) {
         field_Ab = null;
         field_Fb = null;
         field_Db = null;

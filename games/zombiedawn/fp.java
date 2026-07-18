@@ -10,7 +10,7 @@ final class fp extends an {
     int field_K;
     int field_G;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
         int var9 = 0;
         var9 = ZombieDawn.field_J;
         if (param5 < param4) {

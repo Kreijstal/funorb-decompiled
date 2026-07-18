@@ -101,7 +101,7 @@ abstract class bq {
         qc.a(-24 + pc.field_m, 0, tg.field_a, 3, 640, 5, qo.field_b);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_f = null;
         field_h = null;
     }

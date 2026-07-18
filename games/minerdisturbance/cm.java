@@ -148,7 +148,7 @@ final class cm extends pi {
         }
     }
 
-    final static boolean a() {
+    final static boolean a(boolean param0) {
         return rd.a((byte) 27, bm.c(-118));
     }
 
@@ -168,14 +168,13 @@ final class cm extends pi {
             if (param0 == 24683) {
               var1 = sn.field_c;
               L1: while (true) {
-                int discarded$9 = 14921;
-                if (!ub.a()) {
+                if (!ub.a(14921)) {
                   break L0;
                 } else {
                   var1.d((byte) -51, 8);
-                  int fieldTemp$10 = var1.field_o + 1;
+                  int fieldTemp$5 = var1.field_o + 1;
                   var1.field_o = var1.field_o + 1;
-                  var2 = fieldTemp$10;
+                  var2 = fieldTemp$5;
                   pj.a((byte) 119, var1);
                   sn.field_c.g(-1, var1.field_o + -var2);
                   continue L1;

@@ -13,7 +13,7 @@ final class le extends di {
     static int[] field_s;
     static bg field_p;
 
-    final static String a() {
+    final static String a(boolean param0) {
         if (qe.field_f == ua.field_d) {
             return cg.field_H;
         }
@@ -49,8 +49,7 @@ final class le extends di {
         try {
           L0: {
             var4 = (CharSequence) (Object) param0;
-            int discarded$9 = 1;
-            if (!te.a(var4)) {
+            if (!te.a(var4, true)) {
               stackOut_2_0 = qf.field_d;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -106,7 +105,7 @@ final class le extends di {
         return stackIn_8_0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, boolean param2) {
         L0: {
           L1: {
             if (lk.field_a == null) {
@@ -823,16 +822,12 @@ final class le extends di {
             break L0;
           }
         }
-        int discarded$27 = -128;
-        ab.a();
+        ab.a((byte) -128);
         rf.d((byte) 93);
-        int discarded$28 = 1;
-        lf.a();
-        int discarded$29 = 255;
-        if (od.b()) {
+        lf.a(true);
+        if (od.b(255)) {
           di.field_l.k(-17410, 1);
-          int discarded$30 = 0;
-          bc.a(0);
+          bc.a(0, 0);
           gb.g(-17464);
           return;
         } else {
@@ -862,17 +857,16 @@ final class le extends di {
               if (param1 > 82) {
                 break L1;
               } else {
-                int discarded$8 = 0;
-                String discarded$9 = le.a();
+                String discarded$4 = le.a(false);
                 break L1;
               }
             }
             if (bd.field_k.field_d == 0) {
               return false;
             } else {
-              long dupTemp$10 = ll.a(1000);
-              bl.field_h = dupTemp$10;
-              dm.field_c = dupTemp$10;
+              long dupTemp$5 = ll.a(1000);
+              bl.field_h = dupTemp$5;
+              dm.field_c = dupTemp$5;
               if (1 == bd.field_k.field_d) {
                 try {
                   L2: {
@@ -897,8 +891,7 @@ final class le extends di {
                     uc.field_r = stackIn_12_0;
                     var5.field_k = 0;
                     ej.a(gi.field_v, -25563, (dh) (Object) di.field_l, ij.field_d, hb.field_i);
-                    int discarded$11 = 0;
-                    bc.a(-1);
+                    bc.a(-1, 0);
                     break L2;
                   }
                 } catch (java.io.IOException decompiledCaughtParameter0) {

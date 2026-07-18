@@ -10,7 +10,7 @@ final class oi extends wf {
     static String[] field_l;
     int field_h;
 
-    public static void d() {
+    public static void d(int param0) {
         field_g = null;
         field_k = null;
         field_j = null;

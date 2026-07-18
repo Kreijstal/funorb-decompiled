@@ -36,9 +36,7 @@ final class dl extends mc {
         StringBuilder stackOut_3_1 = null;
         String stackOut_3_2 = null;
         try {
-          int discarded$4 = 1;
-          int discarded$5 = -71;
-          mm.a(param1);
+          mm.a(param1, (byte) -71, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,7 +70,7 @@ final class dl extends mc {
         }
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_n = null;
     }
 

@@ -9,8 +9,7 @@ final class jm extends kp {
 
     final static void a(String param0, boolean param1, byte param2, boolean param3) {
         try {
-            int discarded$0 = -1;
-            fe.f();
+            fe.f(-1);
             le.field_e.k(104);
             no.field_e = new ri(qh.field_B, (String) null, el.field_b, param3, param1);
             if (param2 > -50) {
@@ -23,7 +22,7 @@ final class jm extends kp {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_r = null;
         field_q = null;
         field_s = null;

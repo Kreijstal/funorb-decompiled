@@ -11,7 +11,7 @@ final class mk {
     static he[] field_e;
     static String field_d;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_b = null;
         field_g = null;

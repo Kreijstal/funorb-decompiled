@@ -58,8 +58,7 @@ final class ef extends lk {
             if (((ef) this).field_m.a((byte) 86, param1) != qj.field_c) {
               L1: {
                 if (!param1.equals((Object) (Object) ((ef) this).field_l)) {
-                  int discarded$2 = 1;
-                  var3 = hi.a(param1);
+                  var3 = hi.a(param1, true);
                   if (var3.a(true)) {
                     ((ef) this).field_l = param1;
                     ((ef) this).field_k = var3.b(17);
@@ -132,7 +131,7 @@ final class ef extends lk {
         return stackIn_14_0;
     }
 
-    final static void a() {
+    final static void a(int param0, byte param1) {
         cj.field_a = 133;
         cj.field_c = 33;
         cj.field_d = 21845;

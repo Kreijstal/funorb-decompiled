@@ -150,7 +150,7 @@ final class cn {
         return stackIn_10_0;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_h = null;
         field_f = null;
         field_e = null;
@@ -488,8 +488,7 @@ final class cn {
         if (((cn) this).field_g) {
             ((cn) this).field_a[param1] = (Object) (Object) ((cn) this).field_d.a(param1, (byte) -39);
         } else {
-            int discarded$0 = 0;
-            ((cn) this).field_a[param1] = bw.a(270, ((cn) this).field_d.a(param1, (byte) -39));
+            ((cn) this).field_a[param1] = bw.a(270, ((cn) this).field_d.a(param1, (byte) -39), false);
         }
     }
 
@@ -740,8 +739,7 @@ final class cn {
                           var7[var12] = (Object) (Object) var52;
                           break L11;
                         } else {
-                          int discarded$2 = 0;
-                          var7[var12] = bw.a(270, var24);
+                          var7[var12] = bw.a(270, var51, false);
                           break L11;
                         }
                       } else {
@@ -884,8 +882,7 @@ final class cn {
                                               var7[var19] = (Object) (Object) var54[var18];
                                               break L26;
                                             } else {
-                                              int discarded$3 = 0;
-                                              var7[var19] = bw.a(270, var54[var18]);
+                                              var7[var19] = bw.a(270, var54[var18], false);
                                               break L26;
                                             }
                                           }

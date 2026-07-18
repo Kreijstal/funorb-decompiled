@@ -176,13 +176,10 @@ final class wj extends nm {
         return stackIn_10_0;
     }
 
-    final static void a(int param0, boolean param1, int param2, boolean param3, int param4, vm param5) {
+    final static void a(int param0, boolean param1, int param2, boolean param3, int param4, vm param5, boolean param6) {
         synchronized (eo.field_f) {
             m.field_f.e(param2, -1, 16);
-            int discarded$0 = 1;
-            int discarded$1 = 1;
-            int discarded$2 = 1;
-            ji.a(25459, true, param5);
+            ji.a(25459, true, param5, 1, 1, true);
         }
     }
 

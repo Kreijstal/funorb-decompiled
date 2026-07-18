@@ -15,13 +15,13 @@ final class dd {
     private byte[] field_g;
     private int field_b;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_j = null;
         field_e = null;
         field_h = null;
     }
 
-    final static byte[] a(CharSequence param0) {
+    final static byte[] a(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;

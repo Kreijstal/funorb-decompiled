@@ -107,11 +107,11 @@ final class g extends tj {
         return stackIn_12_0;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_m = null;
     }
 
-    final static boolean f() {
+    final static boolean f(int param0) {
         return gf.a(0, kk.c(-14047));
     }
 
@@ -281,7 +281,7 @@ final class g extends tj {
         }
     }
 
-    final static void a() {
+    final static void a(int param0, byte param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         nc var4 = null;

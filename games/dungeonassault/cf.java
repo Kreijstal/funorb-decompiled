@@ -94,8 +94,7 @@ final class cf {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$2 = 0;
-            stackOut_0_0 = l.a(ni.b(param1, 100, param2));
+            stackOut_0_0 = l.a(ni.b(param1, 100, param2), 0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

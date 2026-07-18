@@ -46,7 +46,7 @@ final class e {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_b = null;
         field_a = null;
     }

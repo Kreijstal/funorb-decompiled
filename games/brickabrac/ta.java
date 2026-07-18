@@ -10,7 +10,7 @@ class ta {
     static String field_d;
     static String field_c;
 
-    final static jp b() {
+    final static jp b(int param0) {
         int[] var15 = null;
         int[] var8 = null;
         int var5_int = 0;
@@ -46,8 +46,7 @@ class ta {
             }
             var3 = (Object) (Object) new fb(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var21);
         }
-        int discarded$0 = 96;
-        ee.d();
+        ee.d((byte) 96);
         return (jp) var3;
     }
 
@@ -67,8 +66,7 @@ class ta {
     }
 
     final static void a(boolean param0, boolean param1) {
-        int discarded$5 = 2;
-        if (!(m.a())) {
+        if (!(m.a(2))) {
             return;
         }
         lb.d(0, 0, lb.field_c, lb.field_d, 0, 192);

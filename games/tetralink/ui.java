@@ -12,7 +12,7 @@ final class ui {
     static long[] field_c;
     static String[] field_a;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         long var1 = 0L;
         long var3 = 0L;
         int var5 = 0;

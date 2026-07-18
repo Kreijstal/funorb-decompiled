@@ -92,7 +92,7 @@ final class aq extends oh {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_j = null;
         field_i = null;
         field_o = null;
@@ -121,8 +121,7 @@ final class aq extends oh {
         int var4 = 0;
         gq[] var5 = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        int discarded$2 = 4;
-        var5 = dn.a();
+        var5 = dn.a(4);
         var2 = var5;
         var3 = 0;
         L0: while (true) {

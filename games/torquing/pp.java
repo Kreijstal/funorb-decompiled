@@ -161,7 +161,7 @@ final class pp extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void update(java.awt.Graphics param0) {
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_e = null;
     }

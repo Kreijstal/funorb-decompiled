@@ -76,7 +76,7 @@ final class hh {
         return gh.i(104);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
         field_e = null;
         field_d = null;
@@ -85,7 +85,7 @@ final class hh {
         field_c = null;
     }
 
-    final static void a(String param0, String param1) {
+    final static void a(String param0, String param1, int param2) {
         try {
             ma.a(false, (byte) -65, param0, param1);
         } catch (RuntimeException runtimeException) {

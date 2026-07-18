@@ -114,8 +114,7 @@ final class mk extends cg {
                   return stackIn_10_0;
                 } else {
                   if (!lc.a((byte) -33, var5)) {
-                    int discarded$9 = 0;
-                    if (!this.b(param0)) {
+                    if (!this.b(param0, 0)) {
                       L1: {
                         if (!param1) {
                           break L1;
@@ -139,8 +138,7 @@ final class mk extends cg {
                             stackIn_27_0 = stackOut_26_0;
                             return stackIn_27_0;
                           } else {
-                            int discarded$10 = -1;
-                            if (!g.a(var6, var5)) {
+                            if (!g.a(var6, var5, -1)) {
                               stackOut_31_0 = s.field_b;
                               stackIn_32_0 = stackOut_31_0;
                               return stackIn_32_0;
@@ -204,17 +202,14 @@ final class mk extends cg {
     }
 
     final static java.applet.Applet g(int param0) {
-        if (uh.field_i != null) {
-          return uh.field_i;
-        } else {
-          if (param0 >= -116) {
-            int discarded$4 = 0;
-            String discarded$5 = mk.a(-119, false, true);
-            return (java.applet.Applet) (Object) jj.field_a;
-          } else {
-            return (java.applet.Applet) (Object) jj.field_a;
-          }
+        if (!(uh.field_i == null)) {
+            return uh.field_i;
         }
+        if (param0 >= -116) {
+            String discarded$0 = mk.a(-119, false, true, false);
+            return (java.applet.Applet) (Object) jj.field_a;
+        }
+        return (java.applet.Applet) (Object) jj.field_a;
     }
 
     final static int h(int param0) {
@@ -271,8 +266,7 @@ final class mk extends cg {
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;
               } else {
-                int discarded$2 = 0;
-                if (!this.b(param0)) {
+                if (!this.b(param0, 0)) {
                   stackOut_12_0 = ii.field_e;
                   stackIn_13_0 = stackOut_12_0;
                   break L0;
@@ -321,7 +315,7 @@ final class mk extends cg {
         return stackIn_13_0;
     }
 
-    private final boolean b(String param0) {
+    private final boolean b(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -425,7 +419,7 @@ final class mk extends cg {
         return stackIn_12_0 != 0;
     }
 
-    final static String a(int param0, boolean param1, boolean param2) {
+    final static String a(int param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
         if (param0 >= 106) {
           var4 = 0;

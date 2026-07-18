@@ -14,7 +14,7 @@ final class ll {
     static boolean[][][] field_j;
     static int[][] field_k;
 
-    final static int b() {
+    final static int b(int param0) {
         return sj.field_L;
     }
 
@@ -585,17 +585,15 @@ final class ll {
         }
         if (param0 != 0) {
           ll.a(80, true, false);
-          int discarded$4 = 0;
-          c.a(param1);
+          c.a(param1, false);
           return;
         } else {
-          int discarded$5 = 0;
-          c.a(param1);
+          c.a(param1, false);
           return;
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_e = null;
         field_h = null;

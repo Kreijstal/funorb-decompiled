@@ -15,8 +15,7 @@ final class pa extends ob {
         int stackOut_15_0 = 0;
         if (null != vl.field_m) {
           if (!vl.field_m.b((byte) 111)) {
-            int discarded$7 = 118;
-            int discarded$8 = pa.f();
+            int discarded$2 = pa.f(118);
             if (null == fc.field_b) {
               if (sn.h(-3)) {
                 return true;
@@ -40,19 +39,16 @@ final class pa extends ob {
                 }
               } else {
                 fc.field_b = null;
-                int discarded$9 = 8421504;
-                wa.m();
+                wa.m(8421504);
                 return true;
               }
             }
           } else {
-            int discarded$10 = 8421504;
-            wa.m();
+            wa.m(8421504);
             return true;
           }
         } else {
-          int discarded$11 = 118;
-          int discarded$12 = pa.f();
+          int discarded$3 = pa.f(118);
           if (null == fc.field_b) {
             if (sn.h(-3)) {
               return true;
@@ -83,8 +79,7 @@ final class pa extends ob {
               }
             } else {
               fc.field_b = null;
-              int discarded$13 = 8421504;
-              wa.m();
+              wa.m(8421504);
               return true;
             }
           }
@@ -95,7 +90,7 @@ final class pa extends ob {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    final static int f() {
+    final static int f(int param0) {
         return pq.field_B != null ? pq.field_B.length : 0;
     }
 

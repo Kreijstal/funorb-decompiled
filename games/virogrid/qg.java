@@ -20,7 +20,7 @@ final class qg extends l {
     static int field_w;
     static int field_g;
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0, boolean param1, int param2) {
         int var3 = 0;
         String var4 = null;
         Object var5 = null;
@@ -109,7 +109,7 @@ final class qg extends l {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_h = null;
         field_u = null;
         field_s = null;

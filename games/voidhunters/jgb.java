@@ -4,7 +4,7 @@
 final class jgb extends rqa {
     static String field_o;
 
-    public static void e() {
+    public static void e(int param0) {
         field_o = null;
     }
 
@@ -87,7 +87,7 @@ final class jgb extends rqa {
         super(param0, param1, param2);
     }
 
-    final static phb a() {
+    final static phb a(int param0) {
         int var4_int = 0;
         int var5 = VoidHunters.field_G;
         int var1 = hla.field_a[0] * nhb.field_o[0];

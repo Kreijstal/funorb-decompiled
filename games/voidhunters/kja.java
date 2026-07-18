@@ -448,7 +448,7 @@ class kja extends htb {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_G = null;
         field_E = null;
         field_C = null;

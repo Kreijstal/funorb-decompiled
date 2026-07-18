@@ -57,14 +57,13 @@ final class ka {
             return;
         }
         try {
-            int discarded$0 = 2147483647;
-            bf.a(param7, param2, param4, param0, param3, param5);
+            bf.a(param7, param2, param4, param0, param3, param5, 2147483647);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "ka.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + -74 + ',' + param7 + ')');
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_d = null;
         int var1 = 0;

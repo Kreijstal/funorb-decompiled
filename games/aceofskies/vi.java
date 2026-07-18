@@ -123,7 +123,7 @@ final class vi extends qm {
         }
     }
 
-    private final void a(boolean param0, vi param1) {
+    private final void a(boolean param0, vi param1, boolean param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         sc var5 = null;
@@ -249,7 +249,7 @@ final class vi extends qm {
         return dupTemp$0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_p = null;
         field_n = null;
     }
@@ -397,8 +397,7 @@ final class vi extends qm {
               }
             }
             ((vi) this).field_q.a(param3, true, param2, (vi) this, param4);
-            int discarded$1 = 2765;
-            sl.c();
+            sl.c(2765);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -541,8 +540,7 @@ final class vi extends qm {
     vi(vi param0, boolean param1) {
         this();
         try {
-            int discarded$0 = 0;
-            param0.a(param1, (vi) this);
+            param0.a(param1, (vi) this, false);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

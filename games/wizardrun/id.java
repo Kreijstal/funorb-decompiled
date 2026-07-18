@@ -8,7 +8,7 @@ final class id {
     static int[] field_b;
     static int field_a;
 
-    final static boolean a(String param0, String param1) {
+    final static boolean a(String param0, String param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_5_0 = 0;
@@ -49,10 +49,8 @@ final class id {
           L0: {
             L1: {
               L2: {
-                int discarded$4 = 95;
-                param1 = fa.a((byte) 117, "", param1);
-                int discarded$5 = 1;
-                var3 = ag.a(param1);
+                param1 = fa.a((byte) 117, "", param1, '_');
+                var3 = ag.a(param1, 1);
                 if (param0.indexOf(param1) != -1) {
                   break L2;
                 } else {
@@ -143,7 +141,7 @@ final class id {
         return var3;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
     }
 

@@ -30,7 +30,7 @@ final class sa {
     static String field_l;
     static int[] field_w;
 
-    final static String a() {
+    final static String a(boolean param0) {
         if (ra.field_e != wd.field_Lb) {
           sa.a(38);
           if (pa.field_I == ra.field_e) {

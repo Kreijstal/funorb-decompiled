@@ -93,7 +93,7 @@ final class eq extends ak {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_Xb = null;
         field_Hb = null;
         field_fc = null;

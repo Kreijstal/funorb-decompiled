@@ -9,7 +9,7 @@ final class ii extends RuntimeException {
     static int[] field_d;
     static String[] field_b;
 
-    final static boolean a() {
+    final static boolean a(byte param0) {
         if (null == r.field_a) {
             return false;
         }

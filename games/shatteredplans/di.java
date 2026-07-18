@@ -15,7 +15,7 @@ final class di extends oh {
     static boolean[] field_p;
     static int field_m;
 
-    final static boolean a(int[] param0) {
+    final static boolean a(int[] param0, int param1) {
         RuntimeException var2 = null;
         long var2_long = 0L;
         sk var4_ref_sk = null;
@@ -242,8 +242,7 @@ final class di extends oh {
           if (sl.field_m != null) {
             L0: {
               var6 = (CharSequence) (Object) param0;
-              int discarded$4 = 1;
-              var2 = ji.a(var6);
+              var2 = ji.a(var6, true);
               if (param1 > 115) {
                 break L0;
               } else {
@@ -264,8 +263,7 @@ final class di extends oh {
               if (var3 != null) {
                 L3: {
                   var7 = (CharSequence) (Object) var3.field_Ab;
-                  int discarded$5 = 1;
-                  var4 = ji.a(var7);
+                  var4 = ji.a(var7, true);
                   if (var4 == null) {
                     var4 = var3.field_Ab;
                     break L3;

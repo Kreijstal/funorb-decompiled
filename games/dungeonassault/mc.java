@@ -110,8 +110,7 @@ class mc extends hh {
                       break L1;
                     }
                   }
-                  int discarded$3 = 121;
-                  o.a();
+                  o.a(121);
                   ac.field_B.d((byte) -105, 61);
                   var4_int = 0;
                   var5 = 0;

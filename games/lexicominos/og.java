@@ -14,7 +14,7 @@ final class og implements rd {
     private int field_h;
     static String field_j;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
         field_c = null;
         int var1 = 0;

@@ -15,7 +15,7 @@ final class nr extends oh {
     static bi[] field_r;
     static qb field_l;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_r = null;
         field_o = null;
         field_l = null;

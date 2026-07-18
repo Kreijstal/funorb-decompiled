@@ -11,7 +11,7 @@ final class ub extends li {
     int field_n;
     static int[] field_p;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_t = null;
         field_p = null;
     }

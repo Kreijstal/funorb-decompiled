@@ -57,7 +57,7 @@ final class ef {
         return stackIn_13_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_d = null;
@@ -70,7 +70,7 @@ final class ef {
         throw new IllegalStateException();
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

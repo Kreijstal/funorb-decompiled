@@ -21,7 +21,7 @@ final class rh {
         return ((rh) this).field_c;
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_a = null;
         field_e = null;
         field_d = null;
@@ -45,7 +45,7 @@ final class rh {
         }
     }
 
-    final static void a() {
+    final static void a(boolean param0) {
         RuntimeException var1 = null;
         dl var1_ref = null;
         Object var2 = null;
@@ -149,15 +149,14 @@ final class rh {
         }
     }
 
-    final static rh b() {
+    final static rh b(int param0) {
         String var1 = vg.b((byte) -29);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
                 var1 = "";
             }
         }
-        int discarded$0 = 6;
-        return new rh(vg.b((byte) -29), lk.b());
+        return new rh(vg.b((byte) -29), lk.b(6));
     }
 
     rh(String param0, boolean param1) {

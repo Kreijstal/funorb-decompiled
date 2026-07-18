@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ei {
-    final static void a(ee[] param0, int param1, vr param2, String[][] param3, String[] param4, String[][] param5, boolean param6, kv[][] param7, String[] param8, boolean param9, vr param10, int[] param11, int param12, byte[] param13, int[] param14, String[] param15, vr param16, kv[][] param17, byte[] param18) {
+    final static void a(ee[] param0, int param1, vr param2, String[][] param3, String[] param4, String[][] param5, boolean param6, kv[][] param7, String[] param8, boolean param9, vr param10, int[] param11, int param12, byte[] param13, int[] param14, String[] param15, vr param16, kv[][] param17, byte[] param18, int param19) {
         RuntimeException var20 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -236,11 +236,9 @@ final class ei {
             kea.a(-12238, param16);
             pna.a(param17, 1, param16, 5, param8, param13, param18, param5, param15, true, 4, param4, param7, param11, param3);
             nma.a(param10, true, true, param16);
-            int discarded$2 = 13;
-            bla.c();
+            bla.c((byte) 13);
             ft.a(2048);
-            int discarded$3 = 124;
-            gca.d();
+            gca.d((byte) 124);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -633,7 +631,7 @@ final class ei {
         var2.d(qea.a(false), 0);
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         if (-fa.field_l != ur.field_d) {
           if (ur.field_d != -fa.field_l + 250) {
             ur.field_d = ur.field_d + 1;

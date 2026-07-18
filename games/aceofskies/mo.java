@@ -186,7 +186,7 @@ final class mo {
         return stackIn_26_0;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!ks.field_b) {
             throw new IllegalStateException();
         }
@@ -195,7 +195,7 @@ final class mo {
         ob.field_d = 0;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_c = null;
         int var1 = -16;

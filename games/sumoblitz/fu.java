@@ -274,7 +274,7 @@ final class fu extends wp {
         return stackIn_24_0 != 0;
     }
 
-    final static int e() {
+    final static int e(byte param0) {
         int var1 = 0;
         return rf.field_d;
     }

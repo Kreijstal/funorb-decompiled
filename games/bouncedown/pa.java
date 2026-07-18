@@ -133,7 +133,7 @@ final class pa {
         }
     }
 
-    final static String a(long param0) {
+    final static String a(long param0, int param1) {
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
@@ -170,7 +170,7 @@ final class pa {
         return var6.toString();
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_d = null;
         field_a = null;
@@ -198,15 +198,14 @@ final class pa {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = Bounce.field_N;
         try {
           L0: {
-            int discarded$38 = 21856;
-            if (!fi.b()) {
+            if (!fi.b(21856)) {
               L1: {
                 if (sj.field_f == null) {
                   break L1;
@@ -222,14 +221,13 @@ final class pa {
               }
               return;
             } else {
-              boolean discarded$39 = kf.field_b.a(aj.field_f, true, true, kl.field_t);
+              boolean discarded$15 = kf.field_b.a(aj.field_f, true, true, kl.field_t);
               kf.field_b.d((byte) 120);
               L2: while (true) {
-                int discarded$40 = -15;
-                if (!q.g()) {
+                if (!q.g((byte) -15)) {
                   break L0;
                 } else {
-                  boolean discarded$41 = kf.field_b.a((byte) -90, lh.field_f, gk.field_d);
+                  boolean discarded$16 = kf.field_b.a((byte) -90, lh.field_f, gk.field_d);
                   continue L2;
                 }
               }

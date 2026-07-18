@@ -23,7 +23,7 @@ final class sl extends na {
         }
     }
 
-    final static vi d() {
+    final static vi d(byte param0) {
         return ol.field_c;
     }
 
@@ -399,7 +399,7 @@ final class sl extends na {
         }
     }
 
-    private final void f() {
+    private final void f(int param0) {
         try {
             int var2 = 0;
             Exception var4 = null;
@@ -445,12 +445,12 @@ final class sl extends na {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_q = null;
         field_o = null;
     }
 
-    final static o g() {
+    final static o g(int param0) {
         int var4_int = 0;
         int var5 = wizardrun.field_H;
         int var1 = tf.field_b[0] * cg.field_k[0];
@@ -603,8 +603,7 @@ final class sl extends na {
                 }
                 if (param2 > 118) {
                   ((sl) this).field_p = (hi) param1;
-                  int discarded$1 = -73;
-                  this.f();
+                  this.f(-73);
                   this.a(3, param0);
                   ((sl) this).field_g.field_m = 0;
                   ((sl) this).field_c = null;

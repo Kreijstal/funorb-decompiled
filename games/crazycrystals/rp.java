@@ -8,7 +8,7 @@ final class rp implements Runnable {
     static String field_a;
     volatile boolean field_d;
 
-    final static sj[] a() {
+    final static sj[] a(int param0) {
         int var1 = -1;
         return new sj[]{mn.field_j, og.field_x, cc.field_c, lm.field_e, jl.field_g, qn.field_g, sb.field_E, cm.field_a, tn.field_q, md.field_u, vg.field_a, qj.field_a, cn.field_b, sp.field_f};
     }
@@ -19,7 +19,7 @@ final class rp implements Runnable {
         ((rp) this).field_b = false;
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
     }
 
@@ -38,12 +38,11 @@ final class rp implements Runnable {
                     }
                 }
                 fh.a(true, 10L);
-                int discarded$0 = 1;
-                so.a((Object) null, ((rp) this).field_e);
+                so.a((Object) null, ((rp) this).field_e, true);
             }
         } catch (Exception exception) {
-            int discarded$1 = 21862;
-            wp.a((Throwable) (Object) exception, (String) null);
+            Object var5 = null;
+            wp.a((Throwable) (Object) exception, (String) null, 21862);
         } finally {
             ((rp) this).field_b = false;
         }

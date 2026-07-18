@@ -6,7 +6,7 @@ final class ci {
     static int[] field_a;
     static String field_c;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -35,8 +35,7 @@ final class ci {
 
     final static void a(byte param0) {
         if (10 == ml.field_t) {
-          int discarded$4 = 5;
-          ik.g();
+          ik.g(5);
           ml.field_t = 11;
           if (param0 < -123) {
             cb.field_c = true;
@@ -48,8 +47,7 @@ final class ci {
           }
         } else {
           if (!hd.g((byte) 100)) {
-            int discarded$5 = 5;
-            ik.g();
+            ik.g(5);
             ml.field_t = 11;
             if (param0 >= -123) {
               field_b = null;

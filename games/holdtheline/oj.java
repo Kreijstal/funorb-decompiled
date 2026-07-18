@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oj {
-    final static void a() {
+    final static void a(byte param0) {
         vi var1 = null;
         int var2 = 0;
         vi var3 = null;
@@ -14,10 +14,10 @@ final class oj {
               if (var1 != null) {
                 break L0;
               } else {
-                vi dupTemp$10 = vi.a(bd.field_Q, em.field_m[ab.field_jb], "");
-                var3 = dupTemp$10;
+                vi dupTemp$2 = vi.a(bd.field_Q, em.field_m[ab.field_jb], "");
+                var3 = dupTemp$2;
                 var1 = var3;
-                if (dupTemp$10 != null) {
+                if (dupTemp$2 != null) {
                   gh.field_n[ab.field_jb] = var3;
                   break L0;
                 } else {
@@ -26,52 +26,66 @@ final class oj {
               }
             }
             if (vl.field_d.field_q.a(22050, jh.field_a, var1, false, pd.field_f)) {
-              L1: {
-                i.field_k[ab.field_jb] = var1;
-                ab.field_jb = -1;
-                int fieldTemp$11 = oc.field_a - 1;
-                oc.field_a = oc.field_a - 1;
-                if (fieldTemp$11 != 0) {
-                  break L1;
-                } else {
-                  vl.field_d.field_q.e(0);
-                  jh.field_a = null;
-                  break L1;
-                }
-              }
-              if (bi.field_e != 2) {
-                if (1 == bi.field_e) {
-                  if (lc.field_d != null) {
-                    if (!ai.field_a.a(-98, lc.field_d)) {
-                      int discarded$12 = 30;
-                      int discarded$13 = 69;
-                      gn.a(true, var1);
-                      lc.field_d = null;
-                      return;
+              i.field_k[ab.field_jb] = var1;
+              ab.field_jb = -1;
+              int fieldTemp$3 = oc.field_a - 1;
+              oc.field_a = oc.field_a - 1;
+              if (fieldTemp$3 != 0) {
+                if (bi.field_e != 2) {
+                  if (1 == bi.field_e) {
+                    if (lc.field_d != null) {
+                      if (!ai.field_a.a(-98, lc.field_d)) {
+                        gn.a(true, var1, (byte) 69, 30);
+                        lc.field_d = null;
+                        return;
+                      } else {
+                        ec.field_D = var1;
+                        return;
+                      }
                     } else {
-                      ec.field_D = var1;
+                      gn.a(true, var1, (byte) 69, 30);
+                      lc.field_d = null;
                       return;
                     }
                   } else {
-                    int discarded$14 = 30;
-                    int discarded$15 = 69;
-                    gn.a(true, var1);
+                    gn.a(true, var1, (byte) 69, 30);
                     lc.field_d = null;
                     return;
                   }
                 } else {
-                  int discarded$16 = 30;
-                  int discarded$17 = 69;
-                  gn.a(true, var1);
-                  lc.field_d = null;
+                  lc.field_d = var1;
+                  gn.a(false, var1, (byte) 69, 30);
                   return;
                 }
               } else {
-                lc.field_d = var1;
-                int discarded$18 = 30;
-                int discarded$19 = 69;
-                gn.a(false, var1);
-                return;
+                vl.field_d.field_q.e(0);
+                jh.field_a = null;
+                if (bi.field_e != 2) {
+                  if (1 == bi.field_e) {
+                    if (lc.field_d != null) {
+                      if (!ai.field_a.a(-98, lc.field_d)) {
+                        gn.a(true, var1, (byte) 69, 30);
+                        lc.field_d = null;
+                        return;
+                      } else {
+                        ec.field_D = var1;
+                        return;
+                      }
+                    } else {
+                      gn.a(true, var1, (byte) 69, 30);
+                      lc.field_d = null;
+                      return;
+                    }
+                  } else {
+                    gn.a(true, var1, (byte) 69, 30);
+                    lc.field_d = null;
+                    return;
+                  }
+                } else {
+                  lc.field_d = var1;
+                  gn.a(false, var1, (byte) 69, 30);
+                  return;
+                }
               }
             } else {
               return;

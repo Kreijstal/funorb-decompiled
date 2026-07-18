@@ -15,7 +15,7 @@ class lk extends ml implements dm {
     private lg field_tb;
     static String field_nb;
 
-    public static void f() {
+    public static void f(byte param0) {
         int var1 = 33;
         field_nb = null;
         field_pb = null;
@@ -381,8 +381,7 @@ class lk extends ml implements dm {
               break L0;
             } else {
               if (((lk) this).field_rb) {
-                int discarded$4 = 116;
-                aa.d();
+                aa.d((byte) 116);
                 break L0;
               } else {
                 break L0;

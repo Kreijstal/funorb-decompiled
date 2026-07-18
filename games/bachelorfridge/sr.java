@@ -13,7 +13,7 @@ final class sr {
     int field_e;
     static sna field_b;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
         field_c = null;
         field_b = null;
@@ -576,14 +576,10 @@ final class sr {
                     break L29;
                   } else {
                     if (ce.field_y) {
-                      int discarded$4 = 11;
-                      int discarded$5 = 54;
-                      kl.a();
+                      kl.a(54, 11);
                       break L29;
                     } else {
-                      int discarded$6 = -124;
-                      int discarded$7 = 11;
-                      fq.a();
+                      fq.a(11, (byte) -124);
                       break L29;
                     }
                   }
@@ -603,7 +599,7 @@ final class sr {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         int var1 = 0;
         if (32 >= bs.field_k) {
             gka.a(119, 0);

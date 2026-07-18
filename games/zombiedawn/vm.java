@@ -154,7 +154,7 @@ final class vm extends vf {
         return stackIn_1_0;
     }
 
-    final static boolean c() {
+    final static boolean c(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var3 = 0;

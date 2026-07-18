@@ -49,7 +49,7 @@ final class dm extends cr {
         this(param0, (cr) (Object) param1, param1.field_Lb.field_Lb, param1.field_Lb.field_Hb, param1.field_Hb, param2, param3);
     }
 
-    final static void k() {
+    final static void k(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

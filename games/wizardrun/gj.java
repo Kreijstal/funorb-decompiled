@@ -231,8 +231,7 @@ final class gj implements Iterable {
                         break L10;
                       }
                     }
-                    int discarded$12 = 24268;
-                    cg.field_m = f.a(var4 * var2, var5 * var2);
+                    cg.field_m = f.a(var4 * var2, var5 * var2, 24268);
                     return;
                   } else {
                     L11: {
@@ -254,8 +253,7 @@ final class gj implements Iterable {
                         break L12;
                       }
                     }
-                    int discarded$13 = 24268;
-                    cg.field_m = f.a(var4 * var2, var5 * var2);
+                    cg.field_m = f.a(var4 * var2, var5 * var2, 24268);
                     return;
                   }
                 }
@@ -306,8 +304,7 @@ final class gj implements Iterable {
                   break L17;
                 }
               }
-              int discarded$14 = 24268;
-              cg.field_m = f.a(var4 * var2, var5 * var2);
+              cg.field_m = f.a(var4 * var2, var5 * var2, 24268);
               return;
             } else {
               L18: {
@@ -329,8 +326,7 @@ final class gj implements Iterable {
                   break L19;
                 }
               }
-              int discarded$15 = 24268;
-              cg.field_m = f.a(var4 * var2, var5 * var2);
+              cg.field_m = f.a(var4 * var2, var5 * var2, 24268);
               return;
             }
           } else {
@@ -445,8 +441,7 @@ final class gj implements Iterable {
                         break L31;
                       }
                     }
-                    int discarded$16 = 24268;
-                    cg.field_m = f.a(var4 * var2, var5 * var2);
+                    cg.field_m = f.a(var4 * var2, var5 * var2, 24268);
                     return;
                   }
                 }
@@ -496,8 +491,7 @@ final class gj implements Iterable {
                     break L36;
                   }
                 }
-                int discarded$17 = 24268;
-                cg.field_m = f.a(var4 * var2, var5 * var2);
+                cg.field_m = f.a(var4 * var2, var5 * var2, 24268);
                 return;
               } else {
                 L37: {
@@ -519,8 +513,7 @@ final class gj implements Iterable {
                     break L38;
                   }
                 }
-                int discarded$18 = 24268;
-                cg.field_m = f.a(var4 * var2, var5 * var2);
+                cg.field_m = f.a(var4 * var2, var5 * var2, 24268);
                 return;
               }
             } else {
@@ -569,126 +562,124 @@ final class gj implements Iterable {
                   break L43;
                 }
               }
-              if (param1 != 7) {
-                L44: {
+              L44: {
+                if (param1 == 7) {
+                  var4 = -1;
+                  var5 = -1;
+                  break L44;
+                } else {
                   if (param1 != 8) {
                     break L44;
                   } else {
-                    var4 = -1;
-                    var5 = -1;
-                    break L44;
-                  }
-                }
-                L45: {
-                  if (param1 != 11) {
-                    break L45;
-                  } else {
-                    var4 = -1;
-                    break L45;
-                  }
-                }
-                L46: {
-                  if (param1 != 12) {
-                    break L46;
-                  } else {
-                    var4 = -1;
-                    var5 = -1;
-                    break L46;
-                  }
-                }
-                L47: {
-                  if (13 != param1) {
-                    break L47;
-                  } else {
-                    var4 = 1;
-                    var5 = -1;
-                    break L47;
-                  }
-                }
-                if (param0 == 115) {
-                  L48: {
-                    if (param1 == 14) {
+                    L45: {
                       var4 = -1;
-                      var5 = 1;
-                      break L48;
-                    } else {
-                      break L48;
+                      var5 = -1;
+                      if (param1 != 11) {
+                        break L45;
+                      } else {
+                        var4 = -1;
+                        break L45;
+                      }
                     }
-                  }
-                  L49: {
-                    if (param1 == 15) {
-                      var4 = 1;
-                      var5 = 1;
-                      break L49;
-                    } else {
-                      break L49;
+                    L46: {
+                      if (param1 != 12) {
+                        break L46;
+                      } else {
+                        var4 = -1;
+                        var5 = -1;
+                        break L46;
+                      }
                     }
+                    L47: {
+                      if (13 != param1) {
+                        break L47;
+                      } else {
+                        var4 = 1;
+                        var5 = -1;
+                        break L47;
+                      }
+                    }
+                    L48: {
+                      if (param0 == 115) {
+                        break L48;
+                      } else {
+                        field_a = -119;
+                        break L48;
+                      }
+                    }
+                    L49: {
+                      if (param1 == 14) {
+                        var4 = -1;
+                        var5 = 1;
+                        break L49;
+                      } else {
+                        break L49;
+                      }
+                    }
+                    L50: {
+                      if (param1 == 15) {
+                        var4 = 1;
+                        var5 = 1;
+                        break L50;
+                      } else {
+                        break L50;
+                      }
+                    }
+                    cg.field_m = f.a(var4 * var2, var5 * var2, 24268);
+                    return;
                   }
-                  int discarded$19 = 24268;
-                  cg.field_m = f.a(var4 * var2, var5 * var2);
-                  return;
+                }
+              }
+              L51: {
+                if (param1 != 11) {
+                  break L51;
                 } else {
-                  L50: {
-                    field_a = -119;
-                    if (param1 == 14) {
-                      var4 = -1;
-                      var5 = 1;
-                      break L50;
-                    } else {
-                      break L50;
-                    }
-                  }
-                  L51: {
-                    if (param1 == 15) {
-                      var4 = 1;
-                      var5 = 1;
-                      break L51;
-                    } else {
-                      break L51;
-                    }
-                  }
-                  int discarded$20 = 24268;
-                  cg.field_m = f.a(var4 * var2, var5 * var2);
-                  return;
+                  var4 = -1;
+                  break L51;
                 }
-              } else {
-                L52: {
+              }
+              L52: {
+                if (param1 != 12) {
+                  break L52;
+                } else {
                   var4 = -1;
                   var5 = -1;
-                  if (param1 != 11) {
-                    break L52;
-                  } else {
-                    var4 = -1;
-                    break L52;
-                  }
+                  break L52;
                 }
-                L53: {
-                  if (param1 != 12) {
-                    break L53;
-                  } else {
-                    var4 = -1;
-                    var5 = -1;
-                    break L53;
-                  }
+              }
+              L53: {
+                if (13 != param1) {
+                  break L53;
+                } else {
+                  var4 = 1;
+                  var5 = -1;
+                  break L53;
                 }
+              }
+              if (param0 == 115) {
                 L54: {
-                  if (13 != param1) {
+                  if (param1 == 14) {
+                    var4 = -1;
+                    var5 = 1;
                     break L54;
                   } else {
-                    var4 = 1;
-                    var5 = -1;
                     break L54;
                   }
                 }
                 L55: {
-                  if (param0 == 115) {
+                  if (param1 == 15) {
+                    var4 = 1;
+                    var5 = 1;
                     break L55;
                   } else {
-                    field_a = -119;
                     break L55;
                   }
                 }
+                cg.field_m = f.a(var4 * var2, var5 * var2, 24268);
+                return;
+              } else {
                 L56: {
+                  field_a = -119;
                   if (param1 == 14) {
                     var4 = -1;
                     var5 = 1;
@@ -706,8 +697,7 @@ final class gj implements Iterable {
                     break L57;
                   }
                 }
-                int discarded$21 = 24268;
-                cg.field_m = f.a(var4 * var2, var5 * var2);
+                cg.field_m = f.a(var4 * var2, var5 * var2, 24268);
                 return;
               }
             }
@@ -759,99 +749,150 @@ final class gj implements Iterable {
               break L62;
             }
           }
-          L63: {
+          if (param1 != 7) {
+            L63: {
+              if (param1 != 8) {
+                break L63;
+              } else {
+                var4 = -1;
+                var5 = -1;
+                break L63;
+              }
+            }
             L64: {
-              if (param1 == 7) {
+              if (param1 != 11) {
                 break L64;
               } else {
-                if (param1 != 8) {
-                  break L63;
+                var4 = -1;
+                break L64;
+              }
+            }
+            L65: {
+              if (param1 != 12) {
+                break L65;
+              } else {
+                var4 = -1;
+                var5 = -1;
+                break L65;
+              }
+            }
+            L66: {
+              if (13 != param1) {
+                break L66;
+              } else {
+                var4 = 1;
+                var5 = -1;
+                break L66;
+              }
+            }
+            if (param0 != 115) {
+              L67: {
+                field_a = -119;
+                if (param1 == 14) {
+                  var4 = -1;
+                  var5 = 1;
+                  break L67;
                 } else {
-                  break L64;
+                  break L67;
                 }
               }
-            }
-            var4 = -1;
-            var5 = -1;
-            break L63;
-          }
-          L65: {
-            if (param1 != 11) {
-              break L65;
-            } else {
-              var4 = -1;
-              break L65;
-            }
-          }
-          L66: {
-            if (param1 != 12) {
-              break L66;
-            } else {
-              var4 = -1;
-              var5 = -1;
-              break L66;
-            }
-          }
-          L67: {
-            if (13 != param1) {
-              break L67;
-            } else {
-              var4 = 1;
-              var5 = -1;
-              break L67;
-            }
-          }
-          if (param0 != 115) {
-            L68: {
-              field_a = -119;
-              if (param1 == 14) {
-                var4 = -1;
-                var5 = 1;
-                break L68;
-              } else {
-                break L68;
+              L68: {
+                if (param1 == 15) {
+                  var4 = 1;
+                  var5 = 1;
+                  break L68;
+                } else {
+                  break L68;
+                }
               }
-            }
-            L69: {
-              if (param1 == 15) {
-                var4 = 1;
-                var5 = 1;
-                break L69;
-              } else {
-                break L69;
+              cg.field_m = f.a(var4 * var2, var5 * var2, 24268);
+              return;
+            } else {
+              L69: {
+                if (param1 == 14) {
+                  var4 = -1;
+                  var5 = 1;
+                  break L69;
+                } else {
+                  break L69;
+                }
               }
+              L70: {
+                if (param1 == 15) {
+                  var4 = 1;
+                  var5 = 1;
+                  break L70;
+                } else {
+                  break L70;
+                }
+              }
+              cg.field_m = f.a(var4 * var2, var5 * var2, 24268);
+              return;
             }
-            int discarded$22 = 24268;
-            cg.field_m = f.a(var4 * var2, var5 * var2);
-            return;
           } else {
-            L70: {
+            L71: {
+              var4 = -1;
+              var5 = -1;
+              if (param1 != 11) {
+                break L71;
+              } else {
+                var4 = -1;
+                break L71;
+              }
+            }
+            L72: {
+              if (param1 != 12) {
+                break L72;
+              } else {
+                var4 = -1;
+                var5 = -1;
+                break L72;
+              }
+            }
+            L73: {
+              if (13 != param1) {
+                break L73;
+              } else {
+                var4 = 1;
+                var5 = -1;
+                break L73;
+              }
+            }
+            L74: {
+              if (param0 == 115) {
+                break L74;
+              } else {
+                field_a = -119;
+                break L74;
+              }
+            }
+            L75: {
               if (param1 == 14) {
                 var4 = -1;
                 var5 = 1;
-                break L70;
+                break L75;
               } else {
-                break L70;
+                break L75;
               }
             }
-            L71: {
+            L76: {
               if (param1 == 15) {
                 var4 = 1;
                 var5 = 1;
-                break L71;
+                break L76;
               } else {
-                break L71;
+                break L76;
               }
             }
-            int discarded$23 = 24268;
-            cg.field_m = f.a(var4 * var2, var5 * var2);
+            cg.field_m = f.a(var4 * var2, var5 * var2, 24268);
             return;
           }
         }
     }
 
-    final static aa a(String param0) {
-        Object var2 = null;
+    final static aa a(String param0, int param1) {
+        String var2 = null;
+        RuntimeException var2_ref = null;
         aa var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -859,22 +900,22 @@ final class gj implements Iterable {
         CharSequence var7 = null;
         Object stackIn_5_0 = null;
         aa stackIn_17_0 = null;
-        Object stackIn_21_0 = null;
+        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        Object stackIn_22_0 = null;
+        RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        Object stackIn_23_0 = null;
+        RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         aa stackOut_16_0 = null;
         Object stackOut_4_0 = null;
-        Object stackOut_20_0 = null;
+        RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
-        Object stackOut_22_0 = null;
+        RuntimeException stackOut_22_0 = null;
         StringBuilder stackOut_22_1 = null;
         String stackOut_22_2 = null;
-        Object stackOut_21_0 = null;
+        RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
         String stackOut_21_2 = null;
         var5 = wizardrun.field_H;
@@ -882,15 +923,15 @@ final class gj implements Iterable {
           if (null != wl.field_f) {
             L0: {
               var6 = (CharSequence) (Object) param0;
-              var2 = (Object) (Object) ta.a(-55, var6);
+              var2 = ta.a(-55, var6);
               if (var2 == null) {
-                var2 = (Object) (Object) var6;
+                var2 = param0;
                 break L0;
               } else {
                 break L0;
               }
             }
-            var3 = (aa) (Object) wl.field_f.a((long)((String) var2).hashCode(), (byte) 124);
+            var3 = (aa) (Object) wl.field_f.a((long)var2.hashCode(), (byte) 124);
             L1: while (true) {
               if (var3 != null) {
                 L2: {
@@ -903,7 +944,7 @@ final class gj implements Iterable {
                     break L2;
                   }
                 }
-                if (!var4.equals(var2)) {
+                if (!var4.equals((Object) (Object) var2)) {
                   var3 = (aa) (Object) wl.field_f.a(false);
                   continue L1;
                 } else {
@@ -923,15 +964,15 @@ final class gj implements Iterable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_20_0 = var2;
+            var2_ref = decompiledCaughtException;
+            stackOut_20_0 = (RuntimeException) var2_ref;
             stackOut_20_1 = new StringBuilder().append("gj.B(");
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param0 == null) {
-              stackOut_22_0 = stackIn_22_0;
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
               stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
@@ -939,7 +980,7 @@ final class gj implements Iterable {
               stackIn_23_2 = stackOut_22_2;
               break L3;
             } else {
-              stackOut_21_0 = stackIn_21_0;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
@@ -952,7 +993,7 @@ final class gj implements Iterable {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_f = null;
     }
 
@@ -999,7 +1040,7 @@ final class gj implements Iterable {
         }
     }
 
-    final static void a(java.awt.Component param0) {
+    final static void a(java.awt.Component param0, int param1) {
         try {
             param0.addMouseListener((java.awt.event.MouseListener) (Object) tc.field_m);
             param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) tc.field_m);

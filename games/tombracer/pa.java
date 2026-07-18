@@ -16,11 +16,11 @@ final class pa {
         return bt.field_b;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2, int param3, boolean param4) {
         tga.field_a.b(param1, -11185, 3, fm.a(false, param2), param3);
     }
 

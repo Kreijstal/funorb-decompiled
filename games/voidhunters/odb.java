@@ -10,13 +10,13 @@ final class odb implements ntb {
     public final void b(byte param0, tv param1) {
         odb var4 = (odb) (Object) param1;
         odb var3 = var4;
-        var4.field_a = var4.field_a;
-        var4.field_d = var4.field_d;
+        var4.field_a = ((odb) this).field_a;
+        var4.field_d = ((odb) this).field_d;
         if (param0 < 54) {
             return;
         }
         try {
-            var4.field_c = var4.field_c;
+            var4.field_c = ((odb) this).field_c;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "odb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -35,7 +35,7 @@ final class odb implements ntb {
         }
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
     }
 
@@ -65,8 +65,8 @@ final class odb implements ntb {
               L1: {
                 var5 = (odb) (Object) param0;
                 var4 = 0;
-                if (var5.field_a != var5.field_a) {
-                  System.out.println("int target_id has changed. before=" + var5.field_a + ", now=" + var5.field_a);
+                if (var5.field_a != ((odb) this).field_a) {
+                  System.out.println("int target_id has changed. before=" + var5.field_a + ", now=" + ((odb) this).field_a);
                   var4 = 1;
                   break L1;
                 } else {
@@ -74,19 +74,19 @@ final class odb implements ntb {
                 }
               }
               L2: {
-                if (var5.field_d == var5.field_d) {
+                if (((odb) this).field_d == var5.field_d) {
                   break L2;
                 } else {
                   var4 = 1;
-                  System.out.println("int target_x has changed. before=" + var5.field_d + ", now=" + var5.field_d);
+                  System.out.println("int target_x has changed. before=" + var5.field_d + ", now=" + ((odb) this).field_d);
                   break L2;
                 }
               }
               L3: {
-                if (var5.field_c == var5.field_c) {
+                if (var5.field_c == ((odb) this).field_c) {
                   break L3;
                 } else {
-                  System.out.println("int target_y has changed. before=" + var5.field_c + ", now=" + var5.field_c);
+                  System.out.println("int target_y has changed. before=" + var5.field_c + ", now=" + ((odb) this).field_c);
                   var4 = 1;
                   break L3;
                 }
@@ -227,13 +227,13 @@ final class odb implements ntb {
               L2: {
                 var3_int = -108 / ((22 - param0) / 59);
                 var4 = (odb) (Object) param1;
-                if (var4.field_a != var4.field_a) {
+                if (((odb) this).field_a != var4.field_a) {
                   break L2;
                 } else {
-                  if (var4.field_d != var4.field_d) {
+                  if (((odb) this).field_d != var4.field_d) {
                     break L2;
                   } else {
-                    if (var4.field_c == var4.field_c) {
+                    if (var4.field_c == ((odb) this).field_c) {
                       stackOut_5_0 = 0;
                       stackIn_6_0 = stackOut_5_0;
                       break L1;

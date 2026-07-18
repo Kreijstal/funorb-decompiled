@@ -57,7 +57,7 @@ final class j extends qg {
         ((j) this).field_y = (lk) (Object) ((j) this).d((byte) 61);
     }
 
-    final static void i() {
+    final static void i(int param0) {
         gh.a(17, 31888);
     }
 
@@ -148,7 +148,7 @@ final class j extends qg {
         }
     }
 
-    final static void j() {
+    final static void j(int param0) {
         r.field_p = false;
         ei.field_e = false;
         gh.a(-1, 31888);

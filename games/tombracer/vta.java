@@ -35,7 +35,7 @@ final class vta extends vw {
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0, int param1, int param2) {
         return (param1 & 2048) != 0 && (param0 & 55) != 0;
     }
 
@@ -204,7 +204,7 @@ final class vta extends vw {
         return true;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         fua.field_g = false;
         ok.field_s = vc.field_q.h(255) == 0 ? true : false;
     }

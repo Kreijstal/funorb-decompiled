@@ -112,7 +112,7 @@ final class bc extends mg {
         int var1 = -73 / ((-35 - param0) / 59);
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;

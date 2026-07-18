@@ -51,7 +51,7 @@ final class ta extends jea {
         }
     }
 
-    public static void d() {
+    public static void d(byte param0) {
         field_vb = null;
         field_ub = null;
     }
@@ -89,7 +89,7 @@ final class ta extends jea {
         this.b((byte) 123, param3);
     }
 
-    final static void a(iu[][] param0, String[][] param1, int[] param2, int param3, cn param4, int param5, hja[] param6, byte[] param7, byte[] param8, String[][] param9, String[] param10, cn param11, byte param12, int[] param13, iu[][] param14, cn param15) {
+    final static void a(iu[][] param0, String[][] param1, int[] param2, int param3, cn param4, int param5, hja[] param6, byte[] param7, byte[] param8, String[][] param9, String[] param10, cn param11, byte param12, int[] param13, iu[][] param14, cn param15, boolean param16) {
         int var17_int = 0;
         RuntimeException var17 = null;
         Object var18 = null;

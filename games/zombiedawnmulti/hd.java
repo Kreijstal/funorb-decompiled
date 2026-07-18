@@ -60,8 +60,7 @@ final class hd extends un {
                 if (param1.equals((Object) (Object) ((hd) this).field_v)) {
                   break L1;
                 } else {
-                  int discarded$2 = 0;
-                  var3 = ga.a(param1);
+                  var3 = ga.a(param1, false);
                   if (!var3.d(-99)) {
                     stackOut_6_0 = ua.field_I;
                     stackIn_7_0 = stackOut_6_0;
@@ -255,7 +254,7 @@ final class hd extends un {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_w = null;
         field_r = null;
         field_t = null;
@@ -577,7 +576,7 @@ final class hd extends un {
         }
     }
 
-    final static String a(int param0, String param1) {
+    final static String a(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;

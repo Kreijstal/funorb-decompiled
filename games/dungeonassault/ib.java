@@ -81,16 +81,15 @@ final class ib {
         }
     }
 
-    final static int b() {
+    final static int b(byte param0) {
         return hl.field_g;
     }
 
-    final static void a() {
+    final static void a(int param0) {
         if (!(null != cm.field_R)) {
             return;
         }
-        int discarded$0 = -32;
-        pd.a((java.awt.Canvas) (Object) cm.field_R);
+        pd.a((java.awt.Canvas) (Object) cm.field_R, -32);
         cm.field_R.a(i.field_A, 0);
         cm.field_R = null;
         if (!(il.field_c == null)) {
@@ -99,7 +98,7 @@ final class ib {
         c.field_h.requestFocus();
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_a = null;
         field_i = null;
         field_c = null;
@@ -115,16 +114,11 @@ final class ib {
             return;
         }
         try {
-            int discarded$0 = -1998;
-            var3.field_e = tp.a(kf.field_p, "idle", param0);
-            int discarded$1 = -1998;
-            var3.field_u = tp.a(kf.field_p, "select", param0);
-            int discarded$2 = -1998;
-            var3.field_t = tp.a(kf.field_p, "victory", param0);
-            int discarded$3 = -1998;
-            var3.field_v = tp.a(kf.field_p, "defeat", param0);
-            int discarded$4 = -1998;
-            var3.field_l = tp.a(kf.field_p, "death", param0);
+            var3.field_e = tp.a(kf.field_p, "idle", param0, -1998);
+            var3.field_u = tp.a(kf.field_p, "select", param0, -1998);
+            var3.field_t = tp.a(kf.field_p, "victory", param0, -1998);
+            var3.field_v = tp.a(kf.field_p, "defeat", param0, -1998);
+            var3.field_l = tp.a(kf.field_p, "death", param0, -1998);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "ib.F(" + (param0 != null ? "{...}" : "null") + ',' + true + ',' + param2 + ')');
         }
@@ -156,12 +150,10 @@ final class ib {
           L0: {
             var3 = "<col=" + Integer.toString(param1, 16) + ">";
             param2 = var3 + param2;
-            int discarded$4 = 48;
-            param2 = kk.a(param2, "</col>", var3);
+            param2 = kk.a(param2, "</col>", var3, (byte) 48);
             param2 = param2 + "</col>";
             var4 = 108 % ((-74 - param0) / 49);
-            int discarded$5 = 48;
-            param2 = kk.a(param2, var3 + "<col=", "<col=");
+            param2 = kk.a(param2, var3 + "<col=", "<col=", (byte) 48);
             stackOut_0_0 = (String) param2;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -206,7 +198,7 @@ final class ib {
         return nk.field_Hb;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         ek.field_b.b((byte) 52);
         int var1 = 0;
     }
@@ -245,8 +237,7 @@ final class ib {
         var2 = 0;
         L1: while (true) {
           if (var2 >= dk.field_d) {
-            int discarded$1 = 500;
-            sb.a();
+            sb.a(500);
             return var1;
           } else {
             var3 = jn.field_k[var2] * jc.field_f[var2];
@@ -295,7 +286,7 @@ final class ib {
         }
     }
 
-    final static int a(h param0) {
+    final static int a(h param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;

@@ -48,7 +48,7 @@ final class qd extends o {
         }
     }
 
-    final static int d() {
+    final static int d(int param0) {
         return (int)(1000000000L / ji.field_U);
     }
 
@@ -117,7 +117,7 @@ final class qd extends o {
         return tf.field_o - vh.field_g;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         field_I = null;
         field_G = null;

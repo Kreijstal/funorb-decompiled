@@ -37,8 +37,7 @@ abstract class te {
               var12 = mk.field_j;
               var2 = var12.a(-16384);
               if (0 == var2) {
-                int discarded$3 = 3922;
-                var10 = a.b();
+                var10 = a.b(3922);
                 var18 = var10;
                 var17 = var18;
                 var16 = var17;
@@ -80,8 +79,7 @@ abstract class te {
                   }
                 } else {
                   if (var2 != 2) {
-                    int discarded$4 = -15465;
-                    bd.a((Throwable) null, "A1: " + r.i(), -87);
+                    bd.a((Throwable) null, "A1: " + r.i(-15465), -87);
                     gb.g(-17464);
                     break L1;
                   } else {
@@ -90,8 +88,7 @@ abstract class te {
                       gb.g(-17464);
                       return;
                     } else {
-                      int discarded$5 = 3922;
-                      var13.field_l = a.b();
+                      var13.field_l = a.b(3922);
                       var13.field_k = true;
                       var13.field_m = var13.field_l[0];
                       var13.b((byte) 12);
@@ -110,7 +107,7 @@ abstract class te {
         }
     }
 
-    final static void a(long param0) {
+    final static void a(long param0, int param1) {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
@@ -127,7 +124,7 @@ abstract class te {
         }
     }
 
-    final static boolean a(CharSequence param0) {
+    final static boolean a(CharSequence param0, boolean param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -205,7 +202,7 @@ abstract class te {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        int var24 = 0;
+        int var25 = 0;
         RuntimeException decompiledCaughtException = null;
         var23 = Terraphoenix.field_V;
         try {
@@ -303,8 +300,8 @@ abstract class te {
                           }
                         }
                         var21 = var13 * l.field_k + var19;
-                        var24 = var19;
-                        var7_int = var24;
+                        var25 = var19;
+                        var7_int = var25;
                         var22 = var19;
                         L11: while (true) {
                           if (var20 <= var22) {
@@ -317,11 +314,11 @@ abstract class te {
                             continue L6;
                           } else {
                             L12: {
-                              var10 = (int)(Math.sqrt((double)(-((-param2 + var24) * (var24 - param2)) + -((-param3 + var8) * (-param3 + var8)) + param1 * param1)) + (double)var9);
-                              if (gd.field_a[var24][var8] <= var10) {
+                              var10 = (int)(Math.sqrt((double)(-((-param2 + var25) * (var25 - param2)) + -((-param3 + var8) * (-param3 + var8)) + param1 * param1)) + (double)var9);
+                              if (gd.field_a[var25][var8] <= var10) {
                                 L13: {
                                   if (param6) {
-                                    gd.field_a[var24][var8] = var10;
+                                    gd.field_a[var25][var8] = var10;
                                     break L13;
                                   } else {
                                     break L13;
@@ -336,7 +333,7 @@ abstract class te {
                                 break L12;
                               }
                             }
-                            var24++;
+                            var25++;
                             var22++;
                             continue L11;
                           }

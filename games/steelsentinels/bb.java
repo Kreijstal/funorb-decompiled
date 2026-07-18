@@ -12,7 +12,7 @@ abstract class bb extends dl {
     private int field_U;
     static int[] field_S;
 
-    public static void h() {
+    public static void h(byte param0) {
         field_S = null;
         field_W = null;
         field_P = null;
@@ -48,8 +48,7 @@ abstract class bb extends dl {
 
     boolean j(int param0) {
         if (param0 <= -50) {
-          int discarded$6 = 0;
-          ((bb) this).field_U = this.a();
+          ((bb) this).field_U = this.a(false);
           if (((bb) this).field_U == 0) {
             if (((bb) this).field_Q) {
               return false;
@@ -60,9 +59,8 @@ abstract class bb extends dl {
             return false;
           }
         } else {
-          lh discarded$7 = ((bb) this).h(-124);
-          int discarded$8 = 0;
-          ((bb) this).field_U = this.a();
+          lh discarded$2 = ((bb) this).h(-124);
+          ((bb) this).field_U = this.a(false);
           if (((bb) this).field_U == 0) {
             if (((bb) this).field_Q) {
               return false;
@@ -165,13 +163,12 @@ abstract class bb extends dl {
         }
     }
 
-    private final int a() {
+    private final int a(boolean param0) {
         return !((bb) this).field_Q ? 0 : (Object) (Object) ((bb) this).field_V.i(-1850) == this ? 256 : 0;
     }
 
     boolean i(int param0) {
-        int discarded$0 = 0;
-        int var2 = this.a();
+        int var2 = this.a(false);
         int var3 = var2 - ((bb) this).field_U;
         if (param0 != -8350) {
             return false;

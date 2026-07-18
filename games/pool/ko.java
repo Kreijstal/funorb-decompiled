@@ -71,7 +71,7 @@ final class ko {
         return var2;
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_a = null;
         field_b = null;
         field_d = null;
@@ -110,7 +110,7 @@ final class ko {
         return (cb.field_d & 1 << param0) != 0 ? true : false;
     }
 
-    final static void g() {
+    final static void g(byte param0) {
         int var1_int = 0;
         int var2 = Pool.field_O;
         try {
@@ -268,7 +268,7 @@ final class ko {
         }
     }
 
-    final static void a(int[] param0, int param1, byte[] param2, int param3) {
+    final static void a(int[] param0, int param1, byte[] param2, int param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

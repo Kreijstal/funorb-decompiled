@@ -555,7 +555,7 @@ class ek extends ce {
         return stackIn_11_0;
     }
 
-    final static void g() {
+    final static void g(int param0) {
         ph.field_Ab = false;
     }
 
@@ -734,7 +734,7 @@ class ek extends ce {
         return stackIn_7_0 != 0;
     }
 
-    final static ke a(boolean param0, boolean param1) {
+    final static ke a(boolean param0, boolean param1, int param2) {
         ec var4 = null;
         ec var5 = null;
         ec var6 = null;

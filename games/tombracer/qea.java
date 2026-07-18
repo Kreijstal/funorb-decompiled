@@ -12,7 +12,7 @@ final class qea {
     private int[] field_e;
     private int field_c;
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -95,7 +95,7 @@ final class qea {
         field_b = null;
     }
 
-    private final void c() {
+    private final void c(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -145,13 +145,12 @@ final class qea {
             int discarded$0 = ((qea) this).a(89, 120);
         }
         if (((qea) this).field_d == 0) {
-            int discarded$1 = 2;
-            this.c();
+            this.c(2);
             ((qea) this).field_d = 256;
         }
-        int fieldTemp$2 = ((qea) this).field_d - 1;
+        int fieldTemp$1 = ((qea) this).field_d - 1;
         ((qea) this).field_d = ((qea) this).field_d - 1;
-        return ((qea) this).field_g[fieldTemp$2];
+        return ((qea) this).field_g[fieldTemp$1];
     }
 
     final int a(int param0, int param1) {
@@ -169,7 +168,7 @@ final class qea {
         return oea.a(var4, param0, -66);
     }
 
-    private final void a() {
+    private final void a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -196,8 +195,7 @@ final class qea {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= 256) {
-                    int discarded$1 = 2;
-                    this.c();
+                    this.c(2);
                     ((qea) this).field_d = 256;
                     return;
                   } else {
@@ -470,8 +468,7 @@ final class qea {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((qea) this).field_g[var2_int] = param0[var2_int];
             }
-            int discarded$0 = 1;
-            this.a();
+            this.a(true);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "qea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

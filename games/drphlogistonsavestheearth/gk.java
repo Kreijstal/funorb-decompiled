@@ -91,8 +91,7 @@ final class gk {
                   break L6;
                 }
               }
-              int discarded$2 = -60;
-              ja.a(param0);
+              ja.a(param0, (byte) -60);
               break L0;
             }
           }
@@ -268,14 +267,13 @@ final class gk {
         }
     }
 
-    final static String a() {
+    final static String a(int param0) {
         String var1 = "";
         if (pi.field_O != null) {
             var1 = pi.field_O.b(false);
         }
         if (0 == var1.length()) {
-            int discarded$0 = 0;
-            var1 = am.h();
+            var1 = am.h(0);
         }
         if (var1.length() == 0) {
             var1 = u.field_e;

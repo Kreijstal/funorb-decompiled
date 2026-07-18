@@ -42,7 +42,7 @@ final class rpa extends qe {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_g = null;
         field_c = null;
         field_f = null;
@@ -271,7 +271,7 @@ final class rpa extends qe {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0, boolean param1, boolean param2) {
         if (!param1) {
             return;
         }

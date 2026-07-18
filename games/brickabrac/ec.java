@@ -68,8 +68,7 @@ final class ec extends ib implements en {
                   } else {
                     var7 = ((ec) this).field_T[var6_int];
                     if (var7 != -1) {
-                      int discarded$2 = 1;
-                      bd.a(((ec) this).field_T[var6_int]);
+                      bd.a(((ec) this).field_T[var6_int], true);
                       break L2;
                     } else {
                       ((ec) this).field_K.m(17);
@@ -121,7 +120,7 @@ final class ec extends ib implements en {
         }
     }
 
-    final static void h() {
+    final static void h(int param0) {
         lm.a(-1);
         cg.field_l = true;
         sa.field_E = true;
@@ -506,7 +505,7 @@ final class ec extends ib implements en {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_Q = null;
         field_N = null;
         field_L = null;

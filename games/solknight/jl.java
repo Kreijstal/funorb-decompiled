@@ -14,7 +14,7 @@ final class jl implements Iterator {
     private ec field_a;
     private ik field_i;
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_g = null;
         field_h = null;

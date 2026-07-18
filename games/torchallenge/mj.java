@@ -111,8 +111,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         try {
                             var9 = param0.getParameter("cookieprefix");
                             var3 = var9 + "settings";
-                            int discarded$2 = 20511;
-                            var4 = (String) ff.a("getcookies", param0);
+                            var4 = (String) ff.a("getcookies", param0, 20511);
                             var5 = dl.a(var4, ';', -32);
                             var6 = 0;
                             statePc = 5;
@@ -585,7 +584,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_a = null;
     }

@@ -11,7 +11,7 @@ final class qa {
         field_b = null;
     }
 
-    final static int a() {
+    final static int a(byte param0) {
         int var1 = 0;
         return tc.field_e;
     }

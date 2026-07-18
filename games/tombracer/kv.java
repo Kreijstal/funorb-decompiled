@@ -56,8 +56,7 @@ final class kv {
             }
             L2: {
               L3: {
-                int discarded$2 = 0;
-                var3 = hua.a(param1);
+                var3 = hua.a(param1, 0);
                 if (-1 != param2.indexOf(param1)) {
                   break L3;
                 } else {
@@ -134,7 +133,7 @@ final class kv {
         return stackIn_7_0 != 0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_c = null;
         field_a = null;
         field_b = null;

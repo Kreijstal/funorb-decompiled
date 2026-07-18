@@ -96,7 +96,7 @@ final class sv extends wv {
         tp.field_K.a((aaa.a(false) >> 1) - (tp.field_K.a() >> 1), var3);
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_q = null;
     }
 
@@ -194,8 +194,7 @@ final class sv extends wv {
         try {
           L0: {
             if (jna.a(false, param4, param1, param2)) {
-              int discarded$2 = -123;
-              stackOut_4_0 = ci.a(param0.a(false, param1, param4));
+              stackOut_4_0 = ci.a(param0.a(false, param1, param4), (byte) -123);
               stackIn_5_0 = stackOut_4_0;
               break L0;
             } else {

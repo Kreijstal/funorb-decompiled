@@ -39,8 +39,7 @@ class ba extends tk {
         try {
           L0: {
             if (ln.a(-125, param1, param3, param0)) {
-              int discarded$2 = -2;
-              stackOut_5_0 = kk.a();
+              stackOut_5_0 = kk.a((byte) -2);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
@@ -196,7 +195,7 @@ class ba extends tk {
         return stackIn_7_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_A = null;
         field_B = null;
         field_x = null;

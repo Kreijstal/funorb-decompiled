@@ -429,8 +429,7 @@ final class iu extends at {
                   break L24;
                 }
               }
-              int discarded$1 = -118;
-              var10 = ah.a(var8_ref_gs);
+              var10 = ah.a(var8_ref_gs, (byte) -118);
               var11 = var10 + po.c(var8_ref_gs.field_n);
               var12 = tc.a(false, var8_ref_gs);
               var8_ref_gs.field_h = new sna(0L, uc.field_l, var11);
@@ -452,7 +451,7 @@ final class iu extends at {
         return true;
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_l = null;
     }
 

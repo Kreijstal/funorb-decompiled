@@ -9,16 +9,14 @@ final class km extends sj {
     private ti field_s;
     vj field_o;
 
-    final static sc e() {
-        int discarded$0 = 8192;
-        String var1 = eg.f();
+    final static sc e(int param0) {
+        String var1 = eg.f(8192);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
                 var1 = "";
             }
         }
-        int discarded$1 = 8192;
-        return new sc(eg.f(), op.g(120));
+        return new sc(eg.f(8192), op.g(120));
     }
 
     final sj d() {

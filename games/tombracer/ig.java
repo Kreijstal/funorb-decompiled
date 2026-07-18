@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ig {
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException runtimeException = null;
         int var2 = 0;
         pha var3 = null;

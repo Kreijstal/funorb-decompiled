@@ -60,7 +60,7 @@ final class mh {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         int var2 = SolKnight.field_L ? 1 : 0;
         fh.field_e.c(-10158);
         int var1_int = 0;
@@ -78,7 +78,7 @@ final class mh {
         }
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
     }
 

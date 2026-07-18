@@ -1165,95 +1165,99 @@ final class sw {
             var8 = param5 * param5;
             var9 = param2 * param2;
             var10 = var9 << 1;
-            var11 = var8 << 1;
-            var12 = param2 << 1;
-            var13 = (-var12 + 1) * var8 - -var10;
-            var14 = -((var12 + -1) * var11) + var9;
-            var15 = var8 << 2;
-            var16 = var9 << 2;
-            var17 = (3 + (var6_int << 1)) * var10;
-            var18 = var11 * (-3 + (var7 << 1));
-            var19 = (1 + var6_int) * var16;
-            var20 = var15 * (-1 + var7);
-            ww.a(param4, param3 + param5, rba.field_b[param1], (byte) 75, -param5 + param3);
-            L1: while (true) {
-              L2: {
-                L3: {
-                  if (var7 <= 0) {
-                    break L3;
-                  } else {
-                    if (var25 != 0) {
-                      break L2;
+            if (param0 < -112) {
+              var11 = var8 << 1;
+              var12 = param2 << 1;
+              var13 = (-var12 + 1) * var8 - -var10;
+              var14 = -((var12 + -1) * var11) + var9;
+              var15 = var8 << 2;
+              var16 = var9 << 2;
+              var17 = (3 + (var6_int << 1)) * var10;
+              var18 = var11 * (-3 + (var7 << 1));
+              var19 = (1 + var6_int) * var16;
+              var20 = var15 * (-1 + var7);
+              ww.a(param4, param3 + param5, rba.field_b[param1], (byte) 75, -param5 + param3);
+              L1: while (true) {
+                L2: {
+                  L3: {
+                    if (var7 <= 0) {
+                      break L3;
                     } else {
-                      L4: {
-                        L5: {
-                          if (var13 < 0) {
-                            L6: while (true) {
-                              if (var13 >= 0) {
-                                break L5;
-                              } else {
-                                var14 = var14 + var19;
-                                var13 = var13 + var17;
-                                var6_int++;
-                                var19 = var19 + var16;
-                                var17 = var17 + var16;
-                                if (var25 != 0) {
-                                  break L4;
+                      if (var25 != 0) {
+                        break L2;
+                      } else {
+                        L4: {
+                          L5: {
+                            if (var13 < 0) {
+                              L6: while (true) {
+                                if (var13 >= 0) {
+                                  break L5;
                                 } else {
-                                  if (var25 == 0) {
-                                    continue L6;
+                                  var14 = var14 + var19;
+                                  var13 = var13 + var17;
+                                  var6_int++;
+                                  var19 = var19 + var16;
+                                  var17 = var17 + var16;
+                                  if (var25 != 0) {
+                                    break L4;
                                   } else {
-                                    break L5;
+                                    if (var25 == 0) {
+                                      continue L6;
+                                    } else {
+                                      break L5;
+                                    }
                                   }
                                 }
                               }
+                            } else {
+                              break L5;
                             }
-                          } else {
-                            break L5;
                           }
-                        }
-                        L7: {
-                          if (var14 >= 0) {
-                            break L7;
-                          } else {
-                            var14 = var14 + var19;
-                            var13 = var13 + var17;
-                            var19 = var19 + var16;
-                            var17 = var17 + var16;
-                            var6_int++;
-                            break L7;
+                          L7: {
+                            if (var14 >= 0) {
+                              break L7;
+                            } else {
+                              var14 = var14 + var19;
+                              var13 = var13 + var17;
+                              var19 = var19 + var16;
+                              var17 = var17 + var16;
+                              var6_int++;
+                              break L7;
+                            }
                           }
+                          var13 = var13 + -var20;
+                          var14 = var14 + -var18;
+                          var20 = var20 - var15;
+                          var18 = var18 - var15;
+                          var7--;
+                          break L4;
                         }
-                        var13 = var13 + -var20;
-                        var14 = var14 + -var18;
-                        var20 = var20 - var15;
-                        var18 = var18 - var15;
-                        var7--;
-                        break L4;
-                      }
-                      var21 = -var7 + param1;
-                      var22 = param1 - -var7;
-                      var23 = var6_int + param3;
-                      var24 = param3 - var6_int;
-                      ww.a(param4, var23, rba.field_b[var21], (byte) 75, var24);
-                      ww.a(param4, var23, rba.field_b[var22], (byte) 75, var24);
-                      if (var25 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
+                        var21 = -var7 + param1;
+                        var22 = param1 - -var7;
+                        var23 = var6_int + param3;
+                        var24 = param3 - var6_int;
+                        ww.a(param4, var23, rba.field_b[var21], (byte) 75, var24);
+                        ww.a(param4, var23, rba.field_b[var22], (byte) 75, var24);
+                        if (var25 == 0) {
+                          continue L1;
+                        } else {
+                          break L3;
+                        }
                       }
                     }
                   }
+                  break L2;
                 }
-                break L2;
+                break L0;
               }
-              break L0;
+            } else {
+              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var6, "sw.H(" + -117 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rta.a((Throwable) (Object) var6, "sw.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -2022,214 +2026,222 @@ final class sw {
         try {
           L0: {
             if (null != param1) {
-              var4_int = -1;
-              var5 = -1;
-              var6 = 0;
-              var7 = param1.length();
+              L1: {
+                var4_int = -1;
+                var5 = -1;
+                var6 = 0;
+                var7 = param1.length();
+                if (param0 == 62) {
+                  break L1;
+                } else {
+                  sw.a((byte) -112, -45, -77, 71, 75, 122);
+                  break L1;
+                }
+              }
               var8 = 0;
-              L1: while (true) {
-                L2: {
-                  L3: {
+              L2: while (true) {
+                L3: {
+                  L4: {
                     if (~var8 <= ~var7) {
-                      break L3;
+                      break L4;
                     } else {
                       var9 = param1.charAt(var8);
                       stackOut_9_0 = var9;
                       stackIn_75_0 = stackOut_9_0;
                       stackIn_10_0 = stackOut_9_0;
                       if (var12 != 0) {
-                        break L2;
+                        break L3;
                       } else {
-                        L4: {
-                          L5: {
+                        L5: {
+                          L6: {
                             if (stackIn_10_0 != 60) {
-                              break L5;
+                              break L6;
                             } else {
                               var4_int = var8;
                               if (var12 == 0) {
-                                break L4;
-                              } else {
                                 break L5;
+                              } else {
+                                break L6;
                               }
                             }
                           }
-                          L6: {
+                          L7: {
                             if (62 != var9) {
-                              break L6;
+                              break L7;
                             } else {
                               if (var4_int != -1) {
-                                L7: {
+                                L8: {
                                   var10 = param1.substring(1 + var4_int, var8);
                                   var4_int = -1;
                                   if (!var10.equals((Object) (Object) "lt")) {
-                                    break L7;
+                                    break L8;
                                   } else {
                                     var9 = 60;
                                     if (var12 == 0) {
-                                      break L6;
-                                    } else {
                                       break L7;
-                                    }
-                                  }
-                                }
-                                L8: {
-                                  if (!var10.equals((Object) (Object) "gt")) {
-                                    break L8;
-                                  } else {
-                                    var9 = 62;
-                                    if (var12 == 0) {
-                                      break L6;
                                     } else {
                                       break L8;
                                     }
                                   }
                                 }
                                 L9: {
-                                  if (var10.equals((Object) (Object) "nbsp")) {
+                                  if (!var10.equals((Object) (Object) "gt")) {
                                     break L9;
                                   } else {
-                                    L10: {
+                                    var9 = 62;
+                                    if (var12 == 0) {
+                                      break L7;
+                                    } else {
+                                      break L9;
+                                    }
+                                  }
+                                }
+                                L10: {
+                                  if (var10.equals((Object) (Object) "nbsp")) {
+                                    break L10;
+                                  } else {
+                                    L11: {
                                       if (!var10.equals((Object) (Object) "shy")) {
-                                        break L10;
+                                        break L11;
                                       } else {
                                         var9 = 173;
                                         if (var12 == 0) {
-                                          break L6;
-                                        } else {
-                                          break L10;
-                                        }
-                                      }
-                                    }
-                                    L11: {
-                                      if (!var10.equals((Object) (Object) "times")) {
-                                        break L11;
-                                      } else {
-                                        var9 = 215;
-                                        if (var12 == 0) {
-                                          break L6;
+                                          break L7;
                                         } else {
                                           break L11;
                                         }
                                       }
                                     }
                                     L12: {
-                                      if (!var10.equals((Object) (Object) "euro")) {
+                                      if (!var10.equals((Object) (Object) "times")) {
                                         break L12;
                                       } else {
-                                        var9 = 8364;
+                                        var9 = 215;
                                         if (var12 == 0) {
-                                          break L6;
+                                          break L7;
                                         } else {
                                           break L12;
                                         }
                                       }
                                     }
                                     L13: {
-                                      if (var10.equals((Object) (Object) "copy")) {
+                                      if (!var10.equals((Object) (Object) "euro")) {
                                         break L13;
                                       } else {
-                                        L14: {
+                                        var9 = 8364;
+                                        if (var12 == 0) {
+                                          break L7;
+                                        } else {
+                                          break L13;
+                                        }
+                                      }
+                                    }
+                                    L14: {
+                                      if (var10.equals((Object) (Object) "copy")) {
+                                        break L14;
+                                      } else {
+                                        L15: {
                                           if (var10.equals((Object) (Object) "reg")) {
-                                            break L14;
+                                            break L15;
                                           } else {
                                             if (!var10.startsWith("img=")) {
-                                              break L4;
+                                              break L5;
                                             } else {
-                                              L15: {
+                                              L16: {
                                                 if (param2 != null) {
-                                                  break L15;
+                                                  break L16;
                                                 } else {
                                                   if (var12 == 0) {
-                                                    break L4;
+                                                    break L5;
                                                   } else {
-                                                    break L15;
+                                                    break L16;
                                                   }
                                                 }
                                               }
                                               try {
-                                                L16: {
+                                                L17: {
                                                   var11_int = lob.a(10, (CharSequence) (Object) var10.substring(4));
                                                   var6 = var6 + param2[var11_int].c();
                                                   var5 = -1;
                                                   decompiledRegionSelector0 = 0;
-                                                  break L16;
+                                                  break L17;
                                                 }
                                               } catch (java.lang.Exception decompiledCaughtParameter0) {
                                                 decompiledCaughtException = decompiledCaughtParameter0;
-                                                L17: {
+                                                L18: {
                                                   var11 = (Exception) (Object) decompiledCaughtException;
                                                   if (var12 == 0) {
                                                     decompiledRegionSelector0 = 0;
-                                                    break L17;
+                                                    break L18;
                                                   } else {
                                                     decompiledRegionSelector0 = 1;
-                                                    break L17;
+                                                    break L18;
                                                   }
                                                 }
                                               }
                                               if (decompiledRegionSelector0 == 0) {
-                                                break L4;
+                                                break L5;
                                               } else {
-                                                break L14;
+                                                break L15;
                                               }
                                             }
                                           }
                                         }
                                         var9 = 174;
                                         if (var12 == 0) {
-                                          break L6;
+                                          break L7;
                                         } else {
-                                          break L13;
+                                          break L14;
                                         }
                                       }
                                     }
                                     var9 = 169;
                                     if (var12 == 0) {
-                                      break L6;
+                                      break L7;
                                     } else {
-                                      break L9;
+                                      break L10;
                                     }
                                   }
                                 }
                                 var9 = 160;
-                                break L6;
+                                break L7;
                               } else {
-                                break L6;
+                                break L7;
                               }
                             }
                           }
                           if (var4_int != -1) {
-                            break L4;
+                            break L5;
                           } else {
-                            L18: {
+                            L19: {
                               var6 = var6 + (255 & ((sw) this).field_b[aea.a(-121, (char) var9) & 255]);
                               if (((sw) this).field_g == null) {
-                                break L18;
+                                break L19;
                               } else {
                                 if (-1 != var5) {
                                   var6 = var6 + ((sw) this).field_g[var5][var9];
-                                  break L18;
+                                  break L19;
                                 } else {
-                                  break L18;
+                                  break L19;
                                 }
                               }
                             }
                             var5 = var9;
-                            break L4;
+                            break L5;
                           }
                         }
                         var8++;
                         if (var12 == 0) {
-                          continue L1;
+                          continue L2;
                         } else {
-                          break L3;
+                          break L4;
                         }
                       }
                     }
                   }
                   stackOut_74_0 = var6;
                   stackIn_75_0 = stackOut_74_0;
-                  break L2;
+                  break L3;
                 }
                 break L0;
               }
@@ -2241,10 +2253,10 @@ final class sw {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L19: {
+          L20: {
             var4 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_76_0 = (RuntimeException) var4;
-            stackOut_76_1 = new StringBuilder().append("sw.F(").append(62).append(',');
+            stackOut_76_1 = new StringBuilder().append("sw.F(").append(param0).append(',');
             stackIn_79_0 = stackOut_76_0;
             stackIn_79_1 = stackOut_76_1;
             stackIn_77_0 = stackOut_76_0;
@@ -2256,7 +2268,7 @@ final class sw {
               stackIn_80_0 = stackOut_79_0;
               stackIn_80_1 = stackOut_79_1;
               stackIn_80_2 = stackOut_79_2;
-              break L19;
+              break L20;
             } else {
               stackOut_77_0 = (RuntimeException) (Object) stackIn_77_0;
               stackOut_77_1 = (StringBuilder) (Object) stackIn_77_1;
@@ -2264,10 +2276,10 @@ final class sw {
               stackIn_80_0 = stackOut_77_0;
               stackIn_80_1 = stackOut_77_1;
               stackIn_80_2 = stackOut_77_2;
-              break L19;
+              break L20;
             }
           }
-          L20: {
+          L21: {
             stackOut_80_0 = (RuntimeException) (Object) stackIn_80_0;
             stackOut_80_1 = ((StringBuilder) (Object) stackIn_80_1).append(stackIn_80_2).append(',');
             stackIn_83_0 = stackOut_80_0;
@@ -2281,7 +2293,7 @@ final class sw {
               stackIn_84_0 = stackOut_83_0;
               stackIn_84_1 = stackOut_83_1;
               stackIn_84_2 = stackOut_83_2;
-              break L20;
+              break L21;
             } else {
               stackOut_81_0 = (RuntimeException) (Object) stackIn_81_0;
               stackOut_81_1 = (StringBuilder) (Object) stackIn_81_1;
@@ -2289,7 +2301,7 @@ final class sw {
               stackIn_84_0 = stackOut_81_0;
               stackIn_84_1 = stackOut_81_1;
               stackIn_84_2 = stackOut_81_2;
-              break L20;
+              break L21;
             }
           }
           throw rta.a((Throwable) (Object) stackIn_84_0, stackIn_84_2 + ')');

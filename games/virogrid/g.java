@@ -29,13 +29,13 @@ final class g {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
         field_a = null;
         field_b = null;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         kf.a(4, -1);
     }
 
@@ -86,8 +86,7 @@ final class g {
                 if (oa.field_q == 2) {
                   if (!fm.a(param0, -1369854352)) {
                     if (mj.field_z < 100) {
-                      int discarded$6 = -73;
-                      if (!ch.a(param0)) {
+                      if (!ch.a(param0, (byte) -73)) {
                         var5 = gk.field_g;
                         var5.g(param2, 8);
                         var5.field_l = var5.field_l + 1;

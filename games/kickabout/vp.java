@@ -193,7 +193,7 @@ final class vp implements hc {
         ((vp) this).field_i = 0;
     }
 
-    final static void c() {
+    final static void c(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -312,11 +312,7 @@ final class vp implements hc {
               if (!this.b(param0 ^ 11508)) {
                 break L1;
               } else {
-                int discarded$13 = 15;
-                int discarded$14 = 17860;
-                int discarded$15 = 12;
-                int discarded$16 = 13;
-                if (!ud.a()) {
+                if (!ud.a(13, 12, 17860, 15)) {
                   break L1;
                 } else {
                   stackOut_4_0 = 1;
@@ -338,8 +334,7 @@ final class vp implements hc {
     public final void a(int param0) {
         int var2 = 83 % ((50 - param0) / 45);
         if (((vp) this).a((byte) 87)) {
-            int discarded$0 = 0;
-            ei.a((((vp) this).field_i & 8) == 0 ? true : false);
+            ei.a((((vp) this).field_i & 8) == 0 ? true : false, false);
         }
     }
 

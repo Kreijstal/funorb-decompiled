@@ -82,7 +82,7 @@ final class h {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_f = null;
@@ -183,11 +183,11 @@ final class h {
                                 if (!var26.field_r) {
                                   var5[var14] = var26.field_b;
                                   var29 = new StringBuilder(20);
-                                  StringBuilder discarded$37 = var29.append("<col=1>");
-                                  StringBuilder discarded$38 = var29.append(var26.field_b);
-                                  StringBuilder discarded$39 = var29.append("</col><br>(");
-                                  StringBuilder discarded$40 = var29.append(gh.field_t[var26.field_p]);
-                                  StringBuilder discarded$41 = var29.append(")");
+                                  StringBuilder discarded$34 = var29.append("<col=1>");
+                                  StringBuilder discarded$35 = var29.append(var26.field_b);
+                                  StringBuilder discarded$36 = var29.append("</col><br>(");
+                                  StringBuilder discarded$37 = var29.append(gh.field_t[var26.field_p]);
+                                  StringBuilder discarded$38 = var29.append(")");
                                   var6[var14] = var29.toString();
                                   var7[var14] = var26.a(9392, 2, 111);
                                   break L4;
@@ -224,8 +224,7 @@ final class h {
                             }
                             stackIn_50_0[stackIn_50_1] = stackIn_50_2;
                             var28 = var26.a(9392, 2, 111).e();
-                            int discarded$42 = -1;
-                            qm.a(var28, 64);
+                            qm.a(var28, 64, -1);
                             vb.a(-109, var28);
                             rf.field_ab.a(-rf.field_ab.field_s + var28.field_s >> 1, var28.field_y + -rf.field_ab.field_y >> 1);
                             ug.b(-1);
@@ -273,38 +272,38 @@ final class h {
                                 L11: {
                                   var5[var8] = var19.field_b;
                                   var22 = new StringBuilder(20);
-                                  StringBuilder discarded$43 = var22.append("<col=1>");
-                                  StringBuilder discarded$44 = var22.append(var19.field_b);
-                                  StringBuilder discarded$45 = var22.append("</col><br><br>");
+                                  StringBuilder discarded$39 = var22.append("<col=1>");
+                                  StringBuilder discarded$40 = var22.append(var19.field_b);
+                                  StringBuilder discarded$41 = var22.append("</col><br><br>");
                                   var11 = hk.field_c[cf.field_w][var8];
                                   if (var11 == -1) {
-                                    StringBuilder discarded$46 = var22.append(sm.field_d);
+                                    StringBuilder discarded$42 = var22.append(sm.field_d);
                                     break L11;
                                   } else {
                                     L12: {
-                                      StringBuilder discarded$47 = var22.append(bj.field_I);
-                                      StringBuilder discarded$48 = var22.append(cb.a(53, var11));
-                                      StringBuilder discarded$49 = var22.append(' ');
-                                      StringBuilder discarded$50 = var22.append('(');
+                                      StringBuilder discarded$43 = var22.append(bj.field_I);
+                                      StringBuilder discarded$44 = var22.append(cb.a(53, var11));
+                                      StringBuilder discarded$45 = var22.append(' ');
+                                      StringBuilder discarded$46 = var22.append('(');
                                       if (ha.field_j[cf.field_w][var8] < 0) {
                                         break L12;
                                       } else {
                                         if (ha.field_j[cf.field_w][var8] < 4) {
-                                          StringBuilder discarded$51 = var22.append(rf.field_Y[ha.field_j[cf.field_w][var8]]);
+                                          StringBuilder discarded$47 = var22.append(rf.field_Y[ha.field_j[cf.field_w][var8]]);
                                           break L12;
                                         } else {
                                           break L12;
                                         }
                                       }
                                     }
-                                    StringBuilder discarded$52 = var22.append(')');
-                                    StringBuilder discarded$53 = var22.append(vm.field_zb);
+                                    StringBuilder discarded$48 = var22.append(')');
+                                    StringBuilder discarded$49 = var22.append(vm.field_zb);
                                     var12 = on.field_v[cf.field_w][var8];
                                     if (var12 != -1) {
-                                      StringBuilder discarded$54 = var22.append(cb.a(61, var12));
+                                      StringBuilder discarded$50 = var22.append(cb.a(61, var12));
                                       break L11;
                                     } else {
-                                      StringBuilder discarded$55 = var22.append(on.field_p);
+                                      StringBuilder discarded$51 = var22.append(on.field_p);
                                       break L11;
                                     }
                                   }
@@ -320,8 +319,7 @@ final class h {
                           var20[var8] = "";
                           var6[var8] = HoldTheLine.field_G[cf.field_w];
                           var21 = var19.a(9392, mi.field_d, 111).e();
-                          int discarded$56 = -1;
-                          qm.a(var21, 64);
+                          qm.a(var21, 64, -1);
                           vb.a(-97, var21);
                           rf.field_ab.a(-rf.field_ab.field_s + var21.field_s >> 1, var21.field_y + -rf.field_ab.field_y >> 1);
                           ug.b(-1);
@@ -335,20 +333,20 @@ final class h {
                   } else {
                     L13: {
                       var17 = new StringBuilder(20);
-                      StringBuilder discarded$57 = var17.append("<col=1>");
-                      StringBuilder discarded$58 = var17.append(gh.field_t[var3]);
-                      StringBuilder discarded$59 = var17.append("</col><br><br>");
+                      StringBuilder discarded$52 = var17.append("<col=1>");
+                      StringBuilder discarded$53 = var17.append(gh.field_t[var3]);
+                      StringBuilder discarded$54 = var17.append("</col><br><br>");
                       var5_int = pf.a((byte) 2, var3);
                       if (var5_int != 2) {
                         if (var5_int != 1) {
-                          StringBuilder discarded$60 = var17.append(sa.field_d[var3]);
+                          StringBuilder discarded$55 = var17.append(sa.field_d[var3]);
                           break L13;
                         } else {
-                          StringBuilder discarded$61 = var17.append(lf.field_f[var3]);
+                          StringBuilder discarded$56 = var17.append(lf.field_f[var3]);
                           break L13;
                         }
                       } else {
-                        StringBuilder discarded$62 = var17.append(ug.field_m);
+                        StringBuilder discarded$57 = var17.append(ug.field_m);
                         break L13;
                       }
                     }
@@ -368,29 +366,29 @@ final class h {
                   } else {
                     L15: {
                       var15 = new StringBuilder(20);
-                      StringBuilder discarded$63 = var15.append("<col=1>");
-                      StringBuilder discarded$64 = var15.append(gh.field_t[var3]);
-                      StringBuilder discarded$65 = var15.append("</col><br><br>");
+                      StringBuilder discarded$58 = var15.append("<col=1>");
+                      StringBuilder discarded$59 = var15.append(gh.field_t[var3]);
+                      StringBuilder discarded$60 = var15.append("</col><br><br>");
                       var5_int = pf.a((byte) 105, var3);
                       if (2 != var5_int) {
                         if (var5_int == 1) {
-                          StringBuilder discarded$66 = var15.append(ac.field_a[var3]);
+                          StringBuilder discarded$61 = var15.append(ac.field_a[var3]);
                           break L15;
                         } else {
-                          StringBuilder discarded$67 = var15.append(sa.field_d[var3]);
-                          StringBuilder discarded$68 = var15.append("<br><br>");
+                          StringBuilder discarded$62 = var15.append(sa.field_d[var3]);
+                          StringBuilder discarded$63 = var15.append("<br><br>");
                           var6_int = d.field_c[var3];
                           if (var6_int == -1) {
-                            StringBuilder discarded$69 = var15.append(vm.field_tb);
+                            StringBuilder discarded$64 = var15.append(vm.field_tb);
                             break L15;
                           } else {
-                            StringBuilder discarded$70 = var15.append(bj.field_I);
-                            StringBuilder discarded$71 = var15.append(cb.a(90, var6_int));
+                            StringBuilder discarded$65 = var15.append(bj.field_I);
+                            StringBuilder discarded$66 = var15.append(cb.a(90, var6_int));
                             break L15;
                           }
                         }
                       } else {
-                        StringBuilder discarded$72 = var15.append(ug.field_m);
+                        StringBuilder discarded$67 = var15.append(ug.field_m);
                         break L15;
                       }
                     }

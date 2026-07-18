@@ -28,13 +28,13 @@ final class bm {
         ga.field_c = param0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, byte param2) {
         l.e(param1, param0, 16, 0);
         l.e(param1, param0, 12, 16777215);
         l.e(param1, param0, 8, 0);
     }
 
-    final static dc a(boolean param0) {
+    final static dc a(boolean param0, int param1) {
         uc var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -107,22 +107,21 @@ final class bm {
         }
         L4: {
           if (im.field_c == 1) {
-            int discarded$5 = var8.i(-25578);
-            String discarded$6 = var8.e(-1);
+            int discarded$4 = var8.i(-25578);
+            String discarded$5 = var8.e(-1);
             break L4;
           } else {
             if (im.field_c != 4) {
               break L4;
             } else {
-              int discarded$7 = var8.i(-25578);
-              String discarded$8 = var8.e(-1);
+              int discarded$6 = var8.i(-25578);
+              String discarded$7 = var8.e(-1);
               break L4;
             }
           }
         }
         if (!param0) {
-          int discarded$9 = -48;
-          ea.field_n = ui.a(80, (dh) (Object) var8);
+          ea.field_n = ui.a(80, (dh) (Object) var8, -48);
           ui.field_e = null;
           return new dc(param0);
         } else {
@@ -190,8 +189,7 @@ final class bm {
           L0: {
             var9 = new fb(23, 65512, param0, param6, param8, param7, param2);
             hd.field_p.a((uf) (Object) var9, -16611);
-            int discarded$2 = 0;
-            mh.a(var9, 3);
+            mh.a(var9, 3, 0);
             stackOut_0_0 = (fb) var9;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -229,7 +227,7 @@ final class bm {
         return stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
     }

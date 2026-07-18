@@ -7,7 +7,7 @@ class iv extends am {
     static String field_n;
     static wu field_o;
 
-    final static void a(cn param0) {
+    final static void a(cn param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         hd var4 = null;
@@ -40,8 +40,7 @@ class iv extends am {
         var21 = Kickabout.field_G;
         var2_int = param0.a(ge.field_o[16]);
         var3 = param0.a(ge.field_o[17]);
-        int discarded$3 = -46;
-        jg.a(Math.max(var2_int, var3), param0);
+        jg.a(Math.max(var2_int, var3), param0, (byte) -46);
         var4 = new hd();
         var4.field_R = bn.field_B;
         var5 = new hd();
@@ -296,9 +295,7 @@ class iv extends am {
               } else {
                 L2: {
                   if (un.field_b[var20] != null) {
-                    int discarded$4 = 0;
-                    int discarded$5 = 0;
-                    un.field_b[var20].a(var16[var20], var43[var20], var44[var20], -46, var17[var20], rr.a(var48[var20], var8), rr.a(var49[var20], var8), var47[var20], var15[var20], var46[var20], var20, var45[var20]);
+                    un.field_b[var20].a(var16[var20], var43[var20], var44[var20], -46, var17[var20], rr.a(var48[var20], var8, 0), rr.a(var49[var20], var8, 0), var47[var20], var15[var20], var46[var20], var20, var45[var20]);
                     un.field_b[var20].b(-38);
                     break L2;
                   } else {

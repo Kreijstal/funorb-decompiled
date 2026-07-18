@@ -67,7 +67,7 @@ final class mg {
     final static void a(int param0, boolean param1) {
     }
 
-    final static void a() {
+    final static void a(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -166,7 +166,7 @@ final class mg {
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -254,7 +254,7 @@ final class mg {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -293,8 +293,7 @@ final class mg {
               var2 = var27.f(-121);
               if (var2 != 0) {
                 if (1 != var2) {
-                  int discarded$7 = 92;
-                  k.a((Throwable) null, (byte) -101, "HS1: " + aj.a());
+                  k.a((Throwable) null, (byte) -101, "HS1: " + aj.a((byte) 92));
                   mc.a((byte) -126);
                   break L1;
                 } else {
@@ -357,16 +356,16 @@ final class mg {
                         var8_int = 1;
                         L7: while (true) {
                           if (var8_int >= var5) {
-                            String[][] dupTemp$8 = new String[3][var6_int];
-                            var4_ref_uh.field_m = dupTemp$8;
-                            var8 = dupTemp$8;
+                            String[][] dupTemp$6 = new String[3][var6_int];
+                            var4_ref_uh.field_m = dupTemp$6;
+                            var8 = dupTemp$6;
                             var9 = new String[3][var6_int];
-                            long[][] dupTemp$9 = new long[3][var6_int];
-                            var4_ref_uh.field_j = dupTemp$9;
-                            var10 = dupTemp$9;
-                            int[][] dupTemp$10 = new int[3][var6_int * var7];
-                            var4_ref_uh.field_q = dupTemp$10;
-                            var11 = dupTemp$10;
+                            long[][] dupTemp$7 = new long[3][var6_int];
+                            var4_ref_uh.field_j = dupTemp$7;
+                            var10 = dupTemp$7;
+                            int[][] dupTemp$8 = new int[3][var6_int * var7];
+                            var4_ref_uh.field_q = dupTemp$8;
+                            var11 = dupTemp$8;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -399,9 +398,9 @@ final class mg {
                                         if (var7 <= var25) {
                                           break L9;
                                         } else {
-                                          int incrementValue$11 = var15;
+                                          int incrementValue$9 = var15;
                                           var15++;
-                                          var11[0][incrementValue$11] = var27.e((byte) 126);
+                                          var11[0][incrementValue$9] = var27.e((byte) 126);
                                           var25++;
                                           continue L10;
                                         }
@@ -423,9 +422,9 @@ final class mg {
                                           if (var7 <= var25) {
                                             break L11;
                                           } else {
-                                            int incrementValue$12 = var16;
+                                            int incrementValue$10 = var16;
                                             var16++;
-                                            var11[1][incrementValue$12] = var27.e((byte) 125);
+                                            var11[1][incrementValue$10] = var27.e((byte) 125);
                                             var25++;
                                             continue L12;
                                           }
@@ -451,9 +450,9 @@ final class mg {
                                           if (var25 >= var7) {
                                             break L13;
                                           } else {
-                                            int incrementValue$13 = var17;
+                                            int incrementValue$11 = var17;
                                             var17++;
-                                            var11[2][incrementValue$13] = var27.e((byte) 124);
+                                            var11[2][incrementValue$11] = var27.e((byte) 124);
                                             var25++;
                                             continue L14;
                                           }

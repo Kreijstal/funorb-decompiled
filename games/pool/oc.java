@@ -49,11 +49,11 @@ final class oc {
         ((oc) this).field_G = false;
     }
 
-    final static boolean b() {
+    final static boolean b(byte param0) {
         return jd.field_c != null && tl.field_J.b(719);
     }
 
-    final static void d() {
+    final static void d(int param0) {
         nn.field_b = new oo[5];
         nn.field_b[0] = (oo) (Object) new ni();
         nn.field_b[1] = (oo) (Object) new fk();
@@ -76,7 +76,7 @@ final class oc {
         cb.field_e.b((byte) -23, (ma) (Object) var1);
     }
 
-    public static void c() {
+    public static void c(int param0) {
         field_t = null;
         field_h = null;
     }

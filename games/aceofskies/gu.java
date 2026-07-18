@@ -23,7 +23,7 @@ final class gu {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         ht var3 = null;
@@ -36,16 +36,16 @@ final class gu {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
         int var14 = 0;
-        dl var15 = null;
-        int[][] var19 = null;
+        int var15 = 0;
+        dl var16 = null;
+        int[][] var20 = null;
         RuntimeException decompiledCaughtException = null;
         var12 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
-            var15 = nm.field_c;
-            var2 = var15.g(-86);
+            var16 = nm.field_c;
+            var2 = var16.g(-86);
             var3 = (ht) (Object) an.field_b.d(268435455);
             L1: while (true) {
               L2: {
@@ -62,48 +62,46 @@ final class gu {
               }
               if (var3 != null) {
                 L3: {
-                  var4 = var15.g(121);
+                  var4 = var16.g(121);
                   if (var4 != 0) {
                     var5 = var3.field_f;
                     mb.field_t[0] = fj.field_a;
                     var6_int = 1;
                     L4: while (true) {
                       if (var6_int >= var4) {
-                        int discarded$4 = 2;
-                        ud.a(var4, var5);
+                        ud.a(var4, var5, 2);
                         var6_int = 0;
                         L5: while (true) {
                           if (var4 <= var6_int) {
                             eu.a(var5, true);
                             var6 = new String[2][var5];
-                            var19 = new int[2][var5 * 4];
+                            var20 = new int[2][var5 * 4];
                             var8 = os.field_w;
                             var9 = 0;
                             var10 = 0;
                             L6: while (true) {
                               if (var9 >= var8) {
-                                var13 = 0;
-                                var9 = var13;
                                 var14 = 0;
-                                var10 = var14;
+                                var9 = var14;
+                                var15 = 0;
+                                var10 = var15;
                                 L7: while (true) {
-                                  if (var8 > var13) {
+                                  if (var8 > var14) {
                                     L8: {
-                                      var11 = uf.field_d[var13 + var5];
-                                      var6[1][var14] = mb.field_t[var11];
-                                      var19[1][var14 * 4] = js.field_c[var11];
-                                      var19[1][var14 * 4 + 1] = hg.field_C[var11];
-                                      var19[1][2 + var14 * 4] = qd.field_p[var11];
-                                      var19[1][3 + var14 * 4] = dd.field_c[var11];
-                                      int discarded$5 = -6;
-                                      if (!fd.a(mb.field_t[var11])) {
+                                      var11 = uf.field_d[var14 + var5];
+                                      var6[1][var15] = mb.field_t[var11];
+                                      var20[1][var15 * 4] = js.field_c[var11];
+                                      var20[1][var15 * 4 + 1] = hg.field_C[var11];
+                                      var20[1][2 + var15 * 4] = qd.field_p[var11];
+                                      var20[1][3 + var15 * 4] = dd.field_c[var11];
+                                      if (!fd.a(mb.field_t[var11], (byte) -6)) {
                                         break L8;
                                       } else {
                                         break L8;
                                       }
                                     }
-                                    var13++;
                                     var14++;
+                                    var15++;
                                     continue L7;
                                   } else {
                                     var3.c(-124);
@@ -114,12 +112,11 @@ final class gu {
                                 L9: {
                                   var11 = uf.field_d[var9];
                                   var6[0][var10] = mb.field_t[var11];
-                                  var19[0][var10 * 4] = js.field_c[var11];
-                                  var19[0][1 + var10 * 4] = hg.field_C[var11];
-                                  var19[0][var10 * 4 + 2] = qd.field_p[var11];
-                                  var19[0][3 + 4 * var10] = dd.field_c[var11];
-                                  int discarded$6 = -6;
-                                  if (!fd.a(mb.field_t[var11])) {
+                                  var20[0][var10 * 4] = js.field_c[var11];
+                                  var20[0][1 + var10 * 4] = hg.field_C[var11];
+                                  var20[0][var10 * 4 + 2] = qd.field_p[var11];
+                                  var20[0][3 + 4 * var10] = dd.field_c[var11];
+                                  if (!fd.a(mb.field_t[var11], (byte) -6)) {
                                     break L9;
                                   } else {
                                     if (qd.field_p[var11] + (hg.field_C[var11] + dd.field_c[var11]) != 0) {
@@ -138,7 +135,7 @@ final class gu {
                             }
                           } else {
                             L10: {
-                              ju.a(965924047, (rb) (Object) var15);
+                              ju.a(965924047, (rb) (Object) var16);
                               if (var6_int != 0) {
                                 o.a(fs.field_c, var6_int, 54, tj.field_o, ld.field_a, gl.field_b);
                                 break L10;
@@ -152,7 +149,7 @@ final class gu {
                           }
                         }
                       } else {
-                        mb.field_t[var6_int] = var15.h(-17883);
+                        mb.field_t[var6_int] = var16.h(-17883);
                         var6_int++;
                         continue L4;
                       }
@@ -164,8 +161,7 @@ final class gu {
                 }
                 break L0;
               } else {
-                int discarded$7 = 1;
-                te.b();
+                te.b(true);
                 return;
               }
             }
@@ -244,7 +240,7 @@ final class gu {
         return stackIn_3_0;
     }
 
-    final static ml a(int param0, gk param1) {
+    final static ml a(int param0, gk param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -317,8 +313,7 @@ final class gu {
 
     final void a(java.applet.Applet param0, byte param1) {
         try {
-            int discarded$0 = 0;
-            jt.a("jagex-last-login-method", ((gu) this).field_b, 31536000L, param0);
+            jt.a("jagex-last-login-method", ((gu) this).field_b, 31536000L, param0, 0);
             int var3_int = 79 / ((param1 - 77) / 44);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "gu.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

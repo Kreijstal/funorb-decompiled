@@ -7,7 +7,7 @@ final class ee {
     static volatile int field_d;
     static he[] field_b;
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_c = null;
     }

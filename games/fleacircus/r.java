@@ -69,7 +69,7 @@ abstract class r extends gg implements nk {
         }
     }
 
-    final static void a(dd param0) {
+    final static void a(dd param0, int param1) {
         try {
             we.a(-68);
             gb.a(param0.field_B, param0.field_x, param0.field_r);
@@ -78,7 +78,7 @@ abstract class r extends gg implements nk {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
         field_j = null;
     }

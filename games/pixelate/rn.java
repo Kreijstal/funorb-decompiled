@@ -460,7 +460,7 @@ final class rn {
         field_f = null;
     }
 
-    final static fl a(String param0) {
+    final static fl a(String param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -524,7 +524,7 @@ final class rn {
         }
     }
 
-    final static void a() {
+    final static void a(byte param0) {
     }
 
     public final String toString() {

@@ -22,7 +22,7 @@ final class kk implements gl {
     static String field_q;
     static byte[] field_l;
 
-    final static String a(boolean param0, boolean param1, boolean param2) {
+    final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
         if (!(!param2)) {
             var4 += 4;

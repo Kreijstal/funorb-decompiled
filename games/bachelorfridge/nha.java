@@ -37,7 +37,7 @@ final class nha {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_b = null;

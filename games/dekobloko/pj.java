@@ -25,7 +25,7 @@ final class pj extends sf {
         return param0 ^ param1;
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_N = null;
         field_G = null;
         field_L = null;
@@ -55,7 +55,7 @@ final class pj extends sf {
         return ac.field_A;
     }
 
-    final static void a(ve param0) {
+    final static void a(ve param0, byte param1) {
         ve var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

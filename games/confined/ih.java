@@ -8,7 +8,7 @@ final class ih {
     static bi field_e;
     static int field_a;
 
-    public static void a() {
+    public static void a(int param0) {
         field_d = null;
         field_e = null;
         field_c = null;
@@ -61,7 +61,7 @@ final class ih {
         return stackIn_10_0 != 0;
     }
 
-    final static jb a(boolean param0, boolean param1, boolean param2, boolean param3) {
+    final static jb a(boolean param0, boolean param1, boolean param2, boolean param3, byte param4) {
         int var6 = 0;
         int var7 = 0;
         jb var8 = null;

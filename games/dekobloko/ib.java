@@ -31,8 +31,7 @@ final class ib extends t implements vn {
           L0: {
             L1: {
               if (((ib) this).field_lb == param2) {
-                int discarded$2 = -102;
-                this.m();
+                this.m((byte) -102);
                 break L1;
               } else {
                 break L1;
@@ -185,7 +184,7 @@ final class ib extends t implements vn {
         }
     }
 
-    private final ek a(kg param0, String param1) {
+    private final ek a(kg param0, String param1, byte param2) {
         ek var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -293,7 +292,7 @@ final class ib extends t implements vn {
         return stackIn_1_0;
     }
 
-    private final void m() {
+    private final void m(byte param0) {
         if (!(((ib) this).field_S)) {
             return;
         }
@@ -441,11 +440,10 @@ final class ib extends t implements vn {
         }
     }
 
-    final static int l() {
+    final static int l(int param0) {
         sc.field_l.a(-126);
         if (!ta.field_k.a((byte) -56)) {
-            int discarded$0 = 0;
-            return oj.b();
+            return oj.b(0);
         }
         return 0;
     }
@@ -493,8 +491,7 @@ final class ib extends t implements vn {
                 if (kl.field_p == param1) {
                   var3 = (Object) (Object) dc.field_g;
                   ((ib) this).field_y = ((ib) this).field_y + 10;
-                  int discarded$7 = 98;
-                  if (!wj.r()) {
+                  if (!wj.r(98)) {
                     break L1;
                   } else {
                     ((ib) this).field_y = ((ib) this).field_y + 20;
@@ -522,8 +519,7 @@ final class ib extends t implements vn {
             var4.field_D = 50;
             var4.field_p = (gl) (Object) new a(bj.field_f, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((ib) this).b(var4, (byte) -55);
-            int discarded$8 = -90;
-            ((ib) this).field_lb = this.a((kg) this, og.field_gb);
+            ((ib) this).field_lb = this.a((kg) this, og.field_gb, (byte) -90);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

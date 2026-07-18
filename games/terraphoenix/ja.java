@@ -17,7 +17,7 @@ final class ja extends uf {
         return qi.field_b;
     }
 
-    final static boolean a(char param0) {
+    final static boolean a(char param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var4 = 0;
@@ -681,7 +681,7 @@ final class ja extends uf {
         throw new Error();
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_m = null;
         field_h = null;
     }

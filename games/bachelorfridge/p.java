@@ -7,7 +7,7 @@ final class p extends pu {
     static String field_m;
     static sna field_o;
 
-    final static void c() {
+    final static void c(int param0) {
         int var2 = 3;
         gb var1 = (gb) (Object) ja.field_s.b((byte) 90);
         if (var1 == null) {
@@ -22,7 +22,7 @@ final class p extends pu {
         var1.a(false);
     }
 
-    final static void a(int param0, byte[] param1) {
+    final static void a(int param0, byte[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int[] var4 = null;

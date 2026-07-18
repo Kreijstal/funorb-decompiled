@@ -70,12 +70,12 @@ final class ti {
         return (du) (Object) stackIn_1_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_a = null;
     }
 
-    final static String b() {
+    final static String b(byte param0) {
         int fieldTemp$0 = !ms.field_o ? 1 : 0;
         ms.field_o = !ms.field_o ? true : false;
         return new Boolean(fieldTemp$0 != 0).toString();

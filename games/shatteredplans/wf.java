@@ -10,7 +10,7 @@ class wf extends oh {
     static String field_m;
     int field_i;
 
-    final static void a() {
+    final static void a(int param0) {
         String var2 = null;
         if (!(la.field_h == null)) {
             var2 = la.field_h;

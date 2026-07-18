@@ -64,7 +64,7 @@ abstract class fe {
         return stackIn_8_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_f = null;
         field_g = null;
         field_c = null;
@@ -72,7 +72,7 @@ abstract class fe {
         field_d = null;
     }
 
-    final static void a(ka param0) {
+    final static void a(ka param0, int param1) {
         int var2_int = 0;
         try {
             ci.field_b = param0.c((byte) 86) << 5;

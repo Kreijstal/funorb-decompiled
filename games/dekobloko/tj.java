@@ -225,8 +225,7 @@ final class tj extends w {
         ac.field_F = dk.field_i;
         wh.field_a = 0;
         rg.field_a = new sk(2);
-        int discarded$0 = 7;
-        rg.field_a.a(-1, 0, ak.a(bh.field_g, pm.field_f), param0);
+        rg.field_a.a(-1, 0, ak.a(bh.field_g, pm.field_f, (byte) 7), param0);
     }
 
     final boolean g(byte param0) {
@@ -330,7 +329,7 @@ final class tj extends w {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_jc = null;
         field_ic = null;
         field_ac = null;
@@ -346,8 +345,7 @@ final class tj extends w {
             g.field_R = new w(0L, (w) null);
             g.field_R.a((w) (Object) dc.field_e.field_h, -16834);
             g.field_R.a(uh.field_c, -16834);
-            int discarded$2 = 5;
-            mf.h();
+            mf.h(5);
             return;
           } else {
             aj.field_a.a(gg.field_y, -16834);
@@ -355,8 +353,7 @@ final class tj extends w {
             g.field_R = new w(0L, (w) null);
             g.field_R.a((w) (Object) dc.field_e.field_h, -16834);
             g.field_R.a(uh.field_c, -16834);
-            int discarded$3 = 5;
-            mf.h();
+            mf.h(5);
             return;
           }
         } else {
@@ -372,8 +369,7 @@ final class tj extends w {
             ((tj) this).field_Yb = param1;
             ((tj) this).field_cc = param2;
             var6 = (CharSequence) (Object) ((tj) this).field_Rb;
-            int discarded$0 = 2;
-            String discarded$1 = kf.a(var6);
+            String discarded$0 = kf.a(var6, (byte) 2);
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "tj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -388,8 +384,7 @@ final class tj extends w {
             }
             ((tj) this).field_Yb = param1;
             var5 = (CharSequence) (Object) ((tj) this).field_Rb;
-            int discarded$0 = 2;
-            String discarded$1 = kf.a(var5);
+            String discarded$0 = kf.a(var5, (byte) 2);
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "tj.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -335,7 +335,7 @@ final class oj extends cj implements ij {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_I = null;
         field_O = null;
         field_H = null;

@@ -12,7 +12,7 @@ final class gf {
     static String field_f;
     static String[] field_e;
 
-    final static boolean a(byte[] param0, int param1, int param2) {
+    final static boolean a(byte[] param0, int param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -118,7 +118,7 @@ final class gf {
         return stackIn_14_0 != 0;
     }
 
-    final static void a() {
+    final static void a(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -150,35 +150,29 @@ final class gf {
                   var14.c((byte) -109);
                   break L0;
                 } else {
-                  int discarded$7 = -116;
-                  lr.b();
+                  lr.b((byte) -116);
                   return;
                 }
               } else {
                 if (2 != var3) {
-                  int discarded$8 = 0;
-                  bd.a("A1: " + tr.b(), (Throwable) null, 1);
-                  int discarded$9 = -116;
-                  lr.b();
+                  bd.a("A1: " + tr.b(0), (Throwable) null, 1);
+                  lr.b((byte) -116);
                   return;
                 } else {
                   var16_ref = (dk) (Object) ap.field_j.g(24009);
                   if (var16_ref != null) {
-                    int discarded$10 = -23091;
-                    var16_ref.field_e = st.c();
+                    var16_ref.field_e = st.c(-23091);
                     var16_ref.field_f = true;
                     var16_ref.c((byte) -109);
                     return;
                   } else {
-                    int discarded$11 = -116;
-                    lr.b();
+                    lr.b((byte) -116);
                     return;
                   }
                 }
               }
             } else {
-              int discarded$12 = -23091;
-              var12 = st.c();
+              var12 = st.c(-23091);
               var4 = var12;
               var11 = var12;
               var5 = var11;
@@ -194,8 +188,7 @@ final class gf {
                     var13.c((byte) -109);
                     return;
                   } else {
-                    int discarded$13 = -116;
-                    lr.b();
+                    lr.b((byte) -116);
                     return;
                   }
                 } else {
@@ -213,7 +206,7 @@ final class gf {
         }
     }
 
-    final static vq a(bu param0, int param1, int param2, int param3, int param4) {
+    final static vq a(bu param0, int param1, int param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         vq var7 = null;
@@ -343,8 +336,7 @@ final class gf {
                     var4 = param1.substring(1 + var2_int);
                     var5 = gp.a((byte) -25, var3);
                     if (var5 == null) {
-                      int discarded$2 = 0;
-                      stackOut_11_0 = ie.a(var4);
+                      stackOut_11_0 = ie.a(var4, 0);
                       stackIn_12_0 = stackOut_11_0;
                       break L0;
                     } else {

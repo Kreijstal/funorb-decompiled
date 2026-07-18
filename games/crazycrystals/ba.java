@@ -14,10 +14,9 @@ final class ba extends ln {
         return (1 << param0 & qg.field_q) != 0 ? 1 : 0;
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1 = -4;
-        int discarded$0 = -49;
-        ab.f();
+        ab.f((byte) -49);
     }
 
     final static String a(int param0, CharSequence param1) {
@@ -160,19 +159,18 @@ final class ba extends ln {
     final static void a(byte param0, String param1) {
         try {
             ng.a(param1, 21815);
-            int discarded$0 = -13;
-            ke.a(no.field_i, false);
+            ke.a(no.field_i, false, -13);
             int var2_int = 0;
         } catch (RuntimeException runtimeException) {
             throw dn.a((Throwable) (Object) runtimeException, "ba.B(" + -65 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         jm.field_d.a((qm) (Object) new ae(), (byte) -50);
     }
 
-    final static tj a() {
+    final static tj a(int param0) {
         return hb.field_l;
     }
 

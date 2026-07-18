@@ -35,8 +35,7 @@ abstract class wj {
             field_a = null;
             var4 = ((wj) this).a(-27042);
             if (var4 > 0L) {
-              int discarded$4 = 0;
-              wl.a(var4);
+              wl.a(var4, false);
               break L0;
             } else {
               break L0;
@@ -47,8 +46,7 @@ abstract class wj {
           L1: {
             var4 = ((wj) this).a(-27042);
             if (var4 > 0L) {
-              int discarded$5 = 0;
-              wl.a(var4);
+              wl.a(var4, false);
               break L1;
             } else {
               break L1;
@@ -90,9 +88,7 @@ abstract class wj {
           } else {
             L1: {
               og.field_rb = tk.field_u.c(0);
-              int discarded$2 = 2;
-              int discarded$3 = -127;
-              ni.a();
+              ni.a(-127, 2);
               if (og.field_rb == null) {
                 var3 = 3;
                 break L1;

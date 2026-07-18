@@ -8,7 +8,7 @@ final class nk {
     static ci field_d;
     int field_a;
 
-    final static void a(int param0, o param1) {
+    final static void a(int param0, o param1, int param2) {
         hj var3 = null;
         try {
             var3 = ff.field_D;
@@ -27,7 +27,7 @@ final class nk {
         throw new IllegalStateException();
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_e = null;
         field_b = null;
         field_d = null;

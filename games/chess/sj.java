@@ -138,11 +138,10 @@ final class sj implements jm {
             Object var2 = null;
             sj.a(50, 74, (ak) null);
         }
-        int discarded$0 = 70;
-        return fl.c();
+        return fl.c((byte) 70);
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_e = null;
         field_c = null;
         field_k = null;
@@ -268,7 +267,7 @@ final class sj implements jm {
         }
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -283,12 +282,11 @@ final class sj implements jm {
             var5 = qn.field_P.field_xb.c(param0, 500) + 6;
             var6 = var4 * fe.field_g - -2;
             var7 = ao.a(var5, true, var2_int, 12);
-            int discarded$0 = 0;
-            var8 = sg.a(var3, var6, 20);
+            var8 = sg.a(var3, var6, 20, 0);
             int var9 = -14;
             wb.d(var7, var8, var5, var6, 0);
             wb.f(1 + var7, var8 - -1, -2 + var5, -2 + var6, 16777088);
-            int discarded$1 = qn.field_P.field_xb.a(param0, 3 + var7, -qn.field_P.field_xb.field_C + jg.field_I + (var8 + 1), 500, 1000, 0, -1, 0, 0, fe.field_g);
+            int discarded$0 = qn.field_P.field_xb.a(param0, 3 + var7, -qn.field_P.field_xb.field_C + jg.field_I + (var8 + 1), 500, 1000, 0, -1, 0, 0, fe.field_g);
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "sj.F(" + (param0 != null ? "{...}" : "null") + ',' + 85 + ')');
         }

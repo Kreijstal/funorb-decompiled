@@ -42,8 +42,7 @@ class jl extends rk {
         String stackOut_5_2 = null;
         try {
           if (mc.a(param2, param1, param3, (byte) 119)) {
-            int discarded$2 = -9;
-            return si.a();
+            return si.a((byte) -9);
           } else {
             return null;
           }
@@ -85,7 +84,7 @@ class jl extends rk {
         dn.field_b.a((fj) (Object) ki.field_b, (byte) -72);
     }
 
-    final static bm a(int[] param0, bm param1) {
+    final static bm a(int[] param0, bm param1, int param2) {
         bm var3 = null;
         RuntimeException var3_ref = null;
         bm stackIn_1_0 = null;

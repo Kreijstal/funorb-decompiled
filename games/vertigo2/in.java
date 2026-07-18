@@ -20,7 +20,7 @@ final class in {
         field_d = null;
     }
 
-    final static String a() {
+    final static String a(byte param0) {
         if (un.field_Hb == bf.field_b) {
             return af.field_H;
         }
@@ -91,8 +91,7 @@ final class in {
           if (ko.field_P <= 0) {
             break L4;
           } else {
-            int discarded$4 = 11;
-            an.a(param9, -86, param3);
+            an.a(param9, -86, param3, 11);
             break L4;
           }
         }
@@ -121,14 +120,11 @@ final class in {
           }
           im.field_j.field_lb = true;
           ja.field_f.field_Lb.field_S = null;
-          int discarded$5 = 11;
-          dg.a((byte) -86, ja.field_f, param1, param6);
+          dg.a((byte) -86, ja.field_f, param1, param6, 11);
           break L6;
         }
-        int discarded$6 = 0;
-        uo.a(16777215, 16777215, 11, param1, true, param6);
-        int discarded$7 = 11;
-        dg.a((byte) -121, vd.field_d, param1, param6);
+        uo.a(16777215, 16777215, 11, param1, true, param6, 0);
+        dg.a((byte) -121, vd.field_d, param1, param6, 11);
         lo.field_d = lo.field_d + 1;
     }
 
@@ -170,7 +166,7 @@ final class in {
         }
     }
 
-    final static void a(tn param0) {
+    final static void a(tn param0, int param1) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

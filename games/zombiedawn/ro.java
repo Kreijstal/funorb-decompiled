@@ -6,7 +6,7 @@ final class ro {
     static int field_b;
     static int field_c;
 
-    final static void a(int param0, int param1, mf param2, mf param3, int param4) {
+    final static void a(int param0, int param1, mf param2, mf param3, int param4, int param5) {
         lb.field_Y = param0;
         qb.field_i = param4;
         dd.field_b = param2;
@@ -18,11 +18,11 @@ final class ro {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_a = null;
     }
 
-    final static vn[] a() {
+    final static vn[] a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;

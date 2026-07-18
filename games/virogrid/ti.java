@@ -12,7 +12,7 @@ final class ti implements ol {
     private e field_d;
     static int field_b;
 
-    public static void b() {
+    public static void b(int param0) {
         field_i = null;
         int var1 = 0;
         field_h = null;
@@ -26,12 +26,12 @@ final class ti implements ol {
         int var1 = -112 / ((-57 - param0) / 39);
     }
 
-    final static String a() {
+    final static String a(int param0) {
         int var1 = 0;
         return sh.field_qb.h(-121);
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = Virogrid.field_F ? 1 : 0;

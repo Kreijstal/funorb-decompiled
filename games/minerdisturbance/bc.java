@@ -40,7 +40,7 @@ final class bc implements Iterator {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         int var1 = 31;
         field_b = null;
     }

@@ -15,7 +15,7 @@ final class k {
         throw new IllegalStateException();
     }
 
-    final static int b() {
+    final static int b(int param0) {
         int var1 = 0;
         return po.field_w;
     }

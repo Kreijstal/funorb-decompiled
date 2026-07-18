@@ -136,10 +136,8 @@ final class we extends iq {
         }
         wj.b(76);
         ea.b((byte) 111);
-        int discarded$18 = 65;
-        vb.d();
-        int discarded$24 = -27440;
-        if (cd.b()) {
+        vb.d(65);
+        if (cd.b(-27440)) {
             uh.field_Wb.j(1, param0 ^ -1733144137);
             lf.d(61, 0);
         }
@@ -216,10 +214,8 @@ final class we extends iq {
         cl.field_c = qc.a(0, "");
         cl.field_c.a(0, false);
         try {
-            int discarded$0 = -57;
-            we.a(param4, param3, param0);
-            int discarded$1 = 44;
-            tq.b();
+            we.a(param4, param3, param0, (byte) -57);
+            tq.b((byte) 44);
             un.field_Hb = l.field_a;
             um.field_F = l.field_a;
         } catch (RuntimeException runtimeException) {
@@ -443,7 +439,7 @@ final class we extends iq {
         int var2 = 6 % ((-7 - param0) / 48);
     }
 
-    private final static void a(r param0, r param1, r param2) {
+    private final static void a(r param0, r param1, r param2, byte param3) {
         RuntimeException var4 = null;
         u[] var5 = null;
         u[][] var6 = null;
@@ -512,19 +508,16 @@ final class we extends iq {
         var13 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            int discarded$5 = 1;
-            bh.field_a = gk.a(param1, "commonui", "frame_top");
-            int discarded$6 = 1;
-            ki.field_b = gk.a(param1, "commonui", "frame_bottom");
+            bh.field_a = gk.a(param1, "commonui", "frame_top", true);
+            ki.field_b = gk.a(param1, "commonui", "frame_bottom", true);
             qo.field_y = tn.a("jagex_logo_grey", param1, -95, "commonui");
-            int discarded$7 = 1;
-            q.field_z = gk.a(param1, "commonui", "button");
+            q.field_z = gk.a(param1, "commonui", "button", true);
             jn.field_b = mi.a("validation", param1, (byte) 34, "commonui");
             bl.field_N = (cc) (Object) rl.a(param1, 12, param0, "commonui", "arezzo12");
             qc.field_x = (cc) (Object) rl.a(param1, 12, param0, "commonui", "arezzo14");
             sg.field_a = (cc) (Object) rl.a(param1, 12, param0, "commonui", "arezzo14bold");
             var17 = new er(param2.a("button.gif", "", 0), (java.awt.Component) (Object) ne.field_F);
-            u discarded$8 = vl.a(0, "commonui", param1, "dropdown");
+            u discarded$1 = vl.a(0, "commonui", param1, "dropdown");
             var5 = oh.a((byte) -39, "screen_options", "commonui", param1);
             rg.field_e = new u[4];
             wh.field_F = new u[4];
@@ -572,8 +565,7 @@ final class we extends iq {
                         var9++;
                         continue L2;
                       } else {
-                        int discarded$9 = -35;
-                        var14[var11_int] = pc.a(var5[var9], var21[var11_int]);
+                        var14[var11_int] = pc.a(var5[var9], var21[var11_int], -35);
                         var11_int++;
                         continue L3;
                       }

@@ -15,7 +15,7 @@ final class hb extends ak {
     static volatile int field_B;
     private int field_G;
 
-    public static void e() {
+    public static void e(byte param0) {
         field_C = null;
         field_F = null;
     }
@@ -513,7 +513,7 @@ final class hb extends ak {
         }
     }
 
-    final static void j() {
+    final static void j(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -554,8 +554,7 @@ final class hb extends ak {
                 if (var6 <= var7) {
                   var15 = (ld) (Object) ne.field_r.a((byte) -86);
                   if (var15 == null) {
-                    int discarded$4 = 18;
-                    kc.a();
+                    kc.a((byte) 18);
                     return;
                   } else {
                     var15.field_g = true;
@@ -577,21 +576,18 @@ final class hb extends ak {
                   var11.c(2);
                   return;
                 } else {
-                  int discarded$5 = 18;
-                  kc.a();
+                  kc.a((byte) 18);
                   return;
                 }
               } else {
                 if (var2 != 2) {
                   ti.a((Throwable) null, (byte) 100, "A1: " + la.a(-106));
-                  int discarded$6 = 18;
-                  kc.a();
+                  kc.a((byte) 18);
                   return;
                 } else {
                   var13 = (ld) (Object) ne.field_r.a((byte) -118);
                   if (var13 == null) {
-                    int discarded$7 = 18;
-                    kc.a();
+                    kc.a((byte) 18);
                     return;
                   } else {
                     var13.field_i = eh.a(-117);
@@ -637,8 +633,7 @@ final class hb extends ak {
               try {
                 L0: {
                   var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-                  int discarded$2 = 0;
-                  param1.getAppletContext().showDocument(ag.a(param1, var2), "_top");
+                  param1.getAppletContext().showDocument(ag.a(param1, var2, false), "_top");
                   var3 = 0;
                   break L0;
                 }

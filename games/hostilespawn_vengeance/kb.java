@@ -21,7 +21,7 @@ abstract class kb {
 
     abstract int a(byte param0);
 
-    public static void c() {
+    public static void c(byte param0) {
         field_a = null;
         field_c = null;
         int var1 = 0;
@@ -135,7 +135,7 @@ abstract class kb {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         if (im.field_e != null) {
           L0: {
             im.field_e.l(-115);
@@ -146,8 +146,7 @@ abstract class kb {
               break L0;
             }
           }
-          int discarded$4 = 115;
-          ch.a();
+          ch.a((byte) 115);
           return;
         } else {
           L1: {
@@ -158,13 +157,12 @@ abstract class kb {
               break L1;
             }
           }
-          int discarded$5 = 115;
-          ch.a();
+          ch.a((byte) 115);
           return;
         }
     }
 
-    final static pg a(pg param0, int[] param1) {
+    final static pg a(pg param0, int[] param1, byte param2) {
         pg var3 = null;
         RuntimeException var3_ref = null;
         pg stackIn_1_0 = null;

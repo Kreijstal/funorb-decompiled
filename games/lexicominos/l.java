@@ -106,7 +106,7 @@ final class l extends mg {
         }
     }
 
-    final static void i() {
+    final static void i(int param0) {
         int var1 = -37;
     }
 

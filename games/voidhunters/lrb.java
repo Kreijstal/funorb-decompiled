@@ -19,8 +19,8 @@ final class lrb extends rna implements ntb, hd {
             var5 = (lrb) (Object) param1;
             var6 = var5;
             super.b((byte) 103, param1);
-            var6.field_c = var5.field_c;
-            var6.field_d = var5.field_d;
+            var6.field_c = ((lrb) this).field_c;
+            var6.field_d = ((lrb) this).field_d;
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "lrb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -62,17 +62,17 @@ final class lrb extends rna implements ntb, hd {
               super.a(param0, -97);
               var6 = (lrb) (Object) param0;
               var4 = 0;
-              if (var6.field_d != var6.field_d) {
+              if (var6.field_d != ((lrb) this).field_d) {
                 var4 = 1;
-                System.out.println("int target_body has changed. before=" + var6.field_d + ", now=" + var6.field_d);
+                System.out.println("int target_body has changed. before=" + var6.field_d + ", now=" + ((lrb) this).field_d);
                 break L2;
               } else {
                 break L2;
               }
             }
             L3: {
-              if (var6.field_c != var6.field_c) {
-                System.out.println("int team has changed. before=" + var6.field_c + ", now=" + var6.field_c);
+              if (((lrb) this).field_c != var6.field_c) {
+                System.out.println("int team has changed. before=" + var6.field_c + ", now=" + ((lrb) this).field_c);
                 var4 = 1;
                 break L3;
               } else {
@@ -312,10 +312,10 @@ final class lrb extends rna implements ntb, hd {
                 if (super.a((byte) -44, param1)) {
                   break L2;
                 } else {
-                  if (var3.field_d != var3.field_d) {
+                  if (((lrb) this).field_d != var3.field_d) {
                     break L2;
                   } else {
-                    if (var3.field_c == var3.field_c) {
+                    if (((lrb) this).field_c == var3.field_c) {
                       stackOut_5_0 = 0;
                       stackIn_6_0 = stackOut_5_0;
                       break L1;
@@ -392,8 +392,7 @@ final class lrb extends rna implements ntb, hd {
               if (((lrb) this).field_d < 0) {
                 break L1;
               } else {
-                int discarded$2 = -14;
-                param1 = qi.a(((lrb) this).field_d, true, param1);
+                param1 = qi.a(((lrb) this).field_d, true, param1, (byte) -14);
                 break L1;
               }
             }
@@ -481,8 +480,7 @@ final class lrb extends rna implements ntb, hd {
                           if (tg.field_o == var5.q((byte) 122)) {
                             break L3;
                           } else {
-                            int discarded$2 = 0;
-                            qha.b();
+                            qha.b(false);
                             break L2;
                           }
                         }

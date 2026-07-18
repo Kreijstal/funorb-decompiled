@@ -41,15 +41,13 @@ final class lb {
                       if (bc.field_H.field_d >= 0) {
                         var3 = ik.field_g[bc.field_H.field_d];
                         if (2 == var3) {
-                          int discarded$3 = 9;
-                          aj.a();
+                          aj.a((byte) 9);
                           break L3;
                         } else {
                           if (var3 != 5) {
                             break L3;
                           } else {
-                            int discarded$4 = 9;
-                            aj.a();
+                            aj.a((byte) 9);
                             break L3;
                           }
                         }
@@ -64,8 +62,7 @@ final class lb {
                     if (2 == sh.field_a) {
                       break L3;
                     } else {
-                      int discarded$5 = 9;
-                      aj.a();
+                      aj.a((byte) 9);
                       break L3;
                     }
                   }
@@ -127,7 +124,7 @@ final class lb {
         return stackIn_31_0;
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_a = null;
         field_b = null;
     }

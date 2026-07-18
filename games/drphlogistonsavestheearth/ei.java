@@ -151,7 +151,7 @@ abstract class ei extends dc implements kd {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_k = null;
         field_m = null;
         field_h = null;
@@ -184,8 +184,7 @@ abstract class ei extends dc implements kd {
             try {
               try {
                 var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-                int discarded$2 = 4767999;
-                param1.getAppletContext().showDocument(kk.a(var2, param1), "_top");
+                param1.getAppletContext().showDocument(kk.a(var2, param1, 4767999), "_top");
                 return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

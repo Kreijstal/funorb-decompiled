@@ -32,13 +32,11 @@ final class ql extends dd {
                 break L1;
               } else {
                 var4 = null;
-                String discarded$6 = ((ql) this).c((byte) -78, (al) null);
+                String discarded$2 = ((ql) this).c((byte) -78, (al) null);
                 break L1;
               }
             }
-            int discarded$7 = 20;
-            int discarded$8 = 42;
-            stackOut_2_0 = uh.a(param1.field_s.length());
+            stackOut_2_0 = uh.a(param1.field_s.length(), '*', (byte) 20);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

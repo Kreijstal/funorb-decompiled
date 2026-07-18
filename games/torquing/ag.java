@@ -7,7 +7,7 @@ final class ag {
     static k field_a;
     static String field_d;
 
-    final static long a(long param0) {
+    final static long a(long param0, int param1) {
         param0 = param0 << 32 | param0 >>> 32;
         long var3 = -281470681808896L;
         param0 = (param0 & var3) >>> 16 | (param0 & ~var3) << 16;
@@ -22,7 +22,7 @@ final class ag {
         return param0;
     }
 
-    final static void a() {
+    final static void a(byte param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         wc var4 = null;
@@ -45,9 +45,7 @@ final class ag {
                   }
                 }
               } else {
-                int discarded$4 = 3;
-                int discarded$5 = 1;
-                bp.a(var4);
+                bp.a(var4, 1, 3);
                 var4 = (wc) (Object) so.field_t.f(-24059);
                 continue L1;
               }

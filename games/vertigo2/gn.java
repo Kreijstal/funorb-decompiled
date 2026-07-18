@@ -9,7 +9,7 @@ final class gn {
     static long field_b;
     static String field_a;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_c = null;
         field_e = null;
         field_f = null;

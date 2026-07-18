@@ -953,8 +953,7 @@ class wf extends kd {
           L0: {
             var4_int = param0.c(param1, (byte) -89);
             var5 = param0.a(param3, -27964, var4_int);
-            int discarded$2 = 20;
-            stackOut_2_0 = oc.a(param0, var5, var4_int);
+            stackOut_2_0 = oc.a(param0, var5, var4_int, 20);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

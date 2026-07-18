@@ -125,7 +125,7 @@ final class pd {
         }
     }
 
-    final static void a(java.applet.Applet param0) {
+    final static void a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -164,8 +164,7 @@ final class pd {
                     }
                   }
                   var5 = new java.net.URL(param0.getCodeBase(), var4);
-                  int discarded$2 = 0;
-                  param0.getAppletContext().showDocument(ar.a(param0, var5), "_self");
+                  param0.getAppletContext().showDocument(ar.a(param0, var5, 0), "_self");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -212,7 +211,7 @@ final class pd {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;

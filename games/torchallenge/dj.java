@@ -18,7 +18,7 @@ class dj extends ng {
     static int field_Q;
     static boolean field_Z;
 
-    private final void d() {
+    private final void d(byte param0) {
         lg var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -148,8 +148,7 @@ class dj extends ng {
           L0: {
             L1: {
               super.a(param0, param1, (byte) -99, param3);
-              int discarded$3 = 5;
-              this.d();
+              this.d((byte) 5);
               if (((dj) this).field_z == 1) {
                 L2: {
                   if (!(((dj) this).field_q instanceof gd)) {
@@ -221,7 +220,7 @@ class dj extends ng {
         }
     }
 
-    public static void l() {
+    public static void l(int param0) {
         field_W = null;
         field_O = null;
         field_P = null;
@@ -229,7 +228,7 @@ class dj extends ng {
         field_cb = null;
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         try {
             Exception var2 = null;
             String var2_ref = null;
@@ -238,8 +237,7 @@ class dj extends ng {
               L0: {
                 var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.d(true);
-                int discarded$1 = 1;
-                this.a(var2_ref);
+                this.a(var2_ref, 1);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -285,13 +283,13 @@ class dj extends ng {
         }
     }
 
-    private final String j() {
+    private final String j(int param0) {
         int var2 = ((dj) this).field_R > ((dj) this).field_U ? ((dj) this).field_U : ((dj) this).field_R;
         int var3 = ((dj) this).field_U >= ((dj) this).field_R ? ((dj) this).field_U : ((dj) this).field_R;
         return ((dj) this).field_v.substring(var2, var3);
     }
 
-    private final void a(String param0) {
+    private final void a(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -373,12 +371,12 @@ class dj extends ng {
         }
     }
 
-    private final void g() {
+    private final void g(byte param0) {
         this.g(0);
         this.d(true);
     }
 
-    final static void f() {
+    final static void f(byte param0) {
         if (!(lj.field_q)) {
             throw new IllegalStateException();
         }
@@ -554,7 +552,7 @@ class dj extends ng {
               if (param2 >= 9) {
                 break L1;
               } else {
-                int discarded$5 = this.h(110);
+                int discarded$2 = this.h(110);
                 break L1;
               }
             }
@@ -594,9 +592,9 @@ class dj extends ng {
                         L6: {
                           if (((dj) this).field_R >= ((dj) this).field_v.length()) {
                             ((dj) this).field_v = ((dj) this).field_v + param1;
-                            int dupTemp$6 = ((dj) this).field_v.length();
-                            ((dj) this).field_R = dupTemp$6;
-                            ((dj) this).field_U = dupTemp$6;
+                            int dupTemp$3 = ((dj) this).field_v.length();
+                            ((dj) this).field_R = dupTemp$3;
+                            ((dj) this).field_U = dupTemp$3;
                             break L6;
                           } else {
                             ((dj) this).field_v = ((dj) this).field_v.substring(0, ((dj) this).field_R) + param1 + ((dj) this).field_v.substring(((dj) this).field_R, ((dj) this).field_v.length());
@@ -635,8 +633,7 @@ class dj extends ng {
                                       if (65 != param0) {
                                         break L8;
                                       } else {
-                                        int discarded$7 = 79;
-                                        this.g();
+                                        this.g((byte) 79);
                                         stackOut_63_0 = 1;
                                         stackIn_64_0 = stackOut_63_0;
                                         return stackIn_64_0 != 0;
@@ -663,16 +660,14 @@ class dj extends ng {
                                     if (param0 != 67) {
                                       break L7;
                                     } else {
-                                      int discarded$8 = 65;
-                                      this.e();
+                                      this.e((byte) 65);
                                       stackOut_70_0 = 1;
                                       stackIn_71_0 = stackOut_70_0;
                                       return stackIn_71_0 != 0;
                                     }
                                   }
                                 } else {
-                                  int discarded$9 = -108;
-                                  this.h();
+                                  this.h((byte) -108);
                                   stackOut_59_0 = 1;
                                   stackIn_60_0 = stackOut_59_0;
                                   return stackIn_60_0 != 0;
@@ -824,7 +819,7 @@ class dj extends ng {
         return stackIn_77_0 != 0;
     }
 
-    final static og c() {
+    final static og c(byte param0) {
         try {
             Throwable var1 = null;
             og stackIn_1_0 = null;
@@ -914,15 +909,13 @@ class dj extends ng {
     }
 
     private final void g(int param0) {
-        int discarded$0 = -12349;
-        String var2 = this.j();
+        String var2 = this.j(-12349);
         if (!(0 >= var2.length())) {
-            int discarded$1 = -12349;
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.j()), (java.awt.datatransfer.ClipboardOwner) null);
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.j(-12349)), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
-    private final void h() {
+    private final void h(byte param0) {
         int var2 = 76;
         if (((dj) this).field_k instanceof cc) {
             ((cc) (Object) ((dj) this).field_k).a((dj) this, 5);

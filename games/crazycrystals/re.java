@@ -130,8 +130,7 @@ final class re extends ue {
             }
             L4: {
               var6 = stackIn_21_0;
-              int discarded$2 = 1;
-              this.a(((re) this).field_d[5], var6, gi.field_m);
+              this.a(((re) this).field_d[5], var6, gi.field_m, true);
               if (((re) this).field_b.field_c == 6) {
                 stackOut_23_0 = 16777215;
                 stackIn_24_0 = stackOut_23_0;
@@ -144,8 +143,7 @@ final class re extends ue {
             }
             L5: {
               var6 = stackIn_24_0;
-              int discarded$3 = 1;
-              this.a(((re) this).field_d[6], var6, qd.field_r);
+              this.a(((re) this).field_d[6], var6, qd.field_r, true);
               if (((re) this).field_b.field_c == 7) {
                 stackOut_26_0 = 16777215;
                 stackIn_27_0 = stackOut_26_0;
@@ -476,8 +474,7 @@ final class re extends ue {
             break L18;
           } else {
             if (((re) this).field_b.a(true)) {
-              int discarded$3 = 0;
-              qc.a(((re) this).field_b.field_i);
+              qc.a(((re) this).field_b.field_i, 0);
               ((re) this).field_b.a(-1, true, -1);
               return true;
             } else {
@@ -527,9 +524,7 @@ final class re extends ue {
           } else {
             if (((re) this).field_b.a(true)) {
               q.a(false);
-              int discarded$4 = -20;
-              int discarded$5 = 19;
-              ta.a(le.b());
+              ta.a(le.b((byte) -20), 19);
               break L22;
             } else {
               return false;
@@ -626,7 +621,7 @@ final class re extends ue {
         }
     }
 
-    private final void a(ik param0, int param1, int param2) {
+    private final void a(ik param0, int param1, int param2, boolean param3) {
         try {
             ak.a((byte) 61, 9 + (param0.field_a + ((re) this).field_r), param0.field_d, param2, param1);
         } catch (RuntimeException runtimeException) {
@@ -764,7 +759,7 @@ final class re extends ue {
         int var1 = 10 / ((param0 - -7) / 62);
     }
 
-    private final void d() {
+    private final void d(int param0) {
         int var2 = 0;
         int var3 = CrazyCrystals.field_B;
         if (((re) this).field_l > 0) {
@@ -782,8 +777,7 @@ final class re extends ue {
         int var2 = 0;
         int var3 = CrazyCrystals.field_B;
         ((re) this).f(-114);
-        int discarded$0 = 14;
-        this.d();
+        this.d(14);
         if (!(rb.field_h < 2)) {
             if (!(!cp.field_k[12])) {
                 for (var2 = 0; var2 < 5; var2++) {

@@ -28,7 +28,7 @@ final class fh extends hp implements ri, hh {
         var2.a(87, var3, 20, 270, 50);
         var3 += 50;
         ((fh) this).a(var2, 10);
-        var3 = var3 + (this.a(170, a.field_l, (byte) -76, b.field_i, (ga) (Object) ((fh) this).field_F) + 5);
+        var3 = var3 + (this.a(170, a.field_l, (byte) -76, b.field_i, (ga) (Object) ((fh) this).field_F, var3) + 5);
         ((fh) this).field_H.a(34, var3, 496 + -var5 >> 1, var5, 40);
         ((fh) this).field_G.a(63, 15 + var3, var4 + 3, 60, 40);
         ((fh) this).field_G.field_v = (sk) this;
@@ -41,7 +41,7 @@ final class fh extends hp implements ri, hh {
         ((fh) this).a(-90, 0, 0, 496, var4 + (var3 - -55));
     }
 
-    private final boolean h() {
+    private final boolean h(int param0) {
         if (!this.a(65, (mi) (Object) ((fh) this).field_F)) {
             return false;
         }
@@ -195,14 +195,13 @@ final class fh extends hp implements ri, hh {
     }
 
     private final void e(byte param0) {
-        int discarded$0 = 13;
-        if (!(this.h())) {
+        if (!(this.h(13))) {
             return;
         }
         ca.a((byte) 2, ((fh) this).field_F.field_o);
         if (param0 < 97) {
-            int discarded$1 = 0;
-            String discarded$2 = fh.a((CharSequence) null, -91);
+            Object var3 = null;
+            String discarded$0 = fh.a((CharSequence) null, -91, false);
         }
     }
 
@@ -219,7 +218,7 @@ final class fh extends hp implements ri, hh {
         }
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String a(CharSequence param0, int param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -474,7 +473,7 @@ final class fh extends hp implements ri, hh {
         return stackIn_7_0 != 0;
     }
 
-    final static void i() {
+    final static void i(int param0) {
         int[] var2 = null;
         int var3 = 0;
         Object var4 = null;
@@ -498,8 +497,7 @@ final class fh extends hp implements ri, hh {
           ei.a(0, 0, new int[0], 11, true, -14237, 0, 0);
           ei.a(0, 0, new int[1], 12, true, -14237, 0, 0);
           ei.a(240, 400, new int[4], 13, false, -14237, 160, 428);
-          int discarded$1 = 1;
-          oe.b();
+          oe.b(1);
           ff.field_b = sg.field_jb.b(vk.field_b[12]);
           var3 = sg.field_jb.b(vk.field_b[13]);
           if (var3 > ff.field_b) {
@@ -517,8 +515,7 @@ final class fh extends hp implements ri, hh {
         try {
             super.a(param0, (byte) -48, param2, param3);
             int var5_int = 102 % ((param1 - 46) / 42);
-            int discarded$0 = 13;
-            ((fh) this).field_H.field_C = this.h();
+            ((fh) this).field_H.field_C = this.h(13);
         } catch (RuntimeException runtimeException) {
             throw sh.a((Throwable) (Object) runtimeException, "fh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -535,7 +532,7 @@ final class fh extends hp implements ri, hh {
         return ae.field_b[var4];
     }
 
-    private final int a(int param0, String param1, byte param2, String param3, ga param4) {
+    private final int a(int param0, String param1, byte param2, String param3, ga param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;

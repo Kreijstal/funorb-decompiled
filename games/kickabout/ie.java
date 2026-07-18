@@ -7,7 +7,7 @@ final class ie extends i {
     static int field_F;
     static int field_G;
 
-    final static void g() {
+    final static void g(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -44,12 +44,12 @@ final class ie extends i {
                     break L1;
                   } else {
                     if (0 < je.field_m) {
-                      int fieldTemp$12 = je.field_m - 1;
+                      int fieldTemp$4 = je.field_m - 1;
                       je.field_m = je.field_m - 1;
-                      if (fieldTemp$12 != 0) {
+                      if (fieldTemp$4 != 0) {
                         break L1;
                       } else {
-                        gv discarded$13 = gm.a(de.field_a, true, (byte) -118);
+                        gv discarded$5 = gm.a(de.field_a, true, (byte) -118);
                         break L1;
                       }
                     } else {
@@ -62,15 +62,12 @@ final class ie extends i {
             if (null != et.field_d) {
               L2: {
                 if (sl.field_Eb) {
-                  int discarded$14 = 105;
-                  if (bt.b()) {
+                  if (bt.b(105)) {
                     sl.field_Eb = false;
                     et.field_d.field_R[0].field_g = vb.field_d;
                     p.a(false);
-                    int discarded$15 = -1622;
-                    mk.b();
-                    int discarded$16 = 99;
-                    no.g();
+                    mk.b(-1622);
+                    no.g(99);
                     break L2;
                   } else {
                     break L2;
@@ -85,8 +82,7 @@ final class ie extends i {
                 }
               }
               L3: {
-                int discarded$17 = 0;
-                var1_int = je.a();
+                var1_int = je.a(false);
                 var2 = ob.a(var1_int, -128);
                 if (~mc.field_a != ~var2) {
                   L4: {
@@ -209,15 +205,12 @@ final class ie extends i {
                 }
               }
               L14: {
-                int discarded$18 = 11;
-                ul.b();
-                int discarded$19 = 125;
-                vc.h();
+                ul.b(11);
+                vc.h((byte) 125);
                 if (ks.field_e != 6) {
                   break L14;
                 } else {
-                  int discarded$20 = -127;
-                  o.a();
+                  o.a((byte) -127);
                   break L14;
                 }
               }
@@ -253,7 +246,7 @@ final class ie extends i {
                         break L15;
                       } else {
                         if (var4_ref_nl.field_u == 0) {
-                          boolean discarded$21 = tc.a(12, (byte) 109, 11796480, var4_ref_nl, 36044800);
+                          boolean discarded$6 = tc.a(12, (byte) 109, 11796480, var4_ref_nl, 36044800);
                           if (!sl.field_Eb) {
                             break L15;
                           } else {
@@ -306,8 +299,7 @@ final class ie extends i {
                       var4 = 3;
                       L21: while (true) {
                         if (var4 >= 5) {
-                          int discarded$22 = 1;
-                          df.d();
+                          df.d(true);
                           break L19;
                         } else {
                           L22: {
@@ -388,7 +380,7 @@ final class ie extends i {
                     L27: {
                       et.field_d.field_X.field_m = 0;
                       if (et.field_d.field_P[1][0].field_w < 0) {
-                        boolean discarded$23 = qg.a(2235, 2949120, 4, 29360128);
+                        boolean discarded$7 = qg.a(2235, 2949120, 4, 29360128);
                         break L27;
                       } else {
                         break L27;
@@ -483,7 +475,7 @@ final class ie extends i {
         }
     }
 
-    final static ld a(String param0) {
+    final static ld a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -539,8 +531,7 @@ final class ie extends i {
                       break L0;
                     } else {
                       var6 = var4[var5];
-                      int discarded$2 = 134217728;
-                      var7 = no.a(var6);
+                      var7 = no.a(var6, 134217728);
                       if (var7 == null) {
                         var5++;
                         continue L1;
@@ -611,8 +602,7 @@ final class ie extends i {
             ((ie) this).field_I = param0;
             var6 = param1.d(100);
             String var3 = var6;
-            int discarded$0 = 1;
-            String var4 = ad.a(dh.a(param1), 26300);
+            String var4 = ad.a(dh.a(param1, true), 26300);
             var5 = vo.a((byte) -18, gd.field_e[34], new String[2]);
             ((ie) this).a(var5, ((ie) this).field_t, ((ie) this).field_D, -71, ((ie) this).field_u);
         } catch (RuntimeException runtimeException) {

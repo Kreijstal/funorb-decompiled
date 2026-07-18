@@ -95,7 +95,7 @@ abstract class sf extends wf {
         return ((sf) this).field_g;
     }
 
-    final static ej[] d() {
+    final static ej[] d(byte param0) {
         return new ej[]{gm.field_v, o.field_c, av.field_a, pg.field_d, qe.field_e, tb.field_g, ej.field_b, kb.field_C, op.field_b, qd.field_n, rc.field_e, ct.field_H, lc.field_b, ml.field_j};
     }
 

@@ -76,8 +76,7 @@ final class or {
             } else {
               var3 = (byte[]) param0;
               if (param2) {
-                int discarded$2 = 91;
-                stackOut_9_0 = jj.a(var3);
+                stackOut_9_0 = jj.a(var3, (byte) 91);
                 stackIn_10_0 = stackOut_9_0;
                 return stackIn_10_0;
               } else {
@@ -478,7 +477,7 @@ final class or {
         return stackIn_13_0 != 0;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         String var2 = null;
         if (!(null == nl.field_d)) {
             var2 = nl.field_d;

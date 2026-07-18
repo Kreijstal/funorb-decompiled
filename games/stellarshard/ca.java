@@ -6,7 +6,7 @@ import java.io.*;
 final class ca {
     static String field_a;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_a = null;
     }
 
@@ -211,7 +211,7 @@ final class ca {
         return stackIn_3_0;
     }
 
-    final static void a(ka param0) {
+    final static void a(ka param0, int param1) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;

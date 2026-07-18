@@ -464,14 +464,13 @@ final class dh implements m {
           L0: {
             var1 = nd.field_Lb;
             L1: while (true) {
-              int discarded$9 = 0;
-              if (!jl.a()) {
+              if (!jl.a(false)) {
                 break L0;
               } else {
                 var1.f(8, (byte) -92);
-                int fieldTemp$10 = var1.field_t + 1;
+                int fieldTemp$5 = var1.field_t + 1;
                 var1.field_t = var1.field_t + 1;
-                var2 = fieldTemp$10;
+                var2 = fieldTemp$5;
                 md.a((byte) -93, var1);
                 nd.field_Lb.b(-var2 + var1.field_t, -2);
                 continue L1;
@@ -492,7 +491,7 @@ final class dh implements m {
         return ((dh) this).field_h == 64 ? true : false;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_n = null;
         field_q = null;
         field_g = null;

@@ -81,7 +81,7 @@ final class dh {
         }
     }
 
-    final static void a() {
+    final static void a(int param0) {
         hb.field_jb = null;
         uk.field_r = null;
         df.field_r = null;

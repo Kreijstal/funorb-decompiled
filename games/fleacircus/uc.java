@@ -75,7 +75,7 @@ abstract class uc {
         }
     }
 
-    final static void b() {
+    final static void b(byte param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = fleas.field_A ? 1 : 0;
@@ -86,8 +86,7 @@ abstract class uc {
                     fl.field_c[var1_int][var2] = ia.field_m[fleas.field_E][tj.field_a].field_c[var1_int][var2];
                 }
             }
-            int discarded$0 = 13;
-            fg.a();
+            fg.a((byte) 13);
         } catch (RuntimeException runtimeException) {
             throw pf.a((Throwable) (Object) runtimeException, "uc.F(" + 84 + ')');
         }
@@ -95,7 +94,7 @@ abstract class uc {
 
     abstract void a(java.awt.Graphics param0, int param1, int param2, byte param3);
 
-    public static void c() {
+    public static void c(byte param0) {
         field_e = null;
         field_a = null;
         field_d = null;

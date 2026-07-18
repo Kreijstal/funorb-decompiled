@@ -23,8 +23,7 @@ final class wd extends ab implements ue, dn, bh {
                 pj.b((byte) -26);
             } else {
                 if (!(((wd) this).field_A != param1)) {
-                    int discarded$0 = 90;
-                    boolean discarded$1 = this.k();
+                    boolean discarded$0 = this.k(90);
                 }
             }
             int var6_int = 97 / ((param4 - -27) / 61);
@@ -130,7 +129,7 @@ final class wd extends ab implements ue, dn, bh {
         }
     }
 
-    private final boolean k() {
+    private final boolean k(int param0) {
         if (!this.g(-105)) {
             return false;
         }
@@ -353,7 +352,7 @@ final class wd extends ab implements ue, dn, bh {
         return stackIn_1_0;
     }
 
-    private final int a(String param0, int param1, ea param2, String param3) {
+    private final int a(String param0, int param1, ea param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -492,11 +491,11 @@ final class wd extends ab implements ue, dn, bh {
         return stackIn_1_0;
     }
 
-    private final String j() {
+    private final String j(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final int a(int param0, String param1, ea param2) {
+    private final int a(int param0, String param1, ea param2, int param3, int param4) {
         bc var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;
@@ -606,7 +605,7 @@ final class wd extends ab implements ue, dn, bh {
         }
     }
 
-    private final String i() {
+    private final String i(int param0) {
         int var2 = 0;
         return "</col></u>";
     }
@@ -678,25 +677,14 @@ final class wd extends ab implements ue, dn, bh {
         ul dupTemp$1 = new ul(10000536);
         ((wd) this).field_F.field_e = (ir) (Object) dupTemp$1;
         ((wd) this).field_y.field_e = (ir) (Object) dupTemp$1;
-        int discarded$2 = -99;
-        int discarded$3 = -111;
         String var2 = sn.a(we.field_b, 107, new String[2]);
         int var3 = 20;
-        int discarded$4 = 170;
-        int discarded$5 = -1;
-        var3 = var3 + this.a(var3, ah.field_r, (ea) (Object) ((wd) this).field_E);
+        var3 = var3 + this.a(var3, ah.field_r, (ea) (Object) ((wd) this).field_E, -1, 170);
         var3 = var3 + (this.a("", var3, (ea) (Object) ((wd) this).field_u, (byte) -100, 170, 20, lj.field_e) + 5);
-        int discarded$6 = 170;
-        int discarded$7 = -1;
-        var3 = var3 + this.a(var3, vj.field_b, (ea) (Object) ((wd) this).field_y);
-        int discarded$8 = 170;
-        int discarded$9 = -2791;
-        var3 = var3 + (5 + this.a(nq.field_b, var3, (ea) (Object) ((wd) this).field_F, tj.field_n));
-        int discarded$10 = 170;
-        int discarded$11 = -2791;
-        var3 = var3 + (this.a(es.field_g, var3, (ea) (Object) ((wd) this).field_D, sc.field_b) - -5);
-        int discarded$12 = 170;
-        var3 = var3 + this.a(false, dd.field_b, (ea) (Object) ((wd) this).field_x, var3);
+        var3 = var3 + this.a(var3, vj.field_b, (ea) (Object) ((wd) this).field_y, -1, 170);
+        var3 = var3 + (5 + this.a(nq.field_b, var3, (ea) (Object) ((wd) this).field_F, tj.field_n, -2791, 170));
+        var3 = var3 + (this.a(es.field_g, var3, (ea) (Object) ((wd) this).field_D, sc.field_b, -2791, 170) - -5);
+        var3 = var3 + this.a(false, dd.field_b, (ea) (Object) ((wd) this).field_x, var3, 170);
         bc var4 = new bc(46, var3, -90 + ((wd) this).field_q, 25, (ea) (Object) ((wd) this).field_z, true, ((wd) this).field_q - 120, 5, oi.field_c, 11579568, as.field_a);
         ((wd) this).a((ea) (Object) var4, 1);
         var3 = var3 + var4.field_n;
@@ -888,20 +876,17 @@ final class wd extends ab implements ue, dn, bh {
               if (param3 != 0) {
                 if (param3 != 1) {
                   if (2 == param3) {
-                    int discarded$6 = 0;
-                    qk.a("conduct.ws");
+                    qk.a("conduct.ws", false);
                     break L0;
                   } else {
                     return;
                   }
                 } else {
-                  int discarded$7 = 0;
-                  qk.a("privacy.ws");
+                  qk.a("privacy.ws", false);
                   return;
                 }
               } else {
-                int discarded$8 = 0;
-                qk.a("terms.ws");
+                qk.a("terms.ws", false);
                 return;
               }
             } else {
@@ -955,7 +940,7 @@ final class wd extends ab implements ue, dn, bh {
         }
     }
 
-    private final int a(boolean param0, String param1, ea param2, int param3) {
+    private final int a(boolean param0, String param1, ea param2, int param3, int param4) {
         bc var6 = null;
         RuntimeException var6_ref = null;
         pi var7 = null;

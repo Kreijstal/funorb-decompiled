@@ -18,7 +18,7 @@ final class en extends sr {
     en() {
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_q = null;
         field_p = null;
         field_n = null;

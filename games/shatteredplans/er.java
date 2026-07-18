@@ -87,8 +87,7 @@ final class er {
                           ((er) this).field_o = ((er) this).field_o + 1;
                           ((er) this).field_d = ((er) this).field_d + (8 + -var7);
                           if (((er) this).field_d == 512) {
-                            int discarded$2 = -55;
-                            this.a();
+                            this.a((byte) -55);
                             ((er) this).field_o = 0;
                             ((er) this).field_d = 0;
                             break L6;
@@ -114,8 +113,7 @@ final class er {
                             ((er) this).field_o = ((er) this).field_o + 1;
                             ((er) this).field_d = ((er) this).field_d + (8 + -var7);
                             if (((er) this).field_d == 512) {
-                              int discarded$3 = -55;
-                              this.a();
+                              this.a((byte) -55);
                               ((er) this).field_o = 0;
                               ((er) this).field_d = 0;
                               break L8;
@@ -218,10 +216,7 @@ final class er {
             L2: {
               if (sr.field_h) {
                 L3: {
-                  int discarded$44 = 180;
-                  int discarded$45 = 20;
-                  int discarded$46 = -10;
-                  ca.a(320, param0, param0, param2, param7, param1);
+                  ca.a(320, param0, param0, param2, param7, param1, -10, 20, 180);
                   fa.field_X.a(param5, -20429);
                   if (!param5) {
                     break L3;
@@ -235,8 +230,7 @@ final class er {
                       }
                     }
                     if (cb.field_l.field_rb != 0) {
-                      int discarded$47 = 0;
-                      qq.c();
+                      qq.c(false);
                       sr.field_h = false;
                       break L3;
                     } else {
@@ -568,8 +562,7 @@ final class er {
                       var39 = var30 * var36 >>> 8 & -570360064 | (-16711872 & var30 * var35) >>> 8;
                       var38 = var38 + 65793 * var32;
                       var39 = var39 + var33 * 65793;
-                      int discarded$1 = 256;
-                      bf.a((var38 & 65365) >> 8, var37 & 255, var39 >> 16, var37 >> 8 & 255, var37 >> 16, var26, var22, var39 & 255, var25, 255 & var38, var27, (var39 & 65523) >> 8, var24, var38 >> 16, var23);
+                      bf.a((var38 & 65365) >> 8, var37 & 255, var39 >> 16, var37 >> 8 & 255, var37 >> 16, var26, var22, var39 & 255, var25, 255 & var38, var27, (var39 & 65523) >> 8, var24, var38 >> 16, var23, 256);
                       break L10;
                     }
                     var44++;
@@ -708,14 +701,13 @@ final class er {
               if (((er) this).field_o > 32) {
                 L2: while (true) {
                   if (((er) this).field_o >= 64) {
-                    int discarded$4 = -55;
-                    this.a();
+                    this.a((byte) -55);
                     ((er) this).field_o = 0;
                     break L1;
                   } else {
-                    int fieldTemp$5 = ((er) this).field_o;
+                    int fieldTemp$2 = ((er) this).field_o;
                     ((er) this).field_o = ((er) this).field_o + 1;
-                    ((er) this).field_a[fieldTemp$5] = (byte) 0;
+                    ((er) this).field_a[fieldTemp$2] = (byte) 0;
                     continue L2;
                   }
                 }
@@ -726,8 +718,7 @@ final class er {
             L3: while (true) {
               if (((er) this).field_o >= 32) {
                 ps.a(((er) this).field_k, 0, ((er) this).field_a, 32, 32);
-                int discarded$6 = -55;
-                this.a();
+                this.a((byte) -55);
                 var4_int = 0;
                 var5 = param0;
                 var6 = 59 % ((param1 - 19) / 32);
@@ -750,9 +741,9 @@ final class er {
                   }
                 }
               } else {
-                int fieldTemp$7 = ((er) this).field_o;
+                int fieldTemp$3 = ((er) this).field_o;
                 ((er) this).field_o = ((er) this).field_o + 1;
-                ((er) this).field_a[fieldTemp$7] = (byte) 0;
+                ((er) this).field_a[fieldTemp$3] = (byte) 0;
                 continue L3;
               }
             }
@@ -950,7 +941,7 @@ final class er {
         return stackIn_29_0;
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

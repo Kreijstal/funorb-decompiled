@@ -11,7 +11,7 @@ final class ve extends ak {
     private ak field_Fb;
     private int field_Hb;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_Ib = null;
         field_Jb = null;
         field_Gb = null;
@@ -514,7 +514,7 @@ final class ve extends ak {
                     break L1;
                   } else {
                     if (((ve) this).field_Eb.length() > 0) {
-                      StringBuilder discarded$6 = nk.a(((ve) this).field_Eb, -1 + ((ve) this).field_Eb.length(), ' ', 16736352);
+                      StringBuilder discarded$5 = nk.a(((ve) this).field_Eb, -1 + ((ve) this).field_Eb.length(), ' ', 16736352);
                       break L1;
                     } else {
                       break L1;
@@ -522,9 +522,8 @@ final class ve extends ak {
                   }
                 }
                 L2: {
-                  int discarded$7 = -117;
-                  if (aq.a(nj.field_f, (CharSequence) (Object) ((ve) this).field_Eb)) {
-                    StringBuilder discarded$8 = ((ve) this).field_Eb.append(nj.field_f);
+                  if (aq.a(nj.field_f, (CharSequence) (Object) ((ve) this).field_Eb, (byte) -117)) {
+                    StringBuilder discarded$6 = ((ve) this).field_Eb.append(nj.field_f);
                     break L2;
                   } else {
                     L3: {
@@ -532,7 +531,7 @@ final class ve extends ak {
                         break L3;
                       } else {
                         if (nj.field_f == 91) {
-                          StringBuilder discarded$9 = ((ve) this).field_Eb.append(nj.field_f);
+                          StringBuilder discarded$7 = ((ve) this).field_Eb.append(nj.field_f);
                           break L2;
                         } else {
                           break L3;
@@ -544,7 +543,7 @@ final class ve extends ak {
                         break L4;
                       } else {
                         if (nj.field_f == 35) {
-                          StringBuilder discarded$10 = ((ve) this).field_Eb.append(nj.field_f);
+                          StringBuilder discarded$8 = ((ve) this).field_Eb.append(nj.field_f);
                           break L2;
                         } else {
                           break L4;
@@ -554,7 +553,7 @@ final class ve extends ak {
                     if (nj.field_f != 93) {
                       break L2;
                     } else {
-                      StringBuilder discarded$11 = ((ve) this).field_Eb.append(nj.field_f);
+                      StringBuilder discarded$9 = ((ve) this).field_Eb.append(nj.field_f);
                       break L2;
                     }
                   }
@@ -684,8 +683,7 @@ final class ve extends ak {
             ((ve) this).field_Lb.a(3 - -fq.field_q, fq.field_q, 5, 256, var9_int);
             var10 = var9_int + 10;
             var11 = 6 + 2 * fq.field_q;
-            int discarded$1 = -1;
-            var12 = ui.a(param2, param0, var10);
+            var12 = ui.a(param2, param0, var10, (byte) -1);
             var13 = pj.a(var11, param1, param3, (byte) 67);
             ((ve) this).a(var13, var11, var12, 256, var10);
             break L0;
@@ -797,7 +795,7 @@ final class ve extends ak {
         }
     }
 
-    final static void j() {
+    final static void j(int param0) {
         cd.field_e = new String[d.field_b];
         cd.field_e[17] = ap.field_i;
         cd.field_e[20] = sh.field_c;

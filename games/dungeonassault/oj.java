@@ -278,7 +278,7 @@ final class oj {
         }
     }
 
-    final static int a(int param0) {
+    final static int a(int param0, byte param1) {
         param0 = param0 & 8191;
         if (param0 >= 4096) {
             return 6144 > param0 ? -jb.field_Tb[-4096 + param0] : -jb.field_Tb[8192 + -param0];
@@ -294,7 +294,7 @@ final class oj {
         field_c = null;
     }
 
-    final static void a(int param0, mm param1) {
+    final static void a(int param0, mm param1, boolean param2) {
         wj var5 = null;
         int var4 = 0;
         try {

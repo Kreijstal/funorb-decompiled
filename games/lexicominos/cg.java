@@ -22,7 +22,7 @@ final class cg extends kd {
         return ti.field_L != null && ti.field_L.e(false) != null;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_i = null;
         int var1 = 0;
     }
@@ -97,7 +97,7 @@ final class cg extends kd {
                 break L1;
               } else {
                 if (-1 == param3.indexOf("<br>")) {
-                  args[0] = (String) (Object) args;
+                  args[0] = param3;
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
                   return stackIn_5_0;

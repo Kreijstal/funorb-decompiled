@@ -233,7 +233,7 @@ final class qk extends wi {
         super.b(param0, param1, param2, param3);
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_F = null;
         field_H = null;
         field_E = null;

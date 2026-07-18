@@ -15,7 +15,7 @@ final class nna extends ana {
         }
     }
 
-    private final void e() {
+    private final void e(byte param0) {
         iv var3 = null;
         ad var4 = null;
         int var5 = 0;
@@ -57,7 +57,7 @@ final class nna extends ana {
         return var2;
     }
 
-    final static void a(lda param0, lda param1, int param2, int param3, int param4) {
+    final static void a(lda param0, lda param1, int param2, int param3, int param4, byte param5) {
         try {
             hi.field_a = param0;
             st.field_b = param1;
@@ -70,7 +70,7 @@ final class nna extends ana {
         }
     }
 
-    private final void b() {
+    private final void b(boolean param0) {
     }
 
     final boolean c(byte param0) {
@@ -79,19 +79,17 @@ final class nna extends ana {
         if (!(fieldTemp$0 < 0)) {
             if (((nna) this).field_l == 25) {
                 jja.a(256, -1, 50);
-                int discarded$1 = -68;
-                this.e();
+                this.e((byte) -68);
                 return false;
             }
             return false;
         }
         int var2 = 100 / ((param0 - 71) / 47);
-        int discarded$2 = 0;
-        this.b();
+        this.b(false);
         return true;
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_w = null;
         field_v = null;
         int var1 = -9;

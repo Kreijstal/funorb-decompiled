@@ -78,7 +78,7 @@ abstract class ha {
 
     abstract void HA(int param0, int param1, int param2, int param3, int[] param4);
 
-    final synchronized static ha a(d param0, int param1, cn param2, int param3, int param4, int param5, java.awt.Canvas param6) {
+    final synchronized static ha a(d param0, int param1, cn param2, int param3, int param4, int param5, java.awt.Canvas param6, int param7) {
         RuntimeException var8 = null;
         ha stackIn_2_0 = null;
         ha stackIn_6_0 = null;
@@ -144,8 +144,7 @@ abstract class ha {
               return stackIn_6_0;
             } else {
               if (param3 == 1) {
-                int discarded$2 = -109;
-                stackOut_9_0 = on.a(param6, param0, param5);
+                stackOut_9_0 = on.a(param6, param0, param5, (byte) -109);
                 stackIn_10_0 = stackOut_9_0;
                 return stackIn_10_0;
               } else {

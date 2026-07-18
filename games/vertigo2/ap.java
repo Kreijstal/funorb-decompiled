@@ -31,8 +31,7 @@ final class ap {
         try {
           L0: {
             L1: {
-              int discarded$6 = 11631;
-              vm.a((java.awt.Component) (Object) param0);
+              vm.a((java.awt.Component) (Object) param0, 11631);
               if (param1 == -8228) {
                 break L1;
               } else {
@@ -80,7 +79,7 @@ final class ap {
         }
     }
 
-    final static al a(int param0, r param1) {
+    final static al a(int param0, r param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

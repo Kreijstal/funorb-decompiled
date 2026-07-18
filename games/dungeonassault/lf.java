@@ -71,10 +71,10 @@ final class lf extends kl {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         try {
             field_w = null;
-            int var1_int = 36;
+            int var1_int = 36 / ((-82 - param0) / 35);
             field_v = null;
             field_p = null;
             field_q = null;
@@ -83,7 +83,7 @@ final class lf extends kl {
             field_n = null;
             field_x = null;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "lf.C(" + -121 + ')');
+            throw vk.a((Throwable) (Object) runtimeException, "lf.C(" + param0 + ')');
         }
     }
 

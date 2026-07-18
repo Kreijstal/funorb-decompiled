@@ -479,7 +479,8 @@ final class sn {
             Throwable var8_ref_Throwable = null;
             int var8 = 0;
             int var9 = 0;
-            CharSequence var10 = null;
+            Object var10 = null;
+            CharSequence var11 = null;
             int stackIn_5_0 = 0;
             int stackIn_36_0 = 0;
             int stackIn_46_0 = 0;
@@ -559,12 +560,11 @@ final class sn {
                   } else {
                     L3: {
                       if (param5) {
-                        int discarded$9 = 0;
-                        wb.field_Nb = sb.a(sh.field_f, param2, false, (String) null);
+                        var10 = null;
+                        wb.field_Nb = sb.a(sh.field_f, param2, false, (String) null, 0);
                         break L3;
                       } else {
-                        int discarded$10 = 9507;
-                        wb.field_Nb = hm.a(false, param2, param0);
+                        wb.field_Nb = hm.a(false, param2, param0, 9507);
                         break L3;
                       }
                     }
@@ -669,8 +669,7 @@ final class sn {
                         var6_ref = de.field_V.c(-16829);
                         var7 = de.field_V.d((byte) -93);
                         if ((var7 & 1) != 0) {
-                          int discarded$11 = 64;
-                          qj.a();
+                          qj.a((byte) 64);
                           break L10;
                         } else {
                           break L10;
@@ -738,9 +737,9 @@ final class sn {
                       L16: {
                         gf.field_i = stackIn_57_0 != 0;
                         if (ci.field_c) {
-                          int discarded$12 = de.field_V.d((byte) -25);
-                          int discarded$13 = de.field_V.d((byte) -71);
-                          int discarded$14 = de.field_V.i(7553);
+                          int discarded$5 = de.field_V.d((byte) -25);
+                          int discarded$6 = de.field_V.d((byte) -71);
+                          int discarded$7 = de.field_V.i(7553);
                           uj.field_a = de.field_V.e(3);
                           ai.field_N = new byte[uj.field_a];
                           var8 = 0;
@@ -759,9 +758,8 @@ final class sn {
                       }
                       L18: {
                         oa.field_f = de.field_V.c((byte) -38);
-                        var10 = (CharSequence) (Object) oa.field_f;
-                        int discarded$15 = 2;
-                        h.field_c = kf.a(var10);
+                        var11 = (CharSequence) (Object) oa.field_f;
+                        h.field_c = kf.a(var11, (byte) 2);
                         bb.field_e = de.field_V.d((byte) -49);
                         ph.field_xb = wf.field_u;
                         if (wb.field_Nb.a(18) != pb.field_i) {
@@ -793,7 +791,7 @@ final class sn {
                             if (!on.field_d) {
                               try {
                                 L22: {
-                                  Object discarded$16 = nc.a(true, "unzap", se.h(25144));
+                                  Object discarded$8 = nc.a(true, "unzap", se.h(25144));
                                   break L22;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -811,7 +809,7 @@ final class sn {
                         }
                         try {
                           L24: {
-                            Object discarded$17 = nc.a("zap", -14541, se.h(25144), new Object[1]);
+                            Object discarded$9 = nc.a("zap", -14541, se.h(25144), new Object[1]);
                             break L24;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -1291,7 +1289,7 @@ final class sn {
         return (sn) this;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_k = null;
         int var1 = 0;
         field_e = null;

@@ -113,13 +113,12 @@ final class gb {
         aj[] var5 = null;
         L0: {
           var4 = Lexicominos.field_L ? 1 : 0;
-          int discarded$4 = -55;
-          var5 = ah.a();
+          var5 = ah.a((byte) -55);
           var2 = var5;
           if (param1 == 2121865922) {
             break L0;
           } else {
-            aj discarded$5 = gb.a(71, -115);
+            aj discarded$2 = gb.a(71, -115);
             break L0;
           }
         }

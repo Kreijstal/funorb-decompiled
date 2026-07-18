@@ -415,7 +415,7 @@ final class qp extends we {
         }
     }
 
-    public static void d() {
+    public static void d(int param0) {
         field_r = null;
         field_v = null;
     }

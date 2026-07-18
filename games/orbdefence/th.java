@@ -160,7 +160,7 @@ final class th {
         return stackIn_13_0;
     }
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_f = null;
         field_c = null;
         field_a = null;
@@ -313,7 +313,7 @@ final class th {
                 break L2;
               } else {
                 if (-1 == param1.indexOf("<br>")) {
-                  param2[0] = (String) (Object) param2;
+                  param2[0] = param1;
                   stackOut_6_0 = 1;
                   stackIn_7_0 = stackOut_6_0;
                   return stackIn_7_0;

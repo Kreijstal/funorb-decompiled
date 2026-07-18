@@ -125,8 +125,7 @@ final class oc implements dh {
             L1: {
               var6_int = param4.field_v + param0;
               var7 = param4.field_m + param2;
-              int discarded$1 = -1540604944;
-              ik.a(var6_int, param4.field_h, var7, param4.field_r);
+              ik.a(var6_int, param4.field_h, var7, param4.field_r, -1540604944);
               var8 = oa.field_e[1];
               if (!(param4 instanceof hk)) {
                 break L1;
@@ -196,7 +195,7 @@ final class oc implements dh {
         n.field_l.a(-88, (hf) (Object) var1);
     }
 
-    final static void a() {
+    final static void a(int param0) {
         try {
             java.lang.reflect.Method var1_ref_java_lang_reflect_Method = null;
             int var1 = 0;

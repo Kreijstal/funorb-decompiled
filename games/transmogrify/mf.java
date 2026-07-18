@@ -8,7 +8,7 @@ final class mf {
     static int[] field_c;
     private static String field_z;
 
-    public static void a() {
+    public static void a(boolean param0) {
         field_b = null;
         field_c = null;
         field_a = null;

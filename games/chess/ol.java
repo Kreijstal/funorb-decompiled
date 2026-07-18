@@ -91,7 +91,7 @@ final class ol extends ma implements nn, mj, wl {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_S = null;
         field_O = null;
         field_R = null;
@@ -125,21 +125,18 @@ final class ol extends ma implements nn, mj, wl {
             L1: {
               if (param0 != 0) {
                 if (1 == param0) {
-                  int discarded$7 = -118;
-                  hb.a("privacy.ws");
+                  hb.a("privacy.ws", (byte) -118);
                   break L1;
                 } else {
                   if (param0 != 2) {
                     break L1;
                   } else {
-                    int discarded$8 = -118;
-                    hb.a("conduct.ws");
+                    hb.a("conduct.ws", (byte) -118);
                     break L1;
                   }
                 }
               } else {
-                int discarded$9 = -118;
-                hb.a("terms.ws");
+                hb.a("terms.ws", (byte) -118);
                 break L1;
               }
             }
@@ -413,7 +410,7 @@ final class ol extends ma implements nn, mj, wl {
         }
     }
 
-    final static km[] a(um param0, String param1, String param2) {
+    final static km[] a(um param0, String param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -563,7 +560,7 @@ final class ol extends ma implements nn, mj, wl {
         }
     }
 
-    private final String g() {
+    private final String g(byte param0) {
         return "</col></u>";
     }
 
@@ -1009,8 +1006,6 @@ final class ol extends ma implements nn, mj, wl {
         hk dupTemp$1 = new hk(10000536);
         ((ol) this).field_Z.field_n = (jm) (Object) dupTemp$1;
         ((ol) this).field_U.field_n = (jm) (Object) dupTemp$1;
-        int discarded$2 = 25;
-        int discarded$3 = 79;
         String var2 = oc.a(la.field_a, new String[2], (byte) -120);
         int var3 = 20;
         var3 = var3 + this.a(true, wh.field_e, var3, 170, (mf) (Object) ((ol) this).field_Q);
@@ -1286,11 +1281,11 @@ final class ol extends ma implements nn, mj, wl {
         return stackIn_1_0;
     }
 
-    private final String j() {
+    private final String j(int param0) {
         return "<u=2164A2><col=2164A2>";
     }
 
-    final static void a(String param0) {
+    final static void a(String param0, int param1) {
         System.out.println("Error: " + kb.a(param0, 0, "\n", "%0a"));
     }
 

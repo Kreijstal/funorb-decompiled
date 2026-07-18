@@ -84,8 +84,8 @@ abstract class da implements gk {
 
     public final String a(byte param0) {
         if (param0 != -63) {
-            int discarded$0 = 1;
-            da.a((java.awt.Component) null, (qb) null, (h) null, -88, true, -43, 7);
+            Object var3 = null;
+            da.a((java.awt.Component) null, (qb) null, (h) null, -88, true, -43, 7, true);
         }
         if (((da) this).a(16647)) {
             return null;
@@ -159,7 +159,7 @@ abstract class da implements gk {
         return stackIn_3_0;
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_e = null;
         field_d = null;
         field_c = null;
@@ -268,7 +268,7 @@ abstract class da implements gk {
         }
     }
 
-    final static void a(java.awt.Component param0, qb param1, h param2, int param3, boolean param4, int param5, int param6) {
+    final static void a(java.awt.Component param0, qb param1, h param2, int param3, boolean param4, int param5, int param6, boolean param7) {
         try {
             ap.a(param5, true, 10);
             aj.field_e = ap.a(param1, param0, 0, param6);

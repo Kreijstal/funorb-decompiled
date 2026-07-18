@@ -71,7 +71,7 @@ final class oi extends gb implements n {
         }
     }
 
-    public static void f() {
+    public static void f(byte param0) {
         field_H = null;
         int var1 = -38;
         field_J = null;

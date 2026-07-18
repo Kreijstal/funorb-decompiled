@@ -807,7 +807,7 @@ final class in extends bh {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, byte param5, boolean param6, int param7, int param8, int param9, int param10, int param11) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, byte param5, boolean param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -919,14 +919,14 @@ final class in extends bh {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_s = null;
         field_n = null;
         field_u = null;
         field_o = null;
     }
 
-    final static void c() {
+    final static void c(byte param0) {
         db.a(-127, te.field_q, ve.field_Gc, true);
         dc.field_d = true;
     }
@@ -946,8 +946,7 @@ final class in extends bh {
             var9 = ((in) this).field_t.field_C * var8 / ((in) this).field_t.field_K;
         }
         int var10 = !(!param4) ? 5 * ((in) this).field_r : 0;
-        int discarded$0 = 10000;
-        this.a(-var9 + -var10, param2, param6, -var8, var8, (byte) 72, param4, param0, 10000, param5, -var10 + var9, param3);
+        this.a(-var9 + -var10, param2, param6, -var8, var8, (byte) 72, param4, param0, 10000, param5, -var10 + var9, param3, 10000);
     }
 
     final static void a(ug param0, byte param1, int param2) {

@@ -49,8 +49,7 @@ abstract class fk extends l {
           L0: while (true) {
             param1--;
             if (0 > param1) {
-              int discarded$2 = -123;
-              fk.a(true);
+              fk.a(true, -123);
               return;
             } else {
               var9 = param3;
@@ -94,7 +93,7 @@ abstract class fk extends l {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a(boolean param0, int param1) {
         a.field_d = false;
         id.a(240, 320, 2, gh.field_b, param0, (byte) -105, (lh) (Object) v.field_j, 8, gh.field_b, 8, -4 + (v.field_j.field_t + v.field_j.field_H), v.field_j.field_H);
     }

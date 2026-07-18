@@ -52,7 +52,7 @@ final class lw extends IOException {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_h = null;
         field_a = null;

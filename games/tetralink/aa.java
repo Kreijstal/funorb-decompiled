@@ -39,8 +39,7 @@ final class aa extends hl {
               var6 = var6 + 2 * ((aa) this).field_Tb;
               var7 = ((aa) this).field_Yb + ((aa) this).field_Yb + ((aa) this).field_Rb * ((aa) this).field_Xb;
               var8 = eo.a(var6, (byte) 123, param4, param0);
-              int discarded$2 = -8748;
-              var9 = mh.a(param3, param1, var7);
+              var9 = mh.a(param3, param1, var7, -8748);
               ((aa) this).a((byte) -80, var6, var9, var7, var8);
               var10 = 0;
               if (param2 < -13) {
@@ -99,8 +98,7 @@ final class aa extends hl {
           var6 = var6 + 2 * ((aa) this).field_Tb;
           var7 = ((aa) this).field_Yb + ((aa) this).field_Yb + ((aa) this).field_Rb * ((aa) this).field_Xb;
           var8 = eo.a(var6, (byte) 123, param4, param0);
-          int discarded$3 = -8748;
-          var9 = mh.a(param3, param1, var7);
+          var9 = mh.a(param3, param1, var7, -8748);
           ((aa) this).a((byte) -80, var6, var9, var7, var8);
           var10 = 0;
           if (param2 < -13) {
@@ -147,13 +145,13 @@ final class aa extends hl {
         }
     }
 
-    public static void h() {
+    public static void h(int param0) {
         field_Wb = null;
         field_Kb = null;
         field_bc = null;
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         Object var2 = null;
         ve.a(-1, (String) null, pl.field_e);
     }

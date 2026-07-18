@@ -178,9 +178,7 @@ class lb implements wo, fi {
         String stackOut_3_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            int discarded$5 = 2;
-            this.a(param2, param1, ((lb) this).field_g, ((lb) this).field_c, 0, param0);
+            this.a(param2, param1, ((lb) this).field_g, ((lb) this).field_c, 0, param0, 2, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -353,7 +351,7 @@ class lb implements wo, fi {
         return stackIn_3_0;
     }
 
-    private final void a(int param0, qm param1, int param2, int param3, int param4, int param5) {
+    private final void a(int param0, qm param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -865,7 +863,7 @@ class lb implements wo, fi {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         int var1 = 0;
         field_l = null;

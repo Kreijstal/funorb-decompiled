@@ -154,7 +154,7 @@ class ei {
         return stackIn_4_0 != 0;
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0, int param1, byte param2) {
         return 0 != (55 & param1);
     }
 

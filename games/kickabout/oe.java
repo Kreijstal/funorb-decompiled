@@ -65,8 +65,7 @@ final class oe extends mo {
         }
         L1: {
           L2: {
-            int discarded$2 = 0;
-            var4 = this.d();
+            var4 = this.d(0);
             var5 = ((oe) this).field_i - (var3 - -var4);
             if (((oe) this).field_k[param1] == 1) {
               break L2;
@@ -113,8 +112,8 @@ final class oe extends mo {
         try {
             var6 = (oe) (Object) param1;
             var3 = var6;
-            for (var4 = 0; var6.field_i > var4; var4++) {
-                var6.field_k[var4] = var6.field_k[var4];
+            for (var4 = 0; ((oe) this).field_i > var4; var4++) {
+                ((oe) this).field_k[var4] = var6.field_k[var4];
             }
             if (param0 > -52) {
                 ((oe) this).field_h = null;
@@ -239,7 +238,7 @@ final class oe extends mo {
         }
     }
 
-    final static void c() {
+    final static void c(int param0) {
     }
 
     final boolean b(byte param0, int param1) {
@@ -260,8 +259,7 @@ final class oe extends mo {
         L1: {
           L2: {
             var3 = this.e(-104);
-            int discarded$2 = 0;
-            var4 = this.d();
+            var4 = this.d(0);
             var5 = -var3 + (((oe) this).field_i + -var4);
             if (0 == ((oe) this).field_k[param1]) {
               break L2;
@@ -363,7 +361,7 @@ final class oe extends mo {
         }
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_n = null;
         field_l = null;
         field_m = null;
@@ -456,7 +454,7 @@ final class oe extends mo {
         }
     }
 
-    private final int d() {
+    private final int d(int param0) {
         int var2 = 0;
         int[] var3 = null;
         int var4 = 0;

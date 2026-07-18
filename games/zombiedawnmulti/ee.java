@@ -158,7 +158,7 @@ final class ee {
         return stackIn_12_0;
     }
 
-    final static fc a(byte[] param0) {
+    final static fc a(byte[] param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -241,7 +241,7 @@ final class ee {
         return stackIn_5_0;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean a(boolean param0, boolean param1) {
         L0: {
           if (wp.field_g == null) {
             wp.field_g = ok.field_m.a(tm.field_c, jo.field_b, (byte) -120);
@@ -269,7 +269,7 @@ final class ee {
         }
     }
 
-    final static lm a(int param0, int param1, int param2) {
+    final static lm a(int param0, int param1, int param2, boolean param3) {
         if (19 == param0) {
             return null;
         }
@@ -278,13 +278,11 @@ final class ee {
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, boolean param5, boolean param6, int param7, boolean param8, int param9, int param10, boolean param11, int param12, boolean param13) {
         ui.field_j = null;
-        int discarded$0 = 75;
-        no.c();
+        no.c((byte) 75);
         param8 = ih.a(13, 4, 14, 11, 0, param8, param4);
         el.a(16777215, param13, param12, 2, param8, 16777215, param6, 11, true, param11);
         bg.a(param12, (byte) 101, param6);
-        int discarded$1 = 0;
-        ig.a((byte) -114, param12, param8);
+        ig.a((byte) -114, param12, param8, 0);
     }
 
     static {

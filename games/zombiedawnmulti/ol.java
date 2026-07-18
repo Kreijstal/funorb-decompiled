@@ -712,7 +712,7 @@ final class ol extends nc {
         }
     }
 
-    final static boolean a(String param0) {
+    final static boolean a(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -752,8 +752,7 @@ final class ol extends nc {
                   if (hd.a(-24315, (char) var3)) {
                     break L2;
                   } else {
-                    int discarded$9 = 85;
-                    if (!vh.a((char) var3)) {
+                    if (!vh.a((char) var3, (byte) 85)) {
                       stackOut_6_0 = 1;
                       stackIn_7_0 = stackOut_6_0;
                       return stackIn_7_0 != 0;

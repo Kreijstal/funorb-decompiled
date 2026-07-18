@@ -27,7 +27,7 @@ final class ha extends br {
         }
     }
 
-    final static ob b() {
+    final static ob b(boolean param0) {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         ob var2 = null;

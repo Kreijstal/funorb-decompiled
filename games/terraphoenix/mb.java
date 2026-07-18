@@ -30,7 +30,7 @@ final class mb extends vh {
         }
     }
 
-    public static void b() {
+    public static void b(boolean param0) {
         field_p = null;
         field_u = null;
         field_s = null;
@@ -41,7 +41,7 @@ final class mb extends vh {
         return (Terraphoenix.field_O & 1) != 0 ? true : false;
     }
 
-    final static void a(int param0, pk param1, int param2, int param3, ci[] param4, int param5, ci[] param6, byte param7, int param8, int param9, int param10, int param11, int param12, ci[] param13, int param14, int param15, pk param16, int param17, int param18) {
+    final static void a(int param0, pk param1, int param2, int param3, ci[] param4, int param5, ci[] param6, byte param7, int param8, int param9, int param10, int param11, int param12, ci[] param13, int param14, int param15, pk param16, int param17, int param18, int param19, int param20) {
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -121,10 +121,7 @@ final class mb extends vh {
         String stackOut_15_2 = null;
         try {
           L0: {
-            int discarded$3 = 16711680;
-            int discarded$4 = 240;
-            int discarded$5 = 16744576;
-            gj.a(new bm(param4), new bm(param13), 0, 480, param1, param11, 16777215, param12, 320, 12, 12, 12, param10, 6, new bm(param6), param18, 12, param16);
+            gj.a(new bm(param4), new bm(param13), 0, 480, param1, param11, 16777215, param12, 320, 12, 12, 12, param10, 6, new bm(param6), param18, 12, param16, 16744576, 240, 16711680);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

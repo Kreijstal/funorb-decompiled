@@ -9,7 +9,7 @@ final class hu {
     private int field_e;
     static int[] field_f;
 
-    final static void a(String param0, float param1, boolean param2) {
+    final static void a(String param0, float param1, boolean param2, int param3) {
         try {
             if (!(null != he.field_n)) {
                 he.field_n = new m(rf.field_a, t.field_s);
@@ -138,7 +138,7 @@ final class hu {
         return ls.a(this.a((byte) -110, param1), (byte) -98);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_a = null;
         field_f = null;
         field_c = null;
@@ -194,8 +194,7 @@ final class hu {
               if (var2_int >= param0.length) {
                 break L0;
               } else {
-                int discarded$6 = 72;
-                this.a(param0[var2_int]);
+                this.a(param0[var2_int], (byte) 72);
                 var2_int++;
                 continue L1;
               }
@@ -233,7 +232,7 @@ final class hu {
         }
     }
 
-    private final void a(ls param0) {
+    private final void a(ls param0, byte param1) {
         try {
             int fieldTemp$0 = ((hu) this).field_e;
             ((hu) this).field_e = ((hu) this).field_e + 1;

@@ -20,11 +20,11 @@ final class jt extends hd implements lv {
         return 120;
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_Bb = null;
     }
 
-    final static wd a() {
+    final static wd a(int param0, byte param1, int param2, int param3) {
         wd var4 = null;
         int var5 = 0;
         var5 = Kickabout.field_G;
@@ -35,8 +35,7 @@ final class jt extends hd implements lv {
             var4.field_p = 10;
             var4.field_k = 0;
             ak.field_i.a((gn) (Object) var4, 3);
-            int discarded$2 = 7;
-            vg.a(true, var4);
+            vg.a(true, var4, 7);
             return var4;
           } else {
             if (var4.field_k != 0) {

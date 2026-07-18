@@ -538,8 +538,7 @@ final class jp extends tda {
             break L0;
           } else {
             if (((jp) this).field_G == var3) {
-              int discarded$1 = 23721;
-              this.a(((jp) this).field_j, ((jp) this).field_p, ((jp) this).field_E);
+              this.a(((jp) this).field_j, ((jp) this).field_p, ((jp) this).field_E, 23721);
               this.d(-3305);
               return;
             } else {
@@ -738,8 +737,7 @@ final class jp extends tda {
               if (param3 < 1) {
                 return false;
               } else {
-                int discarded$2 = 126;
-                if (~param3 >= ~vj.a(param1, param0)) {
+                if (~param3 >= ~vj.a(param1, param0, (byte) 126)) {
                   return true;
                 } else {
                   return false;
@@ -1111,8 +1109,7 @@ final class jp extends tda {
             return;
         }
         try {
-            int discarded$0 = 23721;
-            this.a(param2, true, param0);
+            this.a(param2, true, param0, 23721);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "jp.GA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -1785,7 +1782,7 @@ final class jp extends tda {
         }
     }
 
-    private final synchronized void a(boolean param0, boolean param1, kia param2) {
+    private final synchronized void a(boolean param0, boolean param1, kia param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = BachelorFridge.field_y;

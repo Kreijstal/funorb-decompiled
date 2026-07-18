@@ -9,7 +9,7 @@ abstract class vc {
 
     abstract int b(int param0);
 
-    final static void a(t param0) {
+    final static void a(t param0, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -144,13 +144,13 @@ abstract class vc {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;
     }
 
-    final static k[] c() {
+    final static k[] c(int param0) {
         return new k[]{fh.field_t, np.field_k, cc.field_a, jp.field_p, eo.field_b, mc.field_k, gp.field_L, lb.field_z, da.field_d, qk.field_r, ag.field_a, aq.field_a, ip.field_a, qd.field_f};
     }
 

@@ -10,7 +10,7 @@ final class of {
     static vm field_b;
     static String field_d;
 
-    public static void b() {
+    public static void b(int param0) {
         field_g = null;
         field_d = null;
         field_a = null;
@@ -47,7 +47,7 @@ final class of {
         }
     }
 
-    final static e a() {
+    final static e a(int param0) {
         String var1 = bh.d(-77);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {

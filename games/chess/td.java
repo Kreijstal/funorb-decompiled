@@ -12,7 +12,7 @@ final class td extends o {
     static String[] field_n;
     static String field_m;
 
-    final static void a(le param0) {
+    final static void a(le param0, int param1, int param2, int param3) {
         try {
             tm.field_d = 0;
             tn.field_m = 0;
@@ -25,8 +25,7 @@ final class td extends o {
     final static km[] a(int param0, int param1) {
         km[] var3 = new km[9];
         km[] var2 = var3;
-        int discarded$0 = 14727;
-        var3[4] = rd.a(64, param1);
+        var3[4] = rd.a(64, param1, 14727);
         return var2;
     }
 
@@ -38,7 +37,7 @@ final class td extends o {
         }
     }
 
-    public static void a() {
+    public static void a(int param0) {
         field_j = null;
         field_n = null;
         field_m = null;

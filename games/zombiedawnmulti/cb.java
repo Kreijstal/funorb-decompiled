@@ -301,14 +301,12 @@ final class cb extends br {
             ((cb) this).field_n = ((cb) this).field_s;
             ((cb) this).field_f = 0;
             ((cb) this).field_q = ((cb) this).field_n;
-            int discarded$11 = -117;
-            this.a();
+            this.a((byte) -117);
             return;
           } else {
             ((cb) this).field_f = 0;
             ((cb) this).field_q = ((cb) this).field_n;
-            int discarded$12 = -117;
-            this.a();
+            this.a((byte) -117);
             return;
           }
         } else {
@@ -316,8 +314,7 @@ final class cb extends br {
           ((cb) this).field_n = 0;
           ((cb) this).field_f = 0;
           ((cb) this).field_q = ((cb) this).field_n;
-          int discarded$13 = -117;
-          this.a();
+          this.a((byte) -117);
           return;
         }
     }
@@ -412,7 +409,7 @@ final class cb extends br {
         }
     }
 
-    private final void a() {
+    private final void a(byte param0) {
         int var2 = 0;
         ja var3 = null;
         ja var4 = null;

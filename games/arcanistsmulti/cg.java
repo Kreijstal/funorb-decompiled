@@ -157,7 +157,7 @@ final class cg extends kc {
         return stackIn_9_0 != 0;
     }
 
-    final static void f() {
+    final static void f(int param0) {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
@@ -246,9 +246,7 @@ final class cg extends kc {
                         var18 = 0;
                         L5: while (true) {
                           if (var18 >= 3) {
-                            int discarded$2 = 0;
-                            int discarded$3 = 0;
-                            to.a((byte) -61, an.field_e, tn.field_Gb, true, var17);
+                            to.a((byte) -61, an.field_e, tn.field_Gb, true, var17, false, false);
                             cj.a(var8, var13, var12, 20133, var17, var9, var7, var14);
                             var15++;
                             continue L3;
@@ -533,8 +531,7 @@ final class cg extends kc {
             }
             var4_int = param2.c(param3, -79);
             var5 = param2.a(param0, (byte) 54, var4_int);
-            int discarded$2 = -10;
-            stackOut_2_0 = hj.a(var4_int, param2, var5);
+            stackOut_2_0 = hj.a(var4_int, param2, var5, (byte) -10);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

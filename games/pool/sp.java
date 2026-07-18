@@ -6,7 +6,7 @@ final class sp extends gr {
     ge field_K;
     int field_J;
 
-    final static boolean h() {
+    final static boolean h(int param0) {
         return pa.field_I == ra.field_e;
     }
 

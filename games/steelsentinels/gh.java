@@ -489,7 +489,7 @@ class gh extends dh {
         return ((gh) this).b(param0 + 2147483550, 2147483647);
     }
 
-    private final gh a(long param0) {
+    private final gh a(long param0, int param1) {
         gh var5 = null;
         int var6 = 0;
         gh var7 = null;
@@ -501,8 +501,7 @@ class gh extends dh {
             var7 = (gh) (Object) ((gh) this).field_M.e(13058);
             L0: while (true) {
               if (var7 != null) {
-                int discarded$2 = 3318;
-                var5 = var7.a(param0);
+                var5 = var7.a(param0, 3318);
                 if (var5 != null) {
                   return var5;
                 } else {
@@ -1151,8 +1150,8 @@ class gh extends dh {
               if (var23_ref == null) {
                 break L31;
               } else {
-                var23_ref.a(param0, var23_ref.field_Rb - -var19, param2, var23_ref.field_tb, param4, param5, var23_ref.field_zb, var23_ref.field_Lb, (byte) 81, var23_ref.field_cb - -var20, param10);
-                var23_ref = (gh) (Object) var23_ref.field_M.a((byte) -78);
+                var23_ref.a(param0, ((gh) this).field_Rb - -var19, param2, ((gh) this).field_tb, param4, param5, ((gh) this).field_zb, ((gh) this).field_Lb, (byte) 81, ((gh) this).field_cb - -var20, param10);
+                var23_ref = (gh) (Object) ((gh) this).field_M.a((byte) -78);
                 continue L32;
               }
             }
@@ -1190,13 +1189,12 @@ class gh extends dh {
                 break L1;
               } else {
                 var4 = null;
-                String discarded$4 = gh.a(25, (java.applet.Applet) null);
+                String discarded$2 = gh.a(25, (java.applet.Applet) null);
                 break L1;
               }
             }
             var5 = (CharSequence) (Object) param0;
-            int discarded$5 = 3318;
-            stackOut_2_0 = this.a(ke.a(var5, (byte) -48));
+            stackOut_2_0 = this.a(ke.a(var5, (byte) -48), 3318);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -1245,7 +1243,7 @@ class gh extends dh {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        Object var14 = null;
+        gh var14 = null;
         int var15 = 0;
         Object stackIn_27_0 = null;
         Object stackIn_28_0 = null;
@@ -1278,7 +1276,6 @@ class gh extends dh {
         Object stackOut_37_0 = null;
         int stackOut_37_1 = 0;
         L0: {
-          var14 = null;
           var15 = SteelSentinels.field_G;
           var7 = 10 / ((param4 - -71) / 51);
           if (((gh) this).field_Gb > 0) {
@@ -1479,20 +1476,20 @@ class gh extends dh {
           if (((gh) this).field_M == null) {
             break L12;
           } else {
-            var14 = (Object) (Object) (gh) (Object) ((gh) this).field_M.b(1063677678);
+            var14 = (gh) (Object) ((gh) this).field_M.b(1063677678);
             L13: while (true) {
               if (var14 == null) {
                 break L12;
               } else {
-                ((gh) var14).a(param0, ((gh) var14).field_zb, ((gh) var14).field_cb, ((gh) var14).field_Lb, (byte) 1, ((gh) var14).field_Rb);
-                var14 = (Object) (Object) (gh) (Object) ((gh) var14).field_M.a(-2137);
+                var14.a(param0, ((gh) this).field_zb, ((gh) this).field_cb, ((gh) this).field_Lb, (byte) 1, ((gh) this).field_Rb);
+                var14 = (gh) (Object) ((gh) this).field_M.a(-2137);
                 continue L13;
               }
             }
           }
         }
         L14: {
-          if (((gh) var14).field_K) {
+          if (((gh) this).field_K) {
             bh.field_f = true;
             break L14;
           } else {
@@ -1509,16 +1506,16 @@ class gh extends dh {
         }
         L16: {
           pb.a(var9, var10, var11, var12);
-          if (((gh) var14).field_W == 0) {
+          if (((gh) this).field_W == 0) {
             break L16;
           } else {
-            if (!((gh) var14).field_U) {
+            if (!((gh) this).field_U) {
               break L16;
             } else {
               L17: {
-                ((gh) this).field_Y = -((gh) var14).field_Cb + oh.field_f - param5;
-                ((gh) this).field_eb = -param2 + -((gh) var14).field_Nb + pi.field_c;
-                if (((gh) var14).field_Y < 0) {
+                ((gh) this).field_Y = -((gh) this).field_Cb + oh.field_f - param5;
+                ((gh) this).field_eb = -param2 + -((gh) this).field_Nb + pi.field_c;
+                if (((gh) this).field_Y < 0) {
                   ((gh) this).field_Y = 0;
                   break L17;
                 } else {
@@ -1526,15 +1523,15 @@ class gh extends dh {
                 }
               }
               L18: {
-                if (((gh) var14).field_Y > param1 - ((gh) var14).field_zb) {
-                  ((gh) this).field_Y = param1 - ((gh) var14).field_zb;
+                if (((gh) this).field_Y > param1 - ((gh) this).field_zb) {
+                  ((gh) this).field_Y = param1 - ((gh) this).field_zb;
                   break L18;
                 } else {
                   break L18;
                 }
               }
               L19: {
-                if (((gh) var14).field_eb >= 0) {
+                if (((gh) this).field_eb >= 0) {
                   break L19;
                 } else {
                   ((gh) this).field_eb = 0;
@@ -1543,16 +1540,16 @@ class gh extends dh {
               }
               L20: {
                 ((gh) this).field_gb = 0;
-                if (((gh) var14).field_eb <= -((gh) var14).field_Lb + param3) {
+                if (((gh) this).field_eb <= -((gh) this).field_Lb + param3) {
                   break L20;
                 } else {
-                  ((gh) this).field_eb = -((gh) var14).field_Lb + param3;
+                  ((gh) this).field_eb = -((gh) this).field_Lb + param3;
                   break L20;
                 }
               }
               ((gh) this).field_Gb = 0;
-              ((gh) this).field_Rb = param5 - -((gh) var14).field_Y;
-              ((gh) this).field_cb = param2 + ((gh) var14).field_eb;
+              ((gh) this).field_Rb = param5 - -((gh) this).field_Y;
+              ((gh) this).field_cb = param2 + ((gh) this).field_eb;
               break L16;
             }
           }
@@ -1819,7 +1816,7 @@ class gh extends dh {
             while (var4 != null) {
                 var4.field_R = true;
                 var4.h(42);
-                var4 = (gh) (Object) var4.field_M.a(-2137);
+                var4 = (gh) (Object) ((gh) this).field_M.a(-2137);
             }
         }
         int var2 = 126 % ((param0 - -23) / 57);

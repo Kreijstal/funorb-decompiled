@@ -19,7 +19,7 @@ final class dt extends rqa {
         }
     }
 
-    public static void e() {
+    public static void e(int param0) {
         field_o = null;
     }
 

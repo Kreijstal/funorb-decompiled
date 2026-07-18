@@ -111,8 +111,7 @@ final class efa extends b implements mia, tsa {
             if (param1 != 2097152) {
                 ((efa) this).field_x = null;
             }
-            int discarded$0 = 0;
-            ((efa) this).field_A.field_y = this.b();
+            ((efa) this).field_A.field_y = this.b(false);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "efa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -141,13 +140,11 @@ final class efa extends b implements mia, tsa {
           L0: {
             L1: {
               if (((efa) this).field_B == param2) {
-                int discarded$7 = -804227775;
-                pn.f();
+                pn.f(-804227775);
                 break L1;
               } else {
                 if (param2 == ((efa) this).field_A) {
-                  int discarded$8 = 89;
-                  this.a();
+                  this.a((byte) 89);
                   break L1;
                 } else {
                   break L1;
@@ -158,7 +155,7 @@ final class efa extends b implements mia, tsa {
               break L0;
             } else {
               var7 = null;
-              boolean discarded$9 = this.a(-113, (mk) null);
+              boolean discarded$1 = this.a(-113, (mk) null);
               return;
             }
           }
@@ -220,9 +217,7 @@ final class efa extends b implements mia, tsa {
         var2.a((byte) -31, 270, 50, 20, var3);
         ((efa) this).a(var2, -1);
         var3 += 50;
-        int discarded$0 = 170;
-        int discarded$1 = -2239;
-        var3 = var3 + (5 + this.a(var3, rea.field_r, za.field_f, (ae) (Object) ((efa) this).field_z));
+        var3 = var3 + (5 + this.a(var3, rea.field_r, za.field_f, (ae) (Object) ((efa) this).field_z, -2239, 170));
         ((efa) this).field_A.a((byte) -31, var5, 40, -var5 + 496 >> 1, var3);
         ((efa) this).field_B.a((byte) -31, 60, 40, var4 + 3, var3 - -15);
         ((efa) this).field_B.field_h = (qc) this;
@@ -250,7 +245,7 @@ final class efa extends b implements mia, tsa {
         }
     }
 
-    private final int a(int param0, String param1, String param2, ae param3) {
+    private final int a(int param0, String param1, String param2, ae param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -302,9 +297,7 @@ final class efa extends b implements mia, tsa {
         String stackOut_11_2 = null;
         try {
           L0: {
-            int discarded$4 = 3;
-            int discarded$5 = 35;
-            stackOut_2_0 = this.a(70, param3, 170, param1, param2);
+            stackOut_2_0 = this.a(70, param3, 170, param1, param2, 35, 3);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -391,13 +384,11 @@ final class efa extends b implements mia, tsa {
         return stackIn_3_0;
     }
 
-    private final void a() {
-        int discarded$0 = 0;
-        if (!this.b()) {
+    private final void a(byte param0) {
+        if (!this.b(false)) {
             return;
         }
-        int discarded$1 = 0;
-        rka.a(((efa) this).field_z.field_o);
+        rka.a(((efa) this).field_z.field_o, false);
     }
 
     final boolean a(char param0, ae param1, int param2, boolean param3) {
@@ -491,7 +482,7 @@ final class efa extends b implements mia, tsa {
         return stackIn_13_0 != 0;
     }
 
-    private final int a(int param0, ae param1, int param2, String param3, String param4) {
+    private final int a(int param0, ae param1, int param2, String param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         sd var9 = null;
         jsa var10 = null;
@@ -637,7 +628,7 @@ final class efa extends b implements mia, tsa {
         return stackIn_1_0;
     }
 
-    private final boolean b() {
+    private final boolean b(boolean param0) {
         if (!(this.a(-66, (mk) (Object) ((efa) this).field_z))) {
             return false;
         }

@@ -6,7 +6,7 @@ final class qj {
     static String field_b;
     static ub field_a;
 
-    final static String[] a(char param0, String param1) {
+    final static String[] a(char param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;
@@ -100,7 +100,7 @@ final class qj {
         return stackIn_10_0;
     }
 
-    public static void a() {
+    public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_a = null;

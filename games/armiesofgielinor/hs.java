@@ -280,8 +280,7 @@ abstract class hs extends kb implements gw {
           qn.f(param4 + 37, param7 + -70 + param6, 245 - -param4, param6 + (param7 - 45));
           fe.a(var8, -param3 + (param4 + 42), param6 - 43 + param7, 16777215, true);
           qn.a();
-          int discarded$3 = 1;
-          fe.c(param2.field_Y - -param2.field_A + "/" + param2.field_t, param4 + 272, param6 - (42 - param7), 16777215);
+          fe.c(param2.field_Y - -param2.field_A + "/" + param2.field_t, param4 + 272, param6 - (42 - param7), 16777215, true);
           ro.field_rb[param2.g(0)].a(param4 + 9, param7 + -66 + param6);
           var9 = param2.l(-27014);
           qn.b(59 + param4, param7 + -41 + param6, 30, 30, 0, 128);
@@ -368,13 +367,11 @@ abstract class hs extends kb implements gw {
         L6: {
           if (var11 != var12) {
             qn.b(param4 + 92, param7 - 41 - -param6, 39, 30, 0, 128);
-            int discarded$4 = 1;
-            fe.c(fo.a(4800, td.field_a, new String[2]), param4 + 111, param7 + -41 + (param6 - -30), 16777215);
+            fe.c(fo.a(4800, td.field_a, new String[2]), param4 + 111, param7 + -41 + (param6 - -30), 16777215, true);
             break L6;
           } else {
             qn.b(96 + param4, -41 - (-param6 - param7), 30, 30, 0, 128);
-            int discarded$5 = 1;
-            fe.c(Integer.toString(var11), param4 + 111, -41 - (-param6 - (param7 - -30)), 16777215);
+            fe.c(Integer.toString(var11), param4 + 111, -41 - (-param6 - (param7 - -30)), 16777215, true);
             break L6;
           }
         }
@@ -1637,8 +1634,7 @@ abstract class hs extends kb implements gw {
         if (param0) {
             return true;
         }
-        int discarded$0 = -86;
-        return null != this.a() ? true : false;
+        return null != this.a((byte) -86) ? true : false;
     }
 
     boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
@@ -1748,7 +1744,7 @@ abstract class hs extends kb implements gw {
         return stackIn_15_0 != 0;
     }
 
-    public static void i() {
+    public static void i(int param0) {
         field_E = null;
         field_G = null;
         field_F = null;
@@ -1864,7 +1860,7 @@ abstract class hs extends kb implements gw {
         ((hs) this).d((byte) 121);
     }
 
-    private final kb a() {
+    private final kb a(byte param0) {
         kb[] var2 = null;
         int var3 = 0;
         kb var4 = null;

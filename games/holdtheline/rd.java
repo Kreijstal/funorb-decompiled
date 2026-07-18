@@ -244,8 +244,7 @@ abstract class rd {
               L3: while (true) {
                 if (var3.field_d != 0) {
                   if (1 != var3.field_d) {
-                    int discarded$14 = 45;
-                    qe.a(100L);
+                    qe.a(100L, (byte) 45);
                     continue L2;
                   } else {
                     param2.setVisible(false);
@@ -253,8 +252,7 @@ abstract class rd {
                     break L0;
                   }
                 } else {
-                  int discarded$15 = 45;
-                  qe.a(10L);
+                  qe.a(10L, (byte) 45);
                   continue L3;
                 }
               }

@@ -143,7 +143,7 @@ abstract class ud extends ei implements lj {
         return null != ((ud) this).g(-1) ? true : false;
     }
 
-    private final boolean a(ei param0) {
+    private final boolean a(ei param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -701,8 +701,7 @@ abstract class ud extends ei implements lj {
             } else {
               L3: {
                 if (!vj.field_c[81]) {
-                  int discarded$3 = 10;
-                  stackOut_11_0 = this.a(param3);
+                  stackOut_11_0 = this.a(param3, 10);
                   stackIn_12_0 = stackOut_11_0;
                   break L3;
                 } else {

@@ -138,7 +138,7 @@ abstract class jf extends ca {
         }
     }
 
-    public static void h() {
+    public static void h(byte param0) {
         field_kb = null;
         field_nb = null;
         field_fb = null;
@@ -378,12 +378,11 @@ abstract class jf extends ca {
                 break L1;
               } else {
                 var3 = null;
-                boolean discarded$4 = jf.a((CharSequence) null, 52);
+                boolean discarded$2 = jf.a((CharSequence) null, 52);
                 break L1;
               }
             }
-            int discarded$5 = 10;
-            stackOut_2_0 = fc.a(true, -44, param0);
+            stackOut_2_0 = fc.a(true, -44, param0, 10);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

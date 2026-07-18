@@ -20,7 +20,7 @@ final class co extends qm {
     private dl field_B;
     private int field_u;
 
-    private final dl j() {
+    private final dl j(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -46,21 +46,17 @@ final class co extends qm {
 
     final void a(int param0, int param1, int param2, int param3, byte param4) {
         super.a(param0, param1, param2, param3, param4);
-        int discarded$0 = 0;
-        this.h();
+        this.h(0);
     }
 
-    private final void h() {
-        int discarded$0 = 2;
-        int discarded$1 = 2;
-        ((co) this).field_y = new dl[]{this.a(((co) this).field_w, ((co) this).field_C), this.a(((co) this).field_u, ((co) this).field_E)};
-        int discarded$2 = 255;
-        ((co) this).field_z = this.j();
+    private final void h(int param0) {
+        ((co) this).field_y = new dl[]{this.a(((co) this).field_w, ((co) this).field_C, 2), this.a(((co) this).field_u, ((co) this).field_E, 2)};
+        ((co) this).field_z = this.j(255);
         ((co) this).field_B = ((co) this).field_z.c();
         ((co) this).field_D = new dl(((co) this).field_f >> 1, ((co) this).field_f);
     }
 
-    final static int i() {
+    final static int i(int param0) {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -198,7 +194,7 @@ final class co extends qm {
         this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 1, 8355711 & param6 >> 1);
     }
 
-    private final dl a(int param0, int param1) {
+    private final dl a(int param0, int param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -408,12 +404,11 @@ final class co extends qm {
         ((co) this).field_w = param2;
         ((co) this).field_C = param1;
         ((co) this).field_E = (16711422 & param1) >> 1;
-        int discarded$0 = 0;
-        this.h();
+        this.h(0);
         int var4 = 111 / ((param0 - -60) / 40);
     }
 
-    final static void d() {
+    final static void d(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

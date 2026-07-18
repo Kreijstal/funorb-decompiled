@@ -11,7 +11,7 @@ final class fh {
     static ud field_c;
     static w field_d;
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0, int param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -70,14 +70,13 @@ final class fh {
     }
 
     final static void b(byte param0) {
-        int discarded$2 = -115;
-        s.g();
+        s.g((byte) -115);
         if (param0 > -122) {
             fh.a(-67);
         }
     }
 
-    final static void a(byte param0, cl param1) {
+    final static void a(byte param0, cl param1, int param2) {
         uf var3 = null;
         try {
             var3 = we.field_b;
@@ -109,7 +108,7 @@ final class fh {
         return pe.b(25973, sm.field_e);
     }
 
-    public static void b() {
+    public static void b(int param0) {
         field_c = null;
         field_d = null;
         field_e = null;
@@ -126,8 +125,7 @@ final class fh {
         var2 = client.field_A ? 1 : 0;
         try {
           L0: {
-            int discarded$22 = -22802;
-            if (!uk.a()) {
+            if (!uk.a(-22802)) {
               L1: {
                 if (cl.field_v == null) {
                   break L1;
@@ -144,13 +142,13 @@ final class fh {
               return;
             } else {
               var1_int = -26 % ((param0 - 37) / 58);
-              boolean discarded$23 = u.field_i.a(jd.field_Yb, true, ab.field_f, 29166);
+              boolean discarded$15 = u.field_i.a(jd.field_Yb, true, ab.field_f, 29166);
               u.field_i.g(0);
               L2: while (true) {
                 if (!ab.c((byte) 50)) {
                   break L0;
                 } else {
-                  boolean discarded$24 = u.field_i.a(wh.field_c, el.field_G, (byte) 121);
+                  boolean discarded$16 = u.field_i.a(wh.field_c, el.field_G, (byte) 121);
                   continue L2;
                 }
               }

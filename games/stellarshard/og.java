@@ -7,7 +7,7 @@ final class og {
     static int field_a;
     static int[][] field_d;
 
-    public static void a() {
+    public static void a(byte param0) {
         field_d = null;
         field_c = null;
         field_b = null;

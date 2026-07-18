@@ -43,7 +43,7 @@ final class em extends vf {
         }
     }
 
-    final static vk a(String[] args) {
+    final static vk a(String[] args, int param1) {
         vk var2 = null;
         RuntimeException var2_ref = null;
         vk stackIn_1_0 = null;

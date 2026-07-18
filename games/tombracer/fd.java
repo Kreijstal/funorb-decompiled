@@ -35,7 +35,7 @@ final class fd {
         }
     }
 
-    public static void b() {
+    public static void b(byte param0) {
         field_d = null;
     }
 

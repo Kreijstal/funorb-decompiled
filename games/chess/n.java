@@ -11,7 +11,7 @@ final class n {
     static String field_c;
     static bn[] field_b;
 
-    final static vg a() {
+    final static vg a(byte param0) {
         String var1 = ob.d((byte) -108);
         if (var1 != null) {
             if (0 <= var1.indexOf('@')) {
@@ -23,9 +23,8 @@ final class n {
 
     final static void a(lh param0, int param1, boolean param2, km[] param3, int param4, int param5, int param6, int param7, int param8, lh param9, int param10, int param11, int param12, int param13, km[] param14) {
         try {
-            int discarded$0 = 8;
-            int discarded$1 = 8;
-            tb.a(le.field_f, param9, -26472, param3, param0, param12, (km[]) null, 240, kg.field_V, 320, param13, param14, 480, 0, 2, kj.field_h, 0, param7, param6);
+            Object var16 = null;
+            tb.a(le.field_f, param9, -26472, param3, param0, param12, (km[]) null, 240, kg.field_V, 320, param13, param14, 480, 0, 2, kj.field_h, 0, param7, param6, 8, 8);
             ga.a(param2, 121);
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "n.B(" + (param0 != null ? "{...}" : "null") + ',' + 8 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + 320 + ',' + 2 + ',' + param6 + ',' + param7 + ',' + 240 + ',' + (param9 != null ? "{...}" : "null") + ',' + 8 + ',' + 126 + ',' + param12 + ',' + param13 + ',' + (param14 != null ? "{...}" : "null") + ')');
@@ -46,8 +45,7 @@ final class n {
             pi.field_c = la.a(true, "");
             pi.field_c.a(false, -1730123902);
             hn.a(86, param4, param1, param0);
-            int discarded$0 = -128;
-            ak.c();
+            ak.c((byte) -128);
             vl.field_A = ji.field_T;
             g.field_a = ji.field_T;
         } catch (RuntimeException runtimeException) {

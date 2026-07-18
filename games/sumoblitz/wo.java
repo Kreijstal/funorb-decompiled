@@ -6,18 +6,14 @@ final class wo extends java.awt.Canvas {
     static hr[] field_b;
     private java.awt.Component field_a;
 
-    public static void a() {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
+    public static void a(int param0) {
         try {
-          L0: {
             field_b = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "wo.A(" + 92 + ')');
+            if (param0 <= 89) {
+                field_b = null;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "wo.A(" + param0 + ')');
         }
     }
 
@@ -33,6 +29,7 @@ final class wo extends java.awt.Canvas {
         int var12 = 0;
         int var13 = 0;
         int stackIn_8_0 = 0;
+        int stackIn_11_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_15_1 = 0;
         int stackIn_34_0 = 0;
@@ -66,6 +63,7 @@ final class wo extends java.awt.Canvas {
         int stackOut_33_0 = 0;
         int stackOut_33_1 = 0;
         int stackOut_37_0 = 0;
+        int stackOut_10_0 = 0;
         RuntimeException stackOut_39_0 = null;
         StringBuilder stackOut_39_1 = null;
         RuntimeException stackOut_42_0 = null;
@@ -112,91 +110,97 @@ final class wo extends java.awt.Canvas {
             param2 = var5_int / var6;
             var6 = 0;
             var7 = 0;
-            var8 = param4.length();
-            var9 = 0;
-            L2: while (true) {
-              L3: {
-                L4: {
-                  if (var8 <= var9) {
-                    break L4;
-                  } else {
-                    var10 = param4.charAt(var9);
-                    stackOut_14_0 = var10;
-                    stackOut_14_1 = 32;
-                    stackIn_34_0 = stackOut_14_0;
-                    stackIn_34_1 = stackOut_14_1;
-                    stackIn_15_0 = stackOut_14_0;
-                    stackIn_15_1 = stackOut_14_1;
-                    if (var13 != 0) {
-                      break L3;
+            if (!param3) {
+              var8 = param4.length();
+              var9 = 0;
+              L2: while (true) {
+                L3: {
+                  L4: {
+                    if (var8 <= var9) {
+                      break L4;
                     } else {
-                      L5: {
-                        L6: {
-                          if (stackIn_15_0 == stackIn_15_1) {
-                            break L6;
-                          } else {
-                            if (var10 != 45) {
-                              break L5;
-                            } else {
+                      var10 = param4.charAt(var9);
+                      stackOut_14_0 = var10;
+                      stackOut_14_1 = 32;
+                      stackIn_34_0 = stackOut_14_0;
+                      stackIn_34_1 = stackOut_14_1;
+                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_1 = stackOut_14_1;
+                      if (var13 != 0) {
+                        break L3;
+                      } else {
+                        L5: {
+                          L6: {
+                            if (stackIn_15_0 == stackIn_15_1) {
                               break L6;
+                            } else {
+                              if (var10 != 45) {
+                                break L5;
+                              } else {
+                                break L6;
+                              }
+                            }
+                          }
+                          var11 = param4.substring(var7, 1 + var9).trim();
+                          var12 = param1.a(var11);
+                          if (~var12 <= ~param2) {
+                            var7 = var9 + 1;
+                            int incrementValue$3 = var6;
+                            var6++;
+                            args[incrementValue$3] = var11;
+                            break L5;
+                          } else {
+                            break L5;
+                          }
+                        }
+                        L7: {
+                          if (var10 != 62) {
+                            break L7;
+                          } else {
+                            if (param4.regionMatches(var9 - 3, "<br>", 0, 4)) {
+                              int incrementValue$4 = var6;
+                              var6++;
+                              args[incrementValue$4] = param4.substring(var7, var9 + -3).trim();
+                              var7 = 1 + var9;
+                              break L7;
+                            } else {
+                              break L7;
                             }
                           }
                         }
-                        var11 = param4.substring(var7, 1 + var9).trim();
-                        var12 = param1.a(var11);
-                        if (~var12 <= ~param2) {
-                          var7 = var9 + 1;
-                          int incrementValue$3 = var6;
-                          var6++;
-                          args[incrementValue$3] = var11;
-                          break L5;
+                        var9++;
+                        if (var13 == 0) {
+                          continue L2;
                         } else {
-                          break L5;
+                          break L4;
                         }
-                      }
-                      L7: {
-                        if (var10 != 62) {
-                          break L7;
-                        } else {
-                          if (param4.regionMatches(var9 - 3, "<br>", 0, 4)) {
-                            int incrementValue$4 = var6;
-                            var6++;
-                            args[incrementValue$4] = param4.substring(var7, var9 + -3).trim();
-                            var7 = 1 + var9;
-                            break L7;
-                          } else {
-                            break L7;
-                          }
-                        }
-                      }
-                      var9++;
-                      if (var13 == 0) {
-                        continue L2;
-                      } else {
-                        break L4;
                       }
                     }
                   }
+                  stackOut_33_0 = ~var8;
+                  stackOut_33_1 = ~var7;
+                  stackIn_34_0 = stackOut_33_0;
+                  stackIn_34_1 = stackOut_33_1;
+                  break L3;
                 }
-                stackOut_33_0 = ~var8;
-                stackOut_33_1 = ~var7;
-                stackIn_34_0 = stackOut_33_0;
-                stackIn_34_1 = stackOut_33_1;
-                break L3;
-              }
-              L8: {
-                if (stackIn_34_0 < stackIn_34_1) {
-                  int incrementValue$5 = var6;
-                  var6++;
-                  args[incrementValue$5] = param4.substring(var7, var8).trim();
-                  break L8;
-                } else {
-                  break L8;
+                L8: {
+                  if (stackIn_34_0 < stackIn_34_1) {
+                    int incrementValue$5 = var6;
+                    var6++;
+                    args[incrementValue$5] = param4.substring(var7, var8).trim();
+                    break L8;
+                  } else {
+                    break L8;
+                  }
                 }
+                stackOut_37_0 = var6;
+                stackIn_38_0 = stackOut_37_0;
+                break L0;
               }
-              stackOut_37_0 = var6;
-              stackIn_38_0 = stackOut_37_0;
-              break L0;
+            } else {
+              stackOut_10_0 = -80;
+              stackIn_11_0 = stackOut_10_0;
+              return stackIn_11_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -254,7 +258,7 @@ final class wo extends java.awt.Canvas {
           }
           L11: {
             stackOut_47_0 = (RuntimeException) (Object) stackIn_47_0;
-            stackOut_47_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_47_2).append(',').append(param2).append(',').append(false).append(',');
+            stackOut_47_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_47_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_50_0 = stackOut_47_0;
             stackIn_50_1 = stackOut_47_1;
             stackIn_48_0 = stackOut_47_0;

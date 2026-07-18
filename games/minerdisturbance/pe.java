@@ -10,7 +10,7 @@ final class pe extends fd {
     int field_tb;
     String field_ob;
 
-    public static void b() {
+    public static void b(byte param0) {
         field_qb = null;
     }
 
@@ -43,14 +43,13 @@ final class pe extends fd {
         String stackOut_9_2 = null;
         try {
           L0: {
-            int discarded$4 = 0;
-            var8 = pk.a((byte) 72, 0, param1, param3, param5);
+            var8 = pk.a((byte) 72, 0, param1, param3, param5, 0);
             var6 = var8;
             if (param0 < -70) {
               if (var8 != null) {
                 var7 = new l();
                 var7.field_d = var8;
-                java.awt.Component discarded$5 = var7.field_d.add((java.awt.Component) (Object) var7);
+                java.awt.Component discarded$2 = var7.field_d.add((java.awt.Component) (Object) var7);
                 var7.setBounds(0, 0, param1, param3);
                 var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
                 var7.requestFocus();
@@ -101,7 +100,7 @@ final class pe extends fd {
         return stackIn_7_0;
     }
 
-    final static void a(vf param0, int param1, int param2, byte param3, boolean param4, java.awt.Component param5, di param6) {
+    final static void a(vf param0, int param1, int param2, byte param3, boolean param4, java.awt.Component param5, di param6, int param7) {
         try {
             fj.a(22050, true, 10);
             mj.field_o = fj.a(param0, param5, 0, 22050);
