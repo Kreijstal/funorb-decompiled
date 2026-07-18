@@ -47,7 +47,7 @@ final class so {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var2_ref, "so.A(" + param0 + 44 + param1 + 41);
+          throw pn.a((Throwable) (Object) var2_ref, "so.A(" + param0 + ',' + param1 + ')');
         }
     }
 

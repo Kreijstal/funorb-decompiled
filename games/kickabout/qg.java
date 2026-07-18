@@ -22,7 +22,7 @@ final class qg extends gn {
             ((qg) this).field_e = param2;
             ((qg) this).field_i = param7;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "qg.C(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "qg.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -279,7 +279,7 @@ final class qg extends gn {
             }
             ts.field_d = 0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "qg.A(" + 0 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "qg.A(" + 0 + ')');
         }
     }
 

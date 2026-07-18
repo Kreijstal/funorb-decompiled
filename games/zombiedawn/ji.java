@@ -113,7 +113,7 @@ final class ji {
               break L3;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
         }
     }
 
@@ -195,7 +195,7 @@ final class ji {
               break L1;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + -1 + 44 + param2 + 44 + param3 + 41);
+          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + -1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_6_0;
     }

@@ -302,7 +302,7 @@ abstract class rc {
               L26: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_65_0 = (RuntimeException) var2;
-                stackOut_65_1 = new StringBuilder().append("rc.E(").append(param0).append(44);
+                stackOut_65_1 = new StringBuilder().append("rc.E(").append(param0).append(',');
                 stackIn_67_0 = stackOut_65_0;
                 stackIn_67_1 = stackOut_65_1;
                 stackIn_66_0 = stackOut_65_0;
@@ -325,7 +325,7 @@ abstract class rc {
                   break L26;
                 }
               }
-              throw sl.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + 41);
+              throw sl.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -375,7 +375,7 @@ abstract class rc {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("rc.B(").append(-25).append(44);
+            stackOut_4_1 = new StringBuilder().append("rc.B(").append(-25).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -398,7 +398,7 @@ abstract class rc {
               break L1;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }

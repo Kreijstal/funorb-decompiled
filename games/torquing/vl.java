@@ -26,7 +26,7 @@ final class vl implements Iterable {
             param2.field_e.field_h = param2;
             param2.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "vl.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "vl.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

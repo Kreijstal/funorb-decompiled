@@ -201,7 +201,7 @@ final class jh extends bp {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + 1422 + 41);
+          throw nb.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + 1422 + ')');
         }
     }
 

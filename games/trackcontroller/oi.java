@@ -18,7 +18,7 @@ final class oi {
             pi.a(18, 320, 10, 480, (qj[]) null, 20, 0, sl.field_n, param9, 0, db.field_db, 26, param1, 26, param4, 0, 240, 0, 0, param3, j.field_a);
             wj.a((byte) 116, param11);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "oi.A(" + 26 + 44 + (param1 != null ? "{...}" : "null") + 44 + 26 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + 10 + 44 + 320 + 44 + 20 + 44 + 240 + 44 + (param9 != null ? "{...}" : "null") + 44 + -3748 + 44 + param11 + 44 + 18 + 44 + 0 + 44 + 0 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "oi.A(" + 26 + ',' + (param1 != null ? "{...}" : "null") + ',' + 26 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + 10 + ',' + 320 + ',' + 20 + ',' + 240 + ',' + (param9 != null ? "{...}" : "null") + ',' + -3748 + ',' + param11 + ',' + 18 + ',' + 0 + ',' + 0 + ')');
         }
     }
 

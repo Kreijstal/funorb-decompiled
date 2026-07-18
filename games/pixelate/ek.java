@@ -20,7 +20,7 @@ final class ek {
             }
             sd.field_L = 0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ek.B(" + param0 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ek.B(" + param0 + ')');
         }
     }
 

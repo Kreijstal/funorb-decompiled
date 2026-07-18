@@ -56,7 +56,7 @@ final class wh extends pj {
             ((wh) this).field_v = param1 * param2;
             ((wh) this).field_t = ((wh) this).field_u.field_y.createPbuffer(param1, param2);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "wh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

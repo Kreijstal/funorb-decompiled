@@ -76,7 +76,7 @@ final class dh implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var5, "dh.A(" + param0 + 44 + 1232050056 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ii.a((Throwable) (Object) var5, "dh.A(" + param0 + ',' + 1232050056 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class dh implements Iterator {
             int discarded$0 = 1;
             pj.a(true);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "dh.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + -608757616 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "dh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + -608757616 + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class dh implements Iterator {
             int discarded$0 = -1;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "dh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "dh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -69,7 +69,7 @@ final class oj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var1_ref, "oj.C(" + 102 + 41);
+          throw ld.a((Throwable) (Object) var1_ref, "oj.C(" + 102 + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class oj {
           }
           L3: {
             stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(44).append(param1).append(44);
+            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -176,7 +176,7 @@ final class oj {
               break L3;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 
@@ -331,7 +331,7 @@ final class oj {
           }
           L9: {
             stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(44).append(param1).append(44);
+            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param1).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -354,7 +354,7 @@ final class oj {
               break L9;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
         }
     }
 
@@ -523,7 +523,7 @@ final class oj {
               break L9;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param1 + 41);
+          throw ld.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ')');
         }
         return stackIn_24_0;
     }
@@ -652,7 +652,7 @@ final class oj {
                 L3: {
                   ((oj) this).field_e = stackIn_18_1 != 0;
                   ((oj) this).field_k = (String) var5;
-                  var13 = (CharSequence) (Object) ("flag_" + var5);
+                  var13 = (CharSequence) (Object) ("flag_" + (String) var5);
                   ((oj) this).field_h = df.a("", ef.a(var13, (byte) -14), param0, (byte) -92);
                   stackOut_18_0 = this;
                   stackIn_20_0 = stackOut_18_0;
@@ -795,7 +795,7 @@ final class oj {
           }
           L11: {
             stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-            stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(44);
+            stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(',');
             stackIn_38_0 = stackOut_36_0;
             stackIn_38_1 = stackOut_36_1;
             stackIn_37_0 = stackOut_36_0;
@@ -820,7 +820,7 @@ final class oj {
           }
           L12: {
             stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-            stackOut_39_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(44);
+            stackOut_39_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',');
             stackIn_41_0 = stackOut_39_0;
             stackIn_41_1 = stackOut_39_1;
             stackIn_40_0 = stackOut_39_0;
@@ -843,7 +843,7 @@ final class oj {
               break L12;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + ')');
         }
     }
 

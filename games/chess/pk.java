@@ -35,7 +35,7 @@ abstract class pk {
             var3.c(param2.field_k, (byte) -111);
             var3.c(param2.field_m, (byte) -62);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "pk.D(" + 3 + 44 + -90 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "pk.D(" + 3 + ',' + -90 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

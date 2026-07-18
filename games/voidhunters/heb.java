@@ -67,7 +67,7 @@ final class heb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -198,7 +198,7 @@ final class heb extends rqa {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_45_0 = (RuntimeException) var3;
-            stackOut_45_1 = new StringBuilder().append("heb.B(").append(param0).append(44);
+            stackOut_45_1 = new StringBuilder().append("heb.B(").append(param0).append(',');
             stackIn_47_0 = stackOut_45_0;
             stackIn_47_1 = stackOut_45_1;
             stackIn_46_0 = stackOut_45_0;
@@ -221,7 +221,7 @@ final class heb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_48_0, stackIn_48_2 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_48_0, stackIn_48_2 + ',' + param2 + ')');
         }
         return (String) (Object) stackIn_44_0;
     }

@@ -103,7 +103,7 @@ final class cc implements kg {
                             int discarded$4 = -122;
                             var8 = kb.a((char) var7);
                             if (var8 != 0) {
-                              StringBuilder discarded$5 = var5.append(var8);
+                              StringBuilder discarded$5 = var5.append((char) var8);
                               break L6;
                             } else {
                               break L6;
@@ -155,7 +155,7 @@ final class cc implements kg {
               break L7;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param1 + 41);
+          throw oi.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ',' + param1 + ')');
         }
     }
 
@@ -287,7 +287,7 @@ final class cc implements kg {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -310,7 +310,7 @@ final class cc implements kg {
               break L7;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 16 + 44 + 0 + 41);
+          throw oi.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + 16 + ',' + 0 + ')');
         }
         return stackIn_16_0;
     }
@@ -451,7 +451,7 @@ final class cc implements kg {
               break L6;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw oi.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -538,7 +538,7 @@ final class cc implements kg {
               break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + -80 + 41);
+          throw oi.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + -80 + ')');
         }
         return stackIn_9_0 != 0;
     }
@@ -561,7 +561,7 @@ final class cc implements kg {
             ((cc) this).field_k = param1;
             ((cc) this).field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "cc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -921,7 +921,7 @@ final class cc implements kg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var2, "cc.B(" + param0 + 44 + 1 + 41);
+          throw oi.a((Throwable) (Object) var2, "cc.B(" + param0 + ',' + true + ')');
         }
     }
 

@@ -7,7 +7,7 @@ final class ei {
             int var2_int = 3;
             ri.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ei.A(" + (param0 != null ? "{...}" : "null") + 44 + 44 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "ei.A(" + (param0 != null ? "{...}" : "null") + ',' + 44 + ')');
         }
     }
 

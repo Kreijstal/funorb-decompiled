@@ -205,7 +205,7 @@ final class gh {
             }
             param0.c(param1 - param0.field_o / 2, param5 - param0.field_v / 2, lk.a(param4, -1, param3));
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "gh.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "gh.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

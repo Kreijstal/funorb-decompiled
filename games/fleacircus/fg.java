@@ -261,7 +261,7 @@ final class fg extends lh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var1, "fg.B(" + 13 + 41);
+          throw pf.a((Throwable) (Object) var1, "fg.B(" + 13 + ')');
         }
     }
 

@@ -76,7 +76,7 @@ final class ig {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "ig.A(" + param0 + 41);
+          throw qo.a((Throwable) (Object) var1, "ig.A(" + param0 + ')');
         }
         return stackIn_19_0 != 0;
     }
@@ -297,7 +297,7 @@ final class ig {
               break L8;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_48_0, stackIn_48_2 + 44 + 1 + 41);
+          throw qo.a((Throwable) (Object) stackIn_48_0, stackIn_48_2 + ',' + true + ')');
         }
         return stackIn_44_0;
     }

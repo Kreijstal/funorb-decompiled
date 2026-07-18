@@ -162,7 +162,7 @@ final class cm {
               break L4;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 41);
+          throw wg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ')');
         }
     }
 

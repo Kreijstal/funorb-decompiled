@@ -23,7 +23,7 @@ final class gf {
         } else {
             var1 = var1 + ":";
             for (var2 = 0; var2 < jd.field_q; var2++) {
-                var1 = var1 + 32;
+                var1 = var1 + ' ';
                 var3 = 255 & sc.field_g.field_n[var2];
                 var4 = var3 >> 4;
                 if (var4 < 10) {

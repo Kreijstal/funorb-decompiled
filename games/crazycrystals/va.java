@@ -56,7 +56,7 @@ final class va extends IOException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var1, "va.A(" + 127 + 41);
+          throw dn.a((Throwable) (Object) var1, "va.A(" + 127 + ')');
         }
     }
 

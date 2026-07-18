@@ -29,7 +29,7 @@ final class wh implements wa {
             }
             var2 = 3 / ((27 - param0) / 47);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "wh.B(" + param0 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "wh.B(" + param0 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class wh implements wa {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 0 + 41);
+          throw sh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + false + ')');
         }
         return stackIn_12_0;
     }

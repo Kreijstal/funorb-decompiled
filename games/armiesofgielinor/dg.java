@@ -174,7 +174,7 @@ final class dg {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

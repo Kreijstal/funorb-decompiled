@@ -87,7 +87,7 @@ final class cq {
                   break L1;
                 }
               }
-              throw fa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 0 + 41);
+              throw fa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + false + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -188,7 +188,7 @@ final class cq {
               break L3;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ')');
         }
         return stackIn_12_0 != 0;
     }
@@ -299,7 +299,7 @@ final class cq {
           L8: {
             var2 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("cq.D(").append(0).append(44);
+            stackOut_21_1 = new StringBuilder().append("cq.D(").append(0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -322,7 +322,7 @@ final class cq {
               break L8;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
         return stackIn_20_0;
     }

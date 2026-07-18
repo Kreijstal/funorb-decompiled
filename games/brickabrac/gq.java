@@ -152,7 +152,7 @@ final class gq extends mh {
                     break L1;
                   } else {
                     if (0 < ((gq) this).field_Vb.length()) {
-                      StringBuilder discarded$11 = ((gq) this).field_Vb.append(var2);
+                      StringBuilder discarded$11 = ((gq) this).field_Vb.append((char) var2);
                       break L1;
                     } else {
                       break L1;
@@ -161,7 +161,7 @@ final class gq extends mh {
                 }
                 if (ni.b(true, (char) var2)) {
                   L2: {
-                    StringBuilder discarded$12 = ((gq) this).field_Vb.append(var2);
+                    StringBuilder discarded$12 = ((gq) this).field_Vb.append((char) var2);
                     if (dc.field_b == 84) {
                       if (((gq) this).field_Vb.length() > 0) {
                         ((gq) this).field_Mb = ((gq) this).field_Vb.toString();
@@ -186,7 +186,7 @@ final class gq extends mh {
                   return true;
                 } else {
                   if (eh.a((char) var2, (byte) 83)) {
-                    StringBuilder discarded$13 = ((gq) this).field_Vb.append(var2);
+                    StringBuilder discarded$13 = ((gq) this).field_Vb.append((char) var2);
                     if (dc.field_b == 84) {
                       if (((gq) this).field_Vb.length() > 0) {
                         ((gq) this).field_Mb = ((gq) this).field_Vb.toString();
@@ -292,7 +292,7 @@ final class gq extends mh {
                     break L6;
                   } else {
                     if (0 < ((gq) this).field_Vb.length()) {
-                      StringBuilder discarded$14 = ((gq) this).field_Vb.append(var2);
+                      StringBuilder discarded$14 = ((gq) this).field_Vb.append((char) var2);
                       break L6;
                     } else {
                       break L6;
@@ -301,7 +301,7 @@ final class gq extends mh {
                 }
                 if (ni.b(true, (char) var2)) {
                   L7: {
-                    StringBuilder discarded$15 = ((gq) this).field_Vb.append(var2);
+                    StringBuilder discarded$15 = ((gq) this).field_Vb.append((char) var2);
                     if (dc.field_b == 84) {
                       if (((gq) this).field_Vb.length() > 0) {
                         ((gq) this).field_Mb = ((gq) this).field_Vb.toString();
@@ -324,7 +324,7 @@ final class gq extends mh {
                 } else {
                   if (eh.a((char) var2, (byte) 83)) {
                     L8: {
-                      StringBuilder discarded$16 = ((gq) this).field_Vb.append(var2);
+                      StringBuilder discarded$16 = ((gq) this).field_Vb.append((char) var2);
                       if (dc.field_b == 84) {
                         if (((gq) this).field_Vb.length() > 0) {
                           ((gq) this).field_Mb = ((gq) this).field_Vb.toString();
@@ -442,7 +442,7 @@ final class gq extends mh {
                     break L18;
                   } else {
                     if (0 < ((gq) this).field_Vb.length()) {
-                      StringBuilder discarded$17 = ((gq) this).field_Vb.append(var2);
+                      StringBuilder discarded$17 = ((gq) this).field_Vb.append((char) var2);
                       break L18;
                     } else {
                       break L18;
@@ -451,7 +451,7 @@ final class gq extends mh {
                 }
                 if (ni.b(true, (char) var2)) {
                   L19: {
-                    StringBuilder discarded$18 = ((gq) this).field_Vb.append(var2);
+                    StringBuilder discarded$18 = ((gq) this).field_Vb.append((char) var2);
                     if (dc.field_b == 84) {
                       if (((gq) this).field_Vb.length() > 0) {
                         ((gq) this).field_Mb = ((gq) this).field_Vb.toString();
@@ -476,7 +476,7 @@ final class gq extends mh {
                     break L16;
                   } else {
                     L20: {
-                      StringBuilder discarded$19 = ((gq) this).field_Vb.append(var2);
+                      StringBuilder discarded$19 = ((gq) this).field_Vb.append((char) var2);
                       if (dc.field_b == 84) {
                         if (((gq) this).field_Vb.length() > 0) {
                           ((gq) this).field_Mb = ((gq) this).field_Vb.toString();
@@ -620,7 +620,7 @@ final class gq extends mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var1_ref, "gq.B(" + -126 + 41);
+          throw qb.a((Throwable) (Object) var1_ref, "gq.B(" + -126 + ')');
         }
         return stackIn_13_0 != 0;
     }
@@ -738,7 +738,7 @@ final class gq extends mh {
           L1: {
             var9 = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var9;
-            stackOut_3_1 = new StringBuilder().append("gq.<init>(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_3_1 = new StringBuilder().append("gq.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -763,7 +763,7 @@ final class gq extends mh {
           }
           L2: {
             stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(44);
+            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -788,7 +788,7 @@ final class gq extends mh {
           }
           L3: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -813,7 +813,7 @@ final class gq extends mh {
           }
           L4: {
             stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -836,7 +836,7 @@ final class gq extends mh {
               break L4;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 

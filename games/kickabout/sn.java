@@ -115,7 +115,7 @@ final class sn {
                   break L2;
                 }
               }
-              throw nb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+              throw nb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

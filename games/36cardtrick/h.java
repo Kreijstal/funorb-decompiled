@@ -38,7 +38,7 @@ final class h extends hl {
                 }
                 tj.a(true, param0);
             } catch (RuntimeException runtimeException) {
-                throw ma.a((Throwable) (Object) runtimeException, "h.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+                throw ma.a((Throwable) (Object) runtimeException, "h.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -102,7 +102,7 @@ final class h extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1_ref, "h.HA(" + -84 + 41);
+          throw ma.a((Throwable) (Object) var1_ref, "h.HA(" + -84 + ')');
         }
     }
 
@@ -265,7 +265,7 @@ final class h extends hl {
           L6: {
             var8 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var8;
-            stackOut_24_1 = new StringBuilder().append("h.K(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_24_1 = new StringBuilder().append("h.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -288,7 +288,7 @@ final class h extends hl {
               break L6;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param5 + 44 + param6 + 41);
+          throw ma.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_23_0 != 0;
     }

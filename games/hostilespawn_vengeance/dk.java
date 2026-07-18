@@ -38,7 +38,7 @@ class dk extends am {
             var3.d(107, param0.field_m);
             var3.a((byte) -120, param0.field_n);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "dk.OB(" + (param0 != null ? "{...}" : "null") + 44 + 2 + 44 + 10 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "dk.OB(" + (param0 != null ? "{...}" : "null") + ',' + 2 + ',' + 10 + ')');
         }
     }
 

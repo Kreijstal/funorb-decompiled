@@ -499,7 +499,7 @@ final class sc {
           L3: {
             runtimeException = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) runtimeException;
-            stackOut_6_1 = new StringBuilder().append("sc.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("sc.C(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -522,7 +522,7 @@ final class sc {
               break L3;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 

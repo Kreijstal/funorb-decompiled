@@ -183,7 +183,7 @@ final class vj extends ql {
           L7: {
             var3 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var3;
-            stackOut_24_1 = new StringBuilder().append("vj.S(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("vj.S(").append(param0).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -206,7 +206,7 @@ final class vj extends ql {
               break L7;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
     }
 
@@ -295,7 +295,7 @@ final class vj extends ql {
               break L1;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 24 + 41);
+          throw wg.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 24 + ')');
         }
         return stackIn_1_0;
     }

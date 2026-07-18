@@ -104,7 +104,7 @@ final class uo {
             int discarded$0 = 20196;
             this.b();
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "uo.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "uo.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -335,7 +335,7 @@ final class vm {
               break L17;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_56_0, stackIn_56_2 + 44 + param1 + 41);
+          throw wm.a((Throwable) (Object) stackIn_56_0, stackIn_56_2 + ',' + param1 + ')');
         }
     }
 
@@ -476,7 +476,7 @@ final class vm {
             }
             ((vm) this).field_l = 32 + ga.a(32, true, ea.field_r);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "vm.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "vm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

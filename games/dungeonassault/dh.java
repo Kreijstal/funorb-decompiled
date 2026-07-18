@@ -29,7 +29,7 @@ final class dh implements Iterable {
             param0.field_l.field_n = param0;
             param0.field_n.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "dh.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "dh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class dh implements Iterable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var4, "dh.A(" + 32 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw vk.a((Throwable) (Object) var4, "dh.A(" + 32 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

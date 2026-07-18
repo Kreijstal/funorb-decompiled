@@ -199,7 +199,7 @@ class tja implements ntb {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ')');
         }
     }
 
@@ -391,7 +391,7 @@ class tja implements ntb {
           }
           L11: {
             stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-            stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(44).append(param1).append(44);
+            stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(',').append(param1).append(',');
             stackIn_38_0 = stackOut_36_0;
             stackIn_38_1 = stackOut_36_1;
             stackIn_37_0 = stackOut_36_0;
@@ -414,7 +414,7 @@ class tja implements ntb {
               break L11;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 44 + param3 + 44 + param4 + 41);
+          throw rta.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ',' + param3 + ',' + param4 + ')');
         }
         return stackIn_32_0 != 0;
     }
@@ -499,7 +499,7 @@ class tja implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
@@ -538,7 +538,7 @@ class tja implements ntb {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("tja.C(").append(-123).append(44);
+            stackOut_2_1 = new StringBuilder().append("tja.C(").append(-123).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -561,7 +561,7 @@ class tja implements ntb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -624,7 +624,7 @@ class tja implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -667,7 +667,7 @@ class tja implements ntb {
           L2: {
             var3_ref = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var3_ref;
-            stackOut_3_1 = new StringBuilder().append("tja.D(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("tja.D(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -690,7 +690,7 @@ class tja implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -780,7 +780,7 @@ class tja implements ntb {
           L5: {
             var4_ref = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var4_ref;
-            stackOut_16_1 = new StringBuilder().append("tja.M(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_16_1 = new StringBuilder().append("tja.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -803,7 +803,7 @@ class tja implements ntb {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
         return stackIn_15_0;
     }
@@ -827,7 +827,7 @@ class tja implements ntb {
         try {
             ((tja) this).field_c = (bha[]) (Object) kcb.a(hab.field_h, uqa.field_q, param0, 1, -80, (tv[]) (Object) ((tja) this).field_c);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "tja.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "tja.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

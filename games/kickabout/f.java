@@ -48,7 +48,7 @@ final class f {
             sk.a(-53, 8, 6);
             ad.field_d[7] = qm.a(param0, "", "KaB_crowd_loop_END_PITCH_lvl4");
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "f.C(" + (param0 != null ? "{...}" : "null") + 44 + -122 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "f.C(" + (param0 != null ? "{...}" : "null") + ',' + -122 + ')');
         }
     }
 

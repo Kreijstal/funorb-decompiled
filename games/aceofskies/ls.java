@@ -180,7 +180,7 @@ final class ls extends IOException {
               break L8;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 44 + param1 + 44 + param2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_35_0;
     }

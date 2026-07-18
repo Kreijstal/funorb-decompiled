@@ -78,7 +78,7 @@ final class uf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var1_ref, "uf.B(" + 28 + 41);
+          throw vk.a((Throwable) (Object) var1_ref, "uf.B(" + 28 + ')');
         }
     }
 

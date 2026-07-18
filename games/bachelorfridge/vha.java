@@ -7,7 +7,7 @@ final class vha extends bca {
             ((vha) this).a(param0, (byte) -2);
             int var3_int = 93 / ((12 - param1) / 35);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vha.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "vha.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class vha extends bca {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("vha.A(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("vha.A(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -73,7 +73,7 @@ final class vha extends bca {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return (at) (Object) stackIn_4_0;
     }
@@ -141,7 +141,7 @@ final class vha extends bca {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 
@@ -209,7 +209,7 @@ final class vha extends bca {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -119 + 41);
+          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -119 + ')');
         }
         return (pp) (Object) stackIn_3_0;
     }

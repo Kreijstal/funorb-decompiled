@@ -79,7 +79,7 @@ final class de {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -391,7 +391,7 @@ final class de {
           L22: {
             var7 = decompiledCaughtException;
             stackOut_69_0 = (RuntimeException) var7;
-            stackOut_69_1 = new StringBuilder().append("de.E(").append(4).append(44).append(4).append(44);
+            stackOut_69_1 = new StringBuilder().append("de.E(").append(4).append(',').append(4).append(',');
             stackIn_71_0 = stackOut_69_0;
             stackIn_71_1 = stackOut_69_1;
             stackIn_70_0 = stackOut_69_0;
@@ -414,7 +414,7 @@ final class de {
               break L22;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + 44 + 104 + 44 + 160 + 44 + -31 + 44 + 104 + 41);
+          throw ci.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + ',' + 104 + ',' + 160 + ',' + -31 + ',' + 104 + ')');
         }
     }
 
@@ -422,7 +422,7 @@ final class de {
         try {
             ((de) this).field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "de.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "de.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -433,7 +433,7 @@ final class de {
         try {
             mm.a("jagex-last-login-method", (byte) 122, ((de) this).field_h, param1, 31536000L);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "de.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "de.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

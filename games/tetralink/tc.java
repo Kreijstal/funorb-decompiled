@@ -36,7 +36,7 @@ final class tc extends mc {
             ((tc) this).field_u = param1;
             ((tc) this).field_o = param2;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "tc.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "tc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

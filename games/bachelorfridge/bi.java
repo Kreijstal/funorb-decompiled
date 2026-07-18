@@ -318,7 +318,7 @@ abstract class bi extends jla {
           L15: {
             var10 = decompiledCaughtException;
             stackOut_54_0 = (RuntimeException) var10;
-            stackOut_54_1 = new StringBuilder().append("bi.S(").append(param0).append(44).append(param1).append(44).append(20).append(44);
+            stackOut_54_1 = new StringBuilder().append("bi.S(").append(param0).append(',').append(param1).append(',').append(20).append(',');
             stackIn_56_0 = stackOut_54_0;
             stackIn_56_1 = stackOut_54_1;
             stackIn_55_0 = stackOut_54_0;
@@ -341,7 +341,7 @@ abstract class bi extends jla {
               break L15;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_57_0, stackIn_57_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+          throw pe.a((Throwable) (Object) stackIn_57_0, stackIn_57_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

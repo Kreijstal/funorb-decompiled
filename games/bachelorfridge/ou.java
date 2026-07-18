@@ -64,7 +64,7 @@ final class ou implements Iterable {
             }
             param0.field_m.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ou.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ou.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

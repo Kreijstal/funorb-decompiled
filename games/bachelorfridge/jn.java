@@ -36,7 +36,7 @@ final class jn {
           L0: {
             var4 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var4;
-            stackOut_2_1 = new StringBuilder().append("jn.C(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("jn.C(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -59,7 +59,7 @@ final class jn {
               break L0;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 44 + 0 + 41);
+          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param2 + ',' + false + ')');
         }
     }
 

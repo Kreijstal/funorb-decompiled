@@ -51,7 +51,7 @@ final class vp {
             param0.field_k = param1;
             param0.field_j.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "vp.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "vp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class vp {
         try {
             hf.field_a = 0;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "vp.C(" + param0 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "vp.C(" + param0 + ')');
         }
     }
 

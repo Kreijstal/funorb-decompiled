@@ -100,9 +100,9 @@ abstract class pk extends vh {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$10 = field_K.append(60);
+                        StringBuilder discarded$10 = field_K.append('<');
                         StringBuilder discarded$11 = field_K.append(var15);
-                        StringBuilder discarded$12 = field_K.append(62);
+                        StringBuilder discarded$12 = field_K.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -289,7 +289,7 @@ abstract class pk extends vh {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$13 = field_K.append(var14);
+                        StringBuilder discarded$13 = field_K.append((char) var14);
                         var14 = (char)(vb.a((byte) -128, (char) var14) & 255);
                         var4 = var4 + ((pk) this).field_M[var14];
                         if (((pk) this).field_H == null) {

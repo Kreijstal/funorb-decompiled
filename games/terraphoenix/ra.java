@@ -50,7 +50,7 @@ final class ra extends uf {
             ((ra) this).field_k = param2;
             ((ra) this).field_n = param1;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "ra.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "ra.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

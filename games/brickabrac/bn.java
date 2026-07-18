@@ -344,7 +344,7 @@ class bn extends vi {
               break L16;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + 44 + param1 + 41);
+          throw qb.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + ',' + param1 + ')');
         }
         return stackIn_64_0 != 0;
     }
@@ -496,7 +496,7 @@ class bn extends vi {
               break L6;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param1 + 41);
+          throw qb.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + param1 + ')');
         }
         return stackIn_28_0 != 0;
     }
@@ -510,7 +510,7 @@ class bn extends vi {
             param2.field_j = oh.field_f;
             param2.field_m = mm.field_Tb;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "bn.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "bn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -562,7 +562,7 @@ class bn extends vi {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("bn.A(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("bn.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -585,7 +585,7 @@ class bn extends vi {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }

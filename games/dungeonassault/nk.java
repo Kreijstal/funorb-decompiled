@@ -183,7 +183,7 @@ class nk extends hf implements vg {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var4;
-            stackOut_27_1 = new StringBuilder().append("nk.M(").append(param0).append(44);
+            stackOut_27_1 = new StringBuilder().append("nk.M(").append(param0).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -206,7 +206,7 @@ class nk extends hf implements vg {
               break L6;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param2 + ')');
         }
     }
 
@@ -281,7 +281,7 @@ class nk extends hf implements vg {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw vk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_8_0;
     }
@@ -347,7 +347,7 @@ class nk extends hf implements vg {
             ((nk) this).field_Bb.field_R = true;
             ((nk) this).b((byte) -63, (lm) (Object) ((nk) this).field_Bb);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "nk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -410,7 +410,7 @@ class nk extends hf implements vg {
               break L0;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw vk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -604,7 +604,7 @@ class nk extends hf implements vg {
               break L9;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + 44 + 23 + 41);
+          throw vk.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + ',' + 23 + ')');
         }
     }
 

@@ -192,7 +192,7 @@ final class aa {
             param1.field_k.field_i = param1;
             int var6 = 87 / ((35 - param2) / 63);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "aa.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

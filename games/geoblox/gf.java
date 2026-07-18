@@ -51,7 +51,7 @@ final class gf {
             param0.field_J.b(param0.field_J.field_s << 3, param0.field_J.field_o << 3, vf.field_L.field_s << 3, vf.field_L.field_o << 3, (int)(65535.0 * ((double)(-param2 + param0.field_u) / 6.283185307179586)), 4096);
             sh.field_y.a(255);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "gf.F(" + (param0 != null ? "{...}" : "null") + 44 + -1232328029 + 44 + param2 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "gf.F(" + (param0 != null ? "{...}" : "null") + ',' + -1232328029 + ',' + param2 + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class gf {
                   break L1;
                 }
               }
-              throw t.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 62 + 41);
+              throw t.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 62 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -243,7 +243,7 @@ final class gf {
           }
           L2: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -268,7 +268,7 @@ final class gf {
           }
           L3: {
             stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -293,7 +293,7 @@ final class gf {
           }
           L4: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -316,7 +316,7 @@ final class gf {
               break L4;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + 1 + 41);
+          throw t.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + true + ')');
         }
         return stackIn_5_0;
     }

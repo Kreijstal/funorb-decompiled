@@ -37,7 +37,7 @@ final class cj {
             na.a((byte) 46, li.a(param1));
             int var2_int = -91 % ((param0 - 43) / 57);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "cj.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw la.a((Throwable) (Object) runtimeException, "cj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

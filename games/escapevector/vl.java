@@ -164,7 +164,7 @@ final class vl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw t.a((Throwable) (Object) runtimeException, "vl.B(" + 1 + 44 + param1 + 41);
+          throw t.a((Throwable) (Object) runtimeException, "vl.B(" + 1 + ',' + param1 + ')');
         }
     }
 

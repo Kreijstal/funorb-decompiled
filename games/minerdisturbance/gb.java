@@ -108,7 +108,7 @@ final class gb implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1_ref, "gb.D(" + -6129 + 41);
+          throw lj.a((Throwable) (Object) var1_ref, "gb.D(" + -6129 + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class gb implements Iterator {
             int discarded$0 = 0;
             t.a(false, rf.field_a);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "gb.B(" + -126 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "gb.B(" + -126 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class gb implements Iterator {
             int discarded$0 = 123;
             this.c();
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "gb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "gb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

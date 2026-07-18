@@ -115,7 +115,7 @@ final class bc {
           L6: {
             var4_ref = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var4_ref;
-            stackOut_18_1 = new StringBuilder().append("bc.B(").append(param0).append(44);
+            stackOut_18_1 = new StringBuilder().append("bc.B(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -138,7 +138,7 @@ final class bc {
               break L6;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param2 + 44 + param3 + 41);
+          throw t.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_17_0;
     }

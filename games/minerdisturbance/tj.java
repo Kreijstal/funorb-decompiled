@@ -41,7 +41,7 @@ final class tj {
           L1: {
             var9_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var9_ref;
-            stackOut_2_1 = new StringBuilder().append("tj.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(-66).append(44).append(param4).append(44);
+            stackOut_2_1 = new StringBuilder().append("tj.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(-66).append(',').append(param4).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -64,7 +64,7 @@ final class tj {
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param6 + 44 + param7 + 44 + 3 + 41);
+          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param6 + ',' + param7 + ',' + 3 + ')');
         }
         return stackIn_1_0;
     }

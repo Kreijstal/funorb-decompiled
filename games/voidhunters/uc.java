@@ -49,7 +49,7 @@ final class uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1_ref, "uc.B(" + -116 + 41);
+          throw rta.a((Throwable) (Object) var1_ref, "uc.B(" + -116 + ')');
         }
         return stackIn_8_0 != 0;
     }

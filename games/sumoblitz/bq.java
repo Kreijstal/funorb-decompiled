@@ -38,7 +38,7 @@ abstract class bq {
         try {
             ((bq) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "bq.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "bq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

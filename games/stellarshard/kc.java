@@ -74,7 +74,7 @@ final class kc {
                       if (var2 == null) {
                         break L3;
                       } else {
-                        int discarded$4 = fj.field_f.a("Screenshot(s) " + var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        int discarded$4 = fj.field_f.a("Screenshot(s) " + (String) var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L3;
                       }
                     } else {
@@ -110,7 +110,7 @@ final class kc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "kc.A(" + 36 + 41);
+          throw ma.a((Throwable) (Object) var1, "kc.A(" + 36 + ')');
         }
     }
 

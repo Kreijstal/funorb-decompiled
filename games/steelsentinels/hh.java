@@ -53,7 +53,7 @@ final class hh {
                           break L2;
                         }
                       }
-                      StringBuilder discarded$3 = var7.append(var10);
+                      StringBuilder discarded$3 = var7.append((char) var10);
                       continue L1;
                     }
                   }
@@ -89,7 +89,7 @@ final class hh {
         try {
             ma.a(false, (byte) -65, param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "hh.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 50 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "hh.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + 50 + ')');
         }
     }
 

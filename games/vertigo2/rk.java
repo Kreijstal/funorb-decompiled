@@ -106,7 +106,7 @@ abstract class rk extends gp {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_29_0 = (RuntimeException) var3;
-            stackOut_29_1 = new StringBuilder().append("rk.G(").append(-27).append(44);
+            stackOut_29_1 = new StringBuilder().append("rk.G(").append(-27).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -129,7 +129,7 @@ abstract class rk extends gp {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + param2 + ')');
         }
         return stackIn_28_0;
     }

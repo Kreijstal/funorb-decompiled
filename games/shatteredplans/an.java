@@ -28,7 +28,7 @@ final class an {
             }
             po.field_b = 0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "an.B(" + 1 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "an.B(" + true + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class an {
           L5: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("an.A(").append(-76).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("an.A(").append(-76).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -164,7 +164,7 @@ final class an {
               break L5;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
         return stackIn_11_0;
     }

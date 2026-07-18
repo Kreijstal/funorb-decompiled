@@ -40,7 +40,7 @@ final class ug {
             param2.field_b.field_d = param2;
             param2.field_d.field_b = param2;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ug.B(" + (param0 != null ? "{...}" : "null") + 44 + 16737894 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "ug.B(" + (param0 != null ? "{...}" : "null") + ',' + 16737894 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -298,7 +298,7 @@ final class ug {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var3, "ug.A(" + param0 + 44 + 2 + 44 + param2 + 41);
+          throw nb.a((Throwable) (Object) var3, "ug.A(" + param0 + ',' + 2 + ',' + param2 + ')');
         }
     }
 

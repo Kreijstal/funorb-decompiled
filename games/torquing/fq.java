@@ -14,7 +14,7 @@ final class fq extends jh {
             ((fq) this).field_D = 256;
             ((fq) this).field_C = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "fq.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "fq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class fq extends jh {
         try {
             tb.field_l.a(param2, 100, on.field_c * param3 / 160);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "fq.L(" + 0 + 44 + 100 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "fq.L(" + false + ',' + 100 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class fq extends jh {
               break L0;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -25960 + 44 + param2 + 44 + param3 + 41);
+          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -25960 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -232,7 +232,7 @@ final class fq extends jh {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + 0 + 41);
+          throw rb.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + 0 + ')');
         }
     }
 

@@ -160,7 +160,7 @@ final class kn {
           L10: {
             var5 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var5;
-            stackOut_26_1 = new StringBuilder().append("kn.I(").append(param0).append(44);
+            stackOut_26_1 = new StringBuilder().append("kn.I(").append(param0).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -183,7 +183,7 @@ final class kn {
               break L10;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class kn {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -302,7 +302,7 @@ final class kn {
             bea.e(var7 - -1, 1 + var8, 4 + var5_int, 4 + var6, ((kn) this).field_c);
             ((kn) this).field_q.c(param2, var7 - -3, ((kn) this).field_q.field_G + (3 + var8), ((kn) this).field_s, -1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "kn.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + 73 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "kn.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + 73 + ')');
         }
     }
 
@@ -461,7 +461,7 @@ final class kn {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
         }
     }
 

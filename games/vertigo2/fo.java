@@ -89,7 +89,7 @@ final class fo {
           L5: {
             var4_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4_ref;
-            stackOut_12_1 = new StringBuilder().append("fo.O(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("fo.O(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -112,7 +112,7 @@ final class fo {
               break L5;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ')');
         }
     }
 
@@ -986,7 +986,7 @@ final class fo {
           L4: {
             var10 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var10;
-            stackOut_12_1 = new StringBuilder().append("fo.P(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_12_1 = new StringBuilder().append("fo.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -1009,7 +1009,7 @@ final class fo {
               break L4;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param7 + 44 + param8 + 41);
+          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -1171,7 +1171,7 @@ final class fo {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("fo.BA(").append(7).append(44);
+            stackOut_8_1 = new StringBuilder().append("fo.BA(").append(7).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -1194,7 +1194,7 @@ final class fo {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
     }
 

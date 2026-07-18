@@ -21,7 +21,7 @@ final class rk implements Iterable {
             param1.field_s.field_o = param1;
             param1.field_o.field_s = param1;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "rk.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "rk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -59,7 +59,7 @@ final class rk implements Iterable {
             }
             qh.field_n = 0;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "rk.E(" + -8243 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "rk.E(" + -8243 + ')');
         }
     }
 

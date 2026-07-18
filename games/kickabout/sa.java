@@ -14,7 +14,7 @@ final class sa extends java.awt.Canvas {
         try {
             ((sa) this).field_b.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "sa.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "sa.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -252,7 +252,7 @@ final class sa extends java.awt.Canvas {
                         continue stateLoop;
                     }
                     case 19: {
-                        throw nb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 41);
+                        throw nb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -268,7 +268,7 @@ final class sa extends java.awt.Canvas {
         try {
             ((sa) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "sa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "sa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -276,7 +276,7 @@ final class sa extends java.awt.Canvas {
         try {
             ((sa) this).field_b.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "sa.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "sa.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

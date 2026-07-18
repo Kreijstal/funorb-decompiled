@@ -105,7 +105,7 @@ final class tma extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "tma.D(" + -128 + 41);
+          throw rta.a((Throwable) (Object) var1, "tma.D(" + -128 + ')');
         }
     }
 
@@ -148,7 +148,7 @@ final class tma extends rqa {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3_ref;
-            stackOut_4_1 = new StringBuilder().append("tma.C(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("tma.C(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -171,7 +171,7 @@ final class tma extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -124 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -124 + ')');
         }
         return stackIn_3_0;
     }
@@ -238,7 +238,7 @@ final class tma extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

@@ -113,7 +113,7 @@ final class wc implements uj {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("wc.F(").append(240).append(44);
+            stackOut_11_1 = new StringBuilder().append("wc.F(").append(240).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -136,7 +136,7 @@ final class wc implements uj {
               break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ')');
         }
     }
 
@@ -172,7 +172,7 @@ final class wc implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "wc.H(" + -29 + 41);
+          throw lj.a((Throwable) (Object) var1, "wc.H(" + -29 + ')');
         }
     }
 

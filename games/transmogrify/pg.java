@@ -74,7 +74,7 @@ final class pg {
         try {
             ((pg) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "pg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

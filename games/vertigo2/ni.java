@@ -19,7 +19,7 @@ final class ni {
             hc.field_a = 20;
             od.field_Jb = param4;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ni.B(" + 107 + 44 + 5 + 44 + 10 + 44 + 20 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "ni.B(" + 107 + ',' + 5 + ',' + 10 + ',' + 20 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

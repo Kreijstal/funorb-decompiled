@@ -83,7 +83,7 @@ abstract class uj {
           }
           L3: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(-32082).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(-32082).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -106,7 +106,7 @@ abstract class uj {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 
@@ -230,7 +230,7 @@ abstract class uj {
           }
           L3: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param1).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -253,7 +253,7 @@ abstract class uj {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -378,7 +378,7 @@ abstract class uj {
           L5: {
             var5 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var5;
-            stackOut_18_1 = new StringBuilder().append("uj.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_18_1 = new StringBuilder().append("uj.D(").append(param0).append(',').append(param1).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -401,7 +401,7 @@ abstract class uj {
               break L5;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param3 + 41);
+          throw rb.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param3 + ')');
         }
         return stackIn_17_0;
     }

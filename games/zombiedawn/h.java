@@ -69,7 +69,7 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -329,7 +329,7 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               break L10;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param1 + 44 + param2 + 44 + -17 + 44 + param4 + 41);
+          throw sh.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + ',' + param1 + ',' + param2 + ',' + -17 + ',' + param4 + ')');
         }
     }
 
@@ -391,7 +391,7 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -448,7 +448,7 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               break L0;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + -87 + 44 + param3 + 41);
+          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + -87 + ',' + param3 + ')');
         }
     }
 
@@ -513,7 +513,7 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -617,7 +617,7 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               break L6;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
     }
 
@@ -709,7 +709,7 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               break L5;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
     }
 
@@ -771,7 +771,7 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -843,7 +843,7 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 

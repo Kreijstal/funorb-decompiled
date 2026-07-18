@@ -150,7 +150,7 @@ final class oh extends hg {
               break L8;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + -99 + 41);
+          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + -99 + ')');
         }
     }
 

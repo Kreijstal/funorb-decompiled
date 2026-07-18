@@ -1069,7 +1069,7 @@ final class kd {
               break L38;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_109_0, stackIn_109_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_109_0, stackIn_109_2 + ')');
         }
     }
 

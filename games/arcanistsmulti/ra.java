@@ -57,7 +57,7 @@ final class ra {
             oo.field_B = param2.field_G;
             qn.i(65);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ra.C(" + (param0 != null ? "{...}" : "null") + 44 + 64 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ra.C(" + (param0 != null ? "{...}" : "null") + ',' + 64 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

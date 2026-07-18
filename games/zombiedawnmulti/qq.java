@@ -100,7 +100,7 @@ final class qq {
               break L5;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

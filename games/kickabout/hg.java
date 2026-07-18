@@ -53,7 +53,7 @@ final class hg extends i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "hg.B(" + 5 + 44 + -122 + 41);
+          throw nb.a((Throwable) (Object) var2, "hg.B(" + 5 + ',' + -122 + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class hg extends i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "hg.A(" + param0 + 41);
+          throw nb.a((Throwable) (Object) var1, "hg.A(" + param0 + ')');
         }
         return stackIn_23_0;
     }

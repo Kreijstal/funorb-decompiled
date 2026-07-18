@@ -290,7 +290,7 @@ final class fj {
           L11: {
             var8 = decompiledCaughtException;
             stackOut_65_0 = (RuntimeException) var8;
-            stackOut_65_1 = new StringBuilder().append("fj.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_65_1 = new StringBuilder().append("fj.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_67_0 = stackOut_65_0;
             stackIn_67_1 = stackOut_65_1;
             stackIn_66_0 = stackOut_65_0;
@@ -313,7 +313,7 @@ final class fj {
               break L11;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + 44 + param6 + 41);
+          throw tba.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + ',' + param6 + ')');
         }
     }
 

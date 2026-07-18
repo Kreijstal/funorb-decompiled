@@ -159,7 +159,7 @@ final class pf {
           L5: {
             var3 = decompiledCaughtException;
             stackOut_33_0 = (RuntimeException) var3;
-            stackOut_33_1 = new StringBuilder().append("pf.F(").append(1).append(44).append(0).append(44);
+            stackOut_33_1 = new StringBuilder().append("pf.F(").append(1).append(',').append(false).append(',');
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
@@ -182,7 +182,7 @@ final class pf {
               break L5;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ')');
         }
         return stackIn_32_0 != 0;
     }
@@ -251,7 +251,7 @@ final class pf {
               break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw ie.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_4_0;
     }
@@ -276,7 +276,7 @@ final class pf {
             ((pf) this).field_e.write(param3, param2, param1);
             ((pf) this).field_d = ((pf) this).field_d + (long)param1;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "pf.C(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "pf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -301,7 +301,7 @@ final class pf {
             }
             ((pf) this).field_e.seek(0L);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "pf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "pf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

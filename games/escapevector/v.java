@@ -74,7 +74,7 @@ final class v {
                   break L1;
                 }
               }
-              throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -99 + 41);
+              throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -99 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

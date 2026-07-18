@@ -47,7 +47,7 @@ final class gd extends rk {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("gd.B(").append(4).append(44);
+            stackOut_2_1 = new StringBuilder().append("gd.B(").append(4).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -70,7 +70,7 @@ final class gd extends rk {
               break L1;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param2 + ')');
         }
         return stackIn_1_0;
     }
@@ -87,7 +87,7 @@ final class gd extends rk {
             da.a(param0, 0, param2, false, param3);
             int var4_int = -74 / ((param1 - -76) / 32);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "gd.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "gd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

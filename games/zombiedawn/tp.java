@@ -326,7 +326,7 @@ final class tp extends sp {
           L15: {
             var7 = decompiledCaughtException;
             stackOut_53_0 = (RuntimeException) var7;
-            stackOut_53_1 = new StringBuilder().append("tp.M(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_53_1 = new StringBuilder().append("tp.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_55_0 = stackOut_53_0;
             stackIn_55_1 = stackOut_53_1;
             stackIn_54_0 = stackOut_53_0;
@@ -349,7 +349,7 @@ final class tp extends sp {
               break L15;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_56_0, stackIn_56_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_56_0, stackIn_56_2 + ')');
         }
     }
 
@@ -649,7 +649,7 @@ final class tp extends sp {
               break L18;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_71_0, stackIn_71_2 + 44 + param1 + 44 + param2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_71_0, stackIn_71_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -660,7 +660,7 @@ final class tp extends sp {
             var2 = mb.a(param1, "jagex logo2.packvorbis", "");
             gi discarded$0 = var2.b();
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "tp.C(" + 124 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "tp.C(" + 124 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -690,7 +690,7 @@ final class tp extends sp {
             param2.a(param0, true, -1);
             param2.a(param1, false);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "tp.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + -1 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "tp.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + -1 + ')');
         }
     }
 
@@ -707,7 +707,7 @@ final class tp extends sp {
             i.a(256, param1, (byte) -115, param2);
             int var3_int = -119 / ((-38 - param0) / 47);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "tp.O(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "tp.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -796,7 +796,7 @@ final class tp extends sp {
               break L1;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -10 + 41);
+          throw sh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -10 + ')');
         }
     }
 

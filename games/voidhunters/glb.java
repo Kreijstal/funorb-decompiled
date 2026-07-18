@@ -88,7 +88,7 @@ final class glb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1_ref2, "glb.C(" + 17043 + 41);
+          throw rta.a((Throwable) (Object) var1_ref2, "glb.C(" + 17043 + ')');
         }
     }
 

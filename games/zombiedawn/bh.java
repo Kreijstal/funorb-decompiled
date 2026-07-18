@@ -40,7 +40,7 @@ final class bh extends le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1_ref, "bh.B(" + 0 + 41);
+          throw sh.a((Throwable) (Object) var1_ref, "bh.B(" + 0 + ')');
         }
     }
 
@@ -54,7 +54,7 @@ final class bh extends le {
         try {
             ((bh) this).field_k = param0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "bh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -132,7 +132,7 @@ final class bh extends le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var2_ref, "bh.C(" + param0 + 44 + 0 + 41);
+          throw sh.a((Throwable) (Object) var2_ref, "bh.C(" + param0 + ',' + false + ')');
         }
         return stackIn_22_0 != 0;
     }

@@ -54,7 +54,7 @@ final class lc extends pi {
             var3.c(param2.field_r, 25564);
             var3.c(param2.field_v, 25564);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "lc.A(" + 126 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "lc.A(" + 126 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

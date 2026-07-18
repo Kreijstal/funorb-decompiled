@@ -348,7 +348,7 @@ final class sg {
             param0.addKeyListener((java.awt.event.KeyListener) (Object) ol.field_l);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) ol.field_l);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "sg.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "sg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -562,7 +562,7 @@ final class sg {
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var6_ref;
-            stackOut_5_1 = new StringBuilder().append("sg.Q(").append(0).append(44).append(param1).append(44).append(param2).append(44).append(0).append(44).append(0).append(44);
+            stackOut_5_1 = new StringBuilder().append("sg.Q(").append(0).append(',').append(param1).append(',').append(param2).append(',').append(0).append(',').append(0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -585,7 +585,7 @@ final class sg {
               break L1;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_4_0;
     }
@@ -1663,7 +1663,7 @@ final class sg {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2_ref;
-            stackOut_21_1 = new StringBuilder().append("sg.E(").append(param0).append(44);
+            stackOut_21_1 = new StringBuilder().append("sg.E(").append(param0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -1686,7 +1686,7 @@ final class sg {
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 
@@ -1897,7 +1897,7 @@ final class sg {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var6;
-            stackOut_16_1 = new StringBuilder().append("sg.H(").append(param0).append(44).append(param1).append(44).append(64).append(44);
+            stackOut_16_1 = new StringBuilder().append("sg.H(").append(param0).append(',').append(param1).append(',').append(64).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -1920,7 +1920,7 @@ final class sg {
               break L6;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param4 + 41);
+          throw ld.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param4 + ')');
         }
     }
 
@@ -2046,7 +2046,7 @@ final class sg {
               break L6;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + 0 + 44 + param2 + 44 + param3 + 41);
+          throw ld.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + 0 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -3477,7 +3477,7 @@ final class sg {
             uk.field_U[param1] = gg.field_a[0].field_x;
             ((sg) this).field_c = new fi(qc.field_a[param1].length);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "sg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

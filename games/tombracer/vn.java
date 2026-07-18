@@ -14,7 +14,7 @@ final class vn {
             int var3_int = -94 / ((43 - param0) / 34);
             ej.field_a.c((ae) (Object) ci.field_l, 104);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "vn.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "vn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

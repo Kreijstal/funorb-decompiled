@@ -336,7 +336,7 @@ final class li implements Runnable {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("li.C(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("li.C(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -359,7 +359,7 @@ final class li implements Runnable {
               break L6;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
     }
 
@@ -390,7 +390,7 @@ final class li implements Runnable {
                   }
                 }
                 if (((li) this).field_a.field_j == ((li) this).field_a.field_h.length) {
-                  throw li.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((li) this).field_a.field_h.length + " " + ((li) this).field_d));
+                  throw li.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((li) this).field_a.field_h.length + " " + (Object) (Object) ((li) this).field_d));
                 } else {
                   var1 = this;
                   synchronized (var1) {
@@ -434,7 +434,7 @@ final class li implements Runnable {
             ((li) this).field_g = param0;
             ((li) this).field_a = new de(param2);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "li.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

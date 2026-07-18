@@ -133,7 +133,7 @@ final class t extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var1, "t.D(" + -19706 + 41);
+          throw wg.a((Throwable) (Object) var1, "t.D(" + -19706 + ')');
         }
     }
 
@@ -455,7 +455,7 @@ final class t extends am {
               break L18;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + 44 + 0 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+          throw wg.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + ',' + false + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

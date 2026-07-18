@@ -373,7 +373,7 @@ class mi extends kg {
           L38: {
             var3 = decompiledCaughtException;
             stackOut_96_0 = (RuntimeException) var3;
-            stackOut_96_1 = new StringBuilder().append("mi.B(").append(-2147483648).append(44);
+            stackOut_96_1 = new StringBuilder().append("mi.B(").append(-2147483648).append(',');
             stackIn_98_0 = stackOut_96_0;
             stackIn_98_1 = stackOut_96_1;
             stackIn_97_0 = stackOut_96_0;
@@ -396,7 +396,7 @@ class mi extends kg {
               break L38;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_99_0, stackIn_99_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_99_0, stackIn_99_2 + ')');
         }
     }
 
@@ -476,7 +476,7 @@ class mi extends kg {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) runtimeException;
-            stackOut_4_1 = new StringBuilder().append("mi.<init>(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("mi.<init>(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -501,7 +501,7 @@ class mi extends kg {
           }
           L3: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -524,7 +524,7 @@ class mi extends kg {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 

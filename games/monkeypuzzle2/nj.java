@@ -151,7 +151,7 @@ final class nj {
           L1: {
             var7_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var7_ref;
-            stackOut_2_1 = new StringBuilder().append("nj.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("nj.C(").append(param0).append(',').append(param1).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -176,7 +176,7 @@ final class nj {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -201,7 +201,7 @@ final class nj {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(1).append(44).append(param5).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(true).append(',').append(param5).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -224,7 +224,7 @@ final class nj {
               break L3;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_1_0;
     }

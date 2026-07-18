@@ -13,7 +13,7 @@ final class h extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             ((h) this).field_a = true;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "h.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "h.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class h extends java.awt.Canvas implements java.awt.event.FocusListener {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("h.A(").append(-4623).append(44).append(0).append(44);
+            stackOut_14_1 = new StringBuilder().append("h.A(").append(-4623).append(',').append(false).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -98,7 +98,7 @@ final class h extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_13_0 != 0;
     }
@@ -146,7 +146,7 @@ final class h extends java.awt.Canvas implements java.awt.event.FocusListener {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("h.C(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("h.C(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -169,7 +169,7 @@ final class h extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

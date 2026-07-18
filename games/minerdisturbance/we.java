@@ -607,9 +607,9 @@ abstract class we extends al {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$13 = field_v.append(60);
+                        StringBuilder discarded$13 = field_v.append('<');
                         StringBuilder discarded$14 = field_v.append(var15);
-                        StringBuilder discarded$15 = field_v.append(62);
+                        StringBuilder discarded$15 = field_v.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -797,7 +797,7 @@ abstract class we extends al {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$17 = field_v.append(var14);
+                        StringBuilder discarded$17 = field_v.append((char) var14);
                         var14 = (char)(kj.a((char) var14, -8251) & 255);
                         var4 = var4 + ((we) this).field_u[var14];
                         if (((we) this).field_L == null) {

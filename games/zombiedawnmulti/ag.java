@@ -68,7 +68,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -240,7 +240,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var3_ref2, "ag.SA(" + param0 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) var3_ref2, "ag.SA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -317,7 +317,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
               L6: {
                 runtimeException = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_13_0 = (RuntimeException) runtimeException;
-                stackOut_13_1 = new StringBuilder().append("ag.NA(").append(param0).append(44);
+                stackOut_13_1 = new StringBuilder().append("ag.NA(").append(param0).append(',');
                 stackIn_16_0 = stackOut_13_0;
                 stackIn_16_1 = stackOut_13_1;
                 stackIn_14_0 = stackOut_13_0;
@@ -340,7 +340,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
                   break L6;
                 }
               }
-              throw fa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+              throw fa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -397,7 +397,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw fa.a((Throwable) (Object) runtimeException, "ag.RA(" + param0 + 41);
+          throw fa.a((Throwable) (Object) runtimeException, "ag.RA(" + param0 + ')');
         }
     }
 
@@ -481,7 +481,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -495,7 +495,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
         try {
             var2.a(param1 + 13, 3);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ag.UA(" + param0 + 44 + param1 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "ag.UA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -595,7 +595,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (Object) (Object) decompiledCaughtException;
-          throw fa.a((Throwable) var2, "ag.WA(" + param0 + 41);
+          throw fa.a((Throwable) var2, "ag.WA(" + param0 + ')');
         }
     }
 
@@ -1073,7 +1073,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
               L6: {
                 var8_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_23_0 = (RuntimeException) var8_ref;
-                stackOut_23_1 = new StringBuilder().append("ag.TA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+                stackOut_23_1 = new StringBuilder().append("ag.TA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
                 stackIn_26_0 = stackOut_23_0;
                 stackIn_26_1 = stackOut_23_1;
                 stackIn_24_0 = stackOut_23_0;
@@ -1096,7 +1096,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
                   break L6;
                 }
               }
-              throw fa.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param6 + 41);
+              throw fa.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param6 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -1216,7 +1216,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "ag.PA(" + 0 + 41);
+          throw fa.a((Throwable) (Object) var2, "ag.PA(" + false + ')');
         }
     }
 
@@ -1241,7 +1241,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1, "ag.VA(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var1, "ag.VA(" + param0 + ')');
         }
     }
 
@@ -1308,7 +1308,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
           L1: {
             runtimeException = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) runtimeException;
-            stackOut_2_1 = new StringBuilder().append("ag.OA(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("ag.OA(").append(param0).append(',');
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -1331,7 +1331,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param2 + ')');
         }
     }
 
@@ -1437,7 +1437,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -1518,7 +1518,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
         return stackIn_10_0;
     }
@@ -1618,7 +1618,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
               break L4;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
     }
 
@@ -1673,7 +1673,7 @@ public abstract class ag extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

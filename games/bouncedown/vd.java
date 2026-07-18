@@ -79,7 +79,7 @@ final class vd {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3_ref;
-            stackOut_12_1 = new StringBuilder().append("vd.C(").append(88).append(44);
+            stackOut_12_1 = new StringBuilder().append("vd.C(").append(88).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -102,7 +102,7 @@ final class vd {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + 0 + 41);
+          throw ii.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + false + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class vd {
             ed.field_b = ed.field_b + (var2_int >> 1);
             qe.field_i = qe.field_i + param1.a(-1640531527);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "vd.B(" + 72 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "vd.B(" + 72 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

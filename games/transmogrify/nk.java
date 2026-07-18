@@ -19,7 +19,7 @@ final class nk {
             var3.f(6389, param1.field_h);
             var3.f(6389, param1.field_n);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "nk.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -31995 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "nk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + -31995 + ')');
         }
     }
 

@@ -49,7 +49,7 @@ final class jj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "jj.B(" + 0 + 41);
+          throw t.a((Throwable) (Object) var1, "jj.B(" + false + ')');
         }
     }
 

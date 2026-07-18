@@ -84,7 +84,7 @@ final class tj extends si implements n {
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+          throw qk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_5_0;
     }
@@ -94,7 +94,7 @@ final class tj extends si implements n {
         try {
             ((tj) this).field_tb = param1;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "tj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "tj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -242,7 +242,7 @@ final class tj extends si implements n {
               break L4;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + -110 + 44 + param2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ',' + -110 + ',' + param2 + ')');
         }
     }
 
@@ -256,7 +256,7 @@ final class tj extends si implements n {
             ((tj) this).h((byte) -126);
             int var6_int = 75 / ((-5 - param4) / 57);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "tj.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "tj.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

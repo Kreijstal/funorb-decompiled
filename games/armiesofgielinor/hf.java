@@ -101,7 +101,7 @@ final class hf {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 9 + 44 + 1 + 41);
+          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 9 + ',' + true + ')');
         }
     }
 
@@ -144,7 +144,7 @@ final class hf {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("hf.B(").append(128).append(44);
+            stackOut_5_1 = new StringBuilder().append("hf.B(").append(128).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -167,7 +167,7 @@ final class hf {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 41);
+          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 0 + ')');
         }
     }
 

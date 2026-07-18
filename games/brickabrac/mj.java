@@ -197,7 +197,7 @@ final class mj {
           L7: {
             var4 = decompiledCaughtException;
             stackOut_42_0 = (RuntimeException) var4;
-            stackOut_42_1 = new StringBuilder().append("mj.B(").append(-116).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_42_1 = new StringBuilder().append("mj.B(").append(-116).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_44_0 = stackOut_42_0;
             stackIn_44_1 = stackOut_42_1;
             stackIn_43_0 = stackOut_42_0;
@@ -220,7 +220,7 @@ final class mj {
               break L7;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + ')');
         }
         return stackIn_41_0;
     }

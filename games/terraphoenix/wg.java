@@ -29,7 +29,7 @@ final class wg {
             }
             ((wg) this).field_c = (float)((wg) this).field_j * var4_float / (float)(1 + ((wg) this).field_i);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "wg.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "wg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

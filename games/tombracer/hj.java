@@ -90,7 +90,7 @@ final class hj {
         try {
             rua.field_gb.b(-127, (jea) (Object) param0);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "hj.D(" + (param0 != null ? "{...}" : "null") + 44 + 122 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "hj.D(" + (param0 != null ? "{...}" : "null") + ',' + 122 + ')');
         }
     }
 

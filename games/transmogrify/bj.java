@@ -374,7 +374,7 @@ class bj extends kb {
           L38: {
             var3 = decompiledCaughtException;
             stackOut_99_0 = (RuntimeException) var3;
-            stackOut_99_1 = new StringBuilder().append("bj.G(").append(-10583).append(44);
+            stackOut_99_1 = new StringBuilder().append("bj.G(").append(-10583).append(',');
             stackIn_101_0 = stackOut_99_0;
             stackIn_101_1 = stackOut_99_1;
             stackIn_100_0 = stackOut_99_0;
@@ -397,7 +397,7 @@ class bj extends kb {
               break L38;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_102_0, stackIn_102_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_102_0, stackIn_102_2 + ')');
         }
     }
 
@@ -413,7 +413,7 @@ class bj extends kb {
             int discarded$0 = 0;
             gl.a((byte) -126, param1, param0, param4.field_g, param2, param4.field_h);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "bj.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "bj.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -490,7 +490,7 @@ class bj extends kb {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) runtimeException;
-            stackOut_4_1 = new StringBuilder().append("bj.<init>(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("bj.<init>(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -515,7 +515,7 @@ class bj extends kb {
           }
           L3: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -538,7 +538,7 @@ class bj extends kb {
               break L3;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 

@@ -14,7 +14,7 @@ final class rv extends Exception {
         try {
             ((rv) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "rv.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "rv.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

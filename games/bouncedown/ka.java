@@ -217,7 +217,7 @@ final class ka extends wf {
           }
           L8: {
             stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -240,7 +240,7 @@ final class ka extends wf {
               break L8;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param4 + 44 + param5 + 41);
+          throw ii.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -395,7 +395,7 @@ final class ka extends wf {
               break L6;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 44 + param2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -492,7 +492,7 @@ final class ka extends wf {
               break L4;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -503,7 +503,7 @@ final class ka extends wf {
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) nj.field_o);
             c.field_c = 0;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "ka.C(" + (param0 != null ? "{...}" : "null") + 44 + -80 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "ka.C(" + (param0 != null ? "{...}" : "null") + ',' + -80 + ')');
         }
     }
 
@@ -572,7 +572,7 @@ final class ka extends wf {
         try {
             ((ka) this).field_p = param0;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "ka.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "ka.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

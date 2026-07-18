@@ -24,7 +24,7 @@ final class fe extends l {
         try {
             ((fe) this).field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "fe.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "fe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class fe extends l {
                             if (pf.a((byte) -96, (char) var7)) {
                               var8 = tk.a(235, (char) var7);
                               if (0 != var8) {
-                                StringBuilder discarded$1 = var5.append(var8);
+                                StringBuilder discarded$1 = var5.append((char) var8);
                                 break L6;
                               } else {
                                 break L6;
@@ -163,7 +163,7 @@ final class fe extends l {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_30_0 = (RuntimeException) var2;
-            stackOut_30_1 = new StringBuilder().append("fe.A(").append(60136).append(44);
+            stackOut_30_1 = new StringBuilder().append("fe.A(").append(60136).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -186,7 +186,7 @@ final class fe extends l {
               break L7;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ')');
         }
         return stackIn_29_0;
     }
@@ -237,7 +237,7 @@ final class fe extends l {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var1, "fe.G(" + 42806 + 41);
+          throw dn.a((Throwable) (Object) var1, "fe.G(" + 42806 + ')');
         }
     }
 

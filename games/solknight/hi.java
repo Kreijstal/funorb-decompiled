@@ -82,7 +82,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var2_ref, "hi.A(" + param0 + 44 + 70 + 41);
+          throw fc.a((Throwable) (Object) var2_ref, "hi.A(" + param0 + ',' + 70 + ')');
         }
         return stackIn_18_0 != 0;
     }
@@ -273,7 +273,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var2, "hi.D(" + 4 + 44 + -5887 + 41);
+          throw fc.a((Throwable) (Object) var2, "hi.D(" + 4 + ',' + -5887 + ')');
         }
     }
 
@@ -289,7 +289,7 @@ final class hi {
         try {
             ((hi) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

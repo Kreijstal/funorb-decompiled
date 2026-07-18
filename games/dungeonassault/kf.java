@@ -68,7 +68,7 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw vk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
@@ -97,7 +97,7 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
         try {
             ((kf) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "kf.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "kf.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
             param0.setColorModel(((kf) this).field_l);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "kf.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "kf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -183,7 +183,7 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -227,7 +227,7 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("kf.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_3_1 = new StringBuilder().append("kf.B(").append(param0).append(',').append(param1).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -250,7 +250,7 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param3 + 41);
+          throw vk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param3 + ')');
         }
     }
 
@@ -273,7 +273,7 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
             boolean discarded$5 = param1.prepareImage(((kf) this).field_a, (java.awt.image.ImageObserver) this);
             ((kf) this).a(true);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "kf.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "kf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

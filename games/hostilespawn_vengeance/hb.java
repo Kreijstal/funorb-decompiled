@@ -74,7 +74,7 @@ final class hb extends lj {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("hb.A(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("hb.A(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -97,7 +97,7 @@ final class hb extends lj {
               break L3;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -156,7 +156,7 @@ final class hb extends lj {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("hb.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_8_1 = new StringBuilder().append("hb.D(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -179,7 +179,7 @@ final class hb extends lj {
               break L3;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param3 + 41);
+          throw wg.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param3 + ')');
         }
         return stackIn_7_0;
     }
@@ -189,7 +189,7 @@ final class hb extends lj {
         try {
             ((hb) this).field_w = param0;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "hb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "hb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

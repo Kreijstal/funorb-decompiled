@@ -74,7 +74,7 @@ final class vk {
               break L1;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + 0 + 41);
+          throw sh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + 0 + ')');
         }
         return stackIn_4_0;
     }
@@ -253,7 +253,7 @@ final class vk {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("vk.C(").append(param0).append(44);
+            stackOut_21_1 = new StringBuilder().append("vk.C(").append(param0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -276,7 +276,7 @@ final class vk {
               break L6;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
         return stackIn_20_0;
     }

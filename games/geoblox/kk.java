@@ -510,7 +510,7 @@ final class kk extends ji {
           L5: {
             var3 = decompiledCaughtException;
             stackOut_36_0 = (RuntimeException) var3;
-            stackOut_36_1 = new StringBuilder().append("kk.O(").append(0).append(44);
+            stackOut_36_1 = new StringBuilder().append("kk.O(").append(false).append(',');
             stackIn_38_0 = stackOut_36_0;
             stackIn_38_1 = stackOut_36_1;
             stackIn_37_0 = stackOut_36_0;
@@ -533,7 +533,7 @@ final class kk extends ji {
               break L5;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 44 + 118 + 41);
+          throw t.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ',' + 118 + ')');
         }
         return stackIn_35_0 != 0;
     }
@@ -674,7 +674,7 @@ final class kk extends ji {
                   break L12;
                 }
               }
-              throw t.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param1 + 44 + param2 + 41);
+              throw t.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

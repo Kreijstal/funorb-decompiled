@@ -267,7 +267,7 @@ final class pg {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("pg.E(").append(0).append(44);
+            stackOut_21_1 = new StringBuilder().append("pg.E(").append(0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -290,7 +290,7 @@ final class pg {
               break L6;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 

@@ -1351,7 +1351,7 @@ abstract class md extends gb {
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_66_0 = (RuntimeException) var2;
-                stackOut_66_1 = new StringBuilder().append("md.Q(").append(-93).append(44);
+                stackOut_66_1 = new StringBuilder().append("md.Q(").append(-93).append(',');
                 stackIn_68_0 = stackOut_66_0;
                 stackIn_68_1 = stackOut_66_1;
                 stackIn_67_0 = stackOut_66_0;
@@ -1374,7 +1374,7 @@ abstract class md extends gb {
                   break L24;
                 }
               }
-              throw oi.a((Throwable) (Object) stackIn_69_0, stackIn_69_2 + 41);
+              throw oi.a((Throwable) (Object) stackIn_69_0, stackIn_69_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

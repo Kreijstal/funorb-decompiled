@@ -89,7 +89,7 @@ final class ik extends q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var2_ref, "ik.B(" + param0 + 44 + -46 + 41);
+          throw rb.a((Throwable) (Object) var2_ref, "ik.B(" + param0 + ',' + -46 + ')');
         }
         return stackIn_23_0 != 0;
     }

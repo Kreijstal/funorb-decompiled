@@ -27,7 +27,7 @@ abstract class bb extends dl {
             ((bb) this).field_Q = false;
             ((bb) this).field_V = param0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "bb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "bb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -161,7 +161,7 @@ abstract class bb extends dl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var2_ref, "bb.SB(" + param0 + 44 + param1 + 41);
+          throw ci.a((Throwable) (Object) var2_ref, "bb.SB(" + param0 + ',' + param1 + ')');
         }
     }
 

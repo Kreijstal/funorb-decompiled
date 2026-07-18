@@ -123,7 +123,7 @@ final class tib extends eca {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ')');
         }
         return stackIn_17_0;
     }
@@ -241,7 +241,7 @@ final class tib extends eca {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param1 + ')');
         }
         return stackIn_19_0;
     }
@@ -285,7 +285,7 @@ final class tib extends eca {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("tib.N(").append(-596).append(44);
+            stackOut_2_1 = new StringBuilder().append("tib.N(").append(-596).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -308,7 +308,7 @@ final class tib extends eca {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 16 + 41);
+          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 16 + ')');
         }
         return stackIn_1_0;
     }

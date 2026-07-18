@@ -114,7 +114,7 @@ final class kd {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var2;
-            stackOut_8_1 = new StringBuilder().append("kd.E(").append(31913).append(44);
+            stackOut_8_1 = new StringBuilder().append("kd.E(").append(31913).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -137,7 +137,7 @@ final class kd {
               break L3;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
     }
 

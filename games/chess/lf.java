@@ -387,7 +387,7 @@ final class lf extends kn {
           L18: {
             var8 = decompiledCaughtException;
             stackOut_52_0 = (RuntimeException) var8;
-            stackOut_52_1 = new StringBuilder().append("lf.A(").append(param0).append(44);
+            stackOut_52_1 = new StringBuilder().append("lf.A(").append(param0).append(',');
             stackIn_54_0 = stackOut_52_0;
             stackIn_54_1 = stackOut_52_1;
             stackIn_53_0 = stackOut_52_0;
@@ -410,7 +410,7 @@ final class lf extends kn {
               break L18;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw fk.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -488,7 +488,7 @@ final class lf extends kn {
             ((lf) this).field_M = param0;
             ((lf) this).field_R = 256;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "lf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "lf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

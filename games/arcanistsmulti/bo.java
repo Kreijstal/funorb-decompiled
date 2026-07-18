@@ -138,7 +138,7 @@ final class bo {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + -26 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + -26 + ',' + param2 + ')');
         }
         return (String) (Object) stackIn_26_0;
     }

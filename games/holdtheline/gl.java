@@ -100,7 +100,7 @@ final class gl {
               break L5;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -281,7 +281,7 @@ final class gl {
           L10: {
             var4 = decompiledCaughtException;
             stackOut_43_0 = (RuntimeException) var4;
-            stackOut_43_1 = new StringBuilder().append("gl.C(").append(1).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_43_1 = new StringBuilder().append("gl.C(").append(true).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_45_0 = stackOut_43_0;
             stackIn_45_1 = stackOut_43_1;
             stackIn_44_0 = stackOut_43_0;
@@ -304,7 +304,7 @@ final class gl {
               break L10;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + ')');
         }
         return stackIn_42_0;
     }

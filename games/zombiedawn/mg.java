@@ -78,7 +78,7 @@ final class mg extends le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1_ref, "mg.A(" + -120 + 41);
+          throw sh.a((Throwable) (Object) var1_ref, "mg.A(" + -120 + ')');
         }
     }
 

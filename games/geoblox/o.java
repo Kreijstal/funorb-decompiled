@@ -44,7 +44,7 @@ final class o extends pb {
             param1.field_h = var5.a((byte) -54);
             var5.f(param2 ^ 11696, var5.field_f - var4);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "o.E(" + 6 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "o.E(" + 6 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

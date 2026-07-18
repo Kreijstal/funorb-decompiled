@@ -41,7 +41,7 @@ final class di {
             jo.field_r = true;
             kk.field_a = param4;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "di.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + 9 + 44 + param4 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "di.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + 9 + ',' + param4 + ')');
         }
     }
 

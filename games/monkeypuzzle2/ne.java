@@ -115,7 +115,7 @@ final class ne {
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + -98 + 41);
+          throw la.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + -98 + ')');
         }
         return stackIn_20_0;
     }
@@ -365,7 +365,7 @@ final class ne {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "ne.C(" + -107 + 41);
+          throw la.a((Throwable) (Object) var1, "ne.C(" + -107 + ')');
         }
     }
 

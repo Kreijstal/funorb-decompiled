@@ -60,7 +60,7 @@ final class hb implements Iterator {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("hb.C(").append(-32344).append(44);
+            stackOut_2_1 = new StringBuilder().append("hb.C(").append(-32344).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -83,7 +83,7 @@ final class hb implements Iterator {
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -259,7 +259,7 @@ final class hb implements Iterator {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var3;
-            stackOut_10_1 = new StringBuilder().append("hb.A(").append(27937).append(44);
+            stackOut_10_1 = new StringBuilder().append("hb.A(").append(27937).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -282,7 +282,7 @@ final class hb implements Iterator {
               break L4;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param2 + ')');
         }
     }
 
@@ -331,7 +331,7 @@ final class hb implements Iterator {
             int discarded$0 = 43;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "hb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "hb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

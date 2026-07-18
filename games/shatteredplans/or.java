@@ -52,7 +52,7 @@ final class or {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("or.B(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("or.B(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -75,7 +75,7 @@ final class or {
               break L1;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 1 + 41);
+          throw r.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + true + ')');
         }
         return stackIn_4_0;
     }

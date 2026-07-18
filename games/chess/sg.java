@@ -89,7 +89,7 @@ final class sg {
               break L3;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 124 + 44 + param2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + 124 + ',' + param2 + ')');
         }
         return stackIn_7_0;
     }

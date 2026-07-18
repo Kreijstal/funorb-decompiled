@@ -8,7 +8,7 @@ final class ph extends li {
         try {
             ((ph) this).field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ph.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "ph.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -338,7 +338,7 @@ final class ph extends li {
           }
           L14: {
             stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
-            stackOut_43_1 = ((StringBuilder) (Object) stackIn_43_1).append(stackIn_43_2).append(44).append(1).append(44);
+            stackOut_43_1 = ((StringBuilder) (Object) stackIn_43_1).append(stackIn_43_2).append(',').append(true).append(',');
             stackIn_45_0 = stackOut_43_0;
             stackIn_45_1 = stackOut_43_1;
             stackIn_44_0 = stackOut_43_0;
@@ -361,7 +361,7 @@ final class ph extends li {
               break L14;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 44 + param3 + 41);
+          throw wn.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + ',' + param3 + ')');
         }
     }
 

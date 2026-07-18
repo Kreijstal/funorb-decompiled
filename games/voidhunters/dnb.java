@@ -25,7 +25,7 @@ final class dnb extends ksa {
         try {
             ((dnb) this).field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "dnb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "dnb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

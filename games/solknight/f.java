@@ -16,7 +16,7 @@ final class f extends rk {
             }
             param1.addFocusListener((java.awt.event.FocusListener) (Object) i.field_J);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "f.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "f.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -29,7 +29,7 @@ final class f extends rk {
             java.nio.Buffer discarded$0 = ((f) this).field_f.position(param0);
             java.nio.ByteBuffer discarded$1 = ((f) this).field_f.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "f.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "f.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

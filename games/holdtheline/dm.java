@@ -64,7 +64,7 @@ final class dm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var1, "dm.D(" + 255 + 41);
+          throw kk.a((Throwable) (Object) var1, "dm.D(" + 255 + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class dm {
               break L1;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + 255 + 41);
+          throw kk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + 255 + ')');
         }
     }
 

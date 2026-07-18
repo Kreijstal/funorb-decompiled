@@ -17,7 +17,7 @@ final class dk extends java.awt.Canvas {
         try {
             ((dk) this).field_e.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "dk.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "dk.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -25,7 +25,7 @@ final class dk extends java.awt.Canvas {
         try {
             ((dk) this).field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "dk.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "dk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class dk extends java.awt.Canvas {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "dk.B(" + 69 + 41);
+          throw dh.a((Throwable) (Object) var1, "dk.B(" + 69 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class dk extends java.awt.Canvas {
         try {
             ((dk) this).field_e.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "dk.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "dk.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

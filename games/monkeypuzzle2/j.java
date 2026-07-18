@@ -136,7 +136,7 @@ final class j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "j.B(" + param0 + 41);
+          throw la.a((Throwable) (Object) var1, "j.B(" + param0 + ')');
         }
         return stackIn_29_0;
     }

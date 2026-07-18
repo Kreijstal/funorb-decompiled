@@ -93,7 +93,7 @@ final class sf {
                   break L2;
                 }
               }
-              throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+              throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -237,7 +237,7 @@ final class sf {
           }
           L5: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(17).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(17).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -260,7 +260,7 @@ final class sf {
               break L5;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
     }
 

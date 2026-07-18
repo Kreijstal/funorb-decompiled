@@ -38,7 +38,7 @@ final class th extends nv {
             ((th) this).field_r = param1.b((byte) 44, 4);
             ((th) this).field_p = param1.b((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "th.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "th.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -435,7 +435,7 @@ final class th extends nv {
             param1.a((byte) 44, ((th) this).field_r, 4);
             param1.a((byte) -128, ((th) this).field_p, 4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "th.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "th.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

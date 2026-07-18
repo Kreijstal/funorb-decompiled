@@ -111,7 +111,7 @@ final class cd {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + -94 + 44 + param3 + 44 + param4 + 41);
+          throw ma.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + -94 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -220,7 +220,7 @@ final class cd {
             param1.field_i.field_h = param1;
             param1.field_h.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "cd.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "cd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

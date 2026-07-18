@@ -45,7 +45,7 @@ final class khb {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("khb.A(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("khb.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -68,7 +68,7 @@ final class khb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -84,7 +84,7 @@ final class khb {
         try {
             qs.a(param0, param1 ^ -124, ((khb) this).field_a, "jagex-last-login-method", 31536000L);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "khb.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "khb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class khb {
         try {
             ((khb) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "khb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "khb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

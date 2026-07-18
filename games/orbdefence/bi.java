@@ -94,7 +94,7 @@ final class bi {
               break L3;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + 126 + 41);
+          throw dd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + 126 + ')');
         }
         return stackIn_13_0;
     }

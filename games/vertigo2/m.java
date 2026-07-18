@@ -66,7 +66,7 @@ final class m extends ji {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var5, "m.A(" + param0 + 44 + param1 + 44 + -78 + 44 + param3 + 44 + param4 + 41);
+          throw wn.a((Throwable) (Object) var5, "m.A(" + param0 + ',' + param1 + ',' + -78 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -184,7 +184,7 @@ final class m extends ji {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 41);
+          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 0 + ')');
         }
         return stackIn_4_0;
     }

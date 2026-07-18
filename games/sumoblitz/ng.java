@@ -165,7 +165,7 @@ final class ng extends rq {
             ((ng) this).field_b.a(param2, 125);
             ((ng) this).field_b.h(84, param0);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ng.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "ng.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -369,7 +369,7 @@ final class ng extends rq {
               break L9;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ')');
         }
     }
 

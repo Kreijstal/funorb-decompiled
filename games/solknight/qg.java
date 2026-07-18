@@ -153,7 +153,7 @@ final class qg {
               break L7;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + -92 + 41);
+          throw fc.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + -92 + ')');
         }
     }
 
@@ -246,7 +246,7 @@ final class qg {
               break L5;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

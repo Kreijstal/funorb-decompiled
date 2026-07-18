@@ -322,7 +322,7 @@ final class ko extends mc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var3, "ko.A(" + param0 + 44 + param1 + 44 + -64 + 41);
+          throw oi.a((Throwable) (Object) var3, "ko.A(" + param0 + ',' + param1 + ',' + -64 + ')');
         }
     }
 

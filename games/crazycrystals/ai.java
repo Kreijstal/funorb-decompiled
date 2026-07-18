@@ -47,7 +47,7 @@ final class ai implements Runnable {
                     }
                   }
                   if (((ai) this).field_k.field_f == ((ai) this).field_k.field_h.length) {
-                    throw ai.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((ai) this).field_k.field_h.length + " " + ((ai) this).field_i));
+                    throw ai.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((ai) this).field_k.field_h.length + " " + (Object) (Object) ((ai) this).field_i));
                   } else {
                     var1 = this;
                     synchronized (var1) {
@@ -306,7 +306,7 @@ final class ai implements Runnable {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("ai.A(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("ai.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -329,7 +329,7 @@ final class ai implements Runnable {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -720,7 +720,7 @@ final class ai implements Runnable {
           }
           L18: {
             stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
-            stackOut_71_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_71_2).append(44).append(param1).append(44);
+            stackOut_71_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_71_2).append(',').append(param1).append(',');
             stackIn_73_0 = stackOut_71_0;
             stackIn_73_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;
@@ -745,7 +745,7 @@ final class ai implements Runnable {
           }
           L19: {
             stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
-            stackOut_74_1 = ((StringBuilder) (Object) stackIn_74_1).append(stackIn_74_2).append(44).append(param3).append(44);
+            stackOut_74_1 = ((StringBuilder) (Object) stackIn_74_1).append(stackIn_74_2).append(',').append(param3).append(',');
             stackIn_76_0 = stackOut_74_0;
             stackIn_76_1 = stackOut_74_1;
             stackIn_75_0 = stackOut_74_0;
@@ -768,7 +768,7 @@ final class ai implements Runnable {
               break L19;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + 44 + param5 + 44 + param6 + 41);
+          throw dn.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_67_0;
     }
@@ -779,7 +779,7 @@ final class ai implements Runnable {
             ((ai) this).field_i = param1;
             ((ai) this).field_k = new ng(param2);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "ai.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "ai.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

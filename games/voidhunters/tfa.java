@@ -128,7 +128,7 @@ final class tfa extends bha implements ntb {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var3;
-            stackOut_22_1 = new StringBuilder().append("tfa.C(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("tfa.C(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -151,7 +151,7 @@ final class tfa extends bha implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
         return stackIn_21_0 != 0;
     }
@@ -316,7 +316,7 @@ final class tfa extends bha implements ntb {
             var6 = new rha(2, param3, param3);
             var5.field_d.a(var6, param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "tfa.L(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "tfa.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -428,7 +428,7 @@ final class tfa extends bha implements ntb {
               } else {
                 if (var5.field_g.a((byte) 92, (tv) (Object) var5.field_g)) {
                   var4 = 1;
-                  System.out.println("Ship saved_ship has changed. before=" + var5.field_g + ", now=" + var5.field_g);
+                  System.out.println("Ship saved_ship has changed. before=" + (Object) (Object) var5.field_g + ", now=" + (Object) (Object) var5.field_g);
                   break L9;
                 } else {
                   break L9;
@@ -527,7 +527,7 @@ final class tfa extends bha implements ntb {
               break L17;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_48_0, stackIn_48_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_48_0, stackIn_48_2 + ',' + param1 + ')');
         }
     }
 
@@ -774,7 +774,7 @@ final class tfa extends bha implements ntb {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
         }
     }
 
@@ -806,7 +806,7 @@ final class tfa extends bha implements ntb {
             var4.field_c = var4.field_c;
             var4.field_l = var4.field_l;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "tfa.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "tfa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -897,7 +897,7 @@ final class tfa extends bha implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
     }
 
@@ -1038,7 +1038,7 @@ final class tfa extends bha implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

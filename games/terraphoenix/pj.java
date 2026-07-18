@@ -239,7 +239,7 @@ final class pj {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("pj.D(").append(-56).append(44);
+            stackOut_22_1 = new StringBuilder().append("pj.D(").append(-56).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -262,7 +262,7 @@ final class pj {
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
     }
 

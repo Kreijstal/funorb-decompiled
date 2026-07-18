@@ -69,7 +69,7 @@ final class gp implements Iterable {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var2;
-            stackOut_13_1 = new StringBuilder().append("gp.G(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("gp.G(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -92,7 +92,7 @@ final class gp implements Iterable {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
         return stackIn_12_0 != 0;
     }
@@ -144,7 +144,7 @@ final class gp implements Iterable {
             param0.field_n.field_s = param0;
             param0.field_s.field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "gp.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "gp.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

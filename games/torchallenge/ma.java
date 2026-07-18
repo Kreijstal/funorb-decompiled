@@ -34,7 +34,7 @@ abstract class ma extends ui implements cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1_ref, "ma.T(" + 102 + 41);
+          throw oj.a((Throwable) (Object) var1_ref, "ma.T(" + 102 + ')');
         }
     }
 
@@ -149,7 +149,7 @@ abstract class ma extends ui implements cc {
               break L3;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + -25 + 41);
+          throw oj.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + -25 + ')');
         }
     }
 
@@ -213,7 +213,7 @@ abstract class ma extends ui implements cc {
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw oj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
     }
 
@@ -240,7 +240,7 @@ abstract class ma extends ui implements cc {
         try {
             ((ma) this).field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "ma.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "ma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -344,7 +344,7 @@ abstract class ma extends ui implements cc {
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 

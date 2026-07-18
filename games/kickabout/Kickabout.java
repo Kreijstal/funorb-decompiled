@@ -1484,7 +1484,7 @@ public final class Kickabout extends tu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "Kickabout.HA(" + param0 + 41);
+          throw nb.a((Throwable) (Object) var1, "Kickabout.HA(" + param0 + ')');
         }
     }
 
@@ -2122,7 +2122,7 @@ public final class Kickabout extends tu {
                                                               an.field_d = false;
                                                               return true;
                                                             } else {
-                                                              throw new RuntimeException("Tried to init a lobby without the full state being sent [" + var4_int + "," + var5 + "," + var6 + "]");
+                                                              throw new RuntimeException("Tried to init a lobby without the full state being sent [" + (var4_int != 0) + "," + (var5 != 0) + "," + (var6 != 0) + "]");
                                                             }
                                                           } else {
                                                             L23: {

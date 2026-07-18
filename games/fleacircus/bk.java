@@ -51,7 +51,7 @@ final class bk {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2_ref;
-            stackOut_6_1 = new StringBuilder().append("bk.A(").append(-26395).append(44);
+            stackOut_6_1 = new StringBuilder().append("bk.A(").append(-26395).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -74,7 +74,7 @@ final class bk {
               break L1;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_5_0;
     }
@@ -508,7 +508,7 @@ final class bk {
             rb.a(gb.field_d / 2, gb.field_k / 2, (byte) 70);
             hg.a(0, param2.field_K + param2.field_y, param2.field_y, param3.field_y - -param3.field_K, param3.field_y);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "bk.C(" + -5237 + 44 + 480 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "bk.C(" + -5237 + ',' + 480 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

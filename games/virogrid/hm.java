@@ -108,7 +108,7 @@ abstract class hm {
               break L5;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_11_0 != 0;
     }
@@ -482,7 +482,7 @@ abstract class hm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var2, "hm.L(" + param0 + 44 + param1 + 41);
+          throw kg.a((Throwable) (Object) var2, "hm.L(" + param0 + ',' + param1 + ')');
         }
     }
 

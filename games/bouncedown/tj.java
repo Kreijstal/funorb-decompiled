@@ -150,9 +150,9 @@ abstract class tj extends ug {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_z.append(60);
+                        StringBuilder discarded$6 = field_z.append('<');
                         StringBuilder discarded$7 = field_z.append(var15);
-                        StringBuilder discarded$8 = field_z.append(62);
+                        StringBuilder discarded$8 = field_z.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -339,7 +339,7 @@ abstract class tj extends ug {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_z.append(var14);
+                        StringBuilder discarded$9 = field_z.append((char) var14);
                         var14 = (char)(lf.a((char) var14, (byte) 104) & 255);
                         var4 = var4 + ((tj) this).field_q[var14];
                         if (((tj) this).field_t == null) {

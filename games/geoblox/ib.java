@@ -28,7 +28,7 @@ abstract class ib implements dg {
             }
             int var5_int = -30 % ((-2 - param0) / 40);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ib.AA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "ib.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ abstract class ib implements dg {
             var3.d((byte) -84, param2.field_f);
             var3.d((byte) 125, param2.field_l);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ib.DA(" + 3 + 44 + 5 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "ib.DA(" + 3 + ',' + 5 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

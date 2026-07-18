@@ -79,7 +79,7 @@ final class c extends n {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw t.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -166,7 +166,7 @@ final class c extends n {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1_ref, "c.DB(" + param0 + 41);
+          throw t.a((Throwable) (Object) var1_ref, "c.DB(" + param0 + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class c extends n {
         try {
             ((c) this).field_s = new df(param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "c.RA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "c.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

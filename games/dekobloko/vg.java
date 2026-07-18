@@ -734,7 +734,7 @@ final class vg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var4, "vg.A(" + param0 + 44 + param1 + 44 + param2 + 44 + 48 + 41);
+          throw dh.a((Throwable) (Object) var4, "vg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + 48 + ')');
         }
     }
 

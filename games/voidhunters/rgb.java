@@ -67,7 +67,7 @@ final class rgb extends dmb implements ntb {
           L3: {
             var3_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3_ref;
-            stackOut_8_1 = new StringBuilder().append("rgb.C(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("rgb.C(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -90,7 +90,7 @@ final class rgb extends dmb implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -109,7 +109,7 @@ final class rgb extends dmb implements ntb {
             var6.field_e = var5.field_e;
             var6.field_g = var5.field_g;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "rgb.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "rgb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class rgb extends dmb implements ntb {
             ((rgb) this).field_d = param0.i(0, 32);
             ((rgb) this).field_e = param0.i(0, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "rgb.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "rgb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class rgb extends dmb implements ntb {
             }
             boolean discarded$0 = param0.a((byte) -99, false, ((rgb) this).field_d, ((rgb) this).field_g, ((rgb) this).field_e);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "rgb.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "rgb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -235,7 +235,7 @@ final class rgb extends dmb implements ntb {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
         }
     }
 
@@ -250,7 +250,7 @@ final class rgb extends dmb implements ntb {
             }
             param0.a(-632, ((rgb) this).field_e, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "rgb.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "rgb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

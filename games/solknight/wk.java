@@ -52,7 +52,7 @@ final class wk extends java.awt.Canvas {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("wk.A(").append(17).append(44);
+            stackOut_2_1 = new StringBuilder().append("wk.A(").append(17).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -75,7 +75,7 @@ final class wk extends java.awt.Canvas {
               break L1;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -84,7 +84,7 @@ final class wk extends java.awt.Canvas {
         try {
             ((wk) this).field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "wk.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "wk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class wk extends java.awt.Canvas {
         try {
             ((wk) this).field_f.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "wk.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "wk.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class wk extends java.awt.Canvas {
         try {
             ((wk) this).field_f.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "wk.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "wk.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

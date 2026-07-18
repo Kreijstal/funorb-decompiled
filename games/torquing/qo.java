@@ -293,7 +293,7 @@ final class qo extends am {
               break L4;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 44 + param2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -388,7 +388,7 @@ final class qo extends am {
           L1: {
             var5_ref = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var5_ref;
-            stackOut_7_1 = new StringBuilder().append("qo.A(").append(param0).append(44).append(param1).append(44).append(0).append(44);
+            stackOut_7_1 = new StringBuilder().append("qo.A(").append(param0).append(',').append(param1).append(',').append(0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -413,7 +413,7 @@ final class qo extends am {
           }
           L2: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -436,7 +436,7 @@ final class qo extends am {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
         return stackIn_6_0;
     }

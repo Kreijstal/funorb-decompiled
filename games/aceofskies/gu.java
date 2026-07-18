@@ -19,7 +19,7 @@ final class gu {
         try {
             ((gu) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "gu.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "gu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -173,7 +173,7 @@ final class gu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var1, "gu.A(" + 4 + 41);
+          throw pn.a((Throwable) (Object) var1, "gu.A(" + 4 + ')');
         }
     }
 
@@ -216,7 +216,7 @@ final class gu {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("gu.D(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("gu.D(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -239,7 +239,7 @@ final class gu {
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -287,7 +287,7 @@ final class gu {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3_ref;
-            stackOut_5_1 = new StringBuilder().append("gu.E(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("gu.E(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -310,7 +310,7 @@ final class gu {
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 16652 + 41);
+          throw pn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 16652 + ')');
         }
         return stackIn_4_0;
     }
@@ -321,7 +321,7 @@ final class gu {
             jt.a("jagex-last-login-method", ((gu) this).field_b, 31536000L, param0);
             int var3_int = 79 / ((param1 - 77) / 44);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "gu.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "gu.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

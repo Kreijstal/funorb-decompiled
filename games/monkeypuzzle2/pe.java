@@ -122,7 +122,7 @@ final class pe {
               }
               L5: {
                 stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(-108).append(44);
+                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(-108).append(',');
                 stackIn_16_0 = stackOut_14_0;
                 stackIn_16_1 = stackOut_14_1;
                 stackIn_15_0 = stackOut_14_0;
@@ -145,7 +145,7 @@ final class pe {
                   break L5;
                 }
               }
-              throw la.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+              throw la.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -442,7 +442,7 @@ final class pe {
           L19: {
             var7 = decompiledCaughtException;
             stackOut_66_0 = (RuntimeException) var7;
-            stackOut_66_1 = new StringBuilder().append("pe.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_66_1 = new StringBuilder().append("pe.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_68_0 = stackOut_66_0;
             stackIn_68_1 = stackOut_66_1;
             stackIn_67_0 = stackOut_66_0;
@@ -467,7 +467,7 @@ final class pe {
           }
           L20: {
             stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
-            stackOut_69_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_69_2).append(44);
+            stackOut_69_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_69_2).append(',');
             stackIn_71_0 = stackOut_69_0;
             stackIn_71_1 = stackOut_69_1;
             stackIn_70_0 = stackOut_69_0;
@@ -490,7 +490,7 @@ final class pe {
               break L20;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + ')');
         }
         return stackIn_65_0;
     }

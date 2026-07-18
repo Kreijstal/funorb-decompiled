@@ -59,7 +59,7 @@ final class jn {
             em.field_j = 0;
             nc.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "jn.E(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 44 + 0 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "jn.E(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ',' + 0 + ',' + 0 + ')');
         }
     }
 
@@ -804,7 +804,7 @@ final class jn {
             em.field_m[2] = "holdtheline_lose_jingle";
             em.field_m[3] = "holdtheline_classic";
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "jn.A(" + (param0 != null ? "{...}" : "null") + 44 + -127 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "jn.A(" + (param0 != null ? "{...}" : "null") + ',' + -127 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -849,7 +849,7 @@ final class jn {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("jn.I(").append(param0).append(44).append(-96).append(44);
+            stackOut_7_1 = new StringBuilder().append("jn.I(").append(param0).append(',').append(-96).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -872,7 +872,7 @@ final class jn {
               break L2;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }

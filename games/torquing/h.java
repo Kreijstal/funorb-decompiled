@@ -28,7 +28,7 @@ final class h extends q {
             param0.addKeyListener((java.awt.event.KeyListener) (Object) ha.field_b);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) ha.field_b);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "h.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "h.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

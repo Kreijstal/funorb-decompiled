@@ -28,7 +28,7 @@ final class h {
             var3.c(5, 0);
             var3.c(-125, param1.field_k);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "h.A(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 44 + 78 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "h.A(" + 5 + ',' + (param1 != null ? "{...}" : "null") + ',' + 78 + ')');
         }
     }
 

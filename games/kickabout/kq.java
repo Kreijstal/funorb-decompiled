@@ -30,7 +30,7 @@ final class kq extends hd {
             }
             int var5 = -66 / ((-50 - param0) / 34);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "kq.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "kq.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -286,7 +286,7 @@ final class kq extends hd {
           L4: {
             var6 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var6;
-            stackOut_16_1 = new StringBuilder().append("kq.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_16_1 = new StringBuilder().append("kq.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -309,7 +309,7 @@ final class kq extends hd {
               break L4;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
     }
 

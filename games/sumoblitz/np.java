@@ -123,7 +123,7 @@ final class np {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var4;
-            stackOut_14_1 = new StringBuilder().append("np.D(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("np.D(").append(param0).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -146,7 +146,7 @@ final class np {
               break L5;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param2 + ')');
         }
     }
 
@@ -412,7 +412,7 @@ final class np {
               break L8;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param1 + 44 + param2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

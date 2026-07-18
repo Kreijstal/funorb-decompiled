@@ -75,7 +75,7 @@ final class vc {
               break L0;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + param2 + 44 + -2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + param2 + ',' + -2 + ')');
         }
     }
 

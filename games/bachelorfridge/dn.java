@@ -27,7 +27,7 @@ final class dn {
             var6.a(0, -105, param5.length, param5);
             var6.b((byte) 77, var6.field_g - var7);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "dn.B(" + -25 + 44 + param1 + 44 + 0 + 44 + 11 + 44 + 1 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "dn.B(" + -25 + ',' + param1 + ',' + 0 + ',' + 11 + ',' + true + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

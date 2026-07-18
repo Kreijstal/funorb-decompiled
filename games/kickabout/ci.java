@@ -46,7 +46,7 @@ final class ci implements Iterable {
             param1.field_e.field_f = param1;
             param1.field_f.field_e = param1;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ci.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "ci.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

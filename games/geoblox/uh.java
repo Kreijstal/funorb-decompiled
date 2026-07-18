@@ -51,7 +51,7 @@ final class uh extends ac {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("uh.L(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("uh.L(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -74,7 +74,7 @@ final class uh extends ac {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -253,7 +253,7 @@ final class uh extends ac {
               break L7;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + 113 + 41);
+          throw t.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + 113 + ')');
         }
         return stackIn_26_0;
     }
@@ -318,7 +318,7 @@ final class uh extends ac {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "uh.DA(" + 4740 + 41);
+          throw t.a((Throwable) (Object) var1, "uh.DA(" + 4740 + ')');
         }
     }
 

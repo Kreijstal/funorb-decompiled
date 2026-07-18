@@ -11,7 +11,7 @@ final class cd {
             }
             wg.a("jagex-last-login-method", param1, ((cd) this).field_a, -26372, 31536000L);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "cd.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw la.a((Throwable) (Object) runtimeException, "cd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -19,7 +19,7 @@ final class cd {
         try {
             ((cd) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "cd.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw la.a((Throwable) (Object) runtimeException, "cd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class cd {
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw la.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -132,7 +132,7 @@ final class cd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "cd.D(" + 110 + 41);
+          throw la.a((Throwable) (Object) var1, "cd.D(" + 110 + ')');
         }
     }
 
@@ -249,7 +249,7 @@ final class cd {
               break L6;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + 20 + 41);
+          throw la.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + 20 + ')');
         }
     }
 

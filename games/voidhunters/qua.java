@@ -98,7 +98,7 @@ final class qua {
           L8: {
             var3 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var3;
-            stackOut_20_1 = new StringBuilder().append("qua.A(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("qua.A(").append(param0).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -121,7 +121,7 @@ final class qua {
               break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
         }
     }
 
@@ -195,7 +195,7 @@ final class qua {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + true + ')');
         }
         return stackIn_7_0;
     }
@@ -475,7 +475,7 @@ final class qua {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(1).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(true).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -498,7 +498,7 @@ final class qua {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -508,7 +508,7 @@ final class qua {
             ((qua) this).field_e = param0;
             ((qua) this).field_c = new ml[]{};
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "qua.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "qua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -567,7 +567,7 @@ final class qua {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var2;
-            stackOut_10_1 = new StringBuilder().append("qua.E(").append(0).append(44);
+            stackOut_10_1 = new StringBuilder().append("qua.E(").append(false).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -590,7 +590,7 @@ final class qua {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
         return stackIn_9_0;
     }

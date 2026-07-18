@@ -154,7 +154,7 @@ final class ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "ib.C(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var1, "ib.C(" + param0 + ')');
         }
         return stackIn_27_0;
     }
@@ -253,7 +253,7 @@ final class ib {
             ((ib) this).field_b[((ib) this).field_a] = param1;
             ((ib) this).field_a = ((ib) this).field_a + 1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ib.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ib.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

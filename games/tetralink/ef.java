@@ -386,7 +386,7 @@ final class ef extends uh {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_29_0 = (RuntimeException) var3;
-            stackOut_29_1 = new StringBuilder().append("ef.K(").append(63).append(44);
+            stackOut_29_1 = new StringBuilder().append("ef.K(").append(63).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -409,7 +409,7 @@ final class ef extends uh {
               break L1;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + param2 + ')');
         }
         return stackIn_27_0;
     }

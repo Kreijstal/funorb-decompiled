@@ -434,7 +434,7 @@ final class kn extends ec {
           L26: {
             var8 = decompiledCaughtException;
             stackOut_95_0 = (RuntimeException) var8;
-            stackOut_95_1 = new StringBuilder().append("kn.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_95_1 = new StringBuilder().append("kn.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
             stackIn_97_0 = stackOut_95_0;
             stackIn_97_1 = stackOut_95_1;
             stackIn_96_0 = stackOut_95_0;
@@ -457,7 +457,7 @@ final class kn extends ec {
               break L26;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_98_0, stackIn_98_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_98_0, stackIn_98_2 + ')');
         }
     }
 
@@ -563,7 +563,7 @@ final class kn extends ec {
             ((kn) this).field_H = 256;
             ((kn) this).field_x = param0;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "kn.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "kn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

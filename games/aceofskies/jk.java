@@ -97,7 +97,7 @@ final class jk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var2_ref, "jk.C(" + param0 + 44 + param1 + 41);
+          throw pn.a((Throwable) (Object) var2_ref, "jk.C(" + param0 + ',' + param1 + ')');
         }
         return stackIn_24_0 != 0;
     }
@@ -112,7 +112,7 @@ final class jk {
         try {
             hl discarded$3 = new hl(((jk) this).field_a, 5121, 4, 20);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "jk.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "jk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

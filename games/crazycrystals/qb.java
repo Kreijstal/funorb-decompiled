@@ -1180,7 +1180,7 @@ abstract class qb {
             field_b = null;
             int var1_int = 35;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "qb.A(" + 100 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "qb.A(" + 100 + ')');
         }
     }
 

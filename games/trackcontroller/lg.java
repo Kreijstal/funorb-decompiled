@@ -82,7 +82,7 @@ final class lg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1_ref, "lg.B(" + param0 + 41);
+          throw sl.a((Throwable) (Object) var1_ref, "lg.B(" + param0 + ')');
         }
         return stackIn_20_0 != 0;
     }

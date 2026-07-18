@@ -127,7 +127,7 @@ final class ni {
               break L5;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

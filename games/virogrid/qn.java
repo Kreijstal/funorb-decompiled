@@ -186,7 +186,7 @@ final class qn extends tg {
               break L8;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param1 + 41);
+          throw kg.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param1 + ')');
         }
         return stackIn_25_0;
     }
@@ -292,7 +292,7 @@ final class qn extends tg {
               break L5;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw kg.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_15_0 != 0;
     }

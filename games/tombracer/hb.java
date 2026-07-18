@@ -45,7 +45,7 @@ final class hb extends coa {
             var2_int = fieldTemp$9;
             var3 = new StringBuilder();
             var4 = param0.b(21098);
-            StringBuilder discarded$10 = var3.append(var4);
+            StringBuilder discarded$10 = var3.append((char) var4);
             var5 = 0;
             L1: while (true) {
               L2: {
@@ -54,7 +54,7 @@ final class hb extends coa {
                 } else {
                   var6 = param0.b(21098);
                   if (var5 != 0) {
-                    StringBuilder discarded$11 = var3.append(var6);
+                    StringBuilder discarded$11 = var3.append((char) var6);
                     var5 = 0;
                     continue L1;
                   } else {
@@ -63,7 +63,7 @@ final class hb extends coa {
                         var5 = 1;
                         break L3;
                       } else {
-                        StringBuilder discarded$12 = var3.append(var6);
+                        StringBuilder discarded$12 = var3.append((char) var6);
                         break L3;
                       }
                     }
@@ -120,7 +120,7 @@ final class hb extends coa {
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + 0 + 41);
+          throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + false + ')');
         }
         return stackIn_14_0;
     }

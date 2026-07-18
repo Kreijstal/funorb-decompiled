@@ -195,7 +195,7 @@ final class cb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = (Object) (Object) decompiledCaughtException;
-          throw oj.a((Throwable) var4, "cb.C(" + 25 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw oj.a((Throwable) var4, "cb.C(" + 25 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

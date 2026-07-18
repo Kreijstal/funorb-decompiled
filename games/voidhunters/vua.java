@@ -64,7 +64,7 @@ final class vua extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -80,7 +80,7 @@ final class vua extends rqa {
             vba.field_s[param6] = param3;
             vba.field_o[param6] = 50;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "vua.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 50 + 44 + param6 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "vua.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + 50 + ',' + param6 + ')');
         }
     }
 

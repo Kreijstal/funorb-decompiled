@@ -77,7 +77,7 @@ final class tj extends ah {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + -32 + 41);
+          throw aa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + -32 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -87,7 +87,7 @@ final class tj extends ah {
         try {
             ((tj) this).field_x = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "tj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "tj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class tj extends ah {
             param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) fj.field_c);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) fj.field_c);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "tj.E(" + -128 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "tj.E(" + -128 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class tj extends ah {
             int discarded$0 = 6;
             ai.a(param1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "tj.D(" + 240 + 44 + param1 + 44 + 8 + 44 + 8 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + 320 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 44 + param9 + 44 + (param10 != null ? "{...}" : "null") + 44 + 122 + 44 + 2 + 44 + param13 + 44 + param14 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "tj.D(" + 240 + ',' + param1 + ',' + 8 + ',' + 8 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + 320 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + 122 + ',' + 2 + ',' + param13 + ',' + param14 + ')');
         }
     }
 
@@ -286,7 +286,7 @@ final class tj extends ah {
           L10: {
             var4 = decompiledCaughtException;
             stackOut_38_0 = (RuntimeException) var4;
-            stackOut_38_1 = new StringBuilder().append("tj.C(").append(param0).append(44);
+            stackOut_38_1 = new StringBuilder().append("tj.C(").append(param0).append(',');
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
@@ -309,7 +309,7 @@ final class tj extends ah {
               break L10;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 44 + 1 + 44 + 1 + 41);
+          throw aa.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ',' + true + ',' + true + ')');
         }
         return stackIn_37_0;
     }

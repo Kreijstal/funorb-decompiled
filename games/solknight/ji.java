@@ -53,7 +53,7 @@ final class ji {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("ji.B(").append(21762).append(44);
+            stackOut_6_1 = new StringBuilder().append("ji.B(").append(21762).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -76,7 +76,7 @@ final class ji {
               break L2;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_5_0;
     }

@@ -66,7 +66,7 @@ final class bo extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -86,7 +86,7 @@ final class bo extends rqa {
             bk.field_w.r(32712);
             int var2_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bo.B(" + 103 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "bo.B(" + 103 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

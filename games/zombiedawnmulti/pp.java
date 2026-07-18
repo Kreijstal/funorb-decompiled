@@ -29,7 +29,7 @@ class pp extends ic {
             ((pp) this).field_p = param0;
             ((pp) this).field_m = param1;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "pp.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "pp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -41,7 +41,7 @@ class pp extends ic {
             }
             param0.a(13066, ((pp) this).field_m);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "pp.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "pp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

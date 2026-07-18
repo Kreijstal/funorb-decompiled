@@ -76,7 +76,7 @@ final class lp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "lp.A(" + 2 + 41);
+          throw aa.a((Throwable) (Object) var1, "lp.A(" + 2 + ')');
         }
         return stackIn_13_0;
     }

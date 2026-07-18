@@ -283,7 +283,7 @@ final class sh extends uf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var1, "sh.A(" + param0 + 41);
+          throw qk.a((Throwable) (Object) var1, "sh.A(" + param0 + ')');
         }
     }
 

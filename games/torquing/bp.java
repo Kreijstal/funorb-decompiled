@@ -94,7 +94,7 @@ final class bp {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 1 + 44 + 3 + 41);
+          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 1 + ',' + 3 + ')');
         }
     }
 

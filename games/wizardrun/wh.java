@@ -256,7 +256,7 @@ final class wh implements Iterator {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_70_0 = (RuntimeException) var2;
-            stackOut_70_1 = new StringBuilder().append("wh.D(").append(-111).append(44);
+            stackOut_70_1 = new StringBuilder().append("wh.D(").append(-111).append(',');
             stackIn_72_0 = stackOut_70_0;
             stackIn_72_1 = stackOut_70_1;
             stackIn_71_0 = stackOut_70_0;
@@ -279,7 +279,7 @@ final class wh implements Iterator {
               break L6;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_73_0, stackIn_73_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_73_0, stackIn_73_2 + ')');
         }
         return stackIn_69_0;
     }
@@ -357,7 +357,7 @@ final class wh implements Iterator {
             int discarded$0 = -67;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "wh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "wh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

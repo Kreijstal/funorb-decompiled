@@ -1270,7 +1270,7 @@ final class hg {
                                       var21 = (Object) (Object) var31;
                                       break L73;
                                     } else {
-                                      var21 = (Object) (Object) (var21 + "<br>" + var31);
+                                      var21 = (Object) (Object) ((String) var21 + "<br>" + var31);
                                       break L73;
                                     }
                                   }
@@ -1300,7 +1300,7 @@ final class hg {
                                     }
                                   }
                                   if (var21 != null) {
-                                    var21 = (Object) (Object) (var21 + "<br>" + var22);
+                                    var21 = (Object) (Object) ((String) var21 + "<br>" + var22);
                                     var22 = (String) var21;
                                     var25 = var22;
                                     var22 = var25;
@@ -1388,13 +1388,13 @@ final class hg {
                           }
                           L79: {
                             if (var21 != null) {
-                              var32 = "<col=A00000>" + var21;
+                              var32 = "<col=A00000>" + (String) var21;
                               var33 = k.a("<br><col=A00000>", false, "<br>", var32);
                               if (var20 == null) {
                                 var20 = (Object) (Object) var33;
                                 break L79;
                               } else {
-                                var20 = (Object) (Object) (var20 + "<br>" + var33);
+                                var20 = (Object) (Object) ((String) var20 + "<br>" + var33);
                                 break L79;
                               }
                             } else {
@@ -1770,7 +1770,7 @@ final class hg {
               break L5;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw oi.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ')');
         }
     }
 

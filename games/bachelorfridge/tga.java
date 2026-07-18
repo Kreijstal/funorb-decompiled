@@ -13,7 +13,7 @@ class tga extends jm {
             int var3_int = -77 % ((param1 - 37) / 38);
             param0.d(((tga) this).field_o, 0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "tga.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "tga.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -27,7 +27,7 @@ class tga extends jm {
             ((tga) this).a(false, var3.field_h);
             var3.field_s.d(73);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "tga.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "tga.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -45,7 +45,7 @@ class tga extends jm {
             }
             param1.b((byte) 76, var3_int, ((tga) this).field_n, ((tga) this).field_o);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "tga.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "tga.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,7 +72,7 @@ class tga extends jm {
             ((tga) this).field_n = param0.b(16711935);
             ((tga) this).field_o = param0.b(16711935);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "tga.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "tga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

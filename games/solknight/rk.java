@@ -37,7 +37,7 @@ abstract class rk {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("rk.E(").append(param0).append(44).append(20).append(44);
+            stackOut_2_1 = new StringBuilder().append("rk.E(").append(param0).append(',').append(20).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -60,7 +60,7 @@ abstract class rk {
               break L1;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }

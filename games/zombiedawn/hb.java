@@ -179,7 +179,7 @@ final class hb extends ga {
           L5: {
             var5 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var5;
-            stackOut_13_1 = new StringBuilder().append("hb.IA(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("hb.IA(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -202,7 +202,7 @@ final class hb extends ga {
               break L5;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 44 + param3 + 41);
+          throw sh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -256,7 +256,7 @@ final class hb extends ga {
             }
             int var5_int = 20 / ((46 - param1) / 42);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "hb.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "hb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

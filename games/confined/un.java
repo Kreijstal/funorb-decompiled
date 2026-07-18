@@ -110,7 +110,7 @@ final class un {
             ie.field_a = true;
             hc.field_u = ve.field_e;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "un.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "un.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

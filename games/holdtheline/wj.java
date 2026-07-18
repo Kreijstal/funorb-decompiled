@@ -265,7 +265,7 @@ abstract class wj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var1, "wj.N(" + 68 + 41);
+          throw kk.a((Throwable) (Object) var1, "wj.N(" + 68 + ')');
         }
     }
 
@@ -328,7 +328,7 @@ abstract class wj {
             bj.field_G = 0;
             ih.field_m = 50;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "wj.Q(" + 0 + 44 + 19189 + 44 + 80 + 44 + 20 + 44 + 50 + 44 + 0 + 44 + -1500 + 44 + (param7 != null ? "{...}" : "null") + 44 + 80 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "wj.Q(" + 0 + ',' + 19189 + ',' + 80 + ',' + 20 + ',' + 50 + ',' + 0 + ',' + -1500 + ',' + (param7 != null ? "{...}" : "null") + ',' + 80 + ')');
         }
     }
 

@@ -303,7 +303,7 @@ final class e {
           L18: {
             var9 = decompiledCaughtException;
             stackOut_74_0 = (RuntimeException) var9;
-            stackOut_74_1 = new StringBuilder().append("e.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_74_1 = new StringBuilder().append("e.B(").append(param0).append(',').append(param1).append(',');
             stackIn_76_0 = stackOut_74_0;
             stackIn_76_1 = stackOut_74_1;
             stackIn_75_0 = stackOut_74_0;
@@ -326,7 +326,7 @@ final class e {
               break L18;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + -26361 + 44 + param8 + 41);
+          throw sl.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + -26361 + ',' + param8 + ')');
         }
     }
 

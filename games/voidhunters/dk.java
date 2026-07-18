@@ -71,7 +71,7 @@ final class dk extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -132,7 +132,7 @@ final class dk extends rqa {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3_ref;
-            stackOut_12_1 = new StringBuilder().append("dk.B(").append(-125).append(44).append(0).append(44);
+            stackOut_12_1 = new StringBuilder().append("dk.B(").append(-125).append(',').append(false).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -155,7 +155,7 @@ final class dk extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 

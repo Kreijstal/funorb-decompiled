@@ -70,7 +70,7 @@ final class ip extends ml {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "ip.D(" + 1886067877 + 41);
+          throw qo.a((Throwable) (Object) var1, "ip.D(" + 1886067877 + ')');
         }
     }
 

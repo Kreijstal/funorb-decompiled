@@ -107,7 +107,7 @@ final class li implements fe {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var6;
-            stackOut_12_1 = new StringBuilder().append("li.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_12_1 = new StringBuilder().append("li.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -130,7 +130,7 @@ final class li implements fe {
               break L5;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param4 + 41);
+          throw sd.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param4 + ')');
         }
     }
 
@@ -234,7 +234,7 @@ final class li implements fe {
               }
               L2: {
                 stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param1).append(44);
+                stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
                 stackIn_9_0 = stackOut_7_0;
                 stackIn_9_1 = stackOut_7_1;
                 stackIn_8_0 = stackOut_7_0;
@@ -257,7 +257,7 @@ final class li implements fe {
                   break L2;
                 }
               }
-              throw sd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+              throw sd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -277,7 +277,7 @@ final class li implements fe {
             ((li) this).field_b = param4;
             ((li) this).field_a = param1;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "li.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

@@ -874,7 +874,7 @@ abstract class wh extends rc {
           L5: {
             var4_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4_ref;
-            stackOut_12_1 = new StringBuilder().append("wh.MA(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("wh.MA(").append(param0).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_12_0;
             stackIn_15_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -897,7 +897,7 @@ abstract class wh extends rc {
               break L5;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 8 + 41);
+          throw t.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + 8 + ')');
         }
         return stackIn_11_0;
     }
@@ -1597,7 +1597,7 @@ abstract class wh extends rc {
                   break L11;
                 }
               }
-              throw t.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + 1 + 41);
+              throw t.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + true + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -1626,7 +1626,7 @@ abstract class wh extends rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "wh.LA(" + param0 + 41);
+          throw t.a((Throwable) (Object) var1, "wh.LA(" + param0 + ')');
         }
     }
 
@@ -1652,7 +1652,7 @@ abstract class wh extends rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "wh.NA(" + param0 + 41);
+          throw t.a((Throwable) (Object) var1, "wh.NA(" + param0 + ')');
         }
         return stackIn_4_0;
     }

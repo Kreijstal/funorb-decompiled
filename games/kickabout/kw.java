@@ -105,7 +105,7 @@ final class kw {
             var2 = new hn(5, new int[1]);
             ii.a(var2, 118);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "kw.B(" + 123 + 44 + param1 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "kw.B(" + 123 + ',' + param1 + ')');
         }
     }
 
@@ -1017,7 +1017,7 @@ final class kw {
         try {
             ((kw) this).field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "kw.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "kw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

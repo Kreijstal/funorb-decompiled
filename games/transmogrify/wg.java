@@ -92,7 +92,7 @@ final class wg implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var1, "wg.B(" + 4 + 41);
+          throw ch.a((Throwable) (Object) var1, "wg.B(" + 4 + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class wg implements Iterator {
             ((wg) this).field_a = null;
             ((wg) this).field_b = ((wg) this).field_c.field_e.field_h;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "wg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "wg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -144,7 +144,7 @@ final class jp {
             param3[1].b(param3[1].field_y + param0, param1, -(param3[2].field_y << 1) + param2, param3[2].field_v, param4);
             param3[2].g(-param3[2].field_y + (param2 + param0), param1, param4);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "jp.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + -8991 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "jp.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + -8991 + ')');
         }
     }
 
@@ -166,7 +166,7 @@ final class jp {
             nk.field_m = nk.field_m + (var2_int >> 1);
             ov.field_e = ov.field_e + param0.e((byte) -104);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "jp.D(" + (param0 != null ? "{...}" : "null") + 44 + -83 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "jp.D(" + (param0 != null ? "{...}" : "null") + ',' + -83 + ')');
         }
     }
 
@@ -184,7 +184,7 @@ final class jp {
             }
             ((jp) this).field_d = (float)((jp) this).field_h * var4_float / (float)(1 + ((jp) this).field_f);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "jp.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "jp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

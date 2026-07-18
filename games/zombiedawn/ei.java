@@ -70,7 +70,7 @@ abstract class ei extends hp {
           L1: {
             var8 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var8;
-            stackOut_2_1 = new StringBuilder().append("ei.DA(").append(param0).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("ei.DA(").append(param0).append(',').append(param1).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -93,7 +93,7 @@ abstract class ei extends hp {
               break L1;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param3 + 44 + param4 + 44 + -14237 + 44 + param6 + 44 + param7 + 41);
+          throw sh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param3 + ',' + param4 + ',' + -14237 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -169,7 +169,7 @@ abstract class ei extends hp {
             ((ei) this).field_I = 0;
             ((ei) this).field_F = param0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "ei.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "ei.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

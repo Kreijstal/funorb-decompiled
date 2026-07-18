@@ -113,7 +113,7 @@ final class gh extends td {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
         }
         return (ii) (Object) stackIn_15_0;
     }

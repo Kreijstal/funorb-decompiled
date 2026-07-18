@@ -61,7 +61,7 @@ final class bdb extends rqa {
           L2: {
             var10_ref = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var10_ref;
-            stackOut_6_1 = new StringBuilder().append("bdb.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_6_1 = new StringBuilder().append("bdb.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -84,7 +84,7 @@ final class bdb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param8 + 44 + 1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param8 + ',' + true + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class bdb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

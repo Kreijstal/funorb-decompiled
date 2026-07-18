@@ -49,7 +49,7 @@ final class kk extends hl {
                             break L2;
                           }
                         }
-                        StringBuilder discarded$3 = var6.append(var9);
+                        StringBuilder discarded$3 = var6.append((char) var9);
                         continue L1;
                       }
                     }
@@ -88,7 +88,7 @@ final class kk extends hl {
             }
             ((kk) this).field_p = null;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "kk.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "kk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class kk extends hl {
             var2 = new ii(param0, param1);
         } else {
             var2 = (ii) (Object) param0;
-            var2.field_a = var2.field_a + 32 + param1;
+            var2.field_a = var2.field_a + ' ' + param1;
         }
         return var2;
     }
@@ -107,7 +107,7 @@ final class kk extends hl {
         try {
             ((kk) this).a(param1, (byte) -95, param2, param0);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "kk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "kk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

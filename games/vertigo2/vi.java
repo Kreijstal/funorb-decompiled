@@ -43,7 +43,7 @@ final class vi extends li {
             ap.field_a = new t(param6);
             pd.field_c = new kr(kb.field_e, ap.field_a);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "vi.C(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 44 + 112 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "vi.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + 112 + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class vi extends li {
             ((vi) this).field_v = param0;
             ((vi) this).field_o = param6;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "vi.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "vi.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

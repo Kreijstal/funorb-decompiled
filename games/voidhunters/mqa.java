@@ -111,7 +111,7 @@ final class mqa extends rqa {
           L4: {
             var2 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var2;
-            stackOut_26_1 = new StringBuilder().append("mqa.B(").append(param0).append(44);
+            stackOut_26_1 = new StringBuilder().append("mqa.B(").append(param0).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -134,7 +134,7 @@ final class mqa extends rqa {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
         }
         return (lkb) (Object) stackIn_25_0;
     }
@@ -209,7 +209,7 @@ final class mqa extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

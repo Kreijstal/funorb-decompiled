@@ -18,7 +18,7 @@ final class hc {
             ec.field_j = param0;
             nf.a(param3, ab.field_p, -119);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "hc.C(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "hc.C(" + (param0 != null ? "{...}" : "null") + ',' + false + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

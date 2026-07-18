@@ -30,7 +30,7 @@ final class wqa implements dja {
             hwa.field_q = param3;
             ska.field_o = param4;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "wqa.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 114 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "wqa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + 114 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 

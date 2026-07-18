@@ -87,7 +87,7 @@ final class ub implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1_ref, "ub.E(" + 14921 + 41);
+          throw lj.a((Throwable) (Object) var1_ref, "ub.E(" + 14921 + ')');
         }
         return stackIn_19_0 != 0;
     }

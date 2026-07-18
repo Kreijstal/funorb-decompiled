@@ -84,7 +84,7 @@ final class nf extends ei {
           L3: {
             var3_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3_ref;
-            stackOut_12_1 = new StringBuilder().append("nf.G(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("nf.G(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -107,7 +107,7 @@ final class nf extends ei {
               break L3;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
         return stackIn_11_0;
     }
@@ -117,7 +117,7 @@ final class nf extends ei {
         try {
             ((nf) this).field_r = param1;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "nf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "nf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -217,7 +217,7 @@ final class nf extends ei {
           L3: {
             var3_ref = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var3_ref;
-            stackOut_16_1 = new StringBuilder().append("nf.D(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("nf.D(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -240,7 +240,7 @@ final class nf extends ei {
               break L3;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
         return (String) (Object) stackIn_15_0;
     }

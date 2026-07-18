@@ -44,7 +44,7 @@ final class rka extends ida {
             ((rka) this).a(((rka) this).field_k, ((rka) this).field_r, 27230);
             ((rka) this).field_q = 30 * ((rka) this).field_r;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "rka.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "rka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

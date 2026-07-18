@@ -17,7 +17,7 @@ final class s {
             var3.b(1, 0);
             var3.b(1, param2.field_l);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "s.A(" + 127 + 44 + 5 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "s.A(" + 127 + ',' + 5 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class s {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_31_0 = (RuntimeException) var3;
-            stackOut_31_1 = new StringBuilder().append("s.B(").append(0).append(44);
+            stackOut_31_1 = new StringBuilder().append("s.B(").append(false).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
@@ -139,7 +139,7 @@ final class s {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + param2 + ')');
         }
         return (String) (Object) stackIn_29_0;
     }

@@ -20,7 +20,7 @@ final class ic {
             vf.field_w = 0;
             dc.field_bb = 0;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "ic.D(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 19362 + 44 + 0 + 44 + 0 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "ic.D(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + 19362 + ',' + 0 + ',' + 0 + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class ic {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("ic.C(").append(21325).append(44);
+            stackOut_21_1 = new StringBuilder().append("ic.C(").append(21325).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -151,7 +151,7 @@ final class ic {
               break L7;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class ic {
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) field_d);
             u.field_R = 0;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "ic.E(" + 23147 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "ic.E(" + 23147 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

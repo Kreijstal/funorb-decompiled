@@ -100,7 +100,7 @@ final class ul implements kg {
               break L3;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw oi.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class ul implements kg {
           L3: {
             var2_ref = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var2_ref;
-            stackOut_9_1 = new StringBuilder().append("ul.B(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("ul.B(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -181,7 +181,7 @@ final class ul implements kg {
               break L3;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 

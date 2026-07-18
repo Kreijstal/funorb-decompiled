@@ -228,7 +228,7 @@ final class ld extends ca {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_69_0 = (RuntimeException) var2;
-            stackOut_69_1 = new StringBuilder().append("ld.D(").append(-101).append(44);
+            stackOut_69_1 = new StringBuilder().append("ld.D(").append(-101).append(',');
             stackIn_71_0 = stackOut_69_0;
             stackIn_71_1 = stackOut_69_1;
             stackIn_70_0 = stackOut_69_0;
@@ -251,7 +251,7 @@ final class ld extends ca {
               break L6;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + ')');
         }
         return stackIn_68_0;
     }

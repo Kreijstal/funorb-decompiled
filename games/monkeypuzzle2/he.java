@@ -26,7 +26,7 @@ final class he extends ug {
             ok.field_d = false;
             sc.field_c = 0;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "he.C(" + 0 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "he.C(" + 0 + ')');
         }
     }
 

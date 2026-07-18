@@ -65,7 +65,7 @@ final class ffa extends kj {
             ((ffa) this).field_f = param1;
             ((ffa) this).field_g = 80;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ffa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ffa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -242,7 +242,7 @@ final class ffa extends kj {
             re.field_D = param0;
             ep.a(12, 8192);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ffa.C(" + (param0 != null ? "{...}" : "null") + 44 + 12 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ffa.C(" + (param0 != null ? "{...}" : "null") + ',' + 12 + ')');
         }
     }
 

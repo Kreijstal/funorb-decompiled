@@ -221,7 +221,7 @@ final class kha {
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + 0 + 44 + param2 + 44 + 10 + 44 + param4 + 44 + param5 + 41);
+          throw tba.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ',' + 0 + ',' + param2 + ',' + 10 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_27_0;
     }

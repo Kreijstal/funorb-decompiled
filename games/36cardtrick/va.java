@@ -40,7 +40,7 @@ final class va implements Iterable {
             }
             param1.field_h.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "va.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "va.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -42,7 +42,7 @@ final class a {
             var4 = param0.a(((a) this).field_o >> 16, 0) - (((a) this).field_k >> 16);
             tf.field_b[((a) this).field_b].b(-3 + var3_int, -3 + var4);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "a.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "a.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

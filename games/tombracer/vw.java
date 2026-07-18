@@ -59,7 +59,7 @@ abstract class vw {
           L1: {
             var4_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4_ref;
-            stackOut_5_1 = new StringBuilder().append("vw.Q(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("vw.Q(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -82,7 +82,7 @@ abstract class vw {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 44 + 1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ',' + true + ')');
         }
     }
 
@@ -108,7 +108,7 @@ abstract class vw {
         try {
             ((vw) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "vw.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "vw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -712,7 +712,7 @@ final class hi {
           L5: {
             var3 = (Object) (Object) decompiledCaughtException;
             stackOut_28_0 = var3;
-            stackOut_28_1 = new StringBuilder().append("hi.CB(").append(param0).append(44);
+            stackOut_28_1 = new StringBuilder().append("hi.CB(").append(param0).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -735,7 +735,7 @@ final class hi {
               break L5;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ')');
         }
     }
 
@@ -1474,7 +1474,7 @@ final class hi {
             ((hi) this).field_mb = param0;
             this.e(false);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "hi.D(" + (param0 != null ? "{...}" : "null") + 44 + -99 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "hi.D(" + (param0 != null ? "{...}" : "null") + ',' + -99 + ')');
         }
     }
 
@@ -1612,7 +1612,7 @@ final class hi {
                   break L3;
                 }
               }
-              throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 124 + 41);
+              throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 124 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -2641,7 +2641,7 @@ final class hi {
               break L9;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param1 + ')');
         }
     }
 
@@ -2667,7 +2667,7 @@ final class hi {
             ((hi) this).field_gb.d((byte) -106);
             fn discarded$0 = kh.a(47, false);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "hi.BA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "hi.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -4683,7 +4683,7 @@ final class hi {
           L20: {
             var6 = decompiledCaughtException;
             stackOut_61_0 = (RuntimeException) var6;
-            stackOut_61_1 = new StringBuilder().append("hi.NA(").append(param0).append(44);
+            stackOut_61_1 = new StringBuilder().append("hi.NA(").append(param0).append(',');
             stackIn_63_0 = stackOut_61_0;
             stackIn_63_1 = stackOut_61_1;
             stackIn_62_0 = stackOut_61_0;
@@ -4708,7 +4708,7 @@ final class hi {
           }
           L21: {
             stackOut_64_0 = (RuntimeException) (Object) stackIn_64_0;
-            stackOut_64_1 = ((StringBuilder) (Object) stackIn_64_1).append(stackIn_64_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_64_1 = ((StringBuilder) (Object) stackIn_64_1).append(stackIn_64_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_66_0 = stackOut_64_0;
             stackIn_66_1 = stackOut_64_1;
             stackIn_65_0 = stackOut_64_0;
@@ -4731,7 +4731,7 @@ final class hi {
               break L21;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_67_0, stackIn_67_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_67_0, stackIn_67_2 + ')');
         }
     }
 
@@ -6793,7 +6793,7 @@ final class hi {
             }
             ((hi) this).field_W.a((nb) (Object) param0, (byte) -105);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "hi.TA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "hi.TA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -7224,7 +7224,7 @@ final class hi {
         try {
             ((hi) this).field_n.a(param1.field_u, -1, (fa) (Object) param1, param1.field_B);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "hi.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "hi.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

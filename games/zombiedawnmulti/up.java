@@ -131,7 +131,7 @@ final class up implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1, "up.C(" + -125 + 41);
+          throw fa.a((Throwable) (Object) var1, "up.C(" + -125 + ')');
         }
     }
 
@@ -222,7 +222,7 @@ final class up implements Iterator {
             int discarded$0 = 1;
             this.c();
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "up.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "up.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

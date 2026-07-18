@@ -194,7 +194,7 @@ final class nh {
           L5: {
             var2 = decompiledCaughtException;
             stackOut_49_0 = (RuntimeException) var2;
-            stackOut_49_1 = new StringBuilder().append("nh.B(").append(1).append(44);
+            stackOut_49_1 = new StringBuilder().append("nh.B(").append(true).append(',');
             stackIn_51_0 = stackOut_49_0;
             stackIn_51_1 = stackOut_49_1;
             stackIn_50_0 = stackOut_49_0;
@@ -217,7 +217,7 @@ final class nh {
               break L5;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + ')');
         }
     }
 
@@ -243,7 +243,7 @@ final class nh {
             int discarded$0 = 1;
             ub.a();
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "nh.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "nh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

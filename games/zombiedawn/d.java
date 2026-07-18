@@ -311,7 +311,7 @@ final class d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1, "d.B(" + 0 + 41);
+          throw sh.a((Throwable) (Object) var1, "d.B(" + false + ')');
         }
     }
 

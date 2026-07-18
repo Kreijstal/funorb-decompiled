@@ -16,7 +16,7 @@ final class pr {
             param0.addKeyListener((java.awt.event.KeyListener) (Object) im.field_c);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) im.field_c);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "pr.C(" + (param0 != null ? "{...}" : "null") + 44 + -9194 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "pr.C(" + (param0 != null ? "{...}" : "null") + ',' + -9194 + ')');
         }
     }
 

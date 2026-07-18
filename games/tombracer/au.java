@@ -169,7 +169,7 @@ final class au extends aa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "au.A(" + 3 + 41);
+          throw tba.a((Throwable) (Object) var1, "au.A(" + 3 + ')');
         }
     }
 

@@ -295,7 +295,7 @@ final class ej {
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_66_0 = (RuntimeException) var2;
-                stackOut_66_1 = new StringBuilder().append("ej.A(").append(-17).append(44);
+                stackOut_66_1 = new StringBuilder().append("ej.A(").append(-17).append(',');
                 stackIn_68_0 = stackOut_66_0;
                 stackIn_68_1 = stackOut_66_1;
                 stackIn_67_0 = stackOut_66_0;
@@ -318,7 +318,7 @@ final class ej {
                   break L24;
                 }
               }
-              throw ld.a((Throwable) (Object) stackIn_69_0, stackIn_69_2 + 41);
+              throw ld.a((Throwable) (Object) stackIn_69_0, stackIn_69_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

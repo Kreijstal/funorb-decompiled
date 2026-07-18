@@ -43,7 +43,7 @@ final class vb implements Iterable {
             param1.field_i.field_j = param1;
             param1.field_j.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "vb.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "vb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

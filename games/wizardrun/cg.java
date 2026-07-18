@@ -54,7 +54,7 @@ final class cg extends df implements java.awt.image.ImageProducer, java.awt.imag
             param0.setColorModel(((cg) this).field_l);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "cg.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "cg.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class cg extends df implements java.awt.image.ImageProducer, java.awt.imag
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class cg extends df implements java.awt.image.ImageProducer, java.awt.imag
         try {
             ((cg) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "cg.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "cg.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -191,7 +191,7 @@ final class cg extends df implements java.awt.image.ImageProducer, java.awt.imag
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw bd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -214,7 +214,7 @@ final class cg extends df implements java.awt.image.ImageProducer, java.awt.imag
             boolean discarded$5 = param2.prepareImage(((cg) this).field_g, (java.awt.image.ImageObserver) this);
             ((cg) this).b(91);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "cg.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "cg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -275,7 +275,7 @@ final class cg extends df implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw bd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }

@@ -91,7 +91,7 @@ final class fb extends hl {
               break L2;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 115 + 41);
+          throw kk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 115 + ')');
         }
         return stackIn_5_0;
     }
@@ -109,7 +109,7 @@ final class fb extends hl {
             ((fb) this).field_q = param2;
             ((fb) this).field_r = param6;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "fb.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "fb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

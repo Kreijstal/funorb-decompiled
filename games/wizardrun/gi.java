@@ -127,7 +127,7 @@ final class gi {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var5;
-            stackOut_21_1 = new StringBuilder().append("gi.B(").append(param0).append(44);
+            stackOut_21_1 = new StringBuilder().append("gi.B(").append(param0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -150,7 +150,7 @@ final class gi {
               break L8;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 1 + 44 + param3 + 44 + param4 + 41);
+          throw bd.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + true + ',' + param3 + ',' + param4 + ')');
         }
     }
 

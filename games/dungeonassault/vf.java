@@ -132,7 +132,7 @@ abstract class vf extends ll {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var1, "vf.P(" + 117 + 41);
+          throw vk.a((Throwable) (Object) var1, "vf.P(" + 117 + ')');
         }
     }
 

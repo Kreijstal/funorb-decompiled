@@ -86,7 +86,7 @@ public final class ShatteredPlansClient extends tl {
           L4: {
             var4_ref = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var4_ref;
-            stackOut_13_1 = new StringBuilder().append("ShatteredPlansClient.KA(").append(param0).append(44).append(param1).append(44);
+            stackOut_13_1 = new StringBuilder().append("ShatteredPlansClient.KA(").append(param0).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -109,7 +109,7 @@ public final class ShatteredPlansClient extends tl {
               break L4;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
         return stackIn_12_0 != 0;
     }

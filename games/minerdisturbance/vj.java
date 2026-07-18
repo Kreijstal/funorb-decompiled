@@ -12,7 +12,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
         try {
             ((vj) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "vj.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "vj.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
@@ -160,7 +160,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
           L1: {
             var4 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4;
-            stackOut_12_1 = new StringBuilder().append("vj.K(").append(-21614).append(44);
+            stackOut_12_1 = new StringBuilder().append("vj.K(").append(-21614).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -185,7 +185,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
           }
           L2: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param2).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param2).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -208,7 +208,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 
@@ -231,7 +231,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
             boolean discarded$2 = param0.prepareImage(((vj) this).field_g, (java.awt.image.ImageObserver) this);
             ((vj) this).a((byte) -45);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "vj.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "vj.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -245,7 +245,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
             this.c(-1494965825);
             boolean discarded$0 = param2.drawImage(((vj) this).field_g, param3, param0, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "vj.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "vj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -257,7 +257,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
             param0.setColorModel(((vj) this).field_n);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "vj.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "vj.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -320,7 +320,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 

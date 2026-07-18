@@ -38,7 +38,7 @@ final class mf {
             int discarded$3 = 0;
             cl.a(param1);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "mf.E(" + -752960408 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "mf.E(" + -752960408 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -274,7 +274,7 @@ final class mf {
             int discarded$0 = 90;
             this.b();
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "mf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "mf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -107,7 +107,7 @@ final class kd extends be {
                   break L1;
                 }
               }
-              throw nb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
+              throw nb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -196,7 +196,7 @@ final class kd extends be {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2_ref, "kd.BA(" + param0 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) var2_ref, "kd.BA(" + param0 + ',' + param1 + ')');
         }
         return stackIn_20_0 != 0;
     }
@@ -321,9 +321,9 @@ final class kd extends be {
                 ((kd) this).field_t[incrementValue$0] = var5;
                 var5 = (tm) (Object) param0.c(33);
             }
-            ((kd) this).a("# <col=ffaaff>FunOrbConsole (loaded " + ((kd) this).field_t.length + " methods at " + new Date() + ")</col>", (byte) 94);
+            ((kd) this).a("# <col=ffaaff>FunOrbConsole (loaded " + ((kd) this).field_t.length + " methods at " + (Object) (Object) new Date() + ")</col>", (byte) 94);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "kd.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "kd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -782,7 +782,7 @@ final class kd extends be {
               break L3;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
         }
         return stackIn_8_0;
     }
@@ -871,7 +871,7 @@ final class kd extends be {
                         if (var14 == null) {
                           var9++;
                           if (var10 != 0) {
-                            StringBuilder discarded$4 = var8.append(var13);
+                            StringBuilder discarded$4 = var8.append((char) var13);
                             continue L2;
                           } else {
                             continue L2;
@@ -1037,7 +1037,7 @@ final class kd extends be {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var4;
-            stackOut_11_1 = new StringBuilder().append("kd.AA(").append(15).append(44);
+            stackOut_11_1 = new StringBuilder().append("kd.AA(").append(15).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -1062,7 +1062,7 @@ final class kd extends be {
           }
           L5: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param2).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -1085,7 +1085,7 @@ final class kd extends be {
               break L5;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

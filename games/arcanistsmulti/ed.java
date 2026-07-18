@@ -94,7 +94,7 @@ class ed extends qk implements vb {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_6_0;
     }
@@ -131,7 +131,7 @@ class ed extends qk implements vb {
             ((ed) this).field_ub.field_I = true;
             ((ed) this).c(-105, (qm) (Object) ((ed) this).field_ub);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ed.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -823,7 +823,7 @@ class ed extends qk implements vb {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var4;
-            stackOut_27_1 = new StringBuilder().append("ed.H(").append(param0).append(44);
+            stackOut_27_1 = new StringBuilder().append("ed.H(").append(param0).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -846,7 +846,7 @@ class ed extends qk implements vb {
               break L6;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param2 + ')');
         }
     }
 
@@ -870,7 +870,7 @@ class ed extends qk implements vb {
             var2 = ai.a(param1, "jagex logo2.packvorbis", "");
             wf discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ed.F(" + -17 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ed.F(" + -17 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -910,7 +910,7 @@ class ed extends qk implements vb {
           L0: {
             var6 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var6;
-            stackOut_6_1 = new StringBuilder().append("ed.U(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_6_1 = new StringBuilder().append("ed.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -933,7 +933,7 @@ class ed extends qk implements vb {
               break L0;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 

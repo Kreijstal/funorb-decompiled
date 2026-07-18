@@ -20,7 +20,7 @@ final class mc {
             pa.field_k = param1;
             cd.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "mc.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "mc.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + 0 + ')');
         }
     }
 

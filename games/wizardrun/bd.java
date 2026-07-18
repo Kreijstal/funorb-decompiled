@@ -12,7 +12,7 @@ final class bd {
             var2 = new eb(param0, param1);
         } else {
             var2 = (eb) (Object) param0;
-            var2.field_b = var2.field_b + 32 + param1;
+            var2.field_b = var2.field_b + ' ' + param1;
         }
         return var2;
     }

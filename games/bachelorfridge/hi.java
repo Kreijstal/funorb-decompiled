@@ -61,7 +61,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1_ref, "hi.A(" + 116 + 41);
+          throw pe.a((Throwable) (Object) var1_ref, "hi.A(" + 116 + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class hi {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("hi.B(").append(1).append(44);
+            stackOut_5_1 = new StringBuilder().append("hi.B(").append(true).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -135,7 +135,7 @@ final class hi {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 

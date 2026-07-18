@@ -89,7 +89,7 @@ final class wh {
           L4: {
             var2 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var2;
-            stackOut_18_1 = new StringBuilder().append("wh.A(").append(param0).append(44);
+            stackOut_18_1 = new StringBuilder().append("wh.A(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -112,7 +112,7 @@ final class wh {
               break L4;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
         }
         return stackIn_17_0;
     }

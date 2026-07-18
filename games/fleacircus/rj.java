@@ -17,7 +17,7 @@ final class rj extends kc {
             int var3_int = 110 % ((param1 - -62) / 38);
             param0.b(((rj) this).field_h, (byte) 94);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "rj.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "rj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class rj extends kc {
             ((rj) this).field_h = param1;
             ((rj) this).field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "rj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "rj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

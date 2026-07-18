@@ -190,7 +190,7 @@ final class dp extends de {
             }
             super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "dp.MA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "dp.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -235,7 +235,7 @@ final class dp extends de {
             t.d(1 + var7, 1 + var8, -2 + var5, var6 - 2, 16777088);
             int discarded$1 = mg.field_h.field_Db.a(param0, 3 + var7, nc.field_d + (1 + (var8 + -mg.field_h.field_Db.field_w)), 500, 1000, 0, -1, 0, 0, fq.field_q);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "dp.B(" + (param0 != null ? "{...}" : "null") + 44 + -2 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "dp.B(" + (param0 != null ? "{...}" : "null") + ',' + -2 + ')');
         }
     }
 

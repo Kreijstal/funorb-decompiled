@@ -68,7 +68,7 @@ final class ela extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -179,7 +179,7 @@ final class ela extends rqa {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var2;
-            stackOut_23_1 = new StringBuilder().append("ela.B(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("ela.B(").append(param0).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -202,7 +202,7 @@ final class ela extends rqa {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
         return stackIn_22_0;
     }

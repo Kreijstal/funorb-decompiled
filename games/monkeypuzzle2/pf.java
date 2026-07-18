@@ -53,7 +53,7 @@ final class pf {
             int discarded$0 = var6.a((byte) -47, var5);
             var6.a(-var5 + var6.field_h, (byte) -116);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "pf.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 4 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "pf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + 4 + ')');
         }
     }
 

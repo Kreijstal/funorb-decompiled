@@ -37,7 +37,7 @@ final class bj extends l {
             ((bj) this).field_l = param2;
             ((bj) this).field_p = param0;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "bj.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "bj.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -640,7 +640,7 @@ final class bj extends l {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "bj.C(" + param0 + 41);
+          throw kg.a((Throwable) (Object) var1, "bj.C(" + param0 + ')');
         }
     }
 

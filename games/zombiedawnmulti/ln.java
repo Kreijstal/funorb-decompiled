@@ -57,7 +57,7 @@ final class ln implements Iterator {
             ((ln) this).field_a = null;
             ((ln) this).field_e = ((ln) this).field_b.field_d.field_k;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ln.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "ln.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

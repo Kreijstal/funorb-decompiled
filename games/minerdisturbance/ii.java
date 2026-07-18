@@ -60,7 +60,7 @@ final class ii {
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 0 + 41);
+          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + false + ')');
         }
         return stackIn_1_0;
     }
@@ -98,7 +98,7 @@ final class ii {
             var1.d(0, 0);
             tk.b(true);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "ii.C(" + 140 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "ii.C(" + 140 + ')');
         }
     }
 

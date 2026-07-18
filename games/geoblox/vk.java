@@ -142,7 +142,7 @@ abstract class vk {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -165,7 +165,7 @@ abstract class vk {
               break L7;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 16 + 44 + 8 + 41);
+          throw t.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + 16 + ',' + 8 + ')');
         }
         return stackIn_16_0;
     }

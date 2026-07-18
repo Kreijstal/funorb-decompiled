@@ -115,7 +115,7 @@ final class nc {
               break L5;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + -85 + 44 + param2 + 44 + param3 + 41);
+          throw nb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + -85 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -231,7 +231,7 @@ final class nc {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var5;
-            stackOut_22_1 = new StringBuilder().append("nc.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_22_1 = new StringBuilder().append("nc.A(").append(param0).append(',').append(param1).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -254,7 +254,7 @@ final class nc {
               break L8;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + -16161 + 44 + param4 + 41);
+          throw nb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + -16161 + ',' + param4 + ')');
         }
     }
 

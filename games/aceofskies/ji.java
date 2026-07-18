@@ -69,7 +69,7 @@ final class ji {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var3, "ji.B(" + 256 + 44 + 64 + 44 + 37 + 41);
+          throw pn.a((Throwable) (Object) var3, "ji.B(" + 256 + ',' + 64 + ',' + 37 + ')');
         }
     }
 

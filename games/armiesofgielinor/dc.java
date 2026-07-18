@@ -22,7 +22,7 @@ final class dc extends tc {
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) lf.field_q);
             ob.field_J = 0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "dc.C(" + (param0 != null ? "{...}" : "null") + 44 + -37 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "dc.C(" + (param0 != null ? "{...}" : "null") + ',' + -37 + ')');
         }
     }
 

@@ -332,7 +332,7 @@ final class of {
           }
           L2: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param1).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -355,7 +355,7 @@ final class of {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param3 + 41);
+          throw fk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param3 + ')');
         }
         return (String) (Object) stackIn_12_0;
     }
@@ -692,7 +692,7 @@ final class of {
                         continue stateLoop;
                     }
                     case 23: {
-                        throw fk.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param1 + 41);
+                        throw fk.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param1 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -897,7 +897,7 @@ final class of {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_40_0 = (RuntimeException) var3;
-            stackOut_40_1 = new StringBuilder().append("of.M(").append(param0).append(44).append(-26564).append(44);
+            stackOut_40_1 = new StringBuilder().append("of.M(").append(param0).append(',').append(-26564).append(',');
             stackIn_42_0 = stackOut_40_0;
             stackIn_42_1 = stackOut_40_1;
             stackIn_41_0 = stackOut_40_0;
@@ -920,7 +920,7 @@ final class of {
               break L1;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + ')');
         }
         return stackIn_38_0;
     }

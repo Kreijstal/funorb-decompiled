@@ -88,7 +88,7 @@ abstract class ri implements ma {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3_ref;
-            stackOut_12_1 = new StringBuilder().append("ri.P(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("ri.P(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -111,7 +111,7 @@ abstract class ri implements ma {
               break L1;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ')');
         }
         return (Object) (Object) stackIn_11_0;
     }
@@ -258,7 +258,7 @@ abstract class ri implements ma {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var5;
-            stackOut_20_1 = new StringBuilder().append("ri.Q(").append(param0).append(44).append(param1).append(44);
+            stackOut_20_1 = new StringBuilder().append("ri.Q(").append(param0).append(',').append(param1).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -281,7 +281,7 @@ abstract class ri implements ma {
               break L8;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + -82 + 44 + param4 + 41);
+          throw ld.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + -82 + ',' + param4 + ')');
         }
     }
 

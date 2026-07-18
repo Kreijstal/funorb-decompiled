@@ -66,7 +66,7 @@ final class fi extends nt {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("fi.D(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("fi.D(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -89,7 +89,7 @@ final class fi extends nt {
               break L2;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + -96 + 41);
+          throw qo.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + -96 + ')');
         }
         return stackIn_11_0;
     }
@@ -108,7 +108,7 @@ final class fi extends nt {
             var3_int = var3_int * (-((fi) this).field_p + 100);
             kw.field_a.a((float)(((fi) this).field_k >> 8), (float)(((fi) this).field_o >> 8), var3_int, 0, 1, ((fi) this).field_q, 2);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "fi.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "fi.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

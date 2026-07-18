@@ -96,7 +96,7 @@ final class ef extends Exception {
           L4: {
             var8 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var8;
-            stackOut_17_1 = new StringBuilder().append("ef.A(").append(param0).append(44).append(46).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_17_1 = new StringBuilder().append("ef.A(").append(param0).append(',').append(46).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -119,7 +119,7 @@ final class ef extends Exception {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
     }
 

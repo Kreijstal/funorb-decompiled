@@ -146,7 +146,7 @@ final class tk extends IOException {
           L2: {
             var10 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var10;
-            stackOut_8_1 = new StringBuilder().append("tk.G(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(-72).append(44).append(param4).append(44);
+            stackOut_8_1 = new StringBuilder().append("tk.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(-72).append(',').append(param4).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -169,7 +169,7 @@ final class tk extends IOException {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+          throw ii.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

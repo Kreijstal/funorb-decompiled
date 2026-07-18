@@ -16,7 +16,7 @@ final class eb extends td {
             ((eb) this).field_n = param3;
             ((eb) this).field_k = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "eb.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "eb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class eb extends td {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
         }
         return (ii) (Object) stackIn_15_0;
     }
@@ -312,7 +312,7 @@ final class eb extends td {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var2, "eb.C(" + 1 + 44 + 36 + 41);
+          throw pe.a((Throwable) (Object) var2, "eb.C(" + true + ',' + 36 + ')');
         }
     }
 

@@ -39,7 +39,7 @@ final class dj extends ms {
             ((dj) this).field_k = param1;
             ((dj) this).field_q.f(128 + ((dj) this).field_p * kr.field_c >> 8);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "dj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

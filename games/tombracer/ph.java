@@ -175,7 +175,7 @@ final class ph {
         try {
             ((ph) this).a(param0, param0.length, param1, (byte) -112);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ph.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ph.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -421,7 +421,7 @@ final class ph {
               break L15;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -695,7 +695,7 @@ final class ph {
               break L16;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -712,7 +712,7 @@ final class ph {
             ((ph) this).field_e = new byte[param2];
             ((ph) this).field_h = new byte[param1];
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ph.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ph.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

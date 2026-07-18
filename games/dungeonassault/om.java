@@ -264,7 +264,7 @@ final class om {
                         continue stateLoop;
                     }
                     case 21: {
-                        throw vk.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + 2 + 41);
+                        throw vk.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + 2 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -345,7 +345,7 @@ final class om {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var1, "om.C(" + 124 + 41);
+          throw vk.a((Throwable) (Object) var1, "om.C(" + 124 + ')');
         }
         return stackIn_13_0 != 0;
     }

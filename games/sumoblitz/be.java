@@ -25,7 +25,7 @@ final class be extends nt {
             }
             vl.field_c.a((float)((be) this).field_k, (float)((be) this).field_o, var4, 0, 0, (var3_int << 24) + ((be) this).field_q, 1);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "be.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "be.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

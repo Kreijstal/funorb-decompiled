@@ -23,7 +23,7 @@ final class bi {
             param0.SA(param1, var3.field_A, bea.field_g, var3.field_t, bea.field_l, bea.field_g * var3.field_A, bea.field_g);
             var2.a(param1 ^ -64);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "bi.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "bi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

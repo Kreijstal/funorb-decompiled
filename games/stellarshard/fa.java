@@ -66,7 +66,7 @@ final class fa extends gg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2, "fa.B(" + 2 + 44 + param1 + 41);
+          throw ma.a((Throwable) (Object) var2, "fa.B(" + 2 + ',' + param1 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class fa extends gg {
             ((fa) this).field_l = param2;
             ((fa) this).field_o = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "fa.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "fa.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

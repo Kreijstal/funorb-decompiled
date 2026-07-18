@@ -76,7 +76,7 @@ final class jl implements Iterator {
             ((jl) this).field_b = ((jl) this).field_i.field_f.field_i;
             ((jl) this).field_a = null;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "jl.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "jl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -86,7 +86,7 @@ final class ko {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var3_ref;
-            stackOut_16_1 = new StringBuilder().append("ko.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_16_1 = new StringBuilder().append("ko.A(").append(param0).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -109,7 +109,7 @@ final class ko {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
     }
 

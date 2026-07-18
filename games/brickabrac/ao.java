@@ -128,7 +128,7 @@ final class ao extends nm {
           L5: {
             var4_ref = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var4_ref;
-            stackOut_27_1 = new StringBuilder().append("ao.D(").append(0).append(44).append(param1).append(44).append(19166).append(44);
+            stackOut_27_1 = new StringBuilder().append("ao.D(").append(0).append(',').append(param1).append(',').append(19166).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -151,7 +151,7 @@ final class ao extends nm {
               break L5;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ')');
         }
         return stackIn_26_0;
     }
@@ -176,7 +176,7 @@ final class ao extends nm {
             ((ao) this).field_n = ((ao) this).field_n + 1;
             ((ao) this).field_i[fieldTemp$0 % ((ao) this).field_m] = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ao.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "ao.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

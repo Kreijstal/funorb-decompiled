@@ -50,7 +50,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1_ref, "la.G(" + param0 + 41);
+          throw sh.a((Throwable) (Object) var1_ref, "la.G(" + param0 + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -171,7 +171,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             ((la) this).field_a = true;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "la.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "la.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -257,7 +257,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
           }
           L2: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(param1).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param1).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -280,7 +280,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + -126 + 44 + param4 + 41);
+          throw sh.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + -126 + ',' + param4 + ')');
         }
         return stackIn_5_0;
     }
@@ -378,7 +378,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + -103 + 41);
+          throw sh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + -103 + ')');
         }
         return stackIn_13_0;
     }

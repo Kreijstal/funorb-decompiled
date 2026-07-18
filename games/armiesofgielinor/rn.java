@@ -12,7 +12,7 @@ final class rn {
         try {
             nn.a((byte) 96, param1);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "rn.C(" + -118 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "rn.C(" + -118 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class rn {
             lt.field_g = new lw(rl.field_C, (kb) (Object) np.field_Qb);
             rl.field_C.a((kb) (Object) lt.field_g, 0);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "rn.B(" + 3 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "rn.B(" + 3 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

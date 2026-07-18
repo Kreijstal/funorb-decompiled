@@ -1682,7 +1682,7 @@ final class mb {
             md.field_D.a(107);
             em.b(var3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "mb.C(" + (param0 != null ? "{...}" : "null") + 44 + -84 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "mb.C(" + (param0 != null ? "{...}" : "null") + ',' + -84 + ')');
         }
     }
 
@@ -1734,7 +1734,7 @@ final class mb {
                 rc.field_b.field_K.a(args, (byte) -103);
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "mb.E(" + (args != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "mb.E(" + (args != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

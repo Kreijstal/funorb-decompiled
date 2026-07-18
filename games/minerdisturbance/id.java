@@ -58,7 +58,7 @@ final class id {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("id.B(").append(-34).append(44);
+            stackOut_2_1 = new StringBuilder().append("id.B(").append(-34).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -81,7 +81,7 @@ final class id {
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param2 + ')');
         }
         return (jh) (Object) stackIn_1_0;
     }

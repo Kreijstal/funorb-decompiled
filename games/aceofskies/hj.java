@@ -15,7 +15,7 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
             int discarded$1 = 0;
             ps.a(0, false, param0);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "hj.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "hj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -23,7 +23,7 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             ((hj) this).field_b = true;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "hj.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "hj.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("hj.B(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("hj.B(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -97,7 +97,7 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
           L0: {
             var4 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("hj.C(").append(0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_6_1 = new StringBuilder().append("hj.C(").append(false).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -153,7 +153,7 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L0;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 

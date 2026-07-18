@@ -156,7 +156,7 @@ final class wd {
           L7: {
             var3 = decompiledCaughtException;
             stackOut_36_0 = (RuntimeException) var3;
-            stackOut_36_1 = new StringBuilder().append("wd.A(").append(param0).append(44);
+            stackOut_36_1 = new StringBuilder().append("wd.A(").append(param0).append(',');
             stackIn_38_0 = stackOut_36_0;
             stackIn_38_1 = stackOut_36_1;
             stackIn_37_0 = stackOut_36_0;
@@ -179,7 +179,7 @@ final class wd {
               break L7;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 44 + param2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ',' + param2 + ')');
         }
         return stackIn_35_0 != 0;
     }

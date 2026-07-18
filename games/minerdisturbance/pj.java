@@ -295,7 +295,7 @@ final class pj implements uj {
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_65_0 = (RuntimeException) var2;
-                stackOut_65_1 = new StringBuilder().append("pj.C(").append(119).append(44);
+                stackOut_65_1 = new StringBuilder().append("pj.C(").append(119).append(',');
                 stackIn_67_0 = stackOut_65_0;
                 stackIn_67_1 = stackOut_65_1;
                 stackIn_66_0 = stackOut_65_0;
@@ -318,7 +318,7 @@ final class pj implements uj {
                   break L24;
                 }
               }
-              throw lj.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + 41);
+              throw lj.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -447,7 +447,7 @@ final class pj implements uj {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var5;
-            stackOut_7_1 = new StringBuilder().append("pj.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("pj.E(").append(param0).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -472,7 +472,7 @@ final class pj implements uj {
           }
           L3: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param3).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param3).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -495,7 +495,7 @@ final class pj implements uj {
               break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
         return stackIn_6_0;
     }

@@ -136,7 +136,7 @@ final class ej {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var1, "ej.A(" + -39 + 41);
+          throw pf.a((Throwable) (Object) var1, "ej.A(" + -39 + ')');
         }
     }
 

@@ -15,7 +15,7 @@ final class rh {
         try {
             field_a = null;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "rh.B(" + param0 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "rh.B(" + param0 + ')');
         }
     }
 
@@ -320,7 +320,7 @@ final class rh {
           L19: {
             var5 = decompiledCaughtException;
             stackOut_65_0 = (RuntimeException) var5;
-            stackOut_65_1 = new StringBuilder().append("rh.C(").append(param0).append(44);
+            stackOut_65_1 = new StringBuilder().append("rh.C(").append(param0).append(',');
             stackIn_68_0 = stackOut_65_0;
             stackIn_68_1 = stackOut_65_1;
             stackIn_66_0 = stackOut_65_0;
@@ -343,7 +343,7 @@ final class rh {
               break L19;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_69_0, stackIn_69_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ma.a((Throwable) (Object) stackIn_69_0, stackIn_69_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -358,7 +358,7 @@ final class rh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2, "rh.A(" + param0 + 44 + -72 + 41);
+          throw ma.a((Throwable) (Object) var2, "rh.A(" + param0 + ',' + -72 + ')');
         }
     }
 

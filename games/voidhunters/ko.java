@@ -136,7 +136,7 @@ final class ko extends vjb {
           L4: {
             var12 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var12;
-            stackOut_10_1 = new StringBuilder().append("ko.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_10_1 = new StringBuilder().append("ko.B(").append(param0).append(',').append(param1).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -159,7 +159,7 @@ final class ko extends vjb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 41);
+          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
         }
     }
 

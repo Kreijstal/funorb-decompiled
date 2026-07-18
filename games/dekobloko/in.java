@@ -803,7 +803,7 @@ final class in extends bh {
               break L15;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param1 + 44 + param2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -962,7 +962,7 @@ final class in extends bh {
             var3.a(true, param0.field_o);
             var3.d(-1, param0.field_p);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "in.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "in.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -292,7 +292,7 @@ final class so {
             ((so) this).field_j = param3;
             ((so) this).field_b = ((so) this).field_i.length * 37 - 5;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "so.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "so.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

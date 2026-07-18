@@ -77,7 +77,7 @@ abstract class oj {
                   break L1;
                 }
               }
-              throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 20000000 + 41);
+              throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 20000000 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

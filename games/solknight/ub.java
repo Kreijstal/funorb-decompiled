@@ -26,7 +26,7 @@ final class ub {
             ua.field_I.d(1349013231, la.field_k);
             kj.field_P.a((ej) (Object) ua.field_I);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ub.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + 0 + 44 + param7 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "ub.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + false + ',' + param7 + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class ub {
                           break L2;
                         }
                       }
-                      StringBuilder discarded$5 = var6.append(var9);
+                      StringBuilder discarded$5 = var6.append((char) var9);
                       continue L1;
                     }
                   }

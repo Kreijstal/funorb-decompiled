@@ -45,7 +45,7 @@ final class kf {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("kf.E(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("kf.E(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -68,7 +68,7 @@ final class kf {
               break L1;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -277,7 +277,7 @@ final class kf {
                     case 16: {
                         var2_ref = (RuntimeException) (Object) caughtException;
                         stackOut_16_0 = (RuntimeException) var2_ref;
-                        stackOut_16_1 = new StringBuilder().append("kf.A(").append(param0).append(44);
+                        stackOut_16_1 = new StringBuilder().append("kf.A(").append(param0).append(',');
                         stackIn_18_0 = stackOut_16_0;
                         stackIn_18_1 = stackOut_16_1;
                         stackIn_17_0 = stackOut_16_0;
@@ -310,7 +310,7 @@ final class kf {
                         continue stateLoop;
                     }
                     case 19: {
-                        throw qk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+                        throw qk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -326,7 +326,7 @@ final class kf {
         try {
             ((kf) this).field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "kf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "kf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -341,7 +341,7 @@ final class kf {
             }
             ll.a(((kf) this).field_d, 31536000L, (byte) -126, param0, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "kf.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "kf.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -384,7 +384,7 @@ final class kf {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("kf.B(").append(param0).append(44).append(122).append(44);
+            stackOut_5_1 = new StringBuilder().append("kf.B(").append(param0).append(',').append(122).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -407,7 +407,7 @@ final class kf {
               break L1;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_4_0;
     }

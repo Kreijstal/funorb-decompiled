@@ -68,7 +68,7 @@ final class gl extends pk implements fca, ufa {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class gl extends pk implements fca, ufa {
             int var3_int = -85 / (param1 / 49);
             ((gl) this).a(574);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "gl.N(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "gl.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

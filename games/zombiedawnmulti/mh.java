@@ -253,7 +253,7 @@ final class mh implements Runnable {
                   }
                   return;
                 } else {
-                  throw mh.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((mh) this).field_g.field_m.length + " " + ((mh) this).field_a));
+                  throw mh.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((mh) this).field_g.field_m.length + " " + (Object) (Object) ((mh) this).field_a));
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -319,7 +319,7 @@ final class mh implements Runnable {
             ((mh) this).field_j = param0;
             ((mh) this).field_g = new k(param2);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "mh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

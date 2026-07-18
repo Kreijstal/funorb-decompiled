@@ -122,7 +122,7 @@ class ab extends dk {
                   L4: while (true) {
                     if (og.field_d.length <= var6) {
                       if (var3 != null) {
-                        int discarded$8 = ah.field_d.a("Screenshot(s) " + var3 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        int discarded$8 = ah.field_d.a("Screenshot(s) " + (String) var3 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L3;
                       } else {
                         break L3;
@@ -143,7 +143,7 @@ class ab extends dk {
                             }
                           }
                           if (var3 != null) {
-                            var3 = (Object) (Object) (var3 + ", " + var6);
+                            var3 = (Object) (Object) ((String) var3 + ", " + var6);
                             break L5;
                           } else {
                             var3 = (Object) (Object) Integer.toString(var6);
@@ -175,7 +175,7 @@ class ab extends dk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "ab.H(" + -67 + 41);
+          throw sd.a((Throwable) (Object) var1, "ab.H(" + -67 + ')');
         }
     }
 
@@ -251,7 +251,7 @@ class ab extends dk {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) runtimeException;
-            stackOut_5_1 = new StringBuilder().append("ab.U(").append(84).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("ab.U(").append(84).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -274,7 +274,7 @@ class ab extends dk {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param3 + 41);
+          throw sd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param3 + ')');
         }
     }
 
@@ -317,7 +317,7 @@ class ab extends dk {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("ab.PA(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("ab.PA(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -340,7 +340,7 @@ class ab extends dk {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0 != 0;
     }
@@ -502,7 +502,7 @@ class ab extends dk {
         try {
             ((ab) this).field_o = param1;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ab.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "ab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -595,7 +595,7 @@ class ab extends dk {
               break L5;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -19,7 +19,7 @@ final class sa {
             ak.field_m[param4] = param3;
             ak.field_y[param4] = param2;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "sa.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + 27690 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "sa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + 27690 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class sa {
                   break L7;
                 }
               }
-              throw fk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + 109 + 41);
+              throw fk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + 109 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

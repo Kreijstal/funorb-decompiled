@@ -174,7 +174,7 @@ final class sh {
           L9: {
             var4 = decompiledCaughtException;
             stackOut_37_0 = (RuntimeException) var4;
-            stackOut_37_1 = new StringBuilder().append("sh.C(").append(1).append(44).append(104).append(44);
+            stackOut_37_1 = new StringBuilder().append("sh.C(").append(true).append(',').append(104).append(',');
             stackIn_39_0 = stackOut_37_0;
             stackIn_39_1 = stackOut_37_1;
             stackIn_38_0 = stackOut_37_0;
@@ -197,7 +197,7 @@ final class sh {
               break L9;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 44 + 10 + 41);
+          throw qb.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + 10 + ')');
         }
         return stackIn_36_0 != 0;
     }

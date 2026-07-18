@@ -25,7 +25,7 @@ abstract class aa {
         try {
             hw.a(param5, 48000, 48000, (byte) 123, true, param2, param0, 1024);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "aa.B(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 44 + -125 + 44 + 48000 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "aa.B(" + (param0 != null ? "{...}" : "null") + ',' + true + ',' + (param2 != null ? "{...}" : "null") + ',' + -125 + ',' + 48000 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -43,7 +43,7 @@ final class lh {
           L0: {
             var4 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4;
-            stackOut_4_1 = new StringBuilder().append("lh.E(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("lh.E(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -66,7 +66,7 @@ final class lh {
               break L0;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 44 + 119 + 41);
+          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param2 + ',' + 119 + ')');
         }
     }
 
@@ -368,7 +368,7 @@ final class lh {
           }
           L2: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param1).append(44).append(48077700).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param1).append(',').append(48077700).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -391,7 +391,7 @@ final class lh {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param4 + 41);
+          throw aa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param4 + ')');
         }
         return stackIn_4_0;
     }
@@ -407,7 +407,7 @@ final class lh {
             int discarded$0 = -60;
             this.b();
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "lh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "lh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -93,7 +93,7 @@ final class ba extends ag {
               break L3;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw wg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -292,7 +292,7 @@ final class ba extends ag {
           L5: {
             var5 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var5;
-            stackOut_15_1 = new StringBuilder().append("ba.A(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("ba.A(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -315,7 +315,7 @@ final class ba extends ag {
               break L5;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param2 + 44 + param3 + 41);
+          throw wg.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -281,7 +281,7 @@ final class tf {
           L17: {
             var2 = decompiledCaughtException;
             stackOut_52_0 = (RuntimeException) var2;
-            stackOut_52_1 = new StringBuilder().append("tf.C(").append(119).append(44);
+            stackOut_52_1 = new StringBuilder().append("tf.C(").append(119).append(',');
             stackIn_54_0 = stackOut_52_0;
             stackIn_54_1 = stackOut_52_1;
             stackIn_53_0 = stackOut_52_0;
@@ -304,7 +304,7 @@ final class tf {
               break L17;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + ')');
         }
     }
 
@@ -364,7 +364,7 @@ final class tf {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("tf.B(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("tf.B(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -387,7 +387,7 @@ final class tf {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 

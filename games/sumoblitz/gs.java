@@ -18,7 +18,7 @@ final class gs {
             param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) wk.field_h);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) wk.field_h);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "gs.B(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "gs.B(" + (param0 != null ? "{...}" : "null") + ',' + true + ')');
         }
     }
 

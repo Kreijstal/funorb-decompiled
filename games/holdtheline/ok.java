@@ -77,7 +77,7 @@ final class ok {
               break L2;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + -6126 + 41);
+          throw kk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + -6126 + ')');
         }
         return stackIn_5_0;
     }
@@ -102,7 +102,7 @@ final class ok {
             ((ok) this).field_a[fieldTemp$0] = param0;
             var3_int = -24 % ((param1 - -5) / 37);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "ok.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "ok.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

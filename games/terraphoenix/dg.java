@@ -81,7 +81,7 @@ final class dg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var1_ref, "dg.A(" + 81 + 41);
+          throw qk.a((Throwable) (Object) var1_ref, "dg.A(" + 81 + ')');
         }
     }
 

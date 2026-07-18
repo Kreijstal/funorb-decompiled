@@ -18,7 +18,7 @@ final class lj extends pi {
             var2 = new db(param0, param1);
         } else {
             var2 = (db) (Object) param0;
-            var2.field_a = var2.field_a + 32 + param1;
+            var2.field_a = var2.field_a + ' ' + param1;
         }
         return var2;
     }
@@ -34,7 +34,7 @@ final class lj extends pi {
         try {
             ((lj) this).field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "lj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "lj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class lj extends pi {
               break L8;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param1 + 41);
+          throw lj.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ')');
         }
         return stackIn_24_0;
     }

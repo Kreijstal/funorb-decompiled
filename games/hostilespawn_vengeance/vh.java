@@ -309,7 +309,7 @@ final class vh {
           }
           L16: {
             stackOut_58_0 = (RuntimeException) (Object) stackIn_58_0;
-            stackOut_58_1 = ((StringBuilder) (Object) stackIn_58_1).append(stackIn_58_2).append(44).append(5).append(44);
+            stackOut_58_1 = ((StringBuilder) (Object) stackIn_58_1).append(stackIn_58_2).append(',').append(5).append(',');
             stackIn_60_0 = stackOut_58_0;
             stackIn_60_1 = stackOut_58_1;
             stackIn_59_0 = stackOut_58_0;
@@ -332,7 +332,7 @@ final class vh {
               break L16;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_61_0, stackIn_61_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_61_0, stackIn_61_2 + ')');
         }
     }
 
@@ -434,7 +434,7 @@ final class vh {
           }
           L4: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(29360).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(29360).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -457,7 +457,7 @@ final class vh {
               break L4;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -496,7 +496,7 @@ final class vh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "vh.C(" + 113 + 44 + 4 + 41);
+          throw wg.a((Throwable) (Object) var2, "vh.C(" + 113 + ',' + 4 + ')');
         }
     }
 
@@ -510,7 +510,7 @@ final class vh {
         try {
             ((vh) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "vh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "vh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

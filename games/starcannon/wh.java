@@ -135,7 +135,7 @@ final class wh implements Iterator {
           L3: {
             var3 = (Object) (Object) decompiledCaughtException;
             stackOut_11_0 = var3;
-            stackOut_11_1 = new StringBuilder().append("wh.C(").append(127).append(44);
+            stackOut_11_1 = new StringBuilder().append("wh.C(").append(127).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -160,7 +160,7 @@ final class wh implements Iterator {
           }
           L4: {
             stackOut_14_0 = stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -183,7 +183,7 @@ final class wh implements Iterator {
               break L4;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_10_0;
     }
@@ -231,7 +231,7 @@ final class wh implements Iterator {
             ((wh) this).field_b = param0;
             this.a(-17399);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "wh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "wh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

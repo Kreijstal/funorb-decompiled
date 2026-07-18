@@ -27,7 +27,7 @@ final class ul {
             var2[var2.length - 1] = param0;
             rc.field_u = var2;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "ul.D(" + param0 + 44 + param1 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "ul.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class ul {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("ul.B(").append(0).append(44);
+            stackOut_2_1 = new StringBuilder().append("ul.B(").append(false).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -91,7 +91,7 @@ final class ul {
               break L1;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }

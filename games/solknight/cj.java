@@ -82,7 +82,7 @@ final class cj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var1, "cj.B(" + param0 + 41);
+          throw fc.a((Throwable) (Object) var1, "cj.B(" + param0 + ')');
         }
         return stackIn_22_0;
     }

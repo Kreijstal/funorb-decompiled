@@ -94,7 +94,7 @@ final class l {
               break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 118 + 44 + param2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + 118 + ',' + param2 + ')');
         }
         return stackIn_9_0;
     }
@@ -389,7 +389,7 @@ final class l {
         try {
             ll.a(true, param0, 22050, param5, param2, 1024, (byte) 127, 22050);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "l.L(" + (param0 != null ? "{...}" : "null") + 44 + 22050 + 44 + (param2 != null ? "{...}" : "null") + 44 + 1024 + 44 + 1 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "l.L(" + (param0 != null ? "{...}" : "null") + ',' + 22050 + ',' + (param2 != null ? "{...}" : "null") + ',' + 1024 + ',' + true + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -717,7 +717,7 @@ final class l {
             ((l) this).field_f = null;
             ((l) this).field_e = new byte[6];
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "l.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "l.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -73,7 +73,7 @@ final class dg {
         try {
             pd.a(-22949);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "dg.C(" + 19681 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "dg.C(" + 19681 + ')');
         }
     }
 

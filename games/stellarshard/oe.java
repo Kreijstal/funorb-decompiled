@@ -152,7 +152,7 @@ final class oe {
               break L6;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 44 + 640 + 44 + 480 + 44 + param3 + 44 + 0 + 44 + -1 + 41);
+          throw ma.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ',' + 640 + ',' + 480 + ',' + param3 + ',' + 0 + ',' + -1 + ')');
         }
         return (java.awt.Frame) (Object) stackIn_33_0;
     }

@@ -65,7 +65,7 @@ final class sc implements db {
               break L0;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 4 + 44 + 1 + 41);
+          throw t.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 4 + ',' + 1 + ')');
         }
     }
 
@@ -161,7 +161,7 @@ final class sc implements db {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var6;
-            stackOut_12_1 = new StringBuilder().append("sc.M(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_12_1 = new StringBuilder().append("sc.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -184,7 +184,7 @@ final class sc implements db {
               break L5;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param4 + 41);
+          throw t.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param4 + ')');
         }
     }
 
@@ -242,7 +242,7 @@ final class sc implements db {
             ((sc) this).field_a = param7;
             ((sc) this).field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "sc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "sc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class sc implements db {
         try {
             sb.field_b = -1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "sc.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "sc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

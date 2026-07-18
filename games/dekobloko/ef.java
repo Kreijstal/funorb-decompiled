@@ -86,7 +86,7 @@ final class ef extends ma {
             ((ef) this).field_Q = 256;
             ((ef) this).field_L = param0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ef.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "ef.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

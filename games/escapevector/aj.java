@@ -21,7 +21,7 @@ final class aj {
             var3.f(param2.field_j, -123);
             int var4 = 58 % ((param0 - -64) / 39);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "aj.B(" + param0 + 44 + 3 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "aj.B(" + param0 + ',' + 3 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

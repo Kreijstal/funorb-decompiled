@@ -146,7 +146,7 @@ final class kda {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -325,7 +325,7 @@ final class kda {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw rta.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -395,7 +395,7 @@ final class kda {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0 != 0;
     }
@@ -477,7 +477,7 @@ final class kda {
           L2: {
             var5_ref = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5_ref;
-            stackOut_10_1 = new StringBuilder().append("kda.G(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("kda.G(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -502,7 +502,7 @@ final class kda {
           }
           L3: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -525,7 +525,7 @@ final class kda {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
         return stackIn_9_0 != 0;
     }
@@ -540,7 +540,7 @@ final class kda {
             var3.field_b = (ub) (Object) new mo("<RequestNewestBlackBox>");
             rkb.a(0, (tv) (Object) var3, param1, fk.field_e);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "kda.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "kda.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -682,7 +682,7 @@ final class kda {
                     if (param2.a(1, param1)) {
                       break L7;
                     } else {
-                      tfb.a((byte) -101, "Carousel_clientgame: Added an action off your own carousel! " + param1);
+                      tfb.a((byte) -101, "Carousel_clientgame: Added an action off your own carousel! " + (Object) (Object) param1);
                       break L7;
                     }
                   }
@@ -699,7 +699,7 @@ final class kda {
           L8: {
             var8 = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var8;
-            stackOut_25_1 = new StringBuilder().append("kda.I(").append(param0).append(44);
+            stackOut_25_1 = new StringBuilder().append("kda.I(").append(param0).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -724,7 +724,7 @@ final class kda {
           }
           L9: {
             stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44);
+            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -749,7 +749,7 @@ final class kda {
           }
           L10: {
             stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
@@ -772,7 +772,7 @@ final class kda {
               break L10;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ')');
         }
     }
 
@@ -782,7 +782,7 @@ final class kda {
             rkb.a(0, (tv) (Object) param0, param1, pra.field_o);
             em.field_o = true;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "kda.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 1000 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "kda.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + 1000 + ')');
         }
     }
 
@@ -1275,7 +1275,7 @@ final class kda {
           }
           L21: {
             stackOut_85_0 = (RuntimeException) (Object) stackIn_85_0;
-            stackOut_85_1 = ((StringBuilder) (Object) stackIn_85_1).append(stackIn_85_2).append(44);
+            stackOut_85_1 = ((StringBuilder) (Object) stackIn_85_1).append(stackIn_85_2).append(',');
             stackIn_87_0 = stackOut_85_0;
             stackIn_87_1 = stackOut_85_1;
             stackIn_86_0 = stackOut_85_0;
@@ -1300,7 +1300,7 @@ final class kda {
           }
           L22: {
             stackOut_88_0 = (RuntimeException) (Object) stackIn_88_0;
-            stackOut_88_1 = ((StringBuilder) (Object) stackIn_88_1).append(stackIn_88_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_88_1 = ((StringBuilder) (Object) stackIn_88_1).append(stackIn_88_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_90_0 = stackOut_88_0;
             stackIn_90_1 = stackOut_88_1;
             stackIn_89_0 = stackOut_88_0;
@@ -1323,7 +1323,7 @@ final class kda {
               break L22;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_91_0, stackIn_91_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_91_0, stackIn_91_2 + ')');
         }
         return stackIn_81_0 != 0;
     }
@@ -1471,7 +1471,7 @@ final class kda {
           L7: {
             var4 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var4;
-            stackOut_21_1 = new StringBuilder().append("kda.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_21_1 = new StringBuilder().append("kda.C(").append(param0).append(',').append(param1).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -1494,7 +1494,7 @@ final class kda {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 
@@ -1505,7 +1505,7 @@ final class kda {
             var4.field_b = (ub) (Object) new mo("<SetCarouselConstant>" + param2);
             rkb.a(param1 ^ param1, (tv) (Object) var4, param0, fk.field_e);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "kda.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "kda.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1558,7 +1558,7 @@ final class kda {
             var4.field_b = (ub) (Object) new mo(param1);
             rkb.a(0, (tv) (Object) var4, param2, fk.field_e);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "kda.W(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "kda.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1686,7 +1686,7 @@ final class kda {
               break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param1 + ')');
         }
     }
 
@@ -1754,7 +1754,7 @@ final class kda {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
         }
     }
 

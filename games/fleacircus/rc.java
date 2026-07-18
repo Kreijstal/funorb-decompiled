@@ -499,7 +499,7 @@ final class rc implements Iterator {
             ((rc) this).field_d = null;
             ((rc) this).field_b = ((rc) this).field_c.field_a.field_p;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "rc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "rc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

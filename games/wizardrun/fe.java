@@ -12,7 +12,7 @@ final class fe extends mf {
         try {
             ((fe) this).field_k = param1;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "fe.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "fe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class fe extends mf {
           L3: {
             var3_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3_ref;
-            stackOut_12_1 = new StringBuilder().append("fe.C(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("fe.C(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -109,7 +109,7 @@ final class fe extends mf {
               break L3;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
         return stackIn_11_0;
     }
@@ -212,7 +212,7 @@ final class fe extends mf {
               break L4;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw bd.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ')');
         }
         return stackIn_16_0;
     }
@@ -297,7 +297,7 @@ final class fe extends mf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var1, "fe.B(" + param0 + 41);
+          throw bd.a((Throwable) (Object) var1, "fe.B(" + param0 + ')');
         }
     }
 

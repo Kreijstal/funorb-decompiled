@@ -49,7 +49,7 @@ final class hf extends sk {
             int discarded$0 = 1;
             th.a(5, param0);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "hf.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 5 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "hf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + 5 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class hf extends sk {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("hf.C(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("hf.C(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -113,7 +113,7 @@ final class hf extends sk {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -148,7 +148,7 @@ final class hf extends sk {
             ((hf) this).field_h = param0;
             ((hf) this).field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "hf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

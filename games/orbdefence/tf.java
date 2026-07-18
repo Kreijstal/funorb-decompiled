@@ -84,7 +84,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
               L5: {
                 var3 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_12_0 = (RuntimeException) var3;
-                stackOut_12_1 = new StringBuilder().append("tf.M(").append(param0).append(44);
+                stackOut_12_1 = new StringBuilder().append("tf.M(").append(param0).append(',');
                 stackIn_15_0 = stackOut_12_0;
                 stackIn_15_1 = stackOut_12_1;
                 stackIn_13_0 = stackOut_12_0;
@@ -107,7 +107,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
                   break L5;
                 }
               }
-              throw dd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+              throw dd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -167,7 +167,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -648,7 +648,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
                   break L4;
                 }
               }
-              throw dd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+              throw dd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -769,7 +769,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           var3_ref3 = (RuntimeException) (Object) decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var3_ref3, "tf.S(" + 0 + 44 + param1 + 41);
+          throw dd.a((Throwable) (Object) var3_ref3, "tf.S(" + 0 + ',' + param1 + ')');
         }
     }
 
@@ -855,7 +855,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -941,7 +941,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
               break L2;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
         return stackIn_10_0;
     }
@@ -956,7 +956,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
                 tf.b(46);
             }
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "tf.R(" + param0 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "tf.R(" + param0 + ')');
         }
     }
 
@@ -1011,7 +1011,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -1055,7 +1055,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw dd.a((Throwable) (Object) runtimeException, "tf.N(" + 0 + 41);
+          throw dd.a((Throwable) (Object) runtimeException, "tf.N(" + 0 + ')');
         }
     }
 
@@ -1150,7 +1150,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
               L5: {
                 var8_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_22_0 = (RuntimeException) var8_ref;
-                stackOut_22_1 = new StringBuilder().append("tf.O(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+                stackOut_22_1 = new StringBuilder().append("tf.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
                 stackIn_25_0 = stackOut_22_0;
                 stackIn_25_1 = stackOut_22_1;
                 stackIn_23_0 = stackOut_22_0;
@@ -1173,7 +1173,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
                   break L5;
                 }
               }
-              throw dd.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param6 + 41);
+              throw dd.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param6 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -1280,7 +1280,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var2, "tf.T(" + -126 + 41);
+          throw dd.a((Throwable) (Object) var2, "tf.T(" + -126 + ')');
         }
     }
 
@@ -1335,7 +1335,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -1465,7 +1465,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
               break L4;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
     }
 
@@ -1569,7 +1569,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (Object) (Object) decompiledCaughtException;
-          throw dd.a((Throwable) var2, "tf.Q(" + param0 + 41);
+          throw dd.a((Throwable) var2, "tf.Q(" + param0 + ')');
         }
     }
 
@@ -1667,7 +1667,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

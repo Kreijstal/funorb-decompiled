@@ -106,7 +106,7 @@ final class q extends gp {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
         }
     }
 
@@ -242,7 +242,7 @@ final class q extends gp {
               break L6;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + 19291 + 44 + param2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + 19291 + ',' + param2 + ')');
         }
     }
 

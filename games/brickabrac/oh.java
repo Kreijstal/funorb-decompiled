@@ -93,7 +93,7 @@ final class oh {
           L4: {
             var6 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var6;
-            stackOut_15_1 = new StringBuilder().append("oh.A(").append(param0).append(44).append(param1).append(44).append(-24).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_15_1 = new StringBuilder().append("oh.A(").append(param0).append(',').append(param1).append(',').append(-24).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -116,7 +116,7 @@ final class oh {
               break L4;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
         return stackIn_14_0 != 0;
     }

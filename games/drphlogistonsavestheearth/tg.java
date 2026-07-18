@@ -153,7 +153,7 @@ final class tg {
             param0.field_g = param1;
             param0.field_e.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "tg.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "tg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

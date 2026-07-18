@@ -89,7 +89,7 @@ final class ci {
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + -79 + 41);
+          throw ld.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + -79 + ')');
         }
         return stackIn_5_0;
     }
@@ -120,7 +120,7 @@ final class ci {
             param1.field_m.field_l = param1;
             param1.field_l.field_m = param1;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "ci.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "ci.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

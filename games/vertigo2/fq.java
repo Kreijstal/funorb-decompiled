@@ -86,7 +86,7 @@ abstract class fq {
                   break L0;
                 }
               }
-              throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + -16 + 41);
+              throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + -16 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

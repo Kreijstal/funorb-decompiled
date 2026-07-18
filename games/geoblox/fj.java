@@ -42,7 +42,7 @@ abstract class fj extends rc {
             kd.field_b = uf.field_l;
             si.field_g = uf.field_l;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "fj.H(" + 114 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "fj.H(" + 114 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

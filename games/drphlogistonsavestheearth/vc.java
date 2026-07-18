@@ -55,7 +55,7 @@ final class vc {
         try {
             ((vc) this).field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "vc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "vc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

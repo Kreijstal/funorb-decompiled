@@ -61,7 +61,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var2_ref, "mj.J(" + param0 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) var2_ref, "mj.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -408,7 +408,7 @@ final class mj {
           L3: {
             var5_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5_ref;
-            stackOut_5_1 = new StringBuilder().append("mj.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("mj.B(").append(param0).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -431,7 +431,7 @@ final class mj {
               break L3;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param3 + 41);
+          throw sh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param3 + ')');
         }
     }
 
@@ -475,7 +475,7 @@ final class mj {
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) ng.field_b);
             le.field_c = 0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "mj.C(" + 3490 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "mj.C(" + 3490 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

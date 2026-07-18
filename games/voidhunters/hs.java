@@ -38,7 +38,7 @@ final class hs extends rqa {
           L0: {
             var8 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var8;
-            stackOut_8_1 = new StringBuilder().append("hs.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(0).append(44).append(16777215).append(44).append(-1).append(44);
+            stackOut_8_1 = new StringBuilder().append("hs.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(false).append(',').append(16777215).append(',').append(-1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -61,7 +61,7 @@ final class hs extends rqa {
               break L0;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param7 + 41);
+          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param7 + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class hs extends rqa {
             int discarded$0 = var5.g(param1 ^ 1594, var4);
             var5.e(var5.field_e - var4, param1 + -130);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "hs.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "hs.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class hs extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

@@ -137,7 +137,7 @@ final class sb {
           L5: {
             var4_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var4_ref;
-            stackOut_16_1 = new StringBuilder().append("sb.C(").append(1).append(44).append(-33).append(44);
+            stackOut_16_1 = new StringBuilder().append("sb.C(").append(true).append(',').append(-33).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -160,7 +160,7 @@ final class sb {
               break L5;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + 256 + 41);
+          throw aa.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + 256 + ')');
         }
     }
 
@@ -531,7 +531,7 @@ final class sb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var2, "sb.B(" + param0 + 44 + -58 + 41);
+          throw aa.a((Throwable) (Object) var2, "sb.B(" + param0 + ',' + -58 + ')');
         }
     }
 

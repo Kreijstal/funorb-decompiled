@@ -181,7 +181,7 @@ final class fk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3, "fk.C(" + param0 + 44 + -113 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) var3, "fk.C(" + param0 + ',' + -113 + ',' + param2 + ')');
         }
         return stackIn_11_0;
     }

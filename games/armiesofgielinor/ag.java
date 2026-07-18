@@ -268,7 +268,7 @@ final class ag extends oj {
           }
           L11: {
             stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-            stackOut_38_1 = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_38_2).append(44).append(param1).append(44);
+            stackOut_38_1 = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_38_2).append(',').append(param1).append(',');
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
@@ -291,7 +291,7 @@ final class ag extends oj {
               break L11;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ')');
         }
         return stackIn_34_0;
     }
@@ -358,7 +358,7 @@ final class ag extends oj {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 

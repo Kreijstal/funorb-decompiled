@@ -13,7 +13,7 @@ final class hua extends ksa {
             hg.field_b = param0;
             int var2_int = -1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "hua.A(" + (param0 != null ? "{...}" : "null") + 44 + 96 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "hua.A(" + (param0 != null ? "{...}" : "null") + ',' + 96 + ')');
         }
     }
 

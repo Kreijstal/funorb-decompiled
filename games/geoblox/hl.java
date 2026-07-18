@@ -231,7 +231,7 @@ final class hl extends el {
               break L5;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 44 + -12276 + 41);
+          throw t.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + -12276 + ')');
         }
     }
 
@@ -341,7 +341,7 @@ final class hl extends el {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var5;
-            stackOut_6_1 = new StringBuilder().append("hl.H(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("hl.H(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -364,7 +364,7 @@ final class hl extends el {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param3 + 41);
+          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param3 + ')');
         }
     }
 

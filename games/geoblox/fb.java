@@ -91,7 +91,7 @@ final class fb extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "fb.B(" + param0 + 44 + -47 + 41);
+          throw t.a((Throwable) (Object) var2, "fb.B(" + param0 + ',' + -47 + ')');
         }
         return stackIn_20_0 != 0;
     }

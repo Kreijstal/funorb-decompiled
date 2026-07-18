@@ -298,7 +298,7 @@ final class hd {
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_61_0 = (RuntimeException) var2;
-                stackOut_61_1 = new StringBuilder().append("hd.C(").append(0).append(44);
+                stackOut_61_1 = new StringBuilder().append("hd.C(").append(false).append(',');
                 stackIn_63_0 = stackOut_61_0;
                 stackIn_63_1 = stackOut_61_1;
                 stackIn_62_0 = stackOut_61_0;
@@ -321,7 +321,7 @@ final class hd {
                   break L24;
                 }
               }
-              throw kg.a((Throwable) (Object) stackIn_64_0, stackIn_64_2 + 41);
+              throw kg.a((Throwable) (Object) stackIn_64_0, stackIn_64_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

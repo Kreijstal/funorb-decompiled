@@ -532,7 +532,7 @@ final class op extends de {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "op.B(" + 260 + 41);
+          throw aa.a((Throwable) (Object) var1, "op.B(" + 260 + ')');
         }
     }
 
@@ -610,7 +610,7 @@ final class op extends de {
                   L3: {
                     t.f(0, 182, 640, 350);
                     var5 = -2 + param2;
-                    var6 = ki.field_m + 32 + var5;
+                    var6 = ki.field_m + ' ' + var5;
                     var7 = ((op) this).a(param2, (byte) 90);
                     var8 = ((op) this).a(param2, false);
                     var9 = var7 - -var8 >> 1;
@@ -730,7 +730,7 @@ final class op extends de {
             ((op) this).field_r = 0;
             ((op) this).field_v = 0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "op.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "op.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

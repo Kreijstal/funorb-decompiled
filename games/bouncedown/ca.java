@@ -275,7 +275,7 @@ final class ca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var1, "ca.C(" + 0 + 41);
+          throw ii.a((Throwable) (Object) var1, "ca.C(" + false + ')');
         }
     }
 

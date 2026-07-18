@@ -23,7 +23,7 @@ final class sb extends oh {
             v.field_d = 0;
             int var2_int = -1;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "sb.A(" + 89 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "sb.A(" + 89 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

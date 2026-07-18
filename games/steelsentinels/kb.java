@@ -23,7 +23,7 @@ final class kb implements om {
             pb.h(param7, -param6.field_U + (param2 - 2), var8_int, 4 + param6.field_U, param3);
             param6.b(param5, 3 + param7, param2, param0, -1);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "kb.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 1 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "kb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + true + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 

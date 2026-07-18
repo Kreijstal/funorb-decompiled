@@ -88,7 +88,7 @@ final class jr extends tm {
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+          throw wm.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
         }
     }
 
@@ -269,7 +269,7 @@ final class jr extends tm {
           L4: {
             var4_ref = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var4_ref;
-            stackOut_10_1 = new StringBuilder().append("jr.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_10_1 = new StringBuilder().append("jr.E(").append(param0).append(',').append(param1).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -292,7 +292,7 @@ final class jr extends tm {
               break L4;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param3 + 41);
+          throw wm.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param3 + ')');
         }
         return stackIn_9_0;
     }
@@ -308,7 +308,7 @@ final class jr extends tm {
         try {
             ((jr) this).field_e = aj.a(param0 ^ param0, "", param1, "top_bar_balls_jungle");
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "jr.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "jr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -418,7 +418,7 @@ final class jr extends tm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var1, "jr.F(" + param0 + 41);
+          throw wm.a((Throwable) (Object) var1, "jr.F(" + param0 + ')');
         }
     }
 

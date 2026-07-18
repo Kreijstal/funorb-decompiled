@@ -1063,7 +1063,7 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var1, "vf.B(" + -7 + 41);
+          throw oi.a((Throwable) (Object) var1, "vf.B(" + -7 + ')');
         }
     }
 

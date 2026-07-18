@@ -101,7 +101,7 @@ final class ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "ai.C(" + 0 + 41);
+          throw oj.a((Throwable) (Object) var1, "ai.C(" + 0 + ')');
         }
     }
 

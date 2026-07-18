@@ -207,7 +207,7 @@ final class kf extends pj implements ft {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "kf.F(" + 111 + 41);
+          throw qo.a((Throwable) (Object) var1, "kf.F(" + 111 + ')');
         }
     }
 
@@ -304,7 +304,7 @@ final class kf extends pj implements ft {
               break L3;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+          throw qo.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_5_0;
     }
@@ -323,7 +323,7 @@ final class kf extends pj implements ft {
             jaggl.OpenGL.glRenderbufferStorageEXT(36161, ((kf) this).field_D, ((kf) this).field_A, ((kf) this).field_x);
             ((kf) this).field_s = ((kf) this).field_A * (((kf) this).field_x * ((kf) this).field_C.d(((kf) this).field_D, -72));
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "kf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "kf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

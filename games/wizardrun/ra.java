@@ -76,7 +76,7 @@ final class ra extends wl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var1, "ra.C(" + 2 + 41);
+          throw bd.a((Throwable) (Object) var1, "ra.C(" + 2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -151,7 +151,7 @@ final class ra extends wl {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw bd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

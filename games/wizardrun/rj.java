@@ -66,7 +66,7 @@ final class rj {
             r.field_b = new qc(param1, param0, false, true, true);
             td.field_f.c((ub) (Object) r.field_b, -111);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "rj.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "rj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + true + ')');
         }
     }
 

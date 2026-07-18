@@ -59,7 +59,7 @@ final class igb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 119 + 41);
+          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 119 + ')');
         }
         return stackIn_1_0;
     }
@@ -146,7 +146,7 @@ final class igb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var3, "igb.A(" + param0 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) var3, "igb.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -173,7 +173,7 @@ final class igb {
             param0.field_E = 0;
             param0.field_G = 0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "igb.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "igb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

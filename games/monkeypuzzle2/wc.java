@@ -91,7 +91,7 @@ final class wc implements Iterator {
               break L0;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 0 + 41);
+          throw la.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + false + ')');
         }
     }
 
@@ -173,7 +173,7 @@ final class wc implements Iterator {
             ((wc) this).field_b = param0;
             this.a(true);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "wc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw la.a((Throwable) (Object) runtimeException, "wc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

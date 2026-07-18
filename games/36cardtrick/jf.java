@@ -19,7 +19,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
             param0.setColorModel(((jf) this).field_m);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "jf.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "jf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -107,7 +107,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 0 + 44 + param2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + false + ',' + param2 + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
         try {
             ((jf) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "jf.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "jf.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -187,7 +187,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
@@ -200,7 +200,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
             this.c(14);
             boolean discarded$0 = param0.drawImage(((jf) this).field_a, param1, param2, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "jf.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "jf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -259,7 +259,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -281,7 +281,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
             boolean discarded$2 = param0.prepareImage(((jf) this).field_a, (java.awt.image.ImageObserver) this);
             ((jf) this).a(200);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "jf.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "jf.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -361,7 +361,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2_ref;
-            stackOut_21_1 = new StringBuilder().append("jf.A(").append(0).append(44);
+            stackOut_21_1 = new StringBuilder().append("jf.A(").append(0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -384,7 +384,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 

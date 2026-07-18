@@ -91,7 +91,7 @@ final class wua extends od {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
     }
 
@@ -214,7 +214,7 @@ final class wua extends od {
               break L6;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 44 + 46 + 41);
+          throw tba.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ',' + 46 + ')');
         }
     }
 

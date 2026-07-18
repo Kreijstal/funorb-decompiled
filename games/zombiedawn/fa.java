@@ -59,7 +59,7 @@ class fa extends nb {
           L0: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("fa.EC(").append(-46).append(44);
+            stackOut_4_1 = new StringBuilder().append("fa.EC(").append(-46).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -82,7 +82,7 @@ class fa extends nb {
               break L0;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -207,7 +207,7 @@ class fa extends nb {
               break L4;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw sh.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_18_0;
     }

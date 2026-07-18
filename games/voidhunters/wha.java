@@ -586,7 +586,7 @@ final class wha implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var3, "wha.C(" + 2 + 44 + param1 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) var3, "wha.C(" + 2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

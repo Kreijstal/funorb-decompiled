@@ -91,7 +91,7 @@ final class ci extends ne {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 41);
+          throw vk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ')');
         }
         return (va) (Object) stackIn_11_0;
     }
@@ -316,7 +316,7 @@ final class ci extends ne {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var1, "ci.D(" + -119 + 41);
+          throw vk.a((Throwable) (Object) var1, "ci.D(" + -119 + ')');
         }
     }
 
@@ -449,7 +449,7 @@ final class ci extends ne {
               break L8;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + 2 + ')');
         }
         return stackIn_21_0;
     }

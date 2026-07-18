@@ -475,9 +475,9 @@ abstract class ta extends bf {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$12 = field_m.append(60);
+                        StringBuilder discarded$12 = field_m.append('<');
                         StringBuilder discarded$13 = field_m.append(var15);
-                        StringBuilder discarded$14 = field_m.append(62);
+                        StringBuilder discarded$14 = field_m.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -664,7 +664,7 @@ abstract class ta extends bf {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$15 = field_m.append(var14);
+                        StringBuilder discarded$15 = field_m.append((char) var14);
                         var14 = (char)(m.a(1, (char) var14) & 255);
                         var4 = var4 + ((ta) this).field_n[var14];
                         if (((ta) this).field_A == null) {

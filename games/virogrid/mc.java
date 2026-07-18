@@ -165,7 +165,7 @@ final class mc {
               break L8;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param1 + 41);
+          throw kg.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param1 + ')');
         }
         return stackIn_23_0;
     }

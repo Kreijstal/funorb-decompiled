@@ -1035,7 +1035,7 @@ final class mr {
           L1: {
             var11_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var11_ref;
-            stackOut_2_1 = new StringBuilder().append("mr.B(").append(param0).append(44).append(param1).append(44).append(128).append(44).append(-30865).append(44);
+            stackOut_2_1 = new StringBuilder().append("mr.B(").append(param0).append(',').append(param1).append(',').append(128).append(',').append(-30865).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -1058,7 +1058,7 @@ final class mr {
               break L1;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + 16 + 44 + 8 + 44 + 128 + 41);
+          throw qo.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + 16 + ',' + 8 + ',' + 128 + ')');
         }
         return stackIn_1_0;
     }
@@ -1069,7 +1069,7 @@ final class mr {
             ((mr) this).field_a = param0;
             ((mr) this).field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "mr.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "mr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

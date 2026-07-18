@@ -45,7 +45,7 @@ final class nb extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1, "nb.D(" + param0 + 41);
+          throw rb.a((Throwable) (Object) var1, "nb.D(" + param0 + ')');
         }
     }
 
@@ -444,7 +444,7 @@ final class nb extends am {
                     }
                     case 15: {
                         stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                        stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44);
+                        stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
                         stackIn_17_0 = stackOut_15_0;
                         stackIn_17_1 = stackOut_15_1;
                         stackIn_16_0 = stackOut_15_0;
@@ -477,7 +477,7 @@ final class nb extends am {
                         continue stateLoop;
                     }
                     case 18: {
-                        throw rb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + -118 + 41);
+                        throw rb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + -118 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -650,7 +650,7 @@ final class nb extends am {
               break L6;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 44 + param2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

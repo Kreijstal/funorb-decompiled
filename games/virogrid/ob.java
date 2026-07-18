@@ -126,7 +126,7 @@ final class ob {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "ob.A(" + param0 + 41);
+          throw kg.a((Throwable) (Object) var1, "ob.A(" + param0 + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class ob {
             df.b(var7 - -1, var8 + 1, var5 - 2, -2 + var6, 16777088);
             int discarded$0 = ti.field_h.field_C.a(param1, 3 + var7, -ti.field_h.field_C.field_H + var8 - (-1 + -rf.field_e), 500, 1000, 0, -1, 0, 0, pg.field_e);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "ob.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "ob.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -107,7 +107,7 @@ final class ld extends java.awt.Canvas {
           L2: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("ld.A(").append(122).append(44);
+            stackOut_21_1 = new StringBuilder().append("ld.A(").append(122).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -130,7 +130,7 @@ final class ld extends java.awt.Canvas {
               break L2;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 
@@ -144,7 +144,7 @@ final class ld extends java.awt.Canvas {
         try {
             ((ld) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "ld.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "ld.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class ld extends java.awt.Canvas {
         try {
             ((ld) this).field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "ld.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "ld.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class ld extends java.awt.Canvas {
         try {
             ((ld) this).field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "ld.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "ld.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

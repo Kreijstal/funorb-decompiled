@@ -76,7 +76,7 @@ final class b extends wf {
               break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 24 + 41);
+          throw ch.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 24 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -87,7 +87,7 @@ final class b extends wf {
             ((b) this).field_j = param1;
             ((b) this).field_h = param2;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "b.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "b.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

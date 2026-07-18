@@ -106,7 +106,7 @@ abstract class sm implements el {
           L3: {
             var4_ref = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var4_ref;
-            stackOut_14_1 = new StringBuilder().append("sm.R(").append(param0).append(44).append(param1).append(44);
+            stackOut_14_1 = new StringBuilder().append("sm.R(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -129,7 +129,7 @@ abstract class sm implements el {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param3 + 41);
+          throw t.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param3 + ')');
         }
         return stackIn_13_0;
     }
@@ -166,7 +166,7 @@ abstract class sm implements el {
             int discarded$0 = var3.c(var4, -76);
             var3.e(86, var3.field_m - var4);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "sm.O(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 44 + 1 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "sm.O(" + (param0 != null ? "{...}" : "null") + ',' + 4 + ',' + true + ')');
         }
     }
 

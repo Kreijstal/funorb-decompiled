@@ -17,7 +17,7 @@ final class wo extends java.awt.Canvas {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "wo.A(" + 92 + 41);
+          throw qo.a((Throwable) (Object) var1, "wo.A(" + 92 + ')');
         }
     }
 
@@ -229,7 +229,7 @@ final class wo extends java.awt.Canvas {
           }
           L10: {
             stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
-            stackOut_43_1 = ((StringBuilder) (Object) stackIn_43_1).append(stackIn_43_2).append(44);
+            stackOut_43_1 = ((StringBuilder) (Object) stackIn_43_1).append(stackIn_43_2).append(',');
             stackIn_46_0 = stackOut_43_0;
             stackIn_46_1 = stackOut_43_1;
             stackIn_44_0 = stackOut_43_0;
@@ -254,7 +254,7 @@ final class wo extends java.awt.Canvas {
           }
           L11: {
             stackOut_47_0 = (RuntimeException) (Object) stackIn_47_0;
-            stackOut_47_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_47_2).append(44).append(param2).append(44).append(0).append(44);
+            stackOut_47_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_47_2).append(',').append(param2).append(',').append(false).append(',');
             stackIn_50_0 = stackOut_47_0;
             stackIn_50_1 = stackOut_47_1;
             stackIn_48_0 = stackOut_47_0;
@@ -277,7 +277,7 @@ final class wo extends java.awt.Canvas {
               break L11;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + ')');
         }
         return stackIn_38_0;
     }
@@ -333,7 +333,7 @@ final class wo extends java.awt.Canvas {
               break L1;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -388,7 +388,7 @@ final class wo extends java.awt.Canvas {
               break L1;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -821,7 +821,7 @@ final class wo extends java.awt.Canvas {
           }
           L32: {
             stackOut_128_0 = (RuntimeException) (Object) stackIn_128_0;
-            stackOut_128_1 = ((StringBuilder) (Object) stackIn_128_1).append(stackIn_128_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_128_1 = ((StringBuilder) (Object) stackIn_128_1).append(stackIn_128_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_131_0 = stackOut_128_0;
             stackIn_131_1 = stackOut_128_1;
             stackIn_129_0 = stackOut_128_0;
@@ -844,7 +844,7 @@ final class wo extends java.awt.Canvas {
               break L32;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_132_0, stackIn_132_2 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+          throw qo.a((Throwable) (Object) stackIn_132_0, stackIn_132_2 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -899,7 +899,7 @@ final class wo extends java.awt.Canvas {
               break L1;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 

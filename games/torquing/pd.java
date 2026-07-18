@@ -18,7 +18,7 @@ final class pd {
             var3.b(90, param0.field_k);
             var3.a(param0.field_l, 61);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "pd.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "pd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

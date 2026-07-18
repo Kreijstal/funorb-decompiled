@@ -113,7 +113,7 @@ final class ig {
               break L4;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + -121 + 41);
+          throw vk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + -121 + ')');
         }
     }
 

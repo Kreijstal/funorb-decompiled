@@ -76,7 +76,7 @@ final class li {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("li.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("li.E(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -99,7 +99,7 @@ final class li {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 4 + 41);
+          throw vk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 4 + ')');
         }
         return stackIn_5_0;
     }
@@ -136,7 +136,7 @@ final class li {
             gf.d(4, 4, 0, 0, wm.field_c.field_y, wm.field_c.field_v);
             jh.b();
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "li.D(" + -107 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "li.D(" + -107 + ')');
         }
     }
 

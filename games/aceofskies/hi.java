@@ -19,7 +19,7 @@ final class hi extends to {
             ((hi) this).field_u = 256;
             ((hi) this).field_s = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -91,7 +91,7 @@ final class we {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var2;
-            stackOut_16_1 = new StringBuilder().append("we.A(").append(-57).append(44);
+            stackOut_16_1 = new StringBuilder().append("we.A(").append(-57).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -114,7 +114,7 @@ final class we {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
         return stackIn_15_0;
     }

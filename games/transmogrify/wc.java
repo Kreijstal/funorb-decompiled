@@ -448,7 +448,7 @@ final class wc {
               L31: {
                 var6 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_95_0 = (RuntimeException) var6;
-                stackOut_95_1 = new StringBuilder().append("wc.A(").append(param0).append(44).append(param1).append(44);
+                stackOut_95_1 = new StringBuilder().append("wc.A(").append(param0).append(',').append(param1).append(',');
                 stackIn_97_0 = stackOut_95_0;
                 stackIn_97_1 = stackOut_95_1;
                 stackIn_96_0 = stackOut_95_0;
@@ -473,7 +473,7 @@ final class wc {
               }
               L32: {
                 stackOut_98_0 = (RuntimeException) (Object) stackIn_98_0;
-                stackOut_98_1 = ((StringBuilder) (Object) stackIn_98_1).append(stackIn_98_2).append(44).append(param3).append(44).append(param4).append(44);
+                stackOut_98_1 = ((StringBuilder) (Object) stackIn_98_1).append(stackIn_98_2).append(',').append(param3).append(',').append(param4).append(',');
                 stackIn_100_0 = stackOut_98_0;
                 stackIn_100_1 = stackOut_98_1;
                 stackIn_99_0 = stackOut_98_0;
@@ -496,7 +496,7 @@ final class wc {
                   break L32;
                 }
               }
-              throw ch.a((Throwable) (Object) stackIn_101_0, stackIn_101_2 + 41);
+              throw ch.a((Throwable) (Object) stackIn_101_0, stackIn_101_2 + ')');
             }
             return stackIn_94_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -559,7 +559,7 @@ final class wc {
               L0: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var4_ref2;
-                stackOut_6_1 = new StringBuilder().append("wc.D(").append(4).append(44);
+                stackOut_6_1 = new StringBuilder().append("wc.D(").append(4).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -582,7 +582,7 @@ final class wc {
                   break L0;
                 }
               }
-              throw ch.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 44 + param3 + 41);
+              throw ch.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ',' + param3 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -774,7 +774,7 @@ final class wc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var1, "wc.C(" + 116 + 41);
+          throw ch.a((Throwable) (Object) var1, "wc.C(" + 116 + ')');
         }
     }
 

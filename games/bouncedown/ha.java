@@ -61,7 +61,7 @@ final class ha implements Runnable {
                   }
                   return;
                 } else {
-                  throw ha.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((ha) this).field_a.field_i.length + " " + ((ha) this).field_d));
+                  throw ha.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((ha) this).field_a.field_i.length + " " + (Object) (Object) ((ha) this).field_d));
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -311,7 +311,7 @@ final class ha implements Runnable {
           L0: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("ha.D(").append(-17765).append(44);
+            stackOut_2_1 = new StringBuilder().append("ha.D(").append(-17765).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -334,7 +334,7 @@ final class ha implements Runnable {
               break L0;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 3 + 41);
+          throw ii.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 3 + ')');
         }
     }
 
@@ -357,7 +357,7 @@ final class ha implements Runnable {
             ((ha) this).field_d = param1;
             ((ha) this).field_a = new wi(param2);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "ha.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "ha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

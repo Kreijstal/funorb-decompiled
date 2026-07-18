@@ -34,7 +34,7 @@ final class pq extends i {
             ri.field_t = 500;
             uv.field_f = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "pq.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "pq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

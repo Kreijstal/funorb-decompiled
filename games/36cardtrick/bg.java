@@ -51,7 +51,7 @@ final class bg extends af implements qh {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("bg.HB(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("bg.HB(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -74,7 +74,7 @@ final class bg extends af implements qh {
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -89,7 +89,7 @@ final class bg extends af implements qh {
             rg.a((byte) 120);
             ((bg) this).s(116);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "bg.I(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "bg.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -220,7 +220,7 @@ final class bg extends af implements qh {
               break L4;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + param1 + 44 + 117 + 41);
+          throw ma.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ',' + param1 + ',' + 117 + ')');
         }
     }
 
@@ -229,7 +229,7 @@ final class bg extends af implements qh {
         try {
             ((bg) this).field_vb = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "bg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "bg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -302,7 +302,7 @@ final class bg extends af implements qh {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
     }
 
@@ -406,7 +406,7 @@ final class bg extends af implements qh {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("bg.MB(").append(param0).append(44).append(-2147483648).append(44);
+            stackOut_12_1 = new StringBuilder().append("bg.MB(").append(param0).append(',').append(-2147483648).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -429,7 +429,7 @@ final class bg extends af implements qh {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
         return stackIn_11_0;
     }

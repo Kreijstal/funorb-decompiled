@@ -71,7 +71,7 @@ final class kj implements Iterator {
             ((kj) this).field_i = ((kj) this).field_h.field_a.field_j;
             ((kj) this).field_d = null;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "kj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "kj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

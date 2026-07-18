@@ -525,16 +525,16 @@ final class dk extends cj {
                     break L2;
                   } else {
                     L3: {
-                      StringBuilder discarded$16 = ((dk) this).field_Hb.append(var2);
+                      StringBuilder discarded$16 = ((dk) this).field_Hb.append((char) var2);
                       if (hd.a(-24315, (char) var2)) {
-                        StringBuilder discarded$17 = ((dk) this).field_Hb.append(var2);
+                        StringBuilder discarded$17 = ((dk) this).field_Hb.append((char) var2);
                         break L3;
                       } else {
                         int discarded$18 = 85;
                         if (!vh.a((char) var2)) {
                           break L3;
                         } else {
-                          StringBuilder discarded$19 = ((dk) this).field_Hb.append(var2);
+                          StringBuilder discarded$19 = ((dk) this).field_Hb.append((char) var2);
                           break L3;
                         }
                       }
@@ -571,7 +571,7 @@ final class dk extends cj {
               }
               if (hd.a(-24315, (char) var2)) {
                 L6: {
-                  StringBuilder discarded$20 = ((dk) this).field_Hb.append(var2);
+                  StringBuilder discarded$20 = ((dk) this).field_Hb.append((char) var2);
                   if (sj.field_p != 84) {
                     break L6;
                   } else {
@@ -638,7 +638,7 @@ final class dk extends cj {
                     }
                   }
                 } else {
-                  StringBuilder discarded$22 = ((dk) this).field_Hb.append(var2);
+                  StringBuilder discarded$22 = ((dk) this).field_Hb.append((char) var2);
                   if (sj.field_p != 84) {
                     if (param0 >= 123) {
                       if (sj.field_p != 13) {
@@ -752,16 +752,16 @@ final class dk extends cj {
                       break L12;
                     } else {
                       L13: {
-                        StringBuilder discarded$23 = ((dk) this).field_Hb.append(var2);
+                        StringBuilder discarded$23 = ((dk) this).field_Hb.append((char) var2);
                         if (hd.a(-24315, (char) var2)) {
-                          StringBuilder discarded$24 = ((dk) this).field_Hb.append(var2);
+                          StringBuilder discarded$24 = ((dk) this).field_Hb.append((char) var2);
                           break L13;
                         } else {
                           int discarded$25 = 85;
                           if (!vh.a((char) var2)) {
                             break L13;
                           } else {
-                            StringBuilder discarded$26 = ((dk) this).field_Hb.append(var2);
+                            StringBuilder discarded$26 = ((dk) this).field_Hb.append((char) var2);
                             break L13;
                           }
                         }
@@ -795,7 +795,7 @@ final class dk extends cj {
                 }
                 if (hd.a(-24315, (char) var2)) {
                   L15: {
-                    StringBuilder discarded$27 = ((dk) this).field_Hb.append(var2);
+                    StringBuilder discarded$27 = ((dk) this).field_Hb.append((char) var2);
                     if (sj.field_p != 84) {
                       break L15;
                     } else {
@@ -828,7 +828,7 @@ final class dk extends cj {
                     break L10;
                   } else {
                     L17: {
-                      StringBuilder discarded$29 = ((dk) this).field_Hb.append(var2);
+                      StringBuilder discarded$29 = ((dk) this).field_Hb.append((char) var2);
                       if (sj.field_p != 84) {
                         break L17;
                       } else {
@@ -1162,7 +1162,7 @@ final class dk extends cj {
           L1: {
             var9 = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var9;
-            stackOut_3_1 = new StringBuilder().append("dk.<init>(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_3_1 = new StringBuilder().append("dk.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -1187,7 +1187,7 @@ final class dk extends cj {
           }
           L2: {
             stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(44);
+            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -1212,7 +1212,7 @@ final class dk extends cj {
           }
           L3: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -1237,7 +1237,7 @@ final class dk extends cj {
           }
           L4: {
             stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -1260,7 +1260,7 @@ final class dk extends cj {
               break L4;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 

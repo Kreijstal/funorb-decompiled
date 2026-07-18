@@ -100,7 +100,7 @@ final class hg extends ms {
           L5: {
             var2 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("hg.A(").append(110).append(44);
+            stackOut_15_1 = new StringBuilder().append("hg.A(").append(110).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -123,7 +123,7 @@ final class hg extends ms {
               break L5;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
         return stackIn_14_0;
     }

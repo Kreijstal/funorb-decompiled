@@ -42,7 +42,7 @@ final class csb implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "csb.C(" + 1 + 41);
+          throw rta.a((Throwable) (Object) var1, "csb.C(" + true + ')');
         }
     }
 

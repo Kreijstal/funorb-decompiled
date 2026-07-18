@@ -122,7 +122,7 @@ class hf {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3_ref;
-            stackOut_12_1 = new StringBuilder().append("hf.BA(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("hf.BA(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -145,7 +145,7 @@ class hf {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + 0 + 41);
+          throw t.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + false + ')');
         }
         return (Object) (Object) stackIn_10_0;
     }
@@ -436,7 +436,7 @@ class hf {
           L17: {
             var2 = decompiledCaughtException;
             stackOut_49_0 = (RuntimeException) var2;
-            stackOut_49_1 = new StringBuilder().append("hf.W(").append(1).append(44);
+            stackOut_49_1 = new StringBuilder().append("hf.W(").append(true).append(',');
             stackIn_51_0 = stackOut_49_0;
             stackIn_51_1 = stackOut_49_1;
             stackIn_50_0 = stackOut_49_0;
@@ -459,7 +459,7 @@ class hf {
               break L17;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + ')');
         }
     }
 

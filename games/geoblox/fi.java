@@ -56,7 +56,7 @@ final class fi {
             }
             param1.field_b.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "fi.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "fi.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class fi {
           L3: {
             runtimeException = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) runtimeException;
-            stackOut_8_1 = new StringBuilder().append("fi.D(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("fi.D(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -133,7 +133,7 @@ final class fi {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
     }
 

@@ -111,9 +111,9 @@ abstract class vm extends dk {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_H.append(60);
+                        StringBuilder discarded$6 = field_H.append('<');
                         StringBuilder discarded$7 = field_H.append(var15);
-                        StringBuilder discarded$8 = field_H.append(62);
+                        StringBuilder discarded$8 = field_H.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -300,7 +300,7 @@ abstract class vm extends dk {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_H.append(var14);
+                        StringBuilder discarded$9 = field_H.append((char) var14);
                         var14 = (char)(nl.a(false, (char) var14) & 255);
                         var4 = var4 + ((vm) this).field_E[var14];
                         if (((vm) this).field_v == null) {

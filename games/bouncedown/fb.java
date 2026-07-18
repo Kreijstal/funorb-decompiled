@@ -77,7 +77,7 @@ final class fb extends ih {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var1_ref, "fb.K(" + 102 + 41);
+          throw ii.a((Throwable) (Object) var1_ref, "fb.K(" + 102 + ')');
         }
         return stackIn_20_0 != 0;
     }
@@ -101,7 +101,7 @@ final class fb extends ih {
             param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) nj.field_o);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) nj.field_o);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "fb.J(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "fb.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ final class fb extends ih {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var5;
-            stackOut_8_1 = new StringBuilder().append("fb.H(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("fb.H(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -226,7 +226,7 @@ final class fb extends ih {
           }
           L3: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -251,7 +251,7 @@ final class fb extends ih {
           }
           L4: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -276,7 +276,7 @@ final class fb extends ih {
           }
           L5: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -299,7 +299,7 @@ final class fb extends ih {
               break L5;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
         return stackIn_7_0;
     }

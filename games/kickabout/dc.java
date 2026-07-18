@@ -21,7 +21,7 @@ final class dc {
             }
             ue.field_f[0] = var2;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "dc.B(" + param0 + 44 + param1 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "dc.B(" + param0 + ',' + param1 + ')');
         }
     }
 

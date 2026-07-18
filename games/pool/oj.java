@@ -117,7 +117,7 @@ final class oj extends ma {
               break L3;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + -106 + 41);
+          throw wm.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + -106 + ')');
         }
     }
 
@@ -215,7 +215,7 @@ final class oj extends ma {
             ((oj) this).field_z = param6;
             ((oj) this).field_v = param5;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "oj.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "oj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

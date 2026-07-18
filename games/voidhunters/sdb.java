@@ -266,7 +266,7 @@ final class sdb extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (Object) (Object) decompiledCaughtException;
-          throw rta.a((Throwable) var1, "sdb.B(" + -8037 + 41);
+          throw rta.a((Throwable) var1, "sdb.B(" + -8037 + ')');
         }
         return (String) (Object) stackIn_94_0;
     }
@@ -333,7 +333,7 @@ final class sdb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -348,7 +348,7 @@ final class sdb extends rqa {
             field_p = null;
             int var1_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sdb.C(" + 87 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "sdb.C(" + 87 + ')');
         }
     }
 

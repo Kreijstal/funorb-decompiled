@@ -318,7 +318,7 @@ abstract class aq extends ag {
               break L8;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + 640 + 44 + 480 + 44 + param3 + 44 + -126 + 41);
+          throw fa.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + 640 + ',' + 480 + ',' + param3 + ',' + -126 + ')');
         }
     }
 
@@ -348,7 +348,7 @@ abstract class aq extends ag {
             int discarded$0 = -126;
             this.a(param0, 640, 480, param1);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "aq.W(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "aq.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

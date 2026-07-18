@@ -184,7 +184,7 @@ final class gj extends ao {
           }
           L9: {
             stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44).append(0).append(44).append(param2).append(44);
+            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',').append(0).append(',').append(param2).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -207,7 +207,7 @@ final class gj extends ao {
               break L9;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ')');
         }
         return (java.net.Socket) (Object) stackIn_25_0;
     }
@@ -391,7 +391,7 @@ final class gj extends ao {
               break L4;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param1 + 41);
+          throw rb.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param1 + ')');
         }
         return (java.net.Socket) (Object) stackIn_21_0;
     }

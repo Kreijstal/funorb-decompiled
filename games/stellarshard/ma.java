@@ -149,7 +149,7 @@ final class ma extends gg {
         try {
             ((ma) this).field_t = param3;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ma.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "ma.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -168,7 +168,7 @@ final class ma extends gg {
         wg var2 = null;
         if (param0 instanceof wg) {
             var2 = (wg) (Object) param0;
-            var2.field_f = var2.field_f + 32 + param1;
+            var2.field_f = var2.field_f + ' ' + param1;
         } else {
             var2 = new wg(param0, param1);
         }

@@ -25,7 +25,7 @@ final class lq {
             param1.addKeyListener((java.awt.event.KeyListener) (Object) wd.field_e);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) wd.field_e);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "lq.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "lq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class lq {
             mq.field_a.field_A = kh.field_a.field_u;
             su.a((byte) 71);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "lq.A(" + (param0 != null ? "{...}" : "null") + 44 + -84 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "lq.A(" + (param0 != null ? "{...}" : "null") + ',' + -84 + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class lq {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("lq.D(").append(117).append(44);
+            stackOut_8_1 = new StringBuilder().append("lq.D(").append(117).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -145,7 +145,7 @@ final class lq {
           }
           L2: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -170,7 +170,7 @@ final class lq {
           }
           L3: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -193,7 +193,7 @@ final class lq {
               break L3;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_7_0;
     }

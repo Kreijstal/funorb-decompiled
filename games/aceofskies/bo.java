@@ -92,7 +92,7 @@ final class bo {
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + 23187 + 41);
+          throw pn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + 23187 + ')');
         }
         return stackIn_1_0;
     }
@@ -210,7 +210,7 @@ final class bo {
         try {
             ((bo) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "bo.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "bo.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

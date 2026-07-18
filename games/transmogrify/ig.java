@@ -331,7 +331,7 @@ abstract class ig extends fa {
             int discarded$0 = -19492;
             this.a(480, param2, 640, param0);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "ig.BA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "ig.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -487,7 +487,7 @@ abstract class ig extends fa {
           L9: {
             var4 = decompiledCaughtException;
             stackOut_31_0 = (RuntimeException) var4;
-            stackOut_31_1 = new StringBuilder().append("ig.TA(").append(10).append(44).append(0).append(44).append(1).append(44);
+            stackOut_31_1 = new StringBuilder().append("ig.TA(").append(10).append(',').append(false).append(',').append(true).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
@@ -510,7 +510,7 @@ abstract class ig extends fa {
               break L9;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ')');
         }
         return stackIn_30_0 != 0;
     }
@@ -741,7 +741,7 @@ abstract class ig extends fa {
           L8: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var6_ref;
-            stackOut_20_1 = new StringBuilder().append("ig.OA(").append(480).append(44).append(param1).append(44).append(640).append(44);
+            stackOut_20_1 = new StringBuilder().append("ig.OA(").append(480).append(',').append(param1).append(',').append(640).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -764,7 +764,7 @@ abstract class ig extends fa {
               break L8;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + -19492 + 41);
+          throw ch.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + -19492 + ')');
         }
     }
 

@@ -107,7 +107,7 @@ final class vdb extends uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "vdb.C(" + -31515 + 41);
+          throw rta.a((Throwable) (Object) var1, "vdb.C(" + -31515 + ')');
         }
         return stackIn_14_0;
     }

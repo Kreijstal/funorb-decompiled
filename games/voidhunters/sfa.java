@@ -30,7 +30,7 @@ final class sfa {
             }
             ((sfa) this).field_a = param2;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sfa.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "sfa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -327,7 +327,7 @@ final class sfa {
           }
           L17: {
             stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44).append(param1).append(44);
+            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(',').append(param1).append(',');
             stackIn_75_0 = stackOut_73_0;
             stackIn_75_1 = stackOut_73_1;
             stackIn_74_0 = stackOut_73_0;
@@ -350,7 +350,7 @@ final class sfa {
               break L17;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + ',' + param3 + ')');
         }
     }
 

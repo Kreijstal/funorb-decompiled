@@ -129,7 +129,7 @@ final class si implements pf {
               break L5;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw aa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -336,7 +336,7 @@ final class si implements pf {
                       StringBuilder discarded$12 = var7.append(var5_ref.substring(var6, var5_ref.length()));
                       break L9;
                     } else {
-                      StringBuilder discarded$13 = var7.append(47);
+                      StringBuilder discarded$13 = var7.append('/');
                       break L9;
                     }
                   }
@@ -364,7 +364,7 @@ final class si implements pf {
               L11: {
                 var5 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_40_0 = (RuntimeException) var5;
-                stackOut_40_1 = new StringBuilder().append("si.E(").append(115).append(44);
+                stackOut_40_1 = new StringBuilder().append("si.E(").append(115).append(',');
                 stackIn_42_0 = stackOut_40_0;
                 stackIn_42_1 = stackOut_40_1;
                 stackIn_41_0 = stackOut_40_0;
@@ -389,7 +389,7 @@ final class si implements pf {
               }
               L12: {
                 stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
-                stackOut_43_1 = ((StringBuilder) (Object) stackIn_43_1).append(stackIn_43_2).append(44);
+                stackOut_43_1 = ((StringBuilder) (Object) stackIn_43_1).append(stackIn_43_2).append(',');
                 stackIn_45_0 = stackOut_43_0;
                 stackIn_45_1 = stackOut_43_1;
                 stackIn_44_0 = stackOut_43_0;
@@ -414,7 +414,7 @@ final class si implements pf {
               }
               L13: {
                 stackOut_46_0 = (RuntimeException) (Object) stackIn_46_0;
-                stackOut_46_1 = ((StringBuilder) (Object) stackIn_46_1).append(stackIn_46_2).append(44).append(-1).append(44);
+                stackOut_46_1 = ((StringBuilder) (Object) stackIn_46_1).append(stackIn_46_2).append(',').append(-1).append(',');
                 stackIn_48_0 = stackOut_46_0;
                 stackIn_48_1 = stackOut_46_1;
                 stackIn_47_0 = stackOut_46_0;
@@ -437,7 +437,7 @@ final class si implements pf {
                   break L13;
                 }
               }
-              throw aa.a((Throwable) (Object) stackIn_49_0, stackIn_49_2 + 41);
+              throw aa.a((Throwable) (Object) stackIn_49_0, stackIn_49_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -461,7 +461,7 @@ final class si implements pf {
             ((si) this).field_b = param2;
             ((si) this).field_m = param9;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "si.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "si.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

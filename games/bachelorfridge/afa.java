@@ -299,7 +299,7 @@ final class afa extends k {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -128 + 41);
+          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -128 + ')');
         }
         return stackIn_3_0;
     }
@@ -377,7 +377,7 @@ final class afa extends k {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("afa.E(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("afa.E(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -400,7 +400,7 @@ final class afa extends k {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param2 + ')');
         }
     }
 

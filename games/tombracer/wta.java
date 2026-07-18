@@ -26,7 +26,7 @@ final class wta extends kna {
         try {
             ji.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wta.TB(" + (param0 != null ? "{...}" : "null") + 44 + -55 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "wta.TB(" + (param0 != null ? "{...}" : "null") + ',' + -55 + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class wta extends kna {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var4;
-            stackOut_2_1 = new StringBuilder().append("wta.AC(").append(param0).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("wta.AC(").append(param0).append(',').append(param1).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -140,7 +140,7 @@ final class wta extends kna {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -204,7 +204,7 @@ final class wta extends kna {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("wta.V(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("wta.V(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -227,7 +227,7 @@ final class wta extends kna {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

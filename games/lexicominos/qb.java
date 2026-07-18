@@ -319,7 +319,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
                     case 21: {
                         var8_ref = (RuntimeException) (Object) caughtException;
                         stackOut_21_0 = (RuntimeException) var8_ref;
-                        stackOut_21_1 = new StringBuilder().append("qb.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+                        stackOut_21_1 = new StringBuilder().append("qb.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
                         stackIn_24_0 = stackOut_21_0;
                         stackIn_24_1 = stackOut_21_1;
                         stackIn_22_0 = stackOut_21_0;
@@ -352,7 +352,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
                         continue stateLoop;
                     }
                     case 25: {
-                        throw ld.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+                        throw ld.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
                     }
                     case 26: {
                         return;
@@ -489,7 +489,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
                   break L6;
                 }
               }
-              throw ld.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 41);
+              throw ld.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -538,7 +538,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw ld.a((Throwable) (Object) runtimeException, "qb.E(" + 1 + 41);
+          throw ld.a((Throwable) (Object) runtimeException, "qb.E(" + 1 + ')');
         }
     }
 
@@ -647,7 +647,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           var3_ref3 = (RuntimeException) (Object) decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var3_ref3, "qb.B(" + param0 + 44 + -23646 + 41);
+          throw ld.a((Throwable) (Object) var3_ref3, "qb.B(" + param0 + ',' + -23646 + ')');
         }
     }
 
@@ -742,7 +742,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
               break L4;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 
@@ -802,7 +802,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -906,7 +906,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (Object) (Object) decompiledCaughtException;
-          throw ld.a((Throwable) var2, "qb.J(" + param0 + 41);
+          throw ld.a((Throwable) var2, "qb.J(" + param0 + ')');
         }
     }
 
@@ -1040,7 +1040,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
         return stackIn_14_0;
     }
@@ -1139,7 +1139,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -1539,7 +1539,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -1611,7 +1611,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var2, "qb.A(" + 24344 + 41);
+          throw ld.a((Throwable) (Object) var2, "qb.A(" + 24344 + ')');
         }
     }
 
@@ -1666,7 +1666,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -1687,7 +1687,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
                 qb.provideLoaderApplet((java.applet.Applet) null);
             }
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "qb.H(" + param0 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "qb.H(" + param0 + ')');
         }
     }
 
@@ -1742,7 +1742,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

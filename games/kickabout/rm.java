@@ -130,7 +130,7 @@ final class rm extends qt {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ',' + param1 + ')');
         }
         return stackIn_29_0;
     }
@@ -253,7 +253,7 @@ final class rm extends qt {
           L5: {
             var10 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var10;
-            stackOut_15_1 = new StringBuilder().append("rm.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_15_1 = new StringBuilder().append("rm.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -276,7 +276,7 @@ final class rm extends qt {
               break L5;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+          throw nb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

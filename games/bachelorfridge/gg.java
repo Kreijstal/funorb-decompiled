@@ -55,7 +55,7 @@ final class gg {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("gg.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_8_1 = new StringBuilder().append("gg.A(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -78,7 +78,7 @@ final class gg {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }

@@ -140,7 +140,7 @@ final class di {
             param0.field_b.field_a = param0;
             param0.field_e = param2;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "di.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "di.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -71,7 +71,7 @@ final class ku {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "ku.B(" + -94 + 41);
+          throw qo.a((Throwable) (Object) var1, "ku.B(" + -94 + ')');
         }
         return stackIn_5_0;
     }

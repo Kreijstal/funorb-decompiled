@@ -76,7 +76,7 @@ final class bi implements dh {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("bi.B(").append(0).append(44);
+            stackOut_13_1 = new StringBuilder().append("bi.B(").append(false).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -99,7 +99,7 @@ final class bi implements dh {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + -121 + 41);
+          throw t.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + -121 + ')');
         }
         return stackIn_12_0 != 0;
     }
@@ -199,7 +199,7 @@ final class bi implements dh {
           L7: {
             var6 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var6;
-            stackOut_15_1 = new StringBuilder().append("bi.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_15_1 = new StringBuilder().append("bi.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -222,7 +222,7 @@ final class bi implements dh {
               break L7;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 
@@ -245,7 +245,7 @@ final class bi implements dh {
             ((bi) this).field_d = param9;
             ((bi) this).field_j = param6;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "bi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "bi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

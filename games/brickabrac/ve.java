@@ -81,7 +81,7 @@ final class ve {
           L3: {
             var5_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var5_ref2;
-            stackOut_15_1 = new StringBuilder().append("ve.C(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("ve.C(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -104,7 +104,7 @@ final class ve {
               break L3;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param2 + 44 + param3 + 41);
+          throw qb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -479,7 +479,7 @@ final class ve {
                   break L19;
                 }
               }
-              throw qb.a((Throwable) (Object) stackIn_70_0, stackIn_70_2 + 44 + param1 + 44 + param2 + 44 + 1 + 44 + param4 + 41);
+              throw qb.a((Throwable) (Object) stackIn_70_0, stackIn_70_2 + ',' + param1 + ',' + param2 + ',' + true + ',' + param4 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -683,7 +683,7 @@ final class ve {
             ((ve) this).field_a = param2;
             ((ve) this).field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ve.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "ve.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

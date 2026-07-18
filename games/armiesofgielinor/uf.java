@@ -99,7 +99,7 @@ final class uf {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 1680474497 + 41);
+          throw ig.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + 1680474497 + ')');
         }
     }
 
@@ -212,7 +212,7 @@ final class uf {
             ((uf) this).field_h = param4;
             ((uf) this).field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "uf.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "uf.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

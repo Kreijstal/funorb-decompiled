@@ -59,7 +59,7 @@ final class oh {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("oh.E(").append(-29).append(44);
+            stackOut_6_1 = new StringBuilder().append("oh.E(").append(-29).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -82,7 +82,7 @@ final class oh {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class oh {
         try {
             ((oh) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "oh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "oh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

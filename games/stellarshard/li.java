@@ -116,7 +116,7 @@ final class li {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + -5 + 41);
+          throw ma.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + -5 + ')');
         }
     }
 

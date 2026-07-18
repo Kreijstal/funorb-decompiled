@@ -81,7 +81,7 @@ final class wnb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + -10 + 41);
+          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + -10 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class wnb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }

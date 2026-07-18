@@ -56,7 +56,7 @@ final class hc implements Iterator {
             ((hc) this).field_f = null;
             ((hc) this).field_c = ((hc) this).field_a.field_c.field_p;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "hc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "hc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

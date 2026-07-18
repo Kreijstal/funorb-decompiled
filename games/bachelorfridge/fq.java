@@ -13,7 +13,7 @@ final class fq extends td {
             ((fq) this).field_n = param3;
             ((fq) this).field_k = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "fq.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "fq.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -126,7 +126,7 @@ final class fq extends td {
                                 var6++;
                                 break L6;
                               } else {
-                                StringBuilder discarded$1 = var5.append(var8);
+                                StringBuilder discarded$1 = var5.append((char) var8);
                                 var6++;
                                 break L6;
                               }
@@ -158,7 +158,7 @@ final class fq extends td {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_33_0 = (RuntimeException) var2;
-            stackOut_33_1 = new StringBuilder().append("fq.C(").append(param0).append(44);
+            stackOut_33_1 = new StringBuilder().append("fq.C(").append(param0).append(',');
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
@@ -181,7 +181,7 @@ final class fq extends td {
               break L7;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ')');
         }
         return stackIn_32_0;
     }
@@ -359,7 +359,7 @@ final class fq extends td {
               break L6;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ',' + param1 + ')');
         }
         return (ii) (Object) stackIn_29_0;
     }

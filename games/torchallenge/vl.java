@@ -118,7 +118,7 @@ final class vl {
               break L4;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 10 + 41);
+          throw oj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + 10 + ')');
         }
     }
 

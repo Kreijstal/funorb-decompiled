@@ -65,7 +65,7 @@ final class ti {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var1, "ti.A(" + 94 + 41);
+          throw wm.a((Throwable) (Object) var1, "ti.A(" + 94 + ')');
         }
         return stackIn_12_0 != 0;
     }

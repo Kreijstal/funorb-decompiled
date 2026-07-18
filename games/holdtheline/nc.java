@@ -104,7 +104,7 @@ final class nc implements Iterator {
             int discarded$0 = 127;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "nc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "nc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

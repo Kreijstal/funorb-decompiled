@@ -28,7 +28,7 @@ final class qqa extends le {
             gk.field_p = !param0 ? true : false;
             m.a(37);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "qqa.C(" + param0 + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "qqa.C(" + param0 + ',' + param1 + ')');
         }
     }
 

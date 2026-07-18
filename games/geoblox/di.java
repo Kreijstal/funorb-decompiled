@@ -88,7 +88,7 @@ final class di {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2_ref, "di.B(" + 6 + 44 + param1 + 41);
+          throw t.a((Throwable) (Object) var2_ref, "di.B(" + 6 + ',' + param1 + ')');
         }
     }
 

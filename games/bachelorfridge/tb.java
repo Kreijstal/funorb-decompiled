@@ -81,7 +81,7 @@ final class tb {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var3_ref;
-            stackOut_17_1 = new StringBuilder().append("tb.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_17_1 = new StringBuilder().append("tb.A(").append(param0).append(',').append(param1).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -104,7 +104,7 @@ final class tb {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
     }
 

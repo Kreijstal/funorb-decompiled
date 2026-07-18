@@ -12,7 +12,7 @@ final class se {
             field_a = null;
             field_c = null;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "se.A(" + 123 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "se.A(" + 123 + ')');
         }
     }
 
@@ -270,7 +270,7 @@ final class se {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var1, "se.B(" + -86 + 41);
+          throw pn.a((Throwable) (Object) var1, "se.B(" + -86 + ')');
         }
     }
 

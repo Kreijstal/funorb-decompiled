@@ -134,7 +134,7 @@ final class jg extends ak {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var1_ref, "jg.A(" + 0 + 41);
+          throw ii.a((Throwable) (Object) var1_ref, "jg.A(" + 0 + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class jg extends ak {
             ((jg) this).field_x = param0;
             ((jg) this).field_E = 256;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "jg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "jg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

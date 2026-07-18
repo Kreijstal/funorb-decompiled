@@ -41,7 +41,7 @@ final class wi {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("wi.C(").append(param0).append(44).append(-106).append(44);
+            stackOut_5_1 = new StringBuilder().append("wi.C(").append(param0).append(',').append(-106).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -64,7 +64,7 @@ final class wi {
               break L1;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param3 + 41);
+          throw rb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param3 + ')');
         }
         return stackIn_4_0;
     }
@@ -172,7 +172,7 @@ final class wi {
           L5: {
             var4_ref = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var4_ref;
-            stackOut_23_1 = new StringBuilder().append("wi.A(").append(0).append(44).append(0).append(44).append(param2).append(44);
+            stackOut_23_1 = new StringBuilder().append("wi.A(").append(0).append(',').append(0).append(',').append(param2).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -195,7 +195,7 @@ final class wi {
               break L5;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
         return stackIn_22_0;
     }
@@ -250,7 +250,7 @@ final class wi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1_ref, "wi.D(" + 0 + 41);
+          throw rb.a((Throwable) (Object) var1_ref, "wi.D(" + 0 + ')');
         }
     }
 

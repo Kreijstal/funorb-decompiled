@@ -145,7 +145,7 @@ final class th {
               if (var4 != 0) {
                 L6: {
                   if (80 > td.field_c.length()) {
-                    StringBuilder discarded$15 = td.field_c.append(var5);
+                    StringBuilder discarded$15 = td.field_c.append((char) var5);
                     var6 = 485;
                     var13 = di.field_j;
                     var8 = var13;
@@ -471,7 +471,7 @@ final class th {
           L6: {
             var5 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var5;
-            stackOut_14_1 = new StringBuilder().append("th.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_14_1 = new StringBuilder().append("th.D(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -496,7 +496,7 @@ final class th {
           }
           L7: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -519,7 +519,7 @@ final class th {
               break L7;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param4 + 41);
+          throw wm.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param4 + ')');
         }
     }
 

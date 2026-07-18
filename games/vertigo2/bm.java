@@ -138,7 +138,7 @@ final class bm extends ji {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var4;
-            stackOut_15_1 = new StringBuilder().append("bm.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_15_1 = new StringBuilder().append("bm.C(").append(param0).append(',').append(param1).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -161,7 +161,7 @@ final class bm extends ji {
               break L4;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 
@@ -290,7 +290,7 @@ final class bm extends ji {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + 4 + 41);
+          throw wn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + 4 + ')');
         }
     }
 

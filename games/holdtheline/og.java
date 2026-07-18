@@ -52,7 +52,7 @@ final class og {
             param0.field_f = param1;
             param0.field_h.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "og.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "og.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -148,7 +148,7 @@ final class vi extends nt {
               break L3;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+          throw qo.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
         }
     }
 
@@ -316,7 +316,7 @@ final class vi extends nt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "vi.A(" + -77 + 41);
+          throw qo.a((Throwable) (Object) var1, "vi.A(" + -77 + ')');
         }
     }
 
@@ -352,7 +352,7 @@ final class vi extends nt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var2, "vi.D(" + 3 + 44 + -73 + 41);
+          throw qo.a((Throwable) (Object) var2, "vi.D(" + 3 + ',' + -73 + ')');
         }
     }
 

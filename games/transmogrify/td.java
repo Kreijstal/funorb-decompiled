@@ -38,7 +38,7 @@ abstract class td {
             ci.field_f.b((qg) (Object) l.field_d, (byte) -71);
             int var4_int = 70 % ((param0 - 41) / 32);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "td.K(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "td.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ abstract class td {
             param2.field_f.field_b = param2;
             param2.field_b.field_f = param2;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "td.L(" + (param0 != null ? "{...}" : "null") + 44 + 125 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "td.L(" + (param0 != null ? "{...}" : "null") + ',' + 125 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

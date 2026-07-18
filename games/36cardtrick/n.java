@@ -137,7 +137,7 @@ final class n extends qg {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + -117 + 41);
+          throw ma.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + -117 + ')');
         }
         return stackIn_20_0;
     }
@@ -149,7 +149,7 @@ final class n extends qg {
             ((n) this).field_A = 256;
             ((n) this).field_y = param0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "n.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "n.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

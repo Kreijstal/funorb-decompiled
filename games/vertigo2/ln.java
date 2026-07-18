@@ -50,7 +50,7 @@ final class ln {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "ln.E(" + 0 + 41);
+          throw wn.a((Throwable) (Object) var1, "ln.E(" + 0 + ')');
         }
     }
 

@@ -165,7 +165,7 @@ final class nt {
                   break L2;
                 }
               }
-              throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + -1978 + 41);
+              throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + -1978 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

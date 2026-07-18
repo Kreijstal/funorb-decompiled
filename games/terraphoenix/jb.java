@@ -80,7 +80,7 @@ abstract class jb {
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var6_ref;
-            stackOut_8_1 = new StringBuilder().append("jb.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(0).append(44).append(param4).append(44);
+            stackOut_8_1 = new StringBuilder().append("jb.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(0).append(',').append(param4).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -103,7 +103,7 @@ abstract class jb {
               break L1;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }

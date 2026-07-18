@@ -322,7 +322,7 @@ final class nh {
           L23: {
             var6 = decompiledCaughtException;
             stackOut_74_0 = (RuntimeException) var6;
-            stackOut_74_1 = new StringBuilder().append("nh.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_74_1 = new StringBuilder().append("nh.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_76_0 = stackOut_74_0;
             stackIn_76_1 = stackOut_74_1;
             stackIn_75_0 = stackOut_74_0;
@@ -345,7 +345,7 @@ final class nh {
               break L23;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + 44 + param5 + 41);
+          throw qb.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + ',' + param5 + ')');
         }
     }
 
@@ -461,7 +461,7 @@ final class nh {
           }
           L3: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -486,7 +486,7 @@ final class nh {
           }
           L4: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -511,7 +511,7 @@ final class nh {
           }
           L5: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param10).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param10).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -534,7 +534,7 @@ final class nh {
               break L5;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param12 + 44 + param13 + 44 + param14 + 41);
+          throw qb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param12 + ',' + param13 + ',' + param14 + ')');
         }
     }
 
@@ -795,7 +795,7 @@ final class nh {
                                                         var11_ref = (Object) (Object) var27;
                                                         break L17;
                                                       } else {
-                                                        var11_ref = (Object) (Object) (var11_ref + ", " + var27);
+                                                        var11_ref = (Object) (Object) ((String) var11_ref + ", " + var27);
                                                         var12 = 1;
                                                         break L17;
                                                       }
@@ -911,7 +911,7 @@ final class nh {
                                       var11_ref = (Object) (Object) var28;
                                       break L25;
                                     } else {
-                                      var11_ref = (Object) (Object) (var11_ref + ", " + var28);
+                                      var11_ref = (Object) (Object) ((String) var11_ref + ", " + var28);
                                       var12 = 1;
                                       break L25;
                                     }
@@ -928,7 +928,7 @@ final class nh {
                         if (var10 != 0) {
                           var13_ref_String = bh.field_rb;
                           if (var12 != 0) {
-                            var14_ref_String = ff.field_e + var11_ref;
+                            var14_ref_String = ff.field_e + (String) var11_ref;
                             break L26;
                           } else {
                             var14_ref_String = rd.a(br.field_ac, new String[1], (byte) 103);
@@ -940,7 +940,7 @@ final class nh {
                             var14_ref_String = rd.a(gk.field_b, new String[1], (byte) 103);
                             break L26;
                           } else {
-                            var14_ref_String = ki.field_g + var11_ref;
+                            var14_ref_String = ki.field_g + (String) var11_ref;
                             break L26;
                           }
                         }
@@ -1347,7 +1347,7 @@ final class nh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var5, "nh.E(" + 1 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw qb.a((Throwable) (Object) var5, "nh.E(" + true + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1452,7 +1452,7 @@ final class nh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var1, "nh.B(" + param0 + 41);
+          throw qb.a((Throwable) (Object) var1, "nh.B(" + param0 + ')');
         }
     }
 

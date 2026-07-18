@@ -55,7 +55,7 @@ final class bi {
           L2: {
             var6_ref = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var6_ref;
-            stackOut_9_1 = new StringBuilder().append("bi.C(").append(-7).append(44).append(1).append(44);
+            stackOut_9_1 = new StringBuilder().append("bi.C(").append(-7).append(',').append(1).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -78,7 +78,7 @@ final class bi {
               break L2;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param3 + 41);
+          throw kk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param3 + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class bi {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var5;
-            stackOut_4_1 = new StringBuilder().append("bi.G(").append(0).append(44);
+            stackOut_4_1 = new StringBuilder().append("bi.G(").append(false).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -141,7 +141,7 @@ final class bi {
               break L1;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 1 + 44 + 0 + 44 + 2048 + 41);
+          throw kk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + true + ',' + false + ',' + 2048 + ')');
         }
         return stackIn_3_0;
     }
@@ -178,7 +178,7 @@ final class bi {
           L0: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("bi.E(").append(-3393).append(44);
+            stackOut_4_1 = new StringBuilder().append("bi.E(").append(-3393).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -201,7 +201,7 @@ final class bi {
               break L0;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -259,7 +259,7 @@ final class bi {
             }
             this.a((byte) -7, 1, param1, param0);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "bi.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "bi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

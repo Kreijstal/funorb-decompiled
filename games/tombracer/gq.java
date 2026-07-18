@@ -86,7 +86,7 @@ final class gq extends uta {
                       L4: while (true) {
                         if (var13 == null) {
                           if (var10 != 0) {
-                            StringBuilder discarded$2 = var8.append(var12);
+                            StringBuilder discarded$2 = var8.append((char) var12);
                             var9++;
                             continue L2;
                           } else {
@@ -230,7 +230,7 @@ final class gq extends uta {
           L4: {
             var3_ref = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3_ref;
-            stackOut_9_1 = new StringBuilder().append("gq.H(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("gq.H(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -253,7 +253,7 @@ final class gq extends uta {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
         return stackIn_8_0;
     }
@@ -344,7 +344,7 @@ final class gq extends uta {
                   break L0;
                 }
               }
-              throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+              throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -375,9 +375,9 @@ final class gq extends uta {
                 ((gq) this).field_v[incrementValue$0] = var5;
                 var5 = (ela) (Object) param0.e(125);
             }
-            ((gq) this).a(-124, "# <col=ffaaff>FunOrbConsole (loaded " + ((gq) this).field_v.length + " methods at " + new Date() + ")</col>");
+            ((gq) this).a(-124, "# <col=ffaaff>FunOrbConsole (loaded " + ((gq) this).field_v.length + " methods at " + (Object) (Object) new Date() + ")</col>");
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "gq.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "gq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

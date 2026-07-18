@@ -56,7 +56,7 @@ final class tg extends java.awt.Canvas {
             param1.field_db = 0;
             param1.field_N = 0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "tg.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "tg.C(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class tg extends java.awt.Canvas {
           L0: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("tg.A(").append(7).append(44);
+            stackOut_2_1 = new StringBuilder().append("tg.A(").append(7).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -113,7 +113,7 @@ final class tg extends java.awt.Canvas {
               break L0;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 0 + 41);
+          throw wn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 0 + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class tg extends java.awt.Canvas {
         try {
             ((tg) this).field_b.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "tg.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "tg.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class tg extends java.awt.Canvas {
         try {
             ((tg) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "tg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "tg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class tg extends java.awt.Canvas {
         try {
             ((tg) this).field_b.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "tg.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "tg.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

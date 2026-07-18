@@ -127,7 +127,7 @@ final class af {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_38_0 = (RuntimeException) var3;
-            stackOut_38_1 = new StringBuilder().append("af.C(").append(126).append(44).append(param1).append(44);
+            stackOut_38_1 = new StringBuilder().append("af.C(").append(126).append(',').append(param1).append(',');
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
@@ -150,7 +150,7 @@ final class af {
               break L1;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ')');
         }
         return stackIn_37_0;
     }
@@ -207,7 +207,7 @@ final class af {
             var1.d(0, 0);
             dh.a(-581);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "af.B(" + 18428 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "af.B(" + 18428 + ')');
         }
     }
 

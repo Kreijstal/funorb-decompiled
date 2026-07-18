@@ -20,7 +20,7 @@ final class vc {
             ij.field_P = param0;
             jf.field_kb = param1;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "vc.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "vc.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + false + ')');
         }
     }
 

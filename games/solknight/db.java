@@ -300,7 +300,7 @@ abstract class db extends ec {
                   break L23;
                 }
               }
-              throw fc.a((Throwable) (Object) stackIn_63_0, stackIn_63_2 + 44 + -115 + 41);
+              throw fc.a((Throwable) (Object) stackIn_63_0, stackIn_63_2 + ',' + -115 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -416,7 +416,7 @@ abstract class db extends ec {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var1, "db.B(" + param0 + 41);
+          throw fc.a((Throwable) (Object) var1, "db.B(" + param0 + ')');
         }
     }
 
@@ -454,7 +454,7 @@ abstract class db extends ec {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var2, "db.H(" + 36951 + 44 + 7 + 41);
+          throw fc.a((Throwable) (Object) var2, "db.H(" + 36951 + ',' + 7 + ')');
         }
     }
 

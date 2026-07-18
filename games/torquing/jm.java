@@ -60,7 +60,7 @@ final class jm extends dp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var2_ref, "jm.B(" + param0 + 44 + param1 + 41);
+          throw rb.a((Throwable) (Object) var2_ref, "jm.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class jm extends dp {
             java.nio.Buffer discarded$0 = ((jm) this).field_c.position(0);
             java.nio.ByteBuffer discarded$1 = ((jm) this).field_c.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "jm.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "jm.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

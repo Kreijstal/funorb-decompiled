@@ -68,7 +68,7 @@ abstract class tk extends o {
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 26810 + 41);
+          throw dd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 26810 + ')');
         }
         return stackIn_1_0;
     }
@@ -168,7 +168,7 @@ abstract class tk extends o {
           L3: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var2_ref2;
-            stackOut_23_1 = new StringBuilder().append("tk.PB(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("tk.PB(").append(param0).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -191,7 +191,7 @@ abstract class tk extends o {
               break L3;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
     }
 
@@ -254,7 +254,7 @@ abstract class tk extends o {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("tk.OB(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("tk.OB(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -277,7 +277,7 @@ abstract class tk extends o {
               break L2;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }

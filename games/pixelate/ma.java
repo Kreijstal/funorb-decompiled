@@ -157,7 +157,7 @@ final class ma extends bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "ma.B(" + 106 + 41);
+          throw aa.a((Throwable) (Object) var1, "ma.B(" + 106 + ')');
         }
     }
 
@@ -481,7 +481,7 @@ final class ma extends bg {
             ((ma) this).field_m = param3;
             ((ma) this).field_w = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ma.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

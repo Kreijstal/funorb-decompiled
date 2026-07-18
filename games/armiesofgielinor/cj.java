@@ -31,7 +31,7 @@ final class cj extends mg {
             }
             java.nio.ByteBuffer discarded$7 = ((cj) this).field_p.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "cj.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "cj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

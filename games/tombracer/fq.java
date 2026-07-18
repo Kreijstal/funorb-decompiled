@@ -115,7 +115,7 @@ final class fq {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 103 + 41);
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 103 + ')');
         }
         return stackIn_4_0;
     }
@@ -136,7 +136,7 @@ final class fq {
             param0.a((byte) -128, ((fq) this).field_b, 8);
             param0.a((byte) 64, ((fq) this).field_f, 8);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "fq.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "fq.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -250,7 +250,7 @@ final class fq {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var3;
-            stackOut_16_1 = new StringBuilder().append("fq.<init>(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("fq.<init>(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -273,7 +273,7 @@ final class fq {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
     }
 

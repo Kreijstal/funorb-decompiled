@@ -352,7 +352,7 @@ final class bj {
                   break L7;
                 }
               }
-              throw ma.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + -25 + 41);
+              throw ma.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + -25 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

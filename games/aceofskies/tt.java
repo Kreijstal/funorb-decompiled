@@ -47,7 +47,7 @@ final class tt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var2_ref, "tt.C(" + 6 + 44 + 2048 + 41);
+          throw pn.a((Throwable) (Object) var2_ref, "tt.C(" + 6 + ',' + 2048 + ')');
         }
     }
 

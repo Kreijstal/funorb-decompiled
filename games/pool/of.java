@@ -94,7 +94,7 @@ final class of extends vh {
             ((of) this).field_Rb = param1;
             ((of) this).field_Sb.a(-118, param1);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "of.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "of.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -114,7 +114,7 @@ final class of extends vh {
             }
             pn.field_l = new dd(param1.a(false, "menu-framed-background.jpg", ""), (java.awt.Component) (Object) pa.field_K);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "of.A(" + 27 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "of.A(" + 27 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -276,7 +276,7 @@ final class of extends vh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) runtimeException, "of.W(" + 353 + 44 + 0 + 44 + param2 + 41);
+          throw wm.a((Throwable) (Object) runtimeException, "of.W(" + 353 + ',' + false + ',' + param2 + ')');
         }
     }
 

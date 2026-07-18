@@ -253,7 +253,7 @@ final class me extends wo {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_33_0 = (RuntimeException) var6;
-            stackOut_33_1 = new StringBuilder().append("me.G(").append(114).append(44).append(param1).append(44).append(0).append(44);
+            stackOut_33_1 = new StringBuilder().append("me.G(").append(114).append(',').append(param1).append(',').append(0).append(',');
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
@@ -276,7 +276,7 @@ final class me extends wo {
               break L6;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + param4 + 44 + param5 + 41);
+          throw sh.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + param4 + ',' + param5 + ')');
         }
         return (java.awt.Frame) (Object) stackIn_32_0;
     }
@@ -364,7 +364,7 @@ final class me extends wo {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
     }
 

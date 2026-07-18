@@ -61,7 +61,7 @@ final class rna extends ela {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 1 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + true + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }
@@ -128,7 +128,7 @@ final class rna extends ela {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }

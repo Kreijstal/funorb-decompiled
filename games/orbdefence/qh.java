@@ -68,7 +68,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -164,7 +164,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L4;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
     }
 
@@ -300,7 +300,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L7;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
     }
 
@@ -344,7 +344,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             param0.consume();
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "qh.keyTyped(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "qh.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -49,7 +49,7 @@ final class ol implements Iterator {
             int discarded$0 = var5.e(-18951, var4);
             var5.c((byte) -69, -var4 + var5.field_i);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "ol.B(" + -30329 + 44 + (param1 != null ? "{...}" : "null") + 44 + 5 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "ol.B(" + -30329 + ',' + (param1 != null ? "{...}" : "null") + ',' + 5 + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class ol implements Iterator {
             tj.field_a = param0;
             il.a(12, param1 ^ param1);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "ol.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "ol.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class ol implements Iterator {
             ((ol) this).field_c = null;
             ((ol) this).field_i = ((ol) this).field_g.field_a.field_f;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "ol.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "ol.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

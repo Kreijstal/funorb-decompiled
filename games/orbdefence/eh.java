@@ -100,7 +100,7 @@ final class eh {
               break L4;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw dd.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -444,7 +444,7 @@ final class eh {
                   break L19;
                 }
               }
-              throw dd.a((Throwable) (Object) stackIn_71_0, stackIn_71_2 + 44 + 1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+              throw dd.a((Throwable) (Object) stackIn_71_0, stackIn_71_2 + ',' + true + ',' + param2 + ',' + param3 + ',' + param4 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -664,7 +664,7 @@ final class eh {
             ((eh) this).field_f = param0;
             ((eh) this).field_e = param3;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "eh.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "eh.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

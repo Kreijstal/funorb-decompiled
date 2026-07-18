@@ -102,7 +102,7 @@ final class vj {
           L4: {
             var4 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var4;
-            stackOut_15_1 = new StringBuilder().append("vj.A(").append(1).append(44).append(256).append(44).append(121).append(44);
+            stackOut_15_1 = new StringBuilder().append("vj.A(").append(true).append(',').append(256).append(',').append(121).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -125,7 +125,7 @@ final class vj {
               break L4;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class vj {
             var4 = new mh[]{param1, rg.field_c, (mh) (Object) f.field_c};
             ((vj) this).field_d = new oa(0L, eh.field_n, var3, hd.field_c, var4, 0);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "vj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "vj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

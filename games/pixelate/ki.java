@@ -121,7 +121,7 @@ final class ki {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "ki.E(" + 107 + 41);
+          throw aa.a((Throwable) (Object) var1, "ki.E(" + 107 + ')');
         }
     }
 

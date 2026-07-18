@@ -226,7 +226,7 @@ public final class Transmogrify extends ig {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var1_ref, "Transmogrify.I(" + param0 + 41);
+          throw ch.a((Throwable) (Object) var1_ref, "Transmogrify.I(" + param0 + ')');
         }
     }
 

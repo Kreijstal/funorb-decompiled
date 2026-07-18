@@ -55,7 +55,7 @@ final class hn extends le {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("hn.A(").append(0).append(44);
+            stackOut_6_1 = new StringBuilder().append("hn.A(").append(false).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -78,7 +78,7 @@ final class hn extends le {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class hn extends le {
             pg.field_o = 0;
             el.field_d = 0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "hn.B(" + 1780 + 44 + 0 + 44 + (param2 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "hn.B(" + 1780 + ',' + 0 + ',' + (param2 != null ? "{...}" : "null") + ',' + 0 + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class hn extends le {
             ((hn) this).field_k = param1;
             ((hn) this).field_n.g(128 + ((hn) this).field_i * ge.field_c >> 8);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "hn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "hn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

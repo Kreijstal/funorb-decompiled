@@ -23,7 +23,7 @@ final class ci {
             }
             ge.h(0, 0, 640, 480);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "ci.C(" + -2865 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "ci.C(" + -2865 + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class ci {
             i.field_r[param4] = param6;
             mc.field_b[param4] = param3;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "ci.A(" + 30380 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "ci.A(" + 30380 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 

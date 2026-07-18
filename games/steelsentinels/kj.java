@@ -85,7 +85,7 @@ final class kj extends gi {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var5;
-            stackOut_7_1 = new StringBuilder().append("kj.EB(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("kj.EB(").append(param0).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -108,7 +108,7 @@ final class kj extends gi {
               break L3;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param3 + 41);
+          throw ci.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param3 + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class kj extends gi {
             }
             ((kj) this).field_A = new ie(param1);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "kj.WA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "kj.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

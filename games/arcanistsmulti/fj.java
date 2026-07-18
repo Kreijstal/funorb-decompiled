@@ -14,7 +14,7 @@ final class fj extends pg {
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) ch.field_a);
             ub.field_b = -1;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "fj.A(" + (param0 != null ? "{...}" : "null") + 44 + 115 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "fj.A(" + (param0 != null ? "{...}" : "null") + ',' + 115 + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class fj extends pg {
           L9: {
             var4 = decompiledCaughtException;
             stackOut_33_0 = (RuntimeException) var4;
-            stackOut_33_1 = new StringBuilder().append("fj.D(").append(97).append(44);
+            stackOut_33_1 = new StringBuilder().append("fj.D(").append(97).append(',');
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
@@ -183,7 +183,7 @@ final class fj extends pg {
               break L9;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + 1 + 44 + 10 + 41);
+          throw aa.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + true + ',' + 10 + ')');
         }
         return stackIn_32_0 != 0;
     }
@@ -196,7 +196,7 @@ final class fj extends pg {
             var3.f(param1.field_p, (byte) -41);
             var3.f(param1.field_t, (byte) -85);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "fj.C(" + -26971 + 44 + (param1 != null ? "{...}" : "null") + 44 + 7 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "fj.C(" + -26971 + ',' + (param1 != null ? "{...}" : "null") + ',' + 7 + ')');
         }
     }
 
@@ -298,7 +298,7 @@ final class fj extends pg {
           }
           L3: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param1).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -323,7 +323,7 @@ final class fj extends pg {
           }
           L4: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -346,7 +346,7 @@ final class fj extends pg {
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
         return stackIn_3_0;
     }

@@ -48,7 +48,7 @@ final class fga extends kj {
         try {
             ((fga) this).field_g = new vca((po) (Object) taa.field_u, Integer.toString(param3), 16736256, 20, 30, 50);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "fga.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "fga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

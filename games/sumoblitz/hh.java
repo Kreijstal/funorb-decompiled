@@ -143,7 +143,7 @@ final class hh extends IOException {
           L8: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var5_ref;
-            stackOut_18_1 = new StringBuilder().append("hh.B(").append(1).append(44).append(param1).append(44);
+            stackOut_18_1 = new StringBuilder().append("hh.B(").append(true).append(',').append(param1).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -168,7 +168,7 @@ final class hh extends IOException {
           }
           L9: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(param3).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param3).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -191,7 +191,7 @@ final class hh extends IOException {
               break L9;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 

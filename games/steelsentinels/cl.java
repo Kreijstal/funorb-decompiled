@@ -163,7 +163,7 @@ final class cl {
               break L8;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param1 + 44 + param2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

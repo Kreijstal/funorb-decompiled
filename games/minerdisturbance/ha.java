@@ -174,7 +174,7 @@ final class ha {
           L8: {
             var2 = decompiledCaughtException;
             stackOut_50_0 = (RuntimeException) var2;
-            stackOut_50_1 = new StringBuilder().append("ha.C(").append(param0).append(44);
+            stackOut_50_1 = new StringBuilder().append("ha.C(").append(param0).append(',');
             stackIn_52_0 = stackOut_50_0;
             stackIn_52_1 = stackOut_50_1;
             stackIn_51_0 = stackOut_50_0;
@@ -197,7 +197,7 @@ final class ha {
               break L8;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + ')');
         }
     }
 
@@ -524,7 +524,7 @@ final class ha {
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 16 + 44 + 92 + 41);
+          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 16 + ',' + 92 + ')');
         }
         return stackIn_1_0;
     }

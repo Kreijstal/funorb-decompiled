@@ -184,7 +184,7 @@ final class cc extends gh {
             var6 = (CharSequence) (Object) ((cc) this).field_mc;
             String discarded$0 = ui.a(1, var6);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "cc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -292,7 +292,7 @@ final class cc extends gh {
               break L4;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 41);
+          throw ci.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
         }
         return stackIn_15_0 != 0;
     }
@@ -310,7 +310,7 @@ final class cc extends gh {
             }
             di.field_a = 0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "cc.B(" + param0 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "cc.B(" + param0 + ')');
         }
     }
 
@@ -323,7 +323,7 @@ final class cc extends gh {
             String discarded$0 = ui.a(1, var5);
             int var4_int = -54 / ((54 - param0) / 38);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "cc.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "cc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

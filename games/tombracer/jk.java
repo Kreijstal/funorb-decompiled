@@ -108,7 +108,7 @@ final class jk extends vg {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("jk.D(").append(22).append(44);
+            stackOut_13_1 = new StringBuilder().append("jk.D(").append(22).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -131,7 +131,7 @@ final class jk extends vg {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param2 + ')');
         }
         return stackIn_12_0;
     }
@@ -145,7 +145,7 @@ final class jk extends vg {
         try {
             ((jk) this).field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "jk.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "jk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

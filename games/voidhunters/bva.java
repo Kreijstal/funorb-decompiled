@@ -19,7 +19,7 @@ final class bva extends vmb {
         try {
             ((bva) this).field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bva.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "bva.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

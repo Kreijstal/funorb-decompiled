@@ -81,7 +81,7 @@ final class ml {
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw wm.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -93,7 +93,7 @@ final class ml {
             }
             nn.a(31536000L, (byte) -120, param0, ((ml) this).field_i, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ml.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "ml.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class ml {
         try {
             ((ml) this).field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ml.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "ml.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -286,7 +286,7 @@ final class ml {
           L11: {
             var6 = decompiledCaughtException;
             stackOut_34_0 = (RuntimeException) var6;
-            stackOut_34_1 = new StringBuilder().append("ml.F(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_34_1 = new StringBuilder().append("ml.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_36_0 = stackOut_34_0;
             stackIn_36_1 = stackOut_34_1;
             stackIn_35_0 = stackOut_34_0;
@@ -309,7 +309,7 @@ final class ml {
               break L11;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 44 + param5 + 41);
+          throw wm.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ',' + param5 + ')');
         }
     }
 
@@ -318,7 +318,7 @@ final class ml {
         try {
             ch.a(false, param1, 3);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ml.C(" + 25756 + 44 + (param1 != null ? "{...}" : "null") + 44 + 3 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "ml.C(" + 25756 + ',' + (param1 != null ? "{...}" : "null") + ',' + 3 + ')');
         }
     }
 

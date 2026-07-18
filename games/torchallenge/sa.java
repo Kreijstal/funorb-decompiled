@@ -79,7 +79,7 @@ final class sa {
             param2.field_j = var5.i(67);
             var5.a(var5.field_q - var4, -112);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "sa.A(" + param0 + 44 + 6 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "sa.A(" + param0 + ',' + 6 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -45,7 +45,7 @@ final class bd extends IOException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "bd.B(" + -117 + 41);
+          throw t.a((Throwable) (Object) var1, "bd.B(" + -117 + ')');
         }
     }
 

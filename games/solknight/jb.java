@@ -49,7 +49,7 @@ final class jb extends aa {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("jb.A(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("jb.A(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -72,7 +72,7 @@ final class jb extends aa {
               break L2;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class jb extends aa {
             ((jb) this).field_c = param1;
             ((jb) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "jb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "jb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -205,7 +205,7 @@ abstract class jc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var5, "jc.M(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw oj.a((Throwable) (Object) var5, "jc.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -317,7 +317,7 @@ abstract class jc {
               break L1;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 26691 + 41);
+          throw oj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 26691 + ')');
         }
         return stackIn_1_0;
     }

@@ -975,7 +975,7 @@ final class mk {
                           pc.field_Mb = td.field_n[var34_int];
                           break L55;
                         } else {
-                          pc.field_Mb = td.field_n[var34_int] + " - " + var35;
+                          pc.field_Mb = td.field_n[var34_int] + " - " + (String) var35;
                           break L55;
                         }
                       } else {

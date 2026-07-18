@@ -134,7 +134,7 @@ final class al {
                   break L1;
                 }
               }
-              throw pe.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+              throw pe.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

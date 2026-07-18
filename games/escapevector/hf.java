@@ -25,7 +25,7 @@ final class hf {
         if (hi.field_r > 0) {
             var1 = var1 + ":";
             for (var2 = 0; var2 < hi.field_r; var2++) {
-                var1 = var1 + 32;
+                var1 = var1 + ' ';
                 var3 = 255 & om.field_g.field_g[var2];
                 var4 = var3 >> 4;
                 if (var4 >= 10) {
@@ -217,7 +217,7 @@ final class hf {
           }
           L3: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -242,7 +242,7 @@ final class hf {
           }
           L4: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -265,7 +265,7 @@ final class hf {
               break L4;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 97 + 41);
+          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + 97 + ')');
         }
         return stackIn_15_0;
     }

@@ -63,7 +63,7 @@ final class gj {
             qo.field_q.e(-30986);
             jp.field_c.e(param0 ^ -25148);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "gj.A(" + param0 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "gj.A(" + param0 + ')');
         }
     }
 

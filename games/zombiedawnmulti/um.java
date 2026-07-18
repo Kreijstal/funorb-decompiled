@@ -22,7 +22,7 @@ final class um {
             param2.e(-16 + (int)((um) this).field_d + param5, -16 + (int)((um) this).field_e + param0, param4);
             param2.c(param5 + (int)((um) this).field_d - 16, (int)((um) this).field_e + (param0 - 16), param3);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "um.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "um.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

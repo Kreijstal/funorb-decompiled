@@ -59,7 +59,7 @@ final class m {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("m.A(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("m.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -82,7 +82,7 @@ final class m {
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -95,7 +95,7 @@ final class m {
             jj.field_a = new uc(ug.field_A, ra.field_c, param0, ca.field_k, lh.field_w);
             ug.field_A.a(-14579, (w) (Object) jj.field_a);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "m.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "m.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class m {
         try {
             te.a("jagex-last-login-method", 31536000L, param0, ((m) this).field_c, param1 + -3096);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "m.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "m.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -171,7 +171,7 @@ final class m {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("m.F(").append(param0).append(44).append(1).append(44);
+            stackOut_6_1 = new StringBuilder().append("m.F(").append(param0).append(',').append(true).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -196,7 +196,7 @@ final class m {
           }
           L3: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -219,7 +219,7 @@ final class m {
               break L3;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -232,7 +232,7 @@ final class m {
         try {
             ((m) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "m.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "m.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

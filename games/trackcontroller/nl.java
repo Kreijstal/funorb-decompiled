@@ -233,7 +233,7 @@ final class nl extends RuntimeException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1, "nl.C(" + -77 + 41);
+          throw sl.a((Throwable) (Object) var1, "nl.C(" + -77 + ')');
         }
     }
 

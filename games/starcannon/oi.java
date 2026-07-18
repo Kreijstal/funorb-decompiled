@@ -22,7 +22,7 @@ final class oi extends rf {
             w.a(o.field_b, (byte) 86, kb.field_a, nb.field_a);
             dd.a(param0, 0, 0, -23466);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "oi.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "oi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -36,7 +36,7 @@ final class oi extends rf {
             }
             param0.addFocusListener((java.awt.event.FocusListener) (Object) rc.field_d);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "oi.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "oi.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

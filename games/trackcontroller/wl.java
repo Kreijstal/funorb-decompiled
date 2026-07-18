@@ -26,7 +26,7 @@ final class wl extends fc {
         try {
             ((wl) this).field_k = param0;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "wl.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "wl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -73,7 +73,7 @@ final class pe extends fd {
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var6_ref;
-            stackOut_8_1 = new StringBuilder().append("pe.C(").append(param0).append(44).append(param1).append(44).append(0).append(44).append(param3).append(44).append(0).append(44);
+            stackOut_8_1 = new StringBuilder().append("pe.C(").append(param0).append(',').append(param1).append(',').append(0).append(',').append(param3).append(',').append(0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -96,7 +96,7 @@ final class pe extends fd {
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }
@@ -114,7 +114,7 @@ final class pe extends fd {
             mj.field_o.b((um) (Object) km.field_a);
             int var8_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "pe.A(" + (param0 != null ? "{...}" : "null") + 44 + 22050 + 44 + 512 + 44 + -124 + 44 + 1 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + 22050 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "pe.A(" + (param0 != null ? "{...}" : "null") + ',' + 22050 + ',' + 512 + ',' + -124 + ',' + true + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + 22050 + ')');
         }
     }
 

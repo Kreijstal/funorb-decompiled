@@ -629,7 +629,7 @@ final class jd extends tc implements uo {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ')');
         }
         return stackIn_12_0 != 0;
     }
@@ -1106,7 +1106,7 @@ final class jd extends tc implements uo {
           L4: {
             var5 = decompiledCaughtException;
             stackOut_45_0 = (RuntimeException) var5;
-            stackOut_45_1 = new StringBuilder().append("jd.B(").append(param0).append(44);
+            stackOut_45_1 = new StringBuilder().append("jd.B(").append(param0).append(',');
             stackIn_47_0 = stackOut_45_0;
             stackIn_47_1 = stackOut_45_1;
             stackIn_46_0 = stackOut_45_0;
@@ -1131,7 +1131,7 @@ final class jd extends tc implements uo {
           }
           L5: {
             stackOut_48_0 = (RuntimeException) (Object) stackIn_48_0;
-            stackOut_48_1 = ((StringBuilder) (Object) stackIn_48_1).append(stackIn_48_2).append(44);
+            stackOut_48_1 = ((StringBuilder) (Object) stackIn_48_1).append(stackIn_48_2).append(',');
             stackIn_50_0 = stackOut_48_0;
             stackIn_50_1 = stackOut_48_1;
             stackIn_49_0 = stackOut_48_0;
@@ -1154,7 +1154,7 @@ final class jd extends tc implements uo {
               break L5;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + 44 + param3 + 41);
+          throw ig.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + ',' + param3 + ')');
         }
     }
 
@@ -1429,7 +1429,7 @@ final class jd extends tc implements uo {
         try {
             ((jd) this).e(param1 ^ 2079, 256 + (param1 + -(int)(2048.0 * Math.atan2((double)(-(((jd) this).field_w - param0.field_w)), (double)(((jd) this).field_J + -param0.field_J)) / 3.141592653589793 / 2.0)) & 2047);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "jd.HB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "jd.HB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1755,7 +1755,7 @@ final class jd extends tc implements uo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var1, "jd.VA(" + param0 + 41);
+          throw ig.a((Throwable) (Object) var1, "jd.VA(" + param0 + ')');
         }
     }
 
@@ -2042,7 +2042,7 @@ final class jd extends tc implements uo {
           L11: {
             var16 = decompiledCaughtException;
             stackOut_30_0 = (RuntimeException) var16;
-            stackOut_30_1 = new StringBuilder().append("jd.<init>(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44);
+            stackOut_30_1 = new StringBuilder().append("jd.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -2065,7 +2065,7 @@ final class jd extends tc implements uo {
               break L11;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param10 + 44 + param11 + 44 + param12 + 44 + param13 + 44 + param14 + 41);
+          throw ig.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ')');
         }
     }
 

@@ -99,7 +99,7 @@ final class c {
                             if (var8 == 0) {
                               break L6;
                             } else {
-                              StringBuilder discarded$3 = var5.append(var8);
+                              StringBuilder discarded$3 = var5.append((char) var8);
                               break L6;
                             }
                           }
@@ -149,7 +149,7 @@ final class c {
               break L7;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param1 + 41);
+          throw kg.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + param1 + ')');
         }
     }
 
@@ -289,7 +289,7 @@ final class c {
           }
           L7: {
             stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param1).append(44).append(16).append(44);
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',').append(param1).append(',').append(16).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -312,7 +312,7 @@ final class c {
               break L7;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
         return stackIn_19_0;
     }

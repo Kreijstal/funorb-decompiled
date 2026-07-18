@@ -162,7 +162,7 @@ final class qi {
           L9: {
             var2 = decompiledCaughtException;
             stackOut_37_0 = (RuntimeException) var2;
-            stackOut_37_1 = new StringBuilder().append("qi.B(").append(-111).append(44);
+            stackOut_37_1 = new StringBuilder().append("qi.B(").append(-111).append(',');
             stackIn_39_0 = stackOut_37_0;
             stackIn_39_1 = stackOut_37_1;
             stackIn_38_0 = stackOut_37_0;
@@ -185,7 +185,7 @@ final class qi {
               break L9;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ')');
         }
     }
 

@@ -971,7 +971,7 @@ final class pd extends ca {
             ((pd) this).field_A = (int)(256.0 * Math.random());
             ((pd) this).field_m = 0;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "pd.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "pd.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

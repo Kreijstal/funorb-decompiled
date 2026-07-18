@@ -72,7 +72,7 @@ final class hc extends vd implements lja {
           L4: {
             var6 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var6;
-            stackOut_11_1 = new StringBuilder().append("hc.AA(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("hc.AA(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -95,7 +95,7 @@ final class hc extends vd implements lja {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw pe.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class hc extends vd implements lja {
             ((hc) this).field_F[var4_int] = ((hc) this).a((pl) this, param1, param0 + 19521);
             ((hc) this).field_G[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "hc.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "hc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class hc extends vd implements lja {
             var4_int = ((hc) this).field_C != null ? ((hc) this).field_H.a(((hc) this).field_C, 260, ((hc) this).field_H.field_u) : 0;
             ((hc) this).a(0, 22 + var4_int, (byte) 59, 288, 0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "hc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -239,7 +239,7 @@ final class hc extends vd implements lja {
           }
           L3: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -262,7 +262,7 @@ final class hc extends vd implements lja {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }

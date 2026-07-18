@@ -59,7 +59,7 @@ abstract class fe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var3, "fe.E(" + -102 + 44 + param1 + 44 + param2 + 41);
+          throw ma.a((Throwable) (Object) var3, "fe.E(" + -102 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_8_0;
     }
@@ -89,7 +89,7 @@ abstract class fe {
             b.field_t = b.field_t + (var2_int >> 1);
             rb.field_w = rb.field_w + param0.c((byte) 25);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "fe.C(" + (param0 != null ? "{...}" : "null") + 44 + 12726 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "fe.C(" + (param0 != null ? "{...}" : "null") + ',' + 12726 + ')');
         }
     }
 

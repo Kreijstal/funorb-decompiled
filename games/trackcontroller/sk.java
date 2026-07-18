@@ -162,7 +162,7 @@ final class sk {
             }
             ((sk) this).field_i = var4_float * (float)((sk) this).field_e / (float)(1 + ((sk) this).field_c);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "sk.D(" + -1 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "sk.D(" + -1 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -220,7 +220,7 @@ final class sk {
           L2: {
             var4_ref = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var4_ref;
-            stackOut_7_1 = new StringBuilder().append("sk.A(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("sk.A(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -243,7 +243,7 @@ final class sk {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 44 + param3 + 41);
+          throw sl.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_6_0 != 0;
     }

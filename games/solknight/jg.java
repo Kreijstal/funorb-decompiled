@@ -12,7 +12,7 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             ((jg) this).field_a = true;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "jg.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "jg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var2, "jg.C(" + 3 + 44 + -100 + 41);
+          throw fc.a((Throwable) (Object) var2, "jg.C(" + 3 + ',' + -100 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             de.a(param1, ((jg) this).field_c, (byte) 126);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "jg.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "jg.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
             int var3_int = -44;
             uf.a(param2, 123, 256, param0);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "jg.E(" + (param0 != null ? "{...}" : "null") + 44 + 86 + 44 + param2 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "jg.E(" + (param0 != null ? "{...}" : "null") + ',' + 86 + ',' + param2 + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
                             if (var8 == 0) {
                               break L5;
                             } else {
-                              StringBuilder discarded$5 = var5.append(var8);
+                              StringBuilder discarded$5 = var5.append((char) var8);
                               break L5;
                             }
                           } else {
@@ -212,7 +212,7 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L6;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + -2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ',' + -2 + ')');
         }
     }
 

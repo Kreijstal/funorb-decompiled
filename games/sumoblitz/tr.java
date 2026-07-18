@@ -306,7 +306,7 @@ final class tr extends ak {
           L13: {
             var4 = decompiledCaughtException;
             stackOut_40_0 = (RuntimeException) var4;
-            stackOut_40_1 = new StringBuilder().append("tr.B(").append(param0).append(44);
+            stackOut_40_1 = new StringBuilder().append("tr.B(").append(param0).append(',');
             stackIn_42_0 = stackOut_40_0;
             stackIn_42_1 = stackOut_40_1;
             stackIn_41_0 = stackOut_40_0;
@@ -329,7 +329,7 @@ final class tr extends ak {
               break L13;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + 44 + param2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + ',' + param2 + ')');
         }
     }
 

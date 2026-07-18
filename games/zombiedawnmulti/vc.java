@@ -47,7 +47,7 @@ final class vc {
             param1.field_b.field_d = param1;
             param1.field_d.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "vc.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "vc.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + true + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1, "vc.D(" + 1 + 41);
+          throw fa.a((Throwable) (Object) var1, "vc.D(" + true + ')');
         }
     }
 

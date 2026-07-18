@@ -167,7 +167,7 @@ final class wk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "wk.D(" + param0 + 44 + 63 + 41);
+          throw nb.a((Throwable) (Object) var2, "wk.D(" + param0 + ',' + 63 + ')');
         }
         return stackIn_34_0;
     }
@@ -194,7 +194,7 @@ final class wk {
             }
             da.field_h.b(22997);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "wk.E(" + 50 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "wk.E(" + 50 + ')');
         }
     }
 

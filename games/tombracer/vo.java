@@ -27,7 +27,7 @@ abstract class vo {
             }
             int var4_int = -114 / ((param0 - -27) / 51);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "vo.L(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "vo.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -54,7 +54,7 @@ abstract class vo {
             jaggl.OpenGL.glBufferDataARBub(param1, ((vo) this).field_g, param2, 0, ((vo) this).field_a ? 35040 : 35044);
             ((vo) this).field_h.field_mb = ((vo) this).field_h.field_mb + ((vo) this).field_g;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "vo.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "vo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -24,7 +24,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
             boolean discarded$2 = param2.prepareImage(((sib) this).field_g, (java.awt.image.ImageObserver) this);
             ((sib) this).a((byte) -108);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sib.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "sib.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
         try {
             ((sib) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sib.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "sib.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
             int var5_int = -106 % ((-6 - param2) / 41);
             boolean discarded$0 = param0.drawImage(((sib) this).field_g, param1, param3, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sib.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "sib.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
           L2: {
             var3 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("sib.B(").append(80).append(44);
+            stackOut_7_1 = new StringBuilder().append("sib.B(").append(80).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -148,7 +148,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 112 + 41);
+          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + 112 + ')');
         }
     }
 
@@ -207,7 +207,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -222,7 +222,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
             param0.setColorModel(((sib) this).field_j);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sib.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "sib.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -280,7 +280,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }

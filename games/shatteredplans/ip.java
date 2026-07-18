@@ -104,7 +104,7 @@ final class ip implements Iterator {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("ip.A(").append(24243).append(44);
+            stackOut_15_1 = new StringBuilder().append("ip.A(").append(24243).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -127,7 +127,7 @@ final class ip implements Iterator {
               break L3;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
         return stackIn_14_0;
     }
@@ -161,7 +161,7 @@ final class ip implements Iterator {
             ((ip) this).field_e = ((ip) this).field_a.field_a.field_h;
             ((ip) this).field_c = null;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ip.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "ip.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

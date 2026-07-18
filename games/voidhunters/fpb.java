@@ -136,7 +136,7 @@ final class fpb extends mfb {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 0 + 41);
+          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + 0 + ')');
         }
     }
 

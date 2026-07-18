@@ -13,7 +13,7 @@ final class vl extends vg {
             ((vl) this).field_h = param1.n(31974).field_d;
             dt discarded$0 = param1.x(15470);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "vl.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "vl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

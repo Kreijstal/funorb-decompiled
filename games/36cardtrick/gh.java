@@ -41,7 +41,7 @@ final class gh extends qb {
             aj.field_s.a((qb) (Object) new gi(param0, (qb) (Object) param0), 27362);
             bg.field_tb.b((je) (Object) param0);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "gh.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "gh.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -365,7 +365,7 @@ final class cg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var1, "cg.B(" + -27587 + 41);
+          throw wg.a((Throwable) (Object) var1, "cg.B(" + -27587 + ')');
         }
     }
 

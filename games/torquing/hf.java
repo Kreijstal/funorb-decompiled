@@ -97,7 +97,7 @@ final class hf {
                               var6++;
                               break L6;
                             } else {
-                              StringBuilder discarded$3 = var5.append(var8);
+                              StringBuilder discarded$3 = var5.append((char) var8);
                               var6++;
                               break L6;
                             }
@@ -148,7 +148,7 @@ final class hf {
               break L7;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + param1 + 41);
+          throw rb.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + param1 + ')');
         }
     }
 

@@ -28,7 +28,7 @@ final class eb {
             }
             ((eb) this).field_j = var4_float * (float)((eb) this).field_c / (float)(1 + ((eb) this).field_d);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "eb.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "eb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -401,7 +401,7 @@ final class eb {
               }
               L5: {
                 stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-                stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(param1).append(44);
+                stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param1).append(',');
                 stackIn_11_0 = stackOut_9_0;
                 stackIn_11_1 = stackOut_9_1;
                 stackIn_10_0 = stackOut_9_0;
@@ -424,7 +424,7 @@ final class eb {
                   break L5;
                 }
               }
-              throw t.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+              throw t.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

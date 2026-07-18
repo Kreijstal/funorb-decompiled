@@ -16,7 +16,7 @@ final class on extends pm implements kh {
             }
             ((on) this).field_Y = -((on) this).field_y + bd.field_g + -param2;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "on.T(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "on.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class on extends pm implements kh {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("on.F(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("on.F(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -159,7 +159,7 @@ final class on extends pm implements kh {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

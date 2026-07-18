@@ -131,7 +131,7 @@ final class q implements Iterable {
             param0.field_k.field_i = param0;
             param0.field_j = param1;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "q.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "q.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -171,7 +171,7 @@ final class q implements Iterable {
             }
             pb.a(param0.field_E, param0.field_z, param0.field_B);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "q.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "q.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

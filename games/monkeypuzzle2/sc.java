@@ -78,7 +78,7 @@ final class sc {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw la.a((Throwable) (Object) var1, "sc.A(" + 0 + 41);
+              throw la.a((Throwable) (Object) var1, "sc.A(" + 0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -168,7 +168,7 @@ final class sc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "sc.B(" + 0 + 41);
+          throw la.a((Throwable) (Object) var1, "sc.B(" + false + ')');
         }
     }
 
@@ -306,7 +306,7 @@ final class sc {
               break L5;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw la.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_14_0;
     }

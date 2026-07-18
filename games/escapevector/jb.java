@@ -159,7 +159,7 @@ final class jb extends kb {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + -76 + 41);
+          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + -76 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class jb extends kb {
                 var9 = 160;
                 var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
             }
-            StringBuilder discarded$0 = var6.append(var9);
+            StringBuilder discarded$0 = var6.append((char) var9);
         }
         if (param1 != 29) {
             String discarded$1 = jb.a(-73L, (byte) -11);
@@ -609,7 +609,7 @@ final class jb extends kb {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var5;
-            stackOut_26_1 = new StringBuilder().append("jb.F(").append(param0).append(44);
+            stackOut_26_1 = new StringBuilder().append("jb.F(").append(param0).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -634,7 +634,7 @@ final class jb extends kb {
           }
           L9: {
             stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44).append(37).append(44);
+            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',').append(37).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -657,7 +657,7 @@ final class jb extends kb {
               break L9;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ')');
         }
         return (java.net.Socket) (Object) stackIn_25_0;
     }

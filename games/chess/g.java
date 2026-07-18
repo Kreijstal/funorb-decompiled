@@ -77,7 +77,7 @@ final class g extends java.awt.Canvas {
               break L1;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 127 + 41);
+          throw fk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 127 + ')');
         }
         return stackIn_4_0;
     }
@@ -94,7 +94,7 @@ final class g extends java.awt.Canvas {
         try {
             ((g) this).field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "g.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "g.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -219,7 +219,7 @@ final class g extends java.awt.Canvas {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var3;
-            stackOut_23_1 = new StringBuilder().append("g.C(").append(83).append(44);
+            stackOut_23_1 = new StringBuilder().append("g.C(").append(83).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -244,7 +244,7 @@ final class g extends java.awt.Canvas {
           }
           L2: {
             stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(44);
+            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -267,7 +267,7 @@ final class g extends java.awt.Canvas {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
         }
         return stackIn_22_0 != 0;
     }
@@ -313,7 +313,7 @@ final class g extends java.awt.Canvas {
         try {
             ((g) this).field_e.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "g.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "g.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -321,7 +321,7 @@ final class g extends java.awt.Canvas {
         try {
             ((g) this).field_e.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "g.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "g.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -147,7 +147,7 @@ final class vu extends pv {
             ((vu) this).field_n = param1 ? true : false;
             ((vu) this).field_m = new int[5][4];
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vu.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

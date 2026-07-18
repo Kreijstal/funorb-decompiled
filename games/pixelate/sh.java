@@ -98,7 +98,7 @@ final class sh implements Iterator {
             int discarded$0 = -39;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "sh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "sh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

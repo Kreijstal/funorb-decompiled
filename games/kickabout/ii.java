@@ -38,7 +38,7 @@ final class ii extends gn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "ii.C(" + 65280 + 41);
+          throw nb.a((Throwable) (Object) var1, "ii.C(" + 65280 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class ii extends gn {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 

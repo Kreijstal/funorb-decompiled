@@ -166,7 +166,7 @@ final class ik {
           L11: {
             var4 = decompiledCaughtException;
             stackOut_39_0 = (RuntimeException) var4;
-            stackOut_39_1 = new StringBuilder().append("ik.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_39_1 = new StringBuilder().append("ik.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_41_0 = stackOut_39_0;
             stackIn_41_1 = stackOut_39_1;
             stackIn_40_0 = stackOut_39_0;
@@ -189,7 +189,7 @@ final class ik {
               break L11;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + ')');
         }
         return stackIn_38_0;
     }

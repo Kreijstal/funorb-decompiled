@@ -19,7 +19,7 @@ final class cb {
             i.a(false, param2, -5136, param1);
             int var3_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "cb.C(" + 82 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "cb.C(" + 82 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class cb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var1_ref, "cb.B(" + 12 + 41);
+          throw fk.a((Throwable) (Object) var1_ref, "cb.B(" + 12 + ')');
         }
     }
 

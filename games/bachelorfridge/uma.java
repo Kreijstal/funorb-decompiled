@@ -16,7 +16,7 @@ final class uma extends sh {
         try {
             ((uma) this).a(param2, param5, (byte) 59, param4, param3);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uma.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "uma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class uma extends sh {
             ((uma) this).field_N.field_k = (pl) (Object) param0;
             ((uma) this).field_L.field_k = (pl) (Object) param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uma.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "uma.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class uma extends sh {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var6;
-            stackOut_12_1 = new StringBuilder().append("uma.N(").append(param0).append(44).append(param1).append(44).append(0).append(44);
+            stackOut_12_1 = new StringBuilder().append("uma.N(").append(param0).append(',').append(param1).append(',').append(0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -144,7 +144,7 @@ final class uma extends sh {
           }
           L6: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param4).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param4).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -167,7 +167,7 @@ final class uma extends sh {
               break L6;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class uma extends sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "uma.F(" + 1 + 41);
+          throw pe.a((Throwable) (Object) var1, "uma.F(" + 1 + ')');
         }
     }
 
@@ -299,7 +299,7 @@ final class uma extends sh {
         try {
             oc.field_l.a(param2, param4 - -param1.field_s - -(param1.field_p >> 1), -5 + param1.field_v + param3, 16777215, -1);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uma.Q(" + -68 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "uma.Q(" + -68 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -322,7 +322,7 @@ final class uma extends sh {
             }
             ((uma) this).c((wj) (Object) ((uma) this).field_L, -128);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uma.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "uma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

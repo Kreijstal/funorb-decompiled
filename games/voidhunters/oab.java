@@ -87,7 +87,7 @@ final class oab extends rqa {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var4;
-            stackOut_17_1 = new StringBuilder().append("oab.B(").append(-95).append(44).append(8).append(44);
+            stackOut_17_1 = new StringBuilder().append("oab.B(").append(-95).append(',').append(8).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -110,7 +110,7 @@ final class oab extends rqa {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param3 + ')');
         }
         return stackIn_16_0;
     }
@@ -177,7 +177,7 @@ final class oab extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }

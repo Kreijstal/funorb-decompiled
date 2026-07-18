@@ -113,7 +113,7 @@ final class kg {
               L5: {
                 runtimeException = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_13_0 = (RuntimeException) runtimeException;
-                stackOut_13_1 = new StringBuilder().append("kg.C(").append(param0).append(44);
+                stackOut_13_1 = new StringBuilder().append("kg.C(").append(param0).append(',');
                 stackIn_15_0 = stackOut_13_0;
                 stackIn_15_1 = stackOut_13_1;
                 stackIn_14_0 = stackOut_13_0;
@@ -138,7 +138,7 @@ final class kg {
               }
               L6: {
                 stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44);
+                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
                 stackIn_18_0 = stackOut_16_0;
                 stackIn_18_1 = stackOut_16_1;
                 stackIn_17_0 = stackOut_16_0;
@@ -161,7 +161,7 @@ final class kg {
                   break L6;
                 }
               }
-              throw fc.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+              throw fc.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

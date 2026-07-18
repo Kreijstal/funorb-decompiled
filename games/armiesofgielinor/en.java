@@ -22,7 +22,7 @@ abstract class en extends tj implements eg {
             ((en) this).field_H = param1;
             ((en) this).field_H.field_j = (en) this;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "en.I(" + -108 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "en.I(" + -108 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -106,7 +106,7 @@ abstract class en extends tj implements eg {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
         }
         return stackIn_7_0;
     }

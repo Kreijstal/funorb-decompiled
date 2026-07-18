@@ -28,7 +28,7 @@ final class lh {
             param1.field_q = var5.b(true);
             var5.b((byte) 20, var5.field_u - var4);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "lh.B(" + 6 + 44 + (param1 != null ? "{...}" : "null") + 44 + 81 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "lh.B(" + 6 + ',' + (param1 != null ? "{...}" : "null") + ',' + 81 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class lh {
             }
             ba.field_d = 0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "lh.C(" + -22 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "lh.C(" + -22 + ')');
         }
     }
 

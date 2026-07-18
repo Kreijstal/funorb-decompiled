@@ -38,7 +38,7 @@ class ko extends ll {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var2, "ko.M(" + 1 + 44 + 5 + 41);
+          throw vk.a((Throwable) (Object) var2, "ko.M(" + true + ',' + 5 + ')');
         }
     }
 

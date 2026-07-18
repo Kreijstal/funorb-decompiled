@@ -67,7 +67,7 @@ final class oi extends gb implements n {
             var4_int = null == ((oi) this).field_N ? 0 : ((oi) this).field_I.a(((oi) this).field_N, 260, ((oi) this).field_I.field_s);
             ((oi) this).a(0, (byte) 126, 288, 0, var4_int + 22);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "oi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "oi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class oi extends gb implements n {
             }
             var6_int = -43 / ((param4 - -5) / 57);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "oi.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "oi.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class oi extends gb implements n {
             ((oi) this).field_K[var4_int] = ((oi) this).a((byte) 23, (sc) this, param1);
             ((oi) this).field_L[var4_int] = param0;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "oi.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "oi.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class oi extends gb implements n {
           L2: {
             var4_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4_ref;
-            stackOut_4_1 = new StringBuilder().append("oi.D(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("oi.D(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -203,7 +203,7 @@ final class oi extends gb implements n {
           }
           L3: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -226,7 +226,7 @@ final class oi extends gb implements n {
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_3_0;
     }

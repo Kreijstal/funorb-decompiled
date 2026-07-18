@@ -58,7 +58,7 @@ final class ga implements Iterable {
             param0.field_b = param1;
             param0.field_h.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ga.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "ga.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

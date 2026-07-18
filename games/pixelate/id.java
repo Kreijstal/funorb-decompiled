@@ -36,7 +36,7 @@ final class id {
             int discarded$0 = var5.b(var4, (byte) 84);
             var5.f(var5.field_m - var4, -1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "id.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "id.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class id {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "id.D(" + param0 + 41);
+          throw aa.a((Throwable) (Object) var1, "id.D(" + param0 + ')');
         }
     }
 

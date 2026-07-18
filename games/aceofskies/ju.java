@@ -153,7 +153,7 @@ final class ju extends rt {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2_ref;
-            stackOut_4_1 = new StringBuilder().append("ju.A(").append(0).append(44);
+            stackOut_4_1 = new StringBuilder().append("ju.A(").append(0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -176,7 +176,7 @@ final class ju extends rt {
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -201,7 +201,7 @@ final class ju extends rt {
             jaggl.OpenGL.glPixelStorei(3317, 4);
             ((ju) this).a(true, -128);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "ju.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "ju.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -226,7 +226,7 @@ final class ju extends rt {
             tj.field_o = tj.field_o + (var2_int >> 1);
             gl.field_b = gl.field_b + param1.i((byte) 0);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "ju.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "ju.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

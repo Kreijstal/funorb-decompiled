@@ -65,7 +65,7 @@ final class ig {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) runtimeException, "ig.B(" + -125 + 41);
+          throw tba.a((Throwable) (Object) runtimeException, "ig.B(" + -125 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class ig {
             param1.field_f.field_g = param1;
             param1.field_g.field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ig.A(" + 31 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ig.A(" + 31 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

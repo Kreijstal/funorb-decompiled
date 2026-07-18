@@ -111,7 +111,7 @@ final class og extends ek {
             }
             ((og) this).field_R = ((og) this).field_A.field_m.a((byte) 32, ((og) this).field_O, 3000);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "og.Q(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "og.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1128,7 +1128,7 @@ final class og extends ek {
                           ui.field_j = cf.field_f[var34_int];
                           break L55;
                         } else {
-                          ui.field_j = cf.field_f[var34_int] + " - " + var35;
+                          ui.field_j = cf.field_f[var34_int] + " - " + (String) var35;
                           break L55;
                         }
                       } else {
@@ -1202,7 +1202,7 @@ final class og extends ek {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var3, "og.H(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw fa.a((Throwable) (Object) var3, "og.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_13_0;
     }
@@ -1263,7 +1263,7 @@ final class og extends ek {
             var4 = -1L;
             dc.a(var4, param1, var2, -100, var3);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "og.V(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "og.V(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

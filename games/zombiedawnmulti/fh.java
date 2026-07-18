@@ -84,7 +84,7 @@ final class fh {
           L2: {
             var4_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4_ref;
-            stackOut_8_1 = new StringBuilder().append("fh.B(").append(0).append(44);
+            stackOut_8_1 = new StringBuilder().append("fh.B(").append(false).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -109,7 +109,7 @@ final class fh {
           }
           L3: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -132,7 +132,7 @@ final class fh {
               break L3;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
         return stackIn_7_0;
     }
@@ -740,7 +740,7 @@ final class fh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1, "fh.P(" + 1 + 41);
+          throw fa.a((Throwable) (Object) var1, "fh.P(" + 1 + ')');
         }
     }
 
@@ -966,7 +966,7 @@ final class fh {
           L18: {
             var3 = decompiledCaughtException;
             stackOut_43_0 = (RuntimeException) var3;
-            stackOut_43_1 = new StringBuilder().append("fh.M(").append(param0).append(44);
+            stackOut_43_1 = new StringBuilder().append("fh.M(").append(param0).append(',');
             stackIn_45_0 = stackOut_43_0;
             stackIn_45_1 = stackOut_43_1;
             stackIn_44_0 = stackOut_43_0;
@@ -989,7 +989,7 @@ final class fh {
               break L18;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + ')');
         }
     }
 
@@ -1064,7 +1064,7 @@ final class fh {
           }
           L2: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -1087,7 +1087,7 @@ final class fh {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + -71 + 41);
+          throw fa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + -71 + ')');
         }
         return stackIn_3_0;
     }
@@ -1142,7 +1142,7 @@ final class fh {
             }
             ((fh) this).field_k = new boolean[((fh) this).field_i.field_e][((fh) this).field_i.field_d];
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "fh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "fh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1753,7 +1753,7 @@ final class fh {
           L17: {
             var5 = decompiledCaughtException;
             stackOut_79_0 = (RuntimeException) var5;
-            stackOut_79_1 = new StringBuilder().append("fh.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_79_1 = new StringBuilder().append("fh.E(").append(param0).append(',').append(param1).append(',');
             stackIn_81_0 = stackOut_79_0;
             stackIn_81_1 = stackOut_79_1;
             stackIn_80_0 = stackOut_79_0;
@@ -1776,7 +1776,7 @@ final class fh {
               break L17;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_82_0, stackIn_82_2 + 44 + param3 + 41);
+          throw fa.a((Throwable) (Object) stackIn_82_0, stackIn_82_2 + ',' + param3 + ')');
         }
     }
 

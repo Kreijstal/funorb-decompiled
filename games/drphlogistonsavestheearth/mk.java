@@ -54,7 +54,7 @@ final class mk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "mk.A(" + -91 + 44 + param1 + 41);
+          throw ie.a((Throwable) (Object) var2, "mk.A(" + -91 + ',' + param1 + ')');
         }
     }
 
@@ -199,7 +199,7 @@ final class mk {
               break L7;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw ie.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ')');
         }
     }
 

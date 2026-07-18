@@ -33,7 +33,7 @@ final class nha {
             param1.field_i = var6.f(-76);
             var6.b((byte) 117, var6.field_g - var4);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "nha.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "nha.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class nha {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var6, "nha.C(" + param0 + 44 + param1 + 44 + param2 + 44 + 1 + 44 + param4 + 44 + param5 + 41);
+          throw pe.a((Throwable) (Object) var6, "nha.C(" + param0 + ',' + param1 + ',' + param2 + ',' + true + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -101,7 +101,7 @@ final class vba extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -111,7 +111,7 @@ final class vba extends rqa {
             wg.field_p = param1;
             cea.a(-53, param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "vba.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "vba.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

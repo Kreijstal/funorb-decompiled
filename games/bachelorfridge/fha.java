@@ -150,7 +150,7 @@ final class fha extends at {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var5;
-            stackOut_21_1 = new StringBuilder().append("fha.F(").append(param0).append(44).append(0).append(44);
+            stackOut_21_1 = new StringBuilder().append("fha.F(").append(param0).append(',').append(0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -173,7 +173,7 @@ final class fha extends at {
               break L8;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param3 + 44 + param4 + 41);
+          throw pe.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -188,7 +188,7 @@ final class fha extends at {
         try {
             ((fha) this).field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "fha.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "fha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -252,7 +252,7 @@ final class fha extends at {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var8, "fha.C(" + param0 + 44 + 127 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw pe.a((Throwable) (Object) var8, "fha.C(" + param0 + ',' + 127 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

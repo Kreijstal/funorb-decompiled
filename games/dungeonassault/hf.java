@@ -37,7 +37,7 @@ abstract class hf extends sj {
             ((hf) this).b((byte) -57, (lm) (Object) ((hf) this).field_rb);
             ((hf) this).field_xb = null;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "hf.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "hf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -50,7 +50,7 @@ abstract class hf extends sj {
             ((hf) this).field_vb = param4;
             this.b(param1, (byte) 98);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "hf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -162,7 +162,7 @@ abstract class hf extends sj {
               break L3;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 44 + 92 + 41);
+          throw vk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + 92 + ')');
         }
         return stackIn_10_0 != 0;
     }
@@ -239,7 +239,7 @@ abstract class hf extends sj {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("hf.L(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("hf.L(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -262,7 +262,7 @@ abstract class hf extends sj {
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
     }
 

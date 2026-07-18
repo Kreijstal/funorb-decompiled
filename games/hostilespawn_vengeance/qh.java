@@ -1111,7 +1111,7 @@ final class qh {
               break L5;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 256 + 41);
+          throw wg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + 256 + ')');
         }
     }
 
@@ -1885,7 +1885,7 @@ final class qh {
               break L1;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -80 + 41);
+          throw wg.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -80 + ')');
         }
     }
 

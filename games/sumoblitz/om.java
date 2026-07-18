@@ -12,7 +12,7 @@ final class om extends ms {
         try {
             ((om) this).field_o = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "om.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "om.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

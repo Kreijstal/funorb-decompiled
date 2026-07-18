@@ -51,7 +51,7 @@ final class bh {
         if (ue.field_b > 0) {
             var1 = var1 + ":";
             for (var2 = 0; var2 < ue.field_b; var2++) {
-                var1 = var1 + 32;
+                var1 = var1 + ' ';
                 var3 = ae.field_N.field_r[var2] & 255;
                 var4 = var3 >> 4;
                 var3 = var3 & 15;
@@ -109,7 +109,7 @@ final class bh {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("bh.C(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("bh.C(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -132,7 +132,7 @@ final class bh {
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -149,7 +149,7 @@ final class bh {
             }
             b.a(((bh) this).field_b, (byte) 38, 31536000L, "jagex-last-login-method", param0);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "bh.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "bh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -157,7 +157,7 @@ final class bh {
         try {
             ((bh) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "bh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

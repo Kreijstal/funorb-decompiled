@@ -88,7 +88,7 @@ final class gg {
               L3: {
                 var3_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_8_0 = (RuntimeException) var3_ref;
-                stackOut_8_1 = new StringBuilder().append("gg.B(").append(1).append(44);
+                stackOut_8_1 = new StringBuilder().append("gg.B(").append(true).append(',');
                 stackIn_10_0 = stackOut_8_0;
                 stackIn_10_1 = stackOut_8_1;
                 stackIn_9_0 = stackOut_8_0;
@@ -113,7 +113,7 @@ final class gg {
               }
               L4: {
                 stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-                stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+                stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
                 stackIn_13_0 = stackOut_11_0;
                 stackIn_13_1 = stackOut_11_1;
                 stackIn_12_0 = stackOut_11_0;
@@ -136,7 +136,7 @@ final class gg {
                   break L4;
                 }
               }
-              throw ld.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+              throw ld.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

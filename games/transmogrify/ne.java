@@ -90,7 +90,7 @@ final class ne {
             int discarded$0 = var5.d(var4, -1323322296);
             var5.a((byte) -42, var5.field_h + -var4);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "ne.C(" + 7 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "ne.C(" + 7 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

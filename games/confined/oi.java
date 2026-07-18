@@ -444,7 +444,7 @@ final class oi extends rk {
               L32: {
                 var6 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_99_0 = (RuntimeException) var6;
-                stackOut_99_1 = new StringBuilder().append("oi.B(").append(param0).append(44).append(param1).append(44);
+                stackOut_99_1 = new StringBuilder().append("oi.B(").append(param0).append(',').append(param1).append(',');
                 stackIn_101_0 = stackOut_99_0;
                 stackIn_101_1 = stackOut_99_1;
                 stackIn_100_0 = stackOut_99_0;
@@ -469,7 +469,7 @@ final class oi extends rk {
               }
               L33: {
                 stackOut_102_0 = (RuntimeException) (Object) stackIn_102_0;
-                stackOut_102_1 = ((StringBuilder) (Object) stackIn_102_1).append(stackIn_102_2).append(44).append(param3).append(44);
+                stackOut_102_1 = ((StringBuilder) (Object) stackIn_102_1).append(stackIn_102_2).append(',').append(param3).append(',');
                 stackIn_104_0 = stackOut_102_0;
                 stackIn_104_1 = stackOut_102_1;
                 stackIn_103_0 = stackOut_102_0;
@@ -492,7 +492,7 @@ final class oi extends rk {
                   break L33;
                 }
               }
-              throw sd.a((Throwable) (Object) stackIn_105_0, stackIn_105_2 + 44 + param5 + 41);
+              throw sd.a((Throwable) (Object) stackIn_105_0, stackIn_105_2 + ',' + param5 + ')');
             }
             return stackIn_98_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -513,7 +513,7 @@ final class oi extends rk {
         try {
             ((oi) this).field_r = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "oi.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "oi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

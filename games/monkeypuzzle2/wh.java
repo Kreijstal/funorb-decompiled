@@ -82,7 +82,7 @@ final class wh {
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 1 + 41);
+          throw la.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + true + ')');
         }
     }
 
@@ -200,7 +200,7 @@ final class wh {
           L4: {
             var2 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var2;
-            stackOut_12_1 = new StringBuilder().append("wh.C(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("wh.C(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -223,7 +223,7 @@ final class wh {
               break L4;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 

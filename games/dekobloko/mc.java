@@ -27,7 +27,7 @@ final class mc {
             int discarded$0 = var5.a((byte) -15, var4);
             var5.b(var5.field_n + -var4, true);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "mc.B(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "mc.B(" + true + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -1258,7 +1258,7 @@ final class mc {
                                     var25_ref = var32;
                                     var22_ref = var25_ref;
                                     if (var21 != null) {
-                                      var21 = (Object) (Object) (var21 + "<br>" + var32);
+                                      var21 = (Object) (Object) ((String) var21 + "<br>" + var32);
                                       break L74;
                                     } else {
                                       var21 = (Object) (Object) var32;
@@ -1291,7 +1291,7 @@ final class mc {
                                     }
                                   }
                                   if (var21 != null) {
-                                    var21 = (Object) (Object) (var21 + "<br>" + var22_ref);
+                                    var21 = (Object) (Object) ((String) var21 + "<br>" + var22_ref);
                                     break L72;
                                   } else {
                                     var21 = (Object) (Object) var22_ref;
@@ -1367,11 +1367,11 @@ final class mc {
                             if (var21 == null) {
                               break L80;
                             } else {
-                              var21 = (Object) (Object) ("<col=A00000>" + var21);
+                              var21 = (Object) (Object) ("<col=A00000>" + (String) var21);
                               int discarded$7 = 0;
                               var33 = j.a("<br>", (String) var21, "<br><col=A00000>");
                               if (var20 != null) {
-                                var20 = (Object) (Object) (var20 + "<br>" + var33);
+                                var20 = (Object) (Object) ((String) var20 + "<br>" + var33);
                                 break L80;
                               } else {
                                 var20 = (Object) (Object) var33;
@@ -1727,7 +1727,7 @@ final class mc {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
+          throw dh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
         }
         return stackIn_9_0 != 0;
     }

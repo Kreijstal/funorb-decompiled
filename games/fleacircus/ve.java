@@ -53,7 +53,7 @@ final class ve {
         try {
             ((ve) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "ve.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "ve.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

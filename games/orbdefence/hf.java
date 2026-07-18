@@ -16,7 +16,7 @@ final class hf extends ca {
             param1.addKeyListener((java.awt.event.KeyListener) (Object) ad.field_b);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) ad.field_b);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "hf.B(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "hf.B(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class hf extends ca {
           }
           L1: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44).append(6).append(44).append(param3).append(44).append(240).append(44).append(param5).append(44).append(6).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(param1).append(',').append(6).append(',').append(param3).append(',').append(240).append(',').append(param5).append(',').append(6).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -145,7 +145,7 @@ final class hf extends ca {
           }
           L2: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -170,7 +170,7 @@ final class hf extends ca {
           }
           L3: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(8).append(44).append(127).append(44).append(320).append(44).append(param12).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(8).append(',').append(127).append(',').append(320).append(',').append(param12).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -193,7 +193,7 @@ final class hf extends ca {
               break L3;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param14 + 41);
+          throw dd.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param14 + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class hf extends ca {
             ta.j();
             ji.field_b = -ol.field_h;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "hf.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 1000 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "hf.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + 1000 + ')');
         }
     }
 
@@ -227,7 +227,7 @@ final class hf extends ca {
             ((hf) this).field_f = param1;
             ((hf) this).field_h.g(ck.field_f * ((hf) this).field_j + 128 >> 8);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "hf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

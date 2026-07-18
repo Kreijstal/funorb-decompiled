@@ -349,7 +349,7 @@ class wf {
               break L22;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 361 + 44 + param6 + 41);
+          throw ch.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + 361 + ',' + param6 + ')');
         }
     }
 
@@ -421,7 +421,7 @@ class wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var1, "wf.VB(" + -1 + 41);
+          throw ch.a((Throwable) (Object) var1, "wf.VB(" + -1 + ')');
         }
         return stackIn_22_0;
     }

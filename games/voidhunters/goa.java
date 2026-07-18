@@ -23,7 +23,7 @@ final class goa extends iw {
             ((goa) this).field_M = false;
             ((goa) this).b(-18756, (shb) (Object) ((goa) this).field_N);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "goa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "goa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class goa extends iw {
           L4: {
             var5 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var5;
-            stackOut_15_1 = new StringBuilder().append("goa.D(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("goa.D(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -169,7 +169,7 @@ final class goa extends iw {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

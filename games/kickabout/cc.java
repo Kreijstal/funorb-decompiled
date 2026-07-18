@@ -105,7 +105,7 @@ final class cc {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class cc {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("cc.D(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("cc.D(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -216,7 +216,7 @@ final class cc {
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
     }
 

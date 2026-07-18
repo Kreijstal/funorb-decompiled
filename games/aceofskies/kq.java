@@ -285,7 +285,7 @@ final class kq {
           L19: {
             var7 = decompiledCaughtException;
             stackOut_72_0 = (RuntimeException) var7;
-            stackOut_72_1 = new StringBuilder().append("kq.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_72_1 = new StringBuilder().append("kq.B(").append(param0).append(',').append(param1).append(',');
             stackIn_74_0 = stackOut_72_0;
             stackIn_74_1 = stackOut_72_1;
             stackIn_73_0 = stackOut_72_0;
@@ -310,7 +310,7 @@ final class kq {
           }
           L20: {
             stackOut_75_0 = (RuntimeException) (Object) stackIn_75_0;
-            stackOut_75_1 = ((StringBuilder) (Object) stackIn_75_1).append(stackIn_75_2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_75_1 = ((StringBuilder) (Object) stackIn_75_1).append(stackIn_75_2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_77_0 = stackOut_75_0;
             stackIn_77_1 = stackOut_75_1;
             stackIn_76_0 = stackOut_75_0;
@@ -333,7 +333,7 @@ final class kq {
               break L20;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + ')');
         }
         return stackIn_71_0;
     }

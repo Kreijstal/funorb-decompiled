@@ -294,7 +294,7 @@ final class vb {
             }
             param1.f();
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "vb.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "vb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

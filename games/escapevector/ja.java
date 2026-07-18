@@ -260,7 +260,7 @@ final class ja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "ja.C(" + -120 + 41);
+          throw t.a((Throwable) (Object) var1, "ja.C(" + -120 + ')');
         }
     }
 
@@ -324,7 +324,7 @@ final class ja {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 1 + 41);
+          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + true + ')');
         }
     }
 

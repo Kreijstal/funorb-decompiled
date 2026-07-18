@@ -118,7 +118,7 @@ abstract class ed extends ca {
               L8: {
                 runtimeException = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_17_0 = (RuntimeException) runtimeException;
-                stackOut_17_1 = new StringBuilder().append("ed.GB(").append(param0).append(44);
+                stackOut_17_1 = new StringBuilder().append("ed.GB(").append(param0).append(',');
                 stackIn_19_0 = stackOut_17_0;
                 stackIn_19_1 = stackOut_17_1;
                 stackIn_18_0 = stackOut_17_0;
@@ -141,7 +141,7 @@ abstract class ed extends ca {
                   break L8;
                 }
               }
-              throw ld.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+              throw ld.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -160,7 +160,7 @@ abstract class ed extends ca {
             var2 = sd.a(param1, "jagex logo2.packvorbis", "");
             ke discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "ed.FB(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "ed.FB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -251,7 +251,7 @@ abstract class ed extends ca {
               break L3;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 1 + 41);
+          throw ld.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + true + ')');
         }
         return stackIn_8_0;
     }

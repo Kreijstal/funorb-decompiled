@@ -18,7 +18,7 @@ final class dj {
             op.b(t.field_d / 2, t.field_j / 2, true);
             jj.a(param2.field_z + param2.field_D, false, param1.field_D, param2.field_D, param1.field_D + param1.field_z);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "dj.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "dj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class dj {
             int discarded$0 = -1501881951;
             dj.a();
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "dj.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + -1501881951 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "dj.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + -1501881951 + ')');
         }
     }
 

@@ -13,7 +13,7 @@ final class iw {
             iea.a(dg.field_c / 2, dg.field_i / 2, (byte) -98);
             mja.a(param3.field_v, param2.field_v, 3, param3.field_B + param3.field_v, param2.field_v - -param2.field_B);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "iw.D(" + param0 + 44 + 0 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "iw.D(" + param0 + ',' + false + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

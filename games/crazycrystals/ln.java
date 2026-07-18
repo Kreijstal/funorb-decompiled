@@ -79,7 +79,7 @@ abstract class ln {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var5;
-            stackOut_8_1 = new StringBuilder().append("ln.J(").append(-17512).append(44).append(param1).append(44);
+            stackOut_8_1 = new StringBuilder().append("ln.J(").append(-17512).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -104,7 +104,7 @@ abstract class ln {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -127,7 +127,7 @@ abstract class ln {
               break L4;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param4 + 41);
+          throw dn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param4 + ')');
         }
     }
 
@@ -148,7 +148,7 @@ abstract class ln {
             mj.field_f = bf.a(-1, "sprites_player_death_electrocution_skeleton", "", param1);
             ro.field_u = bf.a(~param0, "sprites_player_death_electrocution_halo", "", param1);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "ln.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "ln.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -159,7 +159,7 @@ abstract class ln {
             ((ln) this).field_a = param0;
             ((ln) this).field_b = param3;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "ln.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "ln.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

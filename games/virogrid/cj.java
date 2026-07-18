@@ -209,7 +209,7 @@ final class cj {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_29_0 = (RuntimeException) var2;
-            stackOut_29_1 = new StringBuilder().append("cj.C(").append(param0).append(44);
+            stackOut_29_1 = new StringBuilder().append("cj.C(").append(param0).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -232,7 +232,7 @@ final class cj {
               break L1;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ')');
         }
         return stackIn_28_0;
     }
@@ -279,7 +279,7 @@ final class cj {
             ((cj) this).field_a = 0;
             ((cj) this).field_k = param2;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "cj.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "cj.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -38,7 +38,7 @@ final class or {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "or.B(" + 0 + 41);
+          throw nb.a((Throwable) (Object) var1, "or.B(" + false + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class or {
               break L7;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 44 + param2 + 44 + 99 + 41);
+          throw nb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ',' + param2 + ',' + 99 + ')');
         }
     }
 

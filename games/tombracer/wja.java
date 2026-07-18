@@ -21,7 +21,7 @@ final class wja extends ci {
             rv.field_c.a(-24 + (wo.field_k.field_G + -24), -20 + wo.field_k.field_t + -24, -23776, 16, 24);
             bma.field_v.a(80, 24, -23776, -24 + wo.field_k.field_t - 20, 120);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wja.D(" + (param0 != null ? "{...}" : "null") + 44 + 15165 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "wja.D(" + (param0 != null ? "{...}" : "null") + ',' + 15165 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class wja extends ci {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var4;
-            stackOut_15_1 = new StringBuilder().append("wja.A(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("wja.A(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -132,7 +132,7 @@ final class wja extends ci {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param2 + ')');
         }
     }
 

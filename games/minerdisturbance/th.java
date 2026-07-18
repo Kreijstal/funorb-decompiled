@@ -128,7 +128,7 @@ final class th {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("th.B(").append(33).append(44);
+            stackOut_13_1 = new StringBuilder().append("th.B(").append(33).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -151,7 +151,7 @@ final class th {
               break L4;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class th {
             this.a((byte) 126);
             this.a(33, param0);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "th.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "th.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -249,7 +249,7 @@ final class th {
           L5: {
             var3 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("th.D(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("th.D(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -272,7 +272,7 @@ final class th {
               break L5;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
     }
 
@@ -340,7 +340,7 @@ final class th {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("th.E(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("th.E(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -363,7 +363,7 @@ final class th {
               break L4;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 

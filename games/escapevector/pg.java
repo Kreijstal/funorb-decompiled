@@ -184,7 +184,7 @@ abstract class pg {
           L5: {
             var5 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var5;
-            stackOut_17_1 = new StringBuilder().append("pg.K(").append(param0).append(44).append(param1).append(44);
+            stackOut_17_1 = new StringBuilder().append("pg.K(").append(param0).append(',').append(param1).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -207,7 +207,7 @@ abstract class pg {
               break L5;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param3 + 41);
+          throw t.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param3 + ')');
         }
         return stackIn_16_0;
     }

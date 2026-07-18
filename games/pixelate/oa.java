@@ -14,7 +14,7 @@ final class oa extends hn implements hi, mb {
             int var3_int = -49 / ((-30 - param0) / 60);
             ((oa) this).b(2048);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "oa.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "oa.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class oa extends hn implements hi, mb {
                 }
               }
             }
-            var2 = var2 + 32;
+            var2 = var2 + ' ';
             continue L1;
           }
         }
@@ -243,7 +243,7 @@ final class oa extends hn implements hi, mb {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw aa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 

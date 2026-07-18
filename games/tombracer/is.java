@@ -44,7 +44,7 @@ final class is extends jea {
                   break L2;
                 } else {
                   if (((is) this).field_vb.length() > 0) {
-                    StringBuilder discarded$8 = ((is) this).field_vb.append(var2);
+                    StringBuilder discarded$8 = ((is) this).field_vb.append((char) var2);
                     break L2;
                   } else {
                     break L2;
@@ -53,7 +53,7 @@ final class is extends jea {
               }
               if (dja.a((byte) -17, (char) var2)) {
                 L3: {
-                  StringBuilder discarded$9 = ((is) this).field_vb.append(var2);
+                  StringBuilder discarded$9 = ((is) this).field_vb.append((char) var2);
                   if (fna.field_h == 84) {
                     if (((is) this).field_vb.length() <= 0) {
                       ((is) this).field_ub = 1;
@@ -135,7 +135,7 @@ final class is extends jea {
                     }
                   }
                 } else {
-                  StringBuilder discarded$10 = ((is) this).field_vb.append(var2);
+                  StringBuilder discarded$10 = ((is) this).field_vb.append((char) var2);
                   if (fna.field_h == 84) {
                     if (((is) this).field_vb.length() <= 0) {
                       L8: {
@@ -273,7 +273,7 @@ final class is extends jea {
                     break L20;
                   } else {
                     if (((is) this).field_vb.length() > 0) {
-                      StringBuilder discarded$11 = ((is) this).field_vb.append(var2);
+                      StringBuilder discarded$11 = ((is) this).field_vb.append((char) var2);
                       break L20;
                     } else {
                       break L20;
@@ -282,7 +282,7 @@ final class is extends jea {
                 }
                 if (dja.a((byte) -17, (char) var2)) {
                   L21: {
-                    StringBuilder discarded$12 = ((is) this).field_vb.append(var2);
+                    StringBuilder discarded$12 = ((is) this).field_vb.append((char) var2);
                     if (fna.field_h == 84) {
                       if (((is) this).field_vb.length() <= 0) {
                         ((is) this).field_ub = 1;
@@ -315,7 +315,7 @@ final class is extends jea {
                     break L18;
                   } else {
                     L23: {
-                      StringBuilder discarded$13 = ((is) this).field_vb.append(var2);
+                      StringBuilder discarded$13 = ((is) this).field_vb.append((char) var2);
                       if (fna.field_h == 84) {
                         if (((is) this).field_vb.length() <= 0) {
                           ((is) this).field_ub = 1;
@@ -732,7 +732,7 @@ final class is extends jea {
           L1: {
             var9 = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var9;
-            stackOut_3_1 = new StringBuilder().append("is.<init>(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_3_1 = new StringBuilder().append("is.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -757,7 +757,7 @@ final class is extends jea {
           }
           L2: {
             stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(44);
+            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -782,7 +782,7 @@ final class is extends jea {
           }
           L3: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -807,7 +807,7 @@ final class is extends jea {
           }
           L4: {
             stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -830,7 +830,7 @@ final class is extends jea {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 

@@ -355,7 +355,7 @@ final class ln extends ci {
           L13: {
             var3 = decompiledCaughtException;
             stackOut_69_0 = (RuntimeException) var3;
-            stackOut_69_1 = new StringBuilder().append("ln.C(").append(param0).append(44);
+            stackOut_69_1 = new StringBuilder().append("ln.C(").append(param0).append(',');
             stackIn_71_0 = stackOut_69_0;
             stackIn_71_1 = stackOut_69_1;
             stackIn_70_0 = stackOut_69_0;
@@ -378,7 +378,7 @@ final class ln extends ci {
               break L13;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + ')');
         }
         return stackIn_68_0 != 0;
     }

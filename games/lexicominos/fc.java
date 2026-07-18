@@ -666,7 +666,7 @@ final class fc {
                               var6 = 0;
                               L7: while (true) {
                                 if (var6 >= 12) {
-                                  StringBuilder discarded$17 = ((fc) this).field_X.append(124);
+                                  StringBuilder discarded$17 = ((fc) this).field_X.append('|');
                                   var5--;
                                   continue L6;
                                 } else {
@@ -777,7 +777,7 @@ final class fc {
                         L17: while (true) {
                           if (var15 == null) {
                             L18: {
-                              StringBuilder discarded$19 = ((fc) this).field_X.append(124);
+                              StringBuilder discarded$19 = ((fc) this).field_X.append('|');
                               ((fc) this).field_V = 416 - -(((var7 + var8) * -24 - -24) / 2);
                               ((fc) this).field_o = (1 + (var5 + var6)) * 24 / 2 + 10;
                               if (((fc) this).field_l <= 1) {
@@ -843,13 +843,13 @@ final class fc {
                               }
                             }
                             StringBuilder discarded$20 = ((fc) this).field_X.append(Integer.toString(var14[0]));
-                            StringBuilder discarded$21 = ((fc) this).field_X.append(44);
+                            StringBuilder discarded$21 = ((fc) this).field_X.append(',');
                             StringBuilder discarded$22 = ((fc) this).field_X.append(Integer.toString(var14[1]));
-                            StringBuilder discarded$23 = ((fc) this).field_X.append(44);
+                            StringBuilder discarded$23 = ((fc) this).field_X.append(',');
                             StringBuilder discarded$24 = ((fc) this).field_X.append(Integer.toString(var14[2]));
-                            StringBuilder discarded$25 = ((fc) this).field_X.append(44);
+                            StringBuilder discarded$25 = ((fc) this).field_X.append(',');
                             StringBuilder discarded$26 = ((fc) this).field_X.append(Integer.toString(var14[3]));
-                            StringBuilder discarded$27 = ((fc) this).field_X.append(59);
+                            StringBuilder discarded$27 = ((fc) this).field_X.append(';');
                             ((fc) this).field_N = ((fc) this).field_N + 1;
                             ((fc) this).field_i = ((fc) this).field_i ^ var14[0];
                             ((fc) this).field_f = ((fc) this).field_f ^ var14[0];
@@ -2082,7 +2082,7 @@ final class fc {
           }
           L5: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param1).append(44).append(0).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',').append(0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -2105,7 +2105,7 @@ final class fc {
               break L5;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
     }
 
@@ -2379,7 +2379,7 @@ final class fc {
               break L6;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + 371 + 41);
+          throw ld.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + 371 + ')');
         }
     }
 
@@ -2520,7 +2520,7 @@ final class fc {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -2545,7 +2545,7 @@ final class fc {
           }
           L8: {
             stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44);
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -2568,7 +2568,7 @@ final class fc {
               break L8;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + 11882 + 41);
+          throw ld.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + 11882 + ')');
         }
     }
 
@@ -2814,7 +2814,7 @@ final class fc {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -2839,7 +2839,7 @@ final class fc {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -2862,7 +2862,7 @@ final class fc {
               break L4;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
     }
 

@@ -62,7 +62,7 @@ final class doa {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + 114 + 41);
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + 114 + ')');
         }
         return stackIn_1_0;
     }
@@ -112,7 +112,7 @@ final class doa {
             }
             tj discarded$3 = new tj(((doa) this).field_a, 5121, 4, 20);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "doa.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "doa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

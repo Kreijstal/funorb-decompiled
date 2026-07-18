@@ -299,7 +299,7 @@ final class fh {
           L20: {
             var7 = decompiledCaughtException;
             stackOut_69_0 = (RuntimeException) var7;
-            stackOut_69_1 = new StringBuilder().append("fh.A(").append(param0).append(44);
+            stackOut_69_1 = new StringBuilder().append("fh.A(").append(param0).append(',');
             stackIn_71_0 = stackOut_69_0;
             stackIn_71_1 = stackOut_69_1;
             stackIn_70_0 = stackOut_69_0;
@@ -324,7 +324,7 @@ final class fh {
           }
           L21: {
             stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
-            stackOut_72_1 = ((StringBuilder) (Object) stackIn_72_1).append(stackIn_72_2).append(44).append(param2).append(44);
+            stackOut_72_1 = ((StringBuilder) (Object) stackIn_72_1).append(stackIn_72_2).append(',').append(param2).append(',');
             stackIn_74_0 = stackOut_72_0;
             stackIn_74_1 = stackOut_72_1;
             stackIn_73_0 = stackOut_72_0;
@@ -347,7 +347,7 @@ final class fh {
               break L21;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_75_0, stackIn_75_2 + 44 + param4 + 44 + param5 + 41);
+          throw sd.a((Throwable) (Object) stackIn_75_0, stackIn_75_2 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_68_0;
     }
@@ -459,7 +459,7 @@ final class fh {
           L8: {
             runtimeException = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) runtimeException;
-            stackOut_25_1 = new StringBuilder().append("fh.B(").append(param0).append(44).append(-1).append(44);
+            stackOut_25_1 = new StringBuilder().append("fh.B(").append(param0).append(',').append(-1).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -482,7 +482,7 @@ final class fh {
               break L8;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
         }
     }
 

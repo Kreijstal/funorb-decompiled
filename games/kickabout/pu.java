@@ -397,7 +397,7 @@ final class pu extends hd implements lv {
           L20: {
             var7 = decompiledCaughtException;
             stackOut_54_0 = (RuntimeException) var7;
-            stackOut_54_1 = new StringBuilder().append("pu.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_54_1 = new StringBuilder().append("pu.E(").append(param0).append(',').append(param1).append(',');
             stackIn_56_0 = stackOut_54_0;
             stackIn_56_1 = stackOut_54_1;
             stackIn_55_0 = stackOut_54_0;
@@ -422,7 +422,7 @@ final class pu extends hd implements lv {
           }
           L21: {
             stackOut_57_0 = (RuntimeException) (Object) stackIn_57_0;
-            stackOut_57_1 = ((StringBuilder) (Object) stackIn_57_1).append(stackIn_57_2).append(44).append(-103).append(44);
+            stackOut_57_1 = ((StringBuilder) (Object) stackIn_57_1).append(stackIn_57_2).append(',').append(-103).append(',');
             stackIn_59_0 = stackOut_57_0;
             stackIn_59_1 = stackOut_57_1;
             stackIn_58_0 = stackOut_57_0;
@@ -445,7 +445,7 @@ final class pu extends hd implements lv {
               break L21;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_60_0, stackIn_60_2 + 44 + param5 + 44 + param6 + 41);
+          throw nb.a((Throwable) (Object) stackIn_60_0, stackIn_60_2 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_53_0;
     }
@@ -510,13 +510,13 @@ final class pu extends hd implements lv {
             ((pu) this).field_yb = rv.field_b[((pu) this).field_Bb.field_h].toUpperCase();
             ((pu) this).field_Hb = vo.a((byte) -18, kd.field_u, new String[1]).toLowerCase();
             if (0 == ((pu) this).field_Bb.field_h) {
-                ((pu) this).field_yb = 40 + ((pu) this).field_yb + 41;
+                ((pu) this).field_yb = '(' + ((pu) this).field_yb + ')';
             } else {
-                ((pu) this).field_yb = 34 + ((pu) this).field_yb + 34;
+                ((pu) this).field_yb = '"' + ((pu) this).field_yb + '"';
             }
             ((pu) this).field_Gb = us.field_h[((pu) this).field_Bb.field_h];
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "pu.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "pu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

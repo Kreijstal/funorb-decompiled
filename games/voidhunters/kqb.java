@@ -20,7 +20,7 @@ final class kqb {
             nbb.field_y.a(24, -54, -24 + (dd.field_o.field_hb - 24), param1, -24 + (-20 + dd.field_o.field_G));
             ss.field_o.a(120, -72, 80, -24 + (-20 + dd.field_o.field_G), 24);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "kqb.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "kqb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

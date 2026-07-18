@@ -244,7 +244,7 @@ final class nk {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var3;
-            stackOut_17_1 = new StringBuilder().append("nk.B(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("nk.B(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -267,7 +267,7 @@ final class nk {
               break L1;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 0 + 41);
+          throw qb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + false + ')');
         }
         return stackIn_16_0 != 0;
     }
@@ -313,7 +313,7 @@ final class nk {
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_4_0 = (RuntimeException) var2_ref2;
-                stackOut_4_1 = new StringBuilder().append("nk.D(").append(2048).append(44);
+                stackOut_4_1 = new StringBuilder().append("nk.D(").append(2048).append(',');
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
                 stackIn_5_0 = stackOut_4_0;
@@ -336,7 +336,7 @@ final class nk {
                   break L1;
                 }
               }
-              throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+              throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -401,7 +401,7 @@ final class nk {
               break L1;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 41);
+          throw qb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }

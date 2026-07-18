@@ -1217,7 +1217,7 @@ final class lm {
                                       var21 = (Object) (Object) var31;
                                       break L69;
                                     } else {
-                                      var21 = (Object) (Object) (var21 + "<br>" + var31);
+                                      var21 = (Object) (Object) ((String) var21 + "<br>" + var31);
                                       break L69;
                                     }
                                   } else {
@@ -1247,7 +1247,7 @@ final class lm {
                                     }
                                   }
                                   if (var21 != null) {
-                                    var21 = (Object) (Object) (var21 + "<br>" + var22_ref);
+                                    var21 = (Object) (Object) ((String) var21 + "<br>" + var22_ref);
                                     var22_ref = (String) var21;
                                     var25 = var22_ref;
                                     var22_ref = var25;
@@ -1339,10 +1339,10 @@ final class lm {
                             if (null == var21) {
                               break L75;
                             } else {
-                              var32 = "<col=A00000>" + var21;
+                              var32 = "<col=A00000>" + (String) var21;
                               var33 = ui.a("<br><col=A00000>", "<br>", (byte) -38, var32);
                               if (var20 != null) {
-                                var20 = (Object) (Object) (var20 + "<br>" + var33);
+                                var20 = (Object) (Object) ((String) var20 + "<br>" + var33);
                                 break L75;
                               } else {
                                 var20 = (Object) (Object) var33;

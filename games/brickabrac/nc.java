@@ -39,7 +39,7 @@ final class nc {
             ((nc) this).field_i = ((nc) this).field_i + param0.field_i;
             ((nc) this).field_j = var3;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "nc.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "nc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

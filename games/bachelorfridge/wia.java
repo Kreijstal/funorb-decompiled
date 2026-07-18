@@ -183,7 +183,7 @@ class wia {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var4;
-            stackOut_18_1 = new StringBuilder().append("wia.C(").append(param0).append(44);
+            stackOut_18_1 = new StringBuilder().append("wia.C(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -206,7 +206,7 @@ class wia {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param2 + ')');
         }
         return stackIn_17_0 != 0;
     }
@@ -428,7 +428,7 @@ class wia {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param1 + ')');
         }
         return stackIn_26_0 != 0;
     }
@@ -518,7 +518,7 @@ class wia {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var6;
-            stackOut_13_1 = new StringBuilder().append("wia.J(").append(param0).append(44).append(param1).append(44);
+            stackOut_13_1 = new StringBuilder().append("wia.J(").append(param0).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -543,7 +543,7 @@ class wia {
           }
           L6: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -566,7 +566,7 @@ class wia {
               break L6;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param4 + 41);
+          throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param4 + ')');
         }
     }
 
@@ -754,7 +754,7 @@ class wia {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("wia.L(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("wia.L(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -777,7 +777,7 @@ class wia {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0 != 0;
     }

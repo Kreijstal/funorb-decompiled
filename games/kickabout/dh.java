@@ -21,7 +21,7 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
             this.b((byte) -104);
             boolean discarded$0 = param3.drawImage(((dh) this).field_d, param2, param0, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "dh.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "dh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -43,7 +43,7 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
         try {
             ((dh) this).b(32);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "dh.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "dh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -55,7 +55,7 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
             param0.setColorModel(((dh) this).field_h);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "dh.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "dh.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -164,7 +164,7 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 1 + 41);
+          throw nb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + true + ')');
         }
         return stackIn_4_0;
     }
@@ -223,7 +223,7 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw nb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
@@ -249,7 +249,7 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
             param2.g(param3 + -1207441262, param4);
             param2.a(param3 ^ -3298, param0);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "dh.K(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "dh.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -257,7 +257,7 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
         try {
             ((dh) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "dh.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "dh.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -330,7 +330,7 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 

@@ -225,7 +225,7 @@ final class nm extends w {
                 } else {
                   if (80 > dj.field_ab.length()) {
                     L4: {
-                      StringBuilder discarded$16 = dj.field_ab.append(var4);
+                      StringBuilder discarded$16 = dj.field_ab.append((char) var4);
                       var5 = 485;
                       var13 = oa.field_f;
                       var7 = var13;
@@ -405,7 +405,7 @@ final class nm extends w {
             ((nm) this).field_Ob = param1;
             ((nm) this).field_Rb.a(param1, -16834);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "nm.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "nm.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -165,7 +165,7 @@ final class ul extends bg {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var2;
-            stackOut_12_1 = new StringBuilder().append("ul.G(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("ul.G(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -188,7 +188,7 @@ final class ul extends bg {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
         return stackIn_11_0 != 0;
     }

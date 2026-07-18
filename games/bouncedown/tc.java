@@ -71,7 +71,7 @@ class tc extends jd {
                   break L1;
                 }
               }
-              throw ii.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 6091 + 41);
+              throw ii.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 6091 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -102,7 +102,7 @@ class tc extends jd {
             }
             super.a(param0, param1, (byte) -125, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "tc.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "tc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

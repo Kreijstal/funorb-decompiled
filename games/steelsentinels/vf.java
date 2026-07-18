@@ -34,7 +34,7 @@ final class vf {
             sj.field_z.a(param0 + -320, 16, -24 + (fl.field_b.field_Lb + -20), 24, -24 + (fl.field_b.field_zb - 24));
             pm.field_gb.a(0, -20 + (fl.field_b.field_Lb + -24), 24, 120, 80);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "vf.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "vf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -77,7 +77,7 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var2_ref, "vf.A(" + param0 + 44 + param1 + 41);
+          throw ci.a((Throwable) (Object) var2_ref, "vf.A(" + param0 + ',' + param1 + ')');
         }
     }
 

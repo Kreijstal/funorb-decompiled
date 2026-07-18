@@ -86,7 +86,7 @@ final class gk {
             kj.a(1048576, ed.field_d / 2, ed.field_h / 2);
             qk.a(param2.field_B + param2.field_q, param3.field_q, param2.field_q, 1882, param3.field_q + param3.field_B);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "gk.C(" + 95 + 44 + 480 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "gk.C(" + 95 + ',' + 480 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

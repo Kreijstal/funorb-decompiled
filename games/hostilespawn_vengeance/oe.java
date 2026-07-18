@@ -124,7 +124,7 @@ final class oe implements Iterator {
             int discarded$0 = 105;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "oe.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "oe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

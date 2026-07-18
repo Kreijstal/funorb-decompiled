@@ -50,7 +50,7 @@ final class pe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var4, "pe.C(" + param0 + 44 + 4209 + 44 + param2 + 44 + param3 + 41);
+          throw kk.a((Throwable) (Object) var4, "pe.C(" + param0 + ',' + 4209 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

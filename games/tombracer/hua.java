@@ -63,7 +63,7 @@ final class hua implements java.awt.event.MouseListener, java.awt.event.MouseMot
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class hua implements java.awt.event.MouseListener, java.awt.event.MouseMot
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class hua implements java.awt.event.MouseListener, java.awt.event.MouseMot
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -274,7 +274,7 @@ final class hua implements java.awt.event.MouseListener, java.awt.event.MouseMot
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 0 + 41);
+          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 0 + ')');
         }
         return stackIn_5_0;
     }
@@ -337,7 +337,7 @@ final class hua implements java.awt.event.MouseListener, java.awt.event.MouseMot
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -399,7 +399,7 @@ final class hua implements java.awt.event.MouseListener, java.awt.event.MouseMot
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -508,7 +508,7 @@ final class hua implements java.awt.event.MouseListener, java.awt.event.MouseMot
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
     }
 
@@ -597,7 +597,7 @@ final class hua implements java.awt.event.MouseListener, java.awt.event.MouseMot
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 
@@ -662,7 +662,7 @@ final class hua implements java.awt.event.MouseListener, java.awt.event.MouseMot
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

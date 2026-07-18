@@ -151,7 +151,7 @@ final class esb extends qq implements mkb {
           L9: {
             var2 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var2;
-            stackOut_26_1 = new StringBuilder().append("esb.E(").append(param0).append(44);
+            stackOut_26_1 = new StringBuilder().append("esb.E(").append(param0).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -174,7 +174,7 @@ final class esb extends qq implements mkb {
               break L9;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
         }
         return stackIn_25_0;
     }

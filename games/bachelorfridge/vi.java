@@ -31,7 +31,7 @@ final class vi {
             ((vi) this).field_g.a(param1, (byte) -97, (bw) (Object) param0);
             ((vi) this).field_c.a(param0, (byte) -107);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vi.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "vi.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class vi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "vi.A(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var1, "vi.A(" + param0 + ')');
         }
     }
 

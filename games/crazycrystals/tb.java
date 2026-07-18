@@ -94,7 +94,7 @@ abstract class tb {
           L5: {
             var5 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var5;
-            stackOut_18_1 = new StringBuilder().append("tb.N(").append(param0).append(44).append(param1).append(44);
+            stackOut_18_1 = new StringBuilder().append("tb.N(").append(param0).append(',').append(param1).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -117,7 +117,7 @@ abstract class tb {
               break L5;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param3 + 41);
+          throw dn.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param3 + ')');
         }
         return stackIn_16_0;
     }
@@ -139,7 +139,7 @@ abstract class tb {
             of.field_D = of.field_D + (var2_int >> 1);
             jd.field_I = jd.field_I + param1.c((byte) -7);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "tb.F(" + -31416 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "tb.F(" + -31416 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -211,7 +211,7 @@ abstract class tb {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("tb.P(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("tb.P(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -234,7 +234,7 @@ abstract class tb {
               break L3;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param2 + ')');
         }
     }
 
@@ -294,7 +294,7 @@ abstract class tb {
             an.field_q.a(param4, param3, 1 + param0, 0, -1);
             an.field_q.a(param4, param3, param0, param2, -1);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "tb.G(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "tb.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -558,7 +558,7 @@ abstract class tb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var1, "tb.H(" + param0 + 41);
+          throw dn.a((Throwable) (Object) var1, "tb.H(" + param0 + ')');
         }
         return stackIn_26_0;
     }

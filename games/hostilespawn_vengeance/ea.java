@@ -84,7 +84,7 @@ final class ea {
               break L2;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw wg.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class ea {
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) nj.field_c);
             uc.field_b = -1;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "ea.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "ea.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -191,7 +191,7 @@ final class ea {
               break L3;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 3 + 44 + param2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + 3 + ',' + param2 + ')');
         }
     }
 

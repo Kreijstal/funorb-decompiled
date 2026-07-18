@@ -127,7 +127,7 @@ final class kba extends od implements wia {
             jaggl.OpenGL.glRenderbufferStorageEXT(36161, ((kba) this).field_t, ((kba) this).field_n, ((kba) this).field_l);
             ((kba) this).field_o = ((kba) this).field_n * (((kba) this).field_l * ((kba) this).field_p.a(((kba) this).field_t, (byte) -86));
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "kba.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "kba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class kba extends od implements wia {
             jaggl.OpenGL.glRenderbufferStorageMultisampleEXT(36161, param4, ((kba) this).field_t, ((kba) this).field_n, ((kba) this).field_l);
             ((kba) this).field_o = ((kba) this).field_n * ((kba) this).field_l * ((kba) this).field_p.a(((kba) this).field_t, (byte) -64);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "kba.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "kba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

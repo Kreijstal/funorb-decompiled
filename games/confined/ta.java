@@ -227,7 +227,7 @@ final class ta {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_70_0 = (RuntimeException) var2;
-            stackOut_70_1 = new StringBuilder().append("ta.A(").append(param0).append(44);
+            stackOut_70_1 = new StringBuilder().append("ta.A(").append(param0).append(',');
             stackIn_72_0 = stackOut_70_0;
             stackIn_72_1 = stackOut_70_1;
             stackIn_71_0 = stackOut_70_0;
@@ -250,7 +250,7 @@ final class ta {
               break L7;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_73_0, stackIn_73_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_73_0, stackIn_73_2 + ')');
         }
         return stackIn_69_0;
     }
@@ -264,7 +264,7 @@ final class ta {
             param2.d(param1, param3);
             pn.field_a.b(param4, param2.field_t / 2 + param1, 15 + param3, 0, -1);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ta.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "ta.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

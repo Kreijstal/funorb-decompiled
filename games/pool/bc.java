@@ -95,7 +95,7 @@ final class bc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var1, "bc.A(" + 17 + 41);
+          throw wm.a((Throwable) (Object) var1, "bc.A(" + 17 + ')');
         }
     }
 

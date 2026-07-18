@@ -244,7 +244,7 @@ abstract class ng {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var2_ref, "ng.D(" + -95 + 44 + param1 + 41);
+          throw ii.a((Throwable) (Object) var2_ref, "ng.D(" + -95 + ',' + param1 + ')');
         }
         return stackIn_24_0 != 0;
     }

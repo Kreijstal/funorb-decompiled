@@ -43,7 +43,7 @@ final class jj extends fb {
             }
             lc.field_k[0].e(var3_int, var4, ((jj) this).field_K);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "jj.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "jj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class jj extends fb {
             jj.j();
             cn.field_f.b(109);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "jj.G(" + 0 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "jj.G(" + false + ')');
         }
     }
 
@@ -149,7 +149,7 @@ final class jj extends fb {
           L2: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3_ref;
-            stackOut_9_1 = new StringBuilder().append("jj.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_9_1 = new StringBuilder().append("jj.D(").append(param0).append(',').append(param1).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -172,7 +172,7 @@ final class jj extends fb {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 

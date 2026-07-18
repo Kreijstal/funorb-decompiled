@@ -20,7 +20,7 @@ final class lb {
             int discarded$0 = 0;
             hh.b(param0.field_x + param0.field_F, param3.field_F, param0.field_F, param3.field_F + param3.field_x);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "lb.C(" + (param0 != null ? "{...}" : "null") + 44 + 320 + 44 + -101 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "lb.C(" + (param0 != null ? "{...}" : "null") + ',' + 320 + ',' + -101 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -103,7 +103,7 @@ final class lb {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("lb.A(").append(98).append(44);
+            stackOut_15_1 = new StringBuilder().append("lb.A(").append(98).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -126,7 +126,7 @@ final class lb {
               break L3;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
         return stackIn_14_0;
     }

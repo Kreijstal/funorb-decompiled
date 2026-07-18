@@ -77,7 +77,7 @@ abstract class gl {
                   break L0;
                 }
               }
-              throw oj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 17 + 41);
+              throw oj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 17 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -173,7 +173,7 @@ abstract class gl {
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw oj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
         return stackIn_6_0;
     }

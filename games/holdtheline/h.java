@@ -73,7 +73,7 @@ final class h {
               break L1;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + -113 + 44 + param2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + -113 + ',' + param2 + ')');
         }
         return stackIn_6_0;
     }
@@ -284,8 +284,8 @@ final class h {
                                     L12: {
                                       StringBuilder discarded$47 = var22.append(bj.field_I);
                                       StringBuilder discarded$48 = var22.append(cb.a(53, var11));
-                                      StringBuilder discarded$49 = var22.append(32);
-                                      StringBuilder discarded$50 = var22.append(40);
+                                      StringBuilder discarded$49 = var22.append(' ');
+                                      StringBuilder discarded$50 = var22.append('(');
                                       if (ha.field_j[cf.field_w][var8] < 0) {
                                         break L12;
                                       } else {
@@ -297,7 +297,7 @@ final class h {
                                         }
                                       }
                                     }
-                                    StringBuilder discarded$52 = var22.append(41);
+                                    StringBuilder discarded$52 = var22.append(')');
                                     StringBuilder discarded$53 = var22.append(vm.field_zb);
                                     var12 = on.field_v[cf.field_w][var8];
                                     if (var12 != -1) {
@@ -408,7 +408,7 @@ final class h {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var1, "h.A(" + param0 + 41);
+          throw kk.a((Throwable) (Object) var1, "h.A(" + param0 + ')');
         }
     }
 

@@ -231,7 +231,7 @@ abstract class d implements vm {
                     case 18: {
                         var2_ref2 = (RuntimeException) (Object) caughtException;
                         stackOut_18_0 = (RuntimeException) var2_ref2;
-                        stackOut_18_1 = new StringBuilder().append("d.M(").append(-17840).append(44);
+                        stackOut_18_1 = new StringBuilder().append("d.M(").append(-17840).append(',');
                         stackIn_20_0 = stackOut_18_0;
                         stackIn_20_1 = stackOut_18_1;
                         stackIn_19_0 = stackOut_18_0;
@@ -264,7 +264,7 @@ abstract class d implements vm {
                         continue stateLoop;
                     }
                     case 21: {
-                        throw oi.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+                        throw oi.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -399,7 +399,7 @@ abstract class d implements vm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var1_ref, "d.J(" + param0 + 41);
+          throw oi.a((Throwable) (Object) var1_ref, "d.J(" + param0 + ')');
         }
     }
 

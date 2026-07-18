@@ -150,7 +150,7 @@ final class bf {
           L8: {
             var3 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var3;
-            stackOut_24_1 = new StringBuilder().append("bf.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_24_1 = new StringBuilder().append("bf.C(").append(param0).append(',').append(param1).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -173,7 +173,7 @@ final class bf {
               break L8;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class bf {
             io.field_c.a(-24 + so.field_v.field_K - 24, -24 + so.field_v.field_mb - 20, (byte) 67, 16, 24);
             li.field_d.a(80, 24, (byte) 115, so.field_v.field_mb - 44, 120);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "bf.B(" + 113 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "bf.B(" + 113 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

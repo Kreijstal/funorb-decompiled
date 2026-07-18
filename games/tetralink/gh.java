@@ -80,7 +80,7 @@ final class gh {
           L3: {
             runtimeException = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) runtimeException;
-            stackOut_10_1 = new StringBuilder().append("gh.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_10_1 = new StringBuilder().append("gh.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -103,7 +103,7 @@ final class gh {
               break L3;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + -125 + 41);
+          throw oi.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + -125 + ')');
         }
     }
 
@@ -245,7 +245,7 @@ final class gh {
               break L5;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + 0 + 44 + param2 + 44 + -2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + 0 + ',' + param2 + ',' + -2 + ')');
         }
         return stackIn_25_0;
     }

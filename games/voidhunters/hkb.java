@@ -110,7 +110,7 @@ final class hkb implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
@@ -200,7 +200,7 @@ final class hkb implements ntb {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("hkb.C(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("hkb.C(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -223,7 +223,7 @@ final class hkb implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -302,7 +302,7 @@ final class hkb implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
     }
 
@@ -356,7 +356,7 @@ final class hkb implements ntb {
           L3: {
             var3_ref = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3_ref;
-            stackOut_9_1 = new StringBuilder().append("hkb.D(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("hkb.D(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -379,7 +379,7 @@ final class hkb implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 
@@ -436,7 +436,7 @@ final class hkb implements ntb {
               } else {
                 if (var6.field_a.a((byte) 82, (tv) (Object) var6.field_a)) {
                   var4 = 1;
-                  System.out.println("World saved_state has changed. before=" + var6.field_a + ", now=" + var6.field_a);
+                  System.out.println("World saved_state has changed. before=" + (Object) (Object) var6.field_a + ", now=" + (Object) (Object) var6.field_a);
                   break L3;
                 } else {
                   break L3;
@@ -481,7 +481,7 @@ final class hkb implements ntb {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ')');
         }
     }
 
@@ -552,7 +552,7 @@ final class hkb implements ntb {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var4;
-            stackOut_10_1 = new StringBuilder().append("hkb.E(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("hkb.E(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -575,7 +575,7 @@ final class hkb implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param2 + ')');
         }
     }
 
@@ -586,7 +586,7 @@ final class hkb implements ntb {
         try {
             ((hkb) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "hkb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "hkb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

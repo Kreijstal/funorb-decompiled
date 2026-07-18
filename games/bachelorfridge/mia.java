@@ -21,7 +21,7 @@ final class mia extends cia {
             }
             ea.field_f = 0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "mia.I(" + param0 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "mia.I(" + param0 + ')');
         }
     }
 

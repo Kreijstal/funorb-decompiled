@@ -111,7 +111,7 @@ final class wi extends mi {
             var3.field_H = true;
             boolean discarded$1 = var3.a((ub) this, 8);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "wi.QA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "wi.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

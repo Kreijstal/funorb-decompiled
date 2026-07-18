@@ -91,7 +91,7 @@ final class mh {
               break L2;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + 0 + 41);
+          throw qk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + 0 + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class mh {
                       if (var2 == null) {
                         break L4;
                       } else {
-                        int discarded$5 = ja.field_m.a("Screenshot(s) " + var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        int discarded$5 = ja.field_m.a("Screenshot(s) " + (String) var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L4;
                       }
                     } else {
@@ -221,7 +221,7 @@ final class mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var1, "mh.C(" + param0 + 41);
+          throw qk.a((Throwable) (Object) var1, "mh.C(" + param0 + ')');
         }
     }
 

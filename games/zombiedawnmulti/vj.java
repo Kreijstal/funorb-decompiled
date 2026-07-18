@@ -18,7 +18,7 @@ final class vj extends nc {
             ((vj) this).field_r = new vh(0L, (cj) null, 140, 60, 256, 120);
             ((vj) this).field_q = 0;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "vj.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "vj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

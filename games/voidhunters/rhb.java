@@ -164,7 +164,7 @@ final class rhb extends rqa {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_34_0 = (RuntimeException) var2;
-            stackOut_34_1 = new StringBuilder().append("rhb.C(").append(0).append(44);
+            stackOut_34_1 = new StringBuilder().append("rhb.C(").append(0).append(',');
             stackIn_36_0 = stackOut_34_0;
             stackIn_36_1 = stackOut_34_1;
             stackIn_35_0 = stackOut_34_0;
@@ -187,7 +187,7 @@ final class rhb extends rqa {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ')');
         }
         return stackIn_33_0 != 0;
     }
@@ -254,7 +254,7 @@ final class rhb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }

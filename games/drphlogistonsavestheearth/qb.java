@@ -54,7 +54,7 @@ final class qb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var1, "qb.B(" + 0 + 41);
+          throw ie.a((Throwable) (Object) var1, "qb.B(" + 0 + ')');
         }
     }
 

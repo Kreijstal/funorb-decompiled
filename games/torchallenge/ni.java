@@ -181,7 +181,7 @@ final class ni {
           }
           L8: {
             stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44).append(0).append(44);
+            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',').append(0).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -204,7 +204,7 @@ final class ni {
               break L8;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ')');
         }
         return stackIn_25_0;
     }
@@ -503,7 +503,7 @@ final class ni {
           L17: {
             var9 = decompiledCaughtException;
             stackOut_73_0 = (RuntimeException) var9;
-            stackOut_73_1 = new StringBuilder().append("ni.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_73_1 = new StringBuilder().append("ni.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_75_0 = stackOut_73_0;
             stackIn_75_1 = stackOut_73_1;
             stackIn_74_0 = stackOut_73_0;
@@ -526,7 +526,7 @@ final class ni {
               break L17;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + param7 + 44 + param8 + 41);
+          throw oj.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -564,7 +564,7 @@ final class ni {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var2, "ni.B(" + 3 + 44 + 103 + 41);
+          throw oj.a((Throwable) (Object) var2, "ni.B(" + 3 + ',' + 103 + ')');
         }
     }
 

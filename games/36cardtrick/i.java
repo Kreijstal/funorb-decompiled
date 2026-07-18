@@ -60,7 +60,7 @@ final class i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1_ref, "i.A(" + -125 + 41);
+          throw ma.a((Throwable) (Object) var1_ref, "i.A(" + -125 + ')');
         }
     }
 

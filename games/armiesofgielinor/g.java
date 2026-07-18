@@ -94,7 +94,7 @@ final class g extends RuntimeException {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("g.B(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("g.B(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -117,7 +117,7 @@ final class g extends RuntimeException {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -241,7 +241,7 @@ final class g extends RuntimeException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var1_ref, "g.D(" + -17211 + 41);
+          throw ig.a((Throwable) (Object) var1_ref, "g.D(" + -17211 + ')');
         }
         return stackIn_20_0 != 0;
     }

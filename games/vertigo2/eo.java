@@ -13,7 +13,7 @@ final class eo extends mo {
         try {
             vl.field_e = param1;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "eo.B(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "eo.B(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

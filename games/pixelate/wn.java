@@ -154,7 +154,7 @@ final class wn extends rf {
                   break L12;
                 }
               }
-              throw aa.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param1 + 44 + param2 + 41);
+              throw aa.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param1 + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -594,7 +594,7 @@ final class wn extends rf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1_ref, "wn.E(" + param0 + 41);
+          throw aa.a((Throwable) (Object) var1_ref, "wn.E(" + param0 + ')');
         }
     }
 

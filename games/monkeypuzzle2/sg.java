@@ -21,7 +21,7 @@ final class sg {
             ld.a(param0, (byte) -13);
             vi.a(k.field_k, 12345, false);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "sg.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "sg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -386,7 +386,7 @@ final class sg {
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 0 + 41);
+          throw la.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + false + ')');
         }
         return stackIn_10_0 != 0;
     }

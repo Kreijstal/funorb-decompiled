@@ -88,7 +88,7 @@ final class eqa implements os {
               if (var3 != 0) {
                 if (vc.field_n.length() < 80) {
                   L3: {
-                    StringBuilder discarded$18 = vc.field_n.append(var4);
+                    StringBuilder discarded$18 = vc.field_n.append((char) var4);
                     var5 = 485;
                     var6 = fna.field_k;
                     int discarded$19 = 8;

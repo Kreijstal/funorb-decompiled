@@ -109,7 +109,7 @@ final class u {
         try {
             hp.field_p = 0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "u.A(" + param0 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "u.A(" + param0 + ')');
         }
     }
 

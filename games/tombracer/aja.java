@@ -49,7 +49,7 @@ final class aja extends lea {
           L1: {
             var4_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var4_ref;
-            stackOut_2_1 = new StringBuilder().append("aja.AC(").append(param0).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("aja.AC(").append(param0).append(',').append(param1).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -72,7 +72,7 @@ final class aja extends lea {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -640,7 +640,7 @@ final class aja extends lea {
                                 if (var10 == 0) {
                                   var13_ref_String = wqa.field_J;
                                   if (var12 != 0) {
-                                    var14_ref_String = v.field_j + var11_ref;
+                                    var14_ref_String = v.field_j + (String) var11_ref;
                                     break L36;
                                   } else {
                                     var14_ref_String = gl.a((byte) 82, field_I, new String[1]);
@@ -649,7 +649,7 @@ final class aja extends lea {
                                 } else {
                                   var13_ref_String = lha.field_m;
                                   if (var12 != 0) {
-                                    var14_ref_String = uda.field_w + var11_ref;
+                                    var14_ref_String = uda.field_w + (String) var11_ref;
                                     break L36;
                                   } else {
                                     var14_ref_String = gl.a((byte) 102, bl.field_b, new String[1]);
@@ -666,7 +666,7 @@ final class aja extends lea {
                                 } else {
                                   var23 = "<col=A00000>" + kma.field_e[var13] + "</col>";
                                   if (var11_ref != null) {
-                                    var11_ref = (Object) (Object) (var11_ref + ", " + var23);
+                                    var11_ref = (Object) (Object) ((String) var11_ref + ", " + var23);
                                     var12 = 1;
                                     break L37;
                                   } else {
@@ -902,7 +902,7 @@ final class aja extends lea {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var5, "aja.SB(" + param0 + 44 + -1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw tba.a((Throwable) (Object) var5, "aja.SB(" + param0 + ',' + -1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

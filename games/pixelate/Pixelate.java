@@ -1481,7 +1481,7 @@ public final class Pixelate extends lb {
             int discarded$0 = var5.b(var4, (byte) 43);
             var5.f(-var4 + var5.field_m, -1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "Pixelate.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "Pixelate.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -2472,7 +2472,7 @@ public final class Pixelate extends lb {
                             }
                           }
                           if (var35 != null) {
-                            up.field_o = jk.field_e[var34_int] + " - " + var35;
+                            up.field_o = jk.field_e[var34_int] + " - " + (String) var35;
                             break L55;
                           } else {
                             up.field_o = jk.field_e[var34_int];
@@ -3630,7 +3630,7 @@ public final class Pixelate extends lb {
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_4_0;
     }

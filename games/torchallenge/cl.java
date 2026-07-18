@@ -100,7 +100,7 @@ final class cl extends bc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "cl.M(" + -117 + 41);
+          throw oj.a((Throwable) (Object) var1, "cl.M(" + -117 + ')');
         }
     }
 
@@ -234,7 +234,7 @@ final class cl extends bc {
               break L6;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw oj.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

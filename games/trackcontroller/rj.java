@@ -104,7 +104,7 @@ final class rj implements Iterable {
                   break L0;
                 }
               }
-              throw sl.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+              throw sl.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -135,7 +135,7 @@ final class rj implements Iterable {
             }
             param0.field_k.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "rj.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "rj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

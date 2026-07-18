@@ -1744,7 +1744,7 @@ public final class SolKnight extends ab {
               break L6;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 31 + 41);
+          throw fc.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + 31 + ')');
         }
     }
 

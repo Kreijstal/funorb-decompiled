@@ -78,7 +78,7 @@ final class sg {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var2;
-            stackOut_10_1 = new StringBuilder().append("sg.C(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("sg.C(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -101,7 +101,7 @@ final class sg {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
         return stackIn_9_0;
     }
@@ -208,7 +208,7 @@ final class sg {
               L4: {
                 var15_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_11_0 = (RuntimeException) var15_ref;
-                stackOut_11_1 = new StringBuilder().append("sg.E(").append(5000).append(44).append(param1).append(44);
+                stackOut_11_1 = new StringBuilder().append("sg.E(").append(5000).append(',').append(param1).append(',');
                 stackIn_13_0 = stackOut_11_0;
                 stackIn_13_1 = stackOut_11_1;
                 stackIn_12_0 = stackOut_11_0;
@@ -233,7 +233,7 @@ final class sg {
               }
               L5: {
                 stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param3).append(44);
+                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param3).append(',');
                 stackIn_16_0 = stackOut_14_0;
                 stackIn_16_1 = stackOut_14_1;
                 stackIn_15_0 = stackOut_14_0;
@@ -256,7 +256,7 @@ final class sg {
                   break L5;
                 }
               }
-              throw ma.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param5 + 44 + 96 + 44 + param7 + 44 + param8 + 44 + 5000 + 44 + param10 + 44 + param11 + 44 + param12 + 44 + param13 + 41);
+              throw ma.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param5 + ',' + 96 + ',' + param7 + ',' + param8 + ',' + 5000 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -78,7 +78,7 @@ final class hb extends kg {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw sd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class hb extends kg {
             int var3_int = -124 % ((17 - param1) / 51);
             ((hb) this).field_q = new fc(param0);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "hb.OA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "hb.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class hb extends kg {
           L9: {
             var2 = decompiledCaughtException;
             stackOut_42_0 = (RuntimeException) var2;
-            stackOut_42_1 = new StringBuilder().append("hb.VA(").append(122).append(44);
+            stackOut_42_1 = new StringBuilder().append("hb.VA(").append(122).append(',');
             stackIn_44_0 = stackOut_42_0;
             stackIn_44_1 = stackOut_42_1;
             stackIn_43_0 = stackOut_42_0;
@@ -286,7 +286,7 @@ final class hb extends kg {
               break L9;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + ')');
         }
     }
 

@@ -116,7 +116,7 @@ final class qg {
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var6_ref;
-            stackOut_5_1 = new StringBuilder().append("qg.B(").append(640).append(44).append(480).append(44).append(0).append(44);
+            stackOut_5_1 = new StringBuilder().append("qg.B(").append(640).append(',').append(480).append(',').append(0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -139,7 +139,7 @@ final class qg {
               break L1;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -73 + 44 + 0 + 41);
+          throw la.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + -73 + ',' + 0 + ')');
         }
         return stackIn_4_0;
     }

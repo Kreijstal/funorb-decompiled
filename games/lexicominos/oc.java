@@ -71,7 +71,7 @@ final class oc {
               break L1;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 44 + 20 + 41);
+          throw ld.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + param2 + ',' + 20 + ')');
         }
         return stackIn_4_0;
     }

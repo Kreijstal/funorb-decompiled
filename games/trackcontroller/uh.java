@@ -41,7 +41,7 @@ final class uh {
             na.field_e = 0;
             nh.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "uh.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 44 + -97 + 44 + 10 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "uh.A(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ',' + 0 + ',' + -97 + ',' + 10 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -95,7 +95,7 @@ final class uh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var3, "uh.C(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw sl.a((Throwable) (Object) var3, "uh.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_12_0;
     }

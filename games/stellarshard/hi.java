@@ -35,7 +35,7 @@ final class hi extends java.awt.Canvas {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var3, "hi.A(" + param0 + 44 + 109 + 44 + param2 + 41);
+          throw ma.a((Throwable) (Object) var3, "hi.A(" + param0 + ',' + 109 + ',' + param2 + ')');
         }
         return stackIn_5_0;
     }
@@ -44,7 +44,7 @@ final class hi extends java.awt.Canvas {
         try {
             ((hi) this).field_b.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "hi.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "hi.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class hi extends java.awt.Canvas {
         try {
             ((hi) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class hi extends java.awt.Canvas {
         try {
             ((hi) this).field_b.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "hi.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "hi.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -139,7 +139,7 @@ final class hi extends java.awt.Canvas {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 1 + 41);
+          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + true + ')');
         }
         return stackIn_4_0;
     }

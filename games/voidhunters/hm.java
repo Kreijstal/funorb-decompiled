@@ -20,7 +20,7 @@ final class hm extends rqa {
         if (0 < vja.field_a) {
             var1 = var1 + ":";
             for (var2 = 0; var2 < vja.field_a; var2++) {
-                var1 = var1 + 32;
+                var1 = var1 + ' ';
                 var3 = qga.field_b.field_h[var2] & 255;
                 var4 = var3 >> 4;
                 var3 = var3 & 15;
@@ -104,7 +104,7 @@ final class hm extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

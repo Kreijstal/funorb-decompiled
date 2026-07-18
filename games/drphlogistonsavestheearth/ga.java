@@ -15,7 +15,7 @@ final class ga extends gi {
         try {
             ((ga) this).field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "ga.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "ga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

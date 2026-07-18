@@ -120,7 +120,7 @@ final class aa {
             ii.field_d = ii.field_d + (var2_int >> 1);
             e.field_H = e.field_H + param0.f(2);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "aa.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "aa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class aa {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2_ref;
-            stackOut_4_1 = new StringBuilder().append("aa.A(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("aa.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -190,7 +190,7 @@ final class aa {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -233,7 +233,7 @@ final class aa {
                             break L2;
                           }
                         }
-                        StringBuilder discarded$6 = var12.append(var9);
+                        StringBuilder discarded$6 = var12.append((char) var9);
                         continue L1;
                       }
                     }
@@ -267,7 +267,7 @@ final class aa {
                             break L5;
                           }
                         }
-                        StringBuilder discarded$9 = var13.append(var9);
+                        StringBuilder discarded$9 = var13.append((char) var9);
                         continue L4;
                       }
                     }

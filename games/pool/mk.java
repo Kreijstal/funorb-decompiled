@@ -981,7 +981,7 @@ final class mk {
                           }
                         }
                         if (var35 != null) {
-                          kk.field_B = ck.field_R[var34_int] + " - " + var35;
+                          kk.field_B = ck.field_R[var34_int] + " - " + (String) var35;
                           break L55;
                         } else {
                           kk.field_B = ck.field_R[var34_int];
@@ -1166,7 +1166,7 @@ final class mk {
           }
           L6: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(1024).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(1024).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -1191,7 +1191,7 @@ final class mk {
           }
           L7: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(150).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',').append(150).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -1216,7 +1216,7 @@ final class mk {
           }
           L8: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param5).append(',').append(param6).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -1239,7 +1239,7 @@ final class mk {
               break L8;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 4 + 44 + 13162 + 41);
+          throw wm.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + 4 + ',' + 13162 + ')');
         }
     }
 

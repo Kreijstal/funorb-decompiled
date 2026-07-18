@@ -257,7 +257,7 @@ final class qa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var1, "qa.C(" + -37 + 41);
+          throw pn.a((Throwable) (Object) var1, "qa.C(" + -37 + ')');
         }
     }
 

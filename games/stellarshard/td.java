@@ -84,7 +84,7 @@ final class td {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "td.B(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var1, "td.B(" + param0 + ')');
         }
         return stackIn_23_0;
     }

@@ -96,7 +96,7 @@ final class tka extends kj {
             ((tka) this).field_g = kla.a(129, m.field_a, -2147483648) - 64;
             ((tka) this).field_h = kla.a(65, m.field_a, -2147483648) - 32;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "tka.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "tka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -75,7 +75,7 @@ class ot extends iga {
             ((ot) this).field_f = param0;
             ((ot) this).field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ot.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ot.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -87,7 +87,7 @@ class ot extends iga {
             }
             param0.a(26, ((ot) this).field_g);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ot.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ot.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

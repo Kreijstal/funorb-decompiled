@@ -113,9 +113,9 @@ abstract class ee extends he {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$12 = field_H.append(60);
+                        StringBuilder discarded$12 = field_H.append('<');
                         StringBuilder discarded$13 = field_H.append(var15);
-                        StringBuilder discarded$14 = field_H.append(62);
+                        StringBuilder discarded$14 = field_H.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -302,7 +302,7 @@ abstract class ee extends he {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$15 = field_H.append(var14);
+                        StringBuilder discarded$15 = field_H.append((char) var14);
                         var14 = (char)(ec.a((byte) -56, (char) var14) & 255);
                         var4 = var4 + ((ee) this).field_p[var14];
                         if (((ee) this).field_k == null) {

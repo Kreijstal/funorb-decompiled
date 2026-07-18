@@ -62,7 +62,7 @@ final class hc extends mc {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5;
-            stackOut_5_1 = new StringBuilder().append("hc.B(").append(param0).append(44).append(74).append(44);
+            stackOut_5_1 = new StringBuilder().append("hc.B(").append(param0).append(',').append(74).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -87,7 +87,7 @@ final class hc extends mc {
           }
           L2: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param3).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param3).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -110,7 +110,7 @@ final class hc extends mc {
               break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_4_0;
     }
@@ -163,7 +163,7 @@ final class hc extends mc {
         if (0 < rl.field_d) {
             var1 = var1 + ":";
             for (var2 = 0; var2 < rl.field_d; var2++) {
-                var1 = var1 + 32;
+                var1 = var1 + ' ';
                 var3 = kb.field_q.field_u[var2] & 255;
                 var4 = var3 >> 4;
                 var3 = var3 & 15;
@@ -243,7 +243,7 @@ final class hc extends mc {
           L2: {
             var10_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var10_ref;
-            stackOut_5_1 = new StringBuilder().append("hc.C(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("hc.C(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -266,7 +266,7 @@ final class hc extends mc {
               break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 44 + param3 + 44 + -32263 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+          throw oi.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ',' + param3 + ',' + -32263 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

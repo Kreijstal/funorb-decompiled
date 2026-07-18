@@ -143,7 +143,7 @@ final class oj extends jc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "oj.E(" + -1236579128 + 41);
+          throw lj.a((Throwable) (Object) var1, "oj.E(" + -1236579128 + ')');
         }
     }
 
@@ -157,7 +157,7 @@ final class oj extends jc {
             ((oj) this).field_L = 256;
             ((oj) this).field_I = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "oj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -171,7 +171,7 @@ final class oj extends jc {
             param0.field_c.field_f = param0;
             param0.field_f.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "oj.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + -117 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "oj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + -117 + ')');
         }
     }
 

@@ -16,7 +16,7 @@ final class r {
         try {
             oo.a(param1.field_B, param1.field_z, param1.field_u);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "r.B(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "r.B(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -95,7 +95,7 @@ final class r {
               break L1;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + 15 + 41);
+          throw fa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + 15 + ')');
         }
         return stackIn_4_0;
     }

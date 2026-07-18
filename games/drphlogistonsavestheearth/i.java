@@ -17,7 +17,7 @@ final class i {
         try {
             hb.a(param1.field_h, param3, param2, (byte) -41, param1.field_j, 0, param0);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "i.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "i.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + 0 + ')');
         }
     }
 
@@ -54,7 +54,7 @@ final class i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2_ref, "i.D(" + 4 + 44 + 0 + 41);
+          throw ie.a((Throwable) (Object) var2_ref, "i.D(" + 4 + ',' + 0 + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class i {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_29_0 = (RuntimeException) var2;
-            stackOut_29_1 = new StringBuilder().append("i.B(").append(-32512).append(44);
+            stackOut_29_1 = new StringBuilder().append("i.B(").append(-32512).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -176,7 +176,7 @@ final class i {
               break L1;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ')');
         }
         return stackIn_28_0;
     }

@@ -55,7 +55,7 @@ final class tf extends tc {
           L2: {
             var5_ref = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var5_ref;
-            stackOut_6_1 = new StringBuilder().append("tf.C(").append(param0).append(44).append(-1432128863).append(44).append(param2).append(44);
+            stackOut_6_1 = new StringBuilder().append("tf.C(").append(param0).append(',').append(-1432128863).append(',').append(param2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -78,7 +78,7 @@ final class tf extends tc {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param4 + 41);
+          throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param4 + ')');
         }
     }
 
@@ -95,7 +95,7 @@ final class tf extends tc {
             var3.b(1, param1.field_o);
             var3.b(1, param1.field_q);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "tf.B(" + 7 + 44 + (param1 != null ? "{...}" : "null") + 44 + -64 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "tf.B(" + 7 + ',' + (param1 != null ? "{...}" : "null") + ',' + -64 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class tf extends tc {
             var4 = -1L;
             tc.a(param1, var3, (byte) 120, var2, var4);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "tf.D(" + -99 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "tf.D(" + -99 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -98,7 +98,7 @@ final class ej extends hd {
             param0.addKeyListener((java.awt.event.KeyListener) (Object) nr.field_q);
             param0.addFocusListener((java.awt.event.FocusListener) (Object) nr.field_q);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ej.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "ej.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

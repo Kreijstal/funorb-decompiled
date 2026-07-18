@@ -159,7 +159,7 @@ abstract class bg {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("bg.O(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("bg.O(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -182,7 +182,7 @@ abstract class bg {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

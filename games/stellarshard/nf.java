@@ -100,7 +100,7 @@ final class nf extends gg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "nf.B(" + 84 + 41);
+          throw ma.a((Throwable) (Object) var1, "nf.B(" + 84 + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class nf extends gg {
             ((nf) this).field_u = 65535 & fieldTemp$0;
             ((nf) this).field_p = param3;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "nf.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "nf.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

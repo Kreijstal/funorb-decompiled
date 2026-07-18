@@ -691,7 +691,7 @@ final class re {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) runtimeException, "re.P(" + -71 + 41);
+          throw qb.a((Throwable) (Object) runtimeException, "re.P(" + -71 + ')');
         }
     }
 

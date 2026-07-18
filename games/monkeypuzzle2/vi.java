@@ -20,7 +20,7 @@ final class vi {
             me.field_f = new ha(wg.field_j, pj.field_c, param0, fk.field_a, ja.field_F);
             wg.field_j.b((byte) -63, (we) (Object) me.field_f);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "vi.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "vi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class vi {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("vi.B(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("vi.B(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -89,7 +89,7 @@ final class vi {
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }

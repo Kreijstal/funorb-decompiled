@@ -55,7 +55,7 @@ class nh extends sk {
             }
             param1.a(false, ((nh) this).field_i);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "nh.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "nh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -84,7 +84,7 @@ class nh extends sk {
             param0.field_o = var5.b(false);
             var5.a(-var4 + var5.field_k, (byte) 70);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "nh.L(" + (param0 != null ? "{...}" : "null") + 44 + -30 + 44 + 6 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "nh.L(" + (param0 != null ? "{...}" : "null") + ',' + -30 + ',' + 6 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ class nh extends sk {
                             if (s.a(45, (char) var7)) {
                               var8 = of.a(-119, (char) var7);
                               if (var8 != 0) {
-                                StringBuilder discarded$2 = var5.append(var8);
+                                StringBuilder discarded$2 = var5.append((char) var8);
                                 break L6;
                               } else {
                                 break L6;
@@ -229,7 +229,7 @@ class nh extends sk {
               break L7;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 44 + 0 + 41);
+          throw ma.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ',' + false + ')');
         }
         return stackIn_31_0;
     }
@@ -292,7 +292,7 @@ class nh extends sk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1_ref, "nh.K(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var1_ref, "nh.K(" + param0 + ')');
         }
     }
 
@@ -301,7 +301,7 @@ class nh extends sk {
             ((nh) this).field_j = param0;
             ((nh) this).field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "nh.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "nh.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

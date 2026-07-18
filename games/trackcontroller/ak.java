@@ -13,7 +13,7 @@ final class ak {
             var2 = ml.a(param0, "jagex logo2.packvorbis", "");
             ik discarded$0 = var2.a();
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ak.C(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "ak.C(" + (param0 != null ? "{...}" : "null") + ',' + 4 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class ak {
           }
           L5: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -222,7 +222,7 @@ final class ak {
           }
           L6: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -245,7 +245,7 @@ final class ak {
               break L6;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 127 + 41);
+          throw sl.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + 127 + ')');
         }
     }
 

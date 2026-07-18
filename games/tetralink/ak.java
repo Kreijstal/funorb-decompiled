@@ -49,7 +49,7 @@ final class ak {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("ak.E(").append(-14074).append(44);
+            stackOut_4_1 = new StringBuilder().append("ak.E(").append(-14074).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -72,7 +72,7 @@ final class ak {
               break L1;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -146,7 +146,7 @@ final class ak {
             bn.field_a = param1;
             md.field_v = param2;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "ak.B(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "ak.B(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

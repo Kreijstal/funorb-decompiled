@@ -945,7 +945,7 @@ abstract class nk extends qb {
               break L8;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 480 + 44 + param2 + 44 + 62 + 44 + 640 + 41);
+          throw ld.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + 480 + ',' + param2 + ',' + 62 + ',' + 640 + ')');
         }
     }
 
@@ -1045,7 +1045,7 @@ abstract class nk extends qb {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("nk.FA(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("nk.FA(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -1068,7 +1068,7 @@ abstract class nk extends qb {
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param2 + ')');
         }
     }
 

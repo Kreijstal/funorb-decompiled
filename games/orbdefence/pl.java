@@ -98,7 +98,7 @@ final class pl implements Iterator {
             int discarded$0 = 103;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "pl.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "pl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

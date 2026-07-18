@@ -256,7 +256,7 @@ final class fb extends ca {
               }
               L17: {
                 stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-                stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(44).append(param1).append(44).append(-31).append(44);
+                stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(',').append(param1).append(',').append(-31).append(',');
                 stackIn_38_0 = stackOut_36_0;
                 stackIn_38_1 = stackOut_36_1;
                 stackIn_37_0 = stackOut_36_0;
@@ -279,7 +279,7 @@ final class fb extends ca {
                   break L17;
                 }
               }
-              throw dd.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 41);
+              throw dd.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -295,7 +295,7 @@ final class fb extends ca {
             var2 = nj.a(param1, "jagex logo2.packvorbis", "");
             dl discarded$0 = var2.a();
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "fb.E(" + -2 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "fb.E(" + -2 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

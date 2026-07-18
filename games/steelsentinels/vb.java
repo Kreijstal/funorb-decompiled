@@ -343,7 +343,7 @@ final class vb {
               break L16;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + 44 + param1 + 41);
+          throw ci.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + ',' + param1 + ')');
         }
     }
 
@@ -452,7 +452,7 @@ final class vb {
               }
               L5: {
                 stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44);
+                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
                 stackIn_18_0 = stackOut_16_0;
                 stackIn_18_1 = stackOut_16_1;
                 stackIn_17_0 = stackOut_16_0;
@@ -475,7 +475,7 @@ final class vb {
                   break L5;
                 }
               }
-              throw ci.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 41);
+              throw ci.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -564,7 +564,7 @@ final class vb {
           L2: {
             var3_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3_ref;
-            stackOut_4_1 = new StringBuilder().append("vb.E(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("vb.E(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -587,7 +587,7 @@ final class vb {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }

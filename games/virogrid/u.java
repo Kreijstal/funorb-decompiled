@@ -205,7 +205,7 @@ final class u extends wb {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var4;
-            stackOut_22_1 = new StringBuilder().append("u.B(").append(-4).append(44);
+            stackOut_22_1 = new StringBuilder().append("u.B(").append(-4).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -228,7 +228,7 @@ final class u extends wb {
               break L6;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param2 + ')');
         }
     }
 
@@ -274,7 +274,7 @@ final class u extends wb {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("u.D(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("u.D(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -297,7 +297,7 @@ final class u extends wb {
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 

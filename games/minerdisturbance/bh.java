@@ -46,7 +46,7 @@ final class bh extends wf implements sh {
           L1: {
             var6 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var6;
-            stackOut_6_1 = new StringBuilder().append("bh.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("bh.B(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -69,7 +69,7 @@ final class bh extends wf implements sh {
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param3 + 44 + param4 + 41);
+          throw lj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class bh extends wf implements sh {
           }
           L2: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(62).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(62).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -183,7 +183,7 @@ final class bh extends wf implements sh {
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -230,7 +230,7 @@ final class bh extends wf implements sh {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var2_ref;
-            stackOut_7_1 = new StringBuilder().append("bh.I(").append(104).append(44);
+            stackOut_7_1 = new StringBuilder().append("bh.I(").append(104).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -253,7 +253,7 @@ final class bh extends wf implements sh {
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }
@@ -327,7 +327,7 @@ final class bh extends wf implements sh {
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 41);
+          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }
@@ -343,7 +343,7 @@ final class bh extends wf implements sh {
             var4 = var2_int + (1 + -(var3 * 12));
             ii.field_b.a((byte) -105, (pi) (Object) new tc(param0, var3, var4));
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "bh.C(" + (param0 != null ? "{...}" : "null") + 44 + -115 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "bh.C(" + (param0 != null ? "{...}" : "null") + ',' + -115 + ')');
         }
     }
 
@@ -419,7 +419,7 @@ final class bh extends wf implements sh {
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -29320 + 41);
+          throw lj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + -29320 + ')');
         }
         return stackIn_4_0 != 0;
     }
@@ -529,7 +529,7 @@ final class bh extends wf implements sh {
           }
           L3: {
             stackOut_13_0 = stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -552,7 +552,7 @@ final class bh extends wf implements sh {
               break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
     }
 

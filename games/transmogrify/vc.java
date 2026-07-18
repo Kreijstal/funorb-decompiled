@@ -24,7 +24,7 @@ final class vc extends rg implements ie {
             int var3_int = 32 / ((-1 - param0) / 56);
             ((vc) this).field_Q = param1;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "vc.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "vc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class vc extends rg implements ie {
             super.a(param0, param1, param2, param3);
             ((vc) this).field_P = -param3 + (oa.field_j - ((vc) this).field_p);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "vc.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "vc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

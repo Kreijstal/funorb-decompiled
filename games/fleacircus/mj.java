@@ -344,7 +344,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           L14: {
             stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
-            stackOut_72_1 = ((StringBuilder) (Object) stackIn_72_1).append(stackIn_72_2).append(44);
+            stackOut_72_1 = ((StringBuilder) (Object) stackIn_72_1).append(stackIn_72_2).append(',');
             stackIn_75_0 = stackOut_72_0;
             stackIn_75_1 = stackOut_72_1;
             stackIn_73_0 = stackOut_72_0;
@@ -369,7 +369,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           L15: {
             stackOut_76_0 = (RuntimeException) (Object) stackIn_76_0;
-            stackOut_76_1 = ((StringBuilder) (Object) stackIn_76_1).append(stackIn_76_2).append(44).append(0).append(44);
+            stackOut_76_1 = ((StringBuilder) (Object) stackIn_76_1).append(stackIn_76_2).append(',').append(false).append(',');
             stackIn_79_0 = stackOut_76_0;
             stackIn_79_1 = stackOut_76_1;
             stackIn_77_0 = stackOut_76_0;
@@ -392,7 +392,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L15;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_80_0, stackIn_80_2 + 44 + 0 + 44 + 1 + 44 + 91 + 41);
+          throw pf.a((Throwable) (Object) stackIn_80_0, stackIn_80_2 + ',' + false + ',' + true + ',' + 91 + ')');
         }
     }
 
@@ -495,7 +495,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L4;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
         }
     }
 
@@ -581,7 +581,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L2;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
     }
 
@@ -791,7 +791,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var1, "mj.A(" + -515966495 + 41);
+          throw pf.a((Throwable) (Object) var1, "mj.A(" + -515966495 + ')');
         }
     }
 
@@ -853,7 +853,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L2;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 
@@ -993,7 +993,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L7;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + ')');
         }
     }
 

@@ -18,7 +18,7 @@ final class mh {
             bn.field_I.a((ak) (Object) bo.field_h, (byte) 26);
             un.field_l = true;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "mh.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

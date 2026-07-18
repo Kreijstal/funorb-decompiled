@@ -71,7 +71,7 @@ final class ta {
             ja.field_e = param0;
             int var2_int = -12 / ((-36 - param1) / 50);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ta.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "ta.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

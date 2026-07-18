@@ -17,7 +17,7 @@ final class on {
             var2 = in.a(param0, "jagex logo2.packvorbis", "");
             hh discarded$0 = var2.b();
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "on.C(" + (param0 != null ? "{...}" : "null") + 44 + -58 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "on.C(" + (param0 != null ? "{...}" : "null") + ',' + -58 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class on {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + -49 + 41);
+          throw t.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + -49 + ')');
         }
         return stackIn_11_0;
     }

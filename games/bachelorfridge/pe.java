@@ -45,7 +45,7 @@ final class pe extends k {
             var2 = new gi(param0, param1);
         } else {
             var2 = (gi) (Object) param0;
-            var2.field_e = var2.field_e + 32 + param1;
+            var2.field_e = var2.field_e + ' ' + param1;
         }
         return var2;
     }

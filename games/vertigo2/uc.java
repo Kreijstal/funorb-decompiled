@@ -83,7 +83,7 @@ final class uc {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + 0 + 41);
+          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + false + ')');
         }
         return stackIn_4_0;
     }
@@ -126,7 +126,7 @@ final class uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "uc.B(" + 73 + 41);
+          throw wn.a((Throwable) (Object) var1, "uc.B(" + 73 + ')');
         }
     }
 

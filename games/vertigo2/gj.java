@@ -571,13 +571,13 @@ final class gj extends ji {
                               var14 = Vertigo2.a(new String[1], eg.field_q, -123);
                               break L18;
                             } else {
-                              var14 = ni.field_e + var11;
+                              var14 = ni.field_e + (String) var11;
                               break L18;
                             }
                           } else {
                             var13 = rn.field_y;
                             if (var12 != 0) {
-                              var14 = ia.field_H + var11;
+                              var14 = ia.field_H + (String) var11;
                               break L18;
                             } else {
                               var14 = Vertigo2.a(new String[1], fa.field_t, 14);
@@ -596,7 +596,7 @@ final class gj extends ji {
                               break L19;
                             } else {
                               var12 = 1;
-                              var11 = (Object) (Object) (var11 + ", " + var24);
+                              var11 = (Object) (Object) ((String) var11 + ", " + var24);
                               break L19;
                             }
                           } else {
@@ -1079,7 +1079,7 @@ final class gj extends ji {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("gj.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_8_1 = new StringBuilder().append("gj.C(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -1102,7 +1102,7 @@ final class gj extends ji {
               break L4;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
     }
 

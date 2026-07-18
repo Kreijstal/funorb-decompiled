@@ -92,7 +92,7 @@ final class hh {
                             if (var8 == 0) {
                               break L5;
                             } else {
-                              StringBuilder discarded$1 = var5.append(var8);
+                              StringBuilder discarded$1 = var5.append((char) var8);
                               break L5;
                             }
                           }
@@ -119,7 +119,7 @@ final class hh {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var2;
-            stackOut_27_1 = new StringBuilder().append("hh.D(").append(0).append(44);
+            stackOut_27_1 = new StringBuilder().append("hh.D(").append(0).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -142,7 +142,7 @@ final class hh {
               break L6;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class hh {
               break L7;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + -101 + 41);
+          throw sd.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + -101 + ')');
         }
     }
 
@@ -383,7 +383,7 @@ final class hh {
               break L3;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 94 + 41);
+          throw sd.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + 94 + ')');
         }
         return stackIn_16_0;
     }

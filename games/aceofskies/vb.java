@@ -150,7 +150,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (Object) (Object) decompiledCaughtException;
-          throw pn.a((Throwable) var2, "vb.MA(" + param0 + 41);
+          throw pn.a((Throwable) var2, "vb.MA(" + param0 + ')');
         }
     }
 
@@ -205,7 +205,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -300,7 +300,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
               break L4;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
     }
 
@@ -310,7 +310,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
             int var1_int = -69 % ((18 - param0) / 42);
             field_l = null;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "vb.PA(" + param0 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "vb.PA(" + param0 + ')');
         }
     }
 
@@ -399,7 +399,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
         return stackIn_14_0;
     }
@@ -424,7 +424,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var1, "vb.OA(" + param0 + 41);
+          throw pn.a((Throwable) (Object) var1, "vb.OA(" + param0 + ')');
         }
     }
 
@@ -563,7 +563,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var2, "vb.KA(" + 118 + 41);
+          throw pn.a((Throwable) (Object) var2, "vb.KA(" + 118 + ')');
         }
     }
 
@@ -674,7 +674,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw pn.a((Throwable) (Object) runtimeException, "vb.QA(" + param0 + 44 + param1 + 41);
+          throw pn.a((Throwable) (Object) runtimeException, "vb.QA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -717,7 +717,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw pn.a((Throwable) (Object) runtimeException, "vb.RA(" + 111 + 41);
+          throw pn.a((Throwable) (Object) runtimeException, "vb.RA(" + 111 + ')');
         }
     }
 
@@ -772,7 +772,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -844,7 +844,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
               L6: {
                 var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_13_0 = (RuntimeException) var3_ref2;
-                stackOut_13_1 = new StringBuilder().append("vb.LA(").append(param0).append(44);
+                stackOut_13_1 = new StringBuilder().append("vb.LA(").append(param0).append(',');
                 stackIn_16_0 = stackOut_13_0;
                 stackIn_16_1 = stackOut_13_1;
                 stackIn_14_0 = stackOut_13_0;
@@ -867,7 +867,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
                   break L6;
                 }
               }
-              throw pn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+              throw pn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -1368,7 +1368,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -1424,7 +1424,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -1526,7 +1526,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
               L5: {
                 var8_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_20_0 = (RuntimeException) var8_ref;
-                stackOut_20_1 = new StringBuilder().append("vb.NA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+                stackOut_20_1 = new StringBuilder().append("vb.NA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
                 stackIn_23_0 = stackOut_20_0;
                 stackIn_23_1 = stackOut_20_1;
                 stackIn_21_0 = stackOut_20_0;
@@ -1549,7 +1549,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
                   break L5;
                 }
               }
-              throw pn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+              throw pn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -1609,7 +1609,7 @@ public abstract class vb extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

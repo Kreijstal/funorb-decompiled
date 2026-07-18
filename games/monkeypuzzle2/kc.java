@@ -89,7 +89,7 @@ abstract class kc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1_ref, "kc.I(" + 93 + 41);
+          throw la.a((Throwable) (Object) var1_ref, "kc.I(" + 93 + ')');
         }
     }
 

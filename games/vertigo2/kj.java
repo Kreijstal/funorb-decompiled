@@ -312,7 +312,7 @@ final class kj extends ji {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var4;
-            stackOut_21_1 = new StringBuilder().append("kj.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_21_1 = new StringBuilder().append("kj.C(").append(param0).append(',').append(param1).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -335,7 +335,7 @@ final class kj extends ji {
               break L6;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 
@@ -497,7 +497,7 @@ final class kj extends ji {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5;
-            stackOut_10_1 = new StringBuilder().append("kj.E(").append(1).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_10_1 = new StringBuilder().append("kj.E(").append(1).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -520,7 +520,7 @@ final class kj extends ji {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param4 + 41);
+          throw wn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param4 + ')');
         }
     }
 

@@ -123,7 +123,7 @@ final class ih extends hl {
                 }
               }
             }
-            var2 = var2 + 32;
+            var2 = var2 + ' ';
             continue L1;
           } else {
             var2 = var11;
@@ -140,10 +140,10 @@ final class ih extends hl {
         int var4 = HoldTheLine.field_D;
         StringBuilder var2 = new StringBuilder(5);
         for (var3 = 0; var3 < param0; var3++) {
-            StringBuilder discarded$0 = var2.append(8216);
+            StringBuilder discarded$0 = var2.append('‘');
         }
         while (var3 < 5) {
-            StringBuilder discarded$1 = var2.append(8217);
+            StringBuilder discarded$1 = var2.append('’');
             var3++;
         }
         return var2.toString();

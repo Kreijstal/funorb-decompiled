@@ -35,7 +35,7 @@ final class obb extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var3, "obb.B(" + param0 + 44 + -18644 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) var3, "obb.B(" + param0 + ',' + -18644 + ',' + param2 + ')');
         }
         return stackIn_5_0;
     }
@@ -103,7 +103,7 @@ final class obb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }

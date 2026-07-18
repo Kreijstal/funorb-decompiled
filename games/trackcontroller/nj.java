@@ -111,7 +111,7 @@ final class nj {
           L4: {
             var2_ref = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var2_ref;
-            stackOut_20_1 = new StringBuilder().append("nj.A(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("nj.A(").append(param0).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -134,7 +134,7 @@ final class nj {
               break L4;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
         }
     }
 
@@ -188,7 +188,7 @@ final class nj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1_ref, "nj.C(" + 125 + 41);
+          throw sl.a((Throwable) (Object) var1_ref, "nj.C(" + 125 + ')');
         }
     }
 
@@ -307,7 +307,7 @@ final class nj {
               break L7;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 94 + 41);
+          throw sl.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + 94 + ')');
         }
     }
 

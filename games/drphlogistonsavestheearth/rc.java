@@ -21,7 +21,7 @@ final class rc {
             gf.field_A.a((gi) (Object) param1, 255);
             fc.a(-121, param1, param0);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "rc.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "rc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

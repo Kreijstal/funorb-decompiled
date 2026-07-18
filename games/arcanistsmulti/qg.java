@@ -166,7 +166,7 @@ final class qg extends RuntimeException {
           L9: {
             var2 = decompiledCaughtException;
             stackOut_41_0 = (RuntimeException) var2;
-            stackOut_41_1 = new StringBuilder().append("qg.C(").append(38).append(44);
+            stackOut_41_1 = new StringBuilder().append("qg.C(").append(38).append(',');
             stackIn_43_0 = stackOut_41_0;
             stackIn_43_1 = stackOut_41_1;
             stackIn_42_0 = stackOut_41_0;
@@ -189,7 +189,7 @@ final class qg extends RuntimeException {
               break L9;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + ')');
         }
     }
 

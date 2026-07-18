@@ -36,7 +36,7 @@ final class bh extends fe {
         try {
             super.b((byte) 120, param1);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "bh.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "bh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

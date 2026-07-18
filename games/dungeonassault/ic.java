@@ -118,7 +118,7 @@ final class ic extends mc {
             int discarded$0 = -1998;
             var3.field_d = tp.a(kf.field_p, "idle", param2);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "ic.EA(" + param0 + 44 + 27029 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "ic.EA(" + param0 + ',' + 27029 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -185,7 +185,7 @@ final class ic extends mc {
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw vk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

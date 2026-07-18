@@ -484,7 +484,7 @@ final class nc extends ue {
             ((nc) this).field_d[0] = (ik) (Object) new mh(320, 190, si.field_a, 2);
             ((nc) this).field_d[1] = (ik) (Object) new mh(320, 295, fk.field_y, 2);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "nc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "nc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

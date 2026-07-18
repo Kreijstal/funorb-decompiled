@@ -327,7 +327,7 @@ final class ob extends ql {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("ob.J(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("ob.J(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -350,7 +350,7 @@ final class ob extends ql {
               break L3;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
     }
 

@@ -25,7 +25,7 @@ final class hk {
             me.a(false, sb.field_c / param1, sb.field_g / 2);
             dc.a(param0.field_D, param3.field_D, -47, param0.field_D + param0.field_t, param3.field_D + param3.field_t);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "hk.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 400 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "hk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + 400 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

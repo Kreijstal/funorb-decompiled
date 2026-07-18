@@ -19,7 +19,7 @@ final class gd {
             ce.field_a = param2;
             sb.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "gd.B(" + (param0 != null ? "{...}" : "null") + 44 + 255 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "gd.B(" + (param0 != null ? "{...}" : "null") + ',' + 255 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

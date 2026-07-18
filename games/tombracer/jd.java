@@ -94,7 +94,7 @@ final class jd extends tfa implements lv {
                             if (0 == var8) {
                               break L6;
                             } else {
-                              StringBuilder discarded$1 = var5.append(var8);
+                              StringBuilder discarded$1 = var5.append((char) var8);
                               break L6;
                             }
                           } else {
@@ -121,7 +121,7 @@ final class jd extends tfa implements lv {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_29_0 = (RuntimeException) var2;
-            stackOut_29_1 = new StringBuilder().append("jd.C(").append(param0).append(44);
+            stackOut_29_1 = new StringBuilder().append("jd.C(").append(param0).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -144,7 +144,7 @@ final class jd extends tfa implements lv {
               break L7;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ')');
         }
     }
 
@@ -262,7 +262,7 @@ final class jd extends tfa implements lv {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + 0 + 41);
+          throw tba.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + 0 + ')');
         }
         return stackIn_25_0;
     }
@@ -278,7 +278,7 @@ final class jd extends tfa implements lv {
             jaggl.OpenGL.glTexImage3Dub(((jd) this).field_i, 0, ((jd) this).d(120), ((jd) this).field_k, ((jd) this).field_l, ((jd) this).field_n, 0, waa.a(((jd) this).field_f, 1383), 5121, param5, 0);
             jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "jd.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "jd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -289,7 +289,7 @@ final class jd extends tfa implements lv {
             }
             super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "jd.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "jd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

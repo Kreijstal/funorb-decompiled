@@ -27,7 +27,7 @@ final class jd {
             param0.field_i.field_l = param0;
             param0.field_o = param1;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "jd.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "jd.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

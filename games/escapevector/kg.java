@@ -332,7 +332,7 @@ final class kg {
           L3: {
             runtimeException = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) runtimeException;
-            stackOut_12_1 = new StringBuilder().append("kg.K(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("kg.K(").append(param0).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -355,7 +355,7 @@ final class kg {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param3 + 41);
+          throw t.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param3 + ')');
         }
     }
 
@@ -432,7 +432,7 @@ final class kg {
           L4: {
             var5_ref = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var5_ref;
-            stackOut_17_1 = new StringBuilder().append("kg.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_17_1 = new StringBuilder().append("kg.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -455,7 +455,7 @@ final class kg {
               break L4;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
     }
 

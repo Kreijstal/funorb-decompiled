@@ -27,7 +27,7 @@ final class uga extends ana {
         try {
             ((uga) this).field_z = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uga.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "uga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class uga extends ana {
                             break L2;
                           }
                         }
-                        StringBuilder discarded$5 = var13.append(var9);
+                        StringBuilder discarded$5 = var13.append((char) var9);
                         continue L1;
                       }
                     }
@@ -159,7 +159,7 @@ final class uga extends ana {
                             break L5;
                           }
                         }
-                        StringBuilder discarded$7 = var12.append(var9);
+                        StringBuilder discarded$7 = var12.append((char) var9);
                         continue L4;
                       }
                     }

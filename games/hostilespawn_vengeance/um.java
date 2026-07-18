@@ -365,7 +365,7 @@ final class um {
                   break L19;
                 }
               }
-              throw wg.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+              throw wg.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -440,7 +440,7 @@ final class um {
           L4: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var5_ref;
-            stackOut_12_1 = new StringBuilder().append("um.B(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("um.B(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -463,7 +463,7 @@ final class um {
               break L4;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 44 + param3 + 41);
+          throw wg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -691,7 +691,7 @@ final class um {
             ((um) this).field_a = param0;
             ((um) this).field_g = param2;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "um.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "um.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

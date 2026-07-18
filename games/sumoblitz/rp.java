@@ -50,7 +50,7 @@ final class rp {
             }
             ((rp) this).field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "rp.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "rp.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class rp {
               break L2;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 

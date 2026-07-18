@@ -122,7 +122,7 @@ final class qf {
               break L5;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

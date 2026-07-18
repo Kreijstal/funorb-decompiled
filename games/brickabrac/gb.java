@@ -116,7 +116,7 @@ final class gb {
                             if (m.a(true, (char) var7)) {
                               var8 = ah.a(207, (char) var7);
                               if (0 != var8) {
-                                StringBuilder discarded$1 = var5.append(var8);
+                                StringBuilder discarded$1 = var5.append((char) var8);
                                 break L7;
                               } else {
                                 break L7;
@@ -173,7 +173,7 @@ final class gb {
               break L8;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 44 + param1 + 41);
+          throw qb.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ',' + param1 + ')');
         }
         return stackIn_31_0;
     }
@@ -267,7 +267,7 @@ final class gb {
             ((gb) this).field_o = param2;
             ((gb) this).field_a = 0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "gb.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "gb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

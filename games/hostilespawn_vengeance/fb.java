@@ -717,7 +717,7 @@ final class fb extends ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var5, "fb.A(" + 32 + 44 + 398 + 44 + 11992 + 44 + 32 + 44 + 576 + 41);
+          throw wg.a((Throwable) (Object) var5, "fb.A(" + 32 + ',' + 398 + ',' + 11992 + ',' + 32 + ',' + 576 + ')');
         }
     }
 
@@ -807,7 +807,7 @@ final class fb extends ql {
               break L1;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_4_0 != 0;
     }

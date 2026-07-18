@@ -77,7 +77,7 @@ final class wj implements up {
           L3: {
             runtimeException = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) runtimeException;
-            stackOut_10_1 = new StringBuilder().append("wj.G(").append(0).append(44).append(0).append(44).append(param2).append(44);
+            stackOut_10_1 = new StringBuilder().append("wj.G(").append(0).append(',').append(0).append(',').append(param2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -100,7 +100,7 @@ final class wj implements up {
               break L3;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
     }
 
@@ -251,7 +251,7 @@ final class wj implements up {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var1, "wj.N(" + param0 + 41);
+          throw pn.a((Throwable) (Object) var1, "wj.N(" + param0 + ')');
         }
     }
 
@@ -306,7 +306,7 @@ final class wj implements up {
         try {
             this.a(0, 0, param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "wj.J(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "wj.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -397,7 +397,7 @@ final class wj implements up {
               break L4;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -430,7 +430,7 @@ final class wj implements up {
             wt.field_e.a((byte) 125, l.field_c);
             um.field_m.a((rf) (Object) wt.field_e);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "wj.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "wj.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -483,7 +483,7 @@ final class wj implements up {
             jaggl.OpenGL.glGenFramebuffersEXT(1, ho.field_c, 0);
             ((wj) this).field_d = ho.field_c[0];
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "wj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "wj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

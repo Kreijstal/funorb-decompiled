@@ -69,7 +69,7 @@ final class eg extends rqa {
           L3: {
             runtimeException = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) runtimeException;
-            stackOut_10_1 = new StringBuilder().append("eg.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_10_1 = new StringBuilder().append("eg.C(").append(param0).append(',').append(param1).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -92,7 +92,7 @@ final class eg extends rqa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param3 + 44 + param4 + 41);
+          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class eg extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

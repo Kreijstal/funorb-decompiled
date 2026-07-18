@@ -55,7 +55,7 @@ abstract class t {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "t.J(" + 1 + 41);
+          throw oj.a((Throwable) (Object) var1, "t.J(" + true + ')');
         }
     }
 

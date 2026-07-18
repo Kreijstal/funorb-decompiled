@@ -163,7 +163,7 @@ abstract class fi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "fi.F(" + param0 + 41);
+          throw t.a((Throwable) (Object) var1, "fi.F(" + param0 + ')');
         }
     }
 
@@ -250,7 +250,7 @@ abstract class fi {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 0 + 41);
+          throw t.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + 0 + ')');
         }
     }
 

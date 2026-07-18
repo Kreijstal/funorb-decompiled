@@ -18,7 +18,7 @@ final class cc extends uf {
         try {
             ((cc) this).field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "cc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "cc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

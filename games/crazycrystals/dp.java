@@ -180,7 +180,7 @@ final class dp extends jb {
           L15: {
             var6 = decompiledCaughtException;
             stackOut_41_0 = (RuntimeException) var6;
-            stackOut_41_1 = new StringBuilder().append("dp.B(").append(param0).append(44).append(-27919).append(44).append(param2).append(44);
+            stackOut_41_1 = new StringBuilder().append("dp.B(").append(param0).append(',').append(-27919).append(',').append(param2).append(',');
             stackIn_43_0 = stackOut_41_0;
             stackIn_43_1 = stackOut_41_1;
             stackIn_42_0 = stackOut_41_0;
@@ -203,7 +203,7 @@ final class dp extends jb {
               break L15;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 44 + param4 + 44 + param5 + 41);
+          throw dn.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_40_0;
     }

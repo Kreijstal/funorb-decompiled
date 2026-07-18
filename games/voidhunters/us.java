@@ -21,7 +21,7 @@ class us extends oib {
             ((us) this).field_g = param0;
             ((us) this).field_e = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "us.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "us.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -33,7 +33,7 @@ class us extends oib {
             param0.a(((us) this).field_g, 90);
             param0.a((byte) -53, ((us) this).field_e);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "us.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "us.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

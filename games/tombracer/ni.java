@@ -150,7 +150,7 @@ final class ni {
                   break L7;
                 }
               }
-              throw tba.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + 77 + 41);
+              throw tba.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + 77 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -327,7 +327,7 @@ final class ni {
               break L9;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
         }
     }
 
@@ -336,7 +336,7 @@ final class ni {
             boolean discarded$0 = ((ni) this).field_a.a(786336, 24, true);
             int var3_int = -61 / ((param0 - -55) / 41);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ni.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ni.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

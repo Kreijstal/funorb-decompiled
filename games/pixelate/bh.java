@@ -79,7 +79,7 @@ final class bh extends gf {
             dh.field_a.a(22125, (fa) (Object) param1);
             id.a((byte) -109, param1, param2);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "bh.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "bh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class bh extends gf {
             java.nio.Buffer discarded$0 = ((bh) this).field_j.position(0);
             java.nio.ByteBuffer discarded$1 = ((bh) this).field_j.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "bh.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "bh.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

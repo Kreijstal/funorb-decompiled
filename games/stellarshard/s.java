@@ -167,7 +167,7 @@ final class s implements Iterator {
               break L6;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + 0 + 44 + 3 + 41);
+          throw ma.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + false + ',' + 3 + ')');
         }
         return stackIn_32_0;
     }
@@ -268,7 +268,7 @@ final class s implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2_ref, "s.B(" + 45 + 44 + param1 + 41);
+          throw ma.a((Throwable) (Object) var2_ref, "s.B(" + 45 + ',' + param1 + ')');
         }
         return stackIn_21_0 != 0;
     }
@@ -307,7 +307,7 @@ final class s implements Iterator {
             ((s) this).field_d = null;
             ((s) this).field_h = ((s) this).field_a.field_b.field_m;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "s.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "s.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

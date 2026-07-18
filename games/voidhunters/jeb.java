@@ -166,7 +166,7 @@ final class jeb extends mfb {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var6;
-            stackOut_9_1 = new StringBuilder().append("jeb.C(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("jeb.C(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -191,7 +191,7 @@ final class jeb extends mfb {
           }
           L6: {
             stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44).append(param2).append(44);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -214,7 +214,7 @@ final class jeb extends mfb {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param4 + 41);
+          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param4 + ')');
         }
         return stackIn_8_0 != 0;
     }

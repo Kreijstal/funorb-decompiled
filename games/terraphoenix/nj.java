@@ -17,7 +17,7 @@ final class nj extends ke {
             java.nio.Buffer discarded$0 = ((nj) this).field_h.position(0);
             java.nio.ByteBuffer discarded$1 = ((nj) this).field_h.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "nj.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "nj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

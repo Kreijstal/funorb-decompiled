@@ -29,7 +29,7 @@ abstract class ii extends df {
             u.field_b.field_u.f(256);
             mj.field_Sb = null;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ii.WB(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 35 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "ii.WB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + 35 + ')');
         }
     }
 

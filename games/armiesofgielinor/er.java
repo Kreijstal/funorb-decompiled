@@ -175,7 +175,7 @@ final class er {
           L9: {
             var4 = decompiledCaughtException;
             stackOut_34_0 = (RuntimeException) var4;
-            stackOut_34_1 = new StringBuilder().append("er.D(").append(1).append(44).append(-108).append(44);
+            stackOut_34_1 = new StringBuilder().append("er.D(").append(true).append(',').append(-108).append(',');
             stackIn_36_0 = stackOut_34_0;
             stackIn_36_1 = stackOut_34_1;
             stackIn_35_0 = stackOut_34_0;
@@ -198,7 +198,7 @@ final class er {
               break L9;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 44 + 10 + 41);
+          throw ig.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ',' + 10 + ')');
         }
         return stackIn_33_0 != 0;
     }

@@ -113,7 +113,7 @@ final class nd extends jj {
           L4: {
             var2 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var2;
-            stackOut_18_1 = new StringBuilder().append("nd.BA(").append(param0).append(44);
+            stackOut_18_1 = new StringBuilder().append("nd.BA(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -136,7 +136,7 @@ final class nd extends jj {
               break L4;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
         }
         return stackIn_17_0;
     }
@@ -259,7 +259,7 @@ final class nd extends jj {
               break L4;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw pf.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -291,7 +291,7 @@ final class nd extends jj {
             ((nd) this).field_ab.field_H = true;
             ((nd) this).a((qa) (Object) ((nd) this).field_ab, (byte) -63);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "nd.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "nd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

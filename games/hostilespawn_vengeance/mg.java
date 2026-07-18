@@ -72,7 +72,7 @@ final class mg {
               break L1;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + param2 + 44 + 0 + 41);
+          throw wg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + false + ')');
         }
         return stackIn_6_0;
     }
@@ -91,7 +91,7 @@ final class mg {
             si.f(param1, param2, param0.field_e + 2, 16776960, 128 + -(4 * param0.field_e));
             si.f(param1, param2, param0.field_e / 2 + 1, 16777215, 128 - param0.field_e * 4);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "mg.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + 2 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "mg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + 2 + ')');
         }
     }
 

@@ -141,7 +141,7 @@ final class lk extends am {
           L6: {
             var3 = decompiledCaughtException;
             stackOut_35_0 = (RuntimeException) var3;
-            stackOut_35_1 = new StringBuilder().append("lk.D(").append(0).append(44).append(23).append(44);
+            stackOut_35_1 = new StringBuilder().append("lk.D(").append(false).append(',').append(23).append(',');
             stackIn_37_0 = stackOut_35_0;
             stackIn_37_1 = stackOut_35_1;
             stackIn_36_0 = stackOut_35_0;
@@ -164,7 +164,7 @@ final class lk extends am {
               break L6;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + ')');
         }
         return stackIn_33_0;
     }
@@ -337,7 +337,7 @@ final class lk extends am {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

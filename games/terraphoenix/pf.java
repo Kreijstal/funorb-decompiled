@@ -19,7 +19,7 @@ final class pf {
         try {
             kg.field_r[76].c(param2 - 32, param3 + -64, 64);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "pf.B(" + (param0 != null ? "{...}" : "null") + 44 + 71 + 44 + param2 + 44 + param3 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "pf.B(" + (param0 != null ? "{...}" : "null") + ',' + 71 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

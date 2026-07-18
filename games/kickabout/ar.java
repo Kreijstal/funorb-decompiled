@@ -30,7 +30,7 @@ final class ar {
             on.a(var7 - -1, 1 + var8, var5 + -2, -2 + var6, 16777088);
             int discarded$1 = dw.field_e.field_X.a(param1, 3 + var7, var8 - (-1 + -ig.field_c) - dw.field_e.field_X.field_G, 500, 1000, 0, -1, 0, 0, sh.field_c);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ar.B(" + 15707 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "ar.B(" + 15707 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

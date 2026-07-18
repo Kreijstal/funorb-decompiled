@@ -281,7 +281,7 @@ final class qc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2, "qc.C(" + -115 + 44 + 1 + 41);
+          throw ma.a((Throwable) (Object) var2, "qc.C(" + -115 + ',' + true + ')');
         }
         return stackIn_82_0;
     }
@@ -921,7 +921,7 @@ final class qc {
         try {
             ((qc) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "qc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "qc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

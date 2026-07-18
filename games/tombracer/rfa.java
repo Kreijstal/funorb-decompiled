@@ -44,7 +44,7 @@ abstract class rfa extends ug implements sia {
                 int discarded$0 = 19711;
                 aca.a((sia) this);
             } catch (RuntimeException runtimeException) {
-                throw tba.a((Throwable) (Object) runtimeException, "rfa.GB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+                throw tba.a((Throwable) (Object) runtimeException, "rfa.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -439,7 +439,7 @@ abstract class rfa extends ug implements sia {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
         }
         return stackIn_10_0;
     }

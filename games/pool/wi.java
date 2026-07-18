@@ -409,7 +409,7 @@ final class wi {
               break L5;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -513,7 +513,7 @@ final class wi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var1, "wi.A(" + 199 + 41);
+          throw wm.a((Throwable) (Object) var1, "wi.A(" + 199 + ')');
         }
     }
 

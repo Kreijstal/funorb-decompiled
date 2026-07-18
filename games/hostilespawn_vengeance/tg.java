@@ -77,7 +77,7 @@ final class tg {
           L4: {
             var5 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var5;
-            stackOut_12_1 = new StringBuilder().append("tg.C(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("tg.C(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -100,7 +100,7 @@ final class tg {
               break L4;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw wg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -244,7 +244,7 @@ final class tg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "tg.B(" + param0 + 44 + 30427 + 41);
+          throw wg.a((Throwable) (Object) var2, "tg.B(" + param0 + ',' + 30427 + ')');
         }
     }
 

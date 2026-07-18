@@ -77,7 +77,7 @@ final class ji implements Iterable {
             int var6 = -64 % ((param0 - -60) / 52);
             param2.field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ji.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "ji.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class ji implements Iterable {
           L3: {
             var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var6_ref2;
-            stackOut_11_1 = new StringBuilder().append("ji.B(").append(25459).append(44).append(1).append(44);
+            stackOut_11_1 = new StringBuilder().append("ji.B(").append(25459).append(',').append(true).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -157,7 +157,7 @@ final class ji implements Iterable {
               break L3;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 1 + 44 + 1 + 44 + 1 + 41);
+          throw qb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + 1 + ',' + 1 + ',' + true + ')');
         }
     }
 
@@ -289,7 +289,7 @@ final class ji implements Iterable {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + 0 + 41);
+          throw qb.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + 0 + ')');
         }
         return stackIn_18_0;
     }

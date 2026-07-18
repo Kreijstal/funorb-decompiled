@@ -94,7 +94,7 @@ final class kd {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5;
-            stackOut_5_1 = new StringBuilder().append("kd.A(").append(256).append(44).append(101).append(44);
+            stackOut_5_1 = new StringBuilder().append("kd.A(").append(256).append(',').append(101).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -117,7 +117,7 @@ final class kd {
               break L1;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 1048576 + 44 + param4 + 41);
+          throw fc.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 1048576 + ',' + param4 + ')');
         }
     }
 

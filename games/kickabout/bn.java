@@ -49,7 +49,7 @@ final class bn extends qt {
             }
             io.field_e.a(true, 640, ((bn) this).field_j, 0, 480);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "bn.F(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "bn.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

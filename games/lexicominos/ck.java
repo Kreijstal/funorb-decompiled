@@ -94,7 +94,7 @@ final class ck extends IOException {
                             if (var8 == 0) {
                               break L5;
                             } else {
-                              StringBuilder discarded$37 = var5.append(var8);
+                              StringBuilder discarded$37 = var5.append((char) var8);
                               break L5;
                             }
                           }
@@ -146,7 +146,7 @@ final class ck extends IOException {
               break L6;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + -48 + 41);
+          throw ld.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + -48 + ')');
         }
     }
 

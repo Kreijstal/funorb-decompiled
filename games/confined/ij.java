@@ -91,7 +91,7 @@ final class ij extends rk {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("ij.B(").append(0).append(44).append(param1).append(44);
+            stackOut_9_1 = new StringBuilder().append("ij.B(").append(0).append(',').append(param1).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -114,7 +114,7 @@ final class ij extends rk {
               break L3;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
         return stackIn_8_0;
     }
@@ -258,7 +258,7 @@ final class ij extends rk {
           L8: {
             var3 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var3;
-            stackOut_23_1 = new StringBuilder().append("ij.<init>(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("ij.<init>(").append(param0).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -281,7 +281,7 @@ final class ij extends rk {
               break L8;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
     }
 

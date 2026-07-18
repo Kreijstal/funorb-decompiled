@@ -13,7 +13,7 @@ final class fm extends an {
         try {
             ((fm) this).field_x = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "fm.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "fm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -22,7 +22,7 @@ final class fm extends an {
         try {
             ((fm) this).field_h = se.field_j.field_g;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "fm.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "fm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -31,7 +31,7 @@ final class fm extends an {
         try {
             ((fm) this).field_h = se.field_j.field_g;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "fm.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "fm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class fm extends an {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1, "fm.F(" + 1 + 41);
+          throw sh.a((Throwable) (Object) var1, "fm.F(" + true + ')');
         }
     }
 
@@ -225,7 +225,7 @@ final class fm extends an {
                             if (var8 == 0) {
                               break L6;
                             } else {
-                              StringBuilder discarded$5 = var5.append(var8);
+                              StringBuilder discarded$5 = var5.append((char) var8);
                               break L6;
                             }
                           } else {
@@ -275,7 +275,7 @@ final class fm extends an {
               break L7;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ',' + param1 + ')');
         }
     }
 

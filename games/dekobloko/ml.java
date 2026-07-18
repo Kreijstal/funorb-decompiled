@@ -20,7 +20,7 @@ final class ml {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "ml.B(" + -33 + 41);
+          throw dh.a((Throwable) (Object) var1, "ml.B(" + -33 + ')');
         }
     }
 

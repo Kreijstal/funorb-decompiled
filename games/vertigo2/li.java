@@ -209,7 +209,7 @@ class li {
           L10: {
             var4 = decompiledCaughtException;
             stackOut_38_0 = (RuntimeException) var4;
-            stackOut_38_1 = new StringBuilder().append("li.RB(").append(param0).append(44).append(1).append(44);
+            stackOut_38_1 = new StringBuilder().append("li.RB(").append(param0).append(',').append(true).append(',');
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
@@ -232,7 +232,7 @@ class li {
               break L10;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 44 + 1 + 41);
+          throw wn.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ',' + true + ')');
         }
         return stackIn_37_0;
     }

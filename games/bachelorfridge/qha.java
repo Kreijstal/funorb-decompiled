@@ -73,7 +73,7 @@ final class qha {
               break L0;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -1 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -1 + ',' + param2 + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class qha {
             ml.field_a = ch.a(param1, -1, "minimal", "fridgedoor2d");
             ada.field_p = ch.a(param1, -1, "minimal", "fridge_left");
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "qha.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "qha.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -85,7 +85,7 @@ final class ba {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var1, "ba.A(" + -27 + 41);
+          throw dd.a((Throwable) (Object) var1, "ba.A(" + -27 + ')');
         }
     }
 

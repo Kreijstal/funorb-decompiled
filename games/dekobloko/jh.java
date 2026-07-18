@@ -119,7 +119,7 @@ final class jh {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var6;
-            stackOut_26_1 = new StringBuilder().append("jh.D(").append(param0).append(44);
+            stackOut_26_1 = new StringBuilder().append("jh.D(").append(param0).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -142,7 +142,7 @@ final class jh {
               break L5;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param2 + 44 + param3 + 44 + 0 + 44 + param5 + 41);
+          throw dh.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param2 + ',' + param3 + ',' + false + ',' + param5 + ')');
         }
         return (java.awt.Frame) (Object) stackIn_25_0;
     }
@@ -244,7 +244,7 @@ final class jh {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var3;
-            stackOut_16_1 = new StringBuilder().append("jh.C(").append(116).append(44);
+            stackOut_16_1 = new StringBuilder().append("jh.C(").append(116).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -269,7 +269,7 @@ final class jh {
           }
           L3: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -292,7 +292,7 @@ final class jh {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
         }
     }
 
@@ -374,7 +374,7 @@ final class jh {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
+          throw dh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
         }
         return stackIn_7_0;
     }

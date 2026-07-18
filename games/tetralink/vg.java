@@ -179,7 +179,7 @@ final class vg extends hl {
                   break L4;
                 } else {
                   if (((vg) this).field_Tb.length() > 0) {
-                    StringBuilder discarded$10 = ((vg) this).field_Tb.append(var2);
+                    StringBuilder discarded$10 = ((vg) this).field_Tb.append((char) var2);
                     break L4;
                   } else {
                     break L4;
@@ -197,7 +197,7 @@ final class vg extends hl {
                   }
                 }
               }
-              StringBuilder discarded$11 = ((vg) this).field_Tb.append(var2);
+              StringBuilder discarded$11 = ((vg) this).field_Tb.append((char) var2);
               break L2;
             }
           }
@@ -319,7 +319,7 @@ final class vg extends hl {
           L1: {
             var9 = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var9;
-            stackOut_3_1 = new StringBuilder().append("vg.<init>(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_3_1 = new StringBuilder().append("vg.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -344,7 +344,7 @@ final class vg extends hl {
           }
           L2: {
             stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(44);
+            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -369,7 +369,7 @@ final class vg extends hl {
           }
           L3: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -394,7 +394,7 @@ final class vg extends hl {
           }
           L4: {
             stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -417,7 +417,7 @@ final class vg extends hl {
               break L4;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 
@@ -524,7 +524,7 @@ final class vg extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var1, "vg.D(" + 78 + 41);
+          throw oi.a((Throwable) (Object) var1, "vg.D(" + 78 + ')');
         }
     }
 
@@ -581,7 +581,7 @@ final class vg extends hl {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("vg.E(").append(53).append(44);
+            stackOut_4_1 = new StringBuilder().append("vg.E(").append(53).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -604,7 +604,7 @@ final class vg extends hl {
               break L1;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -881,7 +881,7 @@ final class vg extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var1, "vg.B(" + param0 + 41);
+          throw oi.a((Throwable) (Object) var1, "vg.B(" + param0 + ')');
         }
     }
 

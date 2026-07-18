@@ -127,7 +127,7 @@ final class vaa {
               if (var3 != 0) {
                 if (jm.field_g.length() < 80) {
                   L5: {
-                    StringBuilder discarded$34 = jm.field_g.append(var4);
+                    StringBuilder discarded$34 = jm.field_g.append((char) var4);
                     var5 = 485;
                     var13 = cha.field_l;
                     var12 = kba.a(-127, var13);
@@ -455,7 +455,7 @@ final class vaa {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 44 + param1 + 44 + -1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ',' + param1 + ',' + -1 + ')');
         }
         return stackIn_36_0;
     }
@@ -567,7 +567,7 @@ final class vaa {
               }
               L5: {
                 stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44);
+                stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
                 stackIn_17_0 = stackOut_15_0;
                 stackIn_17_1 = stackOut_15_1;
                 stackIn_16_0 = stackOut_15_0;
@@ -590,7 +590,7 @@ final class vaa {
                   break L5;
                 }
               }
-              throw pe.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param2 + 41);
+              throw pe.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

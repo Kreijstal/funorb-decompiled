@@ -90,7 +90,7 @@ final class ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw la.a((Throwable) (Object) runtimeException, "ib.B(" + 100 + 41);
+          throw la.a((Throwable) (Object) runtimeException, "ib.B(" + 100 + ')');
         }
     }
 

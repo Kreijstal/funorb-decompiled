@@ -340,7 +340,7 @@ final class fa extends l {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "fa.A(" + param0 + 41);
+          throw kg.a((Throwable) (Object) var1, "fa.A(" + param0 + ')');
         }
     }
 

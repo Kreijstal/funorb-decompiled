@@ -114,7 +114,7 @@ final class nu extends lk {
                               decompiledCaughtException = decompiledCaughtParameter0;
                               L6: {
                                 var15 = decompiledCaughtException;
-                                System.out.println("Error reading mission: " + var15);
+                                System.out.println("Error reading mission: " + (Object) (Object) var15);
                                 var15.printStackTrace();
                                 break L6;
                               }
@@ -167,7 +167,7 @@ final class nu extends lk {
           L10: {
             var3 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var3;
-            stackOut_24_1 = new StringBuilder().append("nu.A(").append(23948).append(44);
+            stackOut_24_1 = new StringBuilder().append("nu.A(").append(23948).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -190,7 +190,7 @@ final class nu extends lk {
               break L10;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param2 + ')');
         }
         return stackIn_23_0;
     }
@@ -348,7 +348,7 @@ final class nu extends lk {
               break L6;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ig.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

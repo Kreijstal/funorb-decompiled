@@ -22,7 +22,7 @@ final class sf {
             }
             id.field_b = 0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "sf.B(" + param0 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "sf.B(" + param0 + ')');
         }
     }
 

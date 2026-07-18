@@ -63,7 +63,7 @@ final class ef {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1_ref, "ef.A(" + -24322 + 41);
+          throw lj.a((Throwable) (Object) var1_ref, "ef.A(" + -24322 + ')');
         }
     }
 

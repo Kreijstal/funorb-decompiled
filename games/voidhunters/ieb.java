@@ -139,7 +139,7 @@ final class ieb extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "ieb.B(" + -1321004447 + 41);
+          throw rta.a((Throwable) (Object) var1, "ieb.B(" + -1321004447 + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class ieb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

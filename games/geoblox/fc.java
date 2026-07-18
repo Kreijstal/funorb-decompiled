@@ -81,7 +81,7 @@ final class fc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "fc.B(" + 19 + 41);
+          throw t.a((Throwable) (Object) var1, "fc.B(" + 19 + ')');
         }
     }
 
@@ -95,7 +95,7 @@ final class fc {
             int discarded$1 = 0;
             i.a(0, (byte) 117, param1);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "fc.A(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "fc.A(" + true + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

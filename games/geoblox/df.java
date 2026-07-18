@@ -16,7 +16,7 @@ abstract class df {
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) pg.field_c);
             s.field_I = 0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "df.F(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "df.F(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

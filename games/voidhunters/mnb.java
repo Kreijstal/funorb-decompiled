@@ -36,7 +36,7 @@ abstract class mnb {
             jaggl.OpenGL.glBufferDataARBub(param1, ((mnb) this).field_b, param2, 0, !((mnb) this).field_a ? 35044 : 35040);
             ((mnb) this).field_c.field_mc = ((mnb) this).field_c.field_mc + ((mnb) this).field_b;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "mnb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "mnb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -119,7 +119,7 @@ abstract class mnb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + true + ')');
         }
     }
 

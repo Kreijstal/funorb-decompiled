@@ -40,7 +40,7 @@ final class fd extends o {
             var2 = hi.a(param1, "jagex logo2.packvorbis", "");
             lm discarded$0 = var2.a();
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "fd.D(" + -103 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "fd.D(" + -103 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

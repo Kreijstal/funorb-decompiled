@@ -20,7 +20,7 @@ final class ai {
             ke.field_N = 0;
             ji.field_a = 10;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ai.C(" + 10 + 44 + (param1 != null ? "{...}" : "null") + 44 + 31 + 44 + 132 + 44 + 132 + 44 + 16776960 + 44 + -122 + 44 + 10 + 44 + (param8 != null ? "{...}" : "null") + 44 + 0 + 44 + 5500 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "ai.C(" + 10 + ',' + (param1 != null ? "{...}" : "null") + ',' + 31 + ',' + 132 + ',' + 132 + ',' + 16776960 + ',' + -122 + ',' + 10 + ',' + (param8 != null ? "{...}" : "null") + ',' + 0 + ',' + 5500 + ')');
         }
     }
 
@@ -149,7 +149,7 @@ final class ai {
             pg.field_b = param3;
             la.a(33);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ai.B(" + (param0 != null ? "{...}" : "null") + 44 + -83 + 44 + param2 + 44 + param3 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "ai.B(" + (param0 != null ? "{...}" : "null") + ',' + -83 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

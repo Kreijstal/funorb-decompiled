@@ -64,7 +64,7 @@ final class cc extends gi {
           L0: {
             var4 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("cc.B(").append(param0).append(44).append(-9671).append(44);
+            stackOut_6_1 = new StringBuilder().append("cc.B(").append(param0).append(',').append(-9671).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -87,7 +87,7 @@ final class cc extends gi {
               break L0;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param3 + 41);
+          throw ie.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param3 + ')');
         }
     }
 

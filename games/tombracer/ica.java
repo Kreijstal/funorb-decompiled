@@ -434,7 +434,7 @@ final class ica {
             var1.c(0, 0);
             pfa.a(1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ica.B(" + 16777215 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ica.B(" + 16777215 + ')');
         }
     }
 

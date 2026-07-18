@@ -2066,7 +2066,7 @@ public final class Vertigo2 extends kd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "Vertigo2.R(" + -78 + 41);
+          throw wn.a((Throwable) (Object) var1, "Vertigo2.R(" + -78 + ')');
         }
         return stackIn_14_0;
     }
@@ -2143,7 +2143,7 @@ public final class Vertigo2 extends kd {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5;
-            stackOut_5_1 = new StringBuilder().append("Vertigo2.C(").append(1).append(44);
+            stackOut_5_1 = new StringBuilder().append("Vertigo2.C(").append(1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -2166,7 +2166,7 @@ public final class Vertigo2 extends kd {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 44 + param3 + 41);
+          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -3201,7 +3201,7 @@ public final class Vertigo2 extends kd {
           }
           L8: {
             stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(44);
+            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
@@ -3224,7 +3224,7 @@ public final class Vertigo2 extends kd {
               break L8;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + param2 + ')');
         }
         return stackIn_27_0;
     }
@@ -3299,7 +3299,7 @@ public final class Vertigo2 extends kd {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
     }
 

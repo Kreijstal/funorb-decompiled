@@ -249,7 +249,7 @@ final class qi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "qi.A(" + param0 + 41);
+          throw kg.a((Throwable) (Object) var1, "qi.A(" + param0 + ')');
         }
     }
 

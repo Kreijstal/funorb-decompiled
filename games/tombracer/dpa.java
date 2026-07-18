@@ -78,7 +78,7 @@ final class dpa implements fo {
             var8 = ((dpa) this).e((byte) -106);
             gqa.a(var5, -83584144, var7, var6, var4, var8);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "dpa.DB(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "dpa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -32,7 +32,7 @@ final class qc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1, "qc.B(" + 1 + 41);
+          throw sh.a((Throwable) (Object) var1, "qc.B(" + 1 + ')');
         }
     }
 
@@ -67,7 +67,7 @@ final class qc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1_ref, "qc.A(" + 1400888196 + 41);
+          throw sh.a((Throwable) (Object) var1_ref, "qc.A(" + 1400888196 + ')');
         }
     }
 

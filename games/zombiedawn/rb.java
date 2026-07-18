@@ -416,9 +416,9 @@ abstract class rb extends nb {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_G.append(60);
+                        StringBuilder discarded$6 = field_G.append('<');
                         StringBuilder discarded$7 = field_G.append(var15);
-                        StringBuilder discarded$8 = field_G.append(62);
+                        StringBuilder discarded$8 = field_G.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -605,7 +605,7 @@ abstract class rb extends nb {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_G.append(var14);
+                        StringBuilder discarded$9 = field_G.append((char) var14);
                         var14 = (char)(tb.a((char) var14, -8225) & 255);
                         var4 = var4 + ((rb) this).field_r[var14];
                         if (((rb) this).field_z == null) {

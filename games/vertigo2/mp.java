@@ -28,7 +28,7 @@ final class mp {
         try {
             ((mp) this).field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "mp.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "mp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

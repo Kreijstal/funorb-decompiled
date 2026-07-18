@@ -45,7 +45,7 @@ final class wq extends oh {
             ((wq) this).field_J = 256;
             ((wq) this).field_C = param0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "wq.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "wq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

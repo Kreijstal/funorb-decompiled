@@ -107,7 +107,7 @@ class ro extends pt implements he {
           }
           L4: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -130,7 +130,7 @@ class ro extends pt implements he {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param2 + ')');
         }
     }
 
@@ -205,7 +205,7 @@ class ro extends pt implements he {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw ig.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_6_0;
     }
@@ -222,7 +222,7 @@ class ro extends pt implements he {
             ((ro) this).field_tb.field_R = true;
             ((ro) this).a((byte) 10, (kb) (Object) ((ro) this).field_tb);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "ro.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "ro.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -405,7 +405,7 @@ class ro extends pt implements he {
                     break L5;
                   } else {
                     if (qj.field_C.length() < 80) {
-                      StringBuilder discarded$25 = qj.field_C.append(var4);
+                      StringBuilder discarded$25 = qj.field_C.append((char) var4);
                       var5 = 485;
                       var13 = mv.field_d;
                       var7 = var13;
@@ -601,7 +601,7 @@ class ro extends pt implements he {
                     break L16;
                   } else {
                     if (qj.field_C.length() < 80) {
-                      StringBuilder discarded$35 = qj.field_C.append(var4);
+                      StringBuilder discarded$35 = qj.field_C.append((char) var4);
                       var5 = 485;
                       var13 = mv.field_d;
                       var7 = var13;
@@ -785,7 +785,7 @@ class ro extends pt implements he {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var6;
-            stackOut_6_1 = new StringBuilder().append("ro.N(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_6_1 = new StringBuilder().append("ro.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -808,7 +808,7 @@ class ro extends pt implements he {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 
@@ -958,7 +958,7 @@ class ro extends pt implements he {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var4;
-            stackOut_25_1 = new StringBuilder().append("ro.KA(").append(param0).append(44).append(param1).append(44);
+            stackOut_25_1 = new StringBuilder().append("ro.KA(").append(param0).append(',').append(param1).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -981,7 +981,7 @@ class ro extends pt implements he {
               break L5;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
         }
     }
 

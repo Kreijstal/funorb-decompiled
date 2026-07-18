@@ -97,7 +97,7 @@ final class rn extends fh {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
         }
     }
 
@@ -262,7 +262,7 @@ final class rn extends fh {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var4;
-            stackOut_21_1 = new StringBuilder().append("rn.A(").append(param0).append(44).append(19).append(44);
+            stackOut_21_1 = new StringBuilder().append("rn.A(").append(param0).append(',').append(19).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -285,7 +285,7 @@ final class rn extends fh {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 

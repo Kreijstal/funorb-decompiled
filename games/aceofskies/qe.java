@@ -138,7 +138,7 @@ final class qe {
               break L5;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

@@ -102,7 +102,7 @@ final class fb extends l {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "fb.A(" + param0 + 41);
+          throw kg.a((Throwable) (Object) var1, "fb.A(" + param0 + ')');
         }
     }
 
@@ -140,7 +140,7 @@ final class fb extends l {
             ((fb) this).field_n = 0;
             ((fb) this).field_k = param0.field_a;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "fb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

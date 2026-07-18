@@ -85,7 +85,7 @@ final class nd extends ag {
               break L1;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -140,7 +140,7 @@ final class nd extends ag {
             ((nd) this).field_g = ((nd) this).field_o.field_g;
             ((nd) this).field_k = param1;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "nd.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "nd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -165,7 +165,7 @@ final class pk extends ql {
           L1: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3_ref;
-            stackOut_7_1 = new StringBuilder().append("pk.K(").append(80).append(44).append(122).append(44);
+            stackOut_7_1 = new StringBuilder().append("pk.K(").append(80).append(',').append(122).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -188,7 +188,7 @@ final class pk extends ql {
               break L1;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 

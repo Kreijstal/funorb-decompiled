@@ -368,7 +368,7 @@ final class mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var5, "mh.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 0 + 41);
+          throw r.a((Throwable) (Object) var5, "mh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + false + ')');
         }
     }
 
@@ -446,7 +446,7 @@ final class mh {
             int discarded$0 = 75;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "mh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

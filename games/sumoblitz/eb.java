@@ -162,7 +162,7 @@ final class eb {
               break L2;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 

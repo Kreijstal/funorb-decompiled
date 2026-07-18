@@ -1021,7 +1021,7 @@ final class ci extends mf {
               break L1;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -14710 + 41);
+          throw oi.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -14710 + ')');
         }
     }
 
@@ -1116,7 +1116,7 @@ final class ci extends mf {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var6;
-            stackOut_10_1 = new StringBuilder().append("ci.G(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_10_1 = new StringBuilder().append("ci.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -1139,7 +1139,7 @@ final class ci extends mf {
               break L3;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + -119 + 41);
+          throw oi.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + -119 + ')');
         }
     }
 
@@ -1205,7 +1205,7 @@ final class ci extends mf {
               break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw oi.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

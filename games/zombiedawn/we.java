@@ -119,7 +119,7 @@ final class we extends qk {
               break L4;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
@@ -299,7 +299,7 @@ final class we extends qk {
             param2.field_d.field_b = param2;
             param2.field_b.field_d = param2;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "we.MA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "we.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -309,7 +309,7 @@ final class we extends qk {
             int var3_int = 114 / ((param1 - -3) / 58);
             ((we) this).field_Qb = param0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "we.PA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "we.PA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -388,7 +388,7 @@ final class we extends qk {
               break L1;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ')');
         }
     }
 

@@ -39,7 +39,7 @@ final class bt implements fo {
             var5 = ((bt) this).field_d.b((byte) 74);
             gqa.a(var4, -83584144, ((bt) this).c((byte) 120), ((bt) this).b((byte) -89), var5, ((bt) this).e((byte) -95));
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "bt.DB(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "bt.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

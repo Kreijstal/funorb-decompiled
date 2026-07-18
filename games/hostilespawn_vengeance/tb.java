@@ -184,7 +184,7 @@ final class tb extends ph {
               break L7;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 44 + -24224 + 44 + param2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ',' + -24224 + ',' + param2 + ')');
         }
         return stackIn_34_0;
     }
@@ -340,7 +340,7 @@ final class tb extends ph {
           L6: {
             var8 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var8;
-            stackOut_24_1 = new StringBuilder().append("tb.KA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_24_1 = new StringBuilder().append("tb.KA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -363,7 +363,7 @@ final class tb extends ph {
               break L6;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param6 + 41);
+          throw wg.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param6 + ')');
         }
         return stackIn_23_0 != 0;
     }

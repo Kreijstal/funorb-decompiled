@@ -255,7 +255,7 @@ final class rl extends hg {
           L9: {
             var4 = decompiledCaughtException;
             stackOut_41_0 = (RuntimeException) var4;
-            stackOut_41_1 = new StringBuilder().append("rl.A(").append(10).append(44).append(84).append(44).append(1).append(44);
+            stackOut_41_1 = new StringBuilder().append("rl.A(").append(10).append(',').append(84).append(',').append(true).append(',');
             stackIn_43_0 = stackOut_41_0;
             stackIn_43_1 = stackOut_41_1;
             stackIn_42_0 = stackOut_41_0;
@@ -278,7 +278,7 @@ final class rl extends hg {
               break L9;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + ')');
         }
         return stackIn_40_0 != 0;
     }

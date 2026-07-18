@@ -92,7 +92,7 @@ final class fh {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 5 + 44 + 0 + 41);
+          throw fk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + 5 + ',' + false + ')');
         }
         return stackIn_13_0 != 0;
     }
@@ -158,7 +158,7 @@ final class fh {
           L3: {
             var2_ref = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var2_ref;
-            stackOut_11_1 = new StringBuilder().append("fh.A(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("fh.A(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -181,7 +181,7 @@ final class fh {
               break L3;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
     }
 

@@ -47,7 +47,7 @@ final class rg implements Iterator {
             ((rg) this).field_b = ((rg) this).field_d.field_a.field_h;
             ((rg) this).field_c = null;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "rg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "rg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

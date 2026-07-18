@@ -224,7 +224,7 @@ final class dc {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("dc.F(").append(97).append(44);
+            stackOut_2_1 = new StringBuilder().append("dc.F(").append(97).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -247,7 +247,7 @@ final class dc {
               break L1;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -261,7 +261,7 @@ final class dc {
         try {
             param0.addFocusListener((java.awt.event.FocusListener) (Object) jc.field_b);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "dc.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "dc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -313,7 +313,7 @@ final class dc {
               L0: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("dc.A(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("dc.A(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -336,7 +336,7 @@ final class dc {
                   break L0;
                 }
               }
-              throw wg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+              throw wg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

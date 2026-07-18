@@ -45,7 +45,7 @@ final class tob extends fh {
             ((tob) this).field_k = param0;
             ((tob) this).field_n = ((tob) this).field_k.field_c.createPbuffer(param1, param2);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "tob.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "tob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

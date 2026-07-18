@@ -191,7 +191,7 @@ abstract class lk {
           }
           L4: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(10).append(44).append(param2).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(10).append(',').append(param2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -214,7 +214,7 @@ abstract class lk {
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
         return stackIn_5_0;
     }
@@ -226,7 +226,7 @@ abstract class lk {
             tj.field_t.a(param2, -1 + param1, tj.field_t.field_C + param0, param3, param3);
             tj.field_t.a(param2, param1, param0 + tj.field_t.field_C, param4, -1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "lk.R(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + -109 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "lk.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + -109 + ')');
         }
     }
 

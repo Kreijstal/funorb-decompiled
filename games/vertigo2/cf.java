@@ -181,7 +181,7 @@ final class cf implements Iterator {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("cf.D(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("cf.D(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -204,7 +204,7 @@ final class cf implements Iterator {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_4_0;
     }
@@ -255,7 +255,7 @@ final class cf implements Iterator {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("cf.F(").append(16).append(44);
+            stackOut_2_1 = new StringBuilder().append("cf.F(").append(16).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -278,7 +278,7 @@ final class cf implements Iterator {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param2 + ')');
         }
         return stackIn_1_0;
     }
@@ -294,7 +294,7 @@ final class cf implements Iterator {
             ((cf) this).field_c = null;
             ((cf) this).field_d = ((cf) this).field_e.field_b.field_p;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "cf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "cf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

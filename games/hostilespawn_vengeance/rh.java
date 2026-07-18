@@ -300,7 +300,7 @@ final class rh extends ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var1, "rh.N(" + -93 + 41);
+          throw wg.a((Throwable) (Object) var1, "rh.N(" + -93 + ')');
         }
     }
 

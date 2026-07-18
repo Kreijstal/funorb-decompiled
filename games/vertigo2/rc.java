@@ -217,7 +217,7 @@ final class rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var6, "rc.E(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw wn.a((Throwable) (Object) var6, "rc.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -316,7 +316,7 @@ final class rc {
                               int discarded$6 = 94;
                               var8 = wm.a((char) var7);
                               if (var8 != 0) {
-                                StringBuilder discarded$7 = var5.append(var8);
+                                StringBuilder discarded$7 = var5.append((char) var8);
                                 break L7;
                               } else {
                                 break L7;
@@ -373,7 +373,7 @@ final class rc {
               break L8;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 44 + param1 + 41);
+          throw wn.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ',' + param1 + ')');
         }
         return stackIn_31_0;
     }

@@ -76,7 +76,7 @@ final class cm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var3, "cm.B(" + param0 + 44 + 91 + 44 + param2 + 41);
+          throw oi.a((Throwable) (Object) var3, "cm.B(" + param0 + ',' + 91 + ',' + param2 + ')');
         }
     }
 

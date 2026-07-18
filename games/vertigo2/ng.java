@@ -87,7 +87,7 @@ final class ng {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var2;
-            stackOut_14_1 = new StringBuilder().append("ng.B(").append(-108).append(44);
+            stackOut_14_1 = new StringBuilder().append("ng.B(").append(-108).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -110,7 +110,7 @@ final class ng {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_13_0;
     }

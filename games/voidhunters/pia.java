@@ -28,7 +28,7 @@ final class pia extends oda implements oo {
             super.a(param0, param1, param2, param3);
             ((pia) this).field_w.field_x = ((pia) this).field_v.a(param2 ^ 782443887).a((byte) 35) == lea.field_o ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "pia.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "pia.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class pia extends oda implements oo {
         try {
             seb.b(0, ((pia) this).field_v.e(-5), ((pia) this).field_v.c(true), ((pia) this).field_v.f(3476));
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "pia.Q(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "pia.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

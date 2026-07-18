@@ -59,7 +59,7 @@ final class cf extends hd {
             var2_int = fieldTemp$9;
             var3 = new StringBuilder();
             var4 = param1.b(-123);
-            StringBuilder discarded$10 = var3.append(var4);
+            StringBuilder discarded$10 = var3.append((char) var4);
             var5 = 0;
             L1: while (true) {
               L2: {
@@ -68,7 +68,7 @@ final class cf extends hd {
                 } else {
                   var6 = param1.b(-51);
                   if (var5 != 0) {
-                    StringBuilder discarded$11 = var3.append(var6);
+                    StringBuilder discarded$11 = var3.append((char) var6);
                     var5 = 0;
                     continue L1;
                   } else {
@@ -77,7 +77,7 @@ final class cf extends hd {
                         var5 = 1;
                         break L3;
                       } else {
-                        StringBuilder discarded$12 = var3.append(var6);
+                        StringBuilder discarded$12 = var3.append((char) var6);
                         break L3;
                       }
                     }
@@ -111,7 +111,7 @@ final class cf extends hd {
           L5: {
             var2 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var2;
-            stackOut_17_1 = new StringBuilder().append("cf.D(").append(-9323).append(44);
+            stackOut_17_1 = new StringBuilder().append("cf.D(").append(-9323).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -134,7 +134,7 @@ final class cf extends hd {
               break L5;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
         return stackIn_16_0;
     }
@@ -380,7 +380,7 @@ final class cf extends hd {
           L5: {
             var3 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var3;
-            stackOut_22_1 = new StringBuilder().append("cf.B(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("cf.B(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -403,7 +403,7 @@ final class cf extends hd {
               break L5;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
     }
 

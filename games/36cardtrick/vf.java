@@ -101,7 +101,7 @@ abstract class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "vf.F(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var1, "vf.F(" + param0 + ')');
         }
         return stackIn_26_0;
     }
@@ -258,7 +258,7 @@ abstract class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "vf.B(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var1, "vf.B(" + param0 + ')');
         }
     }
 

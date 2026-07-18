@@ -122,7 +122,7 @@ final class dtb implements dja {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + -30334 + 41);
+          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + -30334 + ')');
         }
         return stackIn_15_0;
     }
@@ -215,7 +215,7 @@ final class dtb implements dja {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var3;
-            stackOut_18_1 = new StringBuilder().append("dtb.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_18_1 = new StringBuilder().append("dtb.C(").append(param0).append(',').append(param1).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -238,7 +238,7 @@ final class dtb implements dja {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
         }
         return stackIn_17_0 != 0;
     }

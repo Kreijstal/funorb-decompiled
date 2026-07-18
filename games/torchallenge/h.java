@@ -98,7 +98,7 @@ final class h {
           L5: {
             var5 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var5;
-            stackOut_19_1 = new StringBuilder().append("h.B(").append(0).append(44).append(param1).append(44);
+            stackOut_19_1 = new StringBuilder().append("h.B(").append(0).append(',').append(param1).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -121,7 +121,7 @@ final class h {
               break L5;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param3 + 44 + 32 + 41);
+          throw oj.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param3 + ',' + 32 + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class h {
         try {
             ((h) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "h.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "h.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

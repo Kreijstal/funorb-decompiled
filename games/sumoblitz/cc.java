@@ -232,7 +232,7 @@ final class cc implements Runnable {
                   }
                 }
                 if (((cc) this).field_d.field_n.length == ((cc) this).field_d.field_p) {
-                  throw cc.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((cc) this).field_d.field_n.length + " " + ((cc) this).field_a));
+                  throw cc.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((cc) this).field_d.field_n.length + " " + (Object) (Object) ((cc) this).field_a));
                 } else {
                   var1 = this;
                   synchronized (var1) {
@@ -284,7 +284,7 @@ final class cc implements Runnable {
             ((cc) this).field_a = param1;
             ((cc) this).field_d = new fs(param2);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "cc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

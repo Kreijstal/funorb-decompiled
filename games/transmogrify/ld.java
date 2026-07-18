@@ -158,7 +158,7 @@ final class ld {
               break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 44 + param2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

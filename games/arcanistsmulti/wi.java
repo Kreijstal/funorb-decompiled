@@ -58,7 +58,7 @@ final class wi extends bg {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("wi.H(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("wi.H(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -81,7 +81,7 @@ final class wi extends bg {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param2 + ')');
         }
         return stackIn_6_0 != 0;
     }
@@ -100,7 +100,7 @@ final class wi extends bg {
             java.nio.Buffer discarded$0 = ((wi) this).field_k.position(0);
             java.nio.ByteBuffer discarded$1 = ((wi) this).field_k.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "wi.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "wi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

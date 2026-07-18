@@ -42,7 +42,7 @@ final class na extends hl {
           L0: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("na.B(").append(4).append(44);
+            stackOut_2_1 = new StringBuilder().append("na.B(").append(4).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -65,7 +65,7 @@ final class na extends hl {
               break L0;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -79 + 41);
+          throw kk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -79 + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class na extends hl {
             ((na) this).field_n = param1;
             ((na) this).field_m = param2;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "na.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "na.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

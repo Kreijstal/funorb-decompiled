@@ -114,7 +114,7 @@ final class db implements ci {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var6;
-            stackOut_15_1 = new StringBuilder().append("db.C(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("db.C(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -137,7 +137,7 @@ final class db implements ci {
               break L6;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ma.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -426,7 +426,7 @@ final class db implements ci {
           L18: {
             var2 = decompiledCaughtException;
             stackOut_53_0 = (RuntimeException) var2;
-            stackOut_53_1 = new StringBuilder().append("db.A(").append(param0).append(44);
+            stackOut_53_1 = new StringBuilder().append("db.A(").append(param0).append(',');
             stackIn_55_0 = stackOut_53_0;
             stackIn_55_1 = stackOut_53_1;
             stackIn_54_0 = stackOut_53_0;
@@ -449,7 +449,7 @@ final class db implements ci {
               break L18;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_56_0, stackIn_56_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_56_0, stackIn_56_2 + ')');
         }
     }
 
@@ -477,7 +477,7 @@ final class db implements ci {
             ((db) this).field_h = param4;
             ((db) this).field_t = param6;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "db.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "db.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

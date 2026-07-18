@@ -99,7 +99,7 @@ final class ia implements Iterator {
             ((ia) this).field_e = param0;
             this.b(8);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ia.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "ia.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

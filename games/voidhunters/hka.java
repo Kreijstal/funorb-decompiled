@@ -115,7 +115,7 @@ final class hka extends uj {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -97 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -97 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class hka extends uj {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("hka.K(").append(111).append(44);
+            stackOut_12_1 = new StringBuilder().append("hka.K(").append(111).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -220,7 +220,7 @@ final class hka extends uj {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ')');
         }
     }
 

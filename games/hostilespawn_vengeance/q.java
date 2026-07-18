@@ -89,7 +89,7 @@ final class q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) runtimeException, "q.C(" + 14470 + 41);
+          throw wg.a((Throwable) (Object) runtimeException, "q.C(" + 14470 + ')');
         }
     }
 

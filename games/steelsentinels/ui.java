@@ -102,7 +102,7 @@ final class ui extends ug {
                               var6++;
                               break L5;
                             } else {
-                              StringBuilder discarded$5 = var5.append(var8);
+                              StringBuilder discarded$5 = var5.append((char) var8);
                               var6++;
                               break L5;
                             }
@@ -130,7 +130,7 @@ final class ui extends ug {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_31_0 = (RuntimeException) var2;
-            stackOut_31_1 = new StringBuilder().append("ui.CA(").append(1).append(44);
+            stackOut_31_1 = new StringBuilder().append("ui.CA(").append(1).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
@@ -153,7 +153,7 @@ final class ui extends ug {
               break L6;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ')');
         }
     }
 
@@ -164,7 +164,7 @@ final class ui extends ug {
             ((ui) this).field_J = param0;
             ((ui) this).field_R = 256;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ui.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "ui.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

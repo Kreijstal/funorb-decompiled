@@ -81,7 +81,7 @@ final class af extends java.awt.Canvas {
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 0 + 41);
+          throw r.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + 0 + ')');
         }
         return stackIn_8_0 != 0;
     }
@@ -216,7 +216,7 @@ final class af extends java.awt.Canvas {
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + -1495 + 41);
+          throw r.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + -1495 + ')');
         }
     }
 
@@ -224,7 +224,7 @@ final class af extends java.awt.Canvas {
         try {
             ((af) this).field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "af.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "af.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -232,7 +232,7 @@ final class af extends java.awt.Canvas {
         try {
             ((af) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "af.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "af.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -240,7 +240,7 @@ final class af extends java.awt.Canvas {
         try {
             ((af) this).field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "af.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "af.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

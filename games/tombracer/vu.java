@@ -20,7 +20,7 @@ final class vu extends vw {
             }
             ((vu) this).field_c.a((byte) -108, param0);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "vu.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "vu.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -357,7 +357,7 @@ final class vu extends vw {
                       var10 = 0;
                       L15: while (true) {
                         if (var10 >= fk.field_b) {
-                          qda.field_b = "<col=A00000>" + cra.field_a + "<br>" + jb.field_J + var9;
+                          qda.field_b = "<col=A00000>" + cra.field_a + "<br>" + jb.field_J + (String) var9;
                           break L1;
                         } else {
                           L16: {
@@ -366,7 +366,7 @@ final class vu extends vw {
                               var9 = (Object) (Object) var11_ref;
                               var9 = (Object) (Object) var11_ref;
                               if (var9 != null) {
-                                var9 = (Object) (Object) (var9 + ", " + var11_ref);
+                                var9 = (Object) (Object) ((String) var9 + ", " + var11_ref);
                                 break L16;
                               } else {
                                 var9 = (Object) (Object) var11_ref;
@@ -417,13 +417,13 @@ final class vu extends vw {
                     if ((lh.field_a & 48) != 32) {
                       break L19;
                     } else {
-                      var9 = (Object) (Object) (var9 + "..");
+                      var9 = (Object) (Object) ((String) var9 + "..");
                       break L19;
                     }
                   }
                   L20: {
                     if (48 == (lh.field_a & 48)) {
-                      var9 = (Object) (Object) (var9 + "...");
+                      var9 = (Object) (Object) ((String) var9 + "...");
                       break L20;
                     } else {
                       break L20;
@@ -618,7 +618,7 @@ final class vu extends vw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var4, "vu.F(" + 1 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) var4, "vu.F(" + 1 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

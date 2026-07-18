@@ -81,7 +81,7 @@ final class ei extends qf {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("ei.OB(").append(param0).append(44).append(param1).append(44);
+            stackOut_14_1 = new StringBuilder().append("ei.OB(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -104,7 +104,7 @@ final class ei extends qf {
               break L4;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class ei extends qf {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3_ref;
-            stackOut_6_1 = new StringBuilder().append("ei.QB(").append(0).append(44).append(0).append(44);
+            stackOut_6_1 = new StringBuilder().append("ei.QB(").append(false).append(',').append(false).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -170,7 +170,7 @@ final class ei extends qf {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_4_0;
     }
@@ -190,7 +190,7 @@ final class ei extends qf {
             }
             super.b(param0, -22);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ei.PB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "ei.PB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

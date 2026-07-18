@@ -936,7 +936,7 @@ abstract class ok extends jl {
                 var5 = param0.charAt(var4);
                 if (var5 != 60) {
                   if (var5 != 62) {
-                    StringBuilder discarded$3 = var3.append(var5);
+                    StringBuilder discarded$3 = var3.append((char) var5);
                     var4++;
                     continue L1;
                   } else {
@@ -1049,9 +1049,9 @@ abstract class ok extends jl {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$13 = field_s.append(60);
+                        StringBuilder discarded$13 = field_s.append('<');
                         StringBuilder discarded$14 = field_s.append(var15);
-                        StringBuilder discarded$15 = field_s.append(62);
+                        StringBuilder discarded$15 = field_s.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -1238,7 +1238,7 @@ abstract class ok extends jl {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$16 = field_s.append(var14);
+                        StringBuilder discarded$16 = field_s.append((char) var14);
                         int discarded$17 = -8483;
                         var14 = (char)(f.a((char) var14) & 255);
                         var4 = var4 + ((ok) this).field_Q[var14];

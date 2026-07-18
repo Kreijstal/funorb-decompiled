@@ -99,7 +99,7 @@ final class lq {
             tg.a((byte) -110);
             bi.a(param0.field_F, param0.field_x, param0.field_B);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "lq.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "lq.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

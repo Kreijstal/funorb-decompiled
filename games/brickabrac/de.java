@@ -105,7 +105,7 @@ final class de extends km {
         try {
             ((de) this).field_u = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "de.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "de.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

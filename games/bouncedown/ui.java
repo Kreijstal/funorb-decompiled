@@ -20,7 +20,7 @@ final class ui extends ai {
             int var2_int = -98;
             hb.field_H = 20000000L;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "ui.C(" + 50 + 44 + 127 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "ui.C(" + 50 + ',' + 127 + ')');
         }
     }
 
@@ -338,7 +338,7 @@ final class ui extends ai {
           L12: {
             var7 = decompiledCaughtException;
             stackOut_62_0 = (RuntimeException) var7;
-            stackOut_62_1 = new StringBuilder().append("ui.A(").append(-99).append(44).append(0).append(44).append(0).append(44);
+            stackOut_62_1 = new StringBuilder().append("ui.A(").append(-99).append(',').append(false).append(',').append(false).append(',');
             stackIn_65_0 = stackOut_62_0;
             stackIn_65_1 = stackOut_62_1;
             stackIn_63_0 = stackOut_62_0;
@@ -363,7 +363,7 @@ final class ui extends ai {
           }
           L13: {
             stackOut_66_0 = (RuntimeException) (Object) stackIn_66_0;
-            stackOut_66_1 = ((StringBuilder) (Object) stackIn_66_1).append(stackIn_66_2).append(44);
+            stackOut_66_1 = ((StringBuilder) (Object) stackIn_66_1).append(stackIn_66_2).append(',');
             stackIn_69_0 = stackOut_66_0;
             stackIn_69_1 = stackOut_66_1;
             stackIn_67_0 = stackOut_66_0;
@@ -388,7 +388,7 @@ final class ui extends ai {
           }
           L14: {
             stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
-            stackOut_70_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_70_2).append(44).append(1).append(44);
+            stackOut_70_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_70_2).append(',').append(true).append(',');
             stackIn_73_0 = stackOut_70_0;
             stackIn_73_1 = stackOut_70_1;
             stackIn_71_0 = stackOut_70_0;
@@ -411,7 +411,7 @@ final class ui extends ai {
               break L14;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + ')');
         }
     }
 
@@ -428,7 +428,7 @@ final class ui extends ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var1, "ui.B(" + 1 + 41);
+          throw ii.a((Throwable) (Object) var1, "ui.B(" + true + ')');
         }
     }
 
@@ -440,7 +440,7 @@ final class ui extends ai {
             ((ui) this).field_h = param1;
             ((ui) this).field_i = param3;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "ui.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "ui.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

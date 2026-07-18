@@ -82,7 +82,7 @@ final class hj extends l {
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + param2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_6_0;
     }
@@ -95,7 +95,7 @@ final class hj extends l {
             param1.a((byte) -94, param0);
             param1.a(param2, 66);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "hj.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + 12 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "hj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + 12 + ')');
         }
     }
 

@@ -116,7 +116,7 @@ final class n extends hi {
               break L4;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 41);
+          throw wg.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ')');
         }
         return stackIn_14_0;
     }
@@ -214,7 +214,7 @@ final class n extends hi {
           L2: {
             var3_ref = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var3_ref;
-            stackOut_17_1 = new StringBuilder().append("n.K(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("n.K(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -237,7 +237,7 @@ final class n extends hi {
               break L2;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
         return stackIn_16_0;
     }

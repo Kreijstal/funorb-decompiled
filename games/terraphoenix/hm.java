@@ -252,7 +252,7 @@ final class hm extends gl {
               break L6;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw qk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -347,7 +347,7 @@ final class hm extends gl {
                             if (ja.a((char) var8)) {
                               var9 = kh.a((char) var8, (byte) -128);
                               if (0 != var9) {
-                                StringBuilder discarded$3 = var6.append(var9);
+                                StringBuilder discarded$3 = var6.append((char) var9);
                                 break L6;
                               } else {
                                 break L6;
@@ -381,7 +381,7 @@ final class hm extends gl {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_30_0 = (RuntimeException) var2;
-            stackOut_30_1 = new StringBuilder().append("hm.QA(").append(param0).append(44);
+            stackOut_30_1 = new StringBuilder().append("hm.QA(").append(param0).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -404,7 +404,7 @@ final class hm extends gl {
               break L7;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ')');
         }
         return stackIn_29_0;
     }
@@ -498,7 +498,7 @@ final class hm extends gl {
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw qk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

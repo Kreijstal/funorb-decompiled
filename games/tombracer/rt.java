@@ -22,7 +22,7 @@ class rt extends kl {
         try {
             rma.a(false, param1, param2, (byte) 100);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "rt.D(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "rt.D(" + true + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -137,7 +137,7 @@ class rt extends kl {
           L7: {
             var11 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var11;
-            stackOut_20_1 = new StringBuilder().append("rt.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_20_1 = new StringBuilder().append("rt.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -160,7 +160,7 @@ class rt extends kl {
               break L7;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+          throw tba.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -328,7 +328,7 @@ class rt extends kl {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -351,7 +351,7 @@ class rt extends kl {
               break L7;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+          throw tba.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -447,7 +447,7 @@ class rt extends kl {
           }
           L4: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -470,7 +470,7 @@ class rt extends kl {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param7 + 41);
+          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param7 + ')');
         }
     }
 
@@ -607,7 +607,7 @@ class rt extends kl {
           }
           L7: {
             stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -630,7 +630,7 @@ class rt extends kl {
               break L7;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param7 + 44 + param8 + 41);
+          throw tba.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -646,7 +646,7 @@ class rt extends kl {
             jaggl.OpenGL.glTexImage2Dub(((rt) this).field_e, 0, ((rt) this).field_c, param3, param4, 0, sja.b(((rt) this).field_c), 5121, (byte[]) null, 0);
             ((rt) this).b(true, 3);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "rt.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "rt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -744,7 +744,7 @@ class rt extends kl {
           L7: {
             var10 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var10;
-            stackOut_17_1 = new StringBuilder().append("rt.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_17_1 = new StringBuilder().append("rt.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -767,7 +767,7 @@ class rt extends kl {
               break L7;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

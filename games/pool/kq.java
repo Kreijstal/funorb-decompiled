@@ -77,7 +77,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -187,7 +187,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
               L5: {
                 var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_11_0 = (RuntimeException) var3_ref2;
-                stackOut_11_1 = new StringBuilder().append("kq.D(").append(param0).append(44);
+                stackOut_11_1 = new StringBuilder().append("kq.D(").append(param0).append(',');
                 stackIn_14_0 = stackOut_11_0;
                 stackIn_14_1 = stackOut_11_1;
                 stackIn_12_0 = stackOut_11_0;
@@ -210,7 +210,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
                   break L5;
                 }
               }
-              throw wm.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+              throw wm.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -315,7 +315,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (Object) (Object) decompiledCaughtException;
-          throw wm.a((Throwable) var2, "kq.A(" + param0 + 41);
+          throw wm.a((Throwable) var2, "kq.A(" + param0 + ')');
         }
     }
 
@@ -431,7 +431,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
               break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_12_0;
     }
@@ -487,7 +487,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -561,7 +561,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
               break L3;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 41);
+          throw wm.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ')');
         }
     }
 
@@ -622,7 +622,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -689,7 +689,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var2, "kq.H(" + -30 + 41);
+          throw wm.a((Throwable) (Object) var2, "kq.H(" + -30 + ')');
         }
     }
 
@@ -744,7 +744,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -811,7 +811,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var2, "kq.F(" + -15568 + 41);
+          throw wm.a((Throwable) (Object) var2, "kq.F(" + -15568 + ')');
         }
     }
 
@@ -1181,7 +1181,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var1, "kq.C(" + param0 + 41);
+          throw wm.a((Throwable) (Object) var1, "kq.C(" + param0 + ')');
         }
     }
 
@@ -1290,7 +1290,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           var3_ref3 = (RuntimeException) (Object) decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var3_ref3, "kq.L(" + 20171 + 44 + param1 + 41);
+          throw wm.a((Throwable) (Object) var3_ref3, "kq.L(" + 20171 + ',' + param1 + ')');
         }
     }
 
@@ -1333,7 +1333,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
           L2: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("kq.G(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("kq.G(").append(param0).append(',');
             stackIn_8_0 = stackOut_5_0;
             stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -1356,7 +1356,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
               break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_4_0;
     }
@@ -1487,7 +1487,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
               L6: {
                 var8_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_22_0 = (RuntimeException) var8_ref;
-                stackOut_22_1 = new StringBuilder().append("kq.J(").append(param0).append(44).append(param1).append(44);
+                stackOut_22_1 = new StringBuilder().append("kq.J(").append(param0).append(',').append(param1).append(',');
                 stackIn_25_0 = stackOut_22_0;
                 stackIn_25_1 = stackOut_22_1;
                 stackIn_23_0 = stackOut_22_0;
@@ -1510,7 +1510,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
                   break L6;
                 }
               }
-              throw wm.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+              throw wm.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -1610,7 +1610,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
               break L4;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
     }
 
@@ -1689,7 +1689,7 @@ public abstract class kq extends java.applet.Applet implements Runnable, java.aw
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

@@ -29,7 +29,7 @@ final class oi {
             int var4_int = 120 / ((64 - param2) / 61);
             nb.field_a.b(3016, (cf) (Object) wj.field_i);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "oi.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "oi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

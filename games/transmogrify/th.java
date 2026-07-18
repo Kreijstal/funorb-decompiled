@@ -16,7 +16,7 @@ final class th {
             var3.f(6389, param2.field_m);
             var3.f(6389, param2.field_k);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "th.C(" + 65536 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "th.C(" + 65536 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class th {
             ug.field_b = ug.field_b + (var2_int >> 1);
             di.field_e = di.field_e + param1.a((byte) -104);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "th.B(" + 101 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "th.B(" + 101 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

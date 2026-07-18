@@ -45,7 +45,7 @@ final class pb {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("pb.B(").append(param0).append(44).append(0).append(44).append(param2).append(44);
+            stackOut_5_1 = new StringBuilder().append("pb.B(").append(param0).append(',').append(false).append(',').append(param2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -68,7 +68,7 @@ final class pb {
               break L1;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_4_0;
     }

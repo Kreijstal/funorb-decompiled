@@ -19,7 +19,7 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
         try {
             ((of) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "of.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "of.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
               break L2;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
             param0.setColorModel(((of) this).field_l);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "of.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "of.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -159,7 +159,7 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw qk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
@@ -186,7 +186,7 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
             boolean discarded$5 = param3.prepareImage(((of) this).field_d, (java.awt.image.ImageObserver) this);
             ((of) this).a(0);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "of.E(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "of.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -200,7 +200,7 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
             }
             boolean discarded$1 = param2.drawImage(((of) this).field_d, param1, param0, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "of.F(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "of.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -321,7 +321,7 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 5 + 41);
+          throw qk.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + 5 + ')');
         }
         return stackIn_16_0;
     }

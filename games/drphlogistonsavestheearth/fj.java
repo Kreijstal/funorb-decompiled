@@ -25,7 +25,7 @@ final class fj extends gi {
             a.a(wj.field_c / 2, wj.field_k / 2, (byte) 101);
             fa.a(false, param3.field_L - -param3.field_S, param1.field_L, param1.field_S + param1.field_L, param3.field_L);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "fj.D(" + 480 + 44 + (param1 != null ? "{...}" : "null") + 44 + 114 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "fj.D(" + 480 + ',' + (param1 != null ? "{...}" : "null") + ',' + 114 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -184,7 +184,7 @@ final class fj extends gi {
           L11: {
             var4 = decompiledCaughtException;
             stackOut_43_0 = (RuntimeException) var4;
-            stackOut_43_1 = new StringBuilder().append("fj.C(").append(param0).append(44);
+            stackOut_43_1 = new StringBuilder().append("fj.C(").append(param0).append(',');
             stackIn_45_0 = stackOut_43_0;
             stackIn_45_1 = stackOut_43_1;
             stackIn_44_0 = stackOut_43_0;
@@ -207,7 +207,7 @@ final class fj extends gi {
               break L11;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 44 + param2 + 44 + 1 + 41);
+          throw ie.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + ',' + param2 + ',' + true + ')');
         }
         return stackIn_42_0;
     }

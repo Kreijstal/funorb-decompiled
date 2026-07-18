@@ -55,7 +55,7 @@ final class sl {
             param0.field_h.field_f = param0;
             param0.field_f.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "sl.N(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "sl.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -731,7 +731,7 @@ final class sl {
             param1.field_h.field_f = param1;
             param1.field_f.field_h = param1;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "sl.J(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "sl.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

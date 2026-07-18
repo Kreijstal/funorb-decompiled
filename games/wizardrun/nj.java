@@ -135,7 +135,7 @@ final class nj extends wl {
           L8: {
             var3 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var3;
-            stackOut_26_1 = new StringBuilder().append("nj.B(").append(param0).append(44);
+            stackOut_26_1 = new StringBuilder().append("nj.B(").append(param0).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -158,7 +158,7 @@ final class nj extends wl {
               break L8;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param2 + ')');
         }
     }
 

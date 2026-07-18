@@ -29,7 +29,7 @@ final class de extends ah {
             java.nio.Buffer discarded$0 = ((de) this).field_a.position(0);
             java.nio.ByteBuffer discarded$1 = ((de) this).field_a.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "de.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "de.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

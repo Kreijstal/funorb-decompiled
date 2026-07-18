@@ -45,7 +45,7 @@ final class ob extends pib {
             jaggl.OpenGL.glTexImage3Dub(((ob) this).field_b, 0, ((ob) this).field_d, ((ob) this).field_i, ((ob) this).field_k, ((ob) this).field_h, 0, fsb.a(((ob) this).field_d, false), 5121, (byte[]) null, 0);
             ((ob) this).a(-95, true);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ob.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class ob extends pib {
             jaggl.OpenGL.glPixelStorei(3317, 4);
             ((ob) this).a(99, true);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ob.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
@@ -126,7 +126,7 @@ final class ob extends pib {
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var6_ref;
-            stackOut_5_1 = new StringBuilder().append("ob.N(").append(0).append(44);
+            stackOut_5_1 = new StringBuilder().append("ob.N(").append(0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -149,7 +149,7 @@ final class ob extends pib {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 44 + param3 + 44 + 0 + 44 + 0 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ',' + param3 + ',' + 0 + ',' + 0 + ')');
         }
         return stackIn_4_0;
     }

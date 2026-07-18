@@ -226,7 +226,7 @@ final class ai extends q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var8, "ai.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + -128 + 44 + param7 + 41);
+          throw rb.a((Throwable) (Object) var8, "ai.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + -128 + ',' + param7 + ')');
         }
     }
 
@@ -236,7 +236,7 @@ final class ai extends q {
             ((ai) this).field_j = param1;
             ((ai) this).field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "ai.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "ai.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

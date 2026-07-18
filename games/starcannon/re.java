@@ -69,7 +69,7 @@ final class re extends rf {
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var6_ref;
-            stackOut_5_1 = new StringBuilder().append("re.C(").append(0).append(44);
+            stackOut_5_1 = new StringBuilder().append("re.C(").append(0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -92,7 +92,7 @@ final class re extends rf {
               break L1;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 44 + 1 + 44 + param4 + 44 + param5 + 41);
+          throw sd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 0 + ',' + true + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_4_0;
     }
@@ -133,7 +133,7 @@ final class re extends rf {
             ((re) this).field_j = param5;
             ((re) this).field_p = param4;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "re.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "re.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

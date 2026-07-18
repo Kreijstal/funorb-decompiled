@@ -39,7 +39,7 @@ final class w extends vg {
             ((w) this).field_db = param1;
             ((w) this).field_cb.field_B = (int)(param2 / 100.0f * 65536.0f);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "w.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "w.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class w extends vg {
             ((w) this).field_gb = false;
             ((w) this).b((hm) (Object) ((w) this).field_cb, false);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "w.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "w.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

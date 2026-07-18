@@ -63,7 +63,7 @@ final class hc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "hc.B(" + 1 + 41);
+          throw ma.a((Throwable) (Object) var1, "hc.B(" + true + ')');
         }
     }
 
@@ -159,7 +159,7 @@ final class hc {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw ma.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -238,7 +238,7 @@ final class hc {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -462,7 +462,7 @@ final class hc {
             ((hc) this).field_i = param3;
             ((hc) this).field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "hc.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "hc.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -790,7 +790,7 @@ final class hc {
               L19: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_71_0 = (RuntimeException) var6_ref;
-                stackOut_71_1 = new StringBuilder().append("hc.E(").append(param0).append(44);
+                stackOut_71_1 = new StringBuilder().append("hc.E(").append(param0).append(',');
                 stackIn_73_0 = stackOut_71_0;
                 stackIn_73_1 = stackOut_71_1;
                 stackIn_72_0 = stackOut_71_0;
@@ -813,7 +813,7 @@ final class hc {
                   break L19;
                 }
               }
-              throw ma.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + 44 + param2 + 44 + param3 + 44 + 2 + 41);
+              throw ma.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + ',' + param2 + ',' + param3 + ',' + 2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

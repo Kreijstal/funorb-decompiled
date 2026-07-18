@@ -69,7 +69,7 @@ final class i extends si {
             var4.field_J = true;
             boolean discarded$0 = var4.a(-1463, (rc) this);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "i.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "i.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

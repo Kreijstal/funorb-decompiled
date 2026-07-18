@@ -60,7 +60,7 @@ final class oa {
             var10.a(0, param5.length, 1991220144, param5);
             var10.c(62, -var7 + var10.field_n);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "oa.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "oa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class oa {
         try {
             sn.field_g.insertElementAt((Object) (Object) param1, 0);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "oa.F(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "oa.F(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

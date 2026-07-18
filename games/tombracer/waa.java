@@ -112,7 +112,7 @@ final class waa {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ')');
         }
     }
 

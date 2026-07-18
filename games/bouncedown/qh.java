@@ -57,7 +57,7 @@ final class qh {
             int discarded$0 = var5.b(var4, -1);
             var5.b(-var4 + var5.field_h, true);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "qh.F(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 44 + -22762 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "qh.F(" + (param0 != null ? "{...}" : "null") + ',' + 4 + ',' + -22762 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class qh {
         try {
             ((qh) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "qh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "qh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

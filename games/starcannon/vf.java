@@ -84,7 +84,7 @@ final class vf {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + -18 + 41);
+          throw sd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + -18 + ')');
         }
         return stackIn_12_0;
     }
@@ -154,7 +154,7 @@ final class vf {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw sd.a((Throwable) (Object) var1, "vf.D(" + 79 + 41);
+              throw sd.a((Throwable) (Object) var1, "vf.D(" + 79 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -239,7 +239,7 @@ final class vf {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 41);
+          throw sd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 0 + ')');
         }
         return stackIn_4_0 != 0;
     }

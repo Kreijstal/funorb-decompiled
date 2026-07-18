@@ -250,7 +250,7 @@ final class mg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "mg.B(" + 96 + 41);
+          throw ma.a((Throwable) (Object) var1, "mg.B(" + 96 + ')');
         }
     }
 
@@ -498,7 +498,7 @@ final class mg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "mg.F(" + -127 + 41);
+          throw ma.a((Throwable) (Object) var1, "mg.F(" + -127 + ')');
         }
     }
 

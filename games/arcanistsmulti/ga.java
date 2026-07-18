@@ -30,7 +30,7 @@ final class ga extends dk implements java.awt.image.ImageProducer, java.awt.imag
             param0.setColorModel(((ga) this).field_o);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ga.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ga.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class ga extends dk implements java.awt.image.ImageProducer, java.awt.imag
             }
             boolean discarded$0 = param1.drawImage(((ga) this).field_j, param3, param0, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ga.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ga.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -103,7 +103,7 @@ final class ga extends dk implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw aa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
@@ -126,7 +126,7 @@ final class ga extends dk implements java.awt.image.ImageProducer, java.awt.imag
             boolean discarded$2 = param1.prepareImage(((ga) this).field_j, (java.awt.image.ImageObserver) this);
             ((ga) this).a(true);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ga.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ga.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class ga extends dk implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ final class ga extends dk implements java.awt.image.ImageProducer, java.awt.imag
         try {
             ((ga) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ga.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ga.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

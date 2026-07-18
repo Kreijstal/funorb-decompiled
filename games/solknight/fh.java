@@ -62,7 +62,7 @@ final class fh {
               L4: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("fh.B(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("fh.B(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -85,7 +85,7 @@ final class fh {
                   break L4;
                 }
               }
-              throw fc.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+              throw fc.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -188,7 +188,7 @@ final class fh {
               break L3;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 41);
+          throw fc.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ')');
         }
         return stackIn_12_0;
     }

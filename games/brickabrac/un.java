@@ -52,7 +52,7 @@ final class un {
             vj.field_c = 65536 & var2_int << 16;
             vj.field_c = vj.field_c + param1.i(65280);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "un.C(" + -122 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "un.C(" + -122 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

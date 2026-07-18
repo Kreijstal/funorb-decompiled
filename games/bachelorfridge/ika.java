@@ -73,7 +73,7 @@ final class ika {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("ika.E(").append(85).append(44);
+            stackOut_4_1 = new StringBuilder().append("ika.E(").append(85).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -96,7 +96,7 @@ final class ika {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -297,7 +297,7 @@ final class ika {
         try {
             jka.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ika.A(" + 18 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ika.A(" + 18 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -311,7 +311,7 @@ final class ika {
             int discarded$0 = 0;
             this.a(param0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ika.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ika.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -378,7 +378,7 @@ final class ika {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 41);
+          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 0 + ')');
         }
     }
 

@@ -140,7 +140,7 @@ final class ag {
             param0.field_o = var6.b((byte) 51);
             var6.g(-1, -var4 + var6.field_o);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "ag.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "ag.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -366,7 +366,7 @@ final class ag {
                         continue stateLoop;
                     }
                     case 18: {
-                        throw lj.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 41);
+                        throw lj.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }

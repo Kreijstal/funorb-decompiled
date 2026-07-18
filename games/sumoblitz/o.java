@@ -193,7 +193,7 @@ final class o {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "o.B(" + -56 + 41);
+          throw qo.a((Throwable) (Object) var1, "o.B(" + -56 + ')');
         }
     }
 

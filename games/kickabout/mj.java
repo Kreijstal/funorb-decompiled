@@ -108,7 +108,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "mj.D(" + -39 + 44 + 128 + 41);
+          throw nb.a((Throwable) (Object) var2, "mj.D(" + -39 + ',' + 128 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class mj {
         try {
             pi.field_b.b((lq) (Object) param1);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "mj.B(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "mj.B(" + true + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

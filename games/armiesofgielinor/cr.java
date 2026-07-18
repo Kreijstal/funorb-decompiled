@@ -74,7 +74,7 @@ final class cr extends sf {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -231,7 +231,7 @@ final class cr extends sf {
           L6: {
             var5 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var5;
-            stackOut_19_1 = new StringBuilder().append("cr.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_19_1 = new StringBuilder().append("cr.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -254,7 +254,7 @@ final class cr extends sf {
               break L6;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
         }
     }
 
@@ -273,7 +273,7 @@ final class cr extends sf {
             ((cr) this).field_Y.field_R = true;
             ((cr) this).a((byte) 10, (kb) (Object) ((cr) this).field_Y);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "cr.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "cr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

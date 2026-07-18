@@ -69,7 +69,7 @@ final class fj {
             eg.field_f.field_M = eg.field_f.field_M - uc.field_c.field_M;
             uc.field_c.field_mb = uc.field_c.field_mb - uc.field_c.field_M;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "fj.F(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + -1 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "fj.F(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ',' + -1 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

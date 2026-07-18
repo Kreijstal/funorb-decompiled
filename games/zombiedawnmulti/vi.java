@@ -983,7 +983,7 @@ final class vi {
             var3.a(119, param1.field_i);
             var3.a(-21, param1.field_p);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "vi.C(" + 7 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "vi.C(" + 7 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -126,7 +126,7 @@ final class cr extends br {
           }
           L5: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -149,7 +149,7 @@ final class cr extends br {
               break L5;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param2 + ')');
         }
         return stackIn_12_0 != 0;
     }

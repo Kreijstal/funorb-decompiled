@@ -140,7 +140,7 @@ final class ts {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var6;
-            stackOut_19_1 = new StringBuilder().append("ts.B(").append(param0).append(44);
+            stackOut_19_1 = new StringBuilder().append("ts.B(").append(param0).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -163,7 +163,7 @@ final class ts {
               break L6;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + -16240 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw qo.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + -16240 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

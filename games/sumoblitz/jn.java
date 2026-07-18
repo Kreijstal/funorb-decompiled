@@ -116,7 +116,7 @@ final class jn {
               break L2;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw qo.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
     }
 
@@ -188,7 +188,7 @@ final class jn {
         try {
             param0.field_b.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "jn.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "jn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

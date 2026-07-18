@@ -39,7 +39,7 @@ final class ih extends bf {
         try {
             ((ih) this).a(param3, 34, param5, param4, param2);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ih.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "ih.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class ih extends bf {
             }
             ((ih) this).b((mf) (Object) ((ih) this).field_W, 95);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ih.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "ih.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class ih extends bf {
             ((ih) this).field_P.field_p = (rg) (Object) param1;
             ((ih) this).field_W.field_p = (rg) (Object) param1;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ih.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "ih.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -215,7 +215,7 @@ final class ih extends bf {
         try {
             rc.field_a.b(param2, (param0.field_y >> 1) + (param1 + param0.field_u), param0.field_r + (param4 - 5), 16777215, -1);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ih.P(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + -2200 + 44 + param4 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "ih.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + -2200 + ',' + param4 + ')');
         }
     }
 

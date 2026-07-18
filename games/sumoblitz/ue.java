@@ -147,7 +147,7 @@ final class ue extends gm {
               break L6;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw qo.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -395,7 +395,7 @@ final class ue extends gm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "ue.C(" + -70 + 41);
+          throw qo.a((Throwable) (Object) var1, "ue.C(" + -70 + ')');
         }
     }
 

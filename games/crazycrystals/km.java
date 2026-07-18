@@ -54,7 +54,7 @@ final class km {
             param1.field_g.field_j = param1;
             param1.field_j.field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "km.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "km.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

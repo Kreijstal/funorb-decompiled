@@ -115,7 +115,7 @@ final class qn {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var3;
-            stackOut_19_1 = new StringBuilder().append("qn.B(").append(-123).append(44).append(0).append(44);
+            stackOut_19_1 = new StringBuilder().append("qn.B(").append(-123).append(',').append(false).append(',');
             stackIn_22_0 = stackOut_19_0;
             stackIn_22_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -138,7 +138,7 @@ final class qn {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
         }
         return stackIn_18_0 != 0;
     }

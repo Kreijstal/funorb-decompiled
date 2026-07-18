@@ -290,7 +290,7 @@ final class g extends hh {
               break L4;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
         }
     }
 
@@ -354,7 +354,7 @@ final class g extends hh {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var4;
-            stackOut_11_1 = new StringBuilder().append("g.J(").append(param0).append(44).append(param1).append(44);
+            stackOut_11_1 = new StringBuilder().append("g.J(").append(param0).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -377,7 +377,7 @@ final class g extends hh {
               break L3;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
     }
 
@@ -388,7 +388,7 @@ final class g extends hh {
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) ho.field_b);
             mp.field_g = 0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "g.I(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "g.I(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ')');
         }
     }
 

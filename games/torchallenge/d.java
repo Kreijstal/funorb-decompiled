@@ -859,7 +859,7 @@ abstract class d extends ug {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("d.HA(").append(param0).append(44).append(param1).append(44);
+            stackOut_3_1 = new StringBuilder().append("d.HA(").append(param0).append(',').append(param1).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -882,7 +882,7 @@ abstract class d extends ug {
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -1376,7 +1376,7 @@ abstract class d extends ug {
               break L8;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + -125 + 44 + 480 + 44 + 640 + 44 + param4 + 41);
+          throw oj.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + -125 + ',' + 480 + ',' + 640 + ',' + param4 + ')');
         }
     }
 

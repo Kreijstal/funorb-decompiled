@@ -25,7 +25,7 @@ abstract class mg extends df implements el {
             int var3_int = 119;
             ((mg) this).field_D.field_h = (mg) this;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "mg.C(" + (param0 != null ? "{...}" : "null") + 44 + 116 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "mg.C(" + (param0 != null ? "{...}" : "null") + ',' + 116 + ')');
         }
     }
 

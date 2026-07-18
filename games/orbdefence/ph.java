@@ -85,7 +85,7 @@ abstract class ph extends tf {
             int var4_int = 68 % ((-44 - param2) / 62);
             this.a(480, 73, 640, param1, param0);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "ph.BA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "ph.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -651,7 +651,7 @@ abstract class ph extends tf {
           L8: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var6_ref;
-            stackOut_21_1 = new StringBuilder().append("ph.GA(").append(480).append(44).append(73).append(44).append(640).append(44);
+            stackOut_21_1 = new StringBuilder().append("ph.GA(").append(480).append(',').append(73).append(',').append(640).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -674,7 +674,7 @@ abstract class ph extends tf {
               break L8;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param4 + 41);
+          throw dd.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param4 + ')');
         }
     }
 

@@ -97,7 +97,7 @@ final class tw implements ntb {
               } else {
                 if (var5.field_d.a((byte) -80, (tv) (Object) var5.field_d)) {
                   var4 = 1;
-                  System.out.println("SettingsChange settings_change has changed. before=" + var5.field_d + ", now=" + var5.field_d);
+                  System.out.println("SettingsChange settings_change has changed. before=" + (Object) (Object) var5.field_d + ", now=" + (Object) (Object) var5.field_d);
                   break L6;
                 } else {
                   break L6;
@@ -119,7 +119,7 @@ final class tw implements ntb {
               } else {
                 if (var5.field_e.a((byte) -64, (tv) (Object) var5.field_e)) {
                   var4 = 1;
-                  System.out.println("SpawnChoice spawnchoice has changed. before=" + var5.field_e + ", now=" + var5.field_e);
+                  System.out.println("SpawnChoice spawnchoice has changed. before=" + (Object) (Object) var5.field_e + ", now=" + (Object) (Object) var5.field_e);
                   break L8;
                 } else {
                   break L8;
@@ -135,7 +135,7 @@ final class tw implements ntb {
                   break L9;
                 } else {
                   var4 = 1;
-                  System.out.println("PlayerVote vote has changed. before=" + var5.field_c + ", now=" + var5.field_c);
+                  System.out.println("PlayerVote vote has changed. before=" + (Object) (Object) var5.field_c + ", now=" + (Object) (Object) var5.field_c);
                   break L9;
                 }
               }
@@ -146,7 +146,7 @@ final class tw implements ntb {
                 break L10;
               } else {
                 if (var5.field_a.a((byte) -40, (tv) (Object) var5.field_a)) {
-                  System.out.println("ShipBlueprint blueprint has changed. before=" + var5.field_a + ", now=" + var5.field_a);
+                  System.out.println("ShipBlueprint blueprint has changed. before=" + (Object) (Object) var5.field_a + ", now=" + (Object) (Object) var5.field_a);
                   var4 = 1;
                   break L10;
                 } else {
@@ -189,7 +189,7 @@ final class tw implements ntb {
               break L11;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_48_0, stackIn_48_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_48_0, stackIn_48_2 + ',' + param1 + ')');
         }
     }
 
@@ -284,7 +284,7 @@ final class tw implements ntb {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
         }
     }
 
@@ -395,7 +395,7 @@ final class tw implements ntb {
           L9: {
             var3 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var3;
-            stackOut_26_1 = new StringBuilder().append("tw.D(").append(param0).append(44);
+            stackOut_26_1 = new StringBuilder().append("tw.D(").append(param0).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -418,7 +418,7 @@ final class tw implements ntb {
               break L9;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
         }
     }
 
@@ -526,7 +526,7 @@ final class tw implements ntb {
           L7: {
             var3 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var3;
-            stackOut_24_1 = new StringBuilder().append("tw.C(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("tw.C(").append(param0).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -549,7 +549,7 @@ final class tw implements ntb {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
         return stackIn_23_0 != 0;
     }
@@ -798,7 +798,7 @@ final class tw implements ntb {
               break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ')');
         }
     }
 
@@ -922,7 +922,7 @@ final class tw implements ntb {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ')');
         }
     }
 

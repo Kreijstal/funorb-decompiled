@@ -25,7 +25,7 @@ final class g {
             param1.field_w = new int[]{-1};
             param1.field_r = new char[]{'?'};
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "g.B(" + 124 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "g.B(" + 124 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class g {
               break L1;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + -128 + 44 + param2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + -128 + ',' + param2 + ')');
         }
         return (String) (Object) stackIn_21_0;
     }

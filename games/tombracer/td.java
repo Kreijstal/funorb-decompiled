@@ -61,7 +61,7 @@ final class td extends vpa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1_ref, "td.C(" + -62 + 41);
+          throw tba.a((Throwable) (Object) var1_ref, "td.C(" + -62 + ')');
         }
     }
 
@@ -191,7 +191,7 @@ final class td extends vpa {
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw tba.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

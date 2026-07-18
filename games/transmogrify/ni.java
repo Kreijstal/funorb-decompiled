@@ -96,7 +96,7 @@ class ni extends h {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var1, "ni.D(" + param0 + 41);
+          throw ch.a((Throwable) (Object) var1, "ni.D(" + param0 + ')');
         }
         return stackIn_24_0;
     }
@@ -109,7 +109,7 @@ class ni extends h {
             }
             super.a(param0, param1, param2, (byte) 107, param4);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "ni.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "ni.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

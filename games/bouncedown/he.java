@@ -172,7 +172,7 @@ final class he extends ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var1, "he.A(" + 1 + 41);
+          throw ii.a((Throwable) (Object) var1, "he.A(" + 1 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class he extends ai {
             ((he) this).field_s = param2;
             ((he) this).field_m = param0;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "he.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "he.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

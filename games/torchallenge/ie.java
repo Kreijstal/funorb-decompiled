@@ -112,7 +112,7 @@ final class ie {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var2_ref, "ie.C(" + param0 + 44 + param1 + 41);
+          throw oj.a((Throwable) (Object) var2_ref, "ie.C(" + param0 + ',' + param1 + ')');
         }
         return stackIn_22_0 != 0;
     }

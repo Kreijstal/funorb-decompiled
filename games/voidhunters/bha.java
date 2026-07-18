@@ -90,7 +90,7 @@ class bha implements ntb {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var3;
-            stackOut_10_1 = new StringBuilder().append("bha.C(").append(-38).append(44);
+            stackOut_10_1 = new StringBuilder().append("bha.C(").append(-38).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -113,7 +113,7 @@ class bha implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
         }
         return stackIn_9_0 != 0;
     }
@@ -155,7 +155,7 @@ class bha implements ntb {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("bha.L(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("bha.L(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -178,7 +178,7 @@ class bha implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -277,7 +277,7 @@ class bha implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + -44 + 41);
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + -44 + ')');
         }
     }
 
@@ -285,7 +285,7 @@ class bha implements ntb {
         try {
             ((bha) this).field_a = kv.a(param1, param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bha.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "bha.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -347,7 +347,7 @@ class bha implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -355,7 +355,7 @@ class bha implements ntb {
         try {
             boolean discarded$0 = vq.a(param0, -82, ((bha) this).field_a);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bha.B(" + (param0 != null ? "{...}" : "null") + 44 + -124 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "bha.B(" + (param0 != null ? "{...}" : "null") + ',' + -124 + ')');
         }
     }
 
@@ -367,7 +367,7 @@ class bha implements ntb {
             var6 = var5;
             var6.field_a = var5.field_a;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bha.D(" + 93 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "bha.D(" + 93 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

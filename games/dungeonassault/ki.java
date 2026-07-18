@@ -46,7 +46,7 @@ final class ki {
           L0: {
             var5 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var5;
-            stackOut_2_1 = new StringBuilder().append("ki.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_2_1 = new StringBuilder().append("ki.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -69,7 +69,7 @@ final class ki {
               break L0;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -1 + 41);
+          throw vk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -1 + ')');
         }
     }
 

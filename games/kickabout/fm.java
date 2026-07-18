@@ -131,7 +131,7 @@ final class fm extends qt {
                         } else {
                           L5: {
                             ra.field_L.c(5 - -((fm) this).field_j, 290);
-                            var10 = var18.a(34 + kw.field_c[var5] + 34, var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
+                            var10 = var18.a('"' + kw.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
                             var11 = var8 - -(var10 * 16) - -5;
                             if (var6 != 0) {
                               break L5;
@@ -187,7 +187,7 @@ final class fm extends qt {
                       }
                     }
                     pn.field_w.c(5 - -((fm) this).field_j, 290);
-                    var10 = var18.a(34 + kw.field_c[var5] + 34, var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
+                    var10 = var18.a('"' + kw.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
                     var11 = var8 - -(var10 * 16) - -5;
                     if (var6 != 0) {
                       L9: {
@@ -280,7 +280,7 @@ final class fm extends qt {
                 }
               }
               qe.field_i[iw.field_e[var5]].c(5 - -((fm) this).field_j, 290);
-              var10 = var18.a(34 + kw.field_c[var5] + 34, var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
+              var10 = var18.a('"' + kw.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
               var11 = var8 - -(var10 * 16) - -5;
               if (var6 == 0) {
                 L15: {
@@ -823,7 +823,7 @@ final class fm extends qt {
               break L3;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + 145 + 41);
+          throw nb.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + 145 + ')');
         }
     }
 
@@ -874,7 +874,7 @@ final class fm extends qt {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("fm.F(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_3_1 = new StringBuilder().append("fm.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -897,7 +897,7 @@ final class fm extends qt {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

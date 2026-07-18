@@ -10,7 +10,7 @@ final class le {
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) qj.field_c);
             db.field_R = -1;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "le.B(" + -1 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "le.B(" + -1 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

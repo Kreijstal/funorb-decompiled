@@ -460,7 +460,7 @@ class qh {
               }
               L32: {
                 stackOut_120_0 = (RuntimeException) (Object) stackIn_120_0;
-                stackOut_120_1 = ((StringBuilder) (Object) stackIn_120_1).append(stackIn_120_2).append(44).append(param1).append(44).append(param2).append(44).append(-9).append(44);
+                stackOut_120_1 = ((StringBuilder) (Object) stackIn_120_1).append(stackIn_120_2).append(',').append(param1).append(',').append(param2).append(',').append(-9).append(',');
                 stackIn_122_0 = stackOut_120_0;
                 stackIn_122_1 = stackOut_120_1;
                 stackIn_121_0 = stackOut_120_0;
@@ -483,7 +483,7 @@ class qh {
                   break L32;
                 }
               }
-              throw bd.a((Throwable) (Object) stackIn_123_0, stackIn_123_2 + 44 + param5 + 41);
+              throw bd.a((Throwable) (Object) stackIn_123_0, stackIn_123_2 + ',' + param5 + ')');
             }
             return stackIn_116_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -701,7 +701,7 @@ class qh {
           L11: {
             var10 = decompiledCaughtException;
             stackOut_54_0 = (RuntimeException) var10;
-            stackOut_54_1 = new StringBuilder().append("qh.C(").append(param0).append(44);
+            stackOut_54_1 = new StringBuilder().append("qh.C(").append(param0).append(',');
             stackIn_57_0 = stackOut_54_0;
             stackIn_57_1 = stackOut_54_1;
             stackIn_55_0 = stackOut_54_0;
@@ -726,7 +726,7 @@ class qh {
           }
           L12: {
             stackOut_58_0 = (RuntimeException) (Object) stackIn_58_0;
-            stackOut_58_1 = ((StringBuilder) (Object) stackIn_58_1).append(stackIn_58_2).append(44);
+            stackOut_58_1 = ((StringBuilder) (Object) stackIn_58_1).append(stackIn_58_2).append(',');
             stackIn_61_0 = stackOut_58_0;
             stackIn_61_1 = stackOut_58_1;
             stackIn_59_0 = stackOut_58_0;
@@ -751,7 +751,7 @@ class qh {
           }
           L13: {
             stackOut_62_0 = (RuntimeException) (Object) stackIn_62_0;
-            stackOut_62_1 = ((StringBuilder) (Object) stackIn_62_1).append(stackIn_62_2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_62_1 = ((StringBuilder) (Object) stackIn_62_1).append(stackIn_62_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_65_0 = stackOut_62_0;
             stackIn_65_1 = stackOut_62_1;
             stackIn_63_0 = stackOut_62_0;
@@ -774,7 +774,7 @@ class qh {
               break L13;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_66_0, stackIn_66_2 + 44 + param7 + 44 + param8 + 41);
+          throw bd.a((Throwable) (Object) stackIn_66_0, stackIn_66_2 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -875,7 +875,7 @@ class qh {
               break L5;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 41);
+          throw bd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
         }
     }
 
@@ -993,7 +993,7 @@ class qh {
           L7: {
             var7 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var7;
-            stackOut_24_1 = new StringBuilder().append("qh.A(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("qh.A(").append(param0).append(',');
             stackIn_27_0 = stackOut_24_0;
             stackIn_27_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -1018,7 +1018,7 @@ class qh {
           }
           L8: {
             stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44).append(param2).append(44);
+            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',').append(param2).append(',');
             stackIn_31_0 = stackOut_28_0;
             stackIn_31_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -1043,7 +1043,7 @@ class qh {
           }
           L9: {
             stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(44).append(param4).append(44);
+            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',').append(param4).append(',');
             stackIn_35_0 = stackOut_32_0;
             stackIn_35_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
@@ -1066,7 +1066,7 @@ class qh {
               break L9;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ')');
         }
     }
 
@@ -1168,7 +1168,7 @@ class qh {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 41);
+          throw bd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
         }
         return stackIn_14_0;
     }
@@ -1245,7 +1245,7 @@ class qh {
                       if (var2 == null) {
                         break L3;
                       } else {
-                        int discarded$4 = bk.field_a.a("Screenshot(s) " + var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        int discarded$4 = bk.field_a.a("Screenshot(s) " + (String) var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L3;
                       }
                     } else {
@@ -1281,7 +1281,7 @@ class qh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var1, "qh.I(" + 1 + 41);
+          throw bd.a((Throwable) (Object) var1, "qh.I(" + true + ')');
         }
     }
 

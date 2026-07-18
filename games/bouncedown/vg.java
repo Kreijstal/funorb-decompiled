@@ -173,7 +173,7 @@ final class vg implements fc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var1_ref, "vg.C(" + param0 + 41);
+          throw ii.a((Throwable) (Object) var1_ref, "vg.C(" + param0 + ')');
         }
     }
 
@@ -254,7 +254,7 @@ final class vg implements fc {
           L4: {
             var6 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var6;
-            stackOut_12_1 = new StringBuilder().append("vg.B(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("vg.B(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -277,7 +277,7 @@ final class vg implements fc {
               break L4;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ii.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -298,7 +298,7 @@ final class vg implements fc {
             ((vg) this).field_i = param3;
             ((vg) this).field_h = param5;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "vg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

@@ -18,7 +18,7 @@ final class wc extends qg {
         try {
             ((wc) this).field_y = param6;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "wc.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "wc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class wc extends qg {
           L2: {
             var7_ref = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var7_ref;
-            stackOut_7_1 = new StringBuilder().append("wc.O(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("wc.O(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -108,7 +108,7 @@ final class wc extends qg {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ma.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

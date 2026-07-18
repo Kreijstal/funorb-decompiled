@@ -391,7 +391,7 @@ abstract class ki {
                     }
                     case 17: {
                         stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-                        stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(param1).append(44);
+                        stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param1).append(',');
                         stackIn_19_0 = stackOut_17_0;
                         stackIn_19_1 = stackOut_17_1;
                         stackIn_18_0 = stackOut_17_0;
@@ -424,7 +424,7 @@ abstract class ki {
                         continue stateLoop;
                     }
                     case 20: {
-                        throw qb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+                        throw qb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -465,7 +465,7 @@ abstract class ki {
             }
             ke.a(((ki) this).field_c, (byte) 39, hi.field_w);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ki.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "ki.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -245,7 +245,7 @@ final class eb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "eb.B(" + -14732 + 41);
+          throw wn.a((Throwable) (Object) var1, "eb.B(" + -14732 + ')');
         }
     }
 
@@ -369,7 +369,7 @@ final class eb {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 1 + 41);
+          throw wn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + true + ')');
         }
     }
 

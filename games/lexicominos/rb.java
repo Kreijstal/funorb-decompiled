@@ -14,7 +14,7 @@ final class rb {
             int var2_int = 17;
             m.a(ca.field_o, -127, false);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "rb.E(" + 112 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "rb.E(" + 112 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -173,7 +173,7 @@ final class rb {
             di.field_x = new qj(ug.field_A, (w) (Object) eb.field_b);
             ug.field_A.a(-14579, (w) (Object) di.field_x);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "rb.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "rb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

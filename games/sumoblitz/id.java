@@ -77,7 +77,7 @@ final class id extends ms {
               L1: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var4_ref2;
-                stackOut_6_1 = new StringBuilder().append("id.A(").append(param0).append(44).append(param1).append(44);
+                stackOut_6_1 = new StringBuilder().append("id.A(").append(param0).append(',').append(param1).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -100,7 +100,7 @@ final class id extends ms {
                   break L1;
                 }
               }
-              throw qo.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param3 + 41);
+              throw qo.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param3 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -122,7 +122,7 @@ final class id extends ms {
             ((id) this).field_k = param5;
             ((id) this).field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "id.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "id.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

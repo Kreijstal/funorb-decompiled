@@ -84,7 +84,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               break L1;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw ie.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }
@@ -229,7 +229,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.GB(" + 1 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.GB(" + true + ')');
         }
     }
 
@@ -297,7 +297,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4;
-            stackOut_12_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.MB(").append(-1745).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.MB(").append(-1745).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_12_0;
             stackIn_15_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -320,7 +320,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               break L4;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
         return stackIn_11_0;
     }
@@ -752,7 +752,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.BA(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.BA(" + param0 + ')');
         }
     }
 
@@ -873,7 +873,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.VA(" + 125 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.VA(" + 125 + ')');
         }
     }
 
@@ -1319,7 +1319,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.W(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.W(" + param0 + ')');
         }
     }
 
@@ -1362,7 +1362,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var1, "DrPhlogistonSavesTheEarth.IB(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var1, "DrPhlogistonSavesTheEarth.IB(" + param0 + ')');
         }
         return stackIn_10_0 != 0;
     }
@@ -1400,7 +1400,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.RA(" + -119 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.RA(" + -119 + ')');
         }
     }
 
@@ -1428,7 +1428,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var3, "DrPhlogistonSavesTheEarth.SA(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw ie.a((Throwable) (Object) var3, "DrPhlogistonSavesTheEarth.SA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_4_0;
     }
@@ -1521,7 +1521,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               break L4;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 65793 + 41);
+          throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + 65793 + ')');
         }
         return stackIn_11_0;
     }
@@ -1591,7 +1591,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           L5: {
             runtimeException = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) runtimeException;
-            stackOut_13_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.WA(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.WA(").append(param0).append(',');
             stackIn_16_0 = stackOut_13_0;
             stackIn_16_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -1614,7 +1614,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               break L5;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 
@@ -1862,7 +1862,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.LA(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.LA(" + param0 + ')');
         }
     }
 
@@ -2030,7 +2030,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.LB(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.LB(" + param0 + ')');
         }
     }
 
@@ -2143,7 +2143,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.TA(" + 22 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.TA(" + 22 + ')');
         }
     }
 
@@ -2248,7 +2248,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           }
           L6: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_15_0;
             stackIn_18_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -2271,7 +2271,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               break L6;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
     }
 
@@ -2327,7 +2327,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           L4: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var4_ref2;
-            stackOut_7_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.OB(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.OB(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_7_0;
             stackIn_10_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -2350,7 +2350,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               break L4;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param3 + 41);
+          throw ie.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param3 + ')');
         }
     }
 
@@ -2935,7 +2935,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   break L4;
                 }
               }
-              throw ie.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
+              throw ie.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -2959,7 +2959,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.NB(" + -83 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.NB(" + -83 + ')');
         }
     }
 
@@ -3018,7 +3018,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.EB(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.EB(" + param0 + ')');
         }
     }
 
@@ -3053,7 +3053,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.AA(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.AA(" + param0 + ')');
         }
     }
 
@@ -3085,7 +3085,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2_ref, "DrPhlogistonSavesTheEarth.MA(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var2_ref, "DrPhlogistonSavesTheEarth.MA(" + param0 + ')');
         }
     }
 
@@ -3153,7 +3153,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           L4: {
             var3_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3_ref;
-            stackOut_12_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.AB(").append(-105).append(44);
+            stackOut_12_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.AB(").append(-105).append(',');
             stackIn_15_0 = stackOut_12_0;
             stackIn_15_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -3176,7 +3176,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               break L4;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
         return stackIn_11_0;
     }
@@ -3192,7 +3192,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             field_L = null;
             field_G = null;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "DrPhlogistonSavesTheEarth.QA(" + param0 + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "DrPhlogistonSavesTheEarth.QA(" + param0 + ')');
         }
     }
 
@@ -3258,7 +3258,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.BB(" + 2 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.BB(" + 2 + ')');
         }
     }
 
@@ -3538,7 +3538,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.DB(" + -125 + 41);
+          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.DB(" + -125 + ')');
         }
     }
 
@@ -3947,7 +3947,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var3, "DrPhlogistonSavesTheEarth.FB(" + param0 + 44 + param1 + 41);
+          throw ie.a((Throwable) (Object) var3, "DrPhlogistonSavesTheEarth.FB(" + param0 + ',' + param1 + ')');
         }
         return stackIn_144_0 != 0;
     }

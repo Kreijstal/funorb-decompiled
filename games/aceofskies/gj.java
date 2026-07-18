@@ -11,7 +11,7 @@ final class gj extends java.awt.Canvas {
         try {
             ((gj) this).field_d.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "gj.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "gj.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -20,7 +20,7 @@ final class gj extends java.awt.Canvas {
             ke.a(-1, param1);
             ua.a(ec.field_o, false, (byte) 82);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "gj.B(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "gj.B(" + true + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -33,7 +33,7 @@ final class gj extends java.awt.Canvas {
         try {
             ((gj) this).field_d.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "gj.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "gj.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -41,7 +41,7 @@ final class gj extends java.awt.Canvas {
         try {
             ((gj) this).field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "gj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "gj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

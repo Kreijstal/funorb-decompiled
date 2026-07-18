@@ -131,7 +131,7 @@ final class jba extends ana {
             ((jba) this).a(27799, (at) (Object) ((jba) this).field_y);
             ((jba) this).field_l = 80;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "jba.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "jba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class jba extends ana {
             oe.a(-21332, (lu) (Object) sja.field_fb, param0);
             sja.field_fb.a((byte) -88, sja.field_fb.field_g + -var3_int);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "jba.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 89 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "jba.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + 89 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class jba extends ana {
             param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) uc.field_m);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) uc.field_m);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "jba.G(" + -30229 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "jba.G(" + -30229 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

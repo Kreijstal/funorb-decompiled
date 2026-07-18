@@ -35,7 +35,7 @@ final class fh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "fh.A(" + -80 + 41);
+          throw kg.a((Throwable) (Object) var1, "fh.A(" + -80 + ')');
         }
     }
 

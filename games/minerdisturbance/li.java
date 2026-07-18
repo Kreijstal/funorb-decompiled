@@ -40,7 +40,7 @@ final class li implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var2, "li.B(" + param0 + 41);
+          throw lj.a((Throwable) (Object) var2, "li.B(" + param0 + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class li implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var2, "li.A(" + param0 + 41);
+          throw lj.a((Throwable) (Object) var2, "li.A(" + param0 + ')');
         }
         return stackIn_1_0;
     }
@@ -6804,7 +6804,7 @@ final class li implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "li.C(" + -90 + 41);
+          throw lj.a((Throwable) (Object) var1, "li.C(" + -90 + ')');
         }
     }
 

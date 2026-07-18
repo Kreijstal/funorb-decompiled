@@ -307,7 +307,7 @@ final class de {
                   break L24;
                 }
               }
-              throw fk.a((Throwable) (Object) stackIn_62_0, stackIn_62_2 + 44 + param1 + 41);
+              throw fk.a((Throwable) (Object) stackIn_62_0, stackIn_62_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

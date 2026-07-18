@@ -396,7 +396,7 @@ final class ih extends qe {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("ih.J(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("ih.J(").append(param0).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -419,7 +419,7 @@ final class ih extends qe {
               break L3;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
         return stackIn_11_0;
     }

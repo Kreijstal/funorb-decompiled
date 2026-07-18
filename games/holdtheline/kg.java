@@ -219,7 +219,7 @@ final class kg {
           L12: {
             var2 = decompiledCaughtException;
             stackOut_65_0 = (RuntimeException) var2;
-            stackOut_65_1 = new StringBuilder().append("kg.B(").append(param0).append(44);
+            stackOut_65_1 = new StringBuilder().append("kg.B(").append(param0).append(',');
             stackIn_67_0 = stackOut_65_0;
             stackIn_67_1 = stackOut_65_1;
             stackIn_66_0 = stackOut_65_0;
@@ -242,7 +242,7 @@ final class kg {
               break L12;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + ')');
         }
         return stackIn_64_0;
     }
@@ -313,7 +313,7 @@ final class kg {
             ((kg) this).field_f = param0;
             ((kg) this).field_e = false;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "kg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -325,7 +325,7 @@ final class kg {
             ((kg) this).field_e = param2 ? true : false;
             ((kg) this).field_c = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "kg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "kg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

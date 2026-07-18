@@ -17,7 +17,7 @@ final class lg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "lg.B(" + 76 + 41);
+          throw lj.a((Throwable) (Object) var1, "lg.B(" + 76 + ')');
         }
     }
 
@@ -4376,7 +4376,7 @@ final class lg {
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw lj.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
         }
         return stackIn_7_0;
     }

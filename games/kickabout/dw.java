@@ -244,7 +244,7 @@ final class dw extends Exception {
         try {
             ((dw) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "dw.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "dw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

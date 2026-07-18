@@ -14,7 +14,7 @@ final class wb {
             aj.a(param1, -18788, "");
             gg.a(param1, (byte) -85);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "wb.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "wb.C(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -26,7 +26,7 @@ final class wb {
             var3.a(param0.field_s, false);
             var3.a(param0.field_o, false);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "wb.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + -96 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "wb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + -96 + ')');
         }
     }
 

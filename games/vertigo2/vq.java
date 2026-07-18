@@ -92,7 +92,7 @@ final class vq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1_ref, "vq.B(" + 256 + 41);
+          throw wn.a((Throwable) (Object) var1_ref, "vq.B(" + 256 + ')');
         }
     }
 
@@ -314,7 +314,7 @@ final class vq {
                         continue stateLoop;
                     }
                     case 18: {
-                        throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + 114 + 41);
+                        throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + 114 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }

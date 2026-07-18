@@ -23,7 +23,7 @@ final class ji extends da {
             var3.field_T = true;
             boolean discarded$0 = var3.a(34, (lm) this);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "ji.J(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "ji.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class ji extends da {
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + -38 + 41);
+          throw vk.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + -38 + ')');
         }
     }
 

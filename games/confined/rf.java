@@ -32,7 +32,7 @@ final class rf {
             param2.field_u = var13 * 20.0;
             param0.a((rk) (Object) param2, (byte) 97);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "rf.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "rf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + false + ')');
         }
     }
 

@@ -146,7 +146,7 @@ final class lp {
               break L8;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 109 + 41);
+          throw rb.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + 109 + ')');
         }
         return stackIn_19_0;
     }

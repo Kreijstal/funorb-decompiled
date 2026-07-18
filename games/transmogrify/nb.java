@@ -33,7 +33,7 @@ final class nb {
             param1.field_j = var6.c((byte) -121);
             var6.a((byte) -42, -var4 + var6.field_h);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "nb.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "nb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -163,7 +163,7 @@ final class nb {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("nb.A(").append(1).append(44);
+            stackOut_21_1 = new StringBuilder().append("nb.A(").append(true).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -186,7 +186,7 @@ final class nb {
               break L7;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
         return stackIn_20_0;
     }

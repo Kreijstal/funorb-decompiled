@@ -48,7 +48,7 @@ abstract class uc {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("uc.B(").append(5).append(44).append(1).append(44);
+            stackOut_2_1 = new StringBuilder().append("uc.B(").append(5).append(',').append(true).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -71,7 +71,7 @@ abstract class uc {
               break L1;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
     }
 
@@ -89,7 +89,7 @@ abstract class uc {
             int discarded$0 = 13;
             fg.a();
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "uc.F(" + 84 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "uc.F(" + 84 + ')');
         }
     }
 

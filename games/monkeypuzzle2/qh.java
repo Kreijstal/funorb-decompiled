@@ -71,7 +71,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -271,7 +271,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -631,7 +631,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           L16: {
             var7 = decompiledCaughtException;
             stackOut_67_0 = (RuntimeException) var7;
-            stackOut_67_1 = new StringBuilder().append("qh.C(").append(param0).append(44);
+            stackOut_67_1 = new StringBuilder().append("qh.C(").append(param0).append(',');
             stackIn_69_0 = stackOut_67_0;
             stackIn_69_1 = stackOut_67_1;
             stackIn_68_0 = stackOut_67_0;
@@ -656,7 +656,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           L17: {
             stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
-            stackOut_70_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_70_2).append(44).append(-1).append(44).append(param3).append(44);
+            stackOut_70_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_70_2).append(',').append(-1).append(',').append(param3).append(',');
             stackIn_72_0 = stackOut_70_0;
             stackIn_72_1 = stackOut_70_1;
             stackIn_71_0 = stackOut_70_0;
@@ -681,7 +681,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           L18: {
             stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44).append(param5).append(44);
+            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(',').append(param5).append(',');
             stackIn_75_0 = stackOut_73_0;
             stackIn_75_1 = stackOut_73_1;
             stackIn_74_0 = stackOut_73_0;
@@ -704,7 +704,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L18;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + ')');
         }
         return stackIn_66_0;
     }
@@ -824,7 +824,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L7;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 6191 + 41);
+          throw la.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + 6191 + ')');
         }
     }
 
@@ -886,7 +886,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -990,7 +990,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L6;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
     }
 
@@ -1055,7 +1055,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -1147,7 +1147,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L5;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
     }
 

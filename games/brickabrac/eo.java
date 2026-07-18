@@ -122,7 +122,7 @@ final class eo extends tl {
             java.nio.Buffer discarded$0 = ((eo) this).field_j.position(0);
             java.nio.ByteBuffer discarded$1 = ((eo) this).field_j.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "eo.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "eo.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -204,7 +204,7 @@ final class eo extends tl {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + -75 + 41);
+          throw qb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + -75 + ')');
         }
         return stackIn_5_0 != 0;
     }

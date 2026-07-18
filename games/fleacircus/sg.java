@@ -51,7 +51,7 @@ final class sg {
           L1: {
             var2_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2_ref;
-            stackOut_4_1 = new StringBuilder().append("sg.D(").append(20).append(44);
+            stackOut_4_1 = new StringBuilder().append("sg.D(").append(20).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -74,7 +74,7 @@ final class sg {
               break L1;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -156,7 +156,7 @@ final class sg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var2_ref, "sg.E(" + param0 + 44 + -95 + 41);
+          throw pf.a((Throwable) (Object) var2_ref, "sg.E(" + param0 + ',' + -95 + ')');
         }
         return stackIn_22_0 != 0;
     }

@@ -51,7 +51,7 @@ final class hj {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("hj.B(").append(-19).append(44);
+            stackOut_4_1 = new StringBuilder().append("hj.B(").append(-19).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -74,7 +74,7 @@ final class hj {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0 != 0;
     }
@@ -85,7 +85,7 @@ final class hj {
         try {
             ud discarded$0 = var2.b();
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "hj.E(" + (param0 != null ? "{...}" : "null") + 44 + 23987 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "hj.E(" + (param0 != null ? "{...}" : "null") + ',' + 23987 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class hj {
         try {
             ti.a(param0.field_z, param0.field_w, param0.field_x);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "hj.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "hj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

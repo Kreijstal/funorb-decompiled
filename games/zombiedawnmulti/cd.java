@@ -39,7 +39,7 @@ final class cd extends cj {
             ((cd) this).a((byte) 50, ((cd) this).field_Gb);
             ((cd) this).a((byte) 50, ((cd) this).field_Hb);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "cd.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "cd.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class cd extends cj {
                   L5: while (true) {
                     if (var5 >= ld.field_Ub.length) {
                       if (var2 != null) {
-                        int discarded$5 = gf.field_e.a("Screenshot(s) " + var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        int discarded$5 = gf.field_e.a("Screenshot(s) " + (String) var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L4;
                       } else {
                         break L4;
@@ -155,7 +155,7 @@ final class cd extends cj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1, "cd.AA(" + -57 + 41);
+          throw fa.a((Throwable) (Object) var1, "cd.AA(" + -57 + ')');
         }
     }
 

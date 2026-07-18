@@ -22,7 +22,7 @@ abstract class pf {
             var4.a(119, 0);
             var4.a(108, param1.field_e);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "pf.A(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 44 + -114 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "pf.A(" + 5 + ',' + (param1 != null ? "{...}" : "null") + ',' + -114 + ')');
         }
     }
 
@@ -50,7 +50,7 @@ abstract class pf {
             lr.field_r = (var2_int & 1) << 16;
             lr.field_r = lr.field_r + param0.a((byte) 81);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "pf.E(" + (param0 != null ? "{...}" : "null") + 44 + 542439655 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "pf.E(" + (param0 != null ? "{...}" : "null") + ',' + 542439655 + ')');
         }
     }
 

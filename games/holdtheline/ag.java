@@ -281,7 +281,7 @@ final class ag extends wj {
                   break L12;
                 }
               }
-              throw kk.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param1 + 44 + param2 + 41);
+              throw kk.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param1 + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -298,7 +298,7 @@ final class ag extends wj {
             lh.field_a = new vg(param2, param0, false, true, true);
             sm.field_c.a((n) (Object) lh.field_a, (byte) -99);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "ag.D(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "ag.D(" + (param0 != null ? "{...}" : "null") + ',' + false + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -53,7 +53,7 @@ final class db {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("db.I(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("db.I(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -76,7 +76,7 @@ final class db {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return (db) this;
     }
@@ -235,7 +235,7 @@ final class db {
           }
           L9: {
             stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(44);
+            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -260,7 +260,7 @@ final class db {
           }
           L10: {
             stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -283,7 +283,7 @@ final class db {
               break L10;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + param5 + 41);
+          throw ma.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ',' + param5 + ')');
         }
     }
 
@@ -368,7 +368,7 @@ final class db {
             param0.field_h = ((db) this).field_h;
             param0.field_a = ((db) this).field_a;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "db.L(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "db.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -418,7 +418,7 @@ final class db {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("db.C(").append(0).append(44).append(61).append(44).append(32).append(44);
+            stackOut_6_1 = new StringBuilder().append("db.C(").append(0).append(',').append(61).append(',').append(' ').append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -441,7 +441,7 @@ final class db {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_5_0;
     }
@@ -806,7 +806,7 @@ final class db {
           L11: {
             var6 = decompiledCaughtException;
             stackOut_28_0 = (RuntimeException) var6;
-            stackOut_28_1 = new StringBuilder().append("db.A(").append(param0).append(44);
+            stackOut_28_1 = new StringBuilder().append("db.A(").append(param0).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -831,7 +831,7 @@ final class db {
           }
           L12: {
             stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(44);
+            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
@@ -854,7 +854,7 @@ final class db {
               break L12;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param3 + 44 + param4 + 41);
+          throw ma.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

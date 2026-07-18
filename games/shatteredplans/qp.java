@@ -345,7 +345,7 @@ final class qp extends o {
           L15: {
             var2 = decompiledCaughtException;
             stackOut_64_0 = (RuntimeException) var2;
-            stackOut_64_1 = new StringBuilder().append("qp.B(").append(1).append(44);
+            stackOut_64_1 = new StringBuilder().append("qp.B(").append(true).append(',');
             stackIn_66_0 = stackOut_64_0;
             stackIn_66_1 = stackOut_64_1;
             stackIn_65_0 = stackOut_64_0;
@@ -368,7 +368,7 @@ final class qp extends o {
               break L15;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_67_0, stackIn_67_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_67_0, stackIn_67_2 + ')');
         }
         return stackIn_63_0;
     }
@@ -507,7 +507,7 @@ final class qp extends o {
               break L6;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw r.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

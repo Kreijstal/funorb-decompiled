@@ -15,7 +15,7 @@ final class ki extends dg {
             }
             ((ki) this).field_m = param2.b((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ki.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ki.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -25,7 +25,7 @@ final class ki extends dg {
             int var3_int = 44 / ((param0 - -8) / 40);
             param1.a((byte) -125, ((ki) this).field_m, 4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ki.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ki.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -43,7 +43,7 @@ final class ki extends dg {
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) nfa.field_n);
             ita.field_f = -1;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ki.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ki.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -264,7 +264,7 @@ final class ki extends dg {
           }
           L2: {
             stackOut_63_0 = (RuntimeException) (Object) stackIn_63_0;
-            stackOut_63_1 = ((StringBuilder) (Object) stackIn_63_1).append(stackIn_63_2).append(44).append(param1).append(44);
+            stackOut_63_1 = ((StringBuilder) (Object) stackIn_63_1).append(stackIn_63_2).append(',').append(param1).append(',');
             stackIn_65_0 = stackOut_63_0;
             stackIn_65_1 = stackOut_63_1;
             stackIn_64_0 = stackOut_63_0;
@@ -287,7 +287,7 @@ final class ki extends dg {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_66_0, stackIn_66_2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) stackIn_66_0, stackIn_66_2 + ',' + param3 + ')');
         }
     }
 
@@ -295,7 +295,7 @@ final class ki extends dg {
         try {
             super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ki.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ki.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -355,7 +355,7 @@ final class ki extends dg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2, "ki.H(" + param0 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) var2, "ki.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -450,7 +450,7 @@ final class ki extends dg {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw tba.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -113,7 +113,7 @@ final class lhb implements dja {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_36_0 = (RuntimeException) var2;
-            stackOut_36_1 = new StringBuilder().append("lhb.D(").append(param0).append(44);
+            stackOut_36_1 = new StringBuilder().append("lhb.D(").append(param0).append(',');
             stackIn_38_0 = stackOut_36_0;
             stackIn_38_1 = stackOut_36_1;
             stackIn_37_0 = stackOut_36_0;
@@ -136,7 +136,7 @@ final class lhb implements dja {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ')');
         }
     }
 
@@ -187,7 +187,7 @@ final class lhb implements dja {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("lhb.C(").append(127).append(44);
+            stackOut_2_1 = new StringBuilder().append("lhb.C(").append(127).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -210,7 +210,7 @@ final class lhb implements dja {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
     }
 

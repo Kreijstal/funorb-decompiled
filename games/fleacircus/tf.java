@@ -14,7 +14,7 @@ final class tf extends dk {
             ((tf) this).field_A = param0;
             ((tf) this).field_F = 256;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "tf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "tf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class tf extends dk {
               break L1;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 0 + 44 + 80 + 41);
+          throw pf.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 0 + ',' + 80 + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class tf extends dk {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("tf.EA(").append(0).append(44);
+            stackOut_2_1 = new StringBuilder().append("tf.EA(").append(0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -188,7 +188,7 @@ final class tf extends dk {
               break L1;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -256,7 +256,7 @@ final class tf extends dk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var3, "tf.CA(" + param0 + 44 + param1 + 44 + -2 + 41);
+          throw pf.a((Throwable) (Object) var3, "tf.CA(" + param0 + ',' + param1 + ',' + -2 + ')');
         }
         return stackIn_12_0;
     }

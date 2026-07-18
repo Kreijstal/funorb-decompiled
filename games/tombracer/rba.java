@@ -55,7 +55,7 @@ final class rba implements Iterator {
             ((rba) this).field_c = ((rba) this).field_d.field_d.field_g;
             ((rba) this).field_f = null;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "rba.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "rba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -383,7 +383,7 @@ final class nh {
           L15: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_57_0 = (RuntimeException) var5_ref;
-            stackOut_57_1 = new StringBuilder().append("nh.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_57_1 = new StringBuilder().append("nh.C(").append(param0).append(',').append(param1).append(',');
             stackIn_59_0 = stackOut_57_0;
             stackIn_59_1 = stackOut_57_1;
             stackIn_58_0 = stackOut_57_0;
@@ -406,7 +406,7 @@ final class nh {
               break L15;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_60_0, stackIn_60_2 + 44 + param3 + 41);
+          throw kg.a((Throwable) (Object) stackIn_60_0, stackIn_60_2 + ',' + param3 + ')');
         }
     }
 
@@ -446,7 +446,7 @@ final class nh {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var3;
-            stackOut_3_1 = new StringBuilder().append("nh.H(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("nh.H(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -469,7 +469,7 @@ final class nh {
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -697,7 +697,7 @@ final class nh {
           L13: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_47_0 = (RuntimeException) var5_ref;
-            stackOut_47_1 = new StringBuilder().append("nh.D(").append(param0).append(44);
+            stackOut_47_1 = new StringBuilder().append("nh.D(").append(param0).append(',');
             stackIn_49_0 = stackOut_47_0;
             stackIn_49_1 = stackOut_47_1;
             stackIn_48_0 = stackOut_47_0;
@@ -720,7 +720,7 @@ final class nh {
               break L13;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_50_0, stackIn_50_2 + 44 + param2 + 44 + param3 + 41);
+          throw kg.a((Throwable) (Object) stackIn_50_0, stackIn_50_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -746,7 +746,7 @@ final class nh {
             ((nh) this).field_e = new byte[param1];
             ((nh) this).field_j = 0L;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "nh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "nh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

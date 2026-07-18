@@ -326,7 +326,7 @@ final class eb extends hc {
               break L18;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_57_0, stackIn_57_2 + 44 + param1 + 41);
+          throw t.a((Throwable) (Object) stackIn_57_0, stackIn_57_2 + ',' + param1 + ')');
         }
     }
 
@@ -409,7 +409,7 @@ final class eb extends hc {
           L4: {
             var8 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var8;
-            stackOut_18_1 = new StringBuilder().append("eb.V(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_18_1 = new StringBuilder().append("eb.V(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -432,7 +432,7 @@ final class eb extends hc {
               break L4;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param6 + 41);
+          throw t.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param6 + ')');
         }
         return stackIn_17_0 != 0;
     }

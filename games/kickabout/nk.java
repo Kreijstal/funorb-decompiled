@@ -128,7 +128,7 @@ final class nk extends dg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "nk.F(" + -56 + 41);
+          throw nb.a((Throwable) (Object) var1, "nk.F(" + -56 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

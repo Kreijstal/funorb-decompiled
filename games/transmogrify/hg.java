@@ -69,7 +69,7 @@ final class hg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var1, "hg.E(" + param0 + 41);
+          throw ch.a((Throwable) (Object) var1, "hg.E(" + param0 + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class hg {
               break L3;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw ch.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
         }
     }
 

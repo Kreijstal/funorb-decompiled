@@ -187,7 +187,7 @@ abstract class ji extends li {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("ji.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_3_1 = new StringBuilder().append("ji.C(").append(param0).append(',').append(param1).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -210,7 +210,7 @@ abstract class ji extends li {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

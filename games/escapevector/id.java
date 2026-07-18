@@ -26,7 +26,7 @@ final class id {
             var1.g(0, 0);
             dl.a((byte) 116);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "id.D(" + 120 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "id.D(" + 120 + ')');
         }
     }
 

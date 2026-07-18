@@ -82,7 +82,7 @@ final class re extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1_ref, "re.C(" + 1 + 41);
+          throw t.a((Throwable) (Object) var1_ref, "re.C(" + true + ')');
         }
     }
 

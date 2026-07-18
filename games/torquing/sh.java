@@ -69,7 +69,7 @@ final class sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1, "sh.B(" + 0 + 41);
+          throw rb.a((Throwable) (Object) var1, "sh.B(" + 0 + ')');
         }
         return stackIn_22_0;
     }

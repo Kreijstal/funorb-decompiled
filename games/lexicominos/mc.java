@@ -68,7 +68,7 @@ final class mc extends kd {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2_ref;
-            stackOut_4_1 = new StringBuilder().append("mc.D(").append(-116).append(44);
+            stackOut_4_1 = new StringBuilder().append("mc.D(").append(-116).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -91,7 +91,7 @@ final class mc extends kd {
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

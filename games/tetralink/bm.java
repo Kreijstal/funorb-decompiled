@@ -63,7 +63,7 @@ final class bm extends mc {
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var6_ref;
-            stackOut_5_1 = new StringBuilder().append("bm.C(").append(param0).append(44).append(0).append(44).append(0).append(44).append(param3).append(44).append(0).append(44);
+            stackOut_5_1 = new StringBuilder().append("bm.C(").append(param0).append(',').append(0).append(',').append(0).append(',').append(param3).append(',').append(0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -86,7 +86,7 @@ final class bm extends mc {
               break L1;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_4_0;
     }
@@ -166,7 +166,7 @@ final class bm extends mc {
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw oi.a((Throwable) (Object) var1, "bm.D(" + -25676 + 41);
+              throw oi.a((Throwable) (Object) var1, "bm.D(" + -25676 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

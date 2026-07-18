@@ -196,7 +196,7 @@ final class kg {
               break L8;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 44 + 21 + 41);
+          throw rb.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ',' + 21 + ')');
         }
     }
 
@@ -232,7 +232,7 @@ final class kg {
             var5.field_k = ((kg) this).field_a;
             param0.a(param1, var5);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "kg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "kg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

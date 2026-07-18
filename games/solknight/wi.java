@@ -151,7 +151,7 @@ final class wi extends gg {
           L8: {
             var4 = decompiledCaughtException;
             stackOut_37_0 = (RuntimeException) var4;
-            stackOut_37_1 = new StringBuilder().append("wi.B(").append(-913).append(44).append(1).append(44);
+            stackOut_37_1 = new StringBuilder().append("wi.B(").append(-913).append(',').append(true).append(',');
             stackIn_39_0 = stackOut_37_0;
             stackIn_39_1 = stackOut_37_1;
             stackIn_38_0 = stackOut_37_0;
@@ -174,7 +174,7 @@ final class wi extends gg {
               break L8;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 44 + 10 + 41);
+          throw fc.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + 10 + ')');
         }
         return stackIn_36_0 != 0;
     }

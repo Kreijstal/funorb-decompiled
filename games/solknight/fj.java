@@ -117,7 +117,7 @@ final class fj extends gg {
           L5: {
             var7 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var7;
-            stackOut_23_1 = new StringBuilder().append("fj.C(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("fj.C(").append(param0).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -140,7 +140,7 @@ final class fj extends gg {
               break L5;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw fc.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

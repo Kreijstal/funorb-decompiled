@@ -93,7 +93,7 @@ final class jn implements Iterator {
             ((jn) this).field_d = ((jn) this).field_e.field_a.field_e;
             ((jn) this).field_b = null;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "jn.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "jn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

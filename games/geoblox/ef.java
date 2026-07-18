@@ -14,7 +14,7 @@ final class ef implements Iterator {
         try {
             r.a(param2, (byte) 87, false, param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ef.C(" + (param0 != null ? "{...}" : "null") + 44 + 66 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "ef.C(" + (param0 != null ? "{...}" : "null") + ',' + 66 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class ef implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "ef.A(" + -15 + 41);
+          throw t.a((Throwable) (Object) var1, "ef.A(" + -15 + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class ef implements Iterator {
             ((ef) this).field_d = ((ef) this).field_a.field_c.field_k;
             ((ef) this).field_b = null;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ef.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "ef.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

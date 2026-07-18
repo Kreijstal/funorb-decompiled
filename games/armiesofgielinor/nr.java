@@ -253,7 +253,7 @@ class nr {
               break L6;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + 44 + 0 + 41);
+          throw ig.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + ',' + false + ')');
         }
         return stackIn_68_0;
     }
@@ -270,7 +270,7 @@ class nr {
         try {
             ((nr) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "nr.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "nr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

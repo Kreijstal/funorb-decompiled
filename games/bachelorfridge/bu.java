@@ -20,7 +20,7 @@ final class bu extends kj {
             var5.e(0, 0, 16777215);
             db.b(62);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "bu.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "bu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class bu extends kj {
         try {
             dg.a(param1.field_v, param1.field_n, param1.field_o);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "bu.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "bu.A(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

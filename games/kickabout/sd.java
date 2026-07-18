@@ -35,7 +35,7 @@ final class sd {
             param0.field_y[(-1 + param0.field_v) * param0.field_o] = 0;
             param0.field_y[-1 + param0.field_y.length] = 0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "sd.A(" + (param0 != null ? "{...}" : "null") + 44 + -51 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "sd.A(" + (param0 != null ? "{...}" : "null") + ',' + -51 + ')');
         }
     }
 

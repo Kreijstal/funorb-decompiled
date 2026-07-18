@@ -172,7 +172,7 @@ final class ci {
         try {
             lf.a(12, (byte) 102);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ci.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "ci.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -272,7 +272,7 @@ final class ci {
           L0: {
             var6 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var6;
-            stackOut_2_1 = new StringBuilder().append("ci.H(").append(param0).append(44).append(26790).append(44);
+            stackOut_2_1 = new StringBuilder().append("ci.H(").append(param0).append(',').append(26790).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -297,7 +297,7 @@ final class ci {
           }
           L1: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -320,7 +320,7 @@ final class ci {
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 

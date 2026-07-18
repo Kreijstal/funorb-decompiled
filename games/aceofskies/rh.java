@@ -45,7 +45,7 @@ final class rh extends wf {
             ((rh) this).field_i = param1;
             ((rh) this).field_g.f(((rh) this).field_h * gn.field_a - -128 >> 8);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "rh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

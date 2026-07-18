@@ -160,7 +160,7 @@ final class nd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var3, "nd.B(" + param0 + 44 + 0 + 44 + param2 + 41);
+          throw t.a((Throwable) (Object) var3, "nd.B(" + param0 + ',' + 0 + ',' + param2 + ')');
         }
         return stackIn_4_0;
     }

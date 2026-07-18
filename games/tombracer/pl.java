@@ -48,7 +48,7 @@ final class pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "pl.A(" + 64 + 41);
+          throw tba.a((Throwable) (Object) var1, "pl.A(" + 64 + ')');
         }
         return stackIn_12_0;
     }

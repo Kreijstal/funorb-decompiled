@@ -355,7 +355,7 @@ class qb extends k {
           L12: {
             var5 = decompiledCaughtException;
             stackOut_38_0 = (RuntimeException) var5;
-            stackOut_38_1 = new StringBuilder().append("qb.P(").append(param0).append(44).append(1).append(44);
+            stackOut_38_1 = new StringBuilder().append("qb.P(").append(param0).append(',').append(true).append(',');
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
@@ -378,7 +378,7 @@ class qb extends k {
               break L12;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 44 + -1 + 44 + param4 + 41);
+          throw pe.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ',' + -1 + ',' + param4 + ')');
         }
     }
 
@@ -425,7 +425,7 @@ class qb extends k {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("qb.E(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("qb.E(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -448,7 +448,7 @@ class qb extends k {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ')');
         }
     }
 

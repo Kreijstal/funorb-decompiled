@@ -119,7 +119,7 @@ final class vj {
               break L4;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 41);
+          throw vk.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ')');
         }
     }
 

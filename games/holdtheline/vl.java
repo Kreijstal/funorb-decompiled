@@ -86,7 +86,7 @@ final class vl implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var1, "vl.A(" + param0 + 41);
+          throw kk.a((Throwable) (Object) var1, "vl.A(" + param0 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class vl implements Iterator {
             ((vl) this).field_b = ((vl) this).field_e.field_i.field_n;
             ((vl) this).field_f = null;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "vl.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "vl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -78,7 +78,7 @@ final class oq extends pj {
               break L3;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw qo.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
     }
 
@@ -349,7 +349,7 @@ final class oq extends pj {
               break L6;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 44 + 111 + 41);
+          throw qo.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ',' + 111 + ')');
         }
     }
 

@@ -16,7 +16,7 @@ final class tk {
             var2 = qf.a(param1, "jagex logo2.packvorbis", "");
             jb discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "tk.B(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "tk.B(" + true + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class tk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var3, "tk.A(" + param0 + 44 + 44 + 44 + param2 + 41);
+          throw wg.a((Throwable) (Object) var3, "tk.A(" + param0 + ',' + 44 + ',' + param2 + ')');
         }
         return stackIn_8_0;
     }
@@ -74,7 +74,7 @@ final class tk {
         try {
             jh.a(uh.field_i, (byte) 51, param2, param1, param0);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "tk.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 1 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "tk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + true + ')');
         }
     }
 

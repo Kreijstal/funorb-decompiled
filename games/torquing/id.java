@@ -142,7 +142,7 @@ final class id {
               break L8;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 44 + param2 + 44 + 19 + 44 + param4 + 41);
+          throw rb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ',' + param2 + ',' + 19 + ',' + param4 + ')');
         }
     }
 

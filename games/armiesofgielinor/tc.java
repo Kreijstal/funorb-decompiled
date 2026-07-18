@@ -403,7 +403,7 @@ class tc {
             int discarded$0 = var5.b((byte) -39, var4);
             var5.e(-var4 + var5.field_q, 5930);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "tc.OB(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 44 + 105 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "tc.OB(" + 5 + ',' + (param1 != null ? "{...}" : "null") + ',' + 105 + ')');
         }
     }
 
@@ -549,7 +549,7 @@ class tc {
               }
               L6: {
                 stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-                stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+                stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
                 stackIn_13_0 = stackOut_11_0;
                 stackIn_13_1 = stackOut_11_1;
                 stackIn_12_0 = stackOut_11_0;
@@ -574,7 +574,7 @@ class tc {
               }
               L7: {
                 stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param2).append(44);
+                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param2).append(',');
                 stackIn_16_0 = stackOut_14_0;
                 stackIn_16_1 = stackOut_14_1;
                 stackIn_15_0 = stackOut_14_0;
@@ -597,7 +597,7 @@ class tc {
                   break L7;
                 }
               }
-              throw ig.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param4 + 41);
+              throw ig.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param4 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

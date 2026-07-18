@@ -50,7 +50,7 @@ final class oj extends pl implements in {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) runtimeException;
-            stackOut_5_1 = new StringBuilder().append("oj.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("oj.E(").append(param0).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -73,7 +73,7 @@ final class oj extends pl implements in {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param3 + 44 + param4 + 41);
+          throw fa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class oj extends pl implements in {
             super.a(param0, param1, param2, param3);
             ((oj) this).field_B.field_F = ((oj) this).field_P.a((byte) 126).d(53) == db.field_b ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "oj.T(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "oj.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

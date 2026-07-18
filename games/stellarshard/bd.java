@@ -712,9 +712,9 @@ abstract class bd extends ah {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$7 = field_u.append(60);
+                        StringBuilder discarded$7 = field_u.append('<');
                         StringBuilder discarded$8 = field_u.append(var15);
-                        StringBuilder discarded$9 = field_u.append(62);
+                        StringBuilder discarded$9 = field_u.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -902,7 +902,7 @@ abstract class bd extends ah {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$11 = field_u.append(var14);
+                        StringBuilder discarded$11 = field_u.append((char) var14);
                         var14 = (char)(bf.a(-8250, (char) var14) & 255);
                         var4 = var4 + ((bd) this).field_B[var14];
                         if (((bd) this).field_O == null) {

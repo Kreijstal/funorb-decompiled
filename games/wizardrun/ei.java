@@ -41,7 +41,7 @@ final class ei extends wl {
             ((ei) this).field_u = param7;
             ((ei) this).field_p = param3;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ei.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "ei.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class ei extends wl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var2_ref, "ei.D(" + param0 + 44 + param1 + 41);
+          throw bd.a((Throwable) (Object) var2_ref, "ei.D(" + param0 + ',' + param1 + ')');
         }
     }
 

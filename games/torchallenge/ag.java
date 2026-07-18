@@ -81,7 +81,7 @@ final class ag implements Iterator {
             ((ag) this).field_a = null;
             ((ag) this).field_f = ((ag) this).field_b.field_f.field_k;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "ag.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "ag.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

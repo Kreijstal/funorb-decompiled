@@ -15,7 +15,7 @@ final class mi extends java.awt.Canvas {
         try {
             ((mi) this).field_e.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "mi.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "mi.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -23,7 +23,7 @@ final class mi extends java.awt.Canvas {
         try {
             dj.a(false, param0, -106, param2);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "mi.B(" + (param0 != null ? "{...}" : "null") + 44 + -60 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "mi.B(" + (param0 != null ? "{...}" : "null") + ',' + -60 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class mi extends java.awt.Canvas {
         try {
             ((mi) this).field_e.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "mi.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "mi.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class mi extends java.awt.Canvas {
         try {
             ((mi) this).field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "mi.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "mi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

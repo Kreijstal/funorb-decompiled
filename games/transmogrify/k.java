@@ -87,7 +87,7 @@ abstract class k {
           L3: {
             runtimeException = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) runtimeException;
-            stackOut_12_1 = new StringBuilder().append("k.C(").append(param0).append(44).append(1).append(44).append(param2).append(44);
+            stackOut_12_1 = new StringBuilder().append("k.C(").append(param0).append(',').append(true).append(',').append(param2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -110,7 +110,7 @@ abstract class k {
               break L3;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param4 + 41);
+          throw ch.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param4 + ')');
         }
     }
 

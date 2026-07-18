@@ -31,7 +31,7 @@ final class wk extends nm {
             ((wk) this).field_i = param1.e(param0 ^ -12869);
             ((wk) this).field_j = param1.a((byte) 24);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "wk.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "wk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

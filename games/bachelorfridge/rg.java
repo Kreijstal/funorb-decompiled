@@ -70,7 +70,7 @@ final class rg extends bw {
             io.field_q.a(-24 + (sb.field_n.field_p - 20), 31407, -24 + (-24 + sb.field_n.field_sb), 24, 16);
             aja.field_l.a(24, 31407, 80, 120, -24 + (-20 + sb.field_n.field_p));
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "rg.D(" + (param0 != null ? "{...}" : "null") + 44 + 2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "rg.D(" + (param0 != null ? "{...}" : "null") + ',' + 2 + ')');
         }
     }
 
@@ -114,7 +114,7 @@ final class rg extends bw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var2_ref, "rg.C(" + 35 + 44 + 4 + 41);
+          throw pe.a((Throwable) (Object) var2_ref, "rg.C(" + 35 + ',' + 4 + ')');
         }
     }
 

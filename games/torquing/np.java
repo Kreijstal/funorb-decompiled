@@ -174,7 +174,7 @@ final class np extends ha {
               break L5;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -276,7 +276,7 @@ final class np extends ha {
           L4: {
             var4_ref = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var4_ref;
-            stackOut_10_1 = new StringBuilder().append("np.A(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("np.A(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -299,7 +299,7 @@ final class np extends ha {
               break L4;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param2 + 44 + param3 + 41);
+          throw rb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_9_0;
     }

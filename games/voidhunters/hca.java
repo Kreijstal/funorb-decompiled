@@ -71,7 +71,7 @@ final class hca extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -244,7 +244,7 @@ final class hca extends rqa {
           L8: {
             var2 = decompiledCaughtException;
             stackOut_51_0 = (RuntimeException) var2;
-            stackOut_51_1 = new StringBuilder().append("hca.C(").append(param0).append(44);
+            stackOut_51_1 = new StringBuilder().append("hca.C(").append(param0).append(',');
             stackIn_53_0 = stackOut_51_0;
             stackIn_53_1 = stackOut_51_1;
             stackIn_52_0 = stackOut_51_0;
@@ -267,7 +267,7 @@ final class hca extends rqa {
               break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + ')');
         }
     }
 

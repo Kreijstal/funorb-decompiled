@@ -222,7 +222,7 @@ final class ki extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "ki.D(" + 1 + 41);
+          throw nb.a((Throwable) (Object) var1, "ki.D(" + true + ')');
         }
     }
 
@@ -300,7 +300,7 @@ final class ki extends am {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 93 + 41);
+          throw nb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 93 + ')');
         }
         return stackIn_4_0 != 0;
     }
@@ -494,7 +494,7 @@ final class ki extends am {
             break L9;
           }
         }
-        return new String("{Move" + var1 + var2 + "}");
+        return new String("{Move" + (String) var1 + var2 + "}");
     }
 
     static {

@@ -90,7 +90,7 @@ final class te extends kj {
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-              throw pe.a((Throwable) (Object) var1_ref, "te.J(" + param0 + 41);
+              throw pe.a((Throwable) (Object) var1_ref, "te.J(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -180,7 +180,7 @@ final class te extends kj {
             ((te) this).field_i = kla.a(129, m.field_a, -2147483648) - 64;
             ((te) this).field_h = -32 + kla.a(65, m.field_a, -2147483648);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "te.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

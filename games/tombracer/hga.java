@@ -20,7 +20,7 @@ class hga extends vpa {
             }
             super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "hga.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "hga.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -218,7 +218,7 @@ class hga extends vpa {
           L10: {
             var2 = decompiledCaughtException;
             stackOut_43_0 = (RuntimeException) var2;
-            stackOut_43_1 = new StringBuilder().append("hga.A(").append(1).append(44);
+            stackOut_43_1 = new StringBuilder().append("hga.A(").append(true).append(',');
             stackIn_45_0 = stackOut_43_0;
             stackIn_45_1 = stackOut_43_1;
             stackIn_44_0 = stackOut_43_0;
@@ -241,7 +241,7 @@ class hga extends vpa {
               break L10;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + ')');
         }
     }
 

@@ -118,7 +118,7 @@ abstract class sm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var3, "sm.D(" + -11003 + 44 + param1 + 44 + param2 + 41);
+          throw wg.a((Throwable) (Object) var3, "sm.D(" + -11003 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

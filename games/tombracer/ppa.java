@@ -76,7 +76,7 @@ final class ppa {
           L4: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var5_ref;
-            stackOut_14_1 = new StringBuilder().append("ppa.C(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("ppa.C(").append(param0).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -99,7 +99,7 @@ final class ppa {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -627,7 +627,7 @@ final class ppa {
               L19: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_66_0 = (RuntimeException) var6_ref;
-                stackOut_66_1 = new StringBuilder().append("ppa.A(").append(param0).append(44).append(param1).append(44);
+                stackOut_66_1 = new StringBuilder().append("ppa.A(").append(param0).append(',').append(param1).append(',');
                 stackIn_68_0 = stackOut_66_0;
                 stackIn_68_1 = stackOut_66_1;
                 stackIn_67_0 = stackOut_66_0;
@@ -650,7 +650,7 @@ final class ppa {
                   break L19;
                 }
               }
-              throw tba.a((Throwable) (Object) stackIn_69_0, stackIn_69_2 + 44 + 1 + 44 + param4 + 41);
+              throw tba.a((Throwable) (Object) stackIn_69_0, stackIn_69_2 + ',' + true + ',' + param4 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -746,7 +746,7 @@ final class ppa {
           }
           L3: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(64).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(64).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -769,7 +769,7 @@ final class ppa {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
     }
 
@@ -787,7 +787,7 @@ final class ppa {
             ((ppa) this).field_b = param2;
             ((ppa) this).field_e = param3;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ppa.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ppa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

@@ -12,7 +12,7 @@ final class ch {
             int var2_int = -2;
             param0.addFocusListener((java.awt.event.FocusListener) (Object) ee.field_j);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ch.A(" + (param0 != null ? "{...}" : "null") + 44 + 122 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "ch.A(" + (param0 != null ? "{...}" : "null") + ',' + 122 + ')');
         }
     }
 

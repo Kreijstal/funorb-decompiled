@@ -45,7 +45,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var1, "hi.A(" + 1 + 41);
+          throw vk.a((Throwable) (Object) var1, "hi.A(" + 1 + ')');
         }
     }
 

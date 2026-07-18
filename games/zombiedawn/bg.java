@@ -24,7 +24,7 @@ final class bg extends le {
             ((bg) this).field_m = param2;
             ((bg) this).field_j = param1;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "bg.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "bg.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -416,7 +416,7 @@ final class bg extends le {
           L16: {
             var7 = decompiledCaughtException;
             stackOut_67_0 = (RuntimeException) var7;
-            stackOut_67_1 = new StringBuilder().append("bg.B(").append(105).append(44).append(param1).append(44);
+            stackOut_67_1 = new StringBuilder().append("bg.B(").append(105).append(',').append(param1).append(',');
             stackIn_69_0 = stackOut_67_0;
             stackIn_69_1 = stackOut_67_1;
             stackIn_68_0 = stackOut_67_0;
@@ -441,7 +441,7 @@ final class bg extends le {
           }
           L17: {
             stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
-            stackOut_70_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_70_2).append(44);
+            stackOut_70_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_70_2).append(',');
             stackIn_72_0 = stackOut_70_0;
             stackIn_72_1 = stackOut_70_1;
             stackIn_71_0 = stackOut_70_0;
@@ -466,7 +466,7 @@ final class bg extends le {
           }
           L18: {
             stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44);
+            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(',');
             stackIn_75_0 = stackOut_73_0;
             stackIn_75_1 = stackOut_73_1;
             stackIn_74_0 = stackOut_73_0;
@@ -489,7 +489,7 @@ final class bg extends le {
               break L18;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + param5 + 44 + param6 + 41);
+          throw sh.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_66_0;
     }

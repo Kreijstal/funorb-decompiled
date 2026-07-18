@@ -173,7 +173,7 @@ final class hg extends ka {
           L8: {
             var4 = decompiledCaughtException;
             stackOut_41_0 = (RuntimeException) var4;
-            stackOut_41_1 = new StringBuilder().append("hg.UA(").append(param0).append(44).append(param1).append(44);
+            stackOut_41_1 = new StringBuilder().append("hg.UA(").append(param0).append(',').append(param1).append(',');
             stackIn_43_0 = stackOut_41_0;
             stackIn_43_1 = stackOut_41_1;
             stackIn_42_0 = stackOut_41_0;
@@ -196,7 +196,7 @@ final class hg extends ka {
               break L8;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + ')');
         }
         return stackIn_40_0;
     }
@@ -268,7 +268,7 @@ final class hg extends ka {
                 if (param1.field_c != 2) {
                   break L1;
                 } else {
-                  var2 = (Object) (Object) ("<img=1>" + var2);
+                  var2 = (Object) (Object) ("<img=1>" + (String) var2);
                   break L1;
                 }
               }
@@ -338,7 +338,7 @@ final class hg extends ka {
                 if (param1.field_h) {
                   break L3;
                 } else {
-                  var3 = var3 + var2 + ": ";
+                  var3 = var3 + (String) var2 + ": ";
                   break L3;
                 }
               }
@@ -352,7 +352,7 @@ final class hg extends ka {
           L9: {
             var2 = (Object) (Object) decompiledCaughtException;
             stackOut_34_0 = var2;
-            stackOut_34_1 = new StringBuilder().append("hg.C(").append(0).append(44);
+            stackOut_34_1 = new StringBuilder().append("hg.C(").append(false).append(',');
             stackIn_36_0 = stackOut_34_0;
             stackIn_36_1 = stackOut_34_1;
             stackIn_35_0 = stackOut_34_0;
@@ -375,7 +375,7 @@ final class hg extends ka {
               break L9;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ')');
         }
         return stackIn_33_0;
     }

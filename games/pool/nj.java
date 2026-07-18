@@ -341,7 +341,7 @@ final class nj {
               break L23;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_75_0, stackIn_75_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw wm.a((Throwable) (Object) stackIn_75_0, stackIn_75_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -447,7 +447,7 @@ final class nj {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var4;
-            stackOut_19_1 = new StringBuilder().append("nj.A(").append(param0).append(44).append(125).append(44);
+            stackOut_19_1 = new StringBuilder().append("nj.A(").append(param0).append(',').append(125).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -472,7 +472,7 @@ final class nj {
           }
           L6: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -495,7 +495,7 @@ final class nj {
               break L6;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
         return stackIn_18_0 != 0;
     }
@@ -622,7 +622,7 @@ final class nj {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_29_0 = (RuntimeException) var6;
-            stackOut_29_1 = new StringBuilder().append("nj.E(").append(param0).append(44);
+            stackOut_29_1 = new StringBuilder().append("nj.E(").append(param0).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -645,7 +645,7 @@ final class nj {
               break L6;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw wm.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return (java.awt.Frame) (Object) stackIn_28_0;
     }

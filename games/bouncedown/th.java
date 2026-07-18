@@ -10,7 +10,7 @@ final class th extends java.awt.Canvas {
         try {
             ((th) this).field_b.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "th.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "th.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -23,7 +23,7 @@ final class th extends java.awt.Canvas {
         try {
             ((th) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "th.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "th.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class th extends java.awt.Canvas {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var6;
-            stackOut_10_1 = new StringBuilder().append("th.A(").append(param0).append(44).append(99).append(44).append(param2).append(44);
+            stackOut_10_1 = new StringBuilder().append("th.A(").append(param0).append(',').append(99).append(',').append(param2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -116,7 +116,7 @@ final class th extends java.awt.Canvas {
               break L3;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param4 + 44 + param5 + 41);
+          throw ii.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class th extends java.awt.Canvas {
         try {
             ((th) this).field_b.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "th.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "th.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

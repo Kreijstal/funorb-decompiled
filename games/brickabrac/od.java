@@ -10,7 +10,7 @@ final class od extends java.awt.Canvas {
         try {
             ((od) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "od.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "od.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -18,7 +18,7 @@ final class od extends java.awt.Canvas {
         try {
             ((od) this).field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "od.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "od.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class od extends java.awt.Canvas {
         try {
             ((od) this).field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "od.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "od.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -256,7 +256,7 @@ final class od extends java.awt.Canvas {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var2_ref, "od.D(" + param0 + 44 + -12 + 41);
+          throw qb.a((Throwable) (Object) var2_ref, "od.D(" + param0 + ',' + -12 + ')');
         }
         return stackIn_20_0 != 0;
     }
@@ -321,7 +321,7 @@ final class od extends java.awt.Canvas {
                   if (var4_int == 0) {
                     break L3;
                   } else {
-                    StringBuilder discarded$12 = gh.field_e.append(45);
+                    StringBuilder discarded$12 = gh.field_e.append('-');
                     break L3;
                   }
                 }
@@ -343,7 +343,7 @@ final class od extends java.awt.Canvas {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4;
-            stackOut_12_1 = new StringBuilder().append("od.C(").append(-9).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("od.C(").append(-9).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -366,7 +366,7 @@ final class od extends java.awt.Canvas {
               break L5;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 

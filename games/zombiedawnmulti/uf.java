@@ -122,7 +122,7 @@ final class uf {
               break L4;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
         }
     }
 
@@ -444,7 +444,7 @@ final class uf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var3, "uf.E(" + param0 + 44 + param1 + 44 + 39 + 41);
+          throw fa.a((Throwable) (Object) var3, "uf.E(" + param0 + ',' + param1 + ',' + 39 + ')');
         }
     }
 

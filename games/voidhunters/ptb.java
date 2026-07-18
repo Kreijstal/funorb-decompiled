@@ -72,7 +72,7 @@ final class ptb extends dmb implements ntb {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("ptb.C(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("ptb.C(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -95,7 +95,7 @@ final class ptb extends dmb implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
         return stackIn_8_0 != 0;
     }
@@ -108,7 +108,7 @@ final class ptb extends dmb implements ntb {
             }
             boolean discarded$1 = param0.a(((ptb) this).field_h - -(((ptb) this).field_e / 2), ((ptb) this).field_g - -(((ptb) this).field_d / 2), ((ptb) this).field_g, false, -124, ((ptb) this).field_h);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ptb.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ptb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class ptb extends dmb implements ntb {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("ptb.J(").append(-107).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("ptb.J(").append(-107).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -174,7 +174,7 @@ final class ptb extends dmb implements ntb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }
@@ -190,7 +190,7 @@ final class ptb extends dmb implements ntb {
             param0.a(-632, ((ptb) this).field_e, 32);
             param0.a(-632, ((ptb) this).field_d, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ptb.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ptb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class ptb extends dmb implements ntb {
             ((ptb) this).field_e = param0.i(0, 32);
             ((ptb) this).field_d = param0.i(0, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ptb.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ptb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -225,7 +225,7 @@ final class ptb extends dmb implements ntb {
             var6.field_e = var5.field_e;
             var6.field_g = var5.field_g;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ptb.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ptb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -336,7 +336,7 @@ final class ptb extends dmb implements ntb {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ')');
         }
     }
 

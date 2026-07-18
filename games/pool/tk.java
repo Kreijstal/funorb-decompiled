@@ -171,7 +171,7 @@ final class tk {
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("tk.C(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("tk.C(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -194,7 +194,7 @@ final class tk {
                   break L1;
                 }
               }
-              throw wm.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+              throw wm.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -228,7 +228,7 @@ final class tk {
             param2.field_m = param1;
             param2.field_q.field_n = param2;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "tk.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "tk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

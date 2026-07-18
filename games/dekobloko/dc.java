@@ -271,7 +271,7 @@ final class dc {
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + -70 + 41);
+          throw dh.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + -70 + ')');
         }
         return stackIn_14_0 != 0;
     }
@@ -397,7 +397,7 @@ final class dc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "dc.D(" + -60 + 41);
+          throw dh.a((Throwable) (Object) var1, "dc.D(" + -60 + ')');
         }
     }
 

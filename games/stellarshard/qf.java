@@ -28,7 +28,7 @@ final class qf implements Runnable {
             int discarded$1 = 1;
             gg.field_f = ee.a(5, 0, (byte) -124);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "qf.B(" + param0 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "qf.B(" + param0 + ')');
         }
     }
 

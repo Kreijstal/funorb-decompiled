@@ -110,7 +110,7 @@ final class r {
           L6: {
             var4_ref = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var4_ref;
-            stackOut_16_1 = new StringBuilder().append("r.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_16_1 = new StringBuilder().append("r.A(").append(param0).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -133,7 +133,7 @@ final class r {
               break L6;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param3 + 41);
+          throw oj.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param3 + ')');
         }
         return stackIn_15_0;
     }
@@ -155,7 +155,7 @@ final class r {
             }
             ((r) this).field_d = var4_float * (float)((r) this).field_f / (float)(1 + ((r) this).field_g);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "r.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "r.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -258,7 +258,7 @@ abstract class e extends wb {
                 var5 = param0.charAt(var4);
                 if (var5 != 60) {
                   if (var5 != 62) {
-                    StringBuilder discarded$3 = var3.append(var5);
+                    StringBuilder discarded$3 = var3.append((char) var5);
                     var4++;
                     continue L1;
                   } else {
@@ -1248,9 +1248,9 @@ abstract class e extends wb {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$10 = field_B.append(60);
+                        StringBuilder discarded$10 = field_B.append('<');
                         StringBuilder discarded$11 = field_B.append(var15);
-                        StringBuilder discarded$12 = field_B.append(62);
+                        StringBuilder discarded$12 = field_B.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -1438,7 +1438,7 @@ abstract class e extends wb {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$14 = field_B.append(var14);
+                        StringBuilder discarded$14 = field_B.append((char) var14);
                         int discarded$15 = 4290;
                         var14 = (char)(ij.a((char) var14) & 255);
                         var4 = var4 + ((e) this).field_u[var14];

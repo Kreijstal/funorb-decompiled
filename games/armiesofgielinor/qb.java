@@ -48,7 +48,7 @@ final class qb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var1, "qb.E(" + -8 + 41);
+          throw ig.a((Throwable) (Object) var1, "qb.E(" + -8 + ')');
         }
     }
 
@@ -251,7 +251,7 @@ final class qb {
           L11: {
             var4 = decompiledCaughtException;
             stackOut_56_0 = (RuntimeException) var4;
-            stackOut_56_1 = new StringBuilder().append("qb.C(").append(0).append(44);
+            stackOut_56_1 = new StringBuilder().append("qb.C(").append(0).append(',');
             stackIn_58_0 = stackOut_56_0;
             stackIn_58_1 = stackOut_56_1;
             stackIn_57_0 = stackOut_56_0;
@@ -274,7 +274,7 @@ final class qb {
               break L11;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_59_0, stackIn_59_2 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_59_0, stackIn_59_2 + ',' + param2 + ')');
         }
     }
 
@@ -329,7 +329,7 @@ final class qb {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("qb.B(").append(32737).append(44);
+            stackOut_5_1 = new StringBuilder().append("qb.B(").append(32737).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -352,7 +352,7 @@ final class qb {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 
@@ -481,7 +481,7 @@ final class qb {
               break L6;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

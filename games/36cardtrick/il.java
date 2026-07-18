@@ -129,7 +129,7 @@ final class il implements Iterator {
             int discarded$0 = 64;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "il.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "il.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

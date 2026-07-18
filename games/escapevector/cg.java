@@ -70,7 +70,7 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw t.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
@@ -167,7 +167,7 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
             boolean discarded$13 = param2.prepareImage(((cg) this).field_f, (java.awt.image.ImageObserver) this);
             ((cg) this).a(param0 + -895);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "cg.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "cg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
             param0.setColorModel(((cg) this).field_j);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "cg.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "cg.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -190,7 +190,7 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
         try {
             ((cg) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "cg.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "cg.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -219,7 +219,7 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
         try {
             boolean discarded$1 = param3.drawImage(((cg) this).field_f, param0, param2, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "cg.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "cg.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -317,7 +317,7 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "cg.J(" + 103 + 41);
+          throw t.a((Throwable) (Object) var1, "cg.J(" + 103 + ')');
         }
     }
 

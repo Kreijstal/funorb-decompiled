@@ -163,7 +163,7 @@ final class qs {
           L9: {
             var2 = decompiledCaughtException;
             stackOut_39_0 = (RuntimeException) var2;
-            stackOut_39_1 = new StringBuilder().append("qs.A(").append(-6939).append(44);
+            stackOut_39_1 = new StringBuilder().append("qs.A(").append(-6939).append(',');
             stackIn_41_0 = stackOut_39_0;
             stackIn_41_1 = stackOut_39_1;
             stackIn_40_0 = stackOut_39_0;
@@ -186,7 +186,7 @@ final class qs {
               break L9;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + ')');
         }
     }
 

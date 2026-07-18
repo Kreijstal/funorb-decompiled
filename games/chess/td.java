@@ -18,7 +18,7 @@ final class td extends o {
             tn.field_m = 0;
             bl.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "td.B(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + 0 + 44 + 200 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "td.B(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ',' + 0 + ',' + 200 + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class td extends o {
         try {
             ((td) this).field_q = param0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "td.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "td.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

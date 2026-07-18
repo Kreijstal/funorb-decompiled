@@ -122,7 +122,7 @@ final class t {
           }
           L3: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -145,7 +145,7 @@ final class t {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + 118 + 41);
+          throw ig.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + 118 + ')');
         }
         return stackIn_12_0;
     }
@@ -208,7 +208,7 @@ final class t {
               L4: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_7_0 = (RuntimeException) var2_ref2;
-                stackOut_7_1 = new StringBuilder().append("t.C(").append(-118).append(44);
+                stackOut_7_1 = new StringBuilder().append("t.C(").append(-118).append(',');
                 stackIn_9_0 = stackOut_7_0;
                 stackIn_9_1 = stackOut_7_1;
                 stackIn_8_0 = stackOut_7_0;
@@ -231,7 +231,7 @@ final class t {
                   break L4;
                 }
               }
-              throw ig.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+              throw ig.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

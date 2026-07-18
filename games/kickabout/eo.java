@@ -1523,7 +1523,7 @@ final class eo {
               }
               L4: {
                 StringBuilder discarded$8 = ((StringBuilder) (Object) stackIn_10_0).append(stackIn_10_1);
-                StringBuilder discarded$9 = var10.append(62);
+                StringBuilder discarded$9 = var10.append('>');
                 stackOut_10_0 = (StringBuilder) var10;
                 stackIn_12_0 = stackOut_10_0;
                 stackIn_11_0 = stackOut_10_0;
@@ -1541,13 +1541,13 @@ final class eo {
                   break L4;
                 }
               }
-              StringBuilder discarded$10 = ((StringBuilder) (Object) stackIn_13_0).append(stackIn_13_1);
+              StringBuilder discarded$10 = ((StringBuilder) (Object) stackIn_13_0).append((char) stackIn_13_1);
               StringBuilder discarded$11 = var10.append(Math.abs(param5));
               StringBuilder discarded$12 = var10.append("</col>");
               break L2;
             }
           }
-          StringBuilder discarded$13 = var10.append(37);
+          StringBuilder discarded$13 = var10.append('%');
           q.field_d.a(var10.toString(), var9 + 4, 10, 16777215, var7);
           ta.e(127);
           eo.a(field_d, 65793);

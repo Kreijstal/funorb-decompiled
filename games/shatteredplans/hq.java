@@ -15,7 +15,7 @@ final class hq {
             param2.d(param0, 255);
             param2.c(param4, (byte) -59);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "hq.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + 20 + 44 + param4 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "hq.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + 20 + ',' + param4 + ')');
         }
     }
 

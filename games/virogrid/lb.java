@@ -21,7 +21,7 @@ final class lb {
             wd.field_c[46] = 72;
             wd.field_c[92] = 74;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "lb.E(" + 42 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "lb.E(" + 42 + ')');
         }
     }
 
@@ -846,7 +846,7 @@ final class lb {
                             }
                           }
                           if (var24 != null) {
-                            var24 = (Object) (Object) ("<col=A00000>" + var24);
+                            var24 = (Object) (Object) ("<col=A00000>" + (String) var24);
                             var25 = null;
                             var26 = 0;
                             var27_int = 0;
@@ -981,7 +981,7 @@ final class lb {
                                           }
                                         }
                                         var26 = 1;
-                                        var25 = (Object) (Object) (var25 + ", " + var30);
+                                        var25 = (Object) (Object) ((String) var25 + ", " + var30);
                                         break L58;
                                       } else {
                                         break L58;
@@ -1014,7 +1014,7 @@ final class lb {
                                     if (var26 != 0) {
                                       break L63;
                                     } else {
-                                      var24 = (Object) (Object) (var24 + "<br>" + oi.a(new String[1], sg.field_k, 2));
+                                      var24 = (Object) (Object) ((String) var24 + "<br>" + oi.a(new String[1], sg.field_k, 2));
                                       if (var31 == 0) {
                                         break L60;
                                       } else {
@@ -1022,7 +1022,7 @@ final class lb {
                                       }
                                     }
                                   }
-                                  var24 = (Object) (Object) (var24 + "<br>" + di.field_q + var25);
+                                  var24 = (Object) (Object) ((String) var24 + "<br>" + di.field_q + (String) var25);
                                   if (var31 == 0) {
                                     break L60;
                                   } else {
@@ -1033,7 +1033,7 @@ final class lb {
                                   if (var26 == 0) {
                                     break L64;
                                   } else {
-                                    var24 = (Object) (Object) (var24 + "<br>" + ge.field_e + var25);
+                                    var24 = (Object) (Object) ((String) var24 + "<br>" + ge.field_e + (String) var25);
                                     if (var31 == 0) {
                                       break L60;
                                     } else {
@@ -1041,7 +1041,7 @@ final class lb {
                                     }
                                   }
                                 }
-                                var24 = (Object) (Object) (var24 + "<br>" + oi.a(new String[1], dm.field_o, 2));
+                                var24 = (Object) (Object) ((String) var24 + "<br>" + oi.a(new String[1], dm.field_o, 2));
                                 break L60;
                               }
                               L65: {
@@ -1051,7 +1051,7 @@ final class lb {
                                   int discarded$7 = 1000;
                                   if (!k.b()) {
                                     var27 = wl.field_d.field_Qb;
-                                    var24 = (Object) (Object) (var24 + "<br>" + oi.a(new String[1], cg.field_b, 2));
+                                    var24 = (Object) (Object) ((String) var24 + "<br>" + oi.a(new String[1], cg.field_b, 2));
                                     break L65;
                                   } else {
                                     break L65;
@@ -1099,7 +1099,7 @@ final class lb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "lb.C(" + 7 + 41);
+          throw kg.a((Throwable) (Object) var1, "lb.C(" + 7 + ')');
         }
     }
 
@@ -1134,7 +1134,7 @@ final class lb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "lb.D(" + -20 + 41);
+          throw kg.a((Throwable) (Object) var1, "lb.D(" + -20 + ')');
         }
         return stackIn_10_0 != 0;
     }

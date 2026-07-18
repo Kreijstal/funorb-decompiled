@@ -18,7 +18,7 @@ final class ih {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "ih.B(" + 122 + 41);
+          throw qo.a((Throwable) (Object) var1, "ih.B(" + 122 + ')');
         }
     }
 
@@ -331,7 +331,7 @@ final class ih {
           L20: {
             var5 = decompiledCaughtException;
             stackOut_66_0 = (RuntimeException) var5;
-            stackOut_66_1 = new StringBuilder().append("ih.A(").append(0).append(44);
+            stackOut_66_1 = new StringBuilder().append("ih.A(").append(false).append(',');
             stackIn_69_0 = stackOut_66_0;
             stackIn_69_1 = stackOut_66_1;
             stackIn_67_0 = stackOut_66_0;
@@ -354,7 +354,7 @@ final class ih {
               break L20;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_70_0, stackIn_70_2 + 44 + -1 + 44 + param3 + 44 + param4 + 41);
+          throw qo.a((Throwable) (Object) stackIn_70_0, stackIn_70_2 + ',' + -1 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -365,7 +365,7 @@ final class ih {
             ki.field_f = wt.field_h[0];
             int var1_int = 21;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ih.C(" + -125 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "ih.C(" + -125 + ')');
         }
     }
 

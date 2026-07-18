@@ -477,7 +477,7 @@ final class mn extends li {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "mn.D(" + 0 + 41);
+          throw wn.a((Throwable) (Object) var1, "mn.D(" + false + ')');
         }
     }
 

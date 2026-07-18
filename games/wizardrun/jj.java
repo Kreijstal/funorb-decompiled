@@ -20,7 +20,7 @@ final class jj {
             }
             uh.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "jj.A(" + param0 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "jj.A(" + param0 + ')');
         }
     }
 

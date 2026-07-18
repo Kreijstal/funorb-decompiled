@@ -15,7 +15,7 @@ final class ob extends gg {
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) i.field_J);
             fg.field_b = -1;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ob.B(" + -1 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "ob.B(" + -1 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -46,7 +46,7 @@ final class te extends IOException {
             int discarded$0 = var5.b((byte) -111, var4);
             var5.b(-var4 + var5.field_l, -1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "te.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 4 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "te.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + 4 + ')');
         }
     }
 

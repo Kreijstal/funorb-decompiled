@@ -106,7 +106,7 @@ final class ni {
           L4: {
             var4_ref = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var4_ref;
-            stackOut_23_1 = new StringBuilder().append("ni.C(").append(param0).append(44).append(0).append(44).append(127).append(44);
+            stackOut_23_1 = new StringBuilder().append("ni.C(").append(param0).append(',').append(0).append(',').append(127).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -129,7 +129,7 @@ final class ni {
               break L4;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
     }
 

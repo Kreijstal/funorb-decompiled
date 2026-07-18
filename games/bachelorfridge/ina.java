@@ -550,7 +550,7 @@ final class ina extends bi {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("ina.N(").append(872364388).append(44);
+            stackOut_13_1 = new StringBuilder().append("ina.N(").append(872364388).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -573,7 +573,7 @@ final class ina extends bi {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
         return stackIn_12_0;
     }

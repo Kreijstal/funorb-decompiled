@@ -90,7 +90,7 @@ final class sc {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+          throw sd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class sc {
             fa.field_G = new ph(ti.field_b, tk.field_a, param2, tc.field_x, vj.field_V);
             ti.field_b.a((byte) 85, (uj) (Object) fa.field_G);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "sc.F(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "sc.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class sc {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var4;
-            stackOut_2_1 = new StringBuilder().append("sc.E(").append(3).append(44);
+            stackOut_2_1 = new StringBuilder().append("sc.E(").append(3).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -177,7 +177,7 @@ final class sc {
               break L1;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 3 + 44 + 30603 + 41);
+          throw sd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 3 + ',' + 30603 + ')');
         }
     }
 
@@ -427,7 +427,7 @@ final class sc {
                         continue stateLoop;
                     }
                     case 20: {
-                        throw sd.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 1 + 41);
+                        throw sd.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + true + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }

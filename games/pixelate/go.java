@@ -164,7 +164,7 @@ class go extends rg {
               if (var3 != 0) {
                 if (mp.field_a.length() < 80) {
                   L5: {
-                    StringBuilder discarded$11 = mp.field_a.append(var5);
+                    StringBuilder discarded$11 = mp.field_a.append((char) var5);
                     var6 = 485;
                     var32 = kn.field_J;
                     var8 = var32;
@@ -283,7 +283,7 @@ class go extends rg {
             param1.a(false, ((go) this).field_g);
             param1.a(-129, ((go) this).field_j);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "go.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "go.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -321,7 +321,7 @@ class go extends rg {
             ((go) this).field_j = param1;
             ((go) this).field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "go.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "go.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -37,7 +37,7 @@ final class qm {
             int discarded$1 = 1024;
             v.a(22050, true, 22050, param3, param1, param5);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "qm.E(" + -31 + 44 + (param1 != null ? "{...}" : "null") + 44 + 22050 + 44 + (param3 != null ? "{...}" : "null") + 44 + 1 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "qm.E(" + -31 + ',' + (param1 != null ? "{...}" : "null") + ',' + 22050 + ',' + (param3 != null ? "{...}" : "null") + ',' + true + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class qm {
           L4: {
             var4_ref = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var4_ref;
-            stackOut_10_1 = new StringBuilder().append("qm.B(").append(-31).append(44);
+            stackOut_10_1 = new StringBuilder().append("qm.B(").append(-31).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -129,7 +129,7 @@ final class qm {
               break L4;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param2 + ')');
         }
         return stackIn_9_0 != 0;
     }

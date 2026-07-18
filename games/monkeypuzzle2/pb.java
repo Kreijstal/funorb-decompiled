@@ -119,7 +119,7 @@ final class pb implements ml {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var6;
-            stackOut_16_1 = new StringBuilder().append("pb.C(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("pb.C(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -142,7 +142,7 @@ final class pb implements ml {
               break L5;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw la.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -161,7 +161,7 @@ final class pb implements ml {
             ((pb) this).field_m = param6;
             ((pb) this).field_o = param8;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "pb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "pb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

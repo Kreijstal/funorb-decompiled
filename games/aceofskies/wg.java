@@ -115,7 +115,7 @@ final class wg implements ir {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var6;
-            stackOut_20_1 = new StringBuilder().append("wg.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_20_1 = new StringBuilder().append("wg.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -138,7 +138,7 @@ final class wg implements ir {
               break L6;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param4 + 41);
+          throw pn.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param4 + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class wg implements ir {
             ((wg) this).field_e = param1;
             ((wg) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "wg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

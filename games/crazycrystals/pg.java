@@ -59,7 +59,7 @@ final class pg extends java.awt.Canvas {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var3, "pg.D(" + param0 + 44 + param1 + 44 + -2 + 41);
+          throw dn.a((Throwable) (Object) var3, "pg.D(" + param0 + ',' + param1 + ',' + -2 + ')');
         }
         return stackIn_12_0;
     }
@@ -79,7 +79,7 @@ final class pg extends java.awt.Canvas {
             sg.field_b = tl.field_e;
             lc.field_c = tl.field_e;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "pg.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "pg.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class pg extends java.awt.Canvas {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var6;
-            stackOut_27_1 = new StringBuilder().append("pg.C(").append(112).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_27_1 = new StringBuilder().append("pg.C(").append(112).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -217,7 +217,7 @@ final class pg extends java.awt.Canvas {
               break L5;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param5 + 41);
+          throw dn.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param5 + ')');
         }
         return stackIn_26_0;
     }
@@ -226,7 +226,7 @@ final class pg extends java.awt.Canvas {
         try {
             ((pg) this).field_d.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "pg.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "pg.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -234,7 +234,7 @@ final class pg extends java.awt.Canvas {
         try {
             ((pg) this).field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "pg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -242,7 +242,7 @@ final class pg extends java.awt.Canvas {
         try {
             ((pg) this).field_d.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "pg.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "pg.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

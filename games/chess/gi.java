@@ -41,7 +41,7 @@ final class gi {
           L0: {
             var4 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4;
-            stackOut_4_1 = new StringBuilder().append("gi.B(").append(param0).append(44).append(3807).append(44).append(param2).append(44);
+            stackOut_4_1 = new StringBuilder().append("gi.B(").append(param0).append(',').append(3807).append(',').append(param2).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -64,7 +64,7 @@ final class gi {
               break L0;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class gi {
             in.field_d = param1;
             m.field_d = 8;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "gi.C(" + 8 + 44 + (param1 != null ? "{...}" : "null") + 44 + 8 + 44 + 0 + 44 + (param4 != null ? "{...}" : "null") + 44 + 2 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "gi.C(" + 8 + ',' + (param1 != null ? "{...}" : "null") + ',' + 8 + ',' + false + ',' + (param4 != null ? "{...}" : "null") + ',' + 2 + ')');
         }
     }
 

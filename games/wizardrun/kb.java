@@ -292,7 +292,7 @@ final class kb extends gf {
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_62_0 = (RuntimeException) var2;
-                stackOut_62_1 = new StringBuilder().append("kb.EA(").append(39).append(44);
+                stackOut_62_1 = new StringBuilder().append("kb.EA(").append(39).append(',');
                 stackIn_64_0 = stackOut_62_0;
                 stackIn_64_1 = stackOut_62_1;
                 stackIn_63_0 = stackOut_62_0;
@@ -315,7 +315,7 @@ final class kb extends gf {
                   break L24;
                 }
               }
-              throw bd.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + 41);
+              throw bd.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -383,7 +383,7 @@ final class kb extends gf {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw bd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 

@@ -158,7 +158,7 @@ final class lq {
           L4: {
             var2 = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var2;
-            stackOut_25_1 = new StringBuilder().append("lq.G(").append(param0).append(44);
+            stackOut_25_1 = new StringBuilder().append("lq.G(").append(param0).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -181,7 +181,7 @@ final class lq {
               break L4;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
         }
     }
 
@@ -281,7 +281,7 @@ final class lq {
             param1.field_p.field_k = param1;
             param1.field_k.field_p = param1;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "lq.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "lq.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

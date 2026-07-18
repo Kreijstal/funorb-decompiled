@@ -144,7 +144,7 @@ final class sc extends kd {
               break L5;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param1 + 44 + param2 + 44 + 124 + 44 + param4 + 44 + param5 + 41);
+          throw sl.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param1 + ',' + param2 + ',' + 124 + ',' + param4 + ',' + param5 + ')');
         }
         return (java.awt.Frame) (Object) stackIn_25_0;
     }
@@ -157,7 +157,7 @@ final class sc extends kd {
             param1.b(((sc) this).field_c, param0 + 132);
             param1.a(((sc) this).field_e, 27933);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "sc.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "sc.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class sc extends kd {
             ((sc) this).field_e = param1;
             ((sc) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "sc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "sc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

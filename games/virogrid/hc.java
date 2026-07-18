@@ -66,7 +66,7 @@ final class hc {
           L1: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3_ref;
-            stackOut_7_1 = new StringBuilder().append("hc.B(").append(128).append(44).append(80).append(44);
+            stackOut_7_1 = new StringBuilder().append("hc.B(").append(128).append(',').append(80).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -89,7 +89,7 @@ final class hc {
               break L1;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class hc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var2_ref, "hc.A(" + param0 + 44 + -1 + 41);
+          throw kg.a((Throwable) (Object) var2_ref, "hc.A(" + param0 + ',' + -1 + ')');
         }
         return stackIn_18_0 != 0;
     }

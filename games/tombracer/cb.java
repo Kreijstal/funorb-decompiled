@@ -68,7 +68,7 @@ final class cb implements ks {
           L3: {
             runtimeException = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) runtimeException;
-            stackOut_10_1 = new StringBuilder().append("cb.B(").append(1).append(44);
+            stackOut_10_1 = new StringBuilder().append("cb.B(").append(1).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -91,7 +91,7 @@ final class cb implements ks {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 0 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + 0 + ',' + param3 + ')');
         }
     }
 
@@ -233,7 +233,7 @@ final class cb implements ks {
           L4: {
             runtimeException = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) runtimeException;
-            stackOut_13_1 = new StringBuilder().append("cb.O(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("cb.O(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -256,7 +256,7 @@ final class cb implements ks {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param2 + ')');
         }
     }
 
@@ -296,7 +296,7 @@ final class cb implements ks {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("cb.N(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("cb.N(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -319,7 +319,7 @@ final class cb implements ks {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param2 + ')');
         }
     }
 
@@ -401,7 +401,7 @@ final class cb implements ks {
             jaggl.OpenGL.glGenFramebuffersEXT(1, tg.field_b, 0);
             ((cb) this).field_b = tg.field_b[0];
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "cb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "cb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

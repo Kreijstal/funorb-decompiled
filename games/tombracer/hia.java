@@ -138,7 +138,7 @@ final class hia extends wda {
             ((hia) this).field_q = ((hia) this).a(param1.b((byte) 44, 8), false);
             ((hia) this).field_p = param1.b((byte) 44, 10) << 16;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "hia.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "hia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -173,7 +173,7 @@ final class hia extends wda {
             }
             int discarded$0 = kua.field_i.field_H.a(param1, var7 - -3, -kua.field_i.field_H.field_w + (hsa.field_a + 1) + var8, 500, 1000, 0, -1, 0, 0, di.field_a);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "hia.DA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "hia.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -276,7 +276,7 @@ final class hia extends wda {
             param0.a((byte) -125, ((hia) this).b(0, ((hia) this).field_q), 8);
             param0.a((byte) -128, ((hia) this).field_p >> 16, 10);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "hia.R(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "hia.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

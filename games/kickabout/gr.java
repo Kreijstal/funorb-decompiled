@@ -313,7 +313,7 @@ final class gr {
               break L10;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + param1 + ')');
         }
     }
 
@@ -601,7 +601,7 @@ final class gr {
                             var28 = var1 + "   Log [" + incrementValue$3 + "]\n";
                             var1 = var28;
                             var1 = var28;
-                            var1 = var28 + "   " + var4_ref_pt + "\n";
+                            var1 = var28 + "   " + (Object) (Object) var4_ref_pt + "\n";
                             var4_ref_pt = (pt) (Object) ((gr) this).field_g.c(33);
                             continue L6;
                           }
@@ -613,7 +613,7 @@ final class gr {
                         var28 = var26;
                         var1 = var28;
                         var1 = var26;
-                        var1 = var26 + "   " + var4_ref_cq + "\n";
+                        var1 = var26 + "   " + (Object) (Object) var4_ref_cq + "\n";
                         var4_ref_cq = (cq) (Object) ((gr) this).field_O.c(33);
                         continue L5;
                       }
@@ -639,7 +639,7 @@ final class gr {
                 var23 = var1 + "Team Member [" + var2 + "]\n";
                 var1 = var23;
                 var1 = var23;
-                var24 = var23 + ((gr) this).field_i[var2] + "\n";
+                var24 = var23 + (Object) (Object) ((gr) this).field_i[var2] + "\n";
                 var1 = var24;
                 var1 = var24;
                 var1 = var24 + "Render Order - " + ((gr) this).field_q[var2] + "\n";
@@ -875,7 +875,7 @@ final class gr {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("gr.J(").append(15).append(44);
+            stackOut_2_1 = new StringBuilder().append("gr.J(").append(15).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -898,7 +898,7 @@ final class gr {
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -1826,7 +1826,7 @@ final class gr {
           L22: {
             var4 = decompiledCaughtException;
             stackOut_65_0 = (RuntimeException) var4;
-            stackOut_65_1 = new StringBuilder().append("gr.G(").append(param0).append(44);
+            stackOut_65_1 = new StringBuilder().append("gr.G(").append(param0).append(',');
             stackIn_67_0 = stackOut_65_0;
             stackIn_67_1 = stackOut_65_1;
             stackIn_66_0 = stackOut_65_0;
@@ -1849,7 +1849,7 @@ final class gr {
               break L22;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + 44 + param2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + ',' + param2 + ')');
         }
     }
 

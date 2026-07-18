@@ -84,7 +84,7 @@ final class hd extends oh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1, "hd.A(" + 120 + 41);
+          throw r.a((Throwable) (Object) var1, "hd.A(" + 120 + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class hd extends oh {
           }
           L7: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -253,7 +253,7 @@ final class hd extends oh {
               break L7;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param2 + 41);
+          throw r.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param2 + ')');
         }
     }
 
@@ -282,7 +282,7 @@ final class hd extends oh {
             }
             kb.field_A = kb.field_A - 294;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "hd.B(" + 0 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "hd.B(" + false + ')');
         }
     }
 

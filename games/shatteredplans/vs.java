@@ -61,7 +61,7 @@ final class vs {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var2_ref, "vs.A(" + 4 + 44 + -103 + 41);
+          throw r.a((Throwable) (Object) var2_ref, "vs.A(" + 4 + ',' + -103 + ')');
         }
     }
 

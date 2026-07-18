@@ -106,7 +106,7 @@ class ln extends hl {
               break L1;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 0 + 41);
+          throw kk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 0 + ')');
         }
         return stackIn_1_0;
     }
@@ -171,7 +171,7 @@ class ln extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var1, "ln.EB(" + param0 + 41);
+          throw kk.a((Throwable) (Object) var1, "ln.EB(" + param0 + ')');
         }
     }
 

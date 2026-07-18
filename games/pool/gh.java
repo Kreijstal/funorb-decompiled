@@ -117,7 +117,7 @@ final class gh extends vc {
           L6: {
             var3 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var3;
-            stackOut_15_1 = new StringBuilder().append("gh.N(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("gh.N(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -140,7 +140,7 @@ final class gh extends vc {
               break L6;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 
@@ -161,7 +161,7 @@ final class gh extends vc {
             li.field_l = param0.a("", "space_cue_soft", (byte) 126);
             jg discarded$0 = param0.a("", "cueball_rolling_loop", (byte) 125);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "gh.M(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "gh.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -240,7 +240,7 @@ final class gh extends vc {
           L5: {
             var3 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var3;
-            stackOut_15_1 = new StringBuilder().append("gh.VA(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("gh.VA(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -263,7 +263,7 @@ final class gh extends vc {
               break L5;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 
@@ -344,7 +344,7 @@ final class gh extends vc {
               break L3;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw wm.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
     }
 
@@ -393,7 +393,7 @@ final class gh extends vc {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("gh.JA(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("gh.JA(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -416,7 +416,7 @@ final class gh extends vc {
               break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -487,7 +487,7 @@ final class gh extends vc {
               break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw wm.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
     }
 
@@ -547,7 +547,7 @@ final class gh extends vc {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("gh.T(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("gh.T(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -570,7 +570,7 @@ final class gh extends vc {
               break L3;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 
@@ -1314,7 +1314,7 @@ final class gh extends vc {
           L21: {
             var3 = decompiledCaughtException;
             stackOut_56_0 = (RuntimeException) var3;
-            stackOut_56_1 = new StringBuilder().append("gh.W(").append(param0).append(44);
+            stackOut_56_1 = new StringBuilder().append("gh.W(").append(param0).append(',');
             stackIn_58_0 = stackOut_56_0;
             stackIn_58_1 = stackOut_56_1;
             stackIn_57_0 = stackOut_56_0;
@@ -1337,7 +1337,7 @@ final class gh extends vc {
               break L21;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_59_0, stackIn_59_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_59_0, stackIn_59_2 + ')');
         }
     }
 
@@ -1351,7 +1351,7 @@ final class gh extends vc {
             int discarded$0 = 0;
             this.m();
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "gh.OA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "gh.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1428,7 +1428,7 @@ final class gh extends vc {
               break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 28350 + 41);
+          throw wm.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + 28350 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -1677,7 +1677,7 @@ final class gh extends vc {
               break L14;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 44 + param1 + 41);
+          throw wm.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + param1 + ')');
         }
     }
 
@@ -1788,7 +1788,7 @@ final class gh extends vc {
             ((gh) this).field_i = cg.a(param1, "", "pool_space_win_jingle");
             ((gh) this).field_n = cg.a(param1, "", "pool_space_lose_jingle");
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "gh.Q(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "gh.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1941,7 +1941,7 @@ final class gh extends vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var1, "gh.WA(" + param0 + 41);
+          throw wm.a((Throwable) (Object) var1, "gh.WA(" + param0 + ')');
         }
         return stackIn_31_0;
     }

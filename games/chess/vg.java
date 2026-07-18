@@ -295,7 +295,7 @@ final class vg {
                       var10 = 0;
                       L15: while (true) {
                         if (var10 >= qa.field_e) {
-                          pc.field_Mb = "<col=A00000>" + sk.field_q + "<br>" + mm.field_b + var9;
+                          pc.field_Mb = "<col=A00000>" + sk.field_q + "<br>" + mm.field_b + (String) var9;
                           break L1;
                         } else {
                           L16: {
@@ -307,7 +307,7 @@ final class vg {
                                 var9 = (Object) (Object) var11_ref;
                                 break L16;
                               } else {
-                                var9 = (Object) (Object) (var9 + ", " + var11_ref);
+                                var9 = (Object) (Object) ((String) var9 + ", " + var11_ref);
                                 break L16;
                               }
                             } else {
@@ -355,13 +355,13 @@ final class vg {
                     if (32 != (48 & g.field_c)) {
                       break L19;
                     } else {
-                      var9 = (Object) (Object) (var9 + "..");
+                      var9 = (Object) (Object) ((String) var9 + "..");
                       break L19;
                     }
                   }
                   L20: {
                     if ((g.field_c & 48) == 48) {
-                      var9 = (Object) (Object) (var9 + "...");
+                      var9 = (Object) (Object) ((String) var9 + "...");
                       break L20;
                     } else {
                       break L20;
@@ -528,7 +528,7 @@ final class vg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var4, "vg.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw fk.a((Throwable) (Object) var4, "vg.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -634,7 +634,7 @@ final class vg {
               break L4;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw fk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
         }
     }
 

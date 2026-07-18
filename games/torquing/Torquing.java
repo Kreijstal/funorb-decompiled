@@ -73,7 +73,7 @@ public final class Torquing extends tg {
           L2: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3_ref;
-            stackOut_8_1 = new StringBuilder().append("Torquing.OA(").append(param0).append(44).append(param1).append(44);
+            stackOut_8_1 = new StringBuilder().append("Torquing.OA(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -96,7 +96,7 @@ public final class Torquing extends tg {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
     }
 
@@ -1484,7 +1484,7 @@ public final class Torquing extends tg {
                                     break L36;
                                   }
                                 } else {
-                                  StringBuilder discarded$97 = var54.append(var12_int);
+                                  StringBuilder discarded$97 = var54.append((char) var12_int);
                                   break L36;
                                 }
                               }
@@ -1611,7 +1611,7 @@ public final class Torquing extends tg {
                                                   break L46;
                                                 }
                                               } else {
-                                                StringBuilder discarded$99 = var13_ref.append(var16);
+                                                StringBuilder discarded$99 = var13_ref.append((char) var16);
                                                 break L46;
                                               }
                                             }
@@ -3467,7 +3467,7 @@ public final class Torquing extends tg {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var4;
-            stackOut_10_1 = new StringBuilder().append("Torquing.AB(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("Torquing.AB(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -3492,7 +3492,7 @@ public final class Torquing extends tg {
           }
           L5: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -3515,7 +3515,7 @@ public final class Torquing extends tg {
               break L5;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
     }
 

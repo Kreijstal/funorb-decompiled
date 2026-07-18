@@ -105,7 +105,7 @@ final class tg {
               break L3;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + 256 + 41);
+          throw dd.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + 256 + ')');
         }
     }
 

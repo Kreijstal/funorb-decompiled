@@ -98,7 +98,7 @@ final class pfa implements Runnable {
           L4: {
             var4_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var4_ref;
-            stackOut_16_1 = new StringBuilder().append("pfa.E(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("pfa.E(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -121,7 +121,7 @@ final class pfa implements Runnable {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param2 + ')');
         }
         return stackIn_15_0;
     }
@@ -213,7 +213,7 @@ final class pfa implements Runnable {
           }
           L3: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -236,7 +236,7 @@ final class pfa implements Runnable {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_3_0;
     }
@@ -287,7 +287,7 @@ final class pfa implements Runnable {
           L1: {
             var4_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4_ref;
-            stackOut_5_1 = new StringBuilder().append("pfa.A(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("pfa.A(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -310,7 +310,7 @@ final class pfa implements Runnable {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ')');
         }
         return stackIn_4_0;
     }
@@ -373,7 +373,7 @@ final class pfa implements Runnable {
             }
             ((pfa) this).field_b = (Thread) var2.field_d;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "pfa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "pfa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

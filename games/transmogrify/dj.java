@@ -60,7 +60,7 @@ abstract class dj {
                     break L2;
                   } else {
                     if (var6 <= 122) {
-                      StringBuilder discarded$6 = var4.append(var6);
+                      StringBuilder discarded$6 = var4.append((char) var6);
                       var5++;
                       continue L1;
                     } else {
@@ -73,7 +73,7 @@ abstract class dj {
                     break L3;
                   } else {
                     if (var6 <= 57) {
-                      StringBuilder discarded$7 = var4.append(var6);
+                      StringBuilder discarded$7 = var4.append((char) var6);
                       var5++;
                       continue L1;
                     } else {
@@ -96,7 +96,7 @@ abstract class dj {
                   }
                 }
                 if (var6 == 43) {
-                  StringBuilder discarded$9 = var4.append(43);
+                  StringBuilder discarded$9 = var4.append('+');
                   var5++;
                   var5++;
                   continue L1;
@@ -110,7 +110,7 @@ abstract class dj {
                         if (var4.charAt(-1 + var7) == 95) {
                           break L5;
                         } else {
-                          StringBuilder discarded$10 = var4.append(95);
+                          StringBuilder discarded$10 = var4.append('_');
                           var5++;
                           continue L1;
                         }
@@ -119,7 +119,7 @@ abstract class dj {
                     var5++;
                     continue L1;
                   } else {
-                    StringBuilder discarded$11 = var4.append(43);
+                    StringBuilder discarded$11 = var4.append('+');
                     var5++;
                     var5++;
                     continue L1;
@@ -156,7 +156,7 @@ abstract class dj {
               break L6;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + param1 + 41);
+          throw ch.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + ',' + param1 + ')');
         }
         return stackIn_34_0;
     }
@@ -355,7 +355,7 @@ abstract class dj {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var4;
-            stackOut_19_1 = new StringBuilder().append("dj.F(").append(-39).append(44);
+            stackOut_19_1 = new StringBuilder().append("dj.F(").append(-39).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -380,7 +380,7 @@ abstract class dj {
           }
           L7: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -403,7 +403,7 @@ abstract class dj {
               break L7;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 16 + 41);
+          throw ch.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + 16 + ')');
         }
         return stackIn_18_0;
     }
@@ -447,7 +447,7 @@ abstract class dj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var3, "dj.G(" + 1 + 44 + param1 + 44 + param2 + 41);
+          throw ch.a((Throwable) (Object) var3, "dj.G(" + true + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_5_0;
     }
@@ -492,7 +492,7 @@ abstract class dj {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var2;
-            stackOut_7_1 = new StringBuilder().append("dj.J(").append(0).append(44);
+            stackOut_7_1 = new StringBuilder().append("dj.J(").append(false).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -515,7 +515,7 @@ abstract class dj {
               break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
     }
 

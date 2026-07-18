@@ -180,7 +180,7 @@ class he extends qb {
                     case 14: {
                         var3_ref2 = (RuntimeException) (Object) caughtException;
                         stackOut_14_0 = (RuntimeException) var3_ref2;
-                        stackOut_14_1 = new StringBuilder().append("he.UA(").append(-24949).append(44);
+                        stackOut_14_1 = new StringBuilder().append("he.UA(").append(-24949).append(',');
                         stackIn_16_0 = stackOut_14_0;
                         stackIn_16_1 = stackOut_14_1;
                         stackIn_15_0 = stackOut_14_0;
@@ -214,7 +214,7 @@ class he extends qb {
                     }
                     case 17: {
                         stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-                        stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44);
+                        stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
                         stackIn_19_0 = stackOut_17_0;
                         stackIn_19_1 = stackOut_17_1;
                         stackIn_18_0 = stackOut_17_0;
@@ -247,7 +247,7 @@ class he extends qb {
                         continue stateLoop;
                     }
                     case 20: {
-                        throw ma.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+                        throw ma.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -299,7 +299,7 @@ class he extends qb {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("he.SA(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("he.SA(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -322,7 +322,7 @@ class he extends qb {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

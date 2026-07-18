@@ -28,7 +28,7 @@ final class sia extends kj {
             ((sia) this).field_f = 100;
             ((sia) this).field_l = en.field_a.a();
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "sia.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "sia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -327,7 +327,7 @@ final class sia extends kj {
                   break L23;
                 }
               }
-              throw pe.a((Throwable) (Object) stackIn_63_0, stackIn_63_2 + 44 + 108 + 41);
+              throw pe.a((Throwable) (Object) stackIn_63_0, stackIn_63_2 + ',' + 108 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

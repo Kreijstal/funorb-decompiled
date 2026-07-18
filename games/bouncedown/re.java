@@ -55,7 +55,7 @@ final class re {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("re.C(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("re.C(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -78,7 +78,7 @@ final class re {
               break L3;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -90,7 +90,7 @@ final class re {
             int discarded$1 = 4;
             qh.a(param1);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "re.A(" + 109 + 44 + (param1 != null ? "{...}" : "null") + 44 + 4 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "re.A(" + 109 + ',' + (param1 != null ? "{...}" : "null") + ',' + 4 + ')');
         }
     }
 

@@ -96,7 +96,7 @@ final class wc {
               break L3;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 0 + 41);
+          throw fc.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + 0 + ')');
         }
         return stackIn_8_0;
     }

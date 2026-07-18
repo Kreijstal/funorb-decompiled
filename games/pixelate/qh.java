@@ -16,7 +16,7 @@ final class qh {
         try {
             ri.field_a.a(1000000, false, param1, (byte) 124, param2, 256);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "qh.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "qh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + true + ')');
         }
     }
 

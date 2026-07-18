@@ -36,7 +36,7 @@ final class wi implements ml {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var2, "wi.A(" + param0 + 44 + param1 + 41);
+          throw la.a((Throwable) (Object) var2, "wi.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class wi implements ml {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var6;
-            stackOut_8_1 = new StringBuilder().append("wi.C(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("wi.C(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -138,7 +138,7 @@ final class wi implements ml {
               break L3;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw la.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

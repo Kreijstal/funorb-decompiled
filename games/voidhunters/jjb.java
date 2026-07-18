@@ -150,7 +150,7 @@ final class jjb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 

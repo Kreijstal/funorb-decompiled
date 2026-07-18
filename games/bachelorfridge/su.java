@@ -95,7 +95,7 @@ final class su {
             int discarded$1 = -12;
             this.b();
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "su.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "su.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -260,7 +260,7 @@ final class fg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var1, "fg.E(" + param0 + 41);
+          throw bd.a((Throwable) (Object) var1, "fg.E(" + param0 + ')');
         }
     }
 
@@ -379,7 +379,7 @@ final class fg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var2_ref, "fg.D(" + param0 + 44 + 0 + 41);
+          throw bd.a((Throwable) (Object) var2_ref, "fg.D(" + param0 + ',' + 0 + ')');
         }
         return stackIn_22_0 != 0;
     }

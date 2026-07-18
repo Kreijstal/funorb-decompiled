@@ -71,7 +71,7 @@ final class wa extends sm implements java.awt.image.ImageProducer, java.awt.imag
               break L2;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class wa extends sm implements java.awt.image.ImageProducer, java.awt.imag
         try {
             ((wa) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "wa.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "wa.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class wa extends sm implements java.awt.image.ImageProducer, java.awt.imag
             param0.setColorModel(((wa) this).field_j);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "wa.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "wa.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class wa extends sm implements java.awt.image.ImageProducer, java.awt.imag
             this.a(-1);
             boolean discarded$0 = param3.drawImage(((wa) this).field_c, param0, param2, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "wa.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "wa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -144,7 +144,7 @@ final class wa extends sm implements java.awt.image.ImageProducer, java.awt.imag
             boolean discarded$2 = param1.prepareImage(((wa) this).field_c, (java.awt.image.ImageObserver) this);
             ((wa) this).b((byte) 116);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "wa.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "wa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -205,7 +205,7 @@ final class wa extends sm implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw wg.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }

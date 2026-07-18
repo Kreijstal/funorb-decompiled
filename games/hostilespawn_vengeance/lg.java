@@ -507,7 +507,7 @@ final class lg extends in {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var4 = (RuntimeException) (Object) decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var4, "lg.K(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw wg.a((Throwable) (Object) var4, "lg.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

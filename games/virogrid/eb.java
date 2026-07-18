@@ -60,7 +60,7 @@ final class eb implements Iterable {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("eb.C(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("eb.C(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -83,7 +83,7 @@ final class eb implements Iterable {
               break L3;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 
@@ -393,7 +393,7 @@ final class eb implements Iterable {
                       var10 = 0;
                       L15: while (true) {
                         if (var10 >= vb.field_h) {
-                          wc.field_g = "<col=A00000>" + eg.field_F + "<br>" + ij.field_h + var9;
+                          wc.field_g = "<col=A00000>" + eg.field_F + "<br>" + ij.field_h + (String) var9;
                           break L1;
                         } else {
                           L16: {
@@ -402,7 +402,7 @@ final class eb implements Iterable {
                               var9 = (Object) (Object) var11_ref;
                               var9 = (Object) (Object) var11_ref;
                               if (var9 != null) {
-                                var9 = (Object) (Object) (var9 + ", " + var11_ref);
+                                var9 = (Object) (Object) ((String) var9 + ", " + var11_ref);
                                 break L16;
                               } else {
                                 var9 = (Object) (Object) var11_ref;
@@ -451,7 +451,7 @@ final class eb implements Iterable {
                   L19: {
                     jk.field_b.field_z = (-var10 + jk.field_b.field_K) / 2;
                     if ((48 & rl.field_y) == 32) {
-                      var9 = (Object) (Object) (var9 + "..");
+                      var9 = (Object) (Object) ((String) var9 + "..");
                       break L19;
                     } else {
                       break L19;
@@ -459,7 +459,7 @@ final class eb implements Iterable {
                   }
                   L20: {
                     if ((48 & rl.field_y) == 48) {
-                      var9 = (Object) (Object) (var9 + "...");
+                      var9 = (Object) (Object) ((String) var9 + "...");
                       break L20;
                     } else {
                       break L20;
@@ -622,7 +622,7 @@ final class eb implements Iterable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var4, "eb.B(" + 0 + 44 + param1 + 44 + 11 + 44 + param3 + 41);
+          throw kg.a((Throwable) (Object) var4, "eb.B(" + false + ',' + param1 + ',' + 11 + ',' + param3 + ')');
         }
     }
 

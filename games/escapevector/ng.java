@@ -16,7 +16,7 @@ final class ng extends fj {
         try {
             super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ng.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "ng.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

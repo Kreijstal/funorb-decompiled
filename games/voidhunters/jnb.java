@@ -292,7 +292,7 @@ final class jnb extends rqa {
               }
               L17: {
                 stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-                stackOut_37_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_37_2).append(44).append(param1).append(44);
+                stackOut_37_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_37_2).append(',').append(param1).append(',');
                 stackIn_39_0 = stackOut_37_0;
                 stackIn_39_1 = stackOut_37_1;
                 stackIn_38_0 = stackOut_37_0;
@@ -315,7 +315,7 @@ final class jnb extends rqa {
                   break L17;
                 }
               }
-              throw rta.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 44 + 0 + 41);
+              throw rta.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + false + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -391,7 +391,7 @@ final class jnb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }

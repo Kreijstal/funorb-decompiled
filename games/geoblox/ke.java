@@ -12,7 +12,7 @@ final class ke {
             param4.e(param3, 28695);
             param4.d((byte) 124, param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ke.B(" + param0 + 44 + 1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "ke.B(" + param0 + ',' + true + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

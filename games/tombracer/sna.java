@@ -238,7 +238,7 @@ final class sna {
             var5.a(tea.field_a, param0, vda.field_n, (byte) 21);
             ((sna) this).field_c.b((byte) -125, (vg) (Object) new mga(var5, param2));
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "sna.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "sna.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -301,7 +301,7 @@ final class sna {
         try {
             ((sna) this).field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "sna.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "sna.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

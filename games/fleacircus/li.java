@@ -42,7 +42,7 @@ final class li implements Iterable {
             param1.field_h.field_a = param1;
             param1.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "li.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "li.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

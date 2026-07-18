@@ -118,7 +118,7 @@ final class lg {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var5;
-            stackOut_18_1 = new StringBuilder().append("lg.E(").append(3).append(44).append(param1).append(44);
+            stackOut_18_1 = new StringBuilder().append("lg.E(").append(3).append(',').append(param1).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -141,7 +141,7 @@ final class lg {
               break L8;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param3 + 44 + param4 + 41);
+          throw dd.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

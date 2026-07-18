@@ -14,7 +14,7 @@ final class rg extends qr {
             ((rg) this).field_x = param0;
             ((rg) this).field_y = 256;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "rg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "rg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -18,7 +18,7 @@ abstract class tl {
             field_b = null;
             int var1_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "tl.D(" + 2 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "tl.D(" + 2 + ')');
         }
     }
 
@@ -2915,7 +2915,7 @@ abstract class tl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var2, "tl.B(" + param0 + 41);
+          throw dn.a((Throwable) (Object) var2, "tl.B(" + param0 + ')');
         }
         return stackIn_1_0;
     }

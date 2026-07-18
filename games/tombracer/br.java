@@ -174,7 +174,7 @@ final class br extends od {
           L7: {
             var4 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var4;
-            stackOut_21_1 = new StringBuilder().append("br.B(").append(param0).append(44).append(-90).append(44);
+            stackOut_21_1 = new StringBuilder().append("br.B(").append(param0).append(',').append(-90).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -197,7 +197,7 @@ final class br extends od {
               break L7;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
         }
     }
 
@@ -294,7 +294,7 @@ final class br extends od {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
     }
 

@@ -166,7 +166,7 @@ final class hw extends gn {
               break L6;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 44 + -26200 + 44 + param2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ',' + -26200 + ',' + param2 + ')');
         }
         return stackIn_33_0 != 0;
     }
@@ -180,7 +180,7 @@ final class hw extends gn {
         try {
             ((hw) this).field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "hw.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "hw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

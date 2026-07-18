@@ -23,7 +23,7 @@ final class ck extends java.awt.Canvas implements java.awt.event.FocusListener {
             }
             ck.a(param0, 103, ((ck) this).field_e);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "ck.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "ck.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class ck extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L2;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw qk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -95,7 +95,7 @@ final class ck extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             ((ck) this).field_d = true;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "ck.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "ck.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -213,7 +213,7 @@ final class ck extends java.awt.Canvas implements java.awt.event.FocusListener {
           }
           L5: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param1).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -236,7 +236,7 @@ final class ck extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L5;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
     }
 

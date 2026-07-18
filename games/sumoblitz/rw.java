@@ -50,7 +50,7 @@ abstract class rw extends pj {
             var1.b(0, 0);
             su.a((byte) 76);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "rw.B(" + -90 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "rw.B(" + -90 + ')');
         }
     }
 

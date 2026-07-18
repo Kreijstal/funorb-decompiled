@@ -36,7 +36,7 @@ class vo {
             param0.field_d.field_b = param0;
             param0.field_b.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "vo.L(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "vo.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -139,7 +139,7 @@ class vo {
             param1.field_d.field_b = param1;
             param1.field_b.field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "vo.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "vo.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

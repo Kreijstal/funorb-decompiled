@@ -75,7 +75,7 @@ final class jg implements Runnable {
           L2: {
             var10 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var10;
-            stackOut_8_1 = new StringBuilder().append("jg.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(0).append(44).append(param6).append(44).append(param7).append(44);
+            stackOut_8_1 = new StringBuilder().append("jg.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(false).append(',').append(param6).append(',').append(param7).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -98,7 +98,7 @@ final class jg implements Runnable {
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param9 + 41);
+          throw r.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param9 + ')');
         }
     }
 
@@ -188,7 +188,7 @@ final class jg implements Runnable {
               }
               L3: {
                 stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-                stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+                stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
                 stackIn_13_0 = stackOut_11_0;
                 stackIn_13_1 = stackOut_11_1;
                 stackIn_12_0 = stackOut_11_0;
@@ -211,7 +211,7 @@ final class jg implements Runnable {
                   break L3;
                 }
               }
-              throw r.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 44 + -22379 + 44 + 4 + 41);
+              throw r.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ',' + -22379 + ',' + 4 + ')');
             }
             return stackIn_7_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -378,7 +378,7 @@ final class jg implements Runnable {
           }
           L4: {
             stackOut_12_0 = stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44).append(0).append(44);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(false).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -401,7 +401,7 @@ final class jg implements Runnable {
               break L4;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
         return stackIn_8_0;
     }

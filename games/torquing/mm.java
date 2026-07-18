@@ -65,7 +65,7 @@ final class mm implements Runnable {
                     }
                     break L0;
                   } else {
-                    throw mm.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((mm) this).field_i.field_j.length + " " + ((mm) this).field_k));
+                    throw mm.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((mm) this).field_i.field_j.length + " " + (Object) (Object) ((mm) this).field_k));
                   }
                 }
               }
@@ -362,7 +362,7 @@ final class mm implements Runnable {
               break L9;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 41);
+          throw rb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ')');
         }
         return stackIn_21_0;
     }
@@ -402,7 +402,7 @@ final class mm implements Runnable {
             ((mm) this).field_k = param1;
             ((mm) this).field_i = new fj(param2);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "mm.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "mm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

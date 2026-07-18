@@ -69,7 +69,7 @@ final class nb {
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 170 + 41);
+          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 170 + ')');
         }
         return stackIn_3_0;
     }
@@ -128,7 +128,7 @@ final class nb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "nb.A(" + -94 + 41);
+          throw nb.a((Throwable) (Object) var1, "nb.A(" + -94 + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class nb {
         bs var2 = null;
         if (param0 instanceof bs) {
             var2 = (bs) (Object) param0;
-            var2.field_d = var2.field_d + 32 + param1;
+            var2.field_d = var2.field_d + ' ' + param1;
         } else {
             var2 = new bs(param0, param1);
         }
@@ -155,7 +155,7 @@ final class nb {
             ((nb) this).field_a = param2;
             ((nb) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "nb.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "nb.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -166,7 +166,7 @@ final class nb {
             ((nb) this).field_d = true;
             ((nb) this).field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "nb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "nb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

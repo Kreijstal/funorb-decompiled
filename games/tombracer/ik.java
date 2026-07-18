@@ -159,7 +159,7 @@ final class ik extends vg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "ik.C(" + 5 + 41);
+          throw tba.a((Throwable) (Object) var1, "ik.C(" + 5 + ')');
         }
     }
 

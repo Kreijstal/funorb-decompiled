@@ -72,7 +72,7 @@ final class nb extends ka {
           L4: {
             runtimeException = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) runtimeException;
-            stackOut_8_1 = new StringBuilder().append("nb.C(").append(8).append(44);
+            stackOut_8_1 = new StringBuilder().append("nb.C(").append(8).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -95,7 +95,7 @@ final class nb extends ka {
               break L4;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class nb extends ka {
             hl discarded$3 = new hl((fq) null, 5121, 4, 0);
             nn discarded$4 = new nn();
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "nb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "nb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

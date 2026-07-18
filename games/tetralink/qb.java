@@ -73,7 +73,7 @@ final class qb extends gn implements dm {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var6;
-            stackOut_11_1 = new StringBuilder().append("qb.M(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("qb.M(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -96,7 +96,7 @@ final class qb extends gn implements dm {
               break L3;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw oi.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -247,7 +247,7 @@ final class qb extends gn implements dm {
               break L3;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + -89 + 44 + param2 + 44 + param3 + 41);
+          throw oi.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + -89 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_8_0;
     }
@@ -405,7 +405,7 @@ final class qb extends gn implements dm {
           L11: {
             var4 = decompiledCaughtException;
             stackOut_40_0 = (RuntimeException) var4;
-            stackOut_40_1 = new StringBuilder().append("qb.E(").append(1).append(44);
+            stackOut_40_1 = new StringBuilder().append("qb.E(").append(true).append(',');
             stackIn_42_0 = stackOut_40_0;
             stackIn_42_1 = stackOut_40_1;
             stackIn_41_0 = stackOut_40_0;
@@ -428,7 +428,7 @@ final class qb extends gn implements dm {
               break L11;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + 44 + param2 + 44 + param3 + 41);
+          throw oi.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_39_0;
     }
@@ -496,7 +496,7 @@ final class qb extends gn implements dm {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var5;
-            stackOut_14_1 = new StringBuilder().append("qb.DB(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_14_1 = new StringBuilder().append("qb.DB(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -519,7 +519,7 @@ final class qb extends gn implements dm {
               break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_13_0 != 0;
     }

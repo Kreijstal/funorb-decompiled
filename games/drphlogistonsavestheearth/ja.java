@@ -175,7 +175,7 @@ final class ja {
               break L7;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + -60 + 41);
+          throw ie.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + -60 + ')');
         }
     }
 

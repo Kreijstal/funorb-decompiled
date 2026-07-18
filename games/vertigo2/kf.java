@@ -855,7 +855,7 @@ final class kf {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var2_ref;
-            stackOut_14_1 = new StringBuilder().append("kf.C(").append(-100).append(44);
+            stackOut_14_1 = new StringBuilder().append("kf.C(").append(-100).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -878,7 +878,7 @@ final class kf {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_13_0;
     }

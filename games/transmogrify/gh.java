@@ -103,7 +103,7 @@ final class gh extends wf {
               break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -112 + 41);
+          throw ch.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + -112 + ')');
         }
     }
 

@@ -147,7 +147,7 @@ final class pi extends fw {
           L6: {
             var8 = decompiledCaughtException;
             stackOut_29_0 = (RuntimeException) var8;
-            stackOut_29_1 = new StringBuilder().append("pi.NA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_29_1 = new StringBuilder().append("pi.NA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -170,7 +170,7 @@ final class pi extends fw {
               break L6;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param5 + 44 + param6 + 41);
+          throw ig.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_28_0 != 0;
     }

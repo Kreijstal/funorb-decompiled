@@ -124,7 +124,7 @@ final class oa extends pd implements java.awt.image.ImageProducer, java.awt.imag
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var1, "oa.F(" + 1811357826 + 41);
+          throw fc.a((Throwable) (Object) var1, "oa.F(" + 1811357826 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class oa extends pd implements java.awt.image.ImageProducer, java.awt.imag
             param0.setColorModel(((oa) this).field_o);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "oa.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "oa.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -183,7 +183,7 @@ final class oa extends pd implements java.awt.image.ImageProducer, java.awt.imag
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3_ref;
-            stackOut_7_1 = new StringBuilder().append("oa.E(").append(-1803587230).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("oa.E(").append(-1803587230).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -206,7 +206,7 @@ final class oa extends pd implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }
@@ -215,7 +215,7 @@ final class oa extends pd implements java.awt.image.ImageProducer, java.awt.imag
         try {
             ((oa) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "oa.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "oa.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -277,7 +277,7 @@ final class oa extends pd implements java.awt.image.ImageProducer, java.awt.imag
               break L2;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -335,7 +335,7 @@ final class oa extends pd implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw fc.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
@@ -367,7 +367,7 @@ final class oa extends pd implements java.awt.image.ImageProducer, java.awt.imag
             boolean discarded$2 = param0.prepareImage(((oa) this).field_g, (java.awt.image.ImageObserver) this);
             ((oa) this).a(true);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "oa.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "oa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -379,7 +379,7 @@ final class oa extends pd implements java.awt.image.ImageProducer, java.awt.imag
             this.b(true);
             boolean discarded$0 = param3.drawImage(((oa) this).field_g, param0, param2, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "oa.D(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "oa.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

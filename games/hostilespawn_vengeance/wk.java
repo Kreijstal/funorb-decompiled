@@ -183,7 +183,7 @@ final class wk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var1, "wk.B(" + 192 + 41);
+          throw wg.a((Throwable) (Object) var1, "wk.B(" + 192 + ')');
         }
     }
 

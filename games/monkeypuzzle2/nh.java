@@ -72,7 +72,7 @@ final class nh extends ug {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "nh.D(" + 62 + 41);
+          throw la.a((Throwable) (Object) var1, "nh.D(" + 62 + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class nh extends ug {
             pe.field_d[0].field_i[0] = 240.0f;
             pe.field_d[0].field_i[1] = 0.0f;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "nh.E(" + 107 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "nh.E(" + 107 + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class nh extends ug {
             ((nh) this).field_g = param1;
             ((nh) this).field_h = param2;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "nh.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw la.a((Throwable) (Object) runtimeException, "nh.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class nh extends ug {
             var4 = -1L;
             wg.a(var2, param1, var3, -26372, var4);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "nh.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw la.a((Throwable) (Object) runtimeException, "nh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

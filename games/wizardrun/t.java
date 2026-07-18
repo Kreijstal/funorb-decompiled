@@ -61,7 +61,7 @@ final class t {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var1_ref, "t.B(" + -1 + 41);
+          throw bd.a((Throwable) (Object) var1_ref, "t.B(" + -1 + ')');
         }
     }
 

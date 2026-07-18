@@ -12,7 +12,7 @@ final class mf {
             var2 = sn.a(param0, "jagex logo2.packvorbis", "");
             el discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "mf.D(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "mf.D(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ')');
         }
     }
 
@@ -23,7 +23,7 @@ final class mf {
         try {
             he.a(31536000L, param0, ((mf) this).field_a, -100, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "mf.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "mf.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class mf {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("mf.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_8_1 = new StringBuilder().append("mf.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -123,7 +123,7 @@ final class mf {
               break L3;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }
@@ -237,7 +237,7 @@ final class mf {
               break L6;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 41);
+          throw kk.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ')');
         }
     }
 
@@ -373,7 +373,7 @@ final class mf {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("mf.C(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("mf.C(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -396,7 +396,7 @@ final class mf {
               break L1;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_4_0;
     }
@@ -405,7 +405,7 @@ final class mf {
         try {
             ((mf) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "mf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "mf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

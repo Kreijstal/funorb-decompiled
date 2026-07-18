@@ -25,7 +25,7 @@ final class fi {
             var3.c(50, param0.field_k);
             var3.c(61, param0.field_l);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "fi.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + -24045 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "fi.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + -24045 + ')');
         }
     }
 
@@ -306,7 +306,7 @@ final class fi {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var5;
-            stackOut_21_1 = new StringBuilder().append("fi.B(").append(param0).append(44);
+            stackOut_21_1 = new StringBuilder().append("fi.B(").append(param0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -329,7 +329,7 @@ final class fi {
               break L8;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param2 + ')');
         }
     }
 
@@ -484,7 +484,7 @@ final class fi {
               break L6;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

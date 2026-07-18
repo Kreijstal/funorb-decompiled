@@ -101,7 +101,7 @@ final class cl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var1, "cl.A(" + -36 + 41);
+          throw pf.a((Throwable) (Object) var1, "cl.A(" + -36 + ')');
         }
     }
 

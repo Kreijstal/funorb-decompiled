@@ -116,7 +116,7 @@ final class ph {
           L6: {
             var4_ref = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var4_ref;
-            stackOut_19_1 = new StringBuilder().append("ph.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_19_1 = new StringBuilder().append("ph.B(").append(param0).append(',').append(param1).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -139,7 +139,7 @@ final class ph {
               break L6;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param3 + 41);
+          throw lj.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param3 + ')');
         }
         return stackIn_18_0;
     }

@@ -67,7 +67,7 @@ final class me {
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 20 + 44 + param2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 20 + ',' + param2 + ')');
         }
         return stackIn_1_0;
     }

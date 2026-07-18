@@ -220,7 +220,7 @@ final class wb {
               break L10;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + 0 + 41);
+          throw r.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ',' + 0 + ')');
         }
         return stackIn_29_0;
     }
@@ -238,7 +238,7 @@ final class wb {
             param1.field_u.field_x = param1;
             param1.field_x.field_u = param1;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "wb.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "wb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

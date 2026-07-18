@@ -127,7 +127,7 @@ final class na {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var1, "na.B(" + 1 + 41);
+          throw ci.a((Throwable) (Object) var1, "na.B(" + true + ')');
         }
     }
 
@@ -233,7 +233,7 @@ final class na {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw ci.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -499,7 +499,7 @@ final class na {
                         continue stateLoop;
                     }
                     case 20: {
-                        throw ci.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 0 + 41);
+                        throw ci.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + 0 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -545,7 +545,7 @@ final class na {
             ((na) this).field_e = param2;
             ((na) this).field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "na.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "na.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

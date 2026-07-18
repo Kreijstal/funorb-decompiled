@@ -77,7 +77,7 @@ final class cn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var1_ref, "cn.B(" + 114 + 41);
+          throw dn.a((Throwable) (Object) var1_ref, "cn.B(" + 114 + ')');
         }
         return stackIn_17_0 != 0;
     }

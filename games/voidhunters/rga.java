@@ -262,7 +262,7 @@ final class rga {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
     }
 

@@ -538,9 +538,9 @@ abstract class dj extends tf {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$10 = field_F.append(60);
+                        StringBuilder discarded$10 = field_F.append('<');
                         StringBuilder discarded$11 = field_F.append(var15);
-                        StringBuilder discarded$12 = field_F.append(62);
+                        StringBuilder discarded$12 = field_F.append('>');
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -727,7 +727,7 @@ abstract class dj extends tf {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$13 = field_F.append(var14);
+                        StringBuilder discarded$13 = field_F.append((char) var14);
                         var14 = (char)(fe.a((byte) 91, (char) var14) & 255);
                         var4 = var4 + ((dj) this).field_v[var14];
                         if (((dj) this).field_I == null) {
@@ -924,7 +924,7 @@ abstract class dj extends tf {
                 var5 = param0.charAt(var4);
                 if (var5 != 60) {
                   if (var5 != 62) {
-                    StringBuilder discarded$3 = var3.append(var5);
+                    StringBuilder discarded$3 = var3.append((char) var5);
                     var4++;
                     continue L1;
                   } else {

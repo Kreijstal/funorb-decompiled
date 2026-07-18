@@ -199,7 +199,7 @@ final class ob extends qa {
           L7: {
             var4 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var4;
-            stackOut_21_1 = new StringBuilder().append("ob.L(").append(-56).append(44);
+            stackOut_21_1 = new StringBuilder().append("ob.L(").append(-56).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -222,7 +222,7 @@ final class ob extends qa {
               break L7;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param2 + ')');
         }
     }
 
@@ -356,7 +356,7 @@ final class ob extends qa {
             }
             var3_int = -23 / ((param0 - 19) / 42);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ob.M(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "ob.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -419,7 +419,7 @@ final class ob extends qa {
             param0.field_z = 0;
             param0.field_mb = 0;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ob.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "ob.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

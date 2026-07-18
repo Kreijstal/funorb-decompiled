@@ -189,7 +189,7 @@ final class th {
           L8: {
             var4 = decompiledCaughtException;
             stackOut_38_0 = (RuntimeException) var4;
-            stackOut_38_1 = new StringBuilder().append("th.D(").append(-123).append(44).append(1).append(44).append(10).append(44);
+            stackOut_38_1 = new StringBuilder().append("th.D(").append(-123).append(',').append(true).append(',').append(10).append(',');
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
@@ -212,7 +212,7 @@ final class th {
               break L8;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ')');
         }
         return stackIn_37_0 != 0;
     }
@@ -225,7 +225,7 @@ final class th {
             ki.a(ti.field_i / 2, ti.field_b / 2, -116);
             qe.a(param0.field_x, -29770, param1.field_r + param1.field_x, param1.field_x, param0.field_r + param0.field_x);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "th.B(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + -128 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "th.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + -128 + ')');
         }
     }
 
@@ -256,7 +256,7 @@ final class th {
             int discarded$0 = var5.c(var4, (byte) -3);
             var5.a(-var4 + var5.field_k, (byte) 80);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "th.G(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "th.G(" + 5 + ',' + (param1 != null ? "{...}" : "null") + ',' + 1 + ')');
         }
     }
 
@@ -282,7 +282,7 @@ final class th {
             var1.b(0, 0);
             id.b((byte) -58);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "th.C(" + -84 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "th.C(" + -84 + ')');
         }
     }
 

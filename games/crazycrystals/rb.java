@@ -86,7 +86,7 @@ final class rb extends ue {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 126 + 41);
+          throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 126 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -101,7 +101,7 @@ final class rb extends ue {
             ((rb) this).field_f = param0;
             ip.a(0, param1);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "rb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

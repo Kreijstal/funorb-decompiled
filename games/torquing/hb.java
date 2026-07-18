@@ -202,7 +202,7 @@ final class hb extends am {
           L13: {
             var8 = decompiledCaughtException;
             stackOut_37_0 = (RuntimeException) var8;
-            stackOut_37_1 = new StringBuilder().append("hb.A(").append(param0).append(44).append(0).append(44);
+            stackOut_37_1 = new StringBuilder().append("hb.A(").append(param0).append(',').append(false).append(',');
             stackIn_39_0 = stackOut_37_0;
             stackIn_39_1 = stackOut_37_1;
             stackIn_38_0 = stackOut_37_0;
@@ -225,7 +225,7 @@ final class hb extends am {
               break L13;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 44 + param3 + 44 + param4 + 44 + 1 + 44 + param6 + 44 + param7 + 41);
+          throw rb.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + param3 + ',' + param4 + ',' + 1 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -463,7 +463,7 @@ final class hb extends am {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

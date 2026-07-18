@@ -123,7 +123,7 @@ final class wi extends eg {
           L6: {
             var6 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var6;
-            stackOut_20_1 = new StringBuilder().append("wi.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_20_1 = new StringBuilder().append("wi.B(").append(param0).append(',').append(param1).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -146,7 +146,7 @@ final class wi extends eg {
               break L6;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param3 + 44 + param4 + 41);
+          throw lj.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

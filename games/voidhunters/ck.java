@@ -239,7 +239,7 @@ final class ck extends rqa {
           L3: {
             var2_ref = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var2_ref;
-            stackOut_20_1 = new StringBuilder().append("ck.C(").append(-1).append(44);
+            stackOut_20_1 = new StringBuilder().append("ck.C(").append(-1).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -262,7 +262,7 @@ final class ck extends rqa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
         }
         return stackIn_19_0;
     }
@@ -330,7 +330,7 @@ final class ck extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }

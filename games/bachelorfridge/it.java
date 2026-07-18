@@ -169,7 +169,7 @@ final class it {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var2, "it.B(" + param0 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) var2, "it.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -196,7 +196,7 @@ final class it {
             ((it) this).field_b = param0.e((byte) 87);
             ((it) this).field_a = param0.b(16711935) == 1 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "it.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "it.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

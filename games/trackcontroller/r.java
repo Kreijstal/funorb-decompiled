@@ -108,7 +108,7 @@ final class r extends fc {
                             if (var8 == 0) {
                               break L5;
                             } else {
-                              StringBuilder discarded$1 = var5.append(var8);
+                              StringBuilder discarded$1 = var5.append((char) var8);
                               break L5;
                             }
                           }
@@ -158,7 +158,7 @@ final class r extends fc {
               break L6;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + -11133 + 41);
+          throw sl.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + -11133 + ')');
         }
     }
 
@@ -200,7 +200,7 @@ final class r extends fc {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) var2;
-            stackOut_3_1 = new StringBuilder().append("r.B(").append(-32652).append(44);
+            stackOut_3_1 = new StringBuilder().append("r.B(").append(-32652).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -223,7 +223,7 @@ final class r extends fc {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

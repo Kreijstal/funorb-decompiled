@@ -127,7 +127,7 @@ final class tm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "tm.B(" + param0 + 41);
+          throw dh.a((Throwable) (Object) var1, "tm.B(" + param0 + ')');
         }
         return stackIn_31_0;
     }

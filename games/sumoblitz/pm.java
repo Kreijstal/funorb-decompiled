@@ -26,7 +26,7 @@ final class pm {
             int discarded$0 = var5.a(var4, false);
             var5.c(var5.field_p + -var4, -13745);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "pm.C(" + param0 + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "pm.C(" + param0 + ',' + 1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class pm {
         try {
             ((pm) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "pm.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "pm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

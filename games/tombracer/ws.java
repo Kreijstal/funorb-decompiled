@@ -52,7 +52,7 @@ final class ws extends wda {
             param0.a((byte) -128, !((ws) this).field_p ? 0 : 1, 1);
             param0.a((byte) -125, ((ws) this).field_q ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ws.R(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ws.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class ws extends wda {
             ((ws) this).field_p = param1.b((byte) 44, 1) == 1 ? true : false;
             ((ws) this).field_q = param1.b((byte) 44, 1) == 1 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ws.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ws.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

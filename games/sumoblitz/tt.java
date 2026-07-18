@@ -34,7 +34,7 @@ abstract class tt extends ms {
           L0: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("tt.J(").append(-100).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("tt.J(").append(-100).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -57,7 +57,7 @@ abstract class tt extends ms {
               break L0;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param3 + 41);
+          throw qo.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param3 + ')');
         }
     }
 

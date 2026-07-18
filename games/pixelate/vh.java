@@ -143,7 +143,7 @@ final class vh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "vh.B(" + 88 + 41);
+          throw aa.a((Throwable) (Object) var1, "vh.B(" + 88 + ')');
         }
     }
 
@@ -223,7 +223,7 @@ final class vh {
               L4: {
                 runtimeException = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_11_0 = (RuntimeException) runtimeException;
-                stackOut_11_1 = new StringBuilder().append("vh.C(").append(param0).append(44);
+                stackOut_11_1 = new StringBuilder().append("vh.C(").append(param0).append(',');
                 stackIn_13_0 = stackOut_11_0;
                 stackIn_13_1 = stackOut_11_1;
                 stackIn_12_0 = stackOut_11_0;
@@ -248,7 +248,7 @@ final class vh {
               }
               L5: {
                 stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44);
+                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
                 stackIn_16_0 = stackOut_14_0;
                 stackIn_16_1 = stackOut_14_1;
                 stackIn_15_0 = stackOut_14_0;
@@ -271,7 +271,7 @@ final class vh {
                   break L5;
                 }
               }
-              throw aa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+              throw aa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

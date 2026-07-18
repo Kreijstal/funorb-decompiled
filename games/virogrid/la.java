@@ -19,7 +19,7 @@ final class la extends l {
             var2 = gj.a(param1, "jagex logo2.packvorbis", "");
             ml discarded$0 = var2.a();
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "la.B(" + 1048576 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "la.B(" + 1048576 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -95,7 +95,7 @@ final class la extends l {
           L3: {
             var4_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var4_ref;
-            stackOut_17_1 = new StringBuilder().append("la.A(").append(param0).append(44).append(param1).append(44).append(1).append(44);
+            stackOut_17_1 = new StringBuilder().append("la.A(").append(param0).append(',').append(param1).append(',').append(true).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -118,7 +118,7 @@ final class la extends l {
               break L3;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
     }
 

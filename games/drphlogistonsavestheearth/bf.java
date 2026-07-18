@@ -604,7 +604,7 @@ final class bf {
           L7: {
             var3 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var3;
-            stackOut_23_1 = new StringBuilder().append("bf.CA(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("bf.CA(").append(param0).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -627,7 +627,7 @@ final class bf {
               break L7;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
         }
     }
 
@@ -1674,7 +1674,7 @@ final class bf {
               L4: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_7_0 = (RuntimeException) var2_ref2;
-                stackOut_7_1 = new StringBuilder().append("bf.K(").append(63).append(44);
+                stackOut_7_1 = new StringBuilder().append("bf.K(").append(63).append(',');
                 stackIn_9_0 = stackOut_7_0;
                 stackIn_9_1 = stackOut_7_1;
                 stackIn_8_0 = stackOut_7_0;
@@ -1697,7 +1697,7 @@ final class bf {
                   break L4;
                 }
               }
-              throw ie.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+              throw ie.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -155,7 +155,7 @@ abstract class rqa extends fh {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_32_0 = (RuntimeException) var4;
-            stackOut_32_1 = new StringBuilder().append("rqa.H(").append(param0).append(44);
+            stackOut_32_1 = new StringBuilder().append("rqa.H(").append(param0).append(',');
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
@@ -180,7 +180,7 @@ abstract class rqa extends fh {
           }
           L7: {
             stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-            stackOut_35_1 = ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(44);
+            stackOut_35_1 = ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(',');
             stackIn_37_0 = stackOut_35_0;
             stackIn_37_1 = stackOut_35_1;
             stackIn_36_0 = stackOut_35_0;
@@ -203,7 +203,7 @@ abstract class rqa extends fh {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + ')');
         }
         return stackIn_31_0 != 0;
     }
@@ -215,7 +215,7 @@ abstract class rqa extends fh {
         try {
             ((rqa) this).field_k = param0;
             ((rqa) this).field_n = param1;
-            var7 = new StringBuilder(((rqa) this).field_k).append(40);
+            var7 = new StringBuilder(((rqa) this).field_k).append('(');
             var8 = var7;
             for (var5 = 0; var5 < ((rqa) this).field_n.length; var5++) {
                 StringBuilder discarded$9 = var7.append(wp.a(((rqa) this).field_n[var5], false));
@@ -223,13 +223,13 @@ abstract class rqa extends fh {
                     StringBuilder discarded$10 = var8.append(", ");
                 }
             }
-            StringBuilder discarded$15 = var8.append(41);
+            StringBuilder discarded$15 = var8.append(')');
             if (param2 != null) {
                 StringBuilder discarded$16 = var8.append("     <col=ffaaff>" + param2 + "</col>");
             }
             ((rqa) this).field_l = var8.toString();
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "rqa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "rqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

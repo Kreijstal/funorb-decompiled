@@ -72,7 +72,7 @@ final class jab extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -121,7 +121,7 @@ final class jab extends rqa {
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_4_0 = (RuntimeException) var2_ref2;
-                stackOut_4_1 = new StringBuilder().append("jab.B(").append(17).append(44);
+                stackOut_4_1 = new StringBuilder().append("jab.B(").append(17).append(',');
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
                 stackIn_5_0 = stackOut_4_0;
@@ -144,7 +144,7 @@ final class jab extends rqa {
                   break L1;
                 }
               }
-              throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+              throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

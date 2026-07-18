@@ -109,7 +109,7 @@ final class nf {
           L5: {
             var3 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("nf.D(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("nf.D(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -132,7 +132,7 @@ final class nf {
               break L5;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
         return stackIn_10_0;
     }
@@ -218,7 +218,7 @@ final class nf {
           L6: {
             var3 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var3;
-            stackOut_16_1 = new StringBuilder().append("nf.A(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("nf.A(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -241,7 +241,7 @@ final class nf {
               break L6;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
     }
 
@@ -383,7 +383,7 @@ final class nf {
                     if (2 > va.field_j) {
                       break L3;
                     } else {
-                      System.out.println("Forced to use default vowels for " + var5);
+                      System.out.println("Forced to use default vowels for " + (String) var5);
                       break L3;
                     }
                   }
@@ -393,7 +393,7 @@ final class nf {
                   ((nf) this).field_b = (String) var9;
                   ((nf) this).field_h = (String) var11;
                   ((nf) this).field_j = (String) var5;
-                  var28 = (CharSequence) (Object) ("flag_" + var5);
+                  var28 = (CharSequence) (Object) ("flag_" + (String) var5);
                   ((nf) this).field_a = pc.a("", dj.a(var28, (byte) -123), param0, -124);
                   stackOut_51_0 = this;
                   stackIn_53_0 = stackOut_51_0;
@@ -520,7 +520,7 @@ final class nf {
                                     if (0 == ((nf) this).field_p[var19]) {
                                       break L13;
                                     } else {
-                                      System.out.println("Multiple letter values found for" + var19);
+                                      System.out.println("Multiple letter values found for" + (char) var19);
                                       break L13;
                                     }
                                   }
@@ -537,7 +537,7 @@ final class nf {
                                       if (((nf) this).field_p[var20] == 0) {
                                         break L14;
                                       } else {
-                                        System.out.println("Multiple letter values found for " + var20);
+                                        System.out.println("Multiple letter values found for " + (char) var20);
                                         break L14;
                                       }
                                     }
@@ -607,7 +607,7 @@ final class nf {
           }
           L17: {
             stackOut_62_0 = (RuntimeException) (Object) stackIn_62_0;
-            stackOut_62_1 = ((StringBuilder) (Object) stackIn_62_1).append(stackIn_62_2).append(44);
+            stackOut_62_1 = ((StringBuilder) (Object) stackIn_62_1).append(stackIn_62_2).append(',');
             stackIn_64_0 = stackOut_62_0;
             stackIn_64_1 = stackOut_62_1;
             stackIn_63_0 = stackOut_62_0;
@@ -632,7 +632,7 @@ final class nf {
           }
           L18: {
             stackOut_65_0 = (RuntimeException) (Object) stackIn_65_0;
-            stackOut_65_1 = ((StringBuilder) (Object) stackIn_65_1).append(stackIn_65_2).append(44);
+            stackOut_65_1 = ((StringBuilder) (Object) stackIn_65_1).append(stackIn_65_2).append(',');
             stackIn_67_0 = stackOut_65_0;
             stackIn_67_1 = stackOut_65_1;
             stackIn_66_0 = stackOut_65_0;
@@ -655,7 +655,7 @@ final class nf {
               break L18;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + 41);
+          throw ch.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + ')');
         }
     }
 

@@ -210,7 +210,7 @@ final class fh implements fo {
           L10: {
             var3 = decompiledCaughtException;
             stackOut_49_0 = (RuntimeException) var3;
-            stackOut_49_1 = new StringBuilder().append("fh.DB(").append(param0).append(44);
+            stackOut_49_1 = new StringBuilder().append("fh.DB(").append(param0).append(',');
             stackIn_51_0 = stackOut_49_0;
             stackIn_51_1 = stackOut_49_1;
             stackIn_50_0 = stackOut_49_0;
@@ -233,7 +233,7 @@ final class fh implements fo {
               break L10;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + ')');
         }
     }
 
@@ -1502,7 +1502,7 @@ final class fh implements fo {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("fh.E(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("fh.E(").append(param0).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -1525,7 +1525,7 @@ final class fh implements fo {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param2 + ')');
         }
     }
 

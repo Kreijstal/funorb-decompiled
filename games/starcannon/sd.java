@@ -18,7 +18,7 @@ final class sd {
         ii var2 = null;
         if (param0 instanceof ii) {
             var2 = (ii) (Object) param0;
-            var2.field_b = var2.field_b + 32 + param1;
+            var2.field_b = var2.field_b + ' ' + param1;
         } else {
             var2 = new ii(param0, param1);
         }

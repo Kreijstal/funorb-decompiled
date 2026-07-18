@@ -56,7 +56,7 @@ class vh extends uf {
           L1: {
             var4_ref = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4_ref;
-            stackOut_6_1 = new StringBuilder().append("vh.VA(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("vh.VA(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -79,7 +79,7 @@ class vh extends uf {
               break L1;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 1 + 41);
+          throw qk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + true + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -90,7 +90,7 @@ class vh extends uf {
             int var3_int = -44 % ((-15 - param1) / 53);
             ed.field_d = param2;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "vh.WA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "vh.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

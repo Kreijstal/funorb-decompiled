@@ -21,7 +21,7 @@ abstract class dc implements qi {
             param3.a(oa.field_b * 128 / 80, (byte) -13);
             el.field_sb.a((ic) (Object) param3);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "dc.Q(" + (param0 != null ? "{...}" : "null") + 44 + 22050 + 44 + 1 + 44 + (param3 != null ? "{...}" : "null") + 44 + -92 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "dc.Q(" + (param0 != null ? "{...}" : "null") + ',' + 22050 + ',' + true + ',' + (param3 != null ? "{...}" : "null") + ',' + -92 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -186,7 +186,7 @@ abstract class dc implements qi {
           L7: {
             var5 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var5;
-            stackOut_19_1 = new StringBuilder().append("dc.M(").append(param0).append(44).append(param1).append(44);
+            stackOut_19_1 = new StringBuilder().append("dc.M(").append(param0).append(',').append(param1).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -211,7 +211,7 @@ abstract class dc implements qi {
           }
           L8: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -236,7 +236,7 @@ abstract class dc implements qi {
           }
           L9: {
             stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(44);
+            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -259,7 +259,7 @@ abstract class dc implements qi {
               break L9;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
         }
     }
 

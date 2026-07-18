@@ -9,6 +9,21 @@ Vineflower, or any other off-the-shelf tool. The decompiler is part of the
 over the obfuscated gamepacks by the pipeline in
 [dekobloko-work](https://github.com/Kreijstal/dekobloko-work).
 
+## What changed in this regeneration
+
+The 2026-07-18 regeneration updates all 44 games with the latest owned
+decompiler output. The main readability changes are interclass constant-argument
+specialization, integer/long constant folding, removal of constant branches and
+unreachable blocks, optional compaction of proven-dead trailing parameters, and
+removal of checked catches whose try body cannot declare the caught exception.
+Signature changes are recorded per game in `signature-map.json`. The detailed
+proof rules, safety boundaries, and Java/bytecode examples are documented below.
+
+The generator also fixes source emission that could select the wrong Java
+overload after decompilation (notably character values appended to strings).
+That correction is required for decompiled-and-recompiled games to preserve
+their displayed text.
+
 ## What "obfuscated" means here
 
 The original gamepacks were shipped obfuscated. Class, field, and method names
@@ -386,6 +401,26 @@ verification, full source recompilation, and representative runtime A/B tests.
   JVM/decompiler toolkit: a JavaScript implementation of the JVM, a Jasmin
   assembler/disassembler, and the decompiler under `src/decompiler` that
   actually generated the Java source here.
+
+### Regeneration provenance
+
+The generated game update is commit
+`84b67f68d4a5eab88c7f5a5b68af4660e14ace81`. The corresponding published
+generator revisions for this line of work are:
+
+- `dekobloko-work`: `7333e0d156cc14ec785c59d7c6378b9bfcd3f5a0`
+- `java-tools`: `58aa181f3b79d2c5dbdba5d4cf357008f0a69749`
+
+This batch was started while both generator repositories still contained the
+changes as uncommitted work, before those published revisions existed. The SHAs
+above therefore identify the reviewed, published implementations, but are not
+claimed as a bit-for-bit provenance guarantee for this particular snapshot.
+
+Starting with the next all-game regeneration, the generator worktrees must be
+clean before the job starts. Its commit or pull-request description must record
+the full `dekobloko-work` and `java-tools` commit SHAs, the regeneration command,
+and every experimental gate. That makes the inputs immutable and permits an
+exact rerun instead of relying on branch names or later commits.
 
 ## Compilation stubs
 

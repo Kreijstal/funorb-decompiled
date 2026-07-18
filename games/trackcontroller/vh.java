@@ -132,7 +132,7 @@ abstract class vh extends gb {
           L9: {
             var2 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var2;
-            stackOut_24_1 = new StringBuilder().append("vh.I(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("vh.I(").append(param0).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -155,7 +155,7 @@ abstract class vh extends gb {
               break L9;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
         return stackIn_23_0;
     }
@@ -467,7 +467,7 @@ abstract class vh extends gb {
           }
           L1: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(224).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(224).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -490,7 +490,7 @@ abstract class vh extends gb {
               break L1;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 

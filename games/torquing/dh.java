@@ -195,7 +195,7 @@ final class dh implements Iterator {
               break L8;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 44 + -1 + 41);
+          throw rb.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ',' + -1 + ')');
         }
     }
 
@@ -273,7 +273,7 @@ final class dh implements Iterator {
             int discarded$0 = 0;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "dh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "dh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

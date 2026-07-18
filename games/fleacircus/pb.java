@@ -45,7 +45,7 @@ final class pb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var2, "pb.A(" + 3 + 44 + 0 + 41);
+          throw pf.a((Throwable) (Object) var2, "pb.A(" + 3 + ',' + 0 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class pb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var1, "pb.B(" + 124 + 41);
+          throw pf.a((Throwable) (Object) var1, "pb.B(" + 124 + ')');
         }
     }
 

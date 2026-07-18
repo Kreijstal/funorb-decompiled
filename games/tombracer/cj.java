@@ -195,7 +195,7 @@ final class cj implements isa {
               break L8;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 44 + 0 + 41);
+          throw tba.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ',' + 0 + ')');
         }
         return stackIn_33_0 != 0;
     }
@@ -305,7 +305,7 @@ final class cj implements isa {
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -319,7 +319,7 @@ final class cj implements isa {
             ((cj) this).field_h = param2;
             ((cj) this).field_a = param3;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "cj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "cj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

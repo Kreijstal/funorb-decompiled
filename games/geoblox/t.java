@@ -18,7 +18,7 @@ final class t {
         sa var2 = null;
         if (param0 instanceof sa) {
             var2 = (sa) (Object) param0;
-            var2.field_d = var2.field_d + 32 + param1;
+            var2.field_d = var2.field_d + ' ' + param1;
         } else {
             var2 = new sa(param0, param1);
         }

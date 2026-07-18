@@ -426,7 +426,7 @@ final class eq extends ak {
           L16: {
             var3 = decompiledCaughtException;
             stackOut_76_0 = (RuntimeException) var3;
-            stackOut_76_1 = new StringBuilder().append("eq.D(").append(param0).append(44);
+            stackOut_76_1 = new StringBuilder().append("eq.D(").append(param0).append(',');
             stackIn_78_0 = stackOut_76_0;
             stackIn_78_1 = stackOut_76_1;
             stackIn_77_0 = stackOut_76_0;
@@ -449,7 +449,7 @@ final class eq extends ak {
               break L16;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_79_0, stackIn_79_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_79_0, stackIn_79_2 + ')');
         }
         return stackIn_75_0 != 0;
     }

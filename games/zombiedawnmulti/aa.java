@@ -120,7 +120,7 @@ final class aa extends ii {
         try {
             bh.field_a.a((gq) (Object) param1);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "aa.C(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "aa.C(" + true + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

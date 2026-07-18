@@ -26,7 +26,7 @@ final class hh extends sh {
             ((hh) this).field_a = param1;
             ((hh) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "hh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "hh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class hh extends sh {
             }
             param0.a((byte) -127, ((hh) this).field_a);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "hh.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "hh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

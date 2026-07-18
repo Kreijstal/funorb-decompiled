@@ -54,7 +54,7 @@ final class le extends java.awt.Canvas {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("le.C(").append(-125).append(44);
+            stackOut_4_1 = new StringBuilder().append("le.C(").append(-125).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -77,7 +77,7 @@ final class le extends java.awt.Canvas {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0 != 0;
     }
@@ -86,7 +86,7 @@ final class le extends java.awt.Canvas {
         try {
             ((le) this).field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "le.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "le.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class le extends java.awt.Canvas {
         try {
             ((le) this).field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "le.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "le.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class le extends java.awt.Canvas {
           L1: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3_ref;
-            stackOut_9_1 = new StringBuilder().append("le.B(").append(80).append(44).append(-25).append(44);
+            stackOut_9_1 = new StringBuilder().append("le.B(").append(80).append(',').append(-25).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -176,7 +176,7 @@ final class le extends java.awt.Canvas {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
     }
 
@@ -184,7 +184,7 @@ final class le extends java.awt.Canvas {
         try {
             ((le) this).field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "le.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "le.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

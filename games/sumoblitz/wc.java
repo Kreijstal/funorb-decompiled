@@ -82,7 +82,7 @@ final class wc {
               break L1;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 40 + 41);
+          throw qo.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 40 + ')');
         }
         return stackIn_3_0;
     }
@@ -92,7 +92,7 @@ final class wc {
             ((wc) this).field_a = param1;
             ((wc) this).field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "wc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "wc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

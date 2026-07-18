@@ -43,7 +43,7 @@ final class uu extends sna {
             ((uu) this).field_v = this.b();
             ((uu) this).a(-1, new sna("buy", (sna) null, 294, 70, 80, 20, qd.field_l));
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uu.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "uu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

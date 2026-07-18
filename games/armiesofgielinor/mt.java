@@ -121,7 +121,7 @@ final class mt {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
         }
         return stackIn_7_0;
     }
@@ -132,7 +132,7 @@ final class mt {
             ((mt) this).field_b = param0;
             ((mt) this).field_a = ((mt) this).field_b.length();
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "mt.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "mt.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

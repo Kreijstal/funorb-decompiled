@@ -20,7 +20,7 @@ final class oo {
             param1.field_t = new char[]{'?'};
             param1.field_D = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "oo.A(" + -1 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "oo.A(" + -1 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

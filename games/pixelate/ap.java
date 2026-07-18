@@ -23,7 +23,7 @@ final class ap {
             nf.field_d.field_K = nf.field_d.field_K - rh.field_y.field_K;
             rh.field_y.field_D = rh.field_y.field_D - rh.field_y.field_K;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ap.A(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + param2 + 44 + 24092 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ap.A(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ',' + param2 + ',' + 24092 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -166,7 +166,7 @@ final class ap {
               break L5;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

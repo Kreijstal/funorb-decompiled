@@ -15,7 +15,7 @@ final class ck extends nm {
             var2 = bk.a(param1, "jagex logo2.packvorbis", "");
             oe discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ck.B(" + -2196 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "ck.B(" + -2196 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -82,7 +82,7 @@ final class ck extends nm {
               break L1;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 0 + 44 + 14209 + 44 + 0 + 41);
+          throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 0 + ',' + 14209 + ',' + 0 + ')');
         }
     }
 

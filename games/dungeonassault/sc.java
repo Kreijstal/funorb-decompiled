@@ -75,7 +75,7 @@ final class sc extends ch {
           L1: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3_ref;
-            stackOut_7_1 = new StringBuilder().append("sc.G(").append(80).append(44);
+            stackOut_7_1 = new StringBuilder().append("sc.G(").append(80).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -98,7 +98,7 @@ final class sc extends ch {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 5 + 41);
+          throw vk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + 5 + ')');
         }
     }
 

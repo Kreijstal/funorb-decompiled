@@ -47,7 +47,7 @@ final class bo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var2_ref, "bo.D(" + 6 + 44 + 7 + 41);
+          throw aa.a((Throwable) (Object) var2_ref, "bo.D(" + 6 + ',' + 7 + ')');
         }
     }
 

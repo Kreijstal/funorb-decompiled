@@ -275,7 +275,7 @@ final class b extends gi {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_71_0 = (RuntimeException) var2;
-            stackOut_71_1 = new StringBuilder().append("b.E(").append(-120).append(44);
+            stackOut_71_1 = new StringBuilder().append("b.E(").append(-120).append(',');
             stackIn_73_0 = stackOut_71_0;
             stackIn_73_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;
@@ -298,7 +298,7 @@ final class b extends gi {
               break L6;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + ')');
         }
         return stackIn_70_0;
     }
@@ -445,7 +445,7 @@ final class b extends gi {
           L3: {
             var4_ref = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var4_ref;
-            stackOut_11_1 = new StringBuilder().append("b.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_11_1 = new StringBuilder().append("b.C(").append(param0).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -468,7 +468,7 @@ final class b extends gi {
               break L3;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param3 + 41);
+          throw ie.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param3 + ')');
         }
         return stackIn_10_0;
     }

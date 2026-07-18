@@ -67,7 +67,7 @@ final class kj extends br {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("kj.A(").append(-94).append(44);
+            stackOut_4_1 = new StringBuilder().append("kj.A(").append(-94).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -90,7 +90,7 @@ final class kj extends br {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0 != 0;
     }
@@ -336,7 +336,7 @@ final class kj extends br {
           L6: {
             var2 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("kj.B(").append(-31806).append(44);
+            stackOut_22_1 = new StringBuilder().append("kj.B(").append(-31806).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -359,7 +359,7 @@ final class kj extends br {
               break L6;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
         }
     }
 

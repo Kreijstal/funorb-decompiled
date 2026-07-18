@@ -17,7 +17,7 @@ final class vb extends java.awt.Canvas implements java.awt.event.FocusListener {
             int discarded$0 = 52;
             hi.a(param0, ((vb) this).field_b);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "vb.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "vb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class vb extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L3;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 41);
+          throw pf.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class vb extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             ((vb) this).field_c = true;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "vb.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "vb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -168,7 +168,7 @@ final class vb extends java.awt.Canvas implements java.awt.event.FocusListener {
           L0: {
             var4 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4;
-            stackOut_4_1 = new StringBuilder().append("vb.A(").append(-113).append(44);
+            stackOut_4_1 = new StringBuilder().append("vb.A(").append(-113).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -191,7 +191,7 @@ final class vb extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L0;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 44 + param3 + 41);
+          throw pf.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

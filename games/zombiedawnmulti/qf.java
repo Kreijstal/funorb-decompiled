@@ -156,7 +156,7 @@ final class qf {
           }
           L5: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param1).append(44).append(2).append(44).append(param3).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param1).append(',').append(2).append(',').append(param3).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -179,7 +179,7 @@ final class qf {
               break L5;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class qf {
             b.field_b = param1;
             sc.a(ah.field_e.field_C + ah.field_e.field_r, fh.field_h, param4, true, 320, 240, 15, (fm) (Object) ah.field_e, 10, (byte) -103, 5, 1, ah.field_e.field_C, true, rl.field_a);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "qf.B(" + 1 + 44 + param1 + 44 + 1 + 44 + 93 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "qf.B(" + 1 + ',' + param1 + ',' + true + ',' + 93 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -129,7 +129,7 @@ final class j extends ai {
             ((j) this).field_g = param1;
             ((j) this).field_i = param2;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "j.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "j.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

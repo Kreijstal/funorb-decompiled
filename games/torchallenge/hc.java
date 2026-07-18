@@ -16,7 +16,7 @@ final class hc extends ng {
         try {
             ((hc) this).field_D = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "hc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class hc extends ng {
                   break L7;
                 }
               }
-              throw oj.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + -13 + 41);
+              throw oj.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + -13 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -165,7 +165,7 @@ final class hc extends ng {
             vk.field_k = 10;
             bh.field_t = 10;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "hc.EA(" + 10 + 44 + 101 + 44 + 10 + 44 + 30 + 44 + 80 + 44 + 1500 + 44 + 80 + 44 + 10 + 44 + (param8 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "hc.EA(" + 10 + ',' + 101 + ',' + 10 + ',' + 30 + ',' + 80 + ',' + 1500 + ',' + 80 + ',' + 10 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -421,7 +421,7 @@ final class hc extends ng {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "hc.BA(" + param0 + 41);
+          throw oj.a((Throwable) (Object) var1, "hc.BA(" + param0 + ')');
         }
     }
 
@@ -430,7 +430,7 @@ final class hc extends ng {
         try {
             ((hc) this).field_q = kl.field_e.field_l;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "hc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -482,7 +482,7 @@ final class hc extends ng {
         try {
             ((hc) this).field_q = kl.field_e.field_l;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "hc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

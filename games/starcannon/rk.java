@@ -41,7 +41,7 @@ final class rk {
             param1.field_d.field_a = param1;
             param1.field_a.field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "rk.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "rk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class rk {
             }
             param1.field_a.field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "rk.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "rk.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

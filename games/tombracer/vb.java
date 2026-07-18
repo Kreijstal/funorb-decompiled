@@ -302,7 +302,7 @@ final class vb extends vg {
           L18: {
             var9 = decompiledCaughtException;
             stackOut_75_0 = (RuntimeException) var9;
-            stackOut_75_1 = new StringBuilder().append("vb.A(").append(-922437200).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
+            stackOut_75_1 = new StringBuilder().append("vb.A(").append(-922437200).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
             stackIn_77_0 = stackOut_75_0;
             stackIn_77_1 = stackOut_75_1;
             stackIn_76_0 = stackOut_75_0;
@@ -325,7 +325,7 @@ final class vb extends vg {
               break L18;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + ')');
         }
     }
 
@@ -346,7 +346,7 @@ final class vb extends vg {
             ((vb) this).field_h = param1;
             ((vb) this).field_f.e(128 + ot.field_v * ((vb) this).field_g >> 8);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "vb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "vb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

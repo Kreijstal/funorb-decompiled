@@ -59,7 +59,7 @@ final class ob {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("ob.C(").append(param0).append(44).append(-13339).append(44);
+            stackOut_5_1 = new StringBuilder().append("ob.C(").append(param0).append(',').append(-13339).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -82,7 +82,7 @@ final class ob {
               break L1;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param3 + 41);
+          throw ie.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param3 + ')');
         }
         return stackIn_4_0;
     }
@@ -308,7 +308,7 @@ final class ob {
                     case 18: {
                         var2_ref = (RuntimeException) (Object) caughtException;
                         stackOut_18_0 = (RuntimeException) var2_ref;
-                        stackOut_18_1 = new StringBuilder().append("ob.B(").append(param0).append(44);
+                        stackOut_18_1 = new StringBuilder().append("ob.B(").append(param0).append(',');
                         stackIn_20_0 = stackOut_18_0;
                         stackIn_20_1 = stackOut_18_1;
                         stackIn_19_0 = stackOut_18_0;
@@ -341,7 +341,7 @@ final class ob {
                         continue stateLoop;
                     }
                     case 21: {
-                        throw ie.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+                        throw ie.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }

@@ -23,7 +23,7 @@ final class pe {
             t.field_c = new wh(param7);
             i.field_a = new qi(jg.field_kb, t.field_c);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "pe.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + 128 + 44 + (param7 != null ? "{...}" : "null") + 44 + param8 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + 128 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -43,7 +43,7 @@ final class pe {
             tb.a(l.field_k / 2, 21361, l.field_j / 2);
             aj.a(param3.field_p + param3.field_u, -19605, param1.field_p + param1.field_u, param3.field_u, param1.field_u);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "pe.B(" + 480 + 44 + (param1 != null ? "{...}" : "null") + 44 + 48 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "pe.B(" + 480 + ',' + (param1 != null ? "{...}" : "null") + ',' + 48 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

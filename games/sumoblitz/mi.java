@@ -34,7 +34,7 @@ final class mi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var3, "mi.B(" + 72 + 44 + param1 + 44 + param2 + 41);
+          throw qo.a((Throwable) (Object) var3, "mi.B(" + 72 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_5_0;
     }

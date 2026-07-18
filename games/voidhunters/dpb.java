@@ -43,7 +43,7 @@ final class dpb {
                   }
                 }
                 if (param1.field_c == 2) {
-                  var2 = (Object) (Object) ("<img=1>" + var2);
+                  var2 = (Object) (Object) ("<img=1>" + (String) var2);
                   var3 = (String) var2;
                   var3 = (String) var2;
                   break L1;
@@ -98,7 +98,7 @@ final class dpb {
                   }
                 }
                 if (!param1.field_k) {
-                  var3 = var3 + var2 + ": ";
+                  var3 = var3 + (String) var2 + ": ";
                   break L3;
                 } else {
                   break L3;
@@ -133,7 +133,7 @@ final class dpb {
           L9: {
             var2 = (Object) (Object) decompiledCaughtException;
             stackOut_35_0 = var2;
-            stackOut_35_1 = new StringBuilder().append("dpb.A(").append(1).append(44);
+            stackOut_35_1 = new StringBuilder().append("dpb.A(").append(true).append(',');
             stackIn_37_0 = stackOut_35_0;
             stackIn_37_1 = stackOut_35_1;
             stackIn_36_0 = stackOut_35_0;
@@ -156,7 +156,7 @@ final class dpb {
               break L9;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + ')');
         }
         return stackIn_34_0;
     }

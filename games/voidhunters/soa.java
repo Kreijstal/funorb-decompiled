@@ -313,7 +313,7 @@ final class soa extends llb {
                       var10 = 0;
                       L15: while (true) {
                         if (~ocb.field_l >= ~var10) {
-                          lob.field_a = "<col=A00000>" + fq.field_q + "<br>" + haa.field_p + var9;
+                          lob.field_a = "<col=A00000>" + fq.field_q + "<br>" + haa.field_p + (String) var9;
                           break L1;
                         } else {
                           L16: {
@@ -324,7 +324,7 @@ final class soa extends llb {
                               var9 = (Object) (Object) var11_ref;
                               var9 = (Object) (Object) var11_ref;
                               if (var9 != null) {
-                                var9 = (Object) (Object) (var9 + ", " + var11_ref);
+                                var9 = (Object) (Object) ((String) var9 + ", " + var11_ref);
                                 break L16;
                               } else {
                                 var9 = (Object) (Object) var11_ref;
@@ -371,7 +371,7 @@ final class soa extends llb {
                   L19: {
                     qi.field_p.field_w = (-var10 + qi.field_p.field_hb) / 2;
                     if (32 == (48 & ls.field_o)) {
-                      var9 = (Object) (Object) (var9 + "..");
+                      var9 = (Object) (Object) ((String) var9 + "..");
                       break L19;
                     } else {
                       break L19;
@@ -379,7 +379,7 @@ final class soa extends llb {
                   }
                   L20: {
                     if ((48 & ls.field_o) == 48) {
-                      var9 = (Object) (Object) (var9 + "...");
+                      var9 = (Object) (Object) ((String) var9 + "...");
                       break L20;
                     } else {
                       break L20;
@@ -536,7 +536,7 @@ final class soa extends llb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var4, "soa.C(" + param0 + 44 + -99 + 44 + param2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) var4, "soa.C(" + param0 + ',' + -99 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -550,7 +550,7 @@ final class soa extends llb {
             ((soa) this).field_wb = param1;
             ((soa) this).field_xb.b(-561, param1);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "soa.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "soa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

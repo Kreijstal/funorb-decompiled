@@ -19,7 +19,7 @@ final class cq extends bw {
             ((cq) this).field_h = param1;
             ((cq) this).field_i.f(128 + b.field_u * ((cq) this).field_f >> 8);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "cq.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "cq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

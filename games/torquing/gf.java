@@ -69,7 +69,7 @@ abstract class gf extends eq implements wm {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -91,7 +91,7 @@ abstract class gf extends eq implements wm {
         try {
             ((gf) this).field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "gf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "gf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -133,7 +133,7 @@ abstract class gf extends eq implements wm {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("gf.A(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("gf.A(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -156,7 +156,7 @@ abstract class gf extends eq implements wm {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

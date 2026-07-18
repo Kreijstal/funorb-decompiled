@@ -22,7 +22,7 @@ final class wi extends eb {
             }
             kg.field_r[76].c(-32 + param2, -64 + param3, 128);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "wi.A(" + -80 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "wi.A(" + -80 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class wi extends eb {
           L6: {
             var8 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var8;
-            stackOut_21_1 = new StringBuilder().append("wi.U(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_21_1 = new StringBuilder().append("wi.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -169,7 +169,7 @@ final class wi extends eb {
               break L6;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param6 + 41);
+          throw qk.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param6 + ')');
         }
         return stackIn_20_0 != 0;
     }
@@ -196,7 +196,7 @@ final class wi extends eb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var1, "wi.D(" + -4168 + 41);
+          throw qk.a((Throwable) (Object) var1, "wi.D(" + -4168 + ')');
         }
     }
 

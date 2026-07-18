@@ -178,7 +178,7 @@ final class vb {
           L3: {
             var5_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5_ref;
-            stackOut_5_1 = new StringBuilder().append("vb.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("vb.A(").append(param0).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -201,7 +201,7 @@ final class vb {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 

@@ -89,7 +89,7 @@ final class fe implements rd {
               break L3;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ld.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class fe implements rd {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var6;
-            stackOut_8_1 = new StringBuilder().append("fe.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_8_1 = new StringBuilder().append("fe.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -177,7 +177,7 @@ final class fe implements rd {
               break L3;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param4 + 41);
+          throw ld.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param4 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

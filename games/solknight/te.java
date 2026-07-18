@@ -61,7 +61,7 @@ final class te extends si {
             ((te) this).field_H = 256;
             ((te) this).field_G = param0;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "te.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "te.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

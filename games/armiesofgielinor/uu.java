@@ -359,7 +359,7 @@ final class uu {
                               if (var10 != 0) {
                                 var13 = l.field_h;
                                 if (var12 != 0) {
-                                  var14 = au.field_Jb + var11;
+                                  var14 = au.field_Jb + (String) var11;
                                   break L22;
                                 } else {
                                   var14 = fo.a(4800, er.field_c, new String[1]);
@@ -368,7 +368,7 @@ final class uu {
                               } else {
                                 var13 = rd.field_f;
                                 if (var12 != 0) {
-                                  var14 = ol.field_x + var11;
+                                  var14 = ol.field_x + (String) var11;
                                   break L22;
                                 } else {
                                   var14 = fo.a(4800, go.field_d, new String[1]);
@@ -387,7 +387,7 @@ final class uu {
                                   break L23;
                                 } else {
                                   var12 = 1;
-                                  var11 = (Object) (Object) (var11 + ", " + var23);
+                                  var11 = (Object) (Object) ((String) var11 + ", " + var23);
                                   break L23;
                                 }
                               } else {
@@ -824,7 +824,7 @@ final class uu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var5, "uu.D(" + param0 + 44 + param1 + 44 + 11 + 44 + 0 + 44 + param4 + 41);
+          throw ig.a((Throwable) (Object) var5, "uu.D(" + param0 + ',' + param1 + ',' + 11 + ',' + 0 + ',' + param4 + ')');
         }
     }
 
@@ -884,7 +884,7 @@ final class uu {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }

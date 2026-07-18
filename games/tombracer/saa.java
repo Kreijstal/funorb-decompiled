@@ -48,7 +48,7 @@ final class saa extends kna {
           L2: {
             var4_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4_ref;
-            stackOut_4_1 = new StringBuilder().append("saa.AC(").append(param0).append(44).append(param1).append(44);
+            stackOut_4_1 = new StringBuilder().append("saa.AC(").append(param0).append(',').append(param1).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -71,7 +71,7 @@ final class saa extends kna {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -88,7 +88,7 @@ final class saa extends kna {
         try {
             super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "saa.V(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "saa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

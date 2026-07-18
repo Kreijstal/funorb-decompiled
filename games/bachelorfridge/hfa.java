@@ -87,7 +87,7 @@ abstract class hfa extends wj implements e {
           L4: {
             var8 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var8;
-            stackOut_8_1 = new StringBuilder().append("hfa.S(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_8_1 = new StringBuilder().append("hfa.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -110,7 +110,7 @@ abstract class hfa extends wj implements e {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param6 + 41);
+          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param6 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -171,7 +171,7 @@ abstract class hfa extends wj implements e {
           L3: {
             var8 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var8;
-            stackOut_8_1 = new StringBuilder().append("hfa.L(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_8_1 = new StringBuilder().append("hfa.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -194,7 +194,7 @@ abstract class hfa extends wj implements e {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param6 + 41);
+          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param6 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -322,7 +322,7 @@ abstract class hfa extends wj implements e {
           }
           L4: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -345,7 +345,7 @@ abstract class hfa extends wj implements e {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
         return stackIn_5_0;
     }
@@ -443,7 +443,7 @@ abstract class hfa extends wj implements e {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var5;
-            stackOut_14_1 = new StringBuilder().append("hfa.I(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_14_1 = new StringBuilder().append("hfa.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -466,7 +466,7 @@ abstract class hfa extends wj implements e {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_13_0 != 0;
     }
@@ -509,7 +509,7 @@ abstract class hfa extends wj implements e {
         var6 = BachelorFridge.field_y;
         try {
           L0: {
-            StringBuilder discarded$18 = param2.append(10);
+            StringBuilder discarded$18 = param2.append('\n');
             if (param3 >= 107) {
               var5_int = 0;
               L1: while (true) {
@@ -525,7 +525,7 @@ abstract class hfa extends wj implements e {
                   }
                   break L0;
                 } else {
-                  StringBuilder discarded$21 = param2.append(32);
+                  StringBuilder discarded$21 = param2.append(' ');
                   var5_int++;
                   continue L1;
                 }
@@ -539,7 +539,7 @@ abstract class hfa extends wj implements e {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5;
-            stackOut_10_1 = new StringBuilder().append("hfa.D(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("hfa.D(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -564,7 +564,7 @@ abstract class hfa extends wj implements e {
           }
           L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -587,7 +587,7 @@ abstract class hfa extends wj implements e {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param3 + 41);
+          throw pe.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param3 + ')');
         }
     }
 
@@ -634,7 +634,7 @@ abstract class hfa extends wj implements e {
           L3: {
             var7 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var7;
-            stackOut_6_1 = new StringBuilder().append("hfa.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_6_1 = new StringBuilder().append("hfa.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -657,7 +657,7 @@ abstract class hfa extends wj implements e {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param4 + 44 + param5 + 41);
+          throw pe.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -697,7 +697,7 @@ abstract class hfa extends wj implements e {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("hfa.O(").append(param0).append(44).append(param1).append(44);
+            stackOut_3_1 = new StringBuilder().append("hfa.O(").append(param0).append(',').append(param1).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -720,7 +720,7 @@ abstract class hfa extends wj implements e {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param3 + 41);
+          throw pe.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param3 + ')');
         }
     }
 
@@ -785,7 +785,7 @@ abstract class hfa extends wj implements e {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("hfa.T(").append(0).append(44);
+            stackOut_6_1 = new StringBuilder().append("hfa.T(").append(0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -808,7 +808,7 @@ abstract class hfa extends wj implements e {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -865,7 +865,7 @@ abstract class hfa extends wj implements e {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("hfa.R(").append(-14391).append(44);
+            stackOut_6_1 = new StringBuilder().append("hfa.R(").append(-14391).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -888,7 +888,7 @@ abstract class hfa extends wj implements e {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -986,7 +986,7 @@ abstract class hfa extends wj implements e {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
         }
         return stackIn_6_0 != 0;
     }

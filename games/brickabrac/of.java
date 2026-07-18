@@ -41,7 +41,7 @@ final class of extends gf {
             }
             wd.field_w.a((mh) (Object) param1, 0);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "of.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "of.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

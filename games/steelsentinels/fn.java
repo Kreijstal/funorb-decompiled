@@ -118,7 +118,7 @@ final class fn {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var5;
-            stackOut_6_1 = new StringBuilder().append("fn.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_6_1 = new StringBuilder().append("fn.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -141,7 +141,7 @@ final class fn {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 
@@ -231,7 +231,7 @@ final class fn {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var2;
-            stackOut_24_1 = new StringBuilder().append("fn.A(").append(-119).append(44);
+            stackOut_24_1 = new StringBuilder().append("fn.A(").append(-119).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -254,7 +254,7 @@ final class fn {
               break L3;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
     }
 

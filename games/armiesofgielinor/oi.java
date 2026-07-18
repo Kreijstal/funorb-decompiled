@@ -100,7 +100,7 @@ final class oi implements kh {
           }
           L3: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
             stackIn_19_0 = stackOut_16_0;
             stackIn_19_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -123,7 +123,7 @@ final class oi implements kh {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 0 + 44 + 1 + 44 + param4 + 41);
+          throw ig.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + false + ',' + 1 + ',' + param4 + ')');
         }
         return (af) (Object) stackIn_11_0;
     }
@@ -222,7 +222,7 @@ final class oi implements kh {
               break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ig.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

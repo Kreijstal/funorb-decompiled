@@ -51,7 +51,7 @@ final class fd extends si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var3, "fd.E(" + 123 + 44 + param1 + 44 + param2 + 41);
+          throw ma.a((Throwable) (Object) var3, "fd.E(" + 123 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_11_0;
     }

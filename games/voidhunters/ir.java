@@ -66,7 +66,7 @@ final class ir extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -147,7 +147,7 @@ final class ir extends rqa {
             fva.field_p = true;
             lsa.field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ir.E(" + 39 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ir.E(" + 39 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -171,7 +171,7 @@ final class ir extends rqa {
             var5.a(1, 1, new ml(23));
             param0.a(1, 5, var5);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ir.F(" + (param0 != null ? "{...}" : "null") + 44 + 127 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ir.F(" + (param0 != null ? "{...}" : "null") + ',' + 127 + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class ir extends rqa {
                           if (var4 == 41) {
                             break L3;
                           } else {
-                            StringBuilder discarded$5 = var3.append(var4);
+                            StringBuilder discarded$5 = var3.append((char) var4);
                             continue L1;
                           }
                         }
@@ -280,7 +280,7 @@ final class ir extends rqa {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var2;
-            stackOut_20_1 = new StringBuilder().append("ir.D(").append(-20).append(44);
+            stackOut_20_1 = new StringBuilder().append("ir.D(").append(-20).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -303,7 +303,7 @@ final class ir extends rqa {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
         }
         return stackIn_19_0;
     }

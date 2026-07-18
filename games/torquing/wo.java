@@ -18,7 +18,7 @@ final class wo implements Iterator {
             param2[1 + param1] = param2[1 + param1] / var3_int;
             param2[2 + param1] = param2[2 + param1] / var3_int;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "wo.E(" + 49 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "wo.E(" + 49 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class wo implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var6, "wo.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 1 + 44 + param5 + 41);
+          throw rb.a((Throwable) (Object) var6, "wo.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + true + ',' + param5 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class wo implements Iterator {
             ((wo) this).field_c = ((wo) this).field_a.field_a.field_p;
             ((wo) this).field_b = null;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "wo.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "wo.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

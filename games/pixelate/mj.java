@@ -86,7 +86,7 @@ final class mj {
             }
             ki.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "mj.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "mj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -187,7 +187,7 @@ final class mj {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var3;
-            stackOut_23_1 = new StringBuilder().append("mj.E(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("mj.E(").append(param0).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -210,7 +210,7 @@ final class mj {
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param2 + ')');
         }
         return (String) (Object) stackIn_22_0;
     }

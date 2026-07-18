@@ -19,7 +19,7 @@ final class uh {
         try {
             this.a(((uh) this).field_b + 1, param0, 1, param0.length, param1);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "uh.J(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "uh.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -144,7 +144,7 @@ final class uh {
             }
             bc.a(param1, param4, ((uh) this).field_a, param0, param3);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "uh.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 44 + param3 + 44 + param4 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "uh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + 1 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

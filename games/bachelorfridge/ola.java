@@ -743,7 +743,7 @@ final class ola {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "ola.H(" + -60 + 41);
+          throw pe.a((Throwable) (Object) var1, "ola.H(" + -60 + ')');
         }
     }
 
@@ -1178,7 +1178,7 @@ final class ola {
           L5: {
             var3 = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var3;
-            stackOut_16_1 = new StringBuilder().append("ola.T(").append(param0).append(44);
+            stackOut_16_1 = new StringBuilder().append("ola.T(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -1201,7 +1201,7 @@ final class ola {
               break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
         }
     }
 
@@ -1249,7 +1249,7 @@ final class ola {
             dg.a(400, 400, 384, 77, var3);
             hga.field_U.a((byte) 122);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ola.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ola.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1364,7 +1364,7 @@ final class ola {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw pe.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_21_0 != 0;
     }
@@ -1440,7 +1440,7 @@ final class ola {
           L5: {
             var3_ref = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var3_ref;
-            stackOut_15_1 = new StringBuilder().append("ola.U(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("ola.U(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -1463,7 +1463,7 @@ final class ola {
               break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
         }
     }
 

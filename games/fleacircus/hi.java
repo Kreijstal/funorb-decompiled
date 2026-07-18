@@ -22,7 +22,7 @@ final class hi extends lh {
             int discarded$0 = 10245;
             df.a(param1);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "hi.D(" + -38 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "hi.D(" + -38 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class hi extends lh {
           }
           L4: {
             stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -136,7 +136,7 @@ final class hi extends lh {
               break L4;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + 52 + 41);
+          throw pf.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + 52 + ')');
         }
     }
 

@@ -22,7 +22,7 @@ class bo extends ff {
             param1.a(-23054, ((bo) this).field_m);
             param1.a(false, ((bo) this).field_k);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "bo.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "bo.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -31,7 +31,7 @@ class bo extends ff {
             ((bo) this).field_k = param1;
             ((bo) this).field_m = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "bo.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "bo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -71,7 +71,7 @@ class bo extends ff {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("bo.A(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("bo.A(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -94,7 +94,7 @@ class bo extends ff {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 

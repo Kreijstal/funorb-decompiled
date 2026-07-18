@@ -148,7 +148,7 @@ final class qh {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var3;
-            stackOut_23_1 = new StringBuilder().append("qh.B(").append(-13716).append(44);
+            stackOut_23_1 = new StringBuilder().append("qh.B(").append(-13716).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -171,7 +171,7 @@ final class qh {
               break L4;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param2 + ')');
         }
     }
 
@@ -242,7 +242,7 @@ final class qh {
                   L4: while (true) {
                     if (var5 >= of.field_q.length) {
                       if (var2 != null) {
-                        int discarded$4 = tg.field_l.a("Screenshot(s) " + var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        int discarded$4 = tg.field_l.a("Screenshot(s) " + (String) var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L3;
                       } else {
                         break L3;
@@ -256,7 +256,7 @@ final class qh {
                               var2 = (Object) (Object) Integer.toString(var5);
                               break L5;
                             } else {
-                              var2 = (Object) (Object) (var2 + ", " + var5);
+                              var2 = (Object) (Object) ((String) var2 + ", " + var5);
                               break L5;
                             }
                           } else {
@@ -296,7 +296,7 @@ final class qh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var1, "qh.I(" + 245 + 41);
+          throw vk.a((Throwable) (Object) var1, "qh.I(" + 245 + ')');
         }
     }
 
@@ -461,7 +461,7 @@ final class qh {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("qh.D(").append(0).append(44);
+            stackOut_2_1 = new StringBuilder().append("qh.D(").append(false).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -486,7 +486,7 @@ final class qh {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -509,7 +509,7 @@ final class qh {
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -545,7 +545,7 @@ final class qh {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("qh.G(").append(16777215).append(44);
+            stackOut_2_1 = new StringBuilder().append("qh.G(").append(16777215).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -568,7 +568,7 @@ final class qh {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param2 + ')');
         }
         return stackIn_1_0;
     }

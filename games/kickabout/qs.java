@@ -282,7 +282,7 @@ final class qs extends ta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "qs.I(" + 0 + 41);
+          throw nb.a((Throwable) (Object) var1, "qs.I(" + false + ')');
         }
     }
 

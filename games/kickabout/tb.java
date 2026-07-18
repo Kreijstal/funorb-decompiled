@@ -394,7 +394,7 @@ final class tb extends bi {
             }
             np.field_Jb.a((gn) (Object) new i(param1), 3);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "tb.I(" + 126 + 44 + param1 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "tb.I(" + 126 + ',' + param1 + ')');
         }
     }
 
@@ -550,7 +550,7 @@ final class tb extends bi {
                   break L12;
                 }
               }
-              throw nb.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param1 + 44 + param2 + 41);
+              throw nb.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param1 + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -634,7 +634,7 @@ final class tb extends bi {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("tb.E(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("tb.E(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -657,7 +657,7 @@ final class tb extends bi {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
     }
 
@@ -838,7 +838,7 @@ final class tb extends bi {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + -125 + 41);
+          throw nb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + -125 + ')');
         }
         return stackIn_7_0 != 0;
     }

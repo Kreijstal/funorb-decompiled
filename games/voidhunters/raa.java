@@ -69,7 +69,7 @@ final class raa extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -141,7 +141,7 @@ final class raa extends rqa {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var2_ref;
-            stackOut_8_1 = new StringBuilder().append("raa.B(").append(-99).append(44);
+            stackOut_8_1 = new StringBuilder().append("raa.B(").append(-99).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -164,7 +164,7 @@ final class raa extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
     }
 

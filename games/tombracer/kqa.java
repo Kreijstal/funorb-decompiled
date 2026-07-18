@@ -176,7 +176,7 @@ final class kqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1_ref, "kqa.D(" + param0 + 41);
+          throw tba.a((Throwable) (Object) var1_ref, "kqa.D(" + param0 + ')');
         }
     }
 
@@ -185,7 +185,7 @@ final class kqa {
             ((kqa) this).field_d = param0;
             ((kqa) this).a(false);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "kqa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "kqa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

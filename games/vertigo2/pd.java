@@ -98,7 +98,7 @@ final class pd {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5;
-            stackOut_5_1 = new StringBuilder().append("pd.B(").append(-1).append(44).append(256).append(44).append(1048576).append(44).append(param3).append(44);
+            stackOut_5_1 = new StringBuilder().append("pd.B(").append(-1).append(',').append(256).append(',').append(1048576).append(',').append(param3).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -121,7 +121,7 @@ final class pd {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
     }
 
@@ -203,7 +203,7 @@ final class pd {
                   break L2;
                 }
               }
-              throw wn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 1000000 + 41);
+              throw wn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + 1000000 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

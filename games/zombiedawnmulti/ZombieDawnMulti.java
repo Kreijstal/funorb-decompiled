@@ -325,7 +325,7 @@ public final class ZombieDawnMulti extends aq {
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
-              throw fa.a((Throwable) (Object) var2, "ZombieDawnMulti.IA(" + param0 + 41);
+              throw fa.a((Throwable) (Object) var2, "ZombieDawnMulti.IA(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -378,7 +378,7 @@ public final class ZombieDawnMulti extends aq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2_ref, "ZombieDawnMulti.JA(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var2_ref, "ZombieDawnMulti.JA(" + param0 + ')');
         }
     }
 
@@ -816,7 +816,7 @@ public final class ZombieDawnMulti extends aq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var3, "ZombieDawnMulti.BA(" + 1 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) var3, "ZombieDawnMulti.BA(" + true + ',' + param1 + ')');
         }
     }
 
@@ -1676,7 +1676,7 @@ public final class ZombieDawnMulti extends aq {
             field_K = null;
             field_M = null;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ZombieDawnMulti.EA(" + param0 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "ZombieDawnMulti.EA(" + param0 + ')');
         }
     }
 
@@ -1713,7 +1713,7 @@ public final class ZombieDawnMulti extends aq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "ZombieDawnMulti.LA(" + -126 + 41);
+          throw fa.a((Throwable) (Object) var2, "ZombieDawnMulti.LA(" + -126 + ')');
         }
     }
 
@@ -1749,7 +1749,7 @@ public final class ZombieDawnMulti extends aq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2_ref, "ZombieDawnMulti.GA(" + -50 + 41);
+          throw fa.a((Throwable) (Object) var2_ref, "ZombieDawnMulti.GA(" + -50 + ')');
         }
     }
 
@@ -1816,7 +1816,7 @@ public final class ZombieDawnMulti extends aq {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var5;
-            stackOut_8_1 = new StringBuilder().append("ZombieDawnMulti.CA(").append(param0).append(44).append(param1).append(44);
+            stackOut_8_1 = new StringBuilder().append("ZombieDawnMulti.CA(").append(param0).append(',').append(param1).append(',');
             stackIn_11_0 = stackOut_8_0;
             stackIn_11_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -1841,7 +1841,7 @@ public final class ZombieDawnMulti extends aq {
           }
           L2: {
             stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_15_0 = stackOut_12_0;
             stackIn_15_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -1864,7 +1864,7 @@ public final class ZombieDawnMulti extends aq {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param4 + 41);
+          throw fa.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param4 + ')');
         }
         return stackIn_7_0;
     }
@@ -2588,7 +2588,7 @@ public final class ZombieDawnMulti extends aq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "ZombieDawnMulti.HA(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var2, "ZombieDawnMulti.HA(" + param0 + ')');
         }
     }
 
@@ -2727,7 +2727,7 @@ public final class ZombieDawnMulti extends aq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "ZombieDawnMulti.FA(" + -123 + 41);
+          throw fa.a((Throwable) (Object) var2, "ZombieDawnMulti.FA(" + -123 + ')');
         }
     }
 
@@ -3328,7 +3328,7 @@ public final class ZombieDawnMulti extends aq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "ZombieDawnMulti.KA(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var2, "ZombieDawnMulti.KA(" + param0 + ')');
         }
     }
 

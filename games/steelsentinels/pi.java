@@ -20,7 +20,7 @@ final class pi extends java.awt.Canvas {
         try {
             ((pi) this).field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "pi.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "pi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class pi extends java.awt.Canvas {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var4;
-            stackOut_17_1 = new StringBuilder().append("pi.C(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("pi.C(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -127,7 +127,7 @@ final class pi extends java.awt.Canvas {
               break L5;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param2 + 44 + param3 + 41);
+          throw ci.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_16_0;
     }
@@ -136,7 +136,7 @@ final class pi extends java.awt.Canvas {
         try {
             ((pi) this).field_d.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "pi.paint(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "pi.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class pi extends java.awt.Canvas {
         try {
             ((pi) this).field_d.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "pi.update(" + (param0 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "pi.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

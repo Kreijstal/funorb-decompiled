@@ -180,7 +180,7 @@ abstract class pt extends sf {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
         }
     }
 
@@ -266,7 +266,7 @@ abstract class pt extends sf {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 44 + -12215 + 41);
+          throw ig.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + -12215 + ')');
         }
         return stackIn_12_0 != 0;
     }
@@ -317,7 +317,7 @@ abstract class pt extends sf {
           L1: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4_ref2;
-            stackOut_4_1 = new StringBuilder().append("pt.E(").append(0).append(44).append(12).append(44);
+            stackOut_4_1 = new StringBuilder().append("pt.E(").append(0).append(',').append(12).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -340,7 +340,7 @@ abstract class pt extends sf {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 0 + 41);
+          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 0 + ')');
         }
     }
 
@@ -359,7 +359,7 @@ abstract class pt extends sf {
             ((pt) this).a((byte) 10, (kb) (Object) ((pt) this).field_cb);
             ((pt) this).field_jb = null;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "pt.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "pt.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -372,7 +372,7 @@ abstract class pt extends sf {
             ((pt) this).field_ib = param3;
             this.b(-36, param1);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "pt.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "pt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

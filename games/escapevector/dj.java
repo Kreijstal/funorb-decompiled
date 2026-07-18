@@ -60,7 +60,7 @@ final class dj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var3, "dj.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw t.a((Throwable) (Object) var3, "dj.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -200,7 +200,7 @@ final class dj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "dj.C(" + param0 + 41);
+          throw t.a((Throwable) (Object) var1, "dj.C(" + param0 + ')');
         }
         return stackIn_25_0;
     }

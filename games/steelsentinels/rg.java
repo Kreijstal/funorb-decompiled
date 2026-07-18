@@ -83,7 +83,7 @@ final class rg {
               break L1;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_7_0;
     }
@@ -162,7 +162,7 @@ final class rg {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var2;
-            stackOut_12_1 = new StringBuilder().append("rg.A(").append(0).append(44);
+            stackOut_12_1 = new StringBuilder().append("rg.A(").append(false).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -185,7 +185,7 @@ final class rg {
               break L3;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 
@@ -328,7 +328,7 @@ final class rg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var1, "rg.F(" + 118 + 41);
+          throw ci.a((Throwable) (Object) var1, "rg.F(" + 118 + ')');
         }
     }
 
@@ -405,7 +405,7 @@ final class rg {
                       if (var2 == null) {
                         break L4;
                       } else {
-                        int discarded$9 = wn.field_a.a("Screenshot(s) " + var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        int discarded$9 = wn.field_a.a("Screenshot(s) " + (String) var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L4;
                       }
                     } else {
@@ -431,7 +431,7 @@ final class rg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var1, "rg.D(" + 30 + 41);
+          throw ci.a((Throwable) (Object) var1, "rg.D(" + 30 + ')');
         }
     }
 

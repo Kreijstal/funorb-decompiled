@@ -60,7 +60,7 @@ final class jc extends mi {
             ((jc) this).field_F = param0;
             ((jc) this).field_G = 256;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "jc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "jc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

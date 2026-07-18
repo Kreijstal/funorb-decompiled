@@ -57,7 +57,7 @@ final class nb extends hi {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("nb.B(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("nb.B(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -80,7 +80,7 @@ final class nb extends hi {
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
         }
         return (String) (Object) stackIn_7_0;
     }
@@ -176,7 +176,7 @@ final class nb extends hi {
               break L2;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 41);
+          throw dd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ')');
         }
         return stackIn_12_0;
     }

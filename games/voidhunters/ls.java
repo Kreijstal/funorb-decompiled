@@ -35,7 +35,7 @@ final class ls extends rqa {
             var1.d(0, 0);
             bia.a((byte) 124);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ls.C(" + param0 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ls.C(" + param0 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class ls extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -163,7 +163,7 @@ final class ls extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

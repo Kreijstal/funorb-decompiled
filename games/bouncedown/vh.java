@@ -279,7 +279,7 @@ final class vh {
           L3: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var5_ref;
-            stackOut_12_1 = new StringBuilder().append("vh.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_12_1 = new StringBuilder().append("vh.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -302,7 +302,7 @@ final class vh {
               break L3;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 
@@ -345,7 +345,7 @@ final class vh {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("vh.A(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("vh.A(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -368,7 +368,7 @@ final class vh {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 1 + 41);
+          throw ii.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + true + ')');
         }
         return stackIn_4_0;
     }
@@ -690,7 +690,7 @@ final class vh {
               L19: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_69_0 = (RuntimeException) var6_ref;
-                stackOut_69_1 = new StringBuilder().append("vh.B(").append(0).append(44);
+                stackOut_69_1 = new StringBuilder().append("vh.B(").append(0).append(',');
                 stackIn_71_0 = stackOut_69_0;
                 stackIn_71_1 = stackOut_69_1;
                 stackIn_70_0 = stackOut_69_0;
@@ -713,7 +713,7 @@ final class vh {
                   break L19;
                 }
               }
-              throw ii.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+              throw ii.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -820,7 +820,7 @@ final class vh {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -845,7 +845,7 @@ final class vh {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param2).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -868,7 +868,7 @@ final class vh {
               break L3;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -896,7 +896,7 @@ final class vh {
             ((vh) this).field_c = param3;
             ((vh) this).field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "vh.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "vh.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

@@ -277,7 +277,7 @@ final class pi {
               break L7;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + 44 + param1 + 41);
+          throw oj.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + ',' + param1 + ')');
         }
         return stackIn_70_0;
     }

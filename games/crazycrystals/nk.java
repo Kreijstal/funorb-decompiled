@@ -87,7 +87,7 @@ class nk extends ik {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3_ref;
-            stackOut_13_1 = new StringBuilder().append("nk.A(").append(0).append(44).append(66).append(44);
+            stackOut_13_1 = new StringBuilder().append("nk.A(").append(false).append(',').append(66).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -110,7 +110,7 @@ class nk extends ik {
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
     }
 
@@ -159,7 +159,7 @@ class nk extends ik {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) runtimeException;
-            stackOut_7_1 = new StringBuilder().append("nk.<init>(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("nk.<init>(").append(param0).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -182,7 +182,7 @@ class nk extends ik {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param3 + 41);
+          throw dn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param3 + ')');
         }
     }
 

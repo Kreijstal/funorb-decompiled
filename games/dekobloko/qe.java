@@ -283,7 +283,7 @@ final class qe {
           L9: {
             var5 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var5;
-            stackOut_23_1 = new StringBuilder().append("qe.H(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("qe.H(").append(param0).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -306,7 +306,7 @@ final class qe {
               break L9;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param2 + ')');
         }
     }
 
@@ -404,7 +404,7 @@ final class qe {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var4;
-            stackOut_13_1 = new StringBuilder().append("qe.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_13_1 = new StringBuilder().append("qe.C(").append(param0).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -427,7 +427,7 @@ final class qe {
               break L6;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
         }
     }
 

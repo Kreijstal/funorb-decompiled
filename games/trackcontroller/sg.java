@@ -100,7 +100,7 @@ final class sg {
           }
           L4: {
             stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44).append(-105).append(44);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(-105).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -123,7 +123,7 @@ final class sg {
               break L4;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw sl.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
         }
     }
 
@@ -386,7 +386,7 @@ final class sg {
           L7: {
             var6 = decompiledCaughtException;
             stackOut_70_0 = (RuntimeException) var6;
-            stackOut_70_1 = new StringBuilder().append("sg.B(").append(param0).append(44);
+            stackOut_70_1 = new StringBuilder().append("sg.B(").append(param0).append(',');
             stackIn_72_0 = stackOut_70_0;
             stackIn_72_1 = stackOut_70_1;
             stackIn_71_0 = stackOut_70_0;
@@ -411,7 +411,7 @@ final class sg {
           }
           L8: {
             stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44);
+            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(',');
             stackIn_75_0 = stackOut_73_0;
             stackIn_75_1 = stackOut_73_1;
             stackIn_74_0 = stackOut_73_0;
@@ -434,7 +434,7 @@ final class sg {
               break L8;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + param3 + 44 + 0 + 44 + param5 + 41);
+          throw sl.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + ',' + param3 + ',' + 0 + ',' + param5 + ')');
         }
         return stackIn_69_0;
     }

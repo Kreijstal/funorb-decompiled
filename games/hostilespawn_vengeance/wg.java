@@ -21,7 +21,7 @@ final class wg extends dg implements qk {
             ((wg) this).g((byte) -5);
             int var6_int = 22 % ((param4 - -63) / 52);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "wg.E(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "wg.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class wg extends dg implements qk {
         kc var2 = null;
         if (param0 instanceof kc) {
             var2 = (kc) (Object) param0;
-            var2.field_a = var2.field_a + 32 + param1;
+            var2.field_a = var2.field_a + ' ' + param1;
         } else {
             var2 = new kc(param0, param1);
         }
@@ -215,7 +215,7 @@ final class wg extends dg implements qk {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("wg.O(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("wg.O(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -238,7 +238,7 @@ final class wg extends dg implements qk {
               break L1;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
         }
         return stackIn_4_0;
     }
@@ -421,7 +421,7 @@ final class wg extends dg implements qk {
               break L5;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + 1 + 44 + param2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + true + ',' + param2 + ')');
         }
     }
 
@@ -430,7 +430,7 @@ final class wg extends dg implements qk {
         try {
             ((wg) this).field_xb = param1;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "wg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

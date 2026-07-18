@@ -141,7 +141,7 @@ abstract class bp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var3_ref, "bp.J(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) var3_ref, "bp.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

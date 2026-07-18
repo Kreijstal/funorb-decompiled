@@ -55,7 +55,7 @@ class oka extends gha {
           L2: {
             var6 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var6;
-            stackOut_6_1 = new StringBuilder().append("oka.A(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("oka.A(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -78,7 +78,7 @@ class oka extends gha {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw pe.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ class oka extends gha {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var5, "oka.C(" + param0 + 44 + param1 + 44 + param2 + 44 + 0 + 44 + param4 + 41);
+          throw pe.a((Throwable) (Object) var5, "oka.C(" + param0 + ',' + param1 + ',' + param2 + ',' + false + ',' + param4 + ')');
         }
     }
 
@@ -230,7 +230,7 @@ class oka extends gha {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -281,7 +281,7 @@ final class aka extends ana {
             var3 = ((aka) this).field_C.field_l.a(34, ((aka) this).field_q.field_h);
             ((aka) this).field_A = new dda(((aka) this).field_q, var3.field_x, var3.field_J);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "aka.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "aka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

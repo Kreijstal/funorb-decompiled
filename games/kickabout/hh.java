@@ -163,7 +163,7 @@ final class hh {
               break L8;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param1 + ')');
         }
         return stackIn_23_0;
     }

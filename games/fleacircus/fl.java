@@ -17,7 +17,7 @@ final class fl {
             ak.field_a = new ui(nb.field_a, (qa) (Object) lg.field_b);
             nb.field_a.b((qa) (Object) ak.field_a, (byte) -35);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "fl.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + -22175 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "fl.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + -22175 + ')');
         }
     }
 
@@ -32,7 +32,7 @@ final class fl {
             var2 = hk.a(param1, "jagex logo2.packvorbis", "");
             sf discarded$0 = var2.b();
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "fl.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "fl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -163,7 +163,7 @@ final class fl {
               break L5;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
     }
 

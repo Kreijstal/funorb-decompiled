@@ -354,7 +354,7 @@ final class mg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var3, "mg.M(" + param0 + 44 + 0 + 44 + param2 + 41);
+          throw sl.a((Throwable) (Object) var3, "mg.M(" + param0 + ',' + 0 + ',' + param2 + ')');
         }
         return stackIn_13_0;
     }
@@ -3504,7 +3504,7 @@ final class mg {
               break L1;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw sl.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
     }
 

@@ -76,7 +76,7 @@ final class jra extends loa {
           L5: {
             var5 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var5;
-            stackOut_12_1 = new StringBuilder().append("jra.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("jra.B(").append(param0).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -99,7 +99,7 @@ final class jra extends loa {
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param3 + ')');
         }
     }
 

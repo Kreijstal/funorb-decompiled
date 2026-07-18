@@ -40,7 +40,7 @@ final class iga extends ija implements java.awt.image.ImageProducer {
             param0.setColorModel(((iga) this).field_j);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "iga.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "iga.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class iga extends ija implements java.awt.image.ImageProducer {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class iga extends ija implements java.awt.image.ImageProducer {
             this.b(param2 + -11329);
             boolean discarded$2 = ((iga) this).field_p.prepareImage(((iga) this).field_l, (java.awt.image.ImageObserver) (Object) ((iga) this).field_p);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "iga.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "iga.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class iga extends ija implements java.awt.image.ImageProducer {
             boolean discarded$1 = param6.drawImage(((iga) this).field_l, param5 - param2, -param4 + param1, (java.awt.image.ImageObserver) (Object) ((iga) this).field_p);
             param6.setClip(var9);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "iga.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "iga.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
@@ -163,7 +163,7 @@ final class iga extends ija implements java.awt.image.ImageProducer {
         try {
             ((iga) this).addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "iga.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "iga.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

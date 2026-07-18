@@ -95,7 +95,7 @@ final class bn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var2, "bn.B(" + param0 + 44 + param1 + 41);
+          throw kg.a((Throwable) (Object) var2, "bn.B(" + param0 + ',' + param1 + ')');
         }
         return stackIn_20_0 != 0;
     }

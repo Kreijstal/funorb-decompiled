@@ -45,7 +45,7 @@ final class moa {
               if (param0.field_n != 2) {
                 break L0;
               } else {
-                var2 = (Object) (Object) ("<img=1>" + var2);
+                var2 = (Object) (Object) ("<img=1>" + (String) var2);
                 break L0;
               }
             } else {
@@ -115,7 +115,7 @@ final class moa {
                 }
               }
               if (!param0.field_m) {
-                var3 = var3 + var2 + ": ";
+                var3 = var3 + (String) var2 + ": ";
                 break L2;
               } else {
                 break L2;
@@ -151,7 +151,7 @@ final class moa {
               break L8;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + 94 + 41);
+          throw tba.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + 94 + ')');
         }
     }
 

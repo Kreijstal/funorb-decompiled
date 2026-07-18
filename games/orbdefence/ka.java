@@ -140,7 +140,7 @@ final class ka {
                   break L1;
                 }
               }
-              throw dd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 1 + 41);
+              throw dd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

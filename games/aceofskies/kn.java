@@ -137,7 +137,7 @@ final class kn {
               break L5;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 0 + 44 + 29742 + 41);
+          throw pn.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + 0 + ',' + 29742 + ')');
         }
         return (java.awt.Frame) (Object) stackIn_27_0;
     }

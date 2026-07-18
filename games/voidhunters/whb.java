@@ -134,7 +134,7 @@ final class whb implements ntb {
                 }
               }
               var4 = 1;
-              iva.a(-6940, "DebugSendable response has changed. before=" + var6.field_b + ", now=" + ((whb) this).field_b);
+              iva.a(-6940, "DebugSendable response has changed. before=" + (Object) (Object) var6.field_b + ", now=" + (Object) (Object) ((whb) this).field_b);
               break L5;
             }
             if (var4 != 0) {
@@ -172,7 +172,7 @@ final class whb implements ntb {
               break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param1 + ')');
         }
     }
 
@@ -243,7 +243,7 @@ final class whb implements ntb {
           L5: {
             var3_ref = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3_ref;
-            stackOut_11_1 = new StringBuilder().append("whb.C(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("whb.C(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -266,7 +266,7 @@ final class whb implements ntb {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
         }
         return stackIn_10_0 != 0;
     }
@@ -354,7 +354,7 @@ final class whb implements ntb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ')');
         }
     }
 
@@ -473,7 +473,7 @@ final class whb implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ')');
         }
     }
 
@@ -544,7 +544,7 @@ final class whb implements ntb {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var3;
-            stackOut_17_1 = new StringBuilder().append("whb.D(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("whb.D(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -567,7 +567,7 @@ final class whb implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
         }
     }
 

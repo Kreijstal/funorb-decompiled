@@ -22,7 +22,7 @@ final class kla {
             }
             ((kla) this).field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "kla.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 0 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "kla.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + false + ')');
         }
     }
 
@@ -187,7 +187,7 @@ final class kla {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -202,7 +202,7 @@ final class kla {
         try {
             ((kla) this).field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "kla.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "kla.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

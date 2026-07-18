@@ -20,7 +20,7 @@ final class ui extends br {
             var2 = ac.a(param1, "jagex logo2.packvorbis", "");
             jd discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ui.A(" + 7478 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "ui.A(" + 7478 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

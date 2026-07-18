@@ -66,7 +66,7 @@ final class wq extends k {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4;
-            stackOut_12_1 = new StringBuilder().append("wq.E(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("wq.E(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -89,7 +89,7 @@ final class wq extends k {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class wq extends k {
             int discarded$0 = hfa.field_z.a(param8, param10, param4, 300, 300, 65793, -1, 1, 0, 14);
             int discarded$1 = jha.field_g.a(param8, param10, 20 + param4, 300, 300, 16777215, -1, 1, 0, 14);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "wq.C(" + 1 + 44 + 14 + 44 + 300 + 44 + 16777215 + 44 + param4 + 44 + 300 + 44 + 65793 + 44 + 1 + 44 + (param8 != null ? "{...}" : "null") + 44 + 0 + 44 + param10 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "wq.C(" + 1 + ',' + 14 + ',' + 300 + ',' + 16777215 + ',' + param4 + ',' + 300 + ',' + 65793 + ',' + true + ',' + (param8 != null ? "{...}" : "null") + ',' + 0 + ',' + param10 + ')');
         }
     }
 

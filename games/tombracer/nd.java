@@ -104,7 +104,7 @@ final class nd implements Iterator {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -1 + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class nd implements Iterator {
             int discarded$0 = 1;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "nd.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "nd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

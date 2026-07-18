@@ -64,7 +64,7 @@ final class ui {
           L1: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3_ref;
-            stackOut_7_1 = new StringBuilder().append("ui.C(").append(80).append(44);
+            stackOut_7_1 = new StringBuilder().append("ui.C(").append(80).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -87,7 +87,7 @@ final class ui {
               break L1;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + -48 + 41);
+          throw qk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + -48 + ')');
         }
     }
 

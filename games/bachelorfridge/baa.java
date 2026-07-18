@@ -91,7 +91,7 @@ final class baa extends ana {
             ((baa) this).field_I = ((baa) this).field_R.field_s.field_J;
             ((baa) this).field_J = nha.field_a.a();
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "baa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "baa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -225,7 +225,7 @@ final class baa extends ana {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 10 + 41);
+          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + true + ',' + param2 + ',' + param3 + ',' + param4 + ',' + 10 + ')');
         }
     }
 

@@ -63,7 +63,7 @@ final class oh {
           L2: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4_ref2;
-            stackOut_6_1 = new StringBuilder().append("oh.C(").append(0).append(44).append(param1).append(44).append(0).append(44);
+            stackOut_6_1 = new StringBuilder().append("oh.C(").append(0).append(',').append(param1).append(',').append(0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -86,7 +86,7 @@ final class oh {
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
         }
     }
 

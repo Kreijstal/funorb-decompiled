@@ -74,7 +74,7 @@ final class sh {
               L2: {
                 var4 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_8_0 = (RuntimeException) var4;
-                stackOut_8_1 = new StringBuilder().append("sh.A(").append(param0).append(44).append(param1).append(44);
+                stackOut_8_1 = new StringBuilder().append("sh.A(").append(param0).append(',').append(param1).append(',');
                 stackIn_10_0 = stackOut_8_0;
                 stackIn_10_1 = stackOut_8_1;
                 stackIn_9_0 = stackOut_8_0;
@@ -99,7 +99,7 @@ final class sh {
               }
               L3: {
                 stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-                stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+                stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
                 stackIn_13_0 = stackOut_11_0;
                 stackIn_13_1 = stackOut_11_1;
                 stackIn_12_0 = stackOut_11_0;
@@ -122,7 +122,7 @@ final class sh {
                   break L3;
                 }
               }
-              throw bd.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+              throw bd.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

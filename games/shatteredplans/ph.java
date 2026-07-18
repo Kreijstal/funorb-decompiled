@@ -62,7 +62,7 @@ final class ph implements jk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1_ref, "ph.B(" + param0 + 41);
+          throw r.a((Throwable) (Object) var1_ref, "ph.B(" + param0 + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class ph implements jk {
             tc.a((byte) 23, param0.a(true, "tutorial.txt", ""));
             int var2_int = 45;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ph.C(" + (param0 != null ? "{...}" : "null") + 44 + -85 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "ph.C(" + (param0 != null ? "{...}" : "null") + ',' + -85 + ')');
         }
     }
 

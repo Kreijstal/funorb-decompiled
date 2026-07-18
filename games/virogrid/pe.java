@@ -12,7 +12,7 @@ final class pe extends l {
         try {
             wl.a(param2, param1, 1024, 106, param3, param0, 22050, 22050);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "pe.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + -18 + 44 + 22050 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "pe.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + -18 + ',' + 22050 + ')');
         }
     }
 
@@ -36,7 +36,7 @@ final class pe extends l {
             }
             var9 = -57 / ((-54 - param3) / 53);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "pe.D(" + param0 + 44 + 1141646 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "pe.D(" + param0 + ',' + 1141646 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -139,7 +139,7 @@ final class pe extends l {
           }
           L2: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -164,7 +164,7 @@ final class pe extends l {
           }
           L3: {
             stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -187,7 +187,7 @@ final class pe extends l {
               break L3;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + 0 + 44 + 0 + 41);
+          throw kg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + 0 + ',' + 0 + ')');
         }
         return stackIn_5_0;
     }
@@ -354,7 +354,7 @@ final class pe extends l {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "pe.F(" + -1 + 41);
+          throw kg.a((Throwable) (Object) var1, "pe.F(" + -1 + ')');
         }
     }
 
@@ -374,7 +374,7 @@ final class pe extends l {
             ((pe) this).field_h = param1;
             ((pe) this).field_g.f(((pe) this).field_i * ag.field_c + 128 >> 8);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "pe.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

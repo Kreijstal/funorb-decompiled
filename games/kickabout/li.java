@@ -22,7 +22,7 @@ final class li {
 
     public final String toString() {
         if (((li) this).field_b) {
-            return rm.a(((li) this).field_d, (byte) 117) + "{" + ((li) this).field_d + "}";
+            return (Object) (Object) rm.a(((li) this).field_d, (byte) 117) + "{" + ((li) this).field_d + "}";
         }
         if (!(null != ((li) this).field_d)) {
             return "null";
@@ -68,7 +68,7 @@ final class li {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("li.A(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("li.A(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -91,7 +91,7 @@ final class li {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -229,7 +229,7 @@ final class li {
             ((li) this).field_b = false;
             ((li) this).field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "li.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

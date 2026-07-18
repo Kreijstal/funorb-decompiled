@@ -107,7 +107,7 @@ final class jqb extends rqa {
           L3: {
             var11 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var11;
-            stackOut_7_1 = new StringBuilder().append("jqb.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("jqb.C(").append(param0).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -132,7 +132,7 @@ final class jqb extends rqa {
           }
           L4: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(100).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(100).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -157,7 +157,7 @@ final class jqb extends rqa {
           }
           L5: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -182,7 +182,7 @@ final class jqb extends rqa {
           }
           L6: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -205,7 +205,7 @@ final class jqb extends rqa {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param9 + 44 + param10 + 41);
+          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param9 + ',' + param10 + ')');
         }
     }
 
@@ -312,7 +312,7 @@ final class jqb extends rqa {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var6;
-            stackOut_27_1 = new StringBuilder().append("jqb.B(").append(11168).append(44).append(param1).append(44);
+            stackOut_27_1 = new StringBuilder().append("jqb.B(").append(11168).append(',').append(param1).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -335,7 +335,7 @@ final class jqb extends rqa {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param3 + 44 + 0 + 44 + param5 + 41);
+          throw rta.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param3 + ',' + 0 + ',' + param5 + ')');
         }
         return (java.awt.Frame) (Object) stackIn_26_0;
     }
@@ -409,7 +409,7 @@ final class jqb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

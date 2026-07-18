@@ -95,7 +95,7 @@ final class oo extends bca {
               break L0;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class oo extends bca {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var4;
-            stackOut_11_1 = new StringBuilder().append("oo.B(").append(param0).append(44).append(-77).append(44);
+            stackOut_11_1 = new StringBuilder().append("oo.B(").append(param0).append(',').append(-77).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -188,7 +188,7 @@ final class oo extends bca {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param3 + 41);
+          throw pe.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param3 + ')');
         }
         return stackIn_10_0;
     }
@@ -232,7 +232,7 @@ final class oo extends bca {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("oo.A(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("oo.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -255,7 +255,7 @@ final class oo extends bca {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
         }
         return (at) (Object) stackIn_3_0;
     }
@@ -276,7 +276,7 @@ final class oo extends bca {
             }
             ((oo) this).field_r = param0.b(16711935);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "oo.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "oo.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -285,7 +285,7 @@ final class oo extends bca {
         try {
             ((oo) this).field_r = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "oo.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "oo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -326,7 +326,7 @@ final class oo extends bca {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("oo.F(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("oo.F(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -349,7 +349,7 @@ final class oo extends bca {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
         }
     }
 
@@ -364,7 +364,7 @@ final class oo extends bca {
             ((oo) this).field_l.a(79, param0).a(false, ((oo) this).b(param0, -1), ((oo) this).field_r);
             int var3_int = 118 / ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "oo.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "oo.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -124,7 +124,7 @@ final class vl {
             param0.field_f.field_g = param0;
             param0.field_g.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "vl.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "vl.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ final class vl {
             param1.field_f.field_g = param1;
             param1.field_g.field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "vl.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "vl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

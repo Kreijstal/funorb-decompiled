@@ -44,7 +44,7 @@ final class pg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1, "pg.A(" + 0 + 41);
+          throw fa.a((Throwable) (Object) var1, "pg.A(" + false + ')');
         }
     }
 
@@ -144,7 +144,7 @@ final class pg {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ')');
         }
         return stackIn_13_0;
     }

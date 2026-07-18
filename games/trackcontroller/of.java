@@ -107,7 +107,7 @@ final class of extends ec {
           }
           L4: {
             stackOut_12_0 = stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -130,7 +130,7 @@ final class of extends ec {
               break L4;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + 0 + 41);
+          throw sl.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + false + ')');
         }
         return stackIn_8_0;
     }
@@ -225,7 +225,7 @@ final class of extends ec {
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_4_0 = (RuntimeException) var2_ref2;
-                stackOut_4_1 = new StringBuilder().append("of.B(").append(-80).append(44);
+                stackOut_4_1 = new StringBuilder().append("of.B(").append(-80).append(',');
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
                 stackIn_5_0 = stackOut_4_0;
@@ -248,7 +248,7 @@ final class of extends ec {
                   break L1;
                 }
               }
-              throw sl.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+              throw sl.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

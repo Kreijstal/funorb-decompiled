@@ -59,7 +59,7 @@ final class ub {
               L0: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_4_0 = (RuntimeException) var4_ref2;
-                stackOut_4_1 = new StringBuilder().append("ub.D(").append(-85).append(44).append(param1).append(44);
+                stackOut_4_1 = new StringBuilder().append("ub.D(").append(-85).append(',').append(param1).append(',');
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
                 stackIn_5_0 = stackOut_4_0;
@@ -82,7 +82,7 @@ final class ub {
                   break L0;
                 }
               }
-              throw la.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param3 + 41);
+              throw la.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param3 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

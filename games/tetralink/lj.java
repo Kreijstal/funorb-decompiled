@@ -169,7 +169,7 @@ final class lj implements Iterator {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var2;
-            stackOut_24_1 = new StringBuilder().append("lj.A(").append(-16483).append(44);
+            stackOut_24_1 = new StringBuilder().append("lj.A(").append(-16483).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -192,7 +192,7 @@ final class lj implements Iterator {
               break L7;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
         }
         return stackIn_23_0;
     }
@@ -381,7 +381,7 @@ final class lj implements Iterator {
               break L3;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 41);
+          throw oi.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ')');
         }
         return stackIn_11_0;
     }
@@ -393,7 +393,7 @@ final class lj implements Iterator {
             int discarded$0 = -1;
             this.a();
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "lj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "lj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

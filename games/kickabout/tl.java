@@ -259,7 +259,7 @@ final class tl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "tl.D(" + 2 + 41);
+          throw nb.a((Throwable) (Object) var1, "tl.D(" + 2 + ')');
         }
     }
 
@@ -312,7 +312,7 @@ final class tl {
                           break L3;
                         } else {
                           if (var4 != 41) {
-                            StringBuilder discarded$5 = var3.append(var4);
+                            StringBuilder discarded$5 = var3.append((char) var4);
                             continue L1;
                           } else {
                             break L3;
@@ -387,7 +387,7 @@ final class tl {
               break L7;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 0 + 41);
+          throw nb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + false + ')');
         }
         return stackIn_20_0;
     }

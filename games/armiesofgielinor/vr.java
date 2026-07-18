@@ -164,7 +164,7 @@ final class vr {
               break L10;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + 18 + 41);
+          throw ig.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + 18 + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class vr {
           L2: {
             var3_ref = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3_ref;
-            stackOut_11_1 = new StringBuilder().append("vr.B(").append(11987).append(44);
+            stackOut_11_1 = new StringBuilder().append("vr.B(").append(11987).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -280,7 +280,7 @@ final class vr {
           }
           L3: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -303,7 +303,7 @@ final class vr {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
         }
         return stackIn_10_0;
     }

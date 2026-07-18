@@ -117,7 +117,7 @@ final class sb {
             ((sb) this).field_f = param0;
             ((sb) this).field_d = ((sb) this).field_f.length();
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "sb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "sb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

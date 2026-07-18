@@ -234,7 +234,7 @@ final class ab extends ln {
               break L3;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 44 + param2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -307,7 +307,7 @@ final class ab extends ln {
             int var5_int = 50 % ((param2 - -43) / 46);
             oh.a(param0.field_h, 0, param4, param3, param0.field_j, 31857, param1);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "ab.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "ab.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
