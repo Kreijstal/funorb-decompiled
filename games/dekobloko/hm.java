@@ -70,7 +70,7 @@ abstract class hm {
             var6 = param4;
             var7 = 1;
             L1: while (true) {
-              if (param3.length() <= var7) {
+              if (~param3.length() >= ~var7) {
                 break L0;
               } else {
                 L2: {

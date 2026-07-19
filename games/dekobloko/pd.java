@@ -35,9 +35,9 @@ final class pd {
             j.a((byte) -33, true, og.field_eb, bg.field_d, param0, ge.field_b, 0);
             var2_int = 0;
             L1: while (true) {
-              if (og.field_eb <= var2_int) {
+              if (~og.field_eb >= ~var2_int) {
                 j.a((byte) -33, false, param0 + og.field_eb, rf.field_g, param0 - -param0, mf.field_Q, param0);
-                if (og.field_eb > param0) {
+                if (~og.field_eb < ~param0) {
                   og.field_eb = param0;
                   break L0;
                 } else {

@@ -105,7 +105,7 @@ final class wa {
               L1: {
                 var10_int = 0;
                 L2: while (true) {
-                  if (var5_int <= var10_int) {
+                  if (~var5_int >= ~var10_int) {
                     break L1;
                   } else {
                     var11 = wj.field_Qb.a(126, param0[var10_int]);

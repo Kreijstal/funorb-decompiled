@@ -112,7 +112,7 @@ abstract class t extends bl {
         var7 = 0;
         var8 = param1;
         L0: while (true) {
-          if (var4 <= var7) {
+          if (~var4 >= ~var7) {
             var6 = 169;
             var4 = 22;
             var5 = 194;
@@ -153,7 +153,7 @@ abstract class t extends bl {
             }
           } else {
             if (hk.field_h <= var8) {
-              if (hk.field_b > var8) {
+              if (~hk.field_b < ~var8) {
                 L3: {
                   var9 = var5 - -((-var5 + var6) * var7 / var4);
                   var10 = 0;

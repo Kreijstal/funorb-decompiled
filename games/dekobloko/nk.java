@@ -26,7 +26,7 @@ final class nk {
     }
 
     final be b(int param0) {
-        int fieldTemp$7 = 0;
+        int fieldTemp$11 = 0;
         be var2_ref_be = null;
         int var2 = 0;
         int var3 = 0;
@@ -46,13 +46,13 @@ final class nk {
           }
         }
         L1: while (true) {
-          if (this.field_o >= this.field_a) {
+          if (~this.field_o <= ~this.field_a) {
             var2 = -38 / ((param0 - -21) / 56);
             return null;
           } else {
-            fieldTemp$7 = this.field_o;
+            fieldTemp$11 = this.field_o;
             this.field_o = this.field_o + 1;
-            var4 = this.field_e[fieldTemp$7].field_p;
+            var4 = this.field_e[fieldTemp$11].field_p;
             var2_ref_be = var4;
             if (var4 != this.field_e[this.field_o + -1]) {
               this.field_m = var2_ref_be.field_p;
@@ -252,7 +252,7 @@ final class nk {
             var10_int = 0;
             var11 = 0;
             L1: while (true) {
-              if (var11 >= rb.field_k.length) {
+              if (~var11 <= ~rb.field_k.length) {
                 L2: {
                   var10_int = (7 + var10_int) / 8;
                   v.field_a = new byte[var10_int];
@@ -643,7 +643,7 @@ final class nk {
         this.field_o = 0;
         this.field_e = new be[param0];
         this.field_a = param0;
-        for (var2 = 0; param0 > var2; var2++) {
+        for (var2 = 0; ~param0 < ~var2; var2++) {
             dupTemp$0 = new be();
             var3 = dupTemp$0;
             this.field_e[var2] = dupTemp$0;

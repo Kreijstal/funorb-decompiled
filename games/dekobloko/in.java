@@ -559,27 +559,27 @@ final class in extends bh {
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        String stackIn_43_2 = null;
+        String stackIn_42_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_1_0 = null;
         Object stackOut_3_0 = null;
         int stackOut_3_1 = 0;
         Object stackOut_2_0 = null;
         int stackOut_2_1 = 0;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
         RuntimeException stackOut_41_0 = null;
         StringBuilder stackOut_41_1 = null;
         String stackOut_41_2 = null;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
+        String stackOut_40_2 = null;
         this.field_r = 0;
         try {
           L0: {
@@ -736,22 +736,19 @@ final class in extends bh {
                                       }
                                     }
                                   }
-                                  L14: {
-                                    if (var22 >= var5 + -1) {
-                                      break L14;
+                                  if (var22 >= var5 + -1) {
+                                    continue L6;
+                                  } else {
+                                    if (var19 != (this.field_t.field_D[var20 + var4_int] & -2147483617)) {
+                                      continue L6;
                                     } else {
-                                      if (var19 != (this.field_t.field_D[var20 + var4_int] & -2147483617)) {
-                                        break L14;
-                                      } else {
-                                        incrementValue$11 = var18;
-                                        var18++;
-                                        var9[incrementValue$11] = var20 - -var4_int;
-                                        this.field_t.field_D[var20 + var4_int] = this.field_t.field_D[var20 + var4_int] + -2147483648;
-                                        break L14;
-                                      }
+                                      incrementValue$11 = var18;
+                                      var18++;
+                                      var9[incrementValue$11] = var20 - -var4_int;
+                                      this.field_t.field_D[var20 + var4_int] = this.field_t.field_D[var20 + var4_int] + -2147483648;
+                                      continue L6;
                                     }
                                   }
-                                  continue L6;
                                 }
                               }
                             }
@@ -763,7 +760,7 @@ final class in extends bh {
                           var23 = -8 + ka.a((byte) 50, 17, tf.field_cb);
                           var24 = (var23 << 24) + (var22 << 16) + ((var20 << 8 & 65280) + (255 & var19));
                           var25 = 0;
-                          L15: while (true) {
+                          L14: while (true) {
                             if (var25 >= var18) {
                               break L4;
                             } else {
@@ -771,7 +768,7 @@ final class in extends bh {
                               this.field_t.field_D[var26] = this.field_t.field_D[var26] - -2147483648;
                               this.field_q[var26] = var24;
                               var25++;
-                              continue L15;
+                              continue L14;
                             }
                           }
                         }
@@ -786,33 +783,33 @@ final class in extends bh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L16: {
+          L15: {
             var4 = decompiledCaughtException;
-            stackOut_40_0 = (RuntimeException) (var4);
-            stackOut_40_1 = new StringBuilder().append("in.<init>(");
-            stackIn_42_0 = stackOut_40_0;
-            stackIn_42_1 = stackOut_40_1;
-            stackIn_41_0 = stackOut_40_0;
-            stackIn_41_1 = stackOut_40_1;
+            stackOut_39_0 = (RuntimeException) (var4);
+            stackOut_39_1 = new StringBuilder().append("in.<init>(");
+            stackIn_41_0 = stackOut_39_0;
+            stackIn_41_1 = stackOut_39_1;
+            stackIn_40_0 = stackOut_39_0;
+            stackIn_40_1 = stackOut_39_1;
             if (param0 == null) {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "null";
-              stackIn_43_0 = stackOut_42_0;
-              stackIn_43_1 = stackOut_42_1;
-              stackIn_43_2 = stackOut_42_2;
-              break L16;
-            } else {
               stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
               stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-              stackOut_41_2 = "{...}";
-              stackIn_43_0 = stackOut_41_0;
-              stackIn_43_1 = stackOut_41_1;
-              stackIn_43_2 = stackOut_41_2;
-              break L16;
+              stackOut_41_2 = "null";
+              stackIn_42_0 = stackOut_41_0;
+              stackIn_42_1 = stackOut_41_1;
+              stackIn_42_2 = stackOut_41_2;
+              break L15;
+            } else {
+              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackOut_40_2 = "{...}";
+              stackIn_42_0 = stackOut_40_0;
+              stackIn_42_1 = stackOut_40_1;
+              stackIn_42_2 = stackOut_40_2;
+              break L15;
             }
           }
-          throw dh.a((Throwable) ((Object) stackIn_43_0), stackIn_43_2 + ',' + param1 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_42_0), stackIn_42_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -832,7 +829,7 @@ final class in extends bh {
           var15 = vl.a(23841, param10, this.field_t.field_C * -param0);
           var16 = var14;
           if (var15 >= 0) {
-            if (this.field_t.field_C >= var15) {
+            if (~this.field_t.field_C <= ~var15) {
               break L0;
             } else {
               var15 = this.field_t.field_C;
@@ -845,7 +842,7 @@ final class in extends bh {
         }
         L1: {
           if (var14 >= 0) {
-            if (this.field_t.field_K >= var14) {
+            if (~this.field_t.field_K <= ~var14) {
               break L1;
             } else {
               var14 = this.field_t.field_K;
@@ -861,7 +858,7 @@ final class in extends bh {
           if (var17 >= this.field_t.field_K) {
             var17 = 0;
             L3: while (true) {
-              if (var14 <= var17) {
+              if (~var14 >= ~var17) {
                 var17 = this.field_t.field_K + -1;
                 L4: while (true) {
                   if (var17 < var14) {
@@ -869,10 +866,10 @@ final class in extends bh {
                   } else {
                     var18 = 0;
                     L5: while (true) {
-                      if (var18 >= var15) {
+                      if (~var18 <= ~var15) {
                         var18 = this.field_t.field_C - 1;
                         L6: while (true) {
-                          if (var15 > var18) {
+                          if (~var15 < ~var18) {
                             var17--;
                             continue L4;
                           } else {

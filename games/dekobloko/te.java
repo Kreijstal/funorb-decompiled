@@ -347,7 +347,7 @@ final class te extends wm {
           L0: {
             L1: {
               var5_int = param4.a(param0);
-              if (var5_int > param2) {
+              if (~var5_int < ~param2) {
                 break L1;
               } else {
                 if (param0.indexOf("<br>") == -1) {
@@ -367,9 +367,9 @@ final class te extends wm {
             var8 = param0.length();
             var9 = 0;
             L2: while (true) {
-              if (var9 >= var8) {
+              if (~var9 <= ~var8) {
                 L3: {
-                  if (var7 >= var8) {
+                  if (~var7 <= ~var8) {
                     break L3;
                   } else {
                     incrementValue$2 = var6;

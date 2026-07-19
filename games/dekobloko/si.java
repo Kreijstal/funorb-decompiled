@@ -267,7 +267,7 @@ final class si implements Iterable {
               var4 = var7;
               var5 = 0;
               L1: while (true) {
-                if (param2.length <= var5) {
+                if (~param2.length >= ~var5) {
                   stackOut_7_0 = (ck[]) (var4);
                   stackIn_8_0 = stackOut_7_0;
                   break L0;
@@ -410,7 +410,7 @@ final class si implements Iterable {
         bh var3 = null;
         this.field_a = param0;
         this.field_h = new bh[param0];
-        for (var2 = 0; param0 > var2; var2++) {
+        for (var2 = 0; ~param0 < ~var2; var2++) {
             dupTemp$0 = new bh();
             var3 = dupTemp$0;
             this.field_h[var2] = dupTemp$0;

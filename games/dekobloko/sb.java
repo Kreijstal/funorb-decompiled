@@ -40,21 +40,22 @@ final class sb extends bh {
                         break L0;
                       } else {
                         if (0 < var1_ref.field_Qb) {
-                          var1_ref.field_Qb = var1_ref.field_Qb - 1;
-                          if (var1_ref.field_Qb != 0) {
-                            var1_ref = (tj) ((Object) oc.field_b.d(true));
-                            continue L3;
-                          } else {
-                            var1_ref.field_hc = 0;
-                            if (!var1_ref.g((byte) 59)) {
-                              var1_ref = (tj) ((Object) oc.field_b.d(true));
-                              continue L3;
+                          L4: {
+                            var1_ref.field_Qb = var1_ref.field_Qb - 1;
+                            if (var1_ref.field_Qb != 0) {
+                              break L4;
                             } else {
-                              var1_ref.b((byte) 101);
-                              var1_ref = (tj) ((Object) oc.field_b.d(true));
-                              continue L3;
+                              var1_ref.field_hc = 0;
+                              if (!var1_ref.g((byte) 59)) {
+                                break L4;
+                              } else {
+                                var1_ref.b((byte) 101);
+                                break L4;
+                              }
                             }
                           }
+                          var1_ref = (tj) ((Object) oc.field_b.d(true));
+                          continue L3;
                         } else {
                           var1_ref = (tj) ((Object) oc.field_b.d(true));
                           continue L3;
@@ -62,49 +63,49 @@ final class sb extends bh {
                       }
                     }
                   } else {
-                    if (var1_ref2.field_Rb > 0) {
-                      var1_ref2.field_Rb = var1_ref2.field_Rb - 1;
-                      if (var1_ref2.field_Rb == 0) {
-                        var1_ref2.field_oc = 0;
-                        if (!var1_ref2.i((byte) 115)) {
-                          var1_ref2 = (ve) ((Object) h.field_b.d(true));
-                          continue L2;
+                    L5: {
+                      if (var1_ref2.field_Rb > 0) {
+                        var1_ref2.field_Rb = var1_ref2.field_Rb - 1;
+                        if (var1_ref2.field_Rb == 0) {
+                          var1_ref2.field_oc = 0;
+                          if (!var1_ref2.i((byte) 115)) {
+                            break L5;
+                          } else {
+                            var1_ref2.b((byte) 113);
+                            break L5;
+                          }
                         } else {
-                          var1_ref2.b((byte) 113);
-                          var1_ref2 = (ve) ((Object) h.field_b.d(true));
-                          continue L2;
+                          break L5;
                         }
                       } else {
-                        var1_ref2 = (ve) ((Object) h.field_b.d(true));
-                        continue L2;
+                        break L5;
                       }
-                    } else {
-                      var1_ref2 = (ve) ((Object) h.field_b.d(true));
-                      continue L2;
                     }
+                    var1_ref2 = (ve) ((Object) h.field_b.d(true));
+                    continue L2;
                   }
                 }
               } else {
-                if (var1_ref.field_Qb <= 0) {
-                  var1_ref = (tj) ((Object) i.field_b.d(true));
-                  continue L1;
-                } else {
-                  var1_ref.field_Qb = var1_ref.field_Qb - 1;
-                  if (var1_ref.field_Qb != 0) {
-                    var1_ref = (tj) ((Object) i.field_b.d(true));
-                    continue L1;
+                L6: {
+                  if (var1_ref.field_Qb <= 0) {
+                    break L6;
                   } else {
-                    var1_ref.field_hc = 0;
-                    if (var1_ref.g((byte) 111)) {
-                      var1_ref.b((byte) 112);
-                      var1_ref = (tj) ((Object) i.field_b.d(true));
-                      continue L1;
+                    var1_ref.field_Qb = var1_ref.field_Qb - 1;
+                    if (var1_ref.field_Qb != 0) {
+                      break L6;
                     } else {
-                      var1_ref = (tj) ((Object) i.field_b.d(true));
-                      continue L1;
+                      var1_ref.field_hc = 0;
+                      if (var1_ref.g((byte) 111)) {
+                        var1_ref.b((byte) 112);
+                        break L6;
+                      } else {
+                        break L6;
+                      }
                     }
                   }
                 }
+                var1_ref = (tj) ((Object) i.field_b.d(true));
+                continue L1;
               }
             }
           }

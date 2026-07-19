@@ -269,7 +269,7 @@ abstract class vi extends be {
                         de.field_V.field_n = 0;
                         var5_int = 0;
                         L2: while (true) {
-                          if (var5_int >= sm.field_e) {
+                          if (~var5_int <= ~sm.field_e) {
                             lg.field_U = bb.field_d;
                             bb.field_d = kf.field_L;
                             kf.field_L = bh.field_k;

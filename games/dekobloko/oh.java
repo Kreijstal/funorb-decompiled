@@ -123,7 +123,7 @@ final class oh implements Runnable {
                   decompiledRegionSelector0 = 0;
                   break L5;
                 }
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
+              } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 L8: {
                   var2 = (IOException) (Object) decompiledCaughtException;

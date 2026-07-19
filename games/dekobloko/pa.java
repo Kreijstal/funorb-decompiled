@@ -121,7 +121,7 @@ final class pa extends qi {
               var11 = var39.field_K << 1;
               var12 = var39.field_C << 1;
               if (this.field_eb != null) {
-                if (var11 > this.field_eb.field_I) {
+                if (~var11 < ~this.field_eb.field_I) {
                   this.field_eb = new ck(var11, var12);
                   tb.a(true, this.field_eb);
                   var39.a(112, 144, var39.field_K << 4, var39.field_C << 4, -this.field_cb << 10, 4096);
@@ -185,7 +185,7 @@ final class pa extends qi {
               var11 = var36.field_K << 1;
               var12 = var36.field_C << 1;
               if (this.field_eb != null) {
-                if (var11 <= this.field_eb.field_I) {
+                if (~var11 >= ~this.field_eb.field_I) {
                   if (var12 <= this.field_eb.field_H) {
                     tb.a(true, this.field_eb);
                     hk.b();
@@ -252,7 +252,7 @@ final class pa extends qi {
               var11 = var32.field_K << 1;
               var12 = var32.field_C << 1;
               if (this.field_eb != null) {
-                if (var11 <= this.field_eb.field_I) {
+                if (~var11 >= ~this.field_eb.field_I) {
                   if (var12 > this.field_eb.field_H) {
                     this.field_eb = new ck(var11, var12);
                     tb.a(true, this.field_eb);
@@ -320,7 +320,7 @@ final class pa extends qi {
                     if (this.field_eb == null) {
                       break L7;
                     } else {
-                      if (var11 > this.field_eb.field_I) {
+                      if (~var11 < ~this.field_eb.field_I) {
                         break L7;
                       } else {
                         if (var12 <= this.field_eb.field_H) {
@@ -389,7 +389,7 @@ final class pa extends qi {
             var11 = var25.field_K << 1;
             var12 = var25.field_C << 1;
             if (this.field_eb != null) {
-              if (var11 <= this.field_eb.field_I) {
+              if (~var11 >= ~this.field_eb.field_I) {
                 if (var12 > this.field_eb.field_H) {
                   this.field_eb = new ck(var11, var12);
                   tb.a(true, this.field_eb);
@@ -457,7 +457,7 @@ final class pa extends qi {
                   if (this.field_eb == null) {
                     break L13;
                   } else {
-                    if (var11 > this.field_eb.field_I) {
+                    if (~var11 < ~this.field_eb.field_I) {
                       break L13;
                     } else {
                       if (var12 <= this.field_eb.field_H) {

@@ -68,7 +68,7 @@ final class wd {
                     var4 = ji.a(';', (byte) 66, var3);
                     var5 = 0;
                     L2: while (true) {
-                      if (var4.length <= var5) {
+                      if (~var4.length >= ~var5) {
                         break L1;
                       } else {
                         L3: {
@@ -167,40 +167,82 @@ final class wd {
     final static ke a(int param0, boolean param1, boolean param2) {
         int var4 = 0;
         int var5 = 0;
-        ke var6 = new ke(2);
-        ke var7 = var6;
-        if (!param2) {
-            var7.a(new ec(17), param0 + 10);
-            var4 = a.field_t.a(ji.field_c);
-            var5 = a.field_t.a(ik.field_g);
-            if (var5 > var4) {
+        ke var6 = null;
+        ke var7 = null;
+        L0: {
+          var6 = new ke(2);
+          var7 = var6;
+          if (param2) {
+            break L0;
+          } else {
+            L1: {
+              var7.a(new ec(17), param0 + 10);
+              var4 = a.field_t.a(ji.field_c);
+              var5 = a.field_t.a(ik.field_g);
+              if (var5 <= var4) {
+                break L1;
+              } else {
                 var4 = var5;
+                break L1;
+              }
             }
-            var5 = a.field_t.a(k.field_h);
-            if (!(var4 >= var5)) {
+            L2: {
+              var5 = a.field_t.a(k.field_h);
+              if (~var4 > ~var5) {
                 var4 = var5;
+                break L2;
+              } else {
+                break L2;
+              }
             }
-            var5 = a.field_t.a(wj.field_Kb);
-            if (!(var5 <= var4)) {
+            L3: {
+              var5 = a.field_t.a(wj.field_Kb);
+              if (var5 > var4) {
                 var4 = var5;
+                break L3;
+              } else {
+                break L3;
+              }
             }
-            var5 = a.field_t.a(sc.field_h);
-            if (var5 > var4) {
+            L4: {
+              var5 = a.field_t.a(sc.field_h);
+              if (~var5 >= ~var4) {
+                break L4;
+              } else {
                 var4 = var5;
+                break L4;
+              }
             }
-            var5 = a.field_t.a(rc.field_g);
-            if (!(var4 >= var5)) {
+            L5: {
+              var5 = a.field_t.a(rc.field_g);
+              if (~var4 > ~var5) {
                 var4 = var5;
+                break L5;
+              } else {
+                break L5;
+              }
             }
-            var5 = a.field_t.a(ig.field_Xb);
-            if (var4 < var5) {
+            L6: {
+              var5 = a.field_t.a(ig.field_Xb);
+              if (~var4 <= ~var5) {
+                break L6;
+              } else {
                 var4 = var5;
+                break L6;
+              }
             }
-            var5 = a.field_t.a(di.field_E);
-            if (!(var5 <= var4)) {
+            L7: {
+              var5 = a.field_t.a(di.field_E);
+              if (var5 > var4) {
                 var4 = var5;
+                break L7;
+              } else {
+                break L7;
+              }
             }
             var7.field_f[-1 + var6.field_b.field_l].field_n = 46 + var4;
+            break L0;
+          }
         }
         var7.a(new ec(18, om.field_b, a.field_t), 104);
         var7.a(-1, param1, -129);

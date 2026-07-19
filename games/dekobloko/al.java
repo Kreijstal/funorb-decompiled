@@ -283,10 +283,10 @@ final class al implements gl {
                 }
               }
             } else {
-              if (ta.field_k.field_j < 4) {
-                return -1;
-              } else {
+              if (ta.field_k.field_j >= 4) {
                 return 1;
+              } else {
+                return -1;
               }
             }
           }

@@ -26,7 +26,7 @@ final class kh {
             var1_int = a.field_r[0];
             var2 = 1;
             L1: while (true) {
-              if (a.field_r.length <= var2) {
+              if (~a.field_r.length >= ~var2) {
                 break L0;
               } else {
                 var3 = a.field_r[var2];
@@ -292,7 +292,7 @@ final class kh {
                                         decompiledRegionSelector0 = 0;
                                         break L7;
                                       }
-                                    } catch (java.lang.Exception decompiledCaughtParameter0) {
+                                    } catch (java.io.EOFException decompiledCaughtParameter0) {
                                       decompiledCaughtException = decompiledCaughtParameter0;
                                       L8: {
                                         var14 = (EOFException) (Object) decompiledCaughtException;
@@ -316,7 +316,7 @@ final class kh {
                                         decompiledRegionSelector1 = 0;
                                         break L9;
                                       }
-                                    } catch (java.lang.Exception decompiledCaughtParameter1) {
+                                    } catch (java.io.EOFException decompiledCaughtParameter1) {
                                       decompiledCaughtException = decompiledCaughtParameter1;
                                       L10: {
                                         var14 = (EOFException) (Object) decompiledCaughtException;
@@ -584,7 +584,7 @@ final class kh {
         int var1_int = 0;
         int var2 = client.field_A ? 1 : 0;
         try {
-            for (var1_int = 0; ic.field_c > var1_int; var1_int++) {
+            for (var1_int = 0; ~ic.field_c < ~var1_int; var1_int++) {
                 pd.field_g[var1_int] = null;
             }
             ic.field_c = 0;
@@ -698,13 +698,13 @@ final class kh {
                                     }
                                     if (var10 == param0) {
                                       if (var8 == var11) {
-                                        if (this.field_h == var13) {
+                                        if (~this.field_h == ~var13) {
                                           if (var12 >= 0) {
                                             if (this.field_a.b(55) / 520L >= (long)var12) {
                                               var15 = var14 - -var9;
                                               var16 = var14;
                                               L5: while (true) {
-                                                if (var15 <= var16) {
+                                                if (~var15 >= ~var16) {
                                                   var8++;
                                                   var5 = var12;
                                                   continue L1;

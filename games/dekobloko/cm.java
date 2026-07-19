@@ -88,7 +88,7 @@ final class cm implements Iterator {
                           if (var3 != var5.field_q) {
                             break L5;
                           } else {
-                            if (var4 != var5.field_r) {
+                            if (~var4 != ~var5.field_r) {
                               break L5;
                             } else {
                               break L4;
@@ -306,7 +306,7 @@ final class cm implements Iterator {
                     var5 = var8 - -2;
                     L6: while (true) {
                       L7: {
-                        if (var3_int <= var5) {
+                        if (~var3_int >= ~var5) {
                           break L7;
                         } else {
                           if (!fl.a(param1.charAt(var5), (byte) 23)) {
@@ -319,7 +319,7 @@ final class cm implements Iterator {
                       }
                       var9 = param1.substring(2 + var8, var5);
                       if (be.a((byte) 98, (CharSequence) ((Object) var9))) {
-                        if (var5 >= var3_int) {
+                        if (~var5 <= ~var3_int) {
                           continue L5;
                         } else {
                           if (param1.charAt(var5) != 62) {

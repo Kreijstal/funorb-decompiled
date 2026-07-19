@@ -68,14 +68,14 @@ final class oc {
           L0: {
             var2_int = 1;
             L1: while (true) {
-              if (var2_int > param0.length + (param0.length >> 1)) {
+              if (~var2_int < ~(param0.length + (param0.length >> 1))) {
                 this.field_a = new int[var2_int - -var2_int];
                 var3 = 0;
                 L2: while (true) {
-                  if (var2_int + var2_int <= var3) {
+                  if (~(var2_int + var2_int) >= ~var3) {
                     var3 = 0;
                     L3: while (true) {
-                      if (var3 >= param0.length) {
+                      if (~var3 <= ~param0.length) {
                         break L0;
                       } else {
                         var4 = param0[var3] & -1 + var2_int;

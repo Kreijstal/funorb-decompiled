@@ -35,19 +35,21 @@ final class oi {
         } else {
           var3 = 0;
           L0: while (true) {
-            if (this.field_c.length <= var3) {
+            if (~this.field_c.length >= ~var3) {
               this.field_c = var2;
               return;
             } else {
-              var4 = this.field_c[var3];
-              if (var4 != null) {
-                var2[var4.field_j % var6.length] = var4;
-                var3++;
-                continue L0;
-              } else {
-                var3++;
-                continue L0;
+              L1: {
+                var4 = this.field_c[var3];
+                if (var4 != null) {
+                  var2[var4.field_j % var6.length] = var4;
+                  break L1;
+                } else {
+                  break L1;
+                }
               }
+              var3++;
+              continue L0;
             }
           }
         }
@@ -196,7 +198,7 @@ final class oi {
         if (!param0) {
           var3 = this.field_c[param1 % this.field_c.length];
           if (var3 != null) {
-            if (var3.field_j != param1) {
+            if (~var3.field_j != ~param1) {
               return null;
             } else {
               return var3;
@@ -209,7 +211,7 @@ final class oi {
           this.a((rf) null, (byte) -73);
           var3 = this.field_c[param1 % this.field_c.length];
           if (var3 != null) {
-            if (var3.field_j != param1) {
+            if (~var3.field_j != ~param1) {
               return null;
             } else {
               return var3;

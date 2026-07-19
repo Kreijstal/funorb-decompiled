@@ -554,7 +554,7 @@ final class qb extends dd {
                     var12 = ph.field_Eb.length;
                     var13 = 0;
                     L11: while (true) {
-                      if (var12 <= var13) {
+                      if (~var12 >= ~var13) {
                         si.a(60);
                         jd.field_Qb = false;
                         stackOut_41_0 = var12 + 100;

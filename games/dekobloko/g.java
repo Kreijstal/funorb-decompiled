@@ -56,7 +56,7 @@ final class g extends ek {
                 var9 = var23.field_K << 1;
                 var10 = var23.field_C << 1;
                 if (kl.field_v != null) {
-                  if (var9 <= kl.field_v.field_I) {
+                  if (~var9 >= ~kl.field_v.field_I) {
                     if (var10 <= kl.field_v.field_H) {
                       tb.a(true, kl.field_v);
                       hk.b();
@@ -94,7 +94,7 @@ final class g extends ek {
               var9 = var23.field_K << 1;
               var10 = var23.field_C << 1;
               if (kl.field_v != null) {
-                if (var9 <= kl.field_v.field_I) {
+                if (~var9 >= ~kl.field_v.field_I) {
                   if (var10 <= kl.field_v.field_H) {
                     tb.a(true, kl.field_v);
                     hk.b();
@@ -151,7 +151,7 @@ final class g extends ek {
                 var9 = var16.field_K << 1;
                 var10 = var16.field_C << 1;
                 if (kl.field_v != null) {
-                  if (var9 <= kl.field_v.field_I) {
+                  if (~var9 >= ~kl.field_v.field_I) {
                     if (var10 <= kl.field_v.field_H) {
                       tb.a(true, kl.field_v);
                       hk.b();
@@ -193,7 +193,7 @@ final class g extends ek {
                   if (kl.field_v == null) {
                     break L1;
                   } else {
-                    if (var9 > kl.field_v.field_I) {
+                    if (~var9 < ~kl.field_v.field_I) {
                       break L1;
                     } else {
                       if (var10 > kl.field_v.field_H) {

@@ -24,37 +24,38 @@ final class kc extends bh {
         var2 = 0;
         var3 = gd.field_e;
         if (var3 >= 5) {
-          if (var3 >= 105) {
+          if (var3 < 105) {
             L0: {
-              if (120 <= var3) {
+              var2 = (-40960 + 16384 * var3) / 220;
+              var4 = 1;
+              var5 = 0;
+              if (param1 != 1) {
                 break L0;
               } else {
-                var3 = -var3 + 120;
-                var2 = -(var3 * var3 * 8192 / 3300) + 8192;
+                var5 = 1;
                 break L0;
               }
             }
             L1: {
-              var4 = 1;
-              var5 = 0;
-              if (param1 != 1) {
+              if (param1 == 3) {
+                var4 = -1;
                 break L1;
               } else {
-                var5 = 1;
                 break L1;
               }
             }
             L2: {
-              if (param1 == 3) {
-                var4 = -1;
+              if (param1 == 4) {
+                var4 = 1;
+                var5 = 1;
                 break L2;
               } else {
                 break L2;
               }
             }
             L3: {
-              if (param1 == 4) {
-                var4 = 1;
+              if (param1 == 5) {
+                var4 = -1;
                 var5 = 1;
                 break L3;
               } else {
@@ -62,88 +63,87 @@ final class kc extends bh {
               }
             }
             L4: {
-              if (param1 == 5) {
-                var4 = -1;
-                var5 = 1;
+              if (param1 == 6) {
+                var4 = 1;
+                var5 = -1;
                 break L4;
               } else {
                 break L4;
               }
             }
             L5: {
-              if (param1 == 6) {
-                var4 = 1;
-                var5 = -1;
-                break L5;
-              } else {
-                break L5;
-              }
-            }
-            L6: {
-              L7: {
+              L6: {
                 if (param1 == 7) {
-                  break L7;
+                  break L6;
                 } else {
                   if (8 == param1) {
-                    break L7;
-                  } else {
                     break L6;
+                  } else {
+                    break L5;
                   }
                 }
               }
               var4 = -1;
               var5 = -1;
-              break L6;
+              break L5;
             }
-            L8: {
+            L7: {
               if (11 == param1) {
                 var4 = -1;
+                break L7;
+              } else {
+                break L7;
+              }
+            }
+            L8: {
+              if (param1 == 12) {
+                var4 = -1;
+                var5 = -1;
                 break L8;
               } else {
                 break L8;
               }
             }
             L9: {
-              if (param1 == 12) {
-                var4 = -1;
-                var5 = -1;
+              if (13 != param1) {
                 break L9;
               } else {
+                var5 = -1;
+                var4 = 1;
                 break L9;
               }
             }
             L10: {
-              if (13 != param1) {
+              if (14 == param1) {
+                var5 = 1;
+                var4 = -1;
                 break L10;
               } else {
-                var5 = -1;
-                var4 = 1;
                 break L10;
               }
             }
             L11: {
-              if (14 == param1) {
-                var5 = 1;
-                var4 = -1;
-                break L11;
-              } else {
-                break L11;
-              }
-            }
-            L12: {
               if (15 != param1) {
-                break L12;
+                break L11;
               } else {
                 var4 = 1;
                 var5 = 1;
-                break L12;
+                break L11;
               }
             }
             o.field_e = em.a(var5 * var2, var2 * var4, (byte) 90);
             return;
           } else {
+            L12: {
+              if (120 <= var3) {
+                break L12;
+              } else {
+                var3 = -var3 + 120;
+                var2 = -(var3 * var3 * 8192 / 3300) + 8192;
+                break L12;
+              }
+            }
             L13: {
-              var2 = (-40960 + 16384 * var3) / 220;
               var4 = 1;
               var5 = 0;
               if (param1 != 1) {
@@ -299,8 +299,10 @@ final class kc extends bh {
             }
           }
           if (param1 != 7) {
-            if (8 != param1) {
+            if (8 == param1) {
               L30: {
+                var4 = -1;
+                var5 = -1;
                 if (11 == param1) {
                   var4 = -1;
                   break L30;
@@ -348,8 +350,6 @@ final class kc extends bh {
               return;
             } else {
               L35: {
-                var4 = -1;
-                var5 = -1;
                 if (11 == param1) {
                   var4 = -1;
                   break L35;

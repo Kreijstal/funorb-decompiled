@@ -188,35 +188,34 @@ final class wb extends w {
                           param3++;
                           continue L6;
                         } else {
-                          var8 = hk.field_l[var6_int];
-                          if ((65280 & var8) >> 8 <= 64) {
-                            var6_int++;
-                            param1++;
-                            continue L7;
-                          } else {
-                            if (~(255 & var8 >> 16) < ~(var8 >> 8 & 255)) {
-                              var6_int++;
-                              param1++;
-                              continue L7;
+                          L8: {
+                            var8 = hk.field_l[var6_int];
+                            if ((65280 & var8) >> 8 <= 64) {
+                              break L8;
                             } else {
-                              L8: {
-                                var9 = ((16711680 & var8) >> 15) - 60;
-                                if (var9 > 255) {
-                                  var9 = 255;
-                                  break L8;
-                                } else {
-                                  break L8;
+                              if (~(255 & var8 >> 16) < ~(var8 >> 8 & 255)) {
+                                break L8;
+                              } else {
+                                L9: {
+                                  var9 = ((16711680 & var8) >> 15) - 60;
+                                  if (var9 > 255) {
+                                    var9 = 255;
+                                    break L9;
+                                  } else {
+                                    break L9;
+                                  }
                                 }
+                                var10 = var8 & 65280;
+                                var10 = (var10 >> 1) + -(var10 >> 5) & 65280;
+                                var11 = 31 & var8 >> 3;
+                                hk.field_l[var6_int] = de.b(var11, de.b(var9 << 16, var10));
+                                break L8;
                               }
-                              var10 = var8 & 65280;
-                              var10 = (var10 >> 1) + -(var10 >> 5) & 65280;
-                              var11 = 31 & var8 >> 3;
-                              hk.field_l[var6_int] = de.b(var11, de.b(var9 << 16, var10));
-                              var6_int++;
-                              param1++;
-                              continue L7;
                             }
                           }
+                          var6_int++;
+                          param1++;
+                          continue L7;
                         }
                       }
                     }

@@ -255,7 +255,7 @@ abstract class vb extends kf implements jl {
                         var14.field_mb = 0;
                         var8 = 0;
                         L15: while (true) {
-                          if (qa.field_v[var6].length <= var8) {
+                          if (~qa.field_v[var6].length >= ~var8) {
                             break L8;
                           } else {
                             L16: {

@@ -13,21 +13,9 @@ final class ll {
         if (null != vh.field_h) {
           var3 = vh.field_h.a((byte) -63, param0);
           if (var3 != 0) {
-            if (var3 != 2) {
-              vh.field_h = null;
-              of.field_d = -1;
-              return;
-            } else {
-              if (null == vh.field_h.field_Y) {
-                vh.field_h = null;
-                of.field_d = -1;
-                return;
-              } else {
-                if (vh.field_h.field_Y.equals("")) {
-                  vh.field_h = null;
-                  of.field_d = -1;
-                  return;
-                } else {
+            if (var3 == 2) {
+              if (null != vh.field_h.field_Y) {
+                if (!vh.field_h.field_Y.equals("")) {
                   L0: {
                     if (vh.field_h.field_Y.charAt(0) != 91) {
                       var7 = (CharSequence) ((Object) vh.field_h.field_Y);
@@ -84,8 +72,20 @@ final class ll {
                     of.field_d = -1;
                     return;
                   }
+                } else {
+                  vh.field_h = null;
+                  of.field_d = -1;
+                  return;
                 }
+              } else {
+                vh.field_h = null;
+                of.field_d = -1;
+                return;
               }
+            } else {
+              vh.field_h = null;
+              of.field_d = -1;
+              return;
             }
           } else {
             return;
@@ -287,7 +287,7 @@ final class ll {
                 if (null != param2.field_C) {
                   var12 = 0;
                   L4: while (true) {
-                    if (param2.field_C.length <= var12) {
+                    if (~param2.field_C.length >= ~var12) {
                       break L3;
                     } else {
                       var13_ref_ac = oi.field_a.a(-126, param2.field_C[var12]);

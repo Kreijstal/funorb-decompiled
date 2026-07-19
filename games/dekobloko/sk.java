@@ -89,72 +89,70 @@ final class sk {
           }
         }
         L2: {
-          if (0 != this.field_q) {
-            break L2;
-          } else {
-            if (wh.field_c != 96) {
+          if (0 == this.field_q) {
+            if (this.field_q != 0) {
               break L2;
             } else {
-              L3: {
-                if (this.field_h <= 0) {
-                  this.field_h = this.field_l;
-                  break L3;
+              if (wh.field_c != 97) {
+                break L2;
+              } else {
+                this.field_h = this.field_h + 1;
+                this.field_n = false;
+                this.field_o = true;
+                if (this.field_l > this.field_h) {
+                  break L2;
                 } else {
-                  break L3;
+                  this.field_h = 0;
+                  break L2;
                 }
               }
-              this.field_n = false;
-              this.field_h = this.field_h - 1;
-              this.field_o = true;
-              break L2;
             }
-          }
-        }
-        L4: {
-          if (this.field_q != 0) {
-            break L4;
           } else {
-            if (wh.field_c != 97) {
-              break L4;
+            if (this.field_q != 0) {
+              break L2;
             } else {
-              this.field_h = this.field_h + 1;
-              this.field_n = false;
-              this.field_o = true;
-              if (this.field_l > this.field_h) {
-                break L4;
+              if (wh.field_c != 97) {
+                break L2;
               } else {
-                this.field_h = 0;
-                break L4;
+                this.field_h = this.field_h + 1;
+                this.field_n = false;
+                this.field_o = true;
+                if (this.field_l > this.field_h) {
+                  break L2;
+                } else {
+                  this.field_h = 0;
+                  break L2;
+                }
               }
             }
           }
         }
-        L5: {
+        L3: {
           if (this.field_q != 0) {
-            break L5;
+            break L3;
           } else {
-            L6: {
+            L4: {
               if (98 == wh.field_c) {
-                break L6;
+                break L4;
               } else {
                 if (wh.field_c == 99) {
-                  break L6;
+                  break L4;
                 } else {
-                  break L5;
+                  break L3;
                 }
               }
             }
-            L7: {
+            L5: {
               if (this.field_h < 0) {
                 this.field_h = param1;
-                break L7;
+                break L5;
               } else {
-                break L7;
+                break L5;
               }
             }
             this.field_n = false;
             this.field_o = true;
-            break L5;
+            break L3;
           }
         }
     }

@@ -17,7 +17,7 @@ final class ab {
         if (!(lg.field_W <= var1)) {
             var1 = lg.field_W;
         }
-        if (var1 < bf.field_r) {
+        if (~var1 > ~bf.field_r) {
             var1 = bf.field_r;
         }
         if (!(tg.field_e <= var1)) {
@@ -172,7 +172,7 @@ final class ab {
             var5 = 0;
             L1: while (true) {
               L2: {
-                if (var5 >= var4) {
+                if (~var5 <= ~var4) {
                   break L2;
                 } else {
                   L3: {
@@ -295,7 +295,7 @@ final class ab {
         var2_ref = f.field_r;
         synchronized (var2_ref) {
           L0: {
-            if (ea.field_n != sf.field_B) {
+            if (~ea.field_n != ~sf.field_B) {
               wh.field_c = pf.field_i[sf.field_B];
               el.field_G = bl.field_Z[sf.field_B];
               sf.field_B = 1 + sf.field_B & 127;

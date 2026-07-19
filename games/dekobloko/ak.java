@@ -16,9 +16,9 @@ final class ak {
         if (!(c.field_i != null)) {
             return -1;
         }
-        if (dm.field_a <= param0) {
+        if (~dm.field_a >= ~param0) {
             if (c.field_i.field_I + dm.field_a > param0) {
-                if (sk.field_k <= param1) {
+                if (~sk.field_k >= ~param1) {
                     if (param1 < sk.field_k + c.field_i.field_H) {
                         return 0;
                     }
@@ -26,9 +26,9 @@ final class ak {
             }
         }
         if (sk.field_e <= param0) {
-            if (c.field_i.field_I + sk.field_e > param0) {
+            if (~(c.field_i.field_I + sk.field_e) < ~param0) {
                 if (param1 >= dg.field_b) {
-                    if (c.field_i.field_H + dg.field_b > param1) {
+                    if (~(c.field_i.field_H + dg.field_b) < ~param1) {
                         return 1;
                     }
                 }

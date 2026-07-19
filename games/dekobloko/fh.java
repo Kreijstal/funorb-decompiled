@@ -35,7 +35,7 @@ final class fh {
             var5 = 490;
             var6 = 0;
             L1: while (true) {
-              if (var6 >= rb.field_n.length) {
+              if (~var6 <= ~rb.field_n.length) {
                 break L0;
               } else {
                 L2: {

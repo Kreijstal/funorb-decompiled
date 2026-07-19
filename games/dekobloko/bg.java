@@ -62,7 +62,7 @@ final class bg {
                 var5 = 256;
                 var1_int = var5;
                 L3: while (true) {
-                  if (ch.field_b.length <= var5) {
+                  if (~ch.field_b.length >= ~var5) {
                     break L0;
                   } else {
                     ch.field_b[var5] = 255;

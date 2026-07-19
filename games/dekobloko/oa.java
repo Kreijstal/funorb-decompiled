@@ -80,7 +80,7 @@ final class oa {
             var3 = new char[var2_int];
             var4 = 0;
             L1: while (true) {
-              if (var4 >= var2_int) {
+              if (~var4 <= ~var2_int) {
                 stackOut_4_0 = new String(var3);
                 stackIn_5_0 = stackOut_4_0;
                 break L0;

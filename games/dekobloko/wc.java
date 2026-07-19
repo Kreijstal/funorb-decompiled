@@ -72,7 +72,7 @@ final class wc extends bh {
           } else {
             var4 = param2;
             L0: while (true) {
-              if (param1.length() > var4) {
+              if (~param1.length() < ~var4) {
                 if (!ci.a(param1.charAt(var4), (byte) 90)) {
                   stackOut_10_0 = jk.field_g;
                   stackIn_11_0 = stackOut_10_0;
@@ -142,7 +142,7 @@ final class wc extends bh {
               var8 = gn.field_e[4 + var3_int];
               var9 = param1 + 5;
               L1: while (true) {
-                if (var9 >= param0) {
+                if (~var9 <= ~param0) {
                   gn.field_e[var3_int] = var4;
                   gn.field_e[var3_int - -1] = var5;
                   gn.field_e[var3_int + 2] = var6;

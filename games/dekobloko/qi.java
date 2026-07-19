@@ -20,7 +20,7 @@ class qi extends ek {
         if (null == this.field_K) {
             return null;
         }
-        if (this.field_K.length <= this.field_P.field_p) {
+        if (~this.field_K.length >= ~this.field_P.field_p) {
             return null;
         }
         if (param0 != 113) {
@@ -164,7 +164,7 @@ class qi extends ek {
                   if (null == this.field_K) {
                     break L2;
                   } else {
-                    if (param1 >= this.field_K.length) {
+                    if (~param1 <= ~this.field_K.length) {
                       break L2;
                     } else {
                       break L1;
@@ -178,7 +178,7 @@ class qi extends ek {
                   if (null != this.field_K) {
                     var5 = 0;
                     L4: while (true) {
-                      if (this.field_K.length <= var5) {
+                      if (~this.field_K.length >= ~var5) {
                         break L3;
                       } else {
                         var7[var5] = this.field_K[var5];
@@ -284,13 +284,13 @@ class qi extends ek {
                   if (param2 < var5.field_t) {
                     break L2;
                   } else {
-                    if (var5.field_u > param1) {
+                    if (~var5.field_u < ~param1) {
                       break L2;
                     } else {
                       if (param2 >= var5.field_n + var5.field_t) {
                         break L2;
                       } else {
-                        if (var5.field_u - -var5.field_s >= param1) {
+                        if (~(var5.field_u - -var5.field_s) <= ~param1) {
                           return var4;
                         } else {
                           break L2;

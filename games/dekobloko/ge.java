@@ -14,9 +14,9 @@ final class ge {
     static boolean field_c;
 
     final static int a(lk param0, int param1) {
-        int discarded$2 = 0;
-        int var2_int = 0;
+        int discarded$1 = 0;
         RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -53,7 +53,7 @@ final class ge {
                   break L1;
                 } else {
                   var7 = (lk) null;
-                  discarded$2 = ge.a((lk) null, 96);
+                  discarded$1 = ge.a((lk) null, 96);
                   break L1;
                 }
               }
@@ -93,7 +93,6 @@ final class ge {
                         if (param0.field_P[var4 * param0.field_O - -var5] == 0) {
                           break L6;
                         } else {
-                          var2_int = var2_int + var3;
                           break L6;
                         }
                       }
@@ -311,7 +310,7 @@ final class ge {
                       var24 = 0;
                       var25 = 0;
                       L3: while (true) {
-                        if (var18.length <= var25) {
+                        if (~var18.length >= ~var25) {
                           var25 = (1 + var51[var17_int]) * param2;
                           var26 = 0;
                           L4: while (true) {
@@ -321,7 +320,7 @@ final class ge {
                             } else {
                               var27 = 0;
                               L5: while (true) {
-                                if (var20 <= var27) {
+                                if (~var20 >= ~var27) {
                                   var25 = var25 + var23;
                                   var26++;
                                   continue L4;

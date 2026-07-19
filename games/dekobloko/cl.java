@@ -190,7 +190,7 @@ final class cl extends bh {
                               }
                             }
                           }
-                          if (var11_int <= var6) {
+                          if (~var11_int >= ~var6) {
                             break L5;
                           } else {
                             var6 = var11_int;
@@ -391,10 +391,10 @@ final class cl extends bh {
                         if (var12.field_Ub < var6) {
                           break L19;
                         } else {
-                          if (var12.field_Xb < var7) {
+                          if (~var12.field_Xb > ~var7) {
                             break L19;
                           } else {
-                            if (-1 >= (var12.field_Sb & var8)) {
+                            if ((~var12.field_Sb & var8) <= 0) {
                               break L18;
                             } else {
                               break L19;
@@ -632,8 +632,8 @@ final class cl extends bh {
                               }
                             }
                           }
-                          if (var12.field_Xb >= var7) {
-                            if (var12.field_Ub >= var6) {
+                          if (~var12.field_Xb <= ~var7) {
+                            if (~var12.field_Ub <= ~var6) {
                               if ((var8 & ~var12.field_Sb) == 0) {
                                 break L33;
                               } else {
@@ -689,7 +689,7 @@ final class cl extends bh {
                             }
                           }
                           if (var12.field_Xb >= var7) {
-                            if (var12.field_Ub >= var6) {
+                            if (~var12.field_Ub <= ~var6) {
                               if (0 != (~var12.field_Sb & var8)) {
                                 var25_int = wb.b((byte) -120, var8 & ~var12.field_Sb);
                                 var24 = cm.a((byte) 91, ci.field_f, new String[]{var20});
@@ -744,7 +744,7 @@ final class cl extends bh {
                         var26 = 0;
                         var27_int = 0;
                         L38: while (true) {
-                          if (var27_int >= j.field_b) {
+                          if (~var27_int <= ~j.field_b) {
                             L39: {
                               L40: {
                                 if (param3 != tb.field_b) {
@@ -831,7 +831,7 @@ final class cl extends bh {
                                       }
                                     }
                                   }
-                                  if (var30 <= var12.field_Ub) {
+                                  if (~var30 >= ~var12.field_Ub) {
                                     break L43;
                                   } else {
                                     var29 = 1;
@@ -866,7 +866,7 @@ final class cl extends bh {
                                       }
                                     }
                                   }
-                                  if (var30 <= var12.field_Xb) {
+                                  if (~var30 >= ~var12.field_Xb) {
                                     break L45;
                                   } else {
                                     var29 = 1;
@@ -1075,7 +1075,7 @@ final class cl extends bh {
                         if (var3 < 6) {
                           break L6;
                         } else {
-                          if (var7 + 6 <= var3) {
+                          if (~(var7 + 6) >= ~var3) {
                             break L6;
                           } else {
                             L7: {
@@ -1106,7 +1106,7 @@ final class cl extends bh {
                         }
                       }
                       var8 = stackIn_27_0;
-                      if (var7 + 7 > var3) {
+                      if (~(var7 + 7) < ~var3) {
                         break L4;
                       } else {
                         if (var8 + 7 + var7 <= var3) {
@@ -1171,7 +1171,7 @@ final class cl extends bh {
                   if (var4 >= 0) {
                     L13: {
                       var1_int = var1_int + qk.field_m;
-                      if (k.field_f.field_h != var4) {
+                      if (~k.field_f.field_h != ~var4) {
                         stackOut_43_0 = da.field_c;
                         stackIn_44_0 = stackOut_43_0;
                         break L13;

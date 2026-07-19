@@ -116,56 +116,33 @@ final class ui {
     }
 
     private final void a(byte param0) {
-        int var2 = 0;
         int var3 = 0;
         ud var4 = null;
-        int var5 = 0;
-        var5 = client.field_A ? 1 : 0;
-        if (this.field_h != null) {
-          var2 = 1;
-          var3 = 0;
-          L0: while (true) {
-            if (var3 >= this.field_g.length) {
-              L1: {
-                if (var2 != 0) {
-                  this.field_h = null;
-                  this.field_D = null;
-                  this.field_y = null;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              return;
+        int var5 = client.field_A ? 1 : 0;
+        if (this.field_h == null) {
+            return;
+        }
+        int var2 = 1;
+        for (var3 = 0; ~var3 > ~this.field_g.length; var3++) {
+            if (this.field_g[var3] != null) {
             } else {
-              if (this.field_g[var3] == null) {
-                L2: {
-                  if (this.field_M[var3] >> 4 == 0) {
-                    var4 = this.field_h.a(-62, this.field_y[var3], this.field_D[var3]);
-                    break L2;
-                  } else {
+                if (this.field_M[var3] >> 4 != 0) {
                     var4 = this.field_h.b(this.field_y[var3], this.field_D[var3], -1);
-                    break L2;
-                  }
-                }
-                if (var4 != null) {
-                  this.field_M[var3] = lb.a(this.field_M[var3], 15);
-                  this.field_g[var3] = var4;
-                  var3++;
-                  continue L0;
                 } else {
-                  var2 = 0;
-                  var3++;
-                  continue L0;
+                    var4 = this.field_h.a(-62, this.field_y[var3], this.field_D[var3]);
                 }
-              } else {
-                var3++;
-                continue L0;
-              }
+                if (var4 == null) {
+                    var2 = 0;
+                } else {
+                    this.field_M[var3] = lb.a(this.field_M[var3], 15);
+                    this.field_g[var3] = var4;
+                }
             }
-          }
-        } else {
-          return;
+        }
+        if (!(var2 == 0)) {
+            this.field_h = null;
+            this.field_D = null;
+            this.field_y = null;
         }
     }
 
@@ -239,7 +216,7 @@ final class ui {
             var4 = 0;
             var5 = 0;
             L1: while (true) {
-              if (var5 >= this.field_i) {
+              if (~var5 <= ~this.field_i) {
                 this.field_e = new byte[256][];
                 this.field_d = new int[256];
                 an.a(this.field_d, 0, 256, 64);
@@ -320,7 +297,7 @@ final class ui {
                                             var4 = 0;
                                             var11 = 0;
                                             L9: while (true) {
-                                              if (var9 <= var11) {
+                                              if (~var9 >= ~var11) {
                                                 var4 = 0;
                                                 array$15 = new int[var9];
                                                 this.field_a[var6] = array$15;

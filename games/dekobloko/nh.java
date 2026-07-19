@@ -162,7 +162,7 @@ final class nh {
             this.field_b = this.field_j;
         }
         this.field_o = this.field_j;
-        while (this.field_m < this.field_g.length) {
+        while (~this.field_m > ~this.field_g.length) {
             var2 = -this.field_m + this.field_g.length;
             if (!(var2 <= 200000000)) {
                 var2 = 200000000;
@@ -217,7 +217,7 @@ final class nh {
                     break L2;
                   }
                 }
-                if (param1.length < param0 - -param3) {
+                if (~param1.length > ~(param0 - -param3)) {
                   throw new ArrayIndexOutOfBoundsException(-param1.length + (param0 + param3));
                 } else {
                   L3: {
@@ -272,7 +272,7 @@ final class nh {
                         L7: {
                           this.a(0);
                           var9_int = param3;
-                          if (this.field_m < var9_int) {
+                          if (~this.field_m > ~var9_int) {
                             var9_int = this.field_m;
                             break L7;
                           } else {
@@ -540,7 +540,7 @@ final class nh {
                     }
                   }
                 }
-                if (this.field_d.length < param3) {
+                if (~this.field_d.length > ~param3) {
                   L6: {
                     if (~this.field_j == ~this.field_b) {
                       break L6;

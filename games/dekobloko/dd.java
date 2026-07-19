@@ -302,7 +302,7 @@ abstract class dd {
         if (param0 != 0) {
           L0: {
             this.field_j = -70;
-            if (-21 < this.c(0)) {
+            if (this.c(0) < 20) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -315,7 +315,7 @@ abstract class dd {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (-21 > this.c(0)) {
+            if (this.c(0) < 20) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;

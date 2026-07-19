@@ -133,7 +133,7 @@ final class dn extends ie {
             }
         }
         long var6 = 0L;
-        for (var8 = 1; var8 <= this.field_n; var8++) {
+        for (var8 = 1; ~var8 >= ~this.field_n; var8++) {
             var6 = var6 + this.field_f[(10 + (this.field_o - var8)) % 10];
         }
         return var6 / (long)this.field_n;

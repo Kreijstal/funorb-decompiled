@@ -39,9 +39,7 @@ final class gd {
                 }
               }
             } else {
-              if (var4 <= 13) {
-                return param3 + "th";
-              } else {
+              if (var4 > 13) {
                 var5 = param3 % 10;
                 if (var5 == 1) {
                   return param3 + "st";
@@ -56,6 +54,8 @@ final class gd {
                     }
                   }
                 }
+              } else {
+                return param3 + "th";
               }
             }
           } else {
@@ -64,19 +64,19 @@ final class gd {
             } else {
               if (2 != param1) {
                 if (param1 != 3) {
-                  if (param1 != 4) {
-                    throw new IllegalArgumentException("Unsupported language " + param1);
-                  } else {
+                  if (param1 == 4) {
                     return param3 + "e";
+                  } else {
+                    throw new IllegalArgumentException("Unsupported language " + param1);
                   }
                 } else {
                   return param3 + "º";
                 }
               } else {
-                if (param3 != 1) {
-                  return param3 + "ème";
-                } else {
+                if (param3 == 1) {
                   return param3 + "er";
+                } else {
+                  return param3 + "ème";
                 }
               }
             }

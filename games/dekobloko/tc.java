@@ -18,7 +18,7 @@ final class tc extends w {
         var3 = client.field_A ? 1 : 0;
         var2 = 0;
         L0: while (true) {
-          if (this.field_Rb.length <= var2) {
+          if (~this.field_Rb.length >= ~var2) {
             L1: {
               if (!param0) {
                 break L1;
@@ -29,23 +29,15 @@ final class tc extends w {
             }
             return;
           } else {
-            if (var2 != this.field_Pb) {
-              if (0 != this.field_Rb[var2].field_ob) {
-                this.field_Rb[this.field_Pb].field_ab = false;
-                this.field_Sb[this.field_Pb].field_vb = this.field_Sb[this.field_Pb].field_vb + 10000;
-                this.field_Pb = var2;
-                this.field_Rb[var2].field_ab = true;
-                this.field_Sb[var2].field_vb = this.field_Sb[var2].field_vb - 10000;
-                var2++;
-                continue L0;
+            L2: {
+              if (~var2 == ~this.field_Pb) {
+                break L2;
               } else {
-                var2++;
-                continue L0;
+                break L2;
               }
-            } else {
-              var2++;
-              continue L0;
             }
+            var2++;
+            continue L0;
           }
         }
     }
@@ -137,7 +129,7 @@ final class tc extends w {
                 var11 = 0;
                 var8_int = var11;
                 L2: while (true) {
-                  if (var11 >= param4.length) {
+                  if (~var11 <= ~param4.length) {
                     this.field_Pb = param5;
                     this.field_Rb[param5].field_ab = true;
                     break L0;
@@ -282,7 +274,7 @@ final class tc extends w {
                 return;
               } else {
                 this.field_Sb[var8].a(this.field_Vb.field_mb + -(2 * param0), 0, param0, -(2 * param0) + this.field_Vb.field_N, param0);
-                if (var8 != this.field_Pb) {
+                if (~var8 != ~this.field_Pb) {
                   this.field_Sb[var8].field_vb = this.field_Sb[var8].field_vb + 10000;
                   var8++;
                   continue L1;

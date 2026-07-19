@@ -1,26 +1,25 @@
 {
   "formatVersion": 1,
-  "capturedAt": "2026-07-19T05:00:21.744Z",
+  "capturedAt": "2026-07-19T08:15:04.307Z",
   "generators": {
     "dekoblokoWork": {
-      "commit": "2126ca021d98d00fce1f957a77d29da5481cff37",
+      "commit": "80049736c6b4dae4926a4b42baca51975c416921",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "fbe537fe4336ee54141e9b6a4c5b39de33d975c4",
+      "commit": "a657e2d64860d008424c234bfcb1729bd65f28df",
       "trackedClean": true
     }
   },
   "invocation": {
     "script": "scripts/decompile-all-games.sh",
     "arguments": [
-      "/tmp/dekobloko-games-fixed.T6mwRb",
+      ".work/games-publish2",
       "--game",
-      "dekobloko",
-      "--reuse-pipeline"
+      "dekobloko"
     ],
     "selectedGame": "dekobloko",
-    "reusePipeline": true,
+    "reusePipeline": false,
     "updateBaseline": false,
     "fixedPipelineArguments": [
       "--profile",
@@ -30,12 +29,13 @@
     "environment": {
       "PIPELINE_EXPERIMENTAL_INTERCLASS_DCE": "1",
       "PIPELINE_EXPERIMENTAL_SIGNATURE_COMPACTION": "0",
-      "PIPELINE_EXPERIMENTAL_UNTHROWABLE_CATCH_DCE": "1"
+      "PIPELINE_EXPERIMENTAL_UNTHROWABLE_CATCH_DCE": "1",
+      "PIPELINE_TIMEOUT_SECONDS": "7200"
     }
   },
   "publication": {
-    "synchronizedAt": "2026-07-19T05:03:48.888Z",
-    "destinationBaseCommit": "b15f600d1d8ac2e11d76bbe844682c34b62d66cb",
+    "synchronizedAt": "2026-07-19T08:34:01.009Z",
+    "destinationBaseCommit": "93561143d6f3f3b492f55929ce86cc3268cca859",
     "syncedGames": [
       "dekobloko"
     ]

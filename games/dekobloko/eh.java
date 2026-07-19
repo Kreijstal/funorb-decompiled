@@ -117,7 +117,7 @@ abstract class eh {
                             mb.field_d = new int[var3];
                             var4 = 1;
                             L5: while (true) {
-                              if (var3 <= var4) {
+                              if (~var3 >= ~var4) {
                                 var17.field_n = 0;
                                 var4 = 0;
                                 L6: while (true) {
@@ -206,7 +206,7 @@ abstract class eh {
                                       } else {
                                         var12 = 0;
                                         L13: while (true) {
-                                          if (var7 <= var12) {
+                                          if (~var7 >= ~var12) {
                                             if ((var11 & 2) == 0) {
                                               break L7;
                                             } else {

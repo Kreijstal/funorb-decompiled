@@ -454,12 +454,12 @@ final class wj extends gk implements vn {
                     break L4;
                   }
                 }
-                if (-4 == param1.field_h) {
+                if (param1.field_h == 3) {
                   var5.a(ce.field_z, 7, 14);
                   this.c(var5, (byte) 68);
                   break L3;
                 } else {
-                  if (-7 != param1.field_h) {
+                  if (param1.field_h != 6) {
                     this.c(var5, (byte) 68);
                     break L3;
                   } else {
@@ -643,7 +643,7 @@ final class wj extends gk implements vn {
               if (wc.field_n) {
                 break L7;
               } else {
-                if (var5 < kf.field_M) {
+                if (~var5 > ~kf.field_M) {
                   var10_int = rf.a(0, var8_ref_hl.field_m);
                   if (var8_ref_hl.b((byte) 94) < var10_int) {
                     break L7;

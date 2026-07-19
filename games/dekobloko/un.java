@@ -373,7 +373,7 @@ final class un {
             var5 = 0;
             var6 = 0;
             L1: while (true) {
-              if (var6 >= param3) {
+              if (~var6 <= ~param3) {
                 stackOut_12_0 = new String(var4, 0, var5);
                 stackIn_13_0 = stackOut_12_0;
                 break L0;
@@ -574,7 +574,7 @@ final class un {
                   var6 = 0;
                   var7 = 0;
                   L6: while (true) {
-                    if (var5.field_Q.length <= var7) {
+                    if (~var5.field_Q.length >= ~var7) {
                       if (var6 != 0) {
                         var5.field_B = (byte)(var6 + 1);
                         break L5;

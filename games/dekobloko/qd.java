@@ -34,7 +34,7 @@ final class qd extends w {
         }
         L2: {
           var6 = param2 + (var5 + param0) + (param2 - -var4);
-          if (var6 <= this.field_mb) {
+          if (~var6 >= ~this.field_mb) {
             break L2;
           } else {
             var5 = var5 + (this.field_mb + -var6);

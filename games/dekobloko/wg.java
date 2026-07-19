@@ -108,13 +108,13 @@ final class wg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             var4 = param1.length();
             var5 = 0;
             L1: while (true) {
-              if (var4 <= var5) {
+              if (~var4 >= ~var5) {
                 stackOut_9_0 = var3_int;
                 stackIn_10_0 = stackOut_9_0;
                 break L0;
               } else {
                 L2: {
-                  if (param1.charAt(var5) != param2) {
+                  if (~param1.charAt(var5) != ~param2) {
                     break L2;
                   } else {
                     var3_int++;
@@ -482,7 +482,7 @@ final class wg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                   stackOut_11_0 = (ve) ((Object) stackIn_11_0);
                   stackIn_13_0 = stackOut_11_0;
                   stackIn_12_0 = stackOut_11_0;
-                  if (param2.field_rc >= param2.field_mc) {
+                  if (~param2.field_rc <= ~param2.field_mc) {
                     break L5;
                   } else {
                     stackOut_12_0 = (ve) ((Object) stackIn_12_0);
@@ -504,7 +504,7 @@ final class wg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               stackOut_14_0 = (ve) (param2);
               stackIn_16_0 = stackOut_14_0;
               stackIn_15_0 = stackOut_14_0;
-              if ((64 & var4_int) == -1) {
+              if ((64 & var4_int) == 0) {
                 stackOut_16_0 = (ve) ((Object) stackIn_16_0);
                 stackOut_16_1 = 0;
                 stackIn_17_0 = stackOut_16_0;
@@ -523,7 +523,7 @@ final class wg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               stackOut_17_0 = (ve) (param2);
               stackIn_19_0 = stackOut_17_0;
               stackIn_18_0 = stackOut_17_0;
-              if (-1 == (var4_int & 8)) {
+              if ((var4_int & 8) == 0) {
                 stackOut_19_0 = (ve) ((Object) stackIn_19_0);
                 stackOut_19_1 = 0;
                 stackIn_20_0 = stackOut_19_0;

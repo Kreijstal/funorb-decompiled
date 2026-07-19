@@ -78,7 +78,7 @@ final class eb {
         this.field_j = true;
         var3 = 0;
         L1: while (true) {
-          if (var3 >= this.field_b) {
+          if (~var3 <= ~this.field_b) {
             return;
           } else {
             var4 = this.field_p[var3];

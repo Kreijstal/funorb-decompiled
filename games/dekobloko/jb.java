@@ -230,7 +230,7 @@ final class jb extends RuntimeException {
               var3 = oc.a((byte) 27);
               var4 = 0;
               L1: while (true) {
-                if (var4 >= var3.length) {
+                if (~var4 <= ~var3.length) {
                   stackOut_11_0 = hn.field_c;
                   stackIn_12_0 = stackOut_11_0;
                   break L0;

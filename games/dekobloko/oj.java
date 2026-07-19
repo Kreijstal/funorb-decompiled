@@ -80,13 +80,13 @@ final class oj {
                     }
                   }
                   L3: {
-                    if (qg.field_a > param10) {
+                    if (~qg.field_a < ~param10) {
                       break L3;
                     } else {
                       if (qg.field_a > param4) {
                         break L3;
                       } else {
-                        if (qg.field_a > param5) {
+                        if (~qg.field_a < ~param5) {
                           break L3;
                         } else {
                           return;
@@ -104,7 +104,7 @@ final class oj {
                   }
                   L5: {
                     var34 = param14 + -param11;
-                    if (param11 == param3) {
+                    if (~param11 == ~param3) {
                       L6: {
                         if (param11 != param14) {
                           var35 = -param3 + param14;
@@ -197,7 +197,7 @@ final class oj {
                         var35 = -param11 + param3;
                         var19 = (param4 + -param10 << 16) / var35;
                         var20 = (param5 - param10 << 16) / var34;
-                        if (var20 > var19) {
+                        if (~var20 < ~var19) {
                           var33 = 0;
                           var27 = (-param2 + param6 << 16) / var35;
                           var32 = (param13 - param16 << 16) / var34;
@@ -259,7 +259,7 @@ final class oj {
                           } else {
                             L12: {
                               var37 = var17_int >> 16;
-                              if (qg.field_a > var37) {
+                              if (~qg.field_a < ~var37) {
                                 var38 = -(var17_int >> 16) + (var18 >> 16);
                                 if (var38 != 0) {
                                   L13: {
@@ -284,7 +284,7 @@ final class oj {
                                   if (var37 < 0) {
                                     break L12;
                                   } else {
-                                    if (var37 < qg.field_a) {
+                                    if (~var37 > ~qg.field_a) {
                                       ve.a(var25, var37 + var36, 0, 0, var21, var38, 9, param12, var29, 0);
                                       break L12;
                                     } else {
@@ -297,7 +297,7 @@ final class oj {
                               }
                             }
                             param11++;
-                            if (param11 < qg.field_e) {
+                            if (~param11 > ~qg.field_e) {
                               var18 = var18 + var20;
                               var21 = var21 + var23;
                               var30 = var30 + var32;
@@ -376,12 +376,12 @@ final class oj {
                   }
                   var35 = qg.field_d[param11];
                   L16: while (true) {
-                    if (param11 >= param14) {
+                    if (~param11 <= ~param14) {
                       break L0;
                     } else {
                       L17: {
                         var36 = var17_int >> 16;
-                        if (qg.field_a <= var36) {
+                        if (~qg.field_a >= ~var36) {
                           break L17;
                         } else {
                           var37 = (var18 >> 16) - (var17_int >> 16);
@@ -389,7 +389,7 @@ final class oj {
                             if (var36 < 0) {
                               break L17;
                             } else {
-                              if (qg.field_a <= var36) {
+                              if (~qg.field_a >= ~var36) {
                                 break L17;
                               } else {
                                 ve.a(var25, var36 + var35, 0, 0, var21, var37, 9, param12, var29, 0);
@@ -477,17 +477,17 @@ final class oj {
             IOException var1 = null;
             int var1_int = 0;
             wl var2 = null;
-            int stackIn_14_0 = 0;
-            int stackIn_24_0 = 0;
-            int stackIn_27_0 = 0;
-            int stackIn_31_0 = 0;
-            int stackIn_33_0 = 0;
+            int stackIn_15_0 = 0;
+            int stackIn_25_0 = 0;
+            int stackIn_28_0 = 0;
+            int stackIn_32_0 = 0;
+            int stackIn_34_0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_13_0 = 0;
-            int stackOut_26_0 = 0;
-            int stackOut_23_0 = 0;
-            int stackOut_32_0 = 0;
-            int stackOut_30_0 = 0;
+            int stackOut_14_0 = 0;
+            int stackOut_27_0 = 0;
+            int stackOut_24_0 = 0;
+            int stackOut_33_0 = 0;
+            int stackOut_31_0 = 0;
             if (4 > ta.field_k.field_j) {
               try {
                 L0: {
@@ -503,9 +503,9 @@ final class oj {
                   L2: {
                     if (hd.field_n == 1) {
                       if (2 == d.field_f.field_c) {
-                        stackOut_13_0 = al.a(0, -1);
-                        stackIn_14_0 = stackOut_13_0;
-                        return stackIn_14_0;
+                        stackOut_14_0 = al.a(0, -1);
+                        stackIn_15_0 = stackOut_14_0;
+                        return stackIn_15_0;
                       } else {
                         if (d.field_f.field_c != 1) {
                           break L2;
@@ -541,17 +541,17 @@ final class oj {
                           hd.field_n = hd.field_n + 1;
                           break L4;
                         } else {
-                          stackOut_26_0 = al.a(0, var1_int);
-                          stackIn_27_0 = stackOut_26_0;
-                          return stackIn_27_0;
+                          stackOut_27_0 = al.a(0, var1_int);
+                          stackIn_28_0 = stackOut_27_0;
+                          return stackIn_28_0;
                         }
                       } else {
                         if (me.field_E >= ik.a(4)) {
                           break L4;
                         } else {
-                          stackOut_23_0 = al.a(0, -2);
-                          stackIn_24_0 = stackOut_23_0;
-                          return stackIn_24_0;
+                          stackOut_24_0 = al.a(0, -2);
+                          stackIn_25_0 = stackOut_24_0;
+                          return stackIn_25_0;
                         }
                       }
                     } else {
@@ -559,17 +559,17 @@ final class oj {
                     }
                   }
                   if (hd.field_n != 4) {
-                    stackOut_32_0 = -1;
-                    stackIn_33_0 = stackOut_32_0;
+                    stackOut_33_0 = -1;
+                    stackIn_34_0 = stackOut_33_0;
                     break L0;
                   } else {
                     ta.field_k.a(rk.field_L, (byte) -128, ta.field_f);
                     rk.field_L = null;
                     d.field_f = null;
                     hd.field_n = 0;
-                    stackOut_30_0 = 0;
-                    stackIn_31_0 = stackOut_30_0;
-                    return stackIn_31_0;
+                    stackOut_31_0 = 0;
+                    stackIn_32_0 = stackOut_31_0;
+                    return stackIn_32_0;
                   }
                 }
               } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -577,15 +577,15 @@ final class oj {
                 var1 = (IOException) (Object) decompiledCaughtException;
                 return al.a(0, -3);
               }
-              return stackIn_33_0;
+              return stackIn_34_0;
             } else {
               if (ta.field_k.field_o == -1) {
                 return 3;
               } else {
-                if (ta.field_k.field_o == -2) {
-                  return 4;
-                } else {
+                if (ta.field_k.field_o != -2) {
                   return 1;
+                } else {
+                  return 4;
                 }
               }
             }

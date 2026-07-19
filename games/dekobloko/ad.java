@@ -335,7 +335,6 @@ final class ad {
                             if (this.field_f[var10] <= var9) {
                               break L8;
                             } else {
-                              var9 = this.field_f[var10];
                               break L8;
                             }
                           }
@@ -356,7 +355,6 @@ final class ad {
                             if (~this.field_f[var10] >= ~var9) {
                               break L10;
                             } else {
-                              var9 = this.field_f[var10];
                               break L10;
                             }
                           }
@@ -524,7 +522,6 @@ final class ad {
                                             if (~var15 >= ~var13) {
                                               break L29;
                                             } else {
-                                              var13 = var15;
                                               break L29;
                                             }
                                           }
@@ -656,7 +653,7 @@ final class ad {
                 }
                 this.field_h = um.a(0, param0, 0, param0.length);
                 for (var4_int = 0; var4_int < 64; var4_int++) {
-                    if (param2[var4_int] != this.field_h[var4_int]) {
+                    if (~param2[var4_int] != ~this.field_h[var4_int]) {
                         throw new RuntimeException();
                     }
                 }

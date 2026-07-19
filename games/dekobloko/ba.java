@@ -139,22 +139,22 @@ abstract class ba implements nb {
             java.lang.reflect.Field var26 = null;
             java.lang.reflect.Method var27 = null;
             java.lang.reflect.Method var28 = null;
-            RuntimeException stackIn_66_0 = null;
-            StringBuilder stackIn_66_1 = null;
             RuntimeException stackIn_67_0 = null;
             StringBuilder stackIn_67_1 = null;
             RuntimeException stackIn_68_0 = null;
             StringBuilder stackIn_68_1 = null;
-            String stackIn_68_2 = null;
+            RuntimeException stackIn_69_0 = null;
+            StringBuilder stackIn_69_1 = null;
+            String stackIn_69_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_65_0 = null;
-            StringBuilder stackOut_65_1 = null;
+            RuntimeException stackOut_66_0 = null;
+            StringBuilder stackOut_66_1 = null;
+            RuntimeException stackOut_68_0 = null;
+            StringBuilder stackOut_68_1 = null;
+            String stackOut_68_2 = null;
             RuntimeException stackOut_67_0 = null;
             StringBuilder stackOut_67_1 = null;
             String stackOut_67_2 = null;
-            RuntimeException stackOut_66_0 = null;
-            StringBuilder stackOut_66_1 = null;
-            String stackOut_66_2 = null;
             var18 = null;
             var16 = null;
             var21 = null;
@@ -264,6 +264,34 @@ abstract class ba implements nb {
                                     }
                                     break L4;
                                   }
+                                } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
+                                  decompiledCaughtException = decompiledCaughtParameter0;
+                                  L8: {
+                                    var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
+                                    param1.a(true, -10);
+                                    break L8;
+                                  }
+                                } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
+                                  decompiledCaughtException = decompiledCaughtParameter1;
+                                  L9: {
+                                    var6_ref = (InvalidClassException) (Object) decompiledCaughtException;
+                                    param1.a(true, -11);
+                                    break L9;
+                                  }
+                                } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
+                                  decompiledCaughtException = decompiledCaughtParameter2;
+                                  L10: {
+                                    var6_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
+                                    param1.a(true, -12);
+                                    break L10;
+                                  }
+                                } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
+                                  decompiledCaughtException = decompiledCaughtParameter3;
+                                  L11: {
+                                    var6_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
+                                    param1.a(true, -13);
+                                    break L11;
+                                  }
                                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                                   decompiledCaughtException = decompiledCaughtParameter4;
                                   L12: {
@@ -353,28 +381,28 @@ abstract class ba implements nb {
                           }
                         }
                       }
-                      L22: {
-                        if (var13.field_t[var4] != null) {
-                          L23: {
-                            if (var13.field_t[var4].field_c == 2) {
-                              var13.field_A[var4] = -6;
-                              break L23;
-                            } else {
-                              break L23;
-                            }
-                          }
-                          if (var13.field_t[var4].field_c != 0) {
+                      if (var13.field_t[var4] != null) {
+                        L22: {
+                          if (var13.field_t[var4].field_c == 2) {
+                            var13.field_A[var4] = -6;
                             break L22;
                           } else {
-                            var3 = 1;
                             break L22;
                           }
-                        } else {
-                          break L22;
                         }
+                        L23: {
+                          if (var13.field_t[var4].field_c != 0) {
+                            break L23;
+                          } else {
+                            break L23;
+                          }
+                        }
+                        var4++;
+                        continue L1;
+                      } else {
+                        var4++;
+                        continue L1;
                       }
-                      var4++;
-                      continue L1;
                     }
                   }
                 }
@@ -383,31 +411,31 @@ abstract class ba implements nb {
               decompiledCaughtException = decompiledCaughtParameter12;
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_65_0 = (RuntimeException) (var2);
-                stackOut_65_1 = new StringBuilder().append("ba.V(").append(-32141).append(',');
-                stackIn_67_0 = stackOut_65_0;
-                stackIn_67_1 = stackOut_65_1;
-                stackIn_66_0 = stackOut_65_0;
-                stackIn_66_1 = stackOut_65_1;
+                stackOut_66_0 = (RuntimeException) (var2);
+                stackOut_66_1 = new StringBuilder().append("ba.V(").append(-32141).append(',');
+                stackIn_68_0 = stackOut_66_0;
+                stackIn_68_1 = stackOut_66_1;
+                stackIn_67_0 = stackOut_66_0;
+                stackIn_67_1 = stackOut_66_1;
                 if (param1 == null) {
-                  stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
-                  stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
-                  stackOut_67_2 = "null";
-                  stackIn_68_0 = stackOut_67_0;
-                  stackIn_68_1 = stackOut_67_1;
-                  stackIn_68_2 = stackOut_67_2;
+                  stackOut_68_0 = (RuntimeException) ((Object) stackIn_68_0);
+                  stackOut_68_1 = (StringBuilder) ((Object) stackIn_68_1);
+                  stackOut_68_2 = "null";
+                  stackIn_69_0 = stackOut_68_0;
+                  stackIn_69_1 = stackOut_68_1;
+                  stackIn_69_2 = stackOut_68_2;
                   break L24;
                 } else {
-                  stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
-                  stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
-                  stackOut_66_2 = "{...}";
-                  stackIn_68_0 = stackOut_66_0;
-                  stackIn_68_1 = stackOut_66_1;
-                  stackIn_68_2 = stackOut_66_2;
+                  stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
+                  stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
+                  stackOut_67_2 = "{...}";
+                  stackIn_69_0 = stackOut_67_0;
+                  stackIn_69_1 = stackOut_67_1;
+                  stackIn_69_2 = stackOut_67_2;
                   break L24;
                 }
               }
-              throw dh.a((Throwable) ((Object) stackIn_68_0), stackIn_68_2 + ')');
+              throw dh.a((Throwable) ((Object) stackIn_69_0), stackIn_69_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -495,7 +523,7 @@ abstract class ba implements nb {
             if (null == mk.field_b) {
               break L9;
             } else {
-              if (param1 > mk.field_b.length) {
+              if (~param1 < ~mk.field_b.length) {
                 break L9;
               } else {
                 break L8;

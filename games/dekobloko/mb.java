@@ -277,7 +277,7 @@ final class mb {
         var4 = client.field_A ? 1 : 0;
         var3 = this.field_b.length;
         L0: while (true) {
-          if (param1 < var3) {
+          if (~param1 > ~var3) {
             return var3;
           } else {
             if (!this.field_a) {
@@ -298,7 +298,7 @@ final class mb {
 
     private final void a(byte param0, int param1, int param2) {
         if (this.field_g >= param1) {
-          if (param1 >= this.field_b.length) {
+          if (~param1 <= ~this.field_b.length) {
             this.a(param1, -23);
             this.field_b[param1] = param2;
             return;
@@ -308,7 +308,7 @@ final class mb {
           }
         } else {
           this.field_g = param1;
-          if (param1 < this.field_b.length) {
+          if (~param1 > ~this.field_b.length) {
             this.field_b[param1] = param2;
             return;
           } else {
@@ -349,7 +349,7 @@ final class mb {
 
     final void c(int param0, int param1) {
         if (param1 >= 0) {
-          if (this.field_g >= param1) {
+          if (~this.field_g <= ~param1) {
             if (param0 > -25) {
               L0: {
                 this.field_f = 15;

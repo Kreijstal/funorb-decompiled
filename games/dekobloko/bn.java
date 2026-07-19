@@ -74,7 +74,7 @@ final class bn {
               var11 = param4.field_I;
               var12 = hk.field_j + -var11;
               var13 = 0;
-              if (param3 < hk.field_h) {
+              if (~param3 > ~hk.field_h) {
                 var14 = hk.field_h + -param3;
                 var8 = var8 + var14 * hk.field_j;
                 var9 = var9 + var11 * var14;
@@ -94,7 +94,7 @@ final class bn {
               }
             }
             L4: {
-              if (hk.field_c <= param5) {
+              if (~hk.field_c >= ~param5) {
                 break L4;
               } else {
                 var14 = hk.field_c + -param5;
@@ -109,7 +109,7 @@ final class bn {
               }
             }
             L5: {
-              if (var11 + param5 > hk.field_g) {
+              if (~(var11 + param5) < ~hk.field_g) {
                 var14 = var11 + (param5 - hk.field_g);
                 var13 = var13 + var14;
                 var12 = var12 + var14;

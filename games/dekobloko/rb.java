@@ -454,13 +454,13 @@ final class rb {
               if (var2_int >= 3) {
                 var2_int = 0;
                 L2: while (true) {
-                  if (ic.field_c <= var2_int) {
+                  if (~ic.field_c >= ~var2_int) {
                     dupTemp$4 = param0.b((byte) 94);
                     ql.field_d[dupTemp$4] = ql.field_d[dupTemp$4] + 1;
                     var2_int = 0;
                     var3 = 0;
                     L3: while (true) {
-                      if (ic.field_c <= var3) {
+                      if (~ic.field_c >= ~var3) {
                         ic.field_c = var2_int;
                         fieldTemp$5 = ic.field_c;
                         ic.field_c = ic.field_c + 1;
@@ -469,7 +469,7 @@ final class rb {
                       } else {
                         L4: {
                           L5: {
-                            if (param0.field_m != pd.field_g[var3].field_m) {
+                            if (~param0.field_m != ~pd.field_g[var3].field_m) {
                               break L5;
                             } else {
                               var4 = pd.field_g[var3].b((byte) 94);
@@ -492,7 +492,7 @@ final class rb {
                     }
                   } else {
                     L6: {
-                      if (pd.field_g[var2_int].field_m == param0.field_m) {
+                      if (~pd.field_g[var2_int].field_m == ~param0.field_m) {
                         dupTemp$7 = pd.field_g[var2_int].b((byte) 94);
                         ql.field_d[dupTemp$7] = ql.field_d[dupTemp$7] + 1;
                         break L6;

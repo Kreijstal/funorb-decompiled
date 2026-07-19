@@ -21,7 +21,7 @@ final class b extends ek {
           if (param1 < 0) {
             break L0;
           } else {
-            if (this.field_N.a(126) > param1) {
+            if (~this.field_N.a(126) < ~param1) {
               L1: {
                 if (param0 == -1) {
                   break L1;
@@ -192,7 +192,7 @@ final class b extends ek {
                     var11 = -1;
                     var12 = 0;
                     L4: while (true) {
-                      if (var12 >= this.field_N.a(114)) {
+                      if (~var12 <= ~this.field_N.a(114)) {
                         if (var11 >= 0) {
                           this.field_N.c(-91, var11);
                           break L3;

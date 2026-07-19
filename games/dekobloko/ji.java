@@ -742,8 +742,6 @@ final class ji {
                                     if (param2 != var19) {
                                       break L20;
                                     } else {
-                                      var15 = var19;
-                                      var14 = var14 + var17;
                                       break L20;
                                     }
                                   }
@@ -1100,7 +1098,7 @@ final class ji {
         if (param0 >= 0) {
             if (param1 >= 0) {
                 if (param0 < this.field_f.field_k.length) {
-                    if (this.field_f.field_k[param0] > param1) {
+                    if (~this.field_f.field_k[param0] < ~param1) {
                         return true;
                     }
                 }
@@ -1156,7 +1154,7 @@ final class ji {
             var6 = 0;
             var7 = 0;
             L1: while (true) {
-              if (var7 >= var3_int) {
+              if (~var7 <= ~var3_int) {
                 var4[var3_int] = param2.substring(var6);
                 stackOut_9_0 = (String[]) (var4);
                 stackIn_10_0 = stackOut_9_0;

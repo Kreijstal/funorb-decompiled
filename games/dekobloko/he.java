@@ -582,7 +582,7 @@ final class he extends kf implements qh, vn {
                   if (param1 == null) {
                     break L2;
                   } else {
-                    if (param1.length != var4_int) {
+                    if (~param1.length != ~var4_int) {
                       break L2;
                     } else {
                       break L1;
@@ -1141,10 +1141,10 @@ final class he extends kf implements qh, vn {
                 param0 = jm.a('_', param0, "", -1);
                 var3 = oa.a(param0, -1);
                 var4 = -17 % ((58 - param1) / 55);
-                if (param2.indexOf(param0) != 0) {
+                if (param2.indexOf(param0) != -1) {
                   break L2;
                 } else {
-                  if (0 == param2.indexOf(var3)) {
+                  if (param2.indexOf(var3) == -1) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
                     break L1;

@@ -123,7 +123,7 @@ final class ph extends ca {
                   L1: {
                     vh.field_g = (-640 + wj.field_Lb) / 2;
                     hg.a(param5, -1843);
-                    if (param7 <= lg.field_W) {
+                    if (param7 <= ~lg.field_W) {
                       break L1;
                     } else {
                       qm.a(param4, param9, param5, (byte) -8);
@@ -133,7 +133,7 @@ final class ph extends ca {
                   L2: {
                     tg.field_i.field_X = 1;
                     tg.field_i.field_ub = fc.field_c.field_ub;
-                    if (-1 < bf.field_r) {
+                    if (bf.field_r > 0) {
                       vg.a(param9, param4, param5, 48);
                       break L2;
                     } else {
@@ -153,7 +153,7 @@ final class ph extends ca {
                       if (!dn.field_k) {
                         break L5;
                       } else {
-                        if (cd.field_m.field_mc > cd.field_m.field_rc) {
+                        if (~cd.field_m.field_mc < ~cd.field_m.field_rc) {
                           break L5;
                         } else {
                           gg.field_y.field_Hb = false;
@@ -176,7 +176,7 @@ final class ph extends ca {
                   L6: {
                     vh.field_g = ea.field_t;
                     hg.a(param5, -1843);
-                    if (param7 <= lg.field_W) {
+                    if (param7 <= ~lg.field_W) {
                       break L6;
                     } else {
                       qm.a(param4, param9, param5, (byte) -8);
@@ -186,7 +186,7 @@ final class ph extends ca {
                   L7: {
                     tg.field_i.field_X = 1;
                     tg.field_i.field_ub = fc.field_c.field_ub;
-                    if (-1 < bf.field_r) {
+                    if (bf.field_r > 0) {
                       vg.a(param9, param4, param5, 48);
                       break L7;
                     } else {
@@ -206,7 +206,7 @@ final class ph extends ca {
                       if (!dn.field_k) {
                         break L10;
                       } else {
-                        if (cd.field_m.field_mc > cd.field_m.field_rc) {
+                        if (~cd.field_m.field_mc < ~cd.field_m.field_rc) {
                           break L10;
                         } else {
                           gg.field_y.field_Hb = false;
@@ -230,7 +230,7 @@ final class ph extends ca {
             }
           }
           L11: {
-            if (hk.field_i != le.field_m.field_i) {
+            if (~hk.field_i != ~le.field_m.field_i) {
               break L11;
             } else {
               if (le.field_m.field_g != hk.field_j) {
@@ -250,7 +250,7 @@ final class ph extends ca {
                     }
                     L13: {
                       hg.a(param5, -1843);
-                      if (param7 <= lg.field_W) {
+                      if (param7 <= ~lg.field_W) {
                         break L13;
                       } else {
                         qm.a(param4, param9, param5, (byte) -8);
@@ -260,7 +260,7 @@ final class ph extends ca {
                     L14: {
                       tg.field_i.field_X = 1;
                       tg.field_i.field_ub = fc.field_c.field_ub;
-                      if (-1 < bf.field_r) {
+                      if (bf.field_r > 0) {
                         vg.a(param9, param4, param5, 48);
                         break L14;
                       } else {
@@ -280,7 +280,7 @@ final class ph extends ca {
                         if (!dn.field_k) {
                           break L17;
                         } else {
-                          if (cd.field_m.field_mc > cd.field_m.field_rc) {
+                          if (~cd.field_m.field_mc < ~cd.field_m.field_rc) {
                             break L17;
                           } else {
                             gg.field_y.field_Hb = false;
@@ -313,7 +313,7 @@ final class ph extends ca {
           if (param5) {
             vh.field_g = ea.field_t;
             hg.a(param5, -1843);
-            if (param7 <= lg.field_W) {
+            if (param7 <= ~lg.field_W) {
               L18: {
                 tg.field_i.field_X = 1;
                 tg.field_i.field_ub = fc.field_c.field_ub;
@@ -333,7 +333,7 @@ final class ph extends ca {
                 }
               }
               if (dn.field_k) {
-                if (cd.field_m.field_mc <= cd.field_m.field_rc) {
+                if (~cd.field_m.field_mc >= ~cd.field_m.field_rc) {
                   gg.field_y.field_Hb = false;
                   ec.field_k.field_Rb.field_Y = cb.field_k;
                   gk.a(ec.field_k.field_Ob, true);
@@ -364,7 +364,7 @@ final class ph extends ca {
                 qm.a(param4, param9, param5, (byte) -8);
                 tg.field_i.field_X = 1;
                 tg.field_i.field_ub = fc.field_c.field_ub;
-                if (-1 < bf.field_r) {
+                if (bf.field_r > 0) {
                   vg.a(param9, param4, param5, 48);
                   break L20;
                 } else {
@@ -384,7 +384,7 @@ final class ph extends ca {
                   if (!dn.field_k) {
                     break L23;
                   } else {
-                    if (cd.field_m.field_mc > cd.field_m.field_rc) {
+                    if (~cd.field_m.field_mc < ~cd.field_m.field_rc) {
                       break L23;
                     } else {
                       gg.field_y.field_Hb = false;
@@ -408,7 +408,7 @@ final class ph extends ca {
             L24: {
               vh.field_g = (-640 + wj.field_Lb) / 2;
               hg.a(param5, -1843);
-              if (param7 <= lg.field_W) {
+              if (param7 <= ~lg.field_W) {
                 break L24;
               } else {
                 qm.a(param4, param9, param5, (byte) -8);
@@ -418,7 +418,7 @@ final class ph extends ca {
             L25: {
               tg.field_i.field_X = 1;
               tg.field_i.field_ub = fc.field_c.field_ub;
-              if (-1 < bf.field_r) {
+              if (bf.field_r > 0) {
                 vg.a(param9, param4, param5, 48);
                 break L25;
               } else {
@@ -437,7 +437,7 @@ final class ph extends ca {
               if (!dn.field_k) {
                 break L27;
               } else {
-                if (cd.field_m.field_mc > cd.field_m.field_rc) {
+                if (~cd.field_m.field_mc < ~cd.field_m.field_rc) {
                   break L27;
                 } else {
                   gg.field_y.field_Hb = false;
@@ -462,7 +462,7 @@ final class ph extends ca {
           L28: {
             vh.field_g = ea.field_t;
             hg.a(param5, -1843);
-            if (param7 <= lg.field_W) {
+            if (param7 <= ~lg.field_W) {
               break L28;
             } else {
               qm.a(param4, param9, param5, (byte) -8);
@@ -472,7 +472,7 @@ final class ph extends ca {
           L29: {
             tg.field_i.field_X = 1;
             tg.field_i.field_ub = fc.field_c.field_ub;
-            if (-1 < bf.field_r) {
+            if (bf.field_r > 0) {
               vg.a(param9, param4, param5, 48);
               break L29;
             } else {
@@ -492,7 +492,7 @@ final class ph extends ca {
               if (!dn.field_k) {
                 break L32;
               } else {
-                if (cd.field_m.field_mc > cd.field_m.field_rc) {
+                if (~cd.field_m.field_mc < ~cd.field_m.field_rc) {
                   break L32;
                 } else {
                   gg.field_y.field_Hb = false;

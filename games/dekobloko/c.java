@@ -343,7 +343,7 @@ final class c {
                 var5_int = this.field_p.a(param1);
                 var6 = this.field_p.field_K + this.field_p.field_C;
                 var7 = param2;
-                if (hk.field_j < var7 + (var5_int - -6)) {
+                if (~hk.field_j > ~(var7 + (var5_int - -6))) {
                   var7 = -var5_int + (hk.field_j + -6);
                   break L1;
                 } else {
@@ -487,12 +487,12 @@ final class c {
               var9 = 0;
               var13 = 0;
               L6: while (true) {
-                if (var11 <= var13) {
+                if (~var11 >= ~var13) {
                   break L2;
                 } else {
                   L7: {
                     var14 = this.field_p.a(el.field_L[var13]);
-                    if (var14 <= var9) {
+                    if (~var14 >= ~var9) {
                       break L7;
                     } else {
                       var9 = var14;
@@ -515,7 +515,7 @@ final class c {
             }
             L9: {
               var13 = 32 + param3 + -this.field_p.field_C;
-              if (hk.field_i >= var13 - (-var10 + -var6)) {
+              if (~hk.field_i <= ~(var13 - (-var10 + -var6))) {
                 break L9;
               } else {
                 var13 = -var6 + (param3 - var10);

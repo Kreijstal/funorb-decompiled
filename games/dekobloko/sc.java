@@ -199,7 +199,7 @@ final class sc extends we {
             var4 = ((java.net.ProxySelector) (Object) stackIn_12_0).select(new java.net.URI(stackIn_12_4 + "://" + this.field_d));
             break L2;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
           return this.b(2);
@@ -218,7 +218,7 @@ final class sc extends we {
         var8_array = var6_array;
         var9 = 0;
         L6: while (true) {
-          if (var8_array.length <= var9) {
+          if (~var8_array.length >= ~var9) {
             if (var7 == null) {
               return this.b(2);
             } else {
@@ -241,15 +241,7 @@ final class sc extends we {
                   break L7;
                 }
               }
-            } catch (java.io.IOException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              L9: {
-                var12_ref = (IOException) (Object) decompiledCaughtException;
-                var9++;
-                decompiledRegionSelector0 = 0;
-                break L9;
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter1) {
+            } catch (db decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L8: {
                 var12 = (db) (Object) decompiledCaughtException;
@@ -257,6 +249,14 @@ final class sc extends we {
                 var9++;
                 decompiledRegionSelector0 = 0;
                 break L8;
+              }
+            } catch (java.io.IOException decompiledCaughtParameter2) {
+              decompiledCaughtException = decompiledCaughtParameter2;
+              L9: {
+                var12_ref = (IOException) (Object) decompiledCaughtException;
+                var9++;
+                decompiledRegionSelector0 = 0;
+                break L9;
               }
             }
             if (decompiledRegionSelector0 == 0) {

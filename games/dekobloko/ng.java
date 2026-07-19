@@ -226,7 +226,7 @@ final class ng {
                   var3 = 0;
                   var4 = 1;
                   L1: while (true) {
-                    if (var2_int + -1 > var4) {
+                    if (~(var2_int + -1) < ~var4) {
                       L2: {
                         var5 = param1.charAt(var4);
                         if (var5 == 92) {
@@ -438,7 +438,7 @@ final class ng {
         this.field_h = new bh[param0];
         var2 = 0;
         L0: while (true) {
-          if (param0 > var2) {
+          if (~param0 < ~var2) {
             dupTemp$2 = new bh();
             var3 = dupTemp$2;
             this.field_h[var2] = dupTemp$2;

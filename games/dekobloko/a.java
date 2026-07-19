@@ -874,13 +874,13 @@ class a implements gl, nl {
         var16 = client.field_A ? 1 : 0;
         try {
           L0: {
-            if (param1 != param0) {
+            if (~param1 != ~param0) {
               L1: {
                 if (param5.a(true)) {
                   L2: {
                     var17 = this.a(param5, (byte) 100);
                     var18 = var17;
-                    if (param0 < param1) {
+                    if (~param0 > ~param1) {
                       var9 = param1;
                       var8 = param0;
                       break L2;
@@ -913,7 +913,7 @@ class a implements gl, nl {
                       }
                       L5: {
                         var14 = stackIn_13_0;
-                        if (var12 != var11) {
+                        if (~var12 != ~var11) {
                           if (var13 != null) {
                             stackOut_17_0 = var13.field_a[-1 + var13.field_a.length];
                             stackIn_18_0 = stackOut_17_0;
@@ -1107,50 +1107,47 @@ class a implements gl, nl {
             }
             L4: {
               L5: {
-                L6: {
-                  var6 = this.field_f;
-                  if (var6 == 0) {
-                    break L6;
-                  } else {
-                    if (var6 != 3) {
-                      if (var6 != 1) {
-                        if (2 != var6) {
-                          break L5;
-                        } else {
-                          if (!(param0.field_n instanceof ea)) {
-                            break L5;
-                          } else {
-                            ((ea) ((Object) param0.field_n)).a(0, this.field_z, var3_int, var5, this.b(param0, (byte) 122));
-                            break L4;
-                          }
-                        }
+                var6 = this.field_f;
+                if (var6 == 0) {
+                  break L5;
+                } else {
+                  if (var6 != 3) {
+                    if (var6 != 1) {
+                      if (2 != var6) {
+                        break L4;
                       } else {
                         if (!(param0.field_n instanceof ea)) {
-                          break L5;
+                          break L4;
                         } else {
-                          ((ea) ((Object) param0.field_n)).a(var5, var3_int >> 1, this.b(param0, (byte) 116), (byte) 8, this.field_z);
+                          ((ea) ((Object) param0.field_n)).a(0, this.field_z, var3_int, var5, this.b(param0, (byte) 122));
                           break L4;
                         }
                       }
                     } else {
-                      break L6;
+                      if (!(param0.field_n instanceof ea)) {
+                        break L4;
+                      } else {
+                        ((ea) ((Object) param0.field_n)).a(var5, var3_int >> 1, this.b(param0, (byte) 116), (byte) 8, this.field_z);
+                        break L4;
+                      }
                     }
+                  } else {
+                    break L5;
                   }
                 }
-                if (!(param0.field_n instanceof ea)) {
-                  break L5;
-                } else {
-                  ((ea) ((Object) param0.field_n)).a(0, this.field_z, this.b(param0, (byte) 127), var5, 25);
-                  break L4;
-                }
               }
-              break L4;
+              if (!(param0.field_n instanceof ea)) {
+                break L4;
+              } else {
+                ((ea) ((Object) param0.field_n)).a(0, this.field_z, this.b(param0, (byte) 127), var5, 25);
+                break L4;
+              }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var3 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) (var3);
             stackOut_27_1 = new StringBuilder().append("a.Q(");
@@ -1165,7 +1162,7 @@ class a implements gl, nl {
               stackIn_30_0 = stackOut_29_0;
               stackIn_30_1 = stackOut_29_1;
               stackIn_30_2 = stackOut_29_2;
-              break L7;
+              break L6;
             } else {
               stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
               stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
@@ -1173,7 +1170,7 @@ class a implements gl, nl {
               stackIn_30_0 = stackOut_28_0;
               stackIn_30_1 = stackOut_28_1;
               stackIn_30_2 = stackOut_28_2;
-              break L7;
+              break L6;
             }
           }
           throw dh.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + 18580 + ')');
@@ -1417,7 +1414,7 @@ class a implements gl, nl {
                     var5 = ji.a(';', (byte) 66, var4);
                     var6 = 0;
                     L3: while (true) {
-                      if (var5.length <= var6) {
+                      if (~var5.length >= ~var6) {
                         break L1;
                       } else {
                         L4: {
@@ -1724,39 +1721,70 @@ class a implements gl, nl {
     }
 
     static {
-        int var1 = 0;
-        int var0_int = 0;
-        int var2 = 0;
-        long var0 = 0L;
-        int var3 = 0;
-        field_e = "<%0><br>IS OUT!";
-        field_r = new int[1024];
-        field_g = 128;
-        field_j = new int[256];
-        for (var1 = 0; var1 < 256; var1++) {
-            var0_int = var1;
-            for (var2 = 0; var2 < 8; var2++) {
-                if ((1 & var0_int) != 1) {
-                    var0_int = var0_int >>> 1;
-                } else {
-                    var0_int = -306674912 ^ var0_int >>> 1;
+        $cfr$clinit: {
+            int var0_int = 0;
+            long var0 = 0L;
+            int var1 = 0;
+            int var2 = 0;
+            int var3 = 0;
+            field_e = "<%0><br>IS OUT!";
+            field_r = new int[1024];
+            field_g = 128;
+            field_j = new int[256];
+            var1 = 0;
+            L0: while (true) {
+              if (var1 >= 256) {
+                field_d = new long[256];
+                field_x = "Theme";
+                field_l = "Invite";
+                var2 = 0;
+                L1: while (true) {
+                  if (256 <= var2) {
+                    break $cfr$clinit;
+                  } else {
+                    var0 = (long)var2;
+                    var3 = 0;
+                    L2: while (true) {
+                      if (var3 >= 8) {
+                        field_d[var2] = var0;
+                        var2++;
+                        continue L1;
+                      } else {
+                        if ((var0 & 1L) != 1L) {
+                          var0 = var0 >>> 1;
+                          var3++;
+                          continue L2;
+                        } else {
+                          var0 = var0 >>> 1 ^ -3932672073523589310L;
+                          var3++;
+                          continue L2;
+                        }
+                      }
+                    }
+                  }
                 }
-            }
-            field_j[var1] = var0_int;
-        }
-        field_d = new long[256];
-        field_x = "Theme";
-        field_l = "Invite";
-        for (var2 = 0; 256 > var2; var2++) {
-            var0 = (long)var2;
-            for (var3 = 0; var3 < 8; var3++) {
-                if ((var0 & 1L) == 1L) {
-                    var0 = var0 >>> 1 ^ -3932672073523589310L;
-                } else {
-                    var0 = var0 >>> 1;
+              } else {
+                var0_int = var1;
+                var2 = 0;
+                L3: while (true) {
+                  if (var2 >= 8) {
+                    field_j[var1] = var0_int;
+                    var1++;
+                    continue L0;
+                  } else {
+                    if ((1 & var0_int) == 1) {
+                      var0_int = -306674912 ^ var0_int >>> 1;
+                      var2++;
+                      continue L3;
+                    } else {
+                      var0_int = var0_int >>> 1;
+                      var2++;
+                      continue L3;
+                    }
+                  }
                 }
+              }
             }
-            field_d[var2] = var0;
         }
     }
 }

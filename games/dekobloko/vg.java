@@ -109,7 +109,7 @@ final class vg {
                 }
               }
               L4: {
-                if (var10 > var6) {
+                if (~var10 < ~var6) {
                   var6 = var10;
                   break L4;
                 } else {
@@ -117,7 +117,7 @@ final class vg {
                 }
               }
               L5: {
-                if (var10 < var3) {
+                if (~var10 > ~var3) {
                   var3 = var10;
                   break L5;
                 } else {
@@ -125,14 +125,14 @@ final class vg {
                 }
               }
               L6: {
-                if (var7 < var11) {
+                if (~var7 > ~var11) {
                   var7 = var11;
                   break L6;
                 } else {
                   break L6;
                 }
               }
-              if (var4 > var11) {
+              if (~var4 < ~var11) {
                 var4 = var11;
                 var8++;
                 continue L1;
@@ -322,7 +322,7 @@ final class vg {
                   var10 = 0;
                   L4: while (true) {
                     L5: {
-                      if (b.field_P.length <= var10) {
+                      if (~b.field_P.length >= ~var10) {
                         break L5;
                       } else {
                         L6: {
@@ -747,7 +747,7 @@ final class vg {
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = client.field_A ? 1 : 0;
-        for (var5 = 0; this.field_l > var5; var5++) {
+        for (var5 = 0; ~this.field_l < ~var5; var5++) {
             this.field_J[var5] = (short)(this.field_J[var5] + param1);
             this.field_o[var5] = (short)(this.field_o[var5] + param2);
             this.field_e[var5] = (short)(this.field_e[var5] + param3);
@@ -762,7 +762,7 @@ final class vg {
         int var6 = 0;
         int var8 = client.field_A ? 1 : 0;
         int var7 = 19 % ((68 - param2) / 34);
-        for (var6 = 0; this.field_l > var6; var6++) {
+        for (var6 = 0; ~this.field_l < ~var6; var6++) {
             this.field_J[var6] = (short)(this.field_J[var6] * param1 / param4);
             this.field_o[var6] = (short)(param0 * this.field_o[var6] / param4);
             this.field_e[var6] = (short)(this.field_e[var6] * param3 / param4);

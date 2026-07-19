@@ -392,7 +392,7 @@ final class je {
           this.field_a = new int[param0][14];
           var4 = 0;
           L0: while (true) {
-            if (var4 >= param0) {
+            if (~var4 <= ~param0) {
               return;
             } else {
               L1: {

@@ -94,7 +94,7 @@ final class ka extends ma {
                 var3_int = -(int)(4294967296L % (long)param1) + -2147483648;
                 L2: while (true) {
                   var4 = param2.nextInt();
-                  if (var3_int > var4) {
+                  if (~var3_int < ~var4) {
                     stackOut_11_0 = oi.a(param1, 105, var4);
                     stackIn_12_0 = stackOut_11_0;
                     break L0;

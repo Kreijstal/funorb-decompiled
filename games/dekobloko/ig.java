@@ -145,7 +145,7 @@ final class ig extends w {
                 break L3;
               } else {
                 L4: {
-                  if (aa.field_b == var5) {
+                  if (~aa.field_b == ~var5) {
                     var5 = 63;
                     break L4;
                   } else {
@@ -154,10 +154,10 @@ final class ig extends w {
                 }
                 var6 = 0;
                 L5: while (true) {
-                  if (this.field_Wb.length <= var6) {
+                  if (~this.field_Wb.length >= ~var6) {
                     break L3;
                   } else {
-                    if (this.field_Wb[var6] == var5) {
+                    if (~this.field_Wb[var6] == ~var5) {
                       this.a(param0, var6, 107, param2);
                       return true;
                     } else {
@@ -253,7 +253,7 @@ final class ig extends w {
                 stackOut_6_0 = (qd) (var5);
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_7_0 = stackOut_6_0;
-                if (var4_int != this.field_Rb) {
+                if (~var4_int != ~this.field_Rb) {
                   stackOut_8_0 = (qd) ((Object) stackIn_8_0);
                   stackOut_8_1 = 0;
                   stackIn_9_0 = stackOut_8_0;
@@ -294,7 +294,7 @@ final class ig extends w {
           }
         }
         L1: {
-          if (param5 != this.field_Zb) {
+          if (~param5 != ~this.field_Zb) {
             this.field_Zb = param5;
             this.b((byte) 67, this.field_ec);
             break L1;
@@ -344,7 +344,7 @@ final class ig extends w {
         }
         int var2 = 0;
         qd[] var3 = this.field_gc;
-        for (var4 = 0; var3.length > var4; var4++) {
+        for (var4 = 0; ~var3.length < ~var4; var4++) {
             var5 = var3[var4];
             var2 = var2 | (0 != var5.field_ob ? 1 : 0);
         }
@@ -364,7 +364,7 @@ final class ig extends w {
         int var5 = client.field_A ? 1 : 0;
         qd[] var6 = this.field_gc;
         qd[] var2 = var6;
-        for (var3 = param0; var3 < var6.length; var3++) {
+        for (var3 = param0; ~var3 > ~var6.length; var3++) {
             var4 = var6[var3];
             var4.field_ab = false;
             var4.field_ob = 0;
@@ -575,7 +575,7 @@ final class ig extends w {
                   this.field_gc[var13] = new qd(0L, param2, (w) null, param3, (ck) (var14), param6[var13]);
                   this.a(this.field_gc[var13], -16834);
                   var15 = var17.a(param6[var13]);
-                  if (var15 <= this.field_fc) {
+                  if (~var15 >= ~this.field_fc) {
                     break L5;
                   } else {
                     this.field_fc = var15;

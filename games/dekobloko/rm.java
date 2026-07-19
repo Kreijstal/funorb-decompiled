@@ -126,7 +126,7 @@ final class rm {
                   var10 = param3 + param2 - var7;
                   param2 = var9;
                   L2: while (true) {
-                    if (param2 >= var10) {
+                    if (~param2 <= ~var10) {
                       hk.a(kh.field_e);
                       break L0;
                     } else {

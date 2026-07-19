@@ -44,18 +44,18 @@ final class hb extends w {
                 }
               }
             } else {
-              if (param0 == -63) {
+              if (param0 != -63) {
+                field_Wb = 87;
                 return this.field_Rb;
               } else {
-                field_Wb = 87;
                 return this.field_Rb;
               }
             }
           } else {
-            if (param0 == -63) {
+            if (param0 != -63) {
+              field_Wb = 87;
               return this.field_Rb;
             } else {
-              field_Wb = 87;
               return this.field_Rb;
             }
           }
@@ -112,11 +112,11 @@ final class hb extends w {
                 }
               }
               if (wh.field_c == 84) {
-                if (this.field_Xb.length() <= 0) {
-                  return 1;
-                } else {
+                if (this.field_Xb.length() > 0) {
                   this.field_Y = this.field_Xb.toString();
                   return 2;
+                } else {
+                  return 1;
                 }
               } else {
                 if (wh.field_c != 13) {
@@ -151,10 +151,10 @@ final class hb extends w {
                   }
                 }
               }
-              if (param0 == -63) {
+              if (param0 != -63) {
+                field_Wb = 87;
                 return this.field_Rb;
               } else {
-                field_Wb = 87;
                 return this.field_Rb;
               }
             }
@@ -267,46 +267,46 @@ final class hb extends w {
                   this.field_Y = this.field_Xb.toString();
                   this.field_Rb = 2;
                   if (wh.field_c != 13) {
-                    if (param0 == 261) {
+                    if (param0 != 261) {
+                      discarded$31 = this.a((byte) 13, false);
                       return true;
                     } else {
-                      discarded$31 = this.a((byte) 13, false);
                       return true;
                     }
                   } else {
                     this.field_Rb = 1;
-                    if (param0 == 261) {
+                    if (param0 != 261) {
+                      discarded$32 = this.a((byte) 13, false);
                       return true;
                     } else {
-                      discarded$32 = this.a((byte) 13, false);
                       return true;
                     }
                   }
                 } else {
                   this.field_Rb = 1;
                   if (wh.field_c != 13) {
-                    if (param0 == 261) {
+                    if (param0 != 261) {
+                      discarded$33 = this.a((byte) 13, false);
                       return true;
                     } else {
-                      discarded$33 = this.a((byte) 13, false);
                       return true;
                     }
                   } else {
                     this.field_Rb = 1;
-                    if (param0 == 261) {
+                    if (param0 != 261) {
+                      discarded$34 = this.a((byte) 13, false);
                       return true;
                     } else {
-                      discarded$34 = this.a((byte) 13, false);
                       return true;
                     }
                   }
                 }
               } else {
                 if (wh.field_c != 13) {
-                  if (param0 == 261) {
+                  if (param0 != 261) {
+                    discarded$35 = this.a((byte) 13, false);
                     return true;
                   } else {
-                    discarded$35 = this.a((byte) 13, false);
                     return true;
                   }
                 } else {
@@ -397,10 +397,10 @@ final class hb extends w {
                   this.field_Rb = 2;
                   if (wh.field_c == 13) {
                     this.field_Rb = 1;
-                    if (param0 != 261) {
-                      discarded$41 = this.a((byte) 13, false);
+                    if (param0 == 261) {
                       return true;
                     } else {
+                      discarded$41 = this.a((byte) 13, false);
                       return true;
                     }
                   } else {
@@ -508,10 +508,10 @@ final class hb extends w {
                         break L22;
                       }
                     }
-                    if (param0 == 261) {
+                    if (param0 != 261) {
+                      discarded$48 = this.a((byte) 13, false);
                       return true;
                     } else {
-                      discarded$48 = this.a((byte) 13, false);
                       return true;
                     }
                   } else {
@@ -521,10 +521,9 @@ final class hb extends w {
               }
             }
             if (wh.field_c == 84) {
-              if (this.field_Xb.length() > 0) {
+              if (this.field_Xb.length() <= 0) {
                 L23: {
-                  this.field_Y = this.field_Xb.toString();
-                  this.field_Rb = 2;
+                  this.field_Rb = 1;
                   if (wh.field_c != 13) {
                     break L23;
                   } else {
@@ -543,7 +542,8 @@ final class hb extends w {
                 return true;
               } else {
                 L25: {
-                  this.field_Rb = 1;
+                  this.field_Y = this.field_Xb.toString();
+                  this.field_Rb = 2;
                   if (wh.field_c != 13) {
                     break L25;
                   } else {

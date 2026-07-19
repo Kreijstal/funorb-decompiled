@@ -336,13 +336,13 @@ final class jm extends wm {
               var5 = param2.length();
               var6 = var4_int;
               var7 = -1 + var5;
-              if (var7 == param3) {
+              if (~var7 == param3) {
                 break L1;
               } else {
                 var8_int = 0;
                 L2: while (true) {
                   var8_int = param1.indexOf((int) param0, var8_int);
-                  if (-1 > var8_int) {
+                  if (var8_int < 0) {
                     break L1;
                   } else {
                     var6 = var6 + var7;

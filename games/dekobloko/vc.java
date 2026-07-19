@@ -55,15 +55,15 @@ final class vc {
                     break L0;
                   }
                 } else {
-                  if (var7[var9].getWidth() == param1) {
+                  if (~var7[var9].getWidth() == ~param1) {
                     if (var7[var9].getHeight() == param2) {
-                      if (param3 == var7[var9].getBitDepth()) {
+                      if (~param3 == ~var7[var9].getBitDepth()) {
                         L2: {
                           var10 = var7[var9].getRefreshRate();
                           if (var8 == 0) {
                             break L2;
                           } else {
-                            if (Math.abs(var10 + -var6) < Math.abs(-var6 + param4)) {
+                            if (~Math.abs(var10 + -var6) > ~Math.abs(-var6 + param4)) {
                               break L2;
                             } else {
                               var9++;
@@ -122,7 +122,7 @@ final class vc {
           var3 = var2;
           var4 = 0;
           L0: while (true) {
-            if (var3.length <= var4) {
+            if (~var3.length >= ~var4) {
               throw vc.<RuntimeException>$cfr$sneakyThrow(new Exception());
             } else {
               var5 = var3[var4];

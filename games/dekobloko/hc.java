@@ -48,7 +48,7 @@ final class hc {
               }
               L2: {
                 var2 = -32;
-                if (ac.field_F >= dk.field_i) {
+                if (~ac.field_F <= ~dk.field_i) {
                   break L2;
                 } else {
                   var8 = d.field_h[bh.field_m];
@@ -75,7 +75,7 @@ final class hc {
                   var6 = 0;
                   var4 = var6;
                   L4: while (true) {
-                    if (var6 >= d.field_h.length) {
+                    if (~var6 <= ~d.field_h.length) {
                       if (var3 == null) {
                         break L3;
                       } else {

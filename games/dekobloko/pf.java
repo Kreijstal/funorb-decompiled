@@ -98,30 +98,30 @@ final class pf {
         if (0 == param2) {
             bn.a(this.field_e, param0, (byte) -84);
         } else {
-            if (1 != param2) {
-                if (param2 == 2) {
-                    cg.a(this.field_f, (byte) -9, param0);
-                    return true;
-                }
-                if (param2 == 3) {
-                    md.a(9, param0, this.field_f);
-                    return true;
-                }
-                if (param2 != 10) {
-                    if (param2 != 15) {
-                        if (param2 == 16) {
-                            vg.a(-20974, param0, 0);
-                            return true;
-                        }
-                        return false;
-                    }
-                    vg.a(-20974, param0, this.field_f);
-                    return true;
-                }
+            if (1 == param2) {
+                mn.a(true, this.field_e, param0);
+                return true;
+            }
+            if (param2 == 2) {
+                cg.a(this.field_f, (byte) -9, param0);
+                return true;
+            }
+            if (param2 == 3) {
+                md.a(9, param0, this.field_f);
+                return true;
+            }
+            if (param2 == 10) {
                 ga.a(false, this.field_f, param0);
                 return true;
             }
-            mn.a(true, this.field_e, param0);
+            if (param2 == 15) {
+                vg.a(-20974, param0, this.field_f);
+                return true;
+            }
+            if (param2 != 16) {
+                return false;
+            }
+            vg.a(-20974, param0, 0);
             return true;
         }
         return true;
@@ -168,7 +168,7 @@ final class pf {
                         if (!cd.field_m.field_wc) {
                           break L0;
                         } else {
-                          if (cd.field_m.field_rc >= cd.field_m.field_mc) {
+                          if (~cd.field_m.field_rc <= ~cd.field_m.field_mc) {
                             break L0;
                           } else {
                             if (!var7.field_bc) {
@@ -225,7 +225,7 @@ final class pf {
                     } else {
                       if (var7 != null) {
                         if (cd.field_m.field_wc) {
-                          if (cd.field_m.field_rc >= cd.field_m.field_mc) {
+                          if (~cd.field_m.field_rc <= ~cd.field_m.field_mc) {
                             break L1;
                           } else {
                             if (!var7.field_bc) {
@@ -433,8 +433,8 @@ final class pf {
               if (param0 != 12) {
                 if (param0 != 13) {
                   if (14 != param0) {
-                    if (param0 != -21) {
-                      if (-20 == param0) {
+                    if (param0 != 20) {
+                      if (param0 == 19) {
                         discarded$1 = vm.a(this.field_j, this.field_e, this.field_b, -120, this.field_a);
                         return true;
                       } else {

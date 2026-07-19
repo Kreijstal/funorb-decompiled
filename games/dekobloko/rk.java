@@ -150,14 +150,14 @@ class rk extends ek {
             var4 = var3.a(false);
             var5 = var9.a(false, (ce) (this));
             var6 = var9.a((byte) -106) >> 1;
-            if (var4 >= var5 + -var6) {
+            if (~var4 <= ~(var5 + -var6)) {
               L0: {
                 var7 = this.field_x + var3.a((byte) -94, this.field_S);
-                if (var5 + -var6 < var7) {
+                if (~(var5 + -var6) > ~var7) {
                   this.field_x = this.field_x + (-var6 + var5) + -var7;
                   break L0;
                 } else {
-                  if (var6 <= var7) {
+                  if (~var6 >= ~var7) {
                     break L0;
                   } else {
                     this.field_x = this.field_x - (-var6 + var7);
@@ -170,7 +170,7 @@ class rk extends ek {
                   this.field_x = 0;
                   break L1;
                 } else {
-                  if (-var5 - -var6 <= this.field_x) {
+                  if (~(-var5 - -var6) >= ~this.field_x) {
                     break L1;
                   } else {
                     this.field_x = -var5 - -var6;
@@ -191,8 +191,8 @@ class rk extends ek {
     private final void f(byte param0) {
         int var3 = 0;
         int var2 = 0;
-        if (!(this.field_S == this.field_M)) {
-            var2 = this.field_S <= this.field_M ? this.field_S : this.field_M;
+        if (!(~this.field_S == ~this.field_M)) {
+            var2 = ~this.field_S >= ~this.field_M ? this.field_S : this.field_M;
             var3 = this.field_S <= this.field_M ? this.field_M : this.field_S;
             this.field_M = var2;
             this.field_S = var2;
@@ -214,7 +214,7 @@ class rk extends ek {
           var3 = 1 + this.field_S;
           L0: while (true) {
             L1: {
-              if (var3 >= var2) {
+              if (~var3 <= ~var2) {
                 break L1;
               } else {
                 if (this.field_E.charAt(var3 + -1) == 32) {
@@ -451,11 +451,11 @@ class rk extends ek {
         try {
           L0: {
             L1: {
-              if (0 == this.field_X) {
+              if (this.field_X == -1) {
                 break L1;
               } else {
                 var3_int = this.field_X + -this.field_E.length();
-                if (-1 > var3_int) {
+                if (var3_int < 0) {
                   param0 = param0.substring(0, var3_int);
                   break L1;
                 } else {
@@ -464,7 +464,7 @@ class rk extends ek {
               }
             }
             L2: {
-              if (this.field_S == this.field_E.length()) {
+              if (~this.field_S == ~this.field_E.length()) {
                 this.field_E = this.field_E + param0;
                 break L2;
               } else {
@@ -548,7 +548,7 @@ class rk extends ek {
                 this.field_p.a(this.field_I, param0, param3, (byte) -110, (ce) (this));
                 if (this.field_p instanceof nl) {
                     var9 = (nl) ((Object) this.field_p);
-                    if (this.field_M != this.field_S) {
+                    if (~this.field_M != ~this.field_S) {
                         var9.a(this.field_M, this.field_S, param3, param0, -123, (ce) (this));
                     }
                     var6 = ik.a(4);
@@ -604,7 +604,7 @@ class rk extends ek {
                           if (this.field_Q <= var6) {
                             break L3;
                           } else {
-                            if (this.field_M < var6) {
+                            if (~this.field_M > ~var6) {
                               var6 = this.field_Q;
                               break L3;
                             } else {
@@ -664,11 +664,11 @@ class rk extends ek {
     }
 
     private final String i(int param0) {
-        int var2 = this.field_S > this.field_M ? this.field_M : this.field_S;
+        int var2 = ~this.field_S < ~this.field_M ? this.field_M : this.field_S;
         if (param0 <= 102) {
             return (String) null;
         }
-        int var3 = this.field_M >= this.field_S ? this.field_M : this.field_S;
+        int var3 = ~this.field_M <= ~this.field_S ? this.field_M : this.field_S;
         return this.field_E.substring(var2, var3);
     }
 

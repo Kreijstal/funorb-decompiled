@@ -112,11 +112,11 @@ final class mg extends w {
                 var16.a();
                 var17 = 0;
                 L3: while (true) {
-                  if (var8 <= var17) {
+                  if (~var8 >= ~var17) {
                     hk.a(var31, var12, var13);
                     var17 = 0;
                     L4: while (true) {
-                      if (var17 >= var8) {
+                      if (~var17 <= ~var8) {
                         L5: {
                           if (param6 >= 84) {
                             break L5;
@@ -317,7 +317,7 @@ final class mg extends w {
             var5 = var8.length;
             var6 = 0;
             L1: while (true) {
-              if (var6 >= var5) {
+              if (~var6 <= ~var5) {
                 break L0;
               } else {
                 L2: {

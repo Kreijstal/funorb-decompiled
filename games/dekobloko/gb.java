@@ -76,7 +76,7 @@ final class gb extends w {
         var6 = 0;
         var7 = 0;
         L1: while (true) {
-          if (this.field_Rb <= var7) {
+          if (~this.field_Rb >= ~var7) {
             L2: {
               var6 = var6 + this.field_Sb * 2;
               var7 = this.field_Rb * this.field_Xb + this.field_bc - -this.field_bc;
@@ -103,7 +103,7 @@ final class gb extends w {
             }
           } else {
             var8 = this.field_Wb[var7].b(this.field_Ub, this.field_Nb, 1940);
-            if (var6 < var8) {
+            if (~var6 > ~var8) {
               var6 = var8;
               var7++;
               continue L1;

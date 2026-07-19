@@ -45,7 +45,7 @@ final class ai extends ek {
             if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
               var8_int = -this.field_O - (param5 - -this.field_u) + param1;
               var9 = param0 - this.field_V - (param4 - -this.field_D);
-              if (var8_int * var8_int + var9 * var9 < this.field_K * this.field_K) {
+              if (~(var8_int * var8_int + var9 * var9) > ~(this.field_K * this.field_K)) {
                 L1: {
                   var10 = Math.atan2((double)var9, (double)var8_int) - hc.field_b;
                   if (0.0 <= var10) {
@@ -62,7 +62,7 @@ final class ai extends ek {
                 }
                 this.field_R = (int)((double)this.field_Q * var10 / 6.283185307179586);
                 L2: while (true) {
-                  if (this.field_Q > this.field_R) {
+                  if (~this.field_Q < ~this.field_R) {
                     L3: while (true) {
                       if (this.field_R >= 0) {
                         stackOut_14_0 = 1;
@@ -147,60 +147,88 @@ final class ai extends ek {
         int var5 = 0;
         int var6 = 0;
         int stackIn_4_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_14_0 = 0;
         int stackOut_10_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_12_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_5_0 = 0;
         L0: {
           if (!db.field_d) {
-            var1 = ue.field_b;
-            var5 = 320 * (vf.field_b * vf.field_b) / 900;
             L1: {
-              var4 = 0;
-              if (!wg.field_f) {
-                stackOut_11_0 = 0;
-                stackIn_12_0 = stackOut_11_0;
+              var1 = ue.field_b;
+              var5 = 320 * (vf.field_b * vf.field_b) / 900;
+              if (!qd.field_Nb) {
+                stackOut_10_0 = 0;
+                stackIn_11_0 = stackOut_10_0;
                 break L1;
               } else {
-                stackOut_10_0 = 1;
-                stackIn_12_0 = stackOut_10_0;
+                stackOut_9_0 = 1;
+                stackIn_11_0 = stackOut_9_0;
                 break L1;
               }
             }
-            var3 = stackIn_12_0;
+            L2: {
+              var4 = stackIn_11_0;
+              if (!wg.field_f) {
+                stackOut_13_0 = 0;
+                stackIn_14_0 = stackOut_13_0;
+                break L2;
+              } else {
+                stackOut_12_0 = 1;
+                stackIn_14_0 = stackOut_12_0;
+                break L2;
+              }
+            }
+            var3 = stackIn_14_0;
             var2 = hh.field_a;
             break L0;
           } else {
-            L2: {
+            L3: {
               var1 = hh.field_a;
               if (!wg.field_f) {
                 stackOut_3_0 = 0;
                 stackIn_4_0 = stackOut_3_0;
-                break L2;
+                break L3;
               } else {
                 stackOut_2_0 = 1;
                 stackIn_4_0 = stackOut_2_0;
-                break L2;
+                break L3;
               }
             }
-            var4 = stackIn_4_0;
-            var2 = ue.field_b;
-            var3 = 0;
+            L4: {
+              var4 = stackIn_4_0;
+              var2 = ue.field_b;
+              if (!qd.field_Nb) {
+                stackOut_6_0 = 0;
+                stackIn_7_0 = stackOut_6_0;
+                break L4;
+              } else {
+                stackOut_5_0 = 1;
+                stackIn_7_0 = stackOut_5_0;
+                break L4;
+              }
+            }
+            var3 = stackIn_7_0;
             var5 = 320 + -(vf.field_b * vf.field_b * 320 / 900);
             break L0;
           }
         }
-        L3: {
+        L5: {
           if (var3 == 0) {
-            break L3;
+            break L5;
           } else {
             if (var4 == 0) {
-              break L3;
+              break L5;
             } else {
               var4 = 0;
               var3 = 0;
-              break L3;
+              break L5;
             }
           }
         }
@@ -222,6 +250,20 @@ final class ai extends ek {
         hk.b(0, var5 + 320, 640, 480);
         dl.a((byte) 121, var4 != 0, var2, var5, 256);
         hk.d();
+        if (qd.field_Nb) {
+          if (wg.field_f) {
+            if (gi.field_b) {
+              return;
+            } else {
+              fj.a(0, 256, -71, 0);
+              return;
+            }
+          } else {
+            return;
+          }
+        } else {
+          return;
+        }
     }
 
     final static boolean f(byte param0) {

@@ -124,24 +124,23 @@ final class fd implements Runnable {
               if (null != this.field_o) {
                 var2_int = 0;
                 L11: while (true) {
-                  if (var2_int >= this.field_o.length) {
+                  if (~var2_int <= ~this.field_o.length) {
                     break L10;
                   } else {
                     if (null != this.field_o[var2_int]) {
                       try {
                         L12: {
                           this.field_o[var2_int].a(param0 ^ -71);
-                          var2_int++;
                           break L12;
                         }
                       } catch (java.io.IOException decompiledCaughtParameter3) {
                         decompiledCaughtException = decompiledCaughtParameter3;
                         L13: {
                           var3_ref = (IOException) (Object) decompiledCaughtException;
-                          var2_int++;
                           break L13;
                         }
                       }
+                      var2_int++;
                       continue L11;
                     } else {
                       var2_int++;
@@ -243,7 +242,7 @@ final class fd implements Runnable {
             var5_array = new String[]{"c:/rscache/", "/rscache/", field_u, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
             var6 = 0;
             L1: while (true) {
-              if (var5_array.length > var6) {
+              if (~var5_array.length < ~var6) {
                 L2: {
                   var7 = var5_array[var6];
                   if (var7.length() <= 0) {
@@ -305,8 +304,9 @@ final class fd implements Runnable {
             Process discarded$9 = null;
             Object discarded$10 = null;
             Object discarded$11 = null;
-            Throwable var2 = null;
-            Object var2_ref = null;
+            ThreadDeath var2 = null;
+            Throwable var2_ref = null;
+            Object var2_ref2 = null;
             int var2_int = 0;
             InterruptedException var3 = null;
             db var3_ref = null;
@@ -340,8 +340,8 @@ final class fd implements Runnable {
             var16 = null;
             var17 = null;
             L0: while (true) {
-              var2_ref = this;
-              synchronized (var2_ref) {
+              var2_ref2 = this;
+              synchronized (var2_ref2) {
                 L1: {
                   L2: while (true) {
                     if (!this.field_m) {
@@ -635,11 +635,12 @@ final class fd implements Runnable {
                       } else {
                         if (~ik.a(4) <= ~field_t) {
                           try {
+                              if (false) throw (db) null;
                             L17: {
                               var8_ref.field_b = pn.a((String) (var8_ref.field_e), var8_ref.field_g, 23155).a(-7);
                               break L17;
                             }
-                          } catch (java.lang.Exception decompiledCaughtParameter2) {
+                          } catch (db decompiledCaughtParameter2) {
                             decompiledCaughtException = decompiledCaughtParameter2;
                             var3_ref = (db) (Object) decompiledCaughtException;
                             var8_ref.field_b = var3_ref.getMessage();
@@ -655,16 +656,20 @@ final class fd implements Runnable {
                   var8_ref.field_c = 1;
                   break L6;
                 }
-              } catch (java.lang.Throwable decompiledCaughtParameter3) {
+              } catch (java.lang.ThreadDeath decompiledCaughtParameter3) {
                 decompiledCaughtException = decompiledCaughtParameter3;
+                var2 = (ThreadDeath) (Object) decompiledCaughtException;
+                throw var2;
+              } catch (java.lang.Throwable decompiledCaughtParameter4) {
+                decompiledCaughtException = decompiledCaughtParameter4;
                 L18: {
-                  var2 = decompiledCaughtException;
+                  var2_ref = decompiledCaughtException;
                   var8_ref.field_c = 2;
                   break L18;
                 }
               }
-              var2_ref = var8_ref;
-              synchronized (var2_ref) {
+              var2_ref2 = var8_ref;
+              synchronized (var2_ref2) {
                 L19: {
                   var8_ref.notify();
                   break L19;

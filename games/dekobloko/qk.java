@@ -233,7 +233,7 @@ final class qk implements Runnable {
                   synchronized (var3_ref) {
                     L2: {
                       L3: {
-                        if (this.field_f == this.field_q) {
+                        if (~this.field_f == ~this.field_q) {
                           if (!this.field_g) {
                             try {
                               L4: {
@@ -317,7 +317,7 @@ final class qk implements Runnable {
                           this.field_b.write(this.field_h, var2, var1_int);
                           break L12;
                         }
-                      } catch (java.lang.Exception decompiledCaughtParameter2) {
+                      } catch (java.io.IOException decompiledCaughtParameter2) {
                         decompiledCaughtException = decompiledCaughtParameter2;
                         L13: {
                           var3 = (IOException) (Object) decompiledCaughtException;
@@ -338,7 +338,7 @@ final class qk implements Runnable {
                           }
                           break L14;
                         }
-                      } catch (java.lang.Exception decompiledCaughtParameter3) {
+                      } catch (java.io.IOException decompiledCaughtParameter3) {
                         decompiledCaughtException = decompiledCaughtParameter3;
                         L16: {
                           var3 = (IOException) (Object) decompiledCaughtException;

@@ -98,9 +98,14 @@ final class fj {
         sk.field_g.e(605, param3, param1);
         fl.field_f.e(0, param3 + 35, param1);
         wm.field_n.e(605, param3 - -35, param1);
-        vg.field_x.e(0, 445 + param3, param1);
-        pg.field_f.e(35, param3 + 445, param1);
-        wc.field_r.e(605, param3 + 445, param1);
+        if (param2 > -7) {
+          return;
+        } else {
+          vg.field_x.e(0, 445 + param3, param1);
+          pg.field_f.e(35, param3 + 445, param1);
+          wc.field_r.e(605, param3 + 445, param1);
+          return;
+        }
     }
 
     static {

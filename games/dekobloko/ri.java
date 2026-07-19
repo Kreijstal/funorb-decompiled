@@ -167,7 +167,7 @@ final class ri {
                     if (null == ef.field_R) {
                       break L4;
                     } else {
-                      if (var7_int > ef.field_R.field_r.length) {
+                      if (~var7_int < ~ef.field_R.field_r.length) {
                         break L4;
                       } else {
                         break L3;
@@ -403,7 +403,7 @@ final class ri {
           } else {
             if (de.field_M < this.field_m) {
               qd.field_Rb = (this.field_m + -de.field_M) / 2;
-              if (this.field_n == de.field_M) {
+              if (~this.field_n == ~de.field_M) {
                 if (ob.field_g != this.field_r) {
                   this.field_t.a(-4328, this.field_r, this.field_n);
                   return;
@@ -417,7 +417,7 @@ final class ri {
             } else {
               if (this.field_m > 0) {
                 qd.field_Rb = 0;
-                if (this.field_n == de.field_M) {
+                if (~this.field_n == ~de.field_M) {
                   if (ob.field_g == this.field_r) {
                     return;
                   } else {
@@ -429,7 +429,7 @@ final class ri {
                   return;
                 }
               } else {
-                if (this.field_n == de.field_M) {
+                if (~this.field_n == ~de.field_M) {
                   if (ob.field_g == this.field_r) {
                     return;
                   } else {
@@ -456,11 +456,11 @@ final class ri {
         var3 = this.field_h;
         if (this.b(0)) {
           L0: {
-            if (var2 > this.field_a) {
+            if (~var2 < ~this.field_a) {
               var2 = this.field_a;
               break L0;
             } else {
-              if (var2 < this.field_l) {
+              if (~var2 > ~this.field_l) {
                 var2 = this.field_l;
                 break L0;
               } else {
@@ -468,7 +468,7 @@ final class ri {
               }
             }
           }
-          if (var3 > this.field_c) {
+          if (~var3 < ~this.field_c) {
             L1: {
               var3 = this.field_c;
               if (0.0f >= this.field_d) {
@@ -484,7 +484,7 @@ final class ri {
                   }
                 } else {
                   var3 = (int)((float)var2 / this.field_d);
-                  if (de.field_M != var2) {
+                  if (~de.field_M != ~var2) {
                     L2: {
                       this.field_t.a(-4328, var3, var2);
                       if (this.field_m <= 0) {
@@ -496,7 +496,7 @@ final class ri {
                     }
                     return;
                   } else {
-                    if (ob.field_g == var3) {
+                    if (~ob.field_g == ~var3) {
                       if (this.field_m > 0) {
                         qd.field_Rb = (this.field_m + -de.field_M) / 2;
                         return;
@@ -516,7 +516,7 @@ final class ri {
                 }
               }
             }
-            if (de.field_M != var2) {
+            if (~de.field_M != ~var2) {
               this.field_t.a(-4328, var3, var2);
               if (this.field_m > 0) {
                 qd.field_Rb = (this.field_m + -de.field_M) / 2;
@@ -525,7 +525,7 @@ final class ri {
                 return;
               }
             } else {
-              if (ob.field_g == var3) {
+              if (~ob.field_g == ~var3) {
                 if (this.field_m > 0) {
                   qd.field_Rb = (this.field_m + -de.field_M) / 2;
                   return;
@@ -543,7 +543,7 @@ final class ri {
               }
             }
           } else {
-            if (this.field_b > var3) {
+            if (~this.field_b < ~var3) {
               L3: {
                 var3 = this.field_b;
                 if (0.0f >= this.field_d) {
@@ -564,11 +564,11 @@ final class ri {
                 }
               }
               L4: {
-                if (de.field_M != var2) {
+                if (~de.field_M != ~var2) {
                   this.field_t.a(-4328, var3, var2);
                   break L4;
                 } else {
-                  if (ob.field_g == var3) {
+                  if (~ob.field_g == ~var3) {
                     break L4;
                   } else {
                     this.field_t.a(-4328, var3, var2);
@@ -598,8 +598,8 @@ final class ri {
                     break L5;
                   }
                 }
-                if (de.field_M == var2) {
-                  if (ob.field_g == var3) {
+                if (~de.field_M == ~var2) {
+                  if (~ob.field_g == ~var3) {
                     L6: {
                       if (this.field_m <= 0) {
                         break L6;
@@ -635,11 +635,11 @@ final class ri {
                 }
               } else {
                 L9: {
-                  if (de.field_M != var2) {
+                  if (~de.field_M != ~var2) {
                     this.field_t.a(-4328, var3, var2);
                     break L9;
                   } else {
-                    if (ob.field_g == var3) {
+                    if (~ob.field_g == ~var3) {
                       break L9;
                     } else {
                       this.field_t.a(-4328, var3, var2);
@@ -742,14 +742,14 @@ final class ri {
           db.field_b[og.field_eb] = param0;
           ch.field_a[og.field_eb] = og.field_eb;
           ad.field_i[og.field_eb] = param3;
-          if (ge.field_b > param3) {
+          if (~ge.field_b < ~param3) {
             mf.field_Q = param3;
             break L0;
           } else {
             break L0;
           }
         }
-        if (param3 <= bg.field_d) {
+        if (~param3 >= ~bg.field_d) {
           L1: {
             oa.field_e[og.field_eb] = param1;
             ln.field_a[og.field_eb] = param4;
@@ -769,7 +769,7 @@ final class ri {
           cc.field_h[og.field_eb] = var7;
           og.field_eb = og.field_eb + 1;
           if (rf.field_g >= var7) {
-            if (mf.field_Q > var7) {
+            if (~mf.field_Q < ~var7) {
               mf.field_Q = var7;
               return;
             } else {
@@ -777,7 +777,7 @@ final class ri {
             }
           } else {
             rf.field_g = var7;
-            if (mf.field_Q > var7) {
+            if (~mf.field_Q < ~var7) {
               mf.field_Q = var7;
               return;
             } else {
@@ -805,7 +805,7 @@ final class ri {
           cc.field_h[og.field_eb] = var7;
           og.field_eb = og.field_eb + 1;
           if (rf.field_g >= var7) {
-            if (mf.field_Q > var7) {
+            if (~mf.field_Q < ~var7) {
               mf.field_Q = var7;
               return;
             } else {
@@ -813,7 +813,7 @@ final class ri {
             }
           } else {
             rf.field_g = var7;
-            if (mf.field_Q <= var7) {
+            if (~mf.field_Q >= ~var7) {
               return;
             } else {
               mf.field_Q = var7;

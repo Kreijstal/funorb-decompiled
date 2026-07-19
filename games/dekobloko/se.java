@@ -303,10 +303,10 @@ final class se extends ma {
                   L4: {
                     var5_int = bh.field_g - (this.field_N - -param3);
                     var6 = pm.field_f - this.field_R - param2;
-                    if (this.field_u != var5_int) {
+                    if (~this.field_u != ~var5_int) {
                       break L4;
                     } else {
-                      if (var6 != this.field_D) {
+                      if (~var6 != ~this.field_D) {
                         break L4;
                       } else {
                         break L1;
@@ -329,7 +329,7 @@ final class se extends ma {
                 break L1;
               } else {
                 L5: {
-                  if (this.field_M != this.field_u) {
+                  if (~this.field_M != ~this.field_u) {
                     L6: {
                       var5_int = -this.field_u + this.field_M;
                       stackOut_8_0 = this;

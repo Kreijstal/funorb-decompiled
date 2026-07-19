@@ -182,7 +182,7 @@ final class jk {
                     if (this.field_f[var7_int] < 0) {
                       incrementValue$8 = param2;
                       param2++;
-                      param3[incrementValue$8] = (byte)var10;
+                      param3[incrementValue$8] = (byte)(~var10);
                       if (param2 < param5) {
                         var7_int = 0;
                         break L7;
@@ -194,7 +194,7 @@ final class jk {
                     }
                   }
                   L8: {
-                    if (-1 != (32 & var9)) {
+                    if ((32 & var9) != 0) {
                       var7_int = this.field_f[var7_int];
                       break L8;
                     } else {
@@ -219,7 +219,7 @@ final class jk {
                     }
                   }
                   L10: {
-                    if ((16 & var9) == -1) {
+                    if ((16 & var9) == 0) {
                       var7_int++;
                       break L10;
                     } else {
@@ -229,7 +229,7 @@ final class jk {
                   }
                   L11: {
                     var10 = this.field_f[var7_int];
-                    if (-1 > this.field_f[var7_int]) {
+                    if (this.field_f[var7_int] < 0) {
                       incrementValue$10 = param2;
                       param2++;
                       param3[incrementValue$10] = (byte)(~var10);
@@ -258,7 +258,7 @@ final class jk {
                       incrementValue$11 = param2;
                       param2++;
                       param3[incrementValue$11] = (byte)(~var10);
-                      if (param5 > param2) {
+                      if (~param5 < ~param2) {
                         var7_int = 0;
                         break L13;
                       } else {
@@ -282,8 +282,8 @@ final class jk {
                     if (this.field_f[var7_int] < 0) {
                       incrementValue$12 = param2;
                       param2++;
-                      param3[incrementValue$12] = (byte)var10;
-                      if (param5 <= param2) {
+                      param3[incrementValue$12] = (byte)(~var10);
+                      if (~param5 >= ~param2) {
                         break L4;
                       } else {
                         var7_int = 0;
@@ -294,7 +294,7 @@ final class jk {
                     }
                   }
                   L16: {
-                    if (-1 == (2 & var9)) {
+                    if ((2 & var9) == 0) {
                       var7_int++;
                       break L16;
                     } else {
@@ -309,8 +309,8 @@ final class jk {
                     } else {
                       incrementValue$13 = param2;
                       param2++;
-                      param3[incrementValue$13] = (byte)var10;
-                      if (param2 >= param5) {
+                      param3[incrementValue$13] = (byte)(~var10);
+                      if (~param2 <= ~param5) {
                         break L4;
                       } else {
                         var7_int = 0;
@@ -319,7 +319,7 @@ final class jk {
                     }
                   }
                   L18: {
-                    if (-1 != (1 & var9)) {
+                    if ((1 & var9) != 0) {
                       var7_int = this.field_f[var7_int];
                       break L18;
                     } else {
@@ -462,7 +462,7 @@ final class jk {
             var8 = param3 << 3;
             param2 = param2 + param4;
             L2: while (true) {
-              if (param2 <= param4) {
+              if (~param2 >= ~param4) {
                 stackOut_16_0 = -param3 + (var8 + 7 >> 3);
                 stackIn_17_0 = stackOut_16_0;
                 break L0;
@@ -487,14 +487,14 @@ final class jk {
                       var13 -= 8;
                       var7_int = var10 >>> var13;
                       param0[var12] = (byte)(var10 >>> var13);
-                      if (var12 >= var14) {
+                      if (~var12 <= ~var14) {
                         break L3;
                       } else {
                         var13 -= 8;
                         var12++;
                         var7_int = var10 >>> var13;
                         param0[var12] = (byte)(var10 >>> var13);
-                        if (var12 < var14) {
+                        if (~var12 > ~var14) {
                           var12++;
                           var13 -= 8;
                           var7_int = var10 >>> var13;
@@ -650,7 +650,7 @@ final class jk {
                             break L3;
                           } else {
                             var11 = var19[var10];
-                            if (var8 != var11) {
+                            if (~var8 != ~var11) {
                               break L3;
                             } else {
                               var12 = 1 << 32 + -var10;
@@ -677,9 +677,9 @@ final class jk {
                         var10 = 0;
                         var11 = 0;
                         L6: while (true) {
-                          if (var6 <= var11) {
+                          if (~var6 >= ~var11) {
                             L7: {
-                              if (var10 < var4) {
+                              if (~var10 > ~var4) {
                                 break L7;
                               } else {
                                 var4 = 1 + var10;
@@ -709,13 +709,13 @@ final class jk {
                             }
                             L10: {
                               var12 = var12 >>> 1;
-                              if (this.field_f.length > var10) {
+                              if (~this.field_f.length < ~var10) {
                                 break L10;
                               } else {
                                 var13 = new int[2 * this.field_f.length];
                                 var14 = 0;
                                 L11: while (true) {
-                                  if (var14 >= this.field_f.length) {
+                                  if (~var14 <= ~this.field_f.length) {
                                     this.field_f = var13;
                                     break L10;
                                   } else {

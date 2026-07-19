@@ -189,8 +189,8 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         int var17 = 0;
         L0: {
           var17 = client.field_A ? 1 : 0;
-          if (param1 > param11) {
-            if (param8 > param1) {
+          if (~param1 < ~param11) {
+            if (~param8 < ~param1) {
               oj.a(param3, param7, param13, param1, param4, param14, param15, (byte) -105, param9, param10, param2, param11, hk.field_l, param6, param8, param5, param0);
               break L0;
             } else {
@@ -203,11 +203,11 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
               }
             }
           } else {
-            if (param11 < param8) {
+            if (~param11 > ~param8) {
               oj.a(param3, param0, param15, param11, param2, param14, param13, (byte) -52, param5, param10, param4, param1, hk.field_l, param6, param8, param9, param7);
               break L0;
             } else {
-              if (param8 > param1) {
+              if (~param8 < ~param1) {
                 oj.a(param5, param6, param15, param8, param14, param2, param10, (byte) -95, param3, param13, param4, param1, hk.field_l, param0, param11, param9, param7);
                 break L0;
               } else {
@@ -270,7 +270,7 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
                     }
                   } else {
                     L4: while (true) {
-                      if (wi.field_b == rc.field_a) {
+                      if (~wi.field_b == ~rc.field_a) {
                         break L2;
                       } else {
                         var2 = la.field_h[rc.field_a];

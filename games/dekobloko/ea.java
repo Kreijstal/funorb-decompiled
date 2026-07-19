@@ -638,7 +638,7 @@ final class ea extends cf {
         if (wd.field_d) {
             return null;
         }
-        if (jc.field_g < o.field_b) {
+        if (~jc.field_g > ~o.field_b) {
             return null;
         }
         if (!(he.field_gb + o.field_b <= jc.field_g)) {

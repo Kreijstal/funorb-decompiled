@@ -277,41 +277,38 @@ final class vk {
                       }
                     }
                     L20: {
-                      L21: {
-                        if (param2[4] == null) {
-                          break L21;
+                      if (param2[4] == null) {
+                        break L20;
+                      } else {
+                        if (0 == param2[4].field_K) {
+                          break L20;
                         } else {
-                          if (0 == param2[4].field_K) {
-                            break L21;
-                          } else {
-                            if (param2[4].field_C != 0) {
-                              hk.f(var16, var18, var17, var19);
-                              var20 = var14;
-                              L22: while (true) {
-                                if (var20 >= var15) {
-                                  hk.a(hl.field_e);
-                                  break L21;
-                                } else {
-                                  var21 = var12;
-                                  L23: while (true) {
-                                    if (~var21 <= ~var13) {
-                                      var20 = var20 + param2[4].field_C;
-                                      continue L22;
-                                    } else {
-                                      param2[4].c(var21, var20);
-                                      var21 = var21 + param2[4].field_K;
-                                      continue L23;
-                                    }
+                          if (param2[4].field_C != 0) {
+                            hk.f(var16, var18, var17, var19);
+                            var20 = var14;
+                            L21: while (true) {
+                              if (var20 >= var15) {
+                                hk.a(hl.field_e);
+                                break L20;
+                              } else {
+                                var21 = var12;
+                                L22: while (true) {
+                                  if (~var21 <= ~var13) {
+                                    var20 = var20 + param2[4].field_C;
+                                    continue L21;
+                                  } else {
+                                    param2[4].c(var21, var20);
+                                    var21 = var21 + param2[4].field_K;
+                                    continue L22;
                                   }
                                 }
                               }
-                            } else {
-                              break L20;
                             }
+                          } else {
+                            break L20;
                           }
                         }
                       }
-                      break L20;
                     }
                     break L0;
                   }
@@ -324,7 +321,7 @@ final class vk {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L24: {
+          L23: {
             var6 = decompiledCaughtException;
             stackOut_74_0 = (RuntimeException) (var6);
             stackOut_74_1 = new StringBuilder().append("vk.A(").append(param0).append(',').append(50).append(',');
@@ -339,7 +336,7 @@ final class vk {
               stackIn_77_0 = stackOut_76_0;
               stackIn_77_1 = stackOut_76_1;
               stackIn_77_2 = stackOut_76_2;
-              break L24;
+              break L23;
             } else {
               stackOut_75_0 = (RuntimeException) ((Object) stackIn_75_0);
               stackOut_75_1 = (StringBuilder) ((Object) stackIn_75_1);
@@ -347,7 +344,7 @@ final class vk {
               stackIn_77_0 = stackOut_75_0;
               stackIn_77_1 = stackOut_75_1;
               stackIn_77_2 = stackOut_75_2;
-              break L24;
+              break L23;
             }
           }
           throw dh.a((Throwable) ((Object) stackIn_77_0), stackIn_77_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
@@ -486,7 +483,7 @@ final class vk {
                     var16 = 0;
                     var17_int = 1;
                     L4: while (true) {
-                      if (var17_int >= jb.field_g.length) {
+                      if (~var17_int <= ~jb.field_g.length) {
                         var23[var16] = -2147483648;
                         var17 = jb.field_g[var16];
                         kc.b(8192, var16);
